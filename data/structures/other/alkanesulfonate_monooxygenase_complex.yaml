@@ -22,6 +22,12 @@ curation_history:
     UniProt example, an E. coli canonical example, alkanesulfonate monooxygenase activity,
     tetrameric subunit count, and a resolved SsuE boundary discussion.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'ssud_monooxygenase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: SsuD complex
   synonym_type: NARROW_SYNONYM
@@ -132,3 +138,50 @@ discussions:
       complex.
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: ssud_monooxygenase_function
+  title: SsuD Alkanesulfonate Monooxygenase Assembly and Catalysis
+  description: Homotetrameric SsuD assembly and FMNH2-dependent monooxygenation of
+    alkanesulfonates.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ssud_alkanesulfonate_monooxygenase
+    label: Alkanesulphonate monooxygenase, FMN-dependent
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR019911
+    component_ref: ssud_alkanesulfonate_monooxygenase
+  - node_id: alkanesulfonate_monooxygenase_complex
+    label: alkanesulfonate monooxygenase complex
+    node_type: STRUCTURE
+    grounding: GO:1990201
+  - node_id: alkanesulfonate_monooxygenase_activity
+    label: alkanesulfonate monooxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008726
+  edges:
+  - subject: ssud_alkanesulfonate_monooxygenase
+    predicate: homotetramerizes into
+    object: alkanesulfonate_monooxygenase_complex
+    description: Four SsuD subunits assemble into the homotetrameric alkanesulfonate
+      monooxygenase complex.
+    evidence:
+    - reference: GO:1990201
+      notes: GO:1990201 defines the E. coli alkanesulfonate monooxygenase complex
+        as a SsuD tetramer.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 purified and characterized E. coli SsuD.
+  - subject: alkanesulfonate_monooxygenase_complex
+    predicate: catalyzes
+    object: alkanesulfonate_monooxygenase_activity
+    description: The SsuD tetramer catalyzes FMNH2-dependent oxygenolytic cleavage
+      of alkanesulfonates into aldehydes and sulfite.
+    evidence:
+    - reference: GO:1990201
+      notes: GO:1990201 is capable of GO:0008726 alkanesulfonate monooxygenase activity.
+    - reference: GO:0008726
+      notes: GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase
+        activity.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 demonstrated FMNH2-dependent conversion of alkanesulfonates
+        into sulfite and aldehydes by SsuD.

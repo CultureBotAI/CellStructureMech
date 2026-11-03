@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sulfite_reductase_complex_nadph.yaml
+  slug: sulfite_reductase_complex_nadph
+session:
+  id: 2026-10-31T223046Z-antigravity-fdc87d
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - synonyms
+  - parent_structures
+  - part_of
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add sulfite reductase complex (NADPH) (GO:0009337) record
+  details: Added CellStructureRecord for sulfite reductase complex (NADPH) (GO:0009337) in
+    Escherichia coli K-12 (CysJ UniProtKB:P38038, CysI UniProtKB:P17846) and Saccharomyces
+    cerevisiae S288C (MET10 UniProtKB:P39692, MET5 UniProtKB:P47169), verbatim PubMed abstract
+    evidence (PMID:26088143, PMID:1479340), ComplexPortal xrefs (CPX-5629, CPX-3163), canonical
+    examples, functions, and a mechanistic FUNCTION causal graph.

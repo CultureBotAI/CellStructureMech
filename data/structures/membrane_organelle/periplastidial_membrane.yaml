@@ -23,6 +23,12 @@ curation_history:
     a periplastidial-compartment boundary function, GO and DOI evidence, and open
     lipid-grounding and complex-plastid membrane-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'periplastidial_membrane_boundary'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: PPM
   synonym_type: EXACT_SYNONYM
@@ -121,3 +127,46 @@ discussions:
   - reference: GO:0009527
   posed_by: codex
   posed_date: '2026-10-03'
+causal_graphs:
+- graph_id: periplastidial_membrane_boundary
+  title: Periplastidial Membrane Compartment Delimitation
+  description: Endosymbiont-plasma-membrane-derived lipid bilayer forming the second
+    outermost complex-plastid membrane that delimits the periplastidial compartment.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: periplastidial_lipid_bilayer
+    label: periplastidial lipid bilayer
+    node_type: STRUCTURE
+    component_ref: periplastidial_lipid_bilayer
+  - node_id: periplastidial_membrane
+    label: periplastidial membrane
+    node_type: STRUCTURE
+  - node_id: periplastidial_compartment_boundary
+    label: periplastidial compartment boundary
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: periplastidial_lipid_bilayer
+    predicate: forms
+    object: periplastidial_membrane
+    description: The endosymbiont-plasma-membrane-derived lipid bilayer forms the
+      second outermost membrane of secondary complex plastids.
+    evidence:
+    - reference: GO:7770041
+      notes: GO:7770041 defines the periplastidial membrane as the second outermost
+        lipid bilayer surrounding four-membrane complex plastids.
+    - reference: DOI:10.1016/j.protis.2016.04.001
+      notes: Flori et al. 2016 analyzed the ultrastructure of the diatom periplastidial
+        membrane and compartment.
+  - subject: periplastidial_membrane
+    predicate: maintains
+    object: periplastidial_compartment_boundary
+    description: Together with the outer plastid envelope membrane, the periplastidial
+      membrane encloses and defines the periplastidial compartment.
+    evidence:
+    - reference: GO:7770041
+      notes: GO:7770041 states that the periplastidial membrane and outer plastid
+        envelope membrane together define the periplastidial compartment.
+    - reference: DOI:10.1007/s10265-005-0214-6
+      notes: Hashimoto 2005 reviewed the membrane boundaries of secondary complex
+        plastids.

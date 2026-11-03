@@ -1,0 +1,267 @@
+identifier: GO:0120155
+label: MIH complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A trimeric complex involved in cytokinesis. Proposed to bridge actomyosin
+  ring contraction and septum synthesis in yeast, resulting in the coordination of
+  these processes, and leading to plasma membrane ingression and fusion. In the yeast
+  Saccharomyces cerevisiae this complex consists of Mlc1p, Iqg1p and Hof1p proteins.
+definition_source: GO:0120155
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: Mlc1p-Iqg1p-Hof1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0120155
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005935
+components:
+- component_id: mlc1_subunit
+  label: Myosin light chain 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002048
+  gene_symbols:
+  - MLC1
+  stoichiometry: Constituent EF-hand light-chain subunit of the trimeric MIH complex
+  essentiality: ESSENTIAL
+  role: EF-hand myosin light chain that binds the IQ motifs of Iqg1p, recruiting Iqg1p
+    to the cellular bud neck to nucleate assembly of the Mlc1p-Iqg1p-Hof1p (MIH) complex.
+  evidence:
+  - reference: GO:0120155
+    notes: GO:0120155 defines the S. cerevisiae MIH complex as consisting of Mlc1p,
+      Iqg1p, and Hof1p.
+  - reference: PMID:24895401
+    notes: Tian et al. 2014 (DOI:10.1242/jcs.153429) demonstrated stepwise and cooperative
+      assembly of the Mlc1p-Iqg1p-Hof1p cytokinetic core complex at the Saccharomyces
+      cerevisiae bud neck.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53141
+    protein_label: Myosin light chain 1
+    gene_symbol: MLC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Mlc1p light-chain subunit of the trimeric MIH
+      complex.
+    evidence:
+    - reference: UniProtKB:P53141
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C myosin light
+        chain 1 (MLC1).
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 characterized Mlc1p as a constituent subunit of the
+        S. cerevisiae MIH complex.
+- component_id: iqg1_scaffold_subunit
+  label: Ras GTPase-activating-like protein IQG1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000593
+  gene_symbols:
+  - IQG1
+  - CYK1
+  stoichiometry: Central IQGAP scaffold subunit of the trimeric MIH complex
+  essentiality: ESSENTIAL
+  role: IQGAP-family scaffold protein that binds Mlc1p via its IQ motifs and Hof1p
+    via its N-terminal and C-terminal regions to couple actomyosin contractile ring
+    constriction to primary septum synthesis.
+  evidence:
+  - reference: GO:0120155
+    notes: GO:0120155 specifies Iqg1p as one of the three subunits of the S. cerevisiae
+      MIH complex.
+  - reference: PMID:24895401
+    notes: Tian et al. 2014 showed that Iqg1p directly interacts with Mlc1p and Hof1p
+      to assemble the cytokinetic MIH core complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12280
+    protein_label: Ras GTPase-activating-like protein IQG1
+    gene_symbol: IQG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Iqg1p (also declared as synonym CYK1) IQGAP
+      scaffold subunit of the trimeric MIH complex.
+    evidence:
+    - reference: UniProtKB:Q12280
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C IQG1.
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 demonstrated how Iqg1p bridges Mlc1p and Hof1p in the
+        MIH complex.
+- component_id: hof1_fbar_subunit
+  label: Cytokinesis protein 2 (Hof1p)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR031160
+  gene_symbols:
+  - HOF1
+  - CYK2
+  stoichiometry: F-BAR/SH3 membrane- and septum-coupling subunit of the trimeric MIH
+    complex
+  essentiality: DISPENSABLE
+  role: F-BAR and C-terminal SH3 domain cytokinesis protein that binds Iqg1p and Inn1p/Chs2p
+    at the cellular bud neck, coupling actomyosin ring contraction to plasma membrane
+    ingression and septum synthesis.
+  evidence:
+  - reference: GO:0120155
+    notes: GO:0120155 specifies Hof1p as one of the three constituent subunits of
+      the S. cerevisiae MIH complex.
+  - reference: PMID:24895401
+    notes: Tian et al. 2014 showed that Hof1p binds Iqg1p to complete the trimeric
+      MIH complex and coordinate cytokinesis with septum synthesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05080
+    protein_label: Cytokinesis protein 2
+    gene_symbol: HOF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Hof1p (also declared as synonym CYK2) F-BAR/SH3
+      subunit of the trimeric MIH complex.
+    evidence:
+    - reference: UniProtKB:Q05080
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C cytokinesis
+        protein 2 (HOF1).
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 characterized Hof1p interaction with Iqg1p-Mlc1p in
+        the S. cerevisiae MIH complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4891
+  taxon_label: Saccharomycetaceae
+  presence: COMMON
+  note: Characterized in budding yeasts (Saccharomyces cerevisiae); GO:0120155 carries
+    an explicit RO:0002161 (never in taxon) axiom for NCBITaxon:4895 (Schizosaccharomyces).
+  reference: PMID:24895401
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which stepwise assembly of the trimeric
+    Mlc1p-Iqg1p-Hof1p (MIH) complex at the cellular bud neck was established.
+  reference: PMID:24895401
+functions:
+- function_id: cytokinesis_septum_coordination
+  label: cytokinesis
+  grounding: GO:0000910
+  description: Bridges actomyosin contractile ring constriction and primary septum
+    synthesis at the cellular bud neck, coordinating plasma membrane ingression and
+    abscission during yeast cytokinesis.
+  evidence:
+  - reference: GO:0120155
+    notes: GO:0120155 defines the MIH complex as a trimeric complex involved in cytokinesis
+      that bridges actomyosin ring contraction and septum synthesis.
+  - reference: PMID:24895401
+    notes: Tian et al. 2014 showed that cooperative assembly of the Mlc1p-Iqg1p-Hof1p
+      complex coordinates actomyosin ring contraction with centripetal septum formation.
+evidence:
+- reference: GO:0120155
+  notes: Gene Ontology cellular-component term for MIH complex.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for cellular bud neck.
+- reference: GO:0000910
+  notes: Gene Ontology biological-process term for cytokinesis.
+- reference: PMID:24895401
+  notes: Tian et al. 2014 (J Cell Sci, DOI:10.1242/jcs.153429), stepwise and cooperative
+    assembly of the Mlc1p-Iqg1p-Hof1p cytokinetic core complex in Saccharomyces cerevisiae.
+- reference: PMID:24413167
+  notes: Naylor and Morgan 2014 (J Cell Sci, DOI:10.1242/jcs.144097), regulation of
+    Iqg1 recruitment during actomyosin ring assembly prior to cytokinesis.
+causal_graphs:
+- graph_id: mih_complex_assembly_and_cytokinesis
+  title: Stepwise assembly of the Mlc1p-Iqg1p-Hof1p (MIH) complex at the bud neck
+    and coordination of cytokinesis
+  description: Directed causal graph linking Mlc1p, Iqg1p, and Hof1p subunits to assembly
+    of the trimeric MIH complex (GO:0120155), actomyosin contractile ring contraction
+    (GO:0000916), and cytokinesis (GO:0000910).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mlc1_subunit
+    label: Myosin light chain 1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002048
+    component_ref: mlc1_subunit
+    description: EF-hand myosin light chain Mlc1p.
+  - node_id: iqg1_scaffold_subunit
+    label: Ras GTPase-activating-like protein IQG1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000593
+    component_ref: iqg1_scaffold_subunit
+    description: IQGAP-family cytokinetic scaffold protein Iqg1p.
+  - node_id: hof1_fbar_subunit
+    label: Cytokinesis protein 2 (Hof1p)
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR031160
+    component_ref: hof1_fbar_subunit
+    description: F-BAR and SH3 domain cytokinesis protein Hof1p.
+  - node_id: mih_complex_node
+    label: MIH complex
+    node_type: STRUCTURE
+    grounding: GO:0120155
+    description: Trimeric Mlc1p-Iqg1p-Hof1p complex at the cellular bud neck.
+  - node_id: actomyosin_ring_contraction
+    label: actomyosin contractile ring contraction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000916
+    description: Constriction of the bud-neck actomyosin contractile ring coupled
+      to septum synthesis.
+  - node_id: cytokinesis_process
+    label: cytokinesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000910
+    description: Plasma membrane ingression, septum closure, and cell separation.
+  edges:
+  - subject: mlc1_subunit
+    predicate: RO:0002436
+    object: mih_complex_node
+    description: Mlc1p binds the IQ motifs of Iqg1p and recruits Iqg1p to the bud
+      neck to initiate MIH complex assembly.
+    evidence:
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 showed that Mlc1p binding to Iqg1p IQ motifs targets
+        Iqg1p to the bud neck during MIH complex assembly.
+  - subject: iqg1_scaffold_subunit
+    predicate: RO:0002436
+    object: mih_complex_node
+    description: Iqg1p serves as the central scaffold bridging Mlc1p and Hof1p in
+      the trimeric MIH complex.
+    evidence:
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 demonstrated direct cooperative interactions of Iqg1p
+        with both Mlc1p and Hof1p.
+  - subject: hof1_fbar_subunit
+    predicate: RO:0002436
+    object: mih_complex_node
+    description: Hof1p associates with Iqg1p at the bud neck to form the complete
+      Mlc1p-Iqg1p-Hof1p complex.
+    evidence:
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 established that Hof1p binds Iqg1p to complete the cytokinetic
+        MIH core complex.
+  - subject: mih_complex_node
+    predicate: RO:0002213
+    object: actomyosin_ring_contraction
+    description: The MIH complex stabilizes the actomyosin contractile ring and couples
+      its constriction to primary septum synthesis.
+    evidence:
+    - reference: PMID:24895401
+      notes: Tian et al. 2014 showed that the MIH complex coordinates actomyosin ring
+        contraction with septum formation.
+  - subject: actomyosin_ring_contraction
+    predicate: RO:0002213
+    object: cytokinesis_process
+    description: Coordinated actomyosin ring contraction and septum synthesis drive
+      plasma membrane ingression and cytokinesis.
+    evidence:
+    - reference: GO:0120155
+      notes: GO:0120155 defines the MIH complex as coordinating actomyosin ring contraction
+        and septum synthesis to drive cytokinesis.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0120155 (MIH complex) with verified GO
+    identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

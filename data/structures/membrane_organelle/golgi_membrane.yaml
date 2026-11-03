@@ -19,6 +19,11 @@ curation_history:
     Saccharomyces scope, GO/DOI evidence, a nonmechanistic Golgi membrane topology
     graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Golgi apparatus membrane
   synonym_type: EXACT_SYNONYM
@@ -142,6 +147,14 @@ causal_graphs:
     - reference: DOI:10.1016/0092-8674(91)90176-y
       notes: Serafini et al. 1991 studied coat subunits on Golgi-derived COP-coated
         vesicles.
+  - subject: copi_vesicle_coat
+    predicate: mediates
+    object: copi_coated_vesicle_budding
+    description: Assembly of the COPI coat on the Golgi membrane drives COPI-coated
+      vesicle budding.
+    evidence:
+    - reference: GO:0035964
+      notes: GO:0035964 defines COPI-coated vesicle budding from the Golgi membrane.
 discussions:
 - discussion_id: ground_golgi_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the

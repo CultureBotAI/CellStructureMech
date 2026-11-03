@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribonuclease_mrp_complex.yaml
+  slug: ribonuclease_mrp_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-fa8386
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect RNase MRP RNA and protein subunits to ribonuclease_mrp_complex and activity
+  details: Added contributes to edges from rnase_mrp_rna, shared_rnase_p_mrp_protein_subunits,
+    and mrp_specific_protein_subunits to ribonuclease_mrp_complex and ribonuclease_mrp_complex
+    enables ribonuclease_mrp_activity backed by GO:0000172 and DOI:10.1093/nar/gkm553.

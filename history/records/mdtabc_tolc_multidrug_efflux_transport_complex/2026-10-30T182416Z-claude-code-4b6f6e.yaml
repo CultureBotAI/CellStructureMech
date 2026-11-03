@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml
+  slug: mdtabc_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-4b6f6e
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect MdtB, MdtC, MdtA, and TolC subunits to mdtabc_tolc and link transport to
+    export
+  details: Added contributes to edges from mdtb, mdtc, mdta, and tolc to mdtabc_tolc and from
+    xenobiotic_transport to outer_membrane_export backed by ComplexPortal:CPX-2119 and GO:0140330.

@@ -1,0 +1,7225 @@
+# PR 2355: current-input review of ten records and adversarial follow-up
+
+- Review: 20261103T074109Z-pr2355-current-record-followup
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-11-03T07:28:53.793947Z
+- Finished UTC: 2026-11-03T07:41:09Z
+- Reviewer: Codex root synthesis with three independent read-only adversarial reviewers (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Current-input reassessment of all ten envelope records in PR2355. The stale dolipore septum review is substantively refreshed against its added source-backed swelling-to-septum parthood edge. The independent reviews reassess every original scientific finding and correct seven structured-source applicability defects without editing any scientific record. Material-only glycocalyx, periplasmic space and slime layer are excluded from invented molecular-query requirements.
+
+## Scope And Provenance
+
+Exact ten-record PR cohort reassessed against current main 11da6b917ff0c91d218f43a714d6be1cda22cc45. Changed inputs are substantively reassessed. Scientific records remain unchanged.
+
+Selection: Complete cohort of ten maintained records reviewed in original PR head c2f8a5c97f75a253db8b98973d50ee0d601f23b5.
+Coverage: full; 10 reviewed / 10 in the declared population.
+Source: working_tree at Git base f2fc189116ccf288bb46a576f5e490a86e2c9361.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000935 | data/structures/envelope/division_septum.yaml | maintained | division septum |
+| GO:0000937 | data/structures/envelope/dolipore_septum.yaml | maintained | dolipore septum |
+| GO:0090512 | data/structures/envelope/eisosome_membrane_domain_mcc.yaml | maintained | eisosome membrane domain/MCC |
+| GO:0009277 | data/structures/envelope/fungal_type_cell_wall.yaml | maintained | fungal-type cell wall |
+| GO:0030112 | data/structures/envelope/glycocalyx.yaml | maintained | glycocalyx |
+| GO:0036407 | data/structures/envelope/mycolate_outer_membrane.yaml | maintained | mycolate outer membrane |
+| GO:0042597 | data/structures/envelope/periplasmic_space.yaml | maintained | periplasmic space |
+| GO:0005886 | data/structures/envelope/plasma_membrane.yaml | maintained | plasma membrane |
+| GO:0000934 | data/structures/envelope/porous_cell_septum.yaml | maintained | porous cell septum |
+| GO:0030114 | data/structures/envelope/slime_layer.yaml | maintained | slime layer |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full native QC | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| Native label correspondence | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| TraitMech references | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Native TraitMech link check passed. |
+| Pinned governed files | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Pinned governed files match; native vendored check passed. |
+| Native identifier resolver | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| validate GO:0000935 | passed | True | GO:0000935 | Documented focused command passed. |
+| validate-strict GO:0000935 | passed | True | GO:0000935 | Documented focused command passed. |
+| validate GO:0000937 | passed | True | GO:0000937 | Documented focused command passed. |
+| validate-strict GO:0000937 | passed | True | GO:0000937 | Documented focused command passed. |
+| validate GO:0090512 | passed | True | GO:0090512 | Documented focused command passed. |
+| validate-strict GO:0090512 | passed | True | GO:0090512 | Documented focused command passed. |
+| validate GO:0009277 | passed | True | GO:0009277 | Documented focused command passed. |
+| validate-strict GO:0009277 | passed | True | GO:0009277 | Documented focused command passed. |
+| validate GO:0030112 | passed | True | GO:0030112 | Documented focused command passed. |
+| validate-strict GO:0030112 | passed | True | GO:0030112 | Documented focused command passed. |
+| validate GO:0036407 | passed | True | GO:0036407 | Documented focused command passed. |
+| validate-strict GO:0036407 | passed | True | GO:0036407 | Documented focused command passed. |
+| validate GO:0042597 | passed | True | GO:0042597 | Documented focused command passed. |
+| validate-strict GO:0042597 | passed | True | GO:0042597 | Documented focused command passed. |
+| validate GO:0005886 | passed | True | GO:0005886 | Documented focused command passed. |
+| validate-strict GO:0005886 | passed | True | GO:0005886 | Documented focused command passed. |
+| validate GO:0000934 | passed | True | GO:0000934 | Documented focused command passed. |
+| validate-strict GO:0000934 | passed | True | GO:0000934 | Documented focused command passed. |
+| validate GO:0030114 | passed | True | GO:0030114 | Documented focused command passed. |
+| validate-strict GO:0030114 | passed | True | GO:0030114 | Documented focused command passed. |
+| Supplemental bounded PMID authority checks | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | 909 PMIDs all OK in bounded native requests; full-command limitations remain separate. |
+| Official structured-source applicability and covered-dataset cross-checks | passed | False | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Applicability was assessed against the complete official catalogue and actual molecular assertions. Bounded organism-matched bacterial gene/module checks preserve dataset, strain and membership-threshold scope. All-false membership is not biological absence. Named fungal targets lacking catalogue coverage are bounded downstream non-applicability outcomes; unrelated organisms are not substitutes. Glycocalyx, periplasmic space and slime layer have material/topology-only scope without an identified gene/locus/protein or molecular pathway to query. Seven original reviews require correction: five unsupported expression-only exemptions and two omissions. Historical native-runner unavailability is separate, with no fresh invocation or success claimed. |
+| Independent claim-level source review | passed | True | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114 | Three read-only reviewers covered the complete ten-record cohort, including changed inputs, with explicit scientific findings and source-access limits. Final artifact/head acceptance occurs after saving. |
+| Retained historical adapter runner availability | unavailable | False | GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0036407, GO:0005886, GO:0000934 | Historical 00:49Z invocation unavailable due to OS access restriction. Official catalogue source fallback was inspected separately; no current invocation or successful adapter execution is claimed. The actual historical exit code 1 is retained in the evidence receipt, since the native unavailable-check model has no execution exit-code field. |
+| Native division septum UniProt verify check | passed | True | GO:0000935 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native division septum UniProt causal check | passed | True | GO:0000935 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native dolipore septum UniProt verify check | passed | True | GO:0000937 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native dolipore septum UniProt causal check | passed | True | GO:0000937 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native eisosome membrane domain/MCC UniProt verify check | passed | True | GO:0090512 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native eisosome membrane domain/MCC UniProt causal check | passed | True | GO:0090512 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native fungal-type cell wall UniProt verify check | passed | True | GO:0009277 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native fungal-type cell wall UniProt causal check | passed | True | GO:0009277 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native glycocalyx UniProt verify check | passed | True | GO:0030112 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native glycocalyx UniProt causal check | passed | True | GO:0030112 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native mycolate outer membrane UniProt verify check | passed | True | GO:0036407 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native mycolate outer membrane UniProt causal check | passed | True | GO:0036407 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native periplasmic space UniProt verify check | passed | True | GO:0042597 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native periplasmic space UniProt causal check | passed | True | GO:0042597 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native plasma membrane UniProt verify check | passed | True | GO:0005886 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native plasma membrane UniProt causal check | passed | True | GO:0005886 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native porous cell septum UniProt verify check | passed | True | GO:0000934 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native porous cell septum UniProt causal check | passed | True | GO:0000934 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native slime layer UniProt verify check | passed | True | GO:0030114 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+| Native slime layer UniProt causal check | passed | True | GO:0030114 | Read-only native command returned zero. Exact represented inventory and coverage limits are retained in evidence. Empty inventories or zero molecular graph nodes do not validate narrative molecules, mechanism, taxon transfer or assembly necessity. |
+
+## Scientific And Domain Assessments
+
+### Complete septum versus upstream divisome
+
+identity: supported. Targets: GO:0000935.
+
+GO0000935 matches the complete exchange-blocking division septum. Parent GO0030428, part_of GO0032153 and exact/related synonyms agree with native terms. Divisome GO1990586 is an upstream structure node, not the maintained physical wall identity.
+
+### Material identity and septal location
+
+grounding: concern. Targets: GO:0000935.
+
+The bacterial component correctly denotes peptidoglycan and excludes fungal polymers. CHEBI8005 supplies the exact material class; its lack of a septal deposition qualifier is not a reason to withhold material grounding. Original minor F1 remains open.
+
+### Conditional necessity remains source-limited
+
+evidence: unknown. Targets: GO:0000935.
+
+Bacterial septal PG composition is supported, but the reviewed papers do not establish a universal removal/assembly test for CONDITIONAL at generic division-septum scope. Membership, spatial synthesis and species-specific division phenotypes remain distinct. No new universal necessity or dispensability finding is manufactured.
+
+### Qualified bacterial models
+
+scope: supported. Targets: GO:0000935.
+
+Native taxa verify Bacteria, E. coli K-12 and B. subtilis. The COMMON row is explicitly restricted to walled FtsZ-dividing bacteria, not an exhaustive frequency estimate. Primary B. subtilis and E. coli BW25113 studies support the model examples within their conditions; they are not prevalence surveys.
+
+### Completed barrier compartmentalization
+
+evidence: supported. Targets: GO:0000935.
+
+The function matches the GO-defined completed barrier. The graph concerns upstream bacterial PG synthesis leading to the physical wall; it does not reinstate assembly-only division-plane closure as an intrinsic function of the already completed septum.
+
+### Bounded nonmechanistic assembly summary
+
+graph: supported. Targets: GO:0000935.
+
+The four edges retain divisome localization, septal PG synthesis, formation of the wall and daughter-compartment separation. NONMECHANISTIC and its notes avoid a universal enzyme order or FtsZ rate-control mechanism. Primary studies and the review distinguish E. coli versus B. subtilis treadmilling effects.
+
+### Cited review sources and direct experimental cross-checks
+
+provenance: supported. Targets: GO:0000935.
+
+McQuillen2020 DOI/PMID and selected complete review sections were inspected as secondary synthesis; Egan/Vollmer first published2012 with later issue date is abstract-limited after publisher403. Added2017 primary main texts corroborate bounded bacterial spatial-synthesis claims; neither cited review is mislabeled as a primary experiment.
+
+### FtsZ matching genes and bounded threshold context
+
+evidence: supported. Targets: GO:0000935.
+
+Fresh catalogue and exact ftsZ queries resolve b0095 in E. coli MG1655 and BSU_15290 in the seven-strain B. subtilis modulome. Neither is above threshold in any returned115/72 modules; no informative module hit requires a summary. This is completed source-fallback applicability/context review, not a successful runner execution, biological absence or experimental assembly evidence.
+
+### Explicit fungal scope and optional inventory
+
+completeness: supported. Targets: GO:0000935.
+
+The fungal-polymer TODO acknowledges the broader class. No protein row, family, image, physical property or molecular census is imposed on this material record. Its lack of protein examples is distinct from the named FtsZ source-adapter trigger.
+
+### Porous septum and dolipore distinction
+
+identity: supported. Targets: GO:0000937.
+
+The dolipore is the cap-covered, swollen central-pore subclass of porous cell septum. The current definition agrees with GO0000937 and is distinct from a complete division septum.
+
+### Morphologic parts are not individual protein families
+
+grounding: supported. Targets: GO:0000937.
+
+Swelling and paired caps are whole dolipore-associated substructures, explicitly qualified in grounding notes and function prose. The2008 localization and2010 cap purification/genetics support the scoped example. Whole caps are not SPC18/Spc14/Spc33 protein classes; optional molecular inventory is not required. Bounded GO name searches and transport-limited InterPro queries do not prove universal family absence.
+
+### Unknown assembly necessity
+
+evidence: unknown. Targets: GO:0000937.
+
+Both morphological-component essentialities remain UNKNOWN. Spc33 deletion establishes cap dependence in S. commune under its experimental conditions, not universal necessity of every cap constituent for every dolipore or porous septum.
+
+### Variable Agaricomycotina and S. commune example
+
+scope: supported. Targets: GO:0000937.
+
+Agaricomycotina and S. commune names/ranks are verified. VARIABLE and its note avoid universal subphylum prevalence. The2009 abstract reports a literature survey plus two TEM examples and cap diversity; the2010 paper supports the S. commune example with distinct purification and deletion strains.
+
+### Localization inference and closure genetics
+
+evidence: supported. Targets: GO:0000937.
+
+The2008 R. solani CBS346.84 body supports specific SPC18 localization to caps and some plug material; transport/release from caps remains hypothesis, not directly demonstrated mechanism. The2010 S. commune deletion supports impaired closure, growth and temperature-dependent fruiting. Its source phrase inability to close is bounded by seven of ten WT closed versus eight of ten mutant open, not100% failure.
+
+### Exact sources, publication versions and access limits
+
+provenance: supported. Targets: GO:0000937.
+
+All four cited DOI identities/abstracts were inspected. The1978 paper is abstract-limited after publisher403; its historical fungal name/spelling is not silently mapped to an unverified current taxon. Final2009 body was not recovered and no thesis replacement is used. The2008 genuine PMC HTML and2010 genuine early-online publisher PDF supply the specified direct body/caption evidence.
+
+### Fungal target applicability is catalogue-bounded
+
+evidence: supported. Targets: GO:0000937.
+
+SPC18 and related named cap proteins/closure claims warrant an applicability check. The full current catalogue has no matched Rhizoctonia, Schizophyllum or other fungal dataset; there is no applicable organism key for a downstream cap-gene/module query. Bacterial FtsZ coverage and recombinant E. coli expression in a source experiment cannot substitute for fungal native context. No fresh runner success or biological absence is claimed.
+
+### Bounded structure record without forced molecular census
+
+completeness: supported. Targets: GO:0000937.
+
+No record quotes, tracked images, quantitative properties or mandatory gene/protein inventory require additional claims. The specific cap proteins are species-scoped evidence, not universal porous-septum constituents or new mandatory rows.
+
+### Porous septum and dolipore distinction
+
+identity: supported. Targets: GO:0000934.
+
+GO0000934 matches the broad porous septum identity and BROAD porous-septum synonym; GO0030428 parentage and dolipore subclass distinction agree. The expanded fungal transport/gating prose is supported as prior-work context in the2008 Introduction, not a new experiment in every named fungus.
+
+### Morphologic parts are not individual protein families
+
+grounding: supported. Targets: GO:0000934.
+
+Swelling and paired caps are whole dolipore-associated substructures, explicitly qualified in grounding notes and function prose. The2008 localization and2010 cap purification/genetics support the scoped example. Whole caps are not SPC18/Spc14/Spc33 protein classes; optional molecular inventory is not required. Bounded GO name searches and transport-limited InterPro queries do not prove universal family absence.
+
+### Unknown assembly necessity
+
+evidence: unknown. Targets: GO:0000934.
+
+Both morphological-component essentialities remain UNKNOWN. Spc33 deletion establishes cap dependence in S. commune under its experimental conditions, not universal necessity of every cap constituent for every dolipore or porous septum.
+
+### Variable Agaricomycotina and S. commune example
+
+scope: supported. Targets: GO:0000934.
+
+Agaricomycotina and S. commune names/ranks are verified. VARIABLE and its note avoid universal subphylum prevalence. The2009 abstract reports a literature survey plus two TEM examples and cap diversity; the2010 paper supports the S. commune example with distinct purification and deletion strains.
+
+### Localization inference and closure genetics
+
+evidence: supported. Targets: GO:0000934.
+
+The2008 R. solani CBS346.84 body supports specific SPC18 localization to caps and some plug material; transport/release from caps remains hypothesis, not directly demonstrated mechanism. The2010 S. commune deletion supports impaired closure, growth and temperature-dependent fruiting. Its source phrase inability to close is bounded by seven of ten WT closed versus eight of ten mutant open, not100% failure.
+
+### Exact sources, publication versions and access limits
+
+provenance: supported. Targets: GO:0000934.
+
+All four cited DOI identities/abstracts were inspected. The1978 paper is abstract-limited after publisher403; its historical fungal name/spelling is not silently mapped to an unverified current taxon. Final2009 body was not recovered and no thesis replacement is used. The2008 genuine PMC HTML and2010 genuine early-online publisher PDF supply the specified direct body/caption evidence.
+
+### Fungal target applicability is catalogue-bounded
+
+evidence: supported. Targets: GO:0000934.
+
+SPC18 and related named cap proteins/closure claims warrant an applicability check. The full current catalogue has no matched Rhizoctonia, Schizophyllum or other fungal dataset; there is no applicable organism key for a downstream cap-gene/module query. Bacterial FtsZ coverage and recombinant E. coli expression in a source experiment cannot substitute for fungal native context. No fresh runner success or biological absence is claimed.
+
+### Bounded structure record without forced molecular census
+
+completeness: supported. Targets: GO:0000934.
+
+No record quotes, tracked images, quantitative properties or mandatory gene/protein inventory require additional claims. The specific cap proteins are species-scoped evidence, not universal porous-septum constituents or new mandatory rows.
+
+### Substantively refreshed added parthood edge
+
+graph: supported. Targets: GO:0000937.
+
+The sole scientific delta adds barrel_shaped_septal_swelling is part of dolipore_septum. Current GO0000937 defines the surrounding septal swelling as the barrel-shaped structure and directly supports that edge; the2008 morphology corroborates it. Existing surrounds/covers/participates-in-closure edges and NONMECHANISTIC scope remain supported. The added history is acknowledged without treating the original review as current.
+
+### Historical septal-complex terminology
+
+nomenclature: supported. Targets: GO:0000937.
+
+The1978 title supports dolipore-parenthesome terminology. Septal pore complex remains RELATED, preserving the broader use in the2009 study.
+
+### Original graph-scope finding persists
+
+graph: concern. Targets: GO:0000934.
+
+The MECHANISTIC graph contains two parthood edges and one whole-structure mediates edge, without a represented causal gating transition. Its generic GO0000934 title/node masks the explicitly dolipore-limited descriptions. Original minor F1 remains open; bounded biology can remain while graph interpretation is corrected.
+
+### Native original integrity and protein gates
+
+schema: supported. Targets: GO:0000935.
+
+Original bundle validation and deterministic Markdown roundtrip pass; all original frozen inputs match historical commit bytes. Current native protein verify and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither prove scientific truth nor establish missing protein defects.
+
+### Native original integrity and protein gates
+
+schema: supported. Targets: GO:0000937.
+
+Original bundle validation and deterministic Markdown roundtrip pass; all original frozen inputs match historical commit bytes. Current native protein verify and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither prove scientific truth nor establish missing protein defects.
+
+### Native original integrity and protein gates
+
+schema: supported. Targets: GO:0000934.
+
+Original bundle validation and deterministic Markdown roundtrip pass; all original frozen inputs match historical commit bytes. Current native protein verify and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither prove scientific truth nor establish missing protein defects.
+
+### MCC is the membrane domain, not its filament scaffold
+
+identity: supported. Targets: GO:0090512.
+
+Exact GO identity, ENVELOPE/SUBCELLULAR_REGION, raft parent and eisosome parthood are supported. MCC/can1 synonyms and separation of integral Sur7 from peripheral Pil1/Lsp1 filaments are coherent; S. pombe ontology exemplar does not change the S. cerevisiae experimental scope.
+
+### Sur7 membership, localization and family boundary
+
+evidence: supported. Targets: GO:0090512.
+
+Fresh Walther/Young primary text supports Sur7 in stable membrane domains. Reviewed P54003 and bounded SUR7/S288C query establish identity; W303 localization is not recast as a specific S288C experiment. IPR009571 includes Rim9/PalI as well as Sur7 and would be broader than the component. No component essentiality is asserted.
+
+### Sur7 source links and limits
+
+provenance: supported. Targets: GO:0090512.
+
+Current UniProt links the three named localization references. Young primary localization was read; Navarre current primary abstract detects Sur7 in enriched membranes; Huh abstract gives assay scope, while Sur7-specific attribution remains database-linked. The evidence note correctly identifies annotation provenance, not a new strain-specific independent experiment.
+
+### Nearest source for yeast furrow/filament architecture
+
+evidence: concern. Targets: GO:0090512.
+
+Original F1 remains a minor confirmed provenance defect. Walther establishes Sur7/Pil1 stable patches and abnormal mutant invaginations; Karotki sec11/Fig7 directly addresses normal furrow-associated lattice. The S. cerevisiae row should attach that source or narrow its wording. Fungal VARIABLE and yeast COMMON remain qualified model scope, not numerical prevalence estimates.
+
+### Localization and filament scaffolding edges
+
+evidence: supported. Targets: GO:0090512.
+
+The two mechanistic edges distinguish Sur7 localization from a filament scaffold. Fresh primary Karotki supports physical membrane-binding/lattice scaffolding with qualified in-vitro versus in-vivo geometry; no universal Sur7 requirement or sole endocytic mechanism is inferred.
+
+### Replace unsupported no-expression exemption with checked coverage
+
+provenance: supported. Targets: GO:0090512.
+
+The original explicitly exempts iModulonDB for lack of expression claims, which does not satisfy the policy for named SUR7. Historical runner availability is separate. Fresh catalogue inspection finds no matching yeast/eukaryote dataset; no downstream bacterial surrogate is appropriate and the absence is not negative biological evidence.
+
+### Variable fungal wall and distinct external capsule
+
+identity: supported. Targets: GO:0009277.
+
+GO identity, fungal wall synonym, narrower chitin/beta-glucan synonym and broad cell-wall parent agree. Variable glucan/glycoprotein and optional chitin wording avoids universal composition. Cryptococcus capsule is explicitly outside the wall, consistent with current GO and scoped secondary source.
+
+### Material classes and heterogeneous mannoproteins
+
+grounding: supported. Targets: GO:0009277.
+
+ChEBI chitin and beta-D-glucan identities match. The latter class includes multiple linkage forms. A wall-mannoprotein collective spans unrelated proteins and attachment modes, so a single sequence family would over-narrow it. CONDITIONAL material rows and explicit variability do not assert each component is universal or individually necessary.
+
+### Four exact yeast examples with bounded annotation provenance
+
+grounding: supported. Targets: GO:0009277.
+
+CWP1/P28319, CWP2/P43497, SED1/Q01589 and GAS1/P22146 are reviewed S288C mappings confirmed by exact queries. GAS1 membrane annotations and named references are genuine, while a wall-linked pool is supported by Orlean and current database. These location scopes coexist; no universal wall-protein necessity follows.
+
+### Taxon-scoped morphology and surface roles
+
+evidence: supported. Targets: GO:0009277.
+
+Secondary Gow/Orlean support fungal surface interactions and S. cerevisiae osmotic integrity/shape with composition and life-stage variation. COMMON prevalence is explicitly qualified to most vegetative cells, not all fungal stages. No population frequency measurement or new causal deletion claim is invented.
+
+### Nonmechanistic wall matrix graph
+
+evidence: supported. Targets: GO:0009277.
+
+The explicitly NONMECHANISTIC graph describes well-studied glucan/chitin/mannoprotein networks, wall outside the membrane and shape support. Its scope notes and edges preserve species variation; secondary synthesis is adequate for this qualified overview and is not presented as a single fresh direct experiment.
+
+### Named yeast proteins require a coverage assessment
+
+provenance: supported. Targets: GO:0009277.
+
+The old no-transcriptomic-inference exemption omits actual applicability. The current catalogue has no yeast/eukaryote match for these four exact named examples; that bounded absence permits N/A for downstream modules without claiming biological absence. Historical runner failure is explicitly not a new execution.
+
+### Generic cell-bounding membrane and exact cytoplasmic synonym
+
+identity: concern. Targets: GO:0005886.
+
+The exact structure ID, membrane parent, cell-periphery parthood and lipid-boundary wording are appropriate across microbial groups. Original F1 remains minor/confirmed: unqualified cytoplasmic membrane is EXACT in GO, while the record types it NARROW. The separately qualified bacterial inner membrane remains narrow.
+
+### Heterogeneous lipids and integral-protein cohort
+
+grounding: supported. Targets: GO:0005886.
+
+The material and protein rows are broad collectives, not a unique chemical or homologous protein family. Collective lipid ESSENTIAL means the defining membrane material; it does not require every lipid species or named integral protein. NONMECHANISTIC graph scope does not choose a bacterial bilayer or archaeal monolayer biosynthetic pathway.
+
+### Bacterial and yeast exact identities
+
+grounding: supported. Targets: GO:0005886.
+
+lacY/P02920 and secY/P0AGA2 are reviewed E. coli K-12 identities; PMA1/P05030 and HXT1/P32465 are reviewed S288C identities. Current exact reviewed-symbol queries and native checks agree. Protein examples are illustrative and not a universal composition or essentiality list; Hxt1 location remains database-evidence scoped.
+
+### LacY localization citations and reconstitution scope
+
+provenance: supported. Targets: GO:0005886.
+
+Current UniProt names the three cited localization references. Fresh Calamia first-page image supports topology experiments and laboratory strains; Newman abstracts concern reconstituted lactose transport. Transport necessity in those assays is not membrane-formation necessity. Remaining Calamia pages and Newman full bodies were not freshly read.
+
+### General barrier and integral-protein activities
+
+evidence: supported. Targets: GO:0005886.
+
+Generic lipid boundary, selective transport and class-level microbial energy-linked activities are supported with source/taxon qualifications. Cell-boundary universality does not imply that every example carries the same respiratory complex. Silhavy is bacterial, Douglas abstract fungal, Ellen archaeal secondary context; Albers current access is abstract-only.
+
+### Nonmechanistic material organization, not complete biogenesis
+
+evidence: supported. Targets: GO:0005886.
+
+The four edges give a broad lipid matrix/enclosure/protein embedding/transport sketch. Lipid physical self-assembly wording is read within that explicit NONMECHANISTIC material scope, not as an assertion that living membrane establishment and maintenance require no energy or biosynthesis. No complete biosynthetic path or individual-lipid necessity is inferred.
+
+### Actual matched E. coli genes and modules, with yeast coverage gap
+
+provenance: supported. Targets: GO:0005886.
+
+The original lacks a structured-source applicability assessment despite named genes. Current catalogue matches E. coli MG1655. Exact b0343/lacY/P02920 and b3300/secY/P0AGA2 were inspected, along with all115 membership rows and their positive k61 Galactose/k7 Translation summaries and gene lists. These are bounded computational contexts, not physical localization/assembly proof. AI summaries and product-only search hits were excluded. Yeast examples have no current catalogue match.
+
+### Native protein identity and graph coverage checks
+
+schema: supported. Targets: GO:0090512.
+
+Both native commands pass at the reviewed source head. The maintained inventory has 1 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+
+### Unchanged input, immutable predecessor and deterministic output
+
+schema: supported. Targets: GO:0090512.
+
+The entire target equals its original frozen input and current main/head bytes. Original native validation and Markdown render pass. No staleness refresh of record content is required; current reassessment preserves historical provenance and any exact open predecessor.
+
+### Historical resolutions, retained omissions and absent artifact scope
+
+provenance: supported. Targets: GO:0090512.
+
+Maintained history/discussions and original verdict were read without treating a prior resolution as proof of unrelated claims. No images, numerical quantities, associated-trait rows or verbatim snippets are present in this target. No missing optional inventory or image is fabricated as a defect. Current minor finding remains open; unchanged input does not resolve it.
+
+### Native protein identity and graph coverage checks
+
+schema: supported. Targets: GO:0009277.
+
+Both native commands pass at the reviewed source head. The maintained inventory has 4 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+
+### Unchanged input, immutable predecessor and deterministic output
+
+schema: supported. Targets: GO:0009277.
+
+The entire target equals its original frozen input and current main/head bytes. Original native validation and Markdown render pass. No staleness refresh of record content is required; current reassessment preserves historical provenance and any exact open predecessor.
+
+### Historical resolutions, retained omissions and absent artifact scope
+
+provenance: supported. Targets: GO:0009277.
+
+Maintained history/discussions and original verdict were read without treating a prior resolution as proof of unrelated claims. No images, numerical quantities, associated-trait rows or verbatim snippets are present in this target. No missing optional inventory or image is fabricated as a defect. No scientific finding is established; positive assessments remain bounded by their actual source tiers.
+
+### Native protein identity and graph coverage checks
+
+schema: supported. Targets: GO:0005886.
+
+Both native commands pass at the reviewed source head. The maintained inventory has 4 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+
+### Unchanged input, immutable predecessor and deterministic output
+
+schema: supported. Targets: GO:0005886.
+
+The entire target equals its original frozen input and current main/head bytes. Original native validation and Markdown render pass. No staleness refresh of record content is required; current reassessment preserves historical provenance and any exact open predecessor.
+
+### Historical resolutions, retained omissions and absent artifact scope
+
+provenance: supported. Targets: GO:0005886.
+
+Maintained history/discussions and original verdict were read without treating a prior resolution as proof of unrelated claims. No images, numerical quantities, associated-trait rows or verbatim snippets are present in this target. No missing optional inventory or image is fabricated as a defect. Current minor finding remains open; unchanged input does not resolve it.
+
+### Broad parent with preserved microbial and nonmicrobial subclasses
+
+identity: supported. Targets: GO:0030112.
+
+The native identifier, definition and parent match. Explicit nonmicrobial subclass discussion prevents a microbial example from redefining the complete GO class; capsule and slime layer remain distinct narrower structures.
+
+### A collective matrix is not one chemical species
+
+grounding: supported. Targets: GO:0030112.
+
+The matrix row deliberately names heterogeneous extracellular material rather than one polymer or protein. Label-only status and the open grounding discussion accurately preserve that class boundary. The complete Brown scans corroborate the mixed-material example without supplying a universal exact chemical inventory.
+
+### Defining material versus chemical-class formation requirements
+
+evidence: unknown. Targets: GO:0030112.
+
+ESSENTIAL applies to the complete extracellular material constituting the glycocalyx. That logical constitution does not establish whether the layer forms without any particular glycan, protein or other chemical class. Brown extraction and Hyams capsule comparisons do not resolve universal formation requirements for the broad matrix, so individual necessity remains unknown without a new finding.
+
+### Two bounded bacterial examples
+
+scope: supported. Targets: GO:0030112.
+
+Brown supports the chemically analyzed P.aeruginosa slime example; all five primary scan pages were independently visually read during this independent review. Hyams directly supports an organized pneumococcal capsule in named strains. Taxon names agree; neither paper is treated as universal prevalence or functional evidence.
+
+### Explicitly descriptive mature-layer topology
+
+graph: supported. Targets: GO:0030112.
+
+The two edges state material constitution and peripheral location. NONMECHANISTIC and the scope note accurately exclude an unsupported secretion or retention mechanism. No separate function row is mandatory for this broad parent.
+
+### Bounded record-level coverage
+
+completeness: supported. Targets: GO:0030112.
+
+The entire maintained record and cited claim contexts were inspected at the stated source scopes. Exact additional polymer inventories, numerical properties, images, traits and expanded mechanisms are optional. No verbatim quotation requires repair, and no status or history rewrite is proposed. A clean result does not assert exhaustive literature completeness.
+
+### Actual structured-source applicability and bounded context
+
+evidence: not_applicable. Targets: GO:0030112.
+
+The complete target is a mixed extracellular-material/outermost topology class, without a named gene/protein or molecular-pathway assertion. Actual scope supports downstream non-applicability. Species examples alone do not require gene/module searches. The original expression-only sentence is clarified by this scope basis; its correct N/A conclusion does not establish a missing required molecular query or a separate bundle defect.
+
+### Current native checks and frozen original provenance
+
+schema: supported. Targets: GO:0030112.
+
+Original schema/render and frozen hashes pass. Current root native protein checks exit0; empty exact inventories and zero protein nodes establish no narrative molecular completeness.
+
+### Mycomembrane distinguished from the entire wall core
+
+identity: supported. Targets: GO:0036407.
+
+Exact GO identity, synonyms and outer-membrane parent are supported. The definition retains the mycolate-rich bilayer and covalent AG–PG linkage. The resolved boundary discussion correctly keeps AG and PG as contextual graph nodes rather than local membrane constituents.
+
+### Chemical class versus heterogeneous pools
+
+grounding: supported. Targets: GO:0036407.
+
+Mycolic acid and contextual arabinogalactan match the verified material classes. Extractable lipids and outer-membrane proteins are heterogeneous pools, not single CHEBI or sequence families. Native fractions and review evidence support their presence; one universal lipid recipe is not warranted.
+
+### Structural requirement for mycolates in the tested corynebacterial context
+
+evidence: supported. Targets: GO:0036407.
+
+The tested C. glutamicum mycolate-deficient mutant lacks an outer-membrane bilayer, providing a structural endpoint distinct from viability. This supports a material requirement in that experimental context; it does not establish individual necessity of each extractable lipid or porin.
+
+### Assembly necessity of heterogeneous lipid and protein pools
+
+evidence: unknown. Targets: GO:0036407.
+
+Presence and uptake or growth effects do not establish whether every member of the extractable-lipid and outer-membrane-protein pools is required to form the membrane. The record uses CONDITIONAL for these pools; the reviewed evidence does not resolve that assembly-necessity classification. No individual requirement or dispensability is inferred.
+
+### Reviewed MspA and accurately labeled unreviewed porins
+
+evidence: supported. Targets: GO:0036407.
+
+Accession/name/gene/taxon/status pairs match all three native entries. The exact reviewed query uniquely returns MspA and returns no reviewed PorA/PorB in the declared species. H7C6A6 links a sequenced MH20-22B PorA record; H7C685 links the ATCC13032 PorB sequence. Their source-linked primary abstracts support the named porin identities and channels, while the maintained entry notes remain identity-only. Unreviewed status is not silently promoted.
+
+### Source-supported model taxa with historical names
+
+scope: supported. Targets: GO:0036407.
+
+Bacterial distribution is explicitly variable. Mycobacteria and related corynebacteria are supported; M.smegmatis mc2155 and C.glutamicum are directly represented in the primary sources. ENA currently uses Mycolicibacterium smegmatis for1772; the maintained older genus name is the historical source name, not a different organism. No prevalence census is asserted.
+
+### Permeability barrier and scoped protein channels
+
+evidence: supported. Targets: GO:0036407.
+
+The membrane barrier and porin-mediated hydrophilic uptake are supported by the review and native fractions. MspA evidence is species-specific; the record is not read as saying every mycobacterium carries MspA or that every identified outer-membrane protein is a general porin.
+
+### Preserve uncertainty of leaflet partition
+
+graph: concern. Targets: GO:0036407.
+
+The explicitly NONMECHANISTIC graph correctly gives class-level anchoring and membrane architecture. However, component roles and the pack-into edge state inner/outer-leaflet assignments without the model qualifications present in the cited papers. This is a bounded certainty issue; bilayer existence and covalent linkage remain supported.
+
+### Bounded record-level coverage
+
+completeness: supported. Targets: GO:0036407.
+
+All maintained fields and claim-bearing source passages were inspected at the disclosed access tiers. One bounded source-certainty finding remains. Optional detailed chemistry, images and inventories are not mandatory. No status/history rewrite or exhaustive literature completeness is asserted.
+
+### Actual structured-source applicability and bounded context
+
+evidence: supported. Targets: GO:0036407.
+
+Named mspA/porA/porB triggers applicability. Fresh official catalogue matches C. glutamicum/modulome263; bounded porA/porB queries, three gene entries and all87 membership rows per candidate were inspected. Exact H7C6A6 and H7C685 mappings agree; the second PorA-family product match is not conflated with PorA. All membership flags are false, a thresholded dataset result with no biological absence inference or positive module requiring summary. M. smegmatis has no returned catalogue dataset; M. tuberculosis is not substituted. Current source fallback is separated from the historical runner PermissionError.
+
+### Current native checks and frozen original provenance
+
+schema: supported. Targets: GO:0036407.
+
+Original schema/render and frozen hashes pass. Current root native protein checks exit0; three exact examples and one covered protein node do not independently prove localization or necessity.
+
+### Generic region and exact authority mappings
+
+identity: supported. Targets: GO:0042597.
+
+The GO label, definition, exact synonym, UniProt location xref and SUBCELLULAR_REGION classification agree. The explicit GO part_of relation is maintained without silently converting it to is_a.
+
+### Generic versus diderm region and boundary material
+
+scope: supported. Targets: GO:0042597.
+
+Both GO and the full narrower maintained record distinguish GO0042597 from GO0030288. Membranes and walls delimit the generic region and are not uniformly contained material; leaving this broad record component-free is an explicit appropriate boundary decision.
+
+### Separate gram-negative and gram-positive examples
+
+evidence: supported. Targets: GO:0042597.
+
+The E.coli example is supported by bacterial review synthesis. The S.aureus example is supported by directly read native cryo-TEM results in Newman D2C. The species rows are not strain identifiers and no universal prevalence, width or composition is inferred.
+
+### Optional inventory and history
+
+completeness: supported. Targets: GO:0042597.
+
+No concrete scientific-record corrective issue was observed. A generic region does not require a universal component list, graph or function inventory. No quoted snippet or image occurs. Existing PROPOSED state and resolved discussions are preserved; historical authorship and earlier searches are not independently certified.
+
+### Actual structured-source applicability and bounded context
+
+evidence: not_applicable. Targets: GO:0042597.
+
+The complete target is a generic membrane/wall-delimited region, without a named gene/protein or molecular-pathway assertion. Actual scope supports downstream non-applicability. Species examples alone do not require gene/module searches. The absence of a formal original adapter row alone is not a defect for this sparse scope.
+
+### Current native checks and frozen original provenance
+
+schema: supported. Targets: GO:0042597.
+
+Original schema/render and frozen hashes pass. Current root native protein checks exit0; empty exact inventories and zero protein nodes establish no narrative molecular completeness.
+
+### Diffuse layer versus organized capsule
+
+identity: supported. Targets: GO:0030114.
+
+GO identity, ENVELOPE_LAYER kind, glycocalyx parent and UniProt location xref agree. The capsule distinction is explicit and authority-backed, rather than merging loosely attached matrix with an organized capsule.
+
+### Mixed extracellular material and necessity
+
+grounding: supported. Targets: GO:0030114.
+
+The component is the collective material constituting the layer. GO, UniProt and Brown composition claims are attributed separately. The measured mixture and unresolved polymer architecture do not justify grounding the complete matrix to one glycan or protein family; material identity remains supported independently of individual formation requirements.
+
+### Whole-material constitution versus individual requirements
+
+evidence: unknown. Targets: GO:0030114.
+
+The record applies ESSENTIAL to the complete material constituting the slime layer, not separately to each named chemical class. Brown chemical extraction does not establish whether the layer forms without any particular polysaccharide, protein or nucleic-acid component. Logical constitution is retained; experimental formation necessity for those individual classes remains unknown, without a new corrective finding.
+
+### Historical multi-strain biochemical example
+
+scope: supported. Targets: GO:0030114.
+
+Native taxon identity matches P.aeruginosa. Brown studied eight strains after five-day static culture at37C, using different media and two extraction procedures. The maintained example claims only chemical characterization of multiple strains; it does not promote uniform composition, fixed proportions or all modern biofilm matrices.
+
+### Descriptive matrix organization
+
+graph: supported. Targets: GO:0030114.
+
+NONMECHANISTIC and its scope note accurately describe the two edges: material forms a layer and the layer surrounds the cell surface. No species-neutral export system, adhesion mechanism, biosynthetic route or individual-component necessity is asserted.
+
+### Open chemistry question is appropriate
+
+completeness: supported. Targets: GO:0030114.
+
+The broad mixed-material TODO remains justified. Optional protein inventory, strain list, quantitative table, image, traits and mechanistic function rows are not mandatory. No existing quotation or reused image occurs. No scientific-record corrective issue was found within this bounded record review; PROPOSED status and history are preserved.
+
+### Actual structured-source applicability and bounded context
+
+evidence: not_applicable. Targets: GO:0030114.
+
+The complete target is a mixed diffuse extracellular-material/topology class, without a named gene/protein or molecular-pathway assertion. Actual scope supports downstream non-applicability. Species examples alone do not require gene/module searches. The absence of a formal original adapter row alone is not a defect for this sparse scope.
+
+### Current native checks and frozen original provenance
+
+schema: supported. Targets: GO:0030114.
+
+Original schema/render and frozen hashes pass. Current root native protein checks exit0; empty exact inventories and zero protein nodes establish no narrative molecular completeness.
+
+### Complete frozen-input comparison and bounded refresh
+
+provenance: supported. Targets: GO:0000935, GO:0000937, GO:0090512, GO:0009277, GO:0030112, GO:0036407, GO:0042597, GO:0005886, GO:0000934, GO:0030114.
+
+1 of ten original target hashes differ from current main. The changed content is substantively reassessed in the target-specific assessments; original observations remain historical and unchanged. All current target and used context bytes are frozen.
+
+## Findings
+
+### plaque-t0-F1: Separate peptidoglycan identity from its septal location
+
+minor / open / confirmed; issue key: division-septum-peptidoglycan-material-grounding.
+
+The bacterial_septal_peptidoglycan component explicitly denotes PG, but its grounding note requires a term that also denotes deposition at bacterial division septa. Native CHEBI8005 supplies the verified material-class identity. Septal placement and exclusion of fungal polymers belong in the role and evidence rather than preventing this material link.
+
+### plaque-t2-F1: State the graph subtype and descriptive scope
+
+minor / open / confirmed; issue key: porous-septum-graph-scope.
+
+The graph is marked MECHANISTIC but represents only component parthood and a whole-structure mediates edge. Its generic GO0000934 node/title stand for descriptions explicitly limited to the dolipore example. The cited localization evidence does not itself supply a represented causal gating transition.
+
+### micro-F1: Cite the source that resolves MCC furrow and filament architecture
+
+minor / open / confirmed; issue key: mcc-yeast-furrow-architecture-source-placement.
+
+The S.cerevisiae distribution note describes Sur7-marked furrow-like MCC domains paired with filaments but cites only Walther2006. That primary body establishes Sur7/Pil1 localization and immobile patches; its EM images described in the body concern abnormal pil1-deletion invaginations rather than normal furrow-and-filament architecture. Karotki2011 Results sec11/Fig7 directly support the fuller architecture and are already cited elsewhere in the record. The biological assertion is supported, but its nearest source is incomplete.
+
+### micro-F2: Use exact scope for the unqualified cytoplasmic membrane synonym
+
+minor / open / confirmed; issue key: plasma-membrane-cytoplasmic-synonym-scope.
+
+The bare cytoplasmic membrane synonym is typed NARROW, but native GO0005886 lists it as EXACT and the maintained resolved discussion describes the same cell-bounding structure. Its bacterial review citation does not by itself restrict the unqualified name to a biologically narrower class. The distinct bacterial inner membrane row is already explicitly qualified and can remain narrow.
+
+### septin-S2355-F1: Retain the sources' uncertainty about leaflet organization
+
+minor / open / confirmed; issue key: mycomembrane-leaflet-model-certainty.
+
+The mycolic-acid role presents a covalently attached inner leaflet and the extractable-lipid role/graph present outer-leaflet packing as settled architecture. Niederweis2010 explicitly discusses extractable lipids in both leaflets and unknown mycolate conformation; Hoffmann2008 gives alternative models, and Chiaradia2017 still calls the outer-leaflet assignment presumed. Qualify the arrangement as a source-scoped model without disputing the observed bilayer or covalent AG linkage.
+
+## Recommended Actions And Acceptance Checks
+
+### plaque-t0-A1
+
+Ground the explicitly bacterial peptidoglycan material to verified CHEBI8005 and revise the label-only rationale while retaining bacterial septal scope.
+
+- Preserve the exact prior finding key and source scopes.
+- Scientific record edits require separately authorized guarded curation and append-only history; this PR only files the curation work.
+- Run native record validation, strict checks, product/trait/history gates, rendering and QC for any later curation.
+
+### plaque-t2-A1
+
+Qualify the graph as the dolipore example and make its scope status/notes reflect the descriptive topology, or separately curate a supported causal gating transition.
+
+- Preserve the exact prior finding key and source scopes.
+- Scientific record edits require separately authorized guarded curation and append-only history; this PR only files the curation work.
+- Run native record validation, strict checks, product/trait/history gates, rendering and QC for any later curation.
+
+### micro-A1
+
+Replace the distribution-row reference with Karotki2011 or Douglas2014 for its full furrow-and-filament wording, or narrow that note to the Sur7/eisosome localization established by Walther2006. Preserve the species scope and separate S288C identity-only protein example.
+
+- The nearest citation must support every retained anatomical clause; verify Karotki Results sec11/Fig7 or the exact Douglas abstract.
+- Retain W303 experimental context without treating it as an S288C-specific localization assay.
+- Any later maintained edit requires separate authorization, the guarded curation writer, history and focused schema/strict validation.
+
+### micro-A2
+
+Type unqualified cytoplasmic membrane as EXACT_SYNONYM and cite GO0005886, or explicitly qualify the synonym text if a narrower bacterial name is intended. Retain bacterial inner membrane as NARROW_SYNONYM.
+
+- Confirm the exact native GO synonym and revised text/source agree.
+- Preserve archaeal-compatible lipid-boundary wording and the separate bacterial inner membrane row.
+- Run focused schema and strict-reference validation.
+
+### septin-S2355-C1
+
+Qualify leaflet assignments as the cited model and preserve the possibility of extractable material in both leaflets; retain the directly supported bilayer and covalent linkage.
+
+- Separate observed membrane structure and biochemical fraction composition from inferred leaflet placement.
+- Do not infer a universal composition or individual lipid/porin formation necessity.
+- Any scientific edit requires separate curation authorization, guarded writes, append-only history and native validation/rendering.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| current-record-0 | data/structures/envelope/division_septum.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80; current SHA256 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80. Record bytes unchanged since the original review. |
+| original-review-0 | reviews/structured/20261021T101605Z-division-septum-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-1 | data/structures/envelope/dolipore_septum.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 a985a168ce218d28b2fb0bdf2bb1b4b025b9d7b2656c9554dea9a2067059d6dd; current SHA256 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca. Changed record reassessed against current sources. |
+| original-review-1 | reviews/structured/20261021T101608Z-dolipore-septum-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-2 | data/structures/envelope/eisosome_membrane_domain_mcc.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f; current SHA256 cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f. Record bytes unchanged since the original review. |
+| original-review-2 | reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-3 | data/structures/envelope/fungal_type_cell_wall.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64; current SHA256 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64. Record bytes unchanged since the original review. |
+| original-review-3 | reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-4 | data/structures/envelope/glycocalyx.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8; current SHA256 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8. Record bytes unchanged since the original review. |
+| original-review-4 | reviews/structured/20261021T101617Z-glycocalyx-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-5 | data/structures/envelope/mycolate_outer_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881; current SHA256 f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881. Record bytes unchanged since the original review. |
+| original-review-5 | reviews/structured/20261021T101620Z-mycolate-outer-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-6 | data/structures/envelope/periplasmic_space.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98; current SHA256 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98. Record bytes unchanged since the original review. |
+| original-review-6 | reviews/structured/20261021T101622Z-periplasmic-space-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-7 | data/structures/envelope/plasma_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d; current SHA256 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d. Record bytes unchanged since the original review. |
+| original-review-7 | reviews/structured/20261021T101624Z-plasma-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-8 | data/structures/envelope/porous_cell_septum.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f; current SHA256 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f. Record bytes unchanged since the original review. |
+| original-review-8 | reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-9 | data/structures/envelope/slime_layer.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34; current SHA256 e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34. Record bytes unchanged since the original review. |
+| original-review-9 | reviews/structured/20261021T101629Z-slime-layer-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| plaque-division-septum-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000935,GO:0030428,GO:0032153,GO:1990586; All four returned definitions, synonyms and exact inverse-child relations | supports | GO0000935 exactly supplies the definition and exact/related synonyms. GO0030428 has GO0000935 as an is_a child; GO0032153 has it as a part_of child. GO1990586 denotes the prokaryotic division machinery and coordinates membrane/wall constriction, rather than denoting the finished wall. |
+| plaque-division-septum-agent-chebi-8005 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/8005/; Complete native name, definition, synonyms, release status and ontology relations | supports | Released three-star CHEBI8005 identifies peptidoglycan as the alternating N-acetylglucosamine/N-acetylmuramic-acid polymer with attached peptide chains. Its material identity does not encode deposition site. |
+| plaque-division-septum-agent-jats-PMC8610174 | https://pmc-oa-opendata.s3.amazonaws.com/PMC8610174.1/PMC8610174.1.xml; JATS PMC8610174 sectionsS1 Introduction, S2 Overview, S16 Scaffold, S17 Coordinator, S22 Cell Pole Shape Determinant, S23 Conclusions; complete named prose sections, no independent primary-reference or image-pixel audit | supports | Secondary review body at sectionsS1/S2/S16/S17/S22/S23 supports bounded divisome localization, septal peptidoglycan synthesis and species-dependent FtsZ roles. Force generation and detailed synthesis coordination retain uncertainty; this review is not itself primary experimental evidence. |
+| plaque-division-septum-agent-doi-10.1146_annurev-biophys-121219-081703 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1146/annurev-biophys-121219-081703%22; Complete bibliographic identity, publication types and abstract | supports | Exact native citation identifies McQuillen and Xiao2020, PMID32092282, and its review abstract. |
+| plaque-division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1111/j.1749-6632.2012.06818.x%22; Complete citation, first-publication/issue dates, publication types and abstract; full body not recovered | supports | Exact Egan and Vollmer review abstract describes the divisome at mid-cell synthesizing stress-bearing PG and coordinating envelope constriction, including simultaneous E.coli septal synthesis/cleavage. First publication2012-12-05 and issue2013 explain the record date. |
+| plaque-division-septum-agent-tax-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Bacteria at domain rank; identity metadata alone is not occurrence evidence. |
+| plaque-division-septum-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Escherichia coli K-12 at strain rank; identity metadata alone is not occurrence evidence. |
+| plaque-division-septum-agent-tax-1423 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1423; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Bacillus subtilis at species rank; identity metadata alone is not occurrence evidence. |
+| plaque-egan-access | https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1749-6632.2012.06818.x; Actual publisher pdfdirect response body;403 HTML, not a PDF | context_only | This route did not expose the review body. Egan claims are restricted to the exact native abstract; no source-wide absence claim is made. |
+| plaque-dolipore-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000937,GO:0000934; Both exact definitions and GO0000934 inverse-child relation | supports | Native GO0000937 describes the barrel-shaped swelling and cap-covered central pore; GO0000934 has dolipore septum as an is_a child. The native class is distinct from a complete, exchange-blocking division septum. |
+| plaque-dolipore-agent-tax-5302 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5302; Taxon identifier, scientific name, rank, lineage and aliases | supports | Native taxon entry verifies Agaricomycotina at subphylum rank; it does not independently establish occurrence or assign every sample to a single experimental strain. |
+| plaque-dolipore-agent-tax-5334 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5334; Taxon identifier, scientific name, rank, lineage and aliases | supports | Native taxon entry verifies Schizophyllum commune at species rank; it does not independently establish occurrence or assign every sample to a single experimental strain. |
+| plaque-dolipore-agent-traquair1978-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1139/m78-129; Exact bibliographic fields, publication dates and complete native abstract | supports | Exact Traquair and McKeen1978 identity, DOI10.1139/m78-129 and PMID679064 are verified. The title supplies dolipore-parenthesome terminology; the abstract describes imperforate parenthesomes in the named historical fungus. Full-body TEM methods were not recovered. |
+| plaque-dolipore-agent-driel2009-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.mycres.2008.12.007; Exact bibliographic fields, publication dates and complete native abstract | supports | Exact vanDriel2009 citation, DOI10.1016/j.mycres.2008.12.007 and PMID19640404 are verified. Abstract describes three cap morphotypes, a literature survey of more than325species, and TEM of R.fibula and C.formosus; it does not assert universal cap presence. |
+| plaque-dolipore-agent-driel2008-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1128/EC.00125-08; Exact bibliographic fields, publication dates and complete native abstract | supports | Exact vanDriel2008 identity, DOI10.1128/EC.00125-08, PMID18757567 and PMC2568075 are verified. The abstract is separate from the genuine body inspected below. |
+| plaque-dolipore-agent-peer2010-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1111/j.1462-2920.2009.02122.x; Exact bibliographic fields, publication dates and complete native abstract | supports | Exact vanPeer2010 identity, DOI10.1111/j.1462-2920.2009.02122.x and PMID20050873 are verified. The early-online2009 date on the PDF and2010 issue refer to the same paper. |
+| plaque-dolipore-agent-legacy-PMC2568075 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2568075/; PMC HTML: complete Abstract/Introduction, Methods sec1, Results sec13, Discussion sec17 and Figures1-8 captions; no source image-pixel reanalysis | supports | R.solani CBS346.84 material was enriched by disruption, centrifugation and detergent treatment. Specific anti-recSPC18 labels caps and some plug peripheries, not the swelling labeled nonspecifically by antibodies to glycosylated protein. Variable plug labeling and a repository/release model are explicitly hypotheses, not direct proof of transport or a universal plugging mechanism. |
+| plaque-dolipore-agent-peer2010-knaw-pdf | https://wi.knaw.nl/images/ResearchGroups/Publications/2009Peer0002.pdf; Genuine early-online PDF: Introduction/Results/Discussion pp1-8; Experimental procedures p8 strains/growth, laser dissection and purification opening; Figures1-7 captions. Remaining detailed cloning/proteomics methods, supplements/movies and image pixels excluded. | supports | Genuine early-online PDF of vanPeer2010: S. commune Spc33 deletion removes visible caps and impairs closure. The assay reports seven of ten wild-type septa closed and eight of ten mutant septa open, not100% closure failure. Cap purification uses the sc3/sc15 deletion derivative of4-40; spc33 deletion uses4-8 and crosses with4-8b. Growth/fruiting depend on temperature, turgor mechanism is speculative, and Spc14 antiserum was nonspecific. |
+| plaque-dolipore-agent-traquair1978-pdf | https://cdnsciencepub.com/doi/pdf/10.1139/m78-129; Actual publisher response body:403 HTML | context_only | This route did not expose the complete cited article. Exact native abstracts remain distinct from the related thesis version or another paper’s recovered body. |
+| plaque-adapter-datasets | https://imodulondb.org/api/datasets; Complete returned organism/dataset catalogue | context_only | Fresh official catalogue contains E. coli and B. subtilis datasets, but no Rhizoctonia, Schizophyllum or other fungal dataset. The absence conclusion is limited to all returned catalogue entries, not biological absence. |
+| plaque-adapter-ecoli-meta | https://imodulondb.org/api/datasets/e_coli/precise_mg1655/meta; Dataset identity, strains, sample counts and publication_url | context_only | precise_mg1655 is MG1655, with 586 samples, 281 conditions and 115 modules. It is bounded K-12 strain context, not all E. coli strains; publication_url is null. |
+| plaque-adapter-ecoli-ftsZ | https://imodulondb.org/api/search?organism=e_coli&amp;dataset=precise_mg1655&amp;query=ftsZ&amp;limit=50; Complete first response; exact ftsZ gene and other-name hits | context_only | Exact gene-name hit b0095 is ftsZ; the kilR product-text hit is an inhibitor of FtsZ, not the target gene. No iModulon-name hit returned. |
+| plaque-driel2008-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2568075/fullTextXML; Actual HTTP500 response body and retrieval receipt | context_only | This JATS route failed with HTTP500. The separately fetched genuine PMC HTML main body was read successfully; this response is not scientific evidence. |
+| plaque-adapter-bsub-meta | https://imodulondb.org/api/datasets/b_subtilis/modulome/meta; Dataset identity, all strains, counts and publication URL | context_only | B. subtilis modulome comprises 265 samples, 83 conditions and 72 modules across strains 168, BEST7003, LK1371, NCIB3610, PLBS802, PY79 and SMY. This mixed-strain transcriptomic context is not an exact single-strain structural experiment. |
+| plaque-adapter-bsub-ftsZ | https://imodulondb.org/api/search?organism=b_subtilis&amp;dataset=modulome&amp;query=ftsZ&amp;limit=50; Complete first response with exact gene-name match | context_only | Exact ftsZ hit BSU_15290 is annotated cell-division initiation protein (septum formation). No iModulon-name hit returned. |
+| plaque-adapter-ecoli-modules | https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0095/imodulons; All 115 returned gene-weight rows and is_in_imodulon/threshold fields | context_only | b0095 is below membership threshold in all 115 returned modules. No above-threshold module hit informs the verdict. This does not indicate absent FtsZ expression, localization, assembly or function. |
+| plaque-bisson2017-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC5485650/; PMC5485650 author manuscript: complete main prose and Figures1-4 captions; detailed supplements/movies and source image pixels excluded | supports | Bisson-Filho2017 directly examines B. subtilis FtsAZ/Pbp2B motions and fluorescent D-amino-acid incorporation. It supports centripetal septal PG construction and FtsZ-guided synthesis in the tested strains/conditions; the rate coupling is organism-specific, not a universal mechanism across bacterial division. |
+| plaque-yang2017-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC5851775/; PMC5851775 author manuscript: complete main prose and Figures1-4 captions; detailed supplements/movies and source image pixels excluded | supports | Yang2017 directly examines E. coli BW25113 and ftsZ mutants. Treadmilling organizes septal synthesis distribution and FtsI motion without generally limiting total synthesis/closure rate. This supports the record bounded bacterial assembly summary without universalizing B. subtilis rate control. |
+| plaque-driel2009-access | https://www.sciencedirect.com/science/article/pii/S0953756209000203; Actual HTTP403 publisher response body; exact paper DOI separately verified | context_only | This publisher route did not expose the final2009 article body. Scientific use is restricted to its exact native abstract and metadata; no thesis version is substituted. |
+| plaque-go-search-parenthesome | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=parenthesome&amp;limit=100; Exact text query first response, count and pagination | context_only | The parenthesome query returned zero candidates. This bounded query does not prove absence from every ontology or spelling. |
+| plaque-go-search-septal-pore-cap | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&amp;limit=100; Exact text query first100 candidate identifiers/names and pagination | context_only | First100 of276 candidates were inspected; no exact named whole septal-pore-cap class in that page. Remaining pages were not inspected, and no exhaustive ontology absence is claimed. |
+| plaque-ipr-search-SPC18 | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=SPC18&amp;page_size=100; extra-receipts.json exact ipr-search-SPC18 entry: HTTP204, curl92 HTTP/2 error; no response-body file created. Snapshot hash identifies the complete receipt JSON, not a successful query body. | unknown | HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error. This is a bounded inconclusive name query, not a successful family-absence result or sequence search. Whole cap structures cannot be equated to an individual protein family. |
+| plaque-ipr-search-Spc14 | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc14&amp;page_size=100; extra-receipts.json exact ipr-search-Spc14 entry: HTTP204, curl92 HTTP/2 error; no response-body file created. Snapshot hash identifies the complete receipt JSON, not a successful query body. | unknown | HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error. This is a bounded inconclusive name query, not a successful family-absence result or sequence search. Whole cap structures cannot be equated to an individual protein family. |
+| plaque-ipr-search-Spc33 | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc33&amp;page_size=100; extra-receipts.json exact ipr-search-Spc33 entry: HTTP204, curl92 HTTP/2 error; no response-body file created. Snapshot hash identifies the complete receipt JSON, not a successful query body. | unknown | HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error. This is a bounded inconclusive name query, not a successful family-absence result or sequence search. Whole cap structures cannot be equated to an individual protein family. |
+| plaque-adapter-bsub-modules | https://imodulondb.org/api/genes/b_subtilis/modulome/BSU_15290/imodulons; All 72 returned gene-weight rows and is_in_imodulon/threshold fields | context_only | BSU_15290 is below membership threshold in all 72 returned modules. Thus there is no above-threshold module hit to summarize; thresholded nonmembership is not biological absence. |
+| plaque-adapter-bsub-publication | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=10&amp;query=DOI%3A10.1371%2Fjournal.pcbi.1012546; Exact DOI match title, abstract, authors and identifiers | context_only | DOI10.1371/journal.pcbi.1012546 is the primary iModulonMiner/PyModulon computational-method paper, PMC11534266. Its inspected abstract describes ICA-derived co-regulated gene sets and a B. subtilis demonstration; only abstract/metadata were read, not the full body. It does not establish septum structure or causal assembly. |
+| plaque-adapter-policy | .claude/skills/review-yaml-record/SKILL.md; Structured Source Cross-Checks | context_only | Named genes/proteins trigger applicability review; physical-structure scope alone is not an exemption. Module membership is computational context, not assembly proof. |
+| plaque-policy | docs/CURATION.md; Components and evidence rules | context_only | Taxon-agnostic material identity, location and assembly necessity are separate. Optional inventories are not quotas; scientific curation is separately authorized. |
+| plaque-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Scope and completion; node/edge scope | context_only | Graph scope must agree with represented directed evidence and source-specific conditions. |
+| plaque-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent.grounding, grounding_status and essentiality; node/scope enums | context_only | Grounding identifies a taxon-neutral class; essentiality concerns whether the structure forms without the component, not viability. |
+| plaque-current-0 | data/structures/envelope/division_septum.yaml; Entire maintained record including components, function, all graph nodes/edges, evidence and discussions/history | context_only | Full current record read. Target bytes match the original frozen target hash. |
+| plaque-original-0 | reviews/structured/20261021T101605Z-division-septum-audit/review.yaml; Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations | context_only | Independent read-only reassessment preserves immutable prior observation. All original frozen inputs match their source commit; native validate and render pass. Existing minor finding remains open. |
+| plaque-current-1 | data/structures/envelope/dolipore_septum.yaml; Entire maintained record including components, function, all graph nodes/edges, evidence and discussions/history | context_only | Full current record read. Historical input is stale only because the swelling-is-part-of-septum edge and its history were added; the new edge was substantively checked. |
+| plaque-original-1 | reviews/structured/20261021T101608Z-dolipore-septum-audit/review.yaml; Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations | context_only | Independent read-only reassessment preserves immutable prior observation. All original frozen inputs match their source commit; native validate and render pass. Original qualified pass does not assess the later edge. |
+| plaque-current-2 | data/structures/envelope/porous_cell_septum.yaml; Entire maintained record including components, function, all graph nodes/edges, evidence and discussions/history | context_only | Full current record read. Target bytes match the original frozen target hash. |
+| plaque-original-2 | reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.yaml; Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations | context_only | Independent read-only reassessment preserves immutable prior observation. All original frozen inputs match their source commit; native validate and render pass. Existing minor finding remains open. |
+| plaque-native-division_septum-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml --verify; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-verify.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-verify-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-native-division_septum-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml --causal-graphs; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-causal.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-causal-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-native-dolipore_septum-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml --verify; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-verify.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-verify-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-native-dolipore_septum-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml --causal-graphs; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-causal.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-causal-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-native-porous_cell_septum-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml --verify; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-verify.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-verify-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-native-porous_cell_septum-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml --causal-graphs; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-causal.log; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-causal-receipt.json | supports | Root-executed native command exit0; independently verified receipt and log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes; this passing empty applicable subset is not scientific source verification. |
+| plaque-original-native-validation | scripts/record_review.py validate and render --content; /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-plaque/original-validation.json | supports | All three original YAML bundles validate, all three renders match the saved Markdown exactly, and target hashes match historical source bytes; only current dolipore is stale. |
+| micro-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0090512,GO:0044853,GO:0032126,GO:0036286,GO:0009277,GO:0005618,GO:0005886,GO:0016020,GO:0071944,GO:0005737,GO:0055085; QuickGO eleven exact requested terms, definitions/synonyms and returned relations; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/go.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/go.receipt.json | supports | All eleven current terms resolve and are not obsolete. GO:0090512 denotes the MCC membrane subdomain, with broader raft and eisosome relationships; GO:0009277 allows variable wall polymers and excludes capsule. GO:0005886 lists unqualified cytoplasmic membrane as EXACT and bacterial inner membrane as NARROW. Remaining parent, location, filament and transport identifiers match their labels. Ontology authority does not prove experimental necessity. |
+| micro-walther2006-primary | https://walterlab.ucsf.edu/wp-content/uploads/2015/06/nature04472.pdf; Walther et al. 2006, DOI:10.1038/nature04472; author-hosted PDF main text and figure captions pp998–1002, Methods p1002; extracted layout text read, not figure image pixels; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/primary/walther-author.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/primary/walther-author.receipt.json | supports | Fresh primary main text supports Sur7/Pil1 colocalization in stable W303-derived plasma-membrane patches. EM in Fig2c and main text concerns abnormal pil1-deletion invaginations, not the normal furrow/filament architecture claimed in the distribution note. Methods identifies W303; database S288C protein identity is a separate scope. No fresh supplement or image-pixel analysis is claimed. |
+| micro-karotki2011-primary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3257569/fullTextXML; Karotki et al. 2011 DOI:10.1083/jcb.201104040, JATS Results sec3/sec5/sec6/sec11 and Fig7 caption; Methods sec14/15/17/19/20/25; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/karotki.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/karotki.receipt.json | supports | Inspected primary text supports purified Pil1/Lsp1 assembly and lipid binding, PI(4,5)P2-dependent behavior, and in-vivo furrow-associated Pil1 lattice assessed by unroofing/deep-etch EM. Section11/Fig7 is the nearest support for normal furrow/filament architecture; in-vitro closed cylinders and in-vivo half-cylinder geometry are distinguished. W303/S288C yeast and recombinant E. coli expression are not interchangeable taxon scopes. Figure captions were read without reanalyzing pixels or raw data. |
+| micro-young2002-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC133540/?pdf=render; Young et al. 2002 PMID:11784867; HTML paragraphs P12/P15/P19/P22 methods, P25/P27–P29/P31 and P34–P36 localization/tag scope; zero-based P offsets in retained text; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/young.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/young.receipt.json | supports | Primary localization and time-series text supports stable Sur7 cortical patches and qualified tagged-protein experiments. Fragment/tag and spheroplast controls constrain the localization evidence; these observations do not establish Sur7 as universally essential for MCC formation. No image-pixel or raw-data analysis. |
+| micro-gow2017-secondary | https://pmc.ncbi.nlm.nih.gov/articles/PMC11687499/?pdf=render; Gow, Latge and Munro 2017 DOI:10.1128/microbiolspec.FUNK-0035-2016; HTML P7–P17 including Fig1 caption; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/gow.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/gow.receipt.json | context_only | Secondary review supports variable glucan/chitin/glycoprotein wall architecture, species-dependent crosslinks and distinct Cryptococcus capsule outside the wall. It does not support an invariant composition in every fungus. Caption inspected, image pixels not inspected. |
+| micro-orlean2012-secondary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3522159/?pdf=render; Orlean 2012 DOI:10.1534/genetics.112.144485; HTML P8–P11/P23/P131/P156/P166–P167/P173–P176; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/orlean.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/orlean.receipt.json | context_only | Secondary review supports S. cerevisiae osmotic/shape roles, wall-linked Cwp1/Cwp2/Sed1 and both membrane-associated and covalent wall pools of Gas1. Growth phase, stress, linkage and deletion phenotypes are qualified; these are not proof that every named protein is necessary for all fungal-wall formation. |
+| micro-silhavy2010-secondary | https://pmc.ncbi.nlm.nih.gov/articles/PMC2857177/?pdf=render; Silhavy, Kahne and Walker 2010 DOI:10.1101/cshperspect.a000414; HTML P7–P9/P18–P22/P25/P34–P35; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/silhavy.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/silhavy.receipt.json | context_only | Secondary bacterial-envelope review supports cell boundary, bacterial inner-membrane lipid/protein organization, transport, SecYEG and energy-linked activities. The introductory distinction between lipid self-assembly and energy-dependent biological membrane establishment is retained: the record graph is a nonmechanistic material-organization sketch, not a claim that an entire living membrane forms without biogenesis. Bacterial examples do not establish universal archaeal/fungal complexes. |
+| micro-sohlenkamp2016-secondary | https://oup.silverchair-cdn.com/article-minimal/2467617; Sohlenkamp and Geiger DOI:10.1093/femsre/fuv008; abstract/Introduction HTML P0–P3; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/sohlenkamp.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/sohlenkamp.receipt.json | context_only | Secondary review supports amphiphilic bacterial membrane lipid classes and compositional variation. Only abstract/Introduction inspected; later biosynthetic pathways not independently audited. This supports a heterogeneous lipid material row, not a universal specific lipid or topology. |
+| micro-ellen2010-secondary | https://pmc.ncbi.nlm.nih.gov/articles/PMC2910488/?pdf=render; Ellen et al. 2010 PMID:20671907, correct PMC2910488; HTML abstract P9, Introduction P10–P11, Sec P12 and Fig1 caption P14; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/ellen-correct.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/ellen-correct.receipt.json | context_only | Secondary review explicitly distinguishes archaeal diether bilayers and tetraether monolayers and describes membrane-embedded secretion machinery. This independently supports the broad lipid-boundary wording. The earlier wrong PMC2912199 response was excluded; no evidence from that unrelated paper is used. |
+| micro-calamia1990-page1 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/35d7/54236/dc659e784616/pnas01038-0052.png; Calamia and Manoil 1990 PMID:2164211, PNAS printed p4937 image directly inspected: title/abstract, Introduction, Materials and Methods and opening Results; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/calamia-page1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/calamia-page1.receipt.json | supports | Fresh first-page image supports LacY membrane-topology experiments using lacY-phoA fusions in stated E. coli laboratory strains, favoring a 12-segment model. This is location/topology evidence for LacY, not formation necessity for the whole plasma membrane. Only p4937 was freshly inspected; no current read of the remaining four pages is claimed. |
+| micro-bibliographic-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Europe PMC exact 18 PMID/DOI result objects, bibliographic identities and publication types; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | supports | The cited Gow, Karotki, Sohlenkamp, Ellen, Silhavy, Douglas, Orlean, Albers, Walther, Luallen, Huh, Navarre, Young, Calamia, Popolo, Conzelmann and two Newman papers resolve to matching identities. Metadata resolution does not substitute for full-text claim verification. |
+| micro-douglas2014-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:25002088; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | context_only | Secondary review abstract explicitly identifies MCC stable furrows, Sur7/Nce102 integral residents and peripheral Pil1/Lsp1 filament scaffolds. Full Annual Reviews page was blocked; the exact abstract is the current inspected scope. |
+| micro-albers2011-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:21572458; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | context_only | Secondary review abstract describes archaeal envelope diversity and general single-membrane envelope scope. Current Nature response was a client challenge; no fresh main-body or lipid-detail verification of this cited review is claimed. Ellen provides separately labeled supporting context. |
+| micro-navarre2002-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:12469340; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | supports | Primary abstract reports plasma-membrane enrichment and detected Sur7/Nce102 with residual contamination caveats. This corroborates the stated database localization attribution; full body was not fetched. |
+| micro-huh2003-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:14562095; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | supports | Primary abstract describes the genome-scale yeast GFP localization assay and its coverage; the abstract alone does not list Sur7. The specific Sur7 attribution was checked in the current UniProt evidence links, not newly reconstructed from Huh raw data. |
+| micro-gas1-primary-abstracts | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:18434410,3046936,3072201; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | supports | Exact primary abstracts: Luallen glycan-mutant assay context; Conzelmann membrane GPI anchoring; Popolo membrane gp115 purification/immunostaining. Specific GAS1 membrane-location references were independently checked in UniProt. Full primary bodies were not read; Orlean supplies secondary wall-pool context. |
+| micro-newman-primary-abstracts | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Exact Europe PMC result abstractText for PMID:7000781,7028742; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json | supports | Exact primary abstracts describe purified/reconstituted LacY lactose transport. Necessity for that transport assay is not necessity for forming a plasma membrane; full bodies were not read. |
+| micro-chebi-17029 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/17029/; Current released ChEBI exact object, label/synonyms and relationships; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-17029.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-17029.receipt.json | supports | CHEBI:17029 is chitin, a beta-(1→4)-linked N-acetyl-D-glucosamine aminoglycan. Chemical identity is not universal fungal composition or formation necessity. |
+| micro-chebi-28793 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/28793/; Current released ChEBI exact object, label/synonyms and relationships; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-28793.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-28793.receipt.json | supports | CHEBI:28793 denotes beta-D-glucan with multiple linkage-specific children; broad class label is appropriate and does not assert a unique linkage. Chemical identity is not universal fungal composition or formation necessity. |
+| micro-sur7-family | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009571/; InterPro IPR009571 metadata/name/hierarchy, description and Pfam PF06687 membership; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/family-IPR009571.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/family-IPR009571.receipt.json | supports | The current family includes Sur7, Rim9 and PalI. This is broader than the exact Sur7 component; leaving that component family grounding unset while providing a verified protein example is not evidence that no family exists. No exhaustive alternative-family search was performed. |
+| micro-uniprot-P54003 | https://rest.uniprot.org/uniprotkb/P54003.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P54003.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P54003.receipt.json | supports | Current reviewed P54003 matches SUR7 and taxon 559292; identity and stated location scope verified. Cell-membrane annotation links Young11784867, Navarre12469340 and Huh14562095 exactly; primary experimental W303 context remains separate from S288C identity. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-SUR7 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ASUR7&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SUR7.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SUR7.receipt.json | supports | One reviewed result maps SUR7 to P54003 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P28319 | https://rest.uniprot.org/uniprotkb/P28319.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P28319.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P28319.receipt.json | supports | Current reviewed P28319 matches CWP1 and taxon 559292; identity and stated location scope verified. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-CWP1 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ACWP1&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP1.receipt.json | supports | One reviewed result maps CWP1 to P28319 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P43497 | https://rest.uniprot.org/uniprotkb/P43497.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P43497.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P43497.receipt.json | supports | Current reviewed P43497 matches CWP2 and taxon 559292; identity and stated location scope verified. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-CWP2 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ACWP2&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP2.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP2.receipt.json | supports | One reviewed result maps CWP2 to P43497 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-Q01589 | https://rest.uniprot.org/uniprotkb/Q01589.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/Q01589.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/Q01589.receipt.json | supports | Current reviewed Q01589 matches SED1 and taxon 559292; identity and stated location scope verified. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-SED1 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ASED1&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SED1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SED1.receipt.json | supports | One reviewed result maps SED1 to Q01589 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P22146 | https://rest.uniprot.org/uniprotkb/P22146.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P22146.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P22146.receipt.json | supports | Current reviewed P22146 matches GAS1 and taxon 559292; identity and stated location scope verified. Cell-membrane references18434410/3046936/3072201 match the record; additional cell-wall localization is also present and does not negate membrane association. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-GAS1 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AGAS1&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-GAS1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-GAS1.receipt.json | supports | One reviewed result maps GAS1 to P22146 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P02920 | https://rest.uniprot.org/uniprotkb/P02920.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P02920.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P02920.receipt.json | supports | Current reviewed P02920 matches lacY and taxon 83333; identity and stated location scope verified. Cell-inner-membrane references2164211/7000781/7028742 match the record; b0343 mapping is explicit. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-lacY | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A83333+AND+gene_exact%3AlacY&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-lacY.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-lacY.receipt.json | supports | One reviewed result maps lacY to P02920 in taxon 83333; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P0AGA2 | https://rest.uniprot.org/uniprotkb/P0AGA2.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P0AGA2.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P0AGA2.receipt.json | supports | Current reviewed P0AGA2 matches secY and taxon 83333; identity and stated location scope verified. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-secY | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A83333+AND+gene_exact%3AsecY&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-secY.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-secY.receipt.json | supports | One reviewed result maps secY to P0AGA2 in taxon 83333; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P05030 | https://rest.uniprot.org/uniprotkb/P05030.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P05030.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P05030.receipt.json | supports | Current reviewed P05030 matches PMA1 and taxon 559292; identity and stated location scope verified. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-PMA1 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3APMA1&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-PMA1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-PMA1.receipt.json | supports | One reviewed result maps PMA1 to P05030 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-uniprot-P32465 | https://rest.uniprot.org/uniprotkb/P32465.json; Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci, recommended name, location comments/evidence and family cross-references; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P32465.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P32465.receipt.json | supports | Current reviewed P32465 matches HXT1 and taxon 559292; identity and stated location scope verified. Membrane localization and GO:0005886 IDA links were checked at database level; referenced primary body was not freshly read. Identity/examples do not prove universal membership, complete family coverage or assembly necessity. |
+| micro-query-HXT1 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AHXT1&amp;format=json&amp;size=500; UniProtKB reviewed exact gene-symbol/taxon query; returned single entry; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-HXT1.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-HXT1.receipt.json | supports | One reviewed result maps HXT1 to P32465 in taxon 559292; no next-page Link header. This verifies the declared symbol/taxon pairing only. |
+| micro-tax-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2.receipt.json | supports | NCBITaxon:2 resolves as Bacteria, rank domain; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-2157 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2157.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2157.receipt.json | supports | NCBITaxon:2157 resolves as Archaea, rank domain; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-4751 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4751.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4751.receipt.json | supports | NCBITaxon:4751 resolves as Fungi, rank kingdom; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-562.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-562.receipt.json | supports | NCBITaxon:562 resolves as Escherichia coli, rank species; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4932.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4932.receipt.json | supports | NCBITaxon:4932 resolves as Saccharomyces cerevisiae, rank species; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-5207 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5207; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-5207.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-5207.receipt.json | supports | NCBITaxon:5207 resolves as Cryptococcus neoformans, rank species; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-83333.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-83333.receipt.json | supports | NCBITaxon:83333 resolves as Escherichia coli K-12, rank strain; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-559292.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-559292.receipt.json | supports | NCBITaxon:559292 resolves as Saccharomyces cerevisiae S288C, rank strain; taxon identity only, not prevalence or experimental strain equivalence. |
+| micro-adapter-catalogue | https://imodulondb.org/api/datasets; Fresh iModulonDB API complete returned catalogue, 20 organism keys and 28 datasets; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/datasets.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/datasets.receipt.json | context_only | The inspected catalogue has covered E. coli datasets but no Saccharomyces or other eukaryote dataset. Thus yeast-only MCC/wall gene examples lack a matching dataset in this catalogue snapshot. This is bounded service coverage, not biological absence. Plasma-membrane E. coli gene examples require downstream checks. |
+| micro-adapter-mg1655-meta | https://imodulondb.org/api/datasets/e_coli/precise_mg1655/meta; iModulonDB e_coli/precise_mg1655 dataset metadata; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/meta.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/meta.receipt.json | context_only | Matched strain context is E. coli K-12 MG1655; dataset reports115 iModulons and4305 genes. The generic record K-12 identities and exact b0343/b3300 cross-mappings are used explicitly; no transfer to all bacteria, archaea or fungi. |
+| micro-adapter-search-lacY | https://imodulondb.org/api/search?organism=e_coli&amp;dataset=precise_mg1655&amp;query=lacY&amp;limit=50; iModulonDB literal gene/product search; exact matching gene separated from product-name hits; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-lacY.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-lacY.receipt.json | context_only | The lacY query returns exact b0343. Lack of module-name hits is not absence of gene membership; exact gene/module endpoints were inspected. |
+| micro-adapter-gene-b0343 | https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0343; Exact iModulonDB gene object e_coli/precise_mg1655/b0343; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343.receipt.json | context_only | Exact gene b0343/lacY maps to P02920; this is dataset identity context, not localization or necessity proof. |
+| micro-adapter-membership-b0343 | https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0343/imodulons; All115 returned iModulon membership rows; actual is_in_imodulon boolean and weights inspected; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343-modules.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343-modules.receipt.json | context_only | b0343/lacY is in k61 Galactose, weight0.353511695 above threshold0.069412175. Other returned rows are not marked members; this is computational expression-module context only. |
+| micro-adapter-search-secY | https://imodulondb.org/api/search?organism=e_coli&amp;dataset=precise_mg1655&amp;query=secY&amp;limit=50; iModulonDB literal gene/product search; exact matching gene separated from product-name hits; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-secY.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-secY.receipt.json | context_only | The secY query returns exact b3300 plus yfgM/b2513 and syd/b2793 product-text hits; only b3300 is the record identity. Lack of module-name hits is not absence of gene membership; exact gene/module endpoints were inspected. |
+| micro-adapter-gene-b3300 | https://imodulondb.org/api/genes/e_coli/precise_mg1655/b3300; Exact iModulonDB gene object e_coli/precise_mg1655/b3300; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300.receipt.json | context_only | Exact gene b3300/secY maps to P0AGA2; this is dataset identity context, not localization or necessity proof. |
+| micro-adapter-membership-b3300 | https://imodulondb.org/api/genes/e_coli/precise_mg1655/b3300/imodulons; All115 returned iModulon membership rows; actual is_in_imodulon boolean and weights inspected; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300-modules.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300-modules.receipt.json | context_only | b3300/secY is in k7 Translation, weight0.074073898 above threshold0.073984647. Other returned rows are not marked members; this is computational expression-module context only. |
+| micro-adapter-module-7 | https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/7; Exact component summary e_coli/precise_mg1655/7; curated metadata, threshold and genes; generated ai_summary deliberately excluded; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-summary.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-summary.receipt.json | context_only | Translation metadata and exact gene-weight list include b3300/secY; regulator/function fields give bounded dataset context. Generated AI summary is not used as evidence. No membrane assembly/localization inference follows. |
+| micro-adapter-module-7-genes | https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/7/genes?limit=500; Exact module gene endpoint, limit500; full returned14(k61) or31(k7) gene rows with threshold; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-genes.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-genes.receipt.json | context_only | Returned module gene list independently includes b3300/secY with in_imodulon=true and matching UniProt mapping/weight. Computational coexpression is context only, not direct physical localization, necessity or universal function. |
+| micro-adapter-module-61 | https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/61; Exact component summary e_coli/precise_mg1655/61; curated metadata, threshold and genes; generated ai_summary deliberately excluded; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-summary.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-summary.receipt.json | context_only | Galactose metadata and exact gene-weight list include b0343/lacY; regulator/function fields give bounded dataset context. Generated AI summary is not used as evidence. No membrane assembly/localization inference follows. |
+| micro-adapter-module-61-genes | https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/61/genes?limit=500; Exact module gene endpoint, limit500; full returned14(k61) or31(k7) gene rows with threshold; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-genes.raw; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-genes.receipt.json | context_only | Returned module gene list independently includes b0343/lacY with in_imodulon=true and matching UniProt mapping/weight. Computational coexpression is context only, not direct physical localization, necessity or universal function. |
+| micro-historical-adapter-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical PR2344 runner receipt retained unchanged; no new runner invocation in this slice | context_only | At00:49:00Z on2026-11-03 the runner returned exit1 because OS PermissionError prevented reading its pyvenv.cfg. This is historical unavailable-runner evidence, not a fresh execution or a successful adapter command. Current direct source inspection is separately dated. |
+| micro-review-policy | .claude/skills/review-yaml-record/SKILL.md; Exact frozen local policy/config bytes; reread in current slice | supports | Named genes/UniProt accessions trigger actual structured-source applicability; a lack of transcriptomic claims alone is not an exemption. The source-adapter limits prevent turning expression-module membership into physical or necessity proof. |
+| micro-review-config | conf/record_review.yaml; Exact frozen local policy/config bytes; reread in current slice | supports | The active profile routes to the native record-review skill and local evidence/checklist/schema guidance; it does not waive adapter applicability for named proteins. |
+| micro-original-validation-inputs | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/original-validation-inputs.json; All three original validate/render receipts and frozen/current/main hash checks | supports | All three originals validate; native deterministic renders match their committed Markdown. All three target bytes equal their original frozen input, original source revision and current main/head. This establishes staleness/schema/provenance only, not scientific adequacy. |
+| micro-record-eisosome_membrane_domain_mcc | data/structures/envelope/eisosome_membrane_domain_mcc.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Entire maintained target read: identity, components/examples, organism distribution, functions, graphs, discussions and history; no mutation. |
+| micro-prior-eisosome_membrane_domain_mcc | reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Original immutable review and Markdown read; exact findings/verdict/source scopes/native schema and deterministic render checked. Historical source timestamps remain historical; fresh reads have separate evidence. |
+| micro-native-eisosome_membrane_domain_mcc-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-verify-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-verify.log; actual start 2026-11-03T07:30:48.102360+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --verify passed on 1 maintained protein_examples and recorded xrefs. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| micro-native-eisosome_membrane_domain_mcc-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-causal-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-causal.log; actual start 2026-11-03T07:30:49.298534+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked to 1 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| micro-record-fungal_type_cell_wall | data/structures/envelope/fungal_type_cell_wall.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Entire maintained target read: identity, components/examples, organism distribution, functions, graphs, discussions and history; no mutation. |
+| micro-prior-fungal_type_cell_wall | reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Original immutable review and Markdown read; exact findings/verdict/source scopes/native schema and deterministic render checked. Historical source timestamps remain historical; fresh reads have separate evidence. |
+| micro-native-fungal_type_cell_wall-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-verify-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-verify.log; actual start 2026-11-03T07:30:49.784090+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --verify passed on 4 maintained protein_examples and recorded xrefs. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| micro-native-fungal_type_cell_wall-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-causal-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-causal.log; actual start 2026-11-03T07:30:51.338772+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked to 4 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| micro-record-plasma_membrane | data/structures/envelope/plasma_membrane.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Entire maintained target read: identity, components/examples, organism distribution, functions, graphs, discussions and history; no mutation. |
+| micro-prior-plasma_membrane | reviews/structured/20261021T101624Z-plasma-membrane-audit/review.yaml; Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Original immutable review and Markdown read; exact findings/verdict/source scopes/native schema and deterministic render checked. Historical source timestamps remain historical; fresh reads have separate evidence. |
+| micro-native-plasma_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-verify-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-verify.log; actual start 2026-11-03T07:30:59.396573+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --verify passed on 4 maintained protein_examples and recorded xrefs. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| micro-native-plasma_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-causal-receipt.json; Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-causal.log; actual start 2026-11-03T07:31:00.757546+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361 | supports | Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked to 4 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped identity/coverage audit; it does not establish complete cohort/family coverage, mechanistic sufficiency or formation necessity. |
+| septin-root18-sources-glycocalyx-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030112,GO:0030114,GO:0030312,GO:0042603,GO:0120234,GO:0120238,GO:0120239,GO:0120240; All eight returned term definitions, exact hierarchy edges and applicable synonyms | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-287 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/287; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-1313 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1313; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-doi-10.1042_bj1120521 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1042/bj1120521; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Composition of Pseudomonas aeruginosa slime.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1128_IAI.00881-09 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1128/IAI.00881-09; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: The Streptococcus pneumoniae capsule inhibits complement activity and neutrophil phagocytosis by multiple mechanisms.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1146_annurev.mi.35.100181.001503 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1146/annurev.mi.35.100181.001503; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: The bacterial glycocalyx in nature and disease.. No abstract is supplied; bibliographic identity only. |
+| septin-root18-sources-legacy-PMC1187742-access | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1187742/; Actual direct HTTP access attempt 2026-11-03T07:31:56.812821Z | context_only | HTTP200 retrieved challenge/redirect HTML, not an article body or PDF. No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-legacy-PMC2812187-access | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812187/; Actual direct HTTP access attempt 2026-11-03T07:31:56.883791Z | context_only | HTTP200 retrieved challenge/redirect HTML, not an article body or PDF. No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-costerton-publisher-access | https://www.annualreviews.org/content/journals/10.1146/annurev.mi.35.100181.001503; Actual direct HTTP access attempt 2026-11-03T07:31:56.886860Z | context_only | &lt;HTTPError 403: 'Forbidden'&gt; No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-brown1969-pdf-access | https://portlandpress.com/biochemj/article-pdf/112/4/521/763317/bj1120521.pdf; Actual direct HTTP access attempt 2026-11-03T07:31:56.889452Z | context_only | &lt;HTTPError 403: 'Forbidden'&gt; No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-brown1969-pmc-pdf-access | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1187742/pdf/biochemj00703-0128.pdf; Actual direct HTTP access attempt 2026-11-03T07:31:56.926524Z | context_only | HTTP200 retrieved challenge/redirect HTML, not an article body or PDF. No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-brown1969-page1 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/0eb45745023b/biochemj00703-0128.png; Fresh genuine native scan page 521, independently visually read with view_image, including article text, tables and discussion at its page scope. | supports | Abstract/Introduction and eight-strain culture context. Historical chemical analysis is scoped to tested preparations. |
+| septin-root18-sources-brown1969-page2 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/7c5292cc3631/biochemj00703-0129.png; Fresh genuine native scan page 522, independently visually read with view_image, including article text, tables and discussion at its page scope. | supports | Five-day static culture, medium and two extraction procedures, chemistry Methods and initial Results inspected. |
+| septin-root18-sources-brown1969-page3 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/eef42817ec9e/biochemj00703-0130.png; Fresh genuine native scan page 523, independently visually read with view_image, including article text, tables and discussion at its page scope. | supports | Composition Results and Tables1–2 inspected; relative quantities depend on medium and extraction. |
+| septin-root18-sources-brown1969-page4 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/c7e5013f9446/biochemj00703-0131.png; Fresh genuine native scan page 524, independently visually read with view_image, including article text, tables and discussion at its page scope. | supports | Remaining Results and Discussion: mixed polysaccharide/nucleic acid/protein material, possible cell-lysis contribution and unresolved copolymer-versus-mixture architecture. |
+| septin-root18-sources-brown1969-page5 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/4fa9e12051bb/biochemj00703-0132.png; Fresh genuine native scan page 525, independently visually read with view_image, including article text, tables and discussion at its page scope. | supports | Final Discussion and references inspected; ribose/deoxyribose interpretation remains qualified. |
+| septin-root18-sources-mycomembrane-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009274,GO:0009279,GO:0036407; All three returned term definitions, synonyms and relevant is_a child relation | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-1763 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1763; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-1772 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1772; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-1718 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1718; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-NCBITaxon-246196 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/246196; Exact taxId, scientificName, rank, lineage and relevant alternative names | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-CHEBI-25438 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/25438/; Exact accession, name, definition where present, synonyms and chemical-class relations | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-CHEBI-27569 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/27569/; Exact accession, name, definition where present, synonyms and chemical-class relations | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-root18-sources-doi-10.1073_pnas.0709530105 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1073/pnas.0709530105; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Disclosure of the mycobacterial outer membrane: cryo-electron tomography and vitreous sections reveal the lipid bilayer structure.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1128_JB.01919-07 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1128/JB.01919-07; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Direct visualization of the outer membrane of mycobacteria and corynebacteria in their native state.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1016_j.tim.2009.12.005 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.tim.2009.12.005; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Mycobacterial outer membranes: in search of proteins.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1101_cshperspect.a021113 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1101/cshperspect.a021113; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: The Mycobacterial Cell Wall--Peptidoglycan and Arabinogalactan.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-doi-10.1038_s41598-017-12718-4 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1038/s41598-017-12718-4; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Dissecting the mycobacterial cell envelope and defining the composition of the native mycomembrane.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-marrakchi-meta-retry | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A24374164%20AND%20SRC%3AMED; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Mycolic acids: structures, biosynthesis, and beyond.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-jats-PMC2931330 | https://pmc-oa-opendata.s3.amazonaws.com/PMC2931330.1/PMC2931330.1.xml; Fresh native secondary-review JATS, Mycobacterial outer membrane section, models/Figures1–2 captions, Porin pathway and Structure of outer membrane proteins sections; bounded barrier/function context. | supports | The observed bilayer is distinguished from model-dependent leaflet partition. Free lipids may occupy both leaflets, in situ mycolate conformation is unresolved, and MspA function is species-scoped. Underlying primary experiments are not all independently audited. |
+| septin-root18-sources-legacy-PMC2268800 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2268800/; Fresh genuine primary HTML body: introduction/model context, relevant cryosection Results, Figure3 caption, Discussion comparing leaflet models, mycolate-deficient mutant and MspA molecular-ruler passages. | supports | Native bilayer observations and mycolate requirement support structural identity, but symmetry and thickness motivate alternative molecular arrangements. Text/caption review only, no fresh microscopy pixel or raw-volume analysis. |
+| septin-root18-sources-legacy-PMC2519390 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2519390/; Fresh genuine primary HTML: Abstract/Introduction; Culture, Vitrification and Quantitative measurements methods; relevant Results and Figure5 caption; Discussion including Challenges to current models and Figure7 caption. | supports | M. smegmatis mc2 155, M. bovis BCG and C. glutamicum are examined. The viable C. glutamicum delta-pks13 mutant lacks the outer membrane, a structural endpoint distinct from growth necessity. Zipper and folded-chain proposals remain models; cutting and preparation limitations retained. |
+| septin-root18-sources-jats-PMC5634507 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5634507.1/PMC5634507.1.xml; Fresh native primary JATS: Introduction and tentative Figure1 model/caption; Results fractionation, biochemical characterization and lipid-content passages; Figure5 immunoblot caption; relevant Discussion fraction purity and unresolved MM isolation. | supports | M. smegmatis and M. aurum MMCW fractions contain lipids and localized MspA, but are not isolated membrane leaflets. Outer-leaflet placement is presumed; protein identity/localization is not universal necessity. No raw proteomics, supplementary table or image-pixel reanalysis. |
+| septin-root18-sources-legacy-PMC4526729 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4526729/; Fresh genuine secondary-review HTML: Abstract, opening mAGP context, Structural features of peptidoglycan linkage paragraphs and terminal arabinan mycolyl-esterification passage. | supports | Covalent arabinogalactan–peptidoglycan anchoring supports contextual graph nodes, without converting the complete wall core into local membrane composition. Detailed biosynthetic enzymes and all cited primary studies were not audited. |
+| septin-root18-sources-marrakchi-doi-route-access | https://doi.org/10.1016/j.chembiol.2013.11.011; Actual direct HTTP access attempt 2026-11-03T07:31:59.396834Z | context_only | HTTP200 retrieved challenge/redirect HTML, not an article body or PDF. No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-root18-sources-UniProtKB-A0QR29 | https://rest.uniprot.org/uniprotkb/A0QR29.json; Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType and primary-reference/strain annotations. | supports | A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity does not alone establish membrane membership. |
+| septin-root18-sources-UniProtKB-H7C6A6 | https://rest.uniprot.org/uniprotkb/H7C6A6.json; Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType and primary-reference/strain annotations. | supports | A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity does not alone establish membrane membership. |
+| septin-root18-sources-UniProtKB-H7C685 | https://rest.uniprot.org/uniprotkb/H7C685.json; Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType and primary-reference/strain annotations. | supports | A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity does not alone establish membrane membership. |
+| septin-root18-sources-query-mspA-246196 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AmspA%29%20AND%20%28taxonomy_id%3A246196%29%20AND%20%28reviewed%3Atrue%29; Complete first returned native reviewed=true gene-and-taxon query response, size500 in URL. | supports | One reviewed mspA hit A0QR29 for tax246196 in this exact query. This is not biological absence or proof that no other accession exists. |
+| septin-root18-sources-query-porA-1718 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AporA%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29; Complete first returned native reviewed=true gene-and-taxon query response, size500 in URL. | supports | Zero reviewed porA hits for tax1718 in this exact query. This is not biological absence or proof that no other accession exists. |
+| septin-root18-sources-query-porB-1718 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AporB%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29; Complete first returned native reviewed=true gene-and-taxon query response, size500 in URL. | supports | Zero reviewed porB hits for tax1718 in this exact query. This is not biological absence or proof that no other accession exists. |
+| septin-root18-sources-PMID-9790664 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A9790664%20AND%20SRC%3AMED; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Biochemical and biophysical characterization of the cell wall porin of Corynebacterium glutamicum: the channel is formed by a low molecular mass polypeptide.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-root18-sources-PMID-14622416 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A14622416%20AND%20SRC%3AMED; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Identification of an anion-specific channel in the cell wall of the Gram-positive bacterium Corynebacterium glutamicum.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-periplasm-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042597,GO%3A0030288,GO%3A0005576; All three returned definitions/synonyms and relevant child relation records | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-periplasm-agent-SL-0200 | https://rest.uniprot.org/locations/SL-0200.json; Complete native location entry, definition, synonyms and GO mapping | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-periplasm-agent-tax-562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-periplasm-agent-tax-1280 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1280; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-periplasm-agent-doi-cshperspect_a000414 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1101/cshperspect.a000414; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: The bacterial cell envelope.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-periplasm-agent-pmid-16428405 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16428405%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Native cell wall organization shown by cryo-electron microscopy confirms the existence of a periplasmic space in Staphylococcus aureus.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-periplasm-agent-silhavy2010-legacy-html | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857177/; Fresh genuine secondary-review HTML: Gram-negative envelope opening, outer membrane/peptidoglycan/periplasm and inner-membrane sections, bounded E. coli topology context. | supports | The diderm aqueous region lies between the two membranes. Review synthesis supports the E. coli example, not a universal periplasmic composition or a fungal experimental claim. |
+| septin-periplasm-agent-legacy-PMC1347357 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1347357/; Fresh genuine primary HTML: Abstract; bacterial culture and preparation/plasmolysis Methods; frozen-hydrated and plasmolysis Results, Figure5/6 captions and Table1; corresponding Discussion on wall fragments and cryoprotectant limits. | supports | Newman D2C cryo-TEM, osmotic separation and isolated-wall comparisons support a periplasmic region between plasma membrane and dense wall. Cryoprotectant and image-resolution limitations remain; no pixel-level or raw thickness reanalysis. |
+| septin-slime-layer-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0030114,GO%3A0030112,GO%3A0042603; All three complete native definitions, comments and relevant child relationships | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-slime-layer-agent-SL-0247 | https://rest.uniprot.org/locations/SL-0247.json; Complete native location entry definition and GO mapping | supports | Exact identifier, returned label/definition and relevant relations checked; authority identity is not direct experimental evidence. |
+| septin-slime-layer-agent-doi-10.1042_bj1120521 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1042/bj1120521&amp;format=json&amp;resultType=core; Europe PMC exact DOI or PMID query: native returned identity, title/authors, publication type and available abstract; no full-body scope by this evidence alone. | supports | Exact returned article identity: Composition of Pseudomonas aeruginosa slime.. Available abstract inspected; metadata/abstract only in this evidence row. Primary or secondary body access is separately scoped. |
+| septin-current-adapter-catalogue | https://imodulondb.org/api/datasets; Entire fresh official /api/datasets response: all 20 organism objects and 28 dataset keys inspected. | supports | C. glutamicum/modulome263 matches the porA/porB example. No M. smegmatis/Mycolicibacterium smegmatis dataset occurs in this returned catalogue; M. tuberculosis is not substituted. Material-only scope does not create molecular-query requirements merely because a named species has a dataset. |
+| septin-hyams2010-jats | https://pmc.ncbi.nlm.nih.gov/articles/PMC2812187/?report=xml; Fresh genuine primary HTML despite requested report=xml: Abstract/Introduction; Bacterial strains and EM Methods; first capsule-loss Results and Figure1 caption; matching Discussion paragraph. | supports | Named TIGR4 and D39 parent/mutant strains support a surface-associated pneumococcal capsule example. Capsule dimensions use fixed sections and a circularity assumption. No complete immunological-mechanism or raw-image audit claimed. |
+| septin-hyams2010-epmc-jats-access | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2812187/fullTextXML; Actual direct HTTP access attempt 2026-11-03T07:32:40.871537Z | context_only | &lt;HTTPError 500: ''&gt; No successful native body access is claimed by this receipt; bounded fallback is separately identified. |
+| septin-cg-search-porA | https://imodulondb.org/api/search?organism=c_glutamicum&amp;dataset=modulome263&amp;query=porA&amp;limit=50; Entire bounded species/dataset native query response. | context_only | porA query returns exact imported H7C6A6 candidate WA5_RS13590 plus product-text family candidate WA5_RS14300; porB returns WA5_RS04855. Both candidates were inspected rather than conflated. |
+| septin-cg-search-porB | https://imodulondb.org/api/search?organism=c_glutamicum&amp;dataset=modulome263&amp;query=porB&amp;limit=50; Entire bounded species/dataset native query response. | context_only | porA query returns exact imported H7C6A6 candidate WA5_RS13590 plus product-text family candidate WA5_RS14300; porB returns WA5_RS04855. Both candidates were inspected rather than conflated. |
+| septin-cg-WA5_RS13590-gene | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS13590; Native exact gene JSON, imported identifiers and organism/dataset context. | context_only | WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only a PorA-family product match with no UniProt ID; it is not asserted to be the maintained PorA accession. |
+| septin-cg-WA5_RS13590-modules | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS13590/imodulons; Entire native 87-row gene-module list including is_in_imodulon flags, weights and thresholds. | context_only | All 87 memberships are false for this exact gene/dataset. This thresholded context is not absence of expression, transport function or structural membership; no positive module summary informs the verdict. |
+| septin-cg-WA5_RS14300-gene | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS14300; Native exact gene JSON, imported identifiers and organism/dataset context. | context_only | WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only a PorA-family product match with no UniProt ID; it is not asserted to be the maintained PorA accession. |
+| septin-cg-WA5_RS14300-modules | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS14300/imodulons; Entire native 87-row gene-module list including is_in_imodulon flags, weights and thresholds. | context_only | All 87 memberships are false for this exact gene/dataset. This thresholded context is not absence of expression, transport function or structural membership; no positive module summary informs the verdict. |
+| septin-cg-WA5_RS04855-gene | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS04855; Native exact gene JSON, imported identifiers and organism/dataset context. | context_only | WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only a PorA-family product match with no UniProt ID; it is not asserted to be the maintained PorA accession. |
+| septin-cg-WA5_RS04855-modules | https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS04855/imodulons; Entire native 87-row gene-module list including is_in_imodulon flags, weights and thresholds. | context_only | All 87 memberships are false for this exact gene/dataset. This thresholded context is not absence of expression, transport function or structural membership; no positive module summary informs the verdict. |
+| septin-record-glycocalyx | data/structures/envelope/glycocalyx.yaml; Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition, identity, composition, taxonomic examples, functions, all graphs and discussions. | supports | Entire target independently reassessed. Current content hash equals original frozen hash; no record edit performed. |
+| septin-record-mycolate_outer_membrane | data/structures/envelope/mycolate_outer_membrane.yaml; Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition, identity, composition, taxonomic examples, functions, all graphs and discussions. | supports | Entire target independently reassessed. Current content hash equals original frozen hash; no record edit performed. |
+| septin-record-periplasmic_space | data/structures/envelope/periplasmic_space.yaml; Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition, identity, composition, taxonomic examples, functions, all graphs and discussions. | supports | Entire target independently reassessed. Current content hash equals original frozen hash; no record edit performed. |
+| septin-record-slime_layer | data/structures/envelope/slime_layer.yaml; Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition, identity, composition, taxonomic examples, functions, all graphs and discussions. | supports | Entire target independently reassessed. Current content hash equals original frozen hash; no record edit performed. |
+| septin-neighbor-capsule | data/structures/envelope/capsule.yaml; Whole frozen neighboring record read only for explicit identity and boundary dependency, after root froze it. | context_only | Capsule is the organized retained glycocalyx child; diderm periplasm is a narrower generic-periplasm child. No independent audit or resolution of every neighbor scientific assertion is claimed. |
+| septin-neighbor-outer_membrane_bounded_periplasmic_space | data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml; Whole frozen neighboring record read only for explicit identity and boundary dependency, after root froze it. | context_only | Capsule is the organized retained glycocalyx child; diderm periplasm is a narrower generic-periplasm child. No independent audit or resolution of every neighbor scientific assertion is claimed. |
+| septin-policy | docs/CURATION.md; Current frozen policy bytes, previously read and hash-matched to prior review; relevant contract reapplied to these records. | supports | Structure identity, collective materials, evidence and assembly necessity are distinct. |
+| septin-adapter-policy | .claude/skills/review-yaml-record/SKILL.md; Current frozen policy bytes, previously read and hash-matched to prior review; relevant contract reapplied to these records. | supports | Named molecular claims trigger applicability; actual sparse material scope can be non-applicable. No expression claim alone is not an exemption. Historical unavailable runner is distinguished from current official source fallback. |
+| septin-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Current frozen policy bytes, previously read and hash-matched to prior review; relevant contract reapplied to these records. | supports | Claim direction and causal versus descriptive scope must agree with sources. |
+| septin-graph-contract | .claude/skills/add-cell-structure/SKILL.md; Current frozen policy bytes, previously read and hash-matched to prior review; relevant contract reapplied to these records. | supports | Mechanistic causal paths and descriptive material topology are distinct; graph nodes do not automatically establish component membership. |
+| septin-original-native-checks | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-septin/original-checks.json; Four original native validations and deterministic render comparisons plus exact target hash checks. | supports | All four validate/render exit0 and Markdown matches. All original target frozen hashes equal current content. Historical corpus checks are not fresh CI. |
+| septin-native-glycocalyx-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/glycocalyx-uniprot-verify-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/glycocalyx.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-native-glycocalyx-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/glycocalyx-uniprot-causal-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/glycocalyx.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-native-mycolate_outer_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/mycolate_outer_membrane-uniprot-verify-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/mycolate_outer_membrane.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0: declared three protein examples verify; one GENE_OR_PROTEIN node is COVERED by mspA/porA/porB accession inventory. This does not prove leaflet allocation, experimental necessity or all biological membership. |
+| septin-native-mycolate_outer_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/mycolate_outer_membrane-uniprot-causal-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/mycolate_outer_membrane.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0: declared three protein examples verify; one GENE_OR_PROTEIN node is COVERED by mspA/porA/porB accession inventory. This does not prove leaflet allocation, experimental necessity or all biological membership. |
+| septin-native-periplasmic_space-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/periplasmic_space-uniprot-verify-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/periplasmic_space.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-native-periplasmic_space-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/periplasmic_space-uniprot-causal-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/periplasmic_space.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-native-slime_layer-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/slime_layer-uniprot-verify-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/slime_layer.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-native-slime_layer-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/slime_layer-uniprot-causal-receipt.json; Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/envelope/slime_layer.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log SHA verified. | supports | Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes; validates no narrative protein claim or universal matrix completeness. |
+| septin-historical-adapter-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical canary invocation 2026-11-03T00:49:00.848907Z–00:49:00.863225Z, exit1 PermissionError reading pyvenv.cfg; receipt read, no fresh invocation. | context_only | Historical runner unavailability does not prevent current source-grounded official-API applicability checks. No new runner test or success asserted. |
+| septin-neighbor-search | rg --no-ignore --hidden -n ^identifier: GO:(0042603&#124;0030288)$ data/structures; Exact top-level neighbor identifier search. | supports | The two frozen canonical paths are the exact matches; only their boundary relationship is judged. |
+| check-qc | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/qc.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| check-labels | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/labels.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| check-trait-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/trait-links.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Native TraitMech link check passed. |
+| check-vendored | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/vendored.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Pinned governed files match; native vendored check passed. |
+| check-curies | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/curies.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| focused | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/focused-results.json; All twenty actual target schema/strict command outputs | supports | Ten schema and ten strict commands returned exit zero. |
+| supplemental-pmid | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/pmid-chunks-receipt.json; Complete native-report PMID set checked with unchanged resolver in batches of at most fifty | supports | 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers remain unverified. |
+| historical-adapter-runner-availability | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical runner invocation receipt, cross-checked against exact stdout/stderr hashes; reread during PR2355 synthesis | context_only | Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS PermissionError reading the configured runner pyvenv.cfg. This is a retained historical availability observation, not a fresh attempt or a scientific validation failure. Native policy permits inspected source-catalogue fallback. |
+
+## Limits And Additional Notes
+
+- Division, dolipore and porous cell septa independent subreview: The Egan/Vollmer review and Traquair1978 source remain native abstract/metadata-limited after publisher403. Final vanDriel2009 paper also remains abstract-limited; no thesis version was substituted.
+- Division, dolipore and porous cell septa independent subreview: McQuillen2020 was read as secondary review body atS1/S2/S16/S17/S22/S23. Bisson-Filho2017 and Yang2017 complete main prose/captions were independently inspected; detailed supplements, movies, raw data and source figure pixels were not independently reanalysed.
+- Division, dolipore and porous cell septa independent subreview: VanDriel2008 Introduction, complete Methods/Results/Discussion and Figures1-8 captions were read. Its broader ascomycete claims are cited prior-work context, and ER-to-cap-to-plug delivery remains a hypothesis with labeling/preparation limitations.
+- Division, dolipore and porous cell septa independent subreview: VanPeer2010 early-online PDF Introduction/Results/Discussion throughp8, strains/growth and laser-dissection procedures and purification opening plus Figures1-7 captions were inspected. Remaining detailed cloning/proteomics methods, supplements/movies and raw images were not independently audited.
+- Division, dolipore and porous cell septa independent subreview: The InterPro name queries returned HTTP204 with curl92 transport errors; they are inconclusive, not successful zero-hit proofs. GO parenthesome query returned0 and only first100 of276 septal-pore-cap query candidates were inspected. No exhaustive ontology absence or sequence-family survey is claimed.
+- Division, dolipore and porous cell septa independent subreview: Conditional assembly necessity of bacterial septal PG remains unknown at generic class scope; fungal components appropriately remain UNKNOWN. No prevalence census, complete molecular inventory or universal permeability experiment was performed.
+- Division, dolipore and porous cell septa independent subreview: Structured-source use is fresh official-page/API fallback. The historical runner failure is a separate earlier receipt, not a current execution. MG1655 and mixed-strain B. subtilis thresholds are computational context only; nonmembership is not biological absence. No fungal dataset occurs in the retrieved catalogue.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Walther author-hosted primary PDF main text/captions and stated Methods were freshly read; image pixels and supplements were not. Karotki inspection covers the specified Results/Methods and Fig7 caption, not all raw maps or image pixels. Young scope is the explicitly listed localization/method/tag passages. No universal Sur7 necessity is inferred.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Gow/Orlean/Silhavy/Sohlenkamp/Ellen are secondary literature, explicitly context-only, with exact inspected sections. Douglas and Albers current access is abstract-only; Annual Reviews403 and Nature client challenge did not expose their full bodies. Correct Ellen PMC2910488 is used; an unrelated guessed PMC2912199 was excluded.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Calamia only printed p4937 was freshly inspected as an image; no current full five-page read is claimed. Newman, Navarre, Huh and GAS1-linked primary papers are bounded to exact abstracts and current annotation attributions unless separately identified. Specific Huh Sur7 mapping is database evidence, not reconstructed raw localization data.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Nine exact reviewed UniProt symbol/taxon queries each returned one result with total-results1 and no next-page Link header; these do not inventory all homologues or prove assembly necessity. Native six commands passed nonempty inventories1/4/4 and one covered protein node each, not whole-family completeness.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Historical runner unavailable receipt retains its actual00:49Z date/exit1 and was not rerun. Fresh catalogue and E. coli MG1655 gene/module APIs were inspected directly; yeast absence is limited to this catalogue. Module membership is computational context only. The generated ai_summary fields were deliberately excluded.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: No global population-frequency study, universal lipid/wall composition, full membrane-biogenesis mechanism, or necessity test for every component was added. Explicit variable/conditional and nonmechanistic scopes are preserved. Source access limitations are distinguished from the two confirmed minor scientific findings.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: Common17 policy/config/schema/verifier context was retained from earlier reads and verified byte-identical to this frozen source; current review skill/config were reread. Entire three current records and six original YAML/Markdown files were inspected. No neighboring capsule/periplasm record or tracked image was used by this slice.
+- MCC, fungal-type cell wall and plasma membrane independent subreview: All three targets are unchanged. Both original scientific finding keys and exact predecessor occurrences remain open for separately authorized record curation; no category-wide or other-record disposition is claimed. Root owns issue deduplication, global QC, final CI, successor writing and publication; this report does not claim their pending or external results.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Four unchanged records independently reassessed read-only. Original frozen target hashes and deterministic schema/render checked; no repository or GitHub mutation by reviewer. Root owns issue deduplication, global gates and final CI.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Brown1969 all five genuine native scan pages521–525 were freshly retrieved and actually visually read, including Methods, Results/Tables1–2 and Discussion. PDF/legacy routes returned403 or challenge HTML, not successful PDFs. Historical bulk extraction is affected by media, extraction and possible cell-lysis contributions; unresolved polymer architecture is not promoted to universal composition.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Hyams2010 genuine primary HTML was recovered via report=xml after a legacy challenge. Only stated abstract, strain/culture, EM, first capsule-loss Results/Figure1 caption and relevant Discussion were audited. No full immune-mechanism or pixel/raw data analysis claimed. Costerton1981 is bibliographic-only: publisher403 and no indexed abstract.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Marrakchi2014 exact metadata/abstract only; returned DOI-route HTML does not establish full-text access. Survival-essentiality language in its secondary-review abstract is not substituted for the directly read structural mutant evidence in Hoffmann/Zuber.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: PorA/PorB source-linked primary identities and abstracts were checked, not complete original bodies. UniProt records remain accurately unreviewed and identity-only. Exact reviewed gene/taxon queries are bounded first-response searches, not biological absence.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Mycomembrane primary microscopy text/captions and Chiaradia fractionation/biochemical passages were read at disclosed scope; source figure pixels, raw tomography/proteomics and all supplementary tables were not reanalysed. MMCW fractions are not isolated leaflets; alternative models, species/method and contamination limits remain explicit. Alderwick and Niederweis are secondary reviews, not fresh primary experiments.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Silhavy is secondary review synthesis at named topology sections; Matias primary Methods/relevant Results/Discussion support S. aureus Newman D2C with cryoprotectant, cutting and resolution limits. No universal periplasmic proteome, fungal experimental survey, pixel-level cryo-TEM or independent thickness measurement is claimed.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Both neighboring records were fully read only for their frozen identity/boundary dependency, not independently scientifically audited as additional targets. No new optional inventory, image, trait, graph or exact-polymer addition is required solely for completeness.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Collective matrix constitution is distinct from experiment-specific necessity of each glycan, protein or nucleic acid. Unresolved individual/pool assembly necessity remains unknown; no invented finding promotes survival, uptake, presence or expression to structure-formation necessity.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Current official iModulonDB fallback is species- and dataset-bounded. C. glutamicum modulome263 exact PorA/PorB imported accessions match; an additional family-product hit is not an exact accession. All87 membership flags per inspected gene are false; no absence of expression/function/membership follows. No positive module hit requires a module summary. Catalogue noncoverage for M. smegmatis does not justify using M. tuberculosis instead. Historical runner failure is separately dated and no fresh runner invocation is claimed.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: Glycocalyx/periplasm/slime lack named molecular claims, so gene/module queries are not required. Glycocalyx original weak N/A rationale is clarified by actual sparse scope without inventing a separate missing-query defect. Mycomembrane is the sole assigned adapter bundle defect.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: All eight current native protein checks pass; three empty inventories/zero protein-node targets provide no molecular-completeness evidence. Mycomembrane three declared accessions and one covered node verify identifiers, not leaflet composition or experimental necessity. Historical original corpus-check counts are not current or target-specific success.
+- Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent subreview: One minor scientific finding retains exact original F1 lineage and requires separate record curation. The other three targets remain supported with limitations. No exhaustive literature absence claim or historical curator-authorship certification is made.
+- Historical observations remain immutable; their old checks are not represented as current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure. Catalogue-based coverage is assessed directly; fresh and reused responses retain actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include 909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head CI and merge-group CI occur after saving this immutable observation and are not represented here as already completed.
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally and pushed without force.
+- This explicit issue-bearing ten-record cohort follows the native persistence policy. Every inherited finding is reassessed and retains exact predecessor identity.
+- Bundle issues #2621, #2622 address one stale dolipore review and seven structured-source applicability defects. Scientific curation stays separately tracked and open. Existing validator #2514 remains open.
+- The added dolipore parthood edge is assessed directly against current GO and primary biological sources; no historical category-wide finding is terminally resolved by this cohort.
+- Source commit f2fc189116ccf288bb46a576f5e490a86e2c9361 is retained by tag review-base/pr2355-current-record-followup-20261103.
+- CLAUDE.md is an alias of AGENTS.md; canonical regular AGENTS.md bytes are frozen.
+- Used local context was frozen before assessment, including native review configuration, graph/protein policies and verifier source. Capsule and outer-membrane-bounded periplasmic-space neighbor records were additionally frozen before assessing claimed boundaries; neither is a curation target.
+- Five molecular-scope reviews used unsupported expression-only exemptions: division septum, dolipore septum, MCC, fungal-type cell wall and mycolate outer membrane. Plasma membrane and porous cell septum omitted applicability. Glycocalyx N/A is supported by its actual material-only scope; its weak wording is clarified without inventing a missing query or extra defect. Periplasmic space and slime layer are also material/topology-only exclusions.
+- Fresh source inspection retains actual access dates. Primary bodies, abstracts, secondary reviews and authority responses have distinct evidence scopes.
+- Native checks with empty protein inventories or zero GENE_OR_PROTEIN nodes do not validate molecular mechanisms or names appearing only in prose. Exact represented identity, taxon, membership, location, function and assembly necessity remain separate judgments.
+- Five minor scientific findings retain exact original lineage and remain open in #2623–#2627. The five other targets retain qualified scientific passes. No finding is terminally resolved by this review.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261103T074109Z-pr2355-current-record-followup
+kind: batch
+repository: CultureBotAI/CellStructureMech
+title: 'PR 2355: current-input review of ten records and adversarial follow-up'
+started_at: '2026-11-03T07:28:53.793947Z'
+finished_at: '2026-11-03T07:41:09Z'
+reviewer:
+  identity: Codex root synthesis with three independent read-only adversarial reviewers
+  kind: agent
+  independence: self_review
+  independence_basis: Root authors this synthesis of three separate read-only reviews.
+    Independent reviewers inspected original bundles, current record bytes and primary/authority
+    sources, and did not author or modify repository files. They independently re-review
+    the final saved head before publication. This is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md; explicit batch route in docs/record-review-profile.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Current-input reassessment of all ten envelope records in PR2355. The stale
+  dolipore septum review is substantively refreshed against its added source-backed
+  swelling-to-septum parthood edge. The independent reviews reassess every original
+  scientific finding and correct seven structured-source applicability defects without
+  editing any scientific record. Material-only glycocalyx, periplasmic space and slime
+  layer are excluded from invented molecular-query requirements.
+source:
+  git_revision: f2fc189116ccf288bb46a576f5e490a86e2c9361
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-cell-structure/SKILL.md
+    sha256: eee04ee51d2c82c05df98570674084bdce9001e5aa67d6230ac1ed50064a3175
+    role: context
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/envelope/capsule.yaml
+    sha256: b50823333417fed66efe064e2a21217adaebf87715ca1d22baf5010cdca87b47
+    role: context
+  - path: data/structures/envelope/division_septum.yaml
+    sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+    role: target
+  - path: data/structures/envelope/dolipore_septum.yaml
+    sha256: 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca
+    role: target
+  - path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    sha256: cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f
+    role: target
+  - path: data/structures/envelope/fungal_type_cell_wall.yaml
+    sha256: 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64
+    role: target
+  - path: data/structures/envelope/glycocalyx.yaml
+    sha256: 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8
+    role: target
+  - path: data/structures/envelope/mycolate_outer_membrane.yaml
+    sha256: f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881
+    role: target
+  - path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    sha256: f1027d233b3287f4a8118b17a7570fdba36acb7cc14b2ac0b766fb0c8985ea2f
+    role: context
+  - path: data/structures/envelope/periplasmic_space.yaml
+    sha256: 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98
+    role: target
+  - path: data/structures/envelope/plasma_membrane.yaml
+    sha256: 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d
+    role: target
+  - path: data/structures/envelope/porous_cell_septum.yaml
+    sha256: 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f
+    role: target
+  - path: data/structures/envelope/slime_layer.yaml
+    sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261021T101605Z-division-septum-audit/review.md
+    sha256: c5f236e02eea2d5dba7de441f5c0de6ee39111d01e47de9c7f78887c1cfb9079
+    role: context
+  - path: reviews/structured/20261021T101605Z-division-septum-audit/review.yaml
+    sha256: a17e8de33c5e90248e9aa9beb603e20f5642f7dc5e67473fa082c5506a41cac5
+    role: context
+  - path: reviews/structured/20261021T101608Z-dolipore-septum-audit/review.md
+    sha256: 768aef7a9844a50eb865ab5340ad4472ff90241671a83889ccb4a7d7f6475196
+    role: context
+  - path: reviews/structured/20261021T101608Z-dolipore-septum-audit/review.yaml
+    sha256: 0834b5ebe83715949265569dd4e4a7717287fc3c950d17d6d0d645435ce40d00
+    role: context
+  - path: reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.md
+    sha256: 021235df6147f2531529754f678b028e4a82468056c5bec9ec9b65cb43fe31ef
+    role: context
+  - path: reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.yaml
+    sha256: 7345e5742d2661bedbfb85ed42e4de150d04ea738222824b7914b3f9f8d78f8f
+    role: context
+  - path: reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.md
+    sha256: 99b672dce8c3dc5eb7eb8af614aef0bbea34364cd4641dbbb3bc5c391d817a8e
+    role: context
+  - path: reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.yaml
+    sha256: bc97dc9029bf76a2b3d759ed28312f113c0d03aa30d01486b024a29695451d4e
+    role: context
+  - path: reviews/structured/20261021T101617Z-glycocalyx-audit/review.md
+    sha256: 54c6350ab3519ab72759f30f0b6bf5db2c24a7d260b59d7a9b95d35eb4823a08
+    role: context
+  - path: reviews/structured/20261021T101617Z-glycocalyx-audit/review.yaml
+    sha256: 9eaa3a634f50a4adb45d26ac49443319dc80e2a724eaeffec2e1ded6559f445c
+    role: context
+  - path: reviews/structured/20261021T101620Z-mycolate-outer-membrane-audit/review.md
+    sha256: 955cda1fa5e8bf58e9f98615240cf9d9d5cdcf7e98ed2da8d48660f06846f55d
+    role: context
+  - path: reviews/structured/20261021T101620Z-mycolate-outer-membrane-audit/review.yaml
+    sha256: 1059bcd3aa889087386c1014cef2297d5d6c7c5085c15e9a5d79a3208a4555e0
+    role: context
+  - path: reviews/structured/20261021T101622Z-periplasmic-space-audit/review.md
+    sha256: 05a39264ba9bfb465fe7638f02672c3671f35cec45a93927e698404bbb6fa696
+    role: context
+  - path: reviews/structured/20261021T101622Z-periplasmic-space-audit/review.yaml
+    sha256: 5a92790d6b9ed0818bcee13aa27f51a5e4e0ce4e048c4f9b569224b7ffea6cf7
+    role: context
+  - path: reviews/structured/20261021T101624Z-plasma-membrane-audit/review.md
+    sha256: 130a843d0307e5aeb48948f7c334a22ba7889145760555adcdb047197cb51d33
+    role: context
+  - path: reviews/structured/20261021T101624Z-plasma-membrane-audit/review.yaml
+    sha256: d1c9eab46d179a952b0d8d066c1dc249ea958b784440bf60e041b6c29d020bec
+    role: context
+  - path: reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.md
+    sha256: dbcd29e2dd4ce76c384a72a74e66cc9499e364ffbed5f161f265d2e315196264
+    role: context
+  - path: reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.yaml
+    sha256: e76a31ded098b2ba27104803cdd11229009d58dffb7b0f7e08c7959113bc9392
+    role: context
+  - path: reviews/structured/20261021T101629Z-slime-layer-audit/review.md
+    sha256: d6ca5265e0618ebe09bfad1f4a0a67698ee3628c0af33ff1b30cc516daaf108c
+    role: context
+  - path: reviews/structured/20261021T101629Z-slime-layer-audit/review.yaml
+    sha256: a881c037aca99b07f2d17a9621623f0ab1de3eea75cd928d1164d38107a5e400
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000935
+  path: data/structures/envelope/division_septum.yaml
+  label: division septum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+- target_id: GO:0000937
+  path: data/structures/envelope/dolipore_septum.yaml
+  label: dolipore septum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/dolipore_septum.yaml
+    role: maintained scientific record
+- target_id: GO:0090512
+  path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  label: eisosome membrane domain/MCC
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    role: maintained scientific record
+- target_id: GO:0009277
+  path: data/structures/envelope/fungal_type_cell_wall.yaml
+  label: fungal-type cell wall
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/fungal_type_cell_wall.yaml
+    role: maintained scientific record
+- target_id: GO:0030112
+  path: data/structures/envelope/glycocalyx.yaml
+  label: glycocalyx
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/glycocalyx.yaml
+    role: maintained scientific record
+- target_id: GO:0036407
+  path: data/structures/envelope/mycolate_outer_membrane.yaml
+  label: mycolate outer membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/mycolate_outer_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0042597
+  path: data/structures/envelope/periplasmic_space.yaml
+  label: periplasmic space
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/periplasmic_space.yaml
+    role: maintained scientific record
+- target_id: GO:0005886
+  path: data/structures/envelope/plasma_membrane.yaml
+  label: plasma membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/plasma_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0000934
+  path: data/structures/envelope/porous_cell_septum.yaml
+  label: porous cell septum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/porous_cell_septum.yaml
+    role: maintained scientific record
+- target_id: GO:0030114
+  path: data/structures/envelope/slime_layer.yaml
+  label: slime layer
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/slime_layer.yaml
+    role: maintained scientific record
+scope:
+  description: Exact ten-record PR cohort reassessed against current main 11da6b917ff0c91d218f43a714d6be1cda22cc45.
+    Changed inputs are substantively reassessed. Scientific records remain unchanged.
+  selection: Complete cohort of ten maintained records reviewed in original PR head
+    c2f8a5c97f75a253db8b98973d50ee0d601f23b5.
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+checks:
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: just qc
+  exit_code: 0
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  scope_note: Actual local execution at main-merge head f2fc189116ccf288bb46a576f5e490a86e2c9361.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-qc
+- check_id: labels
+  name: Native label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: just validate-products
+  exit_code: 0
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  scope_note: Actual local execution at main-merge head f2fc189116ccf288bb46a576f5e490a86e2c9361.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-labels
+- check_id: trait-links
+  name: TraitMech references
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Native TraitMech link check passed.
+  scope_note: Actual local execution at main-merge head f2fc189116ccf288bb46a576f5e490a86e2c9361.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-trait-links
+- check_id: vendored
+  name: Pinned governed files
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: just vendored-check
+  exit_code: 0
+  summary: Pinned governed files match; native vendored check passed.
+  scope_note: Actual local execution at main-merge head f2fc189116ccf288bb46a576f5e490a86e2c9361.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-vendored
+- check_id: curies
+  name: Native identifier resolver
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  scope_note: Actual local execution at main-merge head f2fc189116ccf288bb46a576f5e490a86e2c9361.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-curies
+- check_id: focused-0
+  name: validate GO:0000935
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate data/structures/envelope/division_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-1
+  name: validate-strict GO:0000935
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate-strict data/structures/envelope/division_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-2
+  name: validate GO:0000937
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate data/structures/envelope/dolipore_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-3
+  name: validate-strict GO:0000937
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate-strict data/structures/envelope/dolipore_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-4
+  name: validate GO:0090512
+  status: passed
+  required: true
+  target_ids:
+  - GO:0090512
+  command: just validate data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-5
+  name: validate-strict GO:0090512
+  status: passed
+  required: true
+  target_ids:
+  - GO:0090512
+  command: just validate-strict data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-6
+  name: validate GO:0009277
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009277
+  command: just validate data/structures/envelope/fungal_type_cell_wall.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-7
+  name: validate-strict GO:0009277
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009277
+  command: just validate-strict data/structures/envelope/fungal_type_cell_wall.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-8
+  name: validate GO:0030112
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030112
+  command: just validate data/structures/envelope/glycocalyx.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-9
+  name: validate-strict GO:0030112
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030112
+  command: just validate-strict data/structures/envelope/glycocalyx.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-10
+  name: validate GO:0036407
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036407
+  command: just validate data/structures/envelope/mycolate_outer_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-11
+  name: validate-strict GO:0036407
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036407
+  command: just validate-strict data/structures/envelope/mycolate_outer_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-12
+  name: validate GO:0042597
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042597
+  command: just validate data/structures/envelope/periplasmic_space.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-13
+  name: validate-strict GO:0042597
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042597
+  command: just validate-strict data/structures/envelope/periplasmic_space.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-14
+  name: validate GO:0005886
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005886
+  command: just validate data/structures/envelope/plasma_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-15
+  name: validate-strict GO:0005886
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005886
+  command: just validate-strict data/structures/envelope/plasma_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-16
+  name: validate GO:0000934
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000934
+  command: just validate data/structures/envelope/porous_cell_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-17
+  name: validate-strict GO:0000934
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000934
+  command: just validate-strict data/structures/envelope/porous_cell_septum.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-18
+  name: validate GO:0030114
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate data/structures/envelope/slime_layer.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-19
+  name: validate-strict GO:0030114
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate-strict data/structures/envelope/slime_layer.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: supplemental-pmid
+  name: Supplemental bounded PMID authority checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  command: .venv/bin/python /private/tmp/cellstructure-batches-2346-2397-20261103/check_pmid_chunks.py
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355
+  exit_code: 0
+  summary: 909 PMIDs all OK in bounded native requests; full-command limitations remain
+    separate.
+  evidence_ids:
+  - supplemental-pmid
+- check_id: structured-source-applicability
+  name: Official structured-source applicability and covered-dataset cross-checks
+  status: passed
+  required: false
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  summary: 'Applicability was assessed against the complete official catalogue and
+    actual molecular assertions. Bounded organism-matched bacterial gene/module checks
+    preserve dataset, strain and membership-threshold scope. All-false membership
+    is not biological absence. Named fungal targets lacking catalogue coverage are
+    bounded downstream non-applicability outcomes; unrelated organisms are not substitutes.
+    Glycocalyx, periplasmic space and slime layer have material/topology-only scope
+    without an identified gene/locus/protein or molecular pathway to query. Seven
+    original reviews require correction: five unsupported expression-only exemptions
+    and two omissions. Historical native-runner unavailability is separate, with no
+    fresh invocation or success claimed.'
+  evidence_ids:
+  - plaque-adapter-datasets
+  - plaque-adapter-ecoli-meta
+  - plaque-adapter-ecoli-ftsZ
+  - plaque-adapter-bsub-meta
+  - plaque-adapter-bsub-ftsZ
+  - plaque-adapter-ecoli-modules
+  - plaque-adapter-bsub-modules
+  - micro-adapter-catalogue
+  - micro-adapter-mg1655-meta
+  - micro-adapter-search-lacY
+  - micro-adapter-gene-b0343
+  - micro-adapter-membership-b0343
+  - micro-adapter-search-secY
+  - micro-adapter-gene-b3300
+  - micro-adapter-membership-b3300
+  - micro-adapter-module-7
+  - micro-adapter-module-7-genes
+  - micro-adapter-module-61
+  - micro-adapter-module-61-genes
+  - septin-current-adapter-catalogue
+  - septin-cg-search-porA
+  - septin-cg-search-porB
+  - septin-cg-WA5_RS13590-gene
+  - septin-cg-WA5_RS13590-modules
+  - septin-cg-WA5_RS14300-gene
+  - septin-cg-WA5_RS14300-modules
+  - septin-cg-WA5_RS04855-gene
+  - septin-cg-WA5_RS04855-modules
+- check_id: independent-scientific-review
+  name: Independent claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  summary: Three read-only reviewers covered the complete ten-record cohort, including
+    changed inputs, with explicit scientific findings and source-access limits. Final
+    artifact/head acceptance occurs after saving.
+  evidence_ids:
+  - plaque-division-septum-agent-go
+  - plaque-division-septum-agent-chebi-8005
+  - plaque-division-septum-agent-jats-PMC8610174
+  - plaque-division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  - plaque-division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - plaque-division-septum-agent-tax-2
+  - plaque-division-septum-agent-tax-83333
+  - plaque-division-septum-agent-tax-1423
+  - plaque-egan-access
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-tax-5302
+  - plaque-dolipore-agent-tax-5334
+  - plaque-dolipore-agent-traquair1978-meta
+  - plaque-dolipore-agent-driel2009-meta
+  - plaque-dolipore-agent-driel2008-meta
+  - plaque-dolipore-agent-peer2010-meta
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-dolipore-agent-traquair1978-pdf
+  - plaque-adapter-datasets
+  - plaque-adapter-ecoli-meta
+  - plaque-driel2008-jats
+  - plaque-adapter-bsub-meta
+  - plaque-adapter-ecoli-modules
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+  - plaque-driel2009-access
+  - plaque-adapter-bsub-modules
+  - plaque-adapter-bsub-publication
+  - plaque-adapter-policy
+  - plaque-policy
+  - plaque-graph-policy
+  - plaque-schema-policy
+  - micro-go
+  - micro-walther2006-primary
+  - micro-karotki2011-primary
+  - micro-young2002-primary
+  - micro-gow2017-secondary
+  - micro-orlean2012-secondary
+  - micro-silhavy2010-secondary
+  - micro-sohlenkamp2016-secondary
+  - micro-ellen2010-secondary
+  - micro-calamia1990-page1
+  - micro-bibliographic-metadata
+  - micro-douglas2014-abstract
+  - micro-albers2011-abstract
+  - micro-navarre2002-abstract
+  - micro-huh2003-abstract
+  - micro-gas1-primary-abstracts
+  - micro-newman-primary-abstracts
+  - micro-chebi-17029
+  - micro-chebi-28793
+  - micro-sur7-family
+  - micro-uniprot-P54003
+  - micro-uniprot-P28319
+  - micro-uniprot-P43497
+  - micro-uniprot-Q01589
+  - micro-uniprot-P22146
+  - micro-uniprot-P02920
+  - micro-uniprot-P0AGA2
+  - micro-uniprot-P05030
+  - micro-uniprot-P32465
+  - micro-tax-2
+  - micro-tax-2157
+  - micro-tax-4751
+  - micro-tax-562
+  - micro-tax-4932
+  - micro-tax-5207
+  - micro-tax-83333
+  - micro-tax-559292
+  - micro-adapter-catalogue
+  - micro-adapter-mg1655-meta
+  - micro-adapter-gene-b0343
+  - micro-adapter-membership-b0343
+  - micro-adapter-gene-b3300
+  - micro-adapter-membership-b3300
+  - micro-adapter-module-7
+  - micro-adapter-module-7-genes
+  - micro-adapter-module-61
+  - micro-adapter-module-61-genes
+  - micro-review-policy
+  - micro-review-config
+  - septin-root18-sources-glycocalyx-go
+  - septin-root18-sources-NCBITaxon-287
+  - septin-root18-sources-NCBITaxon-1313
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+  - septin-root18-sources-mycomembrane-go
+  - septin-root18-sources-NCBITaxon-2
+  - septin-root18-sources-NCBITaxon-1763
+  - septin-root18-sources-NCBITaxon-1772
+  - septin-root18-sources-NCBITaxon-1718
+  - septin-root18-sources-NCBITaxon-246196
+  - septin-root18-sources-CHEBI-25438
+  - septin-root18-sources-CHEBI-27569
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-legacy-PMC2519390
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-legacy-PMC4526729
+  - septin-root18-sources-UniProtKB-A0QR29
+  - septin-root18-sources-UniProtKB-H7C6A6
+  - septin-root18-sources-UniProtKB-H7C685
+  - septin-periplasm-agent-go
+  - septin-periplasm-agent-SL-0200
+  - septin-periplasm-agent-tax-562
+  - septin-periplasm-agent-tax-1280
+  - septin-periplasm-agent-silhavy2010-legacy-html
+  - septin-periplasm-agent-legacy-PMC1347357
+  - septin-slime-layer-agent-go
+  - septin-slime-layer-agent-SL-0247
+  - septin-current-adapter-catalogue
+  - septin-hyams2010-jats
+  - septin-cg-WA5_RS13590-gene
+  - septin-cg-WA5_RS13590-modules
+  - septin-cg-WA5_RS14300-gene
+  - septin-cg-WA5_RS14300-modules
+  - septin-cg-WA5_RS04855-gene
+  - septin-cg-WA5_RS04855-modules
+  - septin-policy
+  - septin-adapter-policy
+  - septin-graph-policy
+  - septin-graph-contract
+- check_id: historical-adapter-runner
+  name: Retained historical adapter runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0036407
+  - GO:0005886
+  - GO:0000934
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  summary: Historical 00:49Z invocation unavailable due to OS access restriction.
+    Official catalogue source fallback was inspected separately; no current invocation
+    or successful adapter execution is claimed. The actual historical exit code 1
+    is retained in the evidence receipt, since the native unavailable-check model
+    has no execution exit-code field.
+  scope_note: Prior canary execution receipt reread and hash-verified during this
+    follow-up. A non-required capability observation; repository policy explicitly
+    permits source-page fallback.
+  evidence_ids:
+  - historical-adapter-runner-availability
+- check_id: division_septum-uniprot-verify
+  name: Native division septum UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-division_septum-verify
+- check_id: division_septum-uniprot-causal
+  name: Native division septum UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-division_septum-causal
+- check_id: dolipore_septum-uniprot-verify
+  name: Native dolipore septum UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-dolipore_septum-verify
+- check_id: dolipore_septum-uniprot-causal
+  name: Native dolipore septum UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-dolipore_septum-causal
+- check_id: eisosome_membrane_domain_mcc-uniprot-verify
+  name: Native eisosome membrane domain/MCC UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0090512
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-eisosome_membrane_domain_mcc-verify
+- check_id: eisosome_membrane_domain_mcc-uniprot-causal
+  name: Native eisosome membrane domain/MCC UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0090512
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-eisosome_membrane_domain_mcc-causal
+- check_id: fungal_type_cell_wall-uniprot-verify
+  name: Native fungal-type cell wall UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009277
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-fungal_type_cell_wall-verify
+- check_id: fungal_type_cell_wall-uniprot-causal
+  name: Native fungal-type cell wall UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009277
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-fungal_type_cell_wall-causal
+- check_id: glycocalyx-uniprot-verify
+  name: Native glycocalyx UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030112
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/glycocalyx.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-glycocalyx-verify
+- check_id: glycocalyx-uniprot-causal
+  name: Native glycocalyx UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030112
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/glycocalyx.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-glycocalyx-causal
+- check_id: mycolate_outer_membrane-uniprot-verify
+  name: Native mycolate outer membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036407
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/mycolate_outer_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-mycolate_outer_membrane-verify
+- check_id: mycolate_outer_membrane-uniprot-causal
+  name: Native mycolate outer membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036407
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/mycolate_outer_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-mycolate_outer_membrane-causal
+- check_id: periplasmic_space-uniprot-verify
+  name: Native periplasmic space UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042597
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/periplasmic_space.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-periplasmic_space-verify
+- check_id: periplasmic_space-uniprot-causal
+  name: Native periplasmic space UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042597
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/periplasmic_space.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-periplasmic_space-causal
+- check_id: plasma_membrane-uniprot-verify
+  name: Native plasma membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005886
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-plasma_membrane-verify
+- check_id: plasma_membrane-uniprot-causal
+  name: Native plasma membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005886
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-plasma_membrane-causal
+- check_id: porous_cell_septum-uniprot-verify
+  name: Native porous cell septum UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000934
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-porous_cell_septum-verify
+- check_id: porous_cell_septum-uniprot-causal
+  name: Native porous cell septum UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000934
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-porous_cell_septum-causal
+- check_id: slime_layer-uniprot-verify
+  name: Native slime layer UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/slime_layer.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-slime_layer-verify
+- check_id: slime_layer-uniprot-causal
+  name: Native slime layer UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/slime_layer.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Exact represented inventory and
+    coverage limits are retained in evidence. Empty inventories or zero molecular
+    graph nodes do not validate narrative molecules, mechanism, taxon transfer or
+    assembly necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-slime_layer-causal
+evidence:
+- evidence_id: current-record-0
+  kind: record_content
+  reference: data/structures/envelope/division_septum.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80;
+    current SHA256 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+- evidence_id: original-review-0
+  kind: prior_review
+  reference: reviews/structured/20261021T101605Z-division-septum-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: a17e8de33c5e90248e9aa9beb603e20f5642f7dc5e67473fa082c5506a41cac5
+- evidence_id: current-record-1
+  kind: record_content
+  reference: data/structures/envelope/dolipore_septum.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 a985a168ce218d28b2fb0bdf2bb1b4b025b9d7b2656c9554dea9a2067059d6dd;
+    current SHA256 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca.
+    Changed record reassessed against current sources.
+  snapshot_sha256: 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca
+- evidence_id: original-review-1
+  kind: prior_review
+  reference: reviews/structured/20261021T101608Z-dolipore-septum-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 0834b5ebe83715949265569dd4e4a7717287fc3c950d17d6d0d645435ce40d00
+- evidence_id: current-record-2
+  kind: record_content
+  reference: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f;
+    current SHA256 cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f
+- evidence_id: original-review-2
+  kind: prior_review
+  reference: reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 7345e5742d2661bedbfb85ed42e4de150d04ea738222824b7914b3f9f8d78f8f
+- evidence_id: current-record-3
+  kind: record_content
+  reference: data/structures/envelope/fungal_type_cell_wall.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64;
+    current SHA256 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64
+- evidence_id: original-review-3
+  kind: prior_review
+  reference: reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: bc97dc9029bf76a2b3d759ed28312f113c0d03aa30d01486b024a29695451d4e
+- evidence_id: current-record-4
+  kind: record_content
+  reference: data/structures/envelope/glycocalyx.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8;
+    current SHA256 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8
+- evidence_id: original-review-4
+  kind: prior_review
+  reference: reviews/structured/20261021T101617Z-glycocalyx-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 9eaa3a634f50a4adb45d26ac49443319dc80e2a724eaeffec2e1ded6559f445c
+- evidence_id: current-record-5
+  kind: record_content
+  reference: data/structures/envelope/mycolate_outer_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881;
+    current SHA256 f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881
+- evidence_id: original-review-5
+  kind: prior_review
+  reference: reviews/structured/20261021T101620Z-mycolate-outer-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 1059bcd3aa889087386c1014cef2297d5d6c7c5085c15e9a5d79a3208a4555e0
+- evidence_id: current-record-6
+  kind: record_content
+  reference: data/structures/envelope/periplasmic_space.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98;
+    current SHA256 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98
+- evidence_id: original-review-6
+  kind: prior_review
+  reference: reviews/structured/20261021T101622Z-periplasmic-space-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 5a92790d6b9ed0818bcee13aa27f51a5e4e0ce4e048c4f9b569224b7ffea6cf7
+- evidence_id: current-record-7
+  kind: record_content
+  reference: data/structures/envelope/plasma_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d;
+    current SHA256 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d
+- evidence_id: original-review-7
+  kind: prior_review
+  reference: reviews/structured/20261021T101624Z-plasma-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: d1c9eab46d179a952b0d8d066c1dc249ea958b784440bf60e041b6c29d020bec
+- evidence_id: current-record-8
+  kind: record_content
+  reference: data/structures/envelope/porous_cell_septum.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f;
+    current SHA256 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f
+- evidence_id: original-review-8
+  kind: prior_review
+  reference: reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: e76a31ded098b2ba27104803cdd11229009d58dffb7b0f7e08c7959113bc9392
+- evidence_id: current-record-9
+  kind: record_content
+  reference: data/structures/envelope/slime_layer.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Original frozen SHA256 e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34;
+    current SHA256 e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+- evidence_id: original-review-9
+  kind: prior_review
+  reference: reviews/structured/20261021T101629Z-slime-layer-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: a881c037aca99b07f2d17a9621623f0ab1de3eea75cd928d1164d38107a5e400
+- evidence_id: plaque-division-septum-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000935,GO:0030428,GO:0032153,GO:1990586
+  locator: All four returned definitions, synonyms and exact inverse-child relations
+  accessed_at: '2026-11-03T07:30:34.300521Z'
+  snapshot_sha256: 816f470770889307e9046a370cbe2b7bf26af10b6f3df72e30755a3eebecae76
+  summary: GO0000935 exactly supplies the definition and exact/related synonyms. GO0030428
+    has GO0000935 as an is_a child; GO0032153 has it as a part_of child. GO1990586
+    denotes the prokaryotic division machinery and coordinates membrane/wall constriction,
+    rather than denoting the finished wall.
+  support: supports
+- evidence_id: plaque-division-septum-agent-chebi-8005
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/8005/
+  locator: Complete native name, definition, synonyms, release status and ontology
+    relations
+  accessed_at: '2026-11-03T07:30:34.302123Z'
+  snapshot_sha256: e522d29047c83fadac704ac6c6a4bc6a6beab1c5f0f116d903c78536bca212c0
+  summary: Released three-star CHEBI8005 identifies peptidoglycan as the alternating
+    N-acetylglucosamine/N-acetylmuramic-acid polymer with attached peptide chains.
+    Its material identity does not encode deposition site.
+  support: supports
+- evidence_id: plaque-division-septum-agent-jats-PMC8610174
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8610174.1/PMC8610174.1.xml
+  locator: JATS PMC8610174 sectionsS1 Introduction, S2 Overview, S16 Scaffold, S17
+    Coordinator, S22 Cell Pole Shape Determinant, S23 Conclusions; complete named
+    prose sections, no independent primary-reference or image-pixel audit
+  accessed_at: '2026-11-03T07:30:34.303514Z'
+  snapshot_sha256: 8a76b9af3fed1226ad5e9e6f00452499f9541ace397318b6d6ff1635dd0ca45d
+  summary: Secondary review body at sectionsS1/S2/S16/S17/S22/S23 supports bounded
+    divisome localization, septal peptidoglycan synthesis and species-dependent FtsZ
+    roles. Force generation and detailed synthesis coordination retain uncertainty;
+    this review is not itself primary experimental evidence.
+  support: supports
+- evidence_id: plaque-division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1146/annurev-biophys-121219-081703%22
+  locator: Complete bibliographic identity, publication types and abstract
+  accessed_at: '2026-11-03T07:30:34.303991Z'
+  snapshot_sha256: 11b3b11e5aa467418a3ce7352d845ced8be8d55bb00fe5fecb7b937643e7da86
+  summary: Exact native citation identifies McQuillen and Xiao2020, PMID32092282,
+    and its review abstract.
+  support: supports
+- evidence_id: plaque-division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1111/j.1749-6632.2012.06818.x%22
+  locator: Complete citation, first-publication/issue dates, publication types and
+    abstract; full body not recovered
+  accessed_at: '2026-11-03T07:30:34.305947Z'
+  snapshot_sha256: 9223d6468cb3fd82c0defeba074dfa46343ad8d8b92d9685553c81f47db5f538
+  summary: Exact Egan and Vollmer review abstract describes the divisome at mid-cell
+    synthesizing stress-bearing PG and coordinating envelope constriction, including
+    simultaneous E.coli septal synthesis/cleavage. First publication2012-12-05 and
+    issue2013 explain the record date.
+  support: supports
+- evidence_id: plaque-division-septum-agent-tax-2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-11-03T07:30:34.306148Z'
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+  summary: Native taxonomy identifies Bacteria at domain rank; identity metadata alone
+    is not occurrence evidence.
+  support: supports
+- evidence_id: plaque-division-septum-agent-tax-83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-11-03T07:30:34.308786Z'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+  summary: Native taxonomy identifies Escherichia coli K-12 at strain rank; identity
+    metadata alone is not occurrence evidence.
+  support: supports
+- evidence_id: plaque-division-septum-agent-tax-1423
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1423
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-11-03T07:30:34.309021Z'
+  snapshot_sha256: cba62f34e18147fc64dac9d0b13c66a25f60ac516c43a451187d6787e3c7a07b
+  summary: Native taxonomy identifies Bacillus subtilis at species rank; identity
+    metadata alone is not occurrence evidence.
+  support: supports
+- evidence_id: plaque-egan-access
+  kind: authority
+  reference: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1749-6632.2012.06818.x
+  locator: Actual publisher pdfdirect response body;403 HTML, not a PDF
+  accessed_at: '2026-11-03T07:30:34.894311Z'
+  snapshot_sha256: 9d653239de78142a5d4140deff3327edd356607a3698f5f6d93b68e2e23c2224
+  summary: This route did not expose the review body. Egan claims are restricted to
+    the exact native abstract; no source-wide absence claim is made.
+  support: context_only
+- evidence_id: plaque-dolipore-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000937,GO:0000934
+  locator: Both exact definitions and GO0000934 inverse-child relation
+  accessed_at: '2026-11-03T07:30:34.946431Z'
+  snapshot_sha256: 1233f58c2483eb83306300e25824e32968f6004ee89e51ab1bd8ad93624c2ec0
+  summary: Native GO0000937 describes the barrel-shaped swelling and cap-covered central
+    pore; GO0000934 has dolipore septum as an is_a child. The native class is distinct
+    from a complete, exchange-blocking division septum.
+  support: supports
+- evidence_id: plaque-dolipore-agent-tax-5302
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5302
+  locator: Taxon identifier, scientific name, rank, lineage and aliases
+  accessed_at: '2026-11-03T07:30:35.077629Z'
+  snapshot_sha256: 767e76804a11555dbc7caef4dfb2e33fcb62b45cceefba8ef88fbc7c8b373f71
+  summary: Native taxon entry verifies Agaricomycotina at subphylum rank; it does
+    not independently establish occurrence or assign every sample to a single experimental
+    strain.
+  support: supports
+- evidence_id: plaque-dolipore-agent-tax-5334
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5334
+  locator: Taxon identifier, scientific name, rank, lineage and aliases
+  accessed_at: '2026-11-03T07:30:35.082176Z'
+  snapshot_sha256: f828ad46b9009118aa614b60ff788b7ff067b50a9c79348fa4789b07c0cb4126
+  summary: Native taxon entry verifies Schizophyllum commune at species rank; it does
+    not independently establish occurrence or assign every sample to a single experimental
+    strain.
+  support: supports
+- evidence_id: plaque-dolipore-agent-traquair1978-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1139/m78-129
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-11-03T07:30:35.101235Z'
+  snapshot_sha256: e1d8457fce765525e568d8526427534b90950733b97c7a51b981605cff1df173
+  summary: Exact Traquair and McKeen1978 identity, DOI10.1139/m78-129 and PMID679064
+    are verified. The title supplies dolipore-parenthesome terminology; the abstract
+    describes imperforate parenthesomes in the named historical fungus. Full-body
+    TEM methods were not recovered.
+  support: supports
+- evidence_id: plaque-dolipore-agent-driel2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.mycres.2008.12.007
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-11-03T07:30:35.112228Z'
+  snapshot_sha256: 1bf623ea910deecd0c0d90d11bbf35fd3830a1e3662a7a9ea1095f877e73a38c
+  summary: Exact vanDriel2009 citation, DOI10.1016/j.mycres.2008.12.007 and PMID19640404
+    are verified. Abstract describes three cap morphotypes, a literature survey of
+    more than325species, and TEM of R.fibula and C.formosus; it does not assert universal
+    cap presence.
+  support: supports
+- evidence_id: plaque-dolipore-agent-driel2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/EC.00125-08
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-11-03T07:30:35.115078Z'
+  snapshot_sha256: 204d3f39ccb5c23bf966ee73aca1ee9b4c04b81d05a201a801797a731854ea63
+  summary: Exact vanDriel2008 identity, DOI10.1128/EC.00125-08, PMID18757567 and PMC2568075
+    are verified. The abstract is separate from the genuine body inspected below.
+  support: supports
+- evidence_id: plaque-dolipore-agent-peer2010-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/j.1462-2920.2009.02122.x
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-11-03T07:30:35.118008Z'
+  snapshot_sha256: 98afa4f3276bdc0f44cfb92a8569d31fcf92812b10e06a146dda93ebee78ad91
+  summary: Exact vanPeer2010 identity, DOI10.1111/j.1462-2920.2009.02122.x and PMID20050873
+    are verified. The early-online2009 date on the PDF and2010 issue refer to the
+    same paper.
+  support: supports
+- evidence_id: plaque-dolipore-agent-legacy-PMC2568075
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2568075/
+  locator: 'PMC HTML: complete Abstract/Introduction, Methods sec1, Results sec13,
+    Discussion sec17 and Figures1-8 captions; no source image-pixel reanalysis'
+  accessed_at: '2026-11-03T07:30:35.149895Z'
+  snapshot_sha256: eb44469824730506e85f61ed9bf7cef00f218d08dfdf7b3b488f290421ca8ebc
+  summary: R.solani CBS346.84 material was enriched by disruption, centrifugation
+    and detergent treatment. Specific anti-recSPC18 labels caps and some plug peripheries,
+    not the swelling labeled nonspecifically by antibodies to glycosylated protein.
+    Variable plug labeling and a repository/release model are explicitly hypotheses,
+    not direct proof of transport or a universal plugging mechanism.
+  support: supports
+- evidence_id: plaque-dolipore-agent-peer2010-knaw-pdf
+  kind: primary_source
+  reference: https://wi.knaw.nl/images/ResearchGroups/Publications/2009Peer0002.pdf
+  locator: 'Genuine early-online PDF: Introduction/Results/Discussion pp1-8; Experimental
+    procedures p8 strains/growth, laser dissection and purification opening; Figures1-7
+    captions. Remaining detailed cloning/proteomics methods, supplements/movies and
+    image pixels excluded.'
+  accessed_at: '2026-11-03T07:30:35.589815Z'
+  snapshot_sha256: 9310b0d3b6a841022ccca534b654ae46799eb58089a8d99f4a63462e4d12404c
+  summary: 'Genuine early-online PDF of vanPeer2010: S. commune Spc33 deletion removes
+    visible caps and impairs closure. The assay reports seven of ten wild-type septa
+    closed and eight of ten mutant septa open, not100% closure failure. Cap purification
+    uses the sc3/sc15 deletion derivative of4-40; spc33 deletion uses4-8 and crosses
+    with4-8b. Growth/fruiting depend on temperature, turgor mechanism is speculative,
+    and Spc14 antiserum was nonspecific.'
+  support: supports
+- evidence_id: plaque-dolipore-agent-traquair1978-pdf
+  kind: authority
+  reference: https://cdnsciencepub.com/doi/pdf/10.1139/m78-129
+  locator: Actual publisher response body:403 HTML
+  accessed_at: '2026-11-03T07:30:35.674779Z'
+  snapshot_sha256: 14f1f1c05d57c8d2d9351b9b5e19fea85ebc6708b5a8129c90ec4ca8143ee01e
+  summary: This route did not expose the complete cited article. Exact native abstracts
+    remain distinct from the related thesis version or another paper’s recovered body.
+  support: context_only
+- evidence_id: plaque-adapter-datasets
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete returned organism/dataset catalogue
+  accessed_at: '2026-11-03T07:30:35.688616Z'
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  summary: Fresh official catalogue contains E. coli and B. subtilis datasets, but
+    no Rhizoctonia, Schizophyllum or other fungal dataset. The absence conclusion
+    is limited to all returned catalogue entries, not biological absence.
+  support: context_only
+- evidence_id: plaque-adapter-ecoli-meta
+  kind: database
+  reference: https://imodulondb.org/api/datasets/e_coli/precise_mg1655/meta
+  locator: Dataset identity, strains, sample counts and publication_url
+  accessed_at: '2026-11-03T07:30:35.703759Z'
+  snapshot_sha256: 0722bb1ccec69ac0d7ebc2784fc7cbdf1cfe612d739b8fb66d54a441a8b3db91
+  summary: precise_mg1655 is MG1655, with 586 samples, 281 conditions and 115 modules.
+    It is bounded K-12 strain context, not all E. coli strains; publication_url is
+    null.
+  support: context_only
+- evidence_id: plaque-adapter-ecoli-ftsZ
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=e_coli&dataset=precise_mg1655&query=ftsZ&limit=50
+  locator: Complete first response; exact ftsZ gene and other-name hits
+  accessed_at: '2026-11-03T07:30:35.708449Z'
+  snapshot_sha256: 12e79ef24e0ba10ebcaa059acc247c001863f11767681cfd368096db0714253e
+  summary: Exact gene-name hit b0095 is ftsZ; the kilR product-text hit is an inhibitor
+    of FtsZ, not the target gene. No iModulon-name hit returned.
+  support: context_only
+  search_scope: Database iModulonDB; exact query URL https://imodulondb.org/api/search?organism=e_coli&dataset=precise_mg1655&query=ftsZ&limit=50;
+    accessed 2026-11-03T07:30:35.708449Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-driel2008-jats
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2568075/fullTextXML
+  locator: Actual HTTP500 response body and retrieval receipt
+  accessed_at: '2026-11-03T07:30:35.733026Z'
+  snapshot_sha256: 0d8084cd0d56dbe7fd9e2057f639cd46d8ca8cacc5d1406cb41740e8764c5d93
+  summary: This JATS route failed with HTTP500. The separately fetched genuine PMC
+    HTML main body was read successfully; this response is not scientific evidence.
+  support: context_only
+- evidence_id: plaque-adapter-bsub-meta
+  kind: database
+  reference: https://imodulondb.org/api/datasets/b_subtilis/modulome/meta
+  locator: Dataset identity, all strains, counts and publication URL
+  accessed_at: '2026-11-03T07:31:28.788714Z'
+  snapshot_sha256: f225ad0f8b12890e46ada975cf1a94a6df1259de6da98d44f51f9828e45f5b88
+  summary: B. subtilis modulome comprises 265 samples, 83 conditions and 72 modules
+    across strains 168, BEST7003, LK1371, NCIB3610, PLBS802, PY79 and SMY. This mixed-strain
+    transcriptomic context is not an exact single-strain structural experiment.
+  support: context_only
+- evidence_id: plaque-adapter-bsub-ftsZ
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=b_subtilis&dataset=modulome&query=ftsZ&limit=50
+  locator: Complete first response with exact gene-name match
+  accessed_at: '2026-11-03T07:31:28.790478Z'
+  snapshot_sha256: b5db6560900a5f4542e858a6c37347ab37c263a33651cfbc4f003b61f4f90555
+  summary: Exact ftsZ hit BSU_15290 is annotated cell-division initiation protein
+    (septum formation). No iModulon-name hit returned.
+  support: context_only
+  search_scope: Database iModulonDB; exact query URL https://imodulondb.org/api/search?organism=b_subtilis&dataset=modulome&query=ftsZ&limit=50;
+    accessed 2026-11-03T07:31:28.790478Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-adapter-ecoli-modules
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0095/imodulons
+  locator: All 115 returned gene-weight rows and is_in_imodulon/threshold fields
+  accessed_at: '2026-11-03T07:31:28.792029Z'
+  snapshot_sha256: 03bafb72c3ea7d3fcc6c88f61643e9b01ac96a8ed11fd2d0edccf436ed176d58
+  summary: b0095 is below membership threshold in all 115 returned modules. No above-threshold
+    module hit informs the verdict. This does not indicate absent FtsZ expression,
+    localization, assembly or function.
+  support: context_only
+- evidence_id: plaque-bisson2017-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5485650/
+  locator: 'PMC5485650 author manuscript: complete main prose and Figures1-4 captions;
+    detailed supplements/movies and source image pixels excluded'
+  accessed_at: '2026-11-03T07:31:28.793256Z'
+  snapshot_sha256: 647909edb16dc34d437b006bc0deb98fa365524ca72885b84c6da44e895f5317
+  summary: Bisson-Filho2017 directly examines B. subtilis FtsAZ/Pbp2B motions and
+    fluorescent D-amino-acid incorporation. It supports centripetal septal PG construction
+    and FtsZ-guided synthesis in the tested strains/conditions; the rate coupling
+    is organism-specific, not a universal mechanism across bacterial division.
+  support: supports
+- evidence_id: plaque-yang2017-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5851775/
+  locator: 'PMC5851775 author manuscript: complete main prose and Figures1-4 captions;
+    detailed supplements/movies and source image pixels excluded'
+  accessed_at: '2026-11-03T07:31:28.794412Z'
+  snapshot_sha256: 02c26368f88733cb5e223675db0229505cbd039a8e70c3fa2db7a99d72a1f4d9
+  summary: Yang2017 directly examines E. coli BW25113 and ftsZ mutants. Treadmilling
+    organizes septal synthesis distribution and FtsI motion without generally limiting
+    total synthesis/closure rate. This supports the record bounded bacterial assembly
+    summary without universalizing B. subtilis rate control.
+  support: supports
+- evidence_id: plaque-driel2009-access
+  kind: authority
+  reference: https://www.sciencedirect.com/science/article/pii/S0953756209000203
+  locator: Actual HTTP403 publisher response body; exact paper DOI separately verified
+  accessed_at: '2026-11-03T07:31:28.794679Z'
+  snapshot_sha256: 0b19622998ec637f77c6a60f66ff733548d97ded7a4a583ff00865e27b7acbbd
+  summary: This publisher route did not expose the final2009 article body. Scientific
+    use is restricted to its exact native abstract and metadata; no thesis version
+    is substituted.
+  support: context_only
+- evidence_id: plaque-go-search-parenthesome
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=parenthesome&limit=100
+  locator: Exact text query first response, count and pagination
+  accessed_at: '2026-11-03T07:31:28.796248Z'
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  summary: The parenthesome query returned zero candidates. This bounded query does
+    not prove absence from every ontology or spelling.
+  support: context_only
+  search_scope: Database QuickGO; exact query URL https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=parenthesome&limit=100;
+    accessed 2026-11-03T07:31:28.796248Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-go-search-septal-pore-cap
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100
+  locator: Exact text query first100 candidate identifiers/names and pagination
+  accessed_at: '2026-11-03T07:31:28.799707Z'
+  snapshot_sha256: 070b3dfc6d72cc226533deba2d01f1524c3b57439565d745230dea7ce7ed0e94
+  summary: First100 of276 candidates were inspected; no exact named whole septal-pore-cap
+    class in that page. Remaining pages were not inspected, and no exhaustive ontology
+    absence is claimed.
+  support: context_only
+  search_scope: Database QuickGO; exact query URL https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100;
+    accessed 2026-11-03T07:31:28.799707Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-ipr-search-SPC18
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=SPC18&page_size=100
+  locator: 'extra-receipts.json exact ipr-search-SPC18 entry: HTTP204, curl92 HTTP/2
+    error; no response-body file created. Snapshot hash identifies the complete receipt
+    JSON, not a successful query body.'
+  accessed_at: '2026-11-03T07:31:28.884732Z'
+  snapshot_sha256: 9357e37534c386cf379f2ad776bf378c6ba1eb6e3f85ad0d3fc9155827209c21
+  summary: HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error.
+    This is a bounded inconclusive name query, not a successful family-absence result
+    or sequence search. Whole cap structures cannot be equated to an individual protein
+    family.
+  support: unknown
+  search_scope: Database InterPro; exact query URL https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=SPC18&page_size=100;
+    accessed 2026-11-03T07:31:28.884732Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-ipr-search-Spc14
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc14&page_size=100
+  locator: 'extra-receipts.json exact ipr-search-Spc14 entry: HTTP204, curl92 HTTP/2
+    error; no response-body file created. Snapshot hash identifies the complete receipt
+    JSON, not a successful query body.'
+  accessed_at: '2026-11-03T07:31:28.889934Z'
+  snapshot_sha256: 9357e37534c386cf379f2ad776bf378c6ba1eb6e3f85ad0d3fc9155827209c21
+  summary: HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error.
+    This is a bounded inconclusive name query, not a successful family-absence result
+    or sequence search. Whole cap structures cannot be equated to an individual protein
+    family.
+  support: unknown
+  search_scope: Database InterPro; exact query URL https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc14&page_size=100;
+    accessed 2026-11-03T07:31:28.889934Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-ipr-search-Spc33
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc33&page_size=100
+  locator: 'extra-receipts.json exact ipr-search-Spc33 entry: HTTP204, curl92 HTTP/2
+    error; no response-body file created. Snapshot hash identifies the complete receipt
+    JSON, not a successful query body.'
+  accessed_at: '2026-11-03T07:31:28.897122Z'
+  snapshot_sha256: 9357e37534c386cf379f2ad776bf378c6ba1eb6e3f85ad0d3fc9155827209c21
+  summary: HTTP204 with empty body was accompanied by curl exit92 HTTP/2 stream error.
+    This is a bounded inconclusive name query, not a successful family-absence result
+    or sequence search. Whole cap structures cannot be equated to an individual protein
+    family.
+  support: unknown
+  search_scope: Database InterPro; exact query URL https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc33&page_size=100;
+    accessed 2026-11-03T07:31:28.897122Z; first response only, limit/page_size as
+    encoded (50 or100); no sequence search, other spelling search or biological absence
+    inference. Local ignored files do not apply to this remote query.
+- evidence_id: plaque-adapter-bsub-modules
+  kind: database
+  reference: https://imodulondb.org/api/genes/b_subtilis/modulome/BSU_15290/imodulons
+  locator: All 72 returned gene-weight rows and is_in_imodulon/threshold fields
+  accessed_at: '2026-11-03T07:32:06.213249Z'
+  snapshot_sha256: 845b39befd56ab0bf9671e30c7d380a59c0ad427c55a777b7eb1270c720679ae
+  summary: BSU_15290 is below membership threshold in all 72 returned modules. Thus
+    there is no above-threshold module hit to summarize; thresholded nonmembership
+    is not biological absence.
+  support: context_only
+- evidence_id: plaque-adapter-bsub-publication
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=10&query=DOI%3A10.1371%2Fjournal.pcbi.1012546
+  locator: Exact DOI match title, abstract, authors and identifiers
+  accessed_at: '2026-11-03T07:32:06.214626Z'
+  snapshot_sha256: 783001df8cc38e1d95caa145b308af48c1439cb3b9b60da3cfe07e2743b538cb
+  summary: DOI10.1371/journal.pcbi.1012546 is the primary iModulonMiner/PyModulon
+    computational-method paper, PMC11534266. Its inspected abstract describes ICA-derived
+    co-regulated gene sets and a B. subtilis demonstration; only abstract/metadata
+    were read, not the full body. It does not establish septum structure or causal
+    assembly.
+  support: context_only
+- evidence_id: plaque-adapter-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Structured Source Cross-Checks
+  accessed_at: '2026-11-03T07:35:52.120996Z'
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+  summary: Named genes/proteins trigger applicability review; physical-structure scope
+    alone is not an exemption. Module membership is computational context, not assembly
+    proof.
+  support: context_only
+- evidence_id: plaque-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Components and evidence rules
+  accessed_at: '2026-11-03T07:35:52.121094Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  summary: Taxon-agnostic material identity, location and assembly necessity are separate.
+    Optional inventories are not quotas; scientific curation is separately authorized.
+  support: context_only
+- evidence_id: plaque-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Scope and completion; node/edge scope
+  accessed_at: '2026-11-03T07:35:52.121127Z'
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+  summary: Graph scope must agree with represented directed evidence and source-specific
+    conditions.
+  support: context_only
+- evidence_id: plaque-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent.grounding, grounding_status and essentiality; node/scope
+    enums
+  accessed_at: '2026-11-03T07:35:52.121153Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  summary: Grounding identifies a taxon-neutral class; essentiality concerns whether
+    the structure forms without the component, not viability.
+  support: context_only
+- evidence_id: plaque-current-0
+  kind: record_content
+  reference: data/structures/envelope/division_septum.yaml
+  locator: Entire maintained record including components, function, all graph nodes/edges,
+    evidence and discussions/history
+  accessed_at: '2026-11-03T07:35:52.121200Z'
+  snapshot_sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+  summary: Full current record read. Target bytes match the original frozen target
+    hash.
+  support: context_only
+- evidence_id: plaque-original-0
+  kind: prior_review
+  reference: reviews/structured/20261021T101605Z-division-septum-audit/review.yaml
+  locator: Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations
+  accessed_at: '2026-11-03T07:35:52.121230Z'
+  snapshot_sha256: a17e8de33c5e90248e9aa9beb603e20f5642f7dc5e67473fa082c5506a41cac5
+  summary: Independent read-only reassessment preserves immutable prior observation.
+    All original frozen inputs match their source commit; native validate and render
+    pass. Existing minor finding remains open.
+  support: context_only
+- evidence_id: plaque-current-1
+  kind: record_content
+  reference: data/structures/envelope/dolipore_septum.yaml
+  locator: Entire maintained record including components, function, all graph nodes/edges,
+    evidence and discussions/history
+  accessed_at: '2026-11-03T07:35:52.121267Z'
+  snapshot_sha256: 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca
+  summary: Full current record read. Historical input is stale only because the swelling-is-part-of-septum
+    edge and its history were added; the new edge was substantively checked.
+  support: context_only
+- evidence_id: plaque-original-1
+  kind: prior_review
+  reference: reviews/structured/20261021T101608Z-dolipore-septum-audit/review.yaml
+  locator: Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations
+  accessed_at: '2026-11-03T07:35:52.121294Z'
+  snapshot_sha256: 0834b5ebe83715949265569dd4e4a7717287fc3c950d17d6d0d645435ce40d00
+  summary: Independent read-only reassessment preserves immutable prior observation.
+    All original frozen inputs match their source commit; native validate and render
+    pass. Original qualified pass does not assess the later edge.
+  support: context_only
+- evidence_id: plaque-current-2
+  kind: record_content
+  reference: data/structures/envelope/porous_cell_septum.yaml
+  locator: Entire maintained record including components, function, all graph nodes/edges,
+    evidence and discussions/history
+  accessed_at: '2026-11-03T07:35:52.121333Z'
+  snapshot_sha256: 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f
+  summary: Full current record read. Target bytes match the original frozen target
+    hash.
+  support: context_only
+- evidence_id: plaque-original-2
+  kind: prior_review
+  reference: reviews/structured/20261021T101626Z-porous-cell-septum-audit/review.yaml
+  locator: Complete original YAML plus deterministic Markdown; source/checks/evidence/assessments/findings/limitations
+  accessed_at: '2026-11-03T07:35:52.121358Z'
+  snapshot_sha256: e76a31ded098b2ba27104803cdd11229009d58dffb7b0f7e08c7959113bc9392
+  summary: Independent read-only reassessment preserves immutable prior observation.
+    All original frozen inputs match their source commit; native validate and render
+    pass. Existing minor finding remains open.
+  support: context_only
+- evidence_id: plaque-native-division_septum-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml
+    --verify
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-verify.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-verify-receipt.json
+  accessed_at: '2026-11-03T07:30:46.492755Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-native-division_septum-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/division_septum.yaml
+    --causal-graphs
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-causal.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/division_septum-uniprot-causal-receipt.json
+  accessed_at: '2026-11-03T07:30:47.021317Z'
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-native-dolipore_septum-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml
+    --verify
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-verify.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-verify-receipt.json
+  accessed_at: '2026-11-03T07:30:47.546766Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-native-dolipore_septum-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/dolipore_septum.yaml
+    --causal-graphs
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-causal.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/dolipore_septum-uniprot-causal-receipt.json
+  accessed_at: '2026-11-03T07:30:48.064401Z'
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-native-porous_cell_septum-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml
+    --verify
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-verify.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-verify-receipt.json
+  accessed_at: '2026-11-03T07:31:01.698781Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-native-porous_cell_septum-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/porous_cell_septum.yaml
+    --causal-graphs
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-causal.log;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/porous_cell_septum-uniprot-causal-receipt.json
+  accessed_at: '2026-11-03T07:31:02.204824Z'
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Root-executed native command exit0; independently verified receipt and
+    log hash. These records have no UniProt protein examples or GENE_OR_PROTEIN nodes;
+    this passing empty applicable subset is not scientific source verification.
+  support: supports
+- evidence_id: plaque-original-native-validation
+  kind: validation
+  reference: scripts/record_review.py validate and render --content
+  locator: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-plaque/original-validation.json
+  accessed_at: '2026-11-03T07:30:00.880031Z'
+  snapshot_sha256: 07f72ff46416d0d6dc9f1422d9719672a4667c286c3dd0d02a495b28814e4551
+  summary: All three original YAML bundles validate, all three renders match the saved
+    Markdown exactly, and target hashes match historical source bytes; only current
+    dolipore is stale.
+  support: supports
+- evidence_id: micro-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0090512,GO:0044853,GO:0032126,GO:0036286,GO:0009277,GO:0005618,GO:0005886,GO:0016020,GO:0071944,GO:0005737,GO:0055085
+  locator: QuickGO eleven exact requested terms, definitions/synonyms and returned
+    relations; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/go.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/go.receipt.json
+  accessed_at: '2026-11-03T07:30:51.225852Z'
+  snapshot_sha256: 60572be5ae8b16f52831e3e54303c280b75a4299a55f46734afe33409776a421
+  summary: All eleven current terms resolve and are not obsolete. GO:0090512 denotes
+    the MCC membrane subdomain, with broader raft and eisosome relationships; GO:0009277
+    allows variable wall polymers and excludes capsule. GO:0005886 lists unqualified
+    cytoplasmic membrane as EXACT and bacterial inner membrane as NARROW. Remaining
+    parent, location, filament and transport identifiers match their labels. Ontology
+    authority does not prove experimental necessity.
+  support: supports
+- evidence_id: micro-walther2006-primary
+  kind: primary_source
+  reference: https://walterlab.ucsf.edu/wp-content/uploads/2015/06/nature04472.pdf
+  locator: Walther et al. 2006, DOI:10.1038/nature04472; author-hosted PDF main text
+    and figure captions pp998–1002, Methods p1002; extracted layout text read, not
+    figure image pixels; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/primary/walther-author.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/primary/walther-author.receipt.json
+  accessed_at: '2026-11-03T07:32:29.129753Z'
+  snapshot_sha256: 5b164854a0ae858263a64ba514ae0c25a9d305a34a14e4e533b61d23e874ed79
+  summary: Fresh primary main text supports Sur7/Pil1 colocalization in stable W303-derived
+    plasma-membrane patches. EM in Fig2c and main text concerns abnormal pil1-deletion
+    invaginations, not the normal furrow/filament architecture claimed in the distribution
+    note. Methods identifies W303; database S288C protein identity is a separate scope.
+    No fresh supplement or image-pixel analysis is claimed.
+  support: supports
+- evidence_id: micro-karotki2011-primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3257569/fullTextXML
+  locator: Karotki et al. 2011 DOI:10.1083/jcb.201104040, JATS Results sec3/sec5/sec6/sec11
+    and Fig7 caption; Methods sec14/15/17/19/20/25; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/karotki.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/karotki.receipt.json
+  accessed_at: '2026-11-03T07:30:51.226062Z'
+  snapshot_sha256: 403bb366f2d751bb16d953995b5800338820e4ee1a7f0c79b0c7f1b2d5a67152
+  summary: Inspected primary text supports purified Pil1/Lsp1 assembly and lipid binding,
+    PI(4,5)P2-dependent behavior, and in-vivo furrow-associated Pil1 lattice assessed
+    by unroofing/deep-etch EM. Section11/Fig7 is the nearest support for normal furrow/filament
+    architecture; in-vitro closed cylinders and in-vivo half-cylinder geometry are
+    distinguished. W303/S288C yeast and recombinant E. coli expression are not interchangeable
+    taxon scopes. Figure captions were read without reanalyzing pixels or raw data.
+  support: supports
+- evidence_id: micro-young2002-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC133540/?pdf=render
+  locator: Young et al. 2002 PMID:11784867; HTML paragraphs P12/P15/P19/P22 methods,
+    P25/P27–P29/P31 and P34–P36 localization/tag scope; zero-based P offsets in retained
+    text; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/young.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/young.receipt.json
+  accessed_at: '2026-11-03T07:30:51.226258Z'
+  snapshot_sha256: 578efc92f28fd39c5d5c98bd8f32e928f9eadf3f30e0e77fa7ba12d3f171e8c1
+  summary: Primary localization and time-series text supports stable Sur7 cortical
+    patches and qualified tagged-protein experiments. Fragment/tag and spheroplast
+    controls constrain the localization evidence; these observations do not establish
+    Sur7 as universally essential for MCC formation. No image-pixel or raw-data analysis.
+  support: supports
+- evidence_id: micro-gow2017-secondary
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11687499/?pdf=render
+  locator: Gow, Latge and Munro 2017 DOI:10.1128/microbiolspec.FUNK-0035-2016; HTML
+    P7–P17 including Fig1 caption; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/gow.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/gow.receipt.json
+  accessed_at: '2026-11-03T07:30:51.226366Z'
+  snapshot_sha256: cbdb0688a74eee26173d4ad730b85d048ae02712c9e4fa6d85d27ac91045ad71
+  summary: Secondary review supports variable glucan/chitin/glycoprotein wall architecture,
+    species-dependent crosslinks and distinct Cryptococcus capsule outside the wall.
+    It does not support an invariant composition in every fungus. Caption inspected,
+    image pixels not inspected.
+  support: context_only
+- evidence_id: micro-orlean2012-secondary
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3522159/?pdf=render
+  locator: Orlean 2012 DOI:10.1534/genetics.112.144485; HTML P8–P11/P23/P131/P156/P166–P167/P173–P176;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/orlean.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/orlean.receipt.json
+  accessed_at: '2026-11-03T07:30:51.592747Z'
+  snapshot_sha256: cbaca8b787d9f5230a87edf1636d3a1eed0638f018459c18e9224b5a30b6dd22
+  summary: Secondary review supports S. cerevisiae osmotic/shape roles, wall-linked
+    Cwp1/Cwp2/Sed1 and both membrane-associated and covalent wall pools of Gas1. Growth
+    phase, stress, linkage and deletion phenotypes are qualified; these are not proof
+    that every named protein is necessary for all fungal-wall formation.
+  support: context_only
+- evidence_id: micro-silhavy2010-secondary
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2857177/?pdf=render
+  locator: Silhavy, Kahne and Walker 2010 DOI:10.1101/cshperspect.a000414; HTML P7–P9/P18–P22/P25/P34–P35;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/silhavy.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/silhavy.receipt.json
+  accessed_at: '2026-11-03T07:30:51.635532Z'
+  snapshot_sha256: 02a791f4fc2f840eabd0f84e97506b1d531967cd1f481601f9e4a251575822cd
+  summary: 'Secondary bacterial-envelope review supports cell boundary, bacterial
+    inner-membrane lipid/protein organization, transport, SecYEG and energy-linked
+    activities. The introductory distinction between lipid self-assembly and energy-dependent
+    biological membrane establishment is retained: the record graph is a nonmechanistic
+    material-organization sketch, not a claim that an entire living membrane forms
+    without biogenesis. Bacterial examples do not establish universal archaeal/fungal
+    complexes.'
+  support: context_only
+- evidence_id: micro-sohlenkamp2016-secondary
+  kind: authority
+  reference: https://oup.silverchair-cdn.com/article-minimal/2467617
+  locator: Sohlenkamp and Geiger DOI:10.1093/femsre/fuv008; abstract/Introduction
+    HTML P0–P3; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/sohlenkamp.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/sohlenkamp.receipt.json
+  accessed_at: '2026-11-03T07:30:52.000863Z'
+  snapshot_sha256: a0e2e277435e67ac022544173d5ffc200f23879a77b5ad94932bdd0c4a39de6e
+  summary: Secondary review supports amphiphilic bacterial membrane lipid classes
+    and compositional variation. Only abstract/Introduction inspected; later biosynthetic
+    pathways not independently audited. This supports a heterogeneous lipid material
+    row, not a universal specific lipid or topology.
+  support: context_only
+- evidence_id: micro-ellen2010-secondary
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2910488/?pdf=render
+  locator: Ellen et al. 2010 PMID:20671907, correct PMC2910488; HTML abstract P9,
+    Introduction P10–P11, Sec P12 and Fig1 caption P14; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/ellen-correct.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/ellen-correct.receipt.json
+  accessed_at: '2026-11-03T07:31:46.134174Z'
+  snapshot_sha256: 87c9ca9febec24473910d2f6d9b714a635764042f54c3b0697156d7de9928c15
+  summary: Secondary review explicitly distinguishes archaeal diether bilayers and
+    tetraether monolayers and describes membrane-embedded secretion machinery. This
+    independently supports the broad lipid-boundary wording. The earlier wrong PMC2912199
+    response was excluded; no evidence from that unrelated paper is used.
+  support: context_only
+- evidence_id: micro-calamia1990-page1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/35d7/54236/dc659e784616/pnas01038-0052.png
+  locator: 'Calamia and Manoil 1990 PMID:2164211, PNAS printed p4937 image directly
+    inspected: title/abstract, Introduction, Materials and Methods and opening Results;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/calamia-page1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/calamia-page1.receipt.json'
+  accessed_at: '2026-11-03T07:31:46.134503Z'
+  snapshot_sha256: 6f70b84078c642c7687b132365bc5d5a492a91e2f1bf212c15811feabfd26ba9
+  summary: Fresh first-page image supports LacY membrane-topology experiments using
+    lacY-phoA fusions in stated E. coli laboratory strains, favoring a 12-segment
+    model. This is location/topology evidence for LacY, not formation necessity for
+    the whole plasma membrane. Only p4937 was freshly inspected; no current read of
+    the remaining four pages is claimed.
+  support: supports
+- evidence_id: micro-bibliographic-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Europe PMC exact 18 PMID/DOI result objects, bibliographic identities and
+    publication types; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: The cited Gow, Karotki, Sohlenkamp, Ellen, Silhavy, Douglas, Orlean, Albers,
+    Walther, Luallen, Huh, Navarre, Young, Calamia, Popolo, Conzelmann and two Newman
+    papers resolve to matching identities. Metadata resolution does not substitute
+    for full-text claim verification.
+  support: supports
+- evidence_id: micro-douglas2014-abstract
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:25002088; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: Secondary review abstract explicitly identifies MCC stable furrows, Sur7/Nce102
+    integral residents and peripheral Pil1/Lsp1 filament scaffolds. Full Annual Reviews
+    page was blocked; the exact abstract is the current inspected scope.
+  support: context_only
+- evidence_id: micro-albers2011-abstract
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:21572458; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: Secondary review abstract describes archaeal envelope diversity and general
+    single-membrane envelope scope. Current Nature response was a client challenge;
+    no fresh main-body or lipid-detail verification of this cited review is claimed.
+    Ellen provides separately labeled supporting context.
+  support: context_only
+- evidence_id: micro-navarre2002-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:12469340; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: Primary abstract reports plasma-membrane enrichment and detected Sur7/Nce102
+    with residual contamination caveats. This corroborates the stated database localization
+    attribution; full body was not fetched.
+  support: supports
+- evidence_id: micro-huh2003-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:14562095; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: Primary abstract describes the genome-scale yeast GFP localization assay
+    and its coverage; the abstract alone does not list Sur7. The specific Sur7 attribution
+    was checked in the current UniProt evidence links, not newly reconstructed from
+    Huh raw data.
+  support: supports
+- evidence_id: micro-gas1-primary-abstracts
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:18434410,3046936,3072201;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: 'Exact primary abstracts: Luallen glycan-mutant assay context; Conzelmann
+    membrane GPI anchoring; Popolo membrane gp115 purification/immunostaining. Specific
+    GAS1 membrane-location references were independently checked in UniProt. Full
+    primary bodies were not read; Orlean supplies secondary wall-pool context.'
+  support: supports
+- evidence_id: micro-newman-primary-abstracts
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A25002088+OR+EXT_ID%3A11784867+OR+EXT_ID%3A12469340+OR+EXT_ID%3A14562095+OR+EXT_ID%3A18434410+OR+EXT_ID%3A3046936+OR+EXT_ID%3A3072201+OR+EXT_ID%3A2164211+OR+EXT_ID%3A7000781+OR+EXT_ID%3A7028742+OR+DOI%3A%2210.1038%2Fnature04472%22+OR+DOI%3A%2210.1083%2Fjcb.201104040%22+OR+DOI%3A%2210.1128%2Fmicrobiolspec.FUNK-0035-2016%22+OR+DOI%3A%2210.1534%2Fgenetics.112.144485%22+OR+DOI%3A%2210.1101%2Fcshperspect.a000414%22+OR+DOI%3A%2210.1093%2Ffemsre%2Ffuv008%22+OR+DOI%3A%2210.1038%2Fnrmicro2576%22+OR+DOI%3A%2210.1155%2F2010%2F608243%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact Europe PMC result abstractText for PMID:7000781,7028742; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/metadata.receipt.json
+  accessed_at: '2026-11-03T07:30:57.690496Z'
+  snapshot_sha256: 3f5d4260356a5fc55eaa69676e9196824d8cfae4d0aa9573eee6d9652ecabe26
+  summary: Exact primary abstracts describe purified/reconstituted LacY lactose transport.
+    Necessity for that transport assay is not necessity for forming a plasma membrane;
+    full bodies were not read.
+  support: supports
+- evidence_id: micro-chebi-17029
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/17029/
+  locator: Current released ChEBI exact object, label/synonyms and relationships;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-17029.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-17029.receipt.json
+  accessed_at: '2026-11-03T07:30:52.411383Z'
+  snapshot_sha256: 0df2380c7efa49e34d3699dd8244719d14da0c4c4b7ec95543c35e0c7f095837
+  summary: CHEBI:17029 is chitin, a beta-(1→4)-linked N-acetyl-D-glucosamine aminoglycan.
+    Chemical identity is not universal fungal composition or formation necessity.
+  support: supports
+- evidence_id: micro-chebi-28793
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/28793/
+  locator: Current released ChEBI exact object, label/synonyms and relationships;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-28793.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/chebi-28793.receipt.json
+  accessed_at: '2026-11-03T07:30:52.238731Z'
+  snapshot_sha256: 262e8b077edeaaf9d7734e03846b9e37879ad8d1b3fd480b893682c0669c8283
+  summary: CHEBI:28793 denotes beta-D-glucan with multiple linkage-specific children;
+    broad class label is appropriate and does not assert a unique linkage. Chemical
+    identity is not universal fungal composition or formation necessity.
+  support: supports
+- evidence_id: micro-sur7-family
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009571/
+  locator: InterPro IPR009571 metadata/name/hierarchy, description and Pfam PF06687
+    membership; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/family-IPR009571.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/family-IPR009571.receipt.json
+  accessed_at: '2026-11-03T07:30:52.206864Z'
+  snapshot_sha256: c74c73d3bc87f92f276f050b86fd528fb0fab53e131f1afa34bc2ad80c075262
+  summary: The current family includes Sur7, Rim9 and PalI. This is broader than the
+    exact Sur7 component; leaving that component family grounding unset while providing
+    a verified protein example is not evidence that no family exists. No exhaustive
+    alternative-family search was performed.
+  support: supports
+- evidence_id: micro-uniprot-P54003
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P54003.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P54003.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P54003.receipt.json
+  accessed_at: '2026-11-03T07:30:52.678881Z'
+  snapshot_sha256: 9f26f2c5a9984a2a9a67dd5fe8478290ec8522abbc75595d2829145fa791b25d
+  summary: Current reviewed P54003 matches SUR7 and taxon 559292; identity and stated
+    location scope verified. Cell-membrane annotation links Young11784867, Navarre12469340
+    and Huh14562095 exactly; primary experimental W303 context remains separate from
+    S288C identity. Identity/examples do not prove universal membership, complete
+    family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-SUR7
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ASUR7&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SUR7.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SUR7.receipt.json
+  accessed_at: '2026-11-03T07:31:46.134617Z'
+  snapshot_sha256: 4c29ffd344834d92aed34a0900a95b054e4b46ae7d25df3866413488437ae518
+  summary: One reviewed result maps SUR7 to P54003 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.134617+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:SUR7; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P28319
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P28319.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P28319.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P28319.receipt.json
+  accessed_at: '2026-11-03T07:30:52.934107Z'
+  snapshot_sha256: dc39da2266cd6a391d46f76e47af717e049e1714ada800a885f2e418e3f25886
+  summary: Current reviewed P28319 matches CWP1 and taxon 559292; identity and stated
+    location scope verified. Identity/examples do not prove universal membership,
+    complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-CWP1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ACWP1&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP1.receipt.json
+  accessed_at: '2026-11-03T07:31:46.134681Z'
+  snapshot_sha256: 25bc37b7135a91abf3ade027ab0d20e1cd5bc9664381079087e4e7618b3b6d82
+  summary: One reviewed result maps CWP1 to P28319 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.134681+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:CWP1; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P43497
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P43497.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P43497.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P43497.receipt.json
+  accessed_at: '2026-11-03T07:30:53.025911Z'
+  snapshot_sha256: d8c646a16e8daa253d11239cc3a75a7e6e5e8c5549a9e5acbcd345f8a8e273a4
+  summary: Current reviewed P43497 matches CWP2 and taxon 559292; identity and stated
+    location scope verified. Identity/examples do not prove universal membership,
+    complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-CWP2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ACWP2&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP2.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-CWP2.receipt.json
+  accessed_at: '2026-11-03T07:31:46.332421Z'
+  snapshot_sha256: 01ef49e228558709b45a3e7719fde102ad214d8402535ee1f4565529986d72b6
+  summary: One reviewed result maps CWP2 to P43497 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.332421+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:CWP2; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-Q01589
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q01589.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/Q01589.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/Q01589.receipt.json
+  accessed_at: '2026-11-03T07:30:53.195235Z'
+  snapshot_sha256: fbf15af0f0849402dd5f4054c45eb7ce98389d089759f299893a0d44191d0f5e
+  summary: Current reviewed Q01589 matches SED1 and taxon 559292; identity and stated
+    location scope verified. Identity/examples do not prove universal membership,
+    complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-SED1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3ASED1&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SED1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-SED1.receipt.json
+  accessed_at: '2026-11-03T07:31:46.595271Z'
+  snapshot_sha256: 237e8a88b4a770f59e171ed3dc84ca1828da88e9f6846371e23d4f37878279a4
+  summary: One reviewed result maps SED1 to Q01589 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.595271+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:SED1; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P22146
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P22146.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P22146.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P22146.receipt.json
+  accessed_at: '2026-11-03T07:30:53.537817Z'
+  snapshot_sha256: fc316b4a780273f86f60dd00fc418abe4140e985203c96293a98fdffaf7e32e7
+  summary: Current reviewed P22146 matches GAS1 and taxon 559292; identity and stated
+    location scope verified. Cell-membrane references18434410/3046936/3072201 match
+    the record; additional cell-wall localization is also present and does not negate
+    membrane association. Identity/examples do not prove universal membership, complete
+    family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-GAS1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AGAS1&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-GAS1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-GAS1.receipt.json
+  accessed_at: '2026-11-03T07:31:46.749806Z'
+  snapshot_sha256: fd1ea841d93d3ae5a6e4a83e8730c91b50ffa02e32f6983053934cff16ba7524
+  summary: One reviewed result maps GAS1 to P22146 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.749806+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:GAS1; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P02920
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P02920.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P02920.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P02920.receipt.json
+  accessed_at: '2026-11-03T07:30:53.570177Z'
+  snapshot_sha256: dc9f2caffe4fad652b136c61b634acfd7586af9b5170f8841b2ae5fe73d30630
+  summary: Current reviewed P02920 matches lacY and taxon 83333; identity and stated
+    location scope verified. Cell-inner-membrane references2164211/7000781/7028742
+    match the record; b0343 mapping is explicit. Identity/examples do not prove universal
+    membership, complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-lacY
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A83333+AND+gene_exact%3AlacY&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-lacY.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-lacY.receipt.json
+  accessed_at: '2026-11-03T07:31:46.757588Z'
+  snapshot_sha256: 9e535c157927ff536c6580fedafaaaa2dad374766695630ba8f3b221e4d045a7
+  summary: One reviewed result maps lacY to P02920 in taxon 83333; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:46.757588+00:00: reviewed:true
+    AND organism_id:83333 AND gene_exact:lacY; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P0AGA2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AGA2.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P0AGA2.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P0AGA2.receipt.json
+  accessed_at: '2026-11-03T07:30:53.640587Z'
+  snapshot_sha256: 5fe9bfda47ab90303ecfc2f9b03197d28e32e6b2cf67b467280882c149f64c65
+  summary: Current reviewed P0AGA2 matches secY and taxon 83333; identity and stated
+    location scope verified. Identity/examples do not prove universal membership,
+    complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-secY
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A83333+AND+gene_exact%3AsecY&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-secY.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-secY.receipt.json
+  accessed_at: '2026-11-03T07:31:47.173137Z'
+  snapshot_sha256: ae87004d0b0fed75ec157a730ace426adf991eb37be3d161ecae0225eabf153b
+  summary: One reviewed result maps secY to P0AGA2 in taxon 83333; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:47.173137+00:00: reviewed:true
+    AND organism_id:83333 AND gene_exact:secY; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P05030
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P05030.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P05030.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P05030.receipt.json
+  accessed_at: '2026-11-03T07:30:53.845455Z'
+  snapshot_sha256: 8d6bf727c345c1316e73f4f4556bee120df8e71ccea998da4d77228f5a2bcb66
+  summary: Current reviewed P05030 matches PMA1 and taxon 559292; identity and stated
+    location scope verified. Identity/examples do not prove universal membership,
+    complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-PMA1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3APMA1&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-PMA1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-PMA1.receipt.json
+  accessed_at: '2026-11-03T07:31:47.206908Z'
+  snapshot_sha256: e4cfa702daf0bd8f33057050be18c0f2bae67bdb790a46ddc10bddd5dfd7e846
+  summary: One reviewed result maps PMA1 to P05030 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:47.206908+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:PMA1; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-uniprot-P32465
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32465.json
+  locator: Exact reviewed UniProtKB entry; primary accession, organism, gene names/loci,
+    recommended name, location comments/evidence and family cross-references; response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P32465.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/P32465.receipt.json
+  accessed_at: '2026-11-03T07:30:54.498279Z'
+  snapshot_sha256: 3696a15cf29561ab7c51d1707c32a6436a0a36e6671950d0bf75ca1eb855a41f
+  summary: Current reviewed P32465 matches HXT1 and taxon 559292; identity and stated
+    location scope verified. Membrane localization and GO:0005886 IDA links were checked
+    at database level; referenced primary body was not freshly read. Identity/examples
+    do not prove universal membership, complete family coverage or assembly necessity.
+  support: supports
+- evidence_id: micro-query-HXT1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AHXT1&format=json&size=500
+  locator: UniProtKB reviewed exact gene-symbol/taxon query; returned single entry;
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-HXT1.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/extra/query-HXT1.receipt.json
+  accessed_at: '2026-11-03T07:31:47.544965Z'
+  snapshot_sha256: a03e9e0d84871aecf2e2d994d2800e40c1cd63972d7f53906a0ed60ad4b4a995
+  summary: One reviewed result maps HXT1 to P32465 in taxon 559292; no next-page Link
+    header. This verifies the declared symbol/taxon pairing only.
+  support: supports
+  search_scope: 'UniProtKB REST search on 2026-11-03T07:31:47.544965+00:00: reviewed:true
+    AND organism_id:559292 AND gene_exact:HXT1; format=json,size=500. Total-results
+    header1 and one returned object; no next-page Link header. Bounded to the named
+    gene and exact taxon; excludes unreviewed/other-taxon proteins and does not establish
+    absence of homologues.'
+- evidence_id: micro-tax-2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2.receipt.json'
+  accessed_at: '2026-11-03T07:30:54.747390Z'
+  snapshot_sha256: 7429617438ff0162ee4783c4c660f6127642e6ff686522e670c6ecf3a5b28816
+  summary: NCBITaxon:2 resolves as Bacteria, rank domain; taxon identity only, not
+    prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-2157
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2157.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-2157.receipt.json'
+  accessed_at: '2026-11-03T07:30:55.689641Z'
+  snapshot_sha256: 84a40b3fb3e403b1ab61ce4ab647c6eaa5526395605d947756d90105e0512a3d
+  summary: NCBITaxon:2157 resolves as Archaea, rank domain; taxon identity only, not
+    prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-4751
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4751.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4751.receipt.json'
+  accessed_at: '2026-11-03T07:30:55.792610Z'
+  snapshot_sha256: a7bab59bce650c0d29732327d4e7e342f1b648747f7f9635958f923b4a6089e6
+  summary: NCBITaxon:4751 resolves as Fungi, rank kingdom; taxon identity only, not
+    prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-562.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-562.receipt.json'
+  accessed_at: '2026-11-03T07:30:55.824360Z'
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+  summary: NCBITaxon:562 resolves as Escherichia coli, rank species; taxon identity
+    only, not prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4932.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-4932.receipt.json'
+  accessed_at: '2026-11-03T07:30:56.607775Z'
+  snapshot_sha256: 38f43dd1593a1d47416228ae385464f30aeb8302c3aadb45b3588d03744bc814
+  summary: NCBITaxon:4932 resolves as Saccharomyces cerevisiae, rank species; taxon
+    identity only, not prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-5207
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5207
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-5207.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-5207.receipt.json'
+  accessed_at: '2026-11-03T07:30:56.813391Z'
+  snapshot_sha256: 7ed339a9783044b03b6093d6dea5ab2f8c3c9ff0628d7caebb78a0d7601d4de4
+  summary: NCBITaxon:5207 resolves as Cryptococcus neoformans, rank species; taxon
+    identity only, not prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-83333.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-83333.receipt.json'
+  accessed_at: '2026-11-03T07:30:56.813564Z'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+  summary: NCBITaxon:83333 resolves as Escherichia coli K-12, rank strain; taxon identity
+    only, not prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: 'ENA taxonomy exact NCBI taxon object: taxId/scientificName/rank and available
+    lineage; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-559292.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/tax-559292.receipt.json'
+  accessed_at: '2026-11-03T07:30:56.918162Z'
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+  summary: NCBITaxon:559292 resolves as Saccharomyces cerevisiae S288C, rank strain;
+    taxon identity only, not prevalence or experimental strain equivalence.
+  support: supports
+- evidence_id: micro-adapter-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Fresh iModulonDB API complete returned catalogue, 20 organism keys and
+    28 datasets; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/datasets.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/datasets.receipt.json
+  accessed_at: '2026-11-03T07:30:51.225484Z'
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  summary: The inspected catalogue has covered E. coli datasets but no Saccharomyces
+    or other eukaryote dataset. Thus yeast-only MCC/wall gene examples lack a matching
+    dataset in this catalogue snapshot. This is bounded service coverage, not biological
+    absence. Plasma-membrane E. coli gene examples require downstream checks.
+  support: context_only
+- evidence_id: micro-adapter-mg1655-meta
+  kind: database
+  reference: https://imodulondb.org/api/datasets/e_coli/precise_mg1655/meta
+  locator: iModulonDB e_coli/precise_mg1655 dataset metadata; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/meta.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/meta.receipt.json
+  accessed_at: '2026-11-03T07:32:15.953201Z'
+  snapshot_sha256: 0722bb1ccec69ac0d7ebc2784fc7cbdf1cfe612d739b8fb66d54a441a8b3db91
+  summary: Matched strain context is E. coli K-12 MG1655; dataset reports115 iModulons
+    and4305 genes. The generic record K-12 identities and exact b0343/b3300 cross-mappings
+    are used explicitly; no transfer to all bacteria, archaea or fungi.
+  support: context_only
+- evidence_id: micro-adapter-search-lacY
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=e_coli&dataset=precise_mg1655&query=lacY&limit=50
+  locator: iModulonDB literal gene/product search; exact matching gene separated from
+    product-name hits; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-lacY.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-lacY.receipt.json
+  accessed_at: '2026-11-03T07:32:15.953464Z'
+  snapshot_sha256: 566448c0044b84c2ab9429d4cb0d8eac88c46ec41559061ff2cdc9a5b2b33653
+  summary: The lacY query returns exact b0343. Lack of module-name hits is not absence
+    of gene membership; exact gene/module endpoints were inspected.
+  support: context_only
+  search_scope: iModulonDB API on 2026-11-03T07:32:15.953464+00:00; organism=e_coli,dataset=precise_mg1655,query=lacY,limit=50.
+    Literal search may match product text. Scope is this dataset and returned page;
+    no broader organism or module-absence conclusion.
+- evidence_id: micro-adapter-gene-b0343
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0343
+  locator: Exact iModulonDB gene object e_coli/precise_mg1655/b0343; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343.receipt.json
+  accessed_at: '2026-11-03T07:32:41.173723Z'
+  snapshot_sha256: 39dd6e0be4eab0893670e52839750386eea2cd87a8aab7c3388b837b24a5e29d
+  summary: Exact gene b0343/lacY maps to P02920; this is dataset identity context,
+    not localization or necessity proof.
+  support: context_only
+- evidence_id: micro-adapter-membership-b0343
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise_mg1655/b0343/imodulons
+  locator: All115 returned iModulon membership rows; actual is_in_imodulon boolean
+    and weights inspected; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343-modules.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b0343-modules.receipt.json
+  accessed_at: '2026-11-03T07:32:41.173998Z'
+  snapshot_sha256: 1fce972a2560ccb78dee42e11459464360ab3957384a399d822c71d7073ae81b
+  summary: b0343/lacY is in k61 Galactose, weight0.353511695 above threshold0.069412175.
+    Other returned rows are not marked members; this is computational expression-module
+    context only.
+  support: context_only
+- evidence_id: micro-adapter-search-secY
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=e_coli&dataset=precise_mg1655&query=secY&limit=50
+  locator: iModulonDB literal gene/product search; exact matching gene separated from
+    product-name hits; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-secY.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adapter/search-secY.receipt.json
+  accessed_at: '2026-11-03T07:32:15.953547Z'
+  snapshot_sha256: 88f5ccde7a2c3c89923b764f4aadbb0295326c6d03b883b2815afdf3b51a8174
+  summary: The secY query returns exact b3300 plus yfgM/b2513 and syd/b2793 product-text
+    hits; only b3300 is the record identity. Lack of module-name hits is not absence
+    of gene membership; exact gene/module endpoints were inspected.
+  support: context_only
+  search_scope: iModulonDB API on 2026-11-03T07:32:15.953547+00:00; organism=e_coli,dataset=precise_mg1655,query=secY,limit=50.
+    Literal search may match product text. Scope is this dataset and returned page;
+    no broader organism or module-absence conclusion.
+- evidence_id: micro-adapter-gene-b3300
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise_mg1655/b3300
+  locator: Exact iModulonDB gene object e_coli/precise_mg1655/b3300; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300.receipt.json
+  accessed_at: '2026-11-03T07:32:41.174082Z'
+  snapshot_sha256: 5556968158944294e3b64995e5269a2598076be6d7cebdd240ec4cbe6577a727
+  summary: Exact gene b3300/secY maps to P0AGA2; this is dataset identity context,
+    not localization or necessity proof.
+  support: context_only
+- evidence_id: micro-adapter-membership-b3300
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise_mg1655/b3300/imodulons
+  locator: All115 returned iModulon membership rows; actual is_in_imodulon boolean
+    and weights inspected; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300-modules.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptergenes/b3300-modules.receipt.json
+  accessed_at: '2026-11-03T07:32:41.174135Z'
+  snapshot_sha256: a00e3ef33e7945ff1cf4704aa133b78cb94d0b223e7e99f7370fa269fe144dcc
+  summary: b3300/secY is in k7 Translation, weight0.074073898 above threshold0.073984647.
+    Other returned rows are not marked members; this is computational expression-module
+    context only.
+  support: context_only
+- evidence_id: micro-adapter-module-7
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/7
+  locator: Exact component summary e_coli/precise_mg1655/7; curated metadata, threshold
+    and genes; generated ai_summary deliberately excluded; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-summary.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-summary.receipt.json
+  accessed_at: '2026-11-03T07:33:00.789781Z'
+  snapshot_sha256: c7aad614fcabd1a375ab5ed8f3dd5e76f71c1ac766c450ad7abb6385834aeca6
+  summary: Translation metadata and exact gene-weight list include b3300/secY; regulator/function
+    fields give bounded dataset context. Generated AI summary is not used as evidence.
+    No membrane assembly/localization inference follows.
+  support: context_only
+- evidence_id: micro-adapter-module-7-genes
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/7/genes?limit=500
+  locator: Exact module gene endpoint, limit500; full returned14(k61) or31(k7) gene
+    rows with threshold; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-genes.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/7-genes.receipt.json
+  accessed_at: '2026-11-03T07:33:00.790077Z'
+  snapshot_sha256: 25b9b1fa51da313b2b61c7a78e49a6411f01573fb7de7ad751c35ff0c40ebd3d
+  summary: Returned module gene list independently includes b3300/secY with in_imodulon=true
+    and matching UniProt mapping/weight. Computational coexpression is context only,
+    not direct physical localization, necessity or universal function.
+  support: context_only
+- evidence_id: micro-adapter-module-61
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/61
+  locator: Exact component summary e_coli/precise_mg1655/61; curated metadata, threshold
+    and genes; generated ai_summary deliberately excluded; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-summary.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-summary.receipt.json
+  accessed_at: '2026-11-03T07:33:00.790151Z'
+  snapshot_sha256: 616cc96d80db265d01269b4071f589fb6e2c5ded85077107c3f8b8e7d44eb578
+  summary: Galactose metadata and exact gene-weight list include b0343/lacY; regulator/function
+    fields give bounded dataset context. Generated AI summary is not used as evidence.
+    No membrane assembly/localization inference follows.
+  support: context_only
+- evidence_id: micro-adapter-module-61-genes
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise_mg1655/61/genes?limit=500
+  locator: Exact module gene endpoint, limit500; full returned14(k61) or31(k7) gene
+    rows with threshold; response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-genes.raw;
+    receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/adaptermodules/61-genes.receipt.json
+  accessed_at: '2026-11-03T07:33:00.790225Z'
+  snapshot_sha256: 97503e733100271c81a53af7443f904c057ef61a97cc269d6c97c2c6c980805f
+  summary: Returned module gene list independently includes b0343/lacY with in_imodulon=true
+    and matching UniProt mapping/weight. Computational coexpression is context only,
+    not direct physical localization, necessity or universal function.
+  support: context_only
+- evidence_id: micro-historical-adapter-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical PR2344 runner receipt retained unchanged; no new runner invocation
+    in this slice
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: At00:49:00Z on2026-11-03 the runner returned exit1 because OS PermissionError
+    prevented reading its pyvenv.cfg. This is historical unavailable-runner evidence,
+    not a fresh execution or a successful adapter command. Current direct source inspection
+    is separately dated.
+  support: context_only
+- evidence_id: micro-review-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Exact frozen local policy/config bytes; reread in current slice
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+  summary: Named genes/UniProt accessions trigger actual structured-source applicability;
+    a lack of transcriptomic claims alone is not an exemption. The source-adapter
+    limits prevent turning expression-module membership into physical or necessity
+    proof.
+  support: supports
+- evidence_id: micro-review-config
+  kind: authority
+  reference: conf/record_review.yaml
+  locator: Exact frozen local policy/config bytes; reread in current slice
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+  summary: The active profile routes to the native record-review skill and local evidence/checklist/schema
+    guidance; it does not waive adapter applicability for named proteins.
+  support: supports
+- evidence_id: micro-original-validation-inputs
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-microtubule/original-validation-inputs.json
+  locator: All three original validate/render receipts and frozen/current/main hash
+    checks
+  accessed_at: '2026-11-03T07:31:12.879900Z'
+  snapshot_sha256: 306686c44d76a7313514abf0ee3d98ace0f60240377f4bf8a24be4d7dcfae2dc
+  summary: All three originals validate; native deterministic renders match their
+    committed Markdown. All three target bytes equal their original frozen input,
+    original source revision and current main/head. This establishes staleness/schema/provenance
+    only, not scientific adequacy.
+  support: supports
+- evidence_id: micro-record-eisosome_membrane_domain_mcc
+  kind: record_content
+  reference: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f
+  summary: 'Entire maintained target read: identity, components/examples, organism
+    distribution, functions, graphs, discussions and history; no mutation.'
+  support: supports
+- evidence_id: micro-prior-eisosome_membrane_domain_mcc
+  kind: prior_review
+  reference: reviews/structured/20261021T101612Z-eisosome-membrane-domain-mcc-audit/review.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: 7345e5742d2661bedbfb85ed42e4de150d04ea738222824b7914b3f9f8d78f8f
+  summary: Original immutable review and Markdown read; exact findings/verdict/source
+    scopes/native schema and deterministic render checked. Historical source timestamps
+    remain historical; fresh reads have separate evidence.
+  support: supports
+- evidence_id: micro-native-eisosome_membrane_domain_mcc-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-verify-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-verify.log;
+    actual start 2026-11-03T07:30:48.102360+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:30:49.262904Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Native --verify passed on 1 maintained protein_examples and recorded xrefs.
+    Nonempty scoped identity/coverage audit; it does not establish complete cohort/family
+    coverage, mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: micro-native-eisosome_membrane_domain_mcc-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-causal-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/eisosome_membrane_domain_mcc-uniprot-causal.log;
+    actual start 2026-11-03T07:30:49.298534+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:30:49.746985Z'
+  snapshot_sha256: 4555ff404e119b494724458ee3afd7d2de0bc52b8408c177a14a789823dc00d8
+  summary: Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked
+    to 1 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped
+    identity/coverage audit; it does not establish complete cohort/family coverage,
+    mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: micro-record-fungal_type_cell_wall
+  kind: record_content
+  reference: data/structures/envelope/fungal_type_cell_wall.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64
+  summary: 'Entire maintained target read: identity, components/examples, organism
+    distribution, functions, graphs, discussions and history; no mutation.'
+  support: supports
+- evidence_id: micro-prior-fungal_type_cell_wall
+  kind: prior_review
+  reference: reviews/structured/20261021T101615Z-fungal-type-cell-wall-audit/review.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: bc97dc9029bf76a2b3d759ed28312f113c0d03aa30d01486b024a29695451d4e
+  summary: Original immutable review and Markdown read; exact findings/verdict/source
+    scopes/native schema and deterministic render checked. Historical source timestamps
+    remain historical; fresh reads have separate evidence.
+  support: supports
+- evidence_id: micro-native-fungal_type_cell_wall-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-verify-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml
+    --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-verify.log;
+    actual start 2026-11-03T07:30:49.784090+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:30:51.299012Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Native --verify passed on 4 maintained protein_examples and recorded xrefs.
+    Nonempty scoped identity/coverage audit; it does not establish complete cohort/family
+    coverage, mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: micro-native-fungal_type_cell_wall-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-causal-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/fungal_type_cell_wall.yaml
+    --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/fungal_type_cell_wall-uniprot-causal.log;
+    actual start 2026-11-03T07:30:51.338772+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:30:51.799478Z'
+  snapshot_sha256: 06aded19ed4fa63d2b27899d0b797bd2024c3500eab4c0894d96fec5fb874f0e
+  summary: Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked
+    to 4 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped
+    identity/coverage audit; it does not establish complete cohort/family coverage,
+    mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: micro-record-plasma_membrane
+  kind: record_content
+  reference: data/structures/envelope/plasma_membrane.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d
+  summary: 'Entire maintained target read: identity, components/examples, organism
+    distribution, functions, graphs, discussions and history; no mutation.'
+  support: supports
+- evidence_id: micro-prior-plasma_membrane
+  kind: prior_review
+  reference: reviews/structured/20261021T101624Z-plasma-membrane-audit/review.yaml
+  locator: Complete frozen file at source/head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:40:05.811527Z'
+  snapshot_sha256: d1c9eab46d179a952b0d8d066c1dc249ea958b784440bf60e041b6c29d020bec
+  summary: Original immutable review and Markdown read; exact findings/verdict/source
+    scopes/native schema and deterministic render checked. Historical source timestamps
+    remain historical; fresh reads have separate evidence.
+  support: supports
+- evidence_id: micro-native-plasma_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-verify-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml
+    --verify; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-verify.log;
+    actual start 2026-11-03T07:30:59.396573+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:31:00.717597Z'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Native --verify passed on 4 maintained protein_examples and recorded xrefs.
+    Nonempty scoped identity/coverage audit; it does not establish complete cohort/family
+    coverage, mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: micro-native-plasma_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-causal-receipt.json
+  locator: Command .venv/bin/python scripts/uniprot_genes.py --record data/structures/envelope/plasma_membrane.yaml
+    --causal-graphs; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/plasma_membrane-uniprot-causal.log;
+    actual start 2026-11-03T07:31:00.757546+00:00, source head f2fc189116ccf288bb46a576f5e490a86e2c9361
+  accessed_at: '2026-11-03T07:31:01.203992Z'
+  snapshot_sha256: 02376b0fd2cb51f5730901b0383efb67c81a8ea43f54386adc259ba1ad729e2d
+  summary: Native --causal-graphs passed with one COVERED GENE_OR_PROTEIN node linked
+    to 4 maintained examples; zero dangling/unanchored/partial nodes. Nonempty scoped
+    identity/coverage audit; it does not establish complete cohort/family coverage,
+    mechanistic sufficiency or formation necessity.
+  support: supports
+- evidence_id: septin-root18-sources-glycocalyx-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030112,GO:0030114,GO:0030312,GO:0042603,GO:0120234,GO:0120238,GO:0120239,GO:0120240
+  locator: All eight returned term definitions, exact hierarchy edges and applicable
+    synonyms
+  accessed_at: '2026-11-03T07:31:56.073735Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: a9200105bc5aa4d0aac784073122244c94e3d5e50c951b2ad2d7e88d5b69cc3f
+- evidence_id: septin-root18-sources-NCBITaxon-287
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/287
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:56.073991Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 2cf8c6f6b9448b51588f8a72c0f300ef504712fba2e660155e4db1fc4578677d
+- evidence_id: septin-root18-sources-NCBITaxon-1313
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1313
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:56.074071Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 07b4370dea0d2ae7c95239a13aadb2d8ad0def57b1d6cec5124f8f8389707e56
+- evidence_id: septin-root18-sources-doi-10.1042_bj1120521
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1042/bj1120521
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:56.074125Z'
+  support: supports
+  summary: 'Exact returned article identity: Composition of Pseudomonas aeruginosa
+    slime.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: 9deb8af6e76518d3e5050fcaa04e4b479df9a8b784736b61ae9484629433e934
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1042/bj1120521;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1042/bj1120521'']}; first response/page only, pageSize25 server default;
+    no publication/date filter; accessed 2026-11-03T07:31:56.074125Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1128_IAI.00881-09
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/IAI.00881-09
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:56.074166Z'
+  support: supports
+  summary: 'Exact returned article identity: The Streptococcus pneumoniae capsule
+    inhibits complement activity and neutrophil phagocytosis by multiple mechanisms..
+    Available abstract inspected; metadata/abstract only in this evidence row. Primary
+    or secondary body access is separately scoped.'
+  snapshot_sha256: e0803055e77d0ff0065a30ca84c33483af886b6e3f06a5d36a7d2a87ee0d67ca
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/IAI.00881-09;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1128/IAI.00881-09'']}; first response/page only, pageSize25 server default;
+    no publication/date filter; accessed 2026-11-03T07:31:56.074166Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1146_annurev.mi.35.100181.001503
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1146/annurev.mi.35.100181.001503
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:56.777233Z'
+  support: supports
+  summary: 'Exact returned article identity: The bacterial glycocalyx in nature and
+    disease.. No abstract is supplied; bibliographic identity only.'
+  snapshot_sha256: 28fd3c34a3a7ba7c962f3856f8b49fa5db7181581e431e262f04f3ab84f58590
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1146/annurev.mi.35.100181.001503;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1146/annurev.mi.35.100181.001503'']}; first response/page only, pageSize25
+    server default; no publication/date filter; accessed 2026-11-03T07:31:56.777233Z.
+    Bounded identity/context search, no exhaustive literature or biological absence
+    inferred.'
+- evidence_id: septin-root18-sources-legacy-PMC1187742-access
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1187742/
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:56.812821Z
+  accessed_at: '2026-11-03T07:31:56.812821Z'
+  support: context_only
+  summary: HTTP200 retrieved challenge/redirect HTML, not an article body or PDF.
+    No successful native body access is claimed by this receipt; bounded fallback
+    is separately identified.
+  snapshot_sha256: 9ae7c1e140bf860a16fe3b67c1db597d00dc50584b8f5f9ee4fba85a650cf020
+- evidence_id: septin-root18-sources-legacy-PMC2812187-access
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812187/
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:56.883791Z
+  accessed_at: '2026-11-03T07:31:56.883791Z'
+  support: context_only
+  summary: HTTP200 retrieved challenge/redirect HTML, not an article body or PDF.
+    No successful native body access is claimed by this receipt; bounded fallback
+    is separately identified.
+  snapshot_sha256: 15732e8a7f1c9ccabe6adb43df766b96d517149b563f41c62e2be850ea683d3a
+- evidence_id: septin-root18-sources-costerton-publisher-access
+  kind: validation
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.mi.35.100181.001503
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:56.886860Z
+  accessed_at: '2026-11-03T07:31:56.886860Z'
+  support: context_only
+  summary: '<HTTPError 403: ''Forbidden''> No successful native body access is claimed
+    by this receipt; bounded fallback is separately identified.'
+  snapshot_sha256: 35a7285b84c8cdc0c27be21d6aaca3c0adc8d43fb7bbe6354a42b9fcf0b437a6
+- evidence_id: septin-root18-sources-brown1969-pdf-access
+  kind: validation
+  reference: https://portlandpress.com/biochemj/article-pdf/112/4/521/763317/bj1120521.pdf
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:56.889452Z
+  accessed_at: '2026-11-03T07:31:56.889452Z'
+  support: context_only
+  summary: '<HTTPError 403: ''Forbidden''> No successful native body access is claimed
+    by this receipt; bounded fallback is separately identified.'
+  snapshot_sha256: 35a7285b84c8cdc0c27be21d6aaca3c0adc8d43fb7bbe6354a42b9fcf0b437a6
+- evidence_id: septin-root18-sources-brown1969-pmc-pdf-access
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1187742/pdf/biochemj00703-0128.pdf
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:56.926524Z
+  accessed_at: '2026-11-03T07:31:56.926524Z'
+  support: context_only
+  summary: HTTP200 retrieved challenge/redirect HTML, not an article body or PDF.
+    No successful native body access is claimed by this receipt; bounded fallback
+    is separately identified.
+  snapshot_sha256: e9bdf4c676e8bdd01f02aa12c3703b67fa1d47bfb81293f383c02faabfbe8e99
+- evidence_id: septin-root18-sources-brown1969-page1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/0eb45745023b/biochemj00703-0128.png
+  locator: Fresh genuine native scan page 521, independently visually read with view_image,
+    including article text, tables and discussion at its page scope.
+  accessed_at: '2026-11-03T07:31:56.945287Z'
+  support: supports
+  summary: Abstract/Introduction and eight-strain culture context. Historical chemical
+    analysis is scoped to tested preparations.
+  snapshot_sha256: 50f562ca73cc787982faef026ecc61f6bfbab1290ce168c5e50833cfb9f598a2
+- evidence_id: septin-root18-sources-brown1969-page2
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/7c5292cc3631/biochemj00703-0129.png
+  locator: Fresh genuine native scan page 522, independently visually read with view_image,
+    including article text, tables and discussion at its page scope.
+  accessed_at: '2026-11-03T07:31:57.066323Z'
+  support: supports
+  summary: Five-day static culture, medium and two extraction procedures, chemistry
+    Methods and initial Results inspected.
+  snapshot_sha256: 41ece3885374b6f0fa57af4aec821c75099140dff2138d627d9326bf87959e60
+- evidence_id: septin-root18-sources-brown1969-page3
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/eef42817ec9e/biochemj00703-0130.png
+  locator: Fresh genuine native scan page 523, independently visually read with view_image,
+    including article text, tables and discussion at its page scope.
+  accessed_at: '2026-11-03T07:31:57.133476Z'
+  support: supports
+  summary: Composition Results and Tables1–2 inspected; relative quantities depend
+    on medium and extraction.
+  snapshot_sha256: b8ea09a9d8713a0cc136728a061bd8c1f822063baa25e313c3cb24863433adb2
+- evidence_id: septin-root18-sources-brown1969-page4
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/c7e5013f9446/biochemj00703-0131.png
+  locator: Fresh genuine native scan page 524, independently visually read with view_image,
+    including article text, tables and discussion at its page scope.
+  accessed_at: '2026-11-03T07:31:57.183601Z'
+  support: supports
+  summary: 'Remaining Results and Discussion: mixed polysaccharide/nucleic acid/protein
+    material, possible cell-lysis contribution and unresolved copolymer-versus-mixture
+    architecture.'
+  snapshot_sha256: dc4d865f3e08e42db8604cbe16ecbd7d45860ff984918d70339dd00aafea0540
+- evidence_id: septin-root18-sources-brown1969-page5
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/4fa9e12051bb/biochemj00703-0132.png
+  locator: Fresh genuine native scan page 525, independently visually read with view_image,
+    including article text, tables and discussion at its page scope.
+  accessed_at: '2026-11-03T07:31:57.240254Z'
+  support: supports
+  summary: Final Discussion and references inspected; ribose/deoxyribose interpretation
+    remains qualified.
+  snapshot_sha256: 15d776120aeca92a97a387790947353e1fb7deec037086540e68dc3427616d03
+- evidence_id: septin-root18-sources-mycomembrane-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009274,GO:0009279,GO:0036407
+  locator: All three returned term definitions, synonyms and relevant is_a child relation
+  accessed_at: '2026-11-03T07:31:57.370061Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 19f261e0339213d5436617b11887f040dc9740e7f09f2295612472df549abd61
+- evidence_id: septin-root18-sources-NCBITaxon-2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:57.387143Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: septin-root18-sources-NCBITaxon-1763
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1763
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:57.419143Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 0edbe7d1363d6ad3d4cdb1a289384b4c54d81416651598dfe18bab0aa852c454
+- evidence_id: septin-root18-sources-NCBITaxon-1772
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1772
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:57.460339Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 7905535c889280ea21801a3905b3f7c1b141067c4d6ee098704e26126ab4dd1d
+- evidence_id: septin-root18-sources-NCBITaxon-1718
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1718
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:57.522265Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: afadcafa159b129802acad3052be821ef111a0505347ed4169c5a122aa4988df
+- evidence_id: septin-root18-sources-NCBITaxon-246196
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/246196
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-11-03T07:31:57.952611Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 868aa28908b63c934a864ff3443bdc04bd27783cd1e0241a1c08a1689bbda182
+- evidence_id: septin-root18-sources-CHEBI-25438
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25438/
+  locator: Exact accession, name, definition where present, synonyms and chemical-class
+    relations
+  accessed_at: '2026-11-03T07:31:57.992124Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 858dfa40d0203d8d22fb393e394c28078ff4a7e00bf62850f9ea23594bbb5a52
+- evidence_id: septin-root18-sources-CHEBI-27569
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/27569/
+  locator: Exact accession, name, definition where present, synonyms and chemical-class
+    relations
+  accessed_at: '2026-11-03T07:31:58.030318Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: a4367dabdab575ee57322f816251499814905e0cf368c83b050d0c9008e35582
+- evidence_id: septin-root18-sources-doi-10.1073_pnas.0709530105
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0709530105
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.111005Z'
+  support: supports
+  summary: 'Exact returned article identity: Disclosure of the mycobacterial outer
+    membrane: cryo-electron tomography and vitreous sections reveal the lipid bilayer
+    structure.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: 77f4d42848216680c4f6f4ec8459346545aff2dd6b2a6119cd21bbb7583a34e0
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0709530105;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1073/pnas.0709530105'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:31:58.111005Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1128_JB.01919-07
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/JB.01919-07
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.148751Z'
+  support: supports
+  summary: 'Exact returned article identity: Direct visualization of the outer membrane
+    of mycobacteria and corynebacteria in their native state.. Available abstract
+    inspected; metadata/abstract only in this evidence row. Primary or secondary body
+    access is separately scoped.'
+  snapshot_sha256: a268cca484550b8cd59fdc4990ff6d4c8209481daaf755d9b096934d22a0e907
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/JB.01919-07;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1128/JB.01919-07'']}; first response/page only, pageSize25 server default;
+    no publication/date filter; accessed 2026-11-03T07:31:58.148751Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1016_j.tim.2009.12.005
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.tim.2009.12.005
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.596164Z'
+  support: supports
+  summary: 'Exact returned article identity: Mycobacterial outer membranes: in search
+    of proteins.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: 1c27bfc89478effe14223e69b359be10d9b89a94c0788b54892e79b39f5a740c
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.tim.2009.12.005;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1016/j.tim.2009.12.005'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:31:58.596164Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1101_cshperspect.a021113
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1101/cshperspect.a021113
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.662856Z'
+  support: supports
+  summary: 'Exact returned article identity: The Mycobacterial Cell Wall--Peptidoglycan
+    and Arabinogalactan.. Available abstract inspected; metadata/abstract only in
+    this evidence row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: 9ead2671636be88abbd67528a26e4804fe7a4a619784e5e111fb2a4beed12ca9
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1101/cshperspect.a021113;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1101/cshperspect.a021113'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:31:58.662856Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-doi-10.1038_s41598-017-12718-4
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/s41598-017-12718-4
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.690355Z'
+  support: supports
+  summary: 'Exact returned article identity: Dissecting the mycobacterial cell envelope
+    and defining the composition of the native mycomembrane.. Available abstract inspected;
+    metadata/abstract only in this evidence row. Primary or secondary body access
+    is separately scoped.'
+  snapshot_sha256: a3abb62260b82d3d1e80b50473c8cb5cc702b72044d512259348d60799e34b88
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/s41598-017-12718-4;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1038/s41598-017-12718-4'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:31:58.690355Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-marrakchi-meta-retry
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A24374164%20AND%20SRC%3AMED
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:31:58.776199Z'
+  support: supports
+  summary: 'Exact returned article identity: Mycolic acids: structures, biosynthesis,
+    and beyond.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: ba91421e0c38d6457ef44eef4f416a47d038026f2b15271baf7fe18f431fbfca
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A24374164%20AND%20SRC%3AMED;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''EXT_ID:24374164 AND SRC:MED'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:31:58.776199Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-jats-PMC2931330
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2931330.1/PMC2931330.1.xml
+  locator: Fresh native secondary-review JATS, Mycobacterial outer membrane section,
+    models/Figures1–2 captions, Porin pathway and Structure of outer membrane proteins
+    sections; bounded barrier/function context.
+  accessed_at: '2026-11-03T07:31:58.784657Z'
+  support: supports
+  summary: The observed bilayer is distinguished from model-dependent leaflet partition.
+    Free lipids may occupy both leaflets, in situ mycolate conformation is unresolved,
+    and MspA function is species-scoped. Underlying primary experiments are not all
+    independently audited.
+  snapshot_sha256: fb7483f4b10a97a7c9012e38e14ca42cf497602519eadec1bcefda0737cc5f43
+- evidence_id: septin-root18-sources-legacy-PMC2268800
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2268800/
+  locator: 'Fresh genuine primary HTML body: introduction/model context, relevant
+    cryosection Results, Figure3 caption, Discussion comparing leaflet models, mycolate-deficient
+    mutant and MspA molecular-ruler passages.'
+  accessed_at: '2026-11-03T07:31:59.210187Z'
+  support: supports
+  summary: Native bilayer observations and mycolate requirement support structural
+    identity, but symmetry and thickness motivate alternative molecular arrangements.
+    Text/caption review only, no fresh microscopy pixel or raw-volume analysis.
+  snapshot_sha256: bf6a28a142f6bc011fae4e801bd09c724095c043a893c5529f14359c5ef4241f
+- evidence_id: septin-root18-sources-legacy-PMC2519390
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2519390/
+  locator: 'Fresh genuine primary HTML: Abstract/Introduction; Culture, Vitrification
+    and Quantitative measurements methods; relevant Results and Figure5 caption; Discussion
+    including Challenges to current models and Figure7 caption.'
+  accessed_at: '2026-11-03T07:31:59.285598Z'
+  support: supports
+  summary: M. smegmatis mc2 155, M. bovis BCG and C. glutamicum are examined. The
+    viable C. glutamicum delta-pks13 mutant lacks the outer membrane, a structural
+    endpoint distinct from growth necessity. Zipper and folded-chain proposals remain
+    models; cutting and preparation limitations retained.
+  snapshot_sha256: a02fcda9bd5886ae10ea55d78a55bb417e5e08dc99e664bbd00a324018363035
+- evidence_id: septin-root18-sources-jats-PMC5634507
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5634507.1/PMC5634507.1.xml
+  locator: 'Fresh native primary JATS: Introduction and tentative Figure1 model/caption;
+    Results fractionation, biochemical characterization and lipid-content passages;
+    Figure5 immunoblot caption; relevant Discussion fraction purity and unresolved
+    MM isolation.'
+  accessed_at: '2026-11-03T07:31:59.317747Z'
+  support: supports
+  summary: M. smegmatis and M. aurum MMCW fractions contain lipids and localized MspA,
+    but are not isolated membrane leaflets. Outer-leaflet placement is presumed; protein
+    identity/localization is not universal necessity. No raw proteomics, supplementary
+    table or image-pixel reanalysis.
+  snapshot_sha256: b1e619d1fe5bb256b03df333c8d5681e58673f05d58941032411a686667b547a
+- evidence_id: septin-root18-sources-legacy-PMC4526729
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4526729/
+  locator: 'Fresh genuine secondary-review HTML: Abstract, opening mAGP context, Structural
+    features of peptidoglycan linkage paragraphs and terminal arabinan mycolyl-esterification
+    passage.'
+  accessed_at: '2026-11-03T07:31:59.389734Z'
+  support: supports
+  summary: Covalent arabinogalactan–peptidoglycan anchoring supports contextual graph
+    nodes, without converting the complete wall core into local membrane composition.
+    Detailed biosynthetic enzymes and all cited primary studies were not audited.
+  snapshot_sha256: 7c31d03419def499d20361c48828d68999286b2eb7ce0af9dac58c28428584e1
+- evidence_id: septin-root18-sources-marrakchi-doi-route-access
+  kind: validation
+  reference: https://doi.org/10.1016/j.chembiol.2013.11.011
+  locator: Actual direct HTTP access attempt 2026-11-03T07:31:59.396834Z
+  accessed_at: '2026-11-03T07:31:59.396834Z'
+  support: context_only
+  summary: HTTP200 retrieved challenge/redirect HTML, not an article body or PDF.
+    No successful native body access is claimed by this receipt; bounded fallback
+    is separately identified.
+  snapshot_sha256: 399fc8b506825690939ca5d876b5055a0da43bf47fea1d4bda7103ff7c208a59
+- evidence_id: septin-root18-sources-UniProtKB-A0QR29
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A0QR29.json
+  locator: 'Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType
+    and primary-reference/strain annotations.'
+  accessed_at: '2026-11-03T07:31:59.636024Z'
+  support: supports
+  summary: A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain
+    unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity
+    does not alone establish membrane membership.
+  snapshot_sha256: c723f93af526ad145205651ae7b64414298a75d4832aef546922ebf76d125f71
+- evidence_id: septin-root18-sources-UniProtKB-H7C6A6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/H7C6A6.json
+  locator: 'Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType
+    and primary-reference/strain annotations.'
+  accessed_at: '2026-11-03T07:31:59.763655Z'
+  support: supports
+  summary: A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain
+    unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity
+    does not alone establish membrane membership.
+  snapshot_sha256: 1af1cf8380c422b11c90b959815a925c75f88f6ebf54736e7ca9a22823d51576
+- evidence_id: septin-root18-sources-UniProtKB-H7C685
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/H7C685.json
+  locator: 'Fresh native UniProt JSON: accession, gene, protein name, taxon, entryType
+    and primary-reference/strain annotations.'
+  accessed_at: '2026-11-03T07:31:59.783681Z'
+  support: supports
+  summary: A0QR29 is reviewed MspA in mc2 155; H7C6A6 PorA and H7C685 PorB remain
+    unreviewed, with source-linked MH20-22B and ATCC13032 sequence contexts. Identity
+    does not alone establish membrane membership.
+  snapshot_sha256: 101f8e14dc6587fbaae3b76e34cbb7971e9222249bd02ac0c90860cda8f2422b
+- evidence_id: septin-root18-sources-query-mspA-246196
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AmspA%29%20AND%20%28taxonomy_id%3A246196%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete first returned native reviewed=true gene-and-taxon query response,
+    size500 in URL.
+  accessed_at: '2026-11-03T07:31:59.792010Z'
+  support: supports
+  summary: One reviewed mspA hit A0QR29 for tax246196 in this exact query. This is
+    not biological absence or proof that no other accession exists.
+  snapshot_sha256: 99ce06ef602773faf64f94e64e190d66229e66b8b5f370cbdf313dee27bdb94f
+  search_scope: 'Database UniProtKB REST; exact URL https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AmspA%29%20AND%20%28taxonomy_id%3A246196%29%20AND%20%28reviewed%3Atrue%29;
+    query parameters {''format'': [''json''], ''size'': [''500''], ''query'': [''(gene_exact:mspA)
+    AND (taxonomy_id:246196) AND (reviewed:true)'']}; first response/page only, size500;
+    no publication/date filter; accessed 2026-11-03T07:31:59.792010Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-query-porA-1718
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AporA%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete first returned native reviewed=true gene-and-taxon query response,
+    size500 in URL.
+  accessed_at: '2026-11-03T07:31:59.830603Z'
+  support: supports
+  summary: Zero reviewed porA hits for tax1718 in this exact query. This is not biological
+    absence or proof that no other accession exists.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: 'Database UniProtKB REST; exact URL https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AporA%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29;
+    query parameters {''format'': [''json''], ''size'': [''500''], ''query'': [''(gene_exact:porA)
+    AND (taxonomy_id:1718) AND (reviewed:true)'']}; first response/page only, size500;
+    no publication/date filter; accessed 2026-11-03T07:31:59.830603Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-query-porB-1718
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AporB%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete first returned native reviewed=true gene-and-taxon query response,
+    size500 in URL.
+  accessed_at: '2026-11-03T07:32:00.345641Z'
+  support: supports
+  summary: Zero reviewed porB hits for tax1718 in this exact query. This is not biological
+    absence or proof that no other accession exists.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: 'Database UniProtKB REST; exact URL https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AporB%29%20AND%20%28taxonomy_id%3A1718%29%20AND%20%28reviewed%3Atrue%29;
+    query parameters {''format'': [''json''], ''size'': [''500''], ''query'': [''(gene_exact:porB)
+    AND (taxonomy_id:1718) AND (reviewed:true)'']}; first response/page only, size500;
+    no publication/date filter; accessed 2026-11-03T07:32:00.345641Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-PMID-9790664
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A9790664%20AND%20SRC%3AMED
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:32:00.367082Z'
+  support: supports
+  summary: 'Exact returned article identity: Biochemical and biophysical characterization
+    of the cell wall porin of Corynebacterium glutamicum: the channel is formed by
+    a low molecular mass polypeptide.. Available abstract inspected; metadata/abstract
+    only in this evidence row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: dac5afd97a409138f375ccd2b81dd762ad0a4a7caee98c542a7954156263871a
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A9790664%20AND%20SRC%3AMED;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''EXT_ID:9790664 AND SRC:MED'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:32:00.367082Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-root18-sources-PMID-14622416
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A14622416%20AND%20SRC%3AMED
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:32:00.486321Z'
+  support: supports
+  summary: 'Exact returned article identity: Identification of an anion-specific channel
+    in the cell wall of the Gram-positive bacterium Corynebacterium glutamicum.. Available
+    abstract inspected; metadata/abstract only in this evidence row. Primary or secondary
+    body access is separately scoped.'
+  snapshot_sha256: 45006a722a4c6d5446655eb73f445767945782e696dba8ac3b64c48d07acd280
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A14622416%20AND%20SRC%3AMED;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''EXT_ID:14622416 AND SRC:MED'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:32:00.486321Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-periplasm-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042597,GO%3A0030288,GO%3A0005576
+  locator: All three returned definitions/synonyms and relevant child relation records
+  accessed_at: '2026-11-03T07:32:00.766781Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: d7ecb61771d9d4c36a5db4eae1e8892d1c8c40140c02ac6cdd62f8c6ec5edbd3
+- evidence_id: septin-periplasm-agent-SL-0200
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0200.json
+  locator: Complete native location entry, definition, synonyms and GO mapping
+  accessed_at: '2026-11-03T07:32:01.163090Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: b4f3043f4591151dfdc0ba20bbe3c4b61972cd7e323b738e0da55e7dd1f408d8
+- evidence_id: septin-periplasm-agent-tax-562
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-11-03T07:32:01.165936Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: septin-periplasm-agent-tax-1280
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1280
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-11-03T07:32:01.384332Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 6cc681494899a86cb636a9d82b04dedddb7afe38144e54d017728306a4527776
+- evidence_id: septin-periplasm-agent-doi-cshperspect_a000414
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1101/cshperspect.a000414
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:32:01.518407Z'
+  support: supports
+  summary: 'Exact returned article identity: The bacterial cell envelope.. Available
+    abstract inspected; metadata/abstract only in this evidence row. Primary or secondary
+    body access is separately scoped.'
+  snapshot_sha256: 6dbe4b87edaa5c136c12c86c9d1dd160a184f8e75b68e56095dcffb08d567992
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1101/cshperspect.a000414;
+    query parameters {''format'': [''json''], ''resultType'': [''core''], ''query'':
+    [''DOI:10.1101/cshperspect.a000414'']}; first response/page only, pageSize25 server
+    default; no publication/date filter; accessed 2026-11-03T07:32:01.518407Z. Bounded
+    identity/context search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-periplasm-agent-pmid-16428405
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16428405%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:32:01.523797Z'
+  support: supports
+  summary: 'Exact returned article identity: Native cell wall organization shown by
+    cryo-electron microscopy confirms the existence of a periplasmic space in Staphylococcus
+    aureus.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: fe783264fb02011959f68a3738592a32154a8d739093a7242fa3f20ab56da5ab
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16428405%20AND%20SRC%3AMED&format=json&resultType=core;
+    query parameters {''query'': [''EXT_ID:16428405 AND SRC:MED''], ''format'': [''json''],
+    ''resultType'': [''core'']}; first response/page only, pageSize25 server default;
+    no publication/date filter; accessed 2026-11-03T07:32:01.523797Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-periplasm-agent-silhavy2010-legacy-html
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857177/
+  locator: 'Fresh genuine secondary-review HTML: Gram-negative envelope opening, outer
+    membrane/peptidoglycan/periplasm and inner-membrane sections, bounded E. coli
+    topology context.'
+  accessed_at: '2026-11-03T07:32:01.752559Z'
+  support: supports
+  summary: The diderm aqueous region lies between the two membranes. Review synthesis
+    supports the E. coli example, not a universal periplasmic composition or a fungal
+    experimental claim.
+  snapshot_sha256: 228afc198cf8d7b68411c9f9c6a8d404b7fee466e5765ab785abcc2eb2034cf6
+- evidence_id: septin-periplasm-agent-legacy-PMC1347357
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1347357/
+  locator: 'Fresh genuine primary HTML: Abstract; bacterial culture and preparation/plasmolysis
+    Methods; frozen-hydrated and plasmolysis Results, Figure5/6 captions and Table1;
+    corresponding Discussion on wall fragments and cryoprotectant limits.'
+  accessed_at: '2026-11-03T07:32:01.987697Z'
+  support: supports
+  summary: Newman D2C cryo-TEM, osmotic separation and isolated-wall comparisons support
+    a periplasmic region between plasma membrane and dense wall. Cryoprotectant and
+    image-resolution limitations remain; no pixel-level or raw thickness reanalysis.
+  snapshot_sha256: 2bec1a055fabbb45afec8051bbfda04ee0ece3ddf5d9fdd51035af145772ff66
+- evidence_id: septin-slime-layer-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0030114,GO%3A0030112,GO%3A0042603
+  locator: All three complete native definitions, comments and relevant child relationships
+  accessed_at: '2026-11-03T07:32:02.130400Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 701f86d2d19f9cffc561369be54d51e544b556dc74533396e111bd5ab7257266
+- evidence_id: septin-slime-layer-agent-SL-0247
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0247.json
+  locator: Complete native location entry definition and GO mapping
+  accessed_at: '2026-11-03T07:32:02.150261Z'
+  support: supports
+  summary: Exact identifier, returned label/definition and relevant relations checked;
+    authority identity is not direct experimental evidence.
+  snapshot_sha256: 2102944a375f44e5e8f458b467f355388592faf0d85e485ac2849e6d921f12c0
+- evidence_id: septin-slime-layer-agent-doi-10.1042_bj1120521
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1042/bj1120521&format=json&resultType=core
+  locator: 'Europe PMC exact DOI or PMID query: native returned identity, title/authors,
+    publication type and available abstract; no full-body scope by this evidence alone.'
+  accessed_at: '2026-11-03T07:32:02.201096Z'
+  support: supports
+  summary: 'Exact returned article identity: Composition of Pseudomonas aeruginosa
+    slime.. Available abstract inspected; metadata/abstract only in this evidence
+    row. Primary or secondary body access is separately scoped.'
+  snapshot_sha256: 9deb8af6e76518d3e5050fcaa04e4b479df9a8b784736b61ae9484629433e934
+  search_scope: 'Database Europe PMC REST; exact URL https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1042/bj1120521&format=json&resultType=core;
+    query parameters {''query'': [''DOI:10.1042/bj1120521''], ''format'': [''json''],
+    ''resultType'': [''core'']}; first response/page only, pageSize25 server default;
+    no publication/date filter; accessed 2026-11-03T07:32:02.201096Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-current-adapter-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 'Entire fresh official /api/datasets response: all 20 organism objects
+    and 28 dataset keys inspected.'
+  accessed_at: '2026-11-03T07:32:02.454992Z'
+  support: supports
+  summary: C. glutamicum/modulome263 matches the porA/porB example. No M. smegmatis/Mycolicibacterium
+    smegmatis dataset occurs in this returned catalogue; M. tuberculosis is not substituted.
+    Material-only scope does not create molecular-query requirements merely because
+    a named species has a dataset.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: septin-hyams2010-jats
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2812187/?report=xml
+  locator: 'Fresh genuine primary HTML despite requested report=xml: Abstract/Introduction;
+    Bacterial strains and EM Methods; first capsule-loss Results and Figure1 caption;
+    matching Discussion paragraph.'
+  accessed_at: '2026-11-03T07:32:40.871293Z'
+  support: supports
+  summary: Named TIGR4 and D39 parent/mutant strains support a surface-associated
+    pneumococcal capsule example. Capsule dimensions use fixed sections and a circularity
+    assumption. No complete immunological-mechanism or raw-image audit claimed.
+  snapshot_sha256: 08fe372c2005cf9432222ec2cc416e8aa4746f37d390d5ebbec4ad596583dd56
+- evidence_id: septin-hyams2010-epmc-jats-access
+  kind: validation
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2812187/fullTextXML
+  locator: Actual direct HTTP access attempt 2026-11-03T07:32:40.871537Z
+  accessed_at: '2026-11-03T07:32:40.871537Z'
+  support: context_only
+  summary: '<HTTPError 500: ''''> No successful native body access is claimed by this
+    receipt; bounded fallback is separately identified.'
+  snapshot_sha256: aa221984732e751578696f36f117a77b562235e3ee8f4fd2b84c43b431a7660c
+- evidence_id: septin-cg-search-porA
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=c_glutamicum&dataset=modulome263&query=porA&limit=50
+  locator: Entire bounded species/dataset native query response.
+  accessed_at: '2026-11-03T07:32:40.871624Z'
+  support: context_only
+  summary: porA query returns exact imported H7C6A6 candidate WA5_RS13590 plus product-text
+    family candidate WA5_RS14300; porB returns WA5_RS04855. Both candidates were inspected
+    rather than conflated.
+  snapshot_sha256: d5b77175337622a487e6c70be927c4cde53342d179d0325815b0d206996750e4
+  search_scope: 'Database official iModulonDB; exact URL https://imodulondb.org/api/search?organism=c_glutamicum&dataset=modulome263&query=porA&limit=50;
+    query parameters {''organism'': [''c_glutamicum''], ''dataset'': [''modulome263''],
+    ''query'': [''porA''], ''limit'': [''50'']}; first response/page only, limit50;
+    no publication/date filter; accessed 2026-11-03T07:32:40.871624Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-cg-search-porB
+  kind: search
+  reference: https://imodulondb.org/api/search?organism=c_glutamicum&dataset=modulome263&query=porB&limit=50
+  locator: Entire bounded species/dataset native query response.
+  accessed_at: '2026-11-03T07:32:40.871684Z'
+  support: context_only
+  summary: porA query returns exact imported H7C6A6 candidate WA5_RS13590 plus product-text
+    family candidate WA5_RS14300; porB returns WA5_RS04855. Both candidates were inspected
+    rather than conflated.
+  snapshot_sha256: 2dc947fdfe6613410ec3d3800fb56923b2eefbdc1723026c01cdcad72e8325b4
+  search_scope: 'Database official iModulonDB; exact URL https://imodulondb.org/api/search?organism=c_glutamicum&dataset=modulome263&query=porB&limit=50;
+    query parameters {''organism'': [''c_glutamicum''], ''dataset'': [''modulome263''],
+    ''query'': [''porB''], ''limit'': [''50'']}; first response/page only, limit50;
+    no publication/date filter; accessed 2026-11-03T07:32:40.871684Z. Bounded identity/context
+    search, no exhaustive literature or biological absence inferred.'
+- evidence_id: septin-cg-WA5_RS13590-gene
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS13590
+  locator: Native exact gene JSON, imported identifiers and organism/dataset context.
+  accessed_at: '2026-11-03T07:33:11.968053Z'
+  support: context_only
+  summary: WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only
+    a PorA-family product match with no UniProt ID; it is not asserted to be the maintained
+    PorA accession.
+  snapshot_sha256: ee0354101270405a97b2a362219687ed52a8134bab622688841738ccca25a7f3
+- evidence_id: septin-cg-WA5_RS13590-modules
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS13590/imodulons
+  locator: Entire native 87-row gene-module list including is_in_imodulon flags, weights
+    and thresholds.
+  accessed_at: '2026-11-03T07:33:11.968390Z'
+  support: context_only
+  summary: All 87 memberships are false for this exact gene/dataset. This thresholded
+    context is not absence of expression, transport function or structural membership;
+    no positive module summary informs the verdict.
+  snapshot_sha256: 6b10d89767342df33b8e2446d66ca9f781a92c2810caf3bf7b7010c46e223f00
+- evidence_id: septin-cg-WA5_RS14300-gene
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS14300
+  locator: Native exact gene JSON, imported identifiers and organism/dataset context.
+  accessed_at: '2026-11-03T07:33:11.968514Z'
+  support: context_only
+  summary: WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only
+    a PorA-family product match with no UniProt ID; it is not asserted to be the maintained
+    PorA accession.
+  snapshot_sha256: 836107803e891005354837ccb67fd1596ec77f0da70efc372a046d93d3f25a7b
+- evidence_id: septin-cg-WA5_RS14300-modules
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS14300/imodulons
+  locator: Entire native 87-row gene-module list including is_in_imodulon flags, weights
+    and thresholds.
+  accessed_at: '2026-11-03T07:33:11.968559Z'
+  support: context_only
+  summary: All 87 memberships are false for this exact gene/dataset. This thresholded
+    context is not absence of expression, transport function or structural membership;
+    no positive module summary informs the verdict.
+  snapshot_sha256: cc627aa9504834b4e9a9d35a15408b442333a81ba6a8cb4d101b70db4f661989
+- evidence_id: septin-cg-WA5_RS04855-gene
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS04855
+  locator: Native exact gene JSON, imported identifiers and organism/dataset context.
+  accessed_at: '2026-11-03T07:33:11.968626Z'
+  support: context_only
+  summary: WA5_RS13590 maps to H7C6A6 and WA5_RS04855 to H7C685. WA5_RS14300 is only
+    a PorA-family product match with no UniProt ID; it is not asserted to be the maintained
+    PorA accession.
+  snapshot_sha256: 30f4c6097f61c9ea260de725a72d06579f1da699f9c85d84eea5a586f29bee17
+- evidence_id: septin-cg-WA5_RS04855-modules
+  kind: database
+  reference: https://imodulondb.org/api/genes/c_glutamicum/modulome263/WA5_RS04855/imodulons
+  locator: Entire native 87-row gene-module list including is_in_imodulon flags, weights
+    and thresholds.
+  accessed_at: '2026-11-03T07:33:12.155878Z'
+  support: context_only
+  summary: All 87 memberships are false for this exact gene/dataset. This thresholded
+    context is not absence of expression, transport function or structural membership;
+    no positive module summary informs the verdict.
+  snapshot_sha256: 5da268e37d11e97c058f23dc3d680b5cf7d955fa5691bb158df8834f17f9e1a4
+- evidence_id: septin-record-glycocalyx
+  kind: record_content
+  reference: data/structures/envelope/glycocalyx.yaml
+  locator: 'Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition,
+    identity, composition, taxonomic examples, functions, all graphs and discussions.'
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Entire target independently reassessed. Current content hash equals original
+    frozen hash; no record edit performed.
+  snapshot_sha256: 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8
+- evidence_id: septin-record-mycolate_outer_membrane
+  kind: record_content
+  reference: data/structures/envelope/mycolate_outer_membrane.yaml
+  locator: 'Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition,
+    identity, composition, taxonomic examples, functions, all graphs and discussions.'
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Entire target independently reassessed. Current content hash equals original
+    frozen hash; no record edit performed.
+  snapshot_sha256: f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881
+- evidence_id: septin-record-periplasmic_space
+  kind: record_content
+  reference: data/structures/envelope/periplasmic_space.yaml
+  locator: 'Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition,
+    identity, composition, taxonomic examples, functions, all graphs and discussions.'
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Entire target independently reassessed. Current content hash equals original
+    frozen hash; no record edit performed.
+  snapshot_sha256: 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98
+- evidence_id: septin-record-slime_layer
+  kind: record_content
+  reference: data/structures/envelope/slime_layer.yaml
+  locator: 'Complete current YAML at f2fc189116ccf288bb46a576f5e490a86e2c9361: definition,
+    identity, composition, taxonomic examples, functions, all graphs and discussions.'
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Entire target independently reassessed. Current content hash equals original
+    frozen hash; no record edit performed.
+  snapshot_sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+- evidence_id: septin-neighbor-capsule
+  kind: record_content
+  reference: data/structures/envelope/capsule.yaml
+  locator: Whole frozen neighboring record read only for explicit identity and boundary
+    dependency, after root froze it.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: context_only
+  summary: Capsule is the organized retained glycocalyx child; diderm periplasm is
+    a narrower generic-periplasm child. No independent audit or resolution of every
+    neighbor scientific assertion is claimed.
+  snapshot_sha256: b50823333417fed66efe064e2a21217adaebf87715ca1d22baf5010cdca87b47
+- evidence_id: septin-neighbor-outer_membrane_bounded_periplasmic_space
+  kind: record_content
+  reference: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  locator: Whole frozen neighboring record read only for explicit identity and boundary
+    dependency, after root froze it.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: context_only
+  summary: Capsule is the organized retained glycocalyx child; diderm periplasm is
+    a narrower generic-periplasm child. No independent audit or resolution of every
+    neighbor scientific assertion is claimed.
+  snapshot_sha256: f1027d233b3287f4a8118b17a7570fdba36acb7cc14b2ac0b766fb0c8985ea2f
+- evidence_id: septin-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Current frozen policy bytes, previously read and hash-matched to prior
+    review; relevant contract reapplied to these records.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Structure identity, collective materials, evidence and assembly necessity
+    are distinct.
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: septin-adapter-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Current frozen policy bytes, previously read and hash-matched to prior
+    review; relevant contract reapplied to these records.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Named molecular claims trigger applicability; actual sparse material scope
+    can be non-applicable. No expression claim alone is not an exemption. Historical
+    unavailable runner is distinguished from current official source fallback.
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: septin-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Current frozen policy bytes, previously read and hash-matched to prior
+    review; relevant contract reapplied to these records.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Claim direction and causal versus descriptive scope must agree with sources.
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: septin-graph-contract
+  kind: authority
+  reference: .claude/skills/add-cell-structure/SKILL.md
+  locator: Current frozen policy bytes, previously read and hash-matched to prior
+    review; relevant contract reapplied to these records.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: Mechanistic causal paths and descriptive material topology are distinct;
+    graph nodes do not automatically establish component membership.
+  snapshot_sha256: eee04ee51d2c82c05df98570674084bdce9001e5aa67d6230ac1ed50064a3175
+- evidence_id: septin-original-native-checks
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/adversary-septin/original-checks.json
+  locator: Four original native validations and deterministic render comparisons plus
+    exact target hash checks.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: All four validate/render exit0 and Markdown matches. All original target
+    frozen hashes equal current content. Historical corpus checks are not fresh CI.
+  snapshot_sha256: 8f1137daab9792cddc1dbd7adc3eed2a96c1cc70dbe8eb39ba4d06268e928af4
+- evidence_id: septin-native-glycocalyx-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/glycocalyx-uniprot-verify-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/glycocalyx.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:30:52.320469Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: 996a1bf01427cb4bbe0cbddea3eb2055a7396677030fe470668ce8e1ae2a59c8
+- evidence_id: septin-native-glycocalyx-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/glycocalyx-uniprot-causal-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/glycocalyx.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:30:52.840348Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: 0d5a4846df9c9b963da632c096171e98dd7dede0948d67abeef1109abb0ea481
+- evidence_id: septin-native-mycolate_outer_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/mycolate_outer_membrane-uniprot-verify-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/mycolate_outer_membrane.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:30:57.909743Z'
+  support: supports
+  summary: 'Exit0: declared three protein examples verify; one GENE_OR_PROTEIN node
+    is COVERED by mspA/porA/porB accession inventory. This does not prove leaflet
+    allocation, experimental necessity or all biological membership.'
+  snapshot_sha256: 5105fbcb4204badba0d4c48b3c0fe8e331e7ba450b4a37c2bb3ab28d62e93c39
+- evidence_id: septin-native-mycolate_outer_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/mycolate_outer_membrane-uniprot-causal-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/mycolate_outer_membrane.yaml', '--causal-graphs'] at
+    f2fc189116ccf288bb46a576f5e490a86e2c9361; receipt/log independently read and log
+    SHA verified.
+  accessed_at: '2026-11-03T07:30:58.401179Z'
+  support: supports
+  summary: 'Exit0: declared three protein examples verify; one GENE_OR_PROTEIN node
+    is COVERED by mspA/porA/porB accession inventory. This does not prove leaflet
+    allocation, experimental necessity or all biological membership.'
+  snapshot_sha256: 58318d212e3a623119abad98414a7f6f2a9dd666bad85d1e85285da25f1fa80a
+- evidence_id: septin-native-periplasmic_space-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/periplasmic_space-uniprot-verify-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/periplasmic_space.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:30:58.885205Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: 354f5047130ee18b2a596318c46fa29e43d1105c2f67e9f0586d2c065fbfb785
+- evidence_id: septin-native-periplasmic_space-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/periplasmic_space-uniprot-causal-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/periplasmic_space.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:30:59.360415Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: fb632575b8c1fda6c27714748bbd56d63c60222be7102b8cc109a0f30facc5da
+- evidence_id: septin-native-slime_layer-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/slime_layer-uniprot-verify-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/slime_layer.yaml', '--verify'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:31:02.692687Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: ea8ffba363d5bc6338bc8ddbcb580b8bb3e952669af11785d78b1831c94baa13
+- evidence_id: septin-native-slime_layer-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/slime_layer-uniprot-causal-receipt.json
+  locator: Root-run command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/envelope/slime_layer.yaml', '--causal-graphs'] at f2fc189116ccf288bb46a576f5e490a86e2c9361;
+    receipt/log independently read and log SHA verified.
+  accessed_at: '2026-11-03T07:31:03.171231Z'
+  support: supports
+  summary: Exit0 with empty exact-protein inventory and zero GENE_OR_PROTEIN nodes;
+    validates no narrative protein claim or universal matrix completeness.
+  snapshot_sha256: 232ba173f56cef23b8f06cbd1037427a265b6f7a75dc8fd625d388b4d0ddc056
+- evidence_id: septin-historical-adapter-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical canary invocation 2026-11-03T00:49:00.848907Z–00:49:00.863225Z,
+    exit1 PermissionError reading pyvenv.cfg; receipt read, no fresh invocation.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  summary: Historical runner unavailability does not prevent current source-grounded
+    official-API applicability checks. No new runner test or success asserted.
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: septin-neighbor-search
+  kind: search
+  reference: 'rg --no-ignore --hidden -n ^identifier: GO:(0042603|0030288)$ data/structures'
+  locator: Exact top-level neighbor identifier search.
+  accessed_at: '2026-11-03T07:36:37.571495Z'
+  support: supports
+  summary: The two frozen canonical paths are the exact matches; only their boundary
+    relationship is judged.
+  snapshot_sha256: d35b9a93b735138332eab4f2c2afc41497e89b34d2e0b1f6d48b52548d19394d
+  search_scope: All data/structures recursively with ignored and hidden files included;
+    exact two GO identifiers; no date filter or pagination; executed 2026-11-03T07:36:37.571495Z
+- evidence_id: check-qc
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/qc.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T07:36:20.713441Z'
+  support: supports
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  snapshot_sha256: b4ebbfdda710f5a573858e066eddb661032ae92c78635c223e71e350b08428ca
+- evidence_id: check-labels
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/labels.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T07:31:12.765907Z'
+  support: supports
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  snapshot_sha256: 6cdfb05df9a27194f05a5fd7f851783f817ac1523ca0bbfa54fe0e0d18775905
+- evidence_id: check-trait-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/trait-links.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T07:30:48.989226Z'
+  support: supports
+  summary: Native TraitMech link check passed.
+  snapshot_sha256: 8b336cdefbbd3daf6da8787990efdbe346c95e2c8361d50b7eb68a18f2d5a44a
+- evidence_id: check-vendored
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/vendored.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T07:30:47.479976Z'
+  support: supports
+  summary: Pinned governed files match; native vendored check passed.
+  snapshot_sha256: b1f169d103aaefa930745468bcca171e5867b9cc49e4e74311e458097e3252a6
+- evidence_id: check-curies
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/curies.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T07:31:22.189027Z'
+  support: supports
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  snapshot_sha256: fb3be251020aac118f6df680372ae7aaa32c2a1dd3366648cde95494f19d9dd2
+- evidence_id: focused
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/focused-results.json
+  locator: All twenty actual target schema/strict command outputs
+  accessed_at: '2026-11-03T07:41:09Z'
+  support: supports
+  summary: Ten schema and ten strict commands returned exit zero.
+  snapshot_sha256: 6d7ff1ba499da8d98f1801b93ee44ac59dfee21a73164e83d6b91ffc994963c2
+- evidence_id: supplemental-pmid
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2355/pmid-chunks-receipt.json
+  locator: Complete native-report PMID set checked with unchanged resolver in batches
+    of at most fifty
+  accessed_at: '2026-11-03T07:32:26.452947Z'
+  support: supports
+  summary: 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers
+    remain unverified.
+  snapshot_sha256: 26c513ac2d560ef46e7fbe68a630527aede9313ad5dd0280a26c3e158fdaf571
+- evidence_id: historical-adapter-runner-availability
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical runner invocation receipt, cross-checked against exact stdout/stderr
+    hashes; reread during PR2355 synthesis
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS
+    PermissionError reading the configured runner pyvenv.cfg. This is a retained historical
+    availability observation, not a fresh attempt or a scientific validation failure.
+    Native policy permits inspected source-catalogue fallback.
+assessments:
+- assessment_id: plaque-current-0-identity
+  area: identity
+  topic: Complete septum versus upstream divisome
+  outcome: supported
+  summary: GO0000935 matches the complete exchange-blocking division septum. Parent
+    GO0030428, part_of GO0032153 and exact/related synonyms agree with native terms.
+    Divisome GO1990586 is an upstream structure node, not the maintained physical
+    wall identity.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-go
+- assessment_id: plaque-current-0-grounding
+  area: grounding
+  topic: Material identity and septal location
+  outcome: concern
+  summary: The bacterial component correctly denotes peptidoglycan and excludes fungal
+    polymers. CHEBI8005 supplies the exact material class; its lack of a septal deposition
+    qualifier is not a reason to withhold material grounding. Original minor F1 remains
+    open.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-chebi-8005
+  - plaque-division-septum-agent-jats-PMC8610174
+  - plaque-policy
+  - plaque-schema-policy
+- assessment_id: plaque-current-0-necessity
+  area: evidence
+  topic: Conditional necessity remains source-limited
+  outcome: unknown
+  summary: Bacterial septal PG composition is supported, but the reviewed papers do
+    not establish a universal removal/assembly test for CONDITIONAL at generic division-septum
+    scope. Membership, spatial synthesis and species-specific division phenotypes
+    remain distinct. No new universal necessity or dispensability finding is manufactured.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+  - plaque-division-septum-agent-jats-PMC8610174
+  - plaque-schema-policy
+- assessment_id: plaque-current-0-taxa
+  area: scope
+  topic: Qualified bacterial models
+  outcome: supported
+  summary: Native taxa verify Bacteria, E. coli K-12 and B. subtilis. The COMMON row
+    is explicitly restricted to walled FtsZ-dividing bacteria, not an exhaustive frequency
+    estimate. Primary B. subtilis and E. coli BW25113 studies support the model examples
+    within their conditions; they are not prevalence surveys.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-tax-2
+  - plaque-division-septum-agent-tax-83333
+  - plaque-division-septum-agent-tax-1423
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+- assessment_id: plaque-current-0-function
+  area: evidence
+  topic: Completed barrier compartmentalization
+  outcome: supported
+  summary: The function matches the GO-defined completed barrier. The graph concerns
+    upstream bacterial PG synthesis leading to the physical wall; it does not reinstate
+    assembly-only division-plane closure as an intrinsic function of the already completed
+    septum.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-go
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+- assessment_id: plaque-current-0-graph
+  area: graph
+  topic: Bounded nonmechanistic assembly summary
+  outcome: supported
+  summary: The four edges retain divisome localization, septal PG synthesis, formation
+    of the wall and daughter-compartment separation. NONMECHANISTIC and its notes
+    avoid a universal enzyme order or FtsZ rate-control mechanism. Primary studies
+    and the review distinguish E. coli versus B. subtilis treadmilling effects.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-go
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+  - plaque-division-septum-agent-jats-PMC8610174
+  - plaque-graph-policy
+- assessment_id: plaque-current-0-provenance
+  area: provenance
+  topic: Cited review sources and direct experimental cross-checks
+  outcome: supported
+  summary: McQuillen2020 DOI/PMID and selected complete review sections were inspected
+    as secondary synthesis; Egan/Vollmer first published2012 with later issue date
+    is abstract-limited after publisher403. Added2017 primary main texts corroborate
+    bounded bacterial spatial-synthesis claims; neither cited review is mislabeled
+    as a primary experiment.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  - plaque-division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - plaque-egan-access
+  - plaque-bisson2017-body
+  - plaque-yang2017-body
+- assessment_id: plaque-current-0-adapter
+  area: evidence
+  topic: FtsZ matching genes and bounded threshold context
+  outcome: supported
+  summary: Fresh catalogue and exact ftsZ queries resolve b0095 in E. coli MG1655
+    and BSU_15290 in the seven-strain B. subtilis modulome. Neither is above threshold
+    in any returned115/72 modules; no informative module hit requires a summary. This
+    is completed source-fallback applicability/context review, not a successful runner
+    execution, biological absence or experimental assembly evidence.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-adapter-policy
+  - plaque-adapter-datasets
+  - plaque-adapter-ecoli-meta
+  - plaque-adapter-ecoli-ftsZ
+  - plaque-adapter-ecoli-modules
+  - plaque-adapter-bsub-meta
+  - plaque-adapter-bsub-ftsZ
+  - plaque-adapter-bsub-modules
+  - plaque-adapter-bsub-publication
+- assessment_id: plaque-current-0-coverage
+  area: completeness
+  topic: Explicit fungal scope and optional inventory
+  outcome: supported
+  summary: The fungal-polymer TODO acknowledges the broader class. No protein row,
+    family, image, physical property or molecular census is imposed on this material
+    record. Its lack of protein examples is distinct from the named FtsZ source-adapter
+    trigger.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-policy
+  - plaque-division-septum-agent-go
+- assessment_id: plaque-current-1-identity
+  area: identity
+  topic: Porous septum and dolipore distinction
+  outcome: supported
+  summary: The dolipore is the cap-covered, swollen central-pore subclass of porous
+    cell septum. The current definition agrees with GO0000937 and is distinct from
+    a complete division septum.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-go
+  - plaque-division-septum-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+- assessment_id: plaque-current-1-components
+  area: grounding
+  topic: Morphologic parts are not individual protein families
+  outcome: supported
+  summary: Swelling and paired caps are whole dolipore-associated substructures, explicitly
+    qualified in grounding notes and function prose. The2008 localization and2010
+    cap purification/genetics support the scoped example. Whole caps are not SPC18/Spc14/Spc33
+    protein classes; optional molecular inventory is not required. Bounded GO name
+    searches and transport-limited InterPro queries do not prove universal family
+    absence.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-go-search-parenthesome
+  - plaque-go-search-septal-pore-cap
+  - plaque-ipr-search-SPC18
+  - plaque-ipr-search-Spc14
+  - plaque-ipr-search-Spc33
+  - plaque-policy
+- assessment_id: plaque-current-1-necessity
+  area: evidence
+  topic: Unknown assembly necessity
+  outcome: unknown
+  summary: Both morphological-component essentialities remain UNKNOWN. Spc33 deletion
+    establishes cap dependence in S. commune under its experimental conditions, not
+    universal necessity of every cap constituent for every dolipore or porous septum.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-schema-policy
+- assessment_id: plaque-current-1-taxa
+  area: scope
+  topic: Variable Agaricomycotina and S. commune example
+  outcome: supported
+  summary: Agaricomycotina and S. commune names/ranks are verified. VARIABLE and its
+    note avoid universal subphylum prevalence. The2009 abstract reports a literature
+    survey plus two TEM examples and cap diversity; the2010 paper supports the S.
+    commune example with distinct purification and deletion strains.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-tax-5302
+  - plaque-dolipore-agent-tax-5334
+  - plaque-dolipore-agent-driel2009-meta
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-1-closure
+  area: evidence
+  topic: Localization inference and closure genetics
+  outcome: supported
+  summary: The2008 R. solani CBS346.84 body supports specific SPC18 localization to
+    caps and some plug material; transport/release from caps remains hypothesis, not
+    directly demonstrated mechanism. The2010 S. commune deletion supports impaired
+    closure, growth and temperature-dependent fruiting. Its source phrase inability
+    to close is bounded by seven of ten WT closed versus eight of ten mutant open,
+    not100% failure.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-1-provenance
+  area: provenance
+  topic: Exact sources, publication versions and access limits
+  outcome: supported
+  summary: All four cited DOI identities/abstracts were inspected. The1978 paper is
+    abstract-limited after publisher403; its historical fungal name/spelling is not
+    silently mapped to an unverified current taxon. Final2009 body was not recovered
+    and no thesis replacement is used. The2008 genuine PMC HTML and2010 genuine early-online
+    publisher PDF supply the specified direct body/caption evidence.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-traquair1978-meta
+  - plaque-dolipore-agent-driel2009-meta
+  - plaque-dolipore-agent-driel2008-meta
+  - plaque-dolipore-agent-peer2010-meta
+  - plaque-dolipore-agent-traquair1978-pdf
+  - plaque-driel2009-access
+  - plaque-driel2008-jats
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-1-adapter
+  area: evidence
+  topic: Fungal target applicability is catalogue-bounded
+  outcome: supported
+  summary: SPC18 and related named cap proteins/closure claims warrant an applicability
+    check. The full current catalogue has no matched Rhizoctonia, Schizophyllum or
+    other fungal dataset; there is no applicable organism key for a downstream cap-gene/module
+    query. Bacterial FtsZ coverage and recombinant E. coli expression in a source
+    experiment cannot substitute for fungal native context. No fresh runner success
+    or biological absence is claimed.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-adapter-policy
+  - plaque-adapter-datasets
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-1-coverage
+  area: completeness
+  topic: Bounded structure record without forced molecular census
+  outcome: supported
+  summary: No record quotes, tracked images, quantitative properties or mandatory
+    gene/protein inventory require additional claims. The specific cap proteins are
+    species-scoped evidence, not universal porous-septum constituents or new mandatory
+    rows.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-policy
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-2-identity
+  area: identity
+  topic: Porous septum and dolipore distinction
+  outcome: supported
+  summary: GO0000934 matches the broad porous septum identity and BROAD porous-septum
+    synonym; GO0030428 parentage and dolipore subclass distinction agree. The expanded
+    fungal transport/gating prose is supported as prior-work context in the2008 Introduction,
+    not a new experiment in every named fungus.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-go
+  - plaque-division-septum-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+- assessment_id: plaque-current-2-components
+  area: grounding
+  topic: Morphologic parts are not individual protein families
+  outcome: supported
+  summary: Swelling and paired caps are whole dolipore-associated substructures, explicitly
+    qualified in grounding notes and function prose. The2008 localization and2010
+    cap purification/genetics support the scoped example. Whole caps are not SPC18/Spc14/Spc33
+    protein classes; optional molecular inventory is not required. Bounded GO name
+    searches and transport-limited InterPro queries do not prove universal family
+    absence.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-go-search-parenthesome
+  - plaque-go-search-septal-pore-cap
+  - plaque-ipr-search-SPC18
+  - plaque-ipr-search-Spc14
+  - plaque-ipr-search-Spc33
+  - plaque-policy
+- assessment_id: plaque-current-2-necessity
+  area: evidence
+  topic: Unknown assembly necessity
+  outcome: unknown
+  summary: Both morphological-component essentialities remain UNKNOWN. Spc33 deletion
+    establishes cap dependence in S. commune under its experimental conditions, not
+    universal necessity of every cap constituent for every dolipore or porous septum.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-schema-policy
+- assessment_id: plaque-current-2-taxa
+  area: scope
+  topic: Variable Agaricomycotina and S. commune example
+  outcome: supported
+  summary: Agaricomycotina and S. commune names/ranks are verified. VARIABLE and its
+    note avoid universal subphylum prevalence. The2009 abstract reports a literature
+    survey plus two TEM examples and cap diversity; the2010 paper supports the S.
+    commune example with distinct purification and deletion strains.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-tax-5302
+  - plaque-dolipore-agent-tax-5334
+  - plaque-dolipore-agent-driel2009-meta
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-2-closure
+  area: evidence
+  topic: Localization inference and closure genetics
+  outcome: supported
+  summary: The2008 R. solani CBS346.84 body supports specific SPC18 localization to
+    caps and some plug material; transport/release from caps remains hypothesis, not
+    directly demonstrated mechanism. The2010 S. commune deletion supports impaired
+    closure, growth and temperature-dependent fruiting. Its source phrase inability
+    to close is bounded by seven of ten WT closed versus eight of ten mutant open,
+    not100% failure.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-2-provenance
+  area: provenance
+  topic: Exact sources, publication versions and access limits
+  outcome: supported
+  summary: All four cited DOI identities/abstracts were inspected. The1978 paper is
+    abstract-limited after publisher403; its historical fungal name/spelling is not
+    silently mapped to an unverified current taxon. Final2009 body was not recovered
+    and no thesis replacement is used. The2008 genuine PMC HTML and2010 genuine early-online
+    publisher PDF supply the specified direct body/caption evidence.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-traquair1978-meta
+  - plaque-dolipore-agent-driel2009-meta
+  - plaque-dolipore-agent-driel2008-meta
+  - plaque-dolipore-agent-peer2010-meta
+  - plaque-dolipore-agent-traquair1978-pdf
+  - plaque-driel2009-access
+  - plaque-driel2008-jats
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-2-adapter
+  area: evidence
+  topic: Fungal target applicability is catalogue-bounded
+  outcome: supported
+  summary: SPC18 and related named cap proteins/closure claims warrant an applicability
+    check. The full current catalogue has no matched Rhizoctonia, Schizophyllum or
+    other fungal dataset; there is no applicable organism key for a downstream cap-gene/module
+    query. Bacterial FtsZ coverage and recombinant E. coli expression in a source
+    experiment cannot substitute for fungal native context. No fresh runner success
+    or biological absence is claimed.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-adapter-policy
+  - plaque-adapter-datasets
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-2-coverage
+  area: completeness
+  topic: Bounded structure record without forced molecular census
+  outcome: supported
+  summary: No record quotes, tracked images, quantitative properties or mandatory
+    gene/protein inventory require additional claims. The specific cap proteins are
+    species-scoped evidence, not universal porous-septum constituents or new mandatory
+    rows.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-policy
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+- assessment_id: plaque-current-1-graph-refresh
+  area: graph
+  topic: Substantively refreshed added parthood edge
+  outcome: supported
+  summary: The sole scientific delta adds barrel_shaped_septal_swelling is part of
+    dolipore_septum. Current GO0000937 defines the surrounding septal swelling as
+    the barrel-shaped structure and directly supports that edge; the2008 morphology
+    corroborates it. Existing surrounds/covers/participates-in-closure edges and NONMECHANISTIC
+    scope remain supported. The added history is acknowledged without treating the
+    original review as current.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-original-1
+  - plaque-graph-policy
+- assessment_id: plaque-current-1-synonyms
+  area: nomenclature
+  topic: Historical septal-complex terminology
+  outcome: supported
+  summary: The1978 title supports dolipore-parenthesome terminology. Septal pore complex
+    remains RELATED, preserving the broader use in the2009 study.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-dolipore-agent-traquair1978-meta
+  - plaque-dolipore-agent-driel2009-meta
+- assessment_id: plaque-current-2-graph
+  area: graph
+  topic: Original graph-scope finding persists
+  outcome: concern
+  summary: The MECHANISTIC graph contains two parthood edges and one whole-structure
+    mediates edge, without a represented causal gating transition. Its generic GO0000934
+    title/node masks the explicitly dolipore-limited descriptions. Original minor
+    F1 remains open; bounded biology can remain while graph interpretation is corrected.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-graph-policy
+- assessment_id: plaque-current-0-native
+  area: schema
+  topic: Native original integrity and protein gates
+  outcome: supported
+  summary: Original bundle validation and deterministic Markdown roundtrip pass; all
+    original frozen inputs match historical commit bytes. Current native protein verify
+    and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither
+    prove scientific truth nor establish missing protein defects.
+  target_ids:
+  - GO:0000935
+  evidence_ids:
+  - plaque-current-0
+  - plaque-original-native-validation
+  - plaque-native-division_septum-verify
+  - plaque-native-division_septum-causal
+  - plaque-original-0
+- assessment_id: plaque-current-1-native
+  area: schema
+  topic: Native original integrity and protein gates
+  outcome: supported
+  summary: Original bundle validation and deterministic Markdown roundtrip pass; all
+    original frozen inputs match historical commit bytes. Current native protein verify
+    and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither
+    prove scientific truth nor establish missing protein defects.
+  target_ids:
+  - GO:0000937
+  evidence_ids:
+  - plaque-current-1
+  - plaque-original-native-validation
+  - plaque-native-dolipore_septum-verify
+  - plaque-native-dolipore_septum-causal
+  - plaque-original-1
+- assessment_id: plaque-current-2-native
+  area: schema
+  topic: Native original integrity and protein gates
+  outcome: supported
+  summary: Original bundle validation and deterministic Markdown roundtrip pass; all
+    original frozen inputs match historical commit bytes. Current native protein verify
+    and causal-node checks pass with zero GENE_OR_PROTEIN nodes. These checks neither
+    prove scientific truth nor establish missing protein defects.
+  target_ids:
+  - GO:0000934
+  evidence_ids:
+  - plaque-current-2
+  - plaque-original-native-validation
+  - plaque-native-porous_cell_septum-verify
+  - plaque-native-porous_cell_septum-causal
+  - plaque-original-2
+- assessment_id: micro-eisosome_membrane_domain_mcc-identity
+  area: identity
+  topic: MCC is the membrane domain, not its filament scaffold
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: Exact GO identity, ENVELOPE/SUBCELLULAR_REGION, raft parent and eisosome
+    parthood are supported. MCC/can1 synonyms and separation of integral Sur7 from
+    peripheral Pil1/Lsp1 filaments are coherent; S. pombe ontology exemplar does not
+    change the S. cerevisiae experimental scope.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-go
+  - micro-douglas2014-abstract
+  - micro-karotki2011-primary
+- assessment_id: micro-eisosome_membrane_domain_mcc-composition
+  area: evidence
+  topic: Sur7 membership, localization and family boundary
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: Fresh Walther/Young primary text supports Sur7 in stable membrane domains.
+    Reviewed P54003 and bounded SUR7/S288C query establish identity; W303 localization
+    is not recast as a specific S288C experiment. IPR009571 includes Rim9/PalI as
+    well as Sur7 and would be broader than the component. No component essentiality
+    is asserted.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-walther2006-primary
+  - micro-young2002-primary
+  - micro-uniprot-P54003
+  - micro-query-SUR7
+  - micro-sur7-family
+  - micro-tax-559292
+- assessment_id: micro-eisosome_membrane_domain_mcc-annotation-links
+  area: provenance
+  topic: Sur7 source links and limits
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: Current UniProt links the three named localization references. Young primary
+    localization was read; Navarre current primary abstract detects Sur7 in enriched
+    membranes; Huh abstract gives assay scope, while Sur7-specific attribution remains
+    database-linked. The evidence note correctly identifies annotation provenance,
+    not a new strain-specific independent experiment.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-uniprot-P54003
+  - micro-young2002-primary
+  - micro-navarre2002-abstract
+  - micro-huh2003-abstract
+  - micro-bibliographic-metadata
+- assessment_id: micro-eisosome_membrane_domain_mcc-distribution
+  area: evidence
+  topic: Nearest source for yeast furrow/filament architecture
+  outcome: concern
+  target_ids:
+  - GO:0090512
+  summary: Original F1 remains a minor confirmed provenance defect. Walther establishes
+    Sur7/Pil1 stable patches and abnormal mutant invaginations; Karotki sec11/Fig7
+    directly addresses normal furrow-associated lattice. The S. cerevisiae row should
+    attach that source or narrow its wording. Fungal VARIABLE and yeast COMMON remain
+    qualified model scope, not numerical prevalence estimates.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-walther2006-primary
+  - micro-karotki2011-primary
+  - micro-douglas2014-abstract
+  - micro-tax-4751
+  - micro-tax-4932
+  - micro-prior-eisosome_membrane_domain_mcc
+- assessment_id: micro-eisosome_membrane_domain_mcc-graph
+  area: evidence
+  topic: Localization and filament scaffolding edges
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: The two mechanistic edges distinguish Sur7 localization from a filament
+    scaffold. Fresh primary Karotki supports physical membrane-binding/lattice scaffolding
+    with qualified in-vitro versus in-vivo geometry; no universal Sur7 requirement
+    or sole endocytic mechanism is inferred.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-walther2006-primary
+  - micro-karotki2011-primary
+  - micro-go
+- assessment_id: micro-eisosome_membrane_domain_mcc-adapter
+  area: provenance
+  topic: Replace unsupported no-expression exemption with checked coverage
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: The original explicitly exempts iModulonDB for lack of expression claims,
+    which does not satisfy the policy for named SUR7. Historical runner availability
+    is separate. Fresh catalogue inspection finds no matching yeast/eukaryote dataset;
+    no downstream bacterial surrogate is appropriate and the absence is not negative
+    biological evidence.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-review-policy
+  - micro-review-config
+  - micro-adapter-catalogue
+  - micro-historical-adapter-runner
+  - micro-prior-eisosome_membrane_domain_mcc
+- assessment_id: micro-fungal_type_cell_wall-identity
+  area: identity
+  topic: Variable fungal wall and distinct external capsule
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: GO identity, fungal wall synonym, narrower chitin/beta-glucan synonym and
+    broad cell-wall parent agree. Variable glucan/glycoprotein and optional chitin
+    wording avoids universal composition. Cryptococcus capsule is explicitly outside
+    the wall, consistent with current GO and scoped secondary source.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-go
+  - micro-gow2017-secondary
+  - micro-orlean2012-secondary
+  - micro-tax-4751
+  - micro-tax-4932
+  - micro-tax-5207
+- assessment_id: micro-fungal_type_cell_wall-materials
+  area: grounding
+  topic: Material classes and heterogeneous mannoproteins
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: ChEBI chitin and beta-D-glucan identities match. The latter class includes
+    multiple linkage forms. A wall-mannoprotein collective spans unrelated proteins
+    and attachment modes, so a single sequence family would over-narrow it. CONDITIONAL
+    material rows and explicit variability do not assert each component is universal
+    or individually necessary.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-chebi-17029
+  - micro-chebi-28793
+  - micro-gow2017-secondary
+  - micro-orlean2012-secondary
+- assessment_id: micro-fungal_type_cell_wall-examples
+  area: grounding
+  topic: Four exact yeast examples with bounded annotation provenance
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: CWP1/P28319, CWP2/P43497, SED1/Q01589 and GAS1/P22146 are reviewed S288C
+    mappings confirmed by exact queries. GAS1 membrane annotations and named references
+    are genuine, while a wall-linked pool is supported by Orlean and current database.
+    These location scopes coexist; no universal wall-protein necessity follows.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-uniprot-P28319
+  - micro-uniprot-P43497
+  - micro-uniprot-Q01589
+  - micro-uniprot-P22146
+  - micro-query-CWP1
+  - micro-query-CWP2
+  - micro-query-SED1
+  - micro-query-GAS1
+  - micro-gas1-primary-abstracts
+  - micro-orlean2012-secondary
+  - micro-tax-559292
+- assessment_id: micro-fungal_type_cell_wall-function
+  area: evidence
+  topic: Taxon-scoped morphology and surface roles
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: Secondary Gow/Orlean support fungal surface interactions and S. cerevisiae
+    osmotic integrity/shape with composition and life-stage variation. COMMON prevalence
+    is explicitly qualified to most vegetative cells, not all fungal stages. No population
+    frequency measurement or new causal deletion claim is invented.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-gow2017-secondary
+  - micro-orlean2012-secondary
+  - micro-tax-4751
+  - micro-tax-4932
+  - micro-tax-5207
+- assessment_id: micro-fungal_type_cell_wall-graph
+  area: evidence
+  topic: Nonmechanistic wall matrix graph
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: The explicitly NONMECHANISTIC graph describes well-studied glucan/chitin/mannoprotein
+    networks, wall outside the membrane and shape support. Its scope notes and edges
+    preserve species variation; secondary synthesis is adequate for this qualified
+    overview and is not presented as a single fresh direct experiment.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-gow2017-secondary
+  - micro-orlean2012-secondary
+  - micro-go
+- assessment_id: micro-fungal_type_cell_wall-adapter
+  area: provenance
+  topic: Named yeast proteins require a coverage assessment
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: The old no-transcriptomic-inference exemption omits actual applicability.
+    The current catalogue has no yeast/eukaryote match for these four exact named
+    examples; that bounded absence permits N/A for downstream modules without claiming
+    biological absence. Historical runner failure is explicitly not a new execution.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-review-policy
+  - micro-review-config
+  - micro-adapter-catalogue
+  - micro-historical-adapter-runner
+  - micro-prior-fungal_type_cell_wall
+- assessment_id: micro-plasma_membrane-identity
+  area: identity
+  topic: Generic cell-bounding membrane and exact cytoplasmic synonym
+  outcome: concern
+  target_ids:
+  - GO:0005886
+  summary: 'The exact structure ID, membrane parent, cell-periphery parthood and lipid-boundary
+    wording are appropriate across microbial groups. Original F1 remains minor/confirmed:
+    unqualified cytoplasmic membrane is EXACT in GO, while the record types it NARROW.
+    The separately qualified bacterial inner membrane remains narrow.'
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-go
+  - micro-silhavy2010-secondary
+  - micro-ellen2010-secondary
+  - micro-prior-plasma_membrane
+- assessment_id: micro-plasma_membrane-materials
+  area: grounding
+  topic: Heterogeneous lipids and integral-protein cohort
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: The material and protein rows are broad collectives, not a unique chemical
+    or homologous protein family. Collective lipid ESSENTIAL means the defining membrane
+    material; it does not require every lipid species or named integral protein. NONMECHANISTIC
+    graph scope does not choose a bacterial bilayer or archaeal monolayer biosynthetic
+    pathway.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-sohlenkamp2016-secondary
+  - micro-ellen2010-secondary
+  - micro-silhavy2010-secondary
+  - micro-go
+- assessment_id: micro-plasma_membrane-examples
+  area: grounding
+  topic: Bacterial and yeast exact identities
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: lacY/P02920 and secY/P0AGA2 are reviewed E. coli K-12 identities; PMA1/P05030
+    and HXT1/P32465 are reviewed S288C identities. Current exact reviewed-symbol queries
+    and native checks agree. Protein examples are illustrative and not a universal
+    composition or essentiality list; Hxt1 location remains database-evidence scoped.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-uniprot-P02920
+  - micro-uniprot-P0AGA2
+  - micro-uniprot-P05030
+  - micro-uniprot-P32465
+  - micro-query-lacY
+  - micro-query-secY
+  - micro-query-PMA1
+  - micro-query-HXT1
+  - micro-tax-83333
+  - micro-tax-559292
+- assessment_id: micro-plasma_membrane-primary-annotation
+  area: provenance
+  topic: LacY localization citations and reconstitution scope
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: Current UniProt names the three cited localization references. Fresh Calamia
+    first-page image supports topology experiments and laboratory strains; Newman
+    abstracts concern reconstituted lactose transport. Transport necessity in those
+    assays is not membrane-formation necessity. Remaining Calamia pages and Newman
+    full bodies were not freshly read.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-uniprot-P02920
+  - micro-calamia1990-page1
+  - micro-newman-primary-abstracts
+  - micro-bibliographic-metadata
+- assessment_id: micro-plasma_membrane-functions
+  area: evidence
+  topic: General barrier and integral-protein activities
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: Generic lipid boundary, selective transport and class-level microbial energy-linked
+    activities are supported with source/taxon qualifications. Cell-boundary universality
+    does not imply that every example carries the same respiratory complex. Silhavy
+    is bacterial, Douglas abstract fungal, Ellen archaeal secondary context; Albers
+    current access is abstract-only.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-silhavy2010-secondary
+  - micro-douglas2014-abstract
+  - micro-ellen2010-secondary
+  - micro-albers2011-abstract
+  - micro-tax-2
+  - micro-tax-2157
+  - micro-tax-4751
+  - micro-tax-562
+  - micro-tax-4932
+- assessment_id: micro-plasma_membrane-graph
+  area: evidence
+  topic: Nonmechanistic material organization, not complete biogenesis
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: The four edges give a broad lipid matrix/enclosure/protein embedding/transport
+    sketch. Lipid physical self-assembly wording is read within that explicit NONMECHANISTIC
+    material scope, not as an assertion that living membrane establishment and maintenance
+    require no energy or biosynthesis. No complete biosynthetic path or individual-lipid
+    necessity is inferred.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-go
+  - micro-silhavy2010-secondary
+  - micro-sohlenkamp2016-secondary
+  - micro-ellen2010-secondary
+- assessment_id: micro-plasma_membrane-adapter
+  area: provenance
+  topic: Actual matched E. coli genes and modules, with yeast coverage gap
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: The original lacks a structured-source applicability assessment despite
+    named genes. Current catalogue matches E. coli MG1655. Exact b0343/lacY/P02920
+    and b3300/secY/P0AGA2 were inspected, along with all115 membership rows and their
+    positive k61 Galactose/k7 Translation summaries and gene lists. These are bounded
+    computational contexts, not physical localization/assembly proof. AI summaries
+    and product-only search hits were excluded. Yeast examples have no current catalogue
+    match.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-review-policy
+  - micro-review-config
+  - micro-adapter-catalogue
+  - micro-adapter-mg1655-meta
+  - micro-adapter-search-lacY
+  - micro-adapter-search-secY
+  - micro-adapter-gene-b0343
+  - micro-adapter-gene-b3300
+  - micro-adapter-membership-b0343
+  - micro-adapter-membership-b3300
+  - micro-adapter-module-61
+  - micro-adapter-module-7
+  - micro-adapter-module-61-genes
+  - micro-adapter-module-7-genes
+  - micro-historical-adapter-runner
+  - micro-prior-plasma_membrane
+- assessment_id: micro-eisosome_membrane_domain_mcc-native-proteins
+  area: schema
+  topic: Native protein identity and graph coverage checks
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: Both native commands pass at the reviewed source head. The maintained inventory
+    has 1 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs
+    and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-native-eisosome_membrane_domain_mcc-verify
+  - micro-native-eisosome_membrane_domain_mcc-causal
+- assessment_id: micro-eisosome_membrane_domain_mcc-frozen-original
+  area: schema
+  topic: Unchanged input, immutable predecessor and deterministic output
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: The entire target equals its original frozen input and current main/head
+    bytes. Original native validation and Markdown render pass. No staleness refresh
+    of record content is required; current reassessment preserves historical provenance
+    and any exact open predecessor.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-original-validation-inputs
+  - micro-prior-eisosome_membrane_domain_mcc
+- assessment_id: micro-eisosome_membrane_domain_mcc-history-scope
+  area: provenance
+  topic: Historical resolutions, retained omissions and absent artifact scope
+  outcome: supported
+  target_ids:
+  - GO:0090512
+  summary: Maintained history/discussions and original verdict were read without treating
+    a prior resolution as proof of unrelated claims. No images, numerical quantities,
+    associated-trait rows or verbatim snippets are present in this target. No missing
+    optional inventory or image is fabricated as a defect. Current minor finding remains
+    open; unchanged input does not resolve it.
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-prior-eisosome_membrane_domain_mcc
+  - micro-original-validation-inputs
+- assessment_id: micro-fungal_type_cell_wall-native-proteins
+  area: schema
+  topic: Native protein identity and graph coverage checks
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: Both native commands pass at the reviewed source head. The maintained inventory
+    has 4 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs
+    and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-native-fungal_type_cell_wall-verify
+  - micro-native-fungal_type_cell_wall-causal
+- assessment_id: micro-fungal_type_cell_wall-frozen-original
+  area: schema
+  topic: Unchanged input, immutable predecessor and deterministic output
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: The entire target equals its original frozen input and current main/head
+    bytes. Original native validation and Markdown render pass. No staleness refresh
+    of record content is required; current reassessment preserves historical provenance
+    and any exact open predecessor.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-original-validation-inputs
+  - micro-prior-fungal_type_cell_wall
+- assessment_id: micro-fungal_type_cell_wall-history-scope
+  area: provenance
+  topic: Historical resolutions, retained omissions and absent artifact scope
+  outcome: supported
+  target_ids:
+  - GO:0009277
+  summary: Maintained history/discussions and original verdict were read without treating
+    a prior resolution as proof of unrelated claims. No images, numerical quantities,
+    associated-trait rows or verbatim snippets are present in this target. No missing
+    optional inventory or image is fabricated as a defect. No scientific finding is
+    established; positive assessments remain bounded by their actual source tiers.
+  evidence_ids:
+  - micro-record-fungal_type_cell_wall
+  - micro-prior-fungal_type_cell_wall
+  - micro-original-validation-inputs
+- assessment_id: micro-plasma_membrane-native-proteins
+  area: schema
+  topic: Native protein identity and graph coverage checks
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: Both native commands pass at the reviewed source head. The maintained inventory
+    has 4 protein examples and one COVERED protein graph node. Scope is declared identity/xrefs
+    and node linkage; no exhaustive family, physical assembly or necessity claim follows.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-native-plasma_membrane-verify
+  - micro-native-plasma_membrane-causal
+- assessment_id: micro-plasma_membrane-frozen-original
+  area: schema
+  topic: Unchanged input, immutable predecessor and deterministic output
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: The entire target equals its original frozen input and current main/head
+    bytes. Original native validation and Markdown render pass. No staleness refresh
+    of record content is required; current reassessment preserves historical provenance
+    and any exact open predecessor.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-original-validation-inputs
+  - micro-prior-plasma_membrane
+- assessment_id: micro-plasma_membrane-history-scope
+  area: provenance
+  topic: Historical resolutions, retained omissions and absent artifact scope
+  outcome: supported
+  target_ids:
+  - GO:0005886
+  summary: Maintained history/discussions and original verdict were read without treating
+    a prior resolution as proof of unrelated claims. No images, numerical quantities,
+    associated-trait rows or verbatim snippets are present in this target. No missing
+    optional inventory or image is fabricated as a defect. Current minor finding remains
+    open; unchanged input does not resolve it.
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-prior-plasma_membrane
+  - micro-original-validation-inputs
+- assessment_id: septin-S2355-A1
+  area: identity
+  topic: Broad parent with preserved microbial and nonmicrobial subclasses
+  outcome: supported
+  target_ids:
+  - GO:0030112
+  summary: The native identifier, definition and parent match. Explicit nonmicrobial
+    subclass discussion prevents a microbial example from redefining the complete
+    GO class; capsule and slime layer remain distinct narrower structures.
+  evidence_ids:
+  - septin-root18-sources-glycocalyx-go
+  - septin-record-glycocalyx
+- assessment_id: septin-S2355-A2
+  area: grounding
+  topic: A collective matrix is not one chemical species
+  outcome: supported
+  target_ids:
+  - GO:0030112
+  summary: The matrix row deliberately names heterogeneous extracellular material
+    rather than one polymer or protein. Label-only status and the open grounding discussion
+    accurately preserve that class boundary. The complete Brown scans corroborate
+    the mixed-material example without supplying a universal exact chemical inventory.
+  evidence_ids:
+  - septin-root18-sources-glycocalyx-go
+  - septin-root18-sources-brown1969-page1
+  - septin-record-glycocalyx
+  - septin-policy
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+- assessment_id: septin-S2355-A3
+  area: evidence
+  topic: Defining material versus chemical-class formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:0030112
+  summary: ESSENTIAL applies to the complete extracellular material constituting the
+    glycocalyx. That logical constitution does not establish whether the layer forms
+    without any particular glycan, protein or other chemical class. Brown extraction
+    and Hyams capsule comparisons do not resolve universal formation requirements
+    for the broad matrix, so individual necessity remains unknown without a new finding.
+  evidence_ids:
+  - septin-record-glycocalyx
+  - septin-policy
+  - septin-root18-sources-glycocalyx-go
+  - septin-hyams2010-jats
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+- assessment_id: septin-S2355-A4
+  area: scope
+  topic: Two bounded bacterial examples
+  outcome: supported
+  target_ids:
+  - GO:0030112
+  summary: Brown supports the chemically analyzed P.aeruginosa slime example; all
+    five primary scan pages were independently visually read during this independent
+    review. Hyams directly supports an organized pneumococcal capsule in named strains.
+    Taxon names agree; neither paper is treated as universal prevalence or functional
+    evidence.
+  evidence_ids:
+  - septin-root18-sources-doi-10.1042_bj1120521
+  - septin-root18-sources-doi-10.1128_IAI.00881-09
+  - septin-root18-sources-brown1969-page1
+  - septin-hyams2010-jats
+  - septin-root18-sources-NCBITaxon-287
+  - septin-root18-sources-NCBITaxon-1313
+  - septin-record-glycocalyx
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+- assessment_id: septin-S2355-A5
+  area: graph
+  topic: Explicitly descriptive mature-layer topology
+  outcome: supported
+  target_ids:
+  - GO:0030112
+  summary: The two edges state material constitution and peripheral location. NONMECHANISTIC
+    and the scope note accurately exclude an unsupported secretion or retention mechanism.
+    No separate function row is mandatory for this broad parent.
+  evidence_ids:
+  - septin-root18-sources-glycocalyx-go
+  - septin-record-glycocalyx
+- assessment_id: septin-S2355-A6
+  area: completeness
+  topic: Bounded record-level coverage
+  outcome: supported
+  target_ids:
+  - GO:0030112
+  summary: The entire maintained record and cited claim contexts were inspected at
+    the stated source scopes. Exact additional polymer inventories, numerical properties,
+    images, traits and expanded mechanisms are optional. No verbatim quotation requires
+    repair, and no status or history rewrite is proposed. A clean result does not
+    assert exhaustive literature completeness.
+  evidence_ids:
+  - septin-record-glycocalyx
+  - septin-policy
+  - septin-root18-sources-glycocalyx-go
+  - septin-root18-sources-NCBITaxon-287
+  - septin-root18-sources-NCBITaxon-1313
+  - septin-root18-sources-doi-10.1042_bj1120521
+  - septin-root18-sources-doi-10.1128_IAI.00881-09
+  - septin-root18-sources-doi-10.1146_annurev.mi.35.100181.001503
+  - septin-root18-sources-brown1969-page1
+  - septin-hyams2010-jats
+  - septin-root18-sources-costerton-publisher-access
+  - septin-root18-sources-brown1969-pdf-access
+  - septin-root18-sources-brown1969-pmc-pdf-access
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+- assessment_id: septin-S2355-A7
+  area: evidence
+  topic: Actual structured-source applicability and bounded context
+  outcome: not_applicable
+  summary: The complete target is a mixed extracellular-material/outermost topology
+    class, without a named gene/protein or molecular-pathway assertion. Actual scope
+    supports downstream non-applicability. Species examples alone do not require gene/module
+    searches. The original expression-only sentence is clarified by this scope basis;
+    its correct N/A conclusion does not establish a missing required molecular query
+    or a separate bundle defect.
+  target_ids:
+  - GO:0030112
+  evidence_ids:
+  - septin-record-glycocalyx
+  - septin-adapter-policy
+  - septin-current-adapter-catalogue
+  - septin-historical-adapter-runner
+- assessment_id: septin-S2355-A8
+  area: schema
+  topic: Current native checks and frozen original provenance
+  outcome: supported
+  summary: Original schema/render and frozen hashes pass. Current root native protein
+    checks exit0; empty exact inventories and zero protein nodes establish no narrative
+    molecular completeness.
+  target_ids:
+  - GO:0030112
+  evidence_ids:
+  - septin-original-native-checks
+  - septin-native-glycocalyx-verify
+  - septin-native-glycocalyx-causal
+- assessment_id: septin-S2355-A9
+  area: identity
+  topic: Mycomembrane distinguished from the entire wall core
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: Exact GO identity, synonyms and outer-membrane parent are supported. The
+    definition retains the mycolate-rich bilayer and covalent AG–PG linkage. The resolved
+    boundary discussion correctly keeps AG and PG as contextual graph nodes rather
+    than local membrane constituents.
+  evidence_ids:
+  - septin-root18-sources-mycomembrane-go
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-legacy-PMC2519390
+  - septin-root18-sources-legacy-PMC4526729
+  - septin-record-mycolate_outer_membrane
+- assessment_id: septin-S2355-A10
+  area: grounding
+  topic: Chemical class versus heterogeneous pools
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: Mycolic acid and contextual arabinogalactan match the verified material
+    classes. Extractable lipids and outer-membrane proteins are heterogeneous pools,
+    not single CHEBI or sequence families. Native fractions and review evidence support
+    their presence; one universal lipid recipe is not warranted.
+  evidence_ids:
+  - septin-root18-sources-mycomembrane-go
+  - septin-root18-sources-CHEBI-25438
+  - septin-root18-sources-CHEBI-27569
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-jats-PMC5634507
+  - septin-record-mycolate_outer_membrane
+  - septin-policy
+- assessment_id: septin-S2355-A11
+  area: evidence
+  topic: Structural requirement for mycolates in the tested corynebacterial context
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: The tested C. glutamicum mycolate-deficient mutant lacks an outer-membrane
+    bilayer, providing a structural endpoint distinct from viability. This supports
+    a material requirement in that experimental context; it does not establish individual
+    necessity of each extractable lipid or porin.
+  evidence_ids:
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-legacy-PMC2519390
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-jats-PMC5634507
+  - septin-record-mycolate_outer_membrane
+  - septin-policy
+- assessment_id: septin-S2355-A12
+  area: evidence
+  topic: Assembly necessity of heterogeneous lipid and protein pools
+  outcome: unknown
+  target_ids:
+  - GO:0036407
+  summary: Presence and uptake or growth effects do not establish whether every member
+    of the extractable-lipid and outer-membrane-protein pools is required to form
+    the membrane. The record uses CONDITIONAL for these pools; the reviewed evidence
+    does not resolve that assembly-necessity classification. No individual requirement
+    or dispensability is inferred.
+  evidence_ids:
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-jats-PMC5634507
+  - septin-record-mycolate_outer_membrane
+  - septin-policy
+- assessment_id: septin-S2355-A13
+  area: evidence
+  topic: Reviewed MspA and accurately labeled unreviewed porins
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: Accession/name/gene/taxon/status pairs match all three native entries.
+    The exact reviewed query uniquely returns MspA and returns no reviewed PorA/PorB
+    in the declared species. H7C6A6 links a sequenced MH20-22B PorA record; H7C685
+    links the ATCC13032 PorB sequence. Their source-linked primary abstracts support
+    the named porin identities and channels, while the maintained entry notes remain
+    identity-only. Unreviewed status is not silently promoted.
+  evidence_ids:
+  - septin-root18-sources-UniProtKB-A0QR29
+  - septin-root18-sources-UniProtKB-H7C6A6
+  - septin-root18-sources-UniProtKB-H7C685
+  - septin-root18-sources-query-mspA-246196
+  - septin-root18-sources-query-porA-1718
+  - septin-root18-sources-query-porB-1718
+  - septin-root18-sources-PMID-9790664
+  - septin-root18-sources-PMID-14622416
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-NCBITaxon-2
+  - septin-root18-sources-NCBITaxon-1763
+  - septin-root18-sources-NCBITaxon-1772
+  - septin-root18-sources-NCBITaxon-1718
+  - septin-root18-sources-NCBITaxon-246196
+  - septin-record-mycolate_outer_membrane
+- assessment_id: septin-S2355-A14
+  area: scope
+  topic: Source-supported model taxa with historical names
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: Bacterial distribution is explicitly variable. Mycobacteria and related
+    corynebacteria are supported; M.smegmatis mc2155 and C.glutamicum are directly
+    represented in the primary sources. ENA currently uses Mycolicibacterium smegmatis
+    for1772; the maintained older genus name is the historical source name, not a
+    different organism. No prevalence census is asserted.
+  evidence_ids:
+  - septin-root18-sources-NCBITaxon-2
+  - septin-root18-sources-NCBITaxon-1763
+  - septin-root18-sources-NCBITaxon-1772
+  - septin-root18-sources-NCBITaxon-1718
+  - septin-root18-sources-NCBITaxon-246196
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-legacy-PMC2519390
+  - septin-record-mycolate_outer_membrane
+- assessment_id: septin-S2355-A15
+  area: evidence
+  topic: Permeability barrier and scoped protein channels
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: The membrane barrier and porin-mediated hydrophilic uptake are supported
+    by the review and native fractions. MspA evidence is species-specific; the record
+    is not read as saying every mycobacterium carries MspA or that every identified
+    outer-membrane protein is a general porin.
+  evidence_ids:
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-PMID-9790664
+  - septin-root18-sources-PMID-14622416
+  - septin-record-mycolate_outer_membrane
+- assessment_id: septin-S2355-A16
+  area: graph
+  topic: Preserve uncertainty of leaflet partition
+  outcome: concern
+  target_ids:
+  - GO:0036407
+  summary: The explicitly NONMECHANISTIC graph correctly gives class-level anchoring
+    and membrane architecture. However, component roles and the pack-into edge state
+    inner/outer-leaflet assignments without the model qualifications present in the
+    cited papers. This is a bounded certainty issue; bilayer existence and covalent
+    linkage remain supported.
+  evidence_ids:
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-legacy-PMC4526729
+  - septin-record-mycolate_outer_membrane
+- assessment_id: septin-S2355-A17
+  area: completeness
+  topic: Bounded record-level coverage
+  outcome: supported
+  target_ids:
+  - GO:0036407
+  summary: All maintained fields and claim-bearing source passages were inspected
+    at the disclosed access tiers. One bounded source-certainty finding remains. Optional
+    detailed chemistry, images and inventories are not mandatory. No status/history
+    rewrite or exhaustive literature completeness is asserted.
+  evidence_ids:
+  - septin-record-mycolate_outer_membrane
+  - septin-policy
+  - septin-root18-sources-mycomembrane-go
+  - septin-root18-sources-NCBITaxon-2
+  - septin-root18-sources-NCBITaxon-1763
+  - septin-root18-sources-NCBITaxon-1772
+  - septin-root18-sources-NCBITaxon-1718
+  - septin-root18-sources-NCBITaxon-246196
+  - septin-root18-sources-CHEBI-25438
+  - septin-root18-sources-CHEBI-27569
+  - septin-root18-sources-doi-10.1073_pnas.0709530105
+  - septin-root18-sources-doi-10.1128_JB.01919-07
+  - septin-root18-sources-doi-10.1016_j.tim.2009.12.005
+  - septin-root18-sources-doi-10.1101_cshperspect.a021113
+  - septin-root18-sources-doi-10.1038_s41598-017-12718-4
+  - septin-root18-sources-marrakchi-meta-retry
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-legacy-PMC2519390
+  - septin-root18-sources-jats-PMC5634507
+  - septin-root18-sources-legacy-PMC4526729
+  - septin-root18-sources-marrakchi-doi-route-access
+  - septin-root18-sources-UniProtKB-A0QR29
+  - septin-root18-sources-UniProtKB-H7C6A6
+  - septin-root18-sources-UniProtKB-H7C685
+  - septin-root18-sources-query-mspA-246196
+  - septin-root18-sources-query-porA-1718
+  - septin-root18-sources-query-porB-1718
+  - septin-root18-sources-PMID-9790664
+  - septin-root18-sources-PMID-14622416
+- assessment_id: septin-S2355-A18
+  area: evidence
+  topic: Actual structured-source applicability and bounded context
+  outcome: supported
+  summary: Named mspA/porA/porB triggers applicability. Fresh official catalogue matches
+    C. glutamicum/modulome263; bounded porA/porB queries, three gene entries and all87
+    membership rows per candidate were inspected. Exact H7C6A6 and H7C685 mappings
+    agree; the second PorA-family product match is not conflated with PorA. All membership
+    flags are false, a thresholded dataset result with no biological absence inference
+    or positive module requiring summary. M. smegmatis has no returned catalogue dataset;
+    M. tuberculosis is not substituted. Current source fallback is separated from
+    the historical runner PermissionError.
+  target_ids:
+  - GO:0036407
+  evidence_ids:
+  - septin-record-mycolate_outer_membrane
+  - septin-adapter-policy
+  - septin-current-adapter-catalogue
+  - septin-historical-adapter-runner
+  - septin-cg-search-porA
+  - septin-cg-search-porB
+  - septin-cg-WA5_RS13590-gene
+  - septin-cg-WA5_RS13590-modules
+  - septin-cg-WA5_RS14300-gene
+  - septin-cg-WA5_RS14300-modules
+  - septin-cg-WA5_RS04855-gene
+  - septin-cg-WA5_RS04855-modules
+- assessment_id: septin-S2355-A19
+  area: schema
+  topic: Current native checks and frozen original provenance
+  outcome: supported
+  summary: Original schema/render and frozen hashes pass. Current root native protein
+    checks exit0; three exact examples and one covered protein node do not independently
+    prove localization or necessity.
+  target_ids:
+  - GO:0036407
+  evidence_ids:
+  - septin-original-native-checks
+  - septin-native-mycolate_outer_membrane-verify
+  - septin-native-mycolate_outer_membrane-causal
+- assessment_id: septin-S2355-A20
+  area: identity
+  topic: Generic region and exact authority mappings
+  outcome: supported
+  target_ids:
+  - GO:0042597
+  summary: The GO label, definition, exact synonym, UniProt location xref and SUBCELLULAR_REGION
+    classification agree. The explicit GO part_of relation is maintained without silently
+    converting it to is_a.
+  evidence_ids:
+  - septin-periplasm-agent-go
+  - septin-periplasm-agent-SL-0200
+  - septin-record-periplasmic_space
+- assessment_id: septin-S2355-A21
+  area: scope
+  topic: Generic versus diderm region and boundary material
+  outcome: supported
+  target_ids:
+  - GO:0042597
+  summary: Both GO and the full narrower maintained record distinguish GO0042597 from
+    GO0030288. Membranes and walls delimit the generic region and are not uniformly
+    contained material; leaving this broad record component-free is an explicit appropriate
+    boundary decision.
+  evidence_ids:
+  - septin-periplasm-agent-go
+  - septin-periplasm-agent-SL-0200
+  - septin-neighbor-search
+  - septin-neighbor-outer_membrane_bounded_periplasmic_space
+  - septin-periplasm-agent-silhavy2010-legacy-html
+  - septin-periplasm-agent-legacy-PMC1347357
+  - septin-record-periplasmic_space
+- assessment_id: septin-S2355-A22
+  area: evidence
+  topic: Separate gram-negative and gram-positive examples
+  outcome: supported
+  target_ids:
+  - GO:0042597
+  summary: The E.coli example is supported by bacterial review synthesis. The S.aureus
+    example is supported by directly read native cryo-TEM results in Newman D2C. The
+    species rows are not strain identifiers and no universal prevalence, width or
+    composition is inferred.
+  evidence_ids:
+  - septin-periplasm-agent-tax-562
+  - septin-periplasm-agent-tax-1280
+  - septin-periplasm-agent-doi-cshperspect_a000414
+  - septin-periplasm-agent-pmid-16428405
+  - septin-periplasm-agent-silhavy2010-legacy-html
+  - septin-periplasm-agent-legacy-PMC1347357
+  - septin-record-periplasmic_space
+- assessment_id: septin-S2355-A23
+  area: completeness
+  topic: Optional inventory and history
+  outcome: supported
+  target_ids:
+  - GO:0042597
+  summary: No concrete scientific-record corrective issue was observed. A generic
+    region does not require a universal component list, graph or function inventory.
+    No quoted snippet or image occurs. Existing PROPOSED state and resolved discussions
+    are preserved; historical authorship and earlier searches are not independently
+    certified.
+  evidence_ids:
+  - septin-periplasm-agent-go
+  - septin-periplasm-agent-SL-0200
+  - septin-periplasm-agent-silhavy2010-legacy-html
+  - septin-periplasm-agent-legacy-PMC1347357
+  - septin-record-periplasmic_space
+  - septin-policy
+- assessment_id: septin-S2355-A24
+  area: evidence
+  topic: Actual structured-source applicability and bounded context
+  outcome: not_applicable
+  summary: The complete target is a generic membrane/wall-delimited region, without
+    a named gene/protein or molecular-pathway assertion. Actual scope supports downstream
+    non-applicability. Species examples alone do not require gene/module searches.
+    The absence of a formal original adapter row alone is not a defect for this sparse
+    scope.
+  target_ids:
+  - GO:0042597
+  evidence_ids:
+  - septin-record-periplasmic_space
+  - septin-adapter-policy
+  - septin-current-adapter-catalogue
+  - septin-historical-adapter-runner
+- assessment_id: septin-S2355-A25
+  area: schema
+  topic: Current native checks and frozen original provenance
+  outcome: supported
+  summary: Original schema/render and frozen hashes pass. Current root native protein
+    checks exit0; empty exact inventories and zero protein nodes establish no narrative
+    molecular completeness.
+  target_ids:
+  - GO:0042597
+  evidence_ids:
+  - septin-original-native-checks
+  - septin-native-periplasmic_space-verify
+  - septin-native-periplasmic_space-causal
+- assessment_id: septin-S2355-A26
+  area: identity
+  topic: Diffuse layer versus organized capsule
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: GO identity, ENVELOPE_LAYER kind, glycocalyx parent and UniProt location
+    xref agree. The capsule distinction is explicit and authority-backed, rather than
+    merging loosely attached matrix with an organized capsule.
+  evidence_ids:
+  - septin-slime-layer-agent-go
+  - septin-slime-layer-agent-SL-0247
+  - septin-record-slime_layer
+- assessment_id: septin-S2355-A27
+  area: grounding
+  topic: Mixed extracellular material and necessity
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: The component is the collective material constituting the layer. GO, UniProt
+    and Brown composition claims are attributed separately. The measured mixture and
+    unresolved polymer architecture do not justify grounding the complete matrix to
+    one glycan or protein family; material identity remains supported independently
+    of individual formation requirements.
+  evidence_ids:
+  - septin-slime-layer-agent-go
+  - septin-slime-layer-agent-SL-0247
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+  - septin-record-slime_layer
+  - septin-policy
+- assessment_id: septin-S2355-A28
+  area: evidence
+  topic: Whole-material constitution versus individual requirements
+  outcome: unknown
+  target_ids:
+  - GO:0030114
+  summary: The record applies ESSENTIAL to the complete material constituting the
+    slime layer, not separately to each named chemical class. Brown chemical extraction
+    does not establish whether the layer forms without any particular polysaccharide,
+    protein or nucleic-acid component. Logical constitution is retained; experimental
+    formation necessity for those individual classes remains unknown, without a new
+    corrective finding.
+  evidence_ids:
+  - septin-record-slime_layer
+  - septin-policy
+  - septin-slime-layer-agent-go
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+- assessment_id: septin-S2355-A29
+  area: scope
+  topic: Historical multi-strain biochemical example
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: Native taxon identity matches P.aeruginosa. Brown studied eight strains
+    after five-day static culture at37C, using different media and two extraction
+    procedures. The maintained example claims only chemical characterization of multiple
+    strains; it does not promote uniform composition, fixed proportions or all modern
+    biofilm matrices.
+  evidence_ids:
+  - septin-root18-sources-NCBITaxon-287
+  - septin-slime-layer-agent-doi-10.1042_bj1120521
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+  - septin-record-slime_layer
+- assessment_id: septin-S2355-A30
+  area: graph
+  topic: Descriptive matrix organization
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: 'NONMECHANISTIC and its scope note accurately describe the two edges: material
+    forms a layer and the layer surrounds the cell surface. No species-neutral export
+    system, adhesion mechanism, biosynthetic route or individual-component necessity
+    is asserted.'
+  evidence_ids:
+  - septin-slime-layer-agent-go
+  - septin-slime-layer-agent-SL-0247
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+  - septin-record-slime_layer
+  - septin-policy
+- assessment_id: septin-S2355-A31
+  area: completeness
+  topic: Open chemistry question is appropriate
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: The broad mixed-material TODO remains justified. Optional protein inventory,
+    strain list, quantitative table, image, traits and mechanistic function rows are
+    not mandatory. No existing quotation or reused image occurs. No scientific-record
+    corrective issue was found within this bounded record review; PROPOSED status
+    and history are preserved.
+  evidence_ids:
+  - septin-slime-layer-agent-go
+  - septin-slime-layer-agent-SL-0247
+  - septin-root18-sources-brown1969-page1
+  - septin-root18-sources-brown1969-page2
+  - septin-root18-sources-brown1969-page3
+  - septin-root18-sources-brown1969-page4
+  - septin-root18-sources-brown1969-page5
+  - septin-record-slime_layer
+  - septin-policy
+- assessment_id: septin-S2355-A32
+  area: evidence
+  topic: Actual structured-source applicability and bounded context
+  outcome: not_applicable
+  summary: The complete target is a mixed diffuse extracellular-material/topology
+    class, without a named gene/protein or molecular-pathway assertion. Actual scope
+    supports downstream non-applicability. Species examples alone do not require gene/module
+    searches. The absence of a formal original adapter row alone is not a defect for
+    this sparse scope.
+  target_ids:
+  - GO:0030114
+  evidence_ids:
+  - septin-record-slime_layer
+  - septin-adapter-policy
+  - septin-current-adapter-catalogue
+  - septin-historical-adapter-runner
+- assessment_id: septin-S2355-A33
+  area: schema
+  topic: Current native checks and frozen original provenance
+  outcome: supported
+  summary: Original schema/render and frozen hashes pass. Current root native protein
+    checks exit0; empty exact inventories and zero protein nodes establish no narrative
+    molecular completeness.
+  target_ids:
+  - GO:0030114
+  evidence_ids:
+  - septin-original-native-checks
+  - septin-native-slime_layer-verify
+  - septin-native-slime_layer-causal
+- assessment_id: current-input-comparison
+  area: provenance
+  topic: Complete frozen-input comparison and bounded refresh
+  outcome: supported
+  summary: 1 of ten original target hashes differ from current main. The changed content
+    is substantively reassessed in the target-specific assessments; original observations
+    remain historical and unchanged. All current target and used context bytes are
+    frozen.
+  target_ids:
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0036407
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030114
+  evidence_ids:
+  - current-record-0
+  - original-review-0
+  - current-record-1
+  - original-review-1
+  - current-record-2
+  - original-review-2
+  - current-record-3
+  - original-review-3
+  - current-record-4
+  - original-review-4
+  - current-record-5
+  - original-review-5
+  - current-record-6
+  - original-review-6
+  - current-record-7
+  - original-review-7
+  - current-record-8
+  - original-review-8
+  - current-record-9
+  - original-review-9
+findings:
+- finding_id: plaque-t0-F1
+  issue_key: division-septum-peptidoglycan-material-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate peptidoglycan identity from its septal location
+  description: The bacterial_septal_peptidoglycan component explicitly denotes PG,
+    but its grounding note requires a term that also denotes deposition at bacterial
+    division septa. Native CHEBI8005 supplies the verified material-class identity.
+    Septal placement and exclusion of fungal polymers belong in the role and evidence
+    rather than preventing this material link.
+  target_ids:
+  - GO:0000935
+  field_paths:
+  - components[component_id=bacterial_septal_peptidoglycan].grounding
+  - components[component_id=bacterial_septal_peptidoglycan].grounding_status
+  - components[component_id=bacterial_septal_peptidoglycan].grounding_notes
+  evidence_ids:
+  - plaque-current-0
+  - plaque-division-septum-agent-chebi-8005
+  - plaque-division-septum-agent-jats-PMC8610174
+  - plaque-schema-policy
+  - plaque-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Components
+  native_severity: minor
+  normalization_reason: A bounded material-class link is withheld because location
+    is conflated with chemical identity; the biological component and bacterial scope
+    are already correct.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T101605Z-division-septum-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2623
+- finding_id: plaque-t2-F1
+  issue_key: porous-septum-graph-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: State the graph subtype and descriptive scope
+  description: The graph is marked MECHANISTIC but represents only component parthood
+    and a whole-structure mediates edge. Its generic GO0000934 node/title stand for
+    descriptions explicitly limited to the dolipore example. The cited localization
+    evidence does not itself supply a represented causal gating transition.
+  target_ids:
+  - GO:0000934
+  field_paths:
+  - causal_graphs[graph_id=porous_cell_septum_mechanism].scope_status
+  - causal_graphs[graph_id=porous_cell_septum_mechanism].scope_notes
+  - causal_graphs[graph_id=porous_cell_septum_mechanism].description
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dolipore-agent-go
+  - plaque-dolipore-agent-legacy-PMC2568075
+  - plaque-dolipore-agent-peer2010-knaw-pdf
+  - plaque-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/porous_cell_septum.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: Supported dolipore biology and correct broad identity can
+    remain; the required correction is bounded graph interpretation.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T101626Z-porous-cell-septum-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2624
+- finding_id: micro-F1
+  issue_key: mcc-yeast-furrow-architecture-source-placement
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Cite the source that resolves MCC furrow and filament architecture
+  description: The S.cerevisiae distribution note describes Sur7-marked furrow-like
+    MCC domains paired with filaments but cites only Walther2006. That primary body
+    establishes Sur7/Pil1 localization and immobile patches; its EM images described
+    in the body concern abnormal pil1-deletion invaginations rather than normal furrow-and-filament
+    architecture. Karotki2011 Results sec11/Fig7 directly support the fuller architecture
+    and are already cited elsewhere in the record. The biological assertion is supported,
+    but its nearest source is incomplete.
+  target_ids:
+  - GO:0090512
+  field_paths:
+  - taxonomic_distribution[taxon_id=NCBITaxon:4932].note
+  - taxonomic_distribution[taxon_id=NCBITaxon:4932].reference
+  evidence_ids:
+  - micro-record-eisosome_membrane_domain_mcc
+  - micro-go
+  - micro-prior-eisosome_membrane_domain_mcc
+  - micro-walther2006-primary
+  - micro-karotki2011-primary
+  - micro-douglas2014-abstract
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:Evidence Rules; nearest-claim
+    support
+  native_severity: minor
+  normalization_reason: A non-blocking citation placement gap in an otherwise supported
+    species/architecture assertion; it neither changes structure identity nor contradicts
+    the biology.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T101612Z-eisosome-membrane-domain-mcc-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2626
+- finding_id: micro-F2
+  issue_key: plasma-membrane-cytoplasmic-synonym-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Use exact scope for the unqualified cytoplasmic membrane synonym
+  description: The bare cytoplasmic membrane synonym is typed NARROW, but native GO0005886
+    lists it as EXACT and the maintained resolved discussion describes the same cell-bounding
+    structure. Its bacterial review citation does not by itself restrict the unqualified
+    name to a biologically narrower class. The distinct bacterial inner membrane row
+    is already explicitly qualified and can remain narrow.
+  target_ids:
+  - GO:0005886
+  field_paths:
+  - synonyms[synonym_text=cytoplasmic membrane].synonym_type
+  - synonyms[synonym_text=cytoplasmic membrane].source
+  evidence_ids:
+  - micro-record-plasma_membrane
+  - micro-go
+  - micro-prior-plasma_membrane
+  - micro-silhavy2010-secondary
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/plasma_membrane.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Identity
+    and scope
+  native_severity: minor
+  normalization_reason: The underlying plasma-membrane identity is correct; this is
+    a bounded machine-readable synonym-scope correction.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T101624Z-plasma-membrane-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2627
+- finding_id: septin-S2355-F1
+  issue_key: mycomembrane-leaflet-model-certainty
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Retain the sources' uncertainty about leaflet organization
+  description: The mycolic-acid role presents a covalently attached inner leaflet
+    and the extractable-lipid role/graph present outer-leaflet packing as settled
+    architecture. Niederweis2010 explicitly discusses extractable lipids in both leaflets
+    and unknown mycolate conformation; Hoffmann2008 gives alternative models, and
+    Chiaradia2017 still calls the outer-leaflet assignment presumed. Qualify the arrangement
+    as a source-scoped model without disputing the observed bilayer or covalent AG
+    linkage.
+  target_ids:
+  - GO:0036407
+  field_paths:
+  - components[component_id=mycolic_acid].role
+  - components[component_id=extractable_mycomembrane_lipids].role
+  - components[component_id=extractable_mycomembrane_lipids].grounding_notes
+  - causal_graphs[graph_id=mycolyl_arabinogalactan_mycomembrane].edges[subject=extractable_mycomembrane_lipids,predicate=pack
+    into,object=mycolate_outer_membrane]
+  evidence_ids:
+  - septin-root18-sources-jats-PMC2931330
+  - septin-root18-sources-legacy-PMC2268800
+  - septin-root18-sources-jats-PMC5634507
+  - septin-record-mycolate_outer_membrane
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/mycolate_outer_membrane.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: The target identity, membrane existence and component classes
+    are sound; source uncertainty is lost in a bounded architectural formulation.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T101620Z-mycolate-outer-membrane-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2625
+actions:
+- action_id: plaque-t0-A1
+  finding_ids:
+  - plaque-t0-F1
+  target_ids:
+  - GO:0000935
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+  description: Ground the explicitly bacterial peptidoglycan material to verified
+    CHEBI8005 and revise the label-only rationale while retaining bacterial septal
+    scope.
+  acceptance_checks:
+  - Preserve the exact prior finding key and source scopes.
+  - Scientific record edits require separately authorized guarded curation and append-only
+    history; this PR only files the curation work.
+  - Run native record validation, strict checks, product/trait/history gates, rendering
+    and QC for any later curation.
+- action_id: plaque-t2-A1
+  finding_ids:
+  - plaque-t2-F1
+  target_ids:
+  - GO:0000934
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/porous_cell_septum.yaml
+    role: maintained scientific record
+  description: Qualify the graph as the dolipore example and make its scope status/notes
+    reflect the descriptive topology, or separately curate a supported causal gating
+    transition.
+  acceptance_checks:
+  - Preserve the exact prior finding key and source scopes.
+  - Scientific record edits require separately authorized guarded curation and append-only
+    history; this PR only files the curation work.
+  - Run native record validation, strict checks, product/trait/history gates, rendering
+    and QC for any later curation.
+- action_id: micro-A1
+  finding_ids:
+  - micro-F1
+  target_ids:
+  - GO:0090512
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    role: maintained scientific record
+  description: Replace the distribution-row reference with Karotki2011 or Douglas2014
+    for its full furrow-and-filament wording, or narrow that note to the Sur7/eisosome
+    localization established by Walther2006. Preserve the species scope and separate
+    S288C identity-only protein example.
+  acceptance_checks:
+  - The nearest citation must support every retained anatomical clause; verify Karotki
+    Results sec11/Fig7 or the exact Douglas abstract.
+  - Retain W303 experimental context without treating it as an S288C-specific localization
+    assay.
+  - Any later maintained edit requires separate authorization, the guarded curation
+    writer, history and focused schema/strict validation.
+- action_id: micro-A2
+  finding_ids:
+  - micro-F2
+  target_ids:
+  - GO:0005886
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/plasma_membrane.yaml
+    role: maintained scientific record
+  description: Type unqualified cytoplasmic membrane as EXACT_SYNONYM and cite GO0005886,
+    or explicitly qualify the synonym text if a narrower bacterial name is intended.
+    Retain bacterial inner membrane as NARROW_SYNONYM.
+  acceptance_checks:
+  - Confirm the exact native GO synonym and revised text/source agree.
+  - Preserve archaeal-compatible lipid-boundary wording and the separate bacterial
+    inner membrane row.
+  - Run focused schema and strict-reference validation.
+- action_id: septin-S2355-C1
+  finding_ids:
+  - septin-S2355-F1
+  target_ids:
+  - GO:0036407
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/mycolate_outer_membrane.yaml
+    role: maintained scientific record
+  description: Qualify leaflet assignments as the cited model and preserve the possibility
+    of extractable material in both leaflets; retain the directly supported bilayer
+    and covalent linkage.
+  acceptance_checks:
+  - Separate observed membrane structure and biochemical fraction composition from
+    inferred leaflet placement.
+  - Do not infer a universal composition or individual lipid/porin formation necessity.
+  - Any scientific edit requires separate curation authorization, guarded writes,
+    append-only history and native validation/rendering.
+limitations:
+- 'Division, dolipore and porous cell septa independent subreview: The Egan/Vollmer
+  review and Traquair1978 source remain native abstract/metadata-limited after publisher403.
+  Final vanDriel2009 paper also remains abstract-limited; no thesis version was substituted.'
+- 'Division, dolipore and porous cell septa independent subreview: McQuillen2020 was
+  read as secondary review body atS1/S2/S16/S17/S22/S23. Bisson-Filho2017 and Yang2017
+  complete main prose/captions were independently inspected; detailed supplements,
+  movies, raw data and source figure pixels were not independently reanalysed.'
+- 'Division, dolipore and porous cell septa independent subreview: VanDriel2008 Introduction,
+  complete Methods/Results/Discussion and Figures1-8 captions were read. Its broader
+  ascomycete claims are cited prior-work context, and ER-to-cap-to-plug delivery remains
+  a hypothesis with labeling/preparation limitations.'
+- 'Division, dolipore and porous cell septa independent subreview: VanPeer2010 early-online
+  PDF Introduction/Results/Discussion throughp8, strains/growth and laser-dissection
+  procedures and purification opening plus Figures1-7 captions were inspected. Remaining
+  detailed cloning/proteomics methods, supplements/movies and raw images were not
+  independently audited.'
+- 'Division, dolipore and porous cell septa independent subreview: The InterPro name
+  queries returned HTTP204 with curl92 transport errors; they are inconclusive, not
+  successful zero-hit proofs. GO parenthesome query returned0 and only first100 of276
+  septal-pore-cap query candidates were inspected. No exhaustive ontology absence
+  or sequence-family survey is claimed.'
+- 'Division, dolipore and porous cell septa independent subreview: Conditional assembly
+  necessity of bacterial septal PG remains unknown at generic class scope; fungal
+  components appropriately remain UNKNOWN. No prevalence census, complete molecular
+  inventory or universal permeability experiment was performed.'
+- 'Division, dolipore and porous cell septa independent subreview: Structured-source
+  use is fresh official-page/API fallback. The historical runner failure is a separate
+  earlier receipt, not a current execution. MG1655 and mixed-strain B. subtilis thresholds
+  are computational context only; nonmembership is not biological absence. No fungal
+  dataset occurs in the retrieved catalogue.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Walther author-hosted
+  primary PDF main text/captions and stated Methods were freshly read; image pixels
+  and supplements were not. Karotki inspection covers the specified Results/Methods
+  and Fig7 caption, not all raw maps or image pixels. Young scope is the explicitly
+  listed localization/method/tag passages. No universal Sur7 necessity is inferred.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Gow/Orlean/Silhavy/Sohlenkamp/Ellen
+  are secondary literature, explicitly context-only, with exact inspected sections.
+  Douglas and Albers current access is abstract-only; Annual Reviews403 and Nature
+  client challenge did not expose their full bodies. Correct Ellen PMC2910488 is used;
+  an unrelated guessed PMC2912199 was excluded.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Calamia only
+  printed p4937 was freshly inspected as an image; no current full five-page read
+  is claimed. Newman, Navarre, Huh and GAS1-linked primary papers are bounded to exact
+  abstracts and current annotation attributions unless separately identified. Specific
+  Huh Sur7 mapping is database evidence, not reconstructed raw localization data.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Nine exact
+  reviewed UniProt symbol/taxon queries each returned one result with total-results1
+  and no next-page Link header; these do not inventory all homologues or prove assembly
+  necessity. Native six commands passed nonempty inventories1/4/4 and one covered
+  protein node each, not whole-family completeness.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Historical
+  runner unavailable receipt retains its actual00:49Z date/exit1 and was not rerun.
+  Fresh catalogue and E. coli MG1655 gene/module APIs were inspected directly; yeast
+  absence is limited to this catalogue. Module membership is computational context
+  only. The generated ai_summary fields were deliberately excluded.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: No global
+  population-frequency study, universal lipid/wall composition, full membrane-biogenesis
+  mechanism, or necessity test for every component was added. Explicit variable/conditional
+  and nonmechanistic scopes are preserved. Source access limitations are distinguished
+  from the two confirmed minor scientific findings.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: Common17
+  policy/config/schema/verifier context was retained from earlier reads and verified
+  byte-identical to this frozen source; current review skill/config were reread. Entire
+  three current records and six original YAML/Markdown files were inspected. No neighboring
+  capsule/periplasm record or tracked image was used by this slice.'
+- 'MCC, fungal-type cell wall and plasma membrane independent subreview: All three
+  targets are unchanged. Both original scientific finding keys and exact predecessor
+  occurrences remain open for separately authorized record curation; no category-wide
+  or other-record disposition is claimed. Root owns issue deduplication, global QC,
+  final CI, successor writing and publication; this report does not claim their pending
+  or external results.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Four unchanged records independently reassessed read-only. Original frozen
+  target hashes and deterministic schema/render checked; no repository or GitHub mutation
+  by reviewer. Root owns issue deduplication, global gates and final CI.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Brown1969 all five genuine native scan pages521–525 were freshly retrieved
+  and actually visually read, including Methods, Results/Tables1–2 and Discussion.
+  PDF/legacy routes returned403 or challenge HTML, not successful PDFs. Historical
+  bulk extraction is affected by media, extraction and possible cell-lysis contributions;
+  unresolved polymer architecture is not promoted to universal composition.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Hyams2010 genuine primary HTML was recovered via report=xml after a legacy
+  challenge. Only stated abstract, strain/culture, EM, first capsule-loss Results/Figure1
+  caption and relevant Discussion were audited. No full immune-mechanism or pixel/raw
+  data analysis claimed. Costerton1981 is bibliographic-only: publisher403 and no
+  indexed abstract.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Marrakchi2014 exact metadata/abstract only; returned DOI-route HTML does
+  not establish full-text access. Survival-essentiality language in its secondary-review
+  abstract is not substituted for the directly read structural mutant evidence in
+  Hoffmann/Zuber.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: PorA/PorB source-linked primary identities and abstracts were checked,
+  not complete original bodies. UniProt records remain accurately unreviewed and identity-only.
+  Exact reviewed gene/taxon queries are bounded first-response searches, not biological
+  absence.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Mycomembrane primary microscopy text/captions and Chiaradia fractionation/biochemical
+  passages were read at disclosed scope; source figure pixels, raw tomography/proteomics
+  and all supplementary tables were not reanalysed. MMCW fractions are not isolated
+  leaflets; alternative models, species/method and contamination limits remain explicit.
+  Alderwick and Niederweis are secondary reviews, not fresh primary experiments.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Silhavy is secondary review synthesis at named topology sections; Matias
+  primary Methods/relevant Results/Discussion support S. aureus Newman D2C with cryoprotectant,
+  cutting and resolution limits. No universal periplasmic proteome, fungal experimental
+  survey, pixel-level cryo-TEM or independent thickness measurement is claimed.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Both neighboring records were fully read only for their frozen identity/boundary
+  dependency, not independently scientifically audited as additional targets. No new
+  optional inventory, image, trait, graph or exact-polymer addition is required solely
+  for completeness.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Collective matrix constitution is distinct from experiment-specific necessity
+  of each glycan, protein or nucleic acid. Unresolved individual/pool assembly necessity
+  remains unknown; no invented finding promotes survival, uptake, presence or expression
+  to structure-formation necessity.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Current official iModulonDB fallback is species- and dataset-bounded.
+  C. glutamicum modulome263 exact PorA/PorB imported accessions match; an additional
+  family-product hit is not an exact accession. All87 membership flags per inspected
+  gene are false; no absence of expression/function/membership follows. No positive
+  module hit requires a module summary. Catalogue noncoverage for M. smegmatis does
+  not justify using M. tuberculosis instead. Historical runner failure is separately
+  dated and no fresh runner invocation is claimed.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: Glycocalyx/periplasm/slime lack named molecular claims, so gene/module
+  queries are not required. Glycocalyx original weak N/A rationale is clarified by
+  actual sparse scope without inventing a separate missing-query defect. Mycomembrane
+  is the sole assigned adapter bundle defect.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: All eight current native protein checks pass; three empty inventories/zero
+  protein-node targets provide no molecular-completeness evidence. Mycomembrane three
+  declared accessions and one covered node verify identifiers, not leaflet composition
+  or experimental necessity. Historical original corpus-check counts are not current
+  or target-specific success.'
+- 'Glycocalyx, mycolate outer membrane, periplasmic space and slime layer independent
+  subreview: One minor scientific finding retains exact original F1 lineage and requires
+  separate record curation. The other three targets remain supported with limitations.
+  No exhaustive literature absence claim or historical curator-authorship certification
+  is made.'
+- Historical observations remain immutable; their old checks are not represented as
+  current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure.
+  Catalogue-based coverage is assessed directly; fresh and reused responses retain
+  actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include
+  909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks
+  independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited
+  by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head
+  CI and merge-group CI occur after saving this immutable observation and are not
+  represented here as already completed.
+notes:
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally
+  and pushed without force.
+- This explicit issue-bearing ten-record cohort follows the native persistence policy.
+  Every inherited finding is reassessed and retains exact predecessor identity.
+- 'Bundle issues #2621, #2622 address one stale dolipore review and seven structured-source
+  applicability defects. Scientific curation stays separately tracked and open. Existing
+  validator #2514 remains open.'
+- The added dolipore parthood edge is assessed directly against current GO and primary
+  biological sources; no historical category-wide finding is terminally resolved by
+  this cohort.
+- Source commit f2fc189116ccf288bb46a576f5e490a86e2c9361 is retained by tag review-base/pr2355-current-record-followup-20261103.
+- CLAUDE.md is an alias of AGENTS.md; canonical regular AGENTS.md bytes are frozen.
+- Used local context was frozen before assessment, including native review configuration,
+  graph/protein policies and verifier source. Capsule and outer-membrane-bounded periplasmic-space
+  neighbor records were additionally frozen before assessing claimed boundaries; neither
+  is a curation target.
+- 'Five molecular-scope reviews used unsupported expression-only exemptions: division
+  septum, dolipore septum, MCC, fungal-type cell wall and mycolate outer membrane.
+  Plasma membrane and porous cell septum omitted applicability. Glycocalyx N/A is
+  supported by its actual material-only scope; its weak wording is clarified without
+  inventing a missing query or extra defect. Periplasmic space and slime layer are
+  also material/topology-only exclusions.'
+- Fresh source inspection retains actual access dates. Primary bodies, abstracts,
+  secondary reviews and authority responses have distinct evidence scopes.
+- Native checks with empty protein inventories or zero GENE_OR_PROTEIN nodes do not
+  validate molecular mechanisms or names appearing only in prose. Exact represented
+  identity, taxon, membership, location, function and assembly necessity remain separate
+  judgments.
+- 'Five minor scientific findings retain exact original lineage and remain open in
+  #2623–#2627. The five other targets retain qualified scientific passes. No finding
+  is terminally resolved by this review.'
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101605Z-division-septum-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101608Z-dolipore-septum-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101612Z-eisosome-membrane-domain-mcc-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101615Z-fungal-type-cell-wall-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101617Z-glycocalyx-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101620Z-mycolate-outer-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101622Z-periplasmic-space-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101624Z-plasma-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101626Z-porous-cell-septum-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T101629Z-slime-layer-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2355
+- https://github.com/CultureBotAI/CellStructureMech/issues/2514
+- https://github.com/CultureBotAI/CellStructureMech/issues/2621
+- https://github.com/CultureBotAI/CellStructureMech/issues/2622
+- https://github.com/CultureBotAI/CellStructureMech/issues/2623
+- https://github.com/CultureBotAI/CellStructureMech/issues/2624
+- https://github.com/CultureBotAI/CellStructureMech/issues/2625
+- https://github.com/CultureBotAI/CellStructureMech/issues/2626
+- https://github.com/CultureBotAI/CellStructureMech/issues/2627
+```

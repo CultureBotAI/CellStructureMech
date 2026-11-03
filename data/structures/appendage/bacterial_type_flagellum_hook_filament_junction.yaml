@@ -51,6 +51,13 @@ curation_history:
   changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    flgk_hap1 (InterPro:IPR002371), flgl_hap3 (InterPro:IPR013384).'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar hook-filament junction
   synonym_type: EXACT_SYNONYM
@@ -234,10 +241,12 @@ causal_graphs:
     label: hook-associated protein FlgK/HAP1
     node_type: GENE_OR_PROTEIN
     component_ref: flgk_hap1
+    grounding: InterPro:IPR002371
   - node_id: flgl_hap3
     label: hook-associated protein FlgL/HAP3
     node_type: GENE_OR_PROTEIN
     component_ref: flgl_hap3
+    grounding: InterPro:IPR013384
   - node_id: hook_filament_junction
     label: bacterial-type flagellum hook-filament junction
     node_type: STRUCTURE

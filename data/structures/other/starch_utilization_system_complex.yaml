@@ -42,6 +42,12 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'sus_starch_capture_and_hydrolysis'
+    with 6 nodes and 5 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: Sus complex
   synonym_type: EXACT_SYNONYM
@@ -319,3 +325,95 @@ discussions:
       and the cytoplasmic-membrane regulator SusR.
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: sus_starch_capture_and_hydrolysis
+  title: Bacteroides SusCDEFG Cell-Surface Starch Binding and Hydrolysis
+  description: Cooperative extracellular starch binding by outer-membrane lipoproteins
+    SusD, SusE, and SusF with the TonB-dependent receptor SusC, coupled to surface
+    hydrolysis by SusG.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: susd_starch_binding_lipoprotein
+    label: SusD starch-binding lipoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: susd_starch_binding_lipoprotein
+  - node_id: suse_starch_binding_lipoprotein
+    label: SusE starch-binding lipoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: suse_starch_binding_lipoprotein
+  - node_id: susf_starch_binding_lipoprotein
+    label: SusF starch-binding lipoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: susf_starch_binding_lipoprotein
+  - node_id: susg_alpha_amylase
+    label: SusG alpha-amylase
+    node_type: GENE_OR_PROTEIN
+    component_ref: susg_alpha_amylase
+  - node_id: susc_tonb_dependent_transporter
+    label: SusC TonB-dependent starch transporter
+    node_type: GENE_OR_PROTEIN
+    component_ref: susc_tonb_dependent_transporter
+  - node_id: cell_surface_starch_binding_and_degradation
+    label: cell-surface starch binding and degradation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: susd_starch_binding_lipoprotein
+    predicate: cooperates in starch binding with
+    object: susc_tonb_dependent_transporter
+    description: Surface-exposed lipoprotein SusD physically interacts with the outer-membrane
+      TonB-dependent receptor SusC to form the minimal starch-binding unit.
+    evidence:
+    - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+      notes: Shipman et al. 2000 demonstrated that SusC and SusD interact in the outer
+        membrane and together mediate high-affinity starch binding.
+    - reference: DOI:10.1074/jbc.R109.022848
+      notes: Martens et al. 2009 review the SusC-SusD outer-membrane starch-binding
+        complex.
+  - subject: suse_starch_binding_lipoprotein
+    predicate: enhances starch binding by
+    object: susc_tonb_dependent_transporter
+    description: Outer-membrane lipoprotein SusE associates with the Sus complex and
+      increases cell-surface starch-binding affinity.
+    evidence:
+    - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+      notes: Shipman et al. 2000 showed that SusE enhances starch binding by SusC
+        and SusD.
+    - reference: DOI:10.1074/jbc.R109.022848
+      notes: Martens et al. 2009 review the accessory starch-binding role of SusE.
+  - subject: susf_starch_binding_lipoprotein
+    predicate: associates with starch at
+    object: susc_tonb_dependent_transporter
+    description: Surface-exposed lipoprotein SusF participates in the outer-membrane
+      starch-binding apparatus and contacts bound amylopectin.
+    evidence:
+    - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+      notes: Shipman et al. 2000 showed that SusF is surface exposed and protected
+        from proteolysis by bound starch.
+    - reference: DOI:10.1074/jbc.R109.022848
+      notes: Martens et al. 2009 review SusF as a starch-binding outer-membrane lipoprotein
+        in the Sus system.
+  - subject: susg_alpha_amylase
+    predicate: hydrolyzes starch bound to
+    object: susc_tonb_dependent_transporter
+    description: Cell-surface outer-membrane alpha-amylase SusG cleaves bound starch
+      polysaccharides into maltooligosaccharides for translocation through SusC.
+    evidence:
+    - reference: DOI:10.1128/JB.181.23.7206-7211.1999
+      notes: Shipman et al. 1999 established SusG as the surface-exposed outer-membrane
+        alpha-amylase essential for starch utilization.
+    - reference: DOI:10.1074/jbc.R109.022848
+      notes: Martens et al. 2009 review SusG-catalyzed hydrolysis of surface-captured
+        starch prior to SusC-mediated import.
+  - subject: susc_tonb_dependent_transporter
+    predicate: mediates
+    object: cell_surface_starch_binding_and_degradation
+    description: The outer-membrane SusCDEFG apparatus coordinates cell-surface starch
+      capture, enzymatic cleavage, and oligosaccharide import.
+    evidence:
+    - reference: GO:0044570
+      notes: GO:0044570 defines the starch utilization system complex as a cell-envelope
+        multiprotein complex that binds and degrades starch.
+    - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+      notes: Shipman et al. 2000 characterized the cooperative outer-membrane Sus
+        complex.
