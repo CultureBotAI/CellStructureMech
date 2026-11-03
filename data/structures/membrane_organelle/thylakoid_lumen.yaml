@@ -1,0 +1,94 @@
+identifier: GO:0031977
+label: thylakoid lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by a thylakoid membrane. The continuous aqueous compartment
+  enclosed by the thylakoid membrane in cyanobacteria and plastid-bearing eukaryotic
+  microalgae (such as Chlamydomonas reinhardtii and diatoms). During oxygenic photosynthesis,
+  water oxidation by the lumenal oxygen-evolving complex of Photosystem II and plastoquinol
+  oxidation by cytochrome b6f pump protons into the thylakoid lumen, generating the
+  acidic ΔpH that drives ATP synthase and housing soluble electron carrier plastocyanin
+  (or cytochrome c6).
+definition_source: GO:0031977
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0009579
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants have chloroplast thylakoids whose
+    membranes enclose a lumenal compartment.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles contain cyanelle thylakoid lumens, the cyanelle subtype
+    of plastid thylakoid lumen.
+  reference: GO:0033114
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose native chloroplast thylakoid lumen and membrane
+    architecture were resolved by in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+evidence:
+- reference: GO:0031977
+  notes: 'Gene Ontology cellular-component term for thylakoid lumen: The volume enclosed
+    by a thylakoid membrane.'
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for plastid thylakoid lumen.
+- reference: GO:0031976
+  notes: Gene Ontology cellular-component term for the plastid thylakoid that contains
+    this lumen.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for the plastid thylakoid membrane
+    that encloses this lumen.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+- reference: GO:0033114
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid lumen, the cyanelle
+    subtype of plastid thylakoid lumen.
+causal_graphs:
+- graph_id: thylakoid_lumen_mechanism
+  title: Thylakoid lumen assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of thylakoid lumen (GO:0031977) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: thylakoid_lumen
+    label: thylakoid lumen
+    node_type: STRUCTURE
+    grounding: GO:0031977
+    description: The volume enclosed by a thylakoid membrane.
+  - node_id: thylakoid
+    label: thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0009579
+    description: Enclosing or holo-structural assembly (thylakoid, GO:0009579) containing
+      thylakoid lumen.
+  edges:
+  - subject: thylakoid_lumen
+    predicate: is part of
+    object: thylakoid
+    description: Thylakoid lumen forms an integral structural compartment or subassembly
+      of thylakoid.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity,
+        Annual Review of Cell and Developmental Biology.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of thylakoid lumen (GO:0031977) in category MEMBRANE_ORGANELLE
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

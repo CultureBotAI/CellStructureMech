@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glycine_reductase_complex.yaml
+  slug: glycine_reductase_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-b535a3
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'glycine_reductase_catalytic_transfer'
+    with 4 nodes and 3 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0030700 (glycine reductase complex):
+    Added source-backed FUNCTION causal graph ''glycine_reductase_catalytic_transfer'' with
+    4 nodes and 3 edges. Validated via write_validated_structure.'

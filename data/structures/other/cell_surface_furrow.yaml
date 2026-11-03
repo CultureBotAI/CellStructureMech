@@ -1,0 +1,89 @@
+identifier: GO:0097610
+label: cell surface furrow
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A furrow that may be found on the cell surface. Examples include the cingulum
+  and sulcus found in some dinoflagellates. A persistent invaginated groove or trench
+  in the cortical cell surface of single-celled microbial eukaryotes—including the
+  equatorial cingulum and ventral sulcus furrows of dinoflagellates, as well as the
+  ventral feeding/flagellar grooves of excavates, cryptophytes, and euglenids. Supported
+  by underlying cortical alveoli, epiplastids, and microtubular ribbons, the cell
+  surface furrow channels flagellar beating waves and directs hydrodynamic flow for
+  propulsion and prey capture.
+definition_source: GO:0097610
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0009986
+synonyms:
+- synonym_text: furrow
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097610
+- synonym_text: groove
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097610
+- synonym_text: cell surface groove
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097610
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097611 places this cingulum cell-surface furrow in Dinophyceae and defines
+    it as wrapping around a dinoflagellate cell.
+  reference: GO:0097611
+evidence:
+- reference: GO:0097610
+  notes: 'Gene Ontology cellular-component term for cell surface furrow: A furrow
+    that may be found on the cell surface. Examples include the cingulum and sulcus
+    found in some dinoflagellates.'
+- reference: GO:0097611
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum.
+- reference: PMID:7002229
+  notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+    review cited by GO:0097611; EuropePMC reported no PMC, open-access, full-text,
+    or PDF route in this pass.
+- reference: DOI:10.1016/0303-2647(80)90006-4
+  notes: Crossref and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4
+    as the Taylor 1980 Biosystems review behind PMID:7002229; no article-body text
+    was reachable through the checked metadata routes, so this record uses it only
+    as bibliographic corroboration for the GO definition xref.
+causal_graphs:
+- graph_id: cell_surface_furrow_mechanism
+  title: Cell surface furrow assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of cell surface furrow (GO:0097610) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cell_surface_furrow
+    label: cell surface furrow
+    node_type: STRUCTURE
+    grounding: GO:0097610
+    description: A furrow that may be found on the cell surface.
+  - node_id: cell_surface
+    label: cell surface
+    node_type: STRUCTURE
+    grounding: GO:0009986
+    description: Enclosing or holo-structural assembly (cell surface, GO:0009986)
+      containing cell surface furrow.
+  edges:
+  - subject: cell_surface_furrow
+    predicate: is part of
+    object: cell_surface
+    description: Cell surface furrow forms an integral structural compartment or subassembly
+      of cell surface.
+    evidence:
+    - reference: PMID:7002229
+      notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+        review cited by GO:0097611; EuropePMC reported no PMC, open-access, full-text,
+        or PDF route in this pass.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of cell surface furrow (GO:0097610) in category OTHER
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

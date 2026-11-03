@@ -28,6 +28,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'trap_transporter_solute_uptake'
+    with 4 nodes and 3 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: TRAP transporter complex
   synonym_type: EXACT_SYNONYM
@@ -211,3 +217,66 @@ discussions:
   - reference: DOI:10.1111/j.1574-6976.2010.00236.x
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: trap_transporter_solute_uptake
+  title: TRAP Transporter Solute Capture and Ion-Gradient-Driven Import
+  description: Extracytoplasmic DctP-type receptor solute delivery to the DctQ/DctM
+    integral membrane complex for secondary active transport.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: trap_extracytoplasmic_solute_receptor
+    label: TRAP extracytoplasmic solute receptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: trap_extracytoplasmic_solute_receptor
+  - node_id: trap_small_membrane_dctq
+    label: TRAP transporter, small membrane protein DctQ
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007387
+    component_ref: trap_small_membrane_dctq
+  - node_id: trap_large_membrane_dctm
+    label: TRAP transporter large membrane protein DctM
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR004681
+    component_ref: trap_large_membrane_dctm
+  - node_id: ion_gradient_dependent_solute_uptake
+    label: ion-gradient-dependent solute uptake
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: trap_extracytoplasmic_solute_receptor
+    predicate: delivers solute to
+    object: trap_large_membrane_dctm
+    description: The extracytoplasmic DctP-family solute-binding receptor captures
+      organic acid substrates and presents them to the membrane translocon.
+    evidence:
+    - reference: GO:0031317
+      notes: GO:0031317 defines the TRAP transporter complex as containing an extracytoplasmic
+        solute receptor and two membrane proteins.
+    - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+      notes: Forward et al. 1997 characterized the periplasmic binding protein DctP
+        and membrane subunits DctQ and DctM in R. capsulatus.
+  - subject: trap_small_membrane_dctq
+    predicate: pairs with
+    object: trap_large_membrane_dctm
+    description: The small four-transmembrane-helix subunit DctQ forms a membrane
+      complex with the large pore-forming subunit DctM and is required for transport.
+    evidence:
+    - reference: GO:0031317
+      notes: GO:0031317 defines the two integral membrane components of disparate
+        size in the TRAP complex.
+    - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+      notes: Forward et al. 1997 demonstrated that both dctQ and dctM are essential
+        alongside dctP for C4-dicarboxylate uptake.
+  - subject: trap_large_membrane_dctm
+    predicate: mediates
+    object: ion_gradient_dependent_solute_uptake
+    description: The DctQM integral membrane translocon couples electrochemical ion
+      gradients to unidirectional solute import across the cytoplasmic membrane without
+      ATP hydrolysis.
+    evidence:
+    - reference: GO:0031317
+      notes: GO:0031317 defines TRAP complexes by secondary active transport powered
+        by ion gradients rather than ATP.
+    - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+      notes: Forward et al. 1997 showed that DctPQM transport depends on membrane
+        potential rather than ATP.

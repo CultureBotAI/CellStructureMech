@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_base.yaml
+  slug: ciliary_base
+session:
+  id: 2026-10-19T052740Z-claude-opus-4-7-c3c610
+  timestamp: '2026-10-19T05:27:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for ciliary base (GO:0097546) in appendage.
+  details: Authored data/structures/appendage/ciliary_base.yaml for ciliary base (GO:0097546)
+    with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
