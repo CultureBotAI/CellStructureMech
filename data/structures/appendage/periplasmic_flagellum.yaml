@@ -60,6 +60,12 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 synonyms:
 - synonym_text: endoflagellum
   synonym_type: EXACT_SYNONYM
@@ -252,6 +258,23 @@ components:
       notes: UniProtKB unreviewed (TrEMBL) entry Q57371 for gene motB in Borreliella
         burgdorferi. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P52610
+    protein_label: Flagellar motor switch protein FliG
+    gene_symbol: fliG
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi B31
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene fliG2, which UniProt lists
+      under the primary name fliG, in Borreliella burgdorferi B31, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52610
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52610, the single reviewed entry
+        for gene fliG2 in Borreliella burgdorferi B31. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:203691
   taxon_label: Spirochaetota

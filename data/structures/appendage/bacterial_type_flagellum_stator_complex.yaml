@@ -58,6 +58,13 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    a_subunit (InterPro:IPR047055).'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial-type flagellum motor force generator complex
   synonym_type: EXACT_SYNONYM
@@ -256,6 +263,7 @@ causal_graphs:
     label: Motility protein A-like
     node_type: GENE_OR_PROTEIN
     component_ref: a_subunit
+    grounding: InterPro:IPR047055
   - node_id: b_subunit
     label: flagellar stator B subunit
     node_type: GENE_OR_PROTEIN

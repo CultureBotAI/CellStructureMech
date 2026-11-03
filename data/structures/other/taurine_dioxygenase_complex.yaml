@@ -34,6 +34,12 @@ curation_history:
   changes: Narrowed TauD grounding notes to the verified broad InterPro entries found
     during PR review, removing unsupported Pfam and NCBIfam wording.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'taud_taurine_dioxygenase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: 2-aminoethanesulfonate dioxygenase complex
   synonym_type: EXACT_SYNONYM
@@ -181,3 +187,52 @@ discussions:
       assemblies.
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: taud_taurine_dioxygenase_function
+  title: TauD Taurine Dioxygenase Oligomerization and Sulfite Release
+  description: Homooligomeric assembly of TauD and Fe(II)/2-oxoglutarate-dependent
+    dioxygenation of taurine to release sulfite.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: taud_taurine_dioxygenase
+    label: alpha-ketoglutarate-dependent taurine dioxygenase TauD
+    node_type: GENE_OR_PROTEIN
+    component_ref: taud_taurine_dioxygenase
+  - node_id: taurine_dioxygenase_complex
+    label: taurine dioxygenase complex
+    node_type: STRUCTURE
+    grounding: GO:1990205
+  - node_id: taurine_dioxygenase_activity
+    label: taurine dioxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0000908
+  edges:
+  - subject: taud_taurine_dioxygenase
+    predicate: oligomerizes into
+    object: taurine_dioxygenase_complex
+    description: TauD subunits self-associate into the functional taurine dioxygenase
+      complex.
+    evidence:
+    - reference: GO:1990205
+      notes: GO:1990205 defines the E. coli taurine dioxygenase complex as a homooligomeric
+        TauD complex.
+    - reference: PDB:1OS7
+      notes: PDB:1OS7 resolves the homodimeric assembly of E. coli TauD.
+    - reference: PMID:12741810
+      notes: O'Brien et al. 2003 analyzed the oligomeric structure and substrate-induced
+        conformational changes of E. coli TauD.
+  - subject: taurine_dioxygenase_complex
+    predicate: catalyzes
+    object: taurine_dioxygenase_activity
+    description: The TauD complex catalyzes Fe(II)- and 2-oxoglutarate-dependent oxygenation
+      of taurine into aminoacetaldehyde, sulfite, succinate, and CO2.
+    evidence:
+    - reference: GO:1990205
+      notes: GO:1990205 defines the complex by its taurine dioxygenase activity during
+        sulfur starvation.
+    - reference: GO:0000908
+      notes: GO:0000908 is the molecular-function term for taurine dioxygenase activity.
+    - reference: PMID:9287300
+      notes: Eichhorn et al. 1997 purified and characterized E. coli alpha-ketoglutarate-dependent
+        taurine dioxygenase.

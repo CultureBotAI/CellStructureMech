@@ -1,0 +1,1269 @@
+# NuR identity, chaperone causality and mixed-species figure review
+
+- Review: 20261021T103326Z-nucleolar-peripheral-inclusion-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T10:13:32Z
+- Finished UTC: 2026-10-21T10:33:26Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+NuR identity, selective protein classes, formation-versus-clearance distinctions, bounded causal graphs and licensed mixed-species figure are supported. No corrective issue was established; source access and condition limits remain explicit.
+
+## Scope And Provenance
+
+Entire single target and stated boundary fields; native ontology/taxon/protein/family evidence, complete defining-study main body with named Methods, specified later primary passages and complete maintained Figure7.
+
+Selection: Ninth selected target in batch nineteen, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0140602 | data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml | maintained | nucleolar peripheral inclusion body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native UniProt verify | passed | False | GO:0140602 | Native command passed; scientific membership and graph scope assessed independently. |
+| Native UniProt causal-graphs | passed | False | GO:0140602 | Native command passed; scientific membership and graph scope assessed independently. |
+| Focused native schema | passed | True | GO:0140602 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0140602 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0140602 | 19 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0140602 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0140602 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0140602 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0140602 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0140602 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0140602 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### NuRs distinct from INQ and RNA-surveillance foci
+
+identity: supported. Targets: GO:0140602.
+
+The exact GO identity, nuclear inclusion parent and nuclear location agree. Heat-stress NuRs, starvation-associated context, INQ and the MTREC/NURS-linked nuclear-exosome focus are distinguished; abbreviation similarity does not establish equivalence.
+
+### Selective recruited proteins and exact native identities
+
+grounding: supported. Targets: GO:0140602.
+
+All six reviewed protein accessions, genes and paired S.pombe972h- reference taxon resolve. Four supplied family mappings match the intended classes; broader Clp candidates do not justify an exact Hsp104-only mapping. A heterogeneous denatured-cargo cohort remains label-only, and a recruited Nup85 example does not imply relocation of a whole pore complex.
+
+### Formation versus clearance
+
+evidence: supported. Targets: GO:0140602.
+
+The source supports conditional Mas5 necessity for the tested S.pombe formation assay. Hsp104 is dispensable for formation but promotes subsequent clearance; the maintained DISPENSABLE value is therefore about formation, not inactivity. Other recruitment observations are appropriately UNKNOWN for formation necessity. Hsf1 perturbation does not establish direct structural membership.
+
+### Formation requirements of other recruited classes
+
+evidence: unknown. Targets: GO:0140602.
+
+The inspected studies do not establish general formation necessity for individual denatured cargo species, Nup85-like proteins, Mex67-like factors or every Hsp70 member. Selective recruitment and mixed collective material identity are supported independently; the corresponding UNKNOWN values remain unresolved.
+
+### Species, stress and preparation contexts
+
+scope: supported. Targets: GO:0140602.
+
+Each taxonomy receipt establishes only its own species or strain identity. The examples retain species-specific assays and the W303-only preconcentration condition. Hiraoka supplies independently bounded stationary-phase/glucose-depletion context; it is not used to generalize the heat-stress mechanism to all starvation conditions.
+
+### Sequestration and recovery without a proven protective mechanism
+
+evidence: supported. Targets: GO:0140602.
+
+Heat-induced recruitment and recovery-linked disappearance are directly supported. The record avoids assigning a causally isolated survival benefit to NuRs, equating reduced FRAP mobility with liquid phase separation, or confusing the recruited RNA factors with the whole transcription/export machinery.
+
+### Two bounded causal graphs
+
+graph: supported. Targets: GO:0140602.
+
+The heat/Mas5/preconditioning graph and recovery/Hsp104/Hsf1 graph represent primary perturbation effects. Preconditioning suppresses formation without an absolute block; Hsp104 loss delays disappearance despite preserved formation; Hsf1 effects remain indirect regulatory evidence. Their scopes stay within the stated acute-heat experimental model.
+
+### Mixed-species primary figure and license
+
+evidence: supported. Targets: GO:0140602.
+
+The maintained image SHA-256 matches and its MD5 joins the native PMC figure entry. Complete pixels, caption and explicit CC BY4.0 permissions were inspected. Species, separate reporter panels and schematic content are preserved rather than represented as one homogeneous NuR photograph.
+
+### Appropriate unresolved properties
+
+completeness: supported. Targets: GO:0140602.
+
+No corrective issue was established. Recruitment is selective and no complete cargo census, universal phase state or NuR-only survival mechanism is required or inferred. The inspected family candidates, historical discussions and existing PROPOSED state remain bounded.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml; Entire maintained YAML including definition, components, functions, hierarchy, examples, graph edges, discussions, image metadata and history | context_only | All fields were read after fresh native inspection; the maintained target and PROPOSED state are unchanged. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, CausalNode and source-specific ComplexComposition contracts; essentiality definition; docs/CURATION.md assembly-versus-function guidance and review checklist | context_only | Component family identity, concrete protein identity and source-specific assembly membership are separate. Essentiality asks whether the structure forms without the component; membership and activity do not establish it. Optional fields are not mandatory. CausalNode permits protein complexes; its xrefs contract does not inherit the top-level record equivalence restriction. |
+| nur-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005634,GO:0042405,GO:0140602; GO0140602, GO0042405 and GO0005634 definitions, synonyms and relevant is_a/part_of relationships | supports | GO0140602 defines nucleolar peripheral inclusion bodies, including NuRs/nucleolar rings, under acute heat stress or starvation. It is a nuclear-inclusion subclass and part of the nucleus. This authority does not make every starvation-associated structure the same heat-stress mechanism. |
+| nur-agent-local-ids | rg --no-ignore --hidden --files data/structures -g *.yaml; Exact top-level identifier comparison after parsing all 978 ignored- and hidden-inclusive maintained YAML records | supports | Each selected target and boundary-neighbor identifier resolves to exactly one maintained record in the frozen corpus. This verifies repository-local identity, not an external ontology equivalence or scientific membership. |
+| nur-agent-tax-284812 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Native ENA taxonomy identifies Schizosaccharomyces pombe972h-, strain. This receipt attests that identity and rank only, not occurrence or the experimental strain. |
+| nur-agent-tax-4896 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Native ENA taxonomy identifies Schizosaccharomyces pombe, species. This receipt attests that identity and rank only, not occurrence or the experimental strain. |
+| nur-agent-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Native ENA taxonomy identifies Saccharomyces cerevisiae, species. This receipt attests that identity and rank only, not occurrence or the experimental strain. |
+| nur-agent-Q9UUE5 | https://rest.uniprot.org/uniprotkb/Q9UUE5.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB Q9UUE5 identifies Nucleoporin nup85, gene nup85, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-nup85 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Anup85%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene nup85, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns Q9UUE5. This checks identifier resolution only. |
+| nur-agent-Q9Y8G3 | https://rest.uniprot.org/uniprotkb/Q9Y8G3.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB Q9Y8G3 identifies mRNA export factor mex67, gene mex67, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-mex67 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Amex67%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene mex67, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns Q9Y8G3. This checks identifier resolution only. |
+| nur-agent-Q10265 | https://rest.uniprot.org/uniprotkb/Q10265.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB Q10265 identifies Probable heat shock protein ssa1, gene ssa1, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-ssa1 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Assa1%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene ssa1, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns Q10265. This checks identifier resolution only. |
+| nur-agent-O59855 | https://rest.uniprot.org/uniprotkb/O59855.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB O59855 identifies Probable heat shock protein ssa2, gene ssa2, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-ssa2 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Assa2%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene ssa2, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns O59855. This checks identifier resolution only. |
+| nur-agent-O74752 | https://rest.uniprot.org/uniprotkb/O74752.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB O74752 identifies Mitochondrial protein import protein mas5, gene mas5, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-mas5 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Amas5%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene mas5, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns O74752. This checks identifier resolution only. |
+| nur-agent-O94641 | https://rest.uniprot.org/uniprotkb/O94641.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB O94641 identifies Heat shock protein 104, gene hsp104, taxon284812. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| nur-agent-query-hsp104 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Ahsp104%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene hsp104, organism 284812, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns O94641. This checks identifier resolution only. |
+| nur-agent-matches-Q9UUE5 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9UUE5/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-matches-Q9Y8G3 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9Y8G3/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-matches-Q10265 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q10265/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-matches-O59855 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O59855/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-matches-O74752 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O74752/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-matches-O94641 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94641/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| nur-agent-IPR011502 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011502/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | Nup85-like is a family matching the concrete nup85 example; the whole nuclear pore is not thereby a NuR constituent. |
+| nur-agent-IPR030217 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030217/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | Nuclear RNA export factor is a family matching mex67; membership in a NuR is supported separately by primary localization. |
+| nur-agent-IPR013126 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | Hsp70 is a family matching Ssa1/Ssa2; this does not imply all Hsp70s form NuRs. |
+| nur-agent-IPR044713 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044713/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | DnaJ homolog subfamilyA member1/2-like is the family matching Mas5; its broad native functional annotations are not imported as the NuR mechanism. |
+| nur-agent-IPR001270 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | ClpA/B includes Hsp104 and broader Clp classes; it is not exact Hsp104-only equivalence. |
+| nur-agent-IPR050130 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | The ClpA/ClpB-related class is broader than the maintained Hsp104 component; its predictive description is not an assembly experiment. |
+| nur-agent-doi-10.1016_j.celrep.2020.108377 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.celrep.2020.108377; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Acute Heat Stress Leads to Reversible Aggregation of Nuclear Proteins into Nucleolar Rings in Fission Yeast. Authors: Gallardo P, Real-Calderón P, Flor-Parra I, Salas-Pino S, Daga RR.; PMID 33176152; DOI 10.1016/j.celrep.2020.108377. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| nur-agent-doi-10.3390_ijms241311202 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.3390/ijms241311202; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Formation of Transient Protein Aggregate-like Centers Is a General Strategy Postponing Degradation of Misfolded Intermediates. Authors: Boronat S, Cabrera M, Vega M, Alcalá J, Salas-Pino S, Daga RR, Ayté J, Hidalgo E.; PMID 37446379; DOI 10.3390/ijms241311202. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| nur-agent-doi-10.1242_jcs.260727 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1242/jcs.260727; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies CDK actively contributes to establishment of the stationary phase state in fission yeast. Authors: Hiraoka M, Kiyota Y, Kawai S, Notsu Y, Yamada K, Kurashima K, Chang JW, Shimazaki S, Yamamoto A.; PMID 37128864; DOI 10.1242/jcs.260727. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| nur-agent-gallardo2020-repository | https://hdl.handle.net/10433/22772; DSpace title/citation metadata, DOI and linked public PDF | supports | The public institutional record identifies the Gallardo2020 article and supplies the genuine author/publisher PDF used here. Metadata identity is separate from biological body evidence. |
+| nur-agent-gallardo2020-pdf | https://rio.upo.es/bitstreams/e53913ee-9cf6-44cf-80b5-6b6622cfb213/download; Genuine institutional PDF: Introduction, complete Results and Discussion printed pages1-9; Figures1-4 captions; Methods e3-e4 culture/heat/recovery, Hsf1 manipulation, viability, FISH and microscopy. Other supplementary raw panels not independently audited. | supports | Gallardo2020 directly reports selective recruitment of nucleoporins, RNA-related factors and chaperones to perinucleolar rings. Not every pore protein relocates. Reduced FRAP mobility and disassembly before/concomitant with regrowth do not demonstrate liquid-liquid phase separation. Hsp104 deletion leaves formation near wild-type frequency but strongly delays disappearance; thermotolerant preconditioning suppresses rather than absolutely eliminates formation. Hsf1 downregulation delays clearance without showing direct binding to NuRs. |
+| nur-agent-jats-PMC10342647 | https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/PMC10342647.1.xml; Results2.5, complete Discussion3, Methods4.1-4.7 and Figure7 caption, plus permissions. Other PAC Results subsections not comprehensively audited. | supports | Boronat2023 Results2.5 demonstrates acute-heat Rho1.C17R-associated NuRs in S.pombe and S.cerevisiae conditions, Mas5-dependent formation in S.pombe, and retention after Btn2/Hsp42 loss in the tested budding-yeast assay. Ssa1/Ssa2, Mas5 and Hsp104 recruitment is localized evidence; distinct chaperone images are not simultaneous colocalization. The W303 preconcentration step is not a shared condition for every strain. JATS permissions specify CC BY4.0. |
+| nur-agent-hiraoka2023-browser | https://www.researchgate.net/publication/370466123_CDK_actively_contributes_to_establishment_of_the_stationary_phase_state_in_fission_yeast; Displayed author manuscript Results: CDK accumulates in the nucleolus in stationary phase cells, printed pages3-5 and Figure3 caption only; browser lines649-825 and893-899. No native HTTP status is asserted. | supports | The public author-manuscript display reports Cdc2/Cdc13/Clp1 accumulation at the nucleolar periphery in stationary phase or glucose depletion, distinct from central Gar1/Gar2. This supplies condition-specific context, not proof that all heat-stress recruitment mechanisms also operate in starvation. |
+| nur-agent-hiraoka2023-publisher | https://journals.biologists.com/jcs/article/136/10/jcs260727/311590/CDK-actively-contributes-to-establishment-of-the; Actual response body and retrieval receipt | context_only | Publisher response returned403 HTML. The named claim-bearing author-manuscript browser passages were read separately; this failed route is not a readable full body. |
+| nur-agent-image | data/images/inclusion/nucleolar_peripheral_inclusion_body/pmc10342647_ijms_24_11202_f007.jpg; Entire maintained figure and every panel visually inspected, including genotype/species labels, scale bars, blots/plots or schematic; source caption and license read separately. | supports | The complete Figure7 includes S.pombe and two S.cerevisiae backgrounds in panelA, separate S.pombe chaperone reporters inB, and a schematic inC. The target caption retains these species/panel distinctions and the5µm scale; no direct colocalization of separately imaged reporters is inferred. Local SHA-256 matches the record, and local MD5 cedc637a280e5c710728cb96b5dca4d7 matches the exact native PMC media entry. |
+| nur-agent-native-package-PMC10342647 | https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/PMC10342647.1.json; Article/package identity, license code and exact media_urls match | supports | The native PMC package identifies the article and matching media filename/MD5. The explicit CC BY4.0 license is read in the separately cited JATS permissions, rather than inferred from package shorthand. |
+| boundary-0 | data/structures/inclusion/intranuclear_quality_control_compartment.yaml; Identifier, label, definition/source, synonyms, hierarchy/parthood and all discussions; frozen additional inspection input | context_only | These maintained fields were read to verify the stated identity boundary. This is contextual corpus evidence, not an independent full scientific review of the neighboring record. |
+| boundary-1 | data/structures/other/nuclear_exosome_focus.yaml; Identifier, label, definition/source, synonyms, hierarchy/parthood and all discussions; frozen additional inspection input | context_only | These maintained fields were read to verify the stated identity boundary. This is contextual corpus evidence, not an independent full scientific review of the neighboring record. |
+| native-verify | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml --verify; Captured focused native verify log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml --causal-graphs; Captured focused native causal-graphs log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml |
+| strict-result | just validate-strict data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 19 of19 collected target identifiers returned OK in this fresh base resolver run. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Gallardo main Introduction/Results/Discussion, named Methods and Figure1-4 captions were read from the genuine public PDF; supplementary raw panels and quantitative data were not independently reanalysed.
+- Boronat was read at NuR Results2.5, Discussion, Methods and Figure7 scopes; the full PAC Results chain was not reviewed. Separate chaperone images are not evidence of simultaneous colocalization.
+- Hiraoka publisher access returned403. Only the specified claim-bearing author-manuscript display and Figure3 caption were read; no native full-PDF recovery or complete manuscript review is claimed.
+- The broader GO starvation scope does not establish the same mechanism as the acute-heat graphs. Native reference-strain identities are separate from each experimental culture. Family candidate checks are bounded, and neighboring records are contextual rather than additional full reviews.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The authorized coverage task includes honest clean reviews.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T103326Z-nucleolar-peripheral-inclusion-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: NuR identity, chaperone causality and mixed-species figure review
+started_at: '2026-10-21T10:13:32Z'
+finished_at: '2026-10-21T10:33:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: NuR identity, selective protein classes, formation-versus-clearance distinctions,
+  bounded causal graphs and licensed mixed-species figure are supported. No corrective
+  issue was established; source access and condition limits remain explicit.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/inclusion/nucleolar_peripheral_inclusion_body/pmc10342647_ijms_24_11202_f007.jpg
+    sha256: 58481911ace6752d540bdb673ede896bb5617c60b9565c83ce794a793560e22a
+    role: context
+  - path: data/structures/inclusion/intranuclear_quality_control_compartment.yaml
+    sha256: 7e6cc3b1915d2093b6712f349dea34cad79831f2d4b93f0eaff29351b37f3c36
+    role: context
+  - path: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    sha256: 0882138e885027304adbb077da65d773ad7a2197cd6cb5d7ab3688a49f9c35cc
+    role: target
+  - path: data/structures/other/nuclear_exosome_focus.yaml
+    sha256: 5b22cc3c9405c262a80dd8a4ab05b8dc3f413478c54dd489b4267302b0d10efe
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0140602
+  path: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  label: nucleolar peripheral inclusion body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target and stated boundary fields; native ontology/taxon/protein/family
+    evidence, complete defining-study main body with named Methods, specified later
+    primary passages and complete maintained Figure7.
+  selection: Ninth selected target in batch nineteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0140602
+checks:
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - GO:0140602
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - GO:0140602
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just validate data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just validate-strict data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  summary: 19 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - nur-agent-go
+  - nur-agent-local-ids
+  - nur-agent-tax-284812
+  - nur-agent-tax-4896
+  - nur-agent-tax-4932
+  - nur-agent-Q9UUE5
+  - nur-agent-query-nup85
+  - nur-agent-Q9Y8G3
+  - nur-agent-query-mex67
+  - nur-agent-Q10265
+  - nur-agent-query-ssa1
+  - nur-agent-O59855
+  - nur-agent-query-ssa2
+  - nur-agent-O74752
+  - nur-agent-query-mas5
+  - nur-agent-O94641
+  - nur-agent-query-hsp104
+  - nur-agent-matches-Q9UUE5
+  - nur-agent-matches-Q9Y8G3
+  - nur-agent-matches-Q10265
+  - nur-agent-matches-O59855
+  - nur-agent-matches-O74752
+  - nur-agent-matches-O94641
+  - nur-agent-IPR011502
+  - nur-agent-IPR030217
+  - nur-agent-IPR013126
+  - nur-agent-IPR044713
+  - nur-agent-IPR001270
+  - nur-agent-IPR050130
+  - nur-agent-doi-10.1016_j.celrep.2020.108377
+  - nur-agent-doi-10.3390_ijms241311202
+  - nur-agent-doi-10.1242_jcs.260727
+  - nur-agent-gallardo2020-repository
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - nur-agent-hiraoka2023-browser
+  - nur-agent-hiraoka2023-publisher
+  - nur-agent-image
+  - nur-agent-native-package-PMC10342647
+  - boundary-0
+  - boundary-1
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140602
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  locator: Entire maintained YAML including definition, components, functions, hierarchy,
+    examples, graph edges, discussions, image metadata and history
+  accessed_at: '2026-10-21T10:31:37Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; essentiality definition; docs/CURATION.md assembly-versus-function
+    guidance and review checklist
+  accessed_at: '2026-10-21T10:31:37Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Essentiality asks whether the structure forms
+    without the component; membership and activity do not establish it. Optional fields
+    are not mandatory. CausalNode permits protein complexes; its xrefs contract does
+    not inherit the top-level record equivalence restriction.
+- evidence_id: nur-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005634,GO:0042405,GO:0140602
+  locator: GO0140602, GO0042405 and GO0005634 definitions, synonyms and relevant is_a/part_of
+    relationships
+  accessed_at: '2026-10-21T10:17:18.137972Z'
+  support: supports
+  summary: GO0140602 defines nucleolar peripheral inclusion bodies, including NuRs/nucleolar
+    rings, under acute heat stress or starvation. It is a nuclear-inclusion subclass
+    and part of the nucleus. This authority does not make every starvation-associated
+    structure the same heat-stress mechanism.
+  snapshot_sha256: ed0fad74f93229a98cb4bf1808c8ab547b64bf72c417834a8b99c9221918eae3
+- evidence_id: nur-agent-local-ids
+  kind: search
+  reference: rg --no-ignore --hidden --files data/structures -g *.yaml
+  locator: Exact top-level identifier comparison after parsing all 978 ignored- and
+    hidden-inclusive maintained YAML records
+  accessed_at: '2026-10-21T10:24:28.086489Z'
+  support: supports
+  summary: Each selected target and boundary-neighbor identifier resolves to exactly
+    one maintained record in the frozen corpus. This verifies repository-local identity,
+    not an external ontology equivalence or scientific membership.
+  snapshot_sha256: ff57fe9c24a51b4aca6e12babe535f324f238004ce1c0d84680eec422f379252
+  search_scope: Ignored- and hidden-inclusive maintained data/structures YAML universe;
+    parse every top-level identifier, compare exact selected identifiers. No absence
+    or broad ontology-uniqueness claim.
+- evidence_id: nur-agent-tax-284812
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:17:18.198740Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Schizosaccharomyces pombe972h-, strain.
+    This receipt attests that identity and rank only, not occurrence or the experimental
+    strain.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: nur-agent-tax-4896
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:17:18.297654Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Schizosaccharomyces pombe, species. This
+    receipt attests that identity and rank only, not occurrence or the experimental
+    strain.
+  snapshot_sha256: cdb53b3f4ab5e6bb4476de3bf0db333ae647e307a9fa8f98108827f98fe7f4d3
+- evidence_id: nur-agent-tax-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:17:18.434487Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Saccharomyces cerevisiae, species. This
+    receipt attests that identity and rank only, not occurrence or the experimental
+    strain.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: nur-agent-Q9UUE5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9UUE5.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:20.455467Z'
+  support: supports
+  summary: Native reviewed UniProtKB Q9UUE5 identifies Nucleoporin nup85, gene nup85,
+    taxon284812. Concrete identity is checked independently of membership; relevant
+    subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 7f54caaf1c1943813420d66d670d02d4622dff3c10d729d4fce45142fce9e6d2
+- evidence_id: nur-agent-query-nup85
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Anup85%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene nup85, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:21.266885Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns Q9UUE5. This checks identifier
+    resolution only.
+  snapshot_sha256: 46e6938d84e6c36fcd7f75956c9946eb07903c2e40cf9671ba5cd9c4e31f63ee
+  search_scope: UniProtKB query gene_exact:nup85 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-Q9Y8G3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9Y8G3.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:20.703106Z'
+  support: supports
+  summary: Native reviewed UniProtKB Q9Y8G3 identifies mRNA export factor mex67, gene
+    mex67, taxon284812. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 1f8b9e383a57b1b9d6b4b39c9fede0989b3ce6b30562394f9b2f396b5c9fd90b
+- evidence_id: nur-agent-query-mex67
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Amex67%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene mex67, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:21.322885Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns Q9Y8G3. This checks identifier
+    resolution only.
+  snapshot_sha256: 24768c19d244d1dd494de671cc13474a02bd080882f5e53cb67ecc6231464ac2
+  search_scope: UniProtKB query gene_exact:mex67 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-Q10265
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q10265.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:20.087467Z'
+  support: supports
+  summary: Native reviewed UniProtKB Q10265 identifies Probable heat shock protein
+    ssa1, gene ssa1, taxon284812. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 053fb978d20a8b4e28b6ee2afdc05e4f00c4b77e805c719cd44a044e9acc9877
+- evidence_id: nur-agent-query-ssa1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Assa1%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene ssa1, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:22.098931Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns Q10265. This checks identifier
+    resolution only.
+  snapshot_sha256: a3d9e3d9bfd816dae011b720ca1787ae0edb99c0ea1e0330bef64947606f267e
+  search_scope: UniProtKB query gene_exact:ssa1 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-O59855
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O59855.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:19.036850Z'
+  support: supports
+  summary: Native reviewed UniProtKB O59855 identifies Probable heat shock protein
+    ssa2, gene ssa2, taxon284812. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 2419884600b38d85190c1cf4a3e81dacd46d94f33ab2d59462247540d89951b8
+- evidence_id: nur-agent-query-ssa2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Assa2%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene ssa2, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:22.161038Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns O59855. This checks identifier
+    resolution only.
+  snapshot_sha256: 279c6fb862c8bea3d273e9b1f9c0979e3389c23e6b281ce6366b685a50e7cec0
+  search_scope: UniProtKB query gene_exact:ssa2 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-O74752
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O74752.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:19.435439Z'
+  support: supports
+  summary: Native reviewed UniProtKB O74752 identifies Mitochondrial protein import
+    protein mas5, gene mas5, taxon284812. Concrete identity is checked independently
+    of membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: cf14dd7673c8e8e8dc7c2db585494a44bccdb7dad8fb7b25015c2dd15f2a16a9
+- evidence_id: nur-agent-query-mas5
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Amas5%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene mas5, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:22.299439Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns O74752. This checks identifier
+    resolution only.
+  snapshot_sha256: d8be58f4e506b6901fbfdadea64bb81b7dd728aaf87359cf8bf0e4e57a5c41ac
+  search_scope: UniProtKB query gene_exact:mas5 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-O94641
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O94641.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:19.822851Z'
+  support: supports
+  summary: Native reviewed UniProtKB O94641 identifies Heat shock protein 104, gene
+    hsp104, taxon284812. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 2c5a7ea22c014c0ee45d20567370851bfbd9464d6f41ebde692ff0ccfdf1590c
+- evidence_id: nur-agent-query-hsp104
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Ahsp104%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hsp104, organism 284812, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:22.816837Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns O94641. This checks identifier
+    resolution only.
+  snapshot_sha256: 5067c38a1ae0b65220a9b4ea996788aafe95658d4065cd31be24c9da09d7f086
+  search_scope: UniProtKB query gene_exact:hsp104 AND organism_id:284812 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: nur-agent-matches-Q9UUE5
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9UUE5/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:20.612169Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: 933f6ebb6962cfd0e0aeb7cba2e24917c8ee5ed88da057bf372990ff75bc7f95
+- evidence_id: nur-agent-matches-Q9Y8G3
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9Y8G3/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:21.067802Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: c74aa834be55186d22ffc26f0703ec884b877f38c40bcb5cd9a982eb702e8cf8
+- evidence_id: nur-agent-matches-Q10265
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q10265/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:20.382059Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: 9c20e0458ce64dd17303163d283ec854640f5a44dd507335a8d073b06a5dc320
+- evidence_id: nur-agent-matches-O59855
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O59855/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:19.384089Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: c45f03fc1211909a10bac4be788019b4050652e3bc58c72877c0b3826e0aa047
+- evidence_id: nur-agent-matches-O74752
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O74752/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:19.659303Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: a8d3b889f7bdda331026333efe9384d2f3d6394239b5a1bbbcf9d35b2a2c706b
+- evidence_id: nur-agent-matches-O94641
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94641/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:20.000656Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: 6e38816460aea9b8b904b1be2cb4282132d78ba079377141698fe4500d4deef7
+- evidence_id: nur-agent-IPR011502
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011502/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:18.758200Z'
+  support: supports
+  summary: Nup85-like is a family matching the concrete nup85 example; the whole nuclear
+    pore is not thereby a NuR constituent.
+  snapshot_sha256: 3fd5472f108f657d4d7af5667166f8d377cfb5c0b4bd1eeabe593e3558805467
+- evidence_id: nur-agent-IPR030217
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030217/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:18.900098Z'
+  support: supports
+  summary: Nuclear RNA export factor is a family matching mex67; membership in a NuR
+    is supported separately by primary localization.
+  snapshot_sha256: 9b32f880e181cf615e36aa9320449eb6424a8ad9d8d97028e39b8f0854422501
+- evidence_id: nur-agent-IPR013126
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:18.812978Z'
+  support: supports
+  summary: Hsp70 is a family matching Ssa1/Ssa2; this does not imply all Hsp70s form
+    NuRs.
+  snapshot_sha256: 43e5cb816d24b41f9660bca2ce79602ba65d8013352745427fc0fb1f4a3a6d9c
+- evidence_id: nur-agent-IPR044713
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044713/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:18.920080Z'
+  support: supports
+  summary: DnaJ homolog subfamilyA member1/2-like is the family matching Mas5; its
+    broad native functional annotations are not imported as the NuR mechanism.
+  snapshot_sha256: 3ec369677634cd064a7d7f9347ecb7e9a6ce23e468a5a2d0b4f86b835ff59b80
+- evidence_id: nur-agent-IPR001270
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:12.496928Z'
+  support: supports
+  summary: ClpA/B includes Hsp104 and broader Clp classes; it is not exact Hsp104-only
+    equivalence.
+  snapshot_sha256: ed0a09c17fa611e58cd0d00b904d4dce2757228cd7e411301eddcfb9b391e0dd
+- evidence_id: nur-agent-IPR050130
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:17:13.232297Z'
+  support: supports
+  summary: The ClpA/ClpB-related class is broader than the maintained Hsp104 component;
+    its predictive description is not an assembly experiment.
+  snapshot_sha256: e654bc8d2d359d203a225be0690247071616a63341156fcd507f197717f78701
+- evidence_id: nur-agent-doi-10.1016_j.celrep.2020.108377
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.celrep.2020.108377
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:22.883489Z'
+  support: supports
+  summary: 'Native metadata identifies Acute Heat Stress Leads to Reversible Aggregation
+    of Nuclear Proteins into Nucleolar Rings in Fission Yeast. Authors: Gallardo P,
+    Real-Calderón P, Flor-Parra I, Salas-Pino S, Daga RR.; PMID 33176152; DOI 10.1016/j.celrep.2020.108377.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 1d6bdcfc89e3f20e55a6925d624ba5da2d19da37bc5db3a086a6422cd5005c5e
+- evidence_id: nur-agent-doi-10.3390_ijms241311202
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3390/ijms241311202
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:23.540161Z'
+  support: supports
+  summary: 'Native metadata identifies Formation of Transient Protein Aggregate-like
+    Centers Is a General Strategy Postponing Degradation of Misfolded Intermediates.
+    Authors: Boronat S, Cabrera M, Vega M, Alcalá J, Salas-Pino S, Daga RR, Ayté J,
+    Hidalgo E.; PMID 37446379; DOI 10.3390/ijms241311202. Bibliographic identity and
+    available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 12234535d2cce14fbfa7268e778c4b46a93d4f24177284616313ac283c82a43a
+- evidence_id: nur-agent-doi-10.1242_jcs.260727
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1242/jcs.260727
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:23.059848Z'
+  support: supports
+  summary: 'Native metadata identifies CDK actively contributes to establishment of
+    the stationary phase state in fission yeast. Authors: Hiraoka M, Kiyota Y, Kawai
+    S, Notsu Y, Yamada K, Kurashima K, Chang JW, Shimazaki S, Yamamoto A.; PMID 37128864;
+    DOI 10.1242/jcs.260727. Bibliographic identity and available abstract only; not
+    a substitute for inspected article body.'
+  snapshot_sha256: 33b0115ce1a4932dc88ef833ae966fc22e8a841cb66674104099f24b8d55d2a2
+- evidence_id: nur-agent-gallardo2020-repository
+  kind: database
+  reference: https://hdl.handle.net/10433/22772
+  locator: DSpace title/citation metadata, DOI and linked public PDF
+  accessed_at: '2026-10-21T10:18:31.784464Z'
+  support: supports
+  summary: The public institutional record identifies the Gallardo2020 article and
+    supplies the genuine author/publisher PDF used here. Metadata identity is separate
+    from biological body evidence.
+  snapshot_sha256: e4b57bc31a0e8a89c85c18094a343c75c46740de5780a35deb44c47600736fcb
+- evidence_id: nur-agent-gallardo2020-pdf
+  kind: primary_source
+  reference: https://rio.upo.es/bitstreams/e53913ee-9cf6-44cf-80b5-6b6622cfb213/download
+  locator: 'Genuine institutional PDF: Introduction, complete Results and Discussion
+    printed pages1-9; Figures1-4 captions; Methods e3-e4 culture/heat/recovery, Hsf1
+    manipulation, viability, FISH and microscopy. Other supplementary raw panels not
+    independently audited.'
+  accessed_at: '2026-10-21T10:21:09.852584Z'
+  support: supports
+  summary: Gallardo2020 directly reports selective recruitment of nucleoporins, RNA-related
+    factors and chaperones to perinucleolar rings. Not every pore protein relocates.
+    Reduced FRAP mobility and disassembly before/concomitant with regrowth do not
+    demonstrate liquid-liquid phase separation. Hsp104 deletion leaves formation near
+    wild-type frequency but strongly delays disappearance; thermotolerant preconditioning
+    suppresses rather than absolutely eliminates formation. Hsf1 downregulation delays
+    clearance without showing direct binding to NuRs.
+  snapshot_sha256: b56c5b53945a8a03dffa8735d4e9e895c1386db4d1cba02eea7c9fc9ce97b936
+- evidence_id: nur-agent-jats-PMC10342647
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/PMC10342647.1.xml
+  locator: Results2.5, complete Discussion3, Methods4.1-4.7 and Figure7 caption, plus
+    permissions. Other PAC Results subsections not comprehensively audited.
+  accessed_at: '2026-10-21T10:17:53.990542Z'
+  support: supports
+  summary: Boronat2023 Results2.5 demonstrates acute-heat Rho1.C17R-associated NuRs
+    in S.pombe and S.cerevisiae conditions, Mas5-dependent formation in S.pombe, and
+    retention after Btn2/Hsp42 loss in the tested budding-yeast assay. Ssa1/Ssa2,
+    Mas5 and Hsp104 recruitment is localized evidence; distinct chaperone images are
+    not simultaneous colocalization. The W303 preconcentration step is not a shared
+    condition for every strain. JATS permissions specify CC BY4.0.
+  snapshot_sha256: 0d9e2ef9309ef2e4467b02c001c4919d47818a1423120307660a6fee775d7552
+- evidence_id: nur-agent-hiraoka2023-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/370466123_CDK_actively_contributes_to_establishment_of_the_stationary_phase_state_in_fission_yeast
+  locator: 'Displayed author manuscript Results: CDK accumulates in the nucleolus
+    in stationary phase cells, printed pages3-5 and Figure3 caption only; browser
+    lines649-825 and893-899. No native HTTP status is asserted.'
+  accessed_at: '2026-10-21T10:22:11Z'
+  support: supports
+  summary: The public author-manuscript display reports Cdc2/Cdc13/Clp1 accumulation
+    at the nucleolar periphery in stationary phase or glucose depletion, distinct
+    from central Gar1/Gar2. This supplies condition-specific context, not proof that
+    all heat-stress recruitment mechanisms also operate in starvation.
+  snapshot_sha256: 013a1c090ef1a47b11a018e31d353030ce2ee7439ee8290f74d86e03cf9564ff
+- evidence_id: nur-agent-hiraoka2023-publisher
+  kind: authority
+  reference: https://journals.biologists.com/jcs/article/136/10/jcs260727/311590/CDK-actively-contributes-to-establishment-of-the
+  locator: Actual response body and retrieval receipt
+  accessed_at: '2026-10-21T10:18:31.904856Z'
+  support: context_only
+  summary: Publisher response returned403 HTML. The named claim-bearing author-manuscript
+    browser passages were read separately; this failed route is not a readable full
+    body.
+  snapshot_sha256: 1b81e3cf5b013928c92603da700f43e0211141c8ef1f26f9b5593b49a1f4a820
+- evidence_id: nur-agent-image
+  kind: record_content
+  reference: data/images/inclusion/nucleolar_peripheral_inclusion_body/pmc10342647_ijms_24_11202_f007.jpg
+  locator: Entire maintained figure and every panel visually inspected, including
+    genotype/species labels, scale bars, blots/plots or schematic; source caption
+    and license read separately.
+  accessed_at: '2026-10-21T10:24:20.777692Z'
+  support: supports
+  summary: The complete Figure7 includes S.pombe and two S.cerevisiae backgrounds
+    in panelA, separate S.pombe chaperone reporters inB, and a schematic inC. The
+    target caption retains these species/panel distinctions and the5µm scale; no direct
+    colocalization of separately imaged reporters is inferred. Local SHA-256 matches
+    the record, and local MD5 cedc637a280e5c710728cb96b5dca4d7 matches the exact native
+    PMC media entry.
+  snapshot_sha256: 58481911ace6752d540bdb673ede896bb5617c60b9565c83ce794a793560e22a
+- evidence_id: nur-agent-native-package-PMC10342647
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/PMC10342647.1.json
+  locator: Article/package identity, license code and exact media_urls match
+  accessed_at: '2026-10-21T10:17:53.515129Z'
+  support: supports
+  summary: The native PMC package identifies the article and matching media filename/MD5.
+    The explicit CC BY4.0 license is read in the separately cited JATS permissions,
+    rather than inferred from package shorthand.
+  snapshot_sha256: 3c1b51d3c79b6d45de60c44b57038bcd6baca139e8e531d549a36f570cf1eda5
+- evidence_id: boundary-0
+  kind: record_content
+  reference: data/structures/inclusion/intranuclear_quality_control_compartment.yaml
+  locator: Identifier, label, definition/source, synonyms, hierarchy/parthood and
+    all discussions; frozen additional inspection input
+  accessed_at: '2026-10-21T10:31:37Z'
+  support: context_only
+  summary: These maintained fields were read to verify the stated identity boundary.
+    This is contextual corpus evidence, not an independent full scientific review
+    of the neighboring record.
+- evidence_id: boundary-1
+  kind: record_content
+  reference: data/structures/other/nuclear_exosome_focus.yaml
+  locator: Identifier, label, definition/source, synonyms, hierarchy/parthood and
+    all discussions; frozen additional inspection input
+  accessed_at: '2026-10-21T10:31:37Z'
+  support: context_only
+  summary: These maintained fields were read to verify the stated identity boundary.
+    This is contextual corpus evidence, not an independent full scientific review
+    of the neighboring record.
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T10:18:12.094474Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T10:18:14.664928Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:33Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml'
+  snapshot_sha256: 6dd1cd6a29d1d92a249d0a88b88d0322aa95773b1248fb8572725a88284339d5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml\
+    \ --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/nucleolar_peripheral_inclusion_body-strict.tsv"
+  snapshot_sha256: fe2ad8c07079934a34e342bf259fe18984aa881831ff876353648b5a462a4e72
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml; exact
+    collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:31:37Z'
+  support: supports
+  summary: '19 of19 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: NuRs distinct from INQ and RNA-surveillance foci
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: The exact GO identity, nuclear inclusion parent and nuclear location agree.
+    Heat-stress NuRs, starvation-associated context, INQ and the MTREC/NURS-linked
+    nuclear-exosome focus are distinguished; abbreviation similarity does not establish
+    equivalence.
+  evidence_ids:
+  - nur-agent-go
+  - nur-agent-local-ids
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - nur-agent-hiraoka2023-browser
+  - boundary-0
+  - boundary-1
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Selective recruited proteins and exact native identities
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: All six reviewed protein accessions, genes and paired S.pombe972h- reference
+    taxon resolve. Four supplied family mappings match the intended classes; broader
+    Clp candidates do not justify an exact Hsp104-only mapping. A heterogeneous denatured-cargo
+    cohort remains label-only, and a recruited Nup85 example does not imply relocation
+    of a whole pore complex.
+  evidence_ids:
+  - nur-agent-Q9UUE5
+  - nur-agent-Q9Y8G3
+  - nur-agent-Q10265
+  - nur-agent-O59855
+  - nur-agent-O74752
+  - nur-agent-O94641
+  - nur-agent-matches-Q9UUE5
+  - nur-agent-matches-Q9Y8G3
+  - nur-agent-matches-Q10265
+  - nur-agent-matches-O59855
+  - nur-agent-matches-O74752
+  - nur-agent-matches-O94641
+  - nur-agent-IPR011502
+  - nur-agent-IPR030217
+  - nur-agent-IPR013126
+  - nur-agent-IPR044713
+  - nur-agent-IPR001270
+  - nur-agent-IPR050130
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - record
+  - policy
+- assessment_id: necessity
+  area: evidence
+  topic: Formation versus clearance
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: The source supports conditional Mas5 necessity for the tested S.pombe formation
+    assay. Hsp104 is dispensable for formation but promotes subsequent clearance;
+    the maintained DISPENSABLE value is therefore about formation, not inactivity.
+    Other recruitment observations are appropriately UNKNOWN for formation necessity.
+    Hsf1 perturbation does not establish direct structural membership.
+  evidence_ids:
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - record
+  - policy
+- assessment_id: unresolved-necessity
+  area: evidence
+  topic: Formation requirements of other recruited classes
+  outcome: unknown
+  target_ids:
+  - GO:0140602
+  summary: The inspected studies do not establish general formation necessity for
+    individual denatured cargo species, Nup85-like proteins, Mex67-like factors or
+    every Hsp70 member. Selective recruitment and mixed collective material identity
+    are supported independently; the corresponding UNKNOWN values remain unresolved.
+  evidence_ids:
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - record
+  - policy
+- assessment_id: scope
+  area: scope
+  topic: Species, stress and preparation contexts
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: Each taxonomy receipt establishes only its own species or strain identity.
+    The examples retain species-specific assays and the W303-only preconcentration
+    condition. Hiraoka supplies independently bounded stationary-phase/glucose-depletion
+    context; it is not used to generalize the heat-stress mechanism to all starvation
+    conditions.
+  evidence_ids:
+  - nur-agent-tax-284812
+  - nur-agent-tax-4896
+  - nur-agent-tax-4932
+  - nur-agent-doi-10.1016_j.celrep.2020.108377
+  - nur-agent-doi-10.3390_ijms241311202
+  - nur-agent-doi-10.1242_jcs.260727
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - nur-agent-hiraoka2023-browser
+  - record
+- assessment_id: functions
+  area: evidence
+  topic: Sequestration and recovery without a proven protective mechanism
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: Heat-induced recruitment and recovery-linked disappearance are directly
+    supported. The record avoids assigning a causally isolated survival benefit to
+    NuRs, equating reduced FRAP mobility with liquid phase separation, or confusing
+    the recruited RNA factors with the whole transcription/export machinery.
+  evidence_ids:
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - record
+- assessment_id: graphs
+  area: graph
+  topic: Two bounded causal graphs
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: The heat/Mas5/preconditioning graph and recovery/Hsp104/Hsf1 graph represent
+    primary perturbation effects. Preconditioning suppresses formation without an
+    absolute block; Hsp104 loss delays disappearance despite preserved formation;
+    Hsf1 effects remain indirect regulatory evidence. Their scopes stay within the
+    stated acute-heat experimental model.
+  evidence_ids:
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - record
+  - policy
+- assessment_id: image
+  area: evidence
+  topic: Mixed-species primary figure and license
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: The maintained image SHA-256 matches and its MD5 joins the native PMC figure
+    entry. Complete pixels, caption and explicit CC BY4.0 permissions were inspected.
+    Species, separate reporter panels and schematic content are preserved rather than
+    represented as one homogeneous NuR photograph.
+  evidence_ids:
+  - nur-agent-jats-PMC10342647
+  - nur-agent-image
+  - nur-agent-native-package-PMC10342647
+  - record
+- assessment_id: coverage
+  area: completeness
+  topic: Appropriate unresolved properties
+  outcome: supported
+  target_ids:
+  - GO:0140602
+  summary: No corrective issue was established. Recruitment is selective and no complete
+    cargo census, universal phase state or NuR-only survival mechanism is required
+    or inferred. The inspected family candidates, historical discussions and existing
+    PROPOSED state remain bounded.
+  evidence_ids:
+  - nur-agent-go
+  - nur-agent-gallardo2020-pdf
+  - nur-agent-jats-PMC10342647
+  - nur-agent-hiraoka2023-browser
+  - nur-agent-IPR011502
+  - nur-agent-IPR030217
+  - nur-agent-IPR013126
+  - nur-agent-IPR044713
+  - nur-agent-IPR001270
+  - nur-agent-IPR050130
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Gallardo main Introduction/Results/Discussion, named Methods and Figure1-4 captions
+  were read from the genuine public PDF; supplementary raw panels and quantitative
+  data were not independently reanalysed.
+- Boronat was read at NuR Results2.5, Discussion, Methods and Figure7 scopes; the
+  full PAC Results chain was not reviewed. Separate chaperone images are not evidence
+  of simultaneous colocalization.
+- Hiraoka publisher access returned403. Only the specified claim-bearing author-manuscript
+  display and Figure3 caption were read; no native full-PDF recovery or complete manuscript
+  review is claimed.
+- The broader GO starvation scope does not establish the same mechanism as the acute-heat
+  graphs. Native reference-strain identities are separate from each experimental culture.
+  Family candidate checks are bounded, and neighboring records are contextual rather
+  than additional full reviews.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The authorized coverage task includes honest clean reviews.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

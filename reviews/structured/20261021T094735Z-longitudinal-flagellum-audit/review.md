@@ -1,0 +1,838 @@
+# Longitudinal flagellum identity, spatial graph and source attribution review
+
+- Review: 20261021T094735Z-longitudinal-flagellum-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:07:21Z
+- Finished UTC: 2026-10-21T09:47:35Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Longitudinal-cilium identity and bounded morphology are supported. Three minor issues concern graph scope, current GO citation attribution and unqualified waveform scope.
+
+## Scope And Provenance
+
+Whole single target; native term/taxon identities; exact cited bibliography; readable GO-linked primary article; every graph edge.
+
+Selection: Target 4 in batch fifteen; first uncovered paths in the fresh expanded corpus, sorted by path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097609 | data/structures/appendage/longitudinal_flagellum.yaml | maintained | longitudinal flagellum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Expression-module applicability | not_applicable | False | GO:0097609 | No transcriptomic or expression-module assertion under review. |
+| Focused native schema | passed | True | GO:0097609 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0097609 | Focused validator passed. |
+| Claim-level scientific review | passed | True | GO:0097609 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Target resolver slice with native transport-failure cross-checks | passed | True | GO:0097609 | 7 of 8 exact target identifiers returned OK. Residuals: PMID:7002229 returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| Full corpus QC | passed | True | GO:0097609 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0097609 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0097609 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0097609 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0097609 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact structure and hierarchy
+
+identity: supported. Targets: GO:0097609.
+
+GO identity, exact synonym and 9+2-cilium is_a relation match the native terms. This is a specialized eukaryotic cilium, distinct from the sulcus and transverse flagellum.
+
+### Qualitative dinoflagellate distribution
+
+scope: supported. Targets: GO:0097609.
+
+VARIABLE Dinophyceae is an appropriately nonuniversal distribution. The new primary example is one free-living strain; it does not establish every symbiotic species or cell stage.
+
+### Partial sulcus occupancy and planar motion
+
+evidence: concern. Targets: GO:0097609.
+
+The native definition and primary observations support emergence through the sulcus. Maruyama2023 directly reports planar beating in Akashiwo, while Cachon1991 describes nonplanar three-dimensional waves in the studied Ceratium/Oxyrrhis. The class-level planar statement needs qualification; these source/context differences must not be silently harmonized.
+
+### Spatial relation versus assembly mechanism
+
+graph: concern. Targets: GO:0097609.
+
+The sole edge describes location and is backed by metadata-only Taylor evidence. It does not explain assembly or a causal mechanism. Its unqualified lies-within wording also loses the native often/partial scope.
+
+### Wrong current GO definition-xref attribution
+
+provenance: concern. Targets: GO:0097609.
+
+The record says Taylor1980 is cited by GO0097612. Current native GO instead attaches that PMID to cingulum GO0097611; sulcus GO0097612 cites PMID20561119. The Taylor paper itself is correctly identified.
+
+### Optional inventory and mechanism boundaries
+
+completeness: supported. Targets: GO:0097609.
+
+A short specialized-cilium record need not duplicate every axonemal protein or acquire optional images/properties. The retrieved primary paper supplies a concrete future example, but retraction mechanism and biological purpose remain unresolved rather than required invented graph edges.
+
+## Findings
+
+### F1: The spatial graph is labeled as an assembly mechanism
+
+minor / open / confirmed; issue key: longitudinal-flagellum-spatial-graph-mechanistic-scope.
+
+The graph contains only longitudinal_flagellum lies-within dinoflagellate_sulcus, yet declares ASSEMBLY and MECHANISTIC. Its Taylor evidence explicitly describes metadata access. Retain a qualified spatial relation as nonmechanistic context, or supply a separately evidenced assembly path. Preserve often/partial occupancy rather than implying the entire flagellum remains inside the sulcus.
+
+### F2: Taylor1980 is attributed to the wrong current GO term
+
+minor / open / confirmed; issue key: longitudinal-flagellum-sulcus-citation-attribution.
+
+The top-level PMID/DOI notes identify Taylor1980 as the review cited by GO0097612. Native GO currently assigns Taylor to GO0097611, while GO0097612 cites Iwataki2010 PMID20561119. Correct the source-to-term attribution without pretending that either full historical paper was read.
+
+### F3: Scope the planar-wave statement to the observed taxa and conditions
+
+minor / open / confirmed; issue key: longitudinal-flagellum-planar-wave-scope.
+
+The expanded definition describes longitudinal beating with planar waves without a taxon or observation qualifier. Maruyama2023 supports planar Akashiwo motion, whereas Cachon1991 describes three-dimensional nonplanar waves for its studied Ceratium/Oxyrrhis context. Retain the supported specialized-cilium identity while scoping waveform statements and recording the differing observations rather than implying one class-wide pattern.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Narrow graph kind, scope, descriptions and edge evidence to the actual spatial claim; attach the inspected ontology or appropriate primary passage.
+
+- Do not treat bibliography metadata as evidence of an experimental mechanism.
+- Preserve partial, species- and state-dependent sulcus occupancy.
+- Apply only in separately authorized curation through the guarded writer and required history, rendering and validation gates.
+
+### A2
+
+Correct the GO-xref mapping and cite each source only for claims actually inspected.
+
+- Verify current native term xrefs and exact PMID/DOI identities.
+- Retain the historical access limitation; do not substitute citation identity for article support.
+- Apply only in separately authorized curation through the guarded writer and required history, rendering and validation gates.
+
+### A3
+
+Qualify the added waveform and propulsion wording with inspected source/taxon/state context, or retain only the broader verified ontology definition.
+
+- Keep planar Akashiwo and nonplanar Ceratium/Oxyrrhis observations distinct.
+- Do not infer universal symbiotic-species behavior or an exact thrust partition from these studies.
+- Apply only in separately authorized curation through the guarded writer and required history, rendering and validation gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/longitudinal_flagellum.yaml; Entire maintained YAML including all graph and evidence fields | context_only | Complete target read at inspected revision; scientific status/history remain unchanged. |
+| policy | docs/CURATION.md; Evidence and component rules together with inspected schema/review profile | context_only | Read-only assessment preserves source scope, exact identity, assembly necessity and distinctions between spatial relations and mechanism. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Graph source and scope paragraphs | context_only | Mechanistic claims require appropriate source support; association and component coverage alone do not establish causality. |
+| longitudinal-prep-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097609,GO:0097610,GO:0097611,GO:0097612,GO:0097729; All five returned term definitions, xrefs, synonyms and children relations | supports | The exact term defines a trailing steering cilium often only partly housed in the sulcus. Native 9+2 parentage and exact synonym agree. Current sulcus definition cites PMID20561119; cingulum cites PMID7002229. |
+| longitudinal-prep-tax-2864 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864; Taxon identity, rank and aliases | supports | Taxon2864 is Dinophyceae, with dinoflagellate synonyms. |
+| longitudinal-prep-taylor1980-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A7002229%20AND%20SRC%3AMED; Exact bibliographic entry, abstract and availability | supports | PMID7002229 and the exact DOI identify Taylor1980 On dinoflagellate evolution, a review. Abstract and metadata do not expose the specific flagellar-sulcus passage. |
+| longitudinal-prep-taylor1980-api | https://api.elsevier.com/content/article/pii/0303264780900064?httpAccept=text/xml; Entire returned XML, coredata and absent body | supports | Publisher API confirms title, DOI and PII but returns coredata only; HTTP200 is not readable article-body access. |
+| longitudinal-prep-sulcus-citation-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID:20561119%20AND%20SRC:MED; Exact title, DOI, authors and abstract | supports | PMID20561119 identifies Iwataki2010 on Cochlodinium ultrastructure and flagellar apparatus, the current sulcus xref. Its full body was not read. |
+| longitudinal-prep-maruyama2023-html-native | https://www.jstage.jst.go.jp/article/cytologia/88/4/88_D-23-00024/_html/-char/en; Entire Introduction, Methods, Results and Discussion; Figs1–6 captions; no figure pixels or supplementary movies | supports | In A.sanguinea NIES-4631, live microscopy directly shows sulcus emergence, posterior planar undulation and stimulus-induced retraction. TEM/SEM distinguish axoneme, paraxonemal rod and R-fiber-like structure. Calcium-induced retraction in non-detergent models does not resolve the molecular mechanism or biological purpose. |
+| transverse-agent-cachon1991-pdf-native | https://aquaparadox.obs-vlfr.fr/html/PFD/Taxonomic%20Monographs/Cachon%20et%20al%201991.pdf; Printed pp175–177 biological/motility context and longitudinal Behaviour; p182 Discussion; no image-pixel audit | supports | The studied Ceratium/Oxyrrhis longitudinal flagella are described as nonplanar and three-dimensional, especially visible in slide-associated cells. These observations differ from the planar Akashiwo observations and require taxon/state-specific wording. |
+| schema-result | just validate data/structures/appendage/longitudinal_flagellum.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/appendage/longitudinal_flagellum.yaml |
+| strict-result | just validate-strict data/structures/appendage/longitudinal_flagellum.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/appendage/longitudinal_flagellum.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv |
+| target-curies-result | just check-curies-strict; data/structures/appendage/longitudinal_flagellum.yaml; exact native collect() target slice of original fresh-base TSV | supports | 7 of 8 exact target identifiers returned OK. Residuals: PMID:7002229 returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Taylor1980 publisher returned403 and its API supplied coredata only. The abstract and metadata were checked, not the full review; this does not prove that the paper lacks the biological claim.
+- Iwataki2010 was checked at metadata/abstract level to identify the ontology xref, not as full-body experimental evidence.
+- Maruyama2023 establishes one NIES-4631 strain at18–23C with live imaging and extracted models. Its R-fiber molecular mechanism, calcium-channel explanations and biological role remain proposals or unknowns. Figure pixels, raw videos and supplementary data were not independently reanalyzed.
+- The inspected current ontology xrefs do not establish the contents of every historical GO release.
+- Cachon1991 was read at the stated biological/motility and longitudinal-behavior passages and discussion, not all structural figures or raw videos. Its preparation and organism differences from Maruyama2023 remain unresolved explanatory variables.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The exact target resolver slice is derived from the completed fresh-base run. Any PMID transport failures were checked against the separately cited native literature metadata; these identity checks do not establish full-body scientific support.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T094735Z-longitudinal-flagellum-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Longitudinal flagellum identity, spatial graph and source attribution review
+started_at: '2026-10-21T09:07:21Z'
+finished_at: '2026-10-21T09:47:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Longitudinal-cilium identity and bounded morphology are supported. Three
+  minor issues concern graph scope, current GO citation attribution and unqualified
+  waveform scope.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/longitudinal_flagellum.yaml
+    sha256: 194925fd64e2b09a0877b398d407d96e759784f7df56d8aeda196de1259fb4ac
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097609
+  path: data/structures/appendage/longitudinal_flagellum.yaml
+  label: longitudinal flagellum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single target; native term/taxon identities; exact cited bibliography;
+    readable GO-linked primary article; every graph edge.
+  selection: Target 4 in batch fifteen; first uncovered paths in the fresh expanded
+    corpus, sorted by path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097609
+checks:
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0097609
+  summary: No transcriptomic or expression-module assertion under review.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just validate data/structures/appendage/longitudinal_flagellum.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just validate-strict data/structures/appendage/longitudinal_flagellum.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - longitudinal-prep-go
+  - longitudinal-prep-tax-2864
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - longitudinal-prep-sulcus-citation-meta
+  - longitudinal-prep-maruyama2023-html-native
+  - transverse-agent-cachon1991-pdf-native
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  summary: '7 of 8 exact target identifiers returned OK. Residuals: PMID:7002229 returned
+    UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified
+    by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  evidence_ids:
+  - target-curies-result
+  - longitudinal-prep-taylor1980-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097609
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/longitudinal_flagellum.yaml
+  locator: Entire maintained YAML including all graph and evidence fields
+  accessed_at: '2026-10-21T09:21:19Z'
+  support: context_only
+  summary: Complete target read at inspected revision; scientific status/history remain
+    unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Evidence and component rules together with inspected schema/review profile
+  accessed_at: '2026-10-21T09:21:19Z'
+  support: context_only
+  summary: Read-only assessment preserves source scope, exact identity, assembly necessity
+    and distinctions between spatial relations and mechanism.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph source and scope paragraphs
+  accessed_at: '2026-10-21T09:21:19Z'
+  support: context_only
+  summary: Mechanistic claims require appropriate source support; association and
+    component coverage alone do not establish causality.
+- evidence_id: longitudinal-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097609,GO:0097610,GO:0097611,GO:0097612,GO:0097729
+  locator: All five returned term definitions, xrefs, synonyms and children relations
+  accessed_at: '2026-10-21T09:07:57.316167Z'
+  support: supports
+  summary: The exact term defines a trailing steering cilium often only partly housed
+    in the sulcus. Native 9+2 parentage and exact synonym agree. Current sulcus definition
+    cites PMID20561119; cingulum cites PMID7002229.
+  snapshot_sha256: 05ff0432105e14c07cbd7c22b2cab259ebac685938b8a5cb24698c745d8ab805
+- evidence_id: longitudinal-prep-tax-2864
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864
+  locator: Taxon identity, rank and aliases
+  accessed_at: '2026-10-21T09:07:57.315356Z'
+  support: supports
+  summary: Taxon2864 is Dinophyceae, with dinoflagellate synonyms.
+  snapshot_sha256: da7d6dfa6d6784e4eb22bc3f3e05878f3aae5a281a4996ee25a2012d580f27d4
+- evidence_id: longitudinal-prep-taylor1980-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A7002229%20AND%20SRC%3AMED
+  locator: Exact bibliographic entry, abstract and availability
+  accessed_at: '2026-10-21T09:08:00.385105Z'
+  support: supports
+  summary: PMID7002229 and the exact DOI identify Taylor1980 On dinoflagellate evolution,
+    a review. Abstract and metadata do not expose the specific flagellar-sulcus passage.
+  snapshot_sha256: 03033d3a50fcdf442fafea318713584e25d28b09b50aaf93b2a7f9674b79d1c7
+- evidence_id: longitudinal-prep-taylor1980-api
+  kind: database
+  reference: https://api.elsevier.com/content/article/pii/0303264780900064?httpAccept=text/xml
+  locator: Entire returned XML, coredata and absent body
+  accessed_at: '2026-10-21T09:08:56.409707Z'
+  support: supports
+  summary: Publisher API confirms title, DOI and PII but returns coredata only; HTTP200
+    is not readable article-body access.
+  snapshot_sha256: c4412fc99d85956bb46c41524b17fae0d57261ec0302293d8d856dc905528dd5
+- evidence_id: longitudinal-prep-sulcus-citation-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID:20561119%20AND%20SRC:MED
+  locator: Exact title, DOI, authors and abstract
+  accessed_at: '2026-10-21T09:08:57.025742Z'
+  support: supports
+  summary: PMID20561119 identifies Iwataki2010 on Cochlodinium ultrastructure and
+    flagellar apparatus, the current sulcus xref. Its full body was not read.
+  snapshot_sha256: fa8e45e78bce39ba42890b05a8bd28fe3a9ca6e4822114f96b38022d16ae7ecd
+- evidence_id: longitudinal-prep-maruyama2023-html-native
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/cytologia/88/4/88_D-23-00024/_html/-char/en
+  locator: Entire Introduction, Methods, Results and Discussion; Figs1–6 captions;
+    no figure pixels or supplementary movies
+  accessed_at: '2026-10-21T09:12:35.218296Z'
+  support: supports
+  summary: In A.sanguinea NIES-4631, live microscopy directly shows sulcus emergence,
+    posterior planar undulation and stimulus-induced retraction. TEM/SEM distinguish
+    axoneme, paraxonemal rod and R-fiber-like structure. Calcium-induced retraction
+    in non-detergent models does not resolve the molecular mechanism or biological
+    purpose.
+  snapshot_sha256: 9fdf86b1e4198bf3339bbeccfad57af0c1f6f7a53ba12ba4732a273be35665a4
+- evidence_id: transverse-agent-cachon1991-pdf-native
+  kind: primary_source
+  reference: https://aquaparadox.obs-vlfr.fr/html/PFD/Taxonomic%20Monographs/Cachon%20et%20al%201991.pdf
+  locator: Printed pp175–177 biological/motility context and longitudinal Behaviour;
+    p182 Discussion; no image-pixel audit
+  accessed_at: '2026-10-21T09:08:38.276857Z'
+  support: supports
+  summary: The studied Ceratium/Oxyrrhis longitudinal flagella are described as nonplanar
+    and three-dimensional, especially visible in slide-associated cells. These observations
+    differ from the planar Akashiwo observations and require taxon/state-specific
+    wording.
+  snapshot_sha256: 11d999ea4cf4db794f5b71ff498b5d70f7801ee9a00b56189f8b3d937d2ccf2e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/appendage/longitudinal_flagellum.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:26Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/longitudinal_flagellum.yaml'
+  snapshot_sha256: a1392745a73a63a8697bc9a924999effa9d51c5e7c076e4d5666f668b2b7ae28
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/appendage/longitudinal_flagellum.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:31Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/appendage/longitudinal_flagellum.yaml\
+    \ --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/longitudinal_flagellum-strict.tsv"
+  snapshot_sha256: 93b74f0345e2263e11c49b810f4bc8fb0d94a518fe0f7a84776ad8ab3041da58
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/longitudinal_flagellum.yaml; exact native collect()
+    target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:06.268109Z'
+  support: supports
+  summary: '7 of 8 exact target identifiers returned OK. Residuals: PMID:7002229 returned
+    UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified
+    by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0097609
+  summary: GO identity, exact synonym and 9+2-cilium is_a relation match the native
+    terms. This is a specialized eukaryotic cilium, distinct from the sulcus and transverse
+    flagellum.
+  evidence_ids:
+  - longitudinal-prep-go
+  - record
+- assessment_id: taxonomy
+  area: scope
+  topic: Qualitative dinoflagellate distribution
+  outcome: supported
+  target_ids:
+  - GO:0097609
+  summary: VARIABLE Dinophyceae is an appropriately nonuniversal distribution. The
+    new primary example is one free-living strain; it does not establish every symbiotic
+    species or cell stage.
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-tax-2864
+  - longitudinal-prep-maruyama2023-html-native
+  - record
+- assessment_id: morphology
+  area: evidence
+  topic: Partial sulcus occupancy and planar motion
+  outcome: concern
+  target_ids:
+  - GO:0097609
+  summary: The native definition and primary observations support emergence through
+    the sulcus. Maruyama2023 directly reports planar beating in Akashiwo, while Cachon1991
+    describes nonplanar three-dimensional waves in the studied Ceratium/Oxyrrhis.
+    The class-level planar statement needs qualification; these source/context differences
+    must not be silently harmonized.
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-maruyama2023-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - record
+- assessment_id: spatial-graph
+  area: graph
+  topic: Spatial relation versus assembly mechanism
+  outcome: concern
+  target_ids:
+  - GO:0097609
+  summary: The sole edge describes location and is backed by metadata-only Taylor
+    evidence. It does not explain assembly or a causal mechanism. Its unqualified
+    lies-within wording also loses the native often/partial scope.
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - record
+  - graph-policy
+- assessment_id: citation-attribution
+  area: provenance
+  topic: Wrong current GO definition-xref attribution
+  outcome: concern
+  target_ids:
+  - GO:0097609
+  summary: The record says Taylor1980 is cited by GO0097612. Current native GO instead
+    attaches that PMID to cingulum GO0097611; sulcus GO0097612 cites PMID20561119.
+    The Taylor paper itself is correctly identified.
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-sulcus-citation-meta
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Optional inventory and mechanism boundaries
+  outcome: supported
+  target_ids:
+  - GO:0097609
+  summary: A short specialized-cilium record need not duplicate every axonemal protein
+    or acquire optional images/properties. The retrieved primary paper supplies a
+    concrete future example, but retraction mechanism and biological purpose remain
+    unresolved rather than required invented graph edges.
+  evidence_ids:
+  - longitudinal-prep-maruyama2023-html-native
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: longitudinal-flagellum-spatial-graph-mechanistic-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The spatial graph is labeled as an assembly mechanism
+  description: The graph contains only longitudinal_flagellum lies-within dinoflagellate_sulcus,
+    yet declares ASSEMBLY and MECHANISTIC. Its Taylor evidence explicitly describes
+    metadata access. Retain a qualified spatial relation as nonmechanistic context,
+    or supply a separately evidenced assembly path. Preserve often/partial occupancy
+    rather than implying the entire flagellum remains inside the sulcus.
+  target_ids:
+  - GO:0097609
+  field_paths:
+  - causal_graphs[graph_id=longitudinal_flagellum_mechanism]
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - longitudinal-prep-maruyama2023-html-native
+  - record
+  - graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and scope
+  native_severity: minor
+  normalization_reason: Bounded representation or attribution defect; exact structure
+    identity remains supported.
+- finding_id: F2
+  issue_key: longitudinal-flagellum-sulcus-citation-attribution
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Taylor1980 is attributed to the wrong current GO term
+  description: The top-level PMID/DOI notes identify Taylor1980 as the review cited
+    by GO0097612. Native GO currently assigns Taylor to GO0097611, while GO0097612
+    cites Iwataki2010 PMID20561119. Correct the source-to-term attribution without
+    pretending that either full historical paper was read.
+  target_ids:
+  - GO:0097609
+  field_paths:
+  - evidence[reference=PMID:7002229].notes
+  - evidence[reference=DOI:10.1016/0303-2647(80)90006-4].notes
+  - causal_graphs[graph_id=longitudinal_flagellum_mechanism].edges[0].evidence
+  evidence_ids:
+  - longitudinal-prep-go
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-sulcus-citation-meta
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and scope
+  native_severity: minor
+  normalization_reason: Bounded representation or attribution defect; exact structure
+    identity remains supported.
+- finding_id: F3
+  issue_key: longitudinal-flagellum-planar-wave-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Scope the planar-wave statement to the observed taxa and conditions
+  description: The expanded definition describes longitudinal beating with planar
+    waves without a taxon or observation qualifier. Maruyama2023 supports planar Akashiwo
+    motion, whereas Cachon1991 describes three-dimensional nonplanar waves for its
+    studied Ceratium/Oxyrrhis context. Retain the supported specialized-cilium identity
+    while scoping waveform statements and recording the differing observations rather
+    than implying one class-wide pattern.
+  target_ids:
+  - GO:0097609
+  field_paths:
+  - definition
+  evidence_ids:
+  - longitudinal-prep-maruyama2023-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - longitudinal-prep-go
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and scope
+  native_severity: minor
+  normalization_reason: Bounded representation or attribution defect; exact structure
+    identity remains supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0097609
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  description: Narrow graph kind, scope, descriptions and edge evidence to the actual
+    spatial claim; attach the inspected ontology or appropriate primary passage.
+  acceptance_checks:
+  - Do not treat bibliography metadata as evidence of an experimental mechanism.
+  - Preserve partial, species- and state-dependent sulcus occupancy.
+  - Apply only in separately authorized curation through the guarded writer and required
+    history, rendering and validation gates.
+  generator: Maintained scientific YAML; generated pages are derived.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0097609
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  description: Correct the GO-xref mapping and cite each source only for claims actually
+    inspected.
+  acceptance_checks:
+  - Verify current native term xrefs and exact PMID/DOI identities.
+  - Retain the historical access limitation; do not substitute citation identity for
+    article support.
+  - Apply only in separately authorized curation through the guarded writer and required
+    history, rendering and validation gates.
+  generator: Maintained scientific YAML; generated pages are derived.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0097609
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained scientific record
+  description: Qualify the added waveform and propulsion wording with inspected source/taxon/state
+    context, or retain only the broader verified ontology definition.
+  acceptance_checks:
+  - Keep planar Akashiwo and nonplanar Ceratium/Oxyrrhis observations distinct.
+  - Do not infer universal symbiotic-species behavior or an exact thrust partition
+    from these studies.
+  - Apply only in separately authorized curation through the guarded writer and required
+    history, rendering and validation gates.
+  generator: Maintained scientific YAML; generated pages are derived.
+limitations:
+- Taylor1980 publisher returned403 and its API supplied coredata only. The abstract
+  and metadata were checked, not the full review; this does not prove that the paper
+  lacks the biological claim.
+- Iwataki2010 was checked at metadata/abstract level to identify the ontology xref,
+  not as full-body experimental evidence.
+- Maruyama2023 establishes one NIES-4631 strain at18–23C with live imaging and extracted
+  models. Its R-fiber molecular mechanism, calcium-channel explanations and biological
+  role remain proposals or unknowns. Figure pixels, raw videos and supplementary data
+  were not independently reanalyzed.
+- The inspected current ontology xrefs do not establish the contents of every historical
+  GO release.
+- Cachon1991 was read at the stated biological/motility and longitudinal-behavior
+  passages and discussion, not all structural figures or raw videos. Its preparation
+  and organism differences from Maruyama2023 remain unresolved explanatory variables.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The exact target resolver slice is derived from the completed fresh-base run. Any
+  PMID transport failures were checked against the separately cited native literature
+  metadata; these identity checks do not establish full-body scientific support.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

@@ -23,6 +23,13 @@ components:
   label: 19S base AAA+ ATPase heterohexameric ring (Rpt1-Rpt6)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPT1
+  - RPT2
+  - RPT3
+  - RPT4
+  - RPT5
+  - RPT6
   essentiality: ESSENTIAL
   role: Heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) whose C-terminal HbYX tails
     dock into pockets of the 20S alpha ring to open the proteolytic gate while aromatic
@@ -31,11 +38,112 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 describe the ordered Rpt1-Rpt6 AAA+ heterohexamer
       at the core of the 19S base subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33299
+    protein_label: 26S proteasome regulatory subunit 7 homolog
+    gene_symbol: RPT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P33299.
+  - uniprot_id: UniProtKB:P40327
+    protein_label: 26S proteasome regulatory subunit 4 homolog
+    gene_symbol: RPT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40327
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40327, the single reviewed entry
+        for gene RPT2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33298
+    protein_label: 26S proteasome regulatory subunit 6B homolog
+    gene_symbol: RPT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33298
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33298, the single reviewed entry
+        for gene RPT3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53549
+    protein_label: 26S proteasome subunit RPT4
+    gene_symbol: RPT4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53549
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53549, the single reviewed entry
+        for gene RPT4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33297
+    protein_label: 26S proteasome regulatory subunit 6A
+    gene_symbol: RPT5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33297
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33297, the single reviewed entry
+        for gene RPT5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q01939
+    protein_label: 26S proteasome regulatory subunit 8 homolog
+    gene_symbol: RPT6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01939
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01939, the single reviewed entry
+        for gene RPT6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rpn1_rpn2_receptor_scaffold
   label: 19S base non-ATPase scaffold and ubiquitin receptor module (Rpn1, Rpn2, Rpn10,
     Rpn13)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPN1
+  - RPN2
+  - RPN10
+  - RPN13
   essentiality: ESSENTIAL
   role: Toroidal PC-repeat scaffold subunits (Rpn1, Rpn2) and intrinsic ubiquitin
     receptors (Rpn10, Rpn13) that capture polyubiquitinated proteins and recruit shuttle
@@ -44,6 +152,70 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 review the non-ATPase Rpn1/Rpn2 scaffolds and
       Rpn10/Rpn13 ubiquitin receptors of the 19S base.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38764
+    protein_label: 26S proteasome regulatory subunit RPN1
+    gene_symbol: RPN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38764
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38764, the single reviewed entry
+        for gene RPN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32565
+    protein_label: 26S proteasome regulatory subunit RPN2
+    gene_symbol: RPN2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32565
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32565, the single reviewed entry
+        for gene RPN2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38886
+    protein_label: 26S proteasome regulatory subunit RPN10
+    gene_symbol: RPN10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38886
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38886, the single reviewed entry
+        for gene RPN10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O13563
+    protein_label: 26S proteasome regulatory subunit RPN13
+    gene_symbol: RPN13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of O13563.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -191,4 +363,18 @@ curation_history:
   changes: Initial curation of proteasome regulatory particle, base subcomplex (GO:0008540)
     in category OTHER with verified GO hierarchy, compartmental context, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:13:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 10 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:49Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES
+  changes: Added source-backed subunit gene_symbols (RPT1-6 on rpt_atpase_ring; RPN1,
+    RPN2, RPN10, RPN13 on rpn1_rpn2_receptor_scaffold) prior to seeding 10 reviewed
+    Saccharomyces cerevisiae S288C protein_examples.
   llm_assisted: true
