@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+  slug: infraciliary_lattice
+session:
+  id: 2026-10-25T053507Z-uniprot-protein-examples-skill-421de2
+  timestamp: '2026-10-25T05:35:07Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s);
+    added 2 verified UniProtKB protein_example(s).'
+  details: 'Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s);
+    added 2 verified UniProtKB protein_example(s). Validated via write_validated_structure
+    and uniprot_genes.py --verify.'

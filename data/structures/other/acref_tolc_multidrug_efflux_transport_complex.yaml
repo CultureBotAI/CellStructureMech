@@ -21,6 +21,12 @@ curation_history:
     TolC, a compact xenobiotic export graph, the Complex Portal CPX-4265 source composition,
     and an AcrE/AcrF component-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected tripartite efflux subunits to acref_tolc and linked xenobiotic_transport
+    to outer_membrane_export.
+  llm_assisted: true
 parent_structures:
 - GO:1990281
 components:
@@ -261,6 +267,47 @@ causal_graphs:
     - reference: GO:0140330
       notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
         outer membrane.
+  - subject: acrf
+    predicate: contributes to
+    object: acref_tolc
+    description: Multidrug export protein AcrF assembles into the envelope-spanning
+      tripartite acref_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: ComplexPortal:CPX-4265 curates Multidrug export protein AcrF as an essential
+        stoichiometric subunit of the tripartite acref_tolc efflux pump complex.
+  - subject: acre
+    predicate: contributes to
+    object: acref_tolc
+    description: Multidrug export protein AcrE assembles into the envelope-spanning
+      tripartite acref_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: ComplexPortal:CPX-4265 curates Multidrug export protein AcrE as an essential
+        stoichiometric subunit of the tripartite acref_tolc efflux pump complex.
+  - subject: tolc
+    predicate: contributes to
+    object: acref_tolc
+    description: Outer membrane channel protein TolC assembles into the envelope-spanning
+      tripartite acref_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: ComplexPortal:CPX-4265 curates Outer membrane channel protein TolC as
+        an essential stoichiometric subunit of the tripartite acref_tolc efflux pump
+        complex.
+  - subject: xenobiotic_transport
+    predicate: contributes to
+    object: outer_membrane_export
+    description: Active xenobiotic transport by the inner-membrane antiporter and
+      periplasmic adaptor drives substrate export across the outer membrane through
+      the TolC channel.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: ComplexPortal:CPX-4265 describes tripartite efflux coupling inner-membrane
+        drug transport to export across the outer membrane.
+    - reference: GO:0140330
+      notes: GO:0140330 describes export across the outer membrane mediated by the
+        tripartite efflux apparatus.
 discussions:
 - discussion_id: acref_tolc_component_family_grounding
   prompt: Resolve exact source-neutral protein families for AcrE and AcrF before replacing

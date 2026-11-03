@@ -40,6 +40,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked polar_tube_proteins component into polar_tube_eversion_and_cargo_delivery
+    causal graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: polar filament
   synonym_type: RELATED_SYNONYM
@@ -191,6 +197,10 @@ causal_graphs:
   - node_id: sporoplasm
     label: sporoplasm
     node_type: STRUCTURE
+  - node_id: polar_tube_proteins
+    label: polar tube proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: polar_tube_proteins
   edges:
   - subject: polar_filament
     predicate: everts into
@@ -216,6 +226,18 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3002533
       notes: Sharma et al. 2024 imaged cargo-containing polar tubes during Vairimorpha
         necatrix germination.
+  - subject: polar_tube_proteins
+    predicate: assemble into
+    object: polar_filament
+    description: Lineage-specific polar tube proteins build the compact polar filament
+      in the dormant spore that everts into the polar tube during germination.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2005.04.003
+      notes: Xu and Weiss 2005 reviewed PTP1, PTP2 and PTP3 as structural protein
+        constituents of the microsporidian polar tube.
+    - reference: DOI:10.1016/j.jprot.2022.104617
+      notes: Lv et al. 2022 profiled the protein composition of Nosema bombycis compact
+        polar filaments and everted polar tubes.
 discussions:
 - discussion_id: ground_polar_tube_proteins
   prompt: Resolve exact family groundings for polar tube proteins.

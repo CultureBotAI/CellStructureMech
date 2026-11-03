@@ -1,0 +1,307 @@
+# Record review of clathrin coat of endocytic vesicle (GO:0030128): AP-2 adaptor complex causal-graph node typed as GENE_OR_PROTEIN
+
+- Review: 20261023T230501Z-clathrin-coat-ap2-causal-node-type
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-23T22:50:00Z
+- Finished UTC: 2026-10-23T23:05:01Z
+- Reviewer: antigravity-c2s4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Clathrin coat of endocytic vesicle (GO:0030128, data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml) has accurate GO cellular-component identity, Saccharomyces cerevisiae clathrin heavy/light chain and AP-2 adaptor composition, and source-backed endocytic coat topology. However, causal_graphs[0].nodes[1] (ap2_adaptor_complex, grounded to GO:0030122 AP-2 adaptor complex and also listed in has_part) is typed node_type: GENE_OR_PROTEIN instead of node_type: STRUCTURE.
+
+## Scope And Provenance
+
+Single-record audit of clathrin coat of endocytic vesicle (GO:0030128) covering identity, composition, causal graphs, and ontology grounding.
+
+Selection: Targeted single-record review in data/structures/other/ after whole-corpus audit identified ap2_adaptor_complex (GO:0030122) as the sole GO-grounded causal node in data/structures/other/ typed GENE_OR_PROTEIN.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base af168704d9999acd544d1f9434c0e87e3fec349f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030128 | data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml | maintained | clathrin coat of endocytic vesicle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| LinkML schema validation on clathrin_coat_of_endocytic_vesicle.yaml | passed | True | GO:0030128 | No LinkML schema issues found for clathrin_coat_of_endocytic_vesicle.yaml. |
+| Strict instance validator on clathrin_coat_of_endocytic_vesicle.yaml | passed | True | GO:0030128 | Zero strict validator errors on clathrin_coat_of_endocytic_vesicle.yaml. |
+
+## Scientific And Domain Assessments
+
+### Identity, hierarchy, composition, and evidence of clathrin coat of endocytic vesicle (GO:0030128)
+
+identity: supported. Targets: GO:0030128.
+
+Identity (GO:0030128), parent/part_of/has_part relations, CHC1/CLC1 clathrin triskelion components, S. cerevisiae S288C UniProtKB protein examples (P22137, P17891), and endocytic coat topology are accurately grounded and source-backed.
+
+### Causal-graph node_type for GO cellular-component node ap2_adaptor_complex (GO:0030122)
+
+graph: concern. Targets: GO:0030128.
+
+causal_graphs[0].nodes[1] (ap2_adaptor_complex, grounding: GO:0030122) is typed GENE_OR_PROTEIN instead of STRUCTURE.
+
+## Findings
+
+### F1: causal_graphs[0].nodes[1] (ap2_adaptor_complex, GO:0030122) is typed GENE_OR_PROTEIN instead of STRUCTURE
+
+minor / open / confirmed; issue key: clathrin-coat-ap2-adaptor-causal-node-type.
+
+In data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml (GO:0030128), causal_graphs[0].nodes[1] (ap2_adaptor_complex, label: 'AP-2 adaptor complex', grounding: GO:0030122) represents a GO cellular component that is also listed in has_part[0], but is typed node_type: GENE_OR_PROTEIN instead of node_type: STRUCTURE per CausalNodeTypeEnum.STRUCTURE ('A CellStructureMech record or GO cellular component').
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Change causal_graphs[0].nodes[1].node_type from GENE_OR_PROTEIN to STRUCTURE in data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml and record the edit in curation_history and history/records/clathrin_coat_of_endocytic_vesicle/.
+
+- .venv/bin/python scripts/validate_strict.py data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml --out /tmp/clathrin_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_clathrin_node | data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml; has_part[0] (lines 48-57) and causal_graphs[0].nodes[1] (lines 118-123) | supports | clathrin_coat_of_endocytic_vesicle.yaml lists GO:0030122 (AP-2 adaptor complex) in has_part[0], and causal_graphs[0].nodes[1] (ap2_adaptor_complex) grounds to GO:0030122 but uses node_type: GENE_OR_PROTEIN instead of node_type: STRUCTURE. |
+| ev_schema_clathrin | scripts/validate_strict.py; schema_clathrin receipt | supports | linkml-validate exited 0 on clathrin_coat_of_endocytic_vesicle.yaml. |
+| ev_strict_clathrin | scripts/validate_strict.py; strict_clathrin receipt | supports | validate_strict.py exited 0 on clathrin_coat_of_endocytic_vesicle.yaml. |
+
+## Limits And Additional Notes
+
+- Record edits are deferred to Cycle 2 Stage 5 (resolve_review_findings) per the Stage 4 review-only workflow contract.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T230501Z-clathrin-coat-ap2-causal-node-type
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Record review of clathrin coat of endocytic vesicle (GO:0030128): AP-2 adaptor
+  complex causal-graph node typed as GENE_OR_PROTEIN'
+started_at: '2026-10-23T22:50:00Z'
+finished_at: '2026-10-23T23:05:01Z'
+reviewer:
+  identity: antigravity-c2s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 2 Stage 4 record_review against committed
+    git revision af168704d9999acd544d1f9434c0e87e3fec349f without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Clathrin coat of endocytic vesicle (GO:0030128, data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml)
+  has accurate GO cellular-component identity, Saccharomyces cerevisiae clathrin heavy/light
+  chain and AP-2 adaptor composition, and source-backed endocytic coat topology. However,
+  causal_graphs[0].nodes[1] (ap2_adaptor_complex, grounded to GO:0030122 AP-2 adaptor
+  complex and also listed in has_part) is typed node_type: GENE_OR_PROTEIN instead
+  of node_type: STRUCTURE.'
+source:
+  git_revision: af168704d9999acd544d1f9434c0e87e3fec349f
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    sha256: 1c156e9a910b42e01f74505011a1f24644ca3ad0a8eeb48d438b3b8eeb7ed372
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record audit of clathrin coat of endocytic vesicle (GO:0030128)
+    covering identity, composition, causal graphs, and ontology grounding.
+  selection: Targeted single-record review in data/structures/other/ after whole-corpus
+    audit identified ap2_adaptor_complex (GO:0030122) as the sole GO-grounded causal
+    node in data/structures/other/ typed GENE_OR_PROTEIN.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030128
+targets:
+- target_id: GO:0030128
+  path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  label: clathrin coat of endocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1c156e9a910b42e01f74505011a1f24644ca3ad0a8eeb48d438b3b8eeb7ed372
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    role: maintained_record
+checks:
+- check_id: schema_clathrin
+  name: LinkML schema validation on clathrin_coat_of_endocytic_vesicle.yaml
+  status: passed
+  required: true
+  summary: No LinkML schema issues found for clathrin_coat_of_endocytic_vesicle.yaml.
+  target_ids:
+  - GO:0030128
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_schema_clathrin
+- check_id: strict_clathrin
+  name: Strict instance validator on clathrin_coat_of_endocytic_vesicle.yaml
+  status: passed
+  required: true
+  summary: Zero strict validator errors on clathrin_coat_of_endocytic_vesicle.yaml.
+  target_ids:
+  - GO:0030128
+  command: .venv/bin/python scripts/validate_strict.py data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    --out /tmp/clathrin_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_clathrin
+evidence:
+- evidence_id: ev_clathrin_node
+  kind: record_content
+  reference: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  locator: has_part[0] (lines 48-57) and causal_graphs[0].nodes[1] (lines 118-123)
+  accessed_at: '2026-10-23T22:53:00Z'
+  support: supports
+  summary: 'clathrin_coat_of_endocytic_vesicle.yaml lists GO:0030122 (AP-2 adaptor
+    complex) in has_part[0], and causal_graphs[0].nodes[1] (ap2_adaptor_complex) grounds
+    to GO:0030122 but uses node_type: GENE_OR_PROTEIN instead of node_type: STRUCTURE.'
+  quote: "- id: ap2_adaptor_complex\n    label: AP-2 adaptor complex\n    node_type:\
+    \ GENE_OR_PROTEIN\n    grounding: GO:0030122"
+  snapshot_sha256: 1c156e9a910b42e01f74505011a1f24644ca3ad0a8eeb48d438b3b8eeb7ed372
+- evidence_id: ev_schema_clathrin
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: schema_clathrin receipt
+  accessed_at: '2026-10-23T23:05:01Z'
+  support: supports
+  summary: linkml-validate exited 0 on clathrin_coat_of_endocytic_vesicle.yaml.
+  snapshot_sha256: de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- evidence_id: ev_strict_clathrin
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_clathrin receipt
+  accessed_at: '2026-10-23T23:05:01Z'
+  support: supports
+  summary: validate_strict.py exited 0 on clathrin_coat_of_endocytic_vesicle.yaml.
+  snapshot_sha256: 508e427a1e4ec65731d6491b0841efa6d10de30f723274102e5ab3b98da4424c
+assessments:
+- assessment_id: assess_clathrin_identity
+  area: identity
+  topic: Identity, hierarchy, composition, and evidence of clathrin coat of endocytic
+    vesicle (GO:0030128)
+  outcome: supported
+  summary: Identity (GO:0030128), parent/part_of/has_part relations, CHC1/CLC1 clathrin
+    triskelion components, S. cerevisiae S288C UniProtKB protein examples (P22137,
+    P17891), and endocytic coat topology are accurately grounded and source-backed.
+  target_ids:
+  - GO:0030128
+  evidence_ids:
+  - ev_schema_clathrin
+  - ev_strict_clathrin
+- assessment_id: assess_clathrin_graph_node_type
+  area: graph
+  topic: Causal-graph node_type for GO cellular-component node ap2_adaptor_complex
+    (GO:0030122)
+  outcome: concern
+  summary: 'causal_graphs[0].nodes[1] (ap2_adaptor_complex, grounding: GO:0030122)
+    is typed GENE_OR_PROTEIN instead of STRUCTURE.'
+  target_ids:
+  - GO:0030128
+  evidence_ids:
+  - ev_clathrin_node
+findings:
+- finding_id: F1
+  issue_key: clathrin-coat-ap2-adaptor-causal-node-type
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: causal_graphs[0].nodes[1] (ap2_adaptor_complex, GO:0030122) is typed GENE_OR_PROTEIN
+    instead of STRUCTURE
+  description: 'In data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml (GO:0030128),
+    causal_graphs[0].nodes[1] (ap2_adaptor_complex, label: ''AP-2 adaptor complex'',
+    grounding: GO:0030122) represents a GO cellular component that is also listed
+    in has_part[0], but is typed node_type: GENE_OR_PROTEIN instead of node_type:
+    STRUCTURE per CausalNodeTypeEnum.STRUCTURE (''A CellStructureMech record or GO
+    cellular component'').'
+  target_ids:
+  - GO:0030128
+  field_paths:
+  - causal_graphs[0].nodes[1].node_type
+  evidence_ids:
+  - ev_clathrin_node
+  rule_id: docs/SCHEMA.md:CausalNode-node_type
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    role: maintained_record
+  tags:
+  - causal-graphs
+  - node-type
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Change causal_graphs[0].nodes[1].node_type from GENE_OR_PROTEIN to
+    STRUCTURE in data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml and
+    record the edit in curation_history and history/records/clathrin_coat_of_endocytic_vesicle/.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030128
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    --out /tmp/clathrin_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits are deferred to Cycle 2 Stage 5 (resolve_review_findings) per the Stage
+  4 review-only workflow contract.
+tags:
+- stage4
+- record-review
+- clathrin-coat
+```
