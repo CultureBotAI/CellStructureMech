@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleolar_chromatin.yaml
+  slug: nucleolar_chromatin
+session:
+  id: 2026-10-19T052742Z-claude-opus-4-7-357801
+  timestamp: '2026-10-19T05:27:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for nucleolar chromatin (GO:0030874) in other.
+  details: Authored data/structures/other/nucleolar_chromatin.yaml for nucleolar chromatin
+    (GO:0030874) with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

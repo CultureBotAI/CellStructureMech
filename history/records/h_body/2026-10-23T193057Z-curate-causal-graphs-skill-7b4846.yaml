@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/h_body.yaml
+  slug: h_body
+session:
+  id: 2026-10-23T193057Z-curate-causal-graphs-skill-7b4846
+  timestamp: '2026-10-23T19:30:57Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Added ATP-dependent RNA helicase RhlB type node (rhlb, component_ref:
+    rhlb, InterPro:IPR023554) and H-body client enrichment edge to polyp_modulated_h_body_assembly.'
+  details: 'Cycle 2 Stage 2 causal-graph curation pass for cellstructuremech:h_body
+    (H-body): Added ATP-dependent RNA helicase RhlB type node (rhlb, component_ref:
+    rhlb, InterPro:IPR023554) and H-body client enrichment edge to polyp_modulated_h_body_assembly.
+    Validated via write_validated_structure.'

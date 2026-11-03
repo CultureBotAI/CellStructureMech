@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tho_complex_part_of_transcription_export_complex.yaml
+  slug: tho_complex_part_of_transcription_export_complex
+session:
+  id: 2026-10-19T055622Z-claude-opus-4-7-ba27db
+  timestamp: '2026-10-19T05:56:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for THO complex part of transcription export complex
+    (GO:0000445) in other.
+  details: Authored data/structures/other/tho_complex_part_of_transcription_export_complex.yaml
+    for THO complex part of transcription export complex (GO:0000445) with verified
+    GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature
+    evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

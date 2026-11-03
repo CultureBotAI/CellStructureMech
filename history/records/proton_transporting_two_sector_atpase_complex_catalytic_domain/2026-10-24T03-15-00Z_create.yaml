@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+  slug: proton_transporting_two_sector_atpase_complex_catalytic_domain
+session:
+  id: 2026-10-24T031500Z-claude-opus-4-6-c3s104
+  timestamp: '2026-10-24T03:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for proton-transporting two-sector ATPase complex,
+    catalytic domain (GO:0033178) in energy_complex.
+  details: Authored data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+    for proton-transporting two-sector ATPase complex, catalytic domain (GO:0033178)
+    with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

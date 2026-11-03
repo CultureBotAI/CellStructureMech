@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_phagosome_membrane.yaml
+  slug: early_phagosome_membrane
+session:
+  id: 2026-10-19T055558Z-claude-opus-4-7-5d9071
+  timestamp: '2026-10-19T05:55:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for early phagosome membrane (GO:0036186) in membrane_organelle.
+  details: Authored data/structures/membrane_organelle/early_phagosome_membrane.yaml
+    for early phagosome membrane (GO:0036186) with verified GO hierarchy, taxonomic
+    distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

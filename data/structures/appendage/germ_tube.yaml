@@ -1,0 +1,109 @@
+identifier: GO:0032179
+label: germ tube
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: The slender tubular outgrowth first produced by most spores in germination.
+  A polarized cylindrical outgrowth emerging from a germinating fungal spore or yeast
+  cell during the transition to filamentous hyphal growth, notably in Candida albicans,
+  Aspergillus fumigatus, and Neurospora crassa. Germ tube emergence and extension
+  depend on Cdc42-mediated polarity establishment, Spitzenkörper/polarisome vesicle
+  delivery, and a basal septin collar/cap.
+definition_source: GO:0032179
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+has_part:
+- GO:0032171
+- GO:0032172
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Germ-tube septin caps are formed by fungal septin GTPases, but
+    no exact source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the
+    complete germ-tube cap cohort.
+  role: Septin GTPases that form the faint cap at the leading edge of filamentous
+    fungal germ tubes.
+  evidence:
+  - reference: GO:0032171
+    notes: GO:0032171 defines the germ tube septin cap as a structure formed of septins.
+  - reference: GO:0032159
+    notes: GO:0032159 defines the broader septin cap as a structure formed of septins.
+evidence:
+- reference: GO:0032179
+  notes: 'Gene Ontology cellular-component term for germ tube: The slender tubular
+    outgrowth first produced by most spores in germination.'
+- reference: GO:0032171
+  notes: Gene Ontology cellular-component term for the germ tube septin cap.
+- reference: GO:0032159
+  notes: Gene Ontology cellular-component parent term for the septin cap.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+    fungi', Eukaryotic Cell.
+causal_graphs:
+- graph_id: germ_tube_mechanism
+  title: Germ tube assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of germ tube (GO:0032179) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: germ_tube
+    label: germ tube
+    node_type: STRUCTURE
+    grounding: GO:0032179
+    description: The slender tubular outgrowth first produced by most spores in germination.
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+    description: Septin GTPases that form the faint cap at the leading edge of filamentous
+      fungal germ tubes.
+  - node_id: germ_tube_septin_cap
+    label: germ tube septin cap
+    node_type: STRUCTURE
+    grounding: GO:0032171
+    description: Constituent structural subassembly (germ tube septin cap, GO:0032171)
+      within germ tube.
+  - node_id: germ_tube_septin_ring
+    label: germ tube septin ring
+    node_type: STRUCTURE
+    grounding: GO:0032172
+    description: Constituent structural subassembly (germ tube septin ring, GO:0032172)
+      within germ tube.
+  edges:
+  - subject: septin_proteins
+    predicate: is part of
+    object: germ_tube
+    description: Septin GTPases that form the faint cap at the leading edge of filamentous
+      fungal germ tubes.
+    evidence:
+    - reference: GO:0032171
+      notes: GO:0032171 defines the germ tube septin cap as a structure formed of
+        septins.
+  - subject: germ_tube_septin_cap
+    predicate: is part of
+    object: germ_tube
+    description: Germ tube septin cap is a structural part of germ tube.
+    evidence:
+    - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+      notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+        fungi', Eukaryotic Cell.
+  - subject: germ_tube_septin_ring
+    predicate: is part of
+    object: germ_tube
+    description: Germ tube septin ring is a structural part of germ tube.
+    evidence:
+    - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+      notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+        fungi', Eukaryotic Cell.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of germ tube (GO:0032179) in category APPENDAGE with verified
+    GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.
+  llm_assisted: true

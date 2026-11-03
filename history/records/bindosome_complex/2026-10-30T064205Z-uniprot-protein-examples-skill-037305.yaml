@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bindosome_complex.yaml
+  slug: bindosome_complex
+session:
+  id: 2026-10-30T064205Z-uniprot-protein-examples-skill-037305
+  timestamp: '2026-10-30T06:42:05Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example
+    (Q97UF5, SSO3066/araS) to sugar_binding_proteins.'
+  details: 'Cycle 4 Stage 3 protein_examples curation: added verified UniProtKB:Q97UF5 (Arabinose
+    ABC transporter, arabinose binding protein, SSO3066/araS, Saccharolobus solfataricus P2
+    NCBITaxon:273057, UNREVIEWED) to sugar_binding_proteins. Validated via write_validated_structure
+    and uniprot_genes.py --verify.'

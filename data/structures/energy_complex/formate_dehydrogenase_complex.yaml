@@ -1,0 +1,277 @@
+identifier: GO:0009326
+label: formate dehydrogenase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An enzyme complex that catalyzes the dehydrogenation of formate to produce
+  carbon dioxide (CO2). A multisubunit molybdenum/tungsten-cofactor- and iron-sulfur-cluster-containing
+  oxidoreductase complex in bacteria and archaea (including respiratory membrane-bound
+  Fdh-N/FdnGHI and Fdh-O/FdoGHI in Escherichia coli and cytoplasmic NAD+/F420-linked
+  formate dehydrogenases in methanogens and methylotrophs) that catalyzes the two-electron
+  oxidation of formate (HCOO-) to CO2 and H+. Respiratory formate dehydrogenase complexes
+  couple periplasmic formate oxidation to menaquinone reduction via a redox loop that
+  conserves energy as proton-motive force.
+definition_source: GO:0009326
+mapping_status: PROPOSED
+parent_structures:
+- GO:1990204
+components:
+- component_id: fdng_alpha_subunit
+  label: formate dehydrogenase-N alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fdnG
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for nitrate-inducible
+    FdnG; the reviewed E. coli entry carries molybdopterin oxidoreductase domains
+    and Fdn/Fdo-adjacent signatures that were not verified as exclusive to formate
+    dehydrogenase N alpha subunits.
+  role: Mo-bisMGD catalytic alpha subunit of the nitrate-inducible formate dehydrogenase
+    N complex. Functions within the respiratory/metabolic formate dehydrogenase holoenzyme
+    in formate dehydrogenase complex in the canonical membrane-bound respiratory FdnGHI/FdoGHI
+    holoenzyme (alongside soluble cytoplasmic NAD+-dependent isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P24183
+    protein_label: Formate dehydrogenase, nitrate-inducible, major subunit
+    gene_symbol: fdnG
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P24183
+      notes: Reviewed Swiss-Prot entry FDNG_ECOLI is E. coli K-12 FdnG and cross-references
+        GO:0009326 and ComplexPortal:CPX-1975.
+  evidence:
+  - reference: ComplexPortal:CPX-1975
+    notes: Complex Portal CPX-1975 curates three copies of P24183/FdnG in the E. coli
+      K-12 formate dehydrogenase N complex.
+- component_id: fdnh_iron_sulfur_subunit
+  label: formate dehydrogenase-N iron-sulfur subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fdnH
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for nitrate-inducible
+    FdnH; the reviewed E. coli entry carries 4Fe-4S and formate dehydrogenase iron-sulfur
+    signatures that were not verified as exclusive to FdnH.
+  role: Iron-sulfur electron-transfer subunit linking the FdnG catalytic subunit to
+    the FdnI cytochrome b membrane subunit. Functions within the respiratory/metabolic
+    formate dehydrogenase holoenzyme in formate dehydrogenase complex in the canonical
+    membrane-bound respiratory FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic
+    NAD+-dependent isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AAJ3
+    protein_label: Formate dehydrogenase, nitrate-inducible, iron-sulfur subunit
+    gene_symbol: fdnH
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AAJ3
+      notes: Reviewed Swiss-Prot entry FDNH_ECOLI is E. coli K-12 FdnH and cross-references
+        GO:0009326 and ComplexPortal:CPX-1975.
+  evidence:
+  - reference: ComplexPortal:CPX-1975
+    notes: Complex Portal CPX-1975 curates three copies of P0AAJ3/FdnH in the E. coli
+      K-12 formate dehydrogenase N complex.
+- component_id: fdni_cytochrome_b_subunit
+  label: formate dehydrogenase-N cytochrome b556 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fdnI
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for nitrate-inducible
+    FdnI; the reviewed E. coli entry carries cytochrome b and formate dehydrogenase
+    gamma-subunit signatures that were not verified as exclusive to FdnI.
+  role: Cytochrome b membrane subunit that carries the quinone-binding site. Functions
+    within the respiratory/metabolic formate dehydrogenase holoenzyme in formate dehydrogenase
+    complex in the canonical membrane-bound respiratory FdnGHI/FdoGHI holoenzyme (alongside
+    soluble cytoplasmic NAD+-dependent isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AEK7
+    protein_label: Formate dehydrogenase, nitrate-inducible, cytochrome b556(Fdn)
+      subunit
+    gene_symbol: fdnI
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AEK7
+      notes: Reviewed Swiss-Prot entry FDNI_ECOLI is E. coli K-12 FdnI and cross-references
+        GO:0009326 and ComplexPortal:CPX-1975.
+  evidence:
+  - reference: ComplexPortal:CPX-1975
+    notes: Complex Portal CPX-1975 curates three copies of P0AEK7/FdnI in the E. coli
+      K-12 formate dehydrogenase N complex.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: E. coli K-12 source of the CPX-1975 heterononameric FdnGHI composition with
+    three FdnG, three FdnH, three FdnI, Mo-bisMGD, heme, 4Fe-4S, and menaquinone participants.
+  reference: ComplexPortal:CPX-1975
+functions:
+- function_id: formate_dehydrogenase_quinone_activity
+  label: formate dehydrogenase (quinone) activity
+  grounding: GO:0036397
+  description: The FdnGHI complex oxidizes formate to carbon dioxide while reducing
+    a membrane quinone to quinol.
+  evidence:
+  - reference: GO:0036397
+    notes: GO:0036397 defines formate dehydrogenase (quinone) activity as formate
+      plus quinone yielding CO2 plus quinol.
+  - reference: PMID:11884747
+    notes: Jormakka et al. 2002 solved the E. coli formate dehydrogenase-N structure
+      and described its basis for proton-motive-force generation.
+evidence:
+- reference: GO:0009326
+  notes: 'Gene Ontology cellular-component term for formate dehydrogenase complex:
+    An enzyme complex that catalyzes the dehydrogenation of formate to produce carbon
+    dioxide (CO2).'
+- reference: ComplexPortal:CPX-1975
+  notes: Complex Portal entry for the E. coli K-12 formate dehydrogenase N heterononamer.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: GO:0036397
+  notes: Gene Ontology molecular-function term for formate dehydrogenase (quinone)
+    activity.
+- reference: UniProtKB:P24183
+  notes: Reviewed E. coli K-12 FdnG UniProtKB entry.
+- reference: UniProtKB:P0AAJ3
+  notes: Reviewed E. coli K-12 FdnH UniProtKB entry.
+- reference: UniProtKB:P0AEK7
+  notes: Reviewed E. coli K-12 FdnI UniProtKB entry.
+- reference: CHEBI:60539
+  notes: ChEBI identifier for the Mo-bisMGD cofactor curated in CPX-1975.
+- reference: CHEBI:16374
+  notes: ChEBI identifier for the menaquinone electron acceptor curated in CPX-1975.
+- reference: CHEBI:30413
+  notes: ChEBI identifier for the heme cofactor curated in CPX-1975.
+- reference: CHEBI:33725
+  notes: ChEBI identifier for the 4Fe-4S cluster curated in CPX-1975.
+- reference: PMID:11884747
+  notes: 'Jormakka et al. 2002, Molecular basis of proton motive force generation:
+    structure of formate dehydrogenase-N.'
+- reference: DOI:10.1126/science.1068186
+  notes: DOI for the Jormakka et al. 2002 E. coli formate dehydrogenase-N paper.
+causal_graphs:
+- graph_id: formate_dehydrogenase_complex_mechanism
+  title: Formate dehydrogenase complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of formate dehydrogenase complex (GO:0009326) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: formate_dehydrogenase_complex
+    label: formate dehydrogenase complex
+    node_type: STRUCTURE
+    grounding: GO:0009326
+    description: An enzyme complex that catalyzes the dehydrogenation of formate to
+      produce carbon dioxide (CO2).
+  - node_id: fdng_alpha_subunit
+    label: formate dehydrogenase-N alpha subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fdng_alpha_subunit
+    description: Mo-bisMGD catalytic alpha subunit of the nitrate-inducible formate
+      dehydrogenase N complex. Functions within the respiratory/metabolic formate
+      dehydrogenase holoenzyme in formate dehydrogenase complex in the canonical membrane-bound
+      respiratory FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic NAD+-dependent
+      isoforms across taxa).
+  - node_id: fdnh_iron_sulfur_subunit
+    label: formate dehydrogenase-N iron-sulfur subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fdnh_iron_sulfur_subunit
+    description: Iron-sulfur electron-transfer subunit linking the FdnG catalytic
+      subunit to the FdnI cytochrome b membrane subunit. Functions within the respiratory/metabolic
+      formate dehydrogenase holoenzyme in formate dehydrogenase complex in the canonical
+      membrane-bound respiratory FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic
+      NAD+-dependent isoforms across taxa).
+  - node_id: fdni_cytochrome_b_subunit
+    label: formate dehydrogenase-N cytochrome b556 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fdni_cytochrome_b_subunit
+    description: Cytochrome b membrane subunit that carries the quinone-binding site.
+      Functions within the respiratory/metabolic formate dehydrogenase holoenzyme
+      in formate dehydrogenase complex in the canonical membrane-bound respiratory
+      FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic NAD+-dependent isoforms
+      across taxa).
+  - node_id: formate_dehydrogenase_quinone_activity
+    label: formate dehydrogenase (quinone) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0036397
+    description: The FdnGHI complex oxidizes formate to carbon dioxide while reducing
+      a membrane quinone to quinol.
+  edges:
+  - subject: fdng_alpha_subunit
+    predicate: is part of
+    object: formate_dehydrogenase_complex
+    description: Mo-bisMGD catalytic alpha subunit of the nitrate-inducible formate
+      dehydrogenase N complex. Functions within the respiratory/metabolic formate
+      dehydrogenase holoenzyme in formate dehydrogenase complex in the canonical membrane-bound
+      respiratory FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic NAD+-dependent
+      isoforms across taxa).
+    evidence:
+    - reference: ComplexPortal:CPX-1975
+      notes: Complex Portal CPX-1975 curates three copies of P24183/FdnG in the E.
+        coli K-12 formate dehydrogenase N complex.
+  - subject: fdnh_iron_sulfur_subunit
+    predicate: is part of
+    object: formate_dehydrogenase_complex
+    description: Iron-sulfur electron-transfer subunit linking the FdnG catalytic
+      subunit to the FdnI cytochrome b membrane subunit. Functions within the respiratory/metabolic
+      formate dehydrogenase holoenzyme in formate dehydrogenase complex in the canonical
+      membrane-bound respiratory FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic
+      NAD+-dependent isoforms across taxa).
+    evidence:
+    - reference: ComplexPortal:CPX-1975
+      notes: Complex Portal CPX-1975 curates three copies of P0AAJ3/FdnH in the E.
+        coli K-12 formate dehydrogenase N complex.
+  - subject: fdni_cytochrome_b_subunit
+    predicate: is part of
+    object: formate_dehydrogenase_complex
+    description: Cytochrome b membrane subunit that carries the quinone-binding site.
+      Functions within the respiratory/metabolic formate dehydrogenase holoenzyme
+      in formate dehydrogenase complex in the canonical membrane-bound respiratory
+      FdnGHI/FdoGHI holoenzyme (alongside soluble cytoplasmic NAD+-dependent isoforms
+      across taxa).
+    evidence:
+    - reference: ComplexPortal:CPX-1975
+      notes: Complex Portal CPX-1975 curates three copies of P0AEK7/FdnI in the E.
+        coli K-12 formate dehydrogenase N complex.
+  - subject: formate_dehydrogenase_complex
+    predicate: mediates
+    object: formate_dehydrogenase_quinone_activity
+    description: The FdnGHI complex oxidizes formate to carbon dioxide while reducing
+      a membrane quinone to quinol.
+    evidence:
+    - reference: GO:0036397
+      notes: GO:0036397 defines formate dehydrogenase (quinone) activity as formate
+        plus quinone yielding CO2 plus quinol.
+curation_history:
+- timestamp: '2026-10-19T05:27:43Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of formate dehydrogenase complex (GO:0009326) in category
+    ENERGY_COMPLEX with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across facultatively anaerobic and chemolithotrophic bacteria expressing
+    membrane-bound respiratory (FdnGHI, FdoGHI) or cytoplasmic NAD+/hydrogenase-linked
+    formate dehydrogenase complexes.
+  reference: PMID:11884601
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Conserved in hydrogenotrophic and formate-utilizing methanogenic archaea (FdhAB).
+  reference: PMID:11884601

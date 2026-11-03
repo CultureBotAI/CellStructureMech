@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+  slug: gamma_tubulin_complex
+session:
+  id: 2026-10-19T052740Z-claude-opus-4-7-7813a1
+  timestamp: '2026-10-19T05:27:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for gamma-tubulin complex (GO:0000930) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/gamma_tubulin_complex.yaml for gamma-tubulin
+    complex (GO:0000930) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

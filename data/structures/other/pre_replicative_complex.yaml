@@ -1,0 +1,211 @@
+identifier: GO:0036387
+label: pre-replicative complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex that forms at the origin of replication during the
+  initial step of DNA replication and allows the origin to become competent, or 'licensed',
+  for replication. A multiprotein-DNA nucleoprotein assembly formed at chromosomal
+  replication origins prior to S-phase initiation in eukaryotes, archaea, or bacteria
+  that licenses the origin for bidirectional DNA synthesis. In eukaryotes (ORC–Cdc6–Cdt1–Mcm2-7)
+  and bacteria (ATP-DnaA filaments recruiting DnaC-bound DnaB helicase hexamers onto
+  oriC), the pre-replicative complex unwinds or poises origin DNA for replicative
+  helicase activation.
+definition_source: GO:0036387
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032993
+synonyms:
+- synonym_text: pre-RC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036387
+- synonym_text: pre-replication complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036387
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the bacterial initiator constituent that
+    assembles on oriC during pre-RC formation; exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProt family boundaries were not curated in this pass.
+  role: Replication initiator that occupies oriC recognition sites during bacterial
+    pre-RC assembly.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+      assembly.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 analyzed how E. coli DnaA bound at high-affinity oriC
+      sites assists loading of additional DnaA during pre-RC assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03004
+    protein_label: Chromosomal replication initiator protein DnaA
+    gene_symbol: dnaA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22574163
+      notes: 'Regev T et al. 2012, ‘Association of the chromosome replication initiator
+        DnaA with the Escherichia coli inner membrane in vivo: quantity and mode of
+        binding.’, PLoS One. ECO:0000269 experimental evidence cited by UniProt for
+        the ''Cytoplasm'' localisation of P03004.'
+    - reference: PMID:28166228
+      notes: Schenk K et al. 2017, ‘Rapid turnover of DnaA at replication origin regions
+        contributes to initiation control of DNA replication.’, PLoS Genet. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, nucleoid' localisation
+        of P03004.
+    - reference: PMID:9478970
+      notes: Garner J et al. 1998, ‘Membrane-mediated release of nucleotide from an
+        initiator of chromosomal replication, Escherichia coli DnaA, occurs with insertion
+        of a distinct region of the protein into the lipid bilayer.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P03004.
+- component_id: oric_origin_dna
+  label: oriC origin DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: oriC is the bacterial replication-origin DNA scaffold named by
+    GO:0036389; no exact source-neutral SO sequence-feature CURIE was curated in this
+    pass.
+  role: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA
+      complex that forms at bacterial oriC.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 tested DnaA occupation of the E. coli oriC origin during
+      bacterial pre-RC assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Miller et al. 2009 investigated E. coli DnaA and oriC interactions during
+    bacterial pre-RC assembly.
+  reference: PMID:19833870
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Miller et al. 2009 used the E. coli oriC system to study assembly of bacterial
+    pre-replicative complexes from high-affinity DnaA origin recognition complexes.
+  reference: PMID:19833870
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The bacterial pre-replicative complex forms at oriC during the initial
+    stage of DNA replication to license the origin for replication.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 defines the bacterial pre-RC as forming at oriC during the initial
+      step of DNA replication.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:21035377
+    notes: Leonard and Grimwade 2010 reviewed regulation of DnaA complex assembly
+      during bacterial replication initiation.
+evidence:
+- reference: GO:0036387
+  notes: 'Gene Ontology cellular-component term for pre-replicative complex: A protein-DNA
+    complex that forms at the origin of replication during the initial step of DNA
+    replication and allows the origin to become competent, or ''licensed'', for replication.'
+- reference: GO:0036389
+  notes: Gene Ontology cellular-component term for the bacterial pre-replicative complex
+    and its exact bacterial pre-RC synonym.
+- reference: GO:0032993
+  notes: QuickGO reports GO:0032993 protein-DNA complex as an ancestor of GO:0036389.
+- reference: GO:1990101
+  notes: Gene Ontology cellular-component term for the DnaA-oriC complex, the first
+    step in bacterial pre-RC assembly.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:19833870
+  notes: PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:0036389.
+- reference: DOI:10.1073/pnas.0909472106
+  notes: DOI for Miller et al. 2009, 'Bacterial origin recognition complexes direct
+    assembly of higher-order DnaA oligomeric structures', as reported by PubMed.
+- reference: PMID:21035377
+  notes: PubMed identifier for Leonard and Grimwade 2010, the Current Opinion in Microbiology
+    review cited by GO:0036389.
+- reference: DOI:10.1016/j.mib.2010.10.001
+  notes: 'DOI for Leonard and Grimwade 2010, ''Regulating DnaA complex assembly: it
+    is time to fill the gaps'', as reported by PubMed.'
+causal_graphs:
+- graph_id: pre_replicative_complex_mechanism
+  title: Pre-replicative complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of pre-replicative complex (GO:0036387) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pre_replicative_complex
+    label: pre-replicative complex
+    node_type: STRUCTURE
+    grounding: GO:0036387
+    description: A protein-DNA complex that forms at the origin of replication during
+      the initial step of DNA replication and allows the origin to become competent,
+      or 'licensed', for replication.
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+    description: Replication initiator that occupies oriC recognition sites during
+      bacterial pre-RC assembly.
+  - node_id: oric_origin_dna
+    label: oriC origin DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: oric_origin_dna
+    description: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+    description: The bacterial pre-replicative complex forms at oriC during the initial
+      stage of DNA replication to license the origin for replication.
+  edges:
+  - subject: dnaa_initiator
+    predicate: is part of
+    object: pre_replicative_complex
+    description: Replication initiator that occupies oriC recognition sites during
+      bacterial pre-RC assembly.
+    evidence:
+    - reference: GO:1990101
+      notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+        assembly.
+  - subject: oric_origin_dna
+    predicate: is part of
+    object: pre_replicative_complex
+    description: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
+    evidence:
+    - reference: GO:0036389
+      notes: GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA
+        complex that forms at bacterial oriC.
+  - subject: pre_replicative_complex
+    predicate: mediates
+    object: dna_replication_initiation
+    description: The bacterial pre-replicative complex forms at oriC during the initial
+      stage of DNA replication to license the origin for replication.
+    evidence:
+    - reference: GO:0036389
+      notes: GO:0036389 defines the bacterial pre-RC as forming at oriC during the
+        initial step of DNA replication.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of pre-replicative complex (GO:0036387) in category OTHER
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true

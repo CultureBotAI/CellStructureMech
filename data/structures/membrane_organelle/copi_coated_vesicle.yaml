@@ -29,6 +29,11 @@ curation_history:
     with reachable Yu et al. 2012 Arf1-coatomer and Sandmann et al. 2003 Golgi-to-ER
     retrieval evidence.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005798
 - GO:0030135
@@ -182,6 +187,15 @@ causal_graphs:
     - reference: GO:0035964
       notes: GO:0035964 defines COPI-coated vesicle budding as the process that yields
         a COPI-coated vesicle.
+  - subject: golgi_to_er_retrograde_transport
+    predicate: delivers cargo to
+    object: endoplasmic_reticulum
+    description: COPI-mediated retrograde vesicle transport returns proteins and lipids
+      from the Golgi apparatus to the endoplasmic reticulum.
+    evidence:
+    - reference: GO:0006890
+      notes: GO:0006890 defines retrograde vesicle-mediated transport from the Golgi
+        to the endoplasmic reticulum.
 discussions:
 - discussion_id: keep_coat_subunits_on_copi_coat
   prompt: Keep coatomer and Arf-family GTPases on the COPI vesicle coat record rather

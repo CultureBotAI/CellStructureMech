@@ -49,6 +49,11 @@ curation_history:
   changes: Retyped the photosystem II, cytochrome b6f, photosystem I, and ATP synthase
     graph nodes from GENE_OR_PROTEIN to STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: TM
   synonym_type: RELATED_SYNONYM
@@ -279,6 +284,15 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-120823-022747
       notes: Perez-Boerema et al. 2024 describe proton motive force generation across
         thylakoid membranes and ATP synthase use of that gradient.
+  - subject: psi
+    predicate: participates in
+    object: electron_transport
+    description: Photosystem I, together with photosystem II and cytochrome b6f, carries
+      out photosynthetic linear electron transport across the thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Photosystem II, cytochrome b6f, and photosystem I form the thylakoid
+        photosynthetic electron transport chain.
 discussions:
 - discussion_id: split_photosystem_records
   prompt: Add separate PSI, PSII and cytochrome b6f records if the corpus needs the
