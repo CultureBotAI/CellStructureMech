@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/primosome_complex.yaml
+  slug: primosome_complex
+session:
+  id: 2026-10-31T011500Z-agy-b1bda2
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2476
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  summary: Align UniProtKB:P0AEF0 RecName and add GO hierarchy evidence on primosome complex
+  details: Updated components[2].protein_examples[0] (UniProtKB:P0AEF0, dnaC) protein_label
+    to current UniProtKB RecName 'Replicative helicase loader DnaC' and added top-level GO
+    evidence entries for parent_structures GO:0032993 (DNA-protein complex) and part_of GO:0030894
+    (replisome) on data/structures/other/primosome_complex.yaml.

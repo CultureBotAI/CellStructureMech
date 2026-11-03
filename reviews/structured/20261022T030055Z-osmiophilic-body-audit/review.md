@@ -1,0 +1,877 @@
+# Osmiophilic body scientific review
+
+- Review: 20261022T030055Z-osmiophilic-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:42:24Z
+- Finished UTC: 2026-10-22T03:00:55Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact body identity, Pfg377 association, normal-complement biogenesis and mosquito infection association are supported. One major finding concerns the unqualified emergence pathway despite cited2016 primary counterevidence showing normal measured egress in body-depleted pfg377 knockouts.
+
+## Scope And Provenance
+
+Entire single target and explicitly frozen boundary neighbors; exact identities, hierarchy, membership and formation-necessity scope where asserted, taxon/examples, functions, all directed edges, history/discussions and cited source tiers.
+
+Selection: Batch36 target 8; exact native inspection and focused schema/strict gates passed before assessment on unchanged f97b1abe.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0044310 | data/structures/membrane_organelle/osmiophilic_body.yaml | maintained | osmiophilic body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0044310 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0044310 | Focused validator passed. |
+| Native verify | passed | True | GO:0044310 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Native causal-graphs | passed | True | GO:0044310 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0044310 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0044310 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0044310 | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0044310 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0044310 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0044310 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0044310 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0044310 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact vesicle identity and ontology parent
+
+identity: supported. Targets: GO:0044310.
+
+The structure is a membrane-bounded secretory organelle, not the Pfg377 protein or an egress phenotype. Exact GO0044310 and direct cytoplasmic-vesicle ancestry are supported. The definition explicitly preserves a historical postulate and does not itself state a demonstrated physical release mechanism.
+
+### Body material, protein association and instance identity
+
+grounding: supported. Targets: GO:0044310.
+
+The collective label-only membrane row has no whole-membrane chemical grounding to misidentify. Pfg377 membership and its contribution to the normal body complement are supported by the1995 abstract and2016 primary results. The unreviewed accession matches the named gene/taxon and is an identity reference only; it is a partial sequence and not the whole experimental gene product. No exact source-neutral family was established by the bounded query.
+
+### Formation requirement separated from constitutive material
+
+evidence: unknown. Targets: GO:0044310.
+
+A lipid boundary is constitutive of the vesicle concept, but the membrane ESSENTIAL row does not establish which lipid species are experimentally necessary for formation. Pfg377 essentiality remains UNKNOWN: the studies support normal-complement formation, while residual abnormal granules and differing phenotype endpoints preclude a blanket no-organelle/no-component rule.
+
+### Female gametocyte context and transmission
+
+scope: supported. Targets: GO:0044310.
+
+P. falciparum is the correct species; COMMON is expressly mature-female-gametocyte context rather than all stages or all cells. The2016 source uses3D7 and defined knockout clones, not theG1 sequence background. Normal body biogenesis and mosquito infection association remain supported independently of the disputed egress explanation.
+
+### Emergence pathway requires reconciliation with cited counterevidence
+
+graph: concern. Targets: GO:0044310.
+
+The five-edge NONMECHANISTIC graph has valid membrane bounds, Pfg377 association and normal-complement formation edges. Its general body-to-emergence support edge, graph description and emergence-based explanation for oocyst failure are not a balanced current account: the cited2016 primary study directly separated normal egress from impaired infection. Avoiding a direct cargo-release mechanism does not resolve this broader functional conflict.
+
+### Optional inventory and historical evidence
+
+evidence: supported. Targets: GO:0044310.
+
+Additional2016 localized proteins are potential future inventory additions, not compulsory rows merely because they are absent. The concrete problem is failure to reconcile a cited primary counterexample with present functional assertions. The2008 abstract and GO definition are retained as genuine historical evidence, not declared false or misidentified.
+
+### Exact source tiers and unchanged scientific state
+
+provenance: supported. Targets: GO:0044310.
+
+Every maintained claim was assessed against the cited native identities and the declared source scope. Historical citations retain their genuine observations; concrete current contradictions are flagged separately. No corpus edit, scientific promotion or saved review is implied.
+
+## Findings
+
+### F1: Reconcile the emergence pathway with the cited2016 counterevidence
+
+major / open / confirmed; issue key: osmiophilic-body-unreconciled-pfg377-egress-counterevidence.
+
+The record presents reduced emergence as a general consequence of Pfg377-dependent body depletion and as the route to poor mosquito infection. Its own cited2016 study generated new pfg377 knockouts with depleted bodies, observed normal measured egress, and retained severe mosquito infection defects. That study explicitly reports failure to reproduce the earlier egress phenotype. The record therefore needs source- and condition-specific qualification rather than the current unqualified functional pathway. This does not refute Pfg377 localization, normal-body biogenesis, mosquito infection support or the explicitly postulated GO definition.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, explicitly distinguish the2008 emergence result from the2016 non-reproduction in defined3D7 knockout clones. Qualify or remove the general body-abundance-to-emergence assertion and its explanation of the oocyst defect. Preserve supported Pfg377/body biogenesis and mosquito infection association, and retain uncertainty about the post-egress causal step without inventing a replacement mechanism.
+
+- Both cited studies and their differing assay/context results are represented honestly.
+- No unqualified graph/function assertion treats poor egress as the established explanation of the Pfg377-associated mosquito defect.
+- Correct GO identity, membrane topology, Pfg377 membership and qualified transmission association remain intact.
+- Native schema, strict, identifier, protein, graph and history gates pass after authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/osmiophilic_body.yaml; Entire maintained YAML: definition, identity, components, history, distribution/examples, functions, every graph node/edge, evidence and discussions | context_only | The full maintained target was read. Proposed scientific status and maintained bytes remain unchanged. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent and ProteinExample definitions, lines391–475; graph scope and node contracts | context_only | Molecular grounding differs from whole-structure identity; a label-only collective lipid material need not assert an exact chemical species. Essentiality denotes formation necessity, separate from membership or function. Protein examples identify taxon-paired instances, not independent localization experiments. |
+| osmiophilic-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044310,GO:0031410; Complete two active native entries: definitions, synonyms, source PMID18086189 and direct child relation | supports | GO0044310 exactly identifies the vesicle and supplies the complete maintained definition, including explicitly postulated cargo-release wording. GO0031410 lists GO0044310 as an is_a child. This ontology preserves the historical postulate; it does not reconcile later experimental emergence results. |
+| osmiophilic-agent-tax5833 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833; Complete native taxId, scientificName, rank and lineage | supports | ENA confirms Plasmodium falciparum5833 at species rank and the apicomplexan lineage. It does not establish a percentage of cells or the experimental clone. |
+| osmiophilic-agent-protein-A0A059WIJ2 | https://rest.uniprot.org/uniprotkb/A0A059WIJ2.json; Complete primaryAccession, entryType, proteinDescription including Fragment flag, genes, organism, sequence length, references and cross-references | supports | A0A059WIJ2 is an unreviewed primary entry for pfg377 in P. falciparum5833, matching the maintained token/status/taxon. It is a193-aa sequence fragment from strainG1 genotyping work, not the complete377-kDa protein or a localization experiment. Cross-references include the PF3D7_1250100 locus and a PANTHER family, but no exact InterPro/Pfam/NCBIfam family is asserted here. |
+| osmiophilic-agent-alano1995-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1016/0166-6851%2895%2902491-3%22; Unique MED DOI match, exact title/authors/year/PMID and complete abstract | supports | Alano1995 DOI10.1016/0166-6851(95)02491-3/PMID8719156 identifies Pfg377 by expression cloning and reports two antibody immuno-EM localizations to gametocyte osmiophilic bodies. The inspected source is the complete primary abstract, not the inaccessible article body. |
+| osmiophilic-agent-dekoning2008-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1111/j.1365-2958.2007.06039.x%22; Unique MED DOI match, exact title/authors/year/PMID and complete abstract | supports | de Koning-Ward2008 DOI10.1111/j.1365-2958.2007.06039.x/PMID18086189 reports Pfg377 disruption, reduced normal body complement, less efficient emergence and reduced oocysts. The complete primary abstract genuinely supports the historical account, but does not settle the later conflicting result. |
+| osmiophilic-agent-suarez2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1074/mcp.m116.060681%22; Unique MED DOI match, exact title/authors/year/PMID and complete abstract | supports | Suarez-Cortes2016 DOI10.1074/mcp.M116.060681/PMID27432909/PMC5054347 identifies the genuine primary study read below. Its abstract confirms organelle/infection defects while reporting dispensability or marginal component contributions to egress. |
+| osmiophilic-agent-suarez2016-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC5054347/; Genuine PMC5054347 HTML; complete Experimental Procedures sec5–9; complete Results sec19–23 including TableI and Figure1–6 captions; complete Discussionsec24. No figure pixels, supplementary files or raw-data reanalysis. | supports | In new independent3D7 pfg377KO clones5–2 and8–20, body abundance/morphology was impaired but15-minute WGA-scored egress did not significantly differ from wild type; clone5–2 retained a strong mosquito infection defect. Resultssec19 and Discussion explicitly state that the earlier emergence phenotype was not reproduced and place the unresolved transmission defect after egress. PfDPAP2 disruption gave a separate mild egress defect; this does not restore the asserted Pfg377/body-abundance pathway. Results also localize PfGEST, PfSUB2, PfDPAP2 and PfOBC13 with distinct assay and sex-specific limits. |
+| osmiophilic-agent-family-search | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=pfg377; Complete native response and HTTP status | context_only | The bounded InterPro query returned204 and no entry body; it does not prove that no relevant family exists. |
+| osmiophilic-agent-gene-reviewed-search | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Apfg377%29%20AND%20%28taxonomy_id%3A5833%29%20AND%20%28reviewed%3Atrue%29; Complete native response and HTTP status | context_only | The exact reviewed-gene query returned an empty result list. It supports only this query result, not the absence of other synonyms or unreviewed complete sequences. |
+| schema-result | just validate data/structures/membrane_organelle/osmiophilic_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/osmiophilic_body.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/osmiophilic_body.yaml --out /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/osmiophilic_body.yaml --out /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv |
+| osmiophilic-verify | /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/osmiophilic_body.yaml; Complete native read-only log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| osmiophilic-causal-graphs | /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/osmiophilic_body.yaml; Complete native read-only log | supports | data/structures/membrane_organelle/osmiophilic_body.yaml  (GO:0044310)<br>  pfg377_osmiophilic_body_emergence	pfg377_osmiophilic_body_protein	COVERED	-&gt;pfg377_osmiophilic_body_protein (UniProtKB:A0A059WIJ2)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/osmiophilic_body.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Alano1995 is complete native-abstract evidence only; the ScienceDirect route returned403. de Koning-Ward2008 is complete native-abstract evidence only; Wiley PDF returned403 and the public Glasgow record states that full text is not available there. The older full bodies were not inspected.
+- Suarez-Cortes2016 full PMC HTML was genuinely readable after the EuropePMC XML route returned500. Scope is exactly the declared Methods, Results and Discussion; supplements and figure pixels were not inspected. The15-minute egress assay does not exclude every transient kinetic effect or every strain-dependent mechanism.
+- A0A059WIJ2 is a193-aa unreviewed fragment fromG1, not a full-length structural sequence or independent localization source. The bounded family/gene searches are not exhaustive absence proofs.
+- Lipid-species formation necessity and a complete body protein inventory remain unresolved. Optional missing entries are not separate findings.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes clean drafts without inventing findings. Parent owns finalization and persistence. Five same-base global gates are staged separately.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T030055Z-osmiophilic-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Osmiophilic body scientific review
+started_at: '2026-10-22T02:42:24Z'
+finished_at: '2026-10-22T03:00:55Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact body identity, Pfg377 association, normal-complement biogenesis and
+  mosquito infection association are supported. One major finding concerns the unqualified
+  emergence pathway despite cited2016 primary counterevidence showing normal measured
+  egress in body-depleted pfg377 knockouts.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    sha256: 12985dc29b3e81008d138f3de6e0e10b93090ff200e538a105f24a7c171bfafc
+    role: target
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+    sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0044310
+  path: data/structures/membrane_organelle/osmiophilic_body.yaml
+  label: osmiophilic body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target and explicitly frozen boundary neighbors; exact
+    identities, hierarchy, membership and formation-necessity scope where asserted,
+    taxon/examples, functions, all directed edges, history/discussions and cited source
+    tiers.
+  selection: Batch36 target 8; exact native inspection and focused schema/strict gates
+    passed before assessment on unchanged f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0044310
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just validate data/structures/membrane_organelle/osmiophilic_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just validate-strict data/structures/membrane_organelle/osmiophilic_body.yaml
+    --out /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/osmiophilic_body.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - osmiophilic-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/osmiophilic_body.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - osmiophilic-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0044310
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - osmiophilic-agent-go
+  - osmiophilic-agent-tax5833
+  - osmiophilic-agent-protein-A0A059WIJ2
+  - osmiophilic-agent-alano1995-meta
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-meta
+  - osmiophilic-agent-suarez2016-pmc
+  - osmiophilic-agent-family-search
+  - osmiophilic-agent-gene-reviewed-search
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch36 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch36 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch36 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch36 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044310
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch36 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/osmiophilic_body.yaml
+  locator: 'Entire maintained YAML: definition, identity, components, history, distribution/examples,
+    functions, every graph node/edge, evidence and discussions'
+  accessed_at: '2026-10-22T02:53:08Z'
+  support: context_only
+  summary: The full maintained target was read. Proposed scientific status and maintained
+    bytes remain unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent and ProteinExample definitions, lines391–475; graph
+    scope and node contracts
+  accessed_at: '2026-10-22T02:53:08Z'
+  support: context_only
+  summary: Molecular grounding differs from whole-structure identity; a label-only
+    collective lipid material need not assert an exact chemical species. Essentiality
+    denotes formation necessity, separate from membership or function. Protein examples
+    identify taxon-paired instances, not independent localization experiments.
+- evidence_id: osmiophilic-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044310,GO:0031410
+  locator: 'Complete two active native entries: definitions, synonyms, source PMID18086189
+    and direct child relation'
+  accessed_at: '2026-10-22T02:47:18.301311Z'
+  support: supports
+  summary: GO0044310 exactly identifies the vesicle and supplies the complete maintained
+    definition, including explicitly postulated cargo-release wording. GO0031410 lists
+    GO0044310 as an is_a child. This ontology preserves the historical postulate;
+    it does not reconcile later experimental emergence results.
+  snapshot_sha256: 5b86b63a55390b3e99bd8db521d333ea8250764f6897bc86d2b7d6a500669709
+- evidence_id: osmiophilic-agent-tax5833
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Complete native taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T02:47:18.301784Z'
+  support: supports
+  summary: ENA confirms Plasmodium falciparum5833 at species rank and the apicomplexan
+    lineage. It does not establish a percentage of cells or the experimental clone.
+  snapshot_sha256: 47c9da135299ea0515b9cbddde80166e0e7256bcf1daac4cdf87f8ae3e0ecd11
+- evidence_id: osmiophilic-agent-protein-A0A059WIJ2
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/A0A059WIJ2.json
+  locator: Complete primaryAccession, entryType, proteinDescription including Fragment
+    flag, genes, organism, sequence length, references and cross-references
+  accessed_at: '2026-10-22T02:47:18.301906Z'
+  support: supports
+  summary: A0A059WIJ2 is an unreviewed primary entry for pfg377 in P. falciparum5833,
+    matching the maintained token/status/taxon. It is a193-aa sequence fragment from
+    strainG1 genotyping work, not the complete377-kDa protein or a localization experiment.
+    Cross-references include the PF3D7_1250100 locus and a PANTHER family, but no
+    exact InterPro/Pfam/NCBIfam family is asserted here.
+  snapshot_sha256: 78925197c3e458f597d9e39f5d510c1c8706c965c48e0532397a5d1f49c4dd3f
+- evidence_id: osmiophilic-agent-alano1995-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/0166-6851%2895%2902491-3%22
+  locator: Unique MED DOI match, exact title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:47:18.302028Z'
+  support: supports
+  summary: Alano1995 DOI10.1016/0166-6851(95)02491-3/PMID8719156 identifies Pfg377
+    by expression cloning and reports two antibody immuno-EM localizations to gametocyte
+    osmiophilic bodies. The inspected source is the complete primary abstract, not
+    the inaccessible article body.
+  snapshot_sha256: a09cb66c1f478320f1c7bc3d8006f828779639caa634b0802cbc3e424a99e11d
+- evidence_id: osmiophilic-agent-dekoning2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1111/j.1365-2958.2007.06039.x%22
+  locator: Unique MED DOI match, exact title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:47:18.302118Z'
+  support: supports
+  summary: de Koning-Ward2008 DOI10.1111/j.1365-2958.2007.06039.x/PMID18086189 reports
+    Pfg377 disruption, reduced normal body complement, less efficient emergence and
+    reduced oocysts. The complete primary abstract genuinely supports the historical
+    account, but does not settle the later conflicting result.
+  snapshot_sha256: 81bcb10039a5511c5aec5bf2e2d95dfe1436bdeb8e0d0ad563beb81959346f81
+- evidence_id: osmiophilic-agent-suarez2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1074/mcp.m116.060681%22
+  locator: Unique MED DOI match, exact title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:47:19.026674Z'
+  support: supports
+  summary: Suarez-Cortes2016 DOI10.1074/mcp.M116.060681/PMID27432909/PMC5054347 identifies
+    the genuine primary study read below. Its abstract confirms organelle/infection
+    defects while reporting dispensability or marginal component contributions to
+    egress.
+  snapshot_sha256: a49e8e0fa1fc4ed7c663f9372eaa5103ced56c3483209cf10b3d6fe08dc4a09c
+- evidence_id: osmiophilic-agent-suarez2016-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5054347/
+  locator: Genuine PMC5054347 HTML; complete Experimental Procedures sec5–9; complete
+    Results sec19–23 including TableI and Figure1–6 captions; complete Discussionsec24.
+    No figure pixels, supplementary files or raw-data reanalysis.
+  accessed_at: '2026-10-22T02:47:41.642837Z'
+  support: supports
+  summary: In new independent3D7 pfg377KO clones5–2 and8–20, body abundance/morphology
+    was impaired but15-minute WGA-scored egress did not significantly differ from
+    wild type; clone5–2 retained a strong mosquito infection defect. Resultssec19
+    and Discussion explicitly state that the earlier emergence phenotype was not reproduced
+    and place the unresolved transmission defect after egress. PfDPAP2 disruption
+    gave a separate mild egress defect; this does not restore the asserted Pfg377/body-abundance
+    pathway. Results also localize PfGEST, PfSUB2, PfDPAP2 and PfOBC13 with distinct
+    assay and sex-specific limits.
+  snapshot_sha256: 32acbe69b25f0a428602697da7d02d4965bd497e1869dacf94473c81a410963c
+- evidence_id: osmiophilic-agent-family-search
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=pfg377
+  locator: Complete native response and HTTP status
+  accessed_at: '2026-10-22T02:49:58.935239Z'
+  support: context_only
+  summary: The bounded InterPro query returned204 and no entry body; it does not prove
+    that no relevant family exists.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: Native InterPro entry search only, query=pfg377; one endpoint, no
+    exhaustive alias/family census.
+- evidence_id: osmiophilic-agent-gene-reviewed-search
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Apfg377%29%20AND%20%28taxonomy_id%3A5833%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete native response and HTTP status
+  accessed_at: '2026-10-22T02:49:58.935634Z'
+  support: context_only
+  summary: The exact reviewed-gene query returned an empty result list. It supports
+    only this query result, not the absence of other synonyms or unreviewed complete
+    sequences.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Native UniProt query (gene_exact:pfg377) AND (taxonomy_id:5833) AND
+    (reviewed:true), complete returned results.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/osmiophilic_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:42:25Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/osmiophilic_body.yaml'
+  snapshot_sha256: 8a439a98182d5693e5b178731480dd1cc18b21d0f69367d163ccf751d54eaa0b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/osmiophilic_body.yaml
+    --out /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:42:26Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/osmiophilic_body.yaml\
+    \ --out /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/osmiophilic_body-strict.tsv"
+  snapshot_sha256: f363c63c82334015ca1455c1deb416e17e8ec2660c87e9ec2cf73f817c24c240
+- evidence_id: osmiophilic-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/osmiophilic_body.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T02:50:25.138949Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: osmiophilic-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch36-20261022-i5iwb5rr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/osmiophilic_body.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T02:50:25.590700Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/osmiophilic_body.yaml  (GO:0044310)\n\
+    \  pfg377_osmiophilic_body_emergence\tpfg377_osmiophilic_body_protein\tCOVERED\t\
+    ->pfg377_osmiophilic_body_protein (UniProtKB:A0A059WIJ2)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 8bdeb0fe45330c8ed5561de769ee40e4812f9112e072ee6467a5a2d6ba734b2f
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/osmiophilic_body.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact vesicle identity and ontology parent
+  outcome: supported
+  target_ids:
+  - GO:0044310
+  summary: The structure is a membrane-bounded secretory organelle, not the Pfg377
+    protein or an egress phenotype. Exact GO0044310 and direct cytoplasmic-vesicle
+    ancestry are supported. The definition explicitly preserves a historical postulate
+    and does not itself state a demonstrated physical release mechanism.
+  evidence_ids:
+  - record
+  - osmiophilic-agent-go
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-pmc
+- assessment_id: composition
+  area: grounding
+  topic: Body material, protein association and instance identity
+  outcome: supported
+  target_ids:
+  - GO:0044310
+  summary: The collective label-only membrane row has no whole-membrane chemical grounding
+    to misidentify. Pfg377 membership and its contribution to the normal body complement
+    are supported by the1995 abstract and2016 primary results. The unreviewed accession
+    matches the named gene/taxon and is an identity reference only; it is a partial
+    sequence and not the whole experimental gene product. No exact source-neutral
+    family was established by the bounded query.
+  evidence_ids:
+  - record
+  - schema
+  - osmiophilic-agent-go
+  - osmiophilic-agent-protein-A0A059WIJ2
+  - osmiophilic-agent-alano1995-meta
+  - osmiophilic-agent-suarez2016-pmc
+  - osmiophilic-agent-family-search
+  - osmiophilic-agent-gene-reviewed-search
+- assessment_id: necessity
+  area: evidence
+  topic: Formation requirement separated from constitutive material
+  outcome: unknown
+  target_ids:
+  - GO:0044310
+  summary: 'A lipid boundary is constitutive of the vesicle concept, but the membrane
+    ESSENTIAL row does not establish which lipid species are experimentally necessary
+    for formation. Pfg377 essentiality remains UNKNOWN: the studies support normal-complement
+    formation, while residual abnormal granules and differing phenotype endpoints
+    preclude a blanket no-organelle/no-component rule.'
+  evidence_ids:
+  - record
+  - schema
+  - osmiophilic-agent-go
+  - osmiophilic-agent-suarez2016-pmc
+- assessment_id: scope
+  area: scope
+  topic: Female gametocyte context and transmission
+  outcome: supported
+  target_ids:
+  - GO:0044310
+  summary: P. falciparum is the correct species; COMMON is expressly mature-female-gametocyte
+    context rather than all stages or all cells. The2016 source uses3D7 and defined
+    knockout clones, not theG1 sequence background. Normal body biogenesis and mosquito
+    infection association remain supported independently of the disputed egress explanation.
+  evidence_ids:
+  - record
+  - osmiophilic-agent-tax5833
+  - osmiophilic-agent-protein-A0A059WIJ2
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-pmc
+- assessment_id: function-graph
+  area: graph
+  topic: Emergence pathway requires reconciliation with cited counterevidence
+  outcome: concern
+  target_ids:
+  - GO:0044310
+  summary: 'The five-edge NONMECHANISTIC graph has valid membrane bounds, Pfg377 association
+    and normal-complement formation edges. Its general body-to-emergence support edge,
+    graph description and emergence-based explanation for oocyst failure are not a
+    balanced current account: the cited2016 primary study directly separated normal
+    egress from impaired infection. Avoiding a direct cargo-release mechanism does
+    not resolve this broader functional conflict.'
+  evidence_ids:
+  - record
+  - osmiophilic-agent-go
+  - osmiophilic-agent-alano1995-meta
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-pmc
+- assessment_id: completeness
+  area: evidence
+  topic: Optional inventory and historical evidence
+  outcome: supported
+  target_ids:
+  - GO:0044310
+  summary: Additional2016 localized proteins are potential future inventory additions,
+    not compulsory rows merely because they are absent. The concrete problem is failure
+    to reconcile a cited primary counterexample with present functional assertions.
+    The2008 abstract and GO definition are retained as genuine historical evidence,
+    not declared false or misidentified.
+  evidence_ids:
+  - record
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-pmc
+- assessment_id: review-boundaries
+  area: provenance
+  topic: Exact source tiers and unchanged scientific state
+  outcome: supported
+  target_ids:
+  - GO:0044310
+  summary: Every maintained claim was assessed against the cited native identities
+    and the declared source scope. Historical citations retain their genuine observations;
+    concrete current contradictions are flagged separately. No corpus edit, scientific
+    promotion or saved review is implied.
+  evidence_ids:
+  - record
+  - osmiophilic-agent-go
+  - osmiophilic-agent-tax5833
+  - osmiophilic-agent-protein-A0A059WIJ2
+  - osmiophilic-agent-alano1995-meta
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-meta
+  - osmiophilic-agent-suarez2016-pmc
+findings:
+- finding_id: F1
+  issue_key: osmiophilic-body-unreconciled-pfg377-egress-counterevidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reconcile the emergence pathway with the cited2016 counterevidence
+  description: The record presents reduced emergence as a general consequence of Pfg377-dependent
+    body depletion and as the route to poor mosquito infection. Its own cited2016
+    study generated new pfg377 knockouts with depleted bodies, observed normal measured
+    egress, and retained severe mosquito infection defects. That study explicitly
+    reports failure to reproduce the earlier egress phenotype. The record therefore
+    needs source- and condition-specific qualification rather than the current unqualified
+    functional pathway. This does not refute Pfg377 localization, normal-body biogenesis,
+    mosquito infection support or the explicitly postulated GO definition.
+  target_ids:
+  - GO:0044310
+  field_paths:
+  - functions[0]
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[3]
+  - causal_graphs[0].edges[4].evidence
+  - discussions[1].rationale
+  evidence_ids:
+  - record
+  - osmiophilic-agent-dekoning2008-meta
+  - osmiophilic-agent-suarez2016-pmc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support and biological scope
+  native_severity: major
+  normalization_reason: The contradiction changes the supported functional explanation
+    and directed phenotype pathway; it is materially more than missing citation metadata.
+    Exact organelle identity remains correct, so major rather than blocker.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0044310
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, explicitly distinguish the2008 emergence
+    result from the2016 non-reproduction in defined3D7 knockout clones. Qualify or
+    remove the general body-abundance-to-emergence assertion and its explanation of
+    the oocyst defect. Preserve supported Pfg377/body biogenesis and mosquito infection
+    association, and retain uncertainty about the post-egress causal step without
+    inventing a replacement mechanism.
+  acceptance_checks:
+  - Both cited studies and their differing assay/context results are represented honestly.
+  - No unqualified graph/function assertion treats poor egress as the established
+    explanation of the Pfg377-associated mosquito defect.
+  - Correct GO identity, membrane topology, Pfg377 membership and qualified transmission
+    association remain intact.
+  - Native schema, strict, identifier, protein, graph and history gates pass after
+    authorized curation.
+limitations:
+- Alano1995 is complete native-abstract evidence only; the ScienceDirect route returned403.
+  de Koning-Ward2008 is complete native-abstract evidence only; Wiley PDF returned403
+  and the public Glasgow record states that full text is not available there. The
+  older full bodies were not inspected.
+- Suarez-Cortes2016 full PMC HTML was genuinely readable after the EuropePMC XML route
+  returned500. Scope is exactly the declared Methods, Results and Discussion; supplements
+  and figure pixels were not inspected. The15-minute egress assay does not exclude
+  every transient kinetic effect or every strain-dependent mechanism.
+- A0A059WIJ2 is a193-aa unreviewed fragment fromG1, not a full-length structural sequence
+  or independent localization source. The bounded family/gene searches are not exhaustive
+  absence proofs.
+- Lipid-species formation necessity and a complete body protein inventory remain unresolved.
+  Optional missing entries are not separate findings.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes clean drafts without inventing findings. Parent
+  owns finalization and persistence. Five same-base global gates are staged separately.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

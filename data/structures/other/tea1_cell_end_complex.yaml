@@ -1,0 +1,261 @@
+identifier: GO:0031500
+label: Tea1 cell-end complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A high molecular weight complex characterized in S. pombe containing the
+  cell-end anchoring protein Tea1. This complex is transported to the cell ends by
+  microtubules and is involved in bipolar growth and the maintennce of normal cell
+  polarity.
+definition_source: GO:0031500
+mapping_status: PROPOSED
+parent_structures:
+- GO:0005875
+part_of:
+- GO:0000133
+components:
+- component_id: tea1_kelch_scaffold_subunit
+  label: Tip elongation aberrant protein 1 (Tea1)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR015915
+  gene_symbols:
+  - tea1
+  - alp8
+  stoichiometry: Core Kelch-repeat/coiled-coil polarity marker subunit of the high-molecular-weight
+    Tea1 complex
+  essentiality: DISPENSABLE
+  role: Kelch-repeat and C-terminal coiled-coil cell-end polarity protein that is
+    delivered on growing microtubule plus ends to cell tips, where it anchors to Mod5/Tea3
+    and binds Tea4 to recruit the formin For3 for bipolar polarized growth.
+  evidence:
+  - reference: GO:0031500
+    notes: GO:0031500 defines the Tea1 cell-end complex as a high molecular weight
+      complex characterized in S. pombe containing the cell-end anchoring protein
+      Tea1.
+  - reference: PMID:9200612
+    notes: Mata and Nurse 1997 (DOI:10.1016/s0092-8674(00)80279-2) demonstrated that
+      S. pombe Tea1 is transported on microtubule plus ends to cell tips to maintain
+      antipodal cell polarity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P87061
+    protein_label: Tip elongation aberrant protein 1
+    gene_symbol: tea1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. pombe Tea1 subunit (also declared as synonym alp8) that nucleates
+      the high-molecular-weight Tea1 cell-end complex.
+    evidence:
+    - reference: UniProtKB:P87061
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation
+        aberrant protein 1 (tea1).
+    - reference: PMID:9200612
+      notes: Mata and Nurse 1997 characterized S. pombe Tea1 delivery by microtubules
+        and cortical cell-end anchoring.
+- component_id: tea3_anchoring_subunit
+  label: Tip elongation aberrant protein 3 (Tea3)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR015915
+  gene_symbols:
+  - tea3
+  stoichiometry: Cell-end cortical anchoring partner of Tea1
+  essentiality: DISPENSABLE
+  role: Kelch-repeat and coiled-coil cell-end cortex protein that physically interacts
+    with Tea1 and Mod5 at non-growing cell ends to anchor the Tea1 cell-end complex
+    and promote bipolar growth initiation.
+  evidence:
+  - reference: PMID:12007420
+    notes: Arellano et al. 2002 (DOI:10.1016/s0960-9822(02)00821-7) showed that S.
+      pombe Tea3p is a cell-end marker that directly interacts with Tea1p to activate
+      polarized growth.
+  - reference: PMID:14663827
+    notes: Snaith and Sawin 2003 (DOI:10.1002/yea.1054) dissected the interactions
+      of Tea1p and Tea3p in establishing cell-end polarity complexes in S. pombe.
+  protein_examples:
+  - uniprot_id: UniProtKB:O14248
+    protein_label: Tip elongation aberrant protein 3
+    gene_symbol: tea3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. pombe Tea3 cell-end marker subunit that binds Tea1 at the cell
+      cortex.
+    evidence:
+    - reference: UniProtKB:O14248
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation
+        aberrant protein 3 (tea3).
+    - reference: PMID:12007420
+      notes: Arellano et al. 2002 identified S. pombe Tea3p and its physical interaction
+        with Tea1p.
+- component_id: tea4_sh3_adaptor_subunit
+  label: Tip elongation aberrant protein Tea4
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR053039
+  gene_symbols:
+  - tea4
+  - wsh3
+  stoichiometry: SH3-domain effector adaptor subunit of the Tea1 cell-end complex
+  essentiality: DISPENSABLE
+  role: SH3-domain cell-end adaptor protein (also known as Wsh3) that binds Tea1 directly
+    in the high-molecular-weight Tea1 cell-end complex and links cortical Tea1 to
+    the formin For3 for bipolar actin cable assembly.
+  evidence:
+  - reference: PMID:15936270
+    notes: Tatebe et al. 2005 (DOI:10.1016/j.cub.2005.04.061) identified Wsh3/Tea4
+      as a novel cell-end factor that binds Tea1 and is essential for bipolar Tea1
+      function and cell polarity in S. pombe.
+  protein_examples:
+  - uniprot_id: UniProtKB:O60132
+    protein_label: Tip elongation aberrant protein Tea4
+    gene_symbol: tea4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. pombe Tea4 subunit (also declared as synonym wsh3) that associates
+      with Tea1 in the cell-end polarity complex.
+    evidence:
+    - reference: UniProtKB:O60132
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation
+        aberrant protein Tea4.
+    - reference: PMID:15936270
+      notes: Tatebe et al. 2005 characterized S. pombe Wsh3/Tea4 as a direct binding
+        partner of Tea1 at cell ends.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4895
+  taxon_label: Schizosaccharomyces
+  presence: COMMON
+  note: Characterized in fission yeasts (Schizosaccharomyces pombe) as the microtubule-delivered
+    cortical cell-end polarity complex.
+  reference: PMID:9200612
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast strain in which the high-molecular-weight Tea1 cell-end
+    complex was identified and functionally dissected.
+  reference: PMID:9200612
+functions:
+- function_id: establishment_or_maintenance_of_cell_polarity
+  label: establishment or maintenance of cell polarity
+  grounding: GO:0007163
+  description: Delivered on microtubule plus ends to the cell cortex at both cell
+    tips, where Tea1 associates with Tea3 and Tea4 to mark cell ends, recruit polarity
+    effectors, and maintain normal bipolar cell growth.
+  evidence:
+  - reference: GO:0031500
+    notes: GO:0031500 defines the Tea1 cell-end complex as transported to cell ends
+      by microtubules and involved in bipolar growth and maintenance of normal cell
+      polarity.
+  - reference: PMID:9200612
+    notes: Mata and Nurse 1997 showed that microtubule-mediated delivery of Tea1 to
+      cell ends is required to establish and maintain antipodal cell polarity in S.
+      pombe.
+  - reference: PMID:15936270
+    notes: Tatebe et al. 2005 demonstrated that Tea4/Wsh3 binds Tea1 at cell ends
+      to promote bipolar growth and maintain cell polarity.
+evidence:
+- reference: GO:0031500
+  notes: Gene Ontology cellular-component term for Tea1 cell-end complex.
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: GO:0005875
+  notes: Gene Ontology parent term for microtubule associated complex.
+- reference: GO:0007163
+  notes: Gene Ontology biological-process term for establishment or maintenance of
+    cell polarity.
+- reference: PMID:9200612
+  notes: Mata and Nurse 1997 (Cell, DOI:10.1016/s0092-8674(00)80279-2), primary study
+    establishing Tea1 and microtubule-mediated delivery to fission yeast cell ends.
+- reference: PMID:12007420
+  notes: Arellano et al. 2002 (Curr Biol, DOI:10.1016/s0960-9822(02)00821-7), characterization
+    of Tea3p as a cell-end marker interacting with Tea1p.
+- reference: PMID:15936270
+  notes: Tatebe et al. 2005 (Curr Biol, DOI:10.1016/j.cub.2005.04.061), identification
+    of Wsh3/Tea4 as an essential binding partner of Tea1 in bipolar cell-end polarity.
+causal_graphs:
+- graph_id: tea1_cell_end_complex_polarity_mechanism
+  title: Assembly of the Tea1 cell-end complex at fission yeast cell tips and maintenance
+    of bipolar cell polarity
+  description: Directed causal graph linking Tea1, Tea3, and Tea4 subunits to assembly
+    of the Tea1 cell-end complex (GO:0031500) within the polarisome (GO:0000133) and
+    establishment or maintenance of cell polarity (GO:0007163).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tea1_kelch_scaffold_subunit
+    label: Tip elongation aberrant protein 1 (Tea1)
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR015915
+    component_ref: tea1_kelch_scaffold_subunit
+    description: Kelch-repeat cell-end polarity marker protein Tea1.
+  - node_id: tea3_anchoring_subunit
+    label: Tip elongation aberrant protein 3 (Tea3)
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR015915
+    component_ref: tea3_anchoring_subunit
+    description: Cortical cell-end anchoring partner Tea3.
+  - node_id: tea4_sh3_adaptor_subunit
+    label: Tip elongation aberrant protein Tea4
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR053039
+    component_ref: tea4_sh3_adaptor_subunit
+    description: SH3-domain cell-end effector adaptor Tea4 (Wsh3).
+  - node_id: tea1_cell_end_complex_node
+    label: Tea1 cell-end complex
+    node_type: STRUCTURE
+    grounding: GO:0031500
+    description: High-molecular-weight Tea1 cell-end polarity complex.
+  - node_id: cell_polarity_maintenance
+    label: establishment or maintenance of cell polarity
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007163
+    description: Bipolar cell growth and maintenance of normal antipodal cell polarity.
+  edges:
+  - subject: tea1_kelch_scaffold_subunit
+    predicate: RO:0002436
+    object: tea1_cell_end_complex_node
+    description: Tea1 is delivered on microtubule plus ends to cell tips where it
+      nucleates the high-molecular-weight Tea1 cell-end complex.
+    evidence:
+    - reference: PMID:9200612
+      notes: Mata and Nurse 1997 demonstrated microtubule-dependent delivery of Tea1
+        to the cell ends.
+  - subject: tea3_anchoring_subunit
+    predicate: RO:0002436
+    object: tea1_cell_end_complex_node
+    description: Tea3 binds cortical Tea1 at cell tips to anchor the Tea1 cell-end
+      complex and promote bipolar growth.
+    evidence:
+    - reference: PMID:12007420
+      notes: Arellano et al. 2002 showed that Tea3p directly interacts with Tea1p
+        at the cell ends.
+  - subject: tea4_sh3_adaptor_subunit
+    predicate: RO:0002436
+    object: tea1_cell_end_complex_node
+    description: Tea4 (Wsh3) directly binds Tea1 within the cell-end complex to couple
+      cortical Tea1 to downstream polarity effectors.
+    evidence:
+    - reference: PMID:15936270
+      notes: Tatebe et al. 2005 showed that Wsh3/Tea4 binds Tea1 at cell ends.
+  - subject: tea1_cell_end_complex_node
+    predicate: RO:0002213
+    object: cell_polarity_maintenance
+    description: The cortical Tea1 cell-end complex marks antipodal cell tips and
+      recruits polarity machinery to maintain normal bipolar cell polarity.
+    evidence:
+    - reference: GO:0031500
+      notes: GO:0031500 defines the Tea1 cell-end complex as involved in bipolar growth
+        and the maintenance of normal cell polarity.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0031500 (Tea1 cell-end complex) with
+    verified GO identity, source-backed components, reviewed UniProtKB protein examples,
+    taxonomic distribution, canonical examples, functions, and mechanistic causal
+    graph.
+  llm_assisted: true

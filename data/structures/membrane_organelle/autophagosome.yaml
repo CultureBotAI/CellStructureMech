@@ -28,6 +28,12 @@ curation_history:
     membrane to the top-level graph organelle node and by recasting the macroautophagy
     edge as a functional support edge.'
   llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_FUNCTIONS
+  changes: Added explicit GO grounding GO:0016236 (macroautophagy) to functions[0]
+    (#2476).
+  llm_assisted: true
 has_part:
 - GO:0000421
 - GO:0034423
@@ -70,6 +76,7 @@ canonical_examples:
 functions:
 - function_id: macroautophagy
   label: macroautophagy
+  grounding: GO:0016236
   description: Autophagosomes engulf cytoplasmic material in a double-membrane vesicle
     and deliver that cargo to a lytic vacuole for degradation.
   evidence:
