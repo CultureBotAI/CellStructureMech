@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_replication_factor_a_complex.yaml
+  slug: dna_replication_factor_a_complex
+session:
+  id: 2026-10-30T203828Z-cellstructuremech-curator-58e006
+  timestamp: '2026-10-30T20:38:28Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - components
+  - curation_history
+  summary: Add Saccharomyces cerevisiae S288C canonical example, RFA1-RFA3 gene symbols, and
+    reviewed Swiss-Prot protein_examples
+  details: Added Saccharomyces cerevisiae S288C (NCBITaxon:559292, backed by Wold 1997 PMID:9242902)
+    to canonical_examples, added RFA1, RFA2, and RFA3 gene_symbols to rpa_70_kda_subunit,
+    rpa_30_kda_subunit, and rpa_14_kda_subunit, and seeded reviewed Swiss-Prot protein_examples
+    (UniProtKB:P22336, UniProtKB:P26754, UniProtKB:P26755), converting all 3 causal_graphs
+    GENE_OR_PROTEIN nodes from NO_GENE_SYMBOLS to COVERED.

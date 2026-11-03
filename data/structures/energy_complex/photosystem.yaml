@@ -28,7 +28,7 @@ synonyms:
 components:
 - component_id: type_i_reaction_center_core
   label: Type I (Fe-S type) photosystem reaction center core (PsaA/PsaB)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - psaA
@@ -80,7 +80,7 @@ components:
 - component_id: type_ii_reaction_center_core
   label: Type II (pheophytin-quinone type) photosystem reaction center core (D1/PsbA
     and D2/PsbD)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - psbA
@@ -312,4 +312,10 @@ curation_history:
   changes: Initial curation of photosystem (GO:0009521) in category ENERGY_COMPLEX
     with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2420: Updated components#type_i_reaction_center_core and components#type_ii_reaction_center_core
+    from component_type PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true

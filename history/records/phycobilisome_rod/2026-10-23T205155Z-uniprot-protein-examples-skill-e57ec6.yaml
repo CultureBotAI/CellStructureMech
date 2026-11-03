@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome_rod.yaml
+  slug: phycobilisome_rod
+session:
+  id: 2026-10-23T205155Z-uniprot-protein-examples-skill-e57ec6
+  timestamp: '2026-10-23T20:51:55Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  details: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s). Validated via write_validated_structure and uniprot_genes.py
+    --verify.'

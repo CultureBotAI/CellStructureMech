@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+  slug: gamma_tubulin_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-d0737b
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded and curated reviewed Schizosaccharomyces pombe 972h- protein_examples (Q9USQ2
+    alp6, P25295 gtb1)
+  details: Resolved alp6 to UniProtKB:Q9USQ2 on gcp2_gcp3_spoke_subunits via scripts/uniprot_genes.py
+    and curated UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) on gamma_tubulin_subunit
+    in Schizosaccharomyces pombe 972h- (NCBITaxon:284812), disambiguating gamma-tubulin P25295
+    from the homonymous ER glucosidase II beta subunit Q9USH8.

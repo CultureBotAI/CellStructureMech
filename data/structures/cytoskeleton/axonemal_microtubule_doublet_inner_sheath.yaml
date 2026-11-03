@@ -59,6 +59,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-31T10:56:58Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Added unreviewed (TrEMBL) UniProtKB:Q8LKK4 (RIB72 protein) in Chlamydomonas
+    reinhardtii (NCBITaxon:3055) to component inner_sheath_mips for declared gene
+    symbol RIB72.
+  llm_assisted: true
 part_of:
 - GO:0097545
 has_part:
@@ -124,6 +131,23 @@ components:
       notes: Pazour GJ et al. 2005, ‘Proteomic analysis of a eukaryotic cilium.’,
         J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
         projection, cilium, flagellum' localisation of A8ILK1.
+  - uniprot_id: UniProtKB:Q8LKK4
+    protein_label: RIB72 protein
+    gene_symbol: RIB72
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-31'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RIB72, which
+      UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8LKK4
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8LKK4 (RIB72 protein) for gene RIB72
+        in Chlamydomonas reinhardtii. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

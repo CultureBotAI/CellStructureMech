@@ -1,0 +1,47 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 6,
+  "stage": 5,
+  "revision": 1,
+  "source_revision": "c0423878c9544a29b0db748b5f228b081d978f92",
+  "stage4_source_revision": "9634411be0aeec8d8f4b9cb9158e3165db87c150",
+  "stage4_evidence_sha256": "ba3e8d38c2d0d9f8f3376bf70cae924a97685b4fa7c3cbc959613dd70c5992a5",
+  "remediated_record_count": 12,
+  "findings_consumed": 10,
+  "findings_resolved": 10,
+  "findings_carried_forward": 0,
+  "verification_review_bundle": "reviews/structured/20261031T155500Z-c6-stage5-remediation-verification/review.yaml",
+  "verification_review_sha256": "a5cf3b7885d640f7d73bc97d69b539fa7af788362e7439c0be95688d29afa83f",
+  "issues": [
+    {
+      "number": 2489,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2489",
+      "action": "created",
+      "state": "open",
+      "group_id": "cycle6-stage5-group-01",
+      "finding_ids": [
+        "sid2-mob1-complex-definition-source-attribution",
+        "sid2-mob1-complex-missing-top-level-pmid-evidence",
+        "potassium-atpase-complex-definition-source-attribution",
+        "potassium-atpase-complex-missing-top-level-pmid-evidence",
+        "other-cycle6-stage1-definition-source-attribution",
+        "other-cycle6-stage1-missing-top-level-pmid-evidence"
+      ],
+      "resolution_commit_sha": "c0423878c9544a29b0db748b5f228b081d978f92"
+    },
+    {
+      "number": 2490,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2490",
+      "action": "created",
+      "state": "open",
+      "group_id": "cycle6-stage5-group-02",
+      "finding_ids": [
+        "prostheca-missing-stalk-crossband-has-part",
+        "cytoskeleton-non-reciprocal-substructure-has-part",
+        "reservosome-missing-subcompartment-has-part-and-membrane-grounding",
+        "reservosome-membrane-definition-note-and-graph-scope"
+      ],
+      "resolution_commit_sha": "c0423878c9544a29b0db748b5f228b081d978f92"
+    }
+  ]
+}
