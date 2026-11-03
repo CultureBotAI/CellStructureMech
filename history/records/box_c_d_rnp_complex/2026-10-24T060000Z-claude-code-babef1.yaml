@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+  slug: box_c_d_rnp_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-babef1
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added guide-RNA nucleation edge to protein core in box C/D RNP complex causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added directed edge from box_c_d_rna to
+    nop1_nop56_nop58_snu13_core.'

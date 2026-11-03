@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  slug: static_microtubule_bundle
+session:
+  id: 2026-10-31T011500Z-agy-f1d98a
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2475
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Align UniProtKB:P04689 primary gene_symbol to tub1 on static microtubule bundle
+  details: Updated components[0] (alpha_tubulin) gene_symbols to [tub1, atb2, TUB1, TUB3]
+    and protein_examples[0] (UniProtKB:P04689) gene_symbol to tub1 (retaining synonym atb2
+    in component gene_symbols and role) on data/structures/cytoskeleton/static_microtubule_bundle.yaml.

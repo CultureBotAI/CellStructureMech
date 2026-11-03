@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml
+  slug: potassium_ion_transporting_atpase_complex
+session:
+  id: 2026-10-31T150259Z-antigravity-ca8403
+  timestamp: '2026-10-31T15:02:59Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2489
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - curation_history
+  summary: Align definition with GO:0031004 and add PMID:41384914 to top-level evidence
+  details: Replaced custom mechanistic summary in definition with the official GO:0031004
+    definition verified via OAK sqlite:obo:go, and mirrored function/edge citation PMID:41384914
+    into top-level evidence (#2489).

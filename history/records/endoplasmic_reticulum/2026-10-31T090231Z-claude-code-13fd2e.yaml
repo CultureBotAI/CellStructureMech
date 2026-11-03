@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+  slug: endoplasmic_reticulum
+session:
+  id: 2026-10-31T090231Z-claude-code-13fd2e
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected endoplasmic_reticulum to endoplasmic_reticulum_unfolded_protein_response
+    and erad_quality_control_pathway.
+  details: Added sourced 'supports' edges from endoplasmic_reticulum to endoplasmic_reticulum_unfolded_protein_response
+    (GO:0030968) and erad_quality_control_pathway (GO:0036503) backed by Travers et al. 2000
+    (DOI:10.1016/s0092-8674(00)80835-1).
