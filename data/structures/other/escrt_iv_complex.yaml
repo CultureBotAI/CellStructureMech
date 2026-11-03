@@ -37,6 +37,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0036452
 synonyms:
@@ -275,6 +280,15 @@ causal_graphs:
     - reference: PMID:20696398
       notes: Yang and Hurley 2010 studied Vps4 and Vta1 in the context of ESCRT-III
         recycling.
+  - subject: escrt_iii_complex
+    predicate: is disassembled from
+    object: endosome_membrane
+    description: ESCRT-IV disassembles ESCRT-III polymers from the endosome membrane
+      for subunit recycling.
+    evidence:
+    - reference: GO:1990621
+      notes: GO:1990621 describes ESCRT-IV-mediated disassembly of ESCRT-III from
+        endosomal membranes.
 discussions:
 - discussion_id: resolve_escrt_iv_family_groundings
   prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps4 AAA

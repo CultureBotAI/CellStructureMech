@@ -21,6 +21,12 @@ curation_history:
     composition, xenobiotic transporter activity, Complex Portal/PubMed evidence,
     a compact function graph, and a component-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected tripartite efflux subunits to acrad_tolc and linked xenobiotic_transport
+    to outer_membrane_export.
+  llm_assisted: true
 parent_structures:
 - GO:1990281
 components:
@@ -269,6 +275,49 @@ causal_graphs:
     - reference: GO:0140330
       notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
         outer membrane.
+  - subject: acrd
+    predicate: contributes to
+    object: acrad_tolc
+    description: Probable aminoglycoside efflux pump AcrD assembles into the envelope-spanning
+      tripartite acrad_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4264
+      notes: ComplexPortal:CPX-4264 curates Probable aminoglycoside efflux pump AcrD
+        as an essential stoichiometric subunit of the tripartite acrad_tolc efflux
+        pump complex.
+  - subject: acra
+    predicate: contributes to
+    object: acrad_tolc
+    description: Multidrug efflux pump subunit AcrA assembles into the envelope-spanning
+      tripartite acrad_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4264
+      notes: ComplexPortal:CPX-4264 curates Multidrug efflux pump subunit AcrA as
+        an essential stoichiometric subunit of the tripartite acrad_tolc efflux pump
+        complex.
+  - subject: tolc
+    predicate: contributes to
+    object: acrad_tolc
+    description: Outer membrane channel protein TolC assembles into the envelope-spanning
+      tripartite acrad_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4264
+      notes: ComplexPortal:CPX-4264 curates Outer membrane channel protein TolC as
+        an essential stoichiometric subunit of the tripartite acrad_tolc efflux pump
+        complex.
+  - subject: xenobiotic_transport
+    predicate: contributes to
+    object: outer_membrane_export
+    description: Active xenobiotic transport by the inner-membrane antiporter and
+      periplasmic adaptor drives substrate export across the outer membrane through
+      the TolC channel.
+    evidence:
+    - reference: ComplexPortal:CPX-4264
+      notes: ComplexPortal:CPX-4264 describes tripartite efflux coupling inner-membrane
+        drug transport to export across the outer membrane.
+    - reference: GO:0140330
+      notes: GO:0140330 describes export across the outer membrane mediated by the
+        tripartite efflux apparatus.
 discussions:
 - discussion_id: acrad_tolc_component_family_grounding
   prompt: Resolve exact source-neutral protein families for AcrA and AcrD before replacing

@@ -31,6 +31,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 synonyms:
 - synonym_text: eyespot
   synonym_type: RELATED_SYNONYM
@@ -92,6 +98,22 @@ components:
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q8RUT8
       notes: UniProtKB unreviewed (TrEMBL) entry Q8RUT8 for gene COP4 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q93WP2
+    protein_label: Archaeal-type opsin 1
+    gene_symbol: acop1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene COP3, which
+      UniProt lists under the primary name acop1, in Chlamydomonas reinhardtii. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q93WP2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q93WP2 for gene COP3 in Chlamydomonas
         reinhardtii. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
 taxonomic_distribution:

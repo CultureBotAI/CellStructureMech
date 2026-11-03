@@ -1,0 +1,269 @@
+identifier: GO:0097658
+label: Asi complex
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A nuclear ubiquitin ligase multiprotein complex located in the inner nuclear
+  membrane (INM) that recognizes and ubiquitinates misfolded INM proteins and also
+  some proteins involved in sterol biosynthesis, during ER-associated protein degradation
+  (ERAD). In S. cerevisiae, this complex contains the ubiquitin ligases Asi1p and
+  Asi3p.
+definition_source: GO:0097658
+mapping_status: PROPOSED
+parent_structures:
+- GO:0000152
+- GO:0098796
+part_of:
+- GO:0005637
+components:
+- component_id: asi1_e3_ligase_subunit
+  label: ERAD-associated E3 ubiquitin-protein ligase ASI1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013083
+  gene_symbols:
+  - ASI1
+  stoichiometry: Constituent RING-domain E3 ubiquitin ligase subunit
+  essentiality: DISPENSABLE
+  role: Multipass inner nuclear membrane C-terminal RING-finger E3 ubiquitin ligase
+    subunit that partners with Asi3p and Asi2p to polyubiquitinate misfolded or mislocalized
+    inner nuclear membrane proteins for proteasomal degradation.
+  evidence:
+  - reference: GO:0097658
+    notes: GO:0097658 defines the S. cerevisiae Asi complex as containing the inner
+      nuclear membrane ubiquitin ligases Asi1p and Asi3p.
+  - reference: PMID:25236469
+    notes: Foresti et al. 2014 (DOI:10.1126/science.1255638) demonstrated that Asi1,
+      Asi2, and Asi3 form an inner nuclear membrane E3 ubiquitin ligase complex mediating
+      ERAD of inner nuclear membrane and sterol-biosynthesis substrates.
+  - reference: PMID:25519137
+    notes: Khmelinskii et al. 2014 (DOI:10.1038/nature14096) showed that the Asi1-Asi2-Asi3
+      complex ubiquitinates mislocalized proteins at the inner nuclear membrane to
+      preserve nuclear envelope identity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P54074
+    protein_label: ERAD-associated E3 ubiquitin-protein ligase ASI1
+    gene_symbol: ASI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Asi1p RING-domain E3 ubiquitin ligase subunit
+      of the inner nuclear membrane Asi complex.
+    evidence:
+    - reference: UniProtKB:P54074
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C ERAD-associated
+        E3 ubiquitin-protein ligase ASI1.
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 characterized S. cerevisiae Asi1 as a core RING E3
+        subunit of the Asi complex.
+- component_id: asi3_e3_ligase_subunit
+  label: Probable ERAD-associated E3 ubiquitin-protein ligase ASI1/ASI3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013083
+  gene_symbols:
+  - ASI3
+  stoichiometry: Constituent RING-domain E3 ubiquitin ligase subunit
+  essentiality: DISPENSABLE
+  role: Multipass inner nuclear membrane C-terminal RING-domain E3 ubiquitin ligase
+    subunit that hetero-oligomerizes with Asi1p to catalyze Ubc6p/Ubc7p-dependent
+    substrate polyubiquitination at the inner nuclear membrane.
+  evidence:
+  - reference: GO:0097658
+    notes: GO:0097658 specifies Asi3p together with Asi1p as the ubiquitin ligase
+      subunits of the S. cerevisiae Asi complex.
+  - reference: PMID:25236469
+    notes: Foresti et al. 2014 showed that both Asi1 and Asi3 RING domains are required
+      for Asi complex E3 ligase activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53983
+    protein_label: Probable ERAD-associated E3 ubiquitin-protein ligase ASI1
+    gene_symbol: ASI3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Asi3p RING-domain subunit of the inner nuclear
+      membrane Asi ubiquitin ligase complex.
+    evidence:
+    - reference: UniProtKB:P53983
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C ASI3.
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 established Asi3 as an essential catalytic partner
+        of Asi1 in the Asi complex.
+- component_id: asi2_recognition_subunit
+  label: Protein ASI2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR063277
+  gene_symbols:
+  - ASI2
+  stoichiometry: Accessory transmembrane substrate-recognition factor
+  essentiality: DISPENSABLE
+  role: Two-transmembrane inner nuclear membrane recognition factor that associates
+    with Asi1p-Asi3p to select subset transmembrane substrates for Asi-mediated ubiquitination.
+  evidence:
+  - reference: PMID:25236469
+    notes: Foresti et al. 2014 showed that Asi2 associates with Asi1-Asi3 and is required
+      for recognition of specific transmembrane substrates such as Erg11.
+  - reference: PMID:25519137
+    notes: Khmelinskii et al. 2014 demonstrated that Asi2 acts as a substrate-specific
+      recognition factor within the Asi1-Asi2-Asi3 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53895
+    protein_label: Protein ASI2
+    gene_symbol: ASI2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Asi2p transmembrane substrate-recognition subunit
+      of the inner nuclear membrane Asi complex.
+    evidence:
+    - reference: UniProtKB:P53895
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C protein
+        ASI2.
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 characterized Asi2 as a subunit of the S. cerevisiae
+        Asi complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4891
+  taxon_label: Saccharomycetaceae
+  presence: COMMON
+  note: Conserved across budding yeasts (Saccharomycetaceae) as the dedicated inner-nuclear-membrane
+    branch of ER-associated protein degradation (ERAD).
+  reference: PMID:25236469
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which the inner-nuclear-membrane Asi1-Asi2-Asi3
+    ubiquitin ligase complex was identified and functionally characterized.
+  reference: PMID:25236469
+functions:
+- function_id: ubiquitin_dependent_protein_catabolic_process
+  label: ubiquitin-dependent protein catabolic process
+  grounding: GO:0006511
+  description: Recognizes and polyubiquitinates misfolded or mislocalized integral
+    membrane proteins and sterol-biosynthesis enzymes at the inner nuclear membrane,
+    targeting them for Cdc48p extraction and proteasomal degradation.
+  evidence:
+  - reference: GO:0097658
+    notes: GO:0097658 defines the Asi complex as recognizing and ubiquitinating misfolded
+      inner nuclear membrane proteins and sterol-biosynthesis proteins during ER-associated
+      protein degradation.
+  - reference: PMID:25236469
+    notes: Foresti et al. 2014 established that the Asi complex defines an inner nuclear
+      membrane quality-control and ubiquitin-dependent degradation pathway.
+evidence:
+- reference: GO:0097658
+  notes: Gene Ontology cellular-component term for Asi complex.
+- reference: GO:0005637
+  notes: Gene Ontology cellular-component term for nuclear inner membrane.
+- reference: GO:0000152
+  notes: Gene Ontology parent term for nuclear ubiquitin ligase complex.
+- reference: PMID:25236469
+  notes: Foresti et al. 2014 (Science, DOI:10.1126/science.1255638), characterization
+    of inner nuclear membrane protein quality control by the Asi complex.
+- reference: PMID:25519137
+  notes: Khmelinskii et al. 2014 (Nature, DOI:10.1038/nature14096), demonstration
+    that the Asi1-Asi2-Asi3 complex ubiquitinates mislocalized proteins at the inner
+    nuclear membrane.
+causal_graphs:
+- graph_id: asi_complex_inm_quality_control
+  title: Inner nuclear membrane assembly of the Asi complex and ubiquitin-dependent
+    protein degradation
+  description: Directed causal graph linking Asi1p, Asi3p, and Asi2p subunits to assembly
+    of the inner-nuclear-membrane Asi complex (GO:0097658), protein polyubiquitination
+    (GO:0000209), and ubiquitin-dependent protein catabolic process (GO:0006511).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: asi1_e3_ligase_subunit
+    label: ERAD-associated E3 ubiquitin-protein ligase ASI1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013083
+    component_ref: asi1_e3_ligase_subunit
+    description: Inner nuclear membrane RING-finger E3 ubiquitin ligase Asi1p.
+  - node_id: asi3_e3_ligase_subunit
+    label: Probable ERAD-associated E3 ubiquitin-protein ligase ASI1/ASI3
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013083
+    component_ref: asi3_e3_ligase_subunit
+    description: Inner nuclear membrane RING-finger E3 ubiquitin ligase Asi3p.
+  - node_id: asi2_recognition_subunit
+    label: Protein ASI2
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR063277
+    component_ref: asi2_recognition_subunit
+    description: Inner nuclear membrane transmembrane recognition factor Asi2p.
+  - node_id: asi_complex_node
+    label: Asi complex
+    node_type: STRUCTURE
+    grounding: GO:0097658
+    description: Assembled Asi1p-Asi2p-Asi3p ubiquitin ligase complex in the inner
+      nuclear membrane.
+  - node_id: protein_polyubiquitination
+    label: protein polyubiquitination
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000209
+    description: Polyubiquitination of misfolded or mislocalized inner nuclear membrane
+      proteins.
+  - node_id: ubiquitin_dependent_catabolism
+    label: ubiquitin-dependent protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006511
+    description: Proteasomal degradation of ubiquitinated inner nuclear membrane substrates.
+  edges:
+  - subject: asi1_e3_ligase_subunit
+    predicate: RO:0002436
+    object: asi_complex_node
+    description: Asi1p associates with Asi3p and Asi2p in the inner nuclear membrane
+      to form the catalytic core of the Asi complex.
+    evidence:
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 showed that Asi1 co-purifies with Asi3 and Asi2 as
+        a membrane-embedded E3 ligase complex.
+  - subject: asi3_e3_ligase_subunit
+    predicate: RO:0002436
+    object: asi_complex_node
+    description: Asi3p partners with Asi1p via transmembrane and RING domains within
+      the inner nuclear membrane Asi complex.
+    evidence:
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 demonstrated that Asi3 is an essential RING-domain
+        subunit of the Asi complex.
+  - subject: asi2_recognition_subunit
+    predicate: RO:0002436
+    object: asi_complex_node
+    description: Asi2p binds the Asi1p-Asi3p subcomplex to confer transmembrane substrate
+      recognition.
+    evidence:
+    - reference: PMID:25519137
+      notes: Khmelinskii et al. 2014 showed that Asi2 associates with Asi1-Asi3 to
+        recognize specific inner nuclear membrane substrates.
+  - subject: asi_complex_node
+    predicate: RO:0002213
+    object: protein_polyubiquitination
+    description: The Asi complex recruits Ubc6p and Ubc7p E2 enzymes to polyubiquitinate
+      misfolded or mislocalized inner nuclear membrane proteins.
+    evidence:
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 demonstrated Asi1-Asi3-dependent polyubiquitination
+        of inner nuclear membrane substrates.
+  - subject: protein_polyubiquitination
+    predicate: RO:0002213
+    object: ubiquitin_dependent_catabolism
+    description: Polyubiquitinated inner nuclear membrane substrates are extracted
+      by the Cdc48p ATPase complex for proteasomal degradation.
+    evidence:
+    - reference: PMID:25236469
+      notes: Foresti et al. 2014 showed that Asi-ubiquitinated substrates undergo
+        Cdc48- and proteasome-dependent degradation.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0097658 (Asi complex) with verified GO
+    identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

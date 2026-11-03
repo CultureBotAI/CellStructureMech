@@ -1,0 +1,85 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 1,
+  "stage": 5,
+  "revision": 1,
+  "scope_frozen_at": "2026-10-23T10:52:00Z",
+  "fix_commit_sha": "9dd9935ee1cf1d85454d42df0cec7da12f550a79",
+  "post_remediation_review_bundle": {
+    "review_id": "20261023T114600Z-stage5-remediation-verification",
+    "yaml_path": "reviews/structured/20261023T114600Z-stage5-remediation-verification/review.yaml",
+    "yaml_sha256": "82cb13bad1f7c75c6de8c4a930c65a4b704a18b8981722e8a28f6b526422cb8e",
+    "markdown_path": "reviews/structured/20261023T114600Z-stage5-remediation-verification/review.md",
+    "markdown_sha256": "c663622ca6033c153ef3a6310f48d8b77d3faf80f419ca93fc8fb3167c6f35ed",
+    "verdict": "pass",
+    "open_findings": 0
+  },
+  "groups": [
+    {
+      "group_id": "history-ledger-completeness",
+      "issue_number": 2402,
+      "issue_url": "https://github.com/CultureBotAI/CellStructureMech/issues/2402",
+      "finding_ids": [
+        "woronin-body-missing-history"
+      ],
+      "records": [
+        "data/structures/membrane_organelle/woronin_body.yaml"
+      ],
+      "status": "resolved"
+    },
+    {
+      "group_id": "chemoreceptor-array-phosphotransfer-narrative-sync",
+      "issue_number": 2403,
+      "issue_url": "https://github.com/CultureBotAI/CellStructureMech/issues/2403",
+      "finding_ids": [
+        "chemoreceptor-array-stale-unquotable-phosphotransfer-note"
+      ],
+      "records": [
+        "data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml"
+      ],
+      "status": "resolved"
+    },
+    {
+      "group_id": "causal-graph-subcomplex-structure-node-typing",
+      "issue_number": 2404,
+      "issue_url": "https://github.com/CultureBotAI/CellStructureMech/issues/2404",
+      "finding_ids": [
+        "cilium-ift-particle-causal-node-type",
+        "cytoskeleton-go-subcomplex-causal-node-types",
+        "membrane-organelle-go-subcomplex-causal-node-types"
+      ],
+      "records": [
+        "data/structures/appendage/cilium.yaml",
+        "data/structures/cytoskeleton/actin_cortical_patch.yaml",
+        "data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml",
+        "data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml",
+        "data/structures/cytoskeleton/radial_spoke.yaml",
+        "data/structures/cytoskeleton/telocentrosome.yaml",
+        "data/structures/membrane_organelle/diazoplast.yaml",
+        "data/structures/membrane_organelle/endoplasmic_reticulum.yaml"
+      ],
+      "status": "resolved"
+    },
+    {
+      "group_id": "discussion-evidence-structured-issue-links",
+      "issue_number": 2405,
+      "issue_url": "https://github.com/CultureBotAI/CellStructureMech/issues/2405",
+      "finding_ids": [
+        "chemoreceptor-array-discussion-issue-evidence",
+        "cytoskeleton-discussion-prose-issue-links",
+        "division-machinery-discussion-prose-issue-links",
+        "t3ss-complex-discussion-issue-evidence"
+      ],
+      "records": [
+        "data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml",
+        "data/structures/cytoskeleton/crescentin_filament.yaml",
+        "data/structures/cytoskeleton/mreb_filament.yaml",
+        "data/structures/cytoskeleton/phuz_spindle.yaml",
+        "data/structures/division_machinery/divisome_complex.yaml",
+        "data/structures/division_machinery/elongasome.yaml",
+        "data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml"
+      ],
+      "status": "resolved"
+    }
+  ]
+}

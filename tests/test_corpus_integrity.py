@@ -5,6 +5,14 @@ from __future__ import annotations
 import hashlib
 from collections import Counter
 
+from cellstructuremech.validation.validator import (
+    validate_causal_graphs,
+    validate_component_protein_examples,
+    validate_curation_history,
+    validate_discussion_issue_links,
+    validate_hierarchy_relations,
+    validate_top_level_pmid_parity,
+)
 from cellstructuremech.validation.write_validated import validate_structure
 from scripts.corpus import record_path
 
@@ -62,6 +70,73 @@ def test_graph_node_component_refs_resolve(records):
                 if ref and ref not in comp_ids:
                     bad.append(f"{path.name}:{g['graph_id']}:{n['node_id']}->{ref}")
     assert not bad, f"component_ref pointing at no component: {bad}"
+
+
+def test_causal_graphs_have_no_isolated_nodes_or_undescribed_edges(records):
+    """Every CausalNode participates in at least one directed edge, every
+    CausalEdge carries a non-empty mechanistic description, and CausalNode
+    grounding/aspect agrees with referenced components and functions (#2408, #2472)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_causal_graphs(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"causal graph completeness violations: {bad}"
+
+
+def test_discussions_referencing_issues_carry_structured_issue_links(records):
+    """Any `#NNN` issue mention in `discussions` prose (`prompt`, `rationale`,
+    `resolution_note`) must be backed by a structured GitHub issue URL in
+    `discussions[].evidence` (#2410)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_discussion_issue_links(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"discussion prose issue mentions missing structured issue links: {bad}"
+
+
+def test_component_protein_examples_match_declared_gene_symbols(records):
+    """Every `components[].protein_examples[].gene_symbol` must appear in its
+    parent component's non-empty `gene_symbols` list or be disclosed as a
+    synonym/locus tag in `protein_examples[].role` (#2417, #2472)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_component_protein_examples(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"component protein_examples gene_symbol drift: {bad}"
+
+
+def test_curated_causal_graph_history_targets_match_record_graphs(records):
+    """Every `curation_history` entry with `action: CURATED_CAUSAL_GRAPH` that
+    names a target causal-graph slug must match a declared `graph_id` on the
+    record (#2428)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_curation_history(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"CURATED_CAUSAL_GRAPH history target mismatch: {bad}"
+
+
+def test_hierarchy_and_component_relations_are_disjoint(records):
+    """`parent_structures` (is-a), `part_of` (parthood), and `has_part` /
+    `CONSTITUENT` `components[].grounding` must not share CURIEs on the same
+    record (#2457)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_hierarchy_relations(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"hierarchy/parthood/component relation collision: {bad}"
+
+
+def test_top_level_pmid_evidence_parity(records):
+    """When top-level `evidence` cites `PMID:` primary literature references,
+    primary `PMID:` references cited in `components`, `taxonomic_distribution`,
+    `functions`, or `causal_graphs` must also be present in top-level `evidence`
+    or `protein_examples` (#2486)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_top_level_pmid_parity(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"top-level PMID evidence parity violations: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):
