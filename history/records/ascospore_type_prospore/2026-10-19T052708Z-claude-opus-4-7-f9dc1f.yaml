@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/ascospore_type_prospore.yaml
+  slug: ascospore_type_prospore
+session:
+  id: 2026-10-19T052708Z-claude-opus-4-7-f9dc1f
+  timestamp: '2026-10-19T05:27:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for ascospore-type prospore (GO:0042764) in spore.
+  details: Authored data/structures/spore/ascospore_type_prospore.yaml for ascospore-type
+    prospore (GO:0042764) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

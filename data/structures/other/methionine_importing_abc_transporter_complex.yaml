@@ -35,6 +35,12 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'metniq_methionine_import' with
+    5 nodes and 4 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: ATP-binding cassette (ABC) methionine importer complex
   synonym_type: EXACT_SYNONYM
@@ -273,3 +279,84 @@ discussions:
   - reference: UniProtKB:P28635
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: metniq_methionine_import
+  title: MetNIQ ABC Transporter Methionine Import Mechanism
+  description: Periplasmic MetQ substrate delivery and cytoplasmic MetN ATP hydrolysis
+    coupled to methionine translocation through the MetI permease dimer.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: metq_periplasmic_binding_protein
+    label: MetQ periplasmic methionine-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: metq_periplasmic_binding_protein
+  - node_id: metn_atp_binding_subunit
+    label: ABC transporter, methionine import, ATP-binding protein MetN, proteobacteria
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR012692
+    component_ref: metn_atp_binding_subunit
+  - node_id: meti_transmembrane_subunit
+    label: MetI transmembrane subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: meti_transmembrane_subunit
+  - node_id: l_methionine_transmembrane_transport
+    label: L-methionine transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015191
+  - node_id: abc_type_d_methionine_transport
+    label: ABC-type D-methionine transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0033232
+  edges:
+  - subject: metq_periplasmic_binding_protein
+    predicate: delivers substrate to
+    object: meti_transmembrane_subunit
+    description: The periplasmic methionine-binding lipoprotein MetQ docks onto the
+      periplasmic face of the MetI transmembrane dimer to deliver methionine.
+    evidence:
+    - reference: GO:1990197
+      notes: GO:1990197 defines MetQ as the periplasmic methionine-binding subunit
+        of the MetNIQ importer.
+    - reference: PDB:6CVL
+      notes: PDB:6CVL captures MetQ docked onto the E. coli MetN2I2 transporter.
+    - reference: DOI:10.1073/pnas.1811003115
+      notes: Nguyen et al. 2018 characterized MetQ docking and substrate delivery
+        to MetNI.
+  - subject: metn_atp_binding_subunit
+    predicate: energizes
+    object: meti_transmembrane_subunit
+    description: The cytoplasmic MetN ATPase dimer binds and hydrolyzes ATP to drive
+      alternating-access conformational transitions of the MetI permease dimer.
+    evidence:
+    - reference: GO:1990197
+      notes: GO:1990197 defines MetN as the dimeric ATPase subunit of the methionine-importing
+        ABC transporter.
+    - reference: PMID:22095702
+      notes: Johnson et al. 2012 analyzed the conformational coupling between the
+        MetN nucleotide-binding domains and MetI transmembrane domains.
+  - subject: meti_transmembrane_subunit
+    predicate: mediates
+    object: l_methionine_transmembrane_transport
+    description: The MetI transmembrane pathway translocates L-methionine into the
+      bacterial cytoplasm.
+    evidence:
+    - reference: GO:1990197
+      notes: GO:1990197 defines the complex by ATP-dependent methionine import.
+    - reference: GO:0015191
+      notes: GO:0015191 is the molecular-function term for L-methionine transmembrane
+        transporter activity.
+    - reference: PMID:22095702
+      notes: Johnson et al. 2012 characterized the E. coli MetNI methionine importer.
+  - subject: meti_transmembrane_subunit
+    predicate: mediates
+    object: abc_type_d_methionine_transport
+    description: The MetNIQ complex also catalyzes ATP-dependent import of D-methionine
+      and methionine derivatives across the inner membrane.
+    evidence:
+    - reference: GO:0033232
+      notes: GO:0033232 is the molecular-function term for ABC-type D-methionine transporter
+        activity.
+    - reference: DOI:10.1073/pnas.1811003115
+      notes: Nguyen et al. 2018 demonstrated MetNIQ-mediated transport of D-methionine
+        derivatives.

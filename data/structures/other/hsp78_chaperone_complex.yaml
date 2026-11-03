@@ -26,6 +26,11 @@ curation_history:
     and yeast-complementation graph states and attached native InterPro evidence without
     changing biological scope or label-only grounding.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 7 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0101031
 part_of:
@@ -177,6 +182,8 @@ causal_graphs:
       notes: Figure 1E-F supports oligomeric Hsp78 preparations; native-gel migration
         was interpreted as trimeric and hexameric species, without a universal copy
         count.
+    description: Hsp78 subunits assemble into oligomeric (trimeric and hexameric)
+      chaperone preparations.
   - subject: assembly
     predicate: catalyzes
     object: atpase
@@ -185,6 +192,7 @@ causal_graphs:
       notes: Figure 1C measures ATP-dependent phosphate release from purified Hsp78.
         The active oligomeric state was not independently assigned for each assay
         point.
+    description: Purified oligomeric Hsp78 preparations catalyze ATP hydrolysis.
   - subject: purified_tr
     predicate: impairs
     object: atpase
@@ -192,6 +200,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.102494
       notes: Figure 1C reports approximately 70 percent lower ATPase activity of purified
         Hsp78TR than WT, not complete loss.
+    description: Purified recombinant Walker-motif mutant Hsp78TR exhibits approximately
+      70% lower ATPase activity than wild-type Hsp78.
   - subject: tr
     predicate: impairs
     object: solubilization
@@ -200,6 +210,8 @@ causal_graphs:
       notes: Figure 2A-C shows reduced reporter recovery in Hsp78TR mitochondria relative
         to WT complementation. This does not isolate ATP hydrolysis from substrate
         binding, expression or assembly changes.
+    description: Complementation with Hsp78TR impairs recovery of soluble mitochondrial
+      DHFR reporter after heat stress relative to wild-type Hsp78.
   - subject: deletion
     predicate: impairs
     object: solubilization
@@ -207,6 +219,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.102494
       notes: Figure 2A-C shows reduced reporter resolubilization in hsp78 deletion
         mitochondria under the specified heat/recovery conditions.
+    description: Deletion of HSP78 impairs resolubilization of heat-aggregated mitochondrial
+      reporter protein during recovery.
   - subject: wt_complementation
     predicate: restores relative to deletion
     object: solubilization
@@ -214,6 +228,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.102494
       notes: Figure 2A-C shows improved recovery with Hsp78WT complementation, not
         quantitative recovery of all substrate or demonstration of restored DHFR activity.
+    description: Wild-type Hsp78 complementation restores mitochondrial reporter resolubilization
+      relative to hsp78 deletion.
   - subject: tr
     predicate: impairs
     object: growth
@@ -224,6 +240,8 @@ causal_graphs:
         and 60 minutes at 48 C. TR impairs subsequent growth on glycerol relative
         to WT complementation; glucose growth is similar. No direct respiration or
         universal heat-survival claim is inferred.
+    description: Complementation with Hsp78TR impairs post-heat-shock growth on nonfermentable
+      glycerol medium relative to wild-type Hsp78.
 evidence:
 - reference: DOI:10.1016/j.jbc.2022.102494
   notes: Jaworek, Sylvester, Cenini and Voos (2022), PMID 36115461. Read abstract,

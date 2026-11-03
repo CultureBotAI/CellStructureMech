@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cbf3_complex.yaml
+  slug: cbf3_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-61aedc
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect Ctf13 and Skp1 heterodimer subunits to cbf3_complex structure node
+  details: Added assembles into edges from ctf13_subunit and skp1_subunit to cbf3_complex
+    backed by DOI:10.15252/embj.201798134 and GO:0031518.

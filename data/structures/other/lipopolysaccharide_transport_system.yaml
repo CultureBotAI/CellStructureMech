@@ -25,6 +25,12 @@ curation_history:
   action: EDIT
   changes: added 7 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'lpt_transenvelope_lps_transport'
+    with 8 nodes and 8 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: Lpt machinery
   synonym_type: EXACT_SYNONYM
@@ -390,3 +396,138 @@ discussions:
       LPS extraction and transport to the cell surface.
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: lpt_transenvelope_lps_transport
+  title: Trans-Envelope Lipopolysaccharide Transport across the LptABCDEFG Bridge
+  description: ATP-powered extraction of LPS by inner-membrane LptB2FGC, transit across
+    the periplasmic LptA bridge, and outer-membrane insertion by LptDE.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: lptb_cytoplasmic_atpase
+    label: LptB cytoplasmic ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: lptb_cytoplasmic_atpase
+  - node_id: lptf_inner_membrane_permease
+    label: LptF inner-membrane permease
+    node_type: GENE_OR_PROTEIN
+    component_ref: lptf_inner_membrane_permease
+  - node_id: lptg_inner_membrane_permease
+    label: LptG inner-membrane permease
+    node_type: GENE_OR_PROTEIN
+    component_ref: lptg_inner_membrane_permease
+  - node_id: lptc_inner_membrane_adapter
+    label: LptC inner-membrane adapter
+    node_type: GENE_OR_PROTEIN
+    component_ref: lptc_inner_membrane_adapter
+  - node_id: lpta_periplasmic_bridge_protein
+    label: LptA periplasmic bridge protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: lpta_periplasmic_bridge_protein
+  - node_id: lpte_outer_membrane_lipoprotein
+    label: LptE outer-membrane lipoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: lpte_outer_membrane_lipoprotein
+  - node_id: lptd_outer_membrane_beta_barrel
+    label: LptD outer-membrane beta-barrel
+    node_type: GENE_OR_PROTEIN
+    component_ref: lptd_outer_membrane_beta_barrel
+  - node_id: atp_dependent_lps_transport_to_outer_membrane
+    label: ATP-dependent lipopolysaccharide transport to the outer membrane
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: lptb_cytoplasmic_atpase
+    predicate: energizes
+    object: lptf_inner_membrane_permease
+    description: Cytoplasmic LptB ATP hydrolysis powers LPS extraction by the inner-membrane
+      LptBFGC transporter.
+    evidence:
+    - reference: DOI:10.1126/science.1228984
+      notes: Okuda, Freinkman and Kahne 2012 showed that cytoplasmic ATP hydrolysis
+        powers LPS extraction and movement onto the Lpt bridge.
+    - reference: DOI:10.1016/j.febslet.2009.05.051
+      notes: Narita and Tokuda 2009 purified the inner-membrane LptBFGC ABC transporter
+        complex.
+  - subject: lptb_cytoplasmic_atpase
+    predicate: energizes
+    object: lptg_inner_membrane_permease
+    description: Cytoplasmic LptB ATPase dimers couple nucleotide hydrolysis to the
+      LptF/LptG inner-membrane permease heterodimer.
+    evidence:
+    - reference: DOI:10.1126/science.1228984
+      notes: Okuda, Freinkman and Kahne 2012 demonstrated ATP-dependent LPS extraction
+        by the LptBFGC inner-membrane complex.
+    - reference: DOI:10.1016/j.febslet.2009.05.051
+      notes: Narita and Tokuda 2009 biochemically characterized the E. coli LptB2FGC
+        complex.
+  - subject: lptf_inner_membrane_permease
+    predicate: transfers LPS to
+    object: lptc_inner_membrane_adapter
+    description: Inner-membrane permease LptF cooperates with LptG to extract LPS
+      from the outer leaflet of the inner membrane onto LptC.
+    evidence:
+    - reference: DOI:10.1073/pnas.0801196105
+      notes: Ruiz et al. 2008 identified LptF and LptG as essential inner-membrane
+        components for LPS transport.
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LPS extraction by LptBFG
+        and transfer to LptC.
+  - subject: lptg_inner_membrane_permease
+    predicate: transfers LPS to
+    object: lptc_inner_membrane_adapter
+    description: Inner-membrane permease LptG acts with LptF to hand off extracted
+      LPS to the bitopic adapter LptC.
+    evidence:
+    - reference: DOI:10.1073/pnas.0801196105
+      notes: Ruiz et al. 2008 identified LptG and LptF as the inner-membrane permease
+        pair of the Lpt pathway.
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LptFG-to-LptC LPS transfer.
+  - subject: lptc_inner_membrane_adapter
+    predicate: delivers LPS to
+    object: lpta_periplasmic_bridge_protein
+    description: The periplasmic domain of LptC contacts LptA and transfers LPS onto
+      the periplasmic LptA bridge.
+    evidence:
+    - reference: DOI:10.1126/science.1228984
+      notes: Okuda, Freinkman and Kahne 2012 demonstrated ATP-dependent transfer of
+        LPS from LptC to LptA.
+    - reference: DOI:10.1126/science.aar1886
+      notes: Sherman et al. 2018 reconstituted membrane-to-membrane LPS transport
+        across the LptC-LptA bridge.
+  - subject: lpta_periplasmic_bridge_protein
+    predicate: delivers LPS to
+    object: lptd_outer_membrane_beta_barrel
+    description: The periplasmic LptA bridge conveys LPS across the periplasm to the
+      N-terminal periplasmic domain of outer-membrane LptD.
+    evidence:
+    - reference: DOI:10.1021/bi100493e
+      notes: Chng, Gronenberg and Kahne 2010 showed that LptA bridges inner-membrane
+        LptBCFG and outer-membrane LptDE.
+    - reference: DOI:10.1126/science.aar1886
+      notes: Sherman et al. 2018 reconstituted LptA-mediated LPS transport to the
+        outer-membrane LptDE complex.
+  - subject: lpte_outer_membrane_lipoprotein
+    predicate: complexes with
+    object: lptd_outer_membrane_beta_barrel
+    description: Outer-membrane lipoprotein LptE resides inside the LptD beta-barrel
+      lumen to form the functional two-protein LptDE translocon.
+    evidence:
+    - reference: DOI:10.1073/pnas.0604744103
+      notes: Wu et al. 2006 identified the outer-membrane LptD/LptE complex required
+        for LPS assembly.
+    - reference: DOI:10.1073/pnas.0912872107
+      notes: Chng et al. 2010 demonstrated the plug-and-barrel architecture of the
+        LptDE complex.
+  - subject: lptd_outer_membrane_beta_barrel
+    predicate: executes
+    object: atp_dependent_lps_transport_to_outer_membrane
+    description: The outer-membrane LptDE translocon inserts LPS molecules arriving
+      from the LptA bridge into the cell-surface leaflet of the outer membrane.
+    evidence:
+    - reference: GO:0062051
+      notes: GO:0062051 defines the lipopolysaccharide transport system by ATP-dependent
+        LPS transport to the outer membrane.
+    - reference: DOI:10.1126/science.aar1886
+      notes: Sherman et al. 2018 reconstituted complete inner-to-outer-membrane LPS
+        transport via LptBFGC, LptA, and LptDE.

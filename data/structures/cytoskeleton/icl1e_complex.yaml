@@ -34,6 +34,11 @@ curation_history:
   changes: added 5 verified UniProtKB protein_example(s); added 2 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 2 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -218,6 +223,8 @@ causal_graphs:
     - reference: DOI:10.1242/bio.024273
       notes: 'Figure 6 and interaction Results: internal basal bodies lack GFP-ICL1e
         after Centrin2 depletion, whereas they retain it after Centrin3 depletion.'
+    description: Centrin2 supports GFP-ICL1e localization at internal basal bodies
+      in Paramecium tetraurelia.
   - subject: icl1e_complex
     predicate: supports
     object: right_centrin3_site
@@ -226,6 +233,8 @@ causal_graphs:
       notes: 'Figure 7 and interaction Results: the right-proximal Centrin3 spot is
         lost early after ICL1e depletion; different sites have different temporal
         responses.'
+    description: The ICL1e complex supports maintenance of the right-proximal Centrin3
+      spot at the basal body.
 evidence:
 - reference: DOI:10.1242/bio.024273
   notes: 'Aubusson-Fleury et al. (2017), Centrin diversity and basal body patterning

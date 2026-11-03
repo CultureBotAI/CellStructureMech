@@ -46,6 +46,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2419: Typed causal-graph node csma_baseplate as STRUCTURE grounded
+    to cellstructuremech:chlorosome_baseplate_antenna_complex in pigment_baseplate_energy_transfer.'
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 components:
@@ -343,9 +349,10 @@ causal_graphs:
     node_type: STRUCTURE
     component_ref: lipid_monolayer
   - node_id: csma_baseplate
-    label: CsmA baseplate antenna
-    node_type: GENE_OR_PROTEIN
+    label: chlorosome baseplate antenna complex
+    node_type: STRUCTURE
     component_ref: csma_baseplate
+    grounding: cellstructuremech:chlorosome_baseplate_antenna_complex
   - node_id: chlorosome
     label: chlorosome
     node_type: STRUCTURE

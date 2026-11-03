@@ -46,6 +46,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: GROUNDED_COMPONENT_AND_ADDED_HAS_PART
+  changes: Grounded reservosome_membrane component to GO:0106126 and added has_part
+    links to GO:0106124, GO:0106125, and GO:0106126 (#2490).
+  llm_assisted: true
 components:
 - component_id: reservosome_membrane
   label: reservosome membrane
@@ -57,6 +63,9 @@ components:
   - reference: DOI:10.1017/S0031182004005797
     notes: Figueiredo et al. 2004 described reservosomes as large membrane-bound organelles
       in T. cruzi epimastigotes.
+  - reference: GO:0106126
+    notes: GO cellular-component term for the reservosome membrane.
+  grounding: GO:0106126
 - component_id: endocytosed_cargo
   label: endocytosed protein and lipid cargo
   component_type: OTHER
@@ -148,6 +157,8 @@ evidence:
 - reference: DOI:10.1002/pmic.200800730
   notes: Sant'Anna et al. 2009, Subcellular proteomics of Trypanosoma cruzi reservosomes,
     Proteomics.
+- reference: GO:0106126
+  notes: GO cellular-component term for the reservosome membrane (part_of reservosome).
 causal_graphs:
 - graph_id: endocytic_storage_and_proteolysis
   title: Reservosomes store cargo and contain hydrolases
@@ -229,3 +240,7 @@ discussions:
   posed_date: '2026-09-10'
 parent_structures:
 - GO:0043231
+has_part:
+- GO:0106124
+- GO:0106125
+- GO:0106126

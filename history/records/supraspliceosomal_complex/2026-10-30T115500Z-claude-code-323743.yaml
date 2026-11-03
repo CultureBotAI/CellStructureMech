@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
+  slug: supraspliceosomal_complex
+session:
+  id: 2026-10-30T115500Z-claude-code-323743
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2461
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - has_part
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Changed parent_structures from GO:0005681 (spliceosomal complex) to GO:1990904
+    (ribonucleoprotein complex), added has_part GO:0005681 for the four constituent native
+    spliceosomes, and updated GO:0005681 evidence notes (#2461).
+  details: 'Resolved finding ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+    (#2461): The supraspliceosome (GO:0044530) is a ~21 MDa tetrameric assembly composed of
+    four native spliceosomes connected by pre-mRNA, and the causal graph models spliceosomal_complex
+    (GO:0005681) with edge ''assembles into -> supraspliceosomal_complex''. Set parent_structures
+    to [GO:1990904] (ribonucleoprotein complex) and added has_part: [GO:0005681].'
