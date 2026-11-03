@@ -1,0 +1,43 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 5,
+  "stage": 5,
+  "revision": 1,
+  "source_revision": "c4a8f347c314b5601cad86c334497d5aca756640",
+  "stage4_source_revision": "a94f6deb809dd50c8344fb03284de9801c0aa298",
+  "stage4_evidence_sha256": "008cce72cea1a120bfef359392a32f3930ae39fa3af2b47ef9f79bda7608df12",
+  "remediated_record_count": 10,
+  "findings_consumed": 6,
+  "findings_resolved": 6,
+  "findings_carried_forward": 0,
+  "verification_review_bundle": "reviews/structured/20261031T012000Z-c5-stage5-remediation-verification/review.yaml",
+  "verification_review_sha256": "efa019c67d498b88f74cd562b2e4a940166c9f49dec9116c2ba5bd99f6e05ead",
+  "issues": [
+    {
+      "number": 2475,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2475",
+      "action": "created",
+      "state": "closed",
+      "group_id": "spombe-uniprot-gene-symbols-and-strain-taxon-labels",
+      "finding_ids": [
+        "post-anaphase-microtubule-array-emtoc-missing-gene-symbols",
+        "cytoskeleton-spombe-p04689-primary-gene-symbol-tub1",
+        "other-eukaryotic-replisome-ncbitaxon-284812-strain-label"
+      ],
+      "resolution_commit_sha": "c4a8f347c314b5601cad86c334497d5aca756640"
+    },
+    {
+      "number": 2476,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2476",
+      "action": "created",
+      "state": "closed",
+      "group_id": "go-grounding-causal-node-type-and-primosome-curation",
+      "finding_ids": [
+        "origin-recognition-complex-node-type-molecular-function",
+        "autophagosome-macroautophagy-function-missing-go-grounding",
+        "primosome-complex-dnac-protein-label-and-hierarchy-evidence"
+      ],
+      "resolution_commit_sha": "c4a8f347c314b5601cad86c334497d5aca756640"
+    }
+  ]
+}

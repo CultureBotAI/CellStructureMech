@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-10-30T115500Z-claude-code-30d6b4
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2463
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Removed component_ref: flagellin from STRUCTURE node filament (GO:0009420) in
+    flagellum_torque_generation since GENE_OR_PROTEIN node flic already carries component_ref:
+    flagellin (#2463).'
+  details: 'Resolved finding appendage-flagellum-filament-node-and-archaeal-has-part on bacterial_type_flagellum.yaml
+    (#2463): In causal_graphs[0] (flagellum_torque_generation), GENE_OR_PROTEIN node flic
+    (''flagellin FliC'') already carries component_ref: flagellin and polymerizes into STRUCTURE
+    node filament (''flagellar filament'', GO:0009420). Removed duplicate component_ref: flagellin
+    from STRUCTURE node filament.'

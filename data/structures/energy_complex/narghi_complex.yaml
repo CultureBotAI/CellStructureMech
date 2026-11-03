@@ -32,6 +32,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Connected isolated causal node(s) with 2 source-backed edge(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected nari_gamma to narh_beta, linked narg_alpha to nitrate_reductase_quinone_activity,
+    and connected all three NarGHI subunits to the narghi structure node.
+  llm_assisted: true
 synonyms:
 - synonym_text: cytoplasmic membrane-bound quinol-nitrate oxidoreductase
   synonym_type: EXACT_SYNONYM
@@ -311,6 +317,67 @@ causal_graphs:
     - reference: GO:0160182
       notes: GO:0160182 defines nitrate reductase (quinone) activity as reducing nitrate
         to nitrite.
+  - subject: nari_gamma
+    predicate: passes electrons to
+    object: narh_beta
+    description: The di-heme b membrane-anchor subunit NarI transfers electrons from
+      quinol oxidation across the membrane into the iron-sulfur cluster chain of NarH.
+    evidence:
+    - reference: PMID:12910261
+      notes: Bertero et al. 2003 resolved the continuous electron-transfer pathway
+        from the NarI hemes to the NarH [Fe-S] clusters in E. coli NarGHI.
+    - reference: GO:0044799
+      notes: GO:0044799 describes electron transfer through the gamma, beta, and alpha
+        subunits of the respiratory NarGHI nitrate reductase complex.
+  - subject: narg_alpha
+    predicate: contributes to
+    object: nitrate_reductase_quinone_activity
+    description: The NarG alpha subunit houses the molybdenum-bis(molybdopterin guanine
+      dinucleotide) cofactor and [4Fe-4S] FS0 cluster that catalyze nitrate reduction
+      to nitrite.
+    evidence:
+    - reference: PMID:12910261
+      notes: Crystal structure of NarGHI establishes NarG as the catalytic nitrate-reducing
+        subunit of the complex.
+    - reference: ComplexPortal:CPX-1974
+      notes: ComplexPortal CPX-1974 annotates NarG as the molybdenum-cofactor catalytic
+        subunit of respiratory nitrate reductase A.
+  - subject: nari_gamma
+    predicate: contributes to
+    object: narghi
+    description: The NarI gamma cytochrome b membrane subunit is an essential stoichiometric
+      subunit of the heterotrimeric NarGHI nitrate reductase complex.
+    evidence:
+    - reference: ComplexPortal:CPX-1974
+      notes: ComplexPortal CPX-1974 defines NarG, NarH, and NarI as the three subunits
+        of E. coli nitrate reductase A (NarGHI).
+    - reference: GO:0044799
+      notes: GO:0044799 defines the NarGHI complex as a heterotrimeric quinol-nitrate
+        oxidoreductase.
+  - subject: narh_beta
+    predicate: contributes to
+    object: narghi
+    description: The NarH beta iron-sulfur electron-transfer subunit is an essential
+      stoichiometric subunit of the heterotrimeric NarGHI nitrate reductase complex.
+    evidence:
+    - reference: ComplexPortal:CPX-1974
+      notes: ComplexPortal CPX-1974 defines NarG, NarH, and NarI as the three subunits
+        of E. coli nitrate reductase A (NarGHI).
+    - reference: GO:0044799
+      notes: GO:0044799 defines the NarGHI complex as a heterotrimeric quinol-nitrate
+        oxidoreductase.
+  - subject: narg_alpha
+    predicate: contributes to
+    object: narghi
+    description: The NarG alpha catalytic molybdenum-cofactor subunit is an essential
+      stoichiometric subunit of the heterotrimeric NarGHI nitrate reductase complex.
+    evidence:
+    - reference: ComplexPortal:CPX-1974
+      notes: ComplexPortal CPX-1974 defines NarG, NarH, and NarI as the three subunits
+        of E. coli nitrate reductase A (NarGHI).
+    - reference: GO:0044799
+      notes: GO:0044799 defines the NarGHI complex as a heterotrimeric quinol-nitrate
+        oxidoreductase.
 complex_compositions:
 - composition_id: complex_portal_cpx_1974
   source: COMPLEX_PORTAL

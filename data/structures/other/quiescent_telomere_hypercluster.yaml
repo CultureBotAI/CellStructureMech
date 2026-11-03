@@ -21,6 +21,12 @@ curation_history:
     mechanisms, three dataset links, one hosted and two link-only inspected figures,
     and explicit evidence conflicts and access limits.
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): bqt4 (InterPro:IPR037548).'
+  llm_assisted: true
 parent_structures:
 - GO:0032993
 part_of:
@@ -477,6 +483,7 @@ causal_graphs:
     label: Bouquet formation protein 4
     node_type: GENE_OR_PROTEIN
     component_ref: bqt4
+    grounding: InterPro:IPR037548
   - node_id: budding_position
     label: Peripheral cluster position in tested budding yeast
     node_type: BIOLOGICAL_PROCESS
