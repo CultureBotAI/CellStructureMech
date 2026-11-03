@@ -1,0 +1,872 @@
+# Epiplastidial membrane identity, source scope and claim review
+
+- Review: 20261022T013716Z-epiplastidial-membrane-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T01:18:32Z
+- Finished UTC: 2026-10-22T01:37:16Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two bounded minor findings concern interface wording and descriptive graph classification.
+
+## Scope And Provenance
+
+Whole single target with native identity/taxon checks, all component/formation claims, evidence placement, function and graph audit; source reading scopes enumerated per evidence row.
+
+Selection: Target 3 of batch twenty-eight in strict uncovered path order; fresh f97b1abe initial native inspection/schema/strict gates passed before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:7770040 | data/structures/membrane_organelle/epiplastidial_membrane.yaml | maintained | epiplastidial membrane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:7770040 | Focused validator passed. |
+| Focused native strict | passed | True | GO:7770040 | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | GO:7770040 | No expression-module membership or regulatory transcriptomic claim is used in this record review. |
+| Claim-level scientific review | passed | True | GO:7770040 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:7770040 | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:7770040 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:7770040 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:7770040 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:7770040 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:7770040 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Outermost membrane versus PPM and plastid-envelope membrane
+
+identity: supported. Targets: GO:7770040.
+
+The maintained identifier, five synonyms and parent class match native GO. Plastid parthood follows the plastid-membrane relation and the primary topology. The complete record and frozen PPM neighbor maintain distinct first, second and inner envelope layers; no whole-plastid CURIE is used as a lipid species.
+
+### Directly studied diatom context and limits of cross-lineage generalization
+
+scope: supported. Targets: GO:7770040.
+
+Flori studied Pt1 CCAP1055/3 and Gueguen Pt1 Strain8.6 CCAP1055/1. The listed species and qualitative COMMON occurrence are supported, without implying a measured prevalence. Flori explicitly distinguishes diatom ER continuity from apicomplexan plastids lacking that continuity. The native GO wording is faithfully copied; this review does not independently certify it as an exception-free statement about all secondary plastids.
+
+### Collective lipid bilayer versus molecular lipid census
+
+grounding: supported. Targets: GO:7770040.
+
+The whole epiplastidial bilayer is a supported constituent material. The papers do not establish a complete molecular mixture, and Gueguen retains uncertainty about extraplastidial MGDG pools. REVIEWED_LABEL_ONLY and the lipid TODO correctly avoid an imprecise exact chemical grounding. No required molecular inventory is missing merely because specific lipid species are unresolved.
+
+### Formation necessity of individual lipid classes
+
+grounding: unknown. Targets: GO:7770040.
+
+The ESSENTIAL row denotes the entire constituting bilayer. Individual lipid-species removal/substitution requirements or necessary molecular maintenance machinery are not established by these data and remain unknown independently of collective membrane identity.
+
+### Adjacent interface versus indirect enclosure
+
+evidence: concern. Targets: GO:7770040.
+
+The function wording compresses PPC enclosure into separation from the host endomembrane system, although the primary map places PPC immediately inside PPM and the ER/cER space between PPM and EpM. EpM can indirectly enclose PPC, so this is a bounded clarity issue rather than proof that enclosure is false. Explicit adjacent spaces would avoid reading the function as a PPM interface assigned to EpM.
+
+### Two descriptive constituent/boundary edges
+
+graph: concern. Targets: GO:7770040.
+
+The bilayer forms the named membrane and the membrane maintains an outer boundary; these are structural relations. The graph has no intervening molecular causal process justifying its MECHANISTIC designation. Its last edge also benefits from distinguishing indirect PPC enclosure from the immediate ER/cER-lumen–cytosol interface.
+
+### Full maintained record and bounded scientific coverage
+
+completeness: supported. Targets: GO:7770040.
+
+Every maintained claim, graph edge and discussion was inspected. No quantitative physical-property field, maintained image/licence asset or verbatim evidence snippet is present. Existing PROPOSED status and history remain unchanged. No finding is invented from optional unresolved molecular inventory or unavailable full-text routes alone.
+
+## Findings
+
+### F1: Clarify the membrane interface rather than compressing nested boundaries
+
+minor / open / confirmed; issue key: epiplastidial-adjacent-interface-wording.
+
+The function says EpM separates PPC from the host endomembrane system. Primary topology places the PPC between PPM and oEM, and EpM is itself continuous with host ER/outer nuclear membrane. An outer membrane can indirectly enclose PPC, so the wording is not treated as a proven false enclosure claim; it needs the adjacent spaces specified to avoid attributing the PPM interface to EpM.
+
+### F2: Classify the two-edge boundary graph as descriptive
+
+minor / open / confirmed; issue key: epiplastidial-descriptive-graph-mechanistic-label.
+
+The graph consists of collective bilayer formation of the named membrane and outer-boundary maintenance. These relations describe identity and topology; the cited sources do not establish a molecular causal sequence represented by the current nodes and edges.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In a separately authorized curation change, clarify EpM as the outer boundary against host cytosol, enclosing the ER/cER lumen before the intervening PPM and deeper PPC; retain supported indirect enclosure and diatom ER continuity.
+
+- Keep EpM, PPM and oEM distinct; name the actual adjacent compartments wherever a direct boundary is meant.
+- Retain correct native identity and supported Phaeodactylum context; do not claim the source directly measured a new transport mechanism.
+- Run focused schema and strict checks after the separately authorized edit.
+
+### A2
+
+In a separately authorized curation change, use NONMECHANISTIC with a scope note for this descriptive topology, or add a genuinely source-backed mechanism only if independently established.
+
+- Preserve supported topology while documenting the molecular mechanism is not represented.
+- Do not invent transport machinery or lipid requirements to satisfy a graph label.
+- Run the native graph and focused validation checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/epiplastidial_membrane.yaml; Entire maintained YAML, all fields, evidence notes, discussions, history and graph edges | context_only | The whole single target was read without editing scientific content or promoting its native status. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; Component grounding, essentiality, ProteinExample, xrefs and graph contracts; frozen local review rubric | context_only | Structure identity, molecular family, domain and individual protein are distinct. Assembly necessity is separate from observed membership and catalytic requirement. A whole bilayer material is not an individual lipid species. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Primary-evidence requirement for mechanistic claims and prohibition on inferring causality from association | context_only | A descriptive constituent/topological relation does not by itself establish a molecular causal mechanism; mechanistic scope is assessed separately from biological correctness of the constituent relations. |
+| ppm-neighbor | data/structures/membrane_organelle/periplastidial_membrane.yaml; Entire neighboring maintained record, read only for layer identity and compartment context | context_only | The second outer membrane and the outermost epiplastidial membrane remain distinct; this neighbor is a frozen context input, not another review target. |
+| epiplastidial-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:7770040,GO:7770041,GO:0042170,GO:0009536,GO:0009527; All five requested term IDs, labels, definitions, active flags, synonyms and relevant children | supports | Active GO7770040 exactly matches the target definition and all five exact synonyms. GO0042170 lists it as an is_a child; GO0009536 lists plastid membrane as part_of plastid. GO7770041 defines the second outer membrane and locates PPC between PPM and the plastid outer envelope. GO0009527 is the plastid-envelope outer membrane and is not substituted for EpM. |
+| epiplastidial-agent-tax2850 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2850; Exact taxId, scientificName, rank, lineage and alternate names | supports | ENA identifies taxId2850 as Phaeodactylum tricornutum, species rank and diatom lineage. It does not establish the culture collection strain or frequency of the structure. |
+| epiplastidial-agent-flori2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.protis.2016.04.001; Exact bibliographic identity; detailed claims use the separately inspected body | supports | Native MED identifies Ultrastructure of the Periplastidial Compartment of the Diatom Phaeodactylum tricornutum. by Flori S, Jouneau PH, Finazzi G, Maréchal E, Falconet D. (2016), DOI10.1016/j.protis.2016.04.001, PMID27179349.  |
+| epiplastidial-agent-gueguen2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1093/plcell/koae275; Exact bibliographic identity; detailed claims use the separately inspected body | supports | Native MED identifies Monogalactosyldiacylglycerol synthase isoforms play diverse roles inside and outside the diatom plastid. by Guéguen N, Sérès Y, Cicéron F, Gros V, Si Larbi G, Falconet D, Deragon E, Gueye SD, Le Moigne D, Schilling M, Cussac M, Petroutsos D, Hu H, Gong Y, Michaud M, Jouhet J, Salvaing J, Amato A, Maréchal E. (2024), DOI10.1093/plcell/koae275, PMID39383259.  |
+| epiplastidial-agent-hashimoto2005-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1007/s10265-005-0214-6; Exact bibliographic identity and complete primary abstractText | supports | Native MED identifies The ultrastructural features and division of secondary plastids. by Hashimoto H. (2005), DOI10.1007/s10265-005-0214-6, PMID15937721. The complete abstract of this review distinguishes secondary plastids with three/four membranes and describes EPrER ribosomes and ER/outer-nuclear continuity in heterokonts, cryptophytes and haptophytes; it is not a new primary topology experiment. |
+| epiplastidial-agent-flori2016-oceanomics-pdf | https://www.oceanomics.eu/sites/default/files/documents/oceanomics-flori-et-al-protist-2016-484.pdf; Printed pp254–264: entire scientific Introduction, Results/discussion and Methods; Fig1–7 captions. Fig1 pixels and surrounding p255 text visually inspected from original PDF; p256 text also rendered/read. Other figure pixels and supplementary data were not assessed. | supports | The primary FIB-SEM study of P. tricornutum Pt1 maps the outer cERM as continuous with the outer nuclear envelope and the second outer PPM as the outer boundary of PPC, with oEM its inner boundary. The VN connects to PPM, not oEM; intact and disrupted-cell observations are distinguished. Lipid compositions and molecular maintenance machinery are explicitly unknown or hypotheses. Fig1 pixels show the intervening cERM–PPM space and PPC inside PPM. |
+| epiplastidial-agent-gueguen2024-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11638560/fullTextXML; Introduction koae275-s1 including Fig1 caption; complete Results koae275-s2.4 and Fig2/3 captions; Discussion koae275-s3.2 and s3.8; Methods s4.4 and s4.13. Other Results/Discussion/Methods, supplement and figure pixels not read. | supports | The primary diatom study preserves the EpM/PPM/oEM/iEM distinction and detects MGDgamma-GFP mainly in ER and at the plastid periphery, with qualified EpM localization. Its Discussion explicitly retains uncertainty about the locations and functions of extraplastidial galactolipid pools. This supports boundary context without assigning an exact lipid mixture or promoting localization predictions to necessity. |
+| epiplastidial-agent-hashimoto2005-publisher | https://link.springer.com/article/10.1007/s10265-005-0214-6; Actual access response; not an inspected scientific body | context_only | Publisher request returnedHTTP200 but only a short non-article access page; no full scientific body was recovered. The native complete review abstract is the bounded source. |
+| schema-result | just validate data/structures/membrane_organelle/epiplastidial_membrane.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/epiplastidial_membrane.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/epiplastidial_membrane.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/epiplastidial_membrane.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/epiplastidial_membrane.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Hashimoto2005 was read only as its complete native review abstract; the short publisherHTTP200 response is not a recovered article body.
+- Flori2016 main scientific text and Methods pp254–264, all captions and Fig1 pixels were inspected. Supplementary data, remaining figure pixels and raw measurements were not independently reanalyzed. Gueguen2024 inspection is limited to the explicitly enumerated sections/captions and no image pixels.
+- The full native GO definition is reproduced accurately, but the papers distinguish secondary-plastid lineages and do not support extrapolating diatom ER continuity to all apicomplexan plastids. Host/symbiont membrane origins in the primary discussion include evolutionary hypotheses.
+- Exact lipid mixture and individual formation necessities remain unresolved. The topology wording finding concerns ambiguity of adjacent boundaries, not denial of indirect PPC enclosure.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requires a validated review for every uncovered target, including an honest clean review; no issue is invented to satisfy the local issue-only rule.
+- All remote snapshots retain actual original URL, UTC access timestamp and raw SHA256. No maintained record or publication was modified.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T013716Z-epiplastidial-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Epiplastidial membrane identity, source scope and claim review
+started_at: '2026-10-22T01:18:32Z'
+finished_at: '2026-10-22T01:37:16Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Two bounded minor findings concern interface wording and descriptive graph
+  classification.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    sha256: 15876d75b2efb4115edcf9f6ffa44a5254fcf104c9f543d7eb07b78a5f06db8a
+    role: target
+  - path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+    sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:7770040
+  path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  label: epiplastidial membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single target with native identity/taxon checks, all component/formation
+    claims, evidence placement, function and graph audit; source reading scopes enumerated
+    per evidence row.
+  selection: Target 3 of batch twenty-eight in strict uncovered path order; fresh
+    f97b1abe initial native inspection/schema/strict gates passed before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:7770040
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just validate data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just validate-strict data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:7770040
+  summary: No expression-module membership or regulatory transcriptomic claim is used
+    in this record review.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - ppm-neighbor
+  - epiplastidial-agent-go
+  - epiplastidial-agent-tax2850
+  - epiplastidial-agent-flori2016-meta
+  - epiplastidial-agent-gueguen2024-meta
+  - epiplastidial-agent-hashimoto2005-meta
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+  - epiplastidial-agent-hashimoto2005-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770040
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  locator: Entire maintained YAML, all fields, evidence notes, discussions, history
+    and graph edges
+  accessed_at: '2026-10-22T01:30:20Z'
+  support: context_only
+  summary: The whole single target was read without editing scientific content or
+    promoting its native status.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component grounding, essentiality, ProteinExample, xrefs and graph contracts;
+    frozen local review rubric
+  accessed_at: '2026-10-22T01:30:20Z'
+  support: context_only
+  summary: Structure identity, molecular family, domain and individual protein are
+    distinct. Assembly necessity is separate from observed membership and catalytic
+    requirement. A whole bilayer material is not an individual lipid species.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Primary-evidence requirement for mechanistic claims and prohibition on
+    inferring causality from association
+  accessed_at: '2026-10-22T01:30:20Z'
+  support: context_only
+  summary: A descriptive constituent/topological relation does not by itself establish
+    a molecular causal mechanism; mechanistic scope is assessed separately from biological
+    correctness of the constituent relations.
+- evidence_id: ppm-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  locator: Entire neighboring maintained record, read only for layer identity and
+    compartment context
+  accessed_at: '2026-10-22T01:30:20Z'
+  support: context_only
+  summary: The second outer membrane and the outermost epiplastidial membrane remain
+    distinct; this neighbor is a frozen context input, not another review target.
+- evidence_id: epiplastidial-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:7770040,GO:7770041,GO:0042170,GO:0009536,GO:0009527
+  locator: All five requested term IDs, labels, definitions, active flags, synonyms
+    and relevant children
+  accessed_at: '2026-10-22T01:21:53.018701Z'
+  support: supports
+  summary: Active GO7770040 exactly matches the target definition and all five exact
+    synonyms. GO0042170 lists it as an is_a child; GO0009536 lists plastid membrane
+    as part_of plastid. GO7770041 defines the second outer membrane and locates PPC
+    between PPM and the plastid outer envelope. GO0009527 is the plastid-envelope
+    outer membrane and is not substituted for EpM.
+  snapshot_sha256: 0b3f5b2c4cfb0b6e246bf999c659c202aa4b86be5186da38a27e24b087d75851
+- evidence_id: epiplastidial-agent-tax2850
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2850
+  locator: Exact taxId, scientificName, rank, lineage and alternate names
+  accessed_at: '2026-10-22T01:21:53.019696Z'
+  support: supports
+  summary: ENA identifies taxId2850 as Phaeodactylum tricornutum, species rank and
+    diatom lineage. It does not establish the culture collection strain or frequency
+    of the structure.
+  snapshot_sha256: c75fcca730767d8f4ac8cfed3a443c8d17934ab9655612134af00b64895ac23e
+- evidence_id: epiplastidial-agent-flori2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.protis.2016.04.001
+  locator: Exact bibliographic identity; detailed claims use the separately inspected
+    body
+  accessed_at: '2026-10-22T01:21:54.621024Z'
+  support: supports
+  summary: 'Native MED identifies Ultrastructure of the Periplastidial Compartment
+    of the Diatom Phaeodactylum tricornutum. by Flori S, Jouneau PH, Finazzi G, Maréchal
+    E, Falconet D. (2016), DOI10.1016/j.protis.2016.04.001, PMID27179349. '
+  snapshot_sha256: 3ee49e9e6f7dbce9bb1482ddc23a36e0fc2ef5e8e77f4856ed93562762e78bdf
+- evidence_id: epiplastidial-agent-gueguen2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1093/plcell/koae275
+  locator: Exact bibliographic identity; detailed claims use the separately inspected
+    body
+  accessed_at: '2026-10-22T01:21:55.259694Z'
+  support: supports
+  summary: 'Native MED identifies Monogalactosyldiacylglycerol synthase isoforms play
+    diverse roles inside and outside the diatom plastid. by Guéguen N, Sérès Y, Cicéron
+    F, Gros V, Si Larbi G, Falconet D, Deragon E, Gueye SD, Le Moigne D, Schilling
+    M, Cussac M, Petroutsos D, Hu H, Gong Y, Michaud M, Jouhet J, Salvaing J, Amato
+    A, Maréchal E. (2024), DOI10.1093/plcell/koae275, PMID39383259. '
+  snapshot_sha256: b08f31cdb1c1f54505f232ad176837466d659b8b2603e746b6b8d064a98dd354
+- evidence_id: epiplastidial-agent-hashimoto2005-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s10265-005-0214-6
+  locator: Exact bibliographic identity and complete primary abstractText
+  accessed_at: '2026-10-22T01:21:55.250443Z'
+  support: supports
+  summary: Native MED identifies The ultrastructural features and division of secondary
+    plastids. by Hashimoto H. (2005), DOI10.1007/s10265-005-0214-6, PMID15937721.
+    The complete abstract of this review distinguishes secondary plastids with three/four
+    membranes and describes EPrER ribosomes and ER/outer-nuclear continuity in heterokonts,
+    cryptophytes and haptophytes; it is not a new primary topology experiment.
+  snapshot_sha256: c59c9c32f1113a5c1af07afda091e612f17dfc444c3c1ae07356fc39806d0692
+- evidence_id: epiplastidial-agent-flori2016-oceanomics-pdf
+  kind: primary_source
+  reference: https://www.oceanomics.eu/sites/default/files/documents/oceanomics-flori-et-al-protist-2016-484.pdf
+  locator: 'Printed pp254–264: entire scientific Introduction, Results/discussion
+    and Methods; Fig1–7 captions. Fig1 pixels and surrounding p255 text visually inspected
+    from original PDF; p256 text also rendered/read. Other figure pixels and supplementary
+    data were not assessed.'
+  accessed_at: '2026-10-22T01:23:14.439947Z'
+  support: supports
+  summary: The primary FIB-SEM study of P. tricornutum Pt1 maps the outer cERM as
+    continuous with the outer nuclear envelope and the second outer PPM as the outer
+    boundary of PPC, with oEM its inner boundary. The VN connects to PPM, not oEM;
+    intact and disrupted-cell observations are distinguished. Lipid compositions and
+    molecular maintenance machinery are explicitly unknown or hypotheses. Fig1 pixels
+    show the intervening cERM–PPM space and PPC inside PPM.
+  snapshot_sha256: e2ca79ebda9c385dfc7a1a99b7b9e0227f615d4b4127b36efb616fc97170bf35
+- evidence_id: epiplastidial-agent-gueguen2024-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11638560/fullTextXML
+  locator: Introduction koae275-s1 including Fig1 caption; complete Results koae275-s2.4
+    and Fig2/3 captions; Discussion koae275-s3.2 and s3.8; Methods s4.4 and s4.13.
+    Other Results/Discussion/Methods, supplement and figure pixels not read.
+  accessed_at: '2026-10-22T01:22:20.826396Z'
+  support: supports
+  summary: The primary diatom study preserves the EpM/PPM/oEM/iEM distinction and
+    detects MGDgamma-GFP mainly in ER and at the plastid periphery, with qualified
+    EpM localization. Its Discussion explicitly retains uncertainty about the locations
+    and functions of extraplastidial galactolipid pools. This supports boundary context
+    without assigning an exact lipid mixture or promoting localization predictions
+    to necessity.
+  snapshot_sha256: 0078d6a856bbf8cc5b6769112284c598a161cacf7a7508cfba3e18bac1f14ed0
+- evidence_id: epiplastidial-agent-hashimoto2005-publisher
+  kind: authority
+  reference: https://link.springer.com/article/10.1007/s10265-005-0214-6
+  locator: Actual access response; not an inspected scientific body
+  accessed_at: '2026-10-22T01:22:22.442287Z'
+  support: context_only
+  summary: Publisher request returnedHTTP200 but only a short non-article access page;
+    no full scientific body was recovered. The native complete review abstract is
+    the bounded source.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:33Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/epiplastidial_membrane.yaml'
+  snapshot_sha256: 5bb274109ea36daa6947f9faea35b06c387751e963e4efca6bb7087a68725811
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/epiplastidial_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/epiplastidial_membrane-strict.tsv"
+  snapshot_sha256: b9856a9e42043f0d225893047e91a3010b05e75f3a66090225bd84c801027731
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/epiplastidial_membrane.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Outermost membrane versus PPM and plastid-envelope membrane
+  outcome: supported
+  target_ids:
+  - GO:7770040
+  summary: The maintained identifier, five synonyms and parent class match native
+    GO. Plastid parthood follows the plastid-membrane relation and the primary topology.
+    The complete record and frozen PPM neighbor maintain distinct first, second and
+    inner envelope layers; no whole-plastid CURIE is used as a lipid species.
+  evidence_ids:
+  - record
+  - ppm-neighbor
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+- assessment_id: scope
+  area: scope
+  topic: Directly studied diatom context and limits of cross-lineage generalization
+  outcome: supported
+  target_ids:
+  - GO:7770040
+  summary: Flori studied Pt1 CCAP1055/3 and Gueguen Pt1 Strain8.6 CCAP1055/1. The
+    listed species and qualitative COMMON occurrence are supported, without implying
+    a measured prevalence. Flori explicitly distinguishes diatom ER continuity from
+    apicomplexan plastids lacking that continuity. The native GO wording is faithfully
+    copied; this review does not independently certify it as an exception-free statement
+    about all secondary plastids.
+  evidence_ids:
+  - record
+  - epiplastidial-agent-tax2850
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+  - epiplastidial-agent-hashimoto2005-meta
+- assessment_id: composition
+  area: grounding
+  topic: Collective lipid bilayer versus molecular lipid census
+  outcome: supported
+  target_ids:
+  - GO:7770040
+  summary: The whole epiplastidial bilayer is a supported constituent material. The
+    papers do not establish a complete molecular mixture, and Gueguen retains uncertainty
+    about extraplastidial MGDG pools. REVIEWED_LABEL_ONLY and the lipid TODO correctly
+    avoid an imprecise exact chemical grounding. No required molecular inventory is
+    missing merely because specific lipid species are unresolved.
+  evidence_ids:
+  - record
+  - policy
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity of individual lipid classes
+  outcome: unknown
+  target_ids:
+  - GO:7770040
+  summary: The ESSENTIAL row denotes the entire constituting bilayer. Individual lipid-species
+    removal/substitution requirements or necessary molecular maintenance machinery
+    are not established by these data and remain unknown independently of collective
+    membrane identity.
+  evidence_ids:
+  - record
+  - policy
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+- assessment_id: interface
+  area: evidence
+  topic: Adjacent interface versus indirect enclosure
+  outcome: concern
+  target_ids:
+  - GO:7770040
+  summary: The function wording compresses PPC enclosure into separation from the
+    host endomembrane system, although the primary map places PPC immediately inside
+    PPM and the ER/cER space between PPM and EpM. EpM can indirectly enclose PPC,
+    so this is a bounded clarity issue rather than proof that enclosure is false.
+    Explicit adjacent spaces would avoid reading the function as a PPM interface assigned
+    to EpM.
+  evidence_ids:
+  - record
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+- assessment_id: graph
+  area: graph
+  topic: Two descriptive constituent/boundary edges
+  outcome: concern
+  target_ids:
+  - GO:7770040
+  summary: The bilayer forms the named membrane and the membrane maintains an outer
+    boundary; these are structural relations. The graph has no intervening molecular
+    causal process justifying its MECHANISTIC designation. Its last edge also benefits
+    from distinguishing indirect PPC enclosure from the immediate ER/cER-lumen–cytosol
+    interface.
+  evidence_ids:
+  - record
+  - graph-policy
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained record and bounded scientific coverage
+  outcome: supported
+  target_ids:
+  - GO:7770040
+  summary: Every maintained claim, graph edge and discussion was inspected. No quantitative
+    physical-property field, maintained image/licence asset or verbatim evidence snippet
+    is present. Existing PROPOSED status and history remain unchanged. No finding
+    is invented from optional unresolved molecular inventory or unavailable full-text
+    routes alone.
+  evidence_ids:
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: epiplastidial-adjacent-interface-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Clarify the membrane interface rather than compressing nested boundaries
+  description: The function says EpM separates PPC from the host endomembrane system.
+    Primary topology places the PPC between PPM and oEM, and EpM is itself continuous
+    with host ER/outer nuclear membrane. An outer membrane can indirectly enclose
+    PPC, so the wording is not treated as a proven false enclosure claim; it needs
+    the adjacent spaces specified to avoid attributing the PPM interface to EpM.
+  target_ids:
+  - GO:7770040
+  field_paths:
+  - functions#complex_plastid_outer_boundary.description
+  - causal_graphs#epiplastidial_membrane_boundary.edges
+  evidence_ids:
+  - record
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  - epiplastidial-agent-gueguen2024-jats
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim-level evidence and minor
+    weak-wording/provenance rubric
+  native_severity: minor
+  normalization_reason: Minor weak wording because indirect enclosure remains valid
+    and the text does not explicitly assert a single immediate interface. The correction
+    removes ambiguity; it is not a major finding of demonstrably false whole-structure
+    identity or universal biological function.
+- finding_id: F2
+  issue_key: epiplastidial-descriptive-graph-mechanistic-label
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Classify the two-edge boundary graph as descriptive
+  description: The graph consists of collective bilayer formation of the named membrane
+    and outer-boundary maintenance. These relations describe identity and topology;
+    the cited sources do not establish a molecular causal sequence represented by
+    the current nodes and edges.
+  target_ids:
+  - GO:7770040
+  field_paths:
+  - causal_graphs#epiplastidial_membrane_boundary.scope_status
+  evidence_ids:
+  - record
+  - graph-policy
+  - epiplastidial-agent-go
+  - epiplastidial-agent-flori2016-oceanomics-pdf
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim-level evidence and minor
+    weak-wording/provenance rubric
+  native_severity: minor
+  normalization_reason: 'Minor metadata overstatement: the constituent relations remain
+    supported and no invented molecular interaction is present.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:7770040
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation change, clarify EpM as the outer
+    boundary against host cytosol, enclosing the ER/cER lumen before the intervening
+    PPM and deeper PPC; retain supported indirect enclosure and diatom ER continuity.
+  acceptance_checks:
+  - Keep EpM, PPM and oEM distinct; name the actual adjacent compartments wherever
+    a direct boundary is meant.
+  - Retain correct native identity and supported Phaeodactylum context; do not claim
+    the source directly measured a new transport mechanism.
+  - Run focused schema and strict checks after the separately authorized edit.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:7770040
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation change, use NONMECHANISTIC with
+    a scope note for this descriptive topology, or add a genuinely source-backed mechanism
+    only if independently established.
+  acceptance_checks:
+  - Preserve supported topology while documenting the molecular mechanism is not represented.
+  - Do not invent transport machinery or lipid requirements to satisfy a graph label.
+  - Run the native graph and focused validation checks.
+limitations:
+- Hashimoto2005 was read only as its complete native review abstract; the short publisherHTTP200
+  response is not a recovered article body.
+- Flori2016 main scientific text and Methods pp254–264, all captions and Fig1 pixels
+  were inspected. Supplementary data, remaining figure pixels and raw measurements
+  were not independently reanalyzed. Gueguen2024 inspection is limited to the explicitly
+  enumerated sections/captions and no image pixels.
+- The full native GO definition is reproduced accurately, but the papers distinguish
+  secondary-plastid lineages and do not support extrapolating diatom ER continuity
+  to all apicomplexan plastids. Host/symbiont membrane origins in the primary discussion
+  include evolutionary hypotheses.
+- Exact lipid mixture and individual formation necessities remain unresolved. The
+  topology wording finding concerns ambiguity of adjacent boundaries, not denial of
+  indirect PPC enclosure.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requires a validated review for every uncovered target, including
+  an honest clean review; no issue is invented to satisfy the local issue-only rule.
+- All remote snapshots retain actual original URL, UTC access timestamp and raw SHA256.
+  No maintained record or publication was modified.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

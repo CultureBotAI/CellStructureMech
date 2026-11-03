@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml
+  slug: acrab_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-7267df
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect AcrB, AcrA, and TolC subunit nodes to acrab_tolc structure node
+  details: Added contributes to edges from acrb, acra, and tolc to acrab_tolc backed by ComplexPortal:CPX-4263
+    and PDB:5V5S, unifying the tripartite subunit assembly and xenobiotic efflux subgraphs.

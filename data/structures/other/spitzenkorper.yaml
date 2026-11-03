@@ -52,6 +52,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:09Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked spitzenkorper_actin_filaments component into spitzenkorper_vesicle_supply
+    causal graph with source-backed actin-scaffold organization edge.
+  llm_assisted: true
 synonyms:
 - synonym_text: Spitzenkörper
   synonym_type: EXACT_SYNONYM
@@ -218,6 +224,10 @@ causal_graphs:
   - node_id: polarized_hyphal_growth
     label: polarized hyphal growth
     node_type: BIOLOGICAL_PROCESS
+  - node_id: spitzenkorper_actin_filaments
+    label: Spitzenkorper actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: spitzenkorper_actin_filaments
   edges:
   - subject: spitzenkorper_secretory_vesicles
     predicate: accumulates in
@@ -246,6 +256,18 @@ causal_graphs:
     - reference: DOI:10.1016/j.mib.2014.04.003
       notes: Riquelme and Sanchez-Leon 2014 reviewed Spitzenkorper organization of
         hyphal growth and morphogenesis.
+  - subject: spitzenkorper_actin_filaments
+    predicate: organizes
+    object: spitzenkorper
+    description: Actin filaments in the Spitzenkorper core participate in polarized
+      vesicle organization at the hyphal apex.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2014.04.003
+      notes: Riquelme and Sanchez-Leon 2014 reviewed the Spitzenkorper as a multicomponent
+        structure that includes cytoskeletal elements.
+    - reference: DOI:10.1038/s41467-020-16712-9
+      notes: Zheng et al. 2020 assayed Spitzenkorper F-actin and its scaffold-dependent
+        organization in Neurospora crassa.
 discussions:
 - discussion_id: ground_spitzenkorper_vesicle_and_scaffold_classes
   prompt: Resolve exact source-neutral groundings for Spitzenkorper microvesicles,
