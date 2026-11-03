@@ -1,0 +1,207 @@
+identifier: GO:0032009
+label: early phagosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded intracellular vesicle as initially formed upon the
+  ingestion of particulate material by phagocytosis. A newly formed phagocytic vacuole
+  generated immediately after phagocytic cup closure in phagotrophic protists and
+  amoebae such as Dictyostelium discoideum and Entamoeba histolytica. The early phagosome
+  retains plasma membrane lipids and early endosomal Rab5/Rab7 GTPases while initiating
+  V-ATPase recruitment prior to lysosome fusion.
+definition_source: GO:0032009
+mapping_status: PROPOSED
+parent_structures:
+- GO:0045335
+has_part:
+- GO:0036186
+- GO:0062113
+synonyms:
+- synonym_text: early phagocytic vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032009
+components:
+- component_id: phagocytic_vesicle_lipid_bilayer
+  label: phagocytic vesicle lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer material that forms the phagocytic vesicle membrane boundary
+    around ingested particulate cargo. Functions during early phagosome formation
+    and initial maturation in early phagosome.
+  evidence:
+  - reference: GO:0030670
+    notes: GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic
+      vesicle.
+  - reference: uniprot.location:SL-0206
+    notes: UniProt Subcellular Location SL-0206 identifies the phagosome as a phagocytic
+      cell-specific membrane-bounded vesicle formed after uptake of extracellular
+      material.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030670 identifies the whole phagocytic vesicle membrane; no
+    separate source-neutral CURIE was curated for the generic lipid constituent of
+    that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Dictyostelium discoideum forms phagosomes that undergo ordered maturation
+    after particle uptake.
+  reference: PMID:12388753
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which purified latex-bead phagosomes were sampled across
+    a maturation time course and profiled by two-dimensional gel electrophoresis and
+    mass spectrometry.
+  reference: PMID:16926386
+functions:
+- function_id: phagocytosis
+  label: phagocytosis
+  grounding: GO:0006909
+  description: Phagocytic vesicles enclose extracellular particles taken up by phagocytosis.
+  evidence:
+  - reference: GO:0006909
+    notes: GO:0006909 defines phagocytosis as vesicle-mediated transport that engulfs
+      external particulate material.
+  - reference: GO:0045335
+    notes: GO:0045335 defines phagocytic vesicles as membrane-bounded vesicles that
+      arise from ingestion by phagocytosis.
+- function_id: phagosome_maturation
+  label: phagosome maturation
+  grounding: GO:0090382
+  description: Newly formed phagocytic vesicles mature through ordered membrane-traffic
+    and luminal changes toward late digestive compartments.
+  evidence:
+  - reference: GO:0090382
+    notes: GO:0090382 defines phagosome maturation as cellular rearrangement of phagosome
+      constituent parts after early phagosome formation.
+  - reference: PMID:12388753
+    notes: Gotthardt et al. 2002 dissected the maturation of Dictyostelium phagosomes
+      into stages with distinct membrane-trafficking and luminal-acidification behavior.
+  - reference: PMID:16926386
+    notes: Gotthardt et al. 2006 used two-dimensional gel electrophoresis and mass
+      spectrometry to fingerprint Dictyostelium phagosome protein dynamics across
+      maturation.
+evidence:
+- reference: GO:0032009
+  notes: 'Gene Ontology cellular-component term for early phagosome: A membrane-bounded
+    intracellular vesicle as initially formed upon the ingestion of particulate material
+    by phagocytosis.'
+- reference: GO:0045335
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: GO:0030670
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle membrane.
+- reference: GO:0097013
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle lumen.
+- reference: GO:0032010
+  notes: Gene Ontology cellular-component term for the phagolysosome.
+- reference: GO:0006909
+  notes: Gene Ontology biological-process term for phagocytosis.
+- reference: GO:0090382
+  notes: Gene Ontology biological-process term for phagosome maturation.
+- reference: uniprot.location:SL-0206
+  notes: UniProt Subcellular Location entry SL-0206 maps Phagosome to GO:0045335.
+- reference: PMID:12388753
+  notes: Gotthardt et al. 2002, High-resolution dissection of phagosome maturation
+    reveals distinct membrane trafficking phases, Molecular Biology of the Cell.
+- reference: PMID:16926386
+  notes: Gotthardt et al. 2006, Proteomics fingerprinting of phagosome maturation
+    and evidence for the role of a Galpha during uptake, Molecular & Cellular Proteomics.
+causal_graphs:
+- graph_id: early_phagosome_mechanism
+  title: Early phagosome assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of early phagosome (GO:0032009) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: early_phagosome
+    label: early phagosome
+    node_type: STRUCTURE
+    grounding: GO:0032009
+    description: A membrane-bounded intracellular vesicle as initially formed upon
+      the ingestion of particulate material by phagocytosis.
+  - node_id: phagocytic_vesicle_lipid_bilayer
+    label: phagocytic vesicle lipid bilayer
+    node_type: CHEMICAL
+    component_ref: phagocytic_vesicle_lipid_bilayer
+    description: Lipid-bilayer material that forms the phagocytic vesicle membrane
+      boundary around ingested particulate cargo. Functions during early phagosome
+      formation and initial maturation in early phagosome.
+  - node_id: early_phagosome_membrane
+    label: early phagosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0036186
+    description: Constituent structural subassembly (early phagosome membrane, GO:0036186)
+      within early phagosome.
+  - node_id: early_phagosome_lumen
+    label: early phagosome lumen
+    node_type: STRUCTURE
+    grounding: GO:0062113
+    description: Constituent structural subassembly (early phagosome lumen, GO:0062113)
+      within early phagosome.
+  - node_id: phagocytosis
+    label: phagocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006909
+    description: Phagocytic vesicles enclose extracellular particles taken up by phagocytosis.
+  - node_id: phagosome_maturation
+    label: phagosome maturation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090382
+    description: Newly formed phagocytic vesicles mature through ordered membrane-traffic
+      and luminal changes toward late digestive compartments.
+  edges:
+  - subject: phagocytic_vesicle_lipid_bilayer
+    predicate: is part of
+    object: early_phagosome
+    description: Lipid-bilayer material that forms the phagocytic vesicle membrane
+      boundary around ingested particulate cargo. Functions during early phagosome
+      formation and initial maturation in early phagosome.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic
+        vesicle.
+  - subject: early_phagosome_membrane
+    predicate: is part of
+    object: early_phagosome
+    description: Early phagosome membrane is a structural part of early phagosome.
+    evidence:
+    - reference: PMID:12388753
+      notes: Gotthardt et al. 2002, High-resolution dissection of phagosome maturation
+        reveals distinct membrane trafficking phases, Molecular Biology of the Cell.
+  - subject: early_phagosome_lumen
+    predicate: is part of
+    object: early_phagosome
+    description: Early phagosome lumen is a structural part of early phagosome.
+    evidence:
+    - reference: PMID:12388753
+      notes: Gotthardt et al. 2002, High-resolution dissection of phagosome maturation
+        reveals distinct membrane trafficking phases, Molecular Biology of the Cell.
+  - subject: early_phagosome
+    predicate: mediates
+    object: phagocytosis
+    description: Phagocytic vesicles enclose extracellular particles taken up by phagocytosis.
+    evidence:
+    - reference: GO:0006909
+      notes: GO:0006909 defines phagocytosis as vesicle-mediated transport that engulfs
+        external particulate material.
+  - subject: early_phagosome
+    predicate: mediates
+    object: phagosome_maturation
+    description: Newly formed phagocytic vesicles mature through ordered membrane-traffic
+      and luminal changes toward late digestive compartments.
+    evidence:
+    - reference: GO:0090382
+      notes: GO:0090382 defines phagosome maturation as cellular rearrangement of
+        phagosome constituent parts after early phagosome formation.
+curation_history:
+- timestamp: '2026-10-19T05:27:39Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of early phagosome (GO:0032009) in category MEMBRANE_ORGANELLE
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

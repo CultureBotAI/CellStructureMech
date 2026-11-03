@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_replisome.yaml
+  slug: nuclear_replisome
+session:
+  id: 2026-10-19T052742Z-claude-opus-4-7-a2eb84
+  timestamp: '2026-10-19T05:27:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for nuclear replisome (GO:0043601) in other.
+  details: Authored data/structures/other/nuclear_replisome.yaml for nuclear replisome
+    (GO:0043601) with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

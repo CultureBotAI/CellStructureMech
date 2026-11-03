@@ -1,0 +1,281 @@
+identifier: GO:0001411
+label: hyphal tip
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The end, or tip, of a fungal hypha, where polarized growth occurs during
+  hyphal elongation. The dome-shaped, rapidly expanding apical region of a fungal
+  or oomycete hypha where polarized exocytosis, cell wall biosynthesis, and cytoskeletal
+  remodeling are concentrated. In filamentous fungi and dimorphic yeasts such as Candida
+  albicans and Ashbya gossypii, the hyphal tip houses the Spitzenkörper and polarisome
+  complex that nucleate actin cables and focus secretory vesicle fusion.
+definition_source: GO:0001411
+mapping_status: PROPOSED
+parent_structures:
+- GO:0030427
+- GO:0051286
+has_part:
+- GO:0031521
+- GO:0031562
+components:
+- component_id: spa2_scaffold
+  label: SPA-2 polarisome scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - SPA-2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SPA-2 is curated as the Neurospora hyphal-tip polarisome marker
+    and scaffold homolog; no exact source-neutral family CURIE was assigned for the
+    fungal Spa2 cohort.
+  role: Scaffold marker that partially overlaps the Spitzenkorper and extends into
+    the apical dome of mature Neurospora hyphae. Functions at the growing fungal hyphal
+    tip in hyphal tip.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0030372
+    notes: Lichius et al. 2012 compared BUD-6 and BNI-1 localization with SPA-2 as
+      a bona fide Neurospora polarisome marker and integrated SPA-2 into the mature
+      hyphal-tip architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:V5IQM7
+    protein_label: Spa2-like protein
+    gene_symbol: spa2
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SPA-2, which
+      UniProt lists under the primary name spa2, in Neurospora crassa OR74A. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:V5IQM7
+      notes: UniProtKB unreviewed (TrEMBL) entry V5IQM7 for gene SPA-2 in Neurospora
+        crassa OR74A. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+- component_id: bud6_actin_associated_polarity_protein
+  label: BUD-6 actin-associated polarity protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BUD-6
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BUD-6 is curated as the Neurospora Bud6/Aip3 homolog observed in
+    the mature hyphal-tip architecture; no exact source-neutral family CURIE was assigned
+    for the broader fungal Bud6 cohort.
+  role: Actin-associated polarity protein that forms a subapical cloud around the
+    Spitzenkorper in mature Neurospora hyphae. Functions at the growing fungal hyphal
+    tip in hyphal tip.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0030372
+    notes: Lichius et al. 2012 localized BUD-6 to a dynamic subapical cloud that surrounds
+      the Spitzenkorper during Neurospora mature hyphal-tip growth.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q7RVZ1
+    protein_label: Actin-interacting protein
+    gene_symbol: bud6
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BUD-6, which
+      UniProt lists under the primary name bud6, in Neurospora crassa OR74A. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q7RVZ1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q7RVZ1 for gene BUD-6 in Neurospora
+        crassa OR74A. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+- component_id: bni1_formin
+  label: BNI-1 formin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BNI-1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BNI-1 is curated as the Neurospora formin in the hyphal-tip polarisome;
+    no exact fungal-wide formin family CURIE was assigned because broader families
+    include paralogs outside this localized architecture.
+  role: Formin that localizes in apical clusters and the Spitzenkorper core at mature
+    Neurospora hyphal tips. Functions at the growing fungal hyphal tip in hyphal tip.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0030372
+    notes: Lichius et al. 2012 assayed BNI-1 and placed it in both the apical cap
+      and Spitzenkorper core of the mature Neurospora hyphal tip.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q7RWH7
+    protein_label: Cytokinesis protein sepA
+    gene_symbol: bni1
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BNI-1, which
+      UniProt lists under the primary name bni1, in Neurospora crassa OR74A. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q7RWH7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q7RWH7 for gene BNI-1 in Neurospora
+        crassa OR74A. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  presence: COMMON
+  note: Neurospora mature hyphal tips carry SPA-2, BUD-6, and BNI-1 polarisome proteins
+    in distinct apical-dome zones.
+  reference: DOI:10.1371/journal.pone.0030372
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous fungal model in which SPA-2, BUD-6, and BNI-1 were compared by
+    live-cell imaging during hyphal tip growth.
+  reference: DOI:10.1371/journal.pone.0030372
+functions:
+- function_id: hyphal_tip_polarity_maintenance
+  label: hyphal-tip polarity maintenance
+  description: The hyphal tip polarisome contributes to maintained polarized tip growth
+    in Neurospora hyphae.
+  evidence:
+  - reference: GO:0031562
+    notes: GO:0031562 defines the hyphal tip polarisome by its role in determining
+      cell polarity at the tip of a growing fungal hypha.
+  - reference: DOI:10.1371/journal.pone.0030372
+    notes: Lichius et al. 2012 concluded that the Neurospora SPA-2, BUD-6, and BNI-1
+      arrangement in the mature apical dome is a filamentous tip-growth-apparatus
+      architecture.
+evidence:
+- reference: GO:0001411
+  notes: 'Gene Ontology cellular-component term for hyphal tip: The end, or tip, of
+    a fungal hypha, where polarized growth occurs during hyphal elongation.'
+- reference: GO:0031562
+  notes: Gene Ontology cellular-component term for the hyphal tip polarisome.
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: DOI:10.1371/journal.pone.0030372
+  notes: Lichius et al. 2012, 'Comparative Live-Cell Imaging Analyses of SPA-2, BUD-6
+    and BNI-1 in Neurospora crassa Reveal Novel Features of the Filamentous Fungal
+    Polarisome', PLoS ONE.
+causal_graphs:
+- graph_id: hyphal_tip_mechanism
+  title: Hyphal tip assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of hyphal tip (GO:0001411) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: hyphal_tip
+    label: hyphal tip
+    node_type: STRUCTURE
+    grounding: GO:0001411
+    description: The end, or tip, of a fungal hypha, where polarized growth occurs
+      during hyphal elongation.
+  - node_id: spa2_scaffold
+    label: SPA-2 polarisome scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: spa2_scaffold
+    description: Scaffold marker that partially overlaps the Spitzenkorper and extends
+      into the apical dome of mature Neurospora hyphae. Functions at the growing fungal
+      hyphal tip in hyphal tip.
+  - node_id: bud6_actin_associated_polarity_protein
+    label: BUD-6 actin-associated polarity protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: bud6_actin_associated_polarity_protein
+    description: Actin-associated polarity protein that forms a subapical cloud around
+      the Spitzenkorper in mature Neurospora hyphae. Functions at the growing fungal
+      hyphal tip in hyphal tip.
+  - node_id: bni1_formin
+    label: BNI-1 formin
+    node_type: GENE_OR_PROTEIN
+    component_ref: bni1_formin
+    description: Formin that localizes in apical clusters and the Spitzenkorper core
+      at mature Neurospora hyphal tips. Functions at the growing fungal hyphal tip
+      in hyphal tip.
+  - node_id: spitzenkorper
+    label: spitzenkorper
+    node_type: STRUCTURE
+    grounding: GO:0031521
+    description: Constituent structural subassembly (spitzenkorper, GO:0031521) within
+      hyphal tip.
+  - node_id: hyphal_tip_polarisome
+    label: hyphal tip polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031562
+    description: Constituent structural subassembly (hyphal tip polarisome, GO:0031562)
+      within hyphal tip.
+  - node_id: hyphal_tip_polarity_maintenance
+    label: hyphal-tip polarity maintenance
+    node_type: BIOLOGICAL_PROCESS
+    description: The hyphal tip polarisome contributes to maintained polarized tip
+      growth in Neurospora hyphae.
+  edges:
+  - subject: spa2_scaffold
+    predicate: is part of
+    object: hyphal_tip
+    description: Scaffold marker that partially overlaps the Spitzenkorper and extends
+      into the apical dome of mature Neurospora hyphae. Functions at the growing fungal
+      hyphal tip in hyphal tip.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0030372
+      notes: Lichius et al. 2012 compared BUD-6 and BNI-1 localization with SPA-2
+        as a bona fide Neurospora polarisome marker and integrated SPA-2 into the
+        mature hyphal-tip architecture.
+  - subject: bud6_actin_associated_polarity_protein
+    predicate: is part of
+    object: hyphal_tip
+    description: Actin-associated polarity protein that forms a subapical cloud around
+      the Spitzenkorper in mature Neurospora hyphae. Functions at the growing fungal
+      hyphal tip in hyphal tip.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0030372
+      notes: Lichius et al. 2012 localized BUD-6 to a dynamic subapical cloud that
+        surrounds the Spitzenkorper during Neurospora mature hyphal-tip growth.
+  - subject: bni1_formin
+    predicate: is part of
+    object: hyphal_tip
+    description: Formin that localizes in apical clusters and the Spitzenkorper core
+      at mature Neurospora hyphal tips. Functions at the growing fungal hyphal tip
+      in hyphal tip.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0030372
+      notes: Lichius et al. 2012 assayed BNI-1 and placed it in both the apical cap
+        and Spitzenkorper core of the mature Neurospora hyphal tip.
+  - subject: spitzenkorper
+    predicate: is part of
+    object: hyphal_tip
+    description: Spitzenkorper is a structural part of hyphal tip.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0030372
+      notes: Lichius et al. 2012, 'Comparative Live-Cell Imaging Analyses of SPA-2,
+        BUD-6 and BNI-1 in Neurospora crassa Reveal Novel Features of the Filamentous
+        Fungal Polarisome', PLoS ONE.
+  - subject: hyphal_tip_polarisome
+    predicate: is part of
+    object: hyphal_tip
+    description: Hyphal tip polarisome is a structural part of hyphal tip.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0030372
+      notes: Lichius et al. 2012, 'Comparative Live-Cell Imaging Analyses of SPA-2,
+        BUD-6 and BNI-1 in Neurospora crassa Reveal Novel Features of the Filamentous
+        Fungal Polarisome', PLoS ONE.
+  - subject: hyphal_tip
+    predicate: mediates
+    object: hyphal_tip_polarity_maintenance
+    description: The hyphal tip polarisome contributes to maintained polarized tip
+      growth in Neurospora hyphae.
+    evidence:
+    - reference: GO:0031562
+      notes: GO:0031562 defines the hyphal tip polarisome by its role in determining
+        cell polarity at the tip of a growing fungal hypha.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of hyphal tip (GO:0001411) in category OTHER with verified
+    GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
+    and literature evidence.
+  llm_assisted: true

@@ -1,0 +1,181 @@
+identifier: GO:0000934
+label: porous cell septum
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A septum or cross wall which does not entirely span the space between
+  two portions of cell wall and may contain a specialized central pore structure.
+  A porous septum allows the movement of organelles and/or cytoplasm between compartments.
+  A cross-wall cell septum in filamentous ascomycete and basidiomycete fungi that
+  is perforated by one or more central septal pores (such as the simple septal pore
+  of Neurospora crassa and Aspergillus nidulans or the barrel-shaped dolipore septum
+  of basidiomycetes). The porous cell septum partitions hyphal compartments structurally
+  while permitting regulated intercellular cytoplasmic streaming, organelle migration,
+  and Woronin-body- or parenthesome-mediated pore gating upon hyphal wounding.
+definition_source: GO:0000934
+mapping_status: PROPOSED
+parent_structures:
+- GO:0030428
+synonyms:
+- synonym_text: porous septum
+  synonym_type: BROAD_SYNONYM
+  source: GO:0000934
+components:
+- component_id: barrel_shaped_septal_swelling
+  label: barrel-shaped septal swelling
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The wall thickening around a dolipore is a morphologic subregion
+    of a fungal porous septum; no exact GO, CHEBI or polymer CURIE denotes it without
+    also asserting a broader wall chemistry.
+  essentiality: UNKNOWN
+  role: Forms the swollen cross-wall around the central septal pore. Functions at
+    the fungal porous cell septum and septal pore rim in porous cell septum.
+  evidence:
+  - reference: GO:0000937
+    notes: GO:0000937 defines the dolipore septum as a cross-wall swollen around a
+      central pore.
+  - reference: DOI:10.1139/m78-129
+    notes: Traquair and McKeen 1978 used transmission electron microscopy to describe
+      the dolipore-parenthesome septum in Hirschioporus pargamenus hyphae.
+- component_id: septal_pore_caps
+  label: paired septal pore caps
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Parenthesomes or septal pore caps are curated here as paired dolipore-associated
+    substructures; QuickGO has no exact parenthesome or septal-pore-cap cellular-component
+    term, and no single protein-family grounding spans the whole cap.
+  essentiality: UNKNOWN
+  role: Paired parenthesomes cap the two cytoplasmic faces of the dolipore and participate
+    in septal pore closure. Functions at the fungal porous cell septum and septal
+    pore rim in porous cell septum.
+  evidence:
+  - reference: DOI:10.1128/EC.00125-08
+    notes: Van Driel et al. 2008 localized the SPC18 glycoprotein to Rhizoctonia solani
+      septal pore caps and to pore plugs, supporting a cap role in dolipore plugging.
+  - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+    notes: Van Peer et al. 2010 showed that Schizophyllum commune septal pore caps
+      are proteinaceous, membrane-covered structures whose loss impairs septal closure.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5302
+  taxon_label: Agaricomycotina
+  presence: VARIABLE
+  note: Dolipore septa with septal pore caps have been characterized in sampled filamentous
+    Agaricomycotina, while pore-cap morphology varies among lineages and this row
+    does not assert presence across the whole subphylum.
+  reference: DOI:10.1016/j.mycres.2008.12.007
+canonical_examples:
+- taxon_id: NCBITaxon:5334
+  taxon_label: Schizophyllum commune
+  note: Wood-rot agaricomycete model in which septal pore cap composition and its
+    requirement for normal septal closure, vegetative growth and mushroom formation
+    were genetically tested.
+  reference: DOI:10.1111/j.1462-2920.2009.02122.x
+functions:
+- function_id: septal_pore_gatekeeping
+  label: septal pore gatekeeping
+  description: The dolipore septum and its paired septal pore caps regulate cytoplasmic
+    continuity between adjacent hyphal compartments by controlling whether the central
+    septal pore is open or closed.
+  evidence:
+  - reference: DOI:10.1128/EC.00125-08
+    notes: Van Driel et al. 2008 found SPC18 in septal pore caps and pore plugs, supporting
+      septal pore cap participation in dolipore plugging.
+  - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+    notes: Van Peer et al. 2010 linked Schizophyllum commune septal pore cap loss
+      to an inability to close septa.
+evidence:
+- reference: GO:0000934
+  notes: 'Gene Ontology cellular-component term for porous cell septum: A septum or
+    cross wall which does not entirely span the space between two portions of cell
+    wall and may contain a specialized central pore structure. A porous septum allows
+    the movement of organelles and/or cytoplasm between compartments.'
+- reference: GO:0000937
+  notes: Gene Ontology cellular-component term for the dolipore septum.
+- reference: DOI:10.1139/m78-129
+  notes: Traquair and McKeen 1978, Ultrastructure of the dolipore-parenthesome septum
+    in Hirschioporus pargamenus (Polyporaceae), Canadian Journal of Microbiology.
+- reference: DOI:10.1016/j.mycres.2008.12.007
+  notes: Van Driel et al. 2009, Septal pore complex morphology in the Agaricomycotina
+    (Basidiomycota) with emphasis on the Cantharellales and Hymenochaetales, Mycological
+    Research.
+- reference: DOI:10.1128/EC.00125-08
+  notes: Van Driel et al. 2008, Septal Pore Cap Protein SPC18, Isolated from the Basidiomycetous
+    Fungus Rhizoctonia solani, Also Resides in Pore Plugs, Eukaryotic Cell.
+- reference: DOI:10.1111/j.1462-2920.2009.02122.x
+  notes: Van Peer et al. 2010, The septal pore cap is an organelle that functions
+    in vegetative growth and mushroom formation of the wood-rot fungus Schizophyllum
+    commune, Environmental Microbiology.
+causal_graphs:
+- graph_id: porous_cell_septum_mechanism
+  title: Porous cell septum assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of porous cell septum (GO:0000934) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: porous_cell_septum
+    label: porous cell septum
+    node_type: STRUCTURE
+    grounding: GO:0000934
+    description: A septum or cross wall which does not entirely span the space between
+      two portions of cell wall and may contain a specialized central pore structure.
+  - node_id: barrel_shaped_septal_swelling
+    label: barrel-shaped septal swelling
+    node_type: STRUCTURE
+    component_ref: barrel_shaped_septal_swelling
+    description: Forms the swollen cross-wall around the central septal pore. Functions
+      at the fungal porous cell septum and septal pore rim in porous cell septum.
+  - node_id: septal_pore_caps
+    label: paired septal pore caps
+    node_type: STRUCTURE
+    component_ref: septal_pore_caps
+    description: Paired parenthesomes cap the two cytoplasmic faces of the dolipore
+      and participate in septal pore closure. Functions at the fungal porous cell
+      septum and septal pore rim in porous cell septum.
+  - node_id: septal_pore_gatekeeping
+    label: septal pore gatekeeping
+    node_type: BIOLOGICAL_PROCESS
+    description: The dolipore septum and its paired septal pore caps regulate cytoplasmic
+      continuity between adjacent hyphal compartments by controlling whether the central
+      septal pore is open or closed.
+  edges:
+  - subject: barrel_shaped_septal_swelling
+    predicate: is part of
+    object: porous_cell_septum
+    description: Forms the swollen cross-wall around the central septal pore. Functions
+      at the fungal porous cell septum and septal pore rim in porous cell septum.
+    evidence:
+    - reference: GO:0000937
+      notes: GO:0000937 defines the dolipore septum as a cross-wall swollen around
+        a central pore.
+  - subject: septal_pore_caps
+    predicate: is part of
+    object: porous_cell_septum
+    description: Paired parenthesomes cap the two cytoplasmic faces of the dolipore
+      and participate in septal pore closure. Functions at the fungal porous cell
+      septum and septal pore rim in porous cell septum.
+    evidence:
+    - reference: DOI:10.1128/EC.00125-08
+      notes: Van Driel et al. 2008 localized the SPC18 glycoprotein to Rhizoctonia
+        solani septal pore caps and to pore plugs, supporting a cap role in dolipore
+        plugging.
+  - subject: porous_cell_septum
+    predicate: mediates
+    object: septal_pore_gatekeeping
+    description: The dolipore septum and its paired septal pore caps regulate cytoplasmic
+      continuity between adjacent hyphal compartments by controlling whether the central
+      septal pore is open or closed.
+    evidence:
+    - reference: DOI:10.1128/EC.00125-08
+      notes: Van Driel et al. 2008 found SPC18 in septal pore caps and pore plugs,
+        supporting septal pore cap participation in dolipore plugging.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of porous cell septum (GO:0000934) in category ENVELOPE
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

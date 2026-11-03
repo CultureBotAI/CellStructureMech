@@ -1,0 +1,258 @@
+identifier: GO:0048492
+label: ribulose bisphosphate carboxylase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex containing either both large and small subunits or just small
+  subunits which carries out the activity of producing 3-phosphoglycerate from carbon
+  dioxide and ribulose-1,5-bisphosphate. The multi-subunit ribulose-1,5-bisphosphate
+  carboxylase/oxygenase (RuBisCO) enzyme complex that catalyzes the primary carbon-fixation
+  step of the Calvin-Benson-Bassham cycle by carboxylating ribulose-1,5-bisphosphate
+  with CO2 to yield two molecules of 3-phosphoglycerate. In cyanobacteria, purple
+  bacteria, chemoautotrophic bacteria, and microalgae, Form I RuBisCO assembles as
+  a hexadecameric L8S8 complex (eight catalytic RbcL/CbbL large subunits and eight
+  RbcS/CbbS small subunits) often concentrated within bacterial carboxysomes or algal
+  pyrenoids.
+definition_source: GO:0048492
+mapping_status: PROPOSED
+parent_structures:
+- GO:1902494
+part_of:
+- GO:0005737
+synonyms:
+- synonym_text: RubisCO complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0048492
+components:
+- component_id: rubisco_large_subunit
+  label: ribulose-bisphosphate carboxylase large chain (RbcL / CbbL)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cbbL
+  - rbcL
+  essentiality: ESSENTIAL
+  role: Catalytic large subunit forming the octameric (L8) or dimeric (L2) active-site
+    core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
+  evidence:
+  - reference: PMID:17675289
+    notes: Long et al. 2007 characterize Form IB RuBisCO large (RbcL/CbbL) and small
+      (RbcS/CbbS) subunits in Synechococcus elongatus PCC 7942.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q31NB3
+    protein_label: Ribulose bisphosphate carboxylase large chain
+    gene_symbol: cbbL
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate (also declared as synonym
+      rbcL).'
+    evidence:
+    - reference: PMID:17675289
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.
+    - reference: PMID:20304968
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.'
+- component_id: rubisco_small_subunit
+  label: ribulose-bisphosphate carboxylase small subunit (RbcS / CbbS)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cbbS
+  - rbcS
+  essentiality: CONDITIONAL
+  role: Structural and regulatory small subunit capping both ends of the L8 catalytic
+    core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating CcmM/CsoS2
+    scaffold interaction.
+  evidence:
+  - reference: PMID:17675289
+    notes: Long et al. 2007 demonstrate that RbcS/CbbS assembles with RbcL/CbbL in
+      the hexadecameric Form IB RuBisCO holoenzyme.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q31NB2
+    protein_label: Ribulose bisphosphate carboxylase small subunit
+    gene_symbol: cbbS
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate (also declared as synonym
+      rbcS).'
+    evidence:
+    - reference: PMID:17675289
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB2, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB2, as cited by UniProt.'
+    - reference: PMID:24585024
+      notes: Nishimura T et al. 2014, ‘In vitro and in vivo analyses of the role of
+        the carboxysomal β-type carbonic anhydrase of the cyanobacterium Synechococcus
+        elongatus in carboxylation of ribulose-1,5-bisphosphate’, Photosynth Res.
+        ECO:0000269 experimental evidence for the carboxysome localisation of Q31NB2,
+        as cited by UniProt.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: UNIVERSAL
+  note: Cyanobacteria. Beta-carboxysomes in most lineages; alpha-carboxysomes in marine
+    Prochlorococcus and some Synechococcus.
+  reference: PMID:24006469
+- taxon_id: NCBITaxon:1224
+  taxon_label: Pseudomonadota
+  presence: VARIABLE
+  note: Alpha-carboxysomes in many chemoautotrophs (Halothiobacillus, Thiomicrospira,
+    Nitrosomonas).
+  reference: PMID:24006469
+canonical_examples:
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942
+  note: Model for beta-carboxysomes.
+  reference: PMID:24006469
+- taxon_id: NCBITaxon:927
+  taxon_label: Halothiobacillus neapolitanus
+  note: Model for alpha-carboxysomes.
+  reference: PMID:24006469
+functions:
+- function_id: co2_concentration
+  label: carbon dioxide concentrating mechanism
+  description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+    photorespiration.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018.
+- function_id: carbon_fixation
+  label: carbon fixation
+  grounding: GO:0015977
+  evidence:
+  - reference: PMID:24006469
+    notes: Rae et al. 2013.
+  description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
+    in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
+evidence:
+- reference: GO:0048492
+  notes: 'Gene Ontology cellular-component term for ribulose bisphosphate carboxylase
+    complex: A complex containing either both large and small subunits or just small
+    subunits which carries out the activity of producing 3-phosphoglycerate from carbon
+    dioxide and ribulose-1,5-bisphosphate.'
+- reference: DOI:10.1038/nrmicro.2018.10
+  notes: Kerfeld et al. 2018, "Bacterial microcompartments".
+- reference: DOI:10.1038/nrmicro1913
+  notes: Yeates et al. 2008, "Protein-based organelles in bacteria".
+- reference: PMID:24006469
+  notes: Rae et al. 2013, "Functions, compositions, and evolution of the two types
+    of carboxysomes".
+causal_graphs:
+- graph_id: ribulose_bisphosphate_carboxylase_complex_mechanism
+  title: Ribulose bisphosphate carboxylase complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of ribulose bisphosphate carboxylase complex (GO:0048492) to its biological
+    functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ribulose_bisphosphate_carboxylase_complex
+    label: ribulose bisphosphate carboxylase complex
+    node_type: STRUCTURE
+    grounding: GO:0048492
+    description: A complex containing either both large and small subunits or just
+      small subunits which carries out the activity of producing 3-phosphoglycerate
+      from carbon dioxide and ribulose-1,5-bisphosphate.
+  - node_id: rubisco_large_subunit
+    label: ribulose-bisphosphate carboxylase large chain (RbcL / CbbL)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rubisco_large_subunit
+    description: Catalytic large subunit forming the octameric (L8) or dimeric (L2)
+      active-site core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
+  - node_id: rubisco_small_subunit
+    label: ribulose-bisphosphate carboxylase small subunit (RbcS / CbbS)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rubisco_small_subunit
+    description: Structural and regulatory small subunit capping both ends of the
+      L8 catalytic core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating
+      CcmM/CsoS2 scaffold interaction.
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: STRUCTURE
+    grounding: GO:0005737
+    description: Enclosing or holo-structural assembly (cytoplasm, GO:0005737) containing
+      ribulose bisphosphate carboxylase complex.
+  - node_id: co2_concentration
+    label: carbon dioxide concentrating mechanism
+    node_type: BIOLOGICAL_PROCESS
+    description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+      photorespiration.
+  - node_id: carbon_fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
+      in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
+  edges:
+  - subject: rubisco_large_subunit
+    predicate: is part of
+    object: ribulose_bisphosphate_carboxylase_complex
+    description: Catalytic large subunit forming the octameric (L8) or dimeric (L2)
+      active-site core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
+    evidence:
+    - reference: PMID:17675289
+      notes: Long et al. 2007 characterize Form IB RuBisCO large (RbcL/CbbL) and small
+        (RbcS/CbbS) subunits in Synechococcus elongatus PCC 7942.
+  - subject: rubisco_small_subunit
+    predicate: is part of
+    object: ribulose_bisphosphate_carboxylase_complex
+    description: Structural and regulatory small subunit capping both ends of the
+      L8 catalytic core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating
+      CcmM/CsoS2 scaffold interaction.
+    evidence:
+    - reference: PMID:17675289
+      notes: Long et al. 2007 demonstrate that RbcS/CbbS assembles with RbcL/CbbL
+        in the hexadecameric Form IB RuBisCO holoenzyme.
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: is part of
+    object: cytoplasm
+    description: Ribulose bisphosphate carboxylase complex forms an integral structural
+      compartment or subassembly of cytoplasm.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018, "Bacterial microcompartments".
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: mediates
+    object: co2_concentration
+    description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+      photorespiration.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018.
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: mediates
+    object: carbon_fixation
+    description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
+      in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
+    evidence:
+    - reference: PMID:24006469
+      notes: Rae et al. 2013.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of ribulose bisphosphate carboxylase complex (GO:0048492)
+    in category OTHER with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true

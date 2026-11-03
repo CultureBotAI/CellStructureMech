@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/signal_recognition_particle.yaml
+  slug: signal_recognition_particle
+session:
+  id: 2026-10-30T182416Z-claude-code-fa84e0
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect srp_rna and ffh_srp54_gtpase subunits to bacterial_srp structure node
+  details: Added contributes to edges from srp_rna and ffh_srp54_gtpase to bacterial_srp backed
+    by DOI:10.1016/j.bbamcr.2013.10.013 and DOI:10.1093/emboj/16.16.4880.

@@ -22,6 +22,12 @@ curation_history:
     the B2C heterotrimer subunit count, xenobiotic transport function, taxonomy, and
     PMID/DOI evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'mdtbc_heterotrimer_efflux' with
+    3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: multidrug efflux pump MdtBC
   synonym_type: EXACT_SYNONYM
@@ -148,3 +154,52 @@ evidence:
   notes: PubMed identifier for the E. coli MdtBC B2C heterotrimer study cited by GO:1990203.
 - reference: DOI:10.1128/JB.01448-09
   notes: DOI for the MdtBC B2C heterotrimer study as reported by PubMed.
+causal_graphs:
+- graph_id: mdtbc_heterotrimer_efflux
+  title: MdtB2C Heterotrimeric RND Transporter Assembly and Drug Export
+  description: Assembly of two MdtB subunits with one MdtC subunit into the functional
+    MdtB2C inner-membrane RND multidrug efflux complex.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mdtb_multidrug_resistance_protein
+    label: Multidrug resistance protein MdtB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR022831
+    component_ref: mdtb_multidrug_resistance_protein
+  - node_id: mdtc_multidrug_resistance_protein
+    label: Multidrug resistance protein MdtC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023931
+    component_ref: mdtc_multidrug_resistance_protein
+  - node_id: xenobiotic_transmembrane_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  edges:
+  - subject: mdtb_multidrug_resistance_protein
+    predicate: forms heterotrimer with
+    object: mdtc_multidrug_resistance_protein
+    description: Two MdtB RND permease subunits assemble with one MdtC RND permease
+      subunit to form the active MdtB2C heterotrimer.
+    evidence:
+    - reference: GO:1990203
+      notes: GO:1990203 defines the MdtBC complex as a heterotrimer composed of an
+        MdtB dimer and one MdtC unit.
+    - reference: PMID:20038594
+      notes: Kim et al. 2010 demonstrated that functional E. coli MdtBC is a B2C heterotrimer.
+  - subject: mdtc_multidrug_resistance_protein
+    predicate: mediates
+    object: xenobiotic_transmembrane_transport
+    description: Within the MdtB2C heterotrimer, MdtC and MdtB perform complementary
+      roles in substrate recognition and proton-driven drug export across the inner
+      membrane.
+    evidence:
+    - reference: GO:1990203
+      notes: GO:1990203 defines MdtBC by drug export across the cell membrane.
+    - reference: GO:0042910
+      notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+        transporter activity.
+    - reference: PMID:20038594
+      notes: Kim et al. 2010 showed that both MdtB and MdtC protomers are required
+        for MdtB2C-mediated multidrug efflux.

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  slug: magnetosome
+session:
+  id: 2026-10-23T193057Z-curate-causal-graphs-skill-b00be4
+  timestamp: '2026-10-23T19:30:57Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787)
+    and vesicle-to-MamK attachment edge to magnetosome_chain_alignment.'
+  details: 'Cycle 2 Stage 2 causal-graph curation pass for GO:0110143 (magnetosome):
+    Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787)
+    and vesicle-to-MamK attachment edge to magnetosome_chain_alignment. Validated
+    via write_validated_structure.'
