@@ -1,0 +1,7306 @@
+# PR 2368: current-input review of ten records and adversarial follow-up
+
+- Review: 20261103T154237Z-pr2368-current-record-followup
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-11-03T15:28:17.993361Z
+- Finished UTC: 2026-11-03T15:42:37Z
+- Reviewer: Codex root synthesis with three independent read-only adversarial reviewers (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+All ten records are reassessed against current main with 52 frozen local inputs. Two stale reviews are refreshed: inner membrane pellicle complex protein examples and magnetosome chemical/protein/edge additions. All ten unsupported expression-only structured-source exclusions are replaced by claim-sensitive catalogue assessments. Five inherited scientific findings remain (two major and three minor): one hydrogenosome-lumen citation-title error and four magnetosome necessity, chemical-identity, localization-gap and MamJ-phenotype issues. Two targets need curation and eight receive qualified passes within the documented source limits. Bundle issues #2714 and #2715 are addressed by this successor; scientific issues #2716–#2720 and reused validator #2514 remain open. No record is edited.
+
+## Scope And Provenance
+
+Exact ten-record PR cohort reassessed against current main 495b947e881ae07ddfbae01668dd9799a2fb73cb. Changed inputs are substantively reassessed. Scientific records remain unchanged.
+
+Selection: Complete cohort of ten maintained records reviewed in original PR head 4d1ebd335fa856a275d8da7a0fe1a11adecf991c.
+Coverage: full; 10 reviewed / 10 in the declared population.
+Source: working_tree at Git base cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0034492 | data/structures/membrane_organelle/hydrogenosome_lumen.yaml | maintained | hydrogenosome lumen |
+| GO:0070258 | data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml | maintained | inner membrane pellicle complex |
+| cellstructuremech:intramitochondrial_protein_quality_control_compartment | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml | maintained | intramitochondrial protein quality control compartment |
+| GO:0005770 | data/structures/membrane_organelle/late_endosome.yaml | maintained | late endosome |
+| GO:0031906 | data/structures/membrane_organelle/late_endosome_lumen.yaml | maintained | late endosome lumen |
+| GO:0031902 | data/structures/membrane_organelle/late_endosome_membrane.yaml | maintained | late endosome membrane |
+| GO:0031039 | data/structures/membrane_organelle/macronucleus.yaml | maintained | macronucleus |
+| GO:0110143 | data/structures/membrane_organelle/magnetosome.yaml | maintained | magnetosome |
+| GO:0110145 | data/structures/membrane_organelle/magnetosome_lumen.yaml | maintained | magnetosome lumen |
+| GO:0110146 | data/structures/membrane_organelle/magnetosome_membrane.yaml | maintained | magnetosome membrane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full native QC | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| Native label correspondence | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| TraitMech references | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Native TraitMech link check passed. |
+| Pinned governed files | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Pinned governed files match; native vendored check passed. |
+| Native identifier resolver | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| validate GO:0034492 | passed | True | GO:0034492 | Documented focused command passed. |
+| validate-strict GO:0034492 | passed | True | GO:0034492 | Documented focused command passed. |
+| validate GO:0070258 | passed | True | GO:0070258 | Documented focused command passed. |
+| validate-strict GO:0070258 | passed | True | GO:0070258 | Documented focused command passed. |
+| validate cellstructuremech:intramitochondrial_protein_quality_control_compartment | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Documented focused command passed. |
+| validate-strict cellstructuremech:intramitochondrial_protein_quality_control_compartment | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Documented focused command passed. |
+| validate GO:0005770 | passed | True | GO:0005770 | Documented focused command passed. |
+| validate-strict GO:0005770 | passed | True | GO:0005770 | Documented focused command passed. |
+| validate GO:0031906 | passed | True | GO:0031906 | Documented focused command passed. |
+| validate-strict GO:0031906 | passed | True | GO:0031906 | Documented focused command passed. |
+| validate GO:0031902 | passed | True | GO:0031902 | Documented focused command passed. |
+| validate-strict GO:0031902 | passed | True | GO:0031902 | Documented focused command passed. |
+| validate GO:0031039 | passed | True | GO:0031039 | Documented focused command passed. |
+| validate-strict GO:0031039 | passed | True | GO:0031039 | Documented focused command passed. |
+| validate GO:0110143 | passed | True | GO:0110143 | Documented focused command passed. |
+| validate-strict GO:0110143 | passed | True | GO:0110143 | Documented focused command passed. |
+| validate GO:0110145 | passed | True | GO:0110145 | Documented focused command passed. |
+| validate-strict GO:0110145 | passed | True | GO:0110145 | Documented focused command passed. |
+| validate GO:0110146 | passed | True | GO:0110146 | Documented focused command passed. |
+| validate-strict GO:0110146 | passed | True | GO:0110146 | Documented focused command passed. |
+| Supplemental bounded PMID authority checks | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | 909 PMIDs all OK in bounded native requests; full-command limitations remain separate. |
+| Official structured-source applicability and covered-dataset cross-checks | passed | False | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | All ten explicit expression-only exclusions were reassessed against whole-record claims and the inspected complete official iModulonDB catalogue. Bounded host/strain searches found no relevant yeast/eukaryotic or Magnetospirillum/Paramagnetospirillum host datasets. The actual catalogue coverage and search terms are preserved in target-specific evidence. No unmatched foreign-host proxy is substituted, and catalogue noncoverage is not biological absence. The historical runner access failure was not rerun. |
+| Independent claim-level source review | passed | True | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Three read-only reviewers covered the complete ten-record cohort, including changed inputs, with explicit scientific findings and source-access limits. Final artifact/head acceptance occurs after saving. |
+| Retained historical adapter runner availability | unavailable | False | GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146 | Historical 00:49Z invocation unavailable due to OS access restriction. Official catalogue source fallback was inspected separately; no current invocation or successful adapter execution is claimed. The actual historical exit code 1 is retained in the evidence receipt, since the native unavailable-check model has no execution exit-code field. |
+| Native hydrogenosome lumen UniProt verify check | passed | True | GO:0034492 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native hydrogenosome lumen UniProt causal check | passed | True | GO:0034492 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native inner membrane pellicle complex UniProt verify check | passed | True | GO:0070258 | Read-only native command returned zero. Three unreviewed P. falciparum 3D7 examples for IMC1a/c/g; the alveolin node is COVERED, and the glideosome is UNANCHORED_WITH_UNIPROT (O00934/Q7Z289/A0A125YT84). Native locus/protein-name fields, stage-specific membership, and transient machinery scope are independently assessed; no blanket biological certification. |
+| Native inner membrane pellicle complex UniProt causal check | passed | True | GO:0070258 | Read-only native command returned zero. Three unreviewed P. falciparum 3D7 examples for IMC1a/c/g; the alveolin node is COVERED, and the glideosome is UNANCHORED_WITH_UNIPROT (O00934/Q7Z289/A0A125YT84). Native locus/protein-name fields, stage-specific membership, and transient machinery scope are independently assessed; no blanket biological certification. |
+| Native intramitochondrial protein quality control compartment UniProt verify check | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Read-only native command returned zero. Two reviewed S. cerevisiae examples, HSP78/P33416 and SSC1/P0CS90; zero typed GENE_OR_PROTEIN nodes. Identity, physical localization, stress-induced sedimentation and necessity remain distinct source-level assessments. |
+| Native intramitochondrial protein quality control compartment UniProt causal check | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Read-only native command returned zero. Two reviewed S. cerevisiae examples, HSP78/P33416 and SSC1/P0CS90; zero typed GENE_OR_PROTEIN nodes. Identity, physical localization, stress-induced sedimentation and necessity remain distinct source-level assessments. |
+| Native late endosome UniProt verify check | passed | True | GO:0005770 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native late endosome UniProt causal check | passed | True | GO:0005770 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native late endosome lumen UniProt verify check | passed | True | GO:0031906 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native late endosome lumen UniProt causal check | passed | True | GO:0031906 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native late endosome membrane UniProt verify check | passed | True | GO:0031902 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native late endosome membrane UniProt causal check | passed | True | GO:0031902 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native macronucleus UniProt verify check | passed | True | GO:0031039 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native macronucleus UniProt causal check | passed | True | GO:0031039 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native magnetosome UniProt verify check | passed | True | GO:0110143 | Read-only native command returned zero. Nine reviewed examples across Mam/Mms, MamK and MamJ components; two COVERED typed nodes. MamK filament is a structure node. Correct accession identity is distinct from chemical scope, species-specific membrane interaction, localization or necessity. |
+| Native magnetosome UniProt causal check | passed | True | GO:0110143 | Read-only native command returned zero. Nine reviewed examples across Mam/Mms, MamK and MamJ components; two COVERED typed nodes. MamK filament is a structure node. Correct accession identity is distinct from chemical scope, species-specific membrane interaction, localization or necessity. |
+| Native magnetosome lumen UniProt verify check | passed | True | GO:0110145 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native magnetosome lumen UniProt causal check | passed | True | GO:0110145 | Read-only native command returned zero. No represented protein examples or typed molecular nodes; positive narrative molecular/pathway assertions are assessed separately. |
+| Native magnetosome membrane UniProt verify check | passed | True | GO:0110146 | Read-only native command returned zero. No component protein examples; one UNANCHORED_WITH_UNIPROT Mam/Mms node carries V6F235,V6F510,Q93DY9,Q6NE76,Q6NE58. This is xref-backed actor identity, not complete molecular-component coverage or universal necessity. |
+| Native magnetosome membrane UniProt causal check | passed | True | GO:0110146 | Read-only native command returned zero. No component protein examples; one UNANCHORED_WITH_UNIPROT Mam/Mms node carries V6F235,V6F510,Q93DY9,Q6NE76,Q6NE58. This is xref-backed actor identity, not complete molecular-component coverage or universal necessity. |
+
+## Scientific And Domain Assessments
+
+### Represented proteins and graph actor command coverage
+
+schema: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Actual maintained inventory has 2 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Reviewed HSP78/P33416 and SSC1/P0CS90 are559292 reference examples; deletion conditions are STATE nodes. Both commands pass in this exact scope; independent source assessment supplies narrative support.
+
+### Immutable original inputs and verdict lineage
+
+provenance: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Original qualified pass contains no findings/actions; native validation/render and all 16 historical hashes pass. Current target unchanged; no new or inherited scientific finding established. Historical record/neighbor resolutions are not re-certified.
+
+### Actual molecular/pathway applicability
+
+scope: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Current HSP78/SSC1 reference proteins, deletion interventions and heat/oxidative stress protein-quality-control pathway triggers required assessment. Original explicit expression-only exclusion is unsupported, not an omitted check. Fresh full catalogue lacks yeast hosts, so no matched gene/module query applies. Historical runner failure stays separately dated; no unmatched proxy or negative biology inferred.
+
+### All maintained fields and optional content
+
+completeness: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Entire record, source placements, discussions and histories inspected; PROPOSED remains unchanged. Optional exact chemistry, quantitative properties or accession inventories are not fabricated completeness requirements. Two externally linked figures were actually inspected; no tracked local image exists in this target.
+
+### Represented proteins and graph actor command coverage
+
+schema: supported. Targets: GO:0005770.
+
+Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification. Both commands pass in this exact scope; independent source assessment supplies narrative support.
+
+### Immutable original inputs and verdict lineage
+
+provenance: supported. Targets: GO:0005770.
+
+Original qualified pass contains no findings/actions; native validation/render and all 18 historical hashes pass. Current target unchanged; no new or inherited scientific finding established. Historical record/neighbor resolutions are not re-certified.
+
+### Actual molecular/pathway applicability
+
+scope: supported. Targets: GO:0005770.
+
+Current ESCRT-I/II/III-dependent ubiquitinated membrane cargo sorting and vacuolar delivery triggers required assessment. Original explicit expression-only exclusion is unsupported, not an omitted check. Fresh full catalogue lacks yeast hosts, so no matched gene/module query applies. Historical runner failure stays separately dated; no unmatched proxy or negative biology inferred.
+
+### All maintained fields and optional content
+
+completeness: supported. Targets: GO:0005770.
+
+Entire record, source placements, discussions and histories inspected; PROPOSED remains unchanged. Optional exact chemistry, quantitative properties or accession inventories are not fabricated completeness requirements. No images, datasets or measured physical-property assertions occur in this target.
+
+### Represented proteins and graph actor command coverage
+
+schema: supported. Targets: GO:0031906.
+
+Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification. Both commands pass in this exact scope; independent source assessment supplies narrative support.
+
+### Immutable original inputs and verdict lineage
+
+provenance: supported. Targets: GO:0031906.
+
+Original qualified pass contains no findings/actions; native validation/render and all 17 historical hashes pass. Current target unchanged; no new or inherited scientific finding established. Historical record/neighbor resolutions are not re-certified.
+
+### Actual molecular/pathway applicability
+
+scope: supported. Targets: GO:0031906.
+
+Current explicit ESCRT-dependent MVB sorting/cargo delivery function despite a component-free lumen representation triggers required assessment. Original explicit expression-only exclusion is unsupported, not an omitted check. Fresh full catalogue lacks yeast hosts, so no matched gene/module query applies. Historical runner failure stays separately dated; no unmatched proxy or negative biology inferred.
+
+### All maintained fields and optional content
+
+completeness: supported. Targets: GO:0031906.
+
+Entire record, source placements, discussions and histories inspected; PROPOSED remains unchanged. Optional exact chemistry, quantitative properties or accession inventories are not fabricated completeness requirements. No images, datasets or measured physical-property assertions occur in this target.
+
+### Represented proteins and graph actor command coverage
+
+schema: supported. Targets: GO:0031902.
+
+Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification. Both commands pass in this exact scope; independent source assessment supplies narrative support.
+
+### Immutable original inputs and verdict lineage
+
+provenance: supported. Targets: GO:0031902.
+
+Original qualified pass contains no findings/actions; native validation/render and all 17 historical hashes pass. Current target unchanged; no new or inherited scientific finding established. Historical record/neighbor resolutions are not re-certified.
+
+### Actual molecular/pathway applicability
+
+scope: supported. Targets: GO:0031902.
+
+Current Vps27/ESCRT-I recruitment and the MVB sorting pathway on the endosomal membrane triggers required assessment. Original explicit expression-only exclusion is unsupported, not an omitted check. Fresh full catalogue lacks yeast hosts, so no matched gene/module query applies. Historical runner failure stays separately dated; no unmatched proxy or negative biology inferred.
+
+### All maintained fields and optional content
+
+completeness: supported. Targets: GO:0031902.
+
+Entire record, source placements, discussions and histories inspected; PROPOSED remains unchanged. Optional exact chemistry, quantitative properties or accession inventories are not fabricated completeness requirements. No images, datasets or measured physical-property assertions occur in this target.
+
+### Membrane-enclosed compartment versus aggregate cargo
+
+identity: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Minted IMiQ record denotes the membrane-enclosed reporter deposit compartment, not one protein or the aggregate alone. Broader0043231 is parent;0016234 is not adopted as exact identity. Separation from network makes invariant intact-mitochondrion parthood inappropriate.
+
+### Experimental yeast versus reference strain
+
+scope: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+4932 species scope and559292 accession context are distinct. Reporter experiments, mutant backgrounds and sampled conditions do not establish natural prevalence or species-wide invariant behavior.2018 respiratory-deficient fzo1 limitation is kept distinct from the later preparation.
+
+### Variable cargo and associated chaperones
+
+grounding: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Heterogeneous misfolded cargo is constitutive material; reporter constructs are experimental cargo. Hsp78 and Hsp70 are associated machinery with UNKNOWN necessity, not a fixed structural shell. SSC1 family013126 is exact at broad label scope; Hsp78-only family deliberately remains label-only because observed matches are broader.
+
+### Seven intervention/localization edges
+
+graph: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+All seven edges supported within2018 reporter conditions: induction, frequent perinuclear position, network separation, Hsp78-dependent coalescence/position, Fzo1-dependent coalescence, Fis1-dependent separation and benomyl-sensitive position. Deletions remain STATE interventions; no direct tether, mandatory order or protein-binding mechanism asserted. Figure7A/C/D correctly anchors Hsp78 effects.
+
+### Short-term preservation and longer-term costs
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Initial import/growth preservation is distinct from prolonged oxidative-stress susceptibility and cytochrome-b translation effects. Mother-biased retention is restricted to the reported induction/shutoff budding protocol, including7% versus98% daughter reporter observations. No universally inert or permanently protective deposit is inferred.
+
+### Current access improves earlier stated limitation
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The later paper body is now inspected; variable chaperone recruitment agrees. Original2025 access limitation was truthful historically and remains immutable. No target change or stale-input refresh claimed.
+
+### DUMP conflict remains explicitly unresolved
+
+consistency: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+2020 discussion and later tentative similarity statement do not justify synonym merger. Current record preserves uncertainty and avoids transferring CDP-DAG mechanisms, human experiments or unconditional phenotype between deposits.
+
+### Exact deposition and metadata scope
+
+provenance: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+PXD059828 identity, yeast4932, SILAC/LCMS and Fusion Lumos metadata match the cited study. Dataset CC0 is separate from article/image licence. No raw protein-enrichment or essentiality reanalysis performed.
+
+### Both externally linked figures visually inspected
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Actual2018 Figure1 pixels,10um caption and matching native MD5 support mixed reporter/blot/fluorescence description and NC-SA3.0 attribution. Actual2025 Figure1 pixels/caption match mixed microscopy/TEM,2um and author-coloured outlines. Publisher User Licence1.2 remains OTHER and link-only. No image-derived organelle diameter or membrane proof from fluorescence alone.
+
+### Remaining experimental/access limits
+
+evidence: unknown. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+No raw proteomics, supplementary-data analysis, broader-natural-prevalence experiment, direct tether identification or complete temporal mechanism.2018 supplementary PDF was downloaded but not used as inspected evidence; native accession context is not experimental strain proof.
+
+### Budding-yeast MVB example is bounded
+
+scope: supported. Targets: GO:0005770.
+
+4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular subtype/pathway and do not assert all late endosomes have identical morphology/cargo or experimentally quantify COMMON prevalence. No S288C strain substitution or mammalian universalization.
+
+### Exact source tiers and mechanism limits
+
+evidence: unknown. Targets: GO:0005770.
+
+Katzmann2001 and Babst2002 evidence is complete primary abstract, while Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome sections and Katzmann2003 Results/Discussion/Methods were read; no source figure pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do not certify universal timing, exclusive mechanism, isolated-factor sufficiency or exact lipid necessity.
+
+### Budding-yeast MVB example is bounded
+
+scope: supported. Targets: GO:0031906.
+
+4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular subtype/pathway and do not assert all late endosomes have identical morphology/cargo or experimentally quantify COMMON prevalence. No S288C strain substitution or mammalian universalization.
+
+### Exact source tiers and mechanism limits
+
+evidence: unknown. Targets: GO:0031906.
+
+Katzmann2001 and Babst2002 evidence is complete primary abstract, while Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome sections and Katzmann2003 Results/Discussion/Methods were read; no source figure pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do not certify universal timing, exclusive mechanism, isolated-factor sufficiency or exact lipid necessity.
+
+### Budding-yeast MVB example is bounded
+
+scope: supported. Targets: GO:0031902.
+
+4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular subtype/pathway and do not assert all late endosomes have identical morphology/cargo or experimentally quantify COMMON prevalence. No S288C strain substitution or mammalian universalization.
+
+### Exact source tiers and mechanism limits
+
+evidence: unknown. Targets: GO:0031902.
+
+Katzmann2001 and Babst2002 evidence is complete primary abstract, while Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome sections and Katzmann2003 Results/Discussion/Methods were read; no source figure pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do not certify universal timing, exclusive mechanism, isolated-factor sufficiency or exact lipid necessity.
+
+### Whole late endosome with MVB subtype
+
+identity: supported. Targets: GO:0005770.
+
+GO0005770 exact identity/definition and endosome parent agree. MVB0005771 is a subtype, not a synonym for every late endosome; local ILV is a separate contained vesicle. Generic juxtanuclear/lower-pH definition is ontology scope, not measured yeast localization kinetics.
+
+### Limiting-membrane aggregate material
+
+grounding: supported. Targets: GO:0005770.
+
+Reviewed-label-only LIPID row denotes collective boundary bilayer and its ESSENTIAL status at that level. Membrane node component_ref denotes boundary material, not whole organelle; no broad organelle GO is used as chemical identity. Transient ESCRTs remain assembly actors.
+
+### Six bounded assembly/topology edges
+
+graph: supported. Targets: GO:0005770.
+
+Boundary-bounds-lumen and inward budding/ILV containment agree with GO. ESCRT-I cargo sorting has primary abstract support; ESCRT-II recruitment is supported by direct Vps25–Vps20 binding and conditional liposome experiments; ESCRT-III remodeling is broad functional/authority scope. NONMECHANISTIC graph does not claim complete cargo handoff, Vps4 recycling or fusion sequence.
+
+### MVB sorting and vacuolar degradation
+
+evidence: supported. Targets: GO:0005770.
+
+GO0071985 and cited sources support ubiquitinated membrane cargo sorting into internal vesicles followed by vacuolar/lysosomal delivery. The record does not claim every cargo remains ubiquitinated within a completed vesicle or every late endosome uses only this route.
+
+### Historical optional exact-grounding TODO
+
+consistency: supported. Targets: GO:0005770.
+
+The note that this pass did not curate exact substructure grounding is bounded historical narration, not a current assertion that GO lacks lumen/membrane terms. Optional refinements are not manufactured major defects or terminal dispositions.
+
+### Lumen distinct from membrane and whole organelle
+
+identity: supported. Targets: GO:0031906.
+
+GO0031906 and SL0336 exact label/synonym agree; parent0031904 and part_of0005770 are typed authority relations. SUBCELLULAR_REGION correctly denotes internal volume.
+
+### No invented stable lumen constituents
+
+grounding: supported. Targets: GO:0031906.
+
+Sparse lumen inventory is appropriate; limiting membrane and ESCRT sorting factors are not asserted as stable lumen material. Reviewed boundary discussion remains consistent with current content; no external issue closure inferred.
+
+### Positive MVB lumen cargo-delivery scope
+
+evidence: supported. Targets: GO:0031906.
+
+Functions describe the MVB sorting subtype and membrane cargo on intraluminal vesicles, not soluble lumenal free ubiquitin or universal late-endosome composition. This positive pathway claim independently triggers adapter applicability despite the empty inventory.
+
+### Three descriptive topology relations
+
+graph: supported. Targets: GO:0031906.
+
+Lumen is_a endosome lumen, part_of late endosome and bounded by its membrane are directly consistent with GO/UniProt definitions and relations; no molecular transport mechanism inferred.
+
+### Specific late-endosome boundary
+
+identity: supported. Targets: GO:0031902.
+
+GO0031902 and SL0151 identify the limiting lipid bilayer with exact synonym. Generic endosome membrane0010008 parent and late-endosome0005770 parthood agree; whole compartment and boundary are distinct.
+
+### Collective bilayer necessity and correspondence
+
+grounding: supported. Targets: GO:0031902.
+
+Label-only lipid-bilayer row is appropriately collective rather than a guessed exact chemical species. Membrane-node component_ref corresponds to boundary material. Optional chemical refinement does not make an identified scientific defect.
+
+### Vps27-dependent recruitment and sorting surface
+
+evidence: supported. Targets: GO:0031902.
+
+Katzmann2003 directly supports Vps27-dependent endosomal ESCRT-I recruitment and associated cargo-sorting context in experimental yeast backgrounds. Functions describe a sorting surface without claiming isolated bilayer sufficiency, invariant recruitment or stable ESCRT material in the membrane.
+
+### Three membrane topology relations
+
+graph: supported. Targets: GO:0031902.
+
+is_a generic endosome membrane, part_of late endosome and bounds late-endosome lumen are supported exact descriptive relations. No untested molecular mechanism hidden in NONMECHANISTIC topology.
+
+### Structure, enclosing membrane and enclosed volume
+
+identity: supported. Targets: GO:0110143.
+
+Exact active GO/SL identities preserve whole organelle, membrane and lumen boundaries. Is-a and part_of remain separate; whole parent verified directly and lumen/membrane ancestry via is_a-only authority response.
+
+### Canonical strains and qualitative occurrence
+
+scope: supported. Targets: GO:0110143.
+
+MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current Paramagnetospirillum name. Experimental context remains assigned to the actual source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey was performed.
+
+### Component identity and formation necessity
+
+grounding: concern. Targets: GO:0110143.
+
+Generic bilayer and multi-family Mam/Mms classes remain valid native classes; MamK filament and MamJ connector are DISPENSABLE associated machinery. Exact MamJ family matches both examples. F1 persists for universal magnetite ESSENTIAL. Collective Mam essentiality is not expanded to every individual member; empty membranes and mature crystals are distinct.
+
+### Every current node and edge
+
+graph: concern. Targets: GO:0110143.
+
+Invagination/mineralization/chain-dipole overview has bounded model-strain support. New MamJ node/family/component_ref is coherent; primary interaction/localization supports the attachment model and membrane-association sense, not direct purified lipid-binding stoichiometry. Correct magnetite grounding retained. F2 neutral iron and F4 unqualified scatter remain; the enclosure edge remains true for its exact magnetite actor; alternative-mineral prose is context, not a second proven grounding error.
+
+### Frozen originals and actual current native coverage
+
+schema: supported. Targets: GO:0110143.
+
+Original native validation/render passed and exact original target hashes checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or localization proof.
+
+### Unsupported expression-only exclusion
+
+provenance: concern. Targets: GO:0110143.
+
+Original applicability row is present, not omitted, but excludes solely because no regulatory expression-module assertion is used. Current proteins/iron transport/biomineralization pathway assertions trigger the native applicability assessment even for the lumen.
+
+### Bounded exact-host catalogue assessment
+
+evidence: not_applicable. Targets: GO:0110143.
+
+Fresh complete official catalogue lacks the named magnetotactic model hosts, including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma classes cannot license an unmatched proxy. No matched downstream gene/module summary applies; historical00:49Z runner failure remains historical.
+
+### Primary experiments versus abstract and secondary scopes
+
+evidence: unknown. Targets: GO:0110143.
+
+Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010 are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract are secondary; blocked full-body routes are not certified.
+
+### Complete maintained record and optional slots
+
+completeness: supported. Targets: GO:0110143.
+
+Entire maintained target, discussions and history read; no target image or verbatim snippet asserted. Empty optional component/physical slots are not defects. Historical query counts are not recertified, native PROPOSED status preserved, and no neighbor or grouped-category finding is terminally disposed.
+
+### Structure, enclosing membrane and enclosed volume
+
+identity: supported. Targets: GO:0110145.
+
+Exact active GO/SL identities preserve whole organelle, membrane and lumen boundaries. Is-a and part_of remain separate; whole parent verified directly and lumen/membrane ancestry via is_a-only authority response.
+
+### Canonical strains and qualitative occurrence
+
+scope: supported. Targets: GO:0110145.
+
+MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current Paramagnetospirillum name. Experimental context remains assigned to the actual source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey was performed.
+
+### Component identity and formation necessity
+
+grounding: supported. Targets: GO:0110145.
+
+The lumen is enclosed volume, not its surrounding membrane; no optional component inventory is forced. Biomineralization is a scoped process occurring there, not a claim every empty lumen has already mineralized.
+
+### Every current node and edge
+
+graph: supported. Targets: GO:0110145.
+
+Three NONMECHANISTIC edges preserve lumen part_of whole, enclosure by membrane and biomineralization within enclosed volume. No complete iron transport or nucleation mechanism asserted; Uebe2011 direct scope is magnetite/MSR-1.
+
+### Frozen originals and actual current native coverage
+
+schema: supported. Targets: GO:0110145.
+
+Original native validation/render passed and exact original target hashes checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or localization proof.
+
+### Unsupported expression-only exclusion
+
+provenance: concern. Targets: GO:0110145.
+
+Original applicability row is present, not omitted, but excludes solely because no regulatory expression-module assertion is used. Current proteins/iron transport/biomineralization pathway assertions trigger the native applicability assessment even for the lumen.
+
+### Bounded exact-host catalogue assessment
+
+evidence: not_applicable. Targets: GO:0110145.
+
+Fresh complete official catalogue lacks the named magnetotactic model hosts, including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma classes cannot license an unmatched proxy. No matched downstream gene/module summary applies; historical00:49Z runner failure remains historical.
+
+### Primary experiments versus abstract and secondary scopes
+
+evidence: unknown. Targets: GO:0110145.
+
+Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010 are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract are secondary; blocked full-body routes are not certified.
+
+### Complete maintained record and optional slots
+
+completeness: supported. Targets: GO:0110145.
+
+Entire maintained target, discussions and history read; no target image or verbatim snippet asserted. Empty optional component/physical slots are not defects. Historical query counts are not recertified, native PROPOSED status preserved, and no neighbor or grouped-category finding is terminally disposed.
+
+### Structure, enclosing membrane and enclosed volume
+
+identity: supported. Targets: GO:0110146.
+
+Exact active GO/SL identities preserve whole organelle, membrane and lumen boundaries. Is-a and part_of remain separate; whole parent verified directly and lumen/membrane ancestry via is_a-only authority response.
+
+### Canonical strains and qualitative occurrence
+
+scope: supported. Targets: GO:0110146.
+
+MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current Paramagnetospirillum name. Experimental context remains assigned to the actual source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey was performed.
+
+### Component identity and formation necessity
+
+grounding: supported. Targets: GO:0110146.
+
+Generic lipid bilayer is REVIEWED_LABEL_ONLY without claiming whole-GO identity as a chemical molecule. Constitutive boundary essentiality does not prove any individual lipid or protein necessary. Native MSR-1 proteomics abstract supports phospholipid/fatty-acid material and varied proportions; exact lipid inventory remains unasserted.
+
+### Every current node and edge
+
+graph: supported. Targets: GO:0110146.
+
+Three NONMECHANISTIC edges preserve part_of whole, Mam/Mms residence and support of biomineralization. Five protein xrefs are reviewed MSR-1 identities; MamL location has ECO0000305 inference, not universal experimental residence. Cohort association does not assert every actor is exclusively or constantly in the membrane.
+
+### Frozen originals and actual current native coverage
+
+schema: supported. Targets: GO:0110146.
+
+Original native validation/render passed and exact original target hashes checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or localization proof.
+
+### Unsupported expression-only exclusion
+
+provenance: concern. Targets: GO:0110146.
+
+Original applicability row is present, not omitted, but excludes solely because no regulatory expression-module assertion is used. Current proteins/iron transport/biomineralization pathway assertions trigger the native applicability assessment even for the lumen.
+
+### Bounded exact-host catalogue assessment
+
+evidence: not_applicable. Targets: GO:0110146.
+
+Fresh complete official catalogue lacks the named magnetotactic model hosts, including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma classes cannot license an unmatched proxy. No matched downstream gene/module summary applies; historical00:49Z runner failure remains historical.
+
+### Primary experiments versus abstract and secondary scopes
+
+evidence: unknown. Targets: GO:0110146.
+
+Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010 are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract are secondary; blocked full-body routes are not certified.
+
+### Complete maintained record and optional slots
+
+completeness: supported. Targets: GO:0110146.
+
+Entire maintained target, discussions and history read; no target image or verbatim snippet asserted. Empty optional component/physical slots are not defects. Historical query counts are not recertified, native PROPOSED status preserved, and no neighbor or grouped-category finding is terminally disposed.
+
+### Nine exact examples, current search uniqueness and localization
+
+grounding: concern. Targets: GO:0110143.
+
+Nine whole-record examples retain correct reviewed identity/gene/taxon and bounded one-hit searches; MamJ matches IPR060787. Six Mam/Mms native experimental localization citations contradict the present-tense old only-MamJ discussion (F3), without treating a current response as proof a historical query was wrong.
+
+### Substantive stale graph refresh
+
+provenance: concern. Targets: GO:0110143.
+
+All graph deltas were reassessed: crystal exact magnetite grounding agrees with component; MamJ family/ref and attachment/association model are supported with two-hybrid/localization limits; enclosure edge is sound for the exact magnetite actor; broader alternative-mineral prose does not redefine that node. Four inherited findings remain open with exact original F1-F4 lineage. Historical2432 is not a scientific endorsement or terminal group disposition.
+
+### New enclosure edge: formal actor versus broader context
+
+graph: supported. Targets: GO:0110143.
+
+After independent counter-review, no separate defect is found: crystal remains exactly magnetite CHEBI46726 and is correctly enclosed by membrane. Description mentioning greigite adds context rather than asserting greigite is magnetite or altering formal grounding. Narrower prose would be optional precision. The separate F1 universal magnetite-essentiality contradiction remains unchanged.
+
+### Literature absence and exact measurement limits
+
+scope: unknown. Targets: GO:0110143.
+
+Current exact35–120nm DIAMETER attribution cannot be independently verified from unread Uebe2016 main body; UO unit resolves. Archaea taxon identity does not prove the no-magnetotactic-archaeon statement, and no exhaustive contemporary absence search was performed. These remain explicit limitations rather than fabricated contrary findings.
+
+### Original schema/render and frozen-input comparison
+
+schema: supported. Targets: GO:0034492.
+
+Original native checks pass; frozen historical target hash verifies. Target bytes are unchanged, with current scientific source reassessment. Schema validity is not source-fidelity proof.
+
+### Actual native protein coverage
+
+provenance: supported. Targets: GO:0034492.
+
+Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion.
+
+### Images, numeric properties, traits and snippets
+
+scope: not_applicable. Targets: GO:0034492.
+
+No maintained image, numeric physical-property, associated-trait or verbatim-snippet field is declared. Literature captions were read only where specified; no pixels or raw-data reanalysis is claimed.
+
+### Status and scoped historical observations
+
+provenance: supported. Targets: GO:0034492.
+
+PROPOSED status/history remain unchanged. Original findings are scoped to this record; no neighboring, category or grouped historical issue is newly resolved.
+
+### Original schema/render and frozen-input comparison
+
+schema: supported. Targets: GO:0070258.
+
+Original native checks pass; frozen historical target hash verifies. IMC current additions comprise three unreviewed protein examples and history; all are substantively reassessed. Schema validity is not source-fidelity proof.
+
+### Actual native protein coverage
+
+provenance: supported. Targets: GO:0070258.
+
+Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin node and one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84. The latter are Toxoplasma representatives, not exact P.falciparum experimental accessions. Native identity/coverage is not membership, complete composition or causality.
+
+### Images, numeric properties, traits and snippets
+
+scope: not_applicable. Targets: GO:0070258.
+
+No maintained image, numeric physical-property, associated-trait or verbatim-snippet field is declared. Literature captions were read only where specified; no pixels or raw-data reanalysis is claimed.
+
+### Status and scoped historical observations
+
+provenance: supported. Targets: GO:0070258.
+
+PROPOSED status/history remain unchanged. Original findings are scoped to this record; no neighboring, category or grouped historical issue is newly resolved.
+
+### Original schema/render and frozen-input comparison
+
+schema: supported. Targets: GO:0031039.
+
+Original native checks pass; frozen historical target hash verifies. Target bytes are unchanged, with current scientific source reassessment. Schema validity is not source-fidelity proof.
+
+### Actual native protein coverage
+
+provenance: supported. Targets: GO:0031039.
+
+Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion.
+
+### Images, numeric properties, traits and snippets
+
+scope: not_applicable. Targets: GO:0031039.
+
+No maintained image, numeric physical-property, associated-trait or verbatim-snippet field is declared. Literature captions were read only where specified; no pixels or raw-data reanalysis is claimed.
+
+### Status and scoped historical observations
+
+provenance: supported. Targets: GO:0031039.
+
+PROPOSED status/history remain unchanged. Original findings are scoped to this record; no neighboring, category or grouped historical issue is newly resolved.
+
+### Complete molecular/pathway narrative applicability
+
+scope: supported. Targets: GO:0034492.
+
+The record asserts energy and FeS enzyme pathways, so its expression-only exemption is insufficient. Current catalogue lacks a matching host; downstream searches are inapplicable for that bounded catalogue, not biological evidence against the claims. Historical runner unavailability is not a current execution.
+
+### Complete molecular/pathway narrative applicability
+
+scope: supported. Targets: GO:0070258.
+
+The record asserts named alveolins and actin-myosin anchoring/motility, so its expression-only exemption is insufficient. Current catalogue lacks a matching host; downstream searches are inapplicable for that bounded catalogue, not biological evidence against the claims. Historical runner unavailability is not a current execution.
+
+### Complete molecular/pathway narrative applicability
+
+scope: supported. Targets: GO:0031039.
+
+The record asserts processed/amplified DNA and somatic gene expression, so its expression-only exemption is insufficient. Current catalogue lacks a matching host; downstream searches are inapplicable for that bounded catalogue, not biological evidence against the claims. Historical runner unavailability is not a current execution.
+
+### Exact lumen, ancestry, synonym and boundaries
+
+identity: supported. Targets: GO:0034492.
+
+Current GO0034492/SL0335 agree with organelle-lumen ancestry and hydrogenosome parthood. Membrane encloses the internal region and is correctly a boundary node, not a lumen constituent. No whole-organelle/inner-membrane molecular identity is substituted.
+
+### Hydrogenosome-bearing eukaryotic subset and actual strains
+
+scope: supported. Targets: GO:0034492.
+
+Eukaryota RARE is explicitly qualitative patchy occurrence. T.vaginalis canonical matrix context is supported; Schneider T1 proteomics and Sutak C-1:NIH30001 biochemistry are distinct. No universal strain-specific proteome is inferred; Lindmark metadata concerns T.foetus.
+
+### Matrix energy and FeS-assembly scope
+
+evidence: supported. Targets: GO:0034492.
+
+Sutak demonstrates TvIscS-2 organellar localization and lysate FeS reconstitution; Schneider provides energy/ISC proteome context with fractionation/contamination limits. This lumen record does not assert the specific IscU source attribution found in the separate whole record. Broad supported matrix function remains distinct from every protein being independently matrix-localized.
+
+### Two defining topology edges
+
+graph: supported. Targets: GO:0034492.
+
+Both lumen part_of whole and membrane encloses lumen edges follow exact authorities. NONMECHANISTIC scope deliberately avoids duplicating full import/metabolic mechanism; no missing enzyme census is implied.
+
+### Optional lumen composition and necessity
+
+completeness: supported. Targets: GO:0034492.
+
+No component enumeration is needed merely because enzymes occupy a lumen. No complete matrix proteome or enzyme-specific organelle-formation necessity is asserted; optional composition must not be fabricated.
+
+### Exact Tachezy DOI/title
+
+provenance: concern. Targets: GO:0034492.
+
+Inherited F1 persists: DOI10.1111/jeu.12922 is The hydrogenosome of Trichomonas vaginalis by Tachezy,Makki,Hrdý, not the broad title in this target. The source remains secondary and relevant; no unrelated whole/membrane finding is substituted.
+
+### Apicomplexan IMC identity and broader parent
+
+identity: supported. Targets: GO:0070258.
+
+Two apposed bilayers below the plasma membrane match current GO and primary/review sources. Contextual inner membrane complex synonym is exact within Apicomplexa while GO labels it broad globally. GO0043231 parentage follows biological/source definitions, not a native ancestor edge in the current response.
+
+### Substantive reassessment of three added examples
+
+provenance: supported. Targets: GO:0070258.
+
+O97228/IMC1a/PF3D7_0304000,Q8IK01/IMC1c/PF3D7_1003600,Q8I3K7/IMC1g/PF3D7_0525800 have exact matching putative protein names,UNREVIEWED status and isolate36329. UniProt stores locus identifiers as ORF names; common IMC aliases are supplied by protein names and Ferreira Table1, not falsely reported as indexed geneName fields. Membership rests on source evidence; retrieval dates remain historical.
+
+### Collective bilayer material and alveolin class
+
+grounding: supported. Targets: GO:0070258.
+
+The label-only LIPID row denotes collective bilayer material without a falsely exact whole-GO chemical grounding. Alveolin network is an explicitly broad repeat-containing protein cohort with UNKNOWN essentiality. Sources support named examples at stage-specific scope; generic family/class policy does not imply one fixed molecular complex.
+
+### Verified candidate versus exact network coverage
+
+grounding: unknown. Targets: GO:0070258.
+
+The empty literal alveolin-name searches are not absence proof. All three examples carry IPR022086; exact authority confirms a real family candidate, but its broad name/domain wording and taxon scope do not certify exact identity of the complete alveolin network. Existing narrower-family grounding TODO can remain open; no candidate is silently adopted and no missing-family defect is invented.
+
+### Taxa, developmental stages and experimental systems
+
+scope: supported. Targets: GO:0070258.
+
+Apicomplexa and P.falciparum/3D7 identities verify. Kono P.falciparum3D7 blood/gametocyte and P.bergheiANKA ookinete/sporozoite observations remain separate; nonmotile stages do not acquire gliding merely from broad functions. COMMON is qualitative and stage/lineage-qualified.
+
+### Shape, daughter scaffolding and glideosome anchoring
+
+evidence: supported. Targets: GO:0070258.
+
+All three broad functions match Ferreira review synthesis and primary architecture/localization context. Primary timing/colocalization does not by itself determine every anchoring chemistry or prove every alveolin is required for formation. Stage-specific disassembly/recycling hypotheses remain hypotheses and are not added to the record.
+
+### Representative Toxoplasma molecular links
+
+grounding: supported. Targets: GO:0070258.
+
+O00934 is reviewed T.gondii Myosin-A; Q7Z289 unreviewed GAP45; A0A125YT84 unreviewed ME49 GAP50 with automatic phosphatase annotation. These are representative aggregate-node xrefs, not exact whole-complex identity or P.falciparum-specific experiments. The current unanchored-with-xrefs native scope is explicit.
+
+### All six descriptive scaffold edges
+
+graph: supported. Targets: GO:0070258.
+
+Membranes forming IMC, alveolin localization, pellicle parthood, shape support, glideosome anchoring and invasion support are consistent at NONMECHANISTIC scope. Component_refs resolve; morphology is a STATE; no precise stoichiometry, all-stage motor action or complete complex census is asserted.
+
+### Constitutional material versus formation necessity
+
+evidence: unknown. Targets: GO:0070258.
+
+Collective bilayer material is constitutive of the membrane-bounded identity. Sources do not establish removal tests for each lipid species, nor universal necessity of all alveolins. UNKNOWN protein essentiality and incomplete inventory remain appropriate.
+
+### Date and access-tier distinctions
+
+provenance: supported. Targets: GO:0070258.
+
+Ferreira electronic publication is8January2021 although the collection/DOI year is2020; no date defect is inferred. Ferreira/Kono2013 are reviews, Dearnley is abstract-only, Kono2012 is enumerated primary sections. No source pixels or uninspected supplements are claimed.
+
+### Macronucleus versus micronucleus/chromosome/DNA
+
+identity: supported. Targets: GO:0031039.
+
+GO0031039 and nucleus ancestry match the ciliate somatic polyploid compartment. Macronuclear DNA is molecular material, not the complete GO0000228 nuclear chromosome or the whole macronucleus.
+
+### Processed amplified DNA material
+
+grounding: supported. Targets: GO:0031039.
+
+Explicit label-only macronuclear chromosomal DNA preserves MIC-derived processing, fragmentation/telomere addition and amplification context without misusing a complete chromosome GO term. The open source-neutral SO question is not answered by inventing an accession.
+
+### Species and actual SB210 genome preparation
+
+scope: supported. Targets: GO:0031039.
+
+ENA confirms species5911; SB210 identity and purified-macronucleus shotgun libraries are directly in Eisen methods. Low MIC/mitochondrial contamination remains explicit. COMMON is qualitative; no universal ciliate chromosome architecture or exact all-strain genome size follows.
+
+### Somatic asexual gene expression
+
+evidence: supported. Targets: GO:0031039.
+
+GO and Eisen Introduction support the Tetrahymena MAC as the somatic expression center during asexual growth. Developmental rearrangement background and genome sequencing do not constitute a fresh mechanism or perturbation experiment.
+
+### Three descriptive chromosomal-DNA relations
+
+graph: supported. Targets: GO:0031039.
+
+The carried-on edge is interpreted with its explicit description: DNA is carried on chromosomes housed inside the MAC, not on its exterior. DNA supports somatic expression and MAC enables expression; no developmental pathway or nuclear-pore composition is asserted.
+
+### Constitutional DNA and experimental formation scope
+
+evidence: unknown. Targets: GO:0031039.
+
+Collective chromosomal DNA is defining material, but this sequencing study does not test whether a macronucleus forms without it. ESSENTIAL is interpreted at constitutional-material scope, not an established individual molecule removal experiment.
+
+### Bounded inventories and genome limitations
+
+completeness: supported. Targets: GO:0031039.
+
+No complete molecular/pore inventory or quantitative prevalence is claimed. Assembly gaps do not establish absence of a gene, and bulk coverage uniformity does not force every small chromosome copy number. The existing exact-DNA grounding question remains unresolved without a concrete defect.
+
+### Current scoped scientific verdict
+
+completeness: concern. Targets: GO:0034492.
+
+needs_curation: one inherited minor title finding remains for this lumen record; neighboring whole/membrane issues are distinct.
+
+### Current scoped scientific verdict
+
+completeness: supported. Targets: GO:0070258.
+
+pass_with_limitations: material scientific claims are supported in the stated source scope; unresolved family/necessity/access limitations prevent an unqualified pass. No concrete new scientific curation finding established.
+
+### Current scoped scientific verdict
+
+completeness: supported. Targets: GO:0031039.
+
+pass_with_limitations: material scientific claims are supported in the stated source scope; unresolved family/necessity/access limitations prevent an unqualified pass. No concrete new scientific curation finding established.
+
+### Complete frozen-input comparison and bounded refresh
+
+provenance: supported. Targets: GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146.
+
+2 of ten original target hashes differ from current main. The changed content is substantively reassessed in the target-specific assessments; original observations remain historical and unchanged. All current target and used context bytes are frozen.
+
+## Findings
+
+### micro-F1: Qualify magnetite necessity for alternative-mineral magnetosomes
+
+major / open / confirmed; issue key: magnetosome-magnetite-universal-necessity.
+
+The current component specifically denotes magnetite CHEBI:46726 and is ESSENTIAL, while the definition/role and inspected secondary abstract explicitly allow chemically distinct greigite instead. Native ESSENTIAL means the structure does not form without that constituent. The unconditional magnetite requirement contradicts the acknowledged valid alternative; it does not concern only empty precursors or the necessity of every Mam protein.
+
+### micro-F2: Use an ion-compatible identity for transported iron
+
+major / open / confirmed; issue key: magnetosome-neutral-iron-transport-actor.
+
+The current CHEMICAL node is iron atom CHEBI:18248, with native charge0, but serves as transporter substrate and mineralization input. Inspected primary body context and abstract describe iron/metal-ion supply and a CDF relationship, not neutral Fe atoms. This finding does not prescribe a single oxidation state or claim a complete direct MamB/MamM transport assay.
+
+### micro-F3: Update the open localization-gap interpretation
+
+minor / open / confirmed; issue key: magnetosome-localization-gap-current-example-conflict.
+
+The OPEN discussion still says most magnetosome proteins lack experimental UniProt localization and only MamJ produced an example. Current six Mam/Mms examples retain exact native ECO:0000269 magnetosome-membrane annotations with cited primary support. Preserve the historical SL0510 query as historical; update its broad present-tense interpretation and distinguish membrane SL0512 from whole-organellar SL0510.
+
+### micro-F4: Distinguish MamJ-deficient clustering from scattering
+
+minor / open / confirmed; issue key: magnetosome-mamj-deletion-phenotype-wording.
+
+The current MamK-aligns-chain evidence note says mamJ deletion scatters magnetosomes. Inspected MSR-1 primary text distinguishes chiefly clustered mature particles (with occasional rings/imperfect chains) from scattered empty precursor vesicles. Loss of normal linear organization is supported; the unqualified scatter shorthand loses this biological distinction. MamJ attachment and the alignment edge are not refuted.
+
+### septin-hydrogenosome_lumen-F1: Correct the title attached to the Tachezy2022 review DOI
+
+minor / open / confirmed; issue key: hydrogenosome-lumen-tachezy-title.
+
+DOI:10.1111/jeu.12922 identifies The hydrogenosome of Trichomonas vaginalis by Tachezy, Makki and Hrdý, whereas the target records Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes. The DOI and relevant organelle topic remain correct.
+
+## Recommended Actions And Acceptance Checks
+
+### micro-A1
+
+In separately authorized curation, condition magnetite necessity on magnetite-producing lineages or represent the supported magnetic-mineral alternatives without asserting universal magnetite dependence. Preserve exact chemical identities and avoid claiming greigite is a subtype of magnetite.
+
+- Retain source-specific organism, condition and chemical identity boundaries.
+- Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+- Run focused native schema, strict and graph checks after separately authorized scientific curation.
+
+### micro-A2
+
+In separately authorized curation, identify the transported iron at the ionic scope actually supported by the source, using verified appropriate chemistry grounding or a bounded label if oxidation-state specificity remains unresolved. Keep the downstream mineral identity distinct.
+
+- Retain source-specific organism, condition and chemical identity boundaries.
+- Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+- Run focused native schema, strict and graph checks after separately authorized scientific curation.
+
+### micro-A3
+
+In separately authorized curation, preserve the historical query result but update or resolve the present-tense discussion to distinguish whole-magnetosome SL0510 from membrane SL0512 annotations and the current experimentally supported examples.
+
+- Retain source-specific organism, condition and chemical identity boundaries.
+- Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+- Run focused native schema, strict and graph checks after separately authorized scientific curation.
+
+### micro-A4
+
+In separately authorized curation, describe the loss of normal linear organization and the source-specific MSR-1 clustering phenotype, and preserve distinctions from MamK mutants and AMB-1 genetic redundancy.
+
+- Retain source-specific organism, condition and chemical identity boundaries.
+- Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+- Run focused native schema, strict and graph checks after separately authorized scientific curation.
+
+### septin-hydrogenosome_lumen-A1
+
+In separately authorized curation, replace the wrong citation title and incomplete author attribution with the exact native bibliographic identity; retain DOI and review tier.
+
+- Verify exact title, three authors, year2022 and Journal of Eukaryotic Microbiology against native metadata.
+- Retain correct DOI; do not promote this review to primary experimental evidence or infer broader coverage from the wrong title.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| current-record-0 | data/structures/membrane_organelle/hydrogenosome_lumen.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40; current SHA256 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40. Record bytes unchanged since the original review. |
+| original-review-0 | reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-1 | data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 8090ece98a38a0ca4a5d6644b36bbb0a40b8225c439956d1010443ab0b6e24f9; current SHA256 b1ba7a435c20af9e679a8ac976a0f598a0b48808eda62181b6751732f5896917. Changed record reassessed against current sources. |
+| original-review-1 | reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-2 | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2; current SHA256 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2. Record bytes unchanged since the original review. |
+| original-review-2 | reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-3 | data/structures/membrane_organelle/late_endosome.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0; current SHA256 af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0. Record bytes unchanged since the original review. |
+| original-review-3 | reviews/structured/20261022T021708Z-late-endosome-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-4 | data/structures/membrane_organelle/late_endosome_lumen.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91; current SHA256 f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91. Record bytes unchanged since the original review. |
+| original-review-4 | reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-5 | data/structures/membrane_organelle/late_endosome_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc; current SHA256 abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc. Record bytes unchanged since the original review. |
+| original-review-5 | reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-6 | data/structures/membrane_organelle/macronucleus.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2; current SHA256 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2. Record bytes unchanged since the original review. |
+| original-review-6 | reviews/structured/20261022T021711Z-macronucleus-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-7 | data/structures/membrane_organelle/magnetosome.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 dd4f1d27b520b8e0b00bc379f6adbac38204d45bed6c1cc9e27a5f3b37f6f4d3; current SHA256 8c775795c1af6932344ced4c4d94ad2028642ec05a7c25d1f0d5bd2771153d99. Changed record reassessed against current sources. |
+| original-review-7 | reviews/structured/20261022T021713Z-magnetosome-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-8 | data/structures/membrane_organelle/magnetosome_lumen.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6; current SHA256 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6. Record bytes unchanged since the original review. |
+| original-review-8 | reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-9 | data/structures/membrane_organelle/magnetosome_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4; current SHA256 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4. Record bytes unchanged since the original review. |
+| original-review-9 | reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| plaque-current-2 | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml; Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae including graph, histories, discussions and image links | supports | Current target bytes equal the original frozen target; PROPOSED status and scientific content remain unchanged. |
+| plaque-original-2 | reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.yaml; Exact staleness-selected authoritative YAML and rendered Markdown, provenance, checks, assessments and empty findings/actions | supports | Original qualified pass independently reassessed. Native pair validates/renders and all historical source inputs match; explicit expression-only N/A is a bundle coverage defect. |
+| plaque-current-3 | data/structures/membrane_organelle/late_endosome.yaml; Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae including graph, histories, discussions and image links | supports | Current target bytes equal the original frozen target; PROPOSED status and scientific content remain unchanged. |
+| plaque-original-3 | reviews/structured/20261022T021708Z-late-endosome-audit/review.yaml; Exact staleness-selected authoritative YAML and rendered Markdown, provenance, checks, assessments and empty findings/actions | supports | Original qualified pass independently reassessed. Native pair validates/renders and all historical source inputs match; explicit expression-only N/A is a bundle coverage defect. |
+| plaque-current-4 | data/structures/membrane_organelle/late_endosome_lumen.yaml; Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae including graph, histories, discussions and image links | supports | Current target bytes equal the original frozen target; PROPOSED status and scientific content remain unchanged. |
+| plaque-original-4 | reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.yaml; Exact staleness-selected authoritative YAML and rendered Markdown, provenance, checks, assessments and empty findings/actions | supports | Original qualified pass independently reassessed. Native pair validates/renders and all historical source inputs match; explicit expression-only N/A is a bundle coverage defect. |
+| plaque-current-5 | data/structures/membrane_organelle/late_endosome_membrane.yaml; Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae including graph, histories, discussions and image links | supports | Current target bytes equal the original frozen target; PROPOSED status and scientific content remain unchanged. |
+| plaque-original-5 | reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.yaml; Exact staleness-selected authoritative YAML and rendered Markdown, provenance, checks, assessments and empty findings/actions | supports | Original qualified pass independently reassessed. Native pair validates/renders and all historical source inputs match; explicit expression-only N/A is a bundle coverage defect. |
+| plaque-policy | .claude/skills/review-yaml-record/SKILL.md; Frozen native relevant contract; policy bytes also match prior independently read PR2367 input snapshot | context_only | Actual genes, proteins, pathways and stress responses trigger structured-source assessment even without transcriptomic claims. |
+| plaque-rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Frozen native relevant contract; policy bytes also match prior independently read PR2367 input snapshot | context_only | Identity, source scope, component localization versus necessity, taxonomy, graphs and imagery require separate evidence. Empty optional slots are not automatic defects. |
+| plaque-graph-rubric | .claude/skills/curate-causal-graphs/SKILL.md; Frozen native relevant contract; policy bytes also match prior independently read PR2367 input snapshot | context_only | Descriptive topology and functional participation must not be upgraded to exact mechanism, invariant order, exclusive action or direct binding. |
+| plaque-protein-contract | .claude/skills/uniprot-protein-examples/SKILL.md; Frozen native relevant contract; policy bytes also match prior independently read PR2367 input snapshot | context_only | Native accession and typed-node commands cover represented proteins; their success does not certify every narrative pathway. |
+| plaque-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; Frozen native relevant contract; policy bytes also match prior independently read PR2367 input snapshot | context_only | Structure identity, constituent material and associated machinery remain distinct. State interventions can represent deletion conditions; optional inventories need not be fabricated. |
+| plaque-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0016234,GO:0005770,GO:0005768,GO:0005771,GO:0010008,GO:0031904,GO:0071985,GO:0031902,GO:0031906,GO:0000813,GO:0000814,GO:0000815; All13 exact term responses, definitions/synonyms/typed children for0043231,0016234,0005770,0005768,0005771,0010008,0031904,0071985,0031902,0031906,0000813/14/15 | supports | Authority distinguishes broad intracellular membrane-bounded organelle from aggregate inclusion, whole late endosome from lumen and membrane, MVB as late-endosome subtype, and ESCRT complex identities. Exact typed children support all asserted late-endosome is-a/parthood relations;0071985 supplies scoped MVB cargo delivery. No complete IMiQ term-absence search inferred. |
+| plaque-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native ENA taxon identity/rank/lineage response | supports | NCBITaxon4932 is S. cerevisiae species; this is not measured prevalence or interchangeable strain. |
+| plaque-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native ENA taxon identity/rank/lineage response | supports | NCBITaxon559292 is S. cerevisiae S288C strain, correctly scoped as reference accession context rather than the experimental reporter strain. |
+| plaque-SL-0336 | https://rest.uniprot.org/locations/SL-0336.json; Complete native location entry including definition, synonyms, GO map and parent/parthood | supports | Exact late-endosome lumen identity, late endosomal lumen synonym, GO0031906 correspondence, endosome-lumen parent and late-endosome parthood agree. |
+| plaque-SL-0151 | https://rest.uniprot.org/locations/SL-0151.json; Complete native location entry including definition, synonyms, GO map and parent/parthood | supports | Exact late-endosome membrane identity, late endosomal membrane synonym, GO0031902 correspondence, generic endosome-membrane parent and late-endosome parthood agree. |
+| plaque-P33416 | https://rest.uniprot.org/uniprotkb/P33416.json; Native accession entryType/protein name/genes/organism and FUNCTION, SUBCELLULAR LOCATION, SIMILARITY, SUBUNIT context | supports | Reviewed HSP78/YDR258C mitochondrial Hsp78 in559292, matrix localization, ClpA/ClpB similarity and stress-associated chaperone role agree. Native matrix annotation alone is not exact IMiQ localization or assembly necessity. |
+| plaque-P0CS90 | https://rest.uniprot.org/uniprotkb/P0CS90.json; Native accession entryType/protein name/genes/organism and FUNCTION, SUBCELLULAR LOCATION, SIMILARITY, SUBUNIT context | supports | Reviewed SSC1/YJR045C mitochondrial import-motor/mtHSP70 protein in559292, matrix localization and Hsp70 family agree. S288C entry distinguished from other SSC1 strain accession; generic PAM function is not IMiQ stoichiometry. |
+| plaque-ipr-P33416 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200; Complete nine-match InterPro response for P33416; no next page | supports | Hsp78 matches broad ClpA/B001270 and ClpA/ClpB050130 plus domains/sites; these matches do not establish an exact Hsp78-only class. Grounding remains honestly label-only. |
+| plaque-ipr-P0CS90 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CS90/?page_size=200; Complete six-match InterPro response for P0CS90; no next page | supports | SSC1 matches Hsp70 family013126; component broad family label and reference example agree. |
+| plaque-IPR001270 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/; Entry name/type/hierarchy and non-LLM curated descriptions only | supports | ClpA/B family includes several chaperones/proteases, Hsp78/Hsp104 and other classes. It is broader than a specifically Hsp78-type constituent; no guessed narrow accession. |
+| plaque-IPR050130 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/; Entry name/type/hierarchy only; generated description excluded | supports | ATP-dependent Clp protease/Chaperone ClpA/ClpB is broad family identity, not exact Hsp78. Generated unreviewed prose was excluded from scientific support. |
+| plaque-IPR013126 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/; Entry name/type/hierarchy and non-LLM curated description only | supports | Heat shock protein70 family spans multiple locations and includes DnaK-related subclasses; current general family grounding is supported, not a specific IMiQ localization annotation. |
+| plaque-bruderek2018-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1091%2Fmbc.E17-01-0027%22; Exact DOI metadata and primary source identity | supports | Bruderek and colleagues2018, DOI10.1091/mbc.E17-01-0027, PMID29212875 andPMC5996957 identify the primary IMiQ paper; substantive assessment uses JATS and actual Figure1 pixels. |
+| plaque-bruderek2018-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/PMC5996957.1.xml; Genuine PMC5996957.1 JATS: all Results subsections/Figure1–7 captions, complete Discussion; Methods Plasmids and strains, Aggregate sedimentation assay, Fluorescence microscopy; front author/permissions metadata | supports | Reporter-induced matrix deposits coalesce, usually lie near the nucleus and separate from tubular network. Hsp78/Fzo1/Fis1 deletions and benomyl have distinct conditional effects. Daughter retention and initial growth/import versus prolonged stress/translation costs support bounded descriptions. Experiments do not identify a direct tether, compulsory sequence, fixed native cargo or universal natural prevalence.2018 fzo1 respiratory-deficiency limitation is retained. |
+| plaque-ruland2025-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1242%2Fjcs.263680%22; Exact DOI/PMID40734647 bibliographic metadata and abstract | supports | Ruland et al.2025 is the later primary study of chaperone recruitment and fission/fusion-dependent aggregate sequestration. Main text independently inspected through publisher browser fallback; no PubMed abstract is mislabeled full body. |
+| plaque-ruland-crossref | https://api.crossref.org/works/10.1242/jcs.263680; Exact DOI title/authors/year and license array | supports | Current metadata matches Ruland/Sylvester/Maus/Beckert/Voos2025 and links version of record to Company of Biologists User Licence1.2, not a Creative Commons licence. |
+| plaque-ruland-web410-canonical | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Publisher browser lines390–483: licence link, Abstract/Introduction and early Results,Figure1 caption; exact stored browser response, not raw publisher HTTP body | supports | Primary body supports membrane-enclosed reporter deposits;2025 respiratory-competent fzo1 preparation differs from2018. DUMP identity remains tentative. |
+| plaque-ruland-web480 | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Publisher browser lines442–567: Results dynamics and chaperone sections/captions; exact stored browser response, not raw publisher HTTP body | supports | Conditional coalescence/separation and chaperone observations agree; no source-wide invariant shell is inferred. |
+| plaque-ruland-web568 | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Publisher browser lines522–638: later Results,Discussion and early Methods; exact stored browser response, not raw publisher HTTP body | supports | Later Ssc1/Hsp78 recruitment and variable fis1 rings support associated machinery; Hsp60 ambiguity remains acknowledged. |
+| plaque-ruland-web640 | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Publisher browser lines617–717: Discussion tail, all Methods and data availability; exact stored browser response, not raw publisher HTTP body | supports | Methods and deposition establish experimental context; raw proteomics and supplementary data were not reanalysed. |
+| plaque-ruland-publisher | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Direct curl route403 challenge HTML only | context_only | Direct route did not provide body. Separately timestamped canonical browser response recovered source text; no direct HTTP success invented. |
+| plaque-dump2020-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1126%2Fsciadv.abc7288%22; Exact DOI metadata identity | supports | Ruan et al.2020 DOI10.1126/sciadv.abc7288 PMID32821848 PMC7406381 identifies DUMP comparator; not an exact identity synonym for this record. |
+| plaque-dump2020-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC7406381.1/PMC7406381.1.xml; Genuine PMC7406381.1 JATS: Discussion and Conclusion read; not full Results/Methods or figures | supports | DUMP discussion distinguishes mitochondrial-network-associated deposits from IMiQ and examines different conditions. Later similarity hypothesis does not warrant merging names or transferring DUMP lipid mechanism, mammalian scope or phenotype to IMiQ. |
+| plaque-pride | https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD059828; Complete PXD059828 native project metadata: title, description/protocols, species, methods/instrument, citation and licence | supports | Dataset is yeast4932 SILAC bottom-up LCMS/MS with Orbitrap Fusion Lumos and links Ruland2025. CC0 applies to dataset metadata, not publisher Figure1. No raw-file/compositional reanalysis claimed. |
+| plaque-biologists-license | https://www.biologists.com/user-licence-1-2/; Genuine current publisher User Licence1.2 page: user rights and access/reuse table | supports | Publisher grants bounded noncommercial research/study access; no CC figure-hosting licence inferred. OTHER and link-only treatment accurately retain non-CC licence scope. |
+| plaque-bruderek2018-fig1 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-g001.jpg; Fresh versioned PMC Figure1 media; all pixels viewed; caption and JATS permissions checked; MD5 independently recalculated | supports | Actual mixed reporter diagrams/blots/fluorescence panels match record; microscopy10um. MD5 matches7d0f983ae366b95f1c5424f921e91b4e. CC BY-NC-SA3.0 retained as OTHER; fluorescence alone does not resolve membrane ultrastructure. |
+| plaque-ruland2025-fig1 | https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/138/16/10.1242_jcs.263680/1/jcs26368001.png?Expires=1795000470&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&amp;Signature=pFjs7eQjgM2X91mkkJoeIhqlQsZBgTtaCC7-l4bwA9uMgTcXBcokPIbG1kNVsGRF2AJnePdY989SNI9bl3y~aKlTqgGtrCcELTBK7HKMaKBHQQx-~~Th3DxRivdUJ~UmOrmJdonhRNDBaAnX8Na8ysqz44BlOJLotQjfb3ooFe-cE6lQO0Q0XZT2m-mnr~0eoC9gmEGCVhT7cFVfS8F7rFUNjNHSgucb5uQculMTJAY0X6R9646UyBXNkJpTkpHk9QsnUzYb3xJv62FSWxMYff1kjqySX-0b9y9YZRWHrExjPaa0VzoXIiyD1lvFbOPD0yc0hzA6LIzom1~HlWBt6Q__; Fresh publisher Figure1 bytes through previously located CDN URL; all pixels viewed; exact article caption/licence checked | supports | Mixed diagrams, blots, fluorescence and TEM with2um bars; panelE author-coloured outlines and uncoloured enlarged micrographs match. Link-only OTHER correctly preserves mixed modality and publisher licence; no whole-cell size inferred. |
+| plaque-katzmann2001-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=EXT_ID%3A11511343%20AND%20SRC%3AMED; Exact PMID/DOI metadata and complete primary abstract | supports | Katzmann/Babst/Emr2001 directly reports ESCRT-I recognition and sorting of ubiquitinated MVB cargo. Abstract supports functional participation, not every subunit or an exclusive route. |
+| plaque-babst2002-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=EXT_ID%3A12194857%20AND%20SRC%3AMED; Exact PMID/DOI metadata and complete primary abstract | supports | Babst et al.2002 directly reports ESCRT-III recruitment/oligomerization at endosomal membranes and MVB sorting. Abstract alone does not resolve detailed membrane-scission mechanism. |
+| plaque-teo2004-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1016%2Fj.devcel.2004.09.003%22; Exact PMID/DOI metadata and complete primary abstract | supports | Teo et al.2004 primary identity/abstract agrees with direct ESCRT-II–Vps20 binding and Vps25 recruitment; detailed scope checked in primary PDF. |
+| plaque-katzmann2003-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1083%2Fjcb.200302136%22; Exact PMID/DOI metadata and complete primary abstract | supports | Katzmann et al.2003 DOI10.1083/jcb.200302136 identifies primary Vps27-dependent endosomal ESCRT recruitment; full relevant body separately inspected. |
+| plaque-henne2011-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1016%2Fj.devcel.2011.05.015%22; Exact DOI/PMID21763610 complete abstract of a SECONDARY REVIEW only | supports | Henne/Buchkovich/Emr2011 reviews ESCRT cargo recognition/membrane sculpting and MVB delivery to lysosome/vacuole. Secondary abstract supports broad pathway context; neither full review body nor new direct mechanism experiment claimed. |
+| plaque-teo2004-pdf | https://www2.mrc-lmb.cam.ac.uk/groups/rlw/download/publications/15469844.pdf; Fresh author-institution PDF text: p559 Summary/Introduction; p564–566 direct binding, Vps25/liposome sections,Figure5–6 captions, Conclusions and plasmid/expression Methods; no figure-pixel or supplement review | supports | Purified yeast ESCRT-II binds Vps20 directly through Vps25; mixed partners bind bovine-brain-lipid liposomes more strongly than isolated partners. Yeast genomic template ATCC9763D was expressed in bacteria. This supports bounded downstream recruitment; proposed orientation, complete pathway assembly and universal temporal ordering remain models. |
+| plaque-katzmann2003-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2172707.1/PMC2172707.1.xml; Genuine PMC2172707.1 JATS: complete Results,Discussion and Materials/Methods including captions; no figure pixels/supplement reanalysis | supports | Yeast Vps27/FYVE and PI3P context recruits ESCRT-I to endosomal membranes; mutant localization, membrane copurification and cargo-sorting observations support canonical membrane example. SEY6210-derived experimental backgrounds and mechanistic alternatives are retained, not converted into S288C-specific or universally exclusive mechanism. |
+| plaque-catalogue | https://imodulondb.org/api/datasets; Fresh complete official /api/datasets response; all20 organism rows and their dataset listings read | supports | No Saccharomyces/yeast host is present. All four current positive protein/pathway/stress narratives trigger the assessment; no matched downstream gene/module search or unrelated bacterial proxy applies. Noncoverage is not biological absence; generated module prose excluded. |
+| plaque-historical-runner | /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources imodulondb datasets; Actual historical00:49Z command/stdout/stderr receipt, independently hash-verified | context_only | Historical runner failed before retrieval due pyvenv.cfg PermissionError. No new invocation or adapter execution success claimed; fresh official catalogue and source inspection supply bounded fallback. |
+| plaque-original-checks | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-plaque/original-checks.json; Actual four original native validate/render and complete historical input-hash checks | supports | All original pairs validate/render exactly and historical inputs16/18/17/17 match their retained source; all four current target hashes equal frozen originals. No stale target or hidden prior finding in this slice. |
+| plaque-context-mvb | data/structures/membrane_organelle/multivesicular_body.yaml; Frozen current local identity, parent/parthood, assembly topology and discussion boundaries only; not a full neighbor verdict | context_only | Local MVB is a late-endosome subtype; dedicated ILV denotes inward-budded vesicle rather than whole endosome/lumen or permanently resident ESCRT machinery. No neighbor issue/discussion terminal resolution inferred. |
+| plaque-context-ilv | data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml; Frozen current local identity, parent/parthood, assembly topology and discussion boundaries only; not a full neighbor verdict | context_only | Local MVB is a late-endosome subtype; dedicated ILV denotes inward-budded vesicle rather than whole endosome/lumen or permanently resident ESCRT machinery. No neighbor issue/discussion terminal resolution inferred. |
+| plaque-native-intramitochondrial_protein_quality_control_compartment-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --verify; Actual root-owned receipt/stdout independently read and hash-verified | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope: Actual maintained inventory has 2 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Reviewed HSP78/P33416 and SSC1/P0CS90 are559292 reference examples; deletion conditions are STATE nodes.  |
+| plaque-native-intramitochondrial_protein_quality_control_compartment-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --causal-graphs; Actual root-owned receipt/stdout independently read and hash-verified | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 2 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Reviewed HSP78/P33416 and SSC1/P0CS90 are559292 reference examples; deletion conditions are STATE nodes.  |
+| plaque-native-late_endosome-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml --verify; Actual root-owned receipt/stdout independently read and hash-verified | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| plaque-native-late_endosome-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml --causal-graphs; Actual root-owned receipt/stdout independently read and hash-verified | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| plaque-native-late_endosome_lumen-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml --verify; Actual root-owned receipt/stdout independently read and hash-verified | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| plaque-native-late_endosome_lumen-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml --causal-graphs; Actual root-owned receipt/stdout independently read and hash-verified | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| plaque-native-late_endosome_membrane-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml --verify; Actual root-owned receipt/stdout independently read and hash-verified | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| plaque-native-late_endosome_membrane-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml --causal-graphs; Actual root-owned receipt/stdout independently read and hash-verified | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node coverage is not pathway verification.  |
+| micro-policy | .claude/skills/review-yaml-record/SKILL.md; Current complete skill/profile/config/shared contract/checklist; CURATION component family-or-class, essentiality, evidence and read-only ownership rules | context_only | Named proteins and biomineralization pathways trigger source applicability beyond transcriptomics. Native policy permits generic protein classes; a heterogeneous Mam/Mms cohort is not itself a component-type defect. |
+| micro-component-policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, EssentialityEnum, ComponentTypeEnum and CausalNode; cross-read CURATION component scope | context_only | ESSENTIAL means the structure does not form without the component; CONDITIONAL restricts conditions or lineages. Chemical identity must agree with the assertion. Associated machinery is DISPENSABLE, and protein identity is not experimental membership or necessity. |
+| micro-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Complete graph skill; add-cell-structure identity/evidence/graph contract | context_only | Directed edges retain source-specific identities, experimental scope and grounding. A broad association graph is not a direct membrane-binding assay or universally conserved stoichiometric mechanism. |
+| micro-record-magnetosome | data/structures/membrane_organelle/magnetosome.yaml; Entire current record including all components, protein examples, evidence notes, graph edges, discussions and history | supports | Current source bytes read. The stale graph additions and grounding/history were substantively reassessed. |
+| micro-prior-magnetosome | reviews/structured/20261022T021713Z-magnetosome-audit/review.yaml; Original complete scientific assessments, findings/actions, checks and access limitations; native rendered Markdown verified | context_only | Original needs_curation with 4 finding(s); explicit expression-only source exclusion needs correction. Historical commands and source reads are not current checks. |
+| micro-native-magnetosome-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0 on source head. Nine reviewed examples (six Mam/Mms, one MamK, two MamJ); two COVERED GENE_OR_PROTEIN nodes. MamK filament is STRUCTURE and absent from that typed-node denominator. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-native-magnetosome-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-causal.log SHA256 723e543248a6576923fb11c51652c88c92784b1a3540de36b23eb2f159014be4 | supports | Exit0 on source head. Nine reviewed examples (six Mam/Mms, one MamK, two MamJ); two COVERED GENE_OR_PROTEIN nodes. MamK filament is STRUCTURE and absent from that typed-node denominator. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-record-magnetosome_lumen | data/structures/membrane_organelle/magnetosome_lumen.yaml; Entire current record including all components, protein examples, evidence notes, graph edges, discussions and history | supports | Current source bytes read. Current record equals the original frozen input. |
+| micro-prior-magnetosome_lumen | reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.yaml; Original complete scientific assessments, findings/actions, checks and access limitations; native rendered Markdown verified | context_only | Original pass_with_limitations with 0 finding(s); explicit expression-only source exclusion needs correction. Historical commands and source reads are not current checks. |
+| micro-native-magnetosome_lumen-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0 on source head. Zero protein examples/xrefs and zero GENE_OR_PROTEIN nodes; successful generic verify text is an empty protein scope. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-native-magnetosome_lumen-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0 on source head. Zero protein examples/xrefs and zero GENE_OR_PROTEIN nodes; successful generic verify text is an empty protein scope. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-record-magnetosome_membrane | data/structures/membrane_organelle/magnetosome_membrane.yaml; Entire current record including all components, protein examples, evidence notes, graph edges, discussions and history | supports | Current source bytes read. Current record equals the original frozen input. |
+| micro-prior-magnetosome_membrane | reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.yaml; Original complete scientific assessments, findings/actions, checks and access limitations; native rendered Markdown verified | context_only | Original pass_with_limitations with 0 finding(s); explicit expression-only source exclusion needs correction. Historical commands and source reads are not current checks. |
+| micro-native-magnetosome_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0 on source head. Zero component protein examples; one UNANCHORED_WITH_UNIPROT node with five reviewed MSR-1 xrefs V6F235/V6F510/Q93DY9/Q6NE76/Q6NE58. This allowed external/cohort actor route is not a dangling component or proof of identical residence. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-native-magnetosome_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-causal.log SHA256 3abc710ac03ac07db44a23f8b9dd00fa2df37d724e1ea9e8bf9eda70fd8816a7 | supports | Exit0 on source head. Zero component protein examples; one UNANCHORED_WITH_UNIPROT node with five reviewed MSR-1 xrefs V6F235/V6F510/Q93DY9/Q6NE76/Q6NE58. This allowed external/cohort actor route is not a dangling component or proof of identical residence. No biochemical assembly, necessity or localization assay is performed by this command. |
+| micro-original-pairs | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/original-checks.json; Three original native validate and three render --content commands; exact Markdown equality | supports | All three originals validate and render byte-identically; original frozen target hashes checked from their source revision. Whole target stale; lumen/membrane unchanged. |
+| micro-stale-delta | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/magnetosome-stale.diff; Entire old frozen revision to current diff | context_only | Added crystal magnetite grounding, MamJ node/family/component_ref and attachment edge, MamJ-membrane association and crystal-enclosure edges, plus three history entries. No old observation is rewritten. |
+| micro-historical-2432 | https://github.com/CultureBotAI/CellStructureMech/issues/2432; Complete root-retained body/state/comments /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/historical-issue-2432.json | context_only | Closed grouped propagation issue includes magnetosome crystal grounding among20 records; present exact magnetite grounding agrees with component. This is historical context only, not a terminal disposition of its multi-target predecessor or any of the four inherited record findings. |
+| micro-mamk-neighbor | data/structures/cytoskeleton/mamk_filament.yaml; Entire frozen maintained neighbor for local identity and boundary only | context_only | Local identifier denotes an assembled actin-like MamK filament distinct from whole magnetosome. Neighbor scientific findings/status are not disposed and all its separate citations are not independently recertified. |
+| micro-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110143,GO:0110145,GO:0110146,GO:0043231,GO:0043233,GO:0016020; All six exact active term names/definitions/typed children | supports | Whole0110143 is an intracellular membrane-bounded organelle with direct part_of children lumen0110145/membrane0110146. Whole parent43231 directly lists is_a target. Lumen is enclosed volume; membrane lipid bilayer. No lumen equals membrane or protein identity is inferred. |
+| micro-go-lumen-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110145/ancestors?relations=is_a; Complete exact is_a-only ancestor response | supports | GO lumen target has is_a ancestry to GO:0043233; this confirms hierarchy, not a claim that the parent relation is direct. |
+| micro-go-membrane-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110146/ancestors?relations=is_a; Complete exact is_a-only ancestor response | supports | GO membrane target has is_a ancestry to GO:0016020; this confirms hierarchy, not a claim that the parent relation is direct. |
+| micro-SL0510 | https://rest.uniprot.org/locations/SL-0510.json; Complete native location name/definition/GO mapping and hierarchy | supports | SL-0510 exactly corresponds to whole magnetosome. Statistics are annotation counts, not presence/absence experiments. |
+| micro-SL0511 | https://rest.uniprot.org/locations/SL-0511.json; Complete native location name/definition/GO mapping and hierarchy | supports | SL-0511 exactly corresponds to magnetosome lumen (part_of SL0510). Statistics are annotation counts, not presence/absence experiments. |
+| micro-SL0512 | https://rest.uniprot.org/locations/SL-0512.json; Complete native location name/definition/GO mapping and hierarchy | supports | SL-0512 exactly corresponds to magnetosome membrane (is_a membrane and part_of SL0510). Statistics are annotation counts, not presence/absence experiments. |
+| micro-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax2 = Bacteria (domain). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-tax28211 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/28211; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax28211 = Alphaproteobacteria (class). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-tax1236 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1236; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax1236 = Gammaproteobacteria (class). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-tax2157 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax2157 = Archaea (domain). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-tax431944 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/431944; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax431944 = Magnetospirillum gryphiswaldense MSR-1 (strain). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-tax342108 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/342108; Complete exact taxId/scientificName/rank/lineage and alternative names | supports | Tax342108 = Paramagnetospirillum magneticum AMB-1 (strain). Identity only; not a contemporary prevalence survey or proof of the Archaea absence claim. |
+| micro-chebi46726 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_46726; Exact OLS ChEBI native term identity, formula/charge/definition and active state | supports | Active magnetite, Fe3O4. It does not denote greigite or all magnetic mineral alternatives. |
+| micro-chebi86238 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_86238; Exact OLS ChEBI native term identity, formula/charge/definition and active state | supports | Active greigite, iron sulfide Fe3S4 (native formula3Fe.4S), chemically distinct from magnetite. |
+| micro-chebi18248 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_18248; Exact OLS ChEBI native term identity, formula/charge/definition and active state | supports | Active iron atom, atomic number26, elemental Fe and native charge0. This exact neutral atom is not an oxidation-state-unspecified iron ion. |
+| micro-micro0000216 | https://www.ebi.ac.uk/ols4/api/ontologies/micro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMICRO_0000216; Exact native label, ID, definition annotation and active flag | supports | MICRO0000216 magnetosome agrees at identity level. Its auxiliary sourced descriptive annotation is not treated as authoritative contemporary mineral or taxonomic exhaustiveness. |
+| micro-uo0000018 | https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUO_0000018; Exact label/definition/active state | supports | UO0000018 is nanometer (10^-9 m). Unit identity does not verify the record diameter range. |
+| micro-IPR060787 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR060787/; Complete native entry name/type/member database/description | supports | InterPro060787 is family Magnetosome protein MamJ, member NCBIfamNF040987. Native entry describes family context; phenotype/transport necessity is not inferred from membership. |
+| micro-protein-Q93DY9 | https://rest.uniprot.org/uniprotkb/Q93DY9.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q93DY9 is reviewed, mamA, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-V6F510 | https://rest.uniprot.org/uniprotkb/V6F510.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | V6F510 is reviewed, mamB, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-V6F2B6 | https://rest.uniprot.org/uniprotkb/V6F2B6.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | V6F2B6 is reviewed, mamE, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-V6F235 | https://rest.uniprot.org/uniprotkb/V6F235.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | V6F235 is reviewed, mamM, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-Q93DZ1 | https://rest.uniprot.org/uniprotkb/Q93DZ1.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q93DZ1 is reviewed, mamO, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-Q6NE76 | https://rest.uniprot.org/uniprotkb/Q6NE76.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q6NE76 is reviewed, mms6, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158 and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion without falsifying its historical SL0510 query. |
+| micro-protein-Q6NE59 | https://rest.uniprot.org/uniprotkb/Q6NE59.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q6NE59 is reviewed, mamK, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. Native cytoskeletal ECO0000269 cites17601786/20487281; location comments qualify tag/linker dependence. No universal isolated-particle phenotype inferred. |
+| micro-protein-V6F519 | https://rest.uniprot.org/uniprotkb/V6F519.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | V6F519 is reviewed, mamJ, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. InterPro060787 cross-reference; experimental magnetosome location14766587. FUNCTION/SUBUNIT/DISRUPTION comments distinguish probable tethering, MamK interaction, clustered mature particles and scattered precursor vesicles. |
+| micro-protein-Q2W8Q7 | https://rest.uniprot.org/uniprotkb/Q2W8Q7.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q2W8Q7 is reviewed, mamJ, tax342108. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. InterPro060787 cross-reference; native experimental magnetosome annotation20212111/27481925 matches AMB-1. AMB-1 and MSR-1 functional equivalence is not assumed. |
+| micro-protein-Q6NE58 | https://rest.uniprot.org/uniprotkb/Q6NE58.json; Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype contexts | supports | Q6NE58 is reviewed, mamL, tax431944. All exact identity and SUBCELLULAR LOCATION annotations read with source/ECO distinctions. MamL magnetosome-membrane label carries ECO0000305 from27286560; tagged chains/aligned and unaligned patches carry ECO0000269. It is not upgraded to directly demonstrated invariant membrane residence. |
+| micro-query-mamA-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamA%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly Q93DY9 returned with primary symbol mamA. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamB-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamB%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly V6F510 returned with primary symbol mamB. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamE-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamE%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly V6F2B6 returned with primary symbol mamE. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamM-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamM%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly V6F235 returned with primary symbol mamM. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamO-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamO%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly Q93DZ1 returned with primary symbol mamO. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mms6-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Amms6%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly Q6NE76 returned with primary symbol mms6. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamK-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamK%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly Q6NE59 returned with primary symbol mamK. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamJ-431944 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamJ%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly V6F519 returned with primary symbol mamJ. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-query-mamJ-342108 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamJ%29+AND+%28organism_id%3A342108%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete single-result response, gene tokens and native X-Total-Results1/no Link | supports | Exactly Q2W8Q7 returned with primary symbol mamJ. Current bounded uniqueness is verified; not universal localization or necessity. |
+| micro-PMID11571158 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A11571158%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract: purified magnetosome proteins and conserved MamAB cluster; MSR-1 isolation distinct from cross-species homology. DOI:10.1128/aem.67.10.4573-4582.2001; PMID:11571158 |
+| micro-PMID14766587 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A14766587%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract only: isolated MSR-1 magnetosomes have phospholipids/fatty acids in differing proportions, selective solubilization/proteolysis and proteomics identify at least18 proteins. No fixed lipid composition or individual necessity is shown. DOI:10.1128/aem.70.2.1040-1050.2004; PMID:14766587 |
+| micro-PMID17601786 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A17601786%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract: MamJ deletion complementation, two-hybrid MamJ/MamK interaction; tethering model explicitly has unresolved detail. DOI:10.1128/jb.00421-07; PMID:17601786 |
+| micro-PMID20212111 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A20212111%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract: AMB-1 gene deletions separate membrane biogenesis, localization and biomineralization. DOI:10.1073/pnas.0914439107; PMID:20212111 |
+| micro-PMID20487281 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A20487281%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract only: MSR-1 MamK loss retains shorter fragmented/ectopic straight chains; not universal total loss or isolated scatter; genotype/species context matters. DOI:10.1111/j.1365-2958.2010.07202.x; PMID:20487281 |
+| micro-PMID22007638 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A22007638%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract only: MSR-1 MamB/MamM both necessary for magnetite but only MamB deletion removes membrane vesicles; iron transport originally implicated by CDF homology, not a direct complete transport assay. DOI:10.1111/j.1365-2958.2011.07863.x; PMID:22007638 |
+| micro-PMID27481925 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A27481925%20AND%20SRC%3AMED; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | supports | Primary complete abstract: AMB-1 GFP-protein localization depends on growth/biomineralization condition; Mms6 differs from other actors. DOI:10.1128/jb.00280-16; PMID:27481925 |
+| micro-uebe2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=DOI%3A%2210.1038/nrmicro.2016.99%22; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | context_only | Secondary review, complete native abstract; broad biogenesis outline and two model strains, not direct claim-level primary experiment. DOI:10.1038/nrmicro.2016.99; PMID:27620945 |
+| micro-barber2015-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=DOI%3A%2210.1002/pro.2827%22; Exact native MED id/title/authors/DOI and complete abstractText; exact query returns one result | context_only | Secondary review, complete native abstract; explicitly permits magnetite or greigite (native abstract spells gregite), protein-controlled staged biogenesis. Main body currently inaccessible. DOI:10.1002/pro.2827; PMID:26457474 |
+| micro-uebe2016-publisher | https://www.nature.com/articles/nrmicro.2016.99; Complete Key Points and Abstract through explicit subscription/access boundary; figure titles only | context_only | Secondary review overview supports protein recruitment, iron transport, redox-controlled mineralization and chain organization. No complete main body or figure caption/pixels obtained; exact35–120nm range, universal archaeal absence and detailed review-specific MamJ wording not freshly verified. |
+| micro-grunberg2001-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC93205/; PMC93205 parsed main paragraphs7,11,13,17-18,24,26-28,30-31,38,48,73,77,80; native text with method context and selected captions, no image pixels | supports | MSR-1 magnetosome purification and gel/protein sequencing support membrane association of Mam cohort. Initial homology/predicted domains are distinguished from later exact identity; MamB CDF relationship does not establish all transport chemistry. |
+| micro-murat2010-correct-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC2851823/; PMC2851823 main paragraphs11,14-16,23,28,30-36,41,46,51-59,62-64; table1 and selected captions; no pixels/supplements | supports | AMB-1 deletion/ultrathin-TEM/GFP work separates compartments from crystals and localization; MamE/MamM/MamO deletion can leave empty vesicles. MamL mostly cell membrane with occasional aligned localization. Introduction permits mineral alternatives as context, not new greigite experiment; direct findings are AMB-1 magnetite. |
+| micro-scheffel2007-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC1951895/; PMC1951895 paragraphs5-8,13,17,21-23,26,33,36,49,53-54,59,61-62,64-67 plus Fig5/6 captions; no pixels/supplements | supports | MSR-1 mature ΔmamJ magnetosomes chiefly aggregate in clusters with occasional rings/short imperfect chains. Prior cryo-ET context explicitly describes scattered EMPTY vesicles. Two-hybrid/complementation support MamJ-MamK interaction/model; paper retains need for confirmation and unresolved vesicle attachment detail. |
+| micro-arakaki2016-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC5038011/; PMC5038011 paragraphs14-17,20,24-28,31-33,38-39,44,48,53,66 and Fig1/4/5/6 captions; no pixels/supplements | supports | AMB-1 fluorescent-fusion comparisons support linear MamJ/MamK and condition-dependent Mms6 positioning, with MamL mostly membrane/diffuse and minor linear localization. Correlative microscopy relates Mms6 to crystals; no automatic MSR-1 or invariant residence inference. |
+| micro-access-limits | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/access-limit-receipts.json; All attempted route URLs/statuses/response hashes and actual dates; BioC no-result, PMC challenge, EPMC500 and archive404 | context_only | No returned challenge/error body is treated as article text. Current Barber2015/Grünberg2004 bodies remain unavailable through these routes; actual native abstracts are separate. Murat canonical full body succeeded after its rejected BioC route. |
+| micro-catalogue | https://imodulondb.org/api/datasets; Complete official /api/datasets array; all organism names, keys and dataset lists inspected | supports | No Magnetospirillum gryphiswaldense/MSR-1 or Paramagnetospirillum/Magnetospirillum magneticum/AMB-1 host match. Broad Bacteria/Alpha/Gamma labels do not justify another species proxy. No matched downstream gene/module summary applicable. |
+| micro-historical-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Actual previously retained runner command,00:49Z start/end and PermissionError reading pyvenv.cfg | context_only | Historical optional runner unavailable (exit1 in retained evidence); not re-executed here. Fresh current source catalogue fallback inspected separately. |
+| micro-enclosure-independent-challenge | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/magnetosome-mineral-scope-challenge.json; Independent bounded component/graph, native-policy and two exact ChEBI snapshot challenge; complete receipt | context_only | Separate confirmed enclosure finding withdrawn: true formal magnetite relation and broader mineral context do not constitute a second proved defect. Existing universal magnetite-essentiality finding preserved. No new comprehensive literature review claimed. |
+| septin-review-policy | .claude/skills/review-yaml-record/SKILL.md; Whole-record assertions, structured sources and severity rubric | supports | Positive molecular/pathway assertions require a real applicability assessment; absence of expression claims alone is not an exemption. Keep source scope, uncertainty and original finding identity; record curation is separate. |
+| septin-curation-policy | docs/CURATION.md; Structural components, molecular grounding and family-or-class guidance | supports | Whole assembled membranes are structures; a LIPID component denotes molecular material and cannot use a complete membrane identity as exact chemical grounding. Taxon-agnostic protein families OR classes are permitted. An optional example inventory is not automatically required for every generic class. |
+| septin-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ComponentTypeEnum and grounding contract | supports | Molecular components and whole structures have different identities. Label-only supported lipid material is possible without inventing exact chemical composition. PROTEIN enum prose is interpreted with explicit CURATION generic-class permission; no automatic complex assertion follows from a heterogeneous class. |
+| septin-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Graph nodes, component correspondence, source scope and necessity | supports | Descriptive boundary graphs can remain NONMECHANISTIC; source-specific localization, molecular identity and organelle-formation necessity must not be conflated. |
+| septin-protein-policy | .claude/skills/uniprot-protein-examples/SKILL.md; Step2 generic classes and native coverage report | supports | Generic class components are explicitly recognized. A zero-example inventory or NO_GENE_SYMBOLS node is a stated coverage limit, not proof that the protein class does not exist or that its members form one stable complex. |
+| septin-record-hydrogenosome_lumen | data/structures/membrane_organelle/hydrogenosome_lumen.yaml; Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae | supports | Read all identity, boundaries, components/examples, taxonomic/canonical scopes, functions, evidence, every graph node/edge, discussions and history. No maintained images, physical-property measurements, associated traits or verbatim snippets. |
+| septin-original-hydrogenosome_lumen | reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.yaml; Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source limits | supports | Historical observations stay historical; original files are unchanged. Current input is byte-unchanged. Only the lumen has an inherited scientific finding. |
+| septin-original-validation-hydrogenosome_lumen | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json; Actual focused original native validate/render and historical target hash | supports | Both commands exit0; original Markdown is deterministic and historical target bytes equal the frozen input. |
+| septin-native-hydrogenosome_lumen-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-verify-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-verify.log | supports | Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion. |
+| septin-native-hydrogenosome_lumen-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-causal-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-causal.log | supports | Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion. |
+| septin-record-inner_membrane_pellicle_complex | data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml; Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae | supports | Read all identity, boundaries, components/examples, taxonomic/canonical scopes, functions, evidence, every graph node/edge, discussions and history. No maintained images, physical-property measurements, associated traits or verbatim snippets. |
+| septin-original-inner_membrane_pellicle_complex | reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.yaml; Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source limits | supports | Historical observations stay historical; original files are unchanged. Current input is stale and substantively reassessed. Only the lumen has an inherited scientific finding. |
+| septin-original-validation-inner_membrane_pellicle_complex | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json; Actual focused original native validate/render and historical target hash | supports | Both commands exit0; original Markdown is deterministic and historical target bytes equal the frozen input. |
+| septin-native-inner_membrane_pellicle_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-verify-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-verify.log | supports | Exit0. Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin node and one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84. The latter are Toxoplasma representatives, not exact P.falciparum experimental accessions. Native identity/coverage is not membership, complete composition or causality. |
+| septin-native-inner_membrane_pellicle_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-causal-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-causal.log | supports | Exit0. Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin node and one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84. The latter are Toxoplasma representatives, not exact P.falciparum experimental accessions. Native identity/coverage is not membership, complete composition or causality. |
+| septin-record-macronucleus | data/structures/membrane_organelle/macronucleus.yaml; Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae | supports | Read all identity, boundaries, components/examples, taxonomic/canonical scopes, functions, evidence, every graph node/edge, discussions and history. No maintained images, physical-property measurements, associated traits or verbatim snippets. |
+| septin-original-macronucleus | reviews/structured/20261022T021711Z-macronucleus-audit/review.yaml; Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source limits | supports | Historical observations stay historical; original files are unchanged. Current input is byte-unchanged. Only the lumen has an inherited scientific finding. |
+| septin-original-validation-macronucleus | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json; Actual focused original native validate/render and historical target hash | supports | Both commands exit0; original Markdown is deterministic and historical target bytes equal the frozen input. |
+| septin-native-macronucleus-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-verify-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-verify.log | supports | Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion. |
+| septin-native-macronucleus-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-causal-receipt.json; Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-causal.log | supports | Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every molecular/pathway narrative assertion. |
+| septin-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034492,GO:0043233,GO:0042566,GO:0046859,GO:0070258,GO:0043231,GO:0031039,GO:0005634,GO:0000228; Nine exact active GO definitions/synonyms and relation-bearing children | supports | Lumen0034492, whole0042566 and membrane0046859 are distinct. IMC0070258 is two closely apposed bilayers below the apicomplexan plasma membrane; its inner membrane complex synonym is broad in native GO. Macronucleus0031039 is the ciliate polyploid transcriptional compartment, distinct from complete nuclear chromosome0000228 and DNA molecular material. |
+| septin-ancestors-0034492 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034492/ancestors?relations=is_a; Complete GO ancestors endpoint restricted to relations=is_a | supports | GO0043233 organelle-lumen is_a ancestry is present; parthood in hydrogenosome is independently supported. |
+| septin-ancestors-0070258 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070258/ancestors?relations=is_a; Complete GO ancestors endpoint restricted to relations=is_a | supports | GO0043231 is absent from this is_a-only response. The retained broader parent follows compatible definitions and the source organelle description, not an asserted native GO ancestry edge. |
+| septin-ancestors-0031039 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031039/ancestors?relations=is_a; Complete GO ancestors endpoint restricted to relations=is_a | supports | GO0005634 nucleus is_a ancestry is verified, not substituted parthood. |
+| septin-tax5794 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794; Exact ENA taxId/scientificName/rank/lineage/synonyms | supports | Apicomplexa phylum. Taxonomic identity does not measure prevalence or verify experimental context on its own. |
+| septin-tax5833 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833; Exact ENA taxId/scientificName/rank/lineage/synonyms | supports | Plasmodium falciparum species. Taxonomic identity does not measure prevalence or verify experimental context on its own. |
+| septin-tax36329 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/36329; Exact ENA taxId/scientificName/rank/lineage/synonyms | supports | Plasmodium falciparum3D7 isolate; UniProt isolate3D7 rendering is the same taxon. Taxonomic identity does not measure prevalence or verify experimental context on its own. |
+| septin-tax5911 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5911; Exact ENA taxId/scientificName/rank/lineage/synonyms | supports | Tetrahymena thermophila species; SB210 experimental strain comes from the paper, not this species authority. Taxonomic identity does not measure prevalence or verify experimental context on its own. |
+| septin-protein-O97228 | https://rest.uniprot.org/uniprotkb/O97228.json; Exact accession, submission protein name, UNREVIEWED status, ORF-name gene field, taxon and family cross-references | supports | O97228 has the matching putative inner membrane complex protein name, ORF-name PF3D7_0304000 and taxon36329. IMC1a mapping is also supplied by Ferreira Table1; the current JSON does not contain an indexed primary geneName for this entry. The record uses a legitimate locus identifier, but authority success is not a localization/necessity assay. Each carries IPR022086, which is separately assessed without automatically equating it with the full alveolin network. |
+| septin-protein-Q8IK01 | https://rest.uniprot.org/uniprotkb/Q8IK01.json; Exact accession, submission protein name, UNREVIEWED status, ORF-name gene field, taxon and family cross-references | supports | Q8IK01 has the matching putative inner membrane complex protein name, ORF-name PF3D7_1003600 and taxon36329. IMC1c mapping is also supplied by Ferreira Table1; the current JSON does not contain an indexed primary geneName for this entry. The record uses a legitimate locus identifier, but authority success is not a localization/necessity assay. Each carries IPR022086, which is separately assessed without automatically equating it with the full alveolin network. |
+| septin-protein-Q8I3K7 | https://rest.uniprot.org/uniprotkb/Q8I3K7.json; Exact accession, submission protein name, UNREVIEWED status, ORF-name gene field, taxon and family cross-references | supports | Q8I3K7 has the matching putative inner membrane complex protein name, ORF-name PF3D7_0525800 and taxon36329. IMC1g mapping is also supplied by Ferreira Table1; the current JSON does not contain an indexed primary geneName for this entry. The record uses a legitimate locus identifier, but authority success is not a localization/necessity assay. Each carries IPR022086, which is separately assessed without automatically equating it with the full alveolin network. |
+| septin-protein-O00934 | https://rest.uniprot.org/uniprotkb/O00934.json; Exact current accession/status/name/gene/organism/comments and evidence-code fields | supports | Reviewed T.gondii Myosin-A/MyoA; function includes by-similarity evidence while cell-membrane/peripheral/cytoplasmic-side annotation cites PMID10749937. This representative motor link is not exact identity of the entire glideosome. |
+| septin-protein-Q7Z289 | https://rest.uniprot.org/uniprotkb/Q7Z289.json; Exact current accession/status/name/gene/organism/comments and evidence-code fields | supports | Unreviewed T.gondii GAP45, exact protein and geneName; no native functional comments. Identity is not independent proof of the full anchoring mechanism. |
+| septin-protein-A0A125YT84 | https://rest.uniprot.org/uniprotkb/A0A125YT84.json; Exact current accession/status/name/gene/organism/comments and evidence-code fields | supports | Unreviewed T.gondii ME49 GAP50/TGME49_219320. Automatically assigned acid-phosphatase name/activity is consistent with the reviewed phosphatase-domain context, not proof of every glideosome function or P.falciparum-specific experimental identity. |
+| septin-ferreira2021-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.3389/fcimb.2020.611801%22; Exact MED bibliography and complete abstractText | supports | Complete review abstract and exact authors/title. Native MED collection year2020 differs from electronic publication2021-01-08 explicitly preserved in publisher JATS; Ferreira2021 citation is valid. It is secondary synthesis, not a primary perturbation experiment. |
+| septin-kono2013-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.2741/4157%22; Exact MED bibliography and complete abstractText | supports | Complete review abstract: alveolar homologs across ciliates/dinoflagellates and apicomplexan IMC functions are distinct contexts. Apicomplexan scope is review-supported, not a quantitative phylum-wide prevalence assay. |
+| septin-kono2012-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1093/molbev/mss081%22; Exact MED bibliography and complete abstractText | supports | Complete primary abstract: evolutionary analysis and selected Plasmodium protein microscopy support spatial/temporal architecture across developmental stages; primary body scope is separately stated. |
+| septin-dearnley2012-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1242/jcs.099002%22; Exact MED bibliography and complete abstractText | supports | Complete primary abstract supports flattened subpellicular cisternae, supporting microtubules and gametocyte morphological/deformability changes; detailed body/figure/quantitative claims are not newly inspected. |
+| septin-eisen2006-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=25&amp;query=DOI%3A%2210.1371/journal.pbio.0040286%22; Exact MED bibliography and complete abstractText | supports | Exact publication identity/ordered authors and complete primary abstract support the Tetrahymena somatic macronuclear genome and distinct germline role; genome-sequencing scope is not a new developmental mechanism experiment. |
+| septin-ferreira2021-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC7820811.1/PMC7820811.1.xml; Fresh genuine JATS entire scientific main text s1–s5 including s4_1–s4_5, Table1 and embedded Figure1 caption; no figure pixels or underlying primary-data reanalysis | supports | Secondary review distinguishes Plasmodium/Toxoplasma and stage-specific assembly/disassembly, shape and motility functions. Table1 maps IMC1a/PF3D7_0304000,IMC1c/PF3D7_1003600,IMC1g/PF3D7_0525800 and labels their alveolin repeat; reference superscripts retain P.berghei/P.yoelii context and gray unverified P.falciparum homolog scope. The glideosome inventory/mechanism is incomplete; GAP50 has a phosphatase-domain annotation. Current record does not assert all stages glide or one exact all-lineage architecture. |
+| septin-kono2012-minimal | https://oup.silverchair-cdn.com/article-minimal/1075017; Fresh publisher minimal body: complete Abstract/Introduction/Methods; Results from Differential Spatial Distribution through end, including Figures3–8 captions; complete Discussion. Earlier phylogenetic Results/Figures1–2, pixels and supplements not comprehensively inspected | supports | P.falciparum3D7 blood/sexual microscopy and P.bergheiANKA ookinete/sporozoite comparisons are separate. Alveolins PF10_0039/PFE1285w show distinct temporal/spatial IMC patterns; mature peripheral overlap does not resolve every membrane. Reporter ama1-promoter context, endogenous controls and weak gametocyte fluorescence limitations remain explicit. IMC scaffolding/shape and protein membership are supported without asserting each protein is required for organelle formation or every family member shares a mechanism. |
+| septin-eisen2006-jats | https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040286&amp;type=manuscript; Fresh publisher JATS complete Introduction s1; sequencing/assembly s2a1; assembly accuracy/completeness s2a2; copy-number analysis s2a5; cell-growth/DNA-isolation/library methods s3a, with embedded Figure1–4 captions; no pixels, separate tables/supplements or raw reads | supports | SB210 macronuclei were purified by differential sedimentation and used for shotgun libraries. Low MIC and mitochondrial contamination is acknowledged, so purified does not imply absolute purity. Somatic MAC expression and MIC-derived fragmented/telomere-capped/amplified chromosomes are supported at source scope. Developmental rearrangement background is not a new perturbation assay. Absence from the assembly is not gene absence; uniform bulk copy-number estimates do not prove every small chromosome is identical. |
+| septin-ipr-alveolin-search | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=alveolin&amp;page_size=200; Complete exact InterPro name-search response HTTP204/empty | supports | A bounded alveolin-name query returned no entries; that does not establish missing family representation. Exact current protein xrefs independently identify IPR022086, inspected separately. |
+| septin-alveolin-proteins | https://rest.uniprot.org/uniprotkb/search?query=protein_name%3Aalveolin%20AND%20taxonomy_id%3A5833&amp;format=json&amp;size=100; Complete exact UniProt protein-name query JSON results[] | supports | The literal alveolin protein-name query is empty, while the three known IMC protein accessions resolve. This is a naming/index distinction, not protein absence. |
+| septin-IPR022086 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022086/; Exact accession/type/name/member signature and non-LLM native description only | supports | IPR022086 is named Inner membrane complex protein, type family, with PF12314. Its native non-LLM description mixes ~120-aa domain language, bacteria/eukaryote distribution and parasitic IMC structure. Shared xrefs of three unreviewed examples establish a real candidate but do not certify exact coverage of the full alveolin network. Retain bounded uncertainty in the existing open grounding TODO; no exact replacement is invented. |
+| septin-SL-0144 | https://rest.uniprot.org/locations/SL-0144.json; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/SL-0144.json; Exact location entry, direct GO mapping, names/synonyms and relation-bearing parents | supports | Reused prior public-source retrieval at 2026-11-03T14:51:37.959470Z and reapplied to the current lumen claims; no new fetch claimed. Complete hydrogenosome membrane GO0046859, hydrogenosomal membrane synonym and organelle parthood. Nested mappings do not become exact xrefs of the queried structure. |
+| septin-SL-0335 | https://rest.uniprot.org/locations/SL-0335.json; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/SL-0335.json; Exact location entry, direct GO mapping, names/synonyms and relation-bearing parents | supports | Reused prior public-source retrieval at 2026-11-03T14:51:37.962327Z and reapplied to the current lumen claims; no new fetch claimed. Hydrogenosome matrix GO0034492, lumen synonym and parthood. Nested mappings do not become exact xrefs of the queried structure. |
+| septin-tax2759 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tax2759.json; Exact ENA taxonomy entry/rank/lineage/synonyms | supports | Reused prior public-source retrieval at 2026-11-03T14:51:38.518415Z and reapplied to the current lumen claims; no new fetch claimed. Domain Eukaryota; broad RARE occurrence means patchy qualitative distribution, not an experimentally measured frequency. |
+| septin-tax5722 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5722; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tax5722.json; Exact ENA taxonomy entry/rank/lineage/synonyms | supports | Reused prior public-source retrieval at 2026-11-03T14:51:39.097242Z and reapplied to the current lumen claims; no new fetch claimed. Species Trichomonas vaginalis, with historical Tritrichomonas vaginalis synonym. This is distinct from Tritrichomonas foetus used in the original Lindmark study. |
+| septin-tachezy2022-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1111/jeu.12922&amp;pageSize=25; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tachezy2022-meta.json; Exact native bibliographic identity and complete abstractText | supports | Reused prior public-source retrieval at 2026-11-03T14:51:39.165701Z and reapplied to the current lumen claims; no new fetch claimed. Exact current title is The hydrogenosome of Trichomonas vaginalis, by Tachezy, Makki and Hrdý, year2022. Complete secondary-review abstract supports organelle background, not a new primary experiment. Both assigned hydrogenosomal records carry the wrong title. |
+| septin-schneider2011-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.ijpara.2011.10.001&amp;pageSize=25; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/schneider2011-meta.json; Exact native bibliographic identity and complete abstractText | supports | Reused prior public-source retrieval at 2026-11-03T14:51:39.279395Z and reapplied to the current lumen claims; no new fetch claimed. Complete primary abstract and exact publication identity/PMID22079833. Year2011 is publication metadata; a later repository manuscript-release date is not a different experiment. |
+| septin-sutak2004-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1073/pnas.0401319101&amp;pageSize=25; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/sutak2004-meta.json; Exact native bibliographic identity and complete abstractText | supports | Reused prior public-source retrieval at 2026-11-03T14:51:39.849209Z and reapplied to the current lumen claims; no new fetch claimed. Complete primary abstract: TvIscS-2 localizes to hydrogenosomes and hydrogenosomal extracts support FeS reconstitution of apoferredoxin; this does not independently localize every ISC member. |
+| septin-lindmark1973-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A4750424%20AND%20SRC%3AMED&amp;pageSize=25; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/lindmark1973-meta.json; Exact native bibliographic identity and metadata only, no abstractText | supports | Reused prior public-source retrieval at 2026-11-03T14:51:40.152045Z and reapplied to the current lumen claims; no new fetch claimed. Exact title, authors, year1973, PMID4750424 and DOI10.1016/s0021-9258(19)43249-3 verified. The native record has no abstract; current access is bibliography only. Detailed original Tritrichomonas foetus experiments are not freshly certified. |
+| septin-schneider2011-bioc | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC4437511/unicode; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/schneider2011-bioc.xml; NCBI BioC primary body: complete Introduction and Methods2.1–2.7; Results/Discussion3.1,3.5,3.7,3.8,3.9,3.10; no figure pixels, separate supplements or raw spectra | supports | Reused prior public-source retrieval at 2026-11-03T14:53:16.413225Z and reapplied to the current lumen claims; no new fetch claimed. T.vaginalis T1 hydrogenosome fractionation and mass spectrometry support energy enzymes and ISC proteins, including IscU. The proteome has external associations, potential contaminants and family-level indistinguishable peptides; fraction detection does not independently prove every subcompartment location. Section3.8 explicitly preserves targeting without an N-terminal presequence and stringent motif prediction as an alternative to true signal absence. Translocase candidates/models are not all functionally demonstrated; nondetection is not absence. |
+| septin-sutak2004-maintext | https://pmc.ncbi.nlm.nih.gov/articles/PMC478578/; Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/primary-web-reader-receipt.json; Retained web-reader primary main text: abstract/introduction; Methods lines131–144; Results145–200; Discussion201–209; Fig1–7 caption text, not pixels | supports | Reused prior public-source retrieval at 2026-11-03T14:54:07Z and reapplied to the current lumen claims; no new fetch claimed. Fresh rendered primary text retained in /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/primary-web-reader-receipt.json. C-1:NIH30001 T.vaginalis cells, iron-rich/restricted culture, fractionation and immunolocalization directly examine TvIscS-2. FeS reconstitution uses hydrogenosomal lysate and apoferredoxin with cysteine/iron and controls. IscU appears in yeast/bacterial model/interaction discussion, not a T.vaginalis IscU localization experiment. No IscU biological absence inference follows. |
+| septin-context-hydrogenosome | data/structures/membrane_organelle/hydrogenosome.yaml; Frozen identity/definition/parent/parthood boundary context only | supports | Whole organelle and membrane remain distinct from the assigned lumen. Neighbor findings/issues are not inherited into this target or resolved by this context read. |
+| septin-context-hydrogenosomal_membrane | data/structures/membrane_organelle/hydrogenosomal_membrane.yaml; Frozen identity/definition/parent/parthood boundary context only | supports | Whole organelle and membrane remain distinct from the assigned lumen. Neighbor findings/issues are not inherited into this target or resolved by this context read. |
+| septin-catalogue | https://imodulondb.org/api/datasets; Complete current official iModulonDB catalogue; all organism names/ids and dataset-key fields inspected | supports | No matching Trichomonas, Plasmodium/Toxoplasma or Tetrahymena dataset host occurs in this response. Complete record assertions trigger applicability despite empty inventories in two records. No unrelated bacterial or heterologous expression-host downstream query is justified; noncoverage is not biological absence. |
+| septin-adapter-runner-historical | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Actual historical00:49Z failed invocation; no current rerun | supports | Attempt2026-11-03T00:49:00.848907Z–00:49:00.863225Z exited1 with PermissionError reading pyvenv.cfg. Runner unavailable; current official catalogue fallback is separately recorded. No successful or fresh runner execution is claimed. |
+| check-qc | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/qc.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| check-labels | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/labels.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| check-trait-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/trait-links.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Native TraitMech link check passed. |
+| check-vendored | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/vendored.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Pinned governed files match; native vendored check passed. |
+| check-curies | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/curies.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| focused | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/focused-results.json; All twenty actual target schema/strict command outputs | supports | Ten schema and ten strict commands returned exit zero. |
+| supplemental-pmid | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/pmid-chunks-receipt.json; Complete native-report PMID set checked with unchanged resolver in batches of at most fifty | supports | 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers remain unverified. |
+| historical-adapter-runner-availability | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical runner invocation receipt, exact SHA256 reverified during PR2368 synthesis | context_only | Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS PermissionError reading the configured runner pyvenv.cfg. This is a retained historical availability observation, not a fresh attempt or a scientific validation failure. Native policy permits inspected source-catalogue fallback. |
+
+## Limits And Additional Notes
+
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: Only the four assigned unchanged records were scientifically reviewed. All qualify pass_with_limitations; no scientific finding/action or fabricated predecessor. Four concrete historical bundle exclusions require successor coverage correction. Root may include these in its explicitly issue-bearing cohort; no clean standalone repository bundle was saved.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: Original four pairs validate/render and every historical input matches. Historical record corrections, discussions, neighbor issues, broader groups and other PRs are not terminally resolved by this scope. The two frozen MVB neighbors are boundary context only, not independently accepted full records.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: 2018 IMiQ genuine JATS: all Results/Figure1–7 captions, Discussion, selected Methods Plasmids and strains/Aggregate sedimentation/Fluorescence microscopy and front permissions read. Supplementary PDF downloaded but not assessed; no raw microscopy or proteomic reanalysis. Species and condition scopes are retained.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: 2025 IMiQ publisher direct HTTP route returned403; canonical browser text nevertheless exposed Abstract/Introduction, all Results/Discussion/Methods and data availability. Stored browser snippets carry actual times and are not raw successful publisher HTTP. An initial mistakenly transcribed numeric article URL returned an access error, then the exact source URL was used; no failed route supplied evidence. Figure1 pixels were fetched freshly using an earlier located CDN URL and actually viewed.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: 2018 and2025 linked Figure1 pixels and exact captions/licences were inspected. No other figure pixels were certified.2018 NC-SA3.0, publisher UserLicence1.2 and dataset CC0 remain distinct. No figure bytes were committed or organelle dimensions inferred from arbitrary sections.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: DUMP2020 body inspection was limited to Discussion/Conclusion. Its distinctions and later tentative similarity remain uncertainty; no cross-paper synonym, human scope or lipid mechanism transfer. Current protein-native matrix location is not exact IMiQ necessity. InterPro generated descriptions were excluded.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: Late-endosome sources Katzmann2001/Babst2002 are complete primary abstracts; Henne2011 is secondary abstract only. Teo2004 selected p559/p564–566 binding/liposome/Methods text and captions, and Katzmann2003 complete Results/Discussion/Methods/captions were inspected, without pixel/supplement or raw-data assessment. Universal choreography and isolated-factor sufficiency are not inferred.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: All eight actual native protein commands passed; IMiQ has two reference examples and zero typed GENE_OR_PROTEIN nodes; all three late-endosome targets have zero examples and typed nodes. Empty native coverage does not waive positive pathway assertions.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: Fresh complete iModulonDB catalogue has no matching yeast host; no matched downstream gene/module query or bacterial proxy applies. Historical00:49Z runner PermissionError is not a new failure or current execution. Source fallback is bounded and noncoverage is not negative biology.
+- Intramitochondrial quality-control compartment and late-endosome trio independent subreview: Root owns global gates, issue publication and final PR lifecycle. This report certifies only its actual source/native checks, not final-head CI or merge success. Read-only reviewer wrote scratch only; native scratch preflight validates structure, not automatic scientific correctness.
+- Magnetosome, lumen and membrane independent subreview: Assigned scope only: three entire magnetosome records; whole stale graph substantively refreshed, lumen/membrane unchanged. Four inherited findings retain exact repository/review/F1-F4 identities; A proposed separate enclosure-wording finding was independently challenged and withdrawn: the formal relation is correct and broader context does not identify greigite as magnetite. No grouped2432 or MamK-neighbor finding terminally disposed.
+- Magnetosome, lumen and membrane independent subreview: Primary source reading is passage-scoped as each evidence locator states. Scheffel2007 distinguishes scattered empty vesicles from chiefly clustered mature particles, and retains interaction-model caveats. Murat/Arakaki AMB-1 experiments are not silently exported to MSR-1 or all bacteria. No figure pixels, supplements or raw experimental data inspected; none of these three records asserts an image asset.
+- Magnetosome, lumen and membrane independent subreview: Current Grünberg2004/Uebe2011/Katzmann2010 evidence is complete native abstract only. Uebe2016 publisher offers Key Points/abstract and access boundary; Barber2015 only native abstract inspected currently. Challenge/no-result/500/404 packets retained and never used as main scientific text. No prior full-body inspection is described as a fresh read.
+- Magnetosome, lumen and membrane independent subreview: Exact35–120nm range and broad archaeal absence remain unknown at actual access/search scope, not refuted. Qualitative taxon occurrence is not an exhaustive prevalence survey. Trait linkage is left to the actual root trait gate; no new sibling-repository scientific assessment claimed.
+- Magnetosome, lumen and membrane independent subreview: All ten queried protein accessions are reviewed identities, but only nine are whole-record examples; membrane carries five overlapping xrefs including MamL. Exact single-reviewed-hit searches are bounded to stated organism_id/date/query. Identity, predicted localization, experimental annotations, association, formation necessity and direct transport chemistry remain distinct.
+- Magnetosome, lumen and membrane independent subreview: All three source-adapter rows are present expression-only exclusions needing correction, not omissions or sparse exclusions. Fresh catalogue excludes exact model hosts; broad bacterial ancestry does not authorize unrelated proxy datasets. Historical00:49Z runner failure is retained as historical unavailable, not a new execution.
+- Magnetosome, lumen and membrane independent subreview: No repository/Git/GitHub mutation. Root independently owns global QC/finalCI/issue dedup and publication; source report does not borrow future gate results. Native scripts are frozen execution inputs, not a claimed exhaustive code audit. All curation actions are proposed for maintained records outside this PR.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Read-only independent source review of three assigned records; root owns repository/GitHub writes, issue dedup/publication, global QC/CI and merge queue. No record or original review was edited; future final-head/queue outcomes are not pre-certified.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: IMC is stale only because history and three unreviewed P.falciparum3D7 examples were added. Current accession/status/protein-name/taxon/locus identity is verified and literature supports the named alveolin cohort; identity is not accession-specific localization, functional causality or organelle-formation necessity.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Native IMC scope is3UNREVIEWED examples,1COVERED alveolin node and1UNANCHORED_WITH_UNIPROT glideosome node. Its Toxoplasma motor/anchoring accessions are not P.falciparum experimental examples. Lumen/macronucleus have0examples and0typednodes. All six commands pass within those inventories.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: PF3D7 identifiers are ORF names in current UniProt JSON, not indexed primary geneName fields; the common IMC1a/c/g mappings are independently supplied by named proteins and Ferreira Table1. IPR022086 is a real shared family candidate with ambiguous domain/network scope; no exact full-alveolin-network grounding is certified from automatic xrefs alone. Empty literal-name searches do not imply absent proteins/families.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Ferreira primary publication date is2021-01-08 with collection year2020. Its entire scientific review main text s1–s5/Table1/Fig1caption was read, not underlying primary datasets/pixels. Kono2013 is complete secondary abstract only. Dearnley2012 is complete primary abstract only, not a current full-body/pixel analysis.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Kono2012 fresh primary minimal body: complete Abstract/Introduction/Methods, Results from Differential Spatial Distribution through end and Fig3–8 captions, complete Discussion. Earlier phylogenetic Results/Fig1–2, supplementary material, pixels and quantitative phenotype reanalysis are not comprehensively inspected. P.falciparum3D7 and P.bergheiANKA systems, promoters, endogenous controls and weak gametocyte fluorescence remain distinct.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Eisen2006 fresh JATS is limited to complete Introduction, sequencing/assembly, accuracy/completeness, copy-number and cell-growth/DNA-isolation/library methods with embedded Fig1–4captions. Other sections, separate tables/supplements, pixels and raw genome reads are not inspected. MAC purification is not absolute purity; assembly nondetection is not gene absence.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Hydrogenosome public snapshots are reused from PR2367 with their actual2026-11-03 retrieval timestamps and verified hashes, not freshly fetched. Tachezy is secondary abstract, Lindmark bibliography-only, Schneider selected genuine BioC main sections and Sutak rendered main text/captions with no pixels/raw data. Direct TvIscS-2 localization/lysate activity and proteome fraction membership remain distinct. The lumen does not inherit the separate whole-record IscU attribution defect.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: All three original adapter rows are explicit expression-only exclusions, not omissions. Complete molecular/pathway narratives trigger current catalogue assessment. No matched eukaryotic host exists in the inspected catalogue; no unrelated bacterial proxy or biological absence inference. Runner failure remains the actual historical00:49Z attempt, not a new invocation.
+- Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent subreview: Twenty-eight repository inputs were used:17common policy/schema/native files,3targets,6original artifacts and2frozen hydrogenosomal boundary neighbors. Neighbors supply bounded topology context only and their issues are neither inherited nor resolved. No maintained images, quantitative physical properties, traits or snippets are present.
+- Historical observations remain immutable; their old checks are not represented as current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure. Catalogue-based coverage is assessed directly; fresh and reused responses retain actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include 909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head CI and merge-group CI occur after saving this immutable observation and are not represented here as already completed.
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally and pushed without force.
+- This explicit issue-bearing ten-record cohort follows native persistence policy. Inherited scientific findings retain stable keys and exact predecessor repository/review/finding identities; any new finding has no invented predecessor.
+- Issue #2714 tracks two stale target inputs. Inner membrane pellicle complex adds three unreviewed Plasmodium falciparum 3D7 examples; native identifiers/names, status, taxon and stage-specific membership are reassessed. Magnetosome adds crystal grounding, a MamJ actor/connection and membrane association/enclosure edges; chemical and source-specific interaction scopes are reassessed.
+- Issue #2715 tracks ten explicit unsupported expression-only applicability exclusions. Whole-record metabolism/FeS, alveolin/glideosome, HSP78/SSC1 stress/protein-localization, ESCRT/MVB, somatic-genome expression and Mam/Mms biomineralization assertions trigger bounded host-catalogue coverage assessment despite empty example inventories or narrow titles.
+- Source commit cf694c66fc3ad68d50e01fa740eadcc8987282ae is retained by tag review-base/pr2368-current-record-followup-20261103.
+- CLAUDE.md aliases AGENTS.md; canonical regular AGENTS.md bytes are frozen. All 52 used local inputs were frozen before assessment. Whole hydrogenosome and its membrane, multivesicular body and its intraluminal vesicle, and MamK filament are bounded neighbor context only, not additional review targets or dispositions.
+- Fresh and reused source snapshots retain actual access times and inspection tiers. Native identifier identity does not independently establish structure membership, source-specific mechanism, species-wide generalization or assembly necessity.
+- All twenty native protein commands returned zero. IMC has three unreviewed examples, one COVERED alveolin node and one UNANCHORED_WITH_UNIPROT glideosome; IMiQ has two reviewed examples and zero typed molecular nodes; magnetosome has nine reviewed examples and two COVERED typed nodes; its membrane has zero examples and one UNANCHORED_WITH_UNIPROT Mam/Mms node. The other six records have no examples or typed molecular nodes. These execution scopes do not certify every narrative claim.
+- Closed grouped issue #2432 is historical context for magnetosome crystal grounding propagation; no broad disposition of other records or findings is made. Native-validator issue #2514 remains open and reused. Related website, image-inventory and protein-example-inventory issues remain distinct and untouched.
+- Native family-or-class guidance permits generic protein cohorts when represented honestly. Direct localization, fractionation, sedimentation, interaction, biochemical function and necessity are distinguished in the target-specific assessments.
+- A proposed separate magnetite/greigite enclosure-wording finding was independently challenged and withdrawn. The formal magnetite enclosure relation remains true and correctly grounded; broader alternative-mineral background is not a chemical equivalence assertion. Existing magnetite universal-essentiality F1 remains the demonstrated defect. Optional wording precision is not promoted to a new confirmed finding.
+- IMiQ Figure1 link-only assets were freshly retrieved and their pixels, captions and licences inspected by the independent reviewer. No external figure bytes are committed; 2018 noncommercial/share-alike, publisher UserLicence1.2 and dataset CC0 scopes remain separate. Later primary-text access improved the source assessment without retroactively changing original access history.
+- The final five inherited findings link to scientific issues #2716–#2720 (two major, three minor), with exact predecessor identities retained. The two affected targets are hydrogenosome lumen and magnetosome; the other eight targets have qualified passes. Issues #2714 and #2715 are bundle-only fixes; validator #2514 remains open. No scientific record-curation issue is closed by this review-only PR.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261103T154237Z-pr2368-current-record-followup
+kind: batch
+repository: CultureBotAI/CellStructureMech
+title: 'PR 2368: current-input review of ten records and adversarial follow-up'
+started_at: '2026-11-03T15:28:17.993361Z'
+finished_at: '2026-11-03T15:42:37Z'
+reviewer:
+  identity: Codex root synthesis with three independent read-only adversarial reviewers
+  kind: agent
+  independence: self_review
+  independence_basis: Root authors this synthesis of three separate read-only reviews.
+    Independent reviewers inspected original bundles, current record bytes and primary/authority
+    sources, and did not author or modify repository files. They independently re-review
+    the final saved head before merge-queue admission. This is not human scientific
+    sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md; explicit batch route in docs/record-review-profile.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'All ten records are reassessed against current main with 52 frozen local
+  inputs. Two stale reviews are refreshed: inner membrane pellicle complex protein
+  examples and magnetosome chemical/protein/edge additions. All ten unsupported expression-only
+  structured-source exclusions are replaced by claim-sensitive catalogue assessments.
+  Five inherited scientific findings remain (two major and three minor): one hydrogenosome-lumen
+  citation-title error and four magnetosome necessity, chemical-identity, localization-gap
+  and MamJ-phenotype issues. Two targets need curation and eight receive qualified
+  passes within the documented source limits. Bundle issues #2714 and #2715 are addressed
+  by this successor; scientific issues #2716–#2720 and reused validator #2514 remain
+  open. No record is edited.'
+source:
+  git_revision: cf694c66fc3ad68d50e01fa740eadcc8987282ae
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-cell-structure/SKILL.md
+    sha256: eee04ee51d2c82c05df98570674084bdce9001e5aa67d6230ac1ed50064a3175
+    role: context
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/cytoskeleton/mamk_filament.yaml
+    sha256: fb273942dd11b99a71c61834f5ca331829a340b6a271e0f73e050c1b0128ca64
+    role: context
+  - path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+    sha256: 7e389b3e00ef30e931b8415dcc2daf38b5022ba6849696387af283a6f9f7ab56
+    role: context
+  - path: data/structures/membrane_organelle/hydrogenosome.yaml
+    sha256: 6d295ad6b0bb5066ddec461e6c2ffa142de9d8590d705eff6a3648bc6c01e77a
+    role: context
+  - path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+    role: target
+  - path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    sha256: b1ba7a435c20af9e679a8ac976a0f598a0b48808eda62181b6751732f5896917
+    role: target
+  - path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome.yaml
+    sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+    sha256: f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+    sha256: abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc
+    role: target
+  - path: data/structures/membrane_organelle/macronucleus.yaml
+    sha256: 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome.yaml
+    sha256: 8c775795c1af6932344ced4c4d94ad2028642ec05a7c25d1f0d5bd2771153d99
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+    sha256: 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+    sha256: 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body.yaml
+    sha256: cf6713b73e225eb2413a2a8b8a0fc9dfb6cf84a12f10133e3dcbec03791585a9
+    role: context
+  - path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.md
+    sha256: 891441511f1bf9bef48847d994fa556a4eee3d78343981fbfc183eca70177dc5
+    role: context
+  - path: reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.yaml
+    sha256: ee6af8fcd38551bae4590b0de1a22387c1a806aa6d40969578a76812d35e3019
+    role: context
+  - path: reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.md
+    sha256: 0877e6a5716e662252acff667d2d276f01fd735d154f8e3fe325fb1dbca70234
+    role: context
+  - path: reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.yaml
+    sha256: 842978c8ffc141c710f53bdd40c7b2085c1d1a8ff2fcc950b6b2b5d5251636ab
+    role: context
+  - path: reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.md
+    sha256: 03638ed42fb66c161e2d4e0ddf3c035d8bca8317679e4bfc962e5cbe2f431ec4
+    role: context
+  - path: reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.yaml
+    sha256: 14bd552e4d8652fffe1a67ba67c05e32147bd1bd56cc2a861df1d06eca20100f
+    role: context
+  - path: reviews/structured/20261022T021708Z-late-endosome-audit/review.md
+    sha256: f7490700514853eace071c4163d88d136f14835f1804699386a39d327e1a3dd0
+    role: context
+  - path: reviews/structured/20261022T021708Z-late-endosome-audit/review.yaml
+    sha256: 6c4625c6b855fe53814d49254c3aafe57d62eccd55eb516ce8714cd11892244a
+    role: context
+  - path: reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.md
+    sha256: dcfe588a265b790b03c1fe75a46f3f85a157040eab5eea1feac979732b4a2693
+    role: context
+  - path: reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.yaml
+    sha256: 9e0c0ad070d961bf9c79ce8e76fae9826717ff45eb076c97a4d340d6d69b857c
+    role: context
+  - path: reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.md
+    sha256: 240d17d5e5fa9ddc63b0dddc16bafee56d90e90947a1e5c2c175164e347133df
+    role: context
+  - path: reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.yaml
+    sha256: 2e516992dd17dd614ec0cc7842fedaca2e7d732589ff5a99f7576d982a784645
+    role: context
+  - path: reviews/structured/20261022T021711Z-macronucleus-audit/review.md
+    sha256: a0f54a1dc07e9549b5d80023467f3ae8c1b8560b5981590f7f1d8e1c6ef9910c
+    role: context
+  - path: reviews/structured/20261022T021711Z-macronucleus-audit/review.yaml
+    sha256: 5b14f3ffc770af39883ef34c981ec6ca467433e84bc084939f5f64b2524d7470
+    role: context
+  - path: reviews/structured/20261022T021713Z-magnetosome-audit/review.md
+    sha256: 5b2beffc99b91ba47d251dfe66d5bb4c59afd55ead16e36ea38d808b209442ae
+    role: context
+  - path: reviews/structured/20261022T021713Z-magnetosome-audit/review.yaml
+    sha256: 1e99a6b1e960e470b7e538e0ce14d8a31ac5e76f644a5c296388024b03dbaf11
+    role: context
+  - path: reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.md
+    sha256: dfba4b862c4827a977ffa0c16440217101ff45cbb5ab72e52e05cb9aafd127b1
+    role: context
+  - path: reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.yaml
+    sha256: 3da2f70fd97f64d640726f543295d56b678c4fbb835436edb71a4f91ee3cdac0
+    role: context
+  - path: reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.md
+    sha256: 960fa87f244b786d24c31f9ad7619f67aa56b1f3249e9192309af2585afbd4e3
+    role: context
+  - path: reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.yaml
+    sha256: 62f45424093013a51cf2c1a9f3c0fda6da6203d36128d0efc8cf0149dc546c82
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0034492
+  path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  label: hydrogenosome lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    role: maintained scientific record
+- target_id: GO:0070258
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  label: inner membrane pellicle complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    role: maintained scientific record
+- target_id: cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  label: intramitochondrial protein quality control compartment
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    role: maintained scientific record
+- target_id: GO:0005770
+  path: data/structures/membrane_organelle/late_endosome.yaml
+  label: late endosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome.yaml
+    role: maintained scientific record
+- target_id: GO:0031906
+  path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  label: late endosome lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+    role: maintained scientific record
+- target_id: GO:0031902
+  path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  label: late endosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0031039
+  path: data/structures/membrane_organelle/macronucleus.yaml
+  label: macronucleus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/macronucleus.yaml
+    role: maintained scientific record
+- target_id: GO:0110143
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  label: magnetosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+- target_id: GO:0110145
+  path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+  label: magnetosome lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+    role: maintained scientific record
+- target_id: GO:0110146
+  path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+  label: magnetosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Exact ten-record PR cohort reassessed against current main 495b947e881ae07ddfbae01668dd9799a2fb73cb.
+    Changed inputs are substantively reassessed. Scientific records remain unchanged.
+  selection: Complete cohort of ten maintained records reviewed in original PR head
+    4d1ebd335fa856a275d8da7a0fe1a11adecf991c.
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+checks:
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: just qc
+  exit_code: 0
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  scope_note: Actual local execution at main-merge head cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-qc
+- check_id: labels
+  name: Native label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: just validate-products
+  exit_code: 0
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  scope_note: Actual local execution at main-merge head cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-labels
+- check_id: trait-links
+  name: TraitMech references
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Native TraitMech link check passed.
+  scope_note: Actual local execution at main-merge head cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-trait-links
+- check_id: vendored
+  name: Pinned governed files
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: just vendored-check
+  exit_code: 0
+  summary: Pinned governed files match; native vendored check passed.
+  scope_note: Actual local execution at main-merge head cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-vendored
+- check_id: curies
+  name: Native identifier resolver
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: just check-curies
+  exit_code: 0
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  scope_note: Actual local execution at main-merge head cf694c66fc3ad68d50e01fa740eadcc8987282ae.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-curies
+- check_id: focused-0
+  name: validate GO:0034492
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  command: just validate data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-1
+  name: validate-strict GO:0034492
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  command: just validate-strict data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-2
+  name: validate GO:0070258
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-3
+  name: validate-strict GO:0070258
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate-strict data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-4
+  name: validate cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-5
+  name: validate-strict cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate-strict data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-6
+  name: validate GO:0005770
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005770
+  command: just validate data/structures/membrane_organelle/late_endosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-7
+  name: validate-strict GO:0005770
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005770
+  command: just validate-strict data/structures/membrane_organelle/late_endosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-8
+  name: validate GO:0031906
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031906
+  command: just validate data/structures/membrane_organelle/late_endosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-9
+  name: validate-strict GO:0031906
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031906
+  command: just validate-strict data/structures/membrane_organelle/late_endosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-10
+  name: validate GO:0031902
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031902
+  command: just validate data/structures/membrane_organelle/late_endosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-11
+  name: validate-strict GO:0031902
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031902
+  command: just validate-strict data/structures/membrane_organelle/late_endosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-12
+  name: validate GO:0031039
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031039
+  command: just validate data/structures/membrane_organelle/macronucleus.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-13
+  name: validate-strict GO:0031039
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031039
+  command: just validate-strict data/structures/membrane_organelle/macronucleus.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-14
+  name: validate GO:0110143
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110143
+  command: just validate data/structures/membrane_organelle/magnetosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-15
+  name: validate-strict GO:0110143
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110143
+  command: just validate-strict data/structures/membrane_organelle/magnetosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-16
+  name: validate GO:0110145
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110145
+  command: just validate data/structures/membrane_organelle/magnetosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-17
+  name: validate-strict GO:0110145
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110145
+  command: just validate-strict data/structures/membrane_organelle/magnetosome_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-18
+  name: validate GO:0110146
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110146
+  command: just validate data/structures/membrane_organelle/magnetosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-19
+  name: validate-strict GO:0110146
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110146
+  command: just validate-strict data/structures/membrane_organelle/magnetosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: supplemental-pmid
+  name: Supplemental bounded PMID authority checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: .venv/bin/python /private/tmp/cellstructure-batches-2346-2397-20261103/check_pmid_chunks.py
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368
+  exit_code: 0
+  summary: 909 PMIDs all OK in bounded native requests; full-command limitations remain
+    separate.
+  evidence_ids:
+  - supplemental-pmid
+- check_id: structured-source-applicability
+  name: Official structured-source applicability and covered-dataset cross-checks
+  status: passed
+  required: false
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  summary: All ten explicit expression-only exclusions were reassessed against whole-record
+    claims and the inspected complete official iModulonDB catalogue. Bounded host/strain
+    searches found no relevant yeast/eukaryotic or Magnetospirillum/Paramagnetospirillum
+    host datasets. The actual catalogue coverage and search terms are preserved in
+    target-specific evidence. No unmatched foreign-host proxy is substituted, and
+    catalogue noncoverage is not biological absence. The historical runner access
+    failure was not rerun.
+  evidence_ids:
+  - plaque-catalogue
+  - plaque-historical-runner
+  - micro-catalogue
+  - septin-catalogue
+- check_id: independent-scientific-review
+  name: Independent claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  summary: Three read-only reviewers covered the complete ten-record cohort, including
+    changed inputs, with explicit scientific findings and source-access limits. Final
+    artifact/head acceptance occurs after saving.
+  evidence_ids:
+  - plaque-policy
+  - plaque-rubric
+  - plaque-graph-rubric
+  - plaque-protein-contract
+  - plaque-schema-policy
+  - plaque-go
+  - plaque-tax4932
+  - plaque-tax559292
+  - plaque-SL-0336
+  - plaque-SL-0151
+  - plaque-P33416
+  - plaque-P0CS90
+  - plaque-ipr-P33416
+  - plaque-ipr-P0CS90
+  - plaque-IPR001270
+  - plaque-IPR050130
+  - plaque-IPR013126
+  - plaque-bruderek2018-meta
+  - plaque-bruderek2018-jats
+  - plaque-ruland2025-meta
+  - plaque-ruland-crossref
+  - plaque-ruland-web410-canonical
+  - plaque-ruland-web480
+  - plaque-ruland-web568
+  - plaque-ruland-web640
+  - plaque-ruland-publisher
+  - plaque-dump2020-meta
+  - plaque-dump2020-jats
+  - plaque-pride
+  - plaque-biologists-license
+  - plaque-bruderek2018-fig1
+  - plaque-ruland2025-fig1
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-teo2004-meta
+  - plaque-katzmann2003-meta
+  - plaque-henne2011-meta
+  - plaque-teo2004-pdf
+  - plaque-katzmann2003-jats
+  - plaque-catalogue
+  - micro-policy
+  - micro-component-policy
+  - micro-graph-policy
+  - micro-go
+  - micro-go-lumen-ancestors
+  - micro-go-membrane-ancestors
+  - micro-SL0510
+  - micro-SL0511
+  - micro-SL0512
+  - micro-tax2
+  - micro-tax28211
+  - micro-tax1236
+  - micro-tax2157
+  - micro-tax431944
+  - micro-tax342108
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-chebi18248
+  - micro-micro0000216
+  - micro-uo0000018
+  - micro-IPR060787
+  - micro-protein-Q93DY9
+  - micro-protein-V6F510
+  - micro-protein-V6F2B6
+  - micro-protein-V6F235
+  - micro-protein-Q93DZ1
+  - micro-protein-Q6NE76
+  - micro-protein-Q6NE59
+  - micro-protein-V6F519
+  - micro-protein-Q2W8Q7
+  - micro-protein-Q6NE58
+  - micro-PMID11571158
+  - micro-PMID14766587
+  - micro-PMID17601786
+  - micro-PMID20212111
+  - micro-PMID20487281
+  - micro-PMID22007638
+  - micro-PMID27481925
+  - micro-uebe2016-meta
+  - micro-barber2015-meta
+  - micro-uebe2016-publisher
+  - micro-grunberg2001-body
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+  - micro-arakaki2016-body
+  - septin-review-policy
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-graph-policy
+  - septin-protein-policy
+  - septin-go
+  - septin-ancestors-0034492
+  - septin-ancestors-0070258
+  - septin-ancestors-0031039
+  - septin-tax5794
+  - septin-tax5833
+  - septin-tax36329
+  - septin-tax5911
+  - septin-protein-O97228
+  - septin-protein-Q8IK01
+  - septin-protein-Q8I3K7
+  - septin-protein-O00934
+  - septin-protein-Q7Z289
+  - septin-protein-A0A125YT84
+  - septin-ferreira2021-meta
+  - septin-kono2013-meta
+  - septin-kono2012-meta
+  - septin-dearnley2012-meta
+  - septin-eisen2006-meta
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+  - septin-eisen2006-jats
+  - septin-IPR022086
+  - septin-SL-0144
+  - septin-SL-0335
+  - septin-tax2759
+  - septin-tax5722
+  - septin-tachezy2022-meta
+  - septin-schneider2011-meta
+  - septin-sutak2004-meta
+  - septin-lindmark1973-meta
+  - septin-schneider2011-bioc
+  - septin-sutak2004-maintext
+- check_id: historical-adapter-runner
+  name: Retained historical adapter runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  summary: Historical 00:49Z invocation unavailable due to OS access restriction.
+    Official catalogue source fallback was inspected separately; no current invocation
+    or successful adapter execution is claimed. The actual historical exit code 1
+    is retained in the evidence receipt, since the native unavailable-check model
+    has no execution exit-code field.
+  scope_note: Prior canary execution receipt reread and hash-verified during this
+    follow-up. A non-required capability observation; repository policy explicitly
+    permits source-page fallback.
+  evidence_ids:
+  - historical-adapter-runner-availability
+- check_id: hydrogenosome_lumen-uniprot-verify
+  name: Native hydrogenosome lumen UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-hydrogenosome_lumen-verify
+- check_id: hydrogenosome_lumen-uniprot-causal
+  name: Native hydrogenosome lumen UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034492
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-hydrogenosome_lumen-causal
+- check_id: inner_membrane_pellicle_complex-uniprot-verify
+  name: Native inner membrane pellicle complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Three unreviewed P. falciparum
+    3D7 examples for IMC1a/c/g; the alveolin node is COVERED, and the glideosome is
+    UNANCHORED_WITH_UNIPROT (O00934/Q7Z289/A0A125YT84). Native locus/protein-name
+    fields, stage-specific membership, and transient machinery scope are independently
+    assessed; no blanket biological certification.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-inner_membrane_pellicle_complex-verify
+- check_id: inner_membrane_pellicle_complex-uniprot-causal
+  name: Native inner membrane pellicle complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Three unreviewed P. falciparum
+    3D7 examples for IMC1a/c/g; the alveolin node is COVERED, and the glideosome is
+    UNANCHORED_WITH_UNIPROT (O00934/Q7Z289/A0A125YT84). Native locus/protein-name
+    fields, stage-specific membership, and transient machinery scope are independently
+    assessed; no blanket biological certification.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-inner_membrane_pellicle_complex-causal
+- check_id: intramitochondrial_protein_quality_control_compartment-uniprot-verify
+  name: Native intramitochondrial protein quality control compartment UniProt verify
+    check
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Two reviewed S. cerevisiae examples,
+    HSP78/P33416 and SSC1/P0CS90; zero typed GENE_OR_PROTEIN nodes. Identity, physical
+    localization, stress-induced sedimentation and necessity remain distinct source-level
+    assessments.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-intramitochondrial_protein_quality_control_compartment-verify
+- check_id: intramitochondrial_protein_quality_control_compartment-uniprot-causal
+  name: Native intramitochondrial protein quality control compartment UniProt causal
+    check
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Two reviewed S. cerevisiae examples,
+    HSP78/P33416 and SSC1/P0CS90; zero typed GENE_OR_PROTEIN nodes. Identity, physical
+    localization, stress-induced sedimentation and necessity remain distinct source-level
+    assessments.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-intramitochondrial_protein_quality_control_compartment-causal
+- check_id: late_endosome-uniprot-verify
+  name: Native late endosome UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005770
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome-verify
+- check_id: late_endosome-uniprot-causal
+  name: Native late endosome UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005770
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome-causal
+- check_id: late_endosome_lumen-uniprot-verify
+  name: Native late endosome lumen UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031906
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome_lumen-verify
+- check_id: late_endosome_lumen-uniprot-causal
+  name: Native late endosome lumen UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031906
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome_lumen-causal
+- check_id: late_endosome_membrane-uniprot-verify
+  name: Native late endosome membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031902
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome_membrane-verify
+- check_id: late_endosome_membrane-uniprot-causal
+  name: Native late endosome membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031902
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - plaque-native-late_endosome_membrane-causal
+- check_id: macronucleus-uniprot-verify
+  name: Native macronucleus UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031039
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/macronucleus.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-macronucleus-verify
+- check_id: macronucleus-uniprot-causal
+  name: Native macronucleus UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031039
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/macronucleus.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - septin-native-macronucleus-causal
+- check_id: magnetosome-uniprot-verify
+  name: Native magnetosome UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110143
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. Nine reviewed examples across Mam/Mms,
+    MamK and MamJ components; two COVERED typed nodes. MamK filament is a structure
+    node. Correct accession identity is distinct from chemical scope, species-specific
+    membrane interaction, localization or necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome-verify
+- check_id: magnetosome-uniprot-causal
+  name: Native magnetosome UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110143
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. Nine reviewed examples across Mam/Mms,
+    MamK and MamJ components; two COVERED typed nodes. MamK filament is a structure
+    node. Correct accession identity is distinct from chemical scope, species-specific
+    membrane interaction, localization or necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome-causal
+- check_id: magnetosome_lumen-uniprot-verify
+  name: Native magnetosome lumen UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110145
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome_lumen-verify
+- check_id: magnetosome_lumen-uniprot-causal
+  name: Native magnetosome lumen UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110145
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No represented protein examples
+    or typed molecular nodes; positive narrative molecular/pathway assertions are
+    assessed separately.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome_lumen-causal
+- check_id: magnetosome_membrane-uniprot-verify
+  name: Native magnetosome membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110146
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native command returned zero. No component protein examples;
+    one UNANCHORED_WITH_UNIPROT Mam/Mms node carries V6F235,V6F510,Q93DY9,Q6NE76,Q6NE58.
+    This is xref-backed actor identity, not complete molecular-component coverage
+    or universal necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome_membrane-verify
+- check_id: magnetosome_membrane-uniprot-causal
+  name: Native magnetosome membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110146
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native command returned zero. No component protein examples;
+    one UNANCHORED_WITH_UNIPROT Mam/Mms node carries V6F235,V6F510,Q93DY9,Q6NE76,Q6NE58.
+    This is xref-backed actor identity, not complete molecular-component coverage
+    or universal necessity.
+  scope_note: Actual execution at current main-merge head; verifier source frozen
+    before assessment.
+  evidence_ids:
+  - micro-native-magnetosome_membrane-causal
+evidence:
+- evidence_id: current-record-0
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40;
+    current SHA256 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+- evidence_id: original-review-0
+  kind: prior_review
+  reference: reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: ee6af8fcd38551bae4590b0de1a22387c1a806aa6d40969578a76812d35e3019
+- evidence_id: current-record-1
+  kind: record_content
+  reference: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 8090ece98a38a0ca4a5d6644b36bbb0a40b8225c439956d1010443ab0b6e24f9;
+    current SHA256 b1ba7a435c20af9e679a8ac976a0f598a0b48808eda62181b6751732f5896917.
+    Changed record reassessed against current sources.
+  snapshot_sha256: b1ba7a435c20af9e679a8ac976a0f598a0b48808eda62181b6751732f5896917
+- evidence_id: original-review-1
+  kind: prior_review
+  reference: reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 842978c8ffc141c710f53bdd40c7b2085c1d1a8ff2fcc950b6b2b5d5251636ab
+- evidence_id: current-record-2
+  kind: record_content
+  reference: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2;
+    current SHA256 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+- evidence_id: original-review-2
+  kind: prior_review
+  reference: reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 14bd552e4d8652fffe1a67ba67c05e32147bd1bd56cc2a861df1d06eca20100f
+- evidence_id: current-record-3
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0;
+    current SHA256 af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+- evidence_id: original-review-3
+  kind: prior_review
+  reference: reviews/structured/20261022T021708Z-late-endosome-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 6c4625c6b855fe53814d49254c3aafe57d62eccd55eb516ce8714cd11892244a
+- evidence_id: current-record-4
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91;
+    current SHA256 f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91
+- evidence_id: original-review-4
+  kind: prior_review
+  reference: reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 9e0c0ad070d961bf9c79ce8e76fae9826717ff45eb076c97a4d340d6d69b857c
+- evidence_id: current-record-5
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc;
+    current SHA256 abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc
+- evidence_id: original-review-5
+  kind: prior_review
+  reference: reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 2e516992dd17dd614ec0cc7842fedaca2e7d732589ff5a99f7576d982a784645
+- evidence_id: current-record-6
+  kind: record_content
+  reference: data/structures/membrane_organelle/macronucleus.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2;
+    current SHA256 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2
+- evidence_id: original-review-6
+  kind: prior_review
+  reference: reviews/structured/20261022T021711Z-macronucleus-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 5b14f3ffc770af39883ef34c981ec6ca467433e84bc084939f5f64b2524d7470
+- evidence_id: current-record-7
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 dd4f1d27b520b8e0b00bc379f6adbac38204d45bed6c1cc9e27a5f3b37f6f4d3;
+    current SHA256 8c775795c1af6932344ced4c4d94ad2028642ec05a7c25d1f0d5bd2771153d99.
+    Changed record reassessed against current sources.
+  snapshot_sha256: 8c775795c1af6932344ced4c4d94ad2028642ec05a7c25d1f0d5bd2771153d99
+- evidence_id: original-review-7
+  kind: prior_review
+  reference: reviews/structured/20261022T021713Z-magnetosome-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 1e99a6b1e960e470b7e538e0ce14d8a31ac5e76f644a5c296388024b03dbaf11
+- evidence_id: current-record-8
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome_lumen.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6;
+    current SHA256 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6
+- evidence_id: original-review-8
+  kind: prior_review
+  reference: reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 3da2f70fd97f64d640726f543295d56b678c4fbb835436edb71a4f91ee3cdac0
+- evidence_id: current-record-9
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Original frozen SHA256 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4;
+    current SHA256 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4
+- evidence_id: original-review-9
+  kind: prior_review
+  reference: reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 62f45424093013a51cf2c1a9f3c0fda6da6203d36128d0efc8cf0149dc546c82
+- evidence_id: plaque-current-2
+  kind: record_content
+  reference: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  locator: Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+    including graph, histories, discussions and image links
+  summary: Current target bytes equal the original frozen target; PROPOSED status
+    and scientific content remain unchanged.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+- evidence_id: plaque-original-2
+  kind: prior_review
+  reference: reviews/structured/20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit/review.yaml
+  locator: Exact staleness-selected authoritative YAML and rendered Markdown, provenance,
+    checks, assessments and empty findings/actions
+  summary: Original qualified pass independently reassessed. Native pair validates/renders
+    and all historical source inputs match; explicit expression-only N/A is a bundle
+    coverage defect.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: 14bd552e4d8652fffe1a67ba67c05e32147bd1bd56cc2a861df1d06eca20100f
+- evidence_id: plaque-current-3
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome.yaml
+  locator: Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+    including graph, histories, discussions and image links
+  summary: Current target bytes equal the original frozen target; PROPOSED status
+    and scientific content remain unchanged.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+- evidence_id: plaque-original-3
+  kind: prior_review
+  reference: reviews/structured/20261022T021708Z-late-endosome-audit/review.yaml
+  locator: Exact staleness-selected authoritative YAML and rendered Markdown, provenance,
+    checks, assessments and empty findings/actions
+  summary: Original qualified pass independently reassessed. Native pair validates/renders
+    and all historical source inputs match; explicit expression-only N/A is a bundle
+    coverage defect.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: 6c4625c6b855fe53814d49254c3aafe57d62eccd55eb516ce8714cd11892244a
+- evidence_id: plaque-current-4
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  locator: Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+    including graph, histories, discussions and image links
+  summary: Current target bytes equal the original frozen target; PROPOSED status
+    and scientific content remain unchanged.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91
+- evidence_id: plaque-original-4
+  kind: prior_review
+  reference: reviews/structured/20261022T021709Z-late-endosome-lumen-audit/review.yaml
+  locator: Exact staleness-selected authoritative YAML and rendered Markdown, provenance,
+    checks, assessments and empty findings/actions
+  summary: Original qualified pass independently reassessed. Native pair validates/renders
+    and all historical source inputs match; explicit expression-only N/A is a bundle
+    coverage defect.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: 9e0c0ad070d961bf9c79ce8e76fae9826717ff45eb076c97a4d340d6d69b857c
+- evidence_id: plaque-current-5
+  kind: record_content
+  reference: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  locator: Entire current maintained record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+    including graph, histories, discussions and image links
+  summary: Current target bytes equal the original frozen target; PROPOSED status
+    and scientific content remain unchanged.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc
+- evidence_id: plaque-original-5
+  kind: prior_review
+  reference: reviews/structured/20261022T021710Z-late-endosome-membrane-audit/review.yaml
+  locator: Exact staleness-selected authoritative YAML and rendered Markdown, provenance,
+    checks, assessments and empty findings/actions
+  summary: Original qualified pass independently reassessed. Native pair validates/renders
+    and all historical source inputs match; explicit expression-only N/A is a bundle
+    coverage defect.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: supports
+  snapshot_sha256: 2e516992dd17dd614ec0cc7842fedaca2e7d732589ff5a99f7576d982a784645
+- evidence_id: plaque-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Frozen native relevant contract; policy bytes also match prior independently
+    read PR2367 input snapshot
+  summary: Actual genes, proteins, pathways and stress responses trigger structured-source
+    assessment even without transcriptomic claims.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: plaque-rubric
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Frozen native relevant contract; policy bytes also match prior independently
+    read PR2367 input snapshot
+  summary: Identity, source scope, component localization versus necessity, taxonomy,
+    graphs and imagery require separate evidence. Empty optional slots are not automatic
+    defects.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+- evidence_id: plaque-graph-rubric
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Frozen native relevant contract; policy bytes also match prior independently
+    read PR2367 input snapshot
+  summary: Descriptive topology and functional participation must not be upgraded
+    to exact mechanism, invariant order, exclusive action or direct binding.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: plaque-protein-contract
+  kind: authority
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Frozen native relevant contract; policy bytes also match prior independently
+    read PR2367 input snapshot
+  summary: Native accession and typed-node commands cover represented proteins; their
+    success does not certify every narrative pathway.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+- evidence_id: plaque-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Frozen native relevant contract; policy bytes also match prior independently
+    read PR2367 input snapshot
+  summary: Structure identity, constituent material and associated machinery remain
+    distinct. State interventions can represent deletion conditions; optional inventories
+    need not be fabricated.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: plaque-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0016234,GO:0005770,GO:0005768,GO:0005771,GO:0010008,GO:0031904,GO:0071985,GO:0031902,GO:0031906,GO:0000813,GO:0000814,GO:0000815
+  locator: All13 exact term responses, definitions/synonyms/typed children for0043231,0016234,0005770,0005768,0005771,0010008,0031904,0071985,0031902,0031906,0000813/14/15
+  summary: Authority distinguishes broad intracellular membrane-bounded organelle
+    from aggregate inclusion, whole late endosome from lumen and membrane, MVB as
+    late-endosome subtype, and ESCRT complex identities. Exact typed children support
+    all asserted late-endosome is-a/parthood relations;0071985 supplies scoped MVB
+    cargo delivery. No complete IMiQ term-absence search inferred.
+  accessed_at: '2026-11-03T15:29:59.604773Z'
+  support: supports
+  snapshot_sha256: 6e714e0896071c541e4aaf55c642acc6a1c35bb1dbaaefbfbeeb789b3ee6f383
+- evidence_id: plaque-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native ENA taxon identity/rank/lineage response
+  summary: NCBITaxon4932 is S. cerevisiae species; this is not measured prevalence
+    or interchangeable strain.
+  accessed_at: '2026-11-03T15:29:59.604953Z'
+  support: supports
+  snapshot_sha256: 38f43dd1593a1d47416228ae385464f30aeb8302c3aadb45b3588d03744bc814
+- evidence_id: plaque-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native ENA taxon identity/rank/lineage response
+  summary: NCBITaxon559292 is S. cerevisiae S288C strain, correctly scoped as reference
+    accession context rather than the experimental reporter strain.
+  accessed_at: '2026-11-03T15:29:59.605037Z'
+  support: supports
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: plaque-SL-0336
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0336.json
+  locator: Complete native location entry including definition, synonyms, GO map and
+    parent/parthood
+  summary: Exact late-endosome lumen identity, late endosomal lumen synonym, GO0031906
+    correspondence, endosome-lumen parent and late-endosome parthood agree.
+  accessed_at: '2026-11-03T15:29:59.607474Z'
+  support: supports
+  snapshot_sha256: 8c1a29e54193d2163b81d98bb3ee9362906c24904d35012ee021ce307ebbab37
+- evidence_id: plaque-SL-0151
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0151.json
+  locator: Complete native location entry including definition, synonyms, GO map and
+    parent/parthood
+  summary: Exact late-endosome membrane identity, late endosomal membrane synonym,
+    GO0031902 correspondence, generic endosome-membrane parent and late-endosome parthood
+    agree.
+  accessed_at: '2026-11-03T15:29:59.609031Z'
+  support: supports
+  snapshot_sha256: e8b8ed72be088b8f17e6907255f354dbe5e2a825c41b397b8c7659e7110f9e9d
+- evidence_id: plaque-P33416
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P33416.json
+  locator: Native accession entryType/protein name/genes/organism and FUNCTION, SUBCELLULAR
+    LOCATION, SIMILARITY, SUBUNIT context
+  summary: Reviewed HSP78/YDR258C mitochondrial Hsp78 in559292, matrix localization,
+    ClpA/ClpB similarity and stress-associated chaperone role agree. Native matrix
+    annotation alone is not exact IMiQ localization or assembly necessity.
+  accessed_at: '2026-11-03T15:29:59.610175Z'
+  support: supports
+  snapshot_sha256: bf59e546b5cce1e31ae58140fdd5adcae71159693e3d628ddb5b5dbec385da19
+- evidence_id: plaque-P0CS90
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0CS90.json
+  locator: Native accession entryType/protein name/genes/organism and FUNCTION, SUBCELLULAR
+    LOCATION, SIMILARITY, SUBUNIT context
+  summary: Reviewed SSC1/YJR045C mitochondrial import-motor/mtHSP70 protein in559292,
+    matrix localization and Hsp70 family agree. S288C entry distinguished from other
+    SSC1 strain accession; generic PAM function is not IMiQ stoichiometry.
+  accessed_at: '2026-11-03T15:29:59.612910Z'
+  support: supports
+  snapshot_sha256: 4df0de893445eb18540f618d07d81e9f05c76edae6083cc2aa2e0419e36f0d50
+- evidence_id: plaque-ipr-P33416
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+  locator: Complete nine-match InterPro response for P33416; no next page
+  summary: Hsp78 matches broad ClpA/B001270 and ClpA/ClpB050130 plus domains/sites;
+    these matches do not establish an exact Hsp78-only class. Grounding remains honestly
+    label-only.
+  accessed_at: '2026-11-03T15:29:59.611749Z'
+  support: supports
+  snapshot_sha256: 371cfdd22ff27bb840a73ea823bc75a849ff53f83a8637c7f386a923149e309f
+- evidence_id: plaque-ipr-P0CS90
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CS90/?page_size=200
+  locator: Complete six-match InterPro response for P0CS90; no next page
+  summary: SSC1 matches Hsp70 family013126; component broad family label and reference
+    example agree.
+  accessed_at: '2026-11-03T15:30:00.218263Z'
+  support: supports
+  snapshot_sha256: 9e827587d94b39905ce28c4724cc9c58c87c6095b2610e1b5ac9435d4c1164a1
+- evidence_id: plaque-IPR001270
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/
+  locator: Entry name/type/hierarchy and non-LLM curated descriptions only
+  summary: ClpA/B family includes several chaperones/proteases, Hsp78/Hsp104 and other
+    classes. It is broader than a specifically Hsp78-type constituent; no guessed
+    narrow accession.
+  accessed_at: '2026-11-03T15:30:00.220529Z'
+  support: supports
+  snapshot_sha256: ed0a09c17fa611e58cd0d00b904d4dce2757228cd7e411301eddcfb9b391e0dd
+- evidence_id: plaque-IPR050130
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+  locator: Entry name/type/hierarchy only; generated description excluded
+  summary: ATP-dependent Clp protease/Chaperone ClpA/ClpB is broad family identity,
+    not exact Hsp78. Generated unreviewed prose was excluded from scientific support.
+  accessed_at: '2026-11-03T15:30:00.229620Z'
+  support: supports
+  snapshot_sha256: e654bc8d2d359d203a225be0690247071616a63341156fcd507f197717f78701
+- evidence_id: plaque-IPR013126
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/
+  locator: Entry name/type/hierarchy and non-LLM curated description only
+  summary: Heat shock protein70 family spans multiple locations and includes DnaK-related
+    subclasses; current general family grounding is supported, not a specific IMiQ
+    localization annotation.
+  accessed_at: '2026-11-03T15:30:00.253414Z'
+  support: supports
+  snapshot_sha256: 43e5cb816d24b41f9660bca2ce79602ba65d8013352745427fc0fb1f4a3a6d9c
+- evidence_id: plaque-bruderek2018-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1091%2Fmbc.E17-01-0027%22
+  locator: Exact DOI metadata and primary source identity
+  summary: Bruderek and colleagues2018, DOI10.1091/mbc.E17-01-0027, PMID29212875 andPMC5996957
+    identify the primary IMiQ paper; substantive assessment uses JATS and actual Figure1
+    pixels.
+  accessed_at: '2026-11-03T15:30:00.391087Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1091%2Fmbc.E17-01-0027%22
+    at 2026-11-03T15:30:00.391087Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: 6a897a65637e247adc3593097dfdb5ee9ab34b22be7591b3eb8d773d945d87e3
+- evidence_id: plaque-bruderek2018-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/PMC5996957.1.xml
+  locator: 'Genuine PMC5996957.1 JATS: all Results subsections/Figure1–7 captions,
+    complete Discussion; Methods Plasmids and strains, Aggregate sedimentation assay,
+    Fluorescence microscopy; front author/permissions metadata'
+  summary: Reporter-induced matrix deposits coalesce, usually lie near the nucleus
+    and separate from tubular network. Hsp78/Fzo1/Fis1 deletions and benomyl have
+    distinct conditional effects. Daughter retention and initial growth/import versus
+    prolonged stress/translation costs support bounded descriptions. Experiments do
+    not identify a direct tether, compulsory sequence, fixed native cargo or universal
+    natural prevalence.2018 fzo1 respiratory-deficiency limitation is retained.
+  accessed_at: '2026-11-03T15:30:01.380248Z'
+  support: supports
+  snapshot_sha256: 794a8b8a1053c852b9188826194230175c1e74acdb4e66f150df3e57056fbff4
+- evidence_id: plaque-ruland2025-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1242%2Fjcs.263680%22
+  locator: Exact DOI/PMID40734647 bibliographic metadata and abstract
+  summary: Ruland et al.2025 is the later primary study of chaperone recruitment and
+    fission/fusion-dependent aggregate sequestration. Main text independently inspected
+    through publisher browser fallback; no PubMed abstract is mislabeled full body.
+  accessed_at: '2026-11-03T15:30:00.523829Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1242%2Fjcs.263680%22
+    at 2026-11-03T15:30:00.523829Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: cf655ab48ddce3956757c2d40822508b71f4c59848ee322ebeb8fe2a2dc6e9d1
+- evidence_id: plaque-ruland-crossref
+  kind: database
+  reference: https://api.crossref.org/works/10.1242/jcs.263680
+  locator: Exact DOI title/authors/year and license array
+  summary: Current metadata matches Ruland/Sylvester/Maus/Beckert/Voos2025 and links
+    version of record to Company of Biologists User Licence1.2, not a Creative Commons
+    licence.
+  accessed_at: '2026-11-03T15:30:01.690001Z'
+  support: supports
+  snapshot_sha256: 537618b1ca85c8098f57c7b48a2eda6b0146492598c018cfaeafaa523282bc52
+- evidence_id: plaque-ruland-web410-canonical
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: 'Publisher browser lines390–483: licence link, Abstract/Introduction and
+    early Results,Figure1 caption; exact stored browser response, not raw publisher
+    HTTP body'
+  summary: Primary body supports membrane-enclosed reporter deposits;2025 respiratory-competent
+    fzo1 preparation differs from2018. DUMP identity remains tentative.
+  accessed_at: '2026-11-03T15:34:31Z'
+  support: supports
+  snapshot_sha256: 90507158dad3bcf7ee1fc725cc99cda5d2c64bea90b4e205835d7917bc00a45a
+- evidence_id: plaque-ruland-web480
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: 'Publisher browser lines442–567: Results dynamics and chaperone sections/captions;
+    exact stored browser response, not raw publisher HTTP body'
+  summary: Conditional coalescence/separation and chaperone observations agree; no
+    source-wide invariant shell is inferred.
+  accessed_at: '2026-11-03T15:30:12Z'
+  support: supports
+  snapshot_sha256: d12a168f13f480d842c70d2f4fbb27b93ff9348b7ba473b14aca8e80b9d46e54
+- evidence_id: plaque-ruland-web568
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: 'Publisher browser lines522–638: later Results,Discussion and early Methods;
+    exact stored browser response, not raw publisher HTTP body'
+  summary: Later Ssc1/Hsp78 recruitment and variable fis1 rings support associated
+    machinery; Hsp60 ambiguity remains acknowledged.
+  accessed_at: '2026-11-03T15:30:41Z'
+  support: supports
+  snapshot_sha256: 30da216fc278a1761bdcfb3743bae3f0cc6bb555962a9a313032e74f48d6b49d
+- evidence_id: plaque-ruland-web640
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: 'Publisher browser lines617–717: Discussion tail, all Methods and data
+    availability; exact stored browser response, not raw publisher HTTP body'
+  summary: Methods and deposition establish experimental context; raw proteomics and
+    supplementary data were not reanalysed.
+  accessed_at: '2026-11-03T15:31:01Z'
+  support: supports
+  snapshot_sha256: e36a6e1013ab668b1abf691dd8dbfc57d00a566c6839225cae363d1c306c7edc
+- evidence_id: plaque-ruland-publisher
+  kind: authority
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: Direct curl route403 challenge HTML only
+  summary: Direct route did not provide body. Separately timestamped canonical browser
+    response recovered source text; no direct HTTP success invented.
+  accessed_at: '2026-11-03T15:30:01.884823Z'
+  support: context_only
+  snapshot_sha256: 8c4b60e8dc5f0e99b3e8782b5b14390998228bd948d2b1ca4c386b37f15f9a0f
+- evidence_id: plaque-dump2020-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1126%2Fsciadv.abc7288%22
+  locator: Exact DOI metadata identity
+  summary: Ruan et al.2020 DOI10.1126/sciadv.abc7288 PMID32821848 PMC7406381 identifies
+    DUMP comparator; not an exact identity synonym for this record.
+  accessed_at: '2026-11-03T15:30:00.701200Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1126%2Fsciadv.abc7288%22
+    at 2026-11-03T15:30:00.701200Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: cc88ddf5b76660ec852f124a2e4941ad58899889fb1b1f2405c33f31eb618443
+- evidence_id: plaque-dump2020-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7406381.1/PMC7406381.1.xml
+  locator: 'Genuine PMC7406381.1 JATS: Discussion and Conclusion read; not full Results/Methods
+    or figures'
+  summary: DUMP discussion distinguishes mitochondrial-network-associated deposits
+    from IMiQ and examines different conditions. Later similarity hypothesis does
+    not warrant merging names or transferring DUMP lipid mechanism, mammalian scope
+    or phenotype to IMiQ.
+  accessed_at: '2026-11-03T15:30:01.491607Z'
+  support: supports
+  snapshot_sha256: c8c8b80aa59c08a99bb4664a58b2d579a381241265e901303acfd34d2c3c9d1b
+- evidence_id: plaque-pride
+  kind: database
+  reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD059828
+  locator: 'Complete PXD059828 native project metadata: title, description/protocols,
+    species, methods/instrument, citation and licence'
+  summary: Dataset is yeast4932 SILAC bottom-up LCMS/MS with Orbitrap Fusion Lumos
+    and links Ruland2025. CC0 applies to dataset metadata, not publisher Figure1.
+    No raw-file/compositional reanalysis claimed.
+  accessed_at: '2026-11-03T15:30:01.586681Z'
+  support: supports
+  snapshot_sha256: 8f422f81a3488e90ccff15b071153003f2cfc654dae2fa2b02c638f7dc4b3047
+- evidence_id: plaque-biologists-license
+  kind: authority
+  reference: https://www.biologists.com/user-licence-1-2/
+  locator: 'Genuine current publisher User Licence1.2 page: user rights and access/reuse
+    table'
+  summary: Publisher grants bounded noncommercial research/study access; no CC figure-hosting
+    licence inferred. OTHER and link-only treatment accurately retain non-CC licence
+    scope.
+  accessed_at: '2026-11-03T15:30:01.897168Z'
+  support: supports
+  snapshot_sha256: a571ecf389d28c60453a31707848fabc469db612d2032574e59e17519a75327a
+- evidence_id: plaque-bruderek2018-fig1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-g001.jpg
+  locator: Fresh versioned PMC Figure1 media; all pixels viewed; caption and JATS
+    permissions checked; MD5 independently recalculated
+  summary: Actual mixed reporter diagrams/blots/fluorescence panels match record;
+    microscopy10um. MD5 matches7d0f983ae366b95f1c5424f921e91b4e. CC BY-NC-SA3.0 retained
+    as OTHER; fluorescence alone does not resolve membrane ultrastructure.
+  accessed_at: '2026-11-03T15:30:58.244063Z'
+  support: supports
+  snapshot_sha256: dd127988653bf020aff14d986ad10265458e1deb71d26ef0a18296924eb2ccba
+- evidence_id: plaque-ruland2025-fig1
+  kind: primary_source
+  reference: https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/138/16/10.1242_jcs.263680/1/jcs26368001.png?Expires=1795000470&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&Signature=pFjs7eQjgM2X91mkkJoeIhqlQsZBgTtaCC7-l4bwA9uMgTcXBcokPIbG1kNVsGRF2AJnePdY989SNI9bl3y~aKlTqgGtrCcELTBK7HKMaKBHQQx-~~Th3DxRivdUJ~UmOrmJdonhRNDBaAnX8Na8ysqz44BlOJLotQjfb3ooFe-cE6lQO0Q0XZT2m-mnr~0eoC9gmEGCVhT7cFVfS8F7rFUNjNHSgucb5uQculMTJAY0X6R9646UyBXNkJpTkpHk9QsnUzYb3xJv62FSWxMYff1kjqySX-0b9y9YZRWHrExjPaa0VzoXIiyD1lvFbOPD0yc0hzA6LIzom1~HlWBt6Q__
+  locator: Fresh publisher Figure1 bytes through previously located CDN URL; all pixels
+    viewed; exact article caption/licence checked
+  summary: Mixed diagrams, blots, fluorescence and TEM with2um bars; panelE author-coloured
+    outlines and uncoloured enlarged micrographs match. Link-only OTHER correctly
+    preserves mixed modality and publisher licence; no whole-cell size inferred.
+  accessed_at: '2026-11-03T15:30:58.244502Z'
+  support: supports
+  snapshot_sha256: 595b17acb6e4da7d2d237c8e2ad5d198f125da244d5388095510df88feffef9e
+- evidence_id: plaque-katzmann2001-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=EXT_ID%3A11511343%20AND%20SRC%3AMED
+  locator: Exact PMID/DOI metadata and complete primary abstract
+  summary: Katzmann/Babst/Emr2001 directly reports ESCRT-I recognition and sorting
+    of ubiquitinated MVB cargo. Abstract supports functional participation, not every
+    subunit or an exclusive route.
+  accessed_at: '2026-11-03T15:30:00.831599Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=EXT_ID%3A11511343%20AND%20SRC%3AMED
+    at 2026-11-03T15:30:00.831599Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: 89b0ab16f1c997094ab3253063701f5097b815c030e16320d5d41f485e3d50a9
+- evidence_id: plaque-babst2002-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=EXT_ID%3A12194857%20AND%20SRC%3AMED
+  locator: Exact PMID/DOI metadata and complete primary abstract
+  summary: Babst et al.2002 directly reports ESCRT-III recruitment/oligomerization
+    at endosomal membranes and MVB sorting. Abstract alone does not resolve detailed
+    membrane-scission mechanism.
+  accessed_at: '2026-11-03T15:30:00.845219Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=EXT_ID%3A12194857%20AND%20SRC%3AMED
+    at 2026-11-03T15:30:00.845219Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: 154c66e5c81005bcb646718e07a114e6c610e20c4a80803a5505061f4c107317
+- evidence_id: plaque-teo2004-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1016%2Fj.devcel.2004.09.003%22
+  locator: Exact PMID/DOI metadata and complete primary abstract
+  summary: Teo et al.2004 primary identity/abstract agrees with direct ESCRT-II–Vps20
+    binding and Vps25 recruitment; detailed scope checked in primary PDF.
+  accessed_at: '2026-11-03T15:30:01.021698Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1016%2Fj.devcel.2004.09.003%22
+    at 2026-11-03T15:30:01.021698Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: 4f3790f773f82e02d8f37e5998526d4175a42bfccbd913f1ebfe0bf7700b28e2
+- evidence_id: plaque-katzmann2003-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1083%2Fjcb.200302136%22
+  locator: Exact PMID/DOI metadata and complete primary abstract
+  summary: Katzmann et al.2003 DOI10.1083/jcb.200302136 identifies primary Vps27-dependent
+    endosomal ESCRT recruitment; full relevant body separately inspected.
+  accessed_at: '2026-11-03T15:30:00.928738Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1083%2Fjcb.200302136%22
+    at 2026-11-03T15:30:00.928738Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: 75ba03c5c735dfd74993cbbec6115c1481be127f24917c2f1bf331cd36e7935b
+- evidence_id: plaque-henne2011-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1016%2Fj.devcel.2011.05.015%22
+  locator: Exact DOI/PMID21763610 complete abstract of a SECONDARY REVIEW only
+  summary: Henne/Buchkovich/Emr2011 reviews ESCRT cargo recognition/membrane sculpting
+    and MVB delivery to lysosome/vacuole. Secondary abstract supports broad pathway
+    context; neither full review body nor new direct mechanism experiment claimed.
+  accessed_at: '2026-11-03T15:30:01.224412Z'
+  support: supports
+  search_scope: Bounded EuropePMC exact DOI or PMID query https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1016%2Fj.devcel.2011.05.015%22
+    at 2026-11-03T15:30:01.224412Z; pageSize25, inspected 1 returned metadata/abstract
+    matches; not an open-ended literature search or full-text inference.
+  snapshot_sha256: c1eb20e3ee3b89412437434900f82d42282d787ea5e51ef2d765091fa59227b0
+- evidence_id: plaque-teo2004-pdf
+  kind: primary_source
+  reference: https://www2.mrc-lmb.cam.ac.uk/groups/rlw/download/publications/15469844.pdf
+  locator: 'Fresh author-institution PDF text: p559 Summary/Introduction; p564–566
+    direct binding, Vps25/liposome sections,Figure5–6 captions, Conclusions and plasmid/expression
+    Methods; no figure-pixel or supplement review'
+  summary: Purified yeast ESCRT-II binds Vps20 directly through Vps25; mixed partners
+    bind bovine-brain-lipid liposomes more strongly than isolated partners. Yeast
+    genomic template ATCC9763D was expressed in bacteria. This supports bounded downstream
+    recruitment; proposed orientation, complete pathway assembly and universal temporal
+    ordering remain models.
+  accessed_at: '2026-11-03T15:30:58.244460Z'
+  support: supports
+  snapshot_sha256: 9a62830da92c7a92939524b134a277cf6381382e5539dfdfb47ab58e22817dce
+- evidence_id: plaque-katzmann2003-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2172707.1/PMC2172707.1.xml
+  locator: 'Genuine PMC2172707.1 JATS: complete Results,Discussion and Materials/Methods
+    including captions; no figure pixels/supplement reanalysis'
+  summary: Yeast Vps27/FYVE and PI3P context recruits ESCRT-I to endosomal membranes;
+    mutant localization, membrane copurification and cargo-sorting observations support
+    canonical membrane example. SEY6210-derived experimental backgrounds and mechanistic
+    alternatives are retained, not converted into S288C-specific or universally exclusive
+    mechanism.
+  accessed_at: '2026-11-03T15:30:58.244354Z'
+  support: supports
+  snapshot_sha256: a3a2bd93ad0495102c7ec80c6f89b48c989cb48cbda85fa9cff9be250b6557a9
+- evidence_id: plaque-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Fresh complete official /api/datasets response; all20 organism rows and
+    their dataset listings read
+  summary: No Saccharomyces/yeast host is present. All four current positive protein/pathway/stress
+    narratives trigger the assessment; no matched downstream gene/module search or
+    unrelated bacterial proxy applies. Noncoverage is not biological absence; generated
+    module prose excluded.
+  accessed_at: '2026-11-03T15:30:01.942728Z'
+  support: supports
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: plaque-historical-runner
+  kind: validation
+  reference: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  locator: Actual historical00:49Z command/stdout/stderr receipt, independently hash-verified
+  summary: Historical runner failed before retrieval due pyvenv.cfg PermissionError.
+    No new invocation or adapter execution success claimed; fresh official catalogue
+    and source inspection supply bounded fallback.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: plaque-original-checks
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-plaque/original-checks.json
+  locator: Actual four original native validate/render and complete historical input-hash
+    checks
+  summary: All original pairs validate/render exactly and historical inputs16/18/17/17
+    match their retained source; all four current target hashes equal frozen originals.
+    No stale target or hidden prior finding in this slice.
+  accessed_at: '2026-11-03T15:34:57.526051Z'
+  support: supports
+  snapshot_sha256: e0b0258b70884355062ec604eac25adcfd2732a386b62e4b6f2c23124c887ab6
+- evidence_id: plaque-context-mvb
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body.yaml
+  locator: Frozen current local identity, parent/parthood, assembly topology and discussion
+    boundaries only; not a full neighbor verdict
+  summary: Local MVB is a late-endosome subtype; dedicated ILV denotes inward-budded
+    vesicle rather than whole endosome/lumen or permanently resident ESCRT machinery.
+    No neighbor issue/discussion terminal resolution inferred.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: cf6713b73e225eb2413a2a8b8a0fc9dfb6cf84a12f10133e3dcbec03791585a9
+- evidence_id: plaque-context-ilv
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  locator: Frozen current local identity, parent/parthood, assembly topology and discussion
+    boundaries only; not a full neighbor verdict
+  summary: Local MVB is a late-endosome subtype; dedicated ILV denotes inward-budded
+    vesicle rather than whole endosome/lumen or permanently resident ESCRT machinery.
+    No neighbor issue/discussion terminal resolution inferred.
+  accessed_at: '2026-11-03T15:37:59.320872Z'
+  support: context_only
+  snapshot_sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+- evidence_id: plaque-native-intramitochondrial_protein_quality_control_compartment-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --verify
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: 'all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope:
+    Actual maintained inventory has 2 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Reviewed HSP78/P33416 and SSC1/P0CS90 are559292 reference examples; deletion
+    conditions are STATE nodes. '
+  accessed_at: '2026-11-03T15:29:39.230245Z'
+  support: supports
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: plaque-native-intramitochondrial_protein_quality_control_compartment-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --causal-graphs
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 2\
+    \ protein_examples and 0 typed GENE_OR_PROTEIN nodes. Reviewed HSP78/P33416 and\
+    \ SSC1/P0CS90 are559292 reference examples; deletion conditions are STATE nodes. "
+  accessed_at: '2026-11-03T15:29:39.667838Z'
+  support: supports
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: plaque-native-late_endosome-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml
+    --verify
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: 'all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope:
+    Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. '
+  accessed_at: '2026-11-03T15:29:40.099639Z'
+  support: supports
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: plaque-native-late_endosome-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome.yaml
+    --causal-graphs
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0\
+    \ protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node\
+    \ coverage is not pathway verification. "
+  accessed_at: '2026-11-03T15:29:40.530930Z'
+  support: supports
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: plaque-native-late_endosome_lumen-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml
+    --verify
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: 'all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope:
+    Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. '
+  accessed_at: '2026-11-03T15:29:40.956524Z'
+  support: supports
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: plaque-native-late_endosome_lumen-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_lumen.yaml
+    --causal-graphs
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0\
+    \ protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node\
+    \ coverage is not pathway verification. "
+  accessed_at: '2026-11-03T15:29:41.382226Z'
+  support: supports
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: plaque-native-late_endosome_membrane-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml
+    --verify
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: 'all UniProtKB protein_examples and causal_graphs xrefs verified ok Scope:
+    Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. '
+  accessed_at: '2026-11-03T15:29:41.789086Z'
+  support: supports
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: plaque-native-late_endosome_membrane-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/late_endosome_membrane.yaml
+    --causal-graphs
+  locator: Actual root-owned receipt/stdout independently read and hash-verified
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes Scope: Actual maintained inventory has 0\
+    \ protein_examples and 0 typed GENE_OR_PROTEIN nodes. Empty accession/typed-node\
+    \ coverage is not pathway verification. "
+  accessed_at: '2026-11-03T15:29:42.214905Z'
+  support: supports
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: micro-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Current complete skill/profile/config/shared contract/checklist; CURATION
+    component family-or-class, essentiality, evidence and read-only ownership rules
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+  summary: Named proteins and biomineralization pathways trigger source applicability
+    beyond transcriptomics. Native policy permits generic protein classes; a heterogeneous
+    Mam/Mms cohort is not itself a component-type defect.
+  support: context_only
+- evidence_id: micro-component-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, EssentialityEnum, ComponentTypeEnum
+    and CausalNode; cross-read CURATION component scope
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  summary: ESSENTIAL means the structure does not form without the component; CONDITIONAL
+    restricts conditions or lineages. Chemical identity must agree with the assertion.
+    Associated machinery is DISPENSABLE, and protein identity is not experimental
+    membership or necessity.
+  support: context_only
+- evidence_id: micro-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Complete graph skill; add-cell-structure identity/evidence/graph contract
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+  summary: Directed edges retain source-specific identities, experimental scope and
+    grounding. A broad association graph is not a direct membrane-binding assay or
+    universally conserved stoichiometric mechanism.
+  support: context_only
+- evidence_id: micro-record-magnetosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome.yaml
+  locator: Entire current record including all components, protein examples, evidence
+    notes, graph edges, discussions and history
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 8c775795c1af6932344ced4c4d94ad2028642ec05a7c25d1f0d5bd2771153d99
+  summary: Current source bytes read. The stale graph additions and grounding/history
+    were substantively reassessed.
+  support: supports
+- evidence_id: micro-prior-magnetosome
+  kind: prior_review
+  reference: reviews/structured/20261022T021713Z-magnetosome-audit/review.yaml
+  locator: Original complete scientific assessments, findings/actions, checks and
+    access limitations; native rendered Markdown verified
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 1e99a6b1e960e470b7e538e0ce14d8a31ac5e76f644a5c296388024b03dbaf11
+  summary: Original needs_curation with 4 finding(s); explicit expression-only source
+    exclusion needs correction. Historical commands and source reads are not current
+    checks.
+  support: context_only
+- evidence_id: micro-native-magnetosome-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml
+    --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T15:29:44.583743Z'
+  snapshot_sha256: e41910d23e69ff1a47918bca361e463b5ad37260d3a5764ca324522eb69e91e9
+  summary: Exit0 on source head. Nine reviewed examples (six Mam/Mms, one MamK, two
+    MamJ); two COVERED GENE_OR_PROTEIN nodes. MamK filament is STRUCTURE and absent
+    from that typed-node denominator. No biochemical assembly, necessity or localization
+    assay is performed by this command.
+  support: supports
+- evidence_id: micro-native-magnetosome-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome.yaml
+    --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome-uniprot-causal.log
+    SHA256 723e543248a6576923fb11c51652c88c92784b1a3540de36b23eb2f159014be4
+  accessed_at: '2026-11-03T15:29:45.002233Z'
+  snapshot_sha256: 94a149f959c7b4e302c259e827c8765c9a3d19325ddeb47ddaa4b500bf9c6188
+  summary: Exit0 on source head. Nine reviewed examples (six Mam/Mms, one MamK, two
+    MamJ); two COVERED GENE_OR_PROTEIN nodes. MamK filament is STRUCTURE and absent
+    from that typed-node denominator. No biochemical assembly, necessity or localization
+    assay is performed by this command.
+  support: supports
+- evidence_id: micro-record-magnetosome_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome_lumen.yaml
+  locator: Entire current record including all components, protein examples, evidence
+    notes, graph edges, discussions and history
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6
+  summary: Current source bytes read. Current record equals the original frozen input.
+  support: supports
+- evidence_id: micro-prior-magnetosome_lumen
+  kind: prior_review
+  reference: reviews/structured/20261022T021714Z-magnetosome-lumen-audit/review.yaml
+  locator: Original complete scientific assessments, findings/actions, checks and
+    access limitations; native rendered Markdown verified
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 3da2f70fd97f64d640726f543295d56b678c4fbb835436edb71a4f91ee3cdac0
+  summary: Original pass_with_limitations with 0 finding(s); explicit expression-only
+    source exclusion needs correction. Historical commands and source reads are not
+    current checks.
+  support: context_only
+- evidence_id: micro-native-magnetosome_lumen-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml
+    --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T15:29:45.412348Z'
+  snapshot_sha256: 6a4ba8147807bd3763066f203650aae89b80298908c37c39a877c0c5b9626594
+  summary: Exit0 on source head. Zero protein examples/xrefs and zero GENE_OR_PROTEIN
+    nodes; successful generic verify text is an empty protein scope. No biochemical
+    assembly, necessity or localization assay is performed by this command.
+  support: supports
+- evidence_id: micro-native-magnetosome_lumen-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_lumen.yaml
+    --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_lumen-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  accessed_at: '2026-11-03T15:29:45.821491Z'
+  snapshot_sha256: f12ba18a83c595398f233b1da9c75529627c2d9d10518f8a0234a686dfbb9370
+  summary: Exit0 on source head. Zero protein examples/xrefs and zero GENE_OR_PROTEIN
+    nodes; successful generic verify text is an empty protein scope. No biochemical
+    assembly, necessity or localization assay is performed by this command.
+  support: supports
+- evidence_id: micro-record-magnetosome_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome_membrane.yaml
+  locator: Entire current record including all components, protein examples, evidence
+    notes, graph edges, discussions and history
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4
+  summary: Current source bytes read. Current record equals the original frozen input.
+  support: supports
+- evidence_id: micro-prior-magnetosome_membrane
+  kind: prior_review
+  reference: reviews/structured/20261022T021715Z-magnetosome-membrane-audit/review.yaml
+  locator: Original complete scientific assessments, findings/actions, checks and
+    access limitations; native rendered Markdown verified
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: 62f45424093013a51cf2c1a9f3c0fda6da6203d36128d0efc8cf0149dc546c82
+  summary: Original pass_with_limitations with 0 finding(s); explicit expression-only
+    source exclusion needs correction. Historical commands and source reads are not
+    current checks.
+  support: context_only
+- evidence_id: micro-native-magnetosome_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml
+    --verify; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T15:29:47.023450Z'
+  snapshot_sha256: b97beb90cbfbc6e8ea3692755fcb4971295b121bc29554135a9d88993043839a
+  summary: Exit0 on source head. Zero component protein examples; one UNANCHORED_WITH_UNIPROT
+    node with five reviewed MSR-1 xrefs V6F235/V6F510/Q93DY9/Q6NE76/Q6NE58. This allowed
+    external/cohort actor route is not a dangling component or proof of identical
+    residence. No biochemical assembly, necessity or localization assay is performed
+    by this command.
+  support: supports
+- evidence_id: micro-native-magnetosome_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/magnetosome_membrane.yaml
+    --causal-graphs; complete stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/magnetosome_membrane-uniprot-causal.log
+    SHA256 3abc710ac03ac07db44a23f8b9dd00fa2df37d724e1ea9e8bf9eda70fd8816a7
+  accessed_at: '2026-11-03T15:29:47.426643Z'
+  snapshot_sha256: 09060681a3bebf5b0fa92bca5ac32ea07f0c7afcbfaa67e4208c096e8711fd10
+  summary: Exit0 on source head. Zero component protein examples; one UNANCHORED_WITH_UNIPROT
+    node with five reviewed MSR-1 xrefs V6F235/V6F510/Q93DY9/Q6NE76/Q6NE58. This allowed
+    external/cohort actor route is not a dangling component or proof of identical
+    residence. No biochemical assembly, necessity or localization assay is performed
+    by this command.
+  support: supports
+- evidence_id: micro-original-pairs
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/original-checks.json
+  locator: Three original native validate and three render --content commands; exact
+    Markdown equality
+  accessed_at: '2026-11-03T15:31:52.965376Z'
+  snapshot_sha256: 6d5a9a5b4f5c0913f90da7eac952ca0f265197021bba9345ca475ae3f3e2a38f
+  summary: All three originals validate and render byte-identically; original frozen
+    target hashes checked from their source revision. Whole target stale; lumen/membrane
+    unchanged.
+  support: supports
+- evidence_id: micro-stale-delta
+  kind: record_content
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/magnetosome-stale.diff
+  locator: Entire old frozen revision to current diff
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: e9a3532562aba33bc22b999b73a17790e11bab71c6ce0da492c182cfb4cc87a2
+  summary: Added crystal magnetite grounding, MamJ node/family/component_ref and attachment
+    edge, MamJ-membrane association and crystal-enclosure edges, plus three history
+    entries. No old observation is rewritten.
+  support: context_only
+- evidence_id: micro-historical-2432
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  locator: Complete root-retained body/state/comments /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/historical-issue-2432.json
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: c3015b2c5fe524e2448619b5ee512ae85dc8dcfb8fecf2d319d597738410e524
+  summary: Closed grouped propagation issue includes magnetosome crystal grounding
+    among20 records; present exact magnetite grounding agrees with component. This
+    is historical context only, not a terminal disposition of its multi-target predecessor
+    or any of the four inherited record findings.
+  support: context_only
+- evidence_id: micro-mamk-neighbor
+  kind: record_content
+  reference: data/structures/cytoskeleton/mamk_filament.yaml
+  locator: Entire frozen maintained neighbor for local identity and boundary only
+  accessed_at: '2026-11-03T15:38:33.751261Z'
+  snapshot_sha256: fb273942dd11b99a71c61834f5ca331829a340b6a271e0f73e050c1b0128ca64
+  summary: Local identifier denotes an assembled actin-like MamK filament distinct
+    from whole magnetosome. Neighbor scientific findings/status are not disposed and
+    all its separate citations are not independently recertified.
+  support: context_only
+- evidence_id: micro-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110143,GO:0110145,GO:0110146,GO:0043231,GO:0043233,GO:0016020
+  locator: All six exact active term names/definitions/typed children
+  accessed_at: '2026-11-03T15:31:35.493724Z'
+  snapshot_sha256: fe60b747acb4743040bfafb812bd181bf6b2cac0a8f5ba821cb441ace1f051c8
+  summary: Whole0110143 is an intracellular membrane-bounded organelle with direct
+    part_of children lumen0110145/membrane0110146. Whole parent43231 directly lists
+    is_a target. Lumen is enclosed volume; membrane lipid bilayer. No lumen equals
+    membrane or protein identity is inferred.
+  support: supports
+- evidence_id: micro-go-lumen-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110145/ancestors?relations=is_a
+  locator: Complete exact is_a-only ancestor response
+  accessed_at: '2026-11-03T15:33:12.656330Z'
+  snapshot_sha256: d7137a2e5c0d7fd985d1f443c59d4a724d3dd117da125e0330ff5f1a2591dfaa
+  summary: GO lumen target has is_a ancestry to GO:0043233; this confirms hierarchy,
+    not a claim that the parent relation is direct.
+  support: supports
+- evidence_id: micro-go-membrane-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110146/ancestors?relations=is_a
+  locator: Complete exact is_a-only ancestor response
+  accessed_at: '2026-11-03T15:31:35.494083Z'
+  snapshot_sha256: c094c21da265bd5cd07c85a4894c307bb25d75e01dd072cf98f5f67470bcffb6
+  summary: GO membrane target has is_a ancestry to GO:0016020; this confirms hierarchy,
+    not a claim that the parent relation is direct.
+  support: supports
+- evidence_id: micro-SL0510
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0510.json
+  locator: Complete native location name/definition/GO mapping and hierarchy
+  accessed_at: '2026-11-03T15:31:35.494216Z'
+  snapshot_sha256: aeb4bcf6878993c0447743c8c84901d5a4bacafbde8183dbd0cc4adc2dc3ea8a
+  summary: SL-0510 exactly corresponds to whole magnetosome. Statistics are annotation
+    counts, not presence/absence experiments.
+  support: supports
+- evidence_id: micro-SL0511
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0511.json
+  locator: Complete native location name/definition/GO mapping and hierarchy
+  accessed_at: '2026-11-03T15:31:35.494322Z'
+  snapshot_sha256: bdd80959bf50571da2bace95c31b088edce4ef5ffdbc030ee008da2e8802fa9f
+  summary: SL-0511 exactly corresponds to magnetosome lumen (part_of SL0510). Statistics
+    are annotation counts, not presence/absence experiments.
+  support: supports
+- evidence_id: micro-SL0512
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0512.json
+  locator: Complete native location name/definition/GO mapping and hierarchy
+  accessed_at: '2026-11-03T15:31:35.494429Z'
+  snapshot_sha256: 1a5e2619ee57df8b04098c35c9768ec4ef04c4d511e4f0f5eccaed6141d65f19
+  summary: SL-0512 exactly corresponds to magnetosome membrane (is_a membrane and
+    part_of SL0510). Statistics are annotation counts, not presence/absence experiments.
+  support: supports
+- evidence_id: micro-tax2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:35.494536Z'
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+  summary: Tax2 = Bacteria (domain). Identity only; not a contemporary prevalence
+    survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-tax28211
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/28211
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:36.122933Z'
+  snapshot_sha256: eb9d44c1e2cf0944eb4414649c09418a757a87de66fc01f51cc6c980ef68e802
+  summary: Tax28211 = Alphaproteobacteria (class). Identity only; not a contemporary
+    prevalence survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-tax1236
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1236
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:36.125188Z'
+  snapshot_sha256: e61d7eb1ea01bd14c6542115abeb4c77aef6df90b221045d559fbe22fffb1c94
+  summary: Tax1236 = Gammaproteobacteria (class). Identity only; not a contemporary
+    prevalence survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-tax2157
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:36.127047Z'
+  snapshot_sha256: 84a40b3fb3e403b1ab61ce4ab647c6eaa5526395605d947756d90105e0512a3d
+  summary: Tax2157 = Archaea (domain). Identity only; not a contemporary prevalence
+    survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-tax431944
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/431944
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:36.157631Z'
+  snapshot_sha256: 8e6916672afb4c32a2a99e2dcc07f5a14b4ba7b0969243ce89646042ce60476d
+  summary: Tax431944 = Magnetospirillum gryphiswaldense MSR-1 (strain). Identity only;
+    not a contemporary prevalence survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-tax342108
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/342108
+  locator: Complete exact taxId/scientificName/rank/lineage and alternative names
+  accessed_at: '2026-11-03T15:31:36.159975Z'
+  snapshot_sha256: 23ab2a141de441b18fc4edcd456c3cf95d789c0c017cd9e58cb8bda73a5ae365
+  summary: Tax342108 = Paramagnetospirillum magneticum AMB-1 (strain). Identity only;
+    not a contemporary prevalence survey or proof of the Archaea absence claim.
+  support: supports
+- evidence_id: micro-chebi46726
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_46726
+  locator: Exact OLS ChEBI native term identity, formula/charge/definition and active
+    state
+  accessed_at: '2026-11-03T15:31:38.608012Z'
+  snapshot_sha256: 0abc845119f9fdaa12a29c2a3cd76bf6de785b2b5009ff76a38f36709ea60213
+  summary: Active magnetite, Fe3O4. It does not denote greigite or all magnetic mineral
+    alternatives.
+  support: supports
+- evidence_id: micro-chebi86238
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_86238
+  locator: Exact OLS ChEBI native term identity, formula/charge/definition and active
+    state
+  accessed_at: '2026-11-03T15:31:39.197426Z'
+  snapshot_sha256: 7dcd024053e2086928174c71ff2981d86855f92975fa2a219462554e136a6176
+  summary: Active greigite, iron sulfide Fe3S4 (native formula3Fe.4S), chemically
+    distinct from magnetite.
+  support: supports
+- evidence_id: micro-chebi18248
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_18248
+  locator: Exact OLS ChEBI native term identity, formula/charge/definition and active
+    state
+  accessed_at: '2026-11-03T15:31:39.501392Z'
+  snapshot_sha256: 8b382aa1dc3cdaedba15e69b40a2b75133d1c67f88cb75341932a8bce2595af5
+  summary: Active iron atom, atomic number26, elemental Fe and native charge0. This
+    exact neutral atom is not an oxidation-state-unspecified iron ion.
+  support: supports
+- evidence_id: micro-micro0000216
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/micro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMICRO_0000216
+  locator: Exact native label, ID, definition annotation and active flag
+  accessed_at: '2026-11-03T15:31:39.793524Z'
+  snapshot_sha256: aeb875c595890df066ada49288c837bffa719de820343694a76847c5d18a4f1c
+  summary: MICRO0000216 magnetosome agrees at identity level. Its auxiliary sourced
+    descriptive annotation is not treated as authoritative contemporary mineral or
+    taxonomic exhaustiveness.
+  support: supports
+- evidence_id: micro-uo0000018
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUO_0000018
+  locator: Exact label/definition/active state
+  accessed_at: '2026-11-03T15:31:39.535170Z'
+  snapshot_sha256: 5aa4d11cd0f398ac65be12b58f91295efae620bb2e5c345bd0fd81c6f0e09c5c
+  summary: UO0000018 is nanometer (10^-9 m). Unit identity does not verify the record
+    diameter range.
+  support: supports
+- evidence_id: micro-IPR060787
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR060787/
+  locator: Complete native entry name/type/member database/description
+  accessed_at: '2026-11-03T15:31:40.086073Z'
+  snapshot_sha256: 30bea264adde7bd7af90b512f677882c4f08d4ada31a0bda8df269035e729217
+  summary: InterPro060787 is family Magnetosome protein MamJ, member NCBIfamNF040987.
+    Native entry describes family context; phenotype/transport necessity is not inferred
+    from membership.
+  support: supports
+- evidence_id: micro-protein-Q93DY9
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q93DY9.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.531341Z'
+  snapshot_sha256: d0806f93bc6b1b2c700e6d781028aded4bb2194d74302a4cb4074f45dadb9580
+  summary: Q93DY9 is reviewed, mamA, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-V6F510
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/V6F510.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.718016Z'
+  snapshot_sha256: 526814c66af4b8bbf66cd0f3399455f2537c025fe9045475737b4e5293e75212
+  summary: V6F510 is reviewed, mamB, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-V6F2B6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/V6F2B6.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.720409Z'
+  snapshot_sha256: c0857c461389e7e5650d783f3169b2f1b49a835cc405b55421133883164f3e7e
+  summary: V6F2B6 is reviewed, mamE, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-V6F235
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/V6F235.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.729626Z'
+  snapshot_sha256: 1e87ed2625ca608d68e069dbff2376d2b08f269da840189abf695e91b2b1c3d6
+  summary: V6F235 is reviewed, mamM, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-Q93DZ1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q93DZ1.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.754842Z'
+  snapshot_sha256: 3754220ec9946babcb7dd8c36611e5e7e0eefdb0b744cb45f8509112c97d6976
+  summary: Q93DZ1 is reviewed, mamO, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-Q6NE76
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q6NE76.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:36.759704Z'
+  snapshot_sha256: 4bdaae8944c2f60830514481d846baf51e91fd39fcb5288d13fab7d526fe52a8
+  summary: Q6NE76 is reviewed, mms6, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Magnetosome-membrane location
+    explicitly carries ECO0000269 from PMID14766587; MamA/MamB/MamE additionally cite11571158
+    and MamB/MamM22007638. This contradicts the current broad only-MamJ discussion
+    without falsifying its historical SL0510 query.
+  support: supports
+- evidence_id: micro-protein-Q6NE59
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q6NE59.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:37.264294Z'
+  snapshot_sha256: 12f0f9719e4395404b26dee6039de9834b8d17f6019884b8430479d69502a40c
+  summary: Q6NE59 is reviewed, mamK, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. Native cytoskeletal ECO0000269
+    cites17601786/20487281; location comments qualify tag/linker dependence. No universal
+    isolated-particle phenotype inferred.
+  support: supports
+- evidence_id: micro-protein-V6F519
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/V6F519.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:37.614372Z'
+  snapshot_sha256: 2657edfba0fa2a6bdbb0a1322dac09158b64255ee47545829a25b11b412c0a64
+  summary: V6F519 is reviewed, mamJ, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. InterPro060787 cross-reference;
+    experimental magnetosome location14766587. FUNCTION/SUBUNIT/DISRUPTION comments
+    distinguish probable tethering, MamK interaction, clustered mature particles and
+    scattered precursor vesicles.
+  support: supports
+- evidence_id: micro-protein-Q2W8Q7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q2W8Q7.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:37.709839Z'
+  snapshot_sha256: ebcc9714aa62e720336a1d0b1ebd4fce22017535ffd137e0786ca76d44227818
+  summary: Q2W8Q7 is reviewed, mamJ, tax342108. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. InterPro060787 cross-reference;
+    native experimental magnetosome annotation20212111/27481925 matches AMB-1. AMB-1
+    and MSR-1 functional equivalence is not assumed.
+  support: supports
+- evidence_id: micro-protein-Q6NE58
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q6NE58.json
+  locator: Accession/review status/name/gene/taxon; complete SUBCELLULAR LOCATION
+    comments and evidence; MamJ family xrefs; selected MamB/MamM/MamJ function/subunit/phenotype
+    contexts
+  accessed_at: '2026-11-03T15:31:38.454774Z'
+  snapshot_sha256: c212d204735c53d726f181ec53604bf04160fe80e87206c0fe04dd5dd9836e13
+  summary: Q6NE58 is reviewed, mamL, tax431944. All exact identity and SUBCELLULAR
+    LOCATION annotations read with source/ECO distinctions. MamL magnetosome-membrane
+    label carries ECO0000305 from27286560; tagged chains/aligned and unaligned patches
+    carry ECO0000269. It is not upgraded to directly demonstrated invariant membrane
+    residence.
+  support: supports
+- evidence_id: micro-query-mamA-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamA%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.245591Z'
+  snapshot_sha256: 4502cabf86e758d2ccd0d06129d43b35e44d33cd4afcad341973305c72d4fa1d
+  summary: Exactly Q93DY9 returned with primary symbol mamA. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.245591Z; literal query
+    '(gene_exact:mamA) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamB-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamB%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.245691Z'
+  snapshot_sha256: 651f083d0b920d53c161e8e169c4e1addcc7e072282c9a63a9668d8e903040e5
+  summary: Exactly V6F510 returned with primary symbol mamB. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.245691Z; literal query
+    '(gene_exact:mamB) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamE-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamE%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.448330Z'
+  snapshot_sha256: 40e47802576dde01bca315c93bca0c0f5feeab868e2f1f8cbe4e7218260e88e1
+  summary: Exactly V6F2B6 returned with primary symbol mamE. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.448330Z; literal query
+    '(gene_exact:mamE) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamM-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamM%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.586680Z'
+  snapshot_sha256: a7d55c63109eaedde913f6cea3ccebc596dfd0695c4a51e80c57e84a45325c27
+  summary: Exactly V6F235 returned with primary symbol mamM. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.586680Z; literal query
+    '(gene_exact:mamM) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamO-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamO%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.603312Z'
+  snapshot_sha256: 9fd09fb6437c0d868df5397e26f37a9befa145ce74ce6944be31ab054944c6ba
+  summary: Exactly Q93DZ1 returned with primary symbol mamO. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.603312Z; literal query
+    '(gene_exact:mamO) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mms6-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Amms6%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:33.607528Z'
+  snapshot_sha256: 882f34b70fac8c38cfdcf7b9f7f8ef6e5450e997e534c31fa9ef1813ed763a90
+  summary: Exactly Q6NE76 returned with primary symbol mms6. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:33.607528Z; literal query
+    '(gene_exact:mms6) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamK-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamK%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:34.120868Z'
+  snapshot_sha256: cf329fcf4c532f4e39eff2f8fb8f762c775dfc4b7469da5e3ff304b7d97901c1
+  summary: Exactly Q6NE59 returned with primary symbol mamK. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:34.120868Z; literal query
+    '(gene_exact:mamK) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamJ-431944
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamJ%29+AND+%28organism_id%3A431944%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:34.143165Z'
+  snapshot_sha256: 4b07406c5ffa4f22bbe8e2b1f07bd6fb6025fdb1663822be5de08b180a96c5ad
+  summary: Exactly V6F519 returned with primary symbol mamJ. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:34.143165Z; literal query
+    '(gene_exact:mamJ) AND (organism_id:431944) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-query-mamJ-342108
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmamJ%29+AND+%28organism_id%3A342108%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete single-result response, gene tokens and native X-Total-Results1/no
+    Link
+  accessed_at: '2026-11-03T15:32:34.554108Z'
+  snapshot_sha256: 33dc6c6e40936beebcdc0b3815f36dcd3e14d5f837a4d96b82b36ebedb78a719
+  summary: Exactly Q2W8Q7 returned with primary symbol mamJ. Current bounded uniqueness
+    is verified; not universal localization or necessity.
+  support: supports
+  search_scope: UniProtKB native search at 2026-11-03T15:32:34.554108Z; literal query
+    '(gene_exact:mamJ) AND (organism_id:342108) AND (reviewed:true)'; format=json,size100;
+    complete one hit, X-Total-Results1, no next-page Link. Exact reviewed organism_id
+    scope only.
+- evidence_id: micro-PMID11571158
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A11571158%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.206427Z'
+  snapshot_sha256: 9df7a0ad612dbadec3f8d25668a3a35e33ca8eb6fc4a7f591f89e757fa7a2ec8
+  summary: 'Primary complete abstract: purified magnetosome proteins and conserved
+    MamAB cluster; MSR-1 isolation distinct from cross-species homology. DOI:10.1128/aem.67.10.4573-4582.2001;
+    PMID:11571158'
+  support: supports
+- evidence_id: micro-PMID14766587
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A14766587%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.473082Z'
+  snapshot_sha256: fbabd270aed6269301fe8e7b2e128d1fe3066214ca6005362d3f5583e6819683
+  summary: 'Primary complete abstract only: isolated MSR-1 magnetosomes have phospholipids/fatty
+    acids in differing proportions, selective solubilization/proteolysis and proteomics
+    identify at least18 proteins. No fixed lipid composition or individual necessity
+    is shown. DOI:10.1128/aem.70.2.1040-1050.2004; PMID:14766587'
+  support: supports
+- evidence_id: micro-PMID17601786
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A17601786%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.475602Z'
+  snapshot_sha256: 1772800d0db6081a3e1d8486a9aa2c65b1da0898d43a6131ebae461a13e05516
+  summary: 'Primary complete abstract: MamJ deletion complementation, two-hybrid MamJ/MamK
+    interaction; tethering model explicitly has unresolved detail. DOI:10.1128/jb.00421-07;
+    PMID:17601786'
+  support: supports
+- evidence_id: micro-PMID20212111
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A20212111%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.670413Z'
+  snapshot_sha256: 8029b3e8f25a0edaea439097e1490446e00a94a708b73920369df30741a3c172
+  summary: 'Primary complete abstract: AMB-1 gene deletions separate membrane biogenesis,
+    localization and biomineralization. DOI:10.1073/pnas.0914439107; PMID:20212111'
+  support: supports
+- evidence_id: micro-PMID20487281
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A20487281%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.711715Z'
+  snapshot_sha256: 776fb8920901a3ec41fb02597677d430e06d5ca25674afc1ba42efeff14b3b5e
+  summary: 'Primary complete abstract only: MSR-1 MamK loss retains shorter fragmented/ectopic
+    straight chains; not universal total loss or isolated scatter; genotype/species
+    context matters. DOI:10.1111/j.1365-2958.2010.07202.x; PMID:20487281'
+  support: supports
+- evidence_id: micro-PMID22007638
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A22007638%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:40.854816Z'
+  snapshot_sha256: 06fcf257530950b748c69287ce45624e23e53c7b7b021f3e71216afaab34d413
+  summary: 'Primary complete abstract only: MSR-1 MamB/MamM both necessary for magnetite
+    but only MamB deletion removes membrane vesicles; iron transport originally implicated
+    by CDF homology, not a direct complete transport assay. DOI:10.1111/j.1365-2958.2011.07863.x;
+    PMID:22007638'
+  support: supports
+- evidence_id: micro-PMID27481925
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A27481925%20AND%20SRC%3AMED
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:41.112967Z'
+  snapshot_sha256: 338596c7785e05b5f67c45eb0d121c649e2ad047dec5cecf7aea382bdaf21d2d
+  summary: 'Primary complete abstract: AMB-1 GFP-protein localization depends on growth/biomineralization
+    condition; Mms6 differs from other actors. DOI:10.1128/jb.00280-16; PMID:27481925'
+  support: supports
+- evidence_id: micro-uebe2016-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1038/nrmicro.2016.99%22
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:41.312260Z'
+  snapshot_sha256: 6cac70cbcdbeb66cf02f93d38f12228eb95ce8b162eb76f761e24db2e03fc611
+  summary: Secondary review, complete native abstract; broad biogenesis outline and
+    two model strains, not direct claim-level primary experiment. DOI:10.1038/nrmicro.2016.99;
+    PMID:27620945
+  support: context_only
+- evidence_id: micro-barber2015-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1002/pro.2827%22
+  locator: Exact native MED id/title/authors/DOI and complete abstractText; exact
+    query returns one result
+  accessed_at: '2026-11-03T15:31:41.392335Z'
+  snapshot_sha256: 5cd9b7f5561c75d2abf2009e5497cf056fd357d406700d94935e452869c756aa
+  summary: Secondary review, complete native abstract; explicitly permits magnetite
+    or greigite (native abstract spells gregite), protein-controlled staged biogenesis.
+    Main body currently inaccessible. DOI:10.1002/pro.2827; PMID:26457474
+  support: context_only
+- evidence_id: micro-uebe2016-publisher
+  kind: authority
+  reference: https://www.nature.com/articles/nrmicro.2016.99
+  locator: Complete Key Points and Abstract through explicit subscription/access boundary;
+    figure titles only
+  accessed_at: '2026-11-03T15:31:41.596291Z'
+  snapshot_sha256: 0603bada9161e9fae0f9bf1bdae4087e2c5f1cd3a01475e15a349422475fdf97
+  summary: Secondary review overview supports protein recruitment, iron transport,
+    redox-controlled mineralization and chain organization. No complete main body
+    or figure caption/pixels obtained; exact35–120nm range, universal archaeal absence
+    and detailed review-specific MamJ wording not freshly verified.
+  support: context_only
+- evidence_id: micro-grunberg2001-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC93205/
+  locator: PMC93205 parsed main paragraphs7,11,13,17-18,24,26-28,30-31,38,48,73,77,80;
+    native text with method context and selected captions, no image pixels
+  accessed_at: '2026-11-03T15:32:14.463532Z'
+  snapshot_sha256: 734a1385ff2e9bc7d87580a7482f7b82fc896992c3a5bad19b52043f88890aef
+  summary: MSR-1 magnetosome purification and gel/protein sequencing support membrane
+    association of Mam cohort. Initial homology/predicted domains are distinguished
+    from later exact identity; MamB CDF relationship does not establish all transport
+    chemistry.
+  support: supports
+- evidence_id: micro-murat2010-correct-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2851823/
+  locator: PMC2851823 main paragraphs11,14-16,23,28,30-36,41,46,51-59,62-64; table1
+    and selected captions; no pixels/supplements
+  accessed_at: '2026-11-03T15:32:14.463650Z'
+  snapshot_sha256: dbcc9c2c07b3a34b970ffe0c7e7f8866715ea22f7c8e926366c22d6992e8170c
+  summary: AMB-1 deletion/ultrathin-TEM/GFP work separates compartments from crystals
+    and localization; MamE/MamM/MamO deletion can leave empty vesicles. MamL mostly
+    cell membrane with occasional aligned localization. Introduction permits mineral
+    alternatives as context, not new greigite experiment; direct findings are AMB-1
+    magnetite.
+  support: supports
+- evidence_id: micro-scheffel2007-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1951895/
+  locator: PMC1951895 paragraphs5-8,13,17,21-23,26,33,36,49,53-54,59,61-62,64-67 plus
+    Fig5/6 captions; no pixels/supplements
+  accessed_at: '2026-11-03T15:32:14.463760Z'
+  snapshot_sha256: c4f9da6aa174360b1389641977bce8886e588021f97f2105a25ba22fc808e1f1
+  summary: MSR-1 mature ΔmamJ magnetosomes chiefly aggregate in clusters with occasional
+    rings/short imperfect chains. Prior cryo-ET context explicitly describes scattered
+    EMPTY vesicles. Two-hybrid/complementation support MamJ-MamK interaction/model;
+    paper retains need for confirmation and unresolved vesicle attachment detail.
+  support: supports
+- evidence_id: micro-arakaki2016-body
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5038011/
+  locator: PMC5038011 paragraphs14-17,20,24-28,31-33,38-39,44,48,53,66 and Fig1/4/5/6
+    captions; no pixels/supplements
+  accessed_at: '2026-11-03T15:32:14.463895Z'
+  snapshot_sha256: deca2c10899ac81d5e802122d66cd089681761616e36ca8cb74a3283712d20e0
+  summary: AMB-1 fluorescent-fusion comparisons support linear MamJ/MamK and condition-dependent
+    Mms6 positioning, with MamL mostly membrane/diffuse and minor linear localization.
+    Correlative microscopy relates Mms6 to crystals; no automatic MSR-1 or invariant
+    residence inference.
+  support: supports
+- evidence_id: micro-access-limits
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-microtubule/access-limit-receipts.json
+  locator: All attempted route URLs/statuses/response hashes and actual dates; BioC
+    no-result, PMC challenge, EPMC500 and archive404
+  accessed_at: '2026-11-03T15:33:42.659826Z'
+  snapshot_sha256: f7018a17ee3367f376cbc1153c549e274cbb32d897998ed47bff6414d11ecd61
+  summary: No returned challenge/error body is treated as article text. Current Barber2015/Grünberg2004
+    bodies remain unavailable through these routes; actual native abstracts are separate.
+    Murat canonical full body succeeded after its rejected BioC route.
+  support: context_only
+- evidence_id: micro-catalogue
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete official /api/datasets array; all organism names, keys and dataset
+    lists inspected
+  accessed_at: '2026-11-03T15:31:40.137618Z'
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  summary: No Magnetospirillum gryphiswaldense/MSR-1 or Paramagnetospirillum/Magnetospirillum
+    magneticum/AMB-1 host match. Broad Bacteria/Alpha/Gamma labels do not justify
+    another species proxy. No matched downstream gene/module summary applicable.
+  support: supports
+  search_scope: Official iModulonDB /api/datasets at 2026-11-03T15:31:40.137618Z;
+    complete returned20 organism rows and28 organism-dataset pairs, no pagination
+    or query limit; exact and legacy genus/species/strain matches tested against complete
+    names/keys. Bounded current catalogue only, no biological absence inference.
+- evidence_id: micro-historical-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Actual previously retained runner command,00:49Z start/end and PermissionError
+    reading pyvenv.cfg
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Historical optional runner unavailable (exit1 in retained evidence); not
+    re-executed here. Fresh current source catalogue fallback inspected separately.
+  support: context_only
+- evidence_id: micro-enclosure-independent-challenge
+  kind: prior_review
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/magnetosome-mineral-scope-challenge.json
+  locator: Independent bounded component/graph, native-policy and two exact ChEBI
+    snapshot challenge; complete receipt
+  accessed_at: '2026-11-03T15:37:56.147545Z'
+  snapshot_sha256: 4f16ac6b34ec4dde94d268099275ceacd643b7aa00984c86a8c0ca796e519e6d
+  summary: 'Separate confirmed enclosure finding withdrawn: true formal magnetite
+    relation and broader mineral context do not constitute a second proved defect.
+    Existing universal magnetite-essentiality finding preserved. No new comprehensive
+    literature review claimed.'
+  support: context_only
+- evidence_id: septin-review-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Whole-record assertions, structured sources and severity rubric
+  summary: Positive molecular/pathway assertions require a real applicability assessment;
+    absence of expression claims alone is not an exemption. Keep source scope, uncertainty
+    and original finding identity; record curation is separate.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: septin-curation-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Structural components, molecular grounding and family-or-class guidance
+  summary: Whole assembled membranes are structures; a LIPID component denotes molecular
+    material and cannot use a complete membrane identity as exact chemical grounding.
+    Taxon-agnostic protein families OR classes are permitted. An optional example
+    inventory is not automatically required for every generic class.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: septin-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ComponentTypeEnum and grounding contract
+  summary: Molecular components and whole structures have different identities. Label-only
+    supported lipid material is possible without inventing exact chemical composition.
+    PROTEIN enum prose is interpreted with explicit CURATION generic-class permission;
+    no automatic complex assertion follows from a heterogeneous class.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: septin-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph nodes, component correspondence, source scope and necessity
+  summary: Descriptive boundary graphs can remain NONMECHANISTIC; source-specific
+    localization, molecular identity and organelle-formation necessity must not be
+    conflated.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: septin-protein-policy
+  kind: authority
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Step2 generic classes and native coverage report
+  summary: Generic class components are explicitly recognized. A zero-example inventory
+    or NO_GENE_SYMBOLS node is a stated coverage limit, not proof that the protein
+    class does not exist or that its members form one stable complex.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+- evidence_id: septin-record-hydrogenosome_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  locator: Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+  summary: Read all identity, boundaries, components/examples, taxonomic/canonical
+    scopes, functions, evidence, every graph node/edge, discussions and history. No
+    maintained images, physical-property measurements, associated traits or verbatim
+    snippets.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+- evidence_id: septin-original-hydrogenosome_lumen
+  kind: prior_review
+  reference: reviews/structured/20261022T021704Z-hydrogenosome-lumen-audit/review.yaml
+  locator: Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source
+    limits
+  summary: Historical observations stay historical; original files are unchanged.
+    Current input is byte-unchanged. Only the lumen has an inherited scientific finding.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: ee6af8fcd38551bae4590b0de1a22387c1a806aa6d40969578a76812d35e3019
+- evidence_id: septin-original-validation-hydrogenosome_lumen
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json
+  locator: Actual focused original native validate/render and historical target hash
+  summary: Both commands exit0; original Markdown is deterministic and historical
+    target bytes equal the frozen input.
+  accessed_at: '2026-11-03T15:29:38.749186Z'
+  support: supports
+  snapshot_sha256: e29aaac5aeefcc88659a01f4134dbe98a43db7fceb60638f69645a961b2a1734
+- evidence_id: septin-native-hydrogenosome_lumen-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-verify-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-verify.log
+  summary: Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  accessed_at: '2026-11-03T15:29:35.782757Z'
+  support: supports
+  snapshot_sha256: fd1d70f17dcf6f85e75e767f1f9fdb99425af3306c71042bf3716469bdeca964
+- evidence_id: septin-native-hydrogenosome_lumen-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-causal-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/hydrogenosome_lumen-uniprot-causal.log
+  summary: Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  accessed_at: '2026-11-03T15:29:36.187185Z'
+  support: supports
+  snapshot_sha256: 6f0a427b096b46efe2d3be512023887f907096ec9d3ca9e93f14d9561c522ede
+- evidence_id: septin-record-inner_membrane_pellicle_complex
+  kind: record_content
+  reference: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  locator: Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+  summary: Read all identity, boundaries, components/examples, taxonomic/canonical
+    scopes, functions, evidence, every graph node/edge, discussions and history. No
+    maintained images, physical-property measurements, associated traits or verbatim
+    snippets.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: b1ba7a435c20af9e679a8ac976a0f598a0b48808eda62181b6751732f5896917
+- evidence_id: septin-original-inner_membrane_pellicle_complex
+  kind: prior_review
+  reference: reviews/structured/20261022T021705Z-inner-membrane-pellicle-complex-audit/review.yaml
+  locator: Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source
+    limits
+  summary: Historical observations stay historical; original files are unchanged.
+    Current input is stale and substantively reassessed. Only the lumen has an inherited
+    scientific finding.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 842978c8ffc141c710f53bdd40c7b2085c1d1a8ff2fcc950b6b2b5d5251636ab
+- evidence_id: septin-original-validation-inner_membrane_pellicle_complex
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json
+  locator: Actual focused original native validate/render and historical target hash
+  summary: Both commands exit0; original Markdown is deterministic and historical
+    target bytes equal the frozen input.
+  accessed_at: '2026-11-03T15:29:39.937157Z'
+  support: supports
+  snapshot_sha256: e29aaac5aeefcc88659a01f4134dbe98a43db7fceb60638f69645a961b2a1734
+- evidence_id: septin-native-inner_membrane_pellicle_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-verify-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-verify.log
+  summary: Exit0. Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin
+    node and one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84.
+    The latter are Toxoplasma representatives, not exact P.falciparum experimental
+    accessions. Native identity/coverage is not membership, complete composition or
+    causality.
+  accessed_at: '2026-11-03T15:29:37.503548Z'
+  support: supports
+  snapshot_sha256: e69bb45404353b0c7d96d54c10e22c08ac4aa7c4e7726dc469840706cd2c1a0b
+- evidence_id: septin-native-inner_membrane_pellicle_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-causal-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/inner_membrane_pellicle_complex-uniprot-causal.log
+  summary: Exit0. Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin
+    node and one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84.
+    The latter are Toxoplasma representatives, not exact P.falciparum experimental
+    accessions. Native identity/coverage is not membership, complete composition or
+    causality.
+  accessed_at: '2026-11-03T15:29:37.924292Z'
+  support: supports
+  snapshot_sha256: c124b80151ad66f516fe9880b152b7b4d6f2a25a4f6b198e4a29c6d9c40ff2c5
+- evidence_id: septin-record-macronucleus
+  kind: record_content
+  reference: data/structures/membrane_organelle/macronucleus.yaml
+  locator: Complete current record at cf694c66fc3ad68d50e01fa740eadcc8987282ae
+  summary: Read all identity, boundaries, components/examples, taxonomic/canonical
+    scopes, functions, evidence, every graph node/edge, discussions and history. No
+    maintained images, physical-property measurements, associated traits or verbatim
+    snippets.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2
+- evidence_id: septin-original-macronucleus
+  kind: prior_review
+  reference: reviews/structured/20261022T021711Z-macronucleus-audit/review.yaml
+  locator: Complete original YAML/Markdown, frozen input, all checks/assessments/findings/actions/source
+    limits
+  summary: Historical observations stay historical; original files are unchanged.
+    Current input is byte-unchanged. Only the lumen has an inherited scientific finding.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 5b14f3ffc770af39883ef34c981ec6ca467433e84bc084939f5f64b2524d7470
+- evidence_id: septin-original-validation-macronucleus
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/adversary-septin/original-checks.json
+  locator: Actual focused original native validate/render and historical target hash
+  summary: Both commands exit0; original Markdown is deterministic and historical
+    target bytes equal the frozen input.
+  accessed_at: '2026-11-03T15:29:41.127315Z'
+  support: supports
+  snapshot_sha256: e29aaac5aeefcc88659a01f4134dbe98a43db7fceb60638f69645a961b2a1734
+- evidence_id: septin-native-macronucleus-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-verify-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-verify.log
+  summary: Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  accessed_at: '2026-11-03T15:29:42.632133Z'
+  support: supports
+  snapshot_sha256: 2a3ef9eef1a7b9fec96c7afffae388b2c34ea4121346a49bdc9eb0086b0d9622
+- evidence_id: septin-native-macronucleus-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-causal-receipt.json
+  locator: Actual receipt and /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/macronucleus-uniprot-causal.log
+  summary: Exit0. Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  accessed_at: '2026-11-03T15:29:43.048087Z'
+  support: supports
+  snapshot_sha256: a4819e64fb5c06796860f240cc5f0d9b85f52c86170695d7a48dc02aeaa20d9c
+- evidence_id: septin-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034492,GO:0043233,GO:0042566,GO:0046859,GO:0070258,GO:0043231,GO:0031039,GO:0005634,GO:0000228
+  locator: Nine exact active GO definitions/synonyms and relation-bearing children
+  summary: Lumen0034492, whole0042566 and membrane0046859 are distinct. IMC0070258
+    is two closely apposed bilayers below the apicomplexan plasma membrane; its inner
+    membrane complex synonym is broad in native GO. Macronucleus0031039 is the ciliate
+    polyploid transcriptional compartment, distinct from complete nuclear chromosome0000228
+    and DNA molecular material.
+  accessed_at: '2026-11-03T15:29:48.112136Z'
+  support: supports
+  snapshot_sha256: dc2864a24e6d68fabb4a556c075187cf0229fe3219d6d01c079338da44671623
+- evidence_id: septin-ancestors-0034492
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034492/ancestors?relations=is_a
+  locator: Complete GO ancestors endpoint restricted to relations=is_a
+  summary: GO0043233 organelle-lumen is_a ancestry is present; parthood in hydrogenosome
+    is independently supported.
+  accessed_at: '2026-11-03T15:29:48.112406Z'
+  support: supports
+  snapshot_sha256: dbe9993cec6d259daf43efd2ec790e4acfa464a1859e89808e37f833d3d4edda
+- evidence_id: septin-ancestors-0070258
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070258/ancestors?relations=is_a
+  locator: Complete GO ancestors endpoint restricted to relations=is_a
+  summary: GO0043231 is absent from this is_a-only response. The retained broader
+    parent follows compatible definitions and the source organelle description, not
+    an asserted native GO ancestry edge.
+  accessed_at: '2026-11-03T15:29:48.112489Z'
+  support: supports
+  snapshot_sha256: 01446efb43b26f2cb4a6be42d48f68dd0f6f90d00781809220bd5173b9ddb677
+- evidence_id: septin-ancestors-0031039
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031039/ancestors?relations=is_a
+  locator: Complete GO ancestors endpoint restricted to relations=is_a
+  summary: GO0005634 nucleus is_a ancestry is verified, not substituted parthood.
+  accessed_at: '2026-11-03T15:29:48.112542Z'
+  support: supports
+  snapshot_sha256: 73eee77f9c6e73d1323b86dbd2f6b44b0cc17858e94be5661597ccbb19d52c79
+- evidence_id: septin-tax5794
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Exact ENA taxId/scientificName/rank/lineage/synonyms
+  summary: Apicomplexa phylum. Taxonomic identity does not measure prevalence or verify
+    experimental context on its own.
+  accessed_at: '2026-11-03T15:29:48.112584Z'
+  support: supports
+  snapshot_sha256: 71f50f7adf0b7ad8670573c6c6ac0e6df37a9cf467fdec2ab20d612db477bc53
+- evidence_id: septin-tax5833
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Exact ENA taxId/scientificName/rank/lineage/synonyms
+  summary: Plasmodium falciparum species. Taxonomic identity does not measure prevalence
+    or verify experimental context on its own.
+  accessed_at: '2026-11-03T15:29:48.816395Z'
+  support: supports
+  snapshot_sha256: 47c9da135299ea0515b9cbddde80166e0e7256bcf1daac4cdf87f8ae3e0ecd11
+- evidence_id: septin-tax36329
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/36329
+  locator: Exact ENA taxId/scientificName/rank/lineage/synonyms
+  summary: Plasmodium falciparum3D7 isolate; UniProt isolate3D7 rendering is the same
+    taxon. Taxonomic identity does not measure prevalence or verify experimental context
+    on its own.
+  accessed_at: '2026-11-03T15:29:48.825720Z'
+  support: supports
+  snapshot_sha256: 6d1389e6a3af3a09ef4bf23157b95ec8d94dac9b395b8f8ccf0d1952beddc306
+- evidence_id: septin-tax5911
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5911
+  locator: Exact ENA taxId/scientificName/rank/lineage/synonyms
+  summary: Tetrahymena thermophila species; SB210 experimental strain comes from the
+    paper, not this species authority. Taxonomic identity does not measure prevalence
+    or verify experimental context on its own.
+  accessed_at: '2026-11-03T15:29:48.842248Z'
+  support: supports
+  snapshot_sha256: 42cc1d612d8aa31ffc6e484dfb7b846348bea7e26ca272eb4b5f4e7739df4ce6
+- evidence_id: septin-protein-O97228
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O97228.json
+  locator: Exact accession, submission protein name, UNREVIEWED status, ORF-name gene
+    field, taxon and family cross-references
+  summary: O97228 has the matching putative inner membrane complex protein name, ORF-name
+    PF3D7_0304000 and taxon36329. IMC1a mapping is also supplied by Ferreira Table1;
+    the current JSON does not contain an indexed primary geneName for this entry.
+    The record uses a legitimate locus identifier, but authority success is not a
+    localization/necessity assay. Each carries IPR022086, which is separately assessed
+    without automatically equating it with the full alveolin network.
+  accessed_at: '2026-11-03T15:29:48.842319Z'
+  support: supports
+  snapshot_sha256: 5b36f93f0b009ce441643beca2a353ba070889d0c6732efc04bbf71f0e808416
+- evidence_id: septin-protein-Q8IK01
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q8IK01.json
+  locator: Exact accession, submission protein name, UNREVIEWED status, ORF-name gene
+    field, taxon and family cross-references
+  summary: Q8IK01 has the matching putative inner membrane complex protein name, ORF-name
+    PF3D7_1003600 and taxon36329. IMC1c mapping is also supplied by Ferreira Table1;
+    the current JSON does not contain an indexed primary geneName for this entry.
+    The record uses a legitimate locus identifier, but authority success is not a
+    localization/necessity assay. Each carries IPR022086, which is separately assessed
+    without automatically equating it with the full alveolin network.
+  accessed_at: '2026-11-03T15:29:48.846974Z'
+  support: supports
+  snapshot_sha256: 3ce5f4b3770cd98824d53ce883fb768c800a6d5fa919aa3b58101d131a10e2ff
+- evidence_id: septin-protein-Q8I3K7
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q8I3K7.json
+  locator: Exact accession, submission protein name, UNREVIEWED status, ORF-name gene
+    field, taxon and family cross-references
+  summary: Q8I3K7 has the matching putative inner membrane complex protein name, ORF-name
+    PF3D7_0525800 and taxon36329. IMC1g mapping is also supplied by Ferreira Table1;
+    the current JSON does not contain an indexed primary geneName for this entry.
+    The record uses a legitimate locus identifier, but authority success is not a
+    localization/necessity assay. Each carries IPR022086, which is separately assessed
+    without automatically equating it with the full alveolin network.
+  accessed_at: '2026-11-03T15:29:49.443987Z'
+  support: supports
+  snapshot_sha256: 03c283e3907b860777885f0addf3fbadcf28827277fe63e4507f6dbdf82b7766
+- evidence_id: septin-protein-O00934
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O00934.json
+  locator: Exact current accession/status/name/gene/organism/comments and evidence-code
+    fields
+  summary: Reviewed T.gondii Myosin-A/MyoA; function includes by-similarity evidence
+    while cell-membrane/peripheral/cytoplasmic-side annotation cites PMID10749937.
+    This representative motor link is not exact identity of the entire glideosome.
+  accessed_at: '2026-11-03T15:29:49.448220Z'
+  support: supports
+  snapshot_sha256: 95b32ca195be7bfcead066fae9485017d12f952c0b02c1416d61c510622d80a5
+- evidence_id: septin-protein-Q7Z289
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q7Z289.json
+  locator: Exact current accession/status/name/gene/organism/comments and evidence-code
+    fields
+  summary: Unreviewed T.gondii GAP45, exact protein and geneName; no native functional
+    comments. Identity is not independent proof of the full anchoring mechanism.
+  accessed_at: '2026-11-03T15:29:49.521860Z'
+  support: supports
+  snapshot_sha256: 4ecc18c62e24146999ce3544759e6cdd12481856d6149d395c4ce5b88565e1b8
+- evidence_id: septin-protein-A0A125YT84
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/A0A125YT84.json
+  locator: Exact current accession/status/name/gene/organism/comments and evidence-code
+    fields
+  summary: Unreviewed T.gondii ME49 GAP50/TGME49_219320. Automatically assigned acid-phosphatase
+    name/activity is consistent with the reviewed phosphatase-domain context, not
+    proof of every glideosome function or P.falciparum-specific experimental identity.
+  accessed_at: '2026-11-03T15:29:49.523999Z'
+  support: supports
+  snapshot_sha256: 1b57bc2121175bdd8b3eeed2d5b4f9f9fd37c775d7a33155cfbc5a80cc71678a
+- evidence_id: septin-ferreira2021-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.3389/fcimb.2020.611801%22
+  locator: Exact MED bibliography and complete abstractText
+  summary: Complete review abstract and exact authors/title. Native MED collection
+    year2020 differs from electronic publication2021-01-08 explicitly preserved in
+    publisher JATS; Ferreira2021 citation is valid. It is secondary synthesis, not
+    a primary perturbation experiment.
+  accessed_at: '2026-11-03T15:29:49.543265Z'
+  support: supports
+  snapshot_sha256: bda5105e1829aaa10df4006109ad9df70ec2fa6f0a2842d09d9f9a2dc1f325b5
+  search_scope: Europe PMC exact quoted DOI:10.3389/fcimb.2020.611801 query; resultType=core,pageSize25,one
+    MED result,no date restriction; actual fetch 2026-11-03T15:29:49.543265Z. Identifier
+    lookup, not an exhaustive literature search.
+- evidence_id: septin-kono2013-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.2741/4157%22
+  locator: Exact MED bibliography and complete abstractText
+  summary: 'Complete review abstract: alveolar homologs across ciliates/dinoflagellates
+    and apicomplexan IMC functions are distinct contexts. Apicomplexan scope is review-supported,
+    not a quantitative phylum-wide prevalence assay.'
+  accessed_at: '2026-11-03T15:29:50.383602Z'
+  support: supports
+  snapshot_sha256: 4e0223ec5ae77dde98ed652640fbf05f5425f1acb3264a011c1f1ea34f2f2a27
+  search_scope: Europe PMC exact quoted DOI:10.2741/4157 query; resultType=core,pageSize25,one
+    MED result,no date restriction; actual fetch 2026-11-03T15:29:50.383602Z. Identifier
+    lookup, not an exhaustive literature search.
+- evidence_id: septin-kono2012-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1093/molbev/mss081%22
+  locator: Exact MED bibliography and complete abstractText
+  summary: 'Complete primary abstract: evolutionary analysis and selected Plasmodium
+    protein microscopy support spatial/temporal architecture across developmental
+    stages; primary body scope is separately stated.'
+  accessed_at: '2026-11-03T15:29:50.463365Z'
+  support: supports
+  snapshot_sha256: bec2c234b9ab1a6ce301e0fe134c5b11e8d4ce88d9c5d4afc3e4f79e6259c87b
+  search_scope: Europe PMC exact quoted DOI:10.1093/molbev/mss081 query; resultType=core,pageSize25,one
+    MED result,no date restriction; actual fetch 2026-11-03T15:29:50.463365Z. Identifier
+    lookup, not an exhaustive literature search.
+- evidence_id: septin-dearnley2012-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1242/jcs.099002%22
+  locator: Exact MED bibliography and complete abstractText
+  summary: Complete primary abstract supports flattened subpellicular cisternae, supporting
+    microtubules and gametocyte morphological/deformability changes; detailed body/figure/quantitative
+    claims are not newly inspected.
+  accessed_at: '2026-11-03T15:29:51.004261Z'
+  support: supports
+  snapshot_sha256: 94961b0da2b120011650f7f73ae5e49eda2184ec52e471ef9c342a5e0fad046b
+  search_scope: Europe PMC exact quoted DOI:10.1242/jcs.099002 query; resultType=core,pageSize25,one
+    MED result,no date restriction; actual fetch 2026-11-03T15:29:51.004261Z. Identifier
+    lookup, not an exhaustive literature search.
+- evidence_id: septin-eisen2006-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=25&query=DOI%3A%2210.1371/journal.pbio.0040286%22
+  locator: Exact MED bibliography and complete abstractText
+  summary: Exact publication identity/ordered authors and complete primary abstract
+    support the Tetrahymena somatic macronuclear genome and distinct germline role;
+    genome-sequencing scope is not a new developmental mechanism experiment.
+  accessed_at: '2026-11-03T15:29:51.089982Z'
+  support: supports
+  snapshot_sha256: 278924f8c176d219261d3ce6d6c28ab1e1791dc9f09d654e523976e91600133a
+  search_scope: Europe PMC exact quoted DOI:10.1371/journal.pbio.0040286 query; resultType=core,pageSize25,one
+    MED result,no date restriction; actual fetch 2026-11-03T15:29:51.089982Z. Identifier
+    lookup, not an exhaustive literature search.
+- evidence_id: septin-ferreira2021-jats
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7820811.1/PMC7820811.1.xml
+  locator: Fresh genuine JATS entire scientific main text s1–s5 including s4_1–s4_5,
+    Table1 and embedded Figure1 caption; no figure pixels or underlying primary-data
+    reanalysis
+  summary: Secondary review distinguishes Plasmodium/Toxoplasma and stage-specific
+    assembly/disassembly, shape and motility functions. Table1 maps IMC1a/PF3D7_0304000,IMC1c/PF3D7_1003600,IMC1g/PF3D7_0525800
+    and labels their alveolin repeat; reference superscripts retain P.berghei/P.yoelii
+    context and gray unverified P.falciparum homolog scope. The glideosome inventory/mechanism
+    is incomplete; GAP50 has a phosphatase-domain annotation. Current record does
+    not assert all stages glide or one exact all-lineage architecture.
+  accessed_at: '2026-11-03T15:29:51.387526Z'
+  support: supports
+  snapshot_sha256: 5d77075b815fea8187aacdc79c357525eeb6a0aa21419cc08d9f9d74da3674e9
+- evidence_id: septin-kono2012-minimal
+  kind: primary_source
+  reference: https://oup.silverchair-cdn.com/article-minimal/1075017
+  locator: 'Fresh publisher minimal body: complete Abstract/Introduction/Methods;
+    Results from Differential Spatial Distribution through end, including Figures3–8
+    captions; complete Discussion. Earlier phylogenetic Results/Figures1–2, pixels
+    and supplements not comprehensively inspected'
+  summary: P.falciparum3D7 blood/sexual microscopy and P.bergheiANKA ookinete/sporozoite
+    comparisons are separate. Alveolins PF10_0039/PFE1285w show distinct temporal/spatial
+    IMC patterns; mature peripheral overlap does not resolve every membrane. Reporter
+    ama1-promoter context, endogenous controls and weak gametocyte fluorescence limitations
+    remain explicit. IMC scaffolding/shape and protein membership are supported without
+    asserting each protein is required for organelle formation or every family member
+    shares a mechanism.
+  accessed_at: '2026-11-03T15:29:51.415741Z'
+  support: supports
+  snapshot_sha256: 5f27432e6f2781d60f45d48489dcc3323ef1b6b75fcc67441f832ab81c0ba5b6
+- evidence_id: septin-eisen2006-jats
+  kind: primary_source
+  reference: https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040286&type=manuscript
+  locator: Fresh publisher JATS complete Introduction s1; sequencing/assembly s2a1;
+    assembly accuracy/completeness s2a2; copy-number analysis s2a5; cell-growth/DNA-isolation/library
+    methods s3a, with embedded Figure1–4 captions; no pixels, separate tables/supplements
+    or raw reads
+  summary: SB210 macronuclei were purified by differential sedimentation and used
+    for shotgun libraries. Low MIC and mitochondrial contamination is acknowledged,
+    so purified does not imply absolute purity. Somatic MAC expression and MIC-derived
+    fragmented/telomere-capped/amplified chromosomes are supported at source scope.
+    Developmental rearrangement background is not a new perturbation assay. Absence
+    from the assembly is not gene absence; uniform bulk copy-number estimates do not
+    prove every small chromosome is identical.
+  accessed_at: '2026-11-03T15:29:51.622158Z'
+  support: supports
+  snapshot_sha256: 024925187b37feef920b76eb39d59dd09190d33d393b65cb9c5e0f6e9ecfc55b
+- evidence_id: septin-ipr-alveolin-search
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=alveolin&page_size=200
+  locator: Complete exact InterPro name-search response HTTP204/empty
+  summary: A bounded alveolin-name query returned no entries; that does not establish
+    missing family representation. Exact current protein xrefs independently identify
+    IPR022086, inspected separately.
+  accessed_at: '2026-11-03T15:29:51.963859Z'
+  support: supports
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: InterPro entry/interpro/?search=alveolin&page_size=200; one complete
+    response, no date filter; actual fetch 2026-11-03T15:29:51.963859Z. Only this
+    spelling/name query, not all synonyms or family entries.
+- evidence_id: septin-alveolin-proteins
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=protein_name%3Aalveolin%20AND%20taxonomy_id%3A5833&format=json&size=100
+  locator: Complete exact UniProt protein-name query JSON results[]
+  summary: The literal alveolin protein-name query is empty, while the three known
+    IMC protein accessions resolve. This is a naming/index distinction, not protein
+    absence.
+  accessed_at: '2026-11-03T15:29:51.976656Z'
+  support: supports
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: UniProt protein_name:alveolin AND taxonomy_id:5833; format=json,size100,no
+    date filter; complete result list at 2026-11-03T15:29:51.976656Z. No broader unqueried
+    absence claim.
+- evidence_id: septin-IPR022086
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022086/
+  locator: Exact accession/type/name/member signature and non-LLM native description
+    only
+  summary: IPR022086 is named Inner membrane complex protein, type family, with PF12314.
+    Its native non-LLM description mixes ~120-aa domain language, bacteria/eukaryote
+    distribution and parasitic IMC structure. Shared xrefs of three unreviewed examples
+    establish a real candidate but do not certify exact coverage of the full alveolin
+    network. Retain bounded uncertainty in the existing open grounding TODO; no exact
+    replacement is invented.
+  accessed_at: '2026-11-03T15:31:07.699102Z'
+  support: supports
+  snapshot_sha256: bfb61bd02879c8719211a1a8df45c386345baf52f62bbac3e58c70a64c438a8c
+- evidence_id: septin-SL-0144
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0144.json
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/SL-0144.json;
+    Exact location entry, direct GO mapping, names/synonyms and relation-bearing parents
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:37.959470Z and
+    reapplied to the current lumen claims; no new fetch claimed. Complete hydrogenosome
+    membrane GO0046859, hydrogenosomal membrane synonym and organelle parthood. Nested
+    mappings do not become exact xrefs of the queried structure.
+  accessed_at: '2026-11-03T14:51:37.959470Z'
+  support: supports
+  snapshot_sha256: fccca371507283bd774e05a93feda2a3bc58eee39bb06c0b458c57786a80456a
+- evidence_id: septin-SL-0335
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0335.json
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/SL-0335.json;
+    Exact location entry, direct GO mapping, names/synonyms and relation-bearing parents
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:37.962327Z and
+    reapplied to the current lumen claims; no new fetch claimed. Hydrogenosome matrix
+    GO0034492, lumen synonym and parthood. Nested mappings do not become exact xrefs
+    of the queried structure.
+  accessed_at: '2026-11-03T14:51:37.962327Z'
+  support: supports
+  snapshot_sha256: 96793a2ae46ab05de07492a336d115179a5cf644697d96c5e5d3c4f4daf25c7d
+- evidence_id: septin-tax2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tax2759.json;
+    Exact ENA taxonomy entry/rank/lineage/synonyms
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:38.518415Z and
+    reapplied to the current lumen claims; no new fetch claimed. Domain Eukaryota;
+    broad RARE occurrence means patchy qualitative distribution, not an experimentally
+    measured frequency.
+  accessed_at: '2026-11-03T14:51:38.518415Z'
+  support: supports
+  snapshot_sha256: 61a68c76c70762c97e0b218568ab037d9a30c0207847247e9e055b5764a61634
+- evidence_id: septin-tax5722
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5722
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tax5722.json;
+    Exact ENA taxonomy entry/rank/lineage/synonyms
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:39.097242Z and
+    reapplied to the current lumen claims; no new fetch claimed. Species Trichomonas
+    vaginalis, with historical Tritrichomonas vaginalis synonym. This is distinct
+    from Tritrichomonas foetus used in the original Lindmark study.
+  accessed_at: '2026-11-03T14:51:39.097242Z'
+  support: supports
+  snapshot_sha256: 187c33fcc8a5be0659d37aa99eb3c11f74b2e42cab385cd8ff38b2ba0175e47f
+- evidence_id: septin-tachezy2022-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/jeu.12922&pageSize=25
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/tachezy2022-meta.json;
+    Exact native bibliographic identity and complete abstractText
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:39.165701Z and
+    reapplied to the current lumen claims; no new fetch claimed. Exact current title
+    is The hydrogenosome of Trichomonas vaginalis, by Tachezy, Makki and Hrdý, year2022.
+    Complete secondary-review abstract supports organelle background, not a new primary
+    experiment. Both assigned hydrogenosomal records carry the wrong title.
+  accessed_at: '2026-11-03T14:51:39.165701Z'
+  support: supports
+  snapshot_sha256: f5df47ab6345453693117f507582cd8e121784da785f1bd57dcd69cdea829ba3
+  search_scope: Europe PMC exact 10.1111/jeu.12922 identifier query; format=json,resultType=core,pageSize25,one
+    returned MED article,no date restriction; actual fetch 2026-11-03T14:51:39.165701Z.
+    This is not an exhaustive literature search.
+- evidence_id: septin-schneider2011-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.ijpara.2011.10.001&pageSize=25
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/schneider2011-meta.json;
+    Exact native bibliographic identity and complete abstractText
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:39.279395Z and
+    reapplied to the current lumen claims; no new fetch claimed. Complete primary
+    abstract and exact publication identity/PMID22079833. Year2011 is publication
+    metadata; a later repository manuscript-release date is not a different experiment.
+  accessed_at: '2026-11-03T14:51:39.279395Z'
+  support: supports
+  snapshot_sha256: f4fda6bc22338b0fd07a9b81ebc99336b62eab19c18354b378368786a30905bb
+  search_scope: Europe PMC exact 10.1016/j.ijpara.2011.10.001 identifier query; format=json,resultType=core,pageSize25,one
+    returned MED article,no date restriction; actual fetch 2026-11-03T14:51:39.279395Z.
+    This is not an exhaustive literature search.
+- evidence_id: septin-sutak2004-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0401319101&pageSize=25
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/sutak2004-meta.json;
+    Exact native bibliographic identity and complete abstractText
+  summary: 'Reused prior public-source retrieval at 2026-11-03T14:51:39.849209Z and
+    reapplied to the current lumen claims; no new fetch claimed. Complete primary
+    abstract: TvIscS-2 localizes to hydrogenosomes and hydrogenosomal extracts support
+    FeS reconstitution of apoferredoxin; this does not independently localize every
+    ISC member.'
+  accessed_at: '2026-11-03T14:51:39.849209Z'
+  support: supports
+  snapshot_sha256: 084690cec8acd56239378a6ba2e8ebb31ff08a03d8c00ef5f70d52d1040a874d
+  search_scope: Europe PMC exact 10.1073/pnas.0401319101 identifier query; format=json,resultType=core,pageSize25,one
+    returned MED article,no date restriction; actual fetch 2026-11-03T14:51:39.849209Z.
+    This is not an exhaustive literature search.
+- evidence_id: septin-lindmark1973-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A4750424%20AND%20SRC%3AMED&pageSize=25
+  locator: Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/lindmark1973-meta.json;
+    Exact native bibliographic identity and metadata only, no abstractText
+  summary: Reused prior public-source retrieval at 2026-11-03T14:51:40.152045Z and
+    reapplied to the current lumen claims; no new fetch claimed. Exact title, authors,
+    year1973, PMID4750424 and DOI10.1016/s0021-9258(19)43249-3 verified. The native
+    record has no abstract; current access is bibliography only. Detailed original
+    Tritrichomonas foetus experiments are not freshly certified.
+  accessed_at: '2026-11-03T14:51:40.152045Z'
+  support: supports
+  snapshot_sha256: 54299eb5e6aac224dab7a77f15f64ebd0993ca373a700d8070620e5b493b4227
+  search_scope: Europe PMC exact PMID4750424 identifier query; format=json,resultType=core,pageSize25,one
+    returned MED article,no date restriction; actual fetch 2026-11-03T14:51:40.152045Z.
+    This is not an exhaustive literature search.
+- evidence_id: septin-schneider2011-bioc
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC4437511/unicode
+  locator: 'Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/schneider2011-bioc.xml;
+    NCBI BioC primary body: complete Introduction and Methods2.1–2.7; Results/Discussion3.1,3.5,3.7,3.8,3.9,3.10;
+    no figure pixels, separate supplements or raw spectra'
+  summary: Reused prior public-source retrieval at 2026-11-03T14:53:16.413225Z and
+    reapplied to the current lumen claims; no new fetch claimed. T.vaginalis T1 hydrogenosome
+    fractionation and mass spectrometry support energy enzymes and ISC proteins, including
+    IscU. The proteome has external associations, potential contaminants and family-level
+    indistinguishable peptides; fraction detection does not independently prove every
+    subcompartment location. Section3.8 explicitly preserves targeting without an
+    N-terminal presequence and stringent motif prediction as an alternative to true
+    signal absence. Translocase candidates/models are not all functionally demonstrated;
+    nondetection is not absence.
+  accessed_at: '2026-11-03T14:53:16.413225Z'
+  support: supports
+  snapshot_sha256: 146aa456a4fbaef150a91822d6a006cd33815d8e6eb515f648f2fd597f345ed6
+- evidence_id: septin-sutak2004-maintext
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC478578/
+  locator: 'Reused verified public snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/primary-web-reader-receipt.json;
+    Retained web-reader primary main text: abstract/introduction; Methods lines131–144;
+    Results145–200; Discussion201–209; Fig1–7 caption text, not pixels'
+  summary: Reused prior public-source retrieval at 2026-11-03T14:54:07Z and reapplied
+    to the current lumen claims; no new fetch claimed. Fresh rendered primary text
+    retained in /private/tmp/cellstructure-batches-2346-2397-20261103/pr2367/adversary-septin/primary-web-reader-receipt.json.
+    C-1:NIH30001 T.vaginalis cells, iron-rich/restricted culture, fractionation and
+    immunolocalization directly examine TvIscS-2. FeS reconstitution uses hydrogenosomal
+    lysate and apoferredoxin with cysteine/iron and controls. IscU appears in yeast/bacterial
+    model/interaction discussion, not a T.vaginalis IscU localization experiment.
+    No IscU biological absence inference follows.
+  accessed_at: '2026-11-03T14:54:07Z'
+  support: supports
+  snapshot_sha256: 38d3ee0b7ecdbf6ed2c852179f3cebdacba8b8b9f56dddd037b69430760cac09
+- evidence_id: septin-context-hydrogenosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosome.yaml
+  locator: Frozen identity/definition/parent/parthood boundary context only
+  summary: Whole organelle and membrane remain distinct from the assigned lumen. Neighbor
+    findings/issues are not inherited into this target or resolved by this context
+    read.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 6d295ad6b0bb5066ddec461e6c2ffa142de9d8590d705eff6a3648bc6c01e77a
+- evidence_id: septin-context-hydrogenosomal_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+  locator: Frozen identity/definition/parent/parthood boundary context only
+  summary: Whole organelle and membrane remain distinct from the assigned lumen. Neighbor
+    findings/issues are not inherited into this target or resolved by this context
+    read.
+  accessed_at: '2026-11-03T15:34:37.713173Z'
+  support: supports
+  snapshot_sha256: 7e389b3e00ef30e931b8415dcc2daf38b5022ba6849696387af283a6f9f7ab56
+- evidence_id: septin-catalogue
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete current official iModulonDB catalogue; all organism names/ids
+    and dataset-key fields inspected
+  summary: No matching Trichomonas, Plasmodium/Toxoplasma or Tetrahymena dataset host
+    occurs in this response. Complete record assertions trigger applicability despite
+    empty inventories in two records. No unrelated bacterial or heterologous expression-host
+    downstream query is justified; noncoverage is not biological absence.
+  accessed_at: '2026-11-03T15:29:51.800001Z'
+  support: supports
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  search_scope: Official GET https://imodulondb.org/api/datasets at 2026-11-03T15:29:51.800001Z;
+    complete response,20organism rows,no date filter/pagination truncation; scan organism
+    id/name/dataset keys for Trichomonas/vaginalis/Tritrichomonas,Plasmodium/falciparum/berghei/3D7,Toxoplasma/gondii,Tetrahymena/thermophila
+    and eukaryotic contexts. No inferred absence beyond this catalogue.
+- evidence_id: septin-adapter-runner-historical
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Actual historical00:49Z failed invocation; no current rerun
+  summary: Attempt2026-11-03T00:49:00.848907Z–00:49:00.863225Z exited1 with PermissionError
+    reading pyvenv.cfg. Runner unavailable; current official catalogue fallback is
+    separately recorded. No successful or fresh runner execution is claimed.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: supports
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: check-qc
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/qc.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T15:34:44.204225Z'
+  support: supports
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  snapshot_sha256: bfbf8ed88296ebf63d7fb14ff63617d72270f9ab53e73bd669aab21ca0eb0b74
+- evidence_id: check-labels
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/labels.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T15:30:33.162152Z'
+  support: supports
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  snapshot_sha256: 6cdfb05df9a27194f05a5fd7f851783f817ac1523ca0bbfa54fe0e0d18775905
+- evidence_id: check-trait-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/trait-links.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T15:30:08.452181Z'
+  support: supports
+  summary: Native TraitMech link check passed.
+  snapshot_sha256: 8b336cdefbbd3daf6da8787990efdbe346c95e2c8361d50b7eb68a18f2d5a44a
+- evidence_id: check-vendored
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/vendored.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T15:30:05.470504Z'
+  support: supports
+  summary: Pinned governed files match; native vendored check passed.
+  snapshot_sha256: b1f169d103aaefa930745468bcca171e5867b9cc49e4e74311e458097e3252a6
+- evidence_id: check-curies
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/curies.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T15:29:43.901584Z'
+  support: supports
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  snapshot_sha256: bc12b1285f5747707643f7a98e03dbb3a6c88fb062ad49f99db9cb42ececf3d2
+- evidence_id: focused
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/focused-results.json
+  locator: All twenty actual target schema/strict command outputs
+  accessed_at: '2026-11-03T15:42:37Z'
+  support: supports
+  summary: Ten schema and ten strict commands returned exit zero.
+  snapshot_sha256: 290a278c4e132cc151e44aeddb202fab64b9b79d7be3d6522e09b8f4b39fa90e
+- evidence_id: supplemental-pmid
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2368/pmid-chunks-receipt.json
+  locator: Complete native-report PMID set checked with unchanged resolver in batches
+    of at most fifty
+  accessed_at: '2026-11-03T15:31:36.296247Z'
+  support: supports
+  summary: 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers
+    remain unverified.
+  snapshot_sha256: dd8c1be4d3dea8b9b16647029024ddd56c42200112cdbbf8127b9648f5e30363
+- evidence_id: historical-adapter-runner-availability
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical runner invocation receipt, exact SHA256 reverified during PR2368
+    synthesis
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS
+    PermissionError reading the configured runner pyvenv.cfg. This is a retained historical
+    availability observation, not a fresh attempt or a scientific validation failure.
+    Native policy permits inspected source-catalogue fallback.
+assessments:
+- assessment_id: plaque-t2-native
+  area: schema
+  topic: Represented proteins and graph actor command coverage
+  outcome: supported
+  summary: Actual maintained inventory has 2 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Reviewed HSP78/P33416 and SSC1/P0CS90 are559292 reference examples; deletion
+    conditions are STATE nodes. Both commands pass in this exact scope; independent
+    source assessment supplies narrative support.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-native-intramitochondrial_protein_quality_control_compartment-verify
+  - plaque-native-intramitochondrial_protein_quality_control_compartment-causal
+  - plaque-protein-contract
+- assessment_id: plaque-t2-provenance
+  area: provenance
+  topic: Immutable original inputs and verdict lineage
+  outcome: supported
+  summary: Original qualified pass contains no findings/actions; native validation/render
+    and all 16 historical hashes pass. Current target unchanged; no new or inherited
+    scientific finding established. Historical record/neighbor resolutions are not
+    re-certified.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-original-2
+  - plaque-original-checks
+- assessment_id: plaque-t2-adapter
+  area: scope
+  topic: Actual molecular/pathway applicability
+  outcome: supported
+  summary: Current HSP78/SSC1 reference proteins, deletion interventions and heat/oxidative
+    stress protein-quality-control pathway triggers required assessment. Original
+    explicit expression-only exclusion is unsupported, not an omitted check. Fresh
+    full catalogue lacks yeast hosts, so no matched gene/module query applies. Historical
+    runner failure stays separately dated; no unmatched proxy or negative biology
+    inferred.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-original-2
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-historical-runner
+- assessment_id: plaque-t2-coverage
+  area: completeness
+  topic: All maintained fields and optional content
+  outcome: supported
+  summary: Entire record, source placements, discussions and histories inspected;
+    PROPOSED remains unchanged. Optional exact chemistry, quantitative properties
+    or accession inventories are not fabricated completeness requirements. Two externally
+    linked figures were actually inspected; no tracked local image exists in this
+    target.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-rubric
+- assessment_id: plaque-t3-native
+  area: schema
+  topic: Represented proteins and graph actor command coverage
+  outcome: supported
+  summary: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. Both commands
+    pass in this exact scope; independent source assessment supplies narrative support.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-native-late_endosome-verify
+  - plaque-native-late_endosome-causal
+  - plaque-protein-contract
+- assessment_id: plaque-t3-provenance
+  area: provenance
+  topic: Immutable original inputs and verdict lineage
+  outcome: supported
+  summary: Original qualified pass contains no findings/actions; native validation/render
+    and all 18 historical hashes pass. Current target unchanged; no new or inherited
+    scientific finding established. Historical record/neighbor resolutions are not
+    re-certified.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-original-3
+  - plaque-original-checks
+- assessment_id: plaque-t3-adapter
+  area: scope
+  topic: Actual molecular/pathway applicability
+  outcome: supported
+  summary: Current ESCRT-I/II/III-dependent ubiquitinated membrane cargo sorting and
+    vacuolar delivery triggers required assessment. Original explicit expression-only
+    exclusion is unsupported, not an omitted check. Fresh full catalogue lacks yeast
+    hosts, so no matched gene/module query applies. Historical runner failure stays
+    separately dated; no unmatched proxy or negative biology inferred.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-original-3
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-historical-runner
+- assessment_id: plaque-t3-coverage
+  area: completeness
+  topic: All maintained fields and optional content
+  outcome: supported
+  summary: Entire record, source placements, discussions and histories inspected;
+    PROPOSED remains unchanged. Optional exact chemistry, quantitative properties
+    or accession inventories are not fabricated completeness requirements. No images,
+    datasets or measured physical-property assertions occur in this target.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-rubric
+- assessment_id: plaque-t4-native
+  area: schema
+  topic: Represented proteins and graph actor command coverage
+  outcome: supported
+  summary: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. Both commands
+    pass in this exact scope; independent source assessment supplies narrative support.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-native-late_endosome_lumen-verify
+  - plaque-native-late_endosome_lumen-causal
+  - plaque-protein-contract
+- assessment_id: plaque-t4-provenance
+  area: provenance
+  topic: Immutable original inputs and verdict lineage
+  outcome: supported
+  summary: Original qualified pass contains no findings/actions; native validation/render
+    and all 17 historical hashes pass. Current target unchanged; no new or inherited
+    scientific finding established. Historical record/neighbor resolutions are not
+    re-certified.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-original-4
+  - plaque-original-checks
+- assessment_id: plaque-t4-adapter
+  area: scope
+  topic: Actual molecular/pathway applicability
+  outcome: supported
+  summary: Current explicit ESCRT-dependent MVB sorting/cargo delivery function despite
+    a component-free lumen representation triggers required assessment. Original explicit
+    expression-only exclusion is unsupported, not an omitted check. Fresh full catalogue
+    lacks yeast hosts, so no matched gene/module query applies. Historical runner
+    failure stays separately dated; no unmatched proxy or negative biology inferred.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-original-4
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-historical-runner
+- assessment_id: plaque-t4-coverage
+  area: completeness
+  topic: All maintained fields and optional content
+  outcome: supported
+  summary: Entire record, source placements, discussions and histories inspected;
+    PROPOSED remains unchanged. Optional exact chemistry, quantitative properties
+    or accession inventories are not fabricated completeness requirements. No images,
+    datasets or measured physical-property assertions occur in this target.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-rubric
+- assessment_id: plaque-t5-native
+  area: schema
+  topic: Represented proteins and graph actor command coverage
+  outcome: supported
+  summary: Actual maintained inventory has 0 protein_examples and 0 typed GENE_OR_PROTEIN
+    nodes. Empty accession/typed-node coverage is not pathway verification. Both commands
+    pass in this exact scope; independent source assessment supplies narrative support.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-native-late_endosome_membrane-verify
+  - plaque-native-late_endosome_membrane-causal
+  - plaque-protein-contract
+- assessment_id: plaque-t5-provenance
+  area: provenance
+  topic: Immutable original inputs and verdict lineage
+  outcome: supported
+  summary: Original qualified pass contains no findings/actions; native validation/render
+    and all 17 historical hashes pass. Current target unchanged; no new or inherited
+    scientific finding established. Historical record/neighbor resolutions are not
+    re-certified.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-original-5
+  - plaque-original-checks
+- assessment_id: plaque-t5-adapter
+  area: scope
+  topic: Actual molecular/pathway applicability
+  outcome: supported
+  summary: Current Vps27/ESCRT-I recruitment and the MVB sorting pathway on the endosomal
+    membrane triggers required assessment. Original explicit expression-only exclusion
+    is unsupported, not an omitted check. Fresh full catalogue lacks yeast hosts,
+    so no matched gene/module query applies. Historical runner failure stays separately
+    dated; no unmatched proxy or negative biology inferred.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-original-5
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-historical-runner
+- assessment_id: plaque-t5-coverage
+  area: completeness
+  topic: All maintained fields and optional content
+  outcome: supported
+  summary: Entire record, source placements, discussions and histories inspected;
+    PROPOSED remains unchanged. Optional exact chemistry, quantitative properties
+    or accession inventories are not fabricated completeness requirements. No images,
+    datasets or measured physical-property assertions occur in this target.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-rubric
+- assessment_id: plaque-t2-identity
+  area: identity
+  topic: Membrane-enclosed compartment versus aggregate cargo
+  outcome: supported
+  summary: Minted IMiQ record denotes the membrane-enclosed reporter deposit compartment,
+    not one protein or the aggregate alone. Broader0043231 is parent;0016234 is not
+    adopted as exact identity. Separation from network makes invariant intact-mitochondrion
+    parthood inappropriate.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-go
+  - plaque-bruderek2018-jats
+  - plaque-ruland-web410-canonical
+- assessment_id: plaque-t2-taxonomy
+  area: scope
+  topic: Experimental yeast versus reference strain
+  outcome: supported
+  summary: 4932 species scope and559292 accession context are distinct. Reporter experiments,
+    mutant backgrounds and sampled conditions do not establish natural prevalence
+    or species-wide invariant behavior.2018 respiratory-deficient fzo1 limitation
+    is kept distinct from the later preparation.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-tax4932
+  - plaque-tax559292
+  - plaque-P33416
+  - plaque-P0CS90
+  - plaque-bruderek2018-jats
+  - plaque-ruland-web410-canonical
+- assessment_id: plaque-t2-composition
+  area: grounding
+  topic: Variable cargo and associated chaperones
+  outcome: supported
+  summary: Heterogeneous misfolded cargo is constitutive material; reporter constructs
+    are experimental cargo. Hsp78 and Hsp70 are associated machinery with UNKNOWN
+    necessity, not a fixed structural shell. SSC1 family013126 is exact at broad label
+    scope; Hsp78-only family deliberately remains label-only because observed matches
+    are broader.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-P33416
+  - plaque-P0CS90
+  - plaque-ipr-P33416
+  - plaque-ipr-P0CS90
+  - plaque-IPR001270
+  - plaque-IPR050130
+  - plaque-IPR013126
+  - plaque-bruderek2018-jats
+  - plaque-ruland-web568
+- assessment_id: plaque-t2-graph
+  area: graph
+  topic: Seven intervention/localization edges
+  outcome: supported
+  summary: 'All seven edges supported within2018 reporter conditions: induction, frequent
+    perinuclear position, network separation, Hsp78-dependent coalescence/position,
+    Fzo1-dependent coalescence, Fis1-dependent separation and benomyl-sensitive position.
+    Deletions remain STATE interventions; no direct tether, mandatory order or protein-binding
+    mechanism asserted. Figure7A/C/D correctly anchors Hsp78 effects.'
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-bruderek2018-jats
+  - plaque-graph-rubric
+- assessment_id: plaque-t2-functions
+  area: evidence
+  topic: Short-term preservation and longer-term costs
+  outcome: supported
+  summary: Initial import/growth preservation is distinct from prolonged oxidative-stress
+    susceptibility and cytochrome-b translation effects. Mother-biased retention is
+    restricted to the reported induction/shutoff budding protocol, including7% versus98%
+    daughter reporter observations. No universally inert or permanently protective
+    deposit is inferred.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-bruderek2018-jats
+- assessment_id: plaque-t2-later-body
+  area: evidence
+  topic: Current access improves earlier stated limitation
+  outcome: supported
+  summary: The later paper body is now inspected; variable chaperone recruitment agrees.
+    Original2025 access limitation was truthful historically and remains immutable.
+    No target change or stale-input refresh claimed.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-original-2
+  - plaque-ruland-web480
+  - plaque-ruland-web568
+  - plaque-ruland-web640
+- assessment_id: plaque-t2-dump
+  area: consistency
+  topic: DUMP conflict remains explicitly unresolved
+  outcome: supported
+  summary: 2020 discussion and later tentative similarity statement do not justify
+    synonym merger. Current record preserves uncertainty and avoids transferring CDP-DAG
+    mechanisms, human experiments or unconditional phenotype between deposits.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-dump2020-meta
+  - plaque-dump2020-jats
+  - plaque-ruland-web410-canonical
+- assessment_id: plaque-t2-dataset
+  area: provenance
+  topic: Exact deposition and metadata scope
+  outcome: supported
+  summary: PXD059828 identity, yeast4932, SILAC/LCMS and Fusion Lumos metadata match
+    the cited study. Dataset CC0 is separate from article/image licence. No raw protein-enrichment
+    or essentiality reanalysis performed.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-pride
+  - plaque-ruland-web640
+- assessment_id: plaque-t2-images
+  area: evidence
+  topic: Both externally linked figures visually inspected
+  outcome: supported
+  summary: Actual2018 Figure1 pixels,10um caption and matching native MD5 support
+    mixed reporter/blot/fluorescence description and NC-SA3.0 attribution. Actual2025
+    Figure1 pixels/caption match mixed microscopy/TEM,2um and author-coloured outlines.
+    Publisher User Licence1.2 remains OTHER and link-only. No image-derived organelle
+    diameter or membrane proof from fluorescence alone.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-bruderek2018-jats
+  - plaque-bruderek2018-fig1
+  - plaque-ruland2025-fig1
+  - plaque-ruland-web410-canonical
+  - plaque-ruland-crossref
+  - plaque-biologists-license
+- assessment_id: plaque-t2-limits
+  area: evidence
+  topic: Remaining experimental/access limits
+  outcome: unknown
+  summary: No raw proteomics, supplementary-data analysis, broader-natural-prevalence
+    experiment, direct tether identification or complete temporal mechanism.2018 supplementary
+    PDF was downloaded but not used as inspected evidence; native accession context
+    is not experimental strain proof.
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  evidence_ids:
+  - plaque-current-2
+  - plaque-bruderek2018-jats
+  - plaque-ruland-web640
+  - plaque-pride
+- assessment_id: plaque-t3-taxonomy
+  area: scope
+  topic: Budding-yeast MVB example is bounded
+  outcome: supported
+  summary: 4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular
+    subtype/pathway and do not assert all late endosomes have identical morphology/cargo
+    or experimentally quantify COMMON prevalence. No S288C strain substitution or
+    mammalian universalization.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-tax4932
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+- assessment_id: plaque-t3-limits
+  area: evidence
+  topic: Exact source tiers and mechanism limits
+  outcome: unknown
+  summary: Katzmann2001 and Babst2002 evidence is complete primary abstract, while
+    Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome
+    sections and Katzmann2003 Results/Discussion/Methods were read; no source figure
+    pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do
+    not certify universal timing, exclusive mechanism, isolated-factor sufficiency
+    or exact lipid necessity.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-henne2011-meta
+  - plaque-teo2004-pdf
+  - plaque-katzmann2003-jats
+- assessment_id: plaque-t4-taxonomy
+  area: scope
+  topic: Budding-yeast MVB example is bounded
+  outcome: supported
+  summary: 4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular
+    subtype/pathway and do not assert all late endosomes have identical morphology/cargo
+    or experimentally quantify COMMON prevalence. No S288C strain substitution or
+    mammalian universalization.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-tax4932
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+- assessment_id: plaque-t4-limits
+  area: evidence
+  topic: Exact source tiers and mechanism limits
+  outcome: unknown
+  summary: Katzmann2001 and Babst2002 evidence is complete primary abstract, while
+    Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome
+    sections and Katzmann2003 Results/Discussion/Methods were read; no source figure
+    pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do
+    not certify universal timing, exclusive mechanism, isolated-factor sufficiency
+    or exact lipid necessity.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-henne2011-meta
+  - plaque-teo2004-pdf
+  - plaque-katzmann2003-jats
+- assessment_id: plaque-t5-taxonomy
+  area: scope
+  topic: Budding-yeast MVB example is bounded
+  outcome: supported
+  summary: 4932 denotes budding yeast. MVB-related examples are scoped to the multivesicular
+    subtype/pathway and do not assert all late endosomes have identical morphology/cargo
+    or experimentally quantify COMMON prevalence. No S288C strain substitution or
+    mammalian universalization.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-tax4932
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-katzmann2003-jats
+- assessment_id: plaque-t5-limits
+  area: evidence
+  topic: Exact source tiers and mechanism limits
+  outcome: unknown
+  summary: Katzmann2001 and Babst2002 evidence is complete primary abstract, while
+    Henne2011 is secondary abstract context. Teo primary PDF selected binding/liposome
+    sections and Katzmann2003 Results/Discussion/Methods were read; no source figure
+    pixels or raw data. Broad pathway participation and NONMECHANISTIC topology do
+    not certify universal timing, exclusive mechanism, isolated-factor sufficiency
+    or exact lipid necessity.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-henne2011-meta
+  - plaque-teo2004-pdf
+  - plaque-katzmann2003-jats
+- assessment_id: plaque-t3-identity
+  area: identity
+  topic: Whole late endosome with MVB subtype
+  outcome: supported
+  summary: GO0005770 exact identity/definition and endosome parent agree. MVB0005771
+    is a subtype, not a synonym for every late endosome; local ILV is a separate contained
+    vesicle. Generic juxtanuclear/lower-pH definition is ontology scope, not measured
+    yeast localization kinetics.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-go
+  - plaque-context-mvb
+  - plaque-context-ilv
+- assessment_id: plaque-t3-composition
+  area: grounding
+  topic: Limiting-membrane aggregate material
+  outcome: supported
+  summary: Reviewed-label-only LIPID row denotes collective boundary bilayer and its
+    ESSENTIAL status at that level. Membrane node component_ref denotes boundary material,
+    not whole organelle; no broad organelle GO is used as chemical identity. Transient
+    ESCRTs remain assembly actors.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-go
+  - plaque-schema-policy
+- assessment_id: plaque-t3-graph
+  area: graph
+  topic: Six bounded assembly/topology edges
+  outcome: supported
+  summary: Boundary-bounds-lumen and inward budding/ILV containment agree with GO.
+    ESCRT-I cargo sorting has primary abstract support; ESCRT-II recruitment is supported
+    by direct Vps25–Vps20 binding and conditional liposome experiments; ESCRT-III
+    remodeling is broad functional/authority scope. NONMECHANISTIC graph does not
+    claim complete cargo handoff, Vps4 recycling or fusion sequence.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-go
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-teo2004-pdf
+  - plaque-henne2011-meta
+  - plaque-context-ilv
+  - plaque-graph-rubric
+- assessment_id: plaque-t3-functions
+  area: evidence
+  topic: MVB sorting and vacuolar degradation
+  outcome: supported
+  summary: GO0071985 and cited sources support ubiquitinated membrane cargo sorting
+    into internal vesicles followed by vacuolar/lysosomal delivery. The record does
+    not claim every cargo remains ubiquitinated within a completed vesicle or every
+    late endosome uses only this route.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-go
+  - plaque-katzmann2001-meta
+  - plaque-henne2011-meta
+- assessment_id: plaque-t3-discussion
+  area: consistency
+  topic: Historical optional exact-grounding TODO
+  outcome: supported
+  summary: The note that this pass did not curate exact substructure grounding is
+    bounded historical narration, not a current assertion that GO lacks lumen/membrane
+    terms. Optional refinements are not manufactured major defects or terminal dispositions.
+  target_ids:
+  - GO:0005770
+  evidence_ids:
+  - plaque-current-3
+  - plaque-go
+  - plaque-rubric
+- assessment_id: plaque-t4-identity
+  area: identity
+  topic: Lumen distinct from membrane and whole organelle
+  outcome: supported
+  summary: GO0031906 and SL0336 exact label/synonym agree; parent0031904 and part_of0005770
+    are typed authority relations. SUBCELLULAR_REGION correctly denotes internal volume.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-go
+  - plaque-SL-0336
+- assessment_id: plaque-t4-composition
+  area: grounding
+  topic: No invented stable lumen constituents
+  outcome: supported
+  summary: Sparse lumen inventory is appropriate; limiting membrane and ESCRT sorting
+    factors are not asserted as stable lumen material. Reviewed boundary discussion
+    remains consistent with current content; no external issue closure inferred.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-go
+  - plaque-schema-policy
+  - plaque-context-ilv
+- assessment_id: plaque-t4-function
+  area: evidence
+  topic: Positive MVB lumen cargo-delivery scope
+  outcome: supported
+  summary: Functions describe the MVB sorting subtype and membrane cargo on intraluminal
+    vesicles, not soluble lumenal free ubiquitin or universal late-endosome composition.
+    This positive pathway claim independently triggers adapter applicability despite
+    the empty inventory.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-go
+  - plaque-katzmann2001-meta
+  - plaque-babst2002-meta
+  - plaque-policy
+- assessment_id: plaque-t4-graph
+  area: graph
+  topic: Three descriptive topology relations
+  outcome: supported
+  summary: Lumen is_a endosome lumen, part_of late endosome and bounded by its membrane
+    are directly consistent with GO/UniProt definitions and relations; no molecular
+    transport mechanism inferred.
+  target_ids:
+  - GO:0031906
+  evidence_ids:
+  - plaque-current-4
+  - plaque-go
+  - plaque-SL-0336
+- assessment_id: plaque-t5-identity
+  area: identity
+  topic: Specific late-endosome boundary
+  outcome: supported
+  summary: GO0031902 and SL0151 identify the limiting lipid bilayer with exact synonym.
+    Generic endosome membrane0010008 parent and late-endosome0005770 parthood agree;
+    whole compartment and boundary are distinct.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-go
+  - plaque-SL-0151
+- assessment_id: plaque-t5-composition
+  area: grounding
+  topic: Collective bilayer necessity and correspondence
+  outcome: supported
+  summary: Label-only lipid-bilayer row is appropriately collective rather than a
+    guessed exact chemical species. Membrane-node component_ref corresponds to boundary
+    material. Optional chemical refinement does not make an identified scientific
+    defect.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-go
+  - plaque-schema-policy
+- assessment_id: plaque-t5-function
+  area: evidence
+  topic: Vps27-dependent recruitment and sorting surface
+  outcome: supported
+  summary: Katzmann2003 directly supports Vps27-dependent endosomal ESCRT-I recruitment
+    and associated cargo-sorting context in experimental yeast backgrounds. Functions
+    describe a sorting surface without claiming isolated bilayer sufficiency, invariant
+    recruitment or stable ESCRT material in the membrane.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-katzmann2003-jats
+  - plaque-katzmann2001-meta
+  - plaque-go
+- assessment_id: plaque-t5-graph
+  area: graph
+  topic: Three membrane topology relations
+  outcome: supported
+  summary: is_a generic endosome membrane, part_of late endosome and bounds late-endosome
+    lumen are supported exact descriptive relations. No untested molecular mechanism
+    hidden in NONMECHANISTIC topology.
+  target_ids:
+  - GO:0031902
+  evidence_ids:
+  - plaque-current-5
+  - plaque-go
+  - plaque-SL-0151
+- assessment_id: micro-magnetosome-identity
+  area: identity
+  topic: Structure, enclosing membrane and enclosed volume
+  outcome: supported
+  summary: Exact active GO/SL identities preserve whole organelle, membrane and lumen
+    boundaries. Is-a and part_of remain separate; whole parent verified directly and
+    lumen/membrane ancestry via is_a-only authority response.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-go
+  - micro-SL0510
+  - micro-SL0511
+  - micro-SL0512
+  - micro-go-lumen-ancestors
+  - micro-go-membrane-ancestors
+- assessment_id: micro-magnetosome-taxa
+  area: scope
+  topic: Canonical strains and qualitative occurrence
+  outcome: supported
+  summary: MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current
+    Paramagnetospirillum name. Experimental context remains assigned to the actual
+    source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey
+    was performed.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-tax2
+  - micro-tax28211
+  - micro-tax1236
+  - micro-tax431944
+  - micro-tax342108
+  - micro-PMID14766587
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+- assessment_id: micro-magnetosome-components
+  area: grounding
+  topic: Component identity and formation necessity
+  outcome: concern
+  summary: Generic bilayer and multi-family Mam/Mms classes remain valid native classes;
+    MamK filament and MamJ connector are DISPENSABLE associated machinery. Exact MamJ
+    family matches both examples. F1 persists for universal magnetite ESSENTIAL. Collective
+    Mam essentiality is not expanded to every individual member; empty membranes and
+    mature crystals are distinct.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-component-policy
+  - micro-go
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-IPR060787
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome-graph
+  area: graph
+  topic: Every current node and edge
+  outcome: concern
+  summary: Invagination/mineralization/chain-dipole overview has bounded model-strain
+    support. New MamJ node/family/component_ref is coherent; primary interaction/localization
+    supports the attachment model and membrane-association sense, not direct purified
+    lipid-binding stoichiometry. Correct magnetite grounding retained. F2 neutral
+    iron and F4 unqualified scatter remain; the enclosure edge remains true for its
+    exact magnetite actor; alternative-mineral prose is context, not a second proven
+    grounding error.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-graph-policy
+  - micro-go
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+  - micro-arakaki2016-body
+  - micro-protein-Q6NE58
+- assessment_id: micro-magnetosome-native
+  area: schema
+  topic: Frozen originals and actual current native coverage
+  outcome: supported
+  summary: Original native validation/render passed and exact original target hashes
+    checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes
+    whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or
+    localization proof.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-prior-magnetosome
+  - micro-original-pairs
+  - micro-native-magnetosome-verify
+  - micro-native-magnetosome-causal
+- assessment_id: micro-magnetosome-adapter-old
+  area: provenance
+  topic: Unsupported expression-only exclusion
+  outcome: concern
+  summary: Original applicability row is present, not omitted, but excludes solely
+    because no regulatory expression-module assertion is used. Current proteins/iron
+    transport/biomineralization pathway assertions trigger the native applicability
+    assessment even for the lumen.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-prior-magnetosome
+  - micro-policy
+- assessment_id: micro-magnetosome-adapter-current
+  area: evidence
+  topic: Bounded exact-host catalogue assessment
+  outcome: not_applicable
+  summary: Fresh complete official catalogue lacks the named magnetotactic model hosts,
+    including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma
+    classes cannot license an unmatched proxy. No matched downstream gene/module summary
+    applies; historical00:49Z runner failure remains historical.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-magnetosome-source-limits
+  area: evidence
+  topic: Primary experiments versus abstract and secondary scopes
+  outcome: unknown
+  summary: Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected
+    at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010
+    are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract
+    are secondary; blocked full-body routes are not certified.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-access-limits
+  - micro-uebe2016-publisher
+  - micro-barber2015-meta
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-PMID20487281
+  - micro-scheffel2007-body
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome-completeness
+  area: completeness
+  topic: Complete maintained record and optional slots
+  outcome: supported
+  summary: Entire maintained target, discussions and history read; no target image
+    or verbatim snippet asserted. Empty optional component/physical slots are not
+    defects. Historical query counts are not recertified, native PROPOSED status preserved,
+    and no neighbor or grouped-category finding is terminally disposed.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-prior-magnetosome
+  - micro-policy
+- assessment_id: micro-magnetosome_lumen-identity
+  area: identity
+  topic: Structure, enclosing membrane and enclosed volume
+  outcome: supported
+  summary: Exact active GO/SL identities preserve whole organelle, membrane and lumen
+    boundaries. Is-a and part_of remain separate; whole parent verified directly and
+    lumen/membrane ancestry via is_a-only authority response.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-go
+  - micro-SL0510
+  - micro-SL0511
+  - micro-SL0512
+  - micro-go-lumen-ancestors
+  - micro-go-membrane-ancestors
+- assessment_id: micro-magnetosome_lumen-taxa
+  area: scope
+  topic: Canonical strains and qualitative occurrence
+  outcome: supported
+  summary: MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current
+    Paramagnetospirillum name. Experimental context remains assigned to the actual
+    source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey
+    was performed.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-tax2
+  - micro-tax28211
+  - micro-tax1236
+  - micro-tax431944
+  - micro-tax342108
+  - micro-PMID14766587
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+- assessment_id: micro-magnetosome_lumen-components
+  area: grounding
+  topic: Component identity and formation necessity
+  outcome: supported
+  summary: The lumen is enclosed volume, not its surrounding membrane; no optional
+    component inventory is forced. Biomineralization is a scoped process occurring
+    there, not a claim every empty lumen has already mineralized.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-component-policy
+  - micro-go
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-IPR060787
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome_lumen-graph
+  area: graph
+  topic: Every current node and edge
+  outcome: supported
+  summary: Three NONMECHANISTIC edges preserve lumen part_of whole, enclosure by membrane
+    and biomineralization within enclosed volume. No complete iron transport or nucleation
+    mechanism asserted; Uebe2011 direct scope is magnetite/MSR-1.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-graph-policy
+  - micro-go
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+  - micro-arakaki2016-body
+  - micro-protein-Q6NE58
+- assessment_id: micro-magnetosome_lumen-native
+  area: schema
+  topic: Frozen originals and actual current native coverage
+  outcome: supported
+  summary: Original native validation/render passed and exact original target hashes
+    checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes
+    whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or
+    localization proof.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-prior-magnetosome_lumen
+  - micro-original-pairs
+  - micro-native-magnetosome_lumen-verify
+  - micro-native-magnetosome_lumen-causal
+- assessment_id: micro-magnetosome_lumen-adapter-old
+  area: provenance
+  topic: Unsupported expression-only exclusion
+  outcome: concern
+  summary: Original applicability row is present, not omitted, but excludes solely
+    because no regulatory expression-module assertion is used. Current proteins/iron
+    transport/biomineralization pathway assertions trigger the native applicability
+    assessment even for the lumen.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-prior-magnetosome_lumen
+  - micro-policy
+- assessment_id: micro-magnetosome_lumen-adapter-current
+  area: evidence
+  topic: Bounded exact-host catalogue assessment
+  outcome: not_applicable
+  summary: Fresh complete official catalogue lacks the named magnetotactic model hosts,
+    including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma
+    classes cannot license an unmatched proxy. No matched downstream gene/module summary
+    applies; historical00:49Z runner failure remains historical.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-magnetosome_lumen-source-limits
+  area: evidence
+  topic: Primary experiments versus abstract and secondary scopes
+  outcome: unknown
+  summary: Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected
+    at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010
+    are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract
+    are secondary; blocked full-body routes are not certified.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-access-limits
+  - micro-uebe2016-publisher
+  - micro-barber2015-meta
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-PMID20487281
+  - micro-scheffel2007-body
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome_lumen-completeness
+  area: completeness
+  topic: Complete maintained record and optional slots
+  outcome: supported
+  summary: Entire maintained target, discussions and history read; no target image
+    or verbatim snippet asserted. Empty optional component/physical slots are not
+    defects. Historical query counts are not recertified, native PROPOSED status preserved,
+    and no neighbor or grouped-category finding is terminally disposed.
+  target_ids:
+  - GO:0110145
+  evidence_ids:
+  - micro-record-magnetosome_lumen
+  - micro-prior-magnetosome_lumen
+  - micro-policy
+- assessment_id: micro-magnetosome_membrane-identity
+  area: identity
+  topic: Structure, enclosing membrane and enclosed volume
+  outcome: supported
+  summary: Exact active GO/SL identities preserve whole organelle, membrane and lumen
+    boundaries. Is-a and part_of remain separate; whole parent verified directly and
+    lumen/membrane ancestry via is_a-only authority response.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-go
+  - micro-SL0510
+  - micro-SL0511
+  - micro-SL0512
+  - micro-go-lumen-ancestors
+  - micro-go-membrane-ancestors
+- assessment_id: micro-magnetosome_membrane-taxa
+  area: scope
+  topic: Canonical strains and qualitative occurrence
+  outcome: supported
+  summary: MSR-1 tax431944 and AMB-1 tax342108 identities agree, including current
+    Paramagnetospirillum name. Experimental context remains assigned to the actual
+    source strain; RARE/VARIABLE are qualitative and no exhaustive prevalence survey
+    was performed.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-tax2
+  - micro-tax28211
+  - micro-tax1236
+  - micro-tax431944
+  - micro-tax342108
+  - micro-PMID14766587
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+- assessment_id: micro-magnetosome_membrane-components
+  area: grounding
+  topic: Component identity and formation necessity
+  outcome: supported
+  summary: Generic lipid bilayer is REVIEWED_LABEL_ONLY without claiming whole-GO
+    identity as a chemical molecule. Constitutive boundary essentiality does not prove
+    any individual lipid or protein necessary. Native MSR-1 proteomics abstract supports
+    phospholipid/fatty-acid material and varied proportions; exact lipid inventory
+    remains unasserted.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-component-policy
+  - micro-go
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-IPR060787
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome_membrane-graph
+  area: graph
+  topic: Every current node and edge
+  outcome: supported
+  summary: Three NONMECHANISTIC edges preserve part_of whole, Mam/Mms residence and
+    support of biomineralization. Five protein xrefs are reviewed MSR-1 identities;
+    MamL location has ECO0000305 inference, not universal experimental residence.
+    Cohort association does not assert every actor is exclusively or constantly in
+    the membrane.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-graph-policy
+  - micro-go
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+  - micro-scheffel2007-body
+  - micro-arakaki2016-body
+  - micro-protein-Q6NE58
+- assessment_id: micro-magnetosome_membrane-native
+  area: schema
+  topic: Frozen originals and actual current native coverage
+  outcome: supported
+  summary: Original native validation/render passed and exact original target hashes
+    checked. Current source-head protein checks passed; coverage is explicitly9examples/2nodes
+    whole,0/0 lumen,0examples/1xref-node membrane, not a biological composition or
+    localization proof.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-prior-magnetosome_membrane
+  - micro-original-pairs
+  - micro-native-magnetosome_membrane-verify
+  - micro-native-magnetosome_membrane-causal
+- assessment_id: micro-magnetosome_membrane-adapter-old
+  area: provenance
+  topic: Unsupported expression-only exclusion
+  outcome: concern
+  summary: Original applicability row is present, not omitted, but excludes solely
+    because no regulatory expression-module assertion is used. Current proteins/iron
+    transport/biomineralization pathway assertions trigger the native applicability
+    assessment even for the lumen.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-prior-magnetosome_membrane
+  - micro-policy
+- assessment_id: micro-magnetosome_membrane-adapter-current
+  area: evidence
+  topic: Bounded exact-host catalogue assessment
+  outcome: not_applicable
+  summary: Fresh complete official catalogue lacks the named magnetotactic model hosts,
+    including current/legacy genera and exact strains. Broad Bacteria or Alpha/Gamma
+    classes cannot license an unmatched proxy. No matched downstream gene/module summary
+    applies; historical00:49Z runner failure remains historical.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-magnetosome_membrane-source-limits
+  area: evidence
+  topic: Primary experiments versus abstract and secondary scopes
+  outcome: unknown
+  summary: Fresh Scheffel/Murat/Grünberg2001/Arakaki primary passages were inspected
+    at exact listed extents, not images/supplements. Grünberg2004, Uebe2011 and Katzmann2010
+    are complete abstracts only. Uebe2016 Key Points/abstract and Barber2015 abstract
+    are secondary; blocked full-body routes are not certified.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-access-limits
+  - micro-uebe2016-publisher
+  - micro-barber2015-meta
+  - micro-PMID14766587
+  - micro-PMID22007638
+  - micro-PMID20487281
+  - micro-scheffel2007-body
+  - micro-murat2010-correct-body
+- assessment_id: micro-magnetosome_membrane-completeness
+  area: completeness
+  topic: Complete maintained record and optional slots
+  outcome: supported
+  summary: Entire maintained target, discussions and history read; no target image
+    or verbatim snippet asserted. Empty optional component/physical slots are not
+    defects. Historical query counts are not recertified, native PROPOSED status preserved,
+    and no neighbor or grouped-category finding is terminally disposed.
+  target_ids:
+  - GO:0110146
+  evidence_ids:
+  - micro-record-magnetosome_membrane
+  - micro-prior-magnetosome_membrane
+  - micro-policy
+- assessment_id: micro-whole-protein-localization
+  area: grounding
+  topic: Nine exact examples, current search uniqueness and localization
+  outcome: concern
+  summary: Nine whole-record examples retain correct reviewed identity/gene/taxon
+    and bounded one-hit searches; MamJ matches IPR060787. Six Mam/Mms native experimental
+    localization citations contradict the present-tense old only-MamJ discussion (F3),
+    without treating a current response as proof a historical query was wrong.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-IPR060787
+  - micro-protein-Q93DY9
+  - micro-protein-V6F510
+  - micro-protein-V6F2B6
+  - micro-protein-V6F235
+  - micro-protein-Q93DZ1
+  - micro-protein-Q6NE76
+  - micro-protein-Q6NE59
+  - micro-protein-V6F519
+  - micro-protein-Q2W8Q7
+  - micro-protein-Q6NE58
+  - micro-query-mamA-431944
+  - micro-query-mamB-431944
+  - micro-query-mamE-431944
+  - micro-query-mamM-431944
+  - micro-query-mamO-431944
+  - micro-query-mms6-431944
+  - micro-query-mamK-431944
+  - micro-query-mamJ-431944
+  - micro-query-mamJ-342108
+- assessment_id: micro-whole-stale-refresh
+  area: provenance
+  topic: Substantive stale graph refresh
+  outcome: concern
+  summary: 'All graph deltas were reassessed: crystal exact magnetite grounding agrees
+    with component; MamJ family/ref and attachment/association model are supported
+    with two-hybrid/localization limits; enclosure edge is sound for the exact magnetite
+    actor; broader alternative-mineral prose does not redefine that node. Four inherited
+    findings remain open with exact original F1-F4 lineage. Historical2432 is not
+    a scientific endorsement or terminal group disposition.'
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-stale-delta
+  - micro-record-magnetosome
+  - micro-prior-magnetosome
+  - micro-historical-2432
+  - micro-IPR060787
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-scheffel2007-body
+  - micro-murat2010-correct-body
+- assessment_id: micro-whole-enclosure-challenge
+  area: graph
+  topic: 'New enclosure edge: formal actor versus broader context'
+  outcome: supported
+  summary: 'After independent counter-review, no separate defect is found: crystal
+    remains exactly magnetite CHEBI46726 and is correctly enclosed by membrane. Description
+    mentioning greigite adds context rather than asserting greigite is magnetite or
+    altering formal grounding. Narrower prose would be optional precision. The separate
+    F1 universal magnetite-essentiality contradiction remains unchanged.'
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-stale-delta
+  - micro-graph-policy
+  - micro-component-policy
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-murat2010-correct-body
+  - micro-enclosure-independent-challenge
+- assessment_id: micro-whole-archaeea-size
+  area: scope
+  topic: Literature absence and exact measurement limits
+  outcome: unknown
+  summary: Current exact35–120nm DIAMETER attribution cannot be independently verified
+    from unread Uebe2016 main body; UO unit resolves. Archaea taxon identity does
+    not prove the no-magnetotactic-archaeon statement, and no exhaustive contemporary
+    absence search was performed. These remain explicit limitations rather than fabricated
+    contrary findings.
+  target_ids:
+  - GO:0110143
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-tax2157
+  - micro-uo0000018
+  - micro-uebe2016-publisher
+  - micro-access-limits
+- assessment_id: septin-hydrogenosome_lumen-schema
+  area: schema
+  topic: Original schema/render and frozen-input comparison
+  outcome: supported
+  summary: Original native checks pass; frozen historical target hash verifies. Target
+    bytes are unchanged, with current scientific source reassessment. Schema validity
+    is not source-fidelity proof.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-original-validation-hydrogenosome_lumen
+- assessment_id: septin-hydrogenosome_lumen-inventory
+  area: provenance
+  topic: Actual native protein coverage
+  outcome: supported
+  summary: Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-native-hydrogenosome_lumen-verify
+  - septin-native-hydrogenosome_lumen-causal
+- assessment_id: septin-hydrogenosome_lumen-nonasserted
+  area: scope
+  topic: Images, numeric properties, traits and snippets
+  outcome: not_applicable
+  summary: No maintained image, numeric physical-property, associated-trait or verbatim-snippet
+    field is declared. Literature captions were read only where specified; no pixels
+    or raw-data reanalysis is claimed.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+- assessment_id: septin-hydrogenosome_lumen-history
+  area: provenance
+  topic: Status and scoped historical observations
+  outcome: supported
+  summary: PROPOSED status/history remain unchanged. Original findings are scoped
+    to this record; no neighboring, category or grouped historical issue is newly
+    resolved.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-original-hydrogenosome_lumen
+- assessment_id: septin-inner_membrane_pellicle_complex-schema
+  area: schema
+  topic: Original schema/render and frozen-input comparison
+  outcome: supported
+  summary: Original native checks pass; frozen historical target hash verifies. IMC
+    current additions comprise three unreviewed protein examples and history; all
+    are substantively reassessed. Schema validity is not source-fidelity proof.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-original-validation-inner_membrane_pellicle_complex
+- assessment_id: septin-inner_membrane_pellicle_complex-inventory
+  area: provenance
+  topic: Actual native protein coverage
+  outcome: supported
+  summary: Three UNREVIEWED P.falciparum3D7 examples; one COVERED alveolin node and
+    one UNANCHORED_WITH_UNIPROT glideosome node carrying O00934,Q7Z289,A0A125YT84.
+    The latter are Toxoplasma representatives, not exact P.falciparum experimental
+    accessions. Native identity/coverage is not membership, complete composition or
+    causality.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-native-inner_membrane_pellicle_complex-verify
+  - septin-native-inner_membrane_pellicle_complex-causal
+- assessment_id: septin-inner_membrane_pellicle_complex-nonasserted
+  area: scope
+  topic: Images, numeric properties, traits and snippets
+  outcome: not_applicable
+  summary: No maintained image, numeric physical-property, associated-trait or verbatim-snippet
+    field is declared. Literature captions were read only where specified; no pixels
+    or raw-data reanalysis is claimed.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+- assessment_id: septin-inner_membrane_pellicle_complex-history
+  area: provenance
+  topic: Status and scoped historical observations
+  outcome: supported
+  summary: PROPOSED status/history remain unchanged. Original findings are scoped
+    to this record; no neighboring, category or grouped historical issue is newly
+    resolved.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-original-inner_membrane_pellicle_complex
+- assessment_id: septin-macronucleus-schema
+  area: schema
+  topic: Original schema/render and frozen-input comparison
+  outcome: supported
+  summary: Original native checks pass; frozen historical target hash verifies. Target
+    bytes are unchanged, with current scientific source reassessment. Schema validity
+    is not source-fidelity proof.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-original-validation-macronucleus
+- assessment_id: septin-macronucleus-inventory
+  area: provenance
+  topic: Actual native protein coverage
+  outcome: supported
+  summary: Zero protein examples and zero typed GENE_OR_PROTEIN nodes; no represented
+    UniProtKB graph xrefs. Exit0 validates this empty identifier inventory, not every
+    molecular/pathway narrative assertion.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-native-macronucleus-verify
+  - septin-native-macronucleus-causal
+- assessment_id: septin-macronucleus-nonasserted
+  area: scope
+  topic: Images, numeric properties, traits and snippets
+  outcome: not_applicable
+  summary: No maintained image, numeric physical-property, associated-trait or verbatim-snippet
+    field is declared. Literature captions were read only where specified; no pixels
+    or raw-data reanalysis is claimed.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+- assessment_id: septin-macronucleus-history
+  area: provenance
+  topic: Status and scoped historical observations
+  outcome: supported
+  summary: PROPOSED status/history remain unchanged. Original findings are scoped
+    to this record; no neighboring, category or grouped historical issue is newly
+    resolved.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-original-macronucleus
+- assessment_id: septin-hydrogenosome_lumen-adapter
+  area: scope
+  topic: Complete molecular/pathway narrative applicability
+  outcome: supported
+  summary: The record asserts energy and FeS enzyme pathways, so its expression-only
+    exemption is insufficient. Current catalogue lacks a matching host; downstream
+    searches are inapplicable for that bounded catalogue, not biological evidence
+    against the claims. Historical runner unavailability is not a current execution.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-inner_membrane_pellicle_complex-adapter
+  area: scope
+  topic: Complete molecular/pathway narrative applicability
+  outcome: supported
+  summary: The record asserts named alveolins and actin-myosin anchoring/motility,
+    so its expression-only exemption is insufficient. Current catalogue lacks a matching
+    host; downstream searches are inapplicable for that bounded catalogue, not biological
+    evidence against the claims. Historical runner unavailability is not a current
+    execution.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-macronucleus-adapter
+  area: scope
+  topic: Complete molecular/pathway narrative applicability
+  outcome: supported
+  summary: The record asserts processed/amplified DNA and somatic gene expression,
+    so its expression-only exemption is insufficient. Current catalogue lacks a matching
+    host; downstream searches are inapplicable for that bounded catalogue, not biological
+    evidence against the claims. Historical runner unavailability is not a current
+    execution.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-hydrogenosome_lumen-identity
+  area: identity
+  topic: Exact lumen, ancestry, synonym and boundaries
+  outcome: supported
+  summary: Current GO0034492/SL0335 agree with organelle-lumen ancestry and hydrogenosome
+    parthood. Membrane encloses the internal region and is correctly a boundary node,
+    not a lumen constituent. No whole-organelle/inner-membrane molecular identity
+    is substituted.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-go
+  - septin-ancestors-0034492
+  - septin-SL-0335
+  - septin-SL-0144
+  - septin-context-hydrogenosome
+  - septin-context-hydrogenosomal_membrane
+- assessment_id: septin-hydrogenosome_lumen-taxon
+  area: scope
+  topic: Hydrogenosome-bearing eukaryotic subset and actual strains
+  outcome: supported
+  summary: Eukaryota RARE is explicitly qualitative patchy occurrence. T.vaginalis
+    canonical matrix context is supported; Schneider T1 proteomics and Sutak C-1:NIH30001
+    biochemistry are distinct. No universal strain-specific proteome is inferred;
+    Lindmark metadata concerns T.foetus.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-tax2759
+  - septin-tax5722
+  - septin-tachezy2022-meta
+  - septin-schneider2011-bioc
+  - septin-sutak2004-maintext
+  - septin-lindmark1973-meta
+- assessment_id: septin-hydrogenosome_lumen-function
+  area: evidence
+  topic: Matrix energy and FeS-assembly scope
+  outcome: supported
+  summary: Sutak demonstrates TvIscS-2 organellar localization and lysate FeS reconstitution;
+    Schneider provides energy/ISC proteome context with fractionation/contamination
+    limits. This lumen record does not assert the specific IscU source attribution
+    found in the separate whole record. Broad supported matrix function remains distinct
+    from every protein being independently matrix-localized.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-sutak2004-maintext
+  - septin-sutak2004-meta
+  - septin-schneider2011-bioc
+  - septin-schneider2011-meta
+- assessment_id: septin-hydrogenosome_lumen-graph
+  area: graph
+  topic: Two defining topology edges
+  outcome: supported
+  summary: Both lumen part_of whole and membrane encloses lumen edges follow exact
+    authorities. NONMECHANISTIC scope deliberately avoids duplicating full import/metabolic
+    mechanism; no missing enzyme census is implied.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-go
+  - septin-SL-0335
+  - septin-SL-0144
+  - septin-graph-policy
+- assessment_id: septin-hydrogenosome_lumen-inventory-science
+  area: completeness
+  topic: Optional lumen composition and necessity
+  outcome: supported
+  summary: No component enumeration is needed merely because enzymes occupy a lumen.
+    No complete matrix proteome or enzyme-specific organelle-formation necessity is
+    asserted; optional composition must not be fabricated.
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-curation-policy
+  - septin-schneider2011-bioc
+  - septin-sutak2004-maintext
+- assessment_id: septin-hydrogenosome_lumen-citation
+  area: provenance
+  topic: Exact Tachezy DOI/title
+  outcome: concern
+  summary: 'Inherited F1 persists: DOI10.1111/jeu.12922 is The hydrogenosome of Trichomonas
+    vaginalis by Tachezy,Makki,Hrdý, not the broad title in this target. The source
+    remains secondary and relevant; no unrelated whole/membrane finding is substituted.'
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-original-hydrogenosome_lumen
+  - septin-tachezy2022-meta
+- assessment_id: septin-inner_membrane_pellicle_complex-identity
+  area: identity
+  topic: Apicomplexan IMC identity and broader parent
+  outcome: supported
+  summary: Two apposed bilayers below the plasma membrane match current GO and primary/review
+    sources. Contextual inner membrane complex synonym is exact within Apicomplexa
+    while GO labels it broad globally. GO0043231 parentage follows biological/source
+    definitions, not a native ancestor edge in the current response.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-go
+  - septin-ancestors-0070258
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+- assessment_id: septin-inner_membrane_pellicle_complex-stale-examples
+  area: provenance
+  topic: Substantive reassessment of three added examples
+  outcome: supported
+  summary: O97228/IMC1a/PF3D7_0304000,Q8IK01/IMC1c/PF3D7_1003600,Q8I3K7/IMC1g/PF3D7_0525800
+    have exact matching putative protein names,UNREVIEWED status and isolate36329.
+    UniProt stores locus identifiers as ORF names; common IMC aliases are supplied
+    by protein names and Ferreira Table1, not falsely reported as indexed geneName
+    fields. Membership rests on source evidence; retrieval dates remain historical.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-protein-O97228
+  - septin-protein-Q8IK01
+  - septin-protein-Q8I3K7
+  - septin-tax36329
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+- assessment_id: septin-inner_membrane_pellicle_complex-components
+  area: grounding
+  topic: Collective bilayer material and alveolin class
+  outcome: supported
+  summary: The label-only LIPID row denotes collective bilayer material without a
+    falsely exact whole-GO chemical grounding. Alveolin network is an explicitly broad
+    repeat-containing protein cohort with UNKNOWN essentiality. Sources support named
+    examples at stage-specific scope; generic family/class policy does not imply one
+    fixed molecular complex.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-protein-policy
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+- assessment_id: septin-inner_membrane_pellicle_complex-family-candidate
+  area: grounding
+  topic: Verified candidate versus exact network coverage
+  outcome: unknown
+  summary: The empty literal alveolin-name searches are not absence proof. All three
+    examples carry IPR022086; exact authority confirms a real family candidate, but
+    its broad name/domain wording and taxon scope do not certify exact identity of
+    the complete alveolin network. Existing narrower-family grounding TODO can remain
+    open; no candidate is silently adopted and no missing-family defect is invented.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-ipr-alveolin-search
+  - septin-alveolin-proteins
+  - septin-IPR022086
+  - septin-protein-O97228
+  - septin-protein-Q8IK01
+  - septin-protein-Q8I3K7
+- assessment_id: septin-inner_membrane_pellicle_complex-scope
+  area: scope
+  topic: Taxa, developmental stages and experimental systems
+  outcome: supported
+  summary: Apicomplexa and P.falciparum/3D7 identities verify. Kono P.falciparum3D7
+    blood/gametocyte and P.bergheiANKA ookinete/sporozoite observations remain separate;
+    nonmotile stages do not acquire gliding merely from broad functions. COMMON is
+    qualitative and stage/lineage-qualified.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-tax5794
+  - septin-tax5833
+  - septin-tax36329
+  - septin-kono2012-minimal
+  - septin-kono2013-meta
+  - septin-ferreira2021-jats
+- assessment_id: septin-inner_membrane_pellicle_complex-functions
+  area: evidence
+  topic: Shape, daughter scaffolding and glideosome anchoring
+  outcome: supported
+  summary: All three broad functions match Ferreira review synthesis and primary architecture/localization
+    context. Primary timing/colocalization does not by itself determine every anchoring
+    chemistry or prove every alveolin is required for formation. Stage-specific disassembly/recycling
+    hypotheses remain hypotheses and are not added to the record.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+  - septin-dearnley2012-meta
+- assessment_id: septin-inner_membrane_pellicle_complex-glideosome
+  area: grounding
+  topic: Representative Toxoplasma molecular links
+  outcome: supported
+  summary: O00934 is reviewed T.gondii Myosin-A; Q7Z289 unreviewed GAP45; A0A125YT84
+    unreviewed ME49 GAP50 with automatic phosphatase annotation. These are representative
+    aggregate-node xrefs, not exact whole-complex identity or P.falciparum-specific
+    experiments. The current unanchored-with-xrefs native scope is explicit.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-protein-O00934
+  - septin-protein-Q7Z289
+  - septin-protein-A0A125YT84
+  - septin-ferreira2021-jats
+  - septin-native-inner_membrane_pellicle_complex-causal
+- assessment_id: septin-inner_membrane_pellicle_complex-graph
+  area: graph
+  topic: All six descriptive scaffold edges
+  outcome: supported
+  summary: Membranes forming IMC, alveolin localization, pellicle parthood, shape
+    support, glideosome anchoring and invasion support are consistent at NONMECHANISTIC
+    scope. Component_refs resolve; morphology is a STATE; no precise stoichiometry,
+    all-stage motor action or complete complex census is asserted.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-graph-policy
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+  - septin-go
+- assessment_id: septin-inner_membrane_pellicle_complex-necessity
+  area: evidence
+  topic: Constitutional material versus formation necessity
+  outcome: unknown
+  summary: Collective bilayer material is constitutive of the membrane-bounded identity.
+    Sources do not establish removal tests for each lipid species, nor universal necessity
+    of all alveolins. UNKNOWN protein essentiality and incomplete inventory remain
+    appropriate.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-curation-policy
+  - septin-kono2012-minimal
+  - septin-ferreira2021-jats
+- assessment_id: septin-inner_membrane_pellicle_complex-bibliography
+  area: provenance
+  topic: Date and access-tier distinctions
+  outcome: supported
+  summary: Ferreira electronic publication is8January2021 although the collection/DOI
+    year is2020; no date defect is inferred. Ferreira/Kono2013 are reviews, Dearnley
+    is abstract-only, Kono2012 is enumerated primary sections. No source pixels or
+    uninspected supplements are claimed.
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-ferreira2021-meta
+  - septin-ferreira2021-jats
+  - septin-kono2013-meta
+  - septin-dearnley2012-meta
+  - septin-kono2012-meta
+  - septin-kono2012-minimal
+- assessment_id: septin-macronucleus-identity
+  area: identity
+  topic: Macronucleus versus micronucleus/chromosome/DNA
+  outcome: supported
+  summary: GO0031039 and nucleus ancestry match the ciliate somatic polyploid compartment.
+    Macronuclear DNA is molecular material, not the complete GO0000228 nuclear chromosome
+    or the whole macronucleus.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-go
+  - septin-ancestors-0031039
+  - septin-eisen2006-jats
+- assessment_id: septin-macronucleus-composition
+  area: grounding
+  topic: Processed amplified DNA material
+  outcome: supported
+  summary: Explicit label-only macronuclear chromosomal DNA preserves MIC-derived
+    processing, fragmentation/telomere addition and amplification context without
+    misusing a complete chromosome GO term. The open source-neutral SO question is
+    not answered by inventing an accession.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-go
+  - septin-curation-policy
+  - septin-eisen2006-jats
+- assessment_id: septin-macronucleus-scope
+  area: scope
+  topic: Species and actual SB210 genome preparation
+  outcome: supported
+  summary: ENA confirms species5911; SB210 identity and purified-macronucleus shotgun
+    libraries are directly in Eisen methods. Low MIC/mitochondrial contamination remains
+    explicit. COMMON is qualitative; no universal ciliate chromosome architecture
+    or exact all-strain genome size follows.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-tax5911
+  - septin-eisen2006-meta
+  - septin-eisen2006-jats
+- assessment_id: septin-macronucleus-function
+  area: evidence
+  topic: Somatic asexual gene expression
+  outcome: supported
+  summary: GO and Eisen Introduction support the Tetrahymena MAC as the somatic expression
+    center during asexual growth. Developmental rearrangement background and genome
+    sequencing do not constitute a fresh mechanism or perturbation experiment.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-go
+  - septin-eisen2006-meta
+  - septin-eisen2006-jats
+- assessment_id: septin-macronucleus-graph
+  area: graph
+  topic: Three descriptive chromosomal-DNA relations
+  outcome: supported
+  summary: 'The carried-on edge is interpreted with its explicit description: DNA
+    is carried on chromosomes housed inside the MAC, not on its exterior. DNA supports
+    somatic expression and MAC enables expression; no developmental pathway or nuclear-pore
+    composition is asserted.'
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-graph-policy
+  - septin-eisen2006-jats
+  - septin-go
+- assessment_id: septin-macronucleus-necessity
+  area: evidence
+  topic: Constitutional DNA and experimental formation scope
+  outcome: unknown
+  summary: Collective chromosomal DNA is defining material, but this sequencing study
+    does not test whether a macronucleus forms without it. ESSENTIAL is interpreted
+    at constitutional-material scope, not an established individual molecule removal
+    experiment.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-eisen2006-jats
+- assessment_id: septin-macronucleus-completeness
+  area: completeness
+  topic: Bounded inventories and genome limitations
+  outcome: supported
+  summary: No complete molecular/pore inventory or quantitative prevalence is claimed.
+    Assembly gaps do not establish absence of a gene, and bulk coverage uniformity
+    does not force every small chromosome copy number. The existing exact-DNA grounding
+    question remains unresolved without a concrete defect.
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-eisen2006-jats
+  - septin-curation-policy
+- assessment_id: septin-hydrogenosome_lumen-verdict
+  area: completeness
+  topic: Current scoped scientific verdict
+  outcome: concern
+  summary: 'needs_curation: one inherited minor title finding remains for this lumen
+    record; neighboring whole/membrane issues are distinct.'
+  target_ids:
+  - GO:0034492
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-original-hydrogenosome_lumen
+  - septin-tachezy2022-meta
+- assessment_id: septin-inner_membrane_pellicle_complex-verdict
+  area: completeness
+  topic: Current scoped scientific verdict
+  outcome: supported
+  summary: 'pass_with_limitations: material scientific claims are supported in the
+    stated source scope; unresolved family/necessity/access limitations prevent an
+    unqualified pass. No concrete new scientific curation finding established.'
+  target_ids:
+  - GO:0070258
+  evidence_ids:
+  - septin-record-inner_membrane_pellicle_complex
+  - septin-original-inner_membrane_pellicle_complex
+  - septin-ferreira2021-jats
+  - septin-kono2012-minimal
+- assessment_id: septin-macronucleus-verdict
+  area: completeness
+  topic: Current scoped scientific verdict
+  outcome: supported
+  summary: 'pass_with_limitations: material scientific claims are supported in the
+    stated source scope; unresolved family/necessity/access limitations prevent an
+    unqualified pass. No concrete new scientific curation finding established.'
+  target_ids:
+  - GO:0031039
+  evidence_ids:
+  - septin-record-macronucleus
+  - septin-original-macronucleus
+  - septin-eisen2006-jats
+- assessment_id: current-input-comparison
+  area: provenance
+  topic: Complete frozen-input comparison and bounded refresh
+  outcome: supported
+  summary: 2 of ten original target hashes differ from current main. The changed content
+    is substantively reassessed in the target-specific assessments; original observations
+    remain historical and unchanged. All current target and used context bytes are
+    frozen.
+  target_ids:
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  evidence_ids:
+  - current-record-0
+  - original-review-0
+  - current-record-1
+  - original-review-1
+  - current-record-2
+  - original-review-2
+  - current-record-3
+  - original-review-3
+  - current-record-4
+  - original-review-4
+  - current-record-5
+  - original-review-5
+  - current-record-6
+  - original-review-6
+  - current-record-7
+  - original-review-7
+  - current-record-8
+  - original-review-8
+  - current-record-9
+  - original-review-9
+findings:
+- finding_id: micro-F1
+  issue_key: magnetosome-magnetite-universal-necessity
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify magnetite necessity for alternative-mineral magnetosomes
+  description: The current component specifically denotes magnetite CHEBI:46726 and
+    is ESSENTIAL, while the definition/role and inspected secondary abstract explicitly
+    allow chemically distinct greigite instead. Native ESSENTIAL means the structure
+    does not form without that constituent. The unconditional magnetite requirement
+    contradicts the acknowledged valid alternative; it does not concern only empty
+    precursors or the necessity of every Mam protein.
+  target_ids:
+  - GO:0110143
+  field_paths:
+  - components#magnetite.essentiality
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-component-policy
+  - micro-chebi46726
+  - micro-chebi86238
+  - micro-barber2015-meta
+  - micro-murat2010-correct-body
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim support, exact grounding
+    and internal consistency
+  native_severity: major
+  normalization_reason: Major material scope contradiction between an unconditional
+    structure-formation requirement and an explicitly acknowledged alternative constituent.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T021713Z-magnetosome-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2717
+- finding_id: micro-F2
+  issue_key: magnetosome-neutral-iron-transport-actor
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Use an ion-compatible identity for transported iron
+  description: The current CHEMICAL node is iron atom CHEBI:18248, with native charge0,
+    but serves as transporter substrate and mineralization input. Inspected primary
+    body context and abstract describe iron/metal-ion supply and a CDF relationship,
+    not neutral Fe atoms. This finding does not prescribe a single oxidation state
+    or claim a complete direct MamB/MamM transport assay.
+  target_ids:
+  - GO:0110143
+  field_paths:
+  - causal_graphs#magnetosome_chain_alignment.nodes#iron
+  - causal_graphs#magnetosome_chain_alignment.edges[1].object
+  - causal_graphs#magnetosome_chain_alignment.edges[2].subject
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-component-policy
+  - micro-graph-policy
+  - micro-chebi18248
+  - micro-PMID22007638
+  - micro-murat2010-correct-body
+  - micro-arakaki2016-body
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim support, exact grounding
+    and internal consistency
+  native_severity: major
+  normalization_reason: 'Major exact chemical-actor mismatch: a neutral atomic species
+    is formally assigned a source-supported ion-transport role; the general fact of
+    iron supply is not disputed.'
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T021713Z-magnetosome-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2718
+- finding_id: micro-F3
+  issue_key: magnetosome-localization-gap-current-example-conflict
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Update the open localization-gap interpretation
+  description: The OPEN discussion still says most magnetosome proteins lack experimental
+    UniProt localization and only MamJ produced an example. Current six Mam/Mms examples
+    retain exact native ECO:0000269 magnetosome-membrane annotations with cited primary
+    support. Preserve the historical SL0510 query as historical; update its broad
+    present-tense interpretation and distinguish membrane SL0512 from whole-organellar
+    SL0510.
+  target_ids:
+  - GO:0110143
+  field_paths:
+  - discussions#localisation_evidence_is_thin
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-protein-Q93DY9
+  - micro-protein-V6F510
+  - micro-protein-V6F2B6
+  - micro-protein-V6F235
+  - micro-protein-Q93DZ1
+  - micro-protein-Q6NE76
+  - micro-grunberg2001-body
+  - micro-PMID14766587
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim support, exact grounding
+    and internal consistency
+  native_severity: minor
+  normalization_reason: Minor stale current interpretation; no historical query count,
+    retrieval date or genuine biological knowledge gap is declared false.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T021713Z-magnetosome-audit
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2719
+- finding_id: micro-F4
+  issue_key: magnetosome-mamj-deletion-phenotype-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish MamJ-deficient clustering from scattering
+  description: The current MamK-aligns-chain evidence note says mamJ deletion scatters
+    magnetosomes. Inspected MSR-1 primary text distinguishes chiefly clustered mature
+    particles (with occasional rings/imperfect chains) from scattered empty precursor
+    vesicles. Loss of normal linear organization is supported; the unqualified scatter
+    shorthand loses this biological distinction. MamJ attachment and the alignment
+    edge are not refuted.
+  target_ids:
+  - GO:0110143
+  field_paths:
+  - causal_graphs#magnetosome_chain_alignment.edges[subject=mamk,predicate=aligns,object=chain].evidence[0].notes
+  evidence_ids:
+  - micro-record-magnetosome
+  - micro-scheffel2007-body
+  - micro-protein-V6F519
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim support, exact grounding
+    and internal consistency
+  native_severity: minor
+  normalization_reason: Minor source/phenotype wording overstatement; the overall
+    chain-organization mechanism and associated-machinery status remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T021713Z-magnetosome-audit
+    finding_id: F4
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2720
+- finding_id: septin-hydrogenosome_lumen-F1
+  issue_key: hydrogenosome-lumen-tachezy-title
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the title attached to the Tachezy2022 review DOI
+  description: 'DOI:10.1111/jeu.12922 identifies The hydrogenosome of Trichomonas
+    vaginalis by Tachezy, Makki and Hrdý, whereas the target records Hydrogenosomes
+    and mitosomes: Mitochondria of anaerobic eukaryotes. The DOI and relevant organelle
+    topic remain correct.'
+  target_ids:
+  - GO:0034492
+  field_paths:
+  - evidence[reference=DOI:10.1111/jeu.12922].notes
+  evidence_ids:
+  - septin-record-hydrogenosome_lumen
+  - septin-original-hydrogenosome_lumen
+  - septin-tachezy2022-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:source identity and severity
+  native_severity: minor
+  normalization_reason: Minor bibliographic provenance error within an otherwise correctly
+    identified and relevant source; no biological identity or functional contradiction
+    follows.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T021704Z-hydrogenosome-lumen-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2716
+actions:
+- action_id: micro-A1
+  finding_ids:
+  - micro-F1
+  target_ids:
+  - GO:0110143
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, condition magnetite necessity on
+    magnetite-producing lineages or represent the supported magnetic-mineral alternatives
+    without asserting universal magnetite dependence. Preserve exact chemical identities
+    and avoid claiming greigite is a subtype of magnetite.
+  acceptance_checks:
+  - Retain source-specific organism, condition and chemical identity boundaries.
+  - Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+  - Run focused native schema, strict and graph checks after separately authorized
+    scientific curation.
+- action_id: micro-A2
+  finding_ids:
+  - micro-F2
+  target_ids:
+  - GO:0110143
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, identify the transported iron at
+    the ionic scope actually supported by the source, using verified appropriate chemistry
+    grounding or a bounded label if oxidation-state specificity remains unresolved.
+    Keep the downstream mineral identity distinct.
+  acceptance_checks:
+  - Retain source-specific organism, condition and chemical identity boundaries.
+  - Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+  - Run focused native schema, strict and graph checks after separately authorized
+    scientific curation.
+- action_id: micro-A3
+  finding_ids:
+  - micro-F3
+  target_ids:
+  - GO:0110143
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, preserve the historical query result
+    but update or resolve the present-tense discussion to distinguish whole-magnetosome
+    SL0510 from membrane SL0512 annotations and the current experimentally supported
+    examples.
+  acceptance_checks:
+  - Retain source-specific organism, condition and chemical identity boundaries.
+  - Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+  - Run focused native schema, strict and graph checks after separately authorized
+    scientific curation.
+- action_id: micro-A4
+  finding_ids:
+  - micro-F4
+  target_ids:
+  - GO:0110143
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, describe the loss of normal linear
+    organization and the source-specific MSR-1 clustering phenotype, and preserve
+    distinctions from MamK mutants and AMB-1 genetic redundancy.
+  acceptance_checks:
+  - Retain source-specific organism, condition and chemical identity boundaries.
+  - Confirm the amended assertion matches the frozen essentiality/grounding contracts.
+  - Run focused native schema, strict and graph checks after separately authorized
+    scientific curation.
+- action_id: septin-hydrogenosome_lumen-A1
+  finding_ids:
+  - septin-hydrogenosome_lumen-F1
+  target_ids:
+  - GO:0034492
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, replace the wrong citation title
+    and incomplete author attribution with the exact native bibliographic identity;
+    retain DOI and review tier.
+  acceptance_checks:
+  - Verify exact title, three authors, year2022 and Journal of Eukaryotic Microbiology
+    against native metadata.
+  - Retain correct DOI; do not promote this review to primary experimental evidence
+    or infer broader coverage from the wrong title.
+limitations:
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: Only the four assigned unchanged records were scientifically reviewed.
+  All qualify pass_with_limitations; no scientific finding/action or fabricated predecessor.
+  Four concrete historical bundle exclusions require successor coverage correction.
+  Root may include these in its explicitly issue-bearing cohort; no clean standalone
+  repository bundle was saved.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: Original four pairs validate/render and every historical input matches.
+  Historical record corrections, discussions, neighbor issues, broader groups and
+  other PRs are not terminally resolved by this scope. The two frozen MVB neighbors
+  are boundary context only, not independently accepted full records.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: 2018 IMiQ genuine JATS: all Results/Figure1–7 captions, Discussion, selected
+  Methods Plasmids and strains/Aggregate sedimentation/Fluorescence microscopy and
+  front permissions read. Supplementary PDF downloaded but not assessed; no raw microscopy
+  or proteomic reanalysis. Species and condition scopes are retained.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: 2025 IMiQ publisher direct HTTP route returned403; canonical browser
+  text nevertheless exposed Abstract/Introduction, all Results/Discussion/Methods
+  and data availability. Stored browser snippets carry actual times and are not raw
+  successful publisher HTTP. An initial mistakenly transcribed numeric article URL
+  returned an access error, then the exact source URL was used; no failed route supplied
+  evidence. Figure1 pixels were fetched freshly using an earlier located CDN URL and
+  actually viewed.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: 2018 and2025 linked Figure1 pixels and exact captions/licences were inspected.
+  No other figure pixels were certified.2018 NC-SA3.0, publisher UserLicence1.2 and
+  dataset CC0 remain distinct. No figure bytes were committed or organelle dimensions
+  inferred from arbitrary sections.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: DUMP2020 body inspection was limited to Discussion/Conclusion. Its distinctions
+  and later tentative similarity remain uncertainty; no cross-paper synonym, human
+  scope or lipid mechanism transfer. Current protein-native matrix location is not
+  exact IMiQ necessity. InterPro generated descriptions were excluded.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: Late-endosome sources Katzmann2001/Babst2002 are complete primary abstracts;
+  Henne2011 is secondary abstract only. Teo2004 selected p559/p564–566 binding/liposome/Methods
+  text and captions, and Katzmann2003 complete Results/Discussion/Methods/captions
+  were inspected, without pixel/supplement or raw-data assessment. Universal choreography
+  and isolated-factor sufficiency are not inferred.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: All eight actual native protein commands passed; IMiQ has two reference
+  examples and zero typed GENE_OR_PROTEIN nodes; all three late-endosome targets have
+  zero examples and typed nodes. Empty native coverage does not waive positive pathway
+  assertions.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: Fresh complete iModulonDB catalogue has no matching yeast host; no matched
+  downstream gene/module query or bacterial proxy applies. Historical00:49Z runner
+  PermissionError is not a new failure or current execution. Source fallback is bounded
+  and noncoverage is not negative biology.'
+- 'Intramitochondrial quality-control compartment and late-endosome trio independent
+  subreview: Root owns global gates, issue publication and final PR lifecycle. This
+  report certifies only its actual source/native checks, not final-head CI or merge
+  success. Read-only reviewer wrote scratch only; native scratch preflight validates
+  structure, not automatic scientific correctness.'
+- 'Magnetosome, lumen and membrane independent subreview: Assigned scope only: three
+  entire magnetosome records; whole stale graph substantively refreshed, lumen/membrane
+  unchanged. Four inherited findings retain exact repository/review/F1-F4 identities;
+  A proposed separate enclosure-wording finding was independently challenged and withdrawn:
+  the formal relation is correct and broader context does not identify greigite as
+  magnetite. No grouped2432 or MamK-neighbor finding terminally disposed.'
+- 'Magnetosome, lumen and membrane independent subreview: Primary source reading is
+  passage-scoped as each evidence locator states. Scheffel2007 distinguishes scattered
+  empty vesicles from chiefly clustered mature particles, and retains interaction-model
+  caveats. Murat/Arakaki AMB-1 experiments are not silently exported to MSR-1 or all
+  bacteria. No figure pixels, supplements or raw experimental data inspected; none
+  of these three records asserts an image asset.'
+- 'Magnetosome, lumen and membrane independent subreview: Current Grünberg2004/Uebe2011/Katzmann2010
+  evidence is complete native abstract only. Uebe2016 publisher offers Key Points/abstract
+  and access boundary; Barber2015 only native abstract inspected currently. Challenge/no-result/500/404
+  packets retained and never used as main scientific text. No prior full-body inspection
+  is described as a fresh read.'
+- 'Magnetosome, lumen and membrane independent subreview: Exact35–120nm range and
+  broad archaeal absence remain unknown at actual access/search scope, not refuted.
+  Qualitative taxon occurrence is not an exhaustive prevalence survey. Trait linkage
+  is left to the actual root trait gate; no new sibling-repository scientific assessment
+  claimed.'
+- 'Magnetosome, lumen and membrane independent subreview: All ten queried protein
+  accessions are reviewed identities, but only nine are whole-record examples; membrane
+  carries five overlapping xrefs including MamL. Exact single-reviewed-hit searches
+  are bounded to stated organism_id/date/query. Identity, predicted localization,
+  experimental annotations, association, formation necessity and direct transport
+  chemistry remain distinct.'
+- 'Magnetosome, lumen and membrane independent subreview: All three source-adapter
+  rows are present expression-only exclusions needing correction, not omissions or
+  sparse exclusions. Fresh catalogue excludes exact model hosts; broad bacterial ancestry
+  does not authorize unrelated proxy datasets. Historical00:49Z runner failure is
+  retained as historical unavailable, not a new execution.'
+- 'Magnetosome, lumen and membrane independent subreview: No repository/Git/GitHub
+  mutation. Root independently owns global QC/finalCI/issue dedup and publication;
+  source report does not borrow future gate results. Native scripts are frozen execution
+  inputs, not a claimed exhaustive code audit. All curation actions are proposed for
+  maintained records outside this PR.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Read-only independent source review of three assigned records; root owns
+  repository/GitHub writes, issue dedup/publication, global QC/CI and merge queue.
+  No record or original review was edited; future final-head/queue outcomes are not
+  pre-certified.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: IMC is stale only because history and three unreviewed P.falciparum3D7
+  examples were added. Current accession/status/protein-name/taxon/locus identity
+  is verified and literature supports the named alveolin cohort; identity is not accession-specific
+  localization, functional causality or organelle-formation necessity.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Native IMC scope is3UNREVIEWED examples,1COVERED alveolin node and1UNANCHORED_WITH_UNIPROT
+  glideosome node. Its Toxoplasma motor/anchoring accessions are not P.falciparum
+  experimental examples. Lumen/macronucleus have0examples and0typednodes. All six
+  commands pass within those inventories.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: PF3D7 identifiers are ORF names in current UniProt JSON, not indexed
+  primary geneName fields; the common IMC1a/c/g mappings are independently supplied
+  by named proteins and Ferreira Table1. IPR022086 is a real shared family candidate
+  with ambiguous domain/network scope; no exact full-alveolin-network grounding is
+  certified from automatic xrefs alone. Empty literal-name searches do not imply absent
+  proteins/families.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Ferreira primary publication date is2021-01-08 with collection year2020.
+  Its entire scientific review main text s1–s5/Table1/Fig1caption was read, not underlying
+  primary datasets/pixels. Kono2013 is complete secondary abstract only. Dearnley2012
+  is complete primary abstract only, not a current full-body/pixel analysis.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Kono2012 fresh primary minimal body: complete Abstract/Introduction/Methods,
+  Results from Differential Spatial Distribution through end and Fig3–8 captions,
+  complete Discussion. Earlier phylogenetic Results/Fig1–2, supplementary material,
+  pixels and quantitative phenotype reanalysis are not comprehensively inspected.
+  P.falciparum3D7 and P.bergheiANKA systems, promoters, endogenous controls and weak
+  gametocyte fluorescence remain distinct.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Eisen2006 fresh JATS is limited to complete Introduction, sequencing/assembly,
+  accuracy/completeness, copy-number and cell-growth/DNA-isolation/library methods
+  with embedded Fig1–4captions. Other sections, separate tables/supplements, pixels
+  and raw genome reads are not inspected. MAC purification is not absolute purity;
+  assembly nondetection is not gene absence.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Hydrogenosome public snapshots are reused from PR2367 with their actual2026-11-03
+  retrieval timestamps and verified hashes, not freshly fetched. Tachezy is secondary
+  abstract, Lindmark bibliography-only, Schneider selected genuine BioC main sections
+  and Sutak rendered main text/captions with no pixels/raw data. Direct TvIscS-2 localization/lysate
+  activity and proteome fraction membership remain distinct. The lumen does not inherit
+  the separate whole-record IscU attribution defect.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: All three original adapter rows are explicit expression-only exclusions,
+  not omissions. Complete molecular/pathway narratives trigger current catalogue assessment.
+  No matched eukaryotic host exists in the inspected catalogue; no unrelated bacterial
+  proxy or biological absence inference. Runner failure remains the actual historical00:49Z
+  attempt, not a new invocation.'
+- 'Hydrogenosome lumen, inner membrane pellicle complex and macronucleus independent
+  subreview: Twenty-eight repository inputs were used:17common policy/schema/native
+  files,3targets,6original artifacts and2frozen hydrogenosomal boundary neighbors.
+  Neighbors supply bounded topology context only and their issues are neither inherited
+  nor resolved. No maintained images, quantitative physical properties, traits or
+  snippets are present.'
+- Historical observations remain immutable; their old checks are not represented as
+  current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure.
+  Catalogue-based coverage is assessed directly; fresh and reused responses retain
+  actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include
+  909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks
+  independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited
+  by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head
+  CI and merge-group CI occur after saving this immutable observation and are not
+  represented here as already completed.
+notes:
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally
+  and pushed without force.
+- This explicit issue-bearing ten-record cohort follows native persistence policy.
+  Inherited scientific findings retain stable keys and exact predecessor repository/review/finding
+  identities; any new finding has no invented predecessor.
+- 'Issue #2714 tracks two stale target inputs. Inner membrane pellicle complex adds
+  three unreviewed Plasmodium falciparum 3D7 examples; native identifiers/names, status,
+  taxon and stage-specific membership are reassessed. Magnetosome adds crystal grounding,
+  a MamJ actor/connection and membrane association/enclosure edges; chemical and source-specific
+  interaction scopes are reassessed.'
+- 'Issue #2715 tracks ten explicit unsupported expression-only applicability exclusions.
+  Whole-record metabolism/FeS, alveolin/glideosome, HSP78/SSC1 stress/protein-localization,
+  ESCRT/MVB, somatic-genome expression and Mam/Mms biomineralization assertions trigger
+  bounded host-catalogue coverage assessment despite empty example inventories or
+  narrow titles.'
+- Source commit cf694c66fc3ad68d50e01fa740eadcc8987282ae is retained by tag review-base/pr2368-current-record-followup-20261103.
+- CLAUDE.md aliases AGENTS.md; canonical regular AGENTS.md bytes are frozen. All 52
+  used local inputs were frozen before assessment. Whole hydrogenosome and its membrane,
+  multivesicular body and its intraluminal vesicle, and MamK filament are bounded
+  neighbor context only, not additional review targets or dispositions.
+- Fresh and reused source snapshots retain actual access times and inspection tiers.
+  Native identifier identity does not independently establish structure membership,
+  source-specific mechanism, species-wide generalization or assembly necessity.
+- All twenty native protein commands returned zero. IMC has three unreviewed examples,
+  one COVERED alveolin node and one UNANCHORED_WITH_UNIPROT glideosome; IMiQ has two
+  reviewed examples and zero typed molecular nodes; magnetosome has nine reviewed
+  examples and two COVERED typed nodes; its membrane has zero examples and one UNANCHORED_WITH_UNIPROT
+  Mam/Mms node. The other six records have no examples or typed molecular nodes. These
+  execution scopes do not certify every narrative claim.
+- 'Closed grouped issue #2432 is historical context for magnetosome crystal grounding
+  propagation; no broad disposition of other records or findings is made. Native-validator
+  issue #2514 remains open and reused. Related website, image-inventory and protein-example-inventory
+  issues remain distinct and untouched.'
+- Native family-or-class guidance permits generic protein cohorts when represented
+  honestly. Direct localization, fractionation, sedimentation, interaction, biochemical
+  function and necessity are distinguished in the target-specific assessments.
+- A proposed separate magnetite/greigite enclosure-wording finding was independently
+  challenged and withdrawn. The formal magnetite enclosure relation remains true and
+  correctly grounded; broader alternative-mineral background is not a chemical equivalence
+  assertion. Existing magnetite universal-essentiality F1 remains the demonstrated
+  defect. Optional wording precision is not promoted to a new confirmed finding.
+- IMiQ Figure1 link-only assets were freshly retrieved and their pixels, captions
+  and licences inspected by the independent reviewer. No external figure bytes are
+  committed; 2018 noncommercial/share-alike, publisher UserLicence1.2 and dataset
+  CC0 scopes remain separate. Later primary-text access improved the source assessment
+  without retroactively changing original access history.
+- 'The final five inherited findings link to scientific issues #2716–#2720 (two major,
+  three minor), with exact predecessor identities retained. The two affected targets
+  are hydrogenosome lumen and magnetosome; the other eight targets have qualified
+  passes. Issues #2714 and #2715 are bundle-only fixes; validator #2514 remains open.
+  No scientific record-curation issue is closed by this review-only PR.'
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021704Z-hydrogenosome-lumen-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021705Z-inner-membrane-pellicle-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021708Z-late-endosome-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021709Z-late-endosome-lumen-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021710Z-late-endosome-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021711Z-macronucleus-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021713Z-magnetosome-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021714Z-magnetosome-lumen-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T021715Z-magnetosome-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2368
+- https://github.com/CultureBotAI/CellStructureMech/issues/2432
+- https://github.com/CultureBotAI/CellStructureMech/issues/2514
+- https://github.com/CultureBotAI/CellStructureMech/issues/2714
+- https://github.com/CultureBotAI/CellStructureMech/issues/2715
+- https://github.com/CultureBotAI/CellStructureMech/issues/2716
+- https://github.com/CultureBotAI/CellStructureMech/issues/2717
+- https://github.com/CultureBotAI/CellStructureMech/issues/2718
+- https://github.com/CultureBotAI/CellStructureMech/issues/2719
+- https://github.com/CultureBotAI/CellStructureMech/issues/2720
+```

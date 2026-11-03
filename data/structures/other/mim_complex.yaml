@@ -38,6 +38,13 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Added mim1 (component_ref: mim1, InterPro:IPR013262) and mim2 (component_ref:
+    mim2, InterPro:IPR037652) nodes and co-assembly edges into mim_insertase_pathway
+    (DOI:10.1016/j.celrep.2020.107567, DOI:10.7554/eLife.34488).'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial outer import machinery
   synonym_type: EXACT_SYNONYM
@@ -190,6 +197,16 @@ causal_graphs:
     differs from earlier steady-state measurements; no exclusive import route, fixed
     stoichiometry or directly observed exchange between MIM populations is asserted.
   nodes:
+  - node_id: mim1
+    label: Mitochondrial import protein 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: mim1
+    grounding: InterPro:IPR013262
+  - node_id: mim2
+    label: Mitochondrial outer membrane protein Mim2
+    node_type: GENE_OR_PROTEIN
+    component_ref: mim2
+    grounding: InterPro:IPR037652
   - node_id: mim
     label: MIM complex
     node_type: STRUCTURE
@@ -212,6 +229,33 @@ causal_graphs:
     label: SAM-associated Tom6 assembly intermediate
     node_type: STATE
   edges:
+  - subject: mim1
+    predicate: co-assembles into
+    object: mim
+    description: Multiple copies of Mim1 oligomerize with Mim2 in the mitochondrial
+      outer membrane to form the MIM insertase complex.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      snippet: Import of alpha-helical proteins into the mitochondrial outer membrane
+        is mediated by the mitochondrial import (MIM) complex, which contains multiple
+        copies of Mim1 and one or two copies of Mim2.
+      notes: Supports assembly of multiple Mim1 subunits with Mim2 into the MIM complex.
+  - subject: mim2
+    predicate: co-assembles into
+    object: mim
+    description: One or two copies of the small integral outer-membrane subunit Mim2
+      co-assemble with Mim1 to stabilize the MIM insertase complex.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      snippet: Import of alpha-helical proteins into the mitochondrial outer membrane
+        is mediated by the mitochondrial import (MIM) complex, which contains multiple
+        copies of Mim1 and one or two copies of Mim2.
+      notes: Supports co-assembly of Mim2 with Mim1 in the MIM complex.
+    - reference: DOI:10.7554/eLife.34488
+      snippet: The mitochondrial outer membrane (MOM) protein Mim1 is required for
+        the insertion of alpha-helical proteins into the MOM and forms the MIM complex
+        together with Mim2.
+      notes: Demonstrates that Mim1 and Mim2 together form the MIM complex.
   - subject: mim
     predicate: associates with
     object: tom

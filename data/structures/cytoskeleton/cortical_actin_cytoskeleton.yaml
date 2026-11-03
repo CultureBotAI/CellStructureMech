@@ -1,0 +1,311 @@
+identifier: GO:0030864
+label: cortical actin cytoskeleton
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: The part of the actin cytoskeleton that lies just beneath the plasma membrane.
+  In budding yeast (Saccharomyces cerevisiae), fission yeast, and other fungi and
+  protists, the cortical actin cytoskeleton comprises Arp2/3-nucleated branched actin
+  cortical patches and cortical actin filaments that drive endocytic vesicle internalization
+  and cell-cortex remodeling.
+definition_source: GO:0030864
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-23T14:36:26Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of cortical actin cytoskeleton (GO:0030864) in category
+    CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+parent_structures:
+- GO:0030863
+part_of:
+- GO:0015629
+- GO:0005938
+synonyms:
+- synonym_text: submembranous actin cytoskeleton
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030864
+components:
+- component_id: actin
+  label: actin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ACT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from Saccharomyces cerevisiae ACT1 cortical actin cytoskeleton
+    studies; no single whole-protein InterPro family CURIE was assigned in this pass.
+  role: Monomeric subunit that polymerizes into the branched cortical actin filament
+    networks and cortical patches of the cortical actin cytoskeleton beneath the plasma
+    membrane.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Young, Cooper and Bridgman 2004 examined Saccharomyces cerevisiae actin
+      patches by correlative fluorescence and electron microscopy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60010
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
+        for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: arp2_3_complex
+  label: Arp2/3 protein complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005885
+  essentiality: UNKNOWN
+  role: Seven-subunit actin-nucleation complex (Arp2, Arp3, Arc40, Arc35, Arc19, Arc18,
+    Arc15) that nucleates branched actin filament networks within the cortical actin
+    cytoskeleton.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Young, Cooper and Bridgman 2004 described yeast actin-patch branches characteristic
+      of the Arp2/3 complex.
+  gene_symbols:
+  - ARP2
+  - ARP3
+  - ARC40
+  - ARC35
+  - ARC19
+  - ARC18
+  - ARC15
+  protein_examples:
+  - uniprot_id: UniProtKB:P32381
+    protein_label: Actin-related protein 2
+    gene_symbol: ARP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11248049
+      notes: Boldogh IR et al. 2001, ‘Arp2/3 complex and actin dynamics are required
+        for actin-based mitochondrial motility in yeast.’, Proc Natl Acad Sci U S
+        A. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, actin patch' localisation of P32381.
+    - reference: PMID:9210376
+      notes: Winter D et al. 1997, ‘The complex containing actin-related proteins
+        Arp2 and Arp3 is required for the motility and integrity of yeast actin patches.’,
+        Curr Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, actin patch' localisation of P32381.
+  - uniprot_id: UniProtKB:P47117
+    protein_label: Actin-related protein 3
+    gene_symbol: ARP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9210376
+      notes: Winter D et al. 1997, ‘The complex containing actin-related proteins
+        Arp2 and Arp3 is required for the motility and integrity of yeast actin patches.’,
+        Curr Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, actin patch' localisation of P47117.
+  - uniprot_id: UniProtKB:P38328
+    protein_label: Actin-related protein 2/3 complex subunit 1
+    gene_symbol: ARC40
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC40 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38328, the single reviewed entry
+        for gene ARC40 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53731
+    protein_label: Actin-related protein 2/3 complex subunit 2
+    gene_symbol: ARC35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC35 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53731
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53731, the single reviewed entry
+        for gene ARC35 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33204
+    protein_label: Actin-related protein 2/3 complex subunit 4
+    gene_symbol: ARC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33204
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33204, the single reviewed entry
+        for gene ARC19 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q05933
+    protein_label: Actin-related protein 2/3 complex subunit 3
+    gene_symbol: ARC18
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC18 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q05933
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q05933, the single reviewed entry
+        for gene ARC18 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P40518
+    protein_label: Actin-related protein 2/3 complex subunit 5
+    gene_symbol: ARC15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC15 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11248049
+      notes: Boldogh IR et al. 2001, ‘Arp2/3 complex and actin dynamics are required
+        for actin-based mitochondrial motility in yeast.’, Proc Natl Acad Sci U S
+        A. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, actin patch' localisation of P40518.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast organizes a dynamic Arp2/3-nucleated cortical actin cytoskeleton
+    beneath the plasma membrane that drives endocytic internalization.
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which the cortical actin cytoskeleton beneath
+    the plasma membrane was resolved as Arp2/3-branched Act1 filament networks driving
+    endocytosis.
+  reference: DOI:10.1083/jcb.200404159
+functions:
+- function_id: endocytic_internalization
+  label: endocytic internalization
+  description: Arp2/3-nucleated branched actin filament networks of the cortical actin
+    cytoskeleton assemble beneath the plasma membrane at endocytic sites and generate
+    force for vesicle internalization.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+    notes: Kaksonen, Sun and Drubin 2003 tracked cortical actin assembly and inward
+      movement during yeast endocytic internalization.
+  - reference: DOI:10.1371/journal.pbio.0060001
+    notes: Galletta, Chuang and Cooper 2008 dissected Arp2/3-regulated cortical actin
+      network assembly and motility during endocytosis.
+evidence:
+- reference: GO:0030864
+  notes: 'Gene Ontology cellular-component term for cortical actin cytoskeleton: The
+    part of the actin cytoskeleton that lies just beneath the plasma membrane.'
+- reference: GO:0030479
+  notes: Gene Ontology term for actin cortical patch, a major Arp2/3-nucleated substructure
+    (has_part) of the cortical actin cytoskeleton in fungi.
+- reference: GO:0005885
+  notes: Gene Ontology term for the Arp2/3 protein complex, a constituent branch-nucleating
+    complex of the cortical actin cytoskeleton.
+- reference: DOI:10.1016/S0092-8674(03)00883-3
+  notes: Kaksonen, Sun and Drubin 2003 (Cell) dissect how the budding-yeast cortical
+    actin cytoskeleton assembles at plasma-membrane endocytic sites to drive internalization.
+- reference: DOI:10.1083/jcb.200404159
+  notes: Young, Cooper and Bridgman 2004 (J Cell Biol) resolve the branched actin
+    filament architecture of the yeast cortical actin cytoskeleton.
+- reference: DOI:10.1371/journal.pbio.0060001
+  notes: Galletta, Chuang and Cooper 2008 (PLoS Biol) analyze Arp2/3 regulators in
+    cortical actin assembly and endocytosis.
+causal_graphs:
+- graph_id: cortical_actin_cytoskeleton_mechanism
+  title: Arp2/3-mediated branched actin assembly and endocytic function of the cortical
+    actin cytoskeleton
+  description: The Arp2/3 complex (GO:0005885) nucleates branched Act1 filaments beneath
+    the plasma membrane to assemble the cortical actin cytoskeleton (GO:0030864),
+    which mediates endocytic internalization.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures core Act1 and Arp2/3 assembly into the Saccharomyces cerevisiae
+    cortical actin cytoskeleton and its role in endocytic internalization.
+  nodes:
+  - node_id: actin
+    label: actin
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin
+  - node_id: arp2_3_complex
+    label: Arp2/3 protein complex
+    node_type: STRUCTURE
+    grounding: GO:0005885
+    component_ref: arp2_3_complex
+  - node_id: cortical_actin_cytoskeleton
+    label: cortical actin cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0030864
+    description: Assembled plasma-membrane-proximal cortical actin cytoskeleton (GO:0030864).
+  - node_id: endocytic_internalization
+    label: endocytic internalization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: arp2_3_complex
+    predicate: nucleates branches in
+    object: cortical_actin_cytoskeleton
+    description: The Arp2/3 complex nucleates dendritic actin filament branches within
+      the cortical actin cytoskeleton.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Young, Cooper and Bridgman 2004 resolved branched actin filament networks
+        characteristic of Arp2/3 nucleation in the yeast cell cortex.
+  - subject: actin
+    predicate: polymerizes into
+    object: cortical_actin_cytoskeleton
+    description: Act1 monomers polymerize into the branched cortical filament networks
+      of the cortical actin cytoskeleton.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Correlative light and electron microscopy demonstrates short branched
+        Act1 filaments in the cortical actin cytoskeleton.
+  - subject: cortical_actin_cytoskeleton
+    predicate: mediates
+    object: endocytic_internalization
+    description: Dynamic assembly and inward movement of the cortical actin cytoskeleton
+      drive endocytic vesicle internalization.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 established the pathway coupling cortical
+        actin assembly to endocytic internalization.
+    - reference: DOI:10.1371/journal.pbio.0060001
+      notes: Galletta, Chuang and Cooper 2008 showed that Arp2/3 regulation of cortical
+        actin networks controls endocytic internalization.
+has_part:
+- GO:0030479
+- GO:0005885

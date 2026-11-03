@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/large_ribosomal_subunit.yaml
+  slug: large_ribosomal_subunit
+session:
+  id: 2026-10-31T090231Z-claude-code-e6c6c6
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added rrna_5s and lsu_protein_cohort causal graph nodes with component_ref and
+    connected them to large_ribosomal_subunit.
+  details: Added causal nodes referencing the rrna_5s and lsu_protein_cohort components and
+    connected both to large_ribosomal_subunit (DOI:10.1126/science.289.5481.905, DOI:10.1128/MMBR.00013-07)
+    so all structural components of the large ribosomal subunit participate in the mechanism
+    graph.

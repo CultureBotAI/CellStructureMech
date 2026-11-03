@@ -1,0 +1,241 @@
+schema_version: 1.0.0
+review_id: 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Single-record review of post-anaphase microtubule array (GO:1990295): missing
+  gene_symbols on emtoc component'
+started_at: '2026-10-30T22:15:00Z'
+finished_at: '2026-10-30T22:20:01Z'
+reviewer:
+  identity: antigravity-c5s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 5 Stage 4 record_review against committed
+    git revision a94f6deb809dd50c8344fb03284de9801c0aa298 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Single-record audit of post_anaphase_microtubule_array.yaml (GO:1990295,
+  post-anaphase microtubule array). Structure identity, GO hierarchy (parent_structures:
+  GO:0110165 cellular anatomical entity; part_of: GO:0015630 microtubule cytoskeleton;
+  has_part: GO:0000923 equatorial microtubule organizing center), fission yeast canonical
+  example (NCBITaxon:4896), and causal graphs are well-supported. However, components[3]
+  (component_id: emtoc, label: equatorial microtubule organizing center, grounding:
+  GO:0000923) lists two reviewed protein_examples (UniProtKB:O94488 with gene_symbol:
+  mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2 in NCBITaxon:284812) whose role
+  strings explicitly state ''Identifier for the component''s declared gene symbol'',
+  yet components[3] omits gene_symbols: [mto1, mto2] completely.'
+source:
+  git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record review of data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    (GO:1990295).
+  selection: Targeted single-record audit of post_anaphase_microtubule_array.yaml
+    during Cycle 5 Stage 4 full-corpus inspection.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990295
+targets:
+- target_id: GO:1990295
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  label: post-anaphase microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+checks:
+- check_id: strict_post_anaphase_microtubule_array
+  name: Strict corpus validation covering post_anaphase_microtubule_array.yaml
+  status: passed
+  required: true
+  summary: post_anaphase_microtubule_array.yaml passes current strict LinkML validation
+    because validate_component_protein_examples skips components with empty gene_symbols.
+  target_ids:
+  - GO:1990295
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_pama
+- check_id: history_post_anaphase_microtubule_array
+  name: History ledger validation covering post_anaphase_microtubule_array.yaml
+  status: passed
+  required: true
+  summary: History ledger records covering post_anaphase_microtubule_array.yaml validate
+    cleanly.
+  target_ids:
+  - GO:1990295
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_pama
+evidence:
+- evidence_id: ev_strict_pama
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,008 records.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_history_pama
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,140 history records.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+- evidence_id: ev_pama_emtoc_component
+  kind: record_content
+  reference: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  locator: components[3] (lines 179-251)
+  accessed_at: '2026-10-30T22:16:00Z'
+  support: supports
+  summary: components[3] (emtoc) omits gene_symbols while declaring protein_examples
+    for mto1 (UniProtKB:O94488) and mto2 (UniProtKB:Q9USP7) with role 'Identifier
+    for the component's declared gene symbol'.
+  quote: "- component_id: emtoc\n  label: equatorial microtubule organizing center\n\
+    \  component_type: PROTEIN_COMPLEX\n  component_role: CONSTITUENT\n  grounding:\
+    \ GO:0000923\n  essentiality: UNKNOWN\n  role: Equatorial nucleating subassembly\
+    \ included within the whole-array boundary;\n    its finer composition is curated\
+    \ in the separate center record.\n  evidence:\n  - reference: GO:1990295\n   \
+    \ notes: The native GO class has-part GO:0000923; the relation is not inverted\
+    \ into\n      universal eMTOC part-of PAA.\n  - reference: DOI:10.1016/j.cub.2010.10.006\n\
+    \    notes: Equator-selective Mto1 targeting defects prevent PAA nucleation while\
+    \ preserving\n      spindle-pole targeting.\n  - reference: DOI:10.3390/cells12060917\n\
+    \    notes: Equatorial Mto1 recruitment precedes PAA formation in live-cell time\
+    \ series.\n  protein_examples:\n  - uniprot_id: UniProtKB:O94488\n    protein_label:\
+    \ Gamma tubulin complex adapter mto1\n    gene_symbol: mto1\n    taxon_id: NCBITaxon:284812\n\
+    \    taxon_label: Schizosaccharomyces pombe 972h-\n    entry_status: REVIEWED\n\
+    \    retrieved_on: '2026-10-17'\n    role: Representative reviewed UniProtKB entry\
+    \ for gene mto1 in Schizosaccharomyces\n      pombe 972h-. Identifier for the\
+    \ component's declared gene symbol; it is not\n      itself evidence that the\
+    \ protein is part of this structure."
+  snapshot_sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+assessments:
+- assessment_id: assess_pama_identity_and_hierarchy
+  area: identity
+  topic: GO cellular_component identity and hierarchy of post-anaphase microtubule
+    array (GO:1990295)
+  outcome: supported
+  summary: GO:1990295 accurately identifies the fission yeast post-anaphase microtubule
+    array with parent_structures GO:0110165 (cellular anatomical entity), part_of
+    GO:0015630 (microtubule cytoskeleton), and has_part GO:0000923 (equatorial microtubule
+    organizing center).
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - ev_strict_pama
+  - ev_history_pama
+- assessment_id: assess_pama_emtoc_gene_symbols
+  area: representation
+  topic: Missing gene_symbols list on components[3] (emtoc) despite declared protein_examples
+    for mto1 and mto2
+  outcome: concern
+  summary: 'components[3] (emtoc) omits gene_symbols: [mto1, mto2] even though its
+    two protein_examples (UniProtKB:O94488 mto1 and UniProtKB:Q9USP7 mto2) state ''Identifier
+    for the component''s declared gene symbol'' in role.'
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - ev_pama_emtoc_component
+findings:
+- finding_id: F1
+  issue_key: post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: 'post_anaphase_microtubule_array.yaml components[3] (emtoc) omits gene_symbols:
+    [mto1, mto2] while protein_examples claim declared gene symbols'
+  description: 'In data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    (GO:1990295, lines 179-251), components[3] (component_id: emtoc, label: ''equatorial
+    microtubule organizing center'', grounding: GO:0000923) carries two reviewed protein_examples
+    (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol:
+    mto2 in NCBITaxon:284812) whose role strings state ''Identifier for the component''s
+    declared gene symbol'', yet components[3] omits gene_symbols: [mto1, mto2] completely.
+    This escaped validate_component_protein_examples because validator.py lines 223-224
+    skip components with an empty gene_symbols list (tracked in cellstructuremech-infra-0008).'
+  target_ids:
+  - GO:1990295
+  field_paths:
+  - components[3].gene_symbols
+  evidence_ids:
+  - ev_pama_emtoc_component
+  rule_id: docs/SCHEMA.md:StructuralComponent.gene_symbols
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+  tags:
+  - cytoskeleton
+  - gene-symbols
+  - protein-examples
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Add gene_symbols: [mto1, mto2] to components[3] (emtoc) in data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    with a curation event and history entry.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990295
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits for post_anaphase_microtubule_array.yaml are queued for Cycle 5 Stage
+  5 (resolve_review_findings).
+tags:
+- stage4
+- record-review
+- cytoskeleton

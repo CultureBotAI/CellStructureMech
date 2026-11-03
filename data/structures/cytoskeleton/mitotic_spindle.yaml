@@ -59,6 +59,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-11-03T05:55:11Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked alpha_beta_tubulins component into budding_yeast_spindle_microtubule_architecture
+    causal graph.
+  llm_assisted: true
 parent_structures:
 - GO:0005819
 has_part:
@@ -212,6 +218,10 @@ causal_graphs:
     label: mitotic spindle
     node_type: STRUCTURE
     grounding: GO:0072686
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
   edges:
   - subject: spindle_pole_body
     predicate: anchor
@@ -249,6 +259,21 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.129.6.1601
       notes: Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive
         kinetochore microtubules and interpolar microtubules.
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: spindle_microtubule
+    description: Eukaryotic alpha- and beta-tubulin subunits polymerize into the spindle
+      microtubules of the mitotic spindle.
+    evidence:
+    - reference: GO:0005874
+      notes: GO:0005874 defines microtubules as eukaryotic hollow tubes made from
+        polymeric tubulin protofilaments.
+    - reference: GO:0005876
+      notes: GO:0005876 defines spindle microtubules as microtubules that are part
+        of a mitotic or meiotic spindle.
+    - reference: DOI:10.1126/science.277.5325.574
+      notes: Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in
+        living Saccharomyces cerevisiae cells.
 discussions:
 - discussion_id: spindle_poles_and_kinetochores_are_boundaries
   prompt: Keep spindle pole bodies and kinetochores as adjacent structures instead

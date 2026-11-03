@@ -21,12 +21,19 @@ curation_history:
     four-spliceosomal-complex and reviewed-label-only pre-mRNA components, a conservative
     constituent graph and a TODO for exact native-spliceosome and pre-mRNA boundaries.
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_HIERARCHY_AND_PARTHOOD
+  changes: Changed parent_structures from GO:0005681 (spliceosomal complex) to GO:1990904
+    (ribonucleoprotein complex), added has_part GO:0005681 for the four constituent
+    native spliceosomes, and updated GO:0005681 evidence notes (#2461).
+  llm_assisted: true
 synonyms:
 - synonym_text: supraspliceosome complex
   synonym_type: EXACT_SYNONYM
   source: GO:0044530
 parent_structures:
-- GO:0005681
+- GO:1990904
 components:
 - component_id: spliceosomal_complex
   label: spliceosomal complex
@@ -61,8 +68,10 @@ evidence:
 - reference: GO:0044530
   notes: Gene Ontology cellular-component term for supraspliceosomal complex and its
     exact synonym.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
 - reference: GO:0005681
-  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+  notes: Gene Ontology cellular-component term for constituent spliceosomal complex.
 causal_graphs:
 - graph_id: supraspliceosomal_complex_assembly
   title: Four spliceosomal complexes and pre-mRNA form the supraspliceosomal complex
@@ -98,7 +107,7 @@ causal_graphs:
       notes: GO:0044530 defines the supraspliceosomal complex as composed of four
         active spliceosomes.
     - reference: GO:0005681
-      notes: GO:0005681 is the parent spliceosomal-complex term.
+      notes: GO:0005681 is the constituent spliceosomal-complex term.
   - subject: pre_mrna
     predicate: connects subcomplexes in
     object: supraspliceosomal_complex
@@ -127,3 +136,5 @@ discussions:
   - reference: GO:0005681
   posed_by: codex
   posed_date: '2026-09-25'
+has_part:
+- GO:0005681
