@@ -44,6 +44,13 @@ curation_history:
   changes: Added source-backed FUNCTION causal graph 'bindosome_sugar_capture' with
     3 nodes and 2 edges.
   llm_assisted: true
+- timestamp: '2026-10-30T06:37:11Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example (UniProtKB:Q97UF5 for araS/SSO3066 in Saccharolobus solfataricus
+    P2).'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -89,6 +96,23 @@ components:
         for gene glcS in Saccharolobus solfataricus P2. Establishes the accession
         and gene identity only; the component's membership in this structure rests
         on the record's own sources.
+  - uniprot_id: UniProtKB:Q97UF5
+    protein_label: Arabinose ABC transporter, arabinose binding protein
+    gene_symbol: SSO3066
+    taxon_id: NCBITaxon:273057
+    taxon_label: Saccharolobus solfataricus P2
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-30'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene araS, which
+      UniProt lists under the primary name SSO3066, in Saccharolobus solfataricus
+      P2. Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q97UF5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q97UF5 for gene araS (SSO3066) in
+        Saccharolobus solfataricus P2. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2287
   taxon_label: Saccharolobus solfataricus
