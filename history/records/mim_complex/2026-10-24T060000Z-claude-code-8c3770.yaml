@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mim_complex.yaml
+  slug: mim_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-8c3770
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked Mim1 and Mim2 subunits into the MIM complex causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added GENE_OR_PROTEIN nodes mim1 and mim2
+    linked via component_ref to the record''s structural components with co-assembly edges
+    into mim.'

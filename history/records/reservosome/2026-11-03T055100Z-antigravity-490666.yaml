@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome.yaml
+  slug: reservosome
+session:
+  id: 2026-11-03T055100Z-antigravity-490666
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked reservosome_membrane component into endocytic_storage_and_proteolysis causal
+    graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''endocytic_storage_and_proteolysis''
+    in data/structures/membrane_organelle/reservosome.yaml. Added node(s) [reservosome_membrane]
+    and source-backed edge(s) [reservosome_membrane bounds reservosome]. Validated with write_validated_structure.'

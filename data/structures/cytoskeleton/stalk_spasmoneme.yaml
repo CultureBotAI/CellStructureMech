@@ -28,6 +28,11 @@ curation_history:
     membership from CCDC-specific sheath localization; preserve the spasmoneme exclusion,
     discussion rationale and dates.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 3 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 synonyms:
@@ -146,6 +151,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.77.2.358
       notes: Calcium-responsive glycerinated organelles; not a live-cell channel mechanism.
+    description: Calcium exposure of glycerinated stalk preparations elicits rapid
+      spasmoneme shortening.
   - subject: shortening
     predicate: drives
     object: stalk_deformation
@@ -153,6 +160,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.bpj.2012.07.038
       notes: Contractile stalk mechanics connect organelle shortening with cell-body
         displacement.
+    description: Spasmoneme shortening drives helical stalk deformation and cell-body
+      retraction in Vorticella.
   - subject: viscous_resistance
     predicate: slows and limits
     object: stalk_deformation
@@ -160,6 +169,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.bpj.2012.07.038
       notes: Controlled channel-flow resistance increases contraction duration and
         decreases excursion.
+    description: Imposed viscous channel-flow resistance slows stalk contraction and
+      limits cell-body excursion.
 discussions:
 - discussion_id: identity_and_scope
   kind: CURATION_TODO

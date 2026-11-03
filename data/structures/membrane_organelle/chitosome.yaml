@@ -48,6 +48,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 components:
@@ -281,6 +286,14 @@ causal_graphs:
     - reference: DOI:10.1111/j.1567-1364.2006.00158.x
       notes: Bartnicki-Garcia 2006 reviews chitosomes as vehicles for cell-surface
         construction of fungal chitin microfibrils.
+  - subject: chitosome
+    predicate: targets cargo to
+    object: plasma_membrane
+    description: Chitosomes deliver latent chitin synthase enzymes to the fungal plasma
+      membrane for cell-surface activation.
+    evidence:
+    - reference: DOI:10.1091/mbc.9.6.1565
+      notes: Chitosome microvesicles mobilize chitin synthase to the plasma membrane.
 discussions:
 - discussion_id: ground_chitosome_components
   prompt: Resolve exact source-neutral identifiers for the fungal chitin synthase

@@ -1,0 +1,987 @@
+# IPOD identity, cargo recruitment and turnover evidence review
+
+- Review: 20261021T103322Z-insoluble-protein-deposit-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T10:13:14Z
+- Finished UTC: 2026-10-21T10:33:22Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete issue observed. The record preserves yeast/model-substrate scope and separates transport dependence, native composition and post-assembly turnover.
+
+## Scope And Provenance
+
+Complete exact maintained IPOD record: identity, parents/parthood, two component classes, protein/family/taxa, two functions, both graphs and every edge, discussions/status and hosted Figure3.
+
+Selection: Batch19 index4; entire exact maintained record reviewed individually at frozen main9c0446.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:insoluble_protein_deposit | data/structures/inclusion/insoluble_protein_deposit.yaml | maintained | insoluble protein deposit |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| native-verify | passed | True | cellstructuremech:insoluble_protein_deposit | Focused native check passed; biological claims reviewed separately. |
+| native-causal-graphs | passed | True | cellstructuremech:insoluble_protein_deposit | Focused native check passed; biological claims reviewed separately. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:insoluble_protein_deposit | No expression-module or transcriptomic claim; direct structure and intervention evidence is the relevant source type. |
+| Focused native schema | passed | True | cellstructuremech:insoluble_protein_deposit | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:insoluble_protein_deposit | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:insoluble_protein_deposit | 8 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | cellstructuremech:insoluble_protein_deposit | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:insoluble_protein_deposit | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:insoluble_protein_deposit | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:insoluble_protein_deposit | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:insoluble_protein_deposit | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:insoluble_protein_deposit | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Local IPOD identity and broader ontology relations
+
+identity: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+The definition denotes the perivacuolar cytoplasmic inclusion characterized in yeast. Inclusion body is a broader is-a parent and cytoplasm is parthood. PAS proximity, mammalian aggresomes, INQ and original JUNQ observations are not exact synonyms. Native bounded identity searches support retaining the local CURIE without claiming an exhaustive ontology absence.
+
+### Cargo and associated Hsp104 membership
+
+evidence: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+Heterogeneous deposited cargo and localized Hsp104 are supported. PrD-GFP is an engineered Sup35 fragment, not a fixed native subunit. Transport proteins, PAS factors and downstream proteasomes need not be added as constituents merely because perturbations affect deposition or turnover.
+
+### Unresolved native cargo and Hsp104 assembly requirements
+
+evidence: unknown. Targets: cellstructuremech:insoluble_protein_deposit.
+
+The heterogeneous cargo and associated Hsp104 classes retain UNKNOWN for formation or assembly necessity. A deposit necessarily contains deposited material, but this constitutional role does not identify a tested requirement for particular native cargo. Hsp104 localization and post-formation inhibitor effects do not establish de novo assembly necessity.
+
+### Protein identity and bounded family candidate search
+
+grounding: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+P31539/HSP104 is the single reviewed strain559292 example, with matching gene/name/status. The11 integrated InterPro matches do not define the narrower Hsp104 class exactly. The generic cargo class has no single protein identifier; the PrD-GFP graph node is explicitly a reporter linked to that cargo class, not an asserted full-length Sup35 member.
+
+### Species versus experimental and reference strains
+
+scope: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+Kumar and Carter use74D-694 derivatives, with inducible versus constitutive reporters and endogenous SUP35-PrD deletion distinguished in Methods. The canonical species claim is supported; S288C is explicitly reference-sequence provenance rather than an experimental reassignment. Broad prevalence, universal copy number and material-state claims remain unasserted.
+
+### Sequestration and conditional turnover
+
+evidence: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+The record accurately separates poor reporter mobility and failed Ubc9ts recovery in2008 from slow PrD-GFP processing in2016. Partial MG132 sensitivity does not become exclusive proteasomal turnover, and PAS adjacency does not imply efficient bulk autophagy. Protection, toxicity and obligatory prion nucleation are not universalized.
+
+### Intervention and recovery graph
+
+graph: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+All six recruitment edges are supported by scoped depletion, viability and washout observations in Kumar Fig2/3/5. The mechanistic content is directed experimental dependence and recovery, with recruitment versus maintenance separated. Direct vesicle binding or stable residence of Myo2/Tpm/Sec18 is not asserted.
+
+### Post-formation inhibitor interpretation
+
+graph: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+All five turnover edges reflect the post-induction chase: Hsp104 inhibition preserves deposits and protein, and MG132 reduces but does not abolish subsequent turnover. Gradual release is explicitly the authors interpretation of inhibitor-sensitive decay, not a directly imaged molecular handoff. Assembly necessity is kept distinct.
+
+### Hosted primary Fig3 and exact licence
+
+provenance: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+Tracked SHA89dfdd173c797ff168e0cb7be8cc0547b6b742b26324a3cec906f0d379463bd4 and package MD5 agree. JATS explicitly supplies CC BY4.0, title/authors and exact Fig3 context; the whole image was visually read and curator caption distinguishes microscopy from quantification. Species attribution is supported by yeast Methods, with no strain-taxonomy inference.
+
+### Durable limits and primary-source coverage
+
+completeness: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+The existing discussions correctly retain unresolved native scaffold, site pre-existence and taxonomic breadth. Carter2024 supports the precise mutant-context prion exception. Historical notes that particular supplements or figures were not inspected are retained as historical access annotations; our current reading scope is recorded separately and is not itself a curation defect.
+
+### Maintained ownership and scientific status
+
+provenance: supported. Targets: cellstructuremech:insoluble_protein_deposit.
+
+The complete target and frozen dependencies were read. PROPOSED remains appropriate for agent-authored content; this review neither promotes status nor edits maintained history. No concrete issue or required missing representation was found; optional unknown inventory and properties are not findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/inclusion/insoluble_protein_deposit.yaml; Entire maintained YAML, all components/functions/graphs/discussions/image/history | context_only | The local identity denotes a yeast-scoped perivacuolar protein inclusion, separate from PAS and nuclear quality-control deposits. Its explicit caveats distinguish reporters, associated machinery and native structural unknowns. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Scope and completion; primary intervention evidence | context_only | Mechanistic graphs require source-supported directed effects; localization and genetic dependence do not by themselves establish stable membership or molecular contact. |
+| ipod-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016234,GO:0005737; results for GO0016234 and GO0005737: id, name, aspect, isObsolete, definition | supports | Both returned terms are active cellular components: GO0016234 denotes a discrete intracellular aggregate and GO0005737 denotes cytoplasm excluding nucleus and plasma membrane. They provide broader class and location vocabulary, not exact IPOD identity. |
+| ipod-agent-go-search-0 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=IPOD&amp;limit=100&amp;page=1; Native response result counts and returned labels | supports | Native acronym search returns zero hits. |
+| ipod-agent-go-search-1 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=insoluble+protein+deposit&amp;limit=100&amp;page=1; Native response result counts and returned labels | supports | The broad multiword search returns2980 hits; only the first100 are inspected and no exact IPOD name appears there. This is a bounded lead search, not proof that the remaining pages lack a match. |
+| ipod-agent-ols-exact | https://www.ebi.ac.uk/ols4/api/search?q=insoluble+protein+deposit&amp;ontology=go&amp;exact=true&amp;rows=100; Native response result counts and returned labels | supports | Native exact GO query returns numFound0. Together with the biological identity, this supports retaining the local identifier within the inspected query scope. |
+| ipod-agent-P31539 | https://rest.uniprot.org/uniprotkb/P31539.json; primaryAccession, entryType, proteinDescription.recommendedName, genes, organism | supports | P31539 is the reviewed Heat shock protein104 entry, HSP104/YLL026W/L0948, tax559292. Protein identity and reference-strain provenance are verified; structural association is assessed from primary microscopy separately. |
+| ipod-agent-query-HSP104 | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AHSP104&amp;format=json&amp;size=500; results: single entry, primaryAccession, genes and organism | supports | The exact reviewed HSP104 query returns one entry, P31539, with matching native gene/locus tokens and tax559292. |
+| ipod-agent-interpro-P31539 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200; count11, next=null; all results.metadata accession/name/type and P31539 membership | supports | Complete11 integrated matches have next=null. IPR001270 ClpA/B family and IPR050130 ATP-dependent Clp protease/Chaperone ClpA/ClpB are broader than Hsp104; remaining hits are domains, sites or superfamilies. This inspected candidate set does not justify replacing the narrower label with a broad family. |
+| ipod-agent-taxon-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName, rank, lineage | supports | Native taxonomy identifies Saccharomyces cerevisiae at species rank; identity and lineage only, not experimental occurrence. |
+| ipod-agent-taxon-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; taxId, scientificName, rank, lineage | supports | Native taxonomy identifies Saccharomyces cerevisiae S288C at strain rank; identity and lineage only, not experimental occurrence. |
+| ipod-agent-kaganovich2008-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature07195&amp;format=json&amp;resultType=core; resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText | supports | Exact native citation identifies Misfolded proteins partition between two distinct quality control compartments. by Kaganovich D, Kopito R, Frydman J. PMID18756251, DOI10.1038/nature07195. Bibliographic identity and abstract only; body support is a separately hashed source. |
+| ipod-agent-kumar2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pgen.1006324&amp;format=json&amp;resultType=core; resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText | supports | Exact native citation identifies Prion Aggregates Are Recruited to the Insoluble Protein Deposit (IPOD) via Myosin 2-Based Vesicular Transport. by Kumar R, Nawroth PP, Tyedmers J. PMID27689885, DOI10.1371/journal.pgen.1006324. Bibliographic identity and abstract only; body support is a separately hashed source. |
+| ipod-agent-prion2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pgen.1011194&amp;format=json&amp;resultType=core; resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText | supports | Exact native citation identifies Sequestrase chaperones protect against oxidative stress-induced protein aggregation and [PSI+] prion formation. by Carter Z, Creamer D, Kouvidi A, Grant CM. PMID38422160, DOI10.1371/journal.pgen.1011194. Bibliographic identity and abstract only; body support is a separately hashed source. |
+| ipod-agent-kaganovich2008-publisher | https://www.nature.com/articles/nature07195; Full native Nature Main/Results/Discussion and Online Methods read: derived //p&#124;//h2&#124;//h3&#124;//figcaption indices15–87; especially23,30–31,38–44,47–55,62–66,71–72 and Fig2/4/5/6 captions. Figure pixels and supplements not independently inspected. | supports | Direct primary yeast experiments identify perivacuolar amyloid-associated, poorly exchanging IPOD material and distinguish it from the original JUNQ signal. Rnq1/Ure2/HttQ103 reporter localization, Ubc9ts FLIP/FRAP and functional GFP-Hsp104 association support the scoped record. Ubc9ts in IPOD does not regain diffuse fluorescence after temperature recovery; the source does not establish an invariant native scaffold or universal degradation fate. Mammalian comparisons are kept separate. |
+| ipod-agent-kumar2016-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC5045159.1/PMC5045159.1.xml; PMC5045159.1 JATS Results sec003–009, Discussion sec011–013, Methods sec016 and sec024; embedded Fig1–7 captions, especially Fig3 and Fig6. Claim-bearing sections read in full. Front article-meta permissions/license explicitly links CC BY4.0. Supporting files and raw data not independently analyzed. | supports | Direct74D-694-derived PrD-GFP assays show Tpm/Myo2/Sec18 depletion impairs central recruitment and washout restores accumulation. Myo2 depletion after deposition preserves existing IPOD. Hsp104-inhibited post-induction chase preserves deposits and protein; MG132 only partially reduces turnover. The vesicle tether and substrate-independent site remain models; transport factors and PAS components are not invariant IPOD members. |
+| ipod-agent-prion2024-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC10931478.1/PMC10931478.1.xml; PMC10931478.1 JATS Results sec011 and embedded Fig6A caption; Methods sec015,sec016,sec018. Only these claim-bearing passages read; actual Fig6 pixels and unrelated experiments not reanalyzed. | supports | Direct ABP1-deletion comparison preserves the genotype-specific counterexample: oxidant-induced PSI+ formation falls in the otherwise wild-type background but remains elevated in btn2 hsp42 mutants. The authors interpret this as IPOD-independent prion formation in that mutant, not absence of every IPOD contribution. Experiments use74D-694 derivatives and0.8mM hydrogen peroxide for one hour. |
+| ipod-agent-kumar2016-package | https://pmc-oa-opendata.s3.amazonaws.com/PMC5045159.1/PMC5045159.1.json; pmcid/version/doi/pmid/is_pmc_openaccess/license_code; media_urls entry pgen.1006324.g003.jpg and its MD5 | supports | Native package metadata identifies PMC5045159 version1, its DOI/PMID, open-access flag and CC BY label. The Fig3 media entry gives MD5 9fb3e11d765cf9a68d081cff9402a568, equal to the tracked image bytes. Exact licence version comes from the separately hashed JATS. |
+| image | data/images/inclusion/insoluble_protein_deposit/pmc5045159_pgen_1006324_g003_e27e1f28.jpg; Entire Figure3 image visually inspected, panelsA–F; tracked input SHA and native package MD5 comparison | context_only | PanelsA,C,D show fluorescent foci and their coalescence after auxin washout; B,E,F quantify. E preserves a preformed deposit during Myo2 depletion whereas F shows dispersed recruitment. Caption gives2μm scale bars and RK1e context; no separate third-party credit appears in the image or Fig3 caption. |
+| kaganovich-pmc-access | https://pmc.ncbi.nlm.nih.gov/articles/PMC2746971/?report=xml; Actual native HTTP200 response title: Checking your browser - reCAPTCHA | context_only | This PMC route returned a challenge, not body text. The independently hashed Nature HTML supplies genuine readable body evidence. |
+| native-verify | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml --verify; Captured focused native log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml --causal-graphs; Captured focused native log | supports | data/structures/inclusion/insoluble_protein_deposit.yaml  (cellstructuremech:insoluble_protein_deposit)<br>  amyloid_cargo_recruitment	cargo	NO_GENE_SYMBOLS	-&gt;aggregate_cargo (OTHER: heterogeneous IPOD protein aggregate cargo)<br>  deposit_cargo_turnover	hsp104	COVERED	-&gt;hsp104 (UniProtKB:P31539)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/inclusion/insoluble_protein_deposit.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/inclusion/insoluble_protein_deposit.yaml |
+| strict-result | just validate-strict data/structures/inclusion/insoluble_protein_deposit.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/inclusion/insoluble_protein_deposit.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/inclusion/insoluble_protein_deposit.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 8 of9 collected target identifiers returned OK in this fresh base resolver run. Residuals: cellstructuremech:insoluble_protein_deposit: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Native ontology searches are bounded: IPOD acronym and exact OLS label return zero; the broad multiword QuickGO search covers only its first100of2980 hits. No universal absence claim is made.
+- Kaganovich full Main/Results/Discussion and Methods were read from genuine publisher HTML; the PMC route returned a challenge. Figure pixels other than tracked Kumar Fig3, supplementary strain tables, supporting figures and raw datasets were not independently reanalyzed.
+- Kumar claim-bearing Results/Discussion/Methods were read; Carter coverage is limited to sec011/Fig6A caption and the relevant strain/stress/prion Methods. Experimental conclusions are not generalized to other species or every aggregate substrate.
+- Unknown native scaffold and de novo assembly necessity remain unknown. Historical scientific and access annotations are not silently rewritten.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- User-directed batch review explicitly requests an unsaved review for clean records as well as issue-bearing records; no finding is manufactured.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T103322Z-insoluble-protein-deposit-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: IPOD identity, cargo recruitment and turnover evidence review
+started_at: '2026-10-21T10:13:14Z'
+finished_at: '2026-10-21T10:33:22Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete issue observed. The record preserves yeast/model-substrate scope
+  and separates transport dependence, native composition and post-assembly turnover.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: efb5aa79a0016ae7f1e53e40a9f5789930d152686ea6467aefce0928f7d1900f
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/inclusion/insoluble_protein_deposit/pmc5045159_pgen_1006324_g003_e27e1f28.jpg
+    sha256: 89dfdd173c797ff168e0cb7be8cc0547b6b742b26324a3cec906f0d379463bd4
+    role: context
+  - path: data/structures/inclusion/insoluble_protein_deposit.yaml
+    sha256: 45a74ced04c8c5714cd45f6a8a04c45ae8a5af22a04809aa51520c54884fb773
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:insoluble_protein_deposit
+  path: data/structures/inclusion/insoluble_protein_deposit.yaml
+  label: insoluble protein deposit
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/insoluble_protein_deposit.yaml
+    role: maintained scientific record
+scope:
+  description: 'Complete exact maintained IPOD record: identity, parents/parthood,
+    two component classes, protein/family/taxa, two functions, both graphs and every
+    edge, discussions/status and hosted Figure3.'
+  selection: Batch19 index4; entire exact maintained record reviewed individually
+    at frozen main9c0446.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+checks:
+- check_id: native-verify
+  name: native-verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; biological claims reviewed separately.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: native-causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; biological claims reviewed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: No expression-module or transcriptomic claim; direct structure and intervention
+    evidence is the relevant source type.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just validate data/structures/inclusion/insoluble_protein_deposit.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just validate-strict data/structures/inclusion/insoluble_protein_deposit.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: 8 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - graph-policy
+  - ipod-agent-go
+  - ipod-agent-go-search-0
+  - ipod-agent-go-search-1
+  - ipod-agent-ols-exact
+  - ipod-agent-P31539
+  - ipod-agent-query-HSP104
+  - ipod-agent-interpro-P31539
+  - ipod-agent-taxon-4932
+  - ipod-agent-taxon-559292
+  - ipod-agent-kaganovich2008-meta
+  - ipod-agent-kumar2016-meta
+  - ipod-agent-prion2024-meta
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - ipod-agent-prion2024-jats
+  - ipod-agent-kumar2016-package
+  - image
+  - kaganovich-pmc-access
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/inclusion/insoluble_protein_deposit.yaml
+  locator: Entire maintained YAML, all components/functions/graphs/discussions/image/history
+  accessed_at: '2026-10-21T10:20:26Z'
+  support: context_only
+  summary: The local identity denotes a yeast-scoped perivacuolar protein inclusion,
+    separate from PAS and nuclear quality-control deposits. Its explicit caveats distinguish
+    reporters, associated machinery and native structural unknowns.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Scope and completion; primary intervention evidence
+  accessed_at: '2026-10-21T10:20:26Z'
+  support: context_only
+  summary: Mechanistic graphs require source-supported directed effects; localization
+    and genetic dependence do not by themselves establish stable membership or molecular
+    contact.
+- evidence_id: ipod-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016234,GO:0005737
+  locator: 'results for GO0016234 and GO0005737: id, name, aspect, isObsolete, definition'
+  accessed_at: '2026-10-21T10:16:27.159901Z'
+  support: supports
+  summary: 'Both returned terms are active cellular components: GO0016234 denotes
+    a discrete intracellular aggregate and GO0005737 denotes cytoplasm excluding nucleus
+    and plasma membrane. They provide broader class and location vocabulary, not exact
+    IPOD identity.'
+  snapshot_sha256: 94c9a43328badeef75d174318ba7a648cba7cfe99eb407fa0b30879f5d18dddb
+- evidence_id: ipod-agent-go-search-0
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=IPOD&limit=100&page=1
+  locator: Native response result counts and returned labels
+  accessed_at: '2026-10-21T10:18:12.719775Z'
+  support: supports
+  summary: Native acronym search returns zero hits.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  search_scope: QuickGO query IPOD, page1 limit100; numberOfHits0; complete zero-result
+    response.
+- evidence_id: ipod-agent-go-search-1
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=insoluble+protein+deposit&limit=100&page=1
+  locator: Native response result counts and returned labels
+  accessed_at: '2026-10-21T10:18:12.720110Z'
+  support: supports
+  summary: The broad multiword search returns2980 hits; only the first100 are inspected
+    and no exact IPOD name appears there. This is a bounded lead search, not proof
+    that the remaining pages lack a match.
+  snapshot_sha256: 39ad2701188a10e2976e0ff79d63a7bc7ed0c55f77e705abacd03b6d949ebe4e
+  search_scope: QuickGO query insoluble protein deposit, page1 limit100 of30pages;
+    only100of2980 hits inspected.
+- evidence_id: ipod-agent-ols-exact
+  kind: search
+  reference: https://www.ebi.ac.uk/ols4/api/search?q=insoluble+protein+deposit&ontology=go&exact=true&rows=100
+  locator: Native response result counts and returned labels
+  accessed_at: '2026-10-21T10:18:38.342194Z'
+  support: supports
+  summary: Native exact GO query returns numFound0. Together with the biological identity,
+    this supports retaining the local identifier within the inspected query scope.
+  snapshot_sha256: 8d33fdeb26a2d16294a3c5f4a7f444578bb462aa6036d45a15e9bfadfe47fbd2
+  search_scope: OLS4 search ontology=go, exact=true, q=insoluble protein deposit,
+    rows100; numFound0, no pagination.
+- evidence_id: ipod-agent-P31539
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P31539.json
+  locator: primaryAccession, entryType, proteinDescription.recommendedName, genes,
+    organism
+  accessed_at: '2026-10-21T10:16:27.163517Z'
+  support: supports
+  summary: P31539 is the reviewed Heat shock protein104 entry, HSP104/YLL026W/L0948,
+    tax559292. Protein identity and reference-strain provenance are verified; structural
+    association is assessed from primary microscopy separately.
+  snapshot_sha256: 8636decea760cdb2a2da238bfa589822867a778a41fd6a04c45a74fe5802ee13
+- evidence_id: ipod-agent-query-HSP104
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+gene_exact%3AHSP104&format=json&size=500
+  locator: 'results: single entry, primaryAccession, genes and organism'
+  accessed_at: '2026-10-21T10:16:27.163895Z'
+  support: supports
+  summary: The exact reviewed HSP104 query returns one entry, P31539, with matching
+    native gene/locus tokens and tax559292.
+  snapshot_sha256: 4e2938a5a1292a9626b18e30b225ebfc7a30d63069235f01cd0bc3d007279322
+  search_scope: UniProtKB reviewed:true AND organism_id:559292 AND gene_exact:HSP104,
+    size500; one result, no pagination needed.
+- evidence_id: ipod-agent-interpro-P31539
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+  locator: count11, next=null; all results.metadata accession/name/type and P31539
+    membership
+  accessed_at: '2026-10-21T10:16:27.867842Z'
+  support: supports
+  summary: Complete11 integrated matches have next=null. IPR001270 ClpA/B family and
+    IPR050130 ATP-dependent Clp protease/Chaperone ClpA/ClpB are broader than Hsp104;
+    remaining hits are domains, sites or superfamilies. This inspected candidate set
+    does not justify replacing the narrower label with a broad family.
+  snapshot_sha256: 750867aa538d4dd5c6c6a982138e7401b8b788d9653ecb84bf5d145c8ff6d3ee
+- evidence_id: ipod-agent-taxon-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank, lineage
+  accessed_at: '2026-10-21T10:16:27.162305Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae at species rank; identity
+    and lineage only, not experimental occurrence.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: ipod-agent-taxon-559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName, rank, lineage
+  accessed_at: '2026-10-21T10:16:27.162591Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae S288C at strain rank;
+    identity and lineage only, not experimental occurrence.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: ipod-agent-kaganovich2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnature07195&format=json&resultType=core
+  locator: 'resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText'
+  accessed_at: '2026-10-21T10:16:28.825531Z'
+  support: supports
+  summary: Exact native citation identifies Misfolded proteins partition between two
+    distinct quality control compartments. by Kaganovich D, Kopito R, Frydman J. PMID18756251,
+    DOI10.1038/nature07195. Bibliographic identity and abstract only; body support
+    is a separately hashed source.
+  snapshot_sha256: 2b9503cae1136122e2c103c4d53f8578cc8a6fda5f4b6c2fcb507c9e24a974d4
+- evidence_id: ipod-agent-kumar2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pgen.1006324&format=json&resultType=core
+  locator: 'resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText'
+  accessed_at: '2026-10-21T10:16:29.165958Z'
+  support: supports
+  summary: Exact native citation identifies Prion Aggregates Are Recruited to the
+    Insoluble Protein Deposit (IPOD) via Myosin 2-Based Vesicular Transport. by Kumar
+    R, Nawroth PP, Tyedmers J. PMID27689885, DOI10.1371/journal.pgen.1006324. Bibliographic
+    identity and abstract only; body support is a separately hashed source.
+  snapshot_sha256: 7ebd47f6714d8994580481dec8a05b232372b033dba765ace599ddef965b6b41
+- evidence_id: ipod-agent-prion2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pgen.1011194&format=json&resultType=core
+  locator: 'resultList.result[0]: id, doi, pmcid, title, authorString, pubYear, abstractText'
+  accessed_at: '2026-10-21T10:16:29.278267Z'
+  support: supports
+  summary: Exact native citation identifies Sequestrase chaperones protect against
+    oxidative stress-induced protein aggregation and [PSI+] prion formation. by Carter
+    Z, Creamer D, Kouvidi A, Grant CM. PMID38422160, DOI10.1371/journal.pgen.1011194.
+    Bibliographic identity and abstract only; body support is a separately hashed
+    source.
+  snapshot_sha256: 1d603df27e18901ee0475b1d28fd3f24e68b9b7a65b7a5145e811beef8816076
+- evidence_id: ipod-agent-kaganovich2008-publisher
+  kind: primary_source
+  reference: https://www.nature.com/articles/nature07195
+  locator: 'Full native Nature Main/Results/Discussion and Online Methods read: derived
+    //p|//h2|//h3|//figcaption indices15–87; especially23,30–31,38–44,47–55,62–66,71–72
+    and Fig2/4/5/6 captions. Figure pixels and supplements not independently inspected.'
+  accessed_at: '2026-10-21T10:16:30.328692Z'
+  support: supports
+  summary: Direct primary yeast experiments identify perivacuolar amyloid-associated,
+    poorly exchanging IPOD material and distinguish it from the original JUNQ signal.
+    Rnq1/Ure2/HttQ103 reporter localization, Ubc9ts FLIP/FRAP and functional GFP-Hsp104
+    association support the scoped record. Ubc9ts in IPOD does not regain diffuse
+    fluorescence after temperature recovery; the source does not establish an invariant
+    native scaffold or universal degradation fate. Mammalian comparisons are kept
+    separate.
+  snapshot_sha256: f31003f3c4e68156f87f6bcfb5d99b80fcef91657977ff78aec3b3035ac4382a
+- evidence_id: ipod-agent-kumar2016-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5045159.1/PMC5045159.1.xml
+  locator: PMC5045159.1 JATS Results sec003–009, Discussion sec011–013, Methods sec016
+    and sec024; embedded Fig1–7 captions, especially Fig3 and Fig6. Claim-bearing
+    sections read in full. Front article-meta permissions/license explicitly links
+    CC BY4.0. Supporting files and raw data not independently analyzed.
+  accessed_at: '2026-10-21T10:16:58.769477Z'
+  support: supports
+  summary: Direct74D-694-derived PrD-GFP assays show Tpm/Myo2/Sec18 depletion impairs
+    central recruitment and washout restores accumulation. Myo2 depletion after deposition
+    preserves existing IPOD. Hsp104-inhibited post-induction chase preserves deposits
+    and protein; MG132 only partially reduces turnover. The vesicle tether and substrate-independent
+    site remain models; transport factors and PAS components are not invariant IPOD
+    members.
+  snapshot_sha256: 6a9b94b36eb806af6ebccc45032211d825202eb7bc4d2bf823bb8d3b98bd6889
+- evidence_id: ipod-agent-prion2024-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10931478.1/PMC10931478.1.xml
+  locator: PMC10931478.1 JATS Results sec011 and embedded Fig6A caption; Methods sec015,sec016,sec018.
+    Only these claim-bearing passages read; actual Fig6 pixels and unrelated experiments
+    not reanalyzed.
+  accessed_at: '2026-10-21T10:16:58.769775Z'
+  support: supports
+  summary: 'Direct ABP1-deletion comparison preserves the genotype-specific counterexample:
+    oxidant-induced PSI+ formation falls in the otherwise wild-type background but
+    remains elevated in btn2 hsp42 mutants. The authors interpret this as IPOD-independent
+    prion formation in that mutant, not absence of every IPOD contribution. Experiments
+    use74D-694 derivatives and0.8mM hydrogen peroxide for one hour.'
+  snapshot_sha256: 1494f76d7125ef44b80c836e7b10c683889909df96025862ae79d80e1fa8f746
+- evidence_id: ipod-agent-kumar2016-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5045159.1/PMC5045159.1.json
+  locator: pmcid/version/doi/pmid/is_pmc_openaccess/license_code; media_urls entry
+    pgen.1006324.g003.jpg and its MD5
+  accessed_at: '2026-10-21T10:16:58.769101Z'
+  support: supports
+  summary: Native package metadata identifies PMC5045159 version1, its DOI/PMID, open-access
+    flag and CC BY label. The Fig3 media entry gives MD5 9fb3e11d765cf9a68d081cff9402a568,
+    equal to the tracked image bytes. Exact licence version comes from the separately
+    hashed JATS.
+  snapshot_sha256: b5b904304800a1f28a1e40619552adc92359cb1a55ee21803ba2866cc978e6d0
+- evidence_id: image
+  kind: record_content
+  reference: data/images/inclusion/insoluble_protein_deposit/pmc5045159_pgen_1006324_g003_e27e1f28.jpg
+  locator: Entire Figure3 image visually inspected, panelsA–F; tracked input SHA and
+    native package MD5 comparison
+  accessed_at: '2026-10-21T10:20:26Z'
+  support: context_only
+  summary: PanelsA,C,D show fluorescent foci and their coalescence after auxin washout;
+    B,E,F quantify. E preserves a preformed deposit during Myo2 depletion whereas
+    F shows dispersed recruitment. Caption gives2μm scale bars and RK1e context; no
+    separate third-party credit appears in the image or Fig3 caption.
+  snapshot_sha256: 89dfdd173c797ff168e0cb7be8cc0547b6b742b26324a3cec906f0d379463bd4
+- evidence_id: kaganovich-pmc-access
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2746971/?report=xml
+  locator: 'Actual native HTTP200 response title: Checking your browser - reCAPTCHA'
+  accessed_at: '2026-10-21T10:16:59.319812Z'
+  support: context_only
+  summary: This PMC route returned a challenge, not body text. The independently hashed
+    Nature HTML supplies genuine readable body evidence.
+  snapshot_sha256: fa43985a5d4c540e875d18a7d12d276814a0863a802b56409fd0ec4922e2217c
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml
+    --verify
+  locator: Captured focused native log
+  accessed_at: '2026-10-21T10:17:32.209646Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/insoluble_protein_deposit.yaml
+    --causal-graphs
+  locator: Captured focused native log
+  accessed_at: '2026-10-21T10:17:34.182402Z'
+  support: supports
+  summary: "data/structures/inclusion/insoluble_protein_deposit.yaml  (cellstructuremech:insoluble_protein_deposit)\n\
+    \  amyloid_cargo_recruitment\tcargo\tNO_GENE_SYMBOLS\t->aggregate_cargo (OTHER:\
+    \ heterogeneous IPOD protein aggregate cargo)\n  deposit_cargo_turnover\thsp104\t\
+    COVERED\t->hsp104 (UniProtKB:P31539)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n\
+    \     1  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     1  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref\
+    \ on the node\n     2  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 8e60d37b122caf9871b8b643517f9c62e3c33ff73a4f68b3cf8cf5b227bed12e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/inclusion/insoluble_protein_deposit.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:16Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/insoluble_protein_deposit.yaml'
+  snapshot_sha256: bcf8a07c650c0f1eb94912f9d3f31159e0fa62b4ca8c29b261869d62273e297f
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/inclusion/insoluble_protein_deposit.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:19Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/inclusion/insoluble_protein_deposit.yaml\
+    \ --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/insoluble_protein_deposit-strict.tsv"
+  snapshot_sha256: 450ac6b54f88ca02b0e2c4e307a4f8a46f7fed3a2b3967cce4c1221f37754cd4
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/inclusion/insoluble_protein_deposit.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:20:26Z'
+  support: supports
+  summary: '8 of9 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: cellstructuremech:insoluble_protein_deposit: SKIPPED; resolved
+    by evidence record. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Local IPOD identity and broader ontology relations
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: The definition denotes the perivacuolar cytoplasmic inclusion characterized
+    in yeast. Inclusion body is a broader is-a parent and cytoplasm is parthood. PAS
+    proximity, mammalian aggresomes, INQ and original JUNQ observations are not exact
+    synonyms. Native bounded identity searches support retaining the local CURIE without
+    claiming an exhaustive ontology absence.
+  evidence_ids:
+  - ipod-agent-go
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - record
+  - ipod-agent-go-search-0
+  - ipod-agent-go-search-1
+  - ipod-agent-ols-exact
+- assessment_id: composition
+  area: evidence
+  topic: Cargo and associated Hsp104 membership
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: Heterogeneous deposited cargo and localized Hsp104 are supported. PrD-GFP
+    is an engineered Sup35 fragment, not a fixed native subunit. Transport proteins,
+    PAS factors and downstream proteasomes need not be added as constituents merely
+    because perturbations affect deposition or turnover.
+  evidence_ids:
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - record
+- assessment_id: necessity-unknown
+  area: evidence
+  topic: Unresolved native cargo and Hsp104 assembly requirements
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: The heterogeneous cargo and associated Hsp104 classes retain UNKNOWN for
+    formation or assembly necessity. A deposit necessarily contains deposited material,
+    but this constitutional role does not identify a tested requirement for particular
+    native cargo. Hsp104 localization and post-formation inhibitor effects do not
+    establish de novo assembly necessity.
+  evidence_ids:
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Protein identity and bounded family candidate search
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: P31539/HSP104 is the single reviewed strain559292 example, with matching
+    gene/name/status. The11 integrated InterPro matches do not define the narrower
+    Hsp104 class exactly. The generic cargo class has no single protein identifier;
+    the PrD-GFP graph node is explicitly a reporter linked to that cargo class, not
+    an asserted full-length Sup35 member.
+  evidence_ids:
+  - ipod-agent-P31539
+  - ipod-agent-query-HSP104
+  - ipod-agent-interpro-P31539
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Species versus experimental and reference strains
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: Kumar and Carter use74D-694 derivatives, with inducible versus constitutive
+    reporters and endogenous SUP35-PrD deletion distinguished in Methods. The canonical
+    species claim is supported; S288C is explicitly reference-sequence provenance
+    rather than an experimental reassignment. Broad prevalence, universal copy number
+    and material-state claims remain unasserted.
+  evidence_ids:
+  - ipod-agent-taxon-4932
+  - ipod-agent-taxon-559292
+  - ipod-agent-kumar2016-jats
+  - ipod-agent-prion2024-jats
+  - ipod-agent-P31539
+  - record
+- assessment_id: functions
+  area: evidence
+  topic: Sequestration and conditional turnover
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: The record accurately separates poor reporter mobility and failed Ubc9ts
+    recovery in2008 from slow PrD-GFP processing in2016. Partial MG132 sensitivity
+    does not become exclusive proteasomal turnover, and PAS adjacency does not imply
+    efficient bulk autophagy. Protection, toxicity and obligatory prion nucleation
+    are not universalized.
+  evidence_ids:
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - ipod-agent-prion2024-jats
+  - record
+- assessment_id: graph-recruitment
+  area: graph
+  topic: Intervention and recovery graph
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: All six recruitment edges are supported by scoped depletion, viability
+    and washout observations in Kumar Fig2/3/5. The mechanistic content is directed
+    experimental dependence and recovery, with recruitment versus maintenance separated.
+    Direct vesicle binding or stable residence of Myo2/Tpm/Sec18 is not asserted.
+  evidence_ids:
+  - ipod-agent-kumar2016-jats
+  - record
+  - graph-policy
+- assessment_id: graph-turnover
+  area: graph
+  topic: Post-formation inhibitor interpretation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: 'All five turnover edges reflect the post-induction chase: Hsp104 inhibition
+    preserves deposits and protein, and MG132 reduces but does not abolish subsequent
+    turnover. Gradual release is explicitly the authors interpretation of inhibitor-sensitive
+    decay, not a directly imaged molecular handoff. Assembly necessity is kept distinct.'
+  evidence_ids:
+  - ipod-agent-kumar2016-jats
+  - record
+  - graph-policy
+- assessment_id: image
+  area: provenance
+  topic: Hosted primary Fig3 and exact licence
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: Tracked SHA89dfdd173c797ff168e0cb7be8cc0547b6b742b26324a3cec906f0d379463bd4
+    and package MD5 agree. JATS explicitly supplies CC BY4.0, title/authors and exact
+    Fig3 context; the whole image was visually read and curator caption distinguishes
+    microscopy from quantification. Species attribution is supported by yeast Methods,
+    with no strain-taxonomy inference.
+  evidence_ids:
+  - ipod-agent-kumar2016-package
+  - ipod-agent-kumar2016-jats
+  - image
+  - record
+- assessment_id: discussion
+  area: completeness
+  topic: Durable limits and primary-source coverage
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: The existing discussions correctly retain unresolved native scaffold, site
+    pre-existence and taxonomic breadth. Carter2024 supports the precise mutant-context
+    prion exception. Historical notes that particular supplements or figures were
+    not inspected are retained as historical access annotations; our current reading
+    scope is recorded separately and is not itself a curation defect.
+  evidence_ids:
+  - ipod-agent-kaganovich2008-publisher
+  - ipod-agent-kumar2016-jats
+  - ipod-agent-prion2024-jats
+  - record
+- assessment_id: status
+  area: provenance
+  topic: Maintained ownership and scientific status
+  outcome: supported
+  target_ids:
+  - cellstructuremech:insoluble_protein_deposit
+  summary: The complete target and frozen dependencies were read. PROPOSED remains
+    appropriate for agent-authored content; this review neither promotes status nor
+    edits maintained history. No concrete issue or required missing representation
+    was found; optional unknown inventory and properties are not findings.
+  evidence_ids:
+  - record
+findings: []
+actions: []
+limitations:
+- 'Native ontology searches are bounded: IPOD acronym and exact OLS label return zero;
+  the broad multiword QuickGO search covers only its first100of2980 hits. No universal
+  absence claim is made.'
+- Kaganovich full Main/Results/Discussion and Methods were read from genuine publisher
+  HTML; the PMC route returned a challenge. Figure pixels other than tracked Kumar
+  Fig3, supplementary strain tables, supporting figures and raw datasets were not
+  independently reanalyzed.
+- Kumar claim-bearing Results/Discussion/Methods were read; Carter coverage is limited
+  to sec011/Fig6A caption and the relevant strain/stress/prion Methods. Experimental
+  conclusions are not generalized to other species or every aggregate substrate.
+- Unknown native scaffold and de novo assembly necessity remain unknown. Historical
+  scientific and access annotations are not silently rewritten.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- User-directed batch review explicitly requests an unsaved review for clean records
+  as well as issue-bearing records; no finding is manufactured.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
