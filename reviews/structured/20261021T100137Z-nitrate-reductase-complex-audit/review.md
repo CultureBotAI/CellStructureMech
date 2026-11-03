@@ -1,0 +1,1270 @@
+# Nitrate reductase complex: reaction direction, taxonomic evidence and mechanism scope
+
+- Review: 20261021T100137Z-nitrate-reductase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:43:41Z
+- Finished UTC: 2026-10-21T10:01:37Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The generic identity and E.coli NarGHI example are supported. Two major findings concern reversed reaction wording and unrelated distribution evidence; one minor concerns graph mechanism scope. Exact assembly necessity and broader class generalizations remain unverified.
+
+## Scope And Provenance
+
+Whole single maintained target, exact native GO/taxa/chemical/protein/complex identifiers, every graph node and edge, and bounded primary/annotation source scope.
+
+Selection: Index 2 in batch17, fixed strict sorted uncovered-path selection at fresh revision9c0446. One complete maintained target reviewed independently.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009325 | data/structures/energy_complex/nitrate_reductase_complex.yaml | maintained | nitrate reductase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native verify | passed | True | GO:0009325 | Focused native verification passed; identifier coverage is not independent evidence of membership or assembly necessity. |
+| Native causal-graphs | passed | True | GO:0009325 | Focused native verification passed; identifier coverage is not independent evidence of membership or assembly necessity. |
+| Expression-module applicability | not_applicable | False | GO:0009325 | These structural/compositional claims do not depend on expression-module inference; no iModulon absence claim is made. |
+| Focused native schema | passed | True | GO:0009325 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0009325 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0009325 | 20 identifiers OK; 4 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0009325 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0009325 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0009325 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0009325 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0009325 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0009325 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Generic nitrate reductase versus NarGHI example
+
+identity: supported. Targets: GO:0009325.
+
+GO0009325 denotes the requested generic complex, GO1990204 is its parent, and GO0044799 is a narrower native NarGHI child. The identity and explicitly example-scoped NarGHI components are sound even though the copied broad definition reverses the reaction.
+
+### Native ontology conflict and internal inconsistency
+
+evidence: concern. Targets: GO:0009325.
+
+The first definition sentence and structure-node description say nitrate is formed from nitrite. This wording is genuinely present in the inspected GO0009325 snapshot; it was not invented by the record. It conflicts with the record function, GO0160182, CPX1974 and Bertero primary abstract, which describe nitrate-to-nitrite reduction coupled to quinol oxidation. Preserve this source conflict while correcting the scientific wording.
+
+### NarGHI membership and canonical stoichiometry
+
+evidence: supported. Targets: GO:0009325.
+
+The three named proteins, their catalytic/relay/anchor roles, two copies each in the CPX1974 canonical complex, and listed cofactors match native curation and protein annotations. The heterotrimeric functional unit is distinguished from the dimer-of-heterotrimers assembly. No NarGHI inventory is imposed on NapAB, Nas/Nia or all nitrate reductase complexes. The IPR006547 tetramer prose conflicts with the separately inspected CPX1974 and UniProt dimer-of-heterotrimers annotations; the canonical example follows the latter, preserving the source conflict.
+
+### Assembly necessity of conditional subunits
+
+evidence: unknown. Targets: GO:0009325.
+
+CONDITIONAL is an assembly-necessity claim under the schema. The intact-complex/functional sources do not isolate the assembly requirements of each row across the generic alternatives. This remains unverified; the review does not reinterpret conditional as merely catalytic or taxon-specific membership.
+
+### Exact protein and family identities
+
+grounding: supported. Targets: GO:0009325.
+
+All three reviewed accession/name/gene/taxon pairs and bounded exact-gene queries agree. NarG/NarH mappings match native family classes and named NCBIfam members; homolog examples do not narrow the full family to one K-12 sequence. No optional NarI family or additional inventory is forced.
+
+### Unrelated domain-distribution citation
+
+scope: concern. Targets: GO:0009325.
+
+Both distribution rows cite health economics rather than nitrate reductases. The Richardson review abstract independently supports broad prokaryotic diversity at a secondary tier but is not the rows cited source and does not verify every haloarchaeal/hyperthermophile or frequency claim. The added generic eukaryotic/assimilatory cofactor scope is not established by the NarGHI structure.
+
+### Reduction and redox-loop coupling
+
+evidence: supported. Targets: GO:0009325.
+
+Quinol oxidation and nitrate reduction are directly defined in GO0160182 and described in native CPX/UniProt and Bertero primary abstract. The study-specific electron-transfer route is supported at those tiers, while a detailed full-body assay or proton-pathway audit is unavailable.
+
+### Known composition versus optional additions
+
+completeness: supported. Targets: GO:0009325.
+
+The existing NarGHI exemplar has complete stated subunit examples. No missing image, additional taxon, nonprotein component row, or generic inventory is itself a finding; the concrete corrections concern present claims.
+
+### Membership/activity summary versus mechanism
+
+graph: concern. Targets: GO:0009325.
+
+All five nodes and four edges were inspected. The component roles describe an electron-transfer sequence, but the graph connects each protein only by part-of and the complete structure to its activity. It does not represent transfer through the subunits or cofactor/quinone steps.
+
+## Findings
+
+### F1: Correct the reversed nitrate/nitrite reaction while preserving the upstream conflict
+
+major / open / confirmed; issue key: nitrate-reductase-complex-reversed-definition-reaction.
+
+The definition opening and structure-node description assert formation of nitrate from nitrite. Native GO0009325 currently contains that same wording, but the record itself and independent GO0160182/CPX1974/Bertero abstract evidence describe the nitrate-to-nitrite reaction. This is a material direction contradiction, not an identity mismatch or proof that every nitrite-oxidizing enzyme is the target.
+
+### F2: Replace the unrelated taxonomic-distribution citation
+
+major / open / confirmed; issue key: nitrate-reductase-complex-unrelated-distribution-reference.
+
+Both bacterial and archaeal rows cite PMID12950096, a health-economics study of willingness to pay. It cannot support nitrate-reductase occurrence or frequency. Other readable secondary/native sources provide bounded context, but do not validate that attached citation or all detailed taxon claims.
+
+### F3: Represent the supported electron-transfer steps or narrow graph scope
+
+minor / open / confirmed; issue key: nitrate-reductase-complex-graph-explanatory-scope.
+
+The FUNCTION graph is marked MECHANISTIC but contains only three constituent part-of edges and one whole-complex activity edge. These relationships are sound for the named example, yet they do not express the causal transfer route described in the prose. Preserve them as NONMECHANISTIC or add experimentally scoped electron-transfer transitions. Do not infer that a generic class always has this species-specific subunit set.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use biologically correct reduction wording and document the source discrepancy rather than silently pretending GO already says it.
+
+- Nitrate is the reduced substrate and nitrite the product for the stated NarGHI reaction.
+- The source-specific GO quotation may remain as an attributed historical/current-source observation, but must not serve as an unqualified biological definition.
+- Any scientific correction requires separately authorized guarded curation, append-only history, rendering and native validation.
+
+### A2
+
+Source each actual distribution statement appropriately or narrow/defer it.
+
+- Keep generic class, respiratory NarGHI, periplasmic Nap and assimilatory alternatives distinct.
+- Use inspected taxon-specific or explicitly broad sources; retain the secondary tier of review-based generalizations.
+- Any scientific correction requires separately authorized guarded curation, append-only history, rendering and native validation.
+
+### A3
+
+Match graph scope to its actual explanatory content.
+
+- Retain valid membership and activity statements.
+- A mechanistic version must resolve the supported subunit/cofactor electron route and distinguish the specific E.coli holoenzyme from the generic class.
+- Any scientific correction requires separately authorized guarded curation, append-only history, rendering and native validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/energy_complex/nitrate_reductase_complex.yaml; Entire maintained YAML including definition, component roles/examples, taxonomic references, graph and history | context_only | The full target bytes were read after native inspection; no maintained scientific content was edited. |
+| policy | docs/CURATION.md; Identity, grounding, evidence, and essentiality rules with frozen schema | context_only | Composition, catalytic function and necessity for structure assembly are separate claims. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Mechanistic scope and supported causal paths | context_only | Membership and whole-complex activity edges alone do not resolve causal electron-transfer steps. |
+| nitrate-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009325,GO:1990204,GO:0044799,GO:0160182; All returned exact term names, definitions, source cross-references and relevant parent/child relations | supports | GO0009325 is the generic complex and a native child of GO1990204; GO0044799 is its narrower NarGHI child. GO0160182 defines the quinol-dependent nitrate-reduction reaction. The conflicting generic definition is preserved separately. |
+| nitrate-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Returned taxId, scientificName, rank and aliases | supports | This exact taxon is Escherichia coli K-12, rank strain; taxon identity alone establishes no structure distribution. |
+| nitrate-agent-tax-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Returned taxId, scientificName, rank and aliases | supports | This exact taxon is Bacteria, rank domain; taxon identity alone establishes no structure distribution. |
+| nitrate-agent-tax-2157 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157; Returned taxId, scientificName, rank and aliases | supports | This exact taxon is Archaea, rank domain; taxon identity alone establishes no structure distribution. |
+| nitrate-agent-CPX-1974 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1974; Exact identity/species; systematicName, complexAssemblies, all participant IDs/stoichiometries, functions and properties | supports | CPX-1974 curates two copies each of NarG, NarH and NarI in the E.coli K-12 heterohexamer, with the cytoplasmic catalytic module anchored by NarI; quinol oxidation supplies nitrate reduction. |
+| nitrate-agent-P09152 | https://rest.uniprot.org/uniprotkb/P09152.json; entryType, primaryAccession, genes, organism, recommendedName, relevant comments and cross-references | supports | The reviewed entry is the declared narG protein at taxon83333, with the recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit annotations were read separately from primary experimental bodies. |
+| nitrate-agent-query-narG | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarG%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned result set and entry gene tokens | supports | The bounded reviewed exact-gene query returns one own-entry exact narG match at taxon83333; no automatic seeding or corpus-wide absence inference is made. |
+| nitrate-agent-P11349 | https://rest.uniprot.org/uniprotkb/P11349.json; entryType, primaryAccession, genes, organism, recommendedName, relevant comments and cross-references | supports | The reviewed entry is the declared narH protein at taxon83333, with the recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit annotations were read separately from primary experimental bodies. |
+| nitrate-agent-query-narH | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarH%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned result set and entry gene tokens | supports | The bounded reviewed exact-gene query returns one own-entry exact narH match at taxon83333; no automatic seeding or corpus-wide absence inference is made. |
+| nitrate-agent-P11350 | https://rest.uniprot.org/uniprotkb/P11350.json; entryType, primaryAccession, genes, organism, recommendedName, relevant comments and cross-references | supports | The reviewed entry is the declared narI protein at taxon83333, with the recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit annotations were read separately from primary experimental bodies. |
+| nitrate-agent-query-narI | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarI%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned result set and entry gene tokens | supports | The bounded reviewed exact-gene query returns one own-entry exact narI match at taxon83333; no automatic seeding or corpus-wide absence inference is made. |
+| nitrate-agent-chebi-21137 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_21137; Exact native ChEBI ID, label, definition and relevant synonyms | supports | CHEBI:21137 resolves to tri-mu-sulfido-mu3-sulfido-triiron; the listed CPX participant role is checked in the separate complex receipt. |
+| nitrate-agent-chebi-49883 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_49883; Exact native ChEBI ID, label, definition and relevant synonyms | supports | CHEBI:49883 resolves to tetra-mu3-sulfido-tetrairon; the listed CPX participant role is checked in the separate complex receipt. |
+| nitrate-agent-chebi-60539 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_60539; Exact native ChEBI ID, label, definition and relevant synonyms | supports | CHEBI:60539 resolves to Mo(=O)-bis(molybdopterin guanine dinucleotide)(4-); the listed CPX participant role is checked in the separate complex receipt. |
+| nitrate-agent-chebi-30413 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_30413; Exact native ChEBI ID, label, definition and relevant synonyms | supports | CHEBI:30413 resolves to heme; the listed CPX participant role is checked in the separate complex receipt. |
+| nitrate-agent-pmid-12910261 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A12910261+AND+SRC%3AMED; Exact title/authors/PMID/DOI and entire primary abstract only | supports | Bertero2003 reports the NarGHI structure and explicitly describes nitrate reduction to nitrite in the E.coli respiratory redox loop. The exact primary abstract was read; no full experimental body was recovered. |
+| nitrate-agent-pmid-12950096 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A12950096+AND+SRC%3AMED; Exact PMID identity and entire returned abstract | refutes | PMID12950096 is Yeung et al.2003 on willingness to pay and health-benefit scale sensitivity. Its abstract concerns health-economic survey/model analysis, not bacterial or archaeal nitrate reductase distribution. |
+| nitrate-agent-pmid-11289299 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A11289299+AND+SRC%3AMED; Exact review citation, DOI and complete returned abstract only | supports | Richardson2001 is a secondary review. Its abstract distinguishes cytoplasmic assimilatory NAS, cytoplasm-facing membrane NAR and periplasmic NAP, and says prokaryotic classes are phylogenetically widespread; this is not a direct new distribution experiment or a eukaryotic cofactor survey. |
+| nitrate-agent-pmid-17964535 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A17964535+AND+SRC%3AMED; Exact review citation, DOI and complete returned abstract only | supports | Rothery2008 is a secondary CISM review. Its abstract discusses shared catalytic, Fe-S and membrane-anchor architectures across bacterial enzymes, not exact identity of every nitrate reductase class. |
+| nitrate-agent-IPR006468 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006468/; Whole native family identity/type/member databases and description; homolog scope kept separate from K-12 example | supports | Native family Nitrate reductase alpha subunit and its NCBIfam member support the declared component-class mapping.  |
+| nitrate-agent-IPR006547 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006547/; Whole native family identity/type/member databases and description; homolog scope kept separate from K-12 example | supports | Native family Nitrate reductase, beta subunit and its NCBIfam member support the declared component-class mapping. Its own description includes NarH/NarY and describes a tetramer containing one alpha, one beta and two gamma subunits; that source-specific stoichiometric statement is reported here without adopting it as the canonical assembly. |
+| nitrate-agent-bertero-rcsb | https://data.rcsb.org/rest/v1/core/entry/1Q16; Primary citation, struct.title, experimental method/resolution and entry identifiers | supports | The author-deposited 1Q16 record independently joins the E.coli NarGHI structure to PMID12910261/DOI10.1038/nsb969 and the reported1.9-A resolution. No coordinate-level mechanistic analysis was performed. |
+| nitrate-agent-bertero-crossref | https://api.crossref.org/works/10.1038/nsb969; Native bibliographic registration and source links | supports | Crossref confirms exact Bertero2003 title, DOI and publisher links; linked PDF/HTML routes did not yield an accessible full article body in this review. |
+| nitrate-agent-bertero-publisher | https://www.nature.com/articles/nsb969; Actual returned content inspected for body versus abstract/entitlement stub | context_only | Publisher response contains the primary abstract and subscription/metadata sections, not the full experimental main text. |
+| nitrate-agent-bertero-pdf | https://www.nature.com/articles/nsb969.pdf; Actual returned content inspected for body versus abstract/entitlement stub | context_only | The nominal PDF endpoint returns HTML subscription/abstract markup rather than a scientific PDF. |
+| nitrate-agent-richardson-publisher | https://link.springer.com/article/10.1007/PL00000845; Actual returned content inspected for body versus abstract/entitlement stub | context_only | Publisher response provides the review abstract and bibliographic sections; full review body was not recovered. |
+| nitrate-agent-rothery-elsevier | https://api.elsevier.com/content/article/doi/10.1016/j.bbamem.2007.09.002?httpAccept=text/xml; Actual returned content inspected for body versus abstract/entitlement stub | context_only | Elsevier text-mining response is a short entitlement/metadata stub rather than the review main body. |
+| native-verify | /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml --verify; Captured focused native command output and timestamped receipt | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml --causal-graphs; Captured focused native command output and timestamped receipt | supports | data/structures/energy_complex/nitrate_reductase_complex.yaml  (GO:0009325)<br>  nitrate_reductase_complex_mechanism	narg_alpha_subunit	COVERED	-&gt;narg_alpha_subunit (UniProtKB:P09152)<br>  nitrate_reductase_complex_mechanism	narh_beta_subunit	COVERED	-&gt;narh_beta_subunit (UniProtKB:P11349)<br>  nitrate_reductase_complex_mechanism	nari_gamma_subunit	COVERED	-&gt;nari_gamma_subunit (UniProtKB:P11350)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/energy_complex/nitrate_reductase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/energy_complex/nitrate_reductase_complex.yaml |
+| strict-result | just validate-strict data/structures/energy_complex/nitrate_reductase_complex.yaml --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/energy_complex/nitrate_reductase_complex.yaml --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/energy_complex/nitrate_reductase_complex.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 20 of24 collected target identifiers returned OK in this fresh base resolver run. Residuals: PMID:11289299: UNREACHABLE; resolved by evidence nitrate-agent-pmid-11289299; PMID:12910261: UNREACHABLE; resolved by evidence nitrate-agent-pmid-12910261; PMID:12950096: UNREACHABLE; resolved by evidence nitrate-agent-pmid-12950096; PMID:17964535: UNREACHABLE; resolved by evidence nitrate-agent-pmid-17964535. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Bertero2003 is inspected at primary-abstract and author-deposition/native-curation tiers. Both publisher HTML and nominal PDF responses contained abstract/subscription markup; no full paper or supplementary Methods was recovered or claimed read.
+- Richardson2001 and Rothery2008 are secondary reviews inspected only at citation/abstract tier. Richardson publisher abstract, PMC S3 404 and EuropePMC500 attempts are preserved; Rothery Elsevier200 is a metadata/entitlement stub. No conclusion is based on treating HTTP200 as readable scientific body.
+- Native GO0009325 reverses the substrate/product direction, while the native reaction term and primary abstract disagree; the conflict is preserved explicitly. Native IPR006547 tetramer prose also differs from CPX/UniProt oligomer annotations; canonical stoichiometry follows the latter, not a silent averaging.
+- No raw structure-coordinate, image-pixel, deletion/assembly, domain-wide prevalence or eukaryotic cofactor survey was performed. Initial sandbox-network failures remain transport artifacts, not absence evidence.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The exact fresh resolver residuals are supported by own native PMID receipts; resolving an identifier does not validate its biological use. Root adds final shared gates before finalization. No persistence or scientific edit is authorized by this draft.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100137Z-nitrate-reductase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Nitrate reductase complex: reaction direction, taxonomic evidence and mechanism
+  scope'
+started_at: '2026-10-21T09:43:41Z'
+finished_at: '2026-10-21T10:01:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The generic identity and E.coli NarGHI example are supported. Two major findings
+  concern reversed reaction wording and unrelated distribution evidence; one minor
+  concerns graph mechanism scope. Exact assembly necessity and broader class generalizations
+  remain unverified.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    sha256: ad431e98375e475d6f38365d314b04bb0eb3643d39f289a879d5496ad1ce3459
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009325
+  path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+  label: nitrate reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single maintained target, exact native GO/taxa/chemical/protein/complex
+    identifiers, every graph node and edge, and bounded primary/annotation source
+    scope.
+  selection: Index 2 in batch17, fixed strict sorted uncovered-path selection at fresh
+    revision9c0446. One complete maintained target reviewed independently.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009325
+checks:
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native verification passed; identifier coverage is not independent
+    evidence of membership or assembly necessity.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native verification passed; identifier coverage is not independent
+    evidence of membership or assembly necessity.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0009325
+  summary: These structural/compositional claims do not depend on expression-module
+    inference; no iModulon absence claim is made.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just validate data/structures/energy_complex/nitrate_reductase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just validate-strict data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  summary: 20 identifiers OK; 4 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - nitrate-agent-pmid-11289299
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-pmid-12950096
+  - nitrate-agent-pmid-17964535
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - nitrate-agent-go
+  - nitrate-agent-tax-83333
+  - nitrate-agent-tax-2
+  - nitrate-agent-tax-2157
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-P09152
+  - nitrate-agent-query-narG
+  - nitrate-agent-P11349
+  - nitrate-agent-query-narH
+  - nitrate-agent-P11350
+  - nitrate-agent-query-narI
+  - nitrate-agent-chebi-21137
+  - nitrate-agent-chebi-49883
+  - nitrate-agent-chebi-60539
+  - nitrate-agent-chebi-30413
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-pmid-12950096
+  - nitrate-agent-pmid-11289299
+  - nitrate-agent-pmid-17964535
+  - nitrate-agent-IPR006468
+  - nitrate-agent-IPR006547
+  - nitrate-agent-bertero-rcsb
+  - nitrate-agent-bertero-crossref
+  - nitrate-agent-bertero-publisher
+  - nitrate-agent-bertero-pdf
+  - nitrate-agent-richardson-publisher
+  - nitrate-agent-rothery-elsevier
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009325
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/nitrate_reductase_complex.yaml
+  locator: Entire maintained YAML including definition, component roles/examples,
+    taxonomic references, graph and history
+  accessed_at: '2026-10-21T09:51:24Z'
+  support: context_only
+  summary: The full target bytes were read after native inspection; no maintained
+    scientific content was edited.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, grounding, evidence, and essentiality rules with frozen schema
+  accessed_at: '2026-10-21T09:51:24Z'
+  support: context_only
+  summary: Composition, catalytic function and necessity for structure assembly are
+    separate claims.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Mechanistic scope and supported causal paths
+  accessed_at: '2026-10-21T09:51:24Z'
+  support: context_only
+  summary: Membership and whole-complex activity edges alone do not resolve causal
+    electron-transfer steps.
+- evidence_id: nitrate-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009325,GO:1990204,GO:0044799,GO:0160182
+  locator: All returned exact term names, definitions, source cross-references and
+    relevant parent/child relations
+  accessed_at: '2026-10-21T09:45:18.548970Z'
+  support: supports
+  summary: GO0009325 is the generic complex and a native child of GO1990204; GO0044799
+    is its narrower NarGHI child. GO0160182 defines the quinol-dependent nitrate-reduction
+    reaction. The conflicting generic definition is preserved separately.
+  snapshot_sha256: aed4d3846b881d6516b56b93ca8a3d940010e58f5befcff5401d26aff2c857d9
+- evidence_id: nitrate-agent-tax-83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Returned taxId, scientificName, rank and aliases
+  accessed_at: '2026-10-21T09:45:19.166299Z'
+  support: supports
+  summary: This exact taxon is Escherichia coli K-12, rank strain; taxon identity
+    alone establishes no structure distribution.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: nitrate-agent-tax-2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Returned taxId, scientificName, rank and aliases
+  accessed_at: '2026-10-21T09:45:19.273988Z'
+  support: supports
+  summary: This exact taxon is Bacteria, rank domain; taxon identity alone establishes
+    no structure distribution.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: nitrate-agent-tax-2157
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: Returned taxId, scientificName, rank and aliases
+  accessed_at: '2026-10-21T09:45:19.301005Z'
+  support: supports
+  summary: This exact taxon is Archaea, rank domain; taxon identity alone establishes
+    no structure distribution.
+  snapshot_sha256: c6e652011b95e43e933983bf5f3f5cec9508c1925adae00dc55e46cd4e816b19
+- evidence_id: nitrate-agent-CPX-1974
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1974
+  locator: Exact identity/species; systematicName, complexAssemblies, all participant
+    IDs/stoichiometries, functions and properties
+  accessed_at: '2026-10-21T09:45:20.480598Z'
+  support: supports
+  summary: CPX-1974 curates two copies each of NarG, NarH and NarI in the E.coli K-12
+    heterohexamer, with the cytoplasmic catalytic module anchored by NarI; quinol
+    oxidation supplies nitrate reduction.
+  snapshot_sha256: 06b91684910e1ee11bb247f8ff505e3fa7a4a95ff7f26574221738023eb68d61
+- evidence_id: nitrate-agent-P09152
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P09152.json
+  locator: entryType, primaryAccession, genes, organism, recommendedName, relevant
+    comments and cross-references
+  accessed_at: '2026-10-21T09:45:18.560419Z'
+  support: supports
+  summary: The reviewed entry is the declared narG protein at taxon83333, with the
+    recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit
+    annotations were read separately from primary experimental bodies.
+  snapshot_sha256: 7f778f7b8ff4193fe7f00cc3aa7f2737daa8f2c9a19e07dded498ab5bb6057db
+- evidence_id: nitrate-agent-query-narG
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarG%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned result set and entry gene tokens
+  accessed_at: '2026-10-21T09:45:18.681022Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query returns one own-entry exact narG
+    match at taxon83333; no automatic seeding or corpus-wide absence inference is
+    made.
+  snapshot_sha256: daf163d13eb3ff94d6c6ee14d0f49d7b2038f280a9815995f99683e1f5de90bf
+- evidence_id: nitrate-agent-P11349
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11349.json
+  locator: entryType, primaryAccession, genes, organism, recommendedName, relevant
+    comments and cross-references
+  accessed_at: '2026-10-21T09:45:18.611355Z'
+  support: supports
+  summary: The reviewed entry is the declared narH protein at taxon83333, with the
+    recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit
+    annotations were read separately from primary experimental bodies.
+  snapshot_sha256: 314bb10c12ffb383b607668b73a2019ba2544d880cf2c212bc1b5c863a73628a
+- evidence_id: nitrate-agent-query-narH
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarH%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned result set and entry gene tokens
+  accessed_at: '2026-10-21T09:45:19.122417Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query returns one own-entry exact narH
+    match at taxon83333; no automatic seeding or corpus-wide absence inference is
+    made.
+  snapshot_sha256: d521e8563a530975a26e40f697d95649cdada4fe86617129af5da81367a77a59
+- evidence_id: nitrate-agent-P11350
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11350.json
+  locator: entryType, primaryAccession, genes, organism, recommendedName, relevant
+    comments and cross-references
+  accessed_at: '2026-10-21T09:45:18.616569Z'
+  support: supports
+  summary: The reviewed entry is the declared narI protein at taxon83333, with the
+    recorded recommended name and ComplexPortal/GO cross-references. Its own functional/subunit
+    annotations were read separately from primary experimental bodies.
+  snapshot_sha256: 691e2cdf24e90c807b1b8ef4b33286cd50bc7a6023bdd8103b9b6f33fb2aab50
+- evidence_id: nitrate-agent-query-narI
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AnarI%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned result set and entry gene tokens
+  accessed_at: '2026-10-21T09:45:19.147873Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query returns one own-entry exact narI
+    match at taxon83333; no automatic seeding or corpus-wide absence inference is
+    made.
+  snapshot_sha256: 4dd7ec0fdd2e151a499e372f9e3b53b4f9b96493316eac61a777e6a487aac18d
+- evidence_id: nitrate-agent-chebi-21137
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_21137
+  locator: Exact native ChEBI ID, label, definition and relevant synonyms
+  accessed_at: '2026-10-21T09:45:19.905711Z'
+  support: supports
+  summary: CHEBI:21137 resolves to tri-mu-sulfido-mu3-sulfido-triiron; the listed
+    CPX participant role is checked in the separate complex receipt.
+  snapshot_sha256: 93c2ca9151015ab8984e07b82586b8b1c940d981921b7c787aaf6c301b2716c9
+- evidence_id: nitrate-agent-chebi-49883
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_49883
+  locator: Exact native ChEBI ID, label, definition and relevant synonyms
+  accessed_at: '2026-10-21T09:45:19.944349Z'
+  support: supports
+  summary: CHEBI:49883 resolves to tetra-mu3-sulfido-tetrairon; the listed CPX participant
+    role is checked in the separate complex receipt.
+  snapshot_sha256: 9818554c687c361f5d3b2ab4e553bf4c708cbccf51059ce60d71ffe37a3590a6
+- evidence_id: nitrate-agent-chebi-60539
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_60539
+  locator: Exact native ChEBI ID, label, definition and relevant synonyms
+  accessed_at: '2026-10-21T09:45:20.111123Z'
+  support: supports
+  summary: CHEBI:60539 resolves to Mo(=O)-bis(molybdopterin guanine dinucleotide)(4-);
+    the listed CPX participant role is checked in the separate complex receipt.
+  snapshot_sha256: d4af89178cd9f6d2d13474e41ce605ebf40f7984a52f488232f4cb42b10771b5
+- evidence_id: nitrate-agent-chebi-30413
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_30413
+  locator: Exact native ChEBI ID, label, definition and relevant synonyms
+  accessed_at: '2026-10-21T09:45:20.433477Z'
+  support: supports
+  summary: CHEBI:30413 resolves to heme; the listed CPX participant role is checked
+    in the separate complex receipt.
+  snapshot_sha256: 674cfe9540f1509052fe3ca7d406154865585bac0d66e0663e1b4bdbb9e27d80
+- evidence_id: nitrate-agent-pmid-12910261
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12910261+AND+SRC%3AMED
+  locator: Exact title/authors/PMID/DOI and entire primary abstract only
+  accessed_at: '2026-10-21T09:45:19.777592Z'
+  support: supports
+  summary: Bertero2003 reports the NarGHI structure and explicitly describes nitrate
+    reduction to nitrite in the E.coli respiratory redox loop. The exact primary abstract
+    was read; no full experimental body was recovered.
+  snapshot_sha256: 8a80042e1ca19add22ab78680124cae484dd8e7025163407e7e44e8e57abea8c
+- evidence_id: nitrate-agent-pmid-12950096
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12950096+AND+SRC%3AMED
+  locator: Exact PMID identity and entire returned abstract
+  accessed_at: '2026-10-21T09:45:19.890009Z'
+  support: refutes
+  summary: PMID12950096 is Yeung et al.2003 on willingness to pay and health-benefit
+    scale sensitivity. Its abstract concerns health-economic survey/model analysis,
+    not bacterial or archaeal nitrate reductase distribution.
+  snapshot_sha256: c0831d86c66d0dc6b5e717ca40b9f0a13668eadc55f91fae745fa0b0ddb9a619
+- evidence_id: nitrate-agent-pmid-11289299
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A11289299+AND+SRC%3AMED
+  locator: Exact review citation, DOI and complete returned abstract only
+  accessed_at: '2026-10-21T09:45:19.838309Z'
+  support: supports
+  summary: Richardson2001 is a secondary review. Its abstract distinguishes cytoplasmic
+    assimilatory NAS, cytoplasm-facing membrane NAR and periplasmic NAP, and says
+    prokaryotic classes are phylogenetically widespread; this is not a direct new
+    distribution experiment or a eukaryotic cofactor survey.
+  snapshot_sha256: f9cdda5c771627b7c5134909d76dec68702d5a1a9a113f0a479a087b82c2ca57
+- evidence_id: nitrate-agent-pmid-17964535
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A17964535+AND+SRC%3AMED
+  locator: Exact review citation, DOI and complete returned abstract only
+  accessed_at: '2026-10-21T09:45:19.869025Z'
+  support: supports
+  summary: Rothery2008 is a secondary CISM review. Its abstract discusses shared catalytic,
+    Fe-S and membrane-anchor architectures across bacterial enzymes, not exact identity
+    of every nitrate reductase class.
+  snapshot_sha256: 7d26f9626dfc9340445a20c530f215855fec5b6096a7f1478d8638f929b35838
+- evidence_id: nitrate-agent-IPR006468
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006468/
+  locator: Whole native family identity/type/member databases and description; homolog
+    scope kept separate from K-12 example
+  accessed_at: '2026-10-21T09:45:19.460430Z'
+  support: supports
+  summary: 'Native family Nitrate reductase alpha subunit and its NCBIfam member support
+    the declared component-class mapping. '
+  snapshot_sha256: b7ff761f4d7c377f1edba2465452109c179f823230f1df272865a5b064f15471
+- evidence_id: nitrate-agent-IPR006547
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006547/
+  locator: Whole native family identity/type/member databases and description; homolog
+    scope kept separate from K-12 example
+  accessed_at: '2026-10-21T09:45:19.750521Z'
+  support: supports
+  summary: Native family Nitrate reductase, beta subunit and its NCBIfam member support
+    the declared component-class mapping. Its own description includes NarH/NarY and
+    describes a tetramer containing one alpha, one beta and two gamma subunits; that
+    source-specific stoichiometric statement is reported here without adopting it
+    as the canonical assembly.
+  snapshot_sha256: 7f8019254a2670a952efcf9b03517c6102d768b9d5379bd784a2c9e563617335
+- evidence_id: nitrate-agent-bertero-rcsb
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/1Q16
+  locator: Primary citation, struct.title, experimental method/resolution and entry
+    identifiers
+  accessed_at: '2026-10-21T09:46:45.760886Z'
+  support: supports
+  summary: The author-deposited 1Q16 record independently joins the E.coli NarGHI
+    structure to PMID12910261/DOI10.1038/nsb969 and the reported1.9-A resolution.
+    No coordinate-level mechanistic analysis was performed.
+  snapshot_sha256: b805b8a79f09b6816646d2c33c49b31909ac51114ac33bb60b0ebaa23adae4a3
+- evidence_id: nitrate-agent-bertero-crossref
+  kind: database
+  reference: https://api.crossref.org/works/10.1038/nsb969
+  locator: Native bibliographic registration and source links
+  accessed_at: '2026-10-21T09:46:45.761043Z'
+  support: supports
+  summary: Crossref confirms exact Bertero2003 title, DOI and publisher links; linked
+    PDF/HTML routes did not yield an accessible full article body in this review.
+  snapshot_sha256: 8247cacf45705ded8f350f228440326992bb467ea228329e93f9b11fd077880d
+- evidence_id: nitrate-agent-bertero-publisher
+  kind: database
+  reference: https://www.nature.com/articles/nsb969
+  locator: Actual returned content inspected for body versus abstract/entitlement
+    stub
+  accessed_at: '2026-10-21T09:45:20.483202Z'
+  support: context_only
+  summary: Publisher response contains the primary abstract and subscription/metadata
+    sections, not the full experimental main text.
+  snapshot_sha256: 3c190b7a8e35b6d25aa10834c13ed5bce96ad46f6ac2700a92aec818b647526c
+- evidence_id: nitrate-agent-bertero-pdf
+  kind: database
+  reference: https://www.nature.com/articles/nsb969.pdf
+  locator: Actual returned content inspected for body versus abstract/entitlement
+    stub
+  accessed_at: '2026-10-21T09:45:20.510231Z'
+  support: context_only
+  summary: The nominal PDF endpoint returns HTML subscription/abstract markup rather
+    than a scientific PDF.
+  snapshot_sha256: 04aa840994dc2fe74da18fc0b5b6dc3cad0f3e50c4e3ba929ca78e5032e7e82b
+- evidence_id: nitrate-agent-richardson-publisher
+  kind: database
+  reference: https://link.springer.com/article/10.1007/PL00000845
+  locator: Actual returned content inspected for body versus abstract/entitlement
+    stub
+  accessed_at: '2026-10-21T09:45:20.533027Z'
+  support: context_only
+  summary: Publisher response provides the review abstract and bibliographic sections;
+    full review body was not recovered.
+  snapshot_sha256: dffa545209e78e0d96d30280723dced9668f83830747b801e0cb414f41bd2656
+- evidence_id: nitrate-agent-rothery-elsevier
+  kind: database
+  reference: https://api.elsevier.com/content/article/doi/10.1016/j.bbamem.2007.09.002?httpAccept=text/xml
+  locator: Actual returned content inspected for body versus abstract/entitlement
+    stub
+  accessed_at: '2026-10-21T09:45:20.548608Z'
+  support: context_only
+  summary: Elsevier text-mining response is a short entitlement/metadata stub rather
+    than the review main body.
+  snapshot_sha256: 645ffcc3b6f190a90789dcd4b23e5c05c69a860e312e59b53f4226648ea084fe
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --verify
+  locator: Captured focused native command output and timestamped receipt
+  accessed_at: '2026-10-21T09:47:21.468334Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --causal-graphs
+  locator: Captured focused native command output and timestamped receipt
+  accessed_at: '2026-10-21T09:47:23.261595Z'
+  support: supports
+  summary: "data/structures/energy_complex/nitrate_reductase_complex.yaml  (GO:0009325)\n\
+    \  nitrate_reductase_complex_mechanism\tnarg_alpha_subunit\tCOVERED\t->narg_alpha_subunit\
+    \ (UniProtKB:P09152)\n  nitrate_reductase_complex_mechanism\tnarh_beta_subunit\t\
+    COVERED\t->narh_beta_subunit (UniProtKB:P11349)\n  nitrate_reductase_complex_mechanism\t\
+    nari_gamma_subunit\tCOVERED\t->nari_gamma_subunit (UniProtKB:P11350)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     3  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: af74368d55b6de50d4008ce1b5142d396e34df4b1cfb8605bbac6ab3494ea707
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/nitrate_reductase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:43:44Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/nitrate_reductase_complex.yaml'
+  snapshot_sha256: 222e97da7c02a6c7f894c461cd077d71e3ddf877cec973b1189041364cd1bef0
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/nitrate_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:43:46Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/nitrate_reductase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch17-20261021-vub_b2nx/nitrate_reductase_complex-strict.tsv"
+  snapshot_sha256: 3776ea80d273c76a2b8f72f0a9a8800344ae0a4338402e5c95aa1d11f94bff35
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/nitrate_reductase_complex.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T09:51:25Z'
+  support: supports
+  summary: '20 of24 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: PMID:11289299: UNREACHABLE; resolved by evidence nitrate-agent-pmid-11289299;
+    PMID:12910261: UNREACHABLE; resolved by evidence nitrate-agent-pmid-12910261;
+    PMID:12950096: UNREACHABLE; resolved by evidence nitrate-agent-pmid-12950096;
+    PMID:17964535: UNREACHABLE; resolved by evidence nitrate-agent-pmid-17964535.
+    Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic nitrate reductase versus NarGHI example
+  outcome: supported
+  target_ids:
+  - GO:0009325
+  summary: GO0009325 denotes the requested generic complex, GO1990204 is its parent,
+    and GO0044799 is a narrower native NarGHI child. The identity and explicitly example-scoped
+    NarGHI components are sound even though the copied broad definition reverses the
+    reaction.
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - record
+- assessment_id: direction
+  area: evidence
+  topic: Native ontology conflict and internal inconsistency
+  outcome: concern
+  target_ids:
+  - GO:0009325
+  summary: The first definition sentence and structure-node description say nitrate
+    is formed from nitrite. This wording is genuinely present in the inspected GO0009325
+    snapshot; it was not invented by the record. It conflicts with the record function,
+    GO0160182, CPX1974 and Bertero primary abstract, which describe nitrate-to-nitrite
+    reduction coupled to quinol oxidation. Preserve this source conflict while correcting
+    the scientific wording.
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: NarGHI membership and canonical stoichiometry
+  outcome: supported
+  target_ids:
+  - GO:0009325
+  summary: The three named proteins, their catalytic/relay/anchor roles, two copies
+    each in the CPX1974 canonical complex, and listed cofactors match native curation
+    and protein annotations. The heterotrimeric functional unit is distinguished from
+    the dimer-of-heterotrimers assembly. No NarGHI inventory is imposed on NapAB,
+    Nas/Nia or all nitrate reductase complexes. The IPR006547 tetramer prose conflicts
+    with the separately inspected CPX1974 and UniProt dimer-of-heterotrimers annotations;
+    the canonical example follows the latter, preserving the source conflict.
+  evidence_ids:
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-go
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-bertero-rcsb
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - nitrate-agent-chebi-21137
+  - nitrate-agent-chebi-49883
+  - nitrate-agent-chebi-60539
+  - nitrate-agent-chebi-30413
+  - record
+  - nitrate-agent-IPR006547
+- assessment_id: necessity
+  area: evidence
+  topic: Assembly necessity of conditional subunits
+  outcome: unknown
+  target_ids:
+  - GO:0009325
+  summary: CONDITIONAL is an assembly-necessity claim under the schema. The intact-complex/functional
+    sources do not isolate the assembly requirements of each row across the generic
+    alternatives. This remains unverified; the review does not reinterpret conditional
+    as merely catalytic or taxon-specific membership.
+  evidence_ids:
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - record
+  - policy
+- assessment_id: grounding
+  area: grounding
+  topic: Exact protein and family identities
+  outcome: supported
+  target_ids:
+  - GO:0009325
+  summary: All three reviewed accession/name/gene/taxon pairs and bounded exact-gene
+    queries agree. NarG/NarH mappings match native family classes and named NCBIfam
+    members; homolog examples do not narrow the full family to one K-12 sequence.
+    No optional NarI family or additional inventory is forced.
+  evidence_ids:
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - nitrate-agent-query-narG
+  - nitrate-agent-query-narH
+  - nitrate-agent-query-narI
+  - nitrate-agent-IPR006468
+  - nitrate-agent-IPR006547
+  - nitrate-agent-tax-83333
+  - nitrate-agent-tax-2
+  - nitrate-agent-tax-2157
+  - record
+- assessment_id: distribution
+  area: scope
+  topic: Unrelated domain-distribution citation
+  outcome: concern
+  target_ids:
+  - GO:0009325
+  summary: Both distribution rows cite health economics rather than nitrate reductases.
+    The Richardson review abstract independently supports broad prokaryotic diversity
+    at a secondary tier but is not the rows cited source and does not verify every
+    haloarchaeal/hyperthermophile or frequency claim. The added generic eukaryotic/assimilatory
+    cofactor scope is not established by the NarGHI structure.
+  evidence_ids:
+  - nitrate-agent-pmid-12950096
+  - nitrate-agent-pmid-11289299
+  - nitrate-agent-pmid-17964535
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-tax-83333
+  - nitrate-agent-tax-2
+  - nitrate-agent-tax-2157
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Reduction and redox-loop coupling
+  outcome: supported
+  target_ids:
+  - GO:0009325
+  summary: Quinol oxidation and nitrate reduction are directly defined in GO0160182
+    and described in native CPX/UniProt and Bertero primary abstract. The study-specific
+    electron-transfer route is supported at those tiers, while a detailed full-body
+    assay or proton-pathway audit is unavailable.
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-bertero-rcsb
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Known composition versus optional additions
+  outcome: supported
+  target_ids:
+  - GO:0009325
+  summary: The existing NarGHI exemplar has complete stated subunit examples. No missing
+    image, additional taxon, nonprotein component row, or generic inventory is itself
+    a finding; the concrete corrections concern present claims.
+  evidence_ids:
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-go
+  - record
+  - policy
+- assessment_id: graph
+  area: graph
+  topic: Membership/activity summary versus mechanism
+  outcome: concern
+  target_ids:
+  - GO:0009325
+  summary: All five nodes and four edges were inspected. The component roles describe
+    an electron-transfer sequence, but the graph connects each protein only by part-of
+    and the complete structure to its activity. It does not represent transfer through
+    the subunits or cofactor/quinone steps.
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - record
+  - graph-policy
+findings:
+- finding_id: F1
+  issue_key: nitrate-reductase-complex-reversed-definition-reaction
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the reversed nitrate/nitrite reaction while preserving the upstream
+    conflict
+  description: The definition opening and structure-node description assert formation
+    of nitrate from nitrite. Native GO0009325 currently contains that same wording,
+    but the record itself and independent GO0160182/CPX1974/Bertero abstract evidence
+    describe the nitrate-to-nitrite reaction. This is a material direction contradiction,
+    not an identity mismatch or proof that every nitrite-oxidizing enzyme is the target.
+  target_ids:
+  - GO:0009325
+  field_paths:
+  - definition
+  - causal_graphs[0].nodes[node_id=nitrate_reductase_complex].description
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-P09152
+  - nitrate-agent-P11349
+  - nitrate-agent-P11350
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and claim scope; review-checklist
+  native_severity: major
+  normalization_reason: A material asserted biological claim has an unrelated supporting
+    citation or contradicts the demonstrated reaction.
+- finding_id: F2
+  issue_key: nitrate-reductase-complex-unrelated-distribution-reference
+  category: provenance
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the unrelated taxonomic-distribution citation
+  description: Both bacterial and archaeal rows cite PMID12950096, a health-economics
+    study of willingness to pay. It cannot support nitrate-reductase occurrence or
+    frequency. Other readable secondary/native sources provide bounded context, but
+    do not validate that attached citation or all detailed taxon claims.
+  target_ids:
+  - GO:0009325
+  field_paths:
+  - taxonomic_distribution[0].reference
+  - taxonomic_distribution[1].reference
+  - taxonomic_distribution[0].note
+  - taxonomic_distribution[1].note
+  evidence_ids:
+  - nitrate-agent-pmid-12950096
+  - nitrate-agent-pmid-11289299
+  - nitrate-agent-pmid-17964535
+  - nitrate-agent-pmid-12910261
+  - nitrate-agent-tax-83333
+  - nitrate-agent-tax-2
+  - nitrate-agent-tax-2157
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and claim scope; review-checklist
+  native_severity: major
+  normalization_reason: A material asserted biological claim has an unrelated supporting
+    citation or contradicts the demonstrated reaction.
+- finding_id: F3
+  issue_key: nitrate-reductase-complex-graph-explanatory-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Represent the supported electron-transfer steps or narrow graph scope
+  description: The FUNCTION graph is marked MECHANISTIC but contains only three constituent
+    part-of edges and one whole-complex activity edge. These relationships are sound
+    for the named example, yet they do not express the causal transfer route described
+    in the prose. Preserve them as NONMECHANISTIC or add experimentally scoped electron-transfer
+    transitions. Do not infer that a generic class always has this species-specific
+    subunit set.
+  target_ids:
+  - GO:0009325
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].edges
+  evidence_ids:
+  - nitrate-agent-go
+  - nitrate-agent-CPX-1974
+  - nitrate-agent-pmid-12910261
+  - record
+  - graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and claim scope; review-checklist
+  native_severity: minor
+  normalization_reason: The supported constituent membership and activity remain valid;
+    the defect is bounded to explanatory graph scope.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009325
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  description: Use biologically correct reduction wording and document the source
+    discrepancy rather than silently pretending GO already says it.
+  acceptance_checks:
+  - Nitrate is the reduced substrate and nitrite the product for the stated NarGHI
+    reaction.
+  - The source-specific GO quotation may remain as an attributed historical/current-source
+    observation, but must not serve as an unqualified biological definition.
+  - Any scientific correction requires separately authorized guarded curation, append-only
+    history, rendering and native validation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009325
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  description: Source each actual distribution statement appropriately or narrow/defer
+    it.
+  acceptance_checks:
+  - Keep generic class, respiratory NarGHI, periplasmic Nap and assimilatory alternatives
+    distinct.
+  - Use inspected taxon-specific or explicitly broad sources; retain the secondary
+    tier of review-based generalizations.
+  - Any scientific correction requires separately authorized guarded curation, append-only
+    history, rendering and native validation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0009325
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrate_reductase_complex.yaml
+    role: maintained scientific record
+  description: Match graph scope to its actual explanatory content.
+  acceptance_checks:
+  - Retain valid membership and activity statements.
+  - A mechanistic version must resolve the supported subunit/cofactor electron route
+    and distinguish the specific E.coli holoenzyme from the generic class.
+  - Any scientific correction requires separately authorized guarded curation, append-only
+    history, rendering and native validation.
+limitations:
+- Bertero2003 is inspected at primary-abstract and author-deposition/native-curation
+  tiers. Both publisher HTML and nominal PDF responses contained abstract/subscription
+  markup; no full paper or supplementary Methods was recovered or claimed read.
+- Richardson2001 and Rothery2008 are secondary reviews inspected only at citation/abstract
+  tier. Richardson publisher abstract, PMC S3 404 and EuropePMC500 attempts are preserved;
+  Rothery Elsevier200 is a metadata/entitlement stub. No conclusion is based on treating
+  HTTP200 as readable scientific body.
+- Native GO0009325 reverses the substrate/product direction, while the native reaction
+  term and primary abstract disagree; the conflict is preserved explicitly. Native
+  IPR006547 tetramer prose also differs from CPX/UniProt oligomer annotations; canonical
+  stoichiometry follows the latter, not a silent averaging.
+- No raw structure-coordinate, image-pixel, deletion/assembly, domain-wide prevalence
+  or eukaryotic cofactor survey was performed. Initial sandbox-network failures remain
+  transport artifacts, not absence evidence.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The exact fresh resolver residuals are supported by own native PMID receipts; resolving
+  an identifier does not validate its biological use. Root adds final shared gates
+  before finalization. No persistence or scientific edit is authorized by this draft.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

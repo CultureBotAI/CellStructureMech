@@ -206,6 +206,7 @@ causal_graphs:
     label: S-layer homology domain
     node_type: GENE_OR_PROTEIN
     component_ref: slh_domain
+    grounding: InterPro:IPR001119
   - node_id: scwp
     label: secondary cell-wall polymer
     node_type: CHEMICAL
@@ -329,6 +330,13 @@ curation_history:
   curator: claude-opus-4-7
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding envelope-s-layer-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    slh_domain (InterPro:IPR001119).'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0262

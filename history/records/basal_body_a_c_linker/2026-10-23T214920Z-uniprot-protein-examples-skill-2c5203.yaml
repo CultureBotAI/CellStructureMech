@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+  slug: basal_body_a_c_linker
+session:
+  id: 2026-10-23T214920Z-uniprot-protein-examples-skill-2c5203
+  timestamp: '2026-10-23T21:49:20Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Restrict synonym disclosure on UniProtKB:Q23KH2 in tbc1d31 to WDR67 so
+    distinct paralogs TBC1D31A/TBC1D31B are not conflated with TTHERM_00193630 (#2416).
+  details: Restrict synonym disclosure on UniProtKB:Q23KH2 in tbc1d31 to WDR67 so
+    distinct paralogs TBC1D31A/TBC1D31B are not conflated with TTHERM_00193630 (#2416).
+    Validated via write_validated_structure and uniprot_genes.py --verify.
