@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ekc_keops_complex.yaml
+  slug: ekc_keops_complex
+session:
+  id: 2026-10-31T110100Z-antigravity-fd5a91
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Record PCC2 synonym mapping on S. cerevisiae S288C Gon7 protein_example
+  details: Updated role description on UniProtKB:P46984 (GON7) in Saccharomyces cerevisiae
+    S288C (NCBITaxon:559292) to explicitly disclose the declared synonym symbol PCC2 carried
+    by the same Swiss-Prot entry.

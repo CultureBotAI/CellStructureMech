@@ -27,6 +27,12 @@ curation_history:
     polaroplast membrane component as reviewed-label-only and softening the final
     graph edge to a polaroplast-derived membrane contribution claim.'
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked anterior_lamellar_polaroplast and posterior_tubular_polaroplast
+    components into polaroplast_membrane_transport causal graph.
+  llm_assisted: true
 components:
 - component_id: polaroplast_membranes
   label: polaroplast membranes
@@ -139,6 +145,14 @@ causal_graphs:
   - node_id: sporoplasm_membrane
     label: sporoplasm membrane
     node_type: STRUCTURE
+  - node_id: anterior_lamellar_polaroplast
+    label: anterior lamellar polaroplast
+    node_type: STRUCTURE
+    component_ref: anterior_lamellar_polaroplast
+  - node_id: posterior_tubular_polaroplast
+    label: posterior tubular polaroplast
+    node_type: STRUCTURE
+    component_ref: posterior_tubular_polaroplast
   edges:
   - subject: polaroplast_membranes
     predicate: are packed in
@@ -166,6 +180,24 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02749-23
       notes: Lv et al. 2024 linked transported polaroplast-derived membranes to formation
         of the sporoplasm membrane.
+  - subject: anterior_lamellar_polaroplast
+    predicate: is part of
+    object: polaroplast_membranes
+    description: Densely packed lamellar membranes form the anterior sector of the
+      polaroplast membrane system.
+    evidence:
+    - reference: DOI:10.1007/978-3-030-93306-7_8
+      notes: Han et al. 2022 reviewed the lamellar polaroplast as a tightly packed
+        anterior membrane array in the spore.
+  - subject: posterior_tubular_polaroplast
+    predicate: is part of
+    object: polaroplast_membranes
+    description: Vesicular and tubular membranes form the posterior sector of the
+      polaroplast membrane system.
+    evidence:
+    - reference: DOI:10.1007/978-3-030-93306-7_8
+      notes: Han et al. 2022 reviewed flattened tubules and posterior polaroplast
+        membranes as part of the microsporidian spore invasion apparatus.
 discussions:
 - discussion_id: ground_polaroplast_membrane_machinery
   prompt: Resolve exact protein and lipid identities for the polaroplast membrane

@@ -1,0 +1,1074 @@
+# Nucleus-basal body connector identity, conditional contraction and evidence review
+
+- Review: 20261021T075001Z-nucleus-basal-body-connector-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:36:53Z
+- Finished UTC: 2026-10-21T07:50:01Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The connector identity, centrin constituent, three species examples, conditional calcium/ATP graph and Figure 2 provenance are supported. No material finding was identified within the inspected scope. Two primary citations remain abstract-bounded, and molecular inventory and connector-specific mutant inferences retain explicit limits.
+
+## Scope And Provenance
+
+Entire single target, native GO/InterPro/UniProt/taxonomy responses, all six cited primary abstracts, 1985/1987/1992 primary scientific PDF text, relevant 2005 body, and linked Figure 2 provenance.
+
+Selection: Eighth target in batch nine, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:nucleus_basal_body_connector | data/structures/cytoskeleton/nucleus_basal_body_connector.yaml | maintained | nucleus-basal body connector |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:nucleus_basal_body_connector | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:nucleus_basal_body_connector | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:nucleus_basal_body_connector | 14 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:nucleus_basal_body_connector | The record describes a physical connector, its centrin constituent and calcium/ATP reactivation. The negative gene-induction claim is a directly tested phenotype from a primary abstract, not an asserted expression-module mechanism. |
+| Source PDF checksum, visual content and permissions | passed | True | cellstructuremech:nucleus_basal_body_connector | Downloaded version 1 PDF MD5 equals the official package value; Figure 2 page 4 and Table I page 6 visually inspected; JATS explicitly names CC BY-NC-SA 4.0. |
+| Claim-level scientific review | passed | True | cellstructuremech:nucleus_basal_body_connector | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:nucleus_basal_body_connector | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:nucleus_basal_body_connector | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:nucleus_basal_body_connector | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:nucleus_basal_body_connector | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:nucleus_basal_body_connector | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Nucleus-associated fibrous root system
+
+identity: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The primary isolation/localization experiments support a centrin-containing basal-body-to-nuclear connector system. System II fiber and rhizoplast are related historical terms, not exact equivalence to every rootlet. The NBBC remains distinct from the distal striated fiber, microtubular roots, flagella connector and ciliary centrin arm.
+
+### Broad anatomical parent and exact molecular boundaries
+
+grounding: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+GO:0035253 supplies the broad ciliary-rootlet class, while the record preserves a source-defined specialized identity. Native InterPro IPR050145 and IPR050230 are broader than connector centrins. REVIEWED_LABEL_ONLY and the open inventory discussion preserve this uncertainty; no broad EF-hand/domain term is used as an exact family.
+
+### Centrin constituent and verified species protein
+
+evidence: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+1985 immunolocalization/biochemistry and 1992 sequence-linked vfl2/revertant analysis support centrin as a connector constituent in Chlamydomonas. Reviewed P05434 is 169-aa Caltractin from taxon 3055, with no primary gene symbol in the native entry; its sequence-source references agree with the cloned sequence used by the 1992 study. It is not modeled as a connector-specific paralogue or a complete cross-taxon inventory.
+
+### Conditional calcium contraction and EGTA reextension
+
+graph: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The six-edge graph agrees with the extracted-cell reactivation sequence in 1987 Table I. Calcium contracts initially responsive models; EGTA permits reextension and return toward a central nucleus. After a refractory cycle, calcium alone is insufficient. ATP in EGTA restores capacity while the nucleus remains central; subsequent calcium triggers contraction. ATP plus calcium can restore contraction directly. The record does not equate potentiation with contraction or claim a universal ATP-free cycle.
+
+### Nuclear movement and mechanistic resolution
+
+evidence: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+Living gametes and extracted preparations show coupled connector configuration and nuclear-position changes supporting GO:0051647 nucleus localization. Phosphorylation is proposed, with no specific kinase or atomic motor established. Nuclear distances are not connector dimensions; tentative 1985 filament assignment is not converted to a definitive diameter.
+
+### Centrin assembly versus connector-specific causal attribution
+
+scope: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+E101K affects several centrin structures. Class 2 Met/Ile revertants restore apparently normal NBBCs and transition-region structures while distal fibers remain abnormal, as shown in Table II. The authors infer connector roles by eliminating alternatives; the target explicitly avoids treating this as selective connector ablation or universal essentiality. The 1989 abstract supports stable connectors in bald-2 and preserved gene induction in vfl-2.
+
+### Demonstrated taxa and experimental state
+
+scope: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The three exact native species identifiers agree with the cited examples. The 1987 contraction experiments use gametes of a 137c derivative, not an inferred culture-collection stock. The 2003 primary abstract supports Synura and Mallomonas connector topology, with immunoblot and mitotic observations specifically in Synura; it does not establish Mallomonas contraction or sequence identity. The record preserves these boundaries.
+
+### Larger centrin scaffold and unresolved partners
+
+completeness: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The 2005 serial immunogold study supports a larger centrin scaffold encompassing the NBBC and other basal-apparatus structures. Its Sfi1/CBP1.1 proposal extrapolates from other organisms and does not directly identify that protein in the Chlamydomonas connector. The target appropriately retains the broader molecular inventory as an open question without adding a speculative constituent.
+
+### Figure 2 link, media identity and permissions
+
+provenance: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The linked Figure 2 has nine panels covering preshock, postshock and recovery, with phase contrast, DAPI nuclei and root immunofluorescence and a 5-micrometer scale bar. Visually inspected PDF page 4 agrees with the caption. Official package MD5 matches the PDF, JATS explicitly supplies CC BY-NC-SA 4.0, and version 1 object listing contains no separate figure objects. No repository image binary or adaptation is introduced.
+
+### Current source tiers and historical access notes
+
+provenance: supported. Targets: cellstructuremech:nucleus_basal_body_connector.
+
+The 1985, 1987 and 1992 primary PDFs and relevant 2005 primary body are now readable. The 1989 DOI attempt returned 403 and its primary abstract was read; 2003 publisher text is explicitly a subscription preview containing the primary abstract. Historical curation access statements remain historical and are not treated as erroneous because a body is currently recoverable.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| connector-agent-1985-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2113967.1/PMC2113967.1.xml; Native XML front/article-meta identity and body/preformat PDF-text representation; scientific text attestation is the separate 1985-pdf evidence row; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-jats.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-jats.meta.json | context_only | Native JATS/PDF-text package retained for citation identity and source availability. Scientific reading and detailed experiment locators are attested against the separately hashed primary PDF evidence row, not claimed as independent reading under this XML hash. |
+| connector-agent-1985-pdf | https://pmc-oa-opendata.s3.amazonaws.com/PMC2113967.1/PMC2113967.1.pdf; Printed pp. 1903-1904 identity and strains/isolation Methods; pp. 1905-1906 immunoblots/localization and calcium response; p. 1908 EM and Discussion; pp. 1909-1911 structural inference, artifact controls and system II fiber boundary; p. 1912 note added in proof.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-pdf.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-pdf.meta.json | supports | Full primary PDF retrieved; scientific body, Methods, Results, Discussion, figure captions and note added in proof read through pdftotext. JATS is PDF-text plus metadata; not a new independent experiment. PDF figure pixels were not comprehensively inspected. Chlamydomonas nucleo-flagellar preparations retain basal body pairs linked to nucleus by immunoreactive strands; whole-cell staining supports pre-existing association. Anti-Tetraselmis-root antigen recognizes approximately 20-kDa acidic isoforms, not sequence-resolved universal inventories. Calcium shortens isolated connectors. Electron-microscopy filaments around 6 nm are expressly presumed/suspected connector material, and thin-section visualization failed in that study. System II fibers are heterogeneous and distinct from microtubular roots or distal/proximal basal-body linking fibers. Proposed segregation/mitotic/evolutionary roles are hypotheses. Wild-type 137c NO mt+ and NO mt- derivatives plus cw15/cw92 and vfl mutants were used; calcium experiments are isolated preparations, not proof of the native ATP cycle. |
+| connector-agent-1987-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.xml; article/front/article-meta/article-id, title-group, abstract and permissions/license (license_ref and license-p); body/preformat representation; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-jats.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-jats.meta.json | supports | Native JATS front metadata and primary abstract identify the 1987 article and summarize calcium-dependent root/nuclear movement with ATP potentiation of repeated cycles. The permissions element explicitly links CC BY-NC-SA 4.0, including the license_ref and license paragraph. Body is supplied as PDF-text preformat. Full assay reading and Figure 2/Table I visual inspection are attested separately under connector-agent-1987-pdf; this XML hash does not attest PDF pixels. |
+| connector-agent-1987-list | https://pmc-oa-opendata.s3.amazonaws.com/?prefix=PMC2114663.1/; ListBucketResult Prefix=PMC2114663.1/, IsTruncated and Contents/Key elements; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-list.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-list.meta.json | supports | Native S3 prefix listing for PMC2114663.1 has IsTruncated=false and four objects: JSON, PDF, TXT and XML. No separate figure object occurs in this complete version-specific object listing. This receipt does not attest figure pixels, article license text or experimental content. |
+| connector-agent-1987-package | https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.json; pmcid/version/pmid/doi/is_pmc_openaccess/is_manuscript/is_retracted/license_code/pdf_url; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-package.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-package.meta.json | supports | Official PMC package JSON identifies PMC2114663 version 1, PMID 3667698, DOI 10.1083/jcb.105.4.1799, open-access true, manuscript false and retracted false. license_code is CC BY-NC-SA. pdf_url supplies MD5 727295bf6cca8324137c56ffc396c273, which equals the separately hashed downloaded PDF. License version 4.0 is supplied by the separate JATS receipt; image content is attested against the separate PDF. |
+| connector-agent-1987-pdf | https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.pdf; Printed p. 1799 Cell Culture; p. 1800 Reactivation of Detergent-extracted Cell Models; pp. 1801-1802 Nuclear Movement in Reactivated Cell Models and Figure 2; pp. 1803-1804 ATP Potentiates Flagellar Roots for Contraction and Table I.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-pdf.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-pdf.meta.json | supports | All seven PDF pages read as extracted text, including Methods, Results, Discussion and figure/table captions. Figure 2 on PDF page 4 and Table I on PDF page 6 visually inspected from local renders. Every experiment used gametes of C. reinhardtii 137c derivative NO mt+, cultured in Sager/Granick Medium I then nitrogen deprivation. Living gametes underwent pH-shock or mechanical-shear deflagellation; fixed DAPI and immunofluorescence snapshots establish coupled root/nuclear changes. Extracted models used 0.01% NP-40, 3 mM CaCl2 or 3 mM EGTA, and 3 mM ATP where indicated, with washes between treatments; calcium treatment 5 minutes, EGTA 30 minutes. Initially EGTA-extracted models contracted and shifted nucleus anteriorly upon first calcium exposure, reextended in EGTA, then failed to contract at second calcium exposure. Calcium-lysed models likewise became refractory after EGTA. ATP under either low or high calcium restored response: ATP plus EGTA kept a central nucleus until later calcium, whereas ATP plus calcium yielded anterior position. Thus ATP potentiation alone is not contraction. Phosphorylation is suggested, not demonstrated as a particular kinase/reaction. Table distances measure nuclear position, not connector dimensions. The paper proposes gene-induction linkage, later tested negatively by the 1989 abstract. |
+| connector-agent-1989-publisher | https://doi.org/10.1002/cm.970140409; Recorded exact URL response and metadata only; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1989-publisher.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1989-publisher.meta.json | unknown | HTTP 403 response retained as an unsuccessful access attempt, not primary biological text. The full 1989 source remains uninspected; exact primary abstract read through Europe PMC. |
+| connector-agent-1992-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2289752.1/PMC2289752.1.xml; Native XML front/article-meta identity and body/preformat PDF-text representation; scientific text attestation is the separate 1992-pdf evidence row; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-jats.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-jats.meta.json | context_only | Native JATS/PDF-text package retained for citation identity and source availability. Scientific reading and detailed experiment locators are attested against the separately hashed primary PDF evidence row, not claimed as independent reading under this XML hash. |
+| connector-agent-1992-pdf | https://pmc-oa-opendata.s3.amazonaws.com/PMC2289752.1/PMC2289752.1.pdf; Printed pp. 1613-1615 separate structures, strains, pCaBP4/sequence Methods and RFLP/sequence Results; pp. 1616-1617 revertants and ultrastructure; pp. 1617-1619 immunolocalization and contracted extracted models; pp. 1620-1623 Discussion, Table II and final segregation inference.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-pdf.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-pdf.meta.json | supports | Primary PDF scientific text read: Methods, Results and Discussion, including Table II; PDF page 11 (printed p. 1623) Table II visually inspected. Figure captions read; no complete image-panel audit. Centrin/caltractin sequence tested via cloned pCaBP4/Huang 1988 and Lee 1991 sources; vfl2 is E101K from a G-to-A mutation. The mutant affects NBBCs, distal striated fibers and transition-region stellate structures. Intragenic revertants with Asn/Thr or wild-type Glu appear normal at measured resolution; Met/Ile class 2 revertants restore apparently normal NBBCs and transition-region structures while distal fibers remain abnormal. The authors infer NBBC involvement in accurate basal-body duplication/segregation by eliminating alternatives. This is not selective connector ablation and does not establish every connector role independently. Native sequence/assembly evidence supports a Chlamydomonas centrin constituent; essentiality across all connector taxa is not established. Culture Methods include 137c NO mating derivatives, C. smithii cross, cw15 and vfl2-220 backgrounds; no single collection-strain accession inferred for the record example. |
+| connector-agent-2003-publisher | https://doi.org/10.1007/s00709-003-0016-4; Publisher Summary headed Abs1 and immediately following subscription-preview statement; this receipt contains no Europe PMC response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-publisher.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-publisher.meta.json | supports | Publisher primary Summary read in full. It names S. petersenii, M. fastigiata and M. insignis in the ultrastructural comparison. Strong 20-22-kDa anti-centrin immunoblot labeling and mitotic observations are specifically for S. petersenii. No contraction assay or sequence-level centrin identity is established in this summary. The page explicitly calls this a preview of subscription content; full Methods and figures were not provided or read. |
+| connector-agent-2003-springer | https://link.springer.com/article/10.1007/s00709-003-0016-4; Publisher Summary headed Abs1 and immediately following subscription-preview statement; this receipt contains no Europe PMC response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-springer.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-springer.meta.json | supports | Publisher primary Summary read in full. It names S. petersenii, M. fastigiata and M. insignis in the ultrastructural comparison. Strong 20-22-kDa anti-centrin immunoblot labeling and mitotic observations are specifically for S. petersenii. No contraction assay or sequence-level centrin identity is established in this summary. The page explicitly calls this a preview of subscription content; full Methods and figures were not provided or read. |
+| connector-agent-2005-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC1168961.1/PMC1168961.1.xml; Recorded exact URL response and metadata only; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-jats.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-jats.meta.json | unknown | HTTP 404 response retained as an unsuccessful access attempt, not primary biological text. The 2005 body was subsequently recovered from the separate PMC legacy HTML response. |
+| connector-agent-2005-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC1168961/?report=xml; PMC1168961 HTML sec1 Methods, sec2 strain, sec3 postembedding EM, sec4 Results NBBC/scaffold continuity, sec5 Discussion paragraph beginning The most significant single observation and ensuing Sfi1/CBP1.1 model.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-legacy.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-legacy.meta.json | supports | Full primary PMC legacy HTML recovered after version-1 S3 JATS route returned 404. Read complete abstract/introduction/Methods, relevant NBBC Results paragraphs and Discussion including Sfi1/CBP1.1 proposal. Not an exhaustive visual or all-figure-panel audit. Historical target access annotation is not reassessed as a data defect. C. reinhardtii cw15+ SAG 83.81 isolated interphase cytoskeletons examined by serial-section postembedding immunogold EM with immune/preimmune controls. New localizations connect a larger basal-apparatus centrin scaffold; NBBC is part of this system, not equivalent to the entire scaffold. Some local connections remain inferential: at transitional fibers and NBBC, weak labeling prevented demonstration of gold-particle continuity; extracted preparations can lose filaments. Sfi1/CBP1.1 discussion builds from yeast/human Sfi1 and Spermatozopsis similis CBP1.1, then proposes likely presence in C. reinhardtii scaffold. It does not directly identify Sfi1/CBP1.1 in the Chlamydomonas NBBC. No inventory expansion follows from this paper alone. |
+| connector-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=DOI%3A%2210.1083/jcb.101.5.1903%22%20OR%20DOI%3A%2210.1083/jcb.105.4.1799%22%20OR%20DOI%3A%2210.1002/cm.970140409%22%20OR%20DOI%3A%2210.1083/jcb.119.6.1613%22%20OR%20DOI%3A%2210.1007/s00709-003-0016-4%22%20OR%20DOI%3A%2210.1128/EC.4.7.1253-1263.2005%22; resultList.result objects for the six exact DOIs; id/pmcid/title/authors/pubYear/abstractText; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/epmc.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/epmc.meta.json | supports | Exact-DOI native Europe PMC metadata and full primary abstracts for all six citations read. The 1989 abstract is the highest inspected tier for that paper; the 2003 abstract is corroborated by the publisher preview. Metadata identity is separate from biological full-text support. |
+| connector-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035253,GO:0051647,GO:0120118,GO:0120269; results objects for GO:0035253, GO:0051647, GO:0120118 and GO:0120269; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/go.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/go.meta.json | supports | All four are active. GO:0035253 is ciliary rootlet, originating at the proximal basal body and extending toward the nucleus, with exact synonyms cilial rootlet and cilium rootlet. It is broad anatomical context, not exact connector identity. GO:0051647 is nucleus localization and covers transport/maintenance at a cellular location. GO:0120118 is the kinetoplastid new-to-old flagellum tip junction, and GO:0120269 is the Centrin4 arm flanking FAZ and quartet microtubules; neither denotes the NBBC. Typical size/striation values in the broad rootlet definition are not imported into the target. |
+| connector-agent-ipr050145 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/; metadata.accession/type/name/description/member_databases for IPR050145; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050145.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050145.meta.json | supports | Native IPR050145 is the family Centrin/CML-like. Its reviewed authority description explicitly includes caltractin, obelin and Arabidopsis CML37/38. This breadth is not an exact mapping for connector-associated centrins; no exhaustive family absence is asserted. |
+| connector-agent-ipr050230 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050230/; metadata.accession/type/name/description/member_databases for IPR050230; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050230.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050230.meta.json | supports | Native IPR050230 is the family Calmodulin/Myosin light chain/Troponin C-like. Its reviewed authority description includes broad calcium regulatory proteins such as calmodulins, calglandulins and myosin light chains. This is not an exact connector-centrin class. |
+| connector-agent-taxon-3055 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; taxId, scientificName and rank in this exact taxonomy response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-3055.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-3055.meta.json | supports | Native taxonomy response identifies 3055 as Chlamydomonas reinhardtii at species rank. This verifies the exact species identifier and label, not a culture-collection strain or biological occurrence. |
+| connector-agent-taxon-420600 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/420600; taxId, scientificName and rank in this exact taxonomy response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-420600.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-420600.meta.json | supports | Native taxonomy response identifies 420600 as Mallomonas insignis at species rank. This verifies the exact species identifier and label, not a culture-collection strain or biological occurrence. |
+| connector-agent-taxon-52555 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/52555; taxId, scientificName and rank in this exact taxonomy response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-52555.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-52555.meta.json | supports | Native taxonomy response identifies 52555 as Synura petersenii at species rank. This verifies the exact species identifier and label, not a culture-collection strain or biological occurrence. |
+| connector-agent-uniprot | https://rest.uniprot.org/uniprotkb/P05434.json; primaryAccession, entryType, proteinDescription, organism, genes, sequence, references, InterPro cross-references; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/uniprot.raw; metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/uniprot.meta.json | supports | P05434 is reviewed Swiss-Prot Caltractin, synonym Centrin, taxon 3055 Chlamydomonas reinhardtii, full 169-aa sequence, protein-level evidence. No genes field/primary gene symbol. Sequence-source references include Huang et al. 1988 JCB 107:133-140 DOI 10.1083/jcb.107.1.133 and Lee et al. 1991 JMB DOI 10.1016/0022-2836(91)80213-e. These are the cloned sequence sources used/cited in the inspected 1992 paper. Species-level example does not establish connector-specific paralogue or molecular inventory. InterPro cross-references include IPR050230, IPR011992, IPR018247 and IPR002048. |
+| record | data/structures/cytoskeleton/nucleus_basal_body_connector.yaml; Entire YAML, including component, example, function, all six graph edges, discussions, history and image metadata | context_only | Full target read. No adjacent maintained scientific record is relied upon. Component is label-only, example protein is species-level, contractile graph is extracted-model conditional, taxonomic and molecular limits are explicit. |
+| schema-result | just validate data/structures/cytoskeleton/nucleus_basal_body_connector.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/nucleus_basal_body_connector.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/nucleus_basal_body_connector.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/nucleus_basal_body_connector.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/nucleus_basal_body_connector.yaml; exact collect() scope; snapshot_sha256 identifies the entire original reports/curie_check.tsv, not the extracted resolver-slice.json | supports | 14 of 15 collected target identifiers returned OK at the unchanged base. Residuals: cellstructuremech:nucleus_basal_body_connector: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The 1989 and 2003 sources remain abstract-bounded. The 1989 publisher DOI route returned HTTP 403; the 2003 publisher response supplies a subscription preview, not full Methods or figures. This is a limit of inspected access, not a global unavailability claim.
+- The 1985, 1987 and 1992 primary scientific text was read from downloaded PDFs. Figure 2 and Table I of 1987 and Table II of 1992 were visually inspected; other image panels and raw experimental data were not exhaustively audited.
+- The 2005 primary body was recovered from PMC legacy HTML after the S3 JATS attempt failed. Relevant Methods, NBBC Results and scaffold Discussion were read, without a complete figure-pixel audit.
+- The graph establishes an extracted-model calcium/ATP response, not a purified molecular motor or a specific phosphorylation mechanism. The living-cell and extracted preparations remain distinct evidence contexts.
+- No exhaustive connector family or proteome inventory search was performed. Exact family grounding, additional scaffold proteins, cross-taxon molecular homology and native force-generation details remain explicit scientific uncertainties.
+- The exact-name Mallomonas fastigiata taxon search and historical deduplication search were not rerun; historical notes are not newly asserted absence findings. No unlisted species prevalence or strain accession is inferred.
+- No adjacent maintained record informed the scientific assessment. The current source review does not establish independent historical authorship or reconstruct every earlier curation decision.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Temporary source packet: /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/source-inspection.json. All 21 raw receipts and metadata files are retained; recorded retrieval times are original response times and raw SHA-256 values were rechecked.
+- Parent independently read the complete target, draft, source packet and original source/input hashes, and visually inspected the 1987 Figure2 and TableI. Two source collaborators inspected the primary bodies, 1992 TableII, abstracts and provenance. Parent accepts the bounded assessments.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T075001Z-nucleus-basal-body-connector-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Nucleus-basal body connector identity, conditional contraction and evidence
+  review
+started_at: '2026-10-21T07:36:53Z'
+finished_at: '2026-10-21T07:50:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The connector identity, centrin constituent, three species examples, conditional
+  calcium/ATP graph and Figure 2 provenance are supported. No material finding was
+  identified within the inspected scope. Two primary citations remain abstract-bounded,
+  and molecular inventory and connector-specific mutant inferences retain explicit
+  limits.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    sha256: 89e5e96440535f65493ee4b2928b835f415f79358200f32d877ec59487300f0d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:nucleus_basal_body_connector
+  path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  label: nucleus-basal body connector
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, native GO/InterPro/UniProt/taxonomy responses,
+    all six cited primary abstracts, 1985/1987/1992 primary scientific PDF text, relevant
+    2005 body, and linked Figure 2 provenance.
+  selection: Eighth target in batch nine, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just validate data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just validate-strict data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: 14 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The record describes a physical connector, its centrin constituent and
+    calcium/ATP reactivation. The negative gene-induction claim is a directly tested
+    phenotype from a primary abstract, not an asserted expression-module mechanism.
+- check_id: figure-integrity
+  name: Source PDF checksum, visual content and permissions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: Downloaded version 1 PDF MD5 equals the official package value; Figure
+    2 page 4 and Table I page 6 visually inspected; JATS explicitly names CC BY-NC-SA
+    4.0.
+  evidence_ids:
+  - connector-agent-1987-pdf
+  - connector-agent-1987-package
+  - connector-agent-1987-jats
+  - connector-agent-1987-list
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - connector-agent-1985-jats
+  - connector-agent-1985-pdf
+  - connector-agent-1987-jats
+  - connector-agent-1987-list
+  - connector-agent-1987-package
+  - connector-agent-1987-pdf
+  - connector-agent-1989-publisher
+  - connector-agent-1992-jats
+  - connector-agent-1992-pdf
+  - connector-agent-2003-publisher
+  - connector-agent-2003-springer
+  - connector-agent-2005-jats
+  - connector-agent-2005-legacy
+  - connector-agent-epmc
+  - connector-agent-go
+  - connector-agent-ipr050145
+  - connector-agent-ipr050230
+  - connector-agent-taxon-3055
+  - connector-agent-taxon-420600
+  - connector-agent-taxon-52555
+  - connector-agent-uniprot
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: connector-agent-1985-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2113967.1/PMC2113967.1.xml
+  locator: Native XML front/article-meta identity and body/preformat PDF-text representation;
+    scientific text attestation is the separate 1985-pdf evidence row; raw receipt
+    /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-jats.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-jats.meta.json
+  accessed_at: '2026-10-21T07:43:15.979335Z'
+  support: context_only
+  summary: Native JATS/PDF-text package retained for citation identity and source
+    availability. Scientific reading and detailed experiment locators are attested
+    against the separately hashed primary PDF evidence row, not claimed as independent
+    reading under this XML hash.
+  snapshot_sha256: 1d0a84428f0ed94fe17028ebcb50c39c0ae02e932b9de1dbcfe62dda64ed3e52
+- evidence_id: connector-agent-1985-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2113967.1/PMC2113967.1.pdf
+  locator: Printed pp. 1903-1904 identity and strains/isolation Methods; pp. 1905-1906
+    immunoblots/localization and calcium response; p. 1908 EM and Discussion; pp.
+    1909-1911 structural inference, artifact controls and system II fiber boundary;
+    p. 1912 note added in proof.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-pdf.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1985-pdf.meta.json
+  accessed_at: '2026-10-21T07:42:50.695796Z'
+  support: supports
+  summary: Full primary PDF retrieved; scientific body, Methods, Results, Discussion,
+    figure captions and note added in proof read through pdftotext. JATS is PDF-text
+    plus metadata; not a new independent experiment. PDF figure pixels were not comprehensively
+    inspected. Chlamydomonas nucleo-flagellar preparations retain basal body pairs
+    linked to nucleus by immunoreactive strands; whole-cell staining supports pre-existing
+    association. Anti-Tetraselmis-root antigen recognizes approximately 20-kDa acidic
+    isoforms, not sequence-resolved universal inventories. Calcium shortens isolated
+    connectors. Electron-microscopy filaments around 6 nm are expressly presumed/suspected
+    connector material, and thin-section visualization failed in that study. System
+    II fibers are heterogeneous and distinct from microtubular roots or distal/proximal
+    basal-body linking fibers. Proposed segregation/mitotic/evolutionary roles are
+    hypotheses. Wild-type 137c NO mt+ and NO mt- derivatives plus cw15/cw92 and vfl
+    mutants were used; calcium experiments are isolated preparations, not proof of
+    the native ATP cycle.
+  snapshot_sha256: 1ec9c7409a6e7191df1a37c2f7efb610282b3c43cefa8e3600f4d0af0ecff1b3
+- evidence_id: connector-agent-1987-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.xml
+  locator: article/front/article-meta/article-id, title-group, abstract and permissions/license
+    (license_ref and license-p); body/preformat representation; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-jats.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-jats.meta.json
+  accessed_at: '2026-10-21T07:42:50.230299Z'
+  support: supports
+  summary: Native JATS front metadata and primary abstract identify the 1987 article
+    and summarize calcium-dependent root/nuclear movement with ATP potentiation of
+    repeated cycles. The permissions element explicitly links CC BY-NC-SA 4.0, including
+    the license_ref and license paragraph. Body is supplied as PDF-text preformat.
+    Full assay reading and Figure 2/Table I visual inspection are attested separately
+    under connector-agent-1987-pdf; this XML hash does not attest PDF pixels.
+  snapshot_sha256: 226ef7af3a1147f68912bad8960dc9fc8bfd8f90341263c04f3b020458fd5b67
+- evidence_id: connector-agent-1987-list
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/?prefix=PMC2114663.1/
+  locator: ListBucketResult Prefix=PMC2114663.1/, IsTruncated and Contents/Key elements;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-list.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-list.meta.json
+  accessed_at: '2026-10-21T07:42:50.162805Z'
+  support: supports
+  summary: 'Native S3 prefix listing for PMC2114663.1 has IsTruncated=false and four
+    objects: JSON, PDF, TXT and XML. No separate figure object occurs in this complete
+    version-specific object listing. This receipt does not attest figure pixels, article
+    license text or experimental content.'
+  snapshot_sha256: 2f3f16315711fffa00748fc47b840e0cf46dfd3f665309125f5f7fe6d98aab52
+- evidence_id: connector-agent-1987-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.json
+  locator: pmcid/version/pmid/doi/is_pmc_openaccess/is_manuscript/is_retracted/license_code/pdf_url;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-package.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-package.meta.json
+  accessed_at: '2026-10-21T07:43:15.740427Z'
+  support: supports
+  summary: Official PMC package JSON identifies PMC2114663 version 1, PMID 3667698,
+    DOI 10.1083/jcb.105.4.1799, open-access true, manuscript false and retracted false.
+    license_code is CC BY-NC-SA. pdf_url supplies MD5 727295bf6cca8324137c56ffc396c273,
+    which equals the separately hashed downloaded PDF. License version 4.0 is supplied
+    by the separate JATS receipt; image content is attested against the separate PDF.
+  snapshot_sha256: 502fd57966a3a2fcf902eeba0bdc843a21c5fd8f2d23ee31dd34e77be90e3085
+- evidence_id: connector-agent-1987-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114663.1/PMC2114663.1.pdf
+  locator: Printed p. 1799 Cell Culture; p. 1800 Reactivation of Detergent-extracted
+    Cell Models; pp. 1801-1802 Nuclear Movement in Reactivated Cell Models and Figure
+    2; pp. 1803-1804 ATP Potentiates Flagellar Roots for Contraction and Table I.;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-pdf.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1987-pdf.meta.json
+  accessed_at: '2026-10-21T07:42:50.651188Z'
+  support: supports
+  summary: 'All seven PDF pages read as extracted text, including Methods, Results,
+    Discussion and figure/table captions. Figure 2 on PDF page 4 and Table I on PDF
+    page 6 visually inspected from local renders. Every experiment used gametes of
+    C. reinhardtii 137c derivative NO mt+, cultured in Sager/Granick Medium I then
+    nitrogen deprivation. Living gametes underwent pH-shock or mechanical-shear deflagellation;
+    fixed DAPI and immunofluorescence snapshots establish coupled root/nuclear changes.
+    Extracted models used 0.01% NP-40, 3 mM CaCl2 or 3 mM EGTA, and 3 mM ATP where
+    indicated, with washes between treatments; calcium treatment 5 minutes, EGTA 30
+    minutes. Initially EGTA-extracted models contracted and shifted nucleus anteriorly
+    upon first calcium exposure, reextended in EGTA, then failed to contract at second
+    calcium exposure. Calcium-lysed models likewise became refractory after EGTA.
+    ATP under either low or high calcium restored response: ATP plus EGTA kept a central
+    nucleus until later calcium, whereas ATP plus calcium yielded anterior position.
+    Thus ATP potentiation alone is not contraction. Phosphorylation is suggested,
+    not demonstrated as a particular kinase/reaction. Table distances measure nuclear
+    position, not connector dimensions. The paper proposes gene-induction linkage,
+    later tested negatively by the 1989 abstract.'
+  snapshot_sha256: a742c84cb85915321404f0c531f1bb1e851a64dd7ad608e24449b8a8488ab619
+- evidence_id: connector-agent-1989-publisher
+  kind: primary_source
+  reference: https://doi.org/10.1002/cm.970140409
+  locator: Recorded exact URL response and metadata only; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1989-publisher.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1989-publisher.meta.json
+  accessed_at: '2026-10-21T07:43:16.772927Z'
+  support: unknown
+  summary: HTTP 403 response retained as an unsuccessful access attempt, not primary
+    biological text. The full 1989 source remains uninspected; exact primary abstract
+    read through Europe PMC.
+  snapshot_sha256: b5ced5022a7451ec39060d9e9027bcae0ceacd92b701e288b574559e96d7bd03
+- evidence_id: connector-agent-1992-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2289752.1/PMC2289752.1.xml
+  locator: Native XML front/article-meta identity and body/preformat PDF-text representation;
+    scientific text attestation is the separate 1992-pdf evidence row; raw receipt
+    /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-jats.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-jats.meta.json
+  accessed_at: '2026-10-21T07:43:16.678811Z'
+  support: context_only
+  summary: Native JATS/PDF-text package retained for citation identity and source
+    availability. Scientific reading and detailed experiment locators are attested
+    against the separately hashed primary PDF evidence row, not claimed as independent
+    reading under this XML hash.
+  snapshot_sha256: c90d59123403bad402653eb6fef86df1892a65d2a7d08989006b707ac7571b0e
+- evidence_id: connector-agent-1992-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2289752.1/PMC2289752.1.pdf
+  locator: Printed pp. 1613-1615 separate structures, strains, pCaBP4/sequence Methods
+    and RFLP/sequence Results; pp. 1616-1617 revertants and ultrastructure; pp. 1617-1619
+    immunolocalization and contracted extracted models; pp. 1620-1623 Discussion,
+    Table II and final segregation inference.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-pdf.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/1992-pdf.meta.json
+  accessed_at: '2026-10-21T07:43:17.619244Z'
+  support: supports
+  summary: 'Primary PDF scientific text read: Methods, Results and Discussion, including
+    Table II; PDF page 11 (printed p. 1623) Table II visually inspected. Figure captions
+    read; no complete image-panel audit. Centrin/caltractin sequence tested via cloned
+    pCaBP4/Huang 1988 and Lee 1991 sources; vfl2 is E101K from a G-to-A mutation.
+    The mutant affects NBBCs, distal striated fibers and transition-region stellate
+    structures. Intragenic revertants with Asn/Thr or wild-type Glu appear normal
+    at measured resolution; Met/Ile class 2 revertants restore apparently normal NBBCs
+    and transition-region structures while distal fibers remain abnormal. The authors
+    infer NBBC involvement in accurate basal-body duplication/segregation by eliminating
+    alternatives. This is not selective connector ablation and does not establish
+    every connector role independently. Native sequence/assembly evidence supports
+    a Chlamydomonas centrin constituent; essentiality across all connector taxa is
+    not established. Culture Methods include 137c NO mating derivatives, C. smithii
+    cross, cw15 and vfl2-220 backgrounds; no single collection-strain accession inferred
+    for the record example.'
+  snapshot_sha256: dc06c2312e33688b48b18e0f93665b811d0a010055b929bcbea17cf62ec6e349
+- evidence_id: connector-agent-2003-publisher
+  kind: primary_source
+  reference: https://doi.org/10.1007/s00709-003-0016-4
+  locator: Publisher Summary headed Abs1 and immediately following subscription-preview
+    statement; this receipt contains no Europe PMC response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-publisher.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-publisher.meta.json
+  accessed_at: '2026-10-21T07:43:18.730972Z'
+  support: supports
+  summary: Publisher primary Summary read in full. It names S. petersenii, M. fastigiata
+    and M. insignis in the ultrastructural comparison. Strong 20-22-kDa anti-centrin
+    immunoblot labeling and mitotic observations are specifically for S. petersenii.
+    No contraction assay or sequence-level centrin identity is established in this
+    summary. The page explicitly calls this a preview of subscription content; full
+    Methods and figures were not provided or read.
+  snapshot_sha256: 25656bfc17ba49b8d904173c26cd4bf8c4cb71b7c1f6368bcfba8fab61b10f47
+- evidence_id: connector-agent-2003-springer
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1007/s00709-003-0016-4
+  locator: Publisher Summary headed Abs1 and immediately following subscription-preview
+    statement; this receipt contains no Europe PMC response; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-springer.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2003-springer.meta.json
+  accessed_at: '2026-10-21T07:43:18.074925Z'
+  support: supports
+  summary: Publisher primary Summary read in full. It names S. petersenii, M. fastigiata
+    and M. insignis in the ultrastructural comparison. Strong 20-22-kDa anti-centrin
+    immunoblot labeling and mitotic observations are specifically for S. petersenii.
+    No contraction assay or sequence-level centrin identity is established in this
+    summary. The page explicitly calls this a preview of subscription content; full
+    Methods and figures were not provided or read.
+  snapshot_sha256: 8788f6cb7dd87ca48f22db6dd999ea764564266a57c97d6948496a0e82ff5059
+- evidence_id: connector-agent-2005-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC1168961.1/PMC1168961.1.xml
+  locator: Recorded exact URL response and metadata only; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-jats.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-jats.meta.json
+  accessed_at: '2026-10-21T07:43:15.673402Z'
+  support: unknown
+  summary: HTTP 404 response retained as an unsuccessful access attempt, not primary
+    biological text. The 2005 body was subsequently recovered from the separate PMC
+    legacy HTML response.
+  snapshot_sha256: b516525a49edf64a60a52e8c58772bae444876d166123db4ccfd1ce78f2ddb9f
+- evidence_id: connector-agent-2005-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1168961/?report=xml
+  locator: PMC1168961 HTML sec1 Methods, sec2 strain, sec3 postembedding EM, sec4
+    Results NBBC/scaffold continuity, sec5 Discussion paragraph beginning The most
+    significant single observation and ensuing Sfi1/CBP1.1 model.; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-legacy.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/2005-legacy.meta.json
+  accessed_at: '2026-10-21T07:43:37.024700Z'
+  support: supports
+  summary: 'Full primary PMC legacy HTML recovered after version-1 S3 JATS route returned
+    404. Read complete abstract/introduction/Methods, relevant NBBC Results paragraphs
+    and Discussion including Sfi1/CBP1.1 proposal. Not an exhaustive visual or all-figure-panel
+    audit. Historical target access annotation is not reassessed as a data defect.
+    C. reinhardtii cw15+ SAG 83.81 isolated interphase cytoskeletons examined by serial-section
+    postembedding immunogold EM with immune/preimmune controls. New localizations
+    connect a larger basal-apparatus centrin scaffold; NBBC is part of this system,
+    not equivalent to the entire scaffold. Some local connections remain inferential:
+    at transitional fibers and NBBC, weak labeling prevented demonstration of gold-particle
+    continuity; extracted preparations can lose filaments. Sfi1/CBP1.1 discussion
+    builds from yeast/human Sfi1 and Spermatozopsis similis CBP1.1, then proposes
+    likely presence in C. reinhardtii scaffold. It does not directly identify Sfi1/CBP1.1
+    in the Chlamydomonas NBBC. No inventory expansion follows from this paper alone.'
+  snapshot_sha256: b1166b7a40cf9c882f22c1c85151c530122b63a8b53f76bc6767f487a332696b
+- evidence_id: connector-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1083/jcb.101.5.1903%22%20OR%20DOI%3A%2210.1083/jcb.105.4.1799%22%20OR%20DOI%3A%2210.1002/cm.970140409%22%20OR%20DOI%3A%2210.1083/jcb.119.6.1613%22%20OR%20DOI%3A%2210.1007/s00709-003-0016-4%22%20OR%20DOI%3A%2210.1128/EC.4.7.1253-1263.2005%22
+  locator: resultList.result objects for the six exact DOIs; id/pmcid/title/authors/pubYear/abstractText;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/epmc.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/epmc.meta.json
+  accessed_at: '2026-10-21T07:42:50.734386Z'
+  support: supports
+  summary: Exact-DOI native Europe PMC metadata and full primary abstracts for all
+    six citations read. The 1989 abstract is the highest inspected tier for that paper;
+    the 2003 abstract is corroborated by the publisher preview. Metadata identity
+    is separate from biological full-text support.
+  snapshot_sha256: ba09db9cbc6d85c1b06eab9cde17d161315ca57dd193f0dbed42c290a0e80867
+- evidence_id: connector-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035253,GO:0051647,GO:0120118,GO:0120269
+  locator: results objects for GO:0035253, GO:0051647, GO:0120118 and GO:0120269;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/go.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/go.meta.json
+  accessed_at: '2026-10-21T07:42:49.822655Z'
+  support: supports
+  summary: All four are active. GO:0035253 is ciliary rootlet, originating at the
+    proximal basal body and extending toward the nucleus, with exact synonyms cilial
+    rootlet and cilium rootlet. It is broad anatomical context, not exact connector
+    identity. GO:0051647 is nucleus localization and covers transport/maintenance
+    at a cellular location. GO:0120118 is the kinetoplastid new-to-old flagellum tip
+    junction, and GO:0120269 is the Centrin4 arm flanking FAZ and quartet microtubules;
+    neither denotes the NBBC. Typical size/striation values in the broad rootlet definition
+    are not imported into the target.
+  snapshot_sha256: c80e002ece3cf027c45da5015ee8a76b88f69628dde761788719af66ed915f31
+- evidence_id: connector-agent-ipr050145
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/
+  locator: metadata.accession/type/name/description/member_databases for IPR050145;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050145.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050145.meta.json
+  accessed_at: '2026-10-21T07:42:49.844586Z'
+  support: supports
+  summary: Native IPR050145 is the family Centrin/CML-like. Its reviewed authority
+    description explicitly includes caltractin, obelin and Arabidopsis CML37/38. This
+    breadth is not an exact mapping for connector-associated centrins; no exhaustive
+    family absence is asserted.
+  snapshot_sha256: 386371fb67a7de41d9f9a6ded2bbb77530d9a27411b46349d2ac050d45832910
+- evidence_id: connector-agent-ipr050230
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050230/
+  locator: metadata.accession/type/name/description/member_databases for IPR050230;
+    raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050230.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/ipr050230.meta.json
+  accessed_at: '2026-10-21T07:42:50.433450Z'
+  support: supports
+  summary: Native IPR050230 is the family Calmodulin/Myosin light chain/Troponin C-like.
+    Its reviewed authority description includes broad calcium regulatory proteins
+    such as calmodulins, calglandulins and myosin light chains. This is not an exact
+    connector-centrin class.
+  snapshot_sha256: 71caaab83a460a49f29a4c4bf6932354c77b07e1c9455f9c7521355e22c60bc0
+- evidence_id: connector-agent-taxon-3055
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: taxId, scientificName and rank in this exact taxonomy response; raw receipt
+    /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-3055.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-3055.meta.json
+  accessed_at: '2026-10-21T07:42:49.830241Z'
+  support: supports
+  summary: Native taxonomy response identifies 3055 as Chlamydomonas reinhardtii at
+    species rank. This verifies the exact species identifier and label, not a culture-collection
+    strain or biological occurrence.
+  snapshot_sha256: a24c8f85014097148d9e865ea324b01b8d04f6bae27e893834f8abb5bd8b6a1f
+- evidence_id: connector-agent-taxon-420600
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/420600
+  locator: taxId, scientificName and rank in this exact taxonomy response; raw receipt
+    /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-420600.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-420600.meta.json
+  accessed_at: '2026-10-21T07:42:49.855110Z'
+  support: supports
+  summary: Native taxonomy response identifies 420600 as Mallomonas insignis at species
+    rank. This verifies the exact species identifier and label, not a culture-collection
+    strain or biological occurrence.
+  snapshot_sha256: f4bb3aa70b219548cbc3e2e3a11fc39f4252bb6e1eb90f6ce11ed7cccb9be8d3
+- evidence_id: connector-agent-taxon-52555
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/52555
+  locator: taxId, scientificName and rank in this exact taxonomy response; raw receipt
+    /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-52555.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/taxon-52555.meta.json
+  accessed_at: '2026-10-21T07:42:49.830173Z'
+  support: supports
+  summary: Native taxonomy response identifies 52555 as Synura petersenii at species
+    rank. This verifies the exact species identifier and label, not a culture-collection
+    strain or biological occurrence.
+  snapshot_sha256: 0c39a5132098af0284e446010c71ba8552c96214b25dc999b2b78cea3505a057
+- evidence_id: connector-agent-uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P05434.json
+  locator: primaryAccession, entryType, proteinDescription, organism, genes, sequence,
+    references, InterPro cross-references; raw receipt /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/uniprot.raw;
+    metadata /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/uniprot.meta.json
+  accessed_at: '2026-10-21T07:42:49.879274Z'
+  support: supports
+  summary: P05434 is reviewed Swiss-Prot Caltractin, synonym Centrin, taxon 3055 Chlamydomonas
+    reinhardtii, full 169-aa sequence, protein-level evidence. No genes field/primary
+    gene symbol. Sequence-source references include Huang et al. 1988 JCB 107:133-140
+    DOI 10.1083/jcb.107.1.133 and Lee et al. 1991 JMB DOI 10.1016/0022-2836(91)80213-e.
+    These are the cloned sequence sources used/cited in the inspected 1992 paper.
+    Species-level example does not establish connector-specific paralogue or molecular
+    inventory. InterPro cross-references include IPR050230, IPR011992, IPR018247 and
+    IPR002048.
+  snapshot_sha256: dbc691271995563a38fd19896c92adfb1902cb79dde0e8d777c45effc2a05c79
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  locator: Entire YAML, including component, example, function, all six graph edges,
+    discussions, history and image metadata
+  accessed_at: '2026-10-21T07:48:58Z'
+  support: context_only
+  summary: Full target read. No adjacent maintained scientific record is relied upon.
+    Component is label-only, example protein is species-level, contractile graph is
+    extracted-model conditional, taxonomic and molecular limits are explicit.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:36:57Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/nucleus_basal_body_connector.yaml'
+  snapshot_sha256: d524094af25f7129ebb6070fba971f0117104f49a98d5b764703dc4b58bfade8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:37:02Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/nucleus_basal_body_connector.yaml\
+    \ --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/nucleus_basal_body_connector-strict.tsv"
+  snapshot_sha256: d1ab8f76e6579e55e480caed8f71b36e7a04e6b3ac3c978bfbc4d9a2783fdb4e
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml; exact collect()
+    scope; snapshot_sha256 identifies the entire original reports/curie_check.tsv,
+    not the extracted resolver-slice.json
+  accessed_at: '2026-10-21T07:48:59Z'
+  support: supports
+  summary: '14 of 15 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:nucleus_basal_body_connector: SKIPPED; resolved by
+    evidence record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Nucleus-associated fibrous root system
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The primary isolation/localization experiments support a centrin-containing
+    basal-body-to-nuclear connector system. System II fiber and rhizoplast are related
+    historical terms, not exact equivalence to every rootlet. The NBBC remains distinct
+    from the distal striated fiber, microtubular roots, flagella connector and ciliary
+    centrin arm.
+  evidence_ids:
+  - connector-agent-1985-pdf
+  - connector-agent-1992-pdf
+  - connector-agent-go
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Broad anatomical parent and exact molecular boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: GO:0035253 supplies the broad ciliary-rootlet class, while the record preserves
+    a source-defined specialized identity. Native InterPro IPR050145 and IPR050230
+    are broader than connector centrins. REVIEWED_LABEL_ONLY and the open inventory
+    discussion preserve this uncertainty; no broad EF-hand/domain term is used as
+    an exact family.
+  evidence_ids:
+  - connector-agent-go
+  - connector-agent-ipr050145
+  - connector-agent-ipr050230
+  - connector-agent-1985-pdf
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Centrin constituent and verified species protein
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: 1985 immunolocalization/biochemistry and 1992 sequence-linked vfl2/revertant
+    analysis support centrin as a connector constituent in Chlamydomonas. Reviewed
+    P05434 is 169-aa Caltractin from taxon 3055, with no primary gene symbol in the
+    native entry; its sequence-source references agree with the cloned sequence used
+    by the 1992 study. It is not modeled as a connector-specific paralogue or a complete
+    cross-taxon inventory.
+  evidence_ids:
+  - connector-agent-uniprot
+  - connector-agent-1985-pdf
+  - connector-agent-1992-pdf
+  - connector-agent-epmc
+  - record
+- assessment_id: calcium-cycle
+  area: graph
+  topic: Conditional calcium contraction and EGTA reextension
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The six-edge graph agrees with the extracted-cell reactivation sequence
+    in 1987 Table I. Calcium contracts initially responsive models; EGTA permits reextension
+    and return toward a central nucleus. After a refractory cycle, calcium alone is
+    insufficient. ATP in EGTA restores capacity while the nucleus remains central;
+    subsequent calcium triggers contraction. ATP plus calcium can restore contraction
+    directly. The record does not equate potentiation with contraction or claim a
+    universal ATP-free cycle.
+  evidence_ids:
+  - connector-agent-1987-pdf
+  - connector-agent-1987-jats
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Nuclear movement and mechanistic resolution
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: Living gametes and extracted preparations show coupled connector configuration
+    and nuclear-position changes supporting GO:0051647 nucleus localization. Phosphorylation
+    is proposed, with no specific kinase or atomic motor established. Nuclear distances
+    are not connector dimensions; tentative 1985 filament assignment is not converted
+    to a definitive diameter.
+  evidence_ids:
+  - connector-agent-1987-pdf
+  - connector-agent-1985-pdf
+  - connector-agent-go
+  - record
+- assessment_id: mutants
+  area: scope
+  topic: Centrin assembly versus connector-specific causal attribution
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: E101K affects several centrin structures. Class 2 Met/Ile revertants restore
+    apparently normal NBBCs and transition-region structures while distal fibers remain
+    abnormal, as shown in Table II. The authors infer connector roles by eliminating
+    alternatives; the target explicitly avoids treating this as selective connector
+    ablation or universal essentiality. The 1989 abstract supports stable connectors
+    in bald-2 and preserved gene induction in vfl-2.
+  evidence_ids:
+  - connector-agent-1992-pdf
+  - connector-agent-epmc
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Demonstrated taxa and experimental state
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The three exact native species identifiers agree with the cited examples.
+    The 1987 contraction experiments use gametes of a 137c derivative, not an inferred
+    culture-collection stock. The 2003 primary abstract supports Synura and Mallomonas
+    connector topology, with immunoblot and mitotic observations specifically in Synura;
+    it does not establish Mallomonas contraction or sequence identity. The record
+    preserves these boundaries.
+  evidence_ids:
+  - connector-agent-taxon-3055
+  - connector-agent-taxon-52555
+  - connector-agent-taxon-420600
+  - connector-agent-1987-pdf
+  - connector-agent-2003-springer
+  - connector-agent-epmc
+  - record
+- assessment_id: scaffold
+  area: completeness
+  topic: Larger centrin scaffold and unresolved partners
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The 2005 serial immunogold study supports a larger centrin scaffold encompassing
+    the NBBC and other basal-apparatus structures. Its Sfi1/CBP1.1 proposal extrapolates
+    from other organisms and does not directly identify that protein in the Chlamydomonas
+    connector. The target appropriately retains the broader molecular inventory as
+    an open question without adding a speculative constituent.
+  evidence_ids:
+  - connector-agent-2005-legacy
+  - connector-agent-uniprot
+  - connector-agent-ipr050145
+  - connector-agent-ipr050230
+  - record
+- assessment_id: figure
+  area: provenance
+  topic: Figure 2 link, media identity and permissions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The linked Figure 2 has nine panels covering preshock, postshock and recovery,
+    with phase contrast, DAPI nuclei and root immunofluorescence and a 5-micrometer
+    scale bar. Visually inspected PDF page 4 agrees with the caption. Official package
+    MD5 matches the PDF, JATS explicitly supplies CC BY-NC-SA 4.0, and version 1 object
+    listing contains no separate figure objects. No repository image binary or adaptation
+    is introduced.
+  evidence_ids:
+  - connector-agent-1987-pdf
+  - connector-agent-1987-jats
+  - connector-agent-1987-package
+  - connector-agent-1987-list
+  - record
+- assessment_id: readability
+  area: provenance
+  topic: Current source tiers and historical access notes
+  outcome: supported
+  target_ids:
+  - cellstructuremech:nucleus_basal_body_connector
+  summary: The 1985, 1987 and 1992 primary PDFs and relevant 2005 primary body are
+    now readable. The 1989 DOI attempt returned 403 and its primary abstract was read;
+    2003 publisher text is explicitly a subscription preview containing the primary
+    abstract. Historical curation access statements remain historical and are not
+    treated as erroneous because a body is currently recoverable.
+  evidence_ids:
+  - connector-agent-1985-pdf
+  - connector-agent-1987-pdf
+  - connector-agent-1992-pdf
+  - connector-agent-2005-legacy
+  - connector-agent-2005-jats
+  - connector-agent-1989-publisher
+  - connector-agent-2003-springer
+  - connector-agent-epmc
+  - record
+findings: []
+actions: []
+limitations:
+- The 1989 and 2003 sources remain abstract-bounded. The 1989 publisher DOI route
+  returned HTTP 403; the 2003 publisher response supplies a subscription preview,
+  not full Methods or figures. This is a limit of inspected access, not a global unavailability
+  claim.
+- The 1985, 1987 and 1992 primary scientific text was read from downloaded PDFs. Figure
+  2 and Table I of 1987 and Table II of 1992 were visually inspected; other image
+  panels and raw experimental data were not exhaustively audited.
+- The 2005 primary body was recovered from PMC legacy HTML after the S3 JATS attempt
+  failed. Relevant Methods, NBBC Results and scaffold Discussion were read, without
+  a complete figure-pixel audit.
+- The graph establishes an extracted-model calcium/ATP response, not a purified molecular
+  motor or a specific phosphorylation mechanism. The living-cell and extracted preparations
+  remain distinct evidence contexts.
+- No exhaustive connector family or proteome inventory search was performed. Exact
+  family grounding, additional scaffold proteins, cross-taxon molecular homology and
+  native force-generation details remain explicit scientific uncertainties.
+- The exact-name Mallomonas fastigiata taxon search and historical deduplication search
+  were not rerun; historical notes are not newly asserted absence findings. No unlisted
+  species prevalence or strain accession is inferred.
+- No adjacent maintained record informed the scientific assessment. The current source
+  review does not establish independent historical authorship or reconstruct every
+  earlier curation decision.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- 'Temporary source packet: /private/tmp/cellstructure-batch9-20261021-t98tzqpa/connector-agent/source-inspection.json.
+  All 21 raw receipts and metadata files are retained; recorded retrieval times are
+  original response times and raw SHA-256 values were rechecked.'
+- Parent independently read the complete target, draft, source packet and original
+  source/input hashes, and visually inspected the 1987 Figure2 and TableI. Two source
+  collaborators inspected the primary bodies, 1992 TableII, abstracts and provenance.
+  Parent accepts the bounded assessments.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```

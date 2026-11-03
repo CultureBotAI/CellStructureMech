@@ -1,0 +1,783 @@
+# Division septum identity, material grounding and evidence review
+
+- Review: 20261021T101605Z-division-septum-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:59:16Z
+- Finished UTC: 2026-10-21T10:16:05Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Division-septum identity, bacterial scope, compartmentalization and the nonmechanistic assembly graph are supported. One minor issue withholds an available peptidoglycan material grounding because of its septal location.
+
+## Scope And Provenance
+
+Complete one-record audit with exact native identity and all maintained biological claims; literature scope restricted to the specified body sections and abstract.
+
+Selection: Target1 in batch eighteen; exact selected path at frozen9c0446 main, reviewed individually in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000935 | data/structures/envelope/division_septum.yaml | maintained | division septum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Concrete protein-example applicability | not_applicable | False | GO:0000935 | No UniProt examples or GENE_OR_PROTEIN nodes. Divisome is a structural external actor; no protein examples are imposed. |
+| Expression-module applicability | not_applicable | False | GO:0000935 | This review concerns wall identity and assembly summary, not transcriptomic evidence or expression modules. |
+| Focused native schema | passed | True | GO:0000935 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0000935 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0000935 | 9 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0000935 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0000935 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0000935 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0000935 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0000935 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0000935 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Complete physical septum versus its assembly machine
+
+identity: supported. Targets: GO:0000935.
+
+Native GO matches the complete, exchange-blocking division septum; the definition, synonyms, category/kind, is-a parent and division-site parthood agree. The divisome appears only as an upstream structural actor.
+
+### Bacterial peptidoglycan membership and bounded material grounding
+
+grounding: concern. Targets: GO:0000935.
+
+The component explicitly denotes bacterial PG and excludes fungal chitin/glucan walls. Its chemistry and location are coherent, but the note withholds a verified material-class identifier solely because it does not also encode the septal deposition site.
+
+### Conditional assembly necessity is not established by membership
+
+evidence: unknown. Targets: GO:0000935.
+
+The material is supported for the bacterial septa represented here. The inspected reviews do not constitute a universal assembly-removal test for the CONDITIONAL enum across every generic division septum; presence, normal septum synthesis and assay-specific cell-division failure must remain distinct.
+
+### Qualified bacterial distribution and model organisms
+
+scope: supported. Targets: GO:0000935.
+
+The Bacteria row explicitly excludes wall-less and alternative-division examples. E.coli and B.subtilis are the reviewed models, and native taxonomy verifies the K-12 strain and B.subtilis species identities. The review body includes differing behaviors among bacteria; COMMON is qualitative rather than a surveyed frequency.
+
+### Compartmentalization by a completed septum
+
+evidence: supported. Targets: GO:0000935.
+
+The sole function is the GO-defined barrier produced by completion. Removed division-plane-closure activity is not reintroduced as a property of the completed wall. No independent impermeability measurement across all taxa is claimed.
+
+### Bounded nonmechanistic bacterial assembly summary
+
+graph: supported. Targets: GO:0000935.
+
+All four directed edges preserve machine localization, PG synthesis, formation of the septal wall and completed-barrier compartmentalization. NONMECHANISTIC and its scope notes appropriately avoid an enzyme order, universal FtsZ rate control, force generation or identical envelope remodeling in diderms and monoderms.
+
+### Acknowledged fungal boundary and optional inventory
+
+completeness: supported. Targets: GO:0000935.
+
+The fungal-polymer TODO acknowledges the generic class boundary without claiming its bacterial component covers fungi. No additional optional molecular inventory, protein instances, physical measurements or image is required. Material grounding below is a concrete available link, not an optional-slot quota.
+
+### Citation scope, dates and source access
+
+provenance: supported. Targets: GO:0000935.
+
+Both DOI identities are verified. The2012 Egan date matches online publication even though the issue is2013. McQuillen is review-tier body evidence at the named sections; Egan support remains abstract-level because the publisher PDF route returned403. Agent mapping status remains PROPOSED.
+
+## Findings
+
+### F1: Separate peptidoglycan identity from its septal location
+
+minor / open / confirmed; issue key: division-septum-peptidoglycan-material-grounding.
+
+The bacterial_septal_peptidoglycan component explicitly denotes PG, but its grounding note requires a term that also denotes deposition at bacterial division septa. Native CHEBI8005 supplies the verified material-class identity. Septal placement and exclusion of fungal polymers belong in the role and evidence rather than preventing this material link.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use the verified peptidoglycan material grounding with an ontology-compatible material label, retaining bacterial septal location and fungal exclusion in role/evidence, and revise the label-only explanation.
+
+- Confirm CHEBI8005 remains the exact named material class; do not imply it denotes the full wall or division septum.
+- Retain component identity/reference links and the conditional bacterial scope.
+- Scientific changes require the separately authorized guarded curation writer, append-only history and native validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/envelope/division_septum.yaml; Entire maintained YAML including history, component, distributions, graph and discussions | context_only | Complete record read; physical septum product remains distinct from the divisome machinery. The bacterial-only component and explicit fungal TODO constrain scope. |
+| policy | docs/CURATION.md; Identity, component grounding and assembly-necessity definition in the frozen schema | context_only | Material identity, location, assembly necessity and catalytic function are separate assertions. No optional protein inventory is required. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Node identity, upstream actors, directed edge support and scope classification | context_only | The existing NONMECHANISTIC graph is assessed as a bounded bacterial assembly summary. |
+| division-septum-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000935,GO:0030428,GO:0032153,GO:1990586; All four returned definitions, synonyms and exact inverse-child relations | supports | GO0000935 exactly supplies the definition and exact/related synonyms. GO0030428 has GO0000935 as an is_a child; GO0032153 has it as a part_of child. GO1990586 denotes the prokaryotic division machinery and coordinates membrane/wall constriction, rather than denoting the finished wall. |
+| division-septum-agent-chebi-8005 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/8005/; Complete native name, definition, synonyms, release status and ontology relations | supports | Released three-star CHEBI8005 identifies peptidoglycan as the alternating N-acetylglucosamine/N-acetylmuramic-acid polymer with attached peptide chains. Its material identity does not encode deposition site. |
+| division-septum-agent-jats-PMC8610174 | https://pmc-oa-opendata.s3.amazonaws.com/PMC8610174.1/PMC8610174.1.xml; JATS PMC8610174 sectionsS1 Introduction, S2 Overview, S16 Scaffold, S17 Coordinator, S22 Cell Pole Shape Determinant, S23 Conclusions; complete named prose sections, no independent primary-reference or image-pixel audit | supports | McQuillen and Xiao review bacterial septum synthesis, divisome localization and spatial organization of septal PG synthesis. The source separates FtsZ-guided movement from actual synthesis activity, notes species-dependent rate effects and retains uncertainty over force generation. |
+| division-septum-agent-doi-10.1146_annurev-biophys-121219-081703 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1146/annurev-biophys-121219-081703%22; Complete bibliographic identity, publication types and abstract | supports | Exact native citation identifies McQuillen and Xiao2020, PMID32092282, and its review abstract. |
+| division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1111/j.1749-6632.2012.06818.x%22; Complete citation, first-publication/issue dates, publication types and abstract; full body not recovered | supports | Exact Egan and Vollmer review abstract describes the divisome at mid-cell synthesizing stress-bearing PG and coordinating envelope constriction, including simultaneous E.coli septal synthesis/cleavage. First publication2012-12-05 and issue2013 explain the record date. |
+| division-septum-agent-tax-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Bacteria at domain rank; identity metadata alone is not occurrence evidence. |
+| division-septum-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Escherichia coli K-12 at strain rank; identity metadata alone is not occurrence evidence. |
+| division-septum-agent-tax-1423 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1423; taxId, scientificName, rank, lineage and aliases | supports | Native taxonomy identifies Bacillus subtilis at species rank; identity metadata alone is not occurrence evidence. |
+| egan-access | https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1749-6632.2012.06818.x; Actual publisher pdfdirect response body;403 HTML, not a PDF | context_only | This route did not expose the review body. Egan claims are restricted to the exact native abstract; no source-wide absence claim is made. |
+| schema-result | just validate data/structures/envelope/division_septum.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/envelope/division_septum.yaml |
+| strict-result | just validate-strict data/structures/envelope/division_septum.yaml --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/envelope/division_septum.yaml --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch18-20261021-5wxxz5kh/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/envelope/division_septum.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 9 of9 collected target identifiers returned OK in this fresh base resolver run. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Egan and Vollmer full text was not recovered from the inspected Wiley pdfdirect route; HTTP403 HTML retained. Only exact native abstract supports its claims.
+- McQuillen and Xiao is a review, read atS1/S2/S16/S17/S22/S23. No cited primary experiments or image pixels were independently reanalysed.
+- CONDITIONAL assembly necessity remains unknown at generic-class scope. No fungal/archaeal survey or complete molecular inventory was performed.
+- Label-only review history is retained as historical provenance; the finding concerns an available current material identity, not an asserted historical falsehood.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T101605Z-division-septum-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Division septum identity, material grounding and evidence review
+started_at: '2026-10-21T09:59:16Z'
+finished_at: '2026-10-21T10:16:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Division-septum identity, bacterial scope, compartmentalization and the nonmechanistic
+  assembly graph are supported. One minor issue withholds an available peptidoglycan
+  material grounding because of its septal location.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/division_septum.yaml
+    sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000935
+  path: data/structures/envelope/division_septum.yaml
+  label: division septum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+scope:
+  description: Complete one-record audit with exact native identity and all maintained
+    biological claims; literature scope restricted to the specified body sections
+    and abstract.
+  selection: Target1 in batch eighteen; exact selected path at frozen9c0446 main,
+    reviewed individually in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000935
+checks:
+- check_id: protein-examples
+  name: Concrete protein-example applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000935
+  summary: No UniProt examples or GENE_OR_PROTEIN nodes. Divisome is a structural
+    external actor; no protein examples are imposed.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000935
+  summary: This review concerns wall identity and assembly summary, not transcriptomic
+    evidence or expression modules.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate data/structures/envelope/division_septum.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate-strict data/structures/envelope/division_septum.yaml --out
+    /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  summary: 9 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - division-septum-agent-go
+  - division-septum-agent-chebi-8005
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - division-septum-agent-tax-2
+  - division-septum-agent-tax-83333
+  - division-septum-agent-tax-1423
+  - egan-access
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000935
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/envelope/division_septum.yaml
+  locator: Entire maintained YAML including history, component, distributions, graph
+    and discussions
+  accessed_at: '2026-10-21T10:03:28Z'
+  support: context_only
+  summary: Complete record read; physical septum product remains distinct from the
+    divisome machinery. The bacterial-only component and explicit fungal TODO constrain
+    scope.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, component grounding and assembly-necessity definition in the
+    frozen schema
+  accessed_at: '2026-10-21T10:03:28Z'
+  support: context_only
+  summary: Material identity, location, assembly necessity and catalytic function
+    are separate assertions. No optional protein inventory is required.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Node identity, upstream actors, directed edge support and scope classification
+  accessed_at: '2026-10-21T10:03:28Z'
+  support: context_only
+  summary: The existing NONMECHANISTIC graph is assessed as a bounded bacterial assembly
+    summary.
+- evidence_id: division-septum-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000935,GO:0030428,GO:0032153,GO:1990586
+  locator: All four returned definitions, synonyms and exact inverse-child relations
+  accessed_at: '2026-10-21T10:00:38.584620Z'
+  support: supports
+  summary: GO0000935 exactly supplies the definition and exact/related synonyms. GO0030428
+    has GO0000935 as an is_a child; GO0032153 has it as a part_of child. GO1990586
+    denotes the prokaryotic division machinery and coordinates membrane/wall constriction,
+    rather than denoting the finished wall.
+  snapshot_sha256: 816f470770889307e9046a370cbe2b7bf26af10b6f3df72e30755a3eebecae76
+- evidence_id: division-septum-agent-chebi-8005
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/8005/
+  locator: Complete native name, definition, synonyms, release status and ontology
+    relations
+  accessed_at: '2026-10-21T09:47:01.940077Z'
+  support: supports
+  summary: Released three-star CHEBI8005 identifies peptidoglycan as the alternating
+    N-acetylglucosamine/N-acetylmuramic-acid polymer with attached peptide chains.
+    Its material identity does not encode deposition site.
+  snapshot_sha256: e522d29047c83fadac704ac6c6a4bc6a6beab1c5f0f116d903c78536bca212c0
+- evidence_id: division-septum-agent-jats-PMC8610174
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8610174.1/PMC8610174.1.xml
+  locator: JATS PMC8610174 sectionsS1 Introduction, S2 Overview, S16 Scaffold, S17
+    Coordinator, S22 Cell Pole Shape Determinant, S23 Conclusions; complete named
+    prose sections, no independent primary-reference or image-pixel audit
+  accessed_at: '2026-10-21T09:47:36.061066Z'
+  support: supports
+  summary: McQuillen and Xiao review bacterial septum synthesis, divisome localization
+    and spatial organization of septal PG synthesis. The source separates FtsZ-guided
+    movement from actual synthesis activity, notes species-dependent rate effects
+    and retains uncertainty over force generation.
+  snapshot_sha256: 8a76b9af3fed1226ad5e9e6f00452499f9541ace397318b6d6ff1635dd0ca45d
+- evidence_id: division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1146/annurev-biophys-121219-081703%22
+  locator: Complete bibliographic identity, publication types and abstract
+  accessed_at: '2026-10-21T09:46:58.279436Z'
+  support: supports
+  summary: Exact native citation identifies McQuillen and Xiao2020, PMID32092282,
+    and its review abstract.
+  snapshot_sha256: 11b3b11e5aa467418a3ce7352d845ced8be8d55bb00fe5fecb7b937643e7da86
+- evidence_id: division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1111/j.1749-6632.2012.06818.x%22
+  locator: Complete citation, first-publication/issue dates, publication types and
+    abstract; full body not recovered
+  accessed_at: '2026-10-21T09:46:57.554628Z'
+  support: supports
+  summary: Exact Egan and Vollmer review abstract describes the divisome at mid-cell
+    synthesizing stress-bearing PG and coordinating envelope constriction, including
+    simultaneous E.coli septal synthesis/cleavage. First publication2012-12-05 and
+    issue2013 explain the record date.
+  snapshot_sha256: 9223d6468cb3fd82c0defeba074dfa46343ad8d8b92d9685553c81f47db5f538
+- evidence_id: division-septum-agent-tax-2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-10-21T09:46:57.553248Z'
+  support: supports
+  summary: Native taxonomy identifies Bacteria at domain rank; identity metadata alone
+    is not occurrence evidence.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: division-septum-agent-tax-83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-10-21T09:46:57.554228Z'
+  support: supports
+  summary: Native taxonomy identifies Escherichia coli K-12 at strain rank; identity
+    metadata alone is not occurrence evidence.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: division-septum-agent-tax-1423
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1423
+  locator: taxId, scientificName, rank, lineage and aliases
+  accessed_at: '2026-10-21T09:46:57.553042Z'
+  support: supports
+  summary: Native taxonomy identifies Bacillus subtilis at species rank; identity
+    metadata alone is not occurrence evidence.
+  snapshot_sha256: cba62f34e18147fc64dac9d0b13c66a25f60ac516c43a451187d6787e3c7a07b
+- evidence_id: egan-access
+  kind: authority
+  reference: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1749-6632.2012.06818.x
+  locator: Actual publisher pdfdirect response body;403 HTML, not a PDF
+  accessed_at: '2026-10-21T09:53:05.399612Z'
+  support: context_only
+  summary: This route did not expose the review body. Egan claims are restricted to
+    the exact native abstract; no source-wide absence claim is made.
+  snapshot_sha256: 5a79932b5b8f12f5f6dd543bbc920c5d68c93da95e4b58dfdeecef1d0e7b7b9f
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/envelope/division_septum.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:59:19Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/division_septum.yaml'
+  snapshot_sha256: 417f9576b484a4cd7c0a7d381b9cde2a401bc061093943d54d0dcc92671561a1
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/envelope/division_septum.yaml --out
+    /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:59:21Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/envelope/division_septum.yaml\
+    \ --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch18-20261021-5wxxz5kh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/division_septum-strict.tsv"
+  snapshot_sha256: 0f2855105fc374c990a3a5de81c365d86b507ea4445e43de18e40ce158900a55
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/envelope/division_septum.yaml; exact collect() scope; hash
+    identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:03:28Z'
+  support: supports
+  summary: '9 of9 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Complete physical septum versus its assembly machine
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: Native GO matches the complete, exchange-blocking division septum; the
+    definition, synonyms, category/kind, is-a parent and division-site parthood agree.
+    The divisome appears only as an upstream structural actor.
+  evidence_ids:
+  - division-septum-agent-go
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Bacterial peptidoglycan membership and bounded material grounding
+  outcome: concern
+  target_ids:
+  - GO:0000935
+  summary: The component explicitly denotes bacterial PG and excludes fungal chitin/glucan
+    walls. Its chemistry and location are coherent, but the note withholds a verified
+    material-class identifier solely because it does not also encode the septal deposition
+    site.
+  evidence_ids:
+  - division-septum-agent-chebi-8005
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - record
+- assessment_id: necessity
+  area: evidence
+  topic: Conditional assembly necessity is not established by membership
+  outcome: unknown
+  target_ids:
+  - GO:0000935
+  summary: The material is supported for the bacterial septa represented here. The
+    inspected reviews do not constitute a universal assembly-removal test for the
+    CONDITIONAL enum across every generic division septum; presence, normal septum
+    synthesis and assay-specific cell-division failure must remain distinct.
+  evidence_ids:
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - policy
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Qualified bacterial distribution and model organisms
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: The Bacteria row explicitly excludes wall-less and alternative-division
+    examples. E.coli and B.subtilis are the reviewed models, and native taxonomy verifies
+    the K-12 strain and B.subtilis species identities. The review body includes differing
+    behaviors among bacteria; COMMON is qualitative rather than a surveyed frequency.
+  evidence_ids:
+  - division-septum-agent-tax-2
+  - division-septum-agent-tax-83333
+  - division-septum-agent-tax-1423
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Compartmentalization by a completed septum
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: The sole function is the GO-defined barrier produced by completion. Removed
+    division-plane-closure activity is not reintroduced as a property of the completed
+    wall. No independent impermeability measurement across all taxa is claimed.
+  evidence_ids:
+  - division-septum-agent-go
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Bounded nonmechanistic bacterial assembly summary
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: All four directed edges preserve machine localization, PG synthesis, formation
+    of the septal wall and completed-barrier compartmentalization. NONMECHANISTIC
+    and its scope notes appropriately avoid an enzyme order, universal FtsZ rate control,
+    force generation or identical envelope remodeling in diderms and monoderms.
+  evidence_ids:
+  - division-septum-agent-go
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - graph-policy
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Acknowledged fungal boundary and optional inventory
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: The fungal-polymer TODO acknowledges the generic class boundary without
+    claiming its bacterial component covers fungi. No additional optional molecular
+    inventory, protein instances, physical measurements or image is required. Material
+    grounding below is a concrete available link, not an optional-slot quota.
+  evidence_ids:
+  - division-septum-agent-go
+  - division-septum-agent-jats-PMC8610174
+  - division-septum-agent-chebi-8005
+  - policy
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Citation scope, dates and source access
+  outcome: supported
+  target_ids:
+  - GO:0000935
+  summary: Both DOI identities are verified. The2012 Egan date matches online publication
+    even though the issue is2013. McQuillen is review-tier body evidence at the named
+    sections; Egan support remains abstract-level because the publisher PDF route
+    returned403. Agent mapping status remains PROPOSED.
+  evidence_ids:
+  - division-septum-agent-doi-10.1146_annurev-biophys-121219-081703
+  - division-septum-agent-doi-10.1111_j.1749-6632.2012.06818.x
+  - egan-access
+  - record
+findings:
+- finding_id: F1
+  issue_key: division-septum-peptidoglycan-material-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate peptidoglycan identity from its septal location
+  description: The bacterial_septal_peptidoglycan component explicitly denotes PG,
+    but its grounding note requires a term that also denotes deposition at bacterial
+    division septa. Native CHEBI8005 supplies the verified material-class identity.
+    Septal placement and exclusion of fungal polymers belong in the role and evidence
+    rather than preventing this material link.
+  target_ids:
+  - GO:0000935
+  field_paths:
+  - components[component_id=bacterial_septal_peptidoglycan].grounding
+  - components[component_id=bacterial_septal_peptidoglycan].grounding_status
+  - components[component_id=bacterial_septal_peptidoglycan].grounding_notes
+  evidence_ids:
+  - division-septum-agent-chebi-8005
+  - division-septum-agent-jats-PMC8610174
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Components
+  native_severity: minor
+  normalization_reason: A bounded material-class link is withheld because location
+    is conflated with chemical identity; the biological component and bacterial scope
+    are already correct.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000935
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained scientific record
+  description: Use the verified peptidoglycan material grounding with an ontology-compatible
+    material label, retaining bacterial septal location and fungal exclusion in role/evidence,
+    and revise the label-only explanation.
+  acceptance_checks:
+  - Confirm CHEBI8005 remains the exact named material class; do not imply it denotes
+    the full wall or division septum.
+  - Retain component identity/reference links and the conditional bacterial scope.
+  - Scientific changes require the separately authorized guarded curation writer,
+    append-only history and native validation.
+limitations:
+- Egan and Vollmer full text was not recovered from the inspected Wiley pdfdirect
+  route; HTTP403 HTML retained. Only exact native abstract supports its claims.
+- McQuillen and Xiao is a review, read atS1/S2/S16/S17/S22/S23. No cited primary experiments
+  or image pixels were independently reanalysed.
+- CONDITIONAL assembly necessity remains unknown at generic-class scope. No fungal/archaeal
+  survey or complete molecular inventory was performed.
+- Label-only review history is retained as historical provenance; the finding concerns
+  an available current material identity, not an asserted historical falsehood.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

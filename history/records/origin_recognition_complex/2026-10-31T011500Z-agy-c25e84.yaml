@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/origin_recognition_complex.yaml
+  slug: origin_recognition_complex
+session:
+  id: 2026-10-31T011500Z-agy-c25e84
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2476
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Align GO:0003688 causal node_type to MOLECULAR_FUNCTION on origin recognition complex
+  details: Updated causal_graphs[0].nodes[8] (dna_replication_origin_binding, GO:0003688)
+    node_type from BIOLOGICAL_PROCESS to MOLECULAR_FUNCTION on data/structures/other/origin_recognition_complex.yaml
+    to match the Gene Ontology molecular_function namespace and functions[0].

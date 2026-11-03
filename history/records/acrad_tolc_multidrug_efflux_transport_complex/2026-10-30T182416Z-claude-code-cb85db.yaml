@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  slug: acrad_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-cb85db
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect AcrD, AcrA, and TolC subunits to acrad_tolc and link transport to export
+  details: Added contributes to edges from acrd, acra, and tolc to acrad_tolc and from xenobiotic_transport
+    to outer_membrane_export backed by ComplexPortal:CPX-4264 and GO:0140330.

@@ -1,0 +1,789 @@
+schema_version: 1.0.0
+review_id: 20261021T101608Z-dolipore-septum-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Dolipore septum morphology, closure evidence and source scope review
+started_at: '2026-10-21T09:59:21Z'
+finished_at: '2026-10-21T10:16:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No issues observed in the complete dolipore-septum record. Native identity,
+  qualified morphology/taxonomy and nonmechanistic closure participation are supported,
+  with explicit source-version, access and assembly-necessity limitations.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/dolipore_septum.yaml
+    sha256: a985a168ce218d28b2fb0bdf2bb1b4b025b9d7b2656c9554dea9a2067059d6dd
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000937
+  path: data/structures/envelope/dolipore_septum.yaml
+  label: dolipore septum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/dolipore_septum.yaml
+    role: maintained scientific record
+scope:
+  description: Full one-record audit of every maintained field, using native identifiers
+    and directly inspected primary source bodies at the specified scope.
+  selection: Target2 in batch eighteen; exact selected path at frozen9c0446 main,
+    reviewed individually after division septum.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000937
+checks:
+- check_id: protein-examples
+  name: Concrete protein-example applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000937
+  summary: The target contains no UniProt protein_examples or GENE_OR_PROTEIN graph
+    nodes. Protein names occur in evidence/discussion, where they are checked against
+    the actual sources; no accession inventory is imposed.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000937
+  summary: No transcriptomic dataset inference is required for these ultrastructural
+    and deletion/localization claims.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate data/structures/envelope/dolipore_septum.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate-strict data/structures/envelope/dolipore_septum.yaml --out
+    /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/dolipore_septum-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  summary: 8 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - dolipore-agent-go
+  - dolipore-agent-tax-5302
+  - dolipore-agent-tax-5334
+  - dolipore-agent-traquair1978-meta
+  - dolipore-agent-driel2009-meta
+  - dolipore-agent-driel2008-meta
+  - dolipore-agent-peer2010-meta
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - dolipore-agent-driel-thesis-pdf
+  - dolipore-agent-go-search-parenthesome
+  - dolipore-agent-go-search-septal-pore-cap
+  - dolipore-agent-go-search-septal-pore-cap-page2
+  - dolipore-agent-go-search-septal-pore-cap-page3
+  - dolipore-agent-ipr-search-spc18
+  - dolipore-agent-ipr-search-spc14
+  - dolipore-agent-ipr-search-spc33
+  - dolipore-agent-traquair1978-publisher
+  - dolipore-agent-traquair1978-pdf
+  - dolipore-agent-driel2009-publisher
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000937
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/envelope/dolipore_septum.yaml
+  locator: Entire maintained YAML including history, synonyms, components, distributions,
+    all graph edges and grounding discussion
+  accessed_at: '2026-10-21T10:06:57Z'
+  support: context_only
+  summary: Complete record read; paired caps are substructures, not equated with the
+    entire pore plug, and assembly essentiality remains UNKNOWN.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structural identity, component grounding and frozen schema essentiality
+    meaning
+  accessed_at: '2026-10-21T10:06:57Z'
+  support: context_only
+  summary: Whole morphologic substructures need not receive the identifier of a single
+    protein family. Assembly necessity and physiological function are distinct endpoints.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Exact graph actors and bounded scope
+  accessed_at: '2026-10-21T10:06:57Z'
+  support: context_only
+  summary: NONMECHANISTIC morphology/participation statements are assessed without
+    imposing a conserved protein pathway.
+- evidence_id: dolipore-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000937,GO:0000934
+  locator: Both exact definitions and GO0000934 inverse-child relation
+  accessed_at: '2026-10-21T10:00:38.589425Z'
+  support: supports
+  summary: Native GO0000937 describes the barrel-shaped swelling and cap-covered central
+    pore; GO0000934 has dolipore septum as an is_a child. The native class is distinct
+    from a complete, exchange-blocking division septum.
+  snapshot_sha256: 1233f58c2483eb83306300e25824e32968f6004ee89e51ab1bd8ad93624c2ec0
+- evidence_id: dolipore-agent-tax-5302
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5302
+  locator: Taxon identifier, scientific name, rank, lineage and aliases
+  accessed_at: '2026-10-21T10:00:38.593406Z'
+  support: supports
+  summary: Native taxon entry verifies Agaricomycotina at subphylum rank; it does
+    not independently establish occurrence or assign every sample to a single experimental
+    strain.
+  snapshot_sha256: 767e76804a11555dbc7caef4dfb2e33fcb62b45cceefba8ef88fbc7c8b373f71
+- evidence_id: dolipore-agent-tax-5334
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5334
+  locator: Taxon identifier, scientific name, rank, lineage and aliases
+  accessed_at: '2026-10-21T10:00:38.598703Z'
+  support: supports
+  summary: Native taxon entry verifies Schizophyllum commune at species rank; it does
+    not independently establish occurrence or assign every sample to a single experimental
+    strain.
+  snapshot_sha256: f828ad46b9009118aa614b60ff788b7ff067b50a9c79348fa4789b07c0cb4126
+- evidence_id: dolipore-agent-traquair1978-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1139/m78-129
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-10-21T10:00:38.605204Z'
+  support: supports
+  summary: Exact Traquair and McKeen1978 identity, DOI10.1139/m78-129 and PMID679064
+    are verified. The title supplies dolipore-parenthesome terminology; the abstract
+    describes imperforate parenthesomes in the named historical fungus. Full-body
+    TEM methods were not recovered.
+  snapshot_sha256: 664310e0c1081f1ffbcba5c8ac8bbe933b3a2d4fc88f1d0dc3aa2bc1ad244b64
+- evidence_id: dolipore-agent-driel2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.mycres.2008.12.007
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-10-21T10:00:39.577287Z'
+  support: supports
+  summary: Exact vanDriel2009 citation, DOI10.1016/j.mycres.2008.12.007 and PMID19640404
+    are verified. Abstract describes three cap morphotypes, a literature survey of
+    more than325species, and TEM of R.fibula and C.formosus; it does not assert universal
+    cap presence.
+  snapshot_sha256: 1bf623ea910deecd0c0d90d11bbf35fd3830a1e3662a7a9ea1095f877e73a38c
+- evidence_id: dolipore-agent-driel2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/EC.00125-08
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-10-21T10:00:39.597169Z'
+  support: supports
+  summary: Exact vanDriel2008 identity, DOI10.1128/EC.00125-08, PMID18757567 and PMC2568075
+    are verified. The abstract is separate from the genuine body inspected below.
+  snapshot_sha256: 204d3f39ccb5c23bf966ee73aca1ee9b4c04b81d05a201a801797a731854ea63
+- evidence_id: dolipore-agent-peer2010-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/j.1462-2920.2009.02122.x
+  locator: Exact bibliographic fields, publication dates and complete native abstract
+  accessed_at: '2026-10-21T10:00:39.615816Z'
+  support: supports
+  summary: Exact vanPeer2010 identity, DOI10.1111/j.1462-2920.2009.02122.x and PMID20050873
+    are verified. The early-online2009 date on the PDF and2010 issue refer to the
+    same paper.
+  snapshot_sha256: cb3d45ded6fe188d21dae3e7761109a9848502551f627d94fb43a46247b464f8
+- evidence_id: dolipore-agent-legacy-PMC2568075
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2568075/
+  locator: Complete Abstract/Introduction, Methods and Results/Discussion (derived
+    paragraph16–85), including figure captions; no image-pixel reanalysis
+  accessed_at: '2026-10-21T10:03:10.049178Z'
+  support: supports
+  summary: R.solani CBS346.84 material was enriched by disruption, centrifugation
+    and detergent treatment. Specific anti-recSPC18 labels caps and some plug peripheries,
+    not the swelling labeled nonspecifically by antibodies to glycosylated protein.
+    Variable plug labeling and a repository/release model are explicitly hypotheses,
+    not direct proof of transport or a universal plugging mechanism.
+  snapshot_sha256: d0cf2987ea5ca7e8b57d9f29a8a6456d466c7ddf6b2439e4d3875727c9bb6fed
+- evidence_id: dolipore-agent-peer2010-knaw-pdf
+  kind: primary_source
+  reference: https://wi.knaw.nl/images/ResearchGroups/Publications/2009Peer0002.pdf
+  locator: 'Early-online publisher PDF pp1–10: full main Results/Discussion, captions
+    and Experimental Procedures; original movie/figure pixels not independently analysed'
+  accessed_at: '2026-10-21T10:01:24.897522Z'
+  support: supports
+  summary: The early-online paper demonstrates a membrane-covered protein matrix and
+    Spc33 localization in S.commune caps. spc33 deletion removes visible caps and
+    strongly impairs closure in the laser assay (8/10mutant third septa open;7/10wild-type
+    closed). Growth/development effects depend on conditions; mutant fruiting persists
+    at18C but is impaired. Purification uses a Δsc3Δsc15 derivative of4–40, while
+    deletion experiments use4–8 and crosses with4–8b. Spc14 antiserum was nonspecific.
+  snapshot_sha256: 9310b0d3b6a841022ccca534b654ae46799eb58089a8d99f4a63462e4d12404c
+- evidence_id: dolipore-agent-driel-thesis-pdf
+  kind: primary_source
+  reference: https://dspace.library.uu.nl/bitstream/handle/1874/25302/full.pdf
+  locator: 'Repository cover/date and thesis chapter2 printedpp27–37: title, Abstract/Introduction,
+    Methods, complete Results/Discussion, Table1 and captions; references and species
+    appendix not audited'
+  accessed_at: '2026-10-21T10:01:24.898246Z'
+  support: supports
+  summary: 'VanDriel2007 thesis chapter2 is a related prepublication research version,
+    not the identical2009 journal body: its survey says more than350species rather
+    than the published abstract’s325. Chapter methods/TEM and morphology table support
+    varied cap types, absence in some sampled lineages and unresolved cases. No thesis
+    survey total is substituted for the final paper.'
+  snapshot_sha256: ba213ac7017ce16acc60530893bc4d0e5e4b2b07e5e27342ff6011d7f8dff10a
+- evidence_id: dolipore-agent-go-search-parenthesome
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=parenthesome&limit=100
+  locator: Entire returned identifiers/names and pagination for this recorded query
+    page
+  accessed_at: '2026-10-21T10:00:39.647864Z'
+  support: context_only
+  summary: This exact query response contains 0 candidates (query total 0, page 0).
+    No exact named parenthesome/septal-pore-cap class occurs among this response’s
+    candidate names. This bounded result is not proof of absence from every ontology
+    or spelling.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  search_scope: Only the recorded QuickGO remote lexical query at https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=parenthesome&limit=100;
+    this response page 0 was inspected in full, limit100, 0 returned candidates. Server
+    lexical indexing and this exact spelling bound the result. Ignored-file inclusion
+    is not applicable to this remote query; no local absence is asserted.
+- evidence_id: dolipore-agent-go-search-septal-pore-cap
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100
+  locator: Entire returned identifiers/names and pagination for this recorded query
+    page
+  accessed_at: '2026-10-21T10:00:39.680741Z'
+  support: context_only
+  summary: This exact query response contains 100 candidates (query total 276, page
+    1). No exact named parenthesome/septal-pore-cap class occurs among this response’s
+    candidate names. This bounded result is not proof of absence from every ontology
+    or spelling.
+  snapshot_sha256: 070b3dfc6d72cc226533deba2d01f1524c3b57439565d745230dea7ce7ed0e94
+  search_scope: Only the recorded QuickGO remote lexical query at https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100;
+    this response page 1 was inspected in full, limit100, 100 returned candidates.
+    Server lexical indexing and this exact spelling bound the result. Ignored-file
+    inclusion is not applicable to this remote query; no local absence is asserted.
+- evidence_id: dolipore-agent-go-search-septal-pore-cap-page2
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100&page=2
+  locator: Entire returned identifiers/names and pagination for this recorded query
+    page
+  accessed_at: '2026-10-21T10:05:09.752865Z'
+  support: context_only
+  summary: This exact query response contains 100 candidates (query total 276, page
+    2). No exact named parenthesome/septal-pore-cap class occurs among this response’s
+    candidate names. This bounded result is not proof of absence from every ontology
+    or spelling.
+  snapshot_sha256: 8751ba0a15d91cb52b6349cdfb86a8cfd639c5a7cf3971090096265594c12804
+  search_scope: Only the recorded QuickGO remote lexical query at https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100&page=2;
+    this response page 2 was inspected in full, limit100, 100 returned candidates.
+    Server lexical indexing and this exact spelling bound the result. Ignored-file
+    inclusion is not applicable to this remote query; no local absence is asserted.
+- evidence_id: dolipore-agent-go-search-septal-pore-cap-page3
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100&page=3
+  locator: Entire returned identifiers/names and pagination for this recorded query
+    page
+  accessed_at: '2026-10-21T10:05:09.753320Z'
+  support: context_only
+  summary: This exact query response contains 76 candidates (query total 276, page
+    3). No exact named parenthesome/septal-pore-cap class occurs among this response’s
+    candidate names. This bounded result is not proof of absence from every ontology
+    or spelling.
+  snapshot_sha256: a1887ac2e2933546e30accbb151d3ffe6802a37eb3248a549f1b6a5497e6074d
+  search_scope: Only the recorded QuickGO remote lexical query at https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=septal%20pore%20cap&limit=100&page=3;
+    this response page 3 was inspected in full, limit100, 76 returned candidates.
+    Server lexical indexing and this exact spelling bound the result. Ignored-file
+    inclusion is not applicable to this remote query; no local absence is asserted.
+- evidence_id: dolipore-agent-ipr-search-spc18
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=SPC18&page_size=100
+  locator: 'Native InterPro text-query response: HTTP204 with empty body'
+  accessed_at: '2026-10-21T10:04:07.316383Z'
+  support: context_only
+  summary: No InterPro entry was returned for this exact protein-name query. Empty
+    query results do not prove that sequence-based family mapping is unavailable or
+    establish protein absence.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: Only the exact recorded InterPro search parameter for the named SPC18/Spc14/Spc33
+    token; page_size100, server204 empty response. No sequence search, synonym-exhaustive
+    mapping or all-family survey. Ignored-file inclusion is not applicable to remote
+    queries; no local absence is asserted.
+- evidence_id: dolipore-agent-ipr-search-spc14
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc14&page_size=100
+  locator: 'Native InterPro text-query response: HTTP204 with empty body'
+  accessed_at: '2026-10-21T10:04:07.316780Z'
+  support: context_only
+  summary: No InterPro entry was returned for this exact protein-name query. Empty
+    query results do not prove that sequence-based family mapping is unavailable or
+    establish protein absence.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: Only the exact recorded InterPro search parameter for the named SPC18/Spc14/Spc33
+    token; page_size100, server204 empty response. No sequence search, synonym-exhaustive
+    mapping or all-family survey. Ignored-file inclusion is not applicable to remote
+    queries; no local absence is asserted.
+- evidence_id: dolipore-agent-ipr-search-spc33
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Spc33&page_size=100
+  locator: 'Native InterPro text-query response: HTTP204 with empty body'
+  accessed_at: '2026-10-21T10:04:07.317259Z'
+  support: context_only
+  summary: No InterPro entry was returned for this exact protein-name query. Empty
+    query results do not prove that sequence-based family mapping is unavailable or
+    establish protein absence.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: Only the exact recorded InterPro search parameter for the named SPC18/Spc14/Spc33
+    token; page_size100, server204 empty response. No sequence search, synonym-exhaustive
+    mapping or all-family survey. Ignored-file inclusion is not applicable to remote
+    queries; no local absence is asserted.
+- evidence_id: dolipore-agent-traquair1978-publisher
+  kind: authority
+  reference: https://cdnsciencepub.com/doi/10.1139/m78-129
+  locator: Actual publisher response body:403 HTML
+  accessed_at: '2026-10-21T10:01:24.898774Z'
+  support: context_only
+  summary: This route did not expose the complete cited article. Exact native abstracts
+    remain distinct from the related thesis version or another paper’s recovered body.
+  snapshot_sha256: 2f60157c51ed8449445e2ba541d96b3d970509f604782a2944a6b40b75b86cb7
+- evidence_id: dolipore-agent-traquair1978-pdf
+  kind: authority
+  reference: https://cdnsciencepub.com/doi/pdf/10.1139/m78-129
+  locator: Actual publisher response body:403 HTML
+  accessed_at: '2026-10-21T10:01:24.901354Z'
+  support: context_only
+  summary: This route did not expose the complete cited article. Exact native abstracts
+    remain distinct from the related thesis version or another paper’s recovered body.
+  snapshot_sha256: 756d10d893328fcc07f5bdea76e669b5b7835058b948c9e1f51e1fc2d3346249
+- evidence_id: dolipore-agent-driel2009-publisher
+  kind: authority
+  reference: https://www.sciencedirect.com/science/article/pii/S0953756209000203
+  locator: Actual publisher response body:403 HTML
+  accessed_at: '2026-10-21T10:01:24.901688Z'
+  support: context_only
+  summary: This route did not expose the complete cited article. Exact native abstracts
+    remain distinct from the related thesis version or another paper’s recovered body.
+  snapshot_sha256: ceb21a49ec586d6921ccb94a460c026070585512f6f23f7e4dceb8d1d9c5bbbf
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/envelope/dolipore_septum.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:59:24Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/dolipore_septum.yaml'
+  snapshot_sha256: 5a3a099c01a55d61091c17b3936a259836e16252193c6ba6bf3feb11291cf770
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/envelope/dolipore_septum.yaml --out
+    /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/dolipore_septum-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:59:26Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/envelope/dolipore_septum.yaml\
+    \ --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/dolipore_septum-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch18-20261021-5wxxz5kh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/dolipore_septum-strict.tsv"
+  snapshot_sha256: b9471e9c96059c3e1ec2a89881e6f3c091fcac6ea8abf68548c1c219d1edbc0c
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/envelope/dolipore_septum.yaml; exact collect() scope; hash
+    identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:06:57Z'
+  support: supports
+  summary: '8 of8 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Dolipore morphology and porous-septum parentage
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: The exact GO class and declared parent agree with the swollen cross-wall
+    and paired cap-bearing pore representation. The structure remains an envelope
+    substructure, distinct from one cap protein or an impermeable complete septum.
+  evidence_ids:
+  - dolipore-agent-go
+  - record
+- assessment_id: synonyms
+  area: nomenclature
+  topic: Historical complex terminology
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: Dolipore-parenthesome septum is source-supported terminology; septal pore
+    complex remains a RELATED rather than exact synonym, preserving the broader complex
+    usage. Historical spelling variants in the1978 bibliographic metadata do not change
+    its DOI identity.
+  evidence_ids:
+  - dolipore-agent-traquair1978-meta
+  - dolipore-agent-driel2009-meta
+  - dolipore-agent-driel-thesis-pdf
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Morphologic parts and optional protein inventory
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: The swelling and paired caps are whole morphologic substructures. Their
+    label-only treatment does not conflate either with SPC18, Spc14 or Spc33. The
+    cited studies characterize different species-specific protein complements; the
+    bounded native name queries provide no exact whole-cap family mapping. The optional
+    molecular inventory TODO is not a defect by itself.
+  evidence_ids:
+  - dolipore-agent-go
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - dolipore-agent-go-search-parenthesome
+  - dolipore-agent-go-search-septal-pore-cap
+  - dolipore-agent-go-search-septal-pore-cap-page2
+  - dolipore-agent-go-search-septal-pore-cap-page3
+  - dolipore-agent-ipr-search-spc18
+  - dolipore-agent-ipr-search-spc14
+  - dolipore-agent-ipr-search-spc33
+  - policy
+  - record
+- assessment_id: necessity
+  area: evidence
+  topic: UNKNOWN assembly necessity is retained
+  outcome: unknown
+  target_ids:
+  - GO:0000937
+  summary: Membership and morphology are supported. Spc33 deletion tests cap formation
+    in S.commune, not necessity of every named cap component for assembly of every
+    dolipore septum. The record correctly leaves both component essentialities UNKNOWN;
+    no universal necessity or dispensability is inferred.
+  evidence_ids:
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - policy
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Variable Agaricomycotina occurrence and scoped example
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: Taxon identifiers match their names/ranks. VARIABLE and its note explicitly
+    avoid a whole-subphylum presence claim. The journal abstract and related thesis
+    chapter show heterogeneous cap morphologies and limited sampling; the S.commune
+    canonical example is supported by the direct genetic study rather than inferred
+    from taxonomy alone.
+  evidence_ids:
+  - dolipore-agent-tax-5302
+  - dolipore-agent-tax-5334
+  - dolipore-agent-driel2009-meta
+  - dolipore-agent-driel-thesis-pdf
+  - dolipore-agent-peer2010-knaw-pdf
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Cap participation in closure without identity with the plug
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: SPC18 localization in caps and some plugs supports participation as a hypothesis;
+    independent S.commune deletion/localization evidence supports impaired closure
+    and growth/development. The record’s participation/impairs wording does not require
+    caps to be the complete occluding plug or assert a directly observed release mechanism.
+    The source abstract’s inability-to-close wording must be understood within its
+    assay and sample limits.
+  evidence_ids:
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic geometry and closure participation
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: Surrounds and covers are supported by native morphology and the primary
+    descriptions. The participates-in-closure edge explicitly separates caps from
+    the entire plug. NONMECHANISTIC and its scope note avoid a conserved molecular
+    pathway across all Agaricomycotina.
+  evidence_ids:
+  - dolipore-agent-go
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - graph-policy
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: A bounded record without required optional additions
+  outcome: supported
+  target_ids:
+  - GO:0000937
+  summary: The record supplies defining morphology, two scoped parts, a qualified
+    taxonomic row, a tested example, closure function and a limited graph. The protein-family
+    TODO is relevant and does not justify forcing an unverified family or mandatory
+    species-specific molecular census.
+  evidence_ids:
+  - dolipore-agent-go
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - dolipore-agent-go-search-parenthesome
+  - dolipore-agent-go-search-septal-pore-cap
+  - dolipore-agent-go-search-septal-pore-cap-page2
+  - dolipore-agent-go-search-septal-pore-cap-page3
+  - dolipore-agent-ipr-search-spc18
+  - dolipore-agent-ipr-search-spc14
+  - dolipore-agent-ipr-search-spc33
+  - record
+- assessment_id: access
+  area: provenance
+  topic: Source versions and genuine readability limits
+  outcome: unknown
+  target_ids:
+  - GO:0000937
+  summary: All four DOI identities resolve natively. The2008 journal body and2010
+    early-online paper were read directly;1978 and final2009 remain abstract-limited
+    after recorded publisher403 responses. The2007 thesis chapter is separately named
+    and never treated as byte-identical to the2009 article. Newly recovered access
+    does not falsify historical grounding notes.
+  evidence_ids:
+  - dolipore-agent-traquair1978-meta
+  - dolipore-agent-driel2009-meta
+  - dolipore-agent-driel2008-meta
+  - dolipore-agent-peer2010-meta
+  - dolipore-agent-legacy-PMC2568075
+  - dolipore-agent-peer2010-knaw-pdf
+  - dolipore-agent-driel-thesis-pdf
+  - record
+findings: []
+actions: []
+limitations:
+- Traquair1978 publisher HTML/PDF and final vanDriel2009 publisher routes returned403;
+  only their exact native abstracts were read. The related2007 thesis chapter is a
+  distinct version with a different survey total.
+- VanDriel2008 supports SPC18 localization and a proposed role in plugging. Variable
+  plug labeling, antibody crossreactivity controls and hypothesized release/transport
+  are preserved; no conserved directly observed mechanism is inferred.
+- VanPeer2010 closure sampling was10hyphae per genotype, not100% failure; growth and
+  fruiting outcomes depend on temperature. Strains and purification versus genetic
+  assays remain distinct.
+- No source figure pixels or supplementary movies were independently analysed. No
+  complete protein-family sequence search, cross-ontology absence proof or full current
+  Agaricomycotina survey is claimed.
+- Component assembly necessity remains UNKNOWN. This clean unsaved draft is produced
+  under the user’s explicit every-record review instruction overriding the local issue-only
+  output gate.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
