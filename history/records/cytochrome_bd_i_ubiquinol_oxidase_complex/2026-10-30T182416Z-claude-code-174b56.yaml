@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/cytochrome_bd_i_ubiquinol_oxidase_complex.yaml
+  slug: cytochrome_bd_i_ubiquinol_oxidase_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-174b56
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Add CydX and YnhF-like/CydH causal graph nodes and bd-I subunit contribution edges
+  details: Added GENE_OR_PROTEIN nodes for cydx_small_subunit (InterPro:IPR011724) and ynhf_like_cydh_subunit
+    (InterPro:IPR047743) with component_ref bindings and connected all four subunits (cydA,
+    cydB, cydx_small_subunit, ynhf_like_cydh_subunit) to bd_i_oxidase via contributes to edges
+    backed by PDB:6RKO, PMID:31604309, and their respective InterPro family citations.

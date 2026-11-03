@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+  slug: inner_dynein_arm
+session:
+  id: 2026-10-30T064034Z-uniprot-protein-examples-skill-6d43ea
+  timestamp: '2026-10-30T06:40:34Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example
+    (Q96389, Dhc2) to inner_arm_dynein_heavy_chains.'
+  details: 'Cycle 4 Stage 3 protein_examples curation: added verified UniProtKB:Q96389 (Dynein
+    heavy chain 2, Dhc2, Chlamydomonas reinhardtii NCBITaxon:3055, UNREVIEWED) to inner_arm_dynein_heavy_chains,
+    completing all 4 declared gene_symbols (DHC1, DHC2, DHC5, DHC9) and promoting causal_graphs
+    node inner_arm_dynein_heavy_chains to COVERED. Validated via write_validated_structure
+    and uniprot_genes.py --verify.'

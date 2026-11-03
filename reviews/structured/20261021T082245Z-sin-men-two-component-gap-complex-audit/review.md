@@ -1,0 +1,585 @@
+# SIN/MEN two-component GAP complex identity and evidence-scope review
+
+- Review: 20261021T082245Z-sin-men-two-component-gap-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:09:02Z
+- Finished UTC: 2026-10-21T08:22:45Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact complex identity, native hierarchy, budding-yeast scope and the bounded Tem1-inhibition function are supported. No concrete curation defect was established.
+
+## Scope And Provenance
+
+Entire target and every asserted GO, taxon and DOI identity; primary full scientific body, methods and figure captions.
+
+Selection: Fourth unreviewed path in batch eleven, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990334 | data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml | maintained | SIN/MEN two-component GAP complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990334 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990334 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:1990334 | 8 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:1990334 | The target asserts a physical assembly and its bounded function, without an expression-module mechanism. |
+| Claim-level scientific review | passed | True | GO:1990334 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:1990334 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990334 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990334 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990334 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:1990334 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact complex and hierarchy
+
+identity: supported. Targets: GO:1990334.
+
+Identifier, label, definition, narrow synonyms, parent and spindle-pole-body parthood match native GO. The two-component GAP is distinct from the whole MEN/SIN signaling assembly and an active new-pole SIN state.
+
+### Complex versus structure and signaling state
+
+representation: supported. Targets: GO:1990334.
+
+MULTIPROTEIN_COMPLEX and the explicit boundary discussion preserve the protein assembly identity. SPB containment is an ontology relation, not identity with the whole microtubule-organizing center.
+
+### Tem1 inhibition and evidence limits
+
+evidence: supported. Targets: GO:1990334.
+
+The minimal inhibitory function is supported. The source supports cooperative GAP activity, but does not make hydrolysis the sole necessary inhibitory route: mutant checkpoint behavior and localization are separable. No stronger exclusive mechanism is asserted by this record.
+
+### Budding-yeast experimental scope
+
+scope: supported. Targets: GO:1990334.
+
+The example is species-level S.cerevisiae, consistent with W303-derived/backcrossed experimental strains. COMMON is qualitative occurrence in the described system, not surveyed prevalence. The fission-yeast narrow synonym does not extend the experimental taxonomic row.
+
+### Explicit constituent-grounding TODO
+
+completeness: supported. Targets: GO:1990334.
+
+The record names lineage-specific pairs in its boundary vocabulary and leaves constituent mappings open. A complete protein inventory and graph are optional enrichment; this audit establishes no exact missing required family mapping or contradictory inventory.
+
+### Primary source and experimental interpretation
+
+provenance: supported. Targets: GO:1990334.
+
+The exact paper body, methods and captions were read. Claims about checkpoint function are kept at complex level; mutant-specific persistence and synthetic phenotypes do not establish an invariant causal chain in wild-type cells.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| gap-prep-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005816,GO:0160065,GO:0160066,GO:0160067,GO:1902773,GO:1990334; All six definitions, active flags, synonym scopes and relation-bearing child rows | supports | Active GO1990334 matches the label and definition, with the two lineage-specific names as narrow synonyms. GO1902773 lists it as an is_a child; GO0005816 lists it as a part_of child. GO0160065/66/67 describe broader or state-specific signaling assemblies. |
+| gap-prep-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName and rank | supports | Taxon4932 is Saccharomyces cerevisiae at species rank. |
+| gap-prep-fraschini-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1083/jcb.200507162; Single DOI result identity and abstract | supports | The exact DOI resolves to Fraschini et al.2006, PMID16449187/PMC2063644, on disappearance of Bub2-Bfa1 from the mother-bound spindle pole. |
+| gap-prep-fraschini-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2063644/fullTextXML; Introduction; entire Results sections2-7 and Figs1-6/TableI; Discussion sections8-11/Fig7; Methods sections12-19 | supports | The primary study combines W303-background genetics, SPB immunolocalization and recombinant GTPase assays. Bfa1-dependent Bub2 stimulation of Tem1 hydrolysis is distinct from the checkpoint competence of GAP-defective Bub2-myc9 and its persistent localization. |
+| record | data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml; Entire maintained YAML including history, all evidence, function, examples and discussions | context_only | The target is a two-component inhibitory GAP complex. Its species example is budding yeast; it does not enumerate proteins, claim a fixed inventory, provide an image or assert a causal graph. |
+| schema-result | just validate data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml --out /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml --out /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 8 of 8 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The primary experiments distinguish mutant behavior from wild-type regulation. GAP-defective Bub2-myc9 can retain checkpoint function, so enzymatic activity must not be promoted to the sole inhibitory route.
+- The current record does not claim that Fraschini2006 establishes fission-yeast Spg1/Byr4/Cdc16 behavior experimentally; the broad complex vocabulary and narrow synonyms come from GO.
+- Figure pixels, supplementary files and raw experimental data were not independently evaluated; all relevant body sections and captions were read.
+- No exhaustive family search or complete constituent inventory was performed. The explicit grounding TODO remains open.
+- The alternate PMC HTML fetch returned a browser-check page; the genuine EuropePMC JATS body was used as primary evidence.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user goal requests saving each selected target including qualified passes; no finding is invented to justify persistence.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T082245Z-sin-men-two-component-gap-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: SIN/MEN two-component GAP complex identity and evidence-scope review
+started_at: '2026-10-21T08:09:02Z'
+finished_at: '2026-10-21T08:22:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact complex identity, native hierarchy, budding-yeast scope and the bounded
+  Tem1-inhibition function are supported. No concrete curation defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    sha256: 922665d09fdb8ddf24c904aefc3ccd0ec99a36f92d4d33f71a42c732036ecbdd
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990334
+  path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  label: SIN/MEN two-component GAP complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target and every asserted GO, taxon and DOI identity; primary
+    full scientific body, methods and figure captions.
+  selection: Fourth unreviewed path in batch eleven, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990334
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just validate data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just validate-strict data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    --out /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  summary: 8 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990334
+  summary: The target asserts a physical assembly and its bounded function, without
+    an expression-module mechanism.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - gap-prep-go
+  - gap-prep-tax-4932
+  - gap-prep-fraschini-meta
+  - gap-prep-fraschini-jats
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch11 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch11 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch11 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch11 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990334
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch11 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: gap-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005816,GO:0160065,GO:0160066,GO:0160067,GO:1902773,GO:1990334
+  locator: All six definitions, active flags, synonym scopes and relation-bearing
+    child rows
+  accessed_at: '2026-10-21T08:13:09.734809Z'
+  support: supports
+  summary: Active GO1990334 matches the label and definition, with the two lineage-specific
+    names as narrow synonyms. GO1902773 lists it as an is_a child; GO0005816 lists
+    it as a part_of child. GO0160065/66/67 describe broader or state-specific signaling
+    assemblies.
+  snapshot_sha256: 3133574ce154c8126caa7b82bc59568161c6f40a112272c815a096bee1649b49
+- evidence_id: gap-prep-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-10-21T08:13:13.115380Z'
+  support: supports
+  summary: Taxon4932 is Saccharomyces cerevisiae at species rank.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: gap-prep-fraschini-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083/jcb.200507162
+  locator: Single DOI result identity and abstract
+  accessed_at: '2026-10-21T08:13:13.011036Z'
+  support: supports
+  summary: The exact DOI resolves to Fraschini et al.2006, PMID16449187/PMC2063644,
+    on disappearance of Bub2-Bfa1 from the mother-bound spindle pole.
+  snapshot_sha256: aea83395478966ebf4f2213466cc9fe1675c98063826c6c43a496cc52c87e63b
+- evidence_id: gap-prep-fraschini-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2063644/fullTextXML
+  locator: Introduction; entire Results sections2-7 and Figs1-6/TableI; Discussion
+    sections8-11/Fig7; Methods sections12-19
+  accessed_at: '2026-10-21T08:13:10.657162Z'
+  support: supports
+  summary: The primary study combines W303-background genetics, SPB immunolocalization
+    and recombinant GTPase assays. Bfa1-dependent Bub2 stimulation of Tem1 hydrolysis
+    is distinct from the checkpoint competence of GAP-defective Bub2-myc9 and its
+    persistent localization.
+  snapshot_sha256: fc4658c387e9fb9fe12f46b3bf8bb6679cdc3ab33ad9b816e4f0992274e2e18b
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  locator: Entire maintained YAML including history, all evidence, function, examples
+    and discussions
+  accessed_at: '2026-10-21T08:18:34Z'
+  support: context_only
+  summary: The target is a two-component inhibitory GAP complex. Its species example
+    is budding yeast; it does not enumerate proteins, claim a fixed inventory, provide
+    an image or assert a causal graph.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:09:05Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml'
+  snapshot_sha256: 7be67c82f0a6ae05efe86d0dec1892922c1ab0a863d337b4498205c3cb7efcd6
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    --out /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:09:07Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch11-20261021-bn_6pbpb/repo/../sin_men_two_component_gap_complex-strict.tsv"
+  snapshot_sha256: 2e509d05c4f5424feb00d77f1aff4e40cf585d5dae5a1bf8701870658b189aa0
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml; exact
+    collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:18:34Z'
+  support: supports
+  summary: '8 of 8 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact complex and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: Identifier, label, definition, narrow synonyms, parent and spindle-pole-body
+    parthood match native GO. The two-component GAP is distinct from the whole MEN/SIN
+    signaling assembly and an active new-pole SIN state.
+  evidence_ids:
+  - gap-prep-go
+  - record
+- assessment_id: representation
+  area: representation
+  topic: Complex versus structure and signaling state
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: MULTIPROTEIN_COMPLEX and the explicit boundary discussion preserve the
+    protein assembly identity. SPB containment is an ontology relation, not identity
+    with the whole microtubule-organizing center.
+  evidence_ids:
+  - gap-prep-go
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Tem1 inhibition and evidence limits
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: 'The minimal inhibitory function is supported. The source supports cooperative
+    GAP activity, but does not make hydrolysis the sole necessary inhibitory route:
+    mutant checkpoint behavior and localization are separable. No stronger exclusive
+    mechanism is asserted by this record.'
+  evidence_ids:
+  - gap-prep-fraschini-jats
+  - gap-prep-go
+  - record
+- assessment_id: species
+  area: scope
+  topic: Budding-yeast experimental scope
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: The example is species-level S.cerevisiae, consistent with W303-derived/backcrossed
+    experimental strains. COMMON is qualitative occurrence in the described system,
+    not surveyed prevalence. The fission-yeast narrow synonym does not extend the
+    experimental taxonomic row.
+  evidence_ids:
+  - gap-prep-tax-4932
+  - gap-prep-fraschini-jats
+  - record
+- assessment_id: components
+  area: completeness
+  topic: Explicit constituent-grounding TODO
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: The record names lineage-specific pairs in its boundary vocabulary and
+    leaves constituent mappings open. A complete protein inventory and graph are optional
+    enrichment; this audit establishes no exact missing required family mapping or
+    contradictory inventory.
+  evidence_ids:
+  - gap-prep-go
+  - gap-prep-fraschini-jats
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Primary source and experimental interpretation
+  outcome: supported
+  target_ids:
+  - GO:1990334
+  summary: The exact paper body, methods and captions were read. Claims about checkpoint
+    function are kept at complex level; mutant-specific persistence and synthetic
+    phenotypes do not establish an invariant causal chain in wild-type cells.
+  evidence_ids:
+  - gap-prep-fraschini-meta
+  - gap-prep-fraschini-jats
+  - record
+findings: []
+actions: []
+limitations:
+- The primary experiments distinguish mutant behavior from wild-type regulation. GAP-defective
+  Bub2-myc9 can retain checkpoint function, so enzymatic activity must not be promoted
+  to the sole inhibitory route.
+- The current record does not claim that Fraschini2006 establishes fission-yeast Spg1/Byr4/Cdc16
+  behavior experimentally; the broad complex vocabulary and narrow synonyms come from
+  GO.
+- Figure pixels, supplementary files and raw experimental data were not independently
+  evaluated; all relevant body sections and captions were read.
+- No exhaustive family search or complete constituent inventory was performed. The
+  explicit grounding TODO remains open.
+- The alternate PMC HTML fetch returned a browser-check page; the genuine EuropePMC
+  JATS body was used as primary evidence.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user goal requests saving each selected target including qualified passes; no
+  finding is invented to justify persistence.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```

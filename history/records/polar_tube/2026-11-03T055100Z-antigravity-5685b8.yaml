@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/polar_tube.yaml
+  slug: polar_tube
+session:
+  id: 2026-11-03T055100Z-antigravity-5685b8
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked polar_tube_proteins component into polar_tube_eversion_and_cargo_delivery
+    causal graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''polar_tube_eversion_and_cargo_delivery''
+    in data/structures/spore/polar_tube.yaml. Added node(s) [polar_tube_proteins] and source-backed
+    edge(s) [polar_tube_proteins assemble into polar_filament]. Validated with write_validated_structure.'
