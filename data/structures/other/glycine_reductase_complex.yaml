@@ -25,6 +25,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'glycine_reductase_catalytic_transfer'
+    with 4 nodes and 3 edges.
+  llm_assisted: true
 parent_structures:
 - GO:1990204
 components:
@@ -232,3 +238,70 @@ discussions:
       reductase operon.
   posed_by: codex
   posed_date: '2026-10-02'
+causal_graphs:
+- graph_id: glycine_reductase_catalytic_transfer
+  title: Clostridial Glycine Reductase Two-Carbon Transfer and Phosphorolysis
+  description: Reductive deamination of glycine and sequential two-carbon group transfer
+    from selenoprotein B through selenoprotein A to protein C.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: grdb_selenoprotein_b
+    label: Glycine reductase, selenoprotein B
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR010186
+    component_ref: grdb_selenoprotein_b
+  - node_id: grda_selenoprotein_a
+    label: Glycine reductase complex selenoprotein A
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006812
+    component_ref: grda_selenoprotein_a
+  - node_id: grdc_protein_c
+    label: Glycine reductase protein C
+    node_type: GENE_OR_PROTEIN
+    component_ref: grdc_protein_c
+  - node_id: glycine_reductase_activity
+    label: glycine reductase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0030699
+  edges:
+  - subject: grdb_selenoprotein_b
+    predicate: transfers carboxymethyl group to
+    object: grda_selenoprotein_a
+    description: Selenoprotein B (GrdB) catalyzes reductive deamination of glycine
+      and transfers the resulting carboxymethyl group onto selenoprotein A (GrdA).
+    evidence:
+    - reference: GO:0030700
+      notes: GO:0030700 defines the glycine reductase complex as containing selenoprotein
+        A, selenoprotein B, and protein C.
+    - reference: PMID:2963330
+      notes: Sliwkowski and Stadtman 1988 characterized the carboxymethylated selenocysteine
+        residue of selenoprotein A.
+    - reference: PMID:11271425
+      notes: Graentzdoerffer et al. 2001 characterized the Clostridium sticklandii
+        grd operon encoding GrdA, GrdB, and GrdC.
+  - subject: grda_selenoprotein_a
+    predicate: transfers acetyl group to
+    object: grdc_protein_c
+    description: Carboxymethylated selenoprotein A transfers an acetyl moiety to protein
+      C (GrdC) to form an acetyl-enzyme intermediate.
+    evidence:
+    - reference: GO:0030700
+      notes: GO:0030700 defines selenoprotein A and protein C as core constituents
+        of the glycine reductase complex.
+    - reference: PMID:2018775
+      notes: Arkowitz and Abeles 1991 isolated the acetyl-protein C intermediate formed
+        from selenoprotein A.
+  - subject: grdc_protein_c
+    predicate: catalyzes
+    object: glycine_reductase_activity
+    description: Acetylated protein C undergoes phosphorolysis with inorganic phosphate
+      to generate acetyl phosphate, completing glycine reduction.
+    evidence:
+    - reference: GO:0030700
+      notes: GO:0030700 links the complex to glycine reductase activity.
+    - reference: GO:0030699
+      notes: GO:0030699 is the molecular-function term for glycine reductase activity.
+    - reference: PMID:2018775
+      notes: Arkowitz and Abeles 1991 showed that protein C catalyzes phosphate exchange
+        into acetyl phosphate.

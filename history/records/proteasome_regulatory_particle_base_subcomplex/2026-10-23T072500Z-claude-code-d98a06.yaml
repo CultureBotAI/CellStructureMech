@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+  slug: proteasome_regulatory_particle_base_subcomplex
+session:
+  id: 2026-10-23T072500Z-claude-code-d98a06
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Added source-backed RPT1-6 and RPN1/RPN2/RPN10/RPN13 subunit gene_symbols and seeded
+    10 reviewed Saccharomyces cerevisiae S288C protein_examples
+  details: Added source-backed gene_symbols RPT1-RPT6 to rpt_atpase_ring and RPN1, RPN2, RPN10,
+    RPN13 to rpn1_rpn2_receptor_scaffold (citing DOI:10.1038/nature10774 and PMID:9707434)
+    and resolved all 10 subunits to reviewed Saccharomyces cerevisiae S288C (NCBITaxon:559292)
+    UniProtKB entries (P33299, P40327, P33298, P53549, P33297, Q01939, P38764, P32565, P38886,
+    O13563).

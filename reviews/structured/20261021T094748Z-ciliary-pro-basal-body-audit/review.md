@@ -1,0 +1,923 @@
+# Ciliary pro-basal-body maturation, cartwheel location and function review
+
+- Review: 20261021T094748Z-ciliary-pro-basal-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:08:40Z
+- Finished UTC: 2026-10-21T09:47:48Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The immature GO identity, synonyms, component boundaries and maturation relation are supported. One major stage/function conflation and one minor Bld10 cartwheel-location error require curation.
+
+## Scope And Provenance
+
+Entire single target, native ontology/taxon identities and all developmental/composition/function/graph claims; exact primary/review identities, readable body scopes and abstract-only perturbation limits.
+
+Selection: Tenth selected target in batch fifteen, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0120280 | data/structures/cytoskeleton/ciliary_pro_basal_body.yaml | maintained | ciliary pro-basal body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0120280 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0120280 | Focused validator passed. |
+| Claim-level scientific review | passed | True | GO:0120280 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Target resolver slice with native transport-failure cross-checks | passed | True | GO:0120280 | 13 of 13 exact target identifiers returned OK. No target residuals. The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| Full corpus QC | passed | True | GO:0120280 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0120280 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0120280 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0120280 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0120280 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Immature precursor is correctly identified
+
+identity: supported. Targets: GO:0120280.
+
+GO0120280, the cellular-anatomical-structure parent, category/kind and all broad/exact synonym scopes are correct. The record initial definition explicitly preserves inability to nucleate a cilium. Mature GO0036064 is a distinct developmental endpoint, not an equivalent identifier for the precursor.
+
+### Triplet wall and cartwheel at their developmental scope
+
+evidence: supported. Targets: GO:0120280.
+
+Chlamydomonas pro-basal bodies have a cartwheel and acquire triplet blades; earliest nascent pro-basal bodies may have singlets before B/C tubule addition. The nine-triplet row describes the developed pro-basal architecture rather than every earliest assembly intermediate. Matsuura directly labels pro-basal cartwheels; the reviewed developmental sequence supports the maturation edge.
+
+### Whole substructures are not individual proteins or generic microtubules
+
+grounding: supported. Targets: GO:0120280.
+
+The two rows represent complete triplet blades and the cartwheel scaffold. Generic GO0005874 or a single SAS6/Bld10 family would not be exact equivalents for those whole substructures. Keeping them label-only is defensible; no exhaustive claim that a suitable term can never exist is made.
+
+### UNKNOWN retains the limits of partial structural perturbations
+
+evidence: supported. Targets: GO:0120280.
+
+The native Dutcher1998 abstract reports proximal doublets and zero/one/two flagella in uni3-1, not complete absence of all triplets from every functional basal body. Nakazawa2007 abstract reports loss of the central cartwheel part with variable triplet numbers; it does not demonstrate loss of every spoke-tip/cartwheel component. UNKNOWN appropriately avoids turning partial perturbations into universal assembly-necessity or dispensability claims.
+
+### Bld10 is incorrectly placed at the hub in the added definition
+
+scope: concern. Targets: GO:0120280.
+
+The definition describes a SAS6/Bld10p cartwheel hub. The inspected reviews place Bld10 at spoke tips/pinheads and Matsuura localizes it to cartwheel fibers. The component grounding notes already correctly distinguish the SAS6 hub and Bld10/CEP135 spoke tip; the defining phrase should match that spatial distinction.
+
+### Direct axoneme nucleation belongs to the mature endpoint
+
+graph: concern. Targets: GO:0120280.
+
+The function description and pro-basal-body-to-cilium-assembly edge assign cilium anchoring and axoneme assembly to the immature target, citing the mature GO0036064 definition. GO0120280 explicitly excludes this capacity before maturation. The existing matures-into edge is supported and supplies the correct developmental bridge; direct anchoring/nucleation should be assigned to its mature node or qualified as a future developmental contribution.
+
+### Chlamydomonas occurrence is supported but the note describes the mature pair
+
+scope: concern. Targets: GO:0120280.
+
+Chlamydomonas species identity and common pro-basal occurrence are supported by the reviews, which explicitly describe the immature pair alongside two mature flagellum-bearing bodies. The maintained distribution note mentions only the two cilium-nucleating mature basal bodies, so it should be made stage-specific as part of the same maturation/function correction. Broader Trypanosoma/Tetrahymena molecular detail was not independently traced to primary studies.
+
+### Review and primary evidence remain distinct
+
+provenance: supported. Targets: GO:0120280.
+
+The cited bibliographic identities are exact. Dutcher2016 and Wingfield2018 are review-tier synthesis; Matsuura2004 provides directly inspected localization/assembly experiments. Dutcher1998 full body and Silflow2001 review body were not recovered, and Nakazawa2007 was intentionally abstract-scoped. The claimed detailed1998 Discussion wording remains unverified rather than being accepted as full-body evidence.
+
+### Specific stage and location corrections are actionable
+
+completeness: supported. Targets: GO:0120280.
+
+Core substructures and maturation are represented; no optional requirement for images, more protein examples or exhaustive cartwheel inventory is invented. The concrete changes are to distinguish immature from mature function and to locate Bld10 correctly within the cartwheel.
+
+## Findings
+
+### F1: Assign cilium anchoring and axoneme nucleation to the mature basal body
+
+major / open / confirmed; issue key: probasal-body-mature-cilium-nucleation-conflation.
+
+The function and the graph edge whose subject is ciliary_pro_basal_body state that this structure anchors a cilium and forms the base of axonemal assembly, using the mature GO0036064 definition as evidence. GO0120280 explicitly says pro-basal bodies cannot nucleate a cilium. Retain the supported maturation relation and attribute the direct function to the mature node, or expressly describe an indirect developmental contribution. The distribution note also describes only the mature flagellum-bearing pair and should identify the accompanying pro-basal pair.
+
+### F2: Separate the SAS6 hub from Bld10 spoke-tip location
+
+minor / open / confirmed; issue key: probasal-bld10-cartwheel-hub-location.
+
+The definition compresses the cartwheel into a SAS6/Bld10p hub. The inspected review sections place Bld10 at the spoke tips/pinheads, and Matsuura2004 localizes it on cartwheel fibers; the existing component notes already correctly distinguish hub from spoke tip. Describe the whole cartwheel without locating both proteins at its hub.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During authorized curation, route direct cilium anchoring/axoneme nucleation through the mature_ciliary_basal_body node and make immature occurrence/function wording stage-specific.
+
+- Keep GO0120280 as the target identity and preserve its inability to nucleate before maturation.
+- Retain the supported matures-into edge and distinguish developmental contribution from direct nucleation.
+- Use review-supported Chlamydomonas pro-basal-pair wording in the occurrence note.
+- Run focused schema, strict-reference and causal-graph checks.
+
+### A2
+
+During authorized curation, describe a SAS6-centered cartwheel with Bld10-associated spoke tips, at the source-supported Chlamydomonas scope.
+
+- Do not turn cartwheel localization into specific central-hub localization.
+- Keep the existing correct hub/spoke-tip distinction in component grounding notes.
+- Avoid extrapolating the exact molecular arrangement to every named ciliate/flagellate without matching evidence.
+- Run focused schema and strict-reference validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/ciliary_pro_basal_body.yaml; Entire maintained YAML including all imported participants, component examples, functions, graph edges, discussions and history | context_only | All fields were read after fresh native inspection; the maintained target and PROPOSED state are unchanged. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, CausalNode and source-specific ComplexComposition contracts; essentiality definition; docs/CURATION.md assembly-versus-function guidance and review checklist | context_only | Component family identity, concrete protein identity and source-specific assembly membership are separate. Essentiality asks whether the structure forms without the component; membership and activity do not establish it. Optional fields are not mandatory. CausalNode permits protein complexes; its xrefs contract does not inherit the top-level record equivalence restriction. |
+| probasal-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005815,GO:0005874,GO:0005929,GO:0036064,GO:0060271,GO:0110165,GO:0120280; All seven returned identities, definitions, comments, synonym scopes and relevant parent/cilium relations; especially GO0120280 versus0036064 | supports | GO0120280 explicitly identifies an immature structure incapable of nucleating a cilium, whereas GO0036064 identifies the mature membrane-tethered axoneme-nucleating basal body. The maintained parent and broad/exact synonym scopes match native GO. |
+| probasal-agent-tax-3055 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; Complete native taxon identity, rank and lineage | supports | Native taxonomy confirms Chlamydomonas reinhardtii species3055. |
+| probasal-agent-doi-s13630-016-0039-z | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1186/s13630-016-0039-z; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies The basal bodies of Chlamydomonas reinhardtii. Authors: Dutcher SK, O'Toole ET.; PMID 27252853; DOI 10.1186/s13630-016-0039-z. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-doi-cells7070079 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.3390/cells7070079; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies &lt;i&gt;Chlamydomonas&lt;/i&gt; Basal Bodies as Flagella Organizing Centers. Authors: Wingfield JL, Lechtreck KF.; PMID 30018231; DOI 10.3390/cells7070079. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-doi-jcb.200402022 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1083/jcb.200402022; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Bld10p, a novel protein essential for basal body assembly in Chlamydomonas: localization to the cartwheel, the first ninefold symmetrical structure appearing during assembly. Authors: Matsuura K, Lefebvre PA, Kamiya R, Hirono M.; PMID 15173189; DOI 10.1083/jcb.200402022. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-doi-mbc.9.6.1293 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1091/mbc.9.6.1293; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies The UNI3 gene is required for assembly of basal bodies of Chlamydomonas and encodes delta-tubulin, a new member of the tubulin superfamily. Authors: Dutcher SK, Trabuco EC.; PMID 9614175; DOI 10.1091/mbc.9.6.1293. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-doi-j.cub.2007.11.046 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.cub.2007.11.046; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies SAS-6 is a cartwheel protein that establishes the 9-fold symmetry of the centriole. Authors: Nakazawa Y, Hiraki M, Kamiya R, Hirono M.; PMID 18082404; DOI 10.1016/j.cub.2007.11.046. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-doi-pp.010807 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1104/pp.010807; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Assembly and motility of eukaryotic cilia and flagella. Lessons from Chlamydomonas reinhardtii. Authors: Silflow CD, Lefebvre PA.; PMID 11743094; DOI 10.1104/pp.010807. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| probasal-agent-jats-s13630-016-0039-z | https://pmc-oa-opendata.s3.amazonaws.com/PMC4888484.1/PMC4888484.1.xml; Native PMC4888484.1 JATS: complete scientific main text, from Introduction/Basal body structure through Basal body duplication, Functions, Notable findings and Strengths of future work; abbreviation/back-reference material not counted as new experiments. | supports | Dutcher and OToole2016 is a review. It distinguishes two mature basal bodies and two pro-basal bodies in interphase Chlamydomonas, explains cartwheel-to-triplet progression and maturation, and separates SAS6 spokes from BLD10 spoke tips. New pro-basal bodies begin with singlet blades before B/C tubules are added. |
+| probasal-agent-jats-cells7070079 | https://pmc-oa-opendata.s3.amazonaws.com/PMC6070942.1/PMC6070942.1.xml; Native PMC6070942.1 JATS: Introduction;2.1 Basal bodies;2.2 scaffold;4.2 developmental cycle;5.1 axoneme templating. Other rootlet/IFT sections and underlying primary experiments were not independently audited. | supports | Wingfield and Lechtreck2018 is a review. It places Bld10 at cartwheel spoke tips/pinheads connecting the cartwheel to A-tubules, separates the immature and flagellated basal-body generations, and describes mature axoneme templating. |
+| probasal-agent-jats-jcb.200402022 | https://pmc-oa-opendata.s3.amazonaws.com/PMC2172387.1/PMC2172387.1.xml; Native PMC2172387.1 JATS: Introduction; Results EM of bld10, Bld10 localization and immunoEM with Figure3/6/7 captions; complete Discussion/Figure8 caption; Methods strains/culture, antibodies, fluorescence and EM. Detailed cloning/transformation and unrelated mitotic Results not claimed fully read. | supports | Matsuura2004 is primary evidence for Bld10 cartwheel localization, including pro-basal bodies. Immunogold decorates cartwheel fibers; bld10 mutants lack recognizable normal basal bodies in the examined sections, while disorganized remnants are not excluded. This supports cartwheel-associated assembly, not placement of Bld10 in the central SAS6 hub. |
+| schema-result | just validate data/structures/cytoskeleton/ciliary_pro_basal_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/ciliary_pro_basal_body.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/ciliary_pro_basal_body.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/ciliary_pro_basal_body.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv |
+| target-curies-result | just check-curies-strict; data/structures/cytoskeleton/ciliary_pro_basal_body.yaml; exact native collect() target slice of original fresh-base TSV | supports | 13 of 13 exact target identifiers returned OK. No target residuals. The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Dutcher2016 and Wingfield2018 are reviews; only the explicitly listed Wingfield sections were read. Matsuura2004 was read at the specified localization/assembly Results and Methods scope, not every unrelated experimental subsection.
+- The Dutcher1998 primary abstract is genuine and sufficient for proximal-doublet and flagellar-number observations. Native HTML routes returned challenge pages, S3 JATS404 and EuropePMC JATS500; the attempted browser result exposed acknowledgments only. The exact Discussion statement was not independently read. No failed200 challenge response is treated as an accessible primary body.
+- Nakazawa2007 remains primary-abstract evidence only, as the record already states. Silflow2001 exact bibliographic identity is verified, but its full review body and an abstract were not supplied by the native metadata response. Mature-stage function is checked independently through native GO and the two readable reviews.
+- The Chlamydomonas developmental sequence supports the maintained example. Exact SAS6/Bld10 and duplication details in Trypanosoma/Tetrahymena were not independently traced to primary sources, and no all-eukaryote universal assembly mechanism is inferred.
+- Pro-basal assembly includes earlier singlet-blade stages before a triplet wall is complete. UNKNOWN essentiality is retained; partial cartwheel/proximal-triplet perturbations do not establish complete substructure dispensability. No family, exact protein identity, stoichiometry or quantitative dimension is added.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- All12 fresh batch15 inspection input hashes verified and focused native gates0. No scientific changes, draft persistence or status promotion.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T094748Z-ciliary-pro-basal-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Ciliary pro-basal-body maturation, cartwheel location and function review
+started_at: '2026-10-21T09:08:40Z'
+finished_at: '2026-10-21T09:47:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The immature GO identity, synonyms, component boundaries and maturation relation
+  are supported. One major stage/function conflation and one minor Bld10 cartwheel-location
+  error require curation.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    sha256: 87d2aa0682028aa4f14a6d76543eaeb475598817b8fa5fb9a29a639e8793d4e4
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0120280
+  path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+  label: ciliary pro-basal body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, native ontology/taxon identities and all developmental/composition/function/graph
+    claims; exact primary/review identities, readable body scopes and abstract-only
+    perturbation limits.
+  selection: Tenth selected target in batch fifteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0120280
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just validate data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just validate-strict data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - probasal-agent-go
+  - probasal-agent-tax-3055
+  - probasal-agent-doi-s13630-016-0039-z
+  - probasal-agent-doi-cells7070079
+  - probasal-agent-doi-jcb.200402022
+  - probasal-agent-doi-mbc.9.6.1293
+  - probasal-agent-doi-j.cub.2007.11.046
+  - probasal-agent-doi-pp.010807
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  summary: 13 of 13 exact target identifiers returned OK. No target residuals. The
+    shared command exit zero is not interpreted as successful network resolution for
+    transport failures.
+  evidence_ids:
+  - target-curies-result
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120280
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+  locator: Entire maintained YAML including all imported participants, component examples,
+    functions, graph edges, discussions and history
+  accessed_at: '2026-10-21T09:24:09Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; essentiality definition; docs/CURATION.md assembly-versus-function
+    guidance and review checklist
+  accessed_at: '2026-10-21T09:24:09Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Essentiality asks whether the structure forms
+    without the component; membership and activity do not establish it. Optional fields
+    are not mandatory. CausalNode permits protein complexes; its xrefs contract does
+    not inherit the top-level record equivalence restriction.
+- evidence_id: probasal-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005815,GO:0005874,GO:0005929,GO:0036064,GO:0060271,GO:0110165,GO:0120280
+  locator: All seven returned identities, definitions, comments, synonym scopes and
+    relevant parent/cilium relations; especially GO0120280 versus0036064
+  accessed_at: '2026-10-21T09:15:04.193823Z'
+  support: supports
+  summary: GO0120280 explicitly identifies an immature structure incapable of nucleating
+    a cilium, whereas GO0036064 identifies the mature membrane-tethered axoneme-nucleating
+    basal body. The maintained parent and broad/exact synonym scopes match native
+    GO.
+  snapshot_sha256: 884e9b8985172475cf0a2b23745d78a3817178dcf086bf4c6ff28d4efdb70235
+- evidence_id: probasal-agent-tax-3055
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: Complete native taxon identity, rank and lineage
+  accessed_at: '2026-10-21T09:15:04.304863Z'
+  support: supports
+  summary: Native taxonomy confirms Chlamydomonas reinhardtii species3055.
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+- evidence_id: probasal-agent-doi-s13630-016-0039-z
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1186/s13630-016-0039-z
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:05.673123Z'
+  support: supports
+  summary: 'Native metadata identifies The basal bodies of Chlamydomonas reinhardtii.
+    Authors: Dutcher SK, O''Toole ET.; PMID 27252853; DOI 10.1186/s13630-016-0039-z.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: ddaa4406e27475eb057e05400ac9af0be9b5f4879f66bbe253dfbab7aec2643b
+- evidence_id: probasal-agent-doi-cells7070079
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3390/cells7070079
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:05.866169Z'
+  support: supports
+  summary: 'Native metadata identifies <i>Chlamydomonas</i> Basal Bodies as Flagella
+    Organizing Centers. Authors: Wingfield JL, Lechtreck KF.; PMID 30018231; DOI 10.3390/cells7070079.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 8bd302ce9846239b29faadf4a1087eb66dae576f84fa679b75030fb768764578
+- evidence_id: probasal-agent-doi-jcb.200402022
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083/jcb.200402022
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:04.938659Z'
+  support: supports
+  summary: 'Native metadata identifies Bld10p, a novel protein essential for basal
+    body assembly in Chlamydomonas: localization to the cartwheel, the first ninefold
+    symmetrical structure appearing during assembly. Authors: Matsuura K, Lefebvre
+    PA, Kamiya R, Hirono M.; PMID 15173189; DOI 10.1083/jcb.200402022. Bibliographic
+    identity and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 3947b531a5cd260f2cd557d8f07307083ca6042e11a799c454c6f084a8efaf97
+- evidence_id: probasal-agent-doi-mbc.9.6.1293
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1091/mbc.9.6.1293
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:05.017772Z'
+  support: supports
+  summary: 'Native metadata identifies The UNI3 gene is required for assembly of basal
+    bodies of Chlamydomonas and encodes delta-tubulin, a new member of the tubulin
+    superfamily. Authors: Dutcher SK, Trabuco EC.; PMID 9614175; DOI 10.1091/mbc.9.6.1293.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 5ef8637fa8a2a49ae8f5c82e295790f2b7733e95c755b9dd3ac0ecde5e7e6c8c
+- evidence_id: probasal-agent-doi-j.cub.2007.11.046
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.cub.2007.11.046
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:04.914142Z'
+  support: supports
+  summary: 'Native metadata identifies SAS-6 is a cartwheel protein that establishes
+    the 9-fold symmetry of the centriole. Authors: Nakazawa Y, Hiraki M, Kamiya R,
+    Hirono M.; PMID 18082404; DOI 10.1016/j.cub.2007.11.046. Bibliographic identity
+    and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 047171e3b6e1f40de20e5099acfaf9356dfab05c3a454ad793784a019975addb
+- evidence_id: probasal-agent-doi-pp.010807
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1104/pp.010807
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T09:15:05.628985Z'
+  support: supports
+  summary: 'Native metadata identifies Assembly and motility of eukaryotic cilia and
+    flagella. Lessons from Chlamydomonas reinhardtii. Authors: Silflow CD, Lefebvre
+    PA.; PMID 11743094; DOI 10.1104/pp.010807. Bibliographic identity and available
+    abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: e8551b55d1a2d4377bc57c543f1fd8ea8019869b0933dabb0be6c453c436249c
+- evidence_id: probasal-agent-jats-s13630-016-0039-z
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4888484.1/PMC4888484.1.xml
+  locator: 'Native PMC4888484.1 JATS: complete scientific main text, from Introduction/Basal
+    body structure through Basal body duplication, Functions, Notable findings and
+    Strengths of future work; abbreviation/back-reference material not counted as
+    new experiments.'
+  accessed_at: '2026-10-21T09:15:58.148403Z'
+  support: supports
+  summary: Dutcher and OToole2016 is a review. It distinguishes two mature basal bodies
+    and two pro-basal bodies in interphase Chlamydomonas, explains cartwheel-to-triplet
+    progression and maturation, and separates SAS6 spokes from BLD10 spoke tips. New
+    pro-basal bodies begin with singlet blades before B/C tubules are added.
+  snapshot_sha256: 429c24022ba00944721b09a7837e0e2c78fb2a041648a150915bd5a658ac188d
+- evidence_id: probasal-agent-jats-cells7070079
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC6070942.1/PMC6070942.1.xml
+  locator: 'Native PMC6070942.1 JATS: Introduction;2.1 Basal bodies;2.2 scaffold;4.2
+    developmental cycle;5.1 axoneme templating. Other rootlet/IFT sections and underlying
+    primary experiments were not independently audited.'
+  accessed_at: '2026-10-21T09:15:57.521954Z'
+  support: supports
+  summary: Wingfield and Lechtreck2018 is a review. It places Bld10 at cartwheel spoke
+    tips/pinheads connecting the cartwheel to A-tubules, separates the immature and
+    flagellated basal-body generations, and describes mature axoneme templating.
+  snapshot_sha256: b85cc0486b2c9ca4bbf5ce5b0450fa12a6324ec66cf04638346621a865dbea56
+- evidence_id: probasal-agent-jats-jcb.200402022
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2172387.1/PMC2172387.1.xml
+  locator: 'Native PMC2172387.1 JATS: Introduction; Results EM of bld10, Bld10 localization
+    and immunoEM with Figure3/6/7 captions; complete Discussion/Figure8 caption; Methods
+    strains/culture, antibodies, fluorescence and EM. Detailed cloning/transformation
+    and unrelated mitotic Results not claimed fully read.'
+  accessed_at: '2026-10-21T09:15:57.839722Z'
+  support: supports
+  summary: Matsuura2004 is primary evidence for Bld10 cartwheel localization, including
+    pro-basal bodies. Immunogold decorates cartwheel fibers; bld10 mutants lack recognizable
+    normal basal bodies in the examined sections, while disorganized remnants are
+    not excluded. This supports cartwheel-associated assembly, not placement of Bld10
+    in the central SAS6 hub.
+  snapshot_sha256: 5c397de0020904b247df8e98a8eb23868406edc6ba37172c44b983e5a45a0632
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:08:47Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/ciliary_pro_basal_body.yaml'
+  snapshot_sha256: c8bb9d3d507b6ba5d914e2bece4d87a199bd00acfc762c4004d89c43c0de1609
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:08:55Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/ciliary_pro_basal_body.yaml\
+    \ --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/ciliary_pro_basal_body-strict.tsv"
+  snapshot_sha256: ee984f568d6e0b9f7641908ff276e520364230e3a6e6276a3da743bccf21b6de
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml; exact native
+    collect() target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:06.941705Z'
+  support: supports
+  summary: 13 of 13 exact target identifiers returned OK. No target residuals. The
+    shared command exit zero is not interpreted as successful network resolution for
+    transport failures.
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Immature precursor is correctly identified
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: GO0120280, the cellular-anatomical-structure parent, category/kind and
+    all broad/exact synonym scopes are correct. The record initial definition explicitly
+    preserves inability to nucleate a cilium. Mature GO0036064 is a distinct developmental
+    endpoint, not an equivalent identifier for the precursor.
+  evidence_ids:
+  - probasal-agent-go
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Triplet wall and cartwheel at their developmental scope
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: Chlamydomonas pro-basal bodies have a cartwheel and acquire triplet blades;
+    earliest nascent pro-basal bodies may have singlets before B/C tubule addition.
+    The nine-triplet row describes the developed pro-basal architecture rather than
+    every earliest assembly intermediate. Matsuura directly labels pro-basal cartwheels;
+    the reviewed developmental sequence supports the maturation edge.
+  evidence_ids:
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+- assessment_id: family-boundaries
+  area: grounding
+  topic: Whole substructures are not individual proteins or generic microtubules
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: The two rows represent complete triplet blades and the cartwheel scaffold.
+    Generic GO0005874 or a single SAS6/Bld10 family would not be exact equivalents
+    for those whole substructures. Keeping them label-only is defensible; no exhaustive
+    claim that a suitable term can never exist is made.
+  evidence_ids:
+  - probasal-agent-go
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+  - policy
+- assessment_id: essentiality
+  area: evidence
+  topic: UNKNOWN retains the limits of partial structural perturbations
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: The native Dutcher1998 abstract reports proximal doublets and zero/one/two
+    flagella in uni3-1, not complete absence of all triplets from every functional
+    basal body. Nakazawa2007 abstract reports loss of the central cartwheel part with
+    variable triplet numbers; it does not demonstrate loss of every spoke-tip/cartwheel
+    component. UNKNOWN appropriately avoids turning partial perturbations into universal
+    assembly-necessity or dispensability claims.
+  evidence_ids:
+  - probasal-agent-doi-mbc.9.6.1293
+  - probasal-agent-doi-j.cub.2007.11.046
+  - probasal-agent-jats-jcb.200402022
+  - record
+  - policy
+- assessment_id: cartwheel-location
+  area: scope
+  topic: Bld10 is incorrectly placed at the hub in the added definition
+  outcome: concern
+  target_ids:
+  - GO:0120280
+  summary: The definition describes a SAS6/Bld10p cartwheel hub. The inspected reviews
+    place Bld10 at spoke tips/pinheads and Matsuura localizes it to cartwheel fibers.
+    The component grounding notes already correctly distinguish the SAS6 hub and Bld10/CEP135
+    spoke tip; the defining phrase should match that spatial distinction.
+  evidence_ids:
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+- assessment_id: mature-function
+  area: graph
+  topic: Direct axoneme nucleation belongs to the mature endpoint
+  outcome: concern
+  target_ids:
+  - GO:0120280
+  summary: The function description and pro-basal-body-to-cilium-assembly edge assign
+    cilium anchoring and axoneme assembly to the immature target, citing the mature
+    GO0036064 definition. GO0120280 explicitly excludes this capacity before maturation.
+    The existing matures-into edge is supported and supplies the correct developmental
+    bridge; direct anchoring/nucleation should be assigned to its mature node or qualified
+    as a future developmental contribution.
+  evidence_ids:
+  - probasal-agent-go
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - record
+- assessment_id: taxon-example
+  area: scope
+  topic: Chlamydomonas occurrence is supported but the note describes the mature pair
+  outcome: concern
+  target_ids:
+  - GO:0120280
+  summary: Chlamydomonas species identity and common pro-basal occurrence are supported
+    by the reviews, which explicitly describe the immature pair alongside two mature
+    flagellum-bearing bodies. The maintained distribution note mentions only the two
+    cilium-nucleating mature basal bodies, so it should be made stage-specific as
+    part of the same maturation/function correction. Broader Trypanosoma/Tetrahymena
+    molecular detail was not independently traced to primary studies.
+  evidence_ids:
+  - probasal-agent-tax-3055
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - record
+- assessment_id: source-provenance
+  area: provenance
+  topic: Review and primary evidence remain distinct
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: The cited bibliographic identities are exact. Dutcher2016 and Wingfield2018
+    are review-tier synthesis; Matsuura2004 provides directly inspected localization/assembly
+    experiments. Dutcher1998 full body and Silflow2001 review body were not recovered,
+    and Nakazawa2007 was intentionally abstract-scoped. The claimed detailed1998 Discussion
+    wording remains unverified rather than being accepted as full-body evidence.
+  evidence_ids:
+  - probasal-agent-doi-s13630-016-0039-z
+  - probasal-agent-doi-cells7070079
+  - probasal-agent-doi-jcb.200402022
+  - probasal-agent-doi-mbc.9.6.1293
+  - probasal-agent-doi-j.cub.2007.11.046
+  - probasal-agent-doi-pp.010807
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Specific stage and location corrections are actionable
+  outcome: supported
+  target_ids:
+  - GO:0120280
+  summary: Core substructures and maturation are represented; no optional requirement
+    for images, more protein examples or exhaustive cartwheel inventory is invented.
+    The concrete changes are to distinguish immature from mature function and to locate
+    Bld10 correctly within the cartwheel.
+  evidence_ids:
+  - probasal-agent-go
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: probasal-body-mature-cilium-nucleation-conflation
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Assign cilium anchoring and axoneme nucleation to the mature basal body
+  description: The function and the graph edge whose subject is ciliary_pro_basal_body
+    state that this structure anchors a cilium and forms the base of axonemal assembly,
+    using the mature GO0036064 definition as evidence. GO0120280 explicitly says pro-basal
+    bodies cannot nucleate a cilium. Retain the supported maturation relation and
+    attribute the direct function to the mature node, or expressly describe an indirect
+    developmental contribution. The distribution note also describes only the mature
+    flagellum-bearing pair and should identify the accompanying pro-basal pair.
+  target_ids:
+  - GO:0120280
+  field_paths:
+  - functions[function_id=cilium_assembly]
+  - causal_graphs[graph_id=ciliary_pro_basal_body_mechanism].nodes[node_id=cilium_assembly]
+  - causal_graphs[graph_id=ciliary_pro_basal_body_mechanism].edges[subject=ciliary_pro_basal_body,predicate=mediates,object=cilium_assembly]
+  - taxonomic_distribution[taxon_id=NCBITaxon:3055].note
+  evidence_ids:
+  - probasal-agent-go
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: major
+  normalization_reason: The record assigns an explicitly excluded mature-stage capability
+    to an immature structure, changing the developmental identity and causal interpretation.
+- finding_id: F2
+  issue_key: probasal-bld10-cartwheel-hub-location
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate the SAS6 hub from Bld10 spoke-tip location
+  description: The definition compresses the cartwheel into a SAS6/Bld10p hub. The
+    inspected review sections place Bld10 at the spoke tips/pinheads, and Matsuura2004
+    localizes it on cartwheel fibers; the existing component notes already correctly
+    distinguish hub from spoke tip. Describe the whole cartwheel without locating
+    both proteins at its hub.
+  target_ids:
+  - GO:0120280
+  field_paths:
+  - definition
+  evidence_ids:
+  - probasal-agent-jats-s13630-016-0039-z
+  - probasal-agent-jats-cells7070079
+  - probasal-agent-jats-jcb.200402022
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: The whole cartwheel component and target identity are correct;
+    this is a bounded spatial wording error within the added definition, not an incorrect
+    protein accession or whole-structure mapping.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0120280
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained scientific record
+  description: During authorized curation, route direct cilium anchoring/axoneme nucleation
+    through the mature_ciliary_basal_body node and make immature occurrence/function
+    wording stage-specific.
+  acceptance_checks:
+  - Keep GO0120280 as the target identity and preserve its inability to nucleate before
+    maturation.
+  - Retain the supported matures-into edge and distinguish developmental contribution
+    from direct nucleation.
+  - Use review-supported Chlamydomonas pro-basal-pair wording in the occurrence note.
+  - Run focused schema, strict-reference and causal-graph checks.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0120280
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained scientific record
+  description: During authorized curation, describe a SAS6-centered cartwheel with
+    Bld10-associated spoke tips, at the source-supported Chlamydomonas scope.
+  acceptance_checks:
+  - Do not turn cartwheel localization into specific central-hub localization.
+  - Keep the existing correct hub/spoke-tip distinction in component grounding notes.
+  - Avoid extrapolating the exact molecular arrangement to every named ciliate/flagellate
+    without matching evidence.
+  - Run focused schema and strict-reference validation.
+limitations:
+- Dutcher2016 and Wingfield2018 are reviews; only the explicitly listed Wingfield
+  sections were read. Matsuura2004 was read at the specified localization/assembly
+  Results and Methods scope, not every unrelated experimental subsection.
+- The Dutcher1998 primary abstract is genuine and sufficient for proximal-doublet
+  and flagellar-number observations. Native HTML routes returned challenge pages,
+  S3 JATS404 and EuropePMC JATS500; the attempted browser result exposed acknowledgments
+  only. The exact Discussion statement was not independently read. No failed200 challenge
+  response is treated as an accessible primary body.
+- Nakazawa2007 remains primary-abstract evidence only, as the record already states.
+  Silflow2001 exact bibliographic identity is verified, but its full review body and
+  an abstract were not supplied by the native metadata response. Mature-stage function
+  is checked independently through native GO and the two readable reviews.
+- The Chlamydomonas developmental sequence supports the maintained example. Exact
+  SAS6/Bld10 and duplication details in Trypanosoma/Tetrahymena were not independently
+  traced to primary sources, and no all-eukaryote universal assembly mechanism is
+  inferred.
+- Pro-basal assembly includes earlier singlet-blade stages before a triplet wall is
+  complete. UNKNOWN essentiality is retained; partial cartwheel/proximal-triplet perturbations
+  do not establish complete substructure dispensability. No family, exact protein
+  identity, stoichiometry or quantitative dimension is added.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- All12 fresh batch15 inspection input hashes verified and focused native gates0.
+  No scientific changes, draft persistence or status promotion.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/dolipore_septum.yaml
+  slug: dolipore_septum
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-c4df78
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected isolated causal node(s) with 1 source-backed edge(s).
+  details: 'Stage 2 causal-graph curation pass for GO:0000937 (dolipore septum): Connected
+    isolated causal node(s) with 1 source-backed edge(s). Validated via write_validated_structure.'

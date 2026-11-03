@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mdtbc_complex.yaml
+  slug: mdtbc_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-d6aab9
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'mdtbc_heterotrimer_efflux' with 3 nodes
+    and 2 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:1990203 (MdtBC Complex): Added source-backed
+    FUNCTION causal graph ''mdtbc_heterotrimer_efflux'' with 3 nodes and 2 edges. Validated
+    via write_validated_structure.'

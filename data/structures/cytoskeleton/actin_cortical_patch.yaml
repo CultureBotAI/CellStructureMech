@@ -42,6 +42,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T11:08:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2404 (Stage 4 finding cytoskeleton-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX causal-graph node arp2_3_complex (GO:0005885)
+    from GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
 parent_structures:
 - GO:0061645
 part_of:
@@ -299,7 +306,7 @@ causal_graphs:
     component_ref: actin
   - node_id: arp2_3_complex
     label: Arp2/3 protein complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005885
     component_ref: arp2_3_complex
   - node_id: cortical_endocytic_site

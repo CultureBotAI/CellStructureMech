@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/rnp_body.yaml
+  slug: rnp_body
+session:
+  id: 2026-10-24T060000Z-claude-code-b71a04
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked degradosome components rhlb and aconitase into the BR-body assembly causal
+    graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added GENE_OR_PROTEIN nodes rhlb (component_ref:
+    rhlb) and aconitase (component_ref: aconitase) with recruitment edges from rnase_e backed
+    by DOI:10.1016/j.molcel.2018.08.003.'
