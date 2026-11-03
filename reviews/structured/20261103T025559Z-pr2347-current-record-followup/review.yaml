@@ -1,0 +1,3530 @@
+schema_version: 1.0.0
+review_id: 20261103T025559Z-pr2347-current-record-followup
+kind: batch
+repository: CultureBotAI/CellStructureMech
+title: 'PR 2347: current-input review of ten records and adversarial follow-up'
+started_at: '2026-11-03T02:30:32.323569Z'
+finished_at: '2026-11-03T02:55:59Z'
+reviewer:
+  identity: Codex root synthesis with three independent read-only adversarial reviewers
+  kind: agent
+  independence: self_review
+  independence_basis: Root authors this synthesis of three separate read-only reviews.
+    Independent reviewers inspected original bundles, current record bytes and primary/authority
+    sources, and did not author or modify repository files. They independently re-review
+    the final saved head before publication. This is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md; explicit batch route in docs/record-review-profile.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Current-input reassessment of all ten records in PR2347. Three frozen inputs
+  changed: PAA gene symbols and neck/stalk protein examples; their additions are substantively
+  verified. Four records have qualified supported assessments and six need curation.
+  Eight original scientific findings remain: seven minor/confirmed and one major/provisional
+  cap-membership evidence gap. The follow-up preserves exact finding lineage, refreshes
+  stale coverage and documents structured-source applicability; no scientific record
+  is edited.'
+source:
+  git_revision: c2cf0c2cd4d35257ca4be4821656318f8c8c0513
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg
+    sha256: feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+    role: context
+  - path: data/images/cytoskeleton/post_anaphase_microtubule_array/pmc10047812_cells_12_00917_f002.jpg
+    sha256: e7b4b36cc890afa0a02ef9660162ddb78acbf3a53332515dd8880704e585f317
+    role: context
+  - path: data/images/cytoskeleton/radial_microtubule_organizing_center/pmc3382715_fig3.jpg
+    sha256: 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+    role: context
+  - path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+    role: target
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a
+    role: target
+  - path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    sha256: 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa
+    role: target
+  - path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    sha256: 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5
+    role: target
+  - path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+    role: target
+  - path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_head.yaml
+    sha256: bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+    sha256: d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    sha256: cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86
+    role: target
+  - path: data/structures/cytoskeleton/septin_cap.yaml
+    sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261021T080756Z-peritrich-body-myoneme-system-audit/review.yaml
+    sha256: ac06864e07bf0f4bc9b2c8fb9a9b324bb64ee6b67b3d546a2c901613bff4fb90
+    role: context
+  - path: reviews/structured/20261021T080756Z-post-anaphase-microtubule-array-audit/review.yaml
+    sha256: 62bc475862a709ec45a96516d76b29fb0f85b66ec558e8fda7d0cc9126c0af09
+    role: context
+  - path: reviews/structured/20261021T080757Z-prospore-septin-filament-array-audit/review.yaml
+    sha256: 8244fb6bc8326b744e39b12b380b6a0463b3b8458bf04b766098fceaeb580fb1
+    role: context
+  - path: reviews/structured/20261021T080757Z-prospore-septin-ring-audit/review.yaml
+    sha256: e7dd5ddf71e5afe01318a210572819c786c1e4e25f527d39e4ba405df3e694d4
+    role: context
+  - path: reviews/structured/20261021T080758Z-pseudohyphal-septin-ring-audit/review.yaml
+    sha256: 62cd4dc2a116d60ab76d3c0e3ed5535c62e60677c77ade5ea242d2d0ee449cd1
+    role: context
+  - path: reviews/structured/20261021T080758Z-radial-microtubule-organizing-center-audit/review.yaml
+    sha256: 6f896368b3097e7d07ca5c8f643404b2d3da59b7ab1fb97efd5012b9cec34bc4
+    role: context
+  - path: reviews/structured/20261021T080759Z-radial-spoke-head-audit/review.yaml
+    sha256: 83faaea2d93c7acaee6d5e27e0ffae07f1fc36813c41ff3a84d0b61bbe85ed3a
+    role: context
+  - path: reviews/structured/20261021T080759Z-radial-spoke-neck-audit/review.yaml
+    sha256: 86c1f3f9e49f5ee0a344dd23a2f2521763893f3a1c62a05062cc72542a9e7880
+    role: context
+  - path: reviews/structured/20261021T080800Z-radial-spoke-stalk-audit/review.yaml
+    sha256: 05532f530dce490ba483442b92849510b14c997f783746b06040022ac02ee4da
+    role: context
+  - path: reviews/structured/20261021T080800Z-septin-cap-audit/review.yaml
+    sha256: 3f706829db6ce60b7c2acd28e032e8fe97ac19d0f1efb9f77220230fa9043451
+    role: context
+  - path: reviews/structured/20261103T021018Z-pr2346-current-record-followup/review.yaml
+    sha256: 307eaacbfb9f0a535b61297fbef0e8002f65f136ac1d9e6db4445b17d3ae1069
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:peritrich_body_myoneme_system
+  path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  label: Peritrich body myoneme system
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    role: maintained scientific record
+- target_id: GO:1990295
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  label: post-anaphase microtubule array
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained scientific record
+- target_id: GO:0032165
+  path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  label: prospore septin filament array
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    role: maintained scientific record
+- target_id: GO:0032169
+  path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  label: prospore septin ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained scientific record
+- target_id: GO:0032170
+  path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  label: pseudohyphal septin ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    role: maintained scientific record
+- target_id: cellstructuremech:radial_microtubule_organizing_center
+  path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  label: radial microtubule organizing center
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    role: maintained scientific record
+- target_id: GO:0001535
+  path: data/structures/cytoskeleton/radial_spoke_head.yaml
+  label: radial spoke head
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_head.yaml
+    role: maintained scientific record
+- target_id: GO:0120343
+  path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+  label: radial spoke neck
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+    role: maintained scientific record
+- target_id: GO:0001536
+  path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  label: radial spoke stalk
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    role: maintained scientific record
+- target_id: GO:0032159
+  path: data/structures/cytoskeleton/septin_cap.yaml
+  label: septin cap
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+scope:
+  description: Exact ten-record PR cohort reassessed against current main c44adb0dd1feecf3de4754a5ed078f28708cfd65.
+    Changed inputs are substantively reassessed. Scientific records remain unchanged.
+  selection: Complete cohort of ten maintained records reviewed in original PR head
+    bc03838b77c66f173e67a7d053ef513557460e47.
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+checks:
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: just qc
+  exit_code: 0
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  scope_note: Actual local execution at main-merge head c2cf0c2cd4d35257ca4be4821656318f8c8c0513.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-qc
+- check_id: labels
+  name: Native label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: just validate-products
+  exit_code: 0
+  summary: 4232 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  scope_note: Actual local execution at main-merge head c2cf0c2cd4d35257ca4be4821656318f8c8c0513.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-labels
+- check_id: trait-links
+  name: TraitMech references
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Native TraitMech link check passed.
+  scope_note: Actual local execution at main-merge head c2cf0c2cd4d35257ca4be4821656318f8c8c0513.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-trait-links
+- check_id: vendored
+  name: Pinned governed files
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: just vendored-check
+  exit_code: 0
+  summary: Pinned governed files match; native vendored check passed.
+  scope_note: Actual local execution at main-merge head c2cf0c2cd4d35257ca4be4821656318f8c8c0513.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-vendored
+- check_id: curies
+  name: Native identifier resolver
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  scope_note: Actual local execution at main-merge head c2cf0c2cd4d35257ca4be4821656318f8c8c0513.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-curies
+- check_id: focused-0
+  name: validate cellstructuremech:peritrich_body_myoneme_system
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-1
+  name: validate-strict cellstructuremech:peritrich_body_myoneme_system
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate-strict data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-2
+  name: validate GO:1990295
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990295
+  command: just validate data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-3
+  name: validate-strict GO:1990295
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990295
+  command: just validate-strict data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-4
+  name: validate GO:0032165
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032165
+  command: just validate data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-5
+  name: validate-strict GO:0032165
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032165
+  command: just validate-strict data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-6
+  name: validate GO:0032169
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032169
+  command: just validate data/structures/cytoskeleton/prospore_septin_ring.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-7
+  name: validate-strict GO:0032169
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032169
+  command: just validate-strict data/structures/cytoskeleton/prospore_septin_ring.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-8
+  name: validate GO:0032170
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032170
+  command: just validate data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-9
+  name: validate-strict GO:0032170
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032170
+  command: just validate-strict data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-10
+  name: validate cellstructuremech:radial_microtubule_organizing_center
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-11
+  name: validate-strict cellstructuremech:radial_microtubule_organizing_center
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate-strict data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-12
+  name: validate GO:0001535
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001535
+  command: just validate data/structures/cytoskeleton/radial_spoke_head.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-13
+  name: validate-strict GO:0001535
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001535
+  command: just validate-strict data/structures/cytoskeleton/radial_spoke_head.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-14
+  name: validate GO:0120343
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120343
+  command: just validate data/structures/cytoskeleton/radial_spoke_neck.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-15
+  name: validate-strict GO:0120343
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120343
+  command: just validate-strict data/structures/cytoskeleton/radial_spoke_neck.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-16
+  name: validate GO:0001536
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001536
+  command: just validate data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-17
+  name: validate-strict GO:0001536
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001536
+  command: just validate-strict data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-18
+  name: validate GO:0032159
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate data/structures/cytoskeleton/septin_cap.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-19
+  name: validate-strict GO:0032159
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate-strict data/structures/cytoskeleton/septin_cap.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: supplemental-pmid
+  name: Supplemental bounded PMID authority checks
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  command: .venv/bin/python /private/tmp/cellstructure-batches-2346-2397-20261103/check_pmid_chunks.py
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347
+  exit_code: 0
+  summary: 909 PMIDs all OK in bounded native requests; full-command limitations remain
+    separate.
+  evidence_ids:
+  - supplemental-pmid
+- check_id: structured-source-applicability
+  name: Official structured-source catalogue coverage
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  summary: Official catalogue contains 20 organisms and 28 datasets, all bacterial/archaeal;
+    none matches this yeast/protist cohort. Fresh and reused catalogue receipts are
+    explicitly distinguished. No new CLI execution is claimed; historical canary runner
+    OS unavailability is disclosed.
+  evidence_ids:
+  - radial-current-radial-adapter-catalogue
+  - septin-septin-catalogue-cached
+- check_id: independent-scientific-review
+  name: Independent claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  summary: Three read-only reviewers covered the complete ten-record cohort, including
+    changed inputs, with explicit scientific findings and source-access limits. Final
+    artifact/head acceptance occurs after saving.
+  evidence_ids:
+  - plaque-peritrich-agent-allen-jats
+  - plaque-peritrich-agent-allen-package
+  - plaque-peritrich-agent-allen-pdf
+  - plaque-peritrich-agent-cil-image
+  - plaque-peritrich-agent-cil-item-curl
+  - plaque-peritrich-agent-epmc
+  - plaque-peritrich-agent-go
+  - plaque-peritrich-agent-ipr050145
+  - plaque-peritrich-agent-konior-pdf
+  - plaque-peritrich-agent-taxon-campanella
+  - plaque-peritrich-agent-taxon-vorticella
+  - plaque-paa-agent-go
+  - plaque-paa-agent-go-ols
+  - plaque-paa-agent-bellingham2023-jats
+  - plaque-paa-agent-nuclear2023-jats
+  - plaque-paa-agent-samejima2010-jats
+  - plaque-paa-agent-epmc
+  - plaque-paa-agent-uniprot-P04689
+  - plaque-paa-agent-uniprot-P04688
+  - plaque-paa-agent-uniprot-P05219
+  - plaque-paa-agent-uniprot-Q9HDY1
+  - plaque-paa-agent-uniprot-O94488
+  - plaque-paa-agent-uniprot-Q9USP7
+  - plaque-paa-agent-IPR002452
+  - plaque-paa-agent-IPR002453
+  - plaque-paa-agent-IPR007145
+  - plaque-paa-agent-taxon-4896
+  - plaque-paa-agent-taxon-284812
+  - plaque-paa-agent-bellingham2023-package
+  - plaque-paa-agent-figure2
+  - plaque-radial-mtoc-agent-go
+  - plaque-radial-mtoc-agent-funaya2012-jats
+  - plaque-radial-mtoc-agent-funaya2012-supp
+  - plaque-radial-mtoc-agent-epmc
+  - plaque-radial-mtoc-agent-uniprot-Q10336
+  - plaque-radial-mtoc-agent-uniprot-P25295
+  - plaque-radial-mtoc-agent-IPR002454
+  - plaque-radial-mtoc-agent-matches-gamma
+  - plaque-radial-mtoc-agent-funaya2012-package
+  - plaque-radial-mtoc-agent-figure3
+  - plaque-review-policy
+  - radial-current-radial-prep-go
+  - radial-current-radial-prep-taxon
+  - radial-current-radial-prep-epmc
+  - radial-current-radial-prep-yang-html
+  - radial-current-radial-prep-curry-html
+  - radial-current-curry-agent-page-3967
+  - radial-current-curry-agent-page-3970
+  - radial-current-curry-agent-page-3971
+  - radial-current-radial-prep-protein-Q27YU0
+  - radial-current-radial-prep-protein-Q01656
+  - radial-current-radial-prep-protein-Q01657
+  - radial-current-radial-prep-protein-Q27YU5
+  - radial-current-radial-prep-protein-Q27YU4
+  - radial-current-radial-prep-protein-Q6UBQ3
+  - radial-current-radial-prep-protein-P12759
+  - radial-current-radial-prep-protein-Q27YU7
+  - radial-current-radial-prep-protein-Q27YT9
+  - radial-current-radial-prep-protein-Q27YU6
+  - radial-current-radial-prep-protein-Q27YU2
+  - radial-current-radial-new-protein-Q5MJ90
+  - radial-current-radial-new-protein-Q27YU3
+  - radial-current-radial-prep-rsp9-family
+  - radial-current-radial-adapter-catalogue
+  - radial-current-new-rsp16-ena
+  - radial-current-new-rsp11-ena
+  - radial-current-new-rsp16-primary
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-nicastro-reused
+  - septin-septin-array-go
+  - septin-septin-ring-go
+  - septin-septin-pseudohyphal-go
+  - septin-septin-cap-go
+  - septin-septin-family-cached
+  - septin-septin-catalogue-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-warenda-browser
+  - septin-septin-zhang-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-douglas-metadata
+  - septin-septin-sporulation-metadata
+  - septin-septin-candida-metadata
+  - septin-septin-uniprot-P39826
+  - septin-septin-uniprot-P39827
+  - septin-septin-uniprot-G1UB61
+  - septin-septin-uniprot-G1UAV6
+  - septin-septin-symbol-CDC3
+  - septin-septin-symbol-CDC10
+  - septin-septin-symbol-CDC11
+  - septin-septin-taxon-5476
+  - septin-septin-taxon-237561
+evidence:
+- evidence_id: current-record-0
+  kind: record_content
+  reference: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9;
+    current SHA256 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+- evidence_id: original-review-0
+  kind: prior_review
+  reference: reviews/structured/20261021T080756Z-peritrich-body-myoneme-system-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: ac06864e07bf0f4bc9b2c8fb9a9b324bb64ee6b67b3d546a2c901613bff4fb90
+- evidence_id: current-record-1
+  kind: record_content
+  reference: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 f8b698394b595d435b10633cac0cef969d32aae261b770d3ea60b974e5c4cd15;
+    current SHA256 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a.
+    Changed record reassessed against current sources.
+  snapshot_sha256: 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a
+- evidence_id: original-review-1
+  kind: prior_review
+  reference: reviews/structured/20261021T080756Z-post-anaphase-microtubule-array-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 62bc475862a709ec45a96516d76b29fb0f85b66ec558e8fda7d0cc9126c0af09
+- evidence_id: current-record-2
+  kind: record_content
+  reference: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa;
+    current SHA256 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa
+- evidence_id: original-review-2
+  kind: prior_review
+  reference: reviews/structured/20261021T080757Z-prospore-septin-filament-array-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 8244fb6bc8326b744e39b12b380b6a0463b3b8458bf04b766098fceaeb580fb1
+- evidence_id: current-record-3
+  kind: record_content
+  reference: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5;
+    current SHA256 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5
+- evidence_id: original-review-3
+  kind: prior_review
+  reference: reviews/structured/20261021T080757Z-prospore-septin-ring-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: e7dd5ddf71e5afe01318a210572819c786c1e4e25f527d39e4ba405df3e694d4
+- evidence_id: current-record-4
+  kind: record_content
+  reference: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533;
+    current SHA256 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+- evidence_id: original-review-4
+  kind: prior_review
+  reference: reviews/structured/20261021T080758Z-pseudohyphal-septin-ring-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 62cd4dc2a116d60ab76d3c0e3ed5535c62e60677c77ade5ea242d2d0ee449cd1
+- evidence_id: current-record-5
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364;
+    current SHA256 a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+- evidence_id: original-review-5
+  kind: prior_review
+  reference: reviews/structured/20261021T080758Z-radial-microtubule-organizing-center-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 6f896368b3097e7d07ca5c8f643404b2d3da59b7ab1fb97efd5012b9cec34bc4
+- evidence_id: current-record-6
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_head.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa;
+    current SHA256 bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa
+- evidence_id: original-review-6
+  kind: prior_review
+  reference: reviews/structured/20261021T080759Z-radial-spoke-head-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 83faaea2d93c7acaee6d5e27e0ffae07f1fc36813c41ff3a84d0b61bbe85ed3a
+- evidence_id: current-record-7
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_neck.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 856f1fc78aecde5a603330227e494ac20ee930f25e04deca0ceb98d286c12418;
+    current SHA256 d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327.
+    Changed record reassessed against current sources.
+  snapshot_sha256: d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327
+- evidence_id: original-review-7
+  kind: prior_review
+  reference: reviews/structured/20261021T080759Z-radial-spoke-neck-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 86c1f3f9e49f5ee0a344dd23a2f2521763893f3a1c62a05062cc72542a9e7880
+- evidence_id: current-record-8
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 8747c08b214590fd435efacd64ee8fb09e56cf9e693fa193df256716c2703936;
+    current SHA256 cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86.
+    Changed record reassessed against current sources.
+  snapshot_sha256: cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86
+- evidence_id: original-review-8
+  kind: prior_review
+  reference: reviews/structured/20261021T080800Z-radial-spoke-stalk-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 05532f530dce490ba483442b92849510b14c997f783746b06040022ac02ee4da
+- evidence_id: current-record-9
+  kind: record_content
+  reference: data/structures/cytoskeleton/septin_cap.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Original frozen SHA256 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba;
+    current SHA256 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+- evidence_id: original-review-9
+  kind: prior_review
+  reference: reviews/structured/20261021T080800Z-septin-cap-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 3f706829db6ce60b7c2acd28e032e8fe97ac19d0f1efb9f77220230fa9043451
+- evidence_id: plaque-peritrich-agent-allen-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.xml
+  locator: article/front/article-meta/article-id, title-group and permissions; body/preformat;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-allen-jats.source
+  accessed_at: '2026-11-03T02:32:55.495089Z'
+  support: context_only
+  summary: Native JATS metadata identifies PMC2108889.1 and DOI 10.1083/jcb.56.2.559.
+    Permissions explicitly link CC BY-NC-SA 4.0. Selected primary body passages and
+    two figures are attested against the separately hashed PDF, not this XML.
+  snapshot_sha256: bdef03647e76c1a58237f32cd5bd02f761e71ce95a68dd2fbb2db7ccd598ce82
+- evidence_id: plaque-peritrich-agent-allen-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.json
+  locator: pmcid/version/pmid/doi/is_pmc_openaccess/is_manuscript/is_retracted/license_code/pdf_url;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-allen-package.source
+  accessed_at: '2026-11-03T02:32:55.495318Z'
+  support: supports
+  summary: Official PMC version 1 JSON identifies Allen 1973, PMID 4630196, open-access
+    true, manuscript false, retracted false and CC BY-NC-SA label. pdf_url supplies
+    MD5 c6f9bd76a0ff18f549f1c15e2ee9f476; downloaded PDF matches. The package does
+    not attest image pixels or independently supply experimental interpretation.
+  snapshot_sha256: cd767db4b77eccc9f80c8d285249d1cf3397097e9d2c4307a61e778ec98440ab
+- evidence_id: plaque-peritrich-agent-allen-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.pdf
+  locator: 'Allen 1973: abstract; printed pp. 559-562 introduction, Methods and distribution;
+    selected ER-myoneme morphology passages; Figure 19 and Functional Speculations
+    pp. 577-578. Figures 1 and 19 visually inspected on PDF pages 3 and 14. Current
+    downloaded PDF: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-allen-pdf.source'
+  accessed_at: '2026-11-03T02:32:55.495448Z'
+  support: supports
+  summary: 'Primary methods identify V. convallaria culture LB1690/1 and conventional
+    glutaraldehyde/osmium thin-section TEM. Body myonemes lie below the pellicle and
+    converge into the distinct stalk spasmoneme. Linkage morphology describes a midpiece,
+    rails and cradle, without identifying a protein inventory. Figure 1 is a grazing
+    TEM section; Figure 19 is an interpretive three-dimensional reconstruction. Functional
+    Speculations expressly limits demonstrated function to ER-myoneme linkage: calcium
+    transport, ATPase association and excitation transmission are proposed, not demonstrated
+    mechanisms. Only selected body passages, not the entire paper or bibliography,
+    were independently re-read in this refresh.'
+  snapshot_sha256: 345178622514906260714e1ffcbb9a30c91a83a2d60f5df552b4c2e6cb3e1030
+- evidence_id: plaque-peritrich-agent-cil-image
+  kind: primary_source
+  reference: https://cildata.crbs.ucsd.edu/media/thumbnail_display/39513/39513_thumbnailx512.jpg
+  locator: Entire source-served 512x512 thumbnail preview, compared byte-for-byte
+    with tracked data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-cil-image.source
+  accessed_at: '2026-11-03T02:32:55.495510Z'
+  support: supports
+  summary: 'Source preview SHA-256 feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+    equals tracked image and YAML file_sha256. Tracked preview visually inspected:
+    cortical thin section with membrane profile, myoneme region and small gold particles;
+    no calibrated scale bar. Image supports qualitative source-described localization
+    only, not a count, molecular isoform assignment or full raw-negative measurement.'
+  snapshot_sha256: feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+- evidence_id: plaque-peritrich-agent-cil-item-curl
+  kind: database
+  reference: https://www.cellimagelibrary.org/images/39513
+  locator: Both application/ld+json Dataset objects; name/description/image.url/identifier/license/sourceOrganization/datePublished;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-cil-item-curl.source
+  accessed_at: '2026-11-03T02:32:55.495562Z'
+  support: supports
+  summary: Per-item CIL:39513 JSON-LD identifies V. convallaria, DOI 10.7295/W9CIL39513,
+    Richard Allen (University of Hawaii) attribution, public-domain dedication link
+    and exact 512x512 preview URL. Full description names thin cryosection, rabbit
+    polyclonal alpha-centrin antibody, gold anti-rabbit IgG, and source interpretation
+    that myoneme contains alpha-centrin. It names D. Kunkel, Zeiss 10A 80kV acquisition
+    on 1994-08-18, negative magnification 19,800X; datePublished is 2012-01-23. Preview
+    is distinct from archival negative/high-resolution distribution; no scale calibration,
+    native isoform or NCBI taxon ID is supplied by the item JSON-LD. The fresh successful
+    curl retrieval used normal TLS validation; accessed_at is the actual request-start
+    timestamp in the receipt. The present datePublished differs by one day from the
+    historical review summary; the maintained record uses only the publication year
+    and is unaffected.
+  snapshot_sha256: fab55074c90da4c46af639ca67a97426e3c85584e0134121aa5372b9f7bc005c
+- evidence_id: plaque-peritrich-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1002/jmor.10225%22%20OR%20DOI%3A%2210.1242/jeb.189.1.163%22%20OR%20DOI%3A%2210.1083/jcb.56.2.559%22
+  locator: resultList.result exact DOIs 10.1002/jmor.10225, 10.1242/jeb.189.1.163
+    and 10.1083/jcb.56.2.559; metadata and complete abstractText; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-epmc.source
+  accessed_at: '2026-11-03T02:32:55.495964Z'
+  support: supports
+  summary: 'Exact primary citation identities verified: Shi et al. 2004 PMID 15164366;
+    Katoh and Naitoh 1994 PMID 9317557; Allen 1973 PMID 4630196 / PMC2108889. All
+    returned abstracts read. Shi uses protargol morphology to reveal interconnected
+    longitudinal/circular Campanella fibers and proposes skeletal/contraction/relaxation
+    roles; it does not test molecular identity or perturb contraction. Katoh separates
+    external-calcium responses in Triton-extracted Vorticella from injected calcium-buffer
+    responses in living cells. Body shrinkage is graded in both; live stalk response
+    is all-or-nothing in the ordinary calcium injection experiment. Regenerative calcium
+    release is an interpretation of pharmacology, not identified channels. No species
+    or strain is given in the Katoh abstract. Allen abstract describes morphological
+    ER-myoneme linkage and proposes calcium/excitation roles.'
+  snapshot_sha256: a5b3479a35cc46e34cb2fccdc28ca39fdef8f9b2a3389c18afdb5beadd41f56c
+- evidence_id: plaque-peritrich-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005622,GO:0005856
+  locator: results[id=GO:0005622/GO:0005856], names/definitions/isObsolete; current
+    retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-go.source
+  accessed_at: '2026-11-03T02:32:55.661060Z'
+  support: supports
+  summary: Both terms are active. GO:0005622 is intracellular anatomical structure,
+    a broad class; GO:0005856 is cytoskeleton, the internal filamentous cellular framework.
+    These terms establish broad identity/parthood context, not an exact native GO
+    myoneme class or a native ontology edge for the locally minted target.
+  snapshot_sha256: 4c92d4bbf13d30275ed9de644403094d01d5fad35bbc787f9663ab07f4e01771
+- evidence_id: plaque-peritrich-agent-ipr050145
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/
+  locator: metadata.accession/type/name/description/member_databases; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-ipr050145.source
+  accessed_at: '2026-11-03T02:32:55.734148Z'
+  support: supports
+  summary: IPR050145 is Centrin/CML-like, an authority family whose reviewed description
+    includes caltractin, obelin and Arabidopsis CML37/38. Its scope is broader than
+    Vorticella centrin/spasmin body-myoneme constituents. The historical InterPro
+    spasmin no-hit query was not rerun, and no exhaustive family absence is asserted.
+  snapshot_sha256: 386371fb67a7de41d9f9a6ded2bbb77530d9a27411b46349d2ac050d45832910
+- evidence_id: plaque-peritrich-agent-konior-pdf
+  kind: primary_source
+  reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+  locator: Konior et al. 2009, printed pp. 161-167 main text and Methods/Results/Discussion;
+    pp. 170-174 Figures 1-8 captions; Figure 3 on PDF page 11 / printed p. 171 visually
+    inspected; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-konior-pdf.source
+  accessed_at: '2026-11-03T02:32:55.867235Z'
+  support: supports
+  summary: Complete scientific main text and figure captions read from primary PDF.
+    V. convallaria rejuvenated cells grown in bacteria-containing wheat-grass medium;
+    body-network preparation includes EGTA/Triton relaxation and methanol fixation.
+    The N-terminal VcCentrin4 rabbit antibody recognizes one Western band; stalk-derived
+    mouse 1F5 recognizes two and recognizes recombinant spasmin from prior work. Figure
+    3 fluorescence demonstrates longitudinal branching/interconnected body fibers
+    and peristomial fibers; the body fibers converge aborally into distinct stalk
+    spasmoneme. This does not give a complete isoform inventory or stoichiometry.
+    Figures 4-8 immunogold compartment measurements are explicitly stalk spasmoneme,
+    not body-network copy numbers. Discussion proposes Sfi1-like backbone and tubule
+    contraction/relaxation roles for future testing; those proteins were not identified
+    as native Vorticella constituents in this study. No comparative antibody specificity
+    beyond reported blot/localization is inferred.
+  snapshot_sha256: 2e671848682f3941d8897979290ebf7ef7704335692c2cf4dbd1af69286ca70b
+- evidence_id: plaque-peritrich-agent-taxon-campanella
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/168242
+  locator: taxId/scientificName/rank; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-taxon-campanella.source
+  accessed_at: '2026-11-03T02:32:56.008749Z'
+  support: supports
+  summary: 168242 is Campanella umbellaria at species rank. Exact label/identifier
+    verified; no contractility or molecular evidence supplied by the taxonomy record.
+  snapshot_sha256: b3aa5b9b9d388b22c1db683671db225eba103797d019a9427ccbe00a92e7f8e0
+- evidence_id: plaque-peritrich-agent-taxon-vorticella
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/60850
+  locator: taxId/scientificName/rank; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/peritrich-agent-taxon-vorticella.source
+  accessed_at: '2026-11-03T02:32:56.167935Z'
+  support: supports
+  summary: 60850 is Vorticella convallaria at species rank. Exact label/identifier
+    verified; no reference culture or experimental strain equivalence inferred.
+  snapshot_sha256: 103212be547d5a2cd1015da6d262e4b9628edcaaa0a4f7394137c34e693c3212
+- evidence_id: plaque-paa-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990295,GO:0110165,GO:0015630,GO:0000923,GO:0005874,GO:0051647,GO:0051418
+  locator: results indexed by GO:1990295, GO:0110165, GO:0015630, GO:0000923, GO:0005874,
+    GO:0051647 and GO:0051418; definition, synonyms, children, isObsolete.; current
+    retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-go.source
+  accessed_at: '2026-11-03T02:32:56.257015Z'
+  support: supports
+  summary: Native QuickGO resolves all seven referenced GO classes as active, including
+    the exact PAA definition/aliases, the alpha/beta microtubule class, the eMTOC,
+    and the nucleation and nuclear-localization processes. Parent child lists expose
+    PAA is_a cellular anatomical structure (with cellular anatomical entity retained
+    as a synonym) and part_of microtubule cytoskeleton.
+  snapshot_sha256: 7a5acd582a76aafc8cd075b0413d40d52446176d6d15089093fee791bafe9978
+- evidence_id: plaque-paa-agent-go-ols
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/v2/ontologies/go/entities/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_1990295
+  locator: GO:1990295 relatedTo and rdfs:subClassOf; property BFO_0000050/BFO_0000051
+    and someValuesFrom.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-go-ols.source
+  accessed_at: '2026-11-03T02:32:56.261767Z'
+  support: supports
+  summary: Native OLS entity for GO:1990295 explicitly supplies is_a GO:0110165, BFO:0000050
+    some GO:0015630 and BFO:0000051 some GO:0000923. The existential has_part restriction
+    is not inverted into a universal eMTOC relation.
+  snapshot_sha256: 0ef163791dd92390652fd521d29b39f180233eb2ffb50d42d451e91c3a717f1d
+- evidence_id: plaque-paa-agent-bellingham2023-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/PMC10047812.1.xml
+  locator: PMC10047812.1; sec2dot1–sec2dot5-cells-12-00917, sec3-cells-12-00917, sec4dot1–sec4dot4-cells-12-00917;
+    cells-12-00917-f002; permissions.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-bellingham2023-jats.source
+  accessed_at: '2026-11-03T02:32:56.338636Z'
+  support: supports
+  summary: Full primary Introduction, Results 2.1–2.5, Discussion, Methods 4.1–4.4
+    and Figure2 caption read. Myp2-dependent Mto1 recruitment precedes ePAA/Ase1/lPAA;
+    Ase1 deletion retains altered arrays. Selective mto1-427 effects support inferred
+    effective ring stiffness under unchanged-tension assumptions; full mto1 deletion
+    affects multiple networks. No universal anchoring, cytokinesis or direct-binding
+    requirement follows. Permissions give CC BY4.0.
+  snapshot_sha256: 519b1918af37108acb4ae400b29e82b597cdc3e21480263bbf1041f17bf96521
+- evidence_id: plaque-paa-agent-nuclear2023-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10398876.1/PMC10398876.1.xml
+  locator: PMC10398876.1 Results sections headed The mSPB and PAA microtubules compete
+    to position the nucleus, mSPB microtubules push the nucleus away from the pole,
+    and The PAA microtubules basket the nucleus and limit its movement toward the
+    contractile ring; embedded captions; Discussion. /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-nuclear2023-jats.source
+  accessed_at: '2026-11-03T02:32:56.383581Z'
+  support: supports
+  summary: Primary Results sections on opposing mSPB/PAA effects, mSPB pushing and
+    PAA basket contacts, their embedded captions and the Discussion were read. Selective
+    mto1-427 versus mto1(1-1085) and imaging support opposing PAA/mSPB contributions
+    before septation. Longitudinal contacts and envelope deformation support the basket
+    interpretation without force calibration. MBC and full mto1 deletion are nonselective;
+    newborn-cell growth/interphase simulations concern a later mechanism. Septal DNA
+    protection remains unproven. This refresh does not claim a fresh audit of the
+    entire Methods section or every image/movie.
+  snapshot_sha256: aeda46b2d51023587780e3500b33fa1109119c4ab1124f5f82bd7197d697e555
+- evidence_id: plaque-paa-agent-samejima2010-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2989437.1/PMC2989437.1.xml
+  locator: PMC2989437.1; sec1.1 targeting and Figure1F–I; sec1.3 Myp2 and Figure3;
+    sec1.5 Conclusions.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-samejima2010-jats.source
+  accessed_at: '2026-11-03T02:32:56.617651Z'
+  support: supports
+  summary: Entire primary Results and Discussion read. Mto1-427 loses eMTOC localization
+    and PAA nucleation while retaining SPB targeting/astral microtubules; truncation
+    alleles provide separate Alp4 readouts. Myp2 deletion and latrunculin B impair
+    equatorial recruitment; coimmunoprecipitation and two-hybrid assays do not exclude
+    an intermediary.
+  snapshot_sha256: 9337fd098562acbf278e8fa6b6fdb2bce9ed3f0ef1ed2bdd8cbe6d5f66e8edaa
+- evidence_id: plaque-paa-agent-epmc
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.3390/cells12060917%22%20OR%20DOI%3A%2210.1091/mbc.E23-01-0034%22%20OR%20DOI%3A%2210.1016/j.cub.2010.10.006%22%20OR%20EXT_ID%3A15004232%20OR%20EXT_ID%3A15120067%20OR%20EXT_ID%3A15659644%20OR%20EXT_ID%3A10759889%20OR%20EXT_ID%3A15800064
+  locator: resultList.result IDs 37099380,36980258,20970338,15800064,15659644,15120067,15004232,10759889;
+    title, doi, abstractText.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-epmc.source
+  accessed_at: '2026-11-03T02:32:56.786459Z'
+  support: supports
+  summary: Native Europe PMC confirms the eight queried PMID identities/titles/DOIs
+    and supplies abstracts. The five older PMID citations in protein examples are
+    checked as UniProt attribution and abstract-level context; their original bodies
+    were not independently audited. Abstracts of the 2005 Mto2 papers report eMTOC
+    localization/formation defects, while the 2000 GFP-library abstract does not identify
+    a specific Mto2 experiment.
+  snapshot_sha256: b8bbc881b5a143fab9ec74d166783afe070578bbb1b2637233c003c5818a50f9
+- evidence_id: plaque-paa-agent-uniprot-P04689
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P04689.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-P04689.source
+  accessed_at: '2026-11-03T02:32:56.898006Z'
+  support: supports
+  summary: 'Native reviewed P04689: Tubulin alpha-2 chain, gene tub1 (atb2, alp2),
+    source taxon284812. IPR002452; GFP-Atb2 localization is supplied separately by
+    primary Figure2. Reference-stock identity does not identify the experimental strain.'
+  snapshot_sha256: 3bfa569ef452b581ecc2013f8b85880667fd4de3e6d11df1bdcbbc3319ade3e3
+- evidence_id: plaque-paa-agent-uniprot-P04688
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P04688.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-P04688.source
+  accessed_at: '2026-11-03T02:32:56.903489Z'
+  support: supports
+  summary: 'Native reviewed P04688: Tubulin alpha-1 chain, gene nda2, source taxon284812.
+    IPR002452; identity-only exemplar, not a new PAA isoform-localization assay. Reference-stock
+    identity does not identify the experimental strain.'
+  snapshot_sha256: f6104d4ad0cb6eae74ad3cdbfc6a3c779f42c9522e262843d52d6ca7ef46f4fd
+- evidence_id: plaque-paa-agent-uniprot-P05219
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P05219.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-P05219.source
+  accessed_at: '2026-11-03T02:32:56.906869Z'
+  support: supports
+  summary: 'Native reviewed P05219: Tubulin beta chain, gene nda3 (alp12), source
+    taxon284812. IPR002453; identity-only exemplar, not direct Nda3 localization evidence.
+    Reference-stock identity does not identify the experimental strain.'
+  snapshot_sha256: 748f30a9ed411acc3358c1828f32354becece0ef6d16b60ef4319c8d6bbe66b2
+- evidence_id: plaque-paa-agent-uniprot-Q9HDY1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9HDY1.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-Q9HDY1.source
+  accessed_at: '2026-11-03T02:32:57.006074Z'
+  support: supports
+  summary: 'Native reviewed Q9HDY1: Anaphase spindle elongation protein 1, gene ase1,
+    source taxon284812. IPR007145; PAA membership and dispensability come from the
+    2023 study. Reference-stock identity does not identify the experimental strain.'
+  snapshot_sha256: 6eaa54b440390539f06f41d4cf10735eeb6d10b0840d2616d8edc4f3093bc08a
+- evidence_id: plaque-paa-agent-uniprot-O94488
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O94488.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-O94488.source
+  accessed_at: '2026-11-03T02:32:57.021696Z'
+  support: supports
+  summary: 'Native reviewed O94488: Gamma tubulin complex adapter mto1, gene mto1
+    (mbo1, mod20), source taxon284812. SUBCELLULAR LOCATION cites PMIDs15004232/15120067/15659644
+    for the recorded MTOC/SPB attribution; eMTOC note also cites15004232 and19001497.
+    Reference-stock identity does not identify the experimental strain.'
+  snapshot_sha256: 4903509b256bf5164ea7e5b80970bbb89056a71a4ea4a257e9feb8adcaf0e46b
+- evidence_id: plaque-paa-agent-uniprot-Q9USP7
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9USP7.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism; cross-references
+    and specified SUBCELLULAR LOCATION evidence.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-uniprot-Q9USP7.source
+  accessed_at: '2026-11-03T02:32:57.630571Z'
+  support: supports
+  summary: 'Native reviewed Q9USP7: Gamma tubulin complex adapter mto2, gene mto2,
+    source taxon284812. SUBCELLULAR LOCATION cites PMID10759889 for cytoplasm and15659644/15800064
+    for MTOC/SPB; eMTOC note cites15800064. Reference-stock identity does not identify
+    the experimental strain.'
+  snapshot_sha256: ae275cdd142bdffa04ce4e120465b57fbd20dbe1223de0be9a72966ec6e40698
+- evidence_id: plaque-paa-agent-IPR002452
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002452/
+  locator: metadata.accession, type, name, description and hierarchy.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-IPR002452.source
+  accessed_at: '2026-11-03T02:32:57.648398Z'
+  support: supports
+  summary: Native InterPro IPR002452 is a family for Alpha tubulin; the family defines
+    a constituent class, not universal PAA residence of every member.
+  snapshot_sha256: ff28f4d004d8f82a804f7263ff1df3ab78d7bdbdeee755fa924a58e872602b5a
+- evidence_id: plaque-paa-agent-IPR002453
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002453/
+  locator: metadata.accession, type, name, description and hierarchy.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-IPR002453.source
+  accessed_at: '2026-11-03T02:32:57.717067Z'
+  support: supports
+  summary: Native InterPro IPR002453 is a family for Beta tubulin; the family defines
+    a constituent class, not universal PAA residence of every member.
+  snapshot_sha256: edbfe5509d6e568069c7105eacc2b7e296e84e0790a16a63d836c45a094d20ef
+- evidence_id: plaque-paa-agent-IPR007145
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007145/
+  locator: metadata.accession, type, name, description and hierarchy.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-IPR007145.source
+  accessed_at: '2026-11-03T02:32:58.249889Z'
+  support: supports
+  summary: Native InterPro IPR007145 is a family for MAP65/Ase1/PRC1 microtubule-associated
+    protein; the family defines a constituent class, not universal PAA residence of
+    every member.
+  snapshot_sha256: e2a689c1455d008bbb9885458d09d3b5d914d67afb595cf29457e2efb02b768d
+- evidence_id: plaque-paa-agent-taxon-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: taxId, scientificName, rank, lineage, otherNames.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-taxon-4896.source
+  accessed_at: '2026-11-03T02:32:58.337282Z'
+  support: supports
+  summary: Native ENA taxon4896 is Schizosaccharomyces pombe, rank species; this identity
+    lookup does not establish prevalence or exact experimental stock.
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+- evidence_id: plaque-paa-agent-taxon-284812
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: taxId, scientificName, rank, lineage, otherNames.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-taxon-284812.source
+  accessed_at: '2026-11-03T02:32:58.710722Z'
+  support: supports
+  summary: Native ENA taxon284812 is Schizosaccharomyces pombe 972h-, rank strain;
+    this identity lookup does not establish prevalence or exact experimental stock.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: plaque-paa-agent-bellingham2023-package
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/PMC10047812.1.json
+  locator: pmcid, version, doi, pmid, license_code, media_urls entry cells-12-00917-g002.jpg.;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-bellingham2023-package.source
+  accessed_at: '2026-11-03T02:32:58.971395Z'
+  support: supports
+  summary: Native PMC package identifies article version1, DOI/PMID and CC BY license
+    code; its g002.jpg media MD5 is38c56497f326242cd4ffaeff8bae8188. Exact license
+    version is established by JATS permissions.
+  snapshot_sha256: 90652face5516c0a0cafefdd007b5cca386ec42d330e9a91d8038a8a9c0b267f
+- evidence_id: plaque-paa-agent-figure2
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/cells-12-00917-g002.jpg
+  locator: Original unchanged complete Figure2 panels A–I; tracked image included
+    in source.inputs.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/paa-agent-figure2.source
+  accessed_at: '2026-11-03T02:32:59.090478Z'
+  support: supports
+  summary: Complete Figure2 pixels visually inspected. A–C/E show array geometry/dynamics,
+    D is a schematic, F–G Ase1 timing/localization, H–I deletion comparison. C has2µm
+    bar and other marked bars5µm. Fresh bytes equal tracked SHA256 e7b4b36cc890afa0a02ef9660162ddb78acbf3a53332515dd8880704e585f317
+    and package MD5.
+  snapshot_sha256: e7b4b36cc890afa0a02ef9660162ddb78acbf3a53332515dd8880704e585f317
+- evidence_id: plaque-radial-mtoc-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974
+  locator: results indexed by GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974;
+    name, definition, isObsolete.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-go.source
+  accessed_at: '2026-11-03T02:32:59.130308Z'
+  support: supports
+  summary: Five active native GO terms resolve MTOC as broader parent, HAA organization
+    as process, HAA as output array, dynein-driven oscillatory movement as process
+    and meiotic SPB as a distinct whole structure. These are not exact rMTOC equivalents.
+  snapshot_sha256: a04f665ac454c8e7046ffc8d4eee73b3c231d1e7a41c293f3440587f325ae518
+- evidence_id: plaque-radial-mtoc-agent-funaya2012-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.xml
+  locator: PMC3382715.1; sec2.1–sec2.8, sec3/3.1, sec4; fig3; permissions.; current
+    retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-funaya2012-jats.source
+  accessed_at: '2026-11-03T02:32:59.270255Z'
+  support: supports
+  summary: Full primary Introduction, Results2.1–2.8, Discussion/Conclusion, main
+    experimental procedures and Figure3 caption read. Tomography and immunogold distinguish
+    an Hrs1-dependent, gamma-tubulin-enriched amorphous region from SPB core/output
+    array. Predominantly capped ends and residual nonradial MTs after hrs1 deletion
+    bound essentiality. Hrs1 scaffold/bridge and SPB-holding mechanisms remain models;
+    NudE orthology is tentative. Stabilized nonphosphorylatable Hrs1 delays rather
+    than universally blocks spindle formation, with temperature/checkpoint dependence.
+    Permissions specify CC BY3.0.
+  snapshot_sha256: 59f662c998abf622fbb9bccbabc3867cb5ffd3174943cc52cb6228b1e35cd93d
+- evidence_id: plaque-radial-mtoc-agent-funaya2012-supp
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/mmc1.pdf
+  locator: mmc1.pdf Table S1 (PDF pages 13-17), Supplemental Experimental Procedures
+    (pages 18-22), selected S1/S2 captions; text extraction, no supplementary pixel
+    reanalysis. /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-funaya2012-supp.source
+  accessed_at: '2026-11-03T02:32:59.311477Z'
+  support: supports
+  summary: Supplement Table S1 identifies KT2486 hrs1+ and KT2919 hrs1-deletion engineered
+    h-/h- pat1.114/pat1.114 mat-Pc diploids used for Figures 1-3; homothallic transition
+    strains are separate. Methods specify 34 C synchronized induction, 30 C live imaging
+    and high-pressure freezing followed by freeze substitution and resin sections.
+    Supplement gives 120-minute immunolabeling versus main-text 80 minutes; the record
+    preserves this discrepancy. This is not vitreous cryo-electron tomography. No
+    supplementary pixels were independently reanalyzed.
+  snapshot_sha256: 6dde9cc7999b0e3294aa95f3d3036a319c90b9390920d84bd7194c883dc213f9
+- evidence_id: plaque-radial-mtoc-agent-epmc
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.cub.2012.02.042%22
+  locator: resultList.result id22425159; title, doi, abstractText.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-epmc.source
+  accessed_at: '2026-11-03T02:32:59.624442Z'
+  support: supports
+  summary: Native Europe PMC confirms PMID22425159, title, DOI10.1016/j.cub.2012.02.042
+    and abstract. Full primary support is supplied separately by the JATS body and
+    supplement.
+  snapshot_sha256: cb2a9bbadec30edf9cbc7db3fb875967aa30edf57b4c38969fe751991a94be54
+- evidence_id: plaque-radial-mtoc-agent-uniprot-Q10336
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q10336.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism, uniProtKBCrossReferences.;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-uniprot-Q10336.source
+  accessed_at: '2026-11-03T02:32:59.655842Z'
+  support: supports
+  summary: Native reviewed Q10336 is Meiotic coiled-coil protein6, primary gene mcp6
+    with hrs1/mug3 aliases, taxon284812. It has no integrated InterPro cross-reference;
+    the SUPFAM Tropomyosin match is not an exact Hrs1 family assignment.
+  snapshot_sha256: 392c79e639d3866a32aefe52108d02343682018cb8833ab159bdf96c177651ee
+- evidence_id: plaque-radial-mtoc-agent-uniprot-P25295
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P25295.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism, InterPro
+    cross-references.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-uniprot-P25295.source
+  accessed_at: '2026-11-03T02:32:59.718750Z'
+  support: supports
+  summary: Native reviewed P25295 is Tubulin gamma chain, primary gene gtb1 with tug1
+    alias, taxon284812, with InterProIPR002454. This identity lookup does not identify
+    the engineered experimental stock or independently prove localization.
+  snapshot_sha256: 6c5e36578b9bdda0edebd4bb5352c22762aacb10b0ce93a9d5fb45fa7ac39dcf
+- evidence_id: plaque-radial-mtoc-agent-IPR002454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/
+  locator: metadata.accession, type, name, description, hierarchy.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-IPR002454.source
+  accessed_at: '2026-11-03T02:32:59.726434Z'
+  support: supports
+  summary: Native InterProIPR002454 is the Gamma tubulin family. Its general MTOC/nucleation
+    description does not establish the entire local rMTOC ring-complex composition
+    or assembly sufficiency.
+  snapshot_sha256: 0cc07ff810e7acb2b8d24c24597c1bcabf177adb7e06ae6ddfabbb352fe0c668
+- evidence_id: plaque-radial-mtoc-agent-matches-gamma
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P25295/?page_size=200
+  locator: results metadata accession/name/type for IPR002454.; current retrieval
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-matches-gamma.source
+  accessed_at: '2026-11-03T02:32:59.840395Z'
+  support: supports
+  summary: Native InterPro matches for P25295 include integrated Gamma tubulin IPR002454
+    as a family, independently supporting the exact component-class mapping.
+  snapshot_sha256: 42907d6563396958cafbef2d9c8aeb538af4a828f3dadb2abcdceb8efaf4fb2b
+- evidence_id: plaque-radial-mtoc-agent-funaya2012-package
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.json
+  locator: pmcid, version, doi, pmid, license_code, media_urls gr3.jpg and mmc1.pdf.;
+    current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-funaya2012-package.source
+  accessed_at: '2026-11-03T02:33:00.341681Z'
+  support: supports
+  summary: Native PMC package confirms article version1, DOI/PMID, CC BY code and
+    gr3.jpg MD5 9d12c4edbf7bbdfcc03ef8d3696aa1fb. Exact license3.0 is supplied by
+    JATS permissions.
+  snapshot_sha256: de30cb0d6700b91298a46f459325baad1210f48a49a6ee79056c1b5056ff2536
+- evidence_id: plaque-radial-mtoc-agent-figure3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/gr3.jpg
+  locator: Original unchanged Figure3 panels A–E; tracked image included in native
+    source.inputs.; current retrieval /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/adversary-plaque/radial-mtoc-agent-figure3.source
+  accessed_at: '2026-11-03T02:33:00.439589Z'
+  support: supports
+  summary: Complete Figure3 visually inspected. A/D are immunogold TEM serial sections;
+    B/C/E are interpretive models. Yellow marks gamma-tubulin label positions, green
+    MTs, blue SPB; C adds amorphous-region shading. Bars100nm are image scales, not
+    universal center dimensions. Fresh image equals tracked SHA256 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+    and package MD5.
+  snapshot_sha256: 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+- evidence_id: plaque-current-peritrich
+  kind: record_content
+  reference: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  locator: Entire current maintained YAML at c2cf0c2cd4d35257ca4be4821656318f8c8c0513;
+    source-frozen input compared against current bytes
+  accessed_at: '2026-11-03T02:41:00.838614Z'
+  snapshot_sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+  summary: Entire current target read; hash compared with original frozen input and
+    current main-merge head.
+  support: context_only
+- evidence_id: plaque-current-paa
+  kind: record_content
+  reference: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  locator: Entire current maintained YAML at c2cf0c2cd4d35257ca4be4821656318f8c8c0513;
+    source-frozen input compared against current bytes
+  accessed_at: '2026-11-03T02:41:00.838614Z'
+  snapshot_sha256: 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a
+  summary: Entire current target read; hash compared with original frozen input and
+    current main-merge head.
+  support: context_only
+- evidence_id: plaque-current-rmtoc
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  locator: Entire current maintained YAML at c2cf0c2cd4d35257ca4be4821656318f8c8c0513;
+    source-frozen input compared against current bytes
+  accessed_at: '2026-11-03T02:41:00.838614Z'
+  snapshot_sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+  summary: Entire current target read; hash compared with original frozen input and
+    current main-merge head.
+  support: context_only
+- evidence_id: plaque-review-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Evidence Rules, Structured Source Cross-Checks and Workflow
+  accessed_at: '2026-11-03T02:41:00.838614Z'
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+  summary: Review must preserve exact evidence scopes, verify named identifiers and
+    establish structured source organism/dataset applicability; a physical-structure
+    subject alone does not establish non-applicability.
+  support: context_only
+- evidence_id: radial-current-radial-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001535,GO:0001536,GO:0120343,GO:0032991,GO:0001534,GO:0097540
+  locator: results[].id/name/isObsolete/definition for all six queried GO terms
+  accessed_at: '2026-11-03T02:32:29.386744Z'
+  snapshot_sha256: b3b9e98f1e3009e80442af24caa6e6e593a70c19c4650a758752e36f9b003dde
+  summary: All three regional terms are active exact identities. Head projects toward
+    central pair; neck links head and stalk; stalk lies between the separate A-tubule-binding
+    base and neck. Protein-containing complex is the parent; whole radial spoke is
+    the part_of target.
+  support: supports
+- evidence_id: radial-current-radial-prep-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: taxId/scientificName/rank
+  accessed_at: '2026-11-03T02:32:29.387040Z'
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+  summary: Taxon 3055 is Chlamydomonas reinhardtii at species rank, matching all three
+    examples; it does not identify any particular experimental strain.
+  support: supports
+- evidence_id: radial-current-radial-prep-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1242/jcs.245233%22%20OR%20DOI%3A%2210.1126/science.1128618%22%20OR%20EXT_ID%3A16507594%20OR%20EXT_ID%3A1508197
+  locator: resultList.result[] exact DOI/PMID bibliographic metadata and abstractText
+  accessed_at: '2026-11-03T02:32:29.387124Z'
+  snapshot_sha256: b3b82ac259b16edd733dd1fda1bc6f25ec5b317e7bc669f8ef1f1c989bc3b300
+  summary: Exact metadata identifies Poghosyan2020, Nicastro2006, Yang2006 and Curry1992.
+    Metadata resolves citations but is not substituted for full-text scientific inspection.
+  support: supports
+- evidence_id: radial-current-radial-prep-yang-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1973137/?report=xml
+  locator: 'Results: peptide sequencing and new gene identification; Table 1; confirmation
+    experiments/Figure 3; Discussion; Methods strains and spoke isolation'
+  accessed_at: '2026-11-03T02:32:29.387173Z'
+  snapshot_sha256: cc80ce3abb78602b6c5248704b41ebbcf4327efd1d8cb02e54f0a4b94de592fc
+  summary: Proteomics and antibody/co-sedimentation experiments establish named RSPs
+    in Chlamydomonas spokes, including RSP11 in headless stalk fractions. Table 1
+    maps RSP11 to pf25. This paper uses an older head/stalk partition; later neck
+    assignments must be sourced separately. Predicted domains do not establish catalytic
+    activity.
+  support: supports
+- evidence_id: radial-current-radial-prep-curry-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC360281/?report=xml
+  locator: Abstract and links to original scanned article pages
+  accessed_at: '2026-11-03T02:32:31.467172Z'
+  snapshot_sha256: 1fad02776435acbfb2aa499432850a0f45fddd3bfbd0cb0c4ee0d6d719087c8c
+  summary: Primary abstract supports the related but distinct RSP4/RSP6 head proteins.
+    Claim-relevant original page images 3967, 3970 and 3971 were also inspected separately;
+    other downloaded images were not treated as inspected.
+  support: supports
+- evidence_id: radial-current-curry-agent-page-3967
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5156/360281/d6be58a9c291/molcellb00132-0311.png
+  locator: Visually inspected original printed page 3967
+  accessed_at: '2026-11-03T02:32:31.565654Z'
+  snapshot_sha256: b626222adb179028a09333dd64a1c7cae81fafca738463d53f105d1f135d29b5
+  summary: Abstract and introduction identify RSP4 and RSP6 as distinct head proteins;
+    this page gives experimental strain context.
+  support: supports
+- evidence_id: radial-current-curry-agent-page-3970
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5156/360281/91062ea6ff3e/molcellb00132-0314.png
+  locator: Visually inspected original printed page 3970
+  accessed_at: '2026-11-03T02:32:31.837939Z'
+  snapshot_sha256: bdbd9d76d92241a4280acd2646d76d0b1c4215ff008b64b3888b5a1b7473bcdd
+  summary: Methods describe hybrid selection/translation and transformation; Results
+    introduce the distinct gene-identification experiments.
+  support: supports
+- evidence_id: radial-current-curry-agent-page-3971
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5156/360281/db1c5405cb58/molcellb00132-0315.png
+  locator: Visually inspected original printed page 3971
+  accessed_at: '2026-11-03T02:32:31.852801Z'
+  snapshot_sha256: 2a050f2852edaf21c15dd5ac57dbeeac9fb8785c88d9d712fac16f25e29abfb2
+  summary: Hybrid-selection and transformation experiments support RSP4. RSP6 complementation
+    was not attempted owing to background motility, so that experiment cannot be imputed
+    to RSP6.
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU0.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:29.387218Z'
+  snapshot_sha256: ce5352a8423fc1006aa492e91e093a4b74391e1bea249ddeaae4b1c20d732cdc
+  summary: 'Native Q27YU0: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 1; taxon 3055; native primary genes [''RSP1'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality. Native radial-spoke
+    localization cites PMID16507594; it is not an experimental subregional localization
+    claim.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q01656
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q01656.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:29.909428Z'
+  snapshot_sha256: 748a7e2da89b860cf8a79d67cb9d5b050d5e4fa22de0e86b70fab5de411496a2
+  summary: 'Native Q01656: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 4; taxon 3055; native primary genes [''RSP4'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q01657
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q01657.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:30.115620Z'
+  snapshot_sha256: 337de6dc49993a67b7e8c43aca6d713d909e0a6049e0c21bab199a579267c063
+  summary: 'Native Q01657: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 6; taxon 3055; native primary genes [''RSP6'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality. Native radial-spoke
+    localization cites PMID1508197; primary experiments were separately inspected.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU5.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:30.146541Z'
+  snapshot_sha256: 3becb6c38538484d65974fd96b2b41dabbef5c93f3846ba8c0e923f86e0f4ac1
+  summary: 'Native Q27YU5: UniProtKB unreviewed (TrEMBL); Radial spoke head protein
+    9 homolog; taxon 3055; native primary genes [''RSP9'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU4.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:30.275647Z'
+  snapshot_sha256: 808c7f0f665591019cae07289d5052a30008b42deb891ef9de94bc811568be66
+  summary: 'Native Q27YU4: UniProtKB unreviewed (TrEMBL); Radial spoke protein 10;
+    taxon 3055; native primary genes [''RSP10'']. Supports sequence identity and status,
+    not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q6UBQ3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q6UBQ3.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:32.151760Z'
+  snapshot_sha256: 36d5b50a3b43baa2735afef1f943ba86ec351f047fee8a5c660855f914ca5654
+  summary: 'Native Q6UBQ3: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 2; taxon 3055; native primary genes [''RSP2'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality. Native radial-spoke
+    localization cites PMID16507594; it is not an experimental subregional localization
+    claim.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-P12759
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P12759.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:32.286919Z'
+  snapshot_sha256: 65b4c59781a111e35ecd8a2bc548d5ba2347dbc596f405bc9ba78cd08cd0f76d
+  summary: 'Native P12759: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 3; taxon 3055; native primary genes [''RSP3'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU7.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:32.478578Z'
+  snapshot_sha256: b90e96d4e0724d16701d068fb5676b6cd65d2266dbf6717e6bf922bc49714c92
+  summary: 'Native Q27YU7: UniProtKB reviewed (Swiss-Prot); Flagellar radial spoke
+    protein 5; taxon 3055; native primary genes [''RSP5'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YT9
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YT9.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:32.579729Z'
+  snapshot_sha256: 5d35a20ee93ad5f1234225ff79a9a5d588e4eb1b2b35a45aa36f9c2fce9b6dfd
+  summary: 'Native Q27YT9: UniProtKB unreviewed (TrEMBL); Radial spoke protein 7;
+    taxon 3055; native primary genes [''RSP7'']. Supports sequence identity and status,
+    not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU6.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:32.919758Z'
+  snapshot_sha256: ed7a558ca5a0ff032612dcb83d6bab3e6ad8890962b236350397d7955a9d021c
+  summary: 'Native Q27YU6: UniProtKB unreviewed (TrEMBL); Radial spike protein 8;
+    taxon 3055; native primary genes [''RSP8'']. Supports sequence identity and status,
+    not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-prep-protein-Q27YU2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU2.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:33.194665Z'
+  snapshot_sha256: 5fbb70dafde75059a161530daed7c8fb486b8e21e5f9d98cb165c5de47e87986
+  summary: 'Native Q27YU2: UniProtKB unreviewed (TrEMBL); Peptidyl-prolyl cis-trans
+    isomerase; taxon 3055; native primary genes [''RSP12'']. Supports sequence identity
+    and status, not by itself regional membership or essentiality.'
+  support: supports
+- evidence_id: radial-current-radial-new-protein-Q5MJ90
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q5MJ90.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:33.563436Z'
+  snapshot_sha256: 468a26989e7200290ed3cbe86dce1944cc800f210689930258ba17d0e498afee
+  summary: 'Native Q5MJ90: UniProtKB unreviewed (TrEMBL); Radial spoke protein 16;
+    taxon 3055; native primary genes not supplied. Supports sequence identity and
+    status, not by itself regional membership or essentiality. AY805324/AAV87177.1
+    and the original sequence paper independently identify the record''s RSP16 label;
+    the role explicitly states the absent UniProt gene-symbol field.'
+  support: supports
+- evidence_id: radial-current-radial-new-protein-Q27YU3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27YU3.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; comments
+    SUBCELLULAR LOCATION and references where relevant; crossReferences
+  accessed_at: '2026-11-03T02:32:34.523199Z'
+  snapshot_sha256: e8ade380c61862175678311c4b66504c693ffda348dd9dbf31079ca876da5a35
+  summary: 'Native Q27YU3: UniProtKB unreviewed (TrEMBL); Radial spoke protein 11;
+    taxon 3055; native primary genes [''PF25'']. Supports sequence identity and status,
+    not by itself regional membership or essentiality. Native PF25 names the RSP11
+    product; ENA explicitly records PF25 and RSP11 together.'
+  support: supports
+- evidence_id: radial-current-radial-prep-reviewed-symbols
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28taxonomy_id%3A3055%29%20AND%20%28reviewed%3Atrue%29%20AND%20%28gene_exact%3ARSP1%20OR%20gene_exact%3ARSP2%20OR%20gene_exact%3ARSP3%20OR%20gene_exact%3ARSP4%20OR%20gene_exact%3ARSP5%20OR%20gene_exact%3ARSP6%29
+  locator: Complete results array for exact six-gene reviewed Chlamydomonas query
+  accessed_at: '2026-11-03T02:32:30.317244Z'
+  snapshot_sha256: fe08d114681674b2a6e635031f9af337065fc3756923619408edfdda91a8f4ac
+  summary: Six reviewed hits correspond one-to-one to RSP1,Q27YU0; RSP2,Q6UBQ3; RSP3,P12759;
+    RSP4,Q01656; RSP5,Q27YU7; RSP6,Q01657. The bounded query supports those exact
+    sequence examples, not a complete regional inventory.
+  support: supports
+  search_scope: UniProtKB REST search at 2026-11-03T02:32:30.317244Z; query (taxonomy_id:3055)
+    AND (reviewed:true) AND (gene_exact:RSP1 OR gene_exact:RSP2 OR gene_exact:RSP3
+    OR gene_exact:RSP4 OR gene_exact:RSP5 OR gene_exact:RSP6), format=json, size=500.
+    HTTP200 returned six inspected entries in one response, one for each requested
+    symbol. This bounded reviewed-entry query excludes unreviewed entries, other gene
+    spellings, taxa and genes; it is not a complete radial-spoke inventory. Response
+    pagination headers were not retained and no further pages were fetched. Local
+    ignore rules are inapplicable to this remote API search.
+- evidence_id: radial-current-radial-prep-family-search-head
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=radial%20spoke%20head&page_size=200
+  locator: count/results for phrase radial spoke head
+  accessed_at: '2026-11-03T02:32:30.544400Z'
+  snapshot_sha256: 4088fa1ce575b768e2c591d095c32454ee8577e70aba7f39bf932930836d04e9
+  summary: One returned entry is RSP9 family IPR055316. A family of one subunit cannot
+    ground the heterogeneous head, neck or stalk aggregate. This bounded phrase search
+    is not exhaustive evidence of universal absence.
+  support: supports
+  search_scope: InterPro integrated-entry API /entry/interpro/ at 2026-11-03T02:32:30.544400Z;
+    search=radial spoke head, page_size=200. HTTP200 JSON reports count=1 and next=null,
+    with IPR055316 as the sole returned entry. The complete returned result set for
+    this text query was inspected. This is not an exhaustive synonym, sequence, member-database
+    or cross-species search and cannot establish that no other appropriate family
+    exists. Local ignore rules are inapplicable.
+- evidence_id: radial-current-radial-prep-rsp9-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR055316/
+  locator: metadata.accession/type/name/description
+  accessed_at: '2026-11-03T02:32:30.852476Z'
+  snapshot_sha256: 8e972a4ad66b3215025f8b07f521fab3a62d60a0f3a6b40c7be23de5dde9c2fa
+  summary: IPR055316 is the RSP9 homolog family, narrower than an entire spoke-region
+    cohort. It does not justify whole-cohort grounding.
+  support: supports
+- evidence_id: radial-current-radial-prep-family-search-neck
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=radial%20spoke%20neck&page_size=200
+  locator: Native API HTTP204 empty response for literal search parameter radial spoke
+    neck
+  accessed_at: '2026-11-03T02:32:32.284797Z'
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  summary: The bounded phrase query returned HTTP204 with no entry body. This supplies
+    no exact aggregate mapping and does not establish that no suitable entry could
+    ever exist.
+  support: supports
+  search_scope: InterPro integrated-entry API /entry/interpro/ at 2026-11-03T02:32:32.284797Z;
+    search=radial spoke neck, page_size=200. The request returned HTTP204 with an
+    empty body, so no entry was available to inspect from this bounded text query.
+    No alternative synonyms, sequence search or member-database search was performed;
+    the result does not establish universal absence of suitable families. Local ignore
+    rules are inapplicable.
+- evidence_id: radial-current-radial-prep-family-search-stalk
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=radial%20spoke%20stalk&page_size=200
+  locator: Native API HTTP204 empty response for literal search parameter radial spoke
+    stalk
+  accessed_at: '2026-11-03T02:32:33.527990Z'
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  summary: The bounded phrase query returned HTTP204 with no entry body. This supplies
+    no exact aggregate mapping and does not establish that no suitable entry could
+    ever exist.
+  support: supports
+  search_scope: InterPro integrated-entry API /entry/interpro/ at 2026-11-03T02:32:33.527990Z;
+    search=radial spoke stalk, page_size=200. The request returned HTTP204 with an
+    empty body, so no entry was available to inspect from this bounded text query.
+    No alternative synonyms, sequence search or member-database search was performed;
+    the result does not establish universal absence of suitable families. Local ignore
+    rules are inapplicable.
+- evidence_id: radial-current-radial-adapter-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: All organism names and dataset arrays in complete API catalogue
+  accessed_at: '2026-11-03T02:32:34.557534Z'
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  summary: The live catalogue contains 20 organism entries and 28 datasets; none is
+    Chlamydomonas. Named RSPs trigger an applicability assessment, but no matched
+    organism/dataset supports a search. No expression-module result is negative biological
+    evidence.
+  support: supports
+- evidence_id: radial-current-new-rsp16-ena
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/AY805324?download=false
+  locator: DE; RN[1]; CDS product, protein_id and UniProt cross-reference
+  accessed_at: '2026-11-03T02:33:26.777868Z'
+  snapshot_sha256: 0f6832a54fe167f1721770f66be4bb97d67beb9fa89bb375fda1ddbb7ee4282e
+  summary: AY805324 encodes radial spoke protein16 AAV87177.1 and links Q5MJ90; the
+    source is PMID15563613. ENA does not supply a gene qualifier, so RSP16 is retained
+    as the literature label, not invented as a native field.
+  support: supports
+- evidence_id: radial-current-new-rsp11-ena
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/DQ298251?download=false
+  locator: DE; gene and CDS gene/product/note/protein_id/cross-reference
+  accessed_at: '2026-11-03T02:33:26.778057Z'
+  snapshot_sha256: c8b960408704d4764108101b09f578e19745d5e0baf6631fac88047793a519c0
+  summary: DQ298251 explicitly names PF25, product radial spoke protein11, note RSP11,
+    proteinABC02022.1 and UniProtQ27YU3. This verifies the PF25/RSP11 mapping in the
+    changed stalk record.
+  support: supports
+- evidence_id: radial-current-new-rsp16-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC545900/?report=xml
+  locator: Methods Strains and Culture/Molecular Cloning; Results RSP16 Is a Type
+    II DnaJ HSP40 Homologue and Defective HSP40; Discussion The Constitutive HSP40
+  accessed_at: '2026-11-03T02:37:39.187296Z'
+  snapshot_sha256: edd5670d979aa7eebae8e42caff01f6e43abf8e5ef5fc4d087cfb92e7d453b93
+  summary: Primary sequence and antibody work identifies RSP16 and AY805324 and supports
+    incorporation into the spoke. The paper uses an older head/stalk partition. Its
+    proposed cochaperone assembly role was not established by successful ATPase/refolding
+    assays; current record adds only sequence identity, with later regional membership
+    evaluated separately.
+  support: supports
+- evidence_id: radial-current-radial-poghosyan
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/343123729_The_structure_and_symmetry_of_the_radial_spoke_protein_complex_in_Chlamydomonas_flagella
+  locator: 'Publisher-provided text via ResearchGate: Introduction lines138–259/cohorts162–169;
+    Results474–597; Discussion706–887; Figure5 legend916–923; Methods994–1228'
+  accessed_at: '2026-11-03T02:33:07.003Z'
+  snapshot_sha256: 87c6e5b3ccda7c8557787c8f6ba2bfeb7d00fb1b816d9783cafdd134b40ac352
+  summary: Introduction lists established regional cohorts, including neck RSP2/16/23
+    and stalk RSP3/5/7/8/11/12. Density assignments concern a head/neck model; RSP16
+    is inferred near the neck/stalk interface. This does not provide individual stalk-subunit
+    density assignment. Model constraints and regions remain distinct from atomic
+    or complete mechanistic proof.
+  support: supports
+- evidence_id: radial-current-radial-poghosyan-methods
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/343123729_The_structure_and_symmetry_of_the_radial_spoke_protein_complex_in_Chlamydomonas_flagella
+  locator: Image analysis lines1184–1256, especially masked head/part-neck1212–1214
+    and assigned RSP4/2/6/9/10/1/23 volumes1237–1246; biochemical methods1258–1415
+  accessed_at: '2026-11-03T02:37:59.490Z'
+  snapshot_sha256: 1adfd462df5abbfd5ca7082308460af1c3e881be16114d3855948d3562d7f84b
+  summary: Image-analysis methods segment individual modeled head/neck proteins. Head,
+    neck and stalk regional mass calculations are separate from those assignments.
+    This independently confirms the original stalk wording concern; techniques do
+    not establish every stalk density or universal stoichiometry.
+  support: supports
+- evidence_id: radial-current-radial-nicastro-reused
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+  locator: 'Earlier independent current-session read, retained original time: abstract/body112–136,
+    Figure1 legend40–43 and Figure5 legend52–53; snapshot also includes an unrelated
+    Jaspersen response'
+  accessed_at: '2026-11-03T01:57:22.231Z'
+  snapshot_sha256: 3e099904c6bfa7b06b1054425088f401660eb77bcab988c2ac489b0a3901d4b0
+  summary: Axonemal cryotomography supports radial-spoke structural context. Figure1
+    distinguishes sea-urchin panels from Chlamydomonas panels. This bounded reused
+    read is not a fresh full-paper audit or per-RSP identification.
+  support: supports
+- evidence_id: radial-current-record-radial-head
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_head.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa
+  summary: Entire current record read; No record delta.
+  support: supports
+- evidence_id: radial-current-prior-radial-head
+  kind: prior_review
+  reference: reviews/structured/20261021T080759Z-radial-spoke-head-audit/review.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: 83faaea2d93c7acaee6d5e27e0ffae07f1fc36813c41ff3a84d0b61bbe85ed3a
+  summary: Original immutable review read for input provenance, source scopes, assessments,
+    verdict and existing findings. Historical source accesses are not represented
+    as fresh reads.
+  support: supports
+- evidence_id: radial-current-record-radial-neck
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_neck.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327
+  summary: Entire current record read; Adds Q5MJ90 identity example and October23
+    history. Current unreviewed status, name, taxon and absent-native-gene-field caveat
+    are accurate.
+  support: supports
+- evidence_id: radial-current-prior-radial-neck
+  kind: prior_review
+  reference: reviews/structured/20261021T080759Z-radial-spoke-neck-audit/review.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: 86c1f3f9e49f5ee0a344dd23a2f2521763893f3a1c62a05062cc72542a9e7880
+  summary: Original immutable review read for input provenance, source scopes, assessments,
+    verdict and existing findings. Historical source accesses are not represented
+    as fresh reads.
+  support: supports
+- evidence_id: radial-current-record-radial-stalk
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86
+  summary: Entire current record read; Adds Q27YU3/PF25 identity example and October23
+    history. Native identity and RSP11 mapping are accurate. Existing stalk density-overstatement
+    remains.
+  support: supports
+- evidence_id: radial-current-prior-radial-stalk
+  kind: prior_review
+  reference: reviews/structured/20261021T080800Z-radial-spoke-stalk-audit/review.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-03T02:39:51.746428Z'
+  snapshot_sha256: 05532f530dce490ba483442b92849510b14c997f783746b06040022ac02ee4da
+  summary: Original immutable review read for input provenance, source scopes, assessments,
+    verdict and existing findings. Historical source accesses are not represented
+    as fresh reads.
+  support: supports
+- evidence_id: septin-septin-array-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032165,GO:0032160,GO:0032166,GO:0032169,GO:0005628
+  locator: All returned native term identifiers, active flags, definitions, definition
+    xrefs and parent-term child relations
+  accessed_at: '2026-11-03T02:32:06.758570Z'
+  summary: Exact current target and cited parent/sibling definitions are verified.
+    Parent-term child relations preserve is-a versus parthood. The prospore-ring definition
+    cites only PMID16151244; its localization qualification is assessed separately.
+  snapshot_sha256: 947323abacde26a61506f07ea74d05689c371605cccf01804989fbbfe3cf047c
+  support: supports
+- evidence_id: septin-septin-ring-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032169,GO:0005940,GO:0032172,GO:0032168,GO:0032170,GO:0032177,GO:0032165
+  locator: All returned native term identifiers, active flags, definitions, definition
+    xrefs and parent-term child relations
+  accessed_at: '2026-11-03T02:32:07.218121Z'
+  summary: Exact current target and cited parent/sibling definitions are verified.
+    Parent-term child relations preserve is-a versus parthood. The prospore-ring definition
+    cites only PMID16151244; its localization qualification is assessed separately.
+  snapshot_sha256: 65a837d7a496399f53acd6d0e5733d4922cbc16f5196f385ca211d04bd7a07ed
+  support: supports
+- evidence_id: septin-septin-pseudohyphal-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032170,GO:0005940,GO:0032172,GO:0032168
+  locator: All returned native term identifiers, active flags, definitions, definition
+    xrefs and parent-term child relations
+  accessed_at: '2026-11-03T02:32:07.218196Z'
+  summary: Exact current target and cited parent/sibling definitions are verified.
+    Parent-term child relations preserve is-a versus parthood. The prospore-ring definition
+    cites only PMID16151244; its localization qualification is assessed separately.
+  snapshot_sha256: 3f924f9134a02cc5e72a0236ea06ae621c1480af51ea51954aeefb41d06a6dea
+  support: supports
+- evidence_id: septin-septin-cap-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032159,GO:0032156,GO:0005856,GO:0032171,GO:0032164,GO:0005940,GO:0032173
+  locator: All returned native term identifiers, active flags, definitions, definition
+    xrefs and parent-term child relations
+  accessed_at: '2026-11-03T02:32:07.617829Z'
+  summary: Exact current target and cited parent/sibling definitions are verified.
+    Parent-term child relations preserve is-a versus parthood. The prospore-ring definition
+    cites only PMID16151244; its localization qualification is assessed separately.
+  snapshot_sha256: 275dd117678f386e9a4eb8976b318781e06e14f1989259474ad5ea0d21bbea3f
+  support: supports
+- evidence_id: septin-septin-family-cached
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: Native accession/name/type, hierarchy and family description; reread cached
+    bytes in this pass; original network access time retained
+  accessed_at: '2026-11-03T01:54:20.570567Z'
+  summary: 'Reused independently inspected response: IPR016491 is the generic Septin
+    family. Family grounding does not assert a complete localized cohort, copy number
+    or individual-paralog essentiality.'
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+  support: supports
+- evidence_id: septin-septin-catalogue-cached
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Entire public organism/dataset catalogue; reread cached bytes in this pass;
+    original network access time retained
+  accessed_at: '2026-11-03T01:54:20.056965Z'
+  summary: Reused complete official catalogue has 20 organisms and 28 datasets, all
+    bacterial or archaeal. No Candida or Saccharomyces dataset is present. Downstream
+    organism-specific searches are not applicable; this is not negative evidence about
+    septins.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  support: supports
+- evidence_id: septin-septin-douglas-cached
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/?pdf=render
+  locator: Secondary review PMC1214204 sec14 and sec17, including the three distinct
+    Candida localizations; cached genuine body reread, original retrieval timestamp
+    retained
+  accessed_at: '2026-11-03T00:45:07.048036Z'
+  summary: Secondary synthesis distinguishes sporulation rings, sheets/bars and peripheral
+    staining from bud-neck septation. It distinguishes Candida apical caps from basal
+    bands and internal rings; sterol-domain coincidence is review-level synthesis,
+    not proof of causal recruitment or each named protein colocalizing.
+  snapshot_sha256: 1f416e43bc154bdee2274b49bcb018582fbe2663eca2f62668d543e369bc9e1e
+  support: supports
+- evidence_id: septin-septin-tachikawa
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2150859/fullTextXML
+  locator: JATS Introduction, Results sections on Gip1/Spr28/Glc7 localization and
+    Don1, relevant captions, Discussion on septin organization; methods context
+  accessed_at: '2026-11-03T02:32:42.186808Z'
+  summary: Primary experiments compare Gip1, Spr28 and Glc7 localization in S. cerevisiae
+    sporulation. Gip1 three-dimensional imaging supports parallel sheets appearing
+    as bars; Don1 leading-edge rings are distinct. Membrane growth persists in gip1
+    mutants despite septin misorganization. Early septin-ring chronology is attributed
+    to earlier work.
+  snapshot_sha256: f15d65a734c0bb2a02dd5f2b31eed6f557164bc648994906c2072e5a9802ecfa
+  support: supports
+- evidence_id: septin-septin-fares-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2120726/fullTextXML
+  locator: JATS abstract only; the XML otherwise supplies scanned-article material
+    rather than a readable Results body
+  accessed_at: '2026-11-03T02:32:43.068020Z'
+  summary: Abstract reports developmentally regulated Spr3, membrane-associated septin
+    staining and background-dependent, partially redundant sporulation phenotypes.
+    No unread body detail or figure is used.
+  snapshot_sha256: 41b760ee6d54e90a18227e3da1bb4a2ef85780b982627a37c026c26617441efb
+  support: context_only
+- evidence_id: septin-septin-warenda-browser
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/
+  locator: Browser-opened article Results and relevant figure legends, especially
+    localization, Cdc3/Cdc12 ring comparisons and Discussion; receipt hash is browser
+    JSON, not publisher bytes
+  accessed_at: '2026-11-03T02:33:25Z'
+  summary: BWP17-derived Cdc10-GFP cells show pseudohyphal neck rings and faint early
+    germ-tube-tip localization. Cdc3/Cdc12 comparisons concern neck/internal rings;
+    early Cdc12 localization was inconclusive. Morphogenesis phenotypes do not themselves
+    localize each septin to an apical cap.
+  snapshot_sha256: a62368ccbe1fd9437f33bff1a11c594ba000f4297d74d2da1dcc8e996e278c1f
+  support: supports
+- evidence_id: septin-septin-zhang-browser
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2805285/
+  locator: Browser-opened complete main body and figure legends, lines75-112; receipt
+    contains four route results, only the Zhang article is supporting evidence; hash
+    is browser JSON
+  accessed_at: '2026-11-03T02:33:03Z'
+  summary: The study compares Cdc11-GFP variants in BWP17-derived cells, quantifying
+    in-focus large-budded neck rings and photobleaching. These experiments do not
+    establish apical-cap membership.
+  snapshot_sha256: c2a75f93898a84e5c433390db4af1a053326fc9e63cad9c8f716c5367ddab2d8
+  support: supports
+- evidence_id: septin-septin-sudbery-partial
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.2001.02459.x
+  locator: 'Browser extraction lines63-106: abstract, Introduction and first Results
+    subsection; later sections timed out; hash is browser JSON'
+  accessed_at: '2026-11-03T02:34:15Z'
+  summary: Inspected text distinguishes pseudohyphal neck rings from later internal
+    hyphal rings using anti-S.cerevisiae-Cdc11 immunostaining in Candida strain3153a.
+    Later Results/Discussion were not obtained, so this partial reading cannot exclude
+    Cdc11 apical localization elsewhere in the paper.
+  snapshot_sha256: 90840964159b0f019ddb63c67bc364e0db231f14e775c74863d100604cc0a03f
+  support: partial
+- evidence_id: septin-septin-douglas-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1128/EC.4.9.1503-1512.2005&format=json&resultType=core
+  locator: Exact DOI result author/title/year/publication types
+  accessed_at: '2026-11-03T02:32:06.759425Z'
+  summary: Native metadata identifies Douglas et al.2005, PMID16151244, as a review,
+    distinct from primary experimental evidence.
+  snapshot_sha256: 4237e9967b6dd7017a6ae6bb69002cb751bc337d98cc2f5d166b86d53bf2fc96
+  support: supports
+- evidence_id: septin-septin-sporulation-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:8636217%20OR%20EXT_ID:11724821&format=json&resultType=core
+  locator: Both exact PMID/DOI/title/author/abstract records
+  accessed_at: '2026-11-03T02:32:06.761795Z'
+  summary: Verifies Fares1996 PMID8636217 DOI10.1083/jcb.132.3.399 and Tachikawa2001
+    PMID11724821 DOI10.1083/jcb.200107008.
+  snapshot_sha256: 472b953d1522d2ad0cf6893bde384a8021d831badd8fb870c0bd32248dbd3d90
+  support: supports
+- evidence_id: septin-septin-candida-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:11454197%20OR%20EXT_ID:12181342%20OR%20EXT_ID:19915075&format=json&resultType=core
+  locator: All three exact PMID/title/author/DOI/abstract records
+  accessed_at: '2026-11-03T02:32:07.390792Z'
+  summary: Verifies Sudbery2001 PMID11454197, Warenda/Konopka2002 PMID12181342 and
+    Zhang/Konopka2010 PMID19915075. Metadata itself does not establish uninspected
+    experiment details.
+  snapshot_sha256: 58f7e5efb372dd4a4ada8d719d795922ba1fd216d101f7fe33dbf9adb0a9d244
+  support: supports
+- evidence_id: septin-septin-uniprot-P39826
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39826.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and subcellular-location
+    annotation/evidence
+  accessed_at: '2026-11-03T02:32:07.807404Z'
+  summary: P39826 is reviewed CDC3, Cell division control protein 3, taxon5476. Its
+    location annotation is bud neck; identity does not prove apical membership.
+  snapshot_sha256: ac4f6745c7571bd9e13e467e99da8c6259ede11f57ccd5d717e7bfeac0889105
+  support: supports
+- evidence_id: septin-septin-uniprot-P39827
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39827.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and subcellular-location
+    annotation/evidence
+  accessed_at: '2026-11-03T02:32:07.828886Z'
+  summary: P39827 is reviewed CDC10, Cell division control protein 10, taxon237561.
+    Identity matches; Cdc10 apical localization is separately supported by the primary
+    study.
+  snapshot_sha256: 1b9fb055d9d16e47c579af78abbb28d8c56c53dd39242823f2b80fa4ebd0b8b8
+  support: supports
+- evidence_id: septin-septin-uniprot-G1UB61
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/G1UB61.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and subcellular-location
+    annotation/evidence
+  accessed_at: '2026-11-03T02:32:08.047702Z'
+  summary: G1UB61 is reviewed Septin CDC11, taxon237561. The three copied PMIDs are
+    experimental evidence for its Bud neck location. An additional current PMID does
+    not erase or invalidate those citations; no apical-cap membership is supplied
+    by the copied location.
+  snapshot_sha256: 00f243890073e302712b1abc6f56bfdb1863e67cbffdc8f88f08c7106f47dc46
+  support: supports
+- evidence_id: septin-septin-uniprot-G1UAV6
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/G1UAV6.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and subcellular-location
+    annotation/evidence
+  accessed_at: '2026-11-03T02:32:08.211766Z'
+  summary: G1UAV6 is unreviewed CDC12 named Septin, taxon5476. Native identity/status/taxon
+    agree; inferred Bud neck annotation is not cap-localization evidence.
+  snapshot_sha256: d357e09bc4e6be875daf162506a82bded9c3c3841df4503ef95b922b686468c5
+  support: supports
+- evidence_id: septin-septin-symbol-CDC3
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC3%29+AND+%28taxonomy_id%3A5476%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact reviewed gene/taxon query, result cardinality and matching gene token
+  accessed_at: '2026-11-03T02:32:08.302595Z'
+  summary: Exact native query yields one reviewed accession matching the declared
+    gene and taxon. This supports uniqueness wording, not cap membership.
+  snapshot_sha256: 2933d6c25a08557faf83a6f761af0b9c0d4824267d6af58fd6bb5be1cdeb0d7e
+  support: context_only
+- evidence_id: septin-septin-symbol-CDC10
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC10%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact reviewed gene/taxon query, result cardinality and matching gene token
+  accessed_at: '2026-11-03T02:32:08.413233Z'
+  summary: Exact native query yields one reviewed accession matching the declared
+    gene and taxon. This supports uniqueness wording, not cap membership.
+  snapshot_sha256: 4e524652f7113a0bd4b0e4d155565e1d268233edcd9ebd7bc99f9d9a21688fd4
+  support: context_only
+- evidence_id: septin-septin-symbol-CDC11
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC11%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact reviewed gene/taxon query, result cardinality and matching gene token
+  accessed_at: '2026-11-03T02:32:08.414231Z'
+  summary: Exact native query yields one reviewed accession matching the declared
+    gene and taxon. This supports uniqueness wording, not cap membership.
+  snapshot_sha256: 328c0897f75665901b0423de221ad249edfa7d289b5d7aa5bee698679415d702
+  support: context_only
+- evidence_id: septin-septin-taxon-5476
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5476
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-11-03T02:32:07.702894Z'
+  summary: NCBITaxon5476 is Candida albicans, species rank.
+  snapshot_sha256: fdba428d1e1abf55ec666204b7320749e8f16f798a55b771ec0f5af932e6ab71
+  support: supports
+- evidence_id: septin-septin-taxon-237561
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/237561
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-11-03T02:32:07.799850Z'
+  summary: NCBITaxon237561 is Candida albicans SC5314, strain rank.
+  snapshot_sha256: f765b6328d34d78e346056219fcc740dab702129cfae06f469c8c32e0b3f25d6
+  support: supports
+- evidence_id: septin-septin-record-0
+  kind: record_content
+  reference: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  locator: Entire current maintained YAML
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Current record is byte-identical to its original frozen target input.
+  snapshot_sha256: 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa
+  support: context_only
+- evidence_id: septin-septin-prior-0
+  kind: prior_review
+  reference: reviews/structured/20261021T080757Z-prospore-septin-filament-array-audit/review.yaml
+  locator: 'Complete immutable original review: inputs, checks, source scopes, assessments,
+    findings/actions and limitations'
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Prior scientific observation and exact finding lineage; old commands and
+    access timestamps remain historical.
+  snapshot_sha256: 8244fb6bc8326b744e39b12b380b6a0463b3b8458bf04b766098fceaeb580fb1
+  support: context_only
+- evidence_id: septin-septin-record-1
+  kind: record_content
+  reference: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  locator: Entire current maintained YAML
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Current record is byte-identical to its original frozen target input.
+  snapshot_sha256: 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5
+  support: context_only
+- evidence_id: septin-septin-prior-1
+  kind: prior_review
+  reference: reviews/structured/20261021T080757Z-prospore-septin-ring-audit/review.yaml
+  locator: 'Complete immutable original review: inputs, checks, source scopes, assessments,
+    findings/actions and limitations'
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Prior scientific observation and exact finding lineage; old commands and
+    access timestamps remain historical.
+  snapshot_sha256: e7dd5ddf71e5afe01318a210572819c786c1e4e25f527d39e4ba405df3e694d4
+  support: context_only
+- evidence_id: septin-septin-record-2
+  kind: record_content
+  reference: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  locator: Entire current maintained YAML
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Current record is byte-identical to its original frozen target input.
+  snapshot_sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+  support: context_only
+- evidence_id: septin-septin-prior-2
+  kind: prior_review
+  reference: reviews/structured/20261021T080758Z-pseudohyphal-septin-ring-audit/review.yaml
+  locator: 'Complete immutable original review: inputs, checks, source scopes, assessments,
+    findings/actions and limitations'
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Prior scientific observation and exact finding lineage; old commands and
+    access timestamps remain historical.
+  snapshot_sha256: 62cd4dc2a116d60ab76d3c0e3ed5535c62e60677c77ade5ea242d2d0ee449cd1
+  support: context_only
+- evidence_id: septin-septin-record-3
+  kind: record_content
+  reference: data/structures/cytoskeleton/septin_cap.yaml
+  locator: Entire current maintained YAML
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Current record is byte-identical to its original frozen target input.
+  snapshot_sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+  support: context_only
+- evidence_id: septin-septin-prior-3
+  kind: prior_review
+  reference: reviews/structured/20261021T080800Z-septin-cap-audit/review.yaml
+  locator: 'Complete immutable original review: inputs, checks, source scopes, assessments,
+    findings/actions and limitations'
+  accessed_at: '2026-11-03T02:38:11.727274Z'
+  summary: Prior scientific observation and exact finding lineage; old commands and
+    access timestamps remain historical.
+  snapshot_sha256: 3f706829db6ce60b7c2acd28e032e8fe97ac19d0f1efb9f77220230fa9043451
+  support: context_only
+- evidence_id: check-qc
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/qc.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T02:36:57.785832Z'
+  support: supports
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  snapshot_sha256: d6281edf295904960829fc3f23fc6bf3bb82a1d4eecef8d7371c80f257054c5b
+- evidence_id: check-labels
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/labels.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T02:32:10.709921Z'
+  support: supports
+  summary: 4232 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  snapshot_sha256: d8200b370ec584f49336f01ed9035fbe21f0aa191ad0257a9a421938e9f17ecb
+- evidence_id: check-trait-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/trait-links.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T02:31:43.002863Z'
+  support: supports
+  summary: Native TraitMech link check passed.
+  snapshot_sha256: 8b336cdefbbd3daf6da8787990efdbe346c95e2c8361d50b7eb68a18f2d5a44a
+- evidence_id: check-vendored
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/vendored.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T02:31:40.936643Z'
+  support: supports
+  summary: Pinned governed files match; native vendored check passed.
+  snapshot_sha256: b1f169d103aaefa930745468bcca171e5867b9cc49e4e74311e458097e3252a6
+- evidence_id: check-curies
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/curies.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T02:32:10.920199Z'
+  support: supports
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  snapshot_sha256: fb3be251020aac118f6df680372ae7aaa32c2a1dd3366648cde95494f19d9dd2
+- evidence_id: focused
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/focused-results.json
+  locator: All twenty actual target schema/strict command outputs
+  accessed_at: '2026-11-03T02:55:59Z'
+  support: supports
+  summary: Ten schema and ten strict commands returned exit zero.
+  snapshot_sha256: 5143c7d7a654953552b232864b122dc162da3445835b57b3600624c83e66b9c5
+- evidence_id: supplemental-pmid
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2347/pmid-chunks-receipt.json
+  locator: Complete native-report PMID set checked with unchanged resolver in batches
+    of at most fifty
+  accessed_at: '2026-11-03T02:32:50.206134Z'
+  support: supports
+  summary: 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers
+    remain unverified.
+  snapshot_sha256: 8827c161ffbe5460e4ffb7e9cfc5d9594007dc74547491f5be93cb168f6a0e99
+assessments:
+- assessment_id: plaque-peritrich-current
+  area: evidence
+  topic: Body-myoneme identity, morphology, composition and contraction
+  outcome: supported
+  summary: The current record denotes the connected cortical body system, distinct
+    from the stalk spasmoneme. Konior body immunofluorescence and Allen morphology
+    support longitudinal/peristomial organization and body-stalk continuity. Body
+    centrin/spasmin localization does not identify a complete isoform inventory, copy
+    number or Sfi1 constituent. Stalk immunogold percentages and ATP-independent extracted-stalk
+    mechanics are not generalized to body fibers. Katoh abstract supports graded body
+    shrinkage and contrasts live stalk behavior; regenerative calcium release and
+    Allen ER-calcium mechanisms remain explicit proposals. Campanella evidence remains
+    protargol morphology, without measured contraction or molecular inventory. Broad
+    GO and InterPro context is not exact identity grounding. No additional scientific
+    curation defect found.
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  evidence_ids:
+  - plaque-current-peritrich
+  - plaque-peritrich-agent-konior-pdf
+  - plaque-peritrich-agent-allen-pdf
+  - plaque-peritrich-agent-epmc
+  - plaque-peritrich-agent-go
+  - plaque-peritrich-agent-ipr050145
+  - plaque-peritrich-agent-taxon-vorticella
+  - plaque-peritrich-agent-taxon-campanella
+- assessment_id: plaque-peritrich-image
+  area: provenance
+  topic: CIL image identity and bounded interpretation
+  outcome: supported
+  summary: Fresh CIL preview bytes equal both the tracked image and recorded SHA-256.
+    The source and visually inspected cortical TEM support qualitative source-described
+    anti-centrin/gold labeling. The 512x512 preview has no calibrated scale bar and
+    supplies neither isoform identity nor quantitative native copy counts. Source
+    attribution, DOI, public-domain license and 1994 acquisition metadata agree. Current
+    source datePublished is 2012-01-23; the record contains only 2012.
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  evidence_ids:
+  - plaque-peritrich-agent-cil-item-curl
+  - plaque-peritrich-agent-cil-image
+  - plaque-current-peritrich
+- assessment_id: plaque-paa-current
+  area: evidence
+  topic: Current PAA identity, constituents and bounded mechanics
+  outcome: supported
+  summary: Exact GO identity denotes the post-anaphase array, with eMTOC as a constituent
+    rather than an equivalent structure. Alpha/beta tubulin classes, Ase1 localization
+    and retained arrays after Ase1 deletion are supported. Selective mto1-427 perturbation,
+    Myp2-dependent Mto1 recruitment and source-separated subassembly protein examples
+    support the assembly graph; localization or interaction assays do not prove purified
+    direct binding. PAA-dependent nuclear restraint is pre-septation and opposed to
+    mSPB forces. Effective ring stiffness is inferred under unchanged initial tension
+    and restricted recoil acquisition; universal cytokinesis or anchoring necessity
+    is not asserted. Reference-strain identifiers do not identify engineered experimental
+    stocks.
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - plaque-current-paa
+  - plaque-paa-agent-go
+  - plaque-paa-agent-go-ols
+  - plaque-paa-agent-bellingham2023-jats
+  - plaque-paa-agent-nuclear2023-jats
+  - plaque-paa-agent-samejima2010-jats
+  - plaque-paa-agent-taxon-4896
+  - plaque-paa-agent-taxon-284812
+  - plaque-paa-agent-IPR002452
+  - plaque-paa-agent-IPR002453
+  - plaque-paa-agent-IPR007145
+- assessment_id: plaque-paa-staleness-refresh
+  area: grounding
+  topic: Changed gene-symbol inventory on current main
+  outcome: supported
+  summary: Compared with the frozen original input, current PAA adds nda2 to alpha_tubulin.gene_symbols
+    and mto1/mto2 to emtoc.gene_symbols, plus dated curation events. The corresponding
+    reviewed protein examples already existed in the original. Native P04688, O94488
+    and Q9USP7 verify these exact symbols; P04689, P05219 and Q9HDY1 also retain their
+    recorded identities. P04688 and P05219 remain identity-only examples; native annotation
+    and primary work support the scoped Mto1/Mto2 eMTOC context. The stale input is
+    substantively refreshable within an immutable successor; no maintained-record
+    edits are required.
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - plaque-current-paa
+  - plaque-paa-agent-uniprot-P04688
+  - plaque-paa-agent-uniprot-O94488
+  - plaque-paa-agent-uniprot-Q9USP7
+  - plaque-paa-agent-uniprot-P04689
+  - plaque-paa-agent-uniprot-P05219
+  - plaque-paa-agent-uniprot-Q9HDY1
+  - plaque-paa-agent-samejima2010-jats
+  - plaque-paa-agent-bellingham2023-jats
+  - plaque-paa-agent-epmc
+- assessment_id: plaque-paa-persistent-finding
+  area: completeness
+  topic: Existing Nda3 discussion inconsistency
+  outcome: concern
+  summary: 'The original F1 persists: composition_limits says no Nda3 protein example
+    is supplied, while beta_tubulin.protein_examples contains reviewed P05219/nda3
+    with an identity-only caveat. Acknowledge the valid example while preserving the
+    lack of Nda3-specific PAA localization evidence. This is current wording, not
+    a dated historical source-access note.'
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - plaque-current-paa
+  - plaque-paa-agent-uniprot-P05219
+  - plaque-review-policy
+- assessment_id: plaque-paa-image
+  area: provenance
+  topic: PAA Figure 2 and license
+  outcome: supported
+  summary: Fresh Figure 2 bytes match the tracked file, recorded SHA-256 and PMC media
+    MD5. Visually inspected panels distinguish fluorescence, schematic and Ase1 deletion
+    comparisons. C has a 2-micrometre bar; other marked bars are 5 micrometres. The
+    caption preserves projection overlap and does not convert bars into universal
+    dimensions. JATS explicitly supplies CC BY 4.0.
+  target_ids:
+  - GO:1990295
+  evidence_ids:
+  - plaque-paa-agent-figure2
+  - plaque-paa-agent-bellingham2023-package
+  - plaque-paa-agent-bellingham2023-jats
+  - plaque-current-paa
+- assessment_id: plaque-rmtoc-current
+  area: evidence
+  topic: Hrs1-dependent rMTOC identity and mechanistic limits
+  outcome: supported
+  summary: The record denotes a transient amorphous matrix adjacent to but distinct
+    from the meiotic SPB and its output array. Primary tomography/immunogold supports
+    Hrs1-dependent geometry and gamma-tubulin enrichment; residual nonradial microtubules
+    after hrs1 deletion bound essentiality. Localization does not itself prove gamma-tubulin
+    is required for matrix assembly. Hrs1 bridging/scaffolding and exact force transmission
+    remain proposals. Stabilized nonphosphorylatable Hrs1 delays spindle formation
+    under stated temperature and checkpoint conditions rather than universally blocking
+    it. The supplement identifies engineered experimental stocks and preserves the
+    80/120-minute source discrepancy. UniProt validates Mcp6/Hrs1 and gamma-tubulin
+    identities; no exact Hrs1 InterPro grounding is justified. No additional scientific
+    curation defect found.
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  evidence_ids:
+  - plaque-current-rmtoc
+  - plaque-radial-mtoc-agent-go
+  - plaque-radial-mtoc-agent-funaya2012-jats
+  - plaque-radial-mtoc-agent-funaya2012-supp
+  - plaque-radial-mtoc-agent-epmc
+  - plaque-radial-mtoc-agent-uniprot-Q10336
+  - plaque-radial-mtoc-agent-uniprot-P25295
+  - plaque-radial-mtoc-agent-IPR002454
+  - plaque-radial-mtoc-agent-matches-gamma
+  - plaque-paa-agent-taxon-4896
+  - plaque-paa-agent-taxon-284812
+- assessment_id: plaque-rmtoc-image
+  area: provenance
+  topic: rMTOC Figure 3 media, scale and license
+  outcome: supported
+  summary: Fresh complete Figure 3 matches the tracked SHA-256 and native media MD5.
+    Visual inspection distinguishes serial-section immunogold TEM in A/D from models
+    in B/C/E. Yellow label locations, green microtubules and blue SPB are interpretive
+    overlays/model elements; 100-nm bars are image scales, not universal rMTOC dimensions.
+    Main JATS specifies CC BY 3.0. High-pressure freezing followed by substitution/resin
+    sectioning is not vitreous cryo-ET.
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  evidence_ids:
+  - plaque-radial-mtoc-agent-figure3
+  - plaque-radial-mtoc-agent-funaya2012-package
+  - plaque-radial-mtoc-agent-funaya2012-jats
+  - plaque-radial-mtoc-agent-funaya2012-supp
+  - plaque-current-rmtoc
+- assessment_id: radial-radial-head-identity
+  area: identity
+  topic: Exact region and topology
+  outcome: supported
+  summary: Exact active GO identity, protein-complex parent and spoke parthood are
+    supported. The NONMECHANISTIC graph preserves region-specific geometry and does
+    not assert binding, assembly order, direct stalk-to-doublet attachment or calibrated
+    force.
+  target_ids:
+  - GO:0001535
+  evidence_ids:
+  - radial-current-record-radial-head
+  - radial-current-radial-prep-go
+  - radial-current-radial-poghosyan
+  - radial-current-radial-nicastro-reused
+- assessment_id: radial-radial-head-composition
+  area: grounding
+  topic: Regional cohort and accession identities
+  outcome: supported
+  summary: Named cohort is consistent with the regional literature, while every sequence
+    example retains its native status/name/taxon and sequence-only scope. Aggregate
+    REVIEWED_LABEL_ONLY does not pretend a single subunit family grounds the complete
+    heterogeneous cohort. No record delta.
+  target_ids:
+  - GO:0001535
+  evidence_ids:
+  - radial-current-record-radial-head
+  - radial-current-radial-poghosyan
+  - radial-current-radial-prep-yang-html
+  - radial-current-radial-prep-rsp9-family
+  - radial-current-radial-prep-protein-Q27YU0
+  - radial-current-radial-prep-protein-Q01656
+  - radial-current-radial-prep-protein-Q01657
+  - radial-current-radial-prep-protein-Q27YU5
+  - radial-current-radial-prep-protein-Q27YU4
+  - radial-current-curry-agent-page-3967
+  - radial-current-curry-agent-page-3970
+  - radial-current-curry-agent-page-3971
+- assessment_id: radial-radial-head-scope
+  area: scope
+  topic: Experimental and evidence limits
+  outcome: supported
+  summary: Chlamydomonas species context is supported; reference accessions are not
+    equated with study strains. Regional assignments are nonexhaustive and can overlap
+    interfaces; proposed models do not establish complete copy numbers, universality
+    or every subunit function. No record images, physical dimensions or trait/pathway
+    relations require an additional target-specific check.
+  target_ids:
+  - GO:0001535
+  evidence_ids:
+  - radial-current-record-radial-head
+  - radial-current-radial-prep-taxon
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-prep-yang-html
+- assessment_id: radial-radial-head-adapter
+  area: completeness
+  topic: Structured-source applicability
+  outcome: supported
+  summary: Named RSP proteins trigger the native structured-source applicability check.
+    The inspected complete current iModulonDB catalogue has no Chlamydomonas dataset;
+    no organism-specific expression module can be assessed and this absence is not
+    negative biological evidence.
+  target_ids:
+  - GO:0001535
+  evidence_ids:
+  - radial-current-record-radial-head
+  - radial-current-radial-adapter-catalogue
+- assessment_id: radial-radial-neck-identity
+  area: identity
+  topic: Exact region and topology
+  outcome: supported
+  summary: Exact active GO identity, protein-complex parent and spoke parthood are
+    supported. The NONMECHANISTIC graph preserves region-specific geometry and does
+    not assert binding, assembly order, direct stalk-to-doublet attachment or calibrated
+    force.
+  target_ids:
+  - GO:0120343
+  evidence_ids:
+  - radial-current-record-radial-neck
+  - radial-current-radial-prep-go
+  - radial-current-radial-poghosyan
+  - radial-current-radial-nicastro-reused
+- assessment_id: radial-radial-neck-composition
+  area: grounding
+  topic: Regional cohort and accession identities
+  outcome: supported
+  summary: Named cohort is consistent with the regional literature, while every sequence
+    example retains its native status/name/taxon and sequence-only scope. Aggregate
+    REVIEWED_LABEL_ONLY does not pretend a single subunit family grounds the complete
+    heterogeneous cohort. Adds Q5MJ90 identity example and October23 history. Current
+    unreviewed status, name, taxon and absent-native-gene-field caveat are accurate.
+  target_ids:
+  - GO:0120343
+  evidence_ids:
+  - radial-current-record-radial-neck
+  - radial-current-radial-poghosyan
+  - radial-current-radial-prep-yang-html
+  - radial-current-radial-prep-rsp9-family
+  - radial-current-radial-prep-protein-Q6UBQ3
+  - radial-current-radial-new-protein-Q5MJ90
+  - radial-current-new-rsp16-ena
+  - radial-current-new-rsp16-primary
+- assessment_id: radial-radial-neck-scope
+  area: scope
+  topic: Experimental and evidence limits
+  outcome: supported
+  summary: Chlamydomonas species context is supported; reference accessions are not
+    equated with study strains. Regional assignments are nonexhaustive and can overlap
+    interfaces; proposed models do not establish complete copy numbers, universality
+    or every subunit function. No record images, physical dimensions or trait/pathway
+    relations require an additional target-specific check.
+  target_ids:
+  - GO:0120343
+  evidence_ids:
+  - radial-current-record-radial-neck
+  - radial-current-radial-prep-taxon
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-prep-yang-html
+- assessment_id: radial-radial-neck-adapter
+  area: completeness
+  topic: Structured-source applicability
+  outcome: supported
+  summary: Named RSP proteins trigger the native structured-source applicability check.
+    The inspected complete current iModulonDB catalogue has no Chlamydomonas dataset;
+    no organism-specific expression module can be assessed and this absence is not
+    negative biological evidence.
+  target_ids:
+  - GO:0120343
+  evidence_ids:
+  - radial-current-record-radial-neck
+  - radial-current-radial-adapter-catalogue
+- assessment_id: radial-radial-stalk-identity
+  area: identity
+  topic: Exact region and topology
+  outcome: supported
+  summary: Exact active GO identity, protein-complex parent and spoke parthood are
+    supported. The NONMECHANISTIC graph preserves region-specific geometry and does
+    not assert binding, assembly order, direct stalk-to-doublet attachment or calibrated
+    force.
+  target_ids:
+  - GO:0001536
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-radial-prep-go
+  - radial-current-radial-poghosyan
+  - radial-current-radial-nicastro-reused
+- assessment_id: radial-radial-stalk-composition
+  area: grounding
+  topic: Regional cohort and accession identities
+  outcome: supported
+  summary: Named cohort is consistent with the regional literature, while every sequence
+    example retains its native status/name/taxon and sequence-only scope. Aggregate
+    REVIEWED_LABEL_ONLY does not pretend a single subunit family grounds the complete
+    heterogeneous cohort. Adds Q27YU3/PF25 identity example and October23 history.
+    Native identity and RSP11 mapping are accurate. Existing stalk density-overstatement
+    remains.
+  target_ids:
+  - GO:0001536
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-radial-poghosyan
+  - radial-current-radial-prep-yang-html
+  - radial-current-radial-prep-rsp9-family
+  - radial-current-radial-prep-protein-P12759
+  - radial-current-radial-prep-protein-Q27YU7
+  - radial-current-radial-prep-protein-Q27YT9
+  - radial-current-radial-prep-protein-Q27YU6
+  - radial-current-radial-prep-protein-Q27YU2
+  - radial-current-radial-new-protein-Q27YU3
+  - radial-current-new-rsp11-ena
+- assessment_id: radial-radial-stalk-scope
+  area: scope
+  topic: Experimental and evidence limits
+  outcome: supported
+  summary: Chlamydomonas species context is supported; reference accessions are not
+    equated with study strains. Regional assignments are nonexhaustive and can overlap
+    interfaces; proposed models do not establish complete copy numbers, universality
+    or every subunit function. No record images, physical dimensions or trait/pathway
+    relations require an additional target-specific check.
+  target_ids:
+  - GO:0001536
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-radial-prep-taxon
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-prep-yang-html
+- assessment_id: radial-radial-stalk-adapter
+  area: completeness
+  topic: Structured-source applicability
+  outcome: supported
+  summary: Named RSP proteins trigger the native structured-source applicability check.
+    The inspected complete current iModulonDB catalogue has no Chlamydomonas dataset;
+    no organism-specific expression module can be assessed and this absence is not
+    negative biological evidence.
+  target_ids:
+  - GO:0001536
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-radial-adapter-catalogue
+- assessment_id: radial-radial-stalk-density
+  area: evidence
+  topic: Individual stalk-density assignment
+  outcome: concern
+  summary: 'Original F1 remains open on the changed current record: the discussion
+    converts head/neck density modeling into an individual stalk-density assignment
+    claim. Regional architecture and established stalk cohort remain supported.'
+  target_ids:
+  - GO:0001536
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-prior-radial-stalk
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-prep-yang-html
+- assessment_id: septin-septin-current-0
+  area: evidence
+  topic: prospore septin filament array current scientific assessment
+  outcome: concern
+  summary: Exact GO identity, parent and descriptive membrane-localized array topology
+    remain supported. Sheet/bar imaging is not a reconstruction of individual molecular
+    filaments, and no compulsory array function or universal paralog set is asserted.
+    Existing generic-family grounding gap remains minor/confirmed.
+  target_ids:
+  - GO:0032165
+  evidence_ids:
+  - septin-septin-array-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-sporulation-metadata
+  - septin-septin-record-0
+  - septin-septin-prior-0
+- assessment_id: septin-septin-current-1
+  area: evidence
+  topic: prospore septin ring current scientific assessment
+  outcome: concern
+  summary: 'Exact GO identity and septin-ring parent remain supported. The existing
+    minor family finding and minor localization qualification remain open: the cited
+    review and primary developmental sequence do not justify unqualified budding-like
+    division-plane geometry. Preserve the ring/array distinction.'
+  target_ids:
+  - GO:0032169
+  evidence_ids:
+  - septin-septin-ring-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-sporulation-metadata
+  - septin-septin-record-1
+  - septin-septin-prior-1
+- assessment_id: septin-septin-current-2
+  area: evidence
+  topic: pseudohyphal septin ring current scientific assessment
+  outcome: concern
+  summary: Exact GO identity and mother-cell/pseudohyphal-projection localization
+    are supported by ontology and Candida primary observations. No new taxonomic breadth,
+    kinetics or compulsory individual paralog claim is imported. Existing generic-family
+    grounding gap remains minor/confirmed.
+  target_ids:
+  - GO:0032170
+  evidence_ids:
+  - septin-septin-pseudohyphal-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-warenda-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-candida-metadata
+  - septin-septin-record-2
+  - septin-septin-prior-2
+- assessment_id: septin-septin-current-3
+  area: evidence
+  topic: septin cap current scientific assessment
+  outcome: concern
+  summary: Exact generic apical-cap identity, parentage/parthood, narrow Candida filamentous
+    scope and descriptive topology remain supported. All four accessions, taxa, status
+    labels and reviewed-symbol uniqueness match native sources. Generic family grounding
+    remains minor/confirmed. Cap-specific CDC3/CDC11/CDC12 membership remains major/provisional;
+    Cdc10 has direct apical evidence. Sudbery was only partially read, and absence
+    is not claimed.
+  target_ids:
+  - GO:0032159
+  evidence_ids:
+  - septin-septin-cap-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-warenda-browser
+  - septin-septin-zhang-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-candida-metadata
+  - septin-septin-uniprot-P39826
+  - septin-septin-uniprot-P39827
+  - septin-septin-uniprot-G1UB61
+  - septin-septin-uniprot-G1UAV6
+  - septin-septin-symbol-CDC3
+  - septin-septin-symbol-CDC10
+  - septin-septin-symbol-CDC11
+  - septin-septin-taxon-5476
+  - septin-septin-taxon-237561
+  - septin-septin-record-3
+  - septin-septin-prior-3
+- assessment_id: septin-septin-adapter-coverage
+  area: scope
+  topic: Source coverage before transcriptomic applicability
+  outcome: supported
+  summary: The reused official catalogue contains no Candida or Saccharomyces dataset.
+    Septin cap names four genes/accessions and requires this coverage basis; no named-gene/accession
+    omission is inferred for the three generic-family-only records. CLI OS failure
+    is historical canary evidence and was not rerun. No absence-of-septin inference
+    follows.
+  target_ids:
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - GO:0032159
+  evidence_ids:
+  - septin-septin-catalogue-cached
+- assessment_id: current-input-comparison
+  area: provenance
+  topic: Complete frozen-input comparison and bounded refresh
+  outcome: supported
+  summary: 3 of ten original target hashes differ from current main. The changed content
+    is substantively reassessed in the target-specific assessments; original observations
+    remain historical and unchanged. All current target and used context bytes are
+    frozen.
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  - GO:1990295
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:0032159
+  evidence_ids:
+  - current-record-0
+  - original-review-0
+  - current-record-1
+  - original-review-1
+  - current-record-2
+  - original-review-2
+  - current-record-3
+  - original-review-3
+  - current-record-4
+  - original-review-4
+  - current-record-5
+  - original-review-5
+  - current-record-6
+  - original-review-6
+  - current-record-7
+  - original-review-7
+  - current-record-8
+  - original-review-8
+  - current-record-9
+  - original-review-9
+findings:
+- finding_id: plaque-F1
+  issue_key: post-anaphase-array-nda3-example-discussion
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Composition discussion says Nda3 is absent although P05219 is present
+  description: The current OPEN composition_limits rationale still says no Nda3 protein
+    example is supplied, but beta_tubulin.protein_examples supplies reviewed P05219/nda3
+    and explicitly limits it to identity rather than PAA-specific localization. This
+    contradiction predates the new nda2/mto1/mto2 gene-symbol delta and remains unresolved
+    on current main. Update only the current rationale in a separate curation PR,
+    retaining the valid example and its localization limitation.
+  target_ids:
+  - GO:1990295
+  field_paths:
+  - discussions[discussion_id=composition_limits].rationale
+  - components[component_id=beta_tubulin].protein_examples
+  evidence_ids:
+  - plaque-current-paa
+  - plaque-paa-agent-uniprot-P05219
+  - plaque-review-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:Evidence Rules
+  native_severity: minor
+  normalization_reason: Bounded stale inventory wording; the component identity, source
+    limitation and array interpretation remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080756Z-post-anaphase-microtubule-array-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2521
+- finding_id: radial-F1
+  issue_key: radial-spoke-stalk-individual-density-overstatement
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The open discussion overstates individual stalk-density assignment
+  description: The discussion credits Poghosyan2020 with assigning individual RSP
+    densities to the stalk. Its Introduction summarizes the established stalk cohort,
+    while its individual density assignments and segmentation methods concern head/neck
+    proteins. Replace that claim with regional architectural refinement and established
+    stalk composition; retain the supported stalk genes and distinguish the source's
+    proposed model from direct subunit mapping.
+  target_ids:
+  - GO:0001536
+  field_paths:
+  - discussions[discussion_id=resolve_radial_spoke_stalk_proteins].rationale
+  - components[component_id=radial_spoke_stalk_proteins].evidence
+  - functions[function_id=radial_spoke_stalk_outer_doublet_linkage].evidence
+  evidence_ids:
+  - radial-current-record-radial-stalk
+  - radial-current-prior-radial-stalk
+  - radial-current-radial-poghosyan
+  - radial-current-radial-poghosyan-methods
+  - radial-current-radial-prep-yang-html
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:Evidence Rules
+  native_severity: minor
+  normalization_reason: Bounded overstatement of what the cited study assigned; regional
+    identity and the established protein cohort remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080800Z-radial-spoke-stalk-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2522
+- finding_id: septin-S1
+  issue_key: prospore-septin-filament-array-generic-family-withheld
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion leaves the generic Septin family ungrounded
+  description: The generic septin-proteins component remains REVIEWED_LABEL_ONLY because
+    no accession was assigned for the complete localized cohort. IPR016491 already
+    identifies the named Septin family. Reconcile grounding, status and rationale
+    without inferring an exhaustive localized paralog set or associated-protein inventory.
+  target_ids:
+  - GO:0032165
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions
+  evidence_ids:
+  - septin-septin-array-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-sporulation-metadata
+  - septin-septin-record-0
+  - septin-septin-prior-0
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: A bounded, resolvable generic-family mapping gap; no change
+    to exact structure identity is implied.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080757Z-prospore-septin-filament-array-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2499
+- finding_id: septin-S2
+  issue_key: prospore-septin-ring-generic-family-withheld
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion leaves the generic Septin family ungrounded
+  description: The generic septin-proteins component remains REVIEWED_LABEL_ONLY because
+    no accession was assigned for the complete localized cohort. IPR016491 already
+    identifies the named Septin family. Reconcile grounding, status and rationale
+    without inferring an exhaustive localized paralog set or associated-protein inventory.
+  target_ids:
+  - GO:0032169
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions
+  evidence_ids:
+  - septin-septin-ring-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-sporulation-metadata
+  - septin-septin-record-1
+  - septin-septin-prior-1
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: A bounded, resolvable generic-family mapping gap; no change
+    to exact structure identity is implied.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080757Z-prospore-septin-ring-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2499
+- finding_id: septin-S3
+  issue_key: prospore-septin-ring-cytokinesis-source-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: GO-derived cytokinesis-site wording leaves its source conflict unexplained
+  description: The record faithfully repeats GO0032169, but that term cites Douglas2005
+    alone. Section14 says sporulation has no equivalent bud neck or septation site
+    and describes early rings followed by sheets/bars and spore-peripheral staining.
+    The record repeats a tight division-plane cytokinesis site without preserving
+    this qualification. Document the ontology-versus-literature scope difference and
+    constrain the topology wording; retain the exact GO identity and distinguish the
+    separate array.
+  target_ids:
+  - GO:0032169
+  field_paths:
+  - definition
+  - components[component_id=septin_proteins].role
+  - causal_graphs[graph_id=prospore_septin_ring_topology]
+  - discussions[discussion_id=prospore_septin_ring_boundary]
+  evidence_ids:
+  - septin-septin-ring-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-tachikawa
+  - septin-septin-fares-abstract
+  - septin-septin-sporulation-metadata
+  - septin-septin-record-1
+  - septin-septin-prior-1
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:Evidence Rules
+  native_severity: minor
+  normalization_reason: The ontology mapping is exact and the ring-shaped state exists.
+    The defect is an unqualified imported localization interpretation, not demonstrated
+    wrong structure identity.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080757Z-prospore-septin-ring-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2524
+- finding_id: septin-S4
+  issue_key: pseudohyphal-septin-ring-generic-family-withheld
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion leaves the generic Septin family ungrounded
+  description: The generic septin-proteins component remains REVIEWED_LABEL_ONLY because
+    no accession was assigned for the complete localized cohort. IPR016491 already
+    identifies the named Septin family. Reconcile grounding, status and rationale
+    without inferring an exhaustive localized paralog set or associated-protein inventory.
+  target_ids:
+  - GO:0032170
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions
+  evidence_ids:
+  - septin-septin-pseudohyphal-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-warenda-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-candida-metadata
+  - septin-septin-record-2
+  - septin-septin-prior-2
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: A bounded, resolvable generic-family mapping gap; no change
+    to exact structure identity is implied.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080758Z-pseudohyphal-septin-ring-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2499
+- finding_id: septin-S5
+  issue_key: septin-cap-generic-family-withheld
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion leaves the generic Septin family ungrounded
+  description: The generic septin-proteins component remains REVIEWED_LABEL_ONLY because
+    no accession was assigned for the complete localized cohort. IPR016491 already
+    identifies the named Septin family. Reconcile grounding, status and rationale
+    without inferring an exhaustive localized paralog set or associated-protein inventory.
+  target_ids:
+  - GO:0032159
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions
+  evidence_ids:
+  - septin-septin-cap-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-warenda-browser
+  - septin-septin-zhang-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-candida-metadata
+  - septin-septin-uniprot-P39826
+  - septin-septin-uniprot-P39827
+  - septin-septin-uniprot-G1UB61
+  - septin-septin-uniprot-G1UAV6
+  - septin-septin-symbol-CDC3
+  - septin-septin-symbol-CDC10
+  - septin-septin-symbol-CDC11
+  - septin-septin-taxon-5476
+  - septin-septin-taxon-237561
+  - septin-septin-record-3
+  - septin-septin-prior-3
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: A bounded, resolvable generic-family mapping gap; no change
+    to exact structure identity is implied.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080800Z-septin-cap-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2499
+- finding_id: septin-S6
+  issue_key: septin-cap-protein-examples-membership-evidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: provisional
+  title: Three named septin examples lack established apical-cap membership support
+  description: The component declares CDC3, CDC10, CDC11 and CDC12 as cap-forming
+    septin examples. Accessions and their honest identity/bud-neck notes are correct,
+    but independently inspected cap localization is explicit for Cdc10 only. Cdc3/Cdc12
+    observations concern rings, with early Cdc12 localization inconclusive. Sudbery
+    abstract, Introduction and first Results subsection were obtained, but later body
+    sections timed out. Qualify or substantiate CDC3/CDC11/CDC12 cap membership; this
+    provisional evidence gap is not proof of biological absence.
+  target_ids:
+  - GO:0032159
+  field_paths:
+  - components[component_id=septin_proteins].gene_symbols
+  - components[component_id=septin_proteins].protein_examples
+  evidence_ids:
+  - septin-septin-cap-go
+  - septin-septin-family-cached
+  - septin-septin-douglas-cached
+  - septin-septin-warenda-browser
+  - septin-septin-zhang-browser
+  - septin-septin-sudbery-partial
+  - septin-septin-candida-metadata
+  - septin-septin-uniprot-P39826
+  - septin-septin-uniprot-P39827
+  - septin-septin-uniprot-G1UB61
+  - septin-septin-uniprot-G1UAV6
+  - septin-septin-symbol-CDC3
+  - septin-septin-symbol-CDC10
+  - septin-septin-symbol-CDC11
+  - septin-septin-taxon-5476
+  - septin-septin-taxon-237561
+  - septin-septin-record-3
+  - septin-septin-prior-3
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: major
+  normalization_reason: Structure-specific protein membership requires independent
+    source support beyond correct identity and another septin localization. The scope
+    gap affects substantive component examples; uncertainty about inaccessible primary
+    text is retained.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261021T080800Z-septin-cap-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2525
+actions:
+- action_id: plaque-A1
+  finding_ids:
+  - plaque-F1
+  target_ids:
+  - GO:1990295
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained scientific record
+  description: In a future maintained-record curation, replace the no-Nda3-example
+    sentence with wording that acknowledges P05219 as an identity-only example and
+    states that no Nda3-specific PAA localization assay is established here.
+  acceptance_checks:
+  - Check the revised rationale against beta_tubulin.protein_examples and native P05219
+    identity.
+  - Preserve identity-only scope; do not remove the valid example or invent direct
+    PAA localization.
+  - Run required native schema, strict, label, history and generated-page checks after
+    maintained-record curation.
+  generator: Maintained structure YAML; just render derives pages.
+- action_id: radial-radial-stalk-A1
+  finding_ids:
+  - radial-F1
+  target_ids:
+  - GO:0001536
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    role: maintained scientific record
+  description: In a separate scientific curation PR, replace individual stalk-density
+    assignment wording with regional architecture and established composition, preserving
+    supported named proteins and the source-specific head/neck model distinction.
+  acceptance_checks:
+  - Recheck Poghosyan Introduction, Discussion and Image analysis methods; no individual
+    stalk-subunit density claim remains.
+  - Preserve exact GO identity, region topology, verified accession examples and unresolved
+    whole-cohort scope.
+  - Use the guarded scientific record writer, curation event/history and native validation
+    in that separate PR.
+- action_id: septin-SA1
+  finding_ids:
+  - septin-S1
+  target_ids:
+  - GO:0032165
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic Septin component
+    to verified IPR016491 and reconcile its status and localized-cohort rationale.
+  acceptance_checks:
+  - Retain separate evidence for localized membership and associated proteins.
+  - Do not add a universal paralog set, stoichiometry or individual essentiality.
+  - Use the guarded writer and required curation/history, schema, strict, label and
+    generated-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: septin-SA2
+  finding_ids:
+  - septin-S2
+  target_ids:
+  - GO:0032169
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic Septin component
+    to verified IPR016491 and reconcile its status and localized-cohort rationale.
+  acceptance_checks:
+  - Retain separate evidence for localized membership and associated proteins.
+  - Do not add a universal paralog set, stoichiometry or individual essentiality.
+  - Use the guarded writer and required curation/history, schema, strict, label and
+    generated-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: septin-SA3
+  finding_ids:
+  - septin-S3
+  target_ids:
+  - GO:0032169
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, add an explicit source-boundary
+    discussion distinguishing GO wording from the observed sporulation sequence and
+    constrain the descriptive localization prose accordingly.
+  acceptance_checks:
+  - Preserve exact GO0032169 identity and distinguish array GO0032165 and bud-neck
+    split rings GO0032177.
+  - Do not infer a contractile ring, ordinary septation plane, fixed kinetics or identity
+    with the Don1 leading-edge ring.
+  - Keep GO wording honestly attributed and attach primary/review support at the narrowest
+    applicable claim; run native curation gates.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: septin-SA4
+  finding_ids:
+  - septin-S4
+  target_ids:
+  - GO:0032170
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic Septin component
+    to verified IPR016491 and reconcile its status and localized-cohort rationale.
+  acceptance_checks:
+  - Retain separate evidence for localized membership and associated proteins.
+  - Do not add a universal paralog set, stoichiometry or individual essentiality.
+  - Use the guarded writer and required curation/history, schema, strict, label and
+    generated-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: septin-SA5
+  finding_ids:
+  - septin-S5
+  target_ids:
+  - GO:0032159
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic Septin component
+    to verified IPR016491 and reconcile its status and localized-cohort rationale.
+  acceptance_checks:
+  - Retain separate evidence for localized membership and associated proteins.
+  - Do not add a universal paralog set, stoichiometry or individual essentiality.
+  - Use the guarded writer and required curation/history, schema, strict, label and
+    generated-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: septin-SA6
+  finding_ids:
+  - septin-S6
+  target_ids:
+  - GO:0032159
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, obtain cap-specific evidence
+    for CDC3/CDC11/CDC12 or restrict the declared examples to the supported cap cohort
+    while retaining accurate accession identity information in an appropriately bounded
+    context.
+  acceptance_checks:
+  - Retain the verified Cdc10 example and distinguish apical cap from neck/internal
+    rings and basal band.
+  - Do not relabel correct taxa or reviewed status, infer absence, or treat general
+    septin membership as apical localization.
+  - Resolve the remaining Sudbery body-access limit before claiming it excludes a
+    cap localization; preserve identity-only evidence notes.
+  - Use guarded curation/history and run native schema, strict, UniProt verification,
+    labels and rendered-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+limitations:
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Allen 1973:
+  selected claim-relevant body passages, Methods, Functional Speculations and Figures
+  1/19 were independently re-read, not the complete bibliography or all figure pixels.
+  Konior main text/captions and Figure 3 were read; other Konior figures were not
+  visually reanalyzed.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Katoh 1994
+  and Shi 2004 remain bounded by native Europe PMC identities and abstracts; no fresh
+  full-text access success or failed full-text attempt is claimed.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: The 2023 PAA
+  stiffness paper and 2010 Results/Discussion were read; the 2023 nuclear paper was
+  re-read in the claim-relevant Results sections and Discussion. No new claim of entire
+  nuclear-paper Methods inspection is made. PAA supplementary strains, movies, raw
+  data and equation graphics were not reanalyzed.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Five older
+  PAA protein-example PMIDs were verified as native UniProt annotation provenance
+  and Europe PMC identities/abstracts, not fully audited primary papers.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Funaya main
+  paper and claim-relevant supplementary tables/methods were read; movies, raw tomograms
+  and supplementary image pixels were not independently reanalyzed. Only the tracked
+  Figure 3 pixels were inspected.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Fresh Q10336
+  integrated InterPro request returned HTTP 204 accompanied by curl exit 92 (invalid
+  content-length header); no usable response body was retained. This is an access
+  limitation, not a successful proof of family absence. Fresh reviewed UniProt Q10336
+  supplies no integrated InterPro cross-reference; primary NudE orthology is tentative.
+  Label-only Hrs1 grounding remains justified within this bound.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: CIL current
+  JSON-LD datePublished differs from the original evidence summary by one day (2012-01-23
+  versus 2012-01-22). The record uses only the year, and the historical fetched bytes
+  are not available for a current replay; this is not asserted as a proven historical
+  review defect.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: No neighboring
+  scientific record was used. Three tracked image files were directly relied on and
+  must be included in successor source.inputs. No corpus-wide scientific completeness
+  or exhaustive ontology-family absence claim is made.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: Native original-bundle
+  validation passed for all three and historical frozen input hashes match their source
+  revision. Corpus QC and other global gates are root-owned; this independent agent
+  did not rerun them.'
+- 'Peritrich body myonemes, PAA and radial MTOC independent subreview: iModulonDB
+  native catalogue evidence and runner availability are supplied by the parent review;
+  this report independently identifies the historical check/rationale omission but
+  does not claim a fresh catalogue fetch.'
+- 'Radial spoke head, neck and stalk independent subreview: No raw cryo-EM data, atomic
+  models, microscopy pixels or supplements were independently reanalyzed. Poghosyan
+  primary text was browser-extracted; hashes bind JSON tool receipts, not publisher
+  PDF bytes.'
+- 'Radial spoke head, neck and stalk independent subreview: Curry original pages3967,3970,3971
+  were visually inspected; other downloaded pages were not inspected and are not evidence
+  for further claims.'
+- 'Radial spoke head, neck and stalk independent subreview: Nicastro is a bounded
+  same-session prior read retained at its actual01:57:22.231Z access time; it was
+  not freshly fetched or exhaustively reaudited for this PR.'
+- 'Radial spoke head, neck and stalk independent subreview: UniProt/ENA confirm identifiers
+  and source-specific labels, not all localization/essentiality; regional membership
+  was evaluated through primary literature separately.'
+- 'Radial spoke head, neck and stalk independent subreview: The RSP16 primary paper
+  uses older head/stalk nomenclature and proposes a cochaperone mechanism without
+  successful ATPase/refolding confirmation; no such mechanism was added to the record.'
+- 'Radial spoke head, neck and stalk independent subreview: The bounded InterPro phrase
+  queries and one RSP9 family inspection do not prove universal absence of suitable
+  families.'
+- 'Radial spoke head, neck and stalk independent subreview: Root owns native schema/QC/label/history/trait/identifier
+  validation and adapter runner availability receipts; this report does not claim
+  those commands were run by this subagent. No genuine native check failure was observed
+  in this read-only source audit.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Douglas
+  cached native body was reread at sec14/sec17; original network retrieval time 00:45:07Z
+  is retained. The fresh PMC HTML route was a browser challenge, not a new literature
+  response.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: InterPro
+  and iModulonDB are reused independently inspected responses from PR2346 at 01:54:20Z;
+  original times/hashes retained. No adapter CLI execution repeated the known canary
+  OS access failure.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Tachikawa
+  primary prose and relevant legends were read; microscopy pixels, raw data and movies
+  were not reanalyzed. Sheet geometry directly concerns Gip1 imaging with septin colocalization,
+  not single septin filament reconstruction.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Fares
+  XML yields abstract/scanned material; Results figures were not independently read.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Warenda
+  and Zhang article bodies were inspected through browser extraction; corresponding
+  hashes identify saved browser JSON, not publisher/PDF bytes or a native HTTP-status
+  receipt.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Sudbery
+  browser extraction includes abstract, Introduction and first Results subsection
+  only. Later body access timed out. Its partial text is not evidence that apical
+  Cdc11 localization is absent from the entire paper.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Primary-body
+  routes that yielded HTTP200 challenge pages or Europe PMC HTTP500 are accessibility
+  limitations, not successful source verification. Successful alternate/cached routes
+  are identified separately.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Native
+  old-bundle validation passed for four reviews and all four Markdown files match
+  native rendering; full corpus QC and final CI are root-owned gates, not claimed
+  here.'
+- 'Prospore array/ring, pseudohyphal ring and septin cap independent subreview: Scientific
+  records remain unchanged. Generic family grounding does not resolve complete cohort/accessory
+  composition, individual-paralog necessity or universal occurrence.'
+- Historical observations remain immutable; their old checks are not represented as
+  current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure.
+  Catalogue-based coverage is assessed directly; fresh and reused responses retain
+  actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include
+  909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks
+  independently resolve the 909 PMIDs.
+- Scientific findings and native status are unchanged; proposed curation belongs in
+  separate record PRs.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head
+  CI and merge-group CI occur after saving this immutable observation and are not
+  represented here as already completed.
+notes:
+- All ten original YAML/Markdown pairs are preserved unchanged. Current main was merged
+  normally and pushed without force.
+- One explicit issue-bearing ten-record cohort follows the repository persistence
+  policy. Clean records are assessed within that cohort, without fabricated findings.
+- 'Bundle defects #2523 (three stale reviews) and #2526 (adapter coverage) are addressed
+  here. Scientific curation remains in #2499 (four findings consolidated), #2521,
+  #2522, #2524 and #2525; existing validator #2514 remains open.'
+- Source commit c2cf0c2cd4d35257ca4be4821656318f8c8c0513 is retained by tag review-base/pr2347-current-record-followup-20261103.
+- CLAUDE.md is an alias of AGENTS.md in the current tree; the canonical regular AGENTS.md
+  bytes are frozen. The native input reader correctly rejects a symlink alias; no
+  target or review validation failure resulted.
+- 'An initial uncommitted draft failed native validation because four search-evidence
+  entries lacked search_scope. Issue #2527 tracks the correction: exact bounds reconstructed
+  from retained URL/date/status/body receipts and independently confirmed by the search
+  reviewer. No new search or exhaustive absence claim is invented.'
+- 'Issue #2528: inherited limitations are explicitly attributed to their independent
+  subreview. Fresh and reused catalogue access and subset validation statements are
+  not conflated with complete cohort coverage.'
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080756Z-peritrich-body-myoneme-system-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080756Z-post-anaphase-microtubule-array-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080757Z-prospore-septin-filament-array-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080757Z-prospore-septin-ring-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080758Z-pseudohyphal-septin-ring-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080758Z-radial-microtubule-organizing-center-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080759Z-radial-spoke-head-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080759Z-radial-spoke-neck-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080800Z-radial-spoke-stalk-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261021T080800Z-septin-cap-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2347
+- https://github.com/CultureBotAI/CellStructureMech/issues/2499
+- https://github.com/CultureBotAI/CellStructureMech/issues/2514
+- https://github.com/CultureBotAI/CellStructureMech/issues/2521
+- https://github.com/CultureBotAI/CellStructureMech/issues/2522
+- https://github.com/CultureBotAI/CellStructureMech/issues/2523
+- https://github.com/CultureBotAI/CellStructureMech/issues/2524
+- https://github.com/CultureBotAI/CellStructureMech/issues/2525
+- https://github.com/CultureBotAI/CellStructureMech/issues/2526
+- https://github.com/CultureBotAI/CellStructureMech/issues/2527
+- https://github.com/CultureBotAI/CellStructureMech/issues/2528

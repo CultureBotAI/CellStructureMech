@@ -27,6 +27,10 @@ from new_history_record import (  # noqa: E402
     main,
     session_id,
 )
+from validate_history import (  # noqa: E402
+    check_structure_history_coverage,
+    resolve_linkml_validate,
+)
 
 
 def _kinds_from_schema() -> set[str]:
@@ -247,3 +251,58 @@ def test_the_placeholder_path_still_validates_everything_else(tmp_path):
               "--target-root", "data/structures/metabolism", "--summary", "s",
               "--history-root", str(tmp_path), "--timestamp", "nonsense"])
     assert list(tmp_path.rglob("*.yaml")) == []
+
+
+def test_resolve_linkml_validate_prefers_sibling_of_sys_executable(tmp_path, monkeypatch):
+    """Running `.venv/bin/python scripts/run_qc.py` without `.venv/bin` on PATH
+    must resolve `linkml-validate` beside `sys.executable` (#2407)."""
+    venv_bin = tmp_path / "venv" / "bin"
+    venv_bin.mkdir(parents=True)
+    fake_python = venv_bin / "python"
+    fake_python.write_text("#!/bin/sh\n", encoding="utf-8")
+    fake_linkml = venv_bin / "linkml-validate"
+    fake_linkml.write_text("#!/bin/sh\n", encoding="utf-8")
+
+    monkeypatch.setattr("validate_history.shutil.which", lambda _: None)
+    assert resolve_linkml_validate(fake_python) == str(fake_linkml)
+
+    missing_sibling_python = tmp_path / "other" / "python"
+    missing_sibling_python.parent.mkdir(parents=True)
+    assert resolve_linkml_validate(missing_sibling_python) == "linkml-validate"
+
+
+def test_committed_corpus_has_one_to_one_structure_history_coverage():
+    """Every structure record in `data/structures/` has at least one history
+    record under `history/records/<slug>/` and vice versa (#2410)."""
+    assert check_structure_history_coverage() == []
+
+
+def test_check_structure_history_coverage_flags_missing_and_orphaned_records(tmp_path):
+    """Missing history directories, orphaned history directories, and mismatched
+    target.path values are all reported (#2410)."""
+    structures_root = tmp_path / "data" / "structures"
+    history_root = tmp_path / "history"
+    cat_dir = structures_root / "cytoskeleton"
+    cat_dir.mkdir(parents=True)
+    (cat_dir / "alpha.yaml").write_text("identifier: GO:0000001\n", encoding="utf-8")
+    (cat_dir / "beta.yaml").write_text("identifier: GO:0000002\n", encoding="utf-8")
+
+    # alpha has valid history; beta is missing history; gamma is an orphaned history slug.
+    main([
+        "--kind", "record", "--slug", "alpha",
+        "--target-root", "data/structures/cytoskeleton",
+        "--summary", "s", "--details", "d",
+        "--history-root", str(history_root), "--timestamp", "2026-08-05T12:00:00Z",
+    ])
+    main([
+        "--kind", "record", "--slug", "gamma",
+        "--target-root", "data/structures/cytoskeleton",
+        "--summary", "s", "--details", "d",
+        "--history-root", str(history_root), "--timestamp", "2026-08-05T12:00:00Z",
+    ])
+
+    errors = check_structure_history_coverage(structures_root, history_root)
+    assert any("beta.yaml: structure record has no history record" in e for e in errors)
+    assert any("history/records/gamma: orphaned history directory" in e for e in errors)
+    assert any("target.path 'data/structures/cytoskeleton/gamma.yaml' does not match" in e for e in errors)
+

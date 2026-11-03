@@ -37,6 +37,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 synonyms:
 - synonym_text: cellulosomal complex
   synonym_type: EXACT_SYNONYM
@@ -177,6 +183,23 @@ components:
       notes: UniProtKB unreviewed (TrEMBL) entry P71143 for gene sdbA in Acetivibrio
         thermocellus. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q06853
+    protein_label: Cell surface glycoprotein 2
+    gene_symbol: Cthe_3079
+    taxon_id: NCBITaxon:203119
+    taxon_label: Acetivibrio thermocellus ATCC 27405
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene orf2p, which UniProt lists
+      under the primary name Cthe_3079, in Acetivibrio thermocellus ATCC 27405, a
+      taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06853
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06853, the single reviewed entry
+        for gene orf2p in Acetivibrio thermocellus ATCC 27405. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

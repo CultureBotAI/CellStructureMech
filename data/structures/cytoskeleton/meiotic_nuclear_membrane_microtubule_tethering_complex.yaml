@@ -93,7 +93,7 @@ components:
         Structural role comes from the cited experiment.
 - component_id: bqt1_bqt2_meiotic_connector
   label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
   - bqt1
@@ -291,6 +291,12 @@ curation_history:
   changes: Initial curation of meiotic nuclear membrane microtubule tethering complex
     (GO:0034993) in category CYTOSKELETON with verified GO hierarchy, components,
     UniProtKB protein examples, causal mechanism graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2420: Updated components#bqt1_bqt2_meiotic_connector from component_type
+    PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751

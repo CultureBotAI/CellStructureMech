@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+  slug: proton_transporting_two_sector_atpase_complex_catalytic_domain
+session:
+  id: 2026-10-24T060000Z-claude-code-0af1bf
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added central-stalk-to-hexamer conformational cycling edge in catalytic domain
+    causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added directed edge from central_rotational_stalk
+    to catalytic_hexamer_head.'
