@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1022,
- "corpus_updated": "2026-11-01 00:05:33 UTC",
- "corpus_digest": "60882fcd75ea",
+ "corpus_updated": "2026-11-03 05:55:11 UTC",
+ "corpus_digest": "d7c5fef867d9",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -37882,6 +37882,13 @@
      "action": "ADDRESSED_REVIEW",
      "changes": "Resolved #1748 by preserving the GO uncertainty qualifier on the cytokinesis-factor compartment interpretation in the split-ring function and topology graph descriptions.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked septin_proteins component into bud_neck_split_septin_rings_topology causal graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -37983,6 +37990,12 @@
        "label": "cellular bud neck",
        "node_type": "STRUCTURE",
        "grounding": "GO:0005935"
+      },
+      {
+       "node_id": "septin_proteins",
+       "label": "septin proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "septin_proteins"
       }
      ],
      "edges": [
@@ -38023,6 +38036,22 @@
         {
          "reference": "GO:0005935",
          "notes": "GO:0005935 identifies the cellular bud neck."
+        }
+       ]
+      },
+      {
+       "subject": "septin_proteins",
+       "predicate": "assemble into",
+       "object": "cellular_bud_neck_split_septin_rings",
+       "description": "Septin GTPase subunits form the two cytokinetic rings produced when the bud-neck septin collar splits.",
+       "evidence": [
+        {
+         "reference": "GO:0032177",
+         "notes": "GO:0032177 defines the cellular bud neck split septin rings as two septin rings formed from the bud-neck septin collar."
+        },
+        {
+         "reference": "GO:0032161",
+         "notes": "GO:0032161 defines cleavage-apparatus septin structures as septin- and septin-associated-protein structures localized to the cleavage plane."
         }
        ]
       }
@@ -57755,6 +57784,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-11-03T05:55:11Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked alpha_beta_tubulins component into budding_yeast_spindle_microtubule_architecture causal graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -57945,6 +57981,12 @@
        "label": "mitotic spindle",
        "node_type": "STRUCTURE",
        "grounding": "GO:0072686"
+      },
+      {
+       "node_id": "alpha_beta_tubulins",
+       "label": "alpha- and beta-tubulins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "alpha_beta_tubulins"
       }
      ],
      "edges": [
@@ -57993,6 +58035,26 @@
         {
          "reference": "DOI:10.1083/jcb.129.6.1601",
          "notes": "Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive kinetochore microtubules and interpolar microtubules."
+        }
+       ]
+      },
+      {
+       "subject": "alpha_beta_tubulins",
+       "predicate": "polymerize into",
+       "object": "spindle_microtubule",
+       "description": "Eukaryotic alpha- and beta-tubulin subunits polymerize into the spindle microtubules of the mitotic spindle.",
+       "evidence": [
+        {
+         "reference": "GO:0005874",
+         "notes": "GO:0005874 defines microtubules as eukaryotic hollow tubes made from polymeric tubulin protofilaments."
+        },
+        {
+         "reference": "GO:0005876",
+         "notes": "GO:0005876 defines spindle microtubules as microtubules that are part of a mitotic or meiotic spindle."
+        },
+        {
+         "reference": "DOI:10.1126/science.277.5325.574",
+         "notes": "Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in living Saccharomyces cerevisiae cells."
         }
        ]
       }
@@ -115026,6 +115088,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked cation_transporters component into acidic_polyphosphate_cation_store causal graph.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -115271,6 +115340,12 @@
        "label": "acidocalcisome",
        "node_type": "ORGANELLE",
        "grounding": "GO:0020022"
+      },
+      {
+       "node_id": "cation_transporters",
+       "label": "acidocalcisome cation transporters",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cation_transporters"
       }
      ],
      "edges": [
@@ -115331,6 +115406,18 @@
         {
          "reference": "DOI:10.1038/nrmicro1097",
          "notes": "Docampo et al. 2005 describe acidity and polyphosphate-rich ion storage as defining acidocalcisome properties."
+        }
+       ]
+      },
+      {
+       "subject": "cation_transporters",
+       "predicate": "transport cations into",
+       "object": "acidocalcisome",
+       "description": "Acidocalcisome membrane calcium and divalent-cation transporters move cations into the polyphosphate-rich organelle lumen.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/MMBR.00042-23",
+         "notes": "Docampo 2024 review cation transport systems of acidocalcisome membranes."
         }
        ]
       }
@@ -116000,6 +116087,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added sourced GP40 cargo and membrane, species-scoped examples, adhesion and membrane-supply functions, a physical fusion mechanism, and explicit grounding and pharmacology limits.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked gp40_adhesive_glycoprotein component and prey_adhesion process into extrusome_membrane_donation causal graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -116090,7 +116184,7 @@
      "description": "Ultrastructural membrane-donation mechanism in Actinophrys sol.",
      "graph_kind": "FUNCTION",
      "scope_status": "MECHANISTIC",
-     "scope_notes": "Restricted to observed membrane fusion and enclosure; molecular fusion machinery and upstream calcium signaling are not specified.",
+     "scope_notes": "Restricted to observed membrane fusion, enclosure, and GP40-mediated prey adhesion; molecular fusion machinery and upstream calcium signaling are not specified.",
      "nodes": [
       {
        "node_id": "extrusome_membrane",
@@ -116123,6 +116217,17 @@
       {
        "node_id": "prey_enclosure",
        "label": "prey enclosure",
+       "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "gp40_adhesive_glycoprotein",
+       "label": "GP40-type adhesive glycoprotein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "gp40_adhesive_glycoprotein"
+      },
+      {
+       "node_id": "prey_adhesion",
+       "label": "prey adhesion",
        "node_type": "BIOLOGICAL_PROCESS"
       }
      ],
@@ -116179,6 +116284,30 @@
        "evidence": [
         {
          "reference": "DOI:10.1002/cm.970020103"
+        }
+       ]
+      },
+      {
+       "subject": "gp40_adhesive_glycoprotein",
+       "predicate": "resides in",
+       "object": "extrusome",
+       "description": "Extrusomes store the adhesive glycoprotein GP40 prior to prey capture.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1078/1434-4610-00041",
+         "notes": "The abstract identifies extrusome-stored GP40 and reports prey adhesion to GP40-coated beads."
+        }
+       ]
+      },
+      {
+       "subject": "gp40_adhesive_glycoprotein",
+       "predicate": "mediates",
+       "object": "prey_adhesion",
+       "description": "GP40 adhesive glycoprotein supports prey attachment and ingestion during actinophryid feeding.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1078/1434-4610-00041",
+         "notes": "Purified GP40 supported bead adhesion and induced ingestion of coated beads."
         }
        ]
       }
@@ -116993,6 +117122,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked exported_dense_granule_effectors component and host_cell_effector_delivery process into dense_granule_cargo_pvm_permeability causal graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -117319,6 +117455,17 @@
        "node_id": "pvm_small_molecule_permeability",
        "label": "PVM small-molecule permeability",
        "node_type": "STATE"
+      },
+      {
+       "node_id": "exported_dense_granule_effectors",
+       "label": "exported dense granule effectors",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "exported_dense_granule_effectors"
+      },
+      {
+       "node_id": "host_cell_effector_delivery",
+       "label": "host cell effector delivery",
+       "node_type": "BIOLOGICAL_PROCESS"
       }
      ],
      "edges": [
@@ -117419,6 +117566,30 @@
         {
          "reference": "DOI:10.1016/j.chom.2015.04.003",
          "notes": "Gold et al. 2015 connected GRA17 and GRA23 to PVM conductance and small-molecule permeability."
+        }
+       ]
+      },
+      {
+       "subject": "dense_granule_exocytosis",
+       "predicate": "delivers",
+       "object": "exported_dense_granule_effectors",
+       "description": "Dense granules secrete exported effector cargo such as GRA16 into the parasitophorous vacuole.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.chom.2013.03.002",
+         "notes": "Bougdour et al. 2013 identified GRA16 as an exported dense-granule protein that reaches the host nucleus."
+        }
+       ]
+      },
+      {
+       "subject": "exported_dense_granule_effectors",
+       "predicate": "mediate",
+       "object": "host_cell_effector_delivery",
+       "description": "Exported dense-granule effectors cross the parasitophorous vacuole membrane to reach host-cell compartments and alter host gene expression.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.chom.2013.03.002",
+         "notes": "Bougdour et al. 2013 showed that the exported dense-granule protein GRA16 reaches the host nucleus and alters host gene expression."
         }
        ]
       }
@@ -123144,6 +123315,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2419: Typed causal-graph node csma_baseplate as STRUCTURE grounded to cellstructuremech:chlorosome_baseplate_antenna_complex in pigment_baseplate_energy_transfer.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked accessory_csm_proteins component into pigment_baseplate_energy_transfer causal graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -123498,6 +123676,12 @@
        "label": "photosynthesis",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0015979"
+      },
+      {
+       "node_id": "accessory_csm_proteins",
+       "label": "accessory chlorosome envelope proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "accessory_csm_proteins"
       }
      ],
      "edges": [
@@ -123574,6 +123758,18 @@
         {
          "reference": "DOI:10.1007/s11120-013-9869-3",
          "notes": "Orf and Blankenship 2013 place chlorosomes in the photosynthetic apparatus of green bacteria as antennae feeding reaction centers."
+        }
+       ]
+      },
+      {
+       "subject": "accessory_csm_proteins",
+       "predicate": "localize to",
+       "object": "lipid_monolayer",
+       "description": "Accessory Csm envelope proteins localize to the lipid-rich monolayer envelope surrounding the chlorosome pigment aggregate.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1007/s11120-013-9869-3",
+         "notes": "Orf and Blankenship 2013 review the Csm protein family in the chlorosome envelope."
         }
        ]
       }
@@ -140511,6 +140707,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization statement from the Lamarque-backed Plasmodium falciparum canonical example.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked food_vacuole_membrane component into hemoglobin_digestion_and_hemozoin_formation causal graph.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -140632,6 +140835,12 @@
        "node_id": "hemozoin",
        "label": "hemozoin",
        "node_type": "CHEMICAL"
+      },
+      {
+       "node_id": "food_vacuole_membrane",
+       "label": "food vacuole membrane",
+       "node_type": "STRUCTURE",
+       "component_ref": "food_vacuole_membrane"
       }
      ],
      "edges": [
@@ -140668,6 +140877,22 @@
         {
          "reference": "DOI:10.3390/pathogens13030182",
          "notes": "Wiser 2024 reviewed hemozoin formation inside the digestive vacuole."
+        }
+       ]
+      },
+      {
+       "subject": "food_vacuole_membrane",
+       "predicate": "bounds",
+       "object": "food_vacuole",
+       "description": "The food vacuole membrane encloses the acidic digestive vacuole lumen and separates it from the parasite cytosol.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.113.5.1033",
+         "notes": "Cowman et al. 1991 localized a Plasmodium falciparum P-glycoprotein homologue to the digestive vacuole."
+        },
+        {
+         "reference": "DOI:10.3390/pathogens13030182",
+         "notes": "Wiser 2024 reviewed the digestive vacuole as an acidic lysosome-like organelle of malaria parasites."
         }
        ]
       }
@@ -167608,6 +167833,13 @@
      "action": "ADDRESSED_REVIEW",
      "changes": "Retyped the PSII, cytochrome b6f, and PSI graph nodes from GENE_OR_PROTEIN to STRUCTURE.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked atp_synthase component into plasma_membrane_derived_thylakoid_membrane_topology causal graph.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -167854,6 +168086,13 @@
        "label": "photosynthetic electron transport chain",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0009767"
+      },
+      {
+       "node_id": "atp_synthase",
+       "label": "proton-transporting ATP synthase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0045259",
+       "component_ref": "atp_synthase"
       }
      ],
      "edges": [
@@ -167918,6 +168157,18 @@
         {
          "reference": "DOI:10.1146/annurev-cellbio-120823-022747",
          "notes": "Perez-Boerema et al. 2024 review thylakoid electron transport across PSII, cytochrome b6f and PSI."
+        }
+       ]
+      },
+      {
+       "subject": "thylakoid_membrane",
+       "predicate": "houses",
+       "object": "atp_synthase",
+       "description": "The plasma membrane-derived thylakoid membrane houses proton-transporting ATP synthase complexes alongside the photosynthetic electron-transport chain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-cellbio-120823-022747",
+         "notes": "Perez-Boerema et al. 2024 include ATP synthase among the thylakoid complexes that convert light energy into ATP and reducing power."
         }
        ]
       }
@@ -170319,6 +170570,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Addressed PR #356 review issues #357 and #358 by marking the aggregate polaroplast membrane component as reviewed-label-only and softening the final graph edge to a polaroplast-derived membrane contribution claim.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked anterior_lamellar_polaroplast and posterior_tubular_polaroplast components into polaroplast_membrane_transport causal graph.",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -170465,6 +170723,18 @@
        "node_id": "sporoplasm_membrane",
        "label": "sporoplasm membrane",
        "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "anterior_lamellar_polaroplast",
+       "label": "anterior lamellar polaroplast",
+       "node_type": "STRUCTURE",
+       "component_ref": "anterior_lamellar_polaroplast"
+      },
+      {
+       "node_id": "posterior_tubular_polaroplast",
+       "label": "posterior tubular polaroplast",
+       "node_type": "STRUCTURE",
+       "component_ref": "posterior_tubular_polaroplast"
       }
      ],
      "edges": [
@@ -170501,6 +170771,30 @@
         {
          "reference": "DOI:10.1128/mbio.02749-23",
          "notes": "Lv et al. 2024 linked transported polaroplast-derived membranes to formation of the sporoplasm membrane."
+        }
+       ]
+      },
+      {
+       "subject": "anterior_lamellar_polaroplast",
+       "predicate": "is part of",
+       "object": "polaroplast_membranes",
+       "description": "Densely packed lamellar membranes form the anterior sector of the polaroplast membrane system.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1007/978-3-030-93306-7_8",
+         "notes": "Han et al. 2022 reviewed the lamellar polaroplast as a tightly packed anterior membrane array in the spore."
+        }
+       ]
+      },
+      {
+       "subject": "posterior_tubular_polaroplast",
+       "predicate": "is part of",
+       "object": "polaroplast_membranes",
+       "description": "Vesicular and tubular membranes form the posterior sector of the polaroplast membrane system.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1007/978-3-030-93306-7_8",
+         "notes": "Han et al. 2022 reviewed flattened tubules and posterior polaroplast membranes as part of the microsporidian spore invasion apparatus."
         }
        ]
       }
@@ -171766,6 +172060,13 @@
      "action": "GROUNDED_COMPONENT_AND_ADDED_HAS_PART",
      "changes": "Grounded reservosome_membrane component to GO:0106126 and added has_part links to GO:0106124, GO:0106125, and GO:0106126 (#2490).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked reservosome_membrane component into endocytic_storage_and_proteolysis causal graph.",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -171937,6 +172238,13 @@
        "node_id": "cargo_proteolysis",
        "label": "reservosome cargo proteolysis",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "reservosome_membrane",
+       "label": "reservosome membrane",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0106126",
+       "component_ref": "reservosome_membrane"
       }
      ],
      "edges": [
@@ -171985,6 +172293,22 @@
         {
          "reference": "DOI:10.1002/pmic.200800730",
          "notes": "Sant'Anna et al. 2009 detected cruzipain and other lysosomal hydrolases in purified reservosomes and discussed protein degradation and regulation as a reservosome role."
+        }
+       ]
+      },
+      {
+       "subject": "reservosome_membrane",
+       "predicate": "bounds",
+       "object": "reservosome",
+       "description": "The reservosome membrane bounds the posterior endocytic organelle and separates its lumen from the Trypanosoma cruzi cytosol.",
+       "evidence": [
+        {
+         "reference": "GO:0106126",
+         "notes": "GO cellular-component term for the reservosome membrane."
+        },
+        {
+         "reference": "DOI:10.1017/S0031182004005797",
+         "notes": "Figueiredo et al. 2004 described reservosomes as large membrane-bound organelles in T. cruzi epimastigotes."
         }
        ]
       }
@@ -303024,6 +303348,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:09Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked spitzenkorper_actin_filaments component into spitzenkorper_vesicle_supply causal graph with source-backed actin-scaffold organization edge.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -303230,6 +303561,12 @@
        "node_id": "polarized_hyphal_growth",
        "label": "polarized hyphal growth",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "spitzenkorper_actin_filaments",
+       "label": "Spitzenkorper actin filaments",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spitzenkorper_actin_filaments"
       }
      ],
      "edges": [
@@ -303266,6 +303603,22 @@
         {
          "reference": "DOI:10.1016/j.mib.2014.04.003",
          "notes": "Riquelme and Sanchez-Leon 2014 reviewed Spitzenkorper organization of hyphal growth and morphogenesis."
+        }
+       ]
+      },
+      {
+       "subject": "spitzenkorper_actin_filaments",
+       "predicate": "organizes",
+       "object": "spitzenkorper",
+       "description": "Actin filaments in the Spitzenkorper core participate in polarized vesicle organization at the hyphal apex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.mib.2014.04.003",
+         "notes": "Riquelme and Sanchez-Leon 2014 reviewed the Spitzenkorper as a multicomponent structure that includes cytoskeletal elements."
+        },
+        {
+         "reference": "DOI:10.1038/s41467-020-16712-9",
+         "notes": "Zheng et al. 2020 assayed Spitzenkorper F-actin and its scaffold-dependent organization in Neurospora crassa."
         }
        ]
       }
@@ -331447,6 +331800,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked mrna_decay_protein_cohort component into yeast_p_body_assembly causal graph with source-backed P-body localization edge.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -331775,6 +332135,12 @@
        "label": "P-body",
        "node_type": "STRUCTURE",
        "grounding": "GO:0000932"
+      },
+      {
+       "node_id": "mrna_decay_protein_cohort",
+       "label": "mRNA decapping and 5-to-3 decay protein cohort",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mrna_decay_protein_cohort"
       }
      ],
      "edges": [
@@ -331839,6 +332205,22 @@
         {
          "reference": "GO:0033962",
          "notes": "GO:0033962 defines P-body assembly as the aggregation, arrangement and bonding of proteins and RNA molecules to form a cytoplasmic mRNA processing body."
+        }
+       ]
+      },
+      {
+       "subject": "mrna_decay_protein_cohort",
+       "predicate": "accumulates in",
+       "object": "p_body",
+       "description": "Yeast mRNA decapping and 5'-to-3' decay factors concentrate in cytoplasmic P-bodies alongside nontranslating mRNAs.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.1082320",
+         "notes": "Sheth and Parker 2003 localized Dcp1p, Dcp2p, Dhh1p, Pat1p, Lsm1p, and Xrn1p to discrete cytoplasmic processing bodies in Saccharomyces cerevisiae."
+        },
+        {
+         "reference": "DOI:10.1016/j.molcel.2007.02.011",
+         "notes": "Parker and Sheth 2007 reviewed the conserved core of mRNA decapping and 5'-to-3' decay proteins present in eukaryotic P-bodies."
         }
        ]
       }
@@ -361268,6 +361650,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked polar_tube_proteins component into polar_tube_eversion_and_cargo_delivery causal graph.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -361456,6 +361845,12 @@
        "node_id": "sporoplasm",
        "label": "sporoplasm",
        "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "polar_tube_proteins",
+       "label": "polar tube proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "polar_tube_proteins"
       }
      ],
      "edges": [
@@ -361488,6 +361883,22 @@
         {
          "reference": "DOI:10.1371/journal.pbio.3002533",
          "notes": "Sharma et al. 2024 imaged cargo-containing polar tubes during Vairimorpha necatrix germination."
+        }
+       ]
+      },
+      {
+       "subject": "polar_tube_proteins",
+       "predicate": "assemble into",
+       "object": "polar_filament",
+       "description": "Lineage-specific polar tube proteins build the compact polar filament in the dormant spore that everts into the polar tube during germination.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.ijpara.2005.04.003",
+         "notes": "Xu and Weiss 2005 reviewed PTP1, PTP2 and PTP3 as structural protein constituents of the microsporidian polar tube."
+        },
+        {
+         "reference": "DOI:10.1016/j.jprot.2022.104617",
+         "notes": "Lv et al. 2022 profiled the protein composition of Nosema bombycis compact polar filaments and everted polar tubes."
         }
        ]
       }
@@ -361545,6 +361956,13 @@
      "curator": "curate-causal-graphs-skill",
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-11-03T05:55:10Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Linked enp1 component into anchoring_disc_positions_polar_tube causal graph with source-backed anterior anchoring-disc localization edge.",
      "llm_assisted": true
     }
    ],
@@ -361676,6 +362094,12 @@
        "node_id": "anterior_spore_end",
        "label": "anterior spore end",
        "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "enp1",
+       "label": "EnP1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "enp1"
       }
      ],
      "edges": [
@@ -361728,6 +362152,18 @@
         {
          "reference": "GO:0160202",
          "notes": "GO:0160202 defines the polar tube anchoring disc as attaching the polar tube to the spore wall."
+        }
+       ]
+      },
+      {
+       "subject": "enp1",
+       "predicate": "localizes to",
+       "object": "anchoring_disc",
+       "description": "Spore-wall adherence protein EnP1 localizes to the polar sac/anchoring disk region at the anterior pole of Encephalitozoon spores.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/EC.00113-07",
+         "notes": "Southern et al. 2007 localized EnP1 to the endospore, exospore, and polar sac/anchoring disk region of Encephalitozoon spores."
         }
        ]
       }

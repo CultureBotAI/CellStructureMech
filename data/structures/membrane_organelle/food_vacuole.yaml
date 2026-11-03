@@ -32,6 +32,12 @@ curation_history:
     definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization
     statement from the Lamarque-backed Plasmodium falciparum canonical example.'
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked food_vacuole_membrane component into hemoglobin_digestion_and_hemozoin_formation
+    causal graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: digestive vacuole
   synonym_type: EXACT_SYNONYM
@@ -121,6 +127,10 @@ causal_graphs:
   - node_id: hemozoin
     label: hemozoin
     node_type: CHEMICAL
+  - node_id: food_vacuole_membrane
+    label: food vacuole membrane
+    node_type: STRUCTURE
+    component_ref: food_vacuole_membrane
   edges:
   - subject: food_vacuole
     predicate: digests
@@ -147,6 +157,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/pathogens13030182
       notes: Wiser 2024 reviewed hemozoin formation inside the digestive vacuole.
+  - subject: food_vacuole_membrane
+    predicate: bounds
+    object: food_vacuole
+    description: The food vacuole membrane encloses the acidic digestive vacuole lumen
+      and separates it from the parasite cytosol.
+    evidence:
+    - reference: DOI:10.1083/jcb.113.5.1033
+      notes: Cowman et al. 1991 localized a Plasmodium falciparum P-glycoprotein homologue
+        to the digestive vacuole.
+    - reference: DOI:10.3390/pathogens13030182
+      notes: Wiser 2024 reviewed the digestive vacuole as an acidic lysosome-like
+        organelle of malaria parasites.
 discussions:
 - discussion_id: ground_food_vacuole_enzymes_and_transporters
   prompt: Resolve exact component groundings for Plasmodium food vacuole proteases,

@@ -40,6 +40,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked mrna_decay_protein_cohort component into yeast_p_body_assembly causal
+    graph with source-backed P-body localization edge.
+  llm_assisted: true
 synonyms:
 - synonym_text: P body
   synonym_type: EXACT_SYNONYM
@@ -322,6 +328,10 @@ causal_graphs:
     label: P-body
     node_type: STRUCTURE
     grounding: GO:0000932
+  - node_id: mrna_decay_protein_cohort
+    label: mRNA decapping and 5-to-3 decay protein cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: mrna_decay_protein_cohort
   edges:
   - subject: nontranslating_mrna_cargo
     predicate: promotes
@@ -370,6 +380,18 @@ causal_graphs:
       notes: GO:0033962 defines P-body assembly as the aggregation, arrangement and
         bonding of proteins and RNA molecules to form a cytoplasmic mRNA processing
         body.
+  - subject: mrna_decay_protein_cohort
+    predicate: accumulates in
+    object: p_body
+    description: Yeast mRNA decapping and 5'-to-3' decay factors concentrate in cytoplasmic
+      P-bodies alongside nontranslating mRNAs.
+    evidence:
+    - reference: DOI:10.1126/science.1082320
+      notes: Sheth and Parker 2003 localized Dcp1p, Dcp2p, Dhh1p, Pat1p, Lsm1p, and
+        Xrn1p to discrete cytoplasmic processing bodies in Saccharomyces cerevisiae.
+    - reference: DOI:10.1016/j.molcel.2007.02.011
+      notes: Parker and Sheth 2007 reviewed the conserved core of mRNA decapping and
+        5'-to-3' decay proteins present in eukaryotic P-bodies.
 discussions:
 - discussion_id: resolve_p_body_component_groundings
   prompt: Resolve exact source-neutral groundings and boundaries for P-body RNA cargo,
