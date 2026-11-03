@@ -21,6 +21,12 @@ curation_history:
     Rhodococcus jostii RHA1 and P. putida canonical examples, protocatechuate 3,4-dioxygenase
     activity, and GO/PubMed/DOI evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'pcagh_intradiol_cleavage' with
+    3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: PcaGH complex
   synonym_type: NARROW_SYNONYM
@@ -156,3 +162,55 @@ evidence:
     putida pcaG-pcaH cloning paper cited by UniProtKB P00436 and P00437.
 - reference: DOI:10.1128/jb.175.19.6194-6202.1993
   notes: DOI for Frazee et al. 1993, as reported by UniProtKB.
+causal_graphs:
+- graph_id: pcagh_intradiol_cleavage
+  title: PcaGH Protocatechuate 3,4-Dioxygenase Active-Site Assembly and Catalysis
+  description: Assembly of PcaG alpha and PcaH beta subunits to form the interfacial
+    non-heme ferric iron active site for intradiol ring cleavage.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pcag_alpha
+    label: Protocatechuate 3,4-dioxygenase, alpha subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR012786
+    component_ref: pcag_alpha
+  - node_id: pcah_beta
+    label: Protocatechuate 3,4-dioxygenase, beta subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR012785
+    component_ref: pcah_beta
+  - node_id: protocatechuate_3_4_dioxygenase_activity
+    label: protocatechuate 3,4-dioxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0018578
+  edges:
+  - subject: pcag_alpha
+    predicate: forms interfacial active site with
+    object: pcah_beta
+    description: The PcaG alpha subunit pairs with the iron-coordinating PcaH beta
+      subunit to form the non-heme Fe(III) catalytic cleft at the alpha-beta interface.
+    evidence:
+    - reference: GO:7770085
+      notes: GO:7770085 defines the protocatechuate 3,4-dioxygenase complex as composed
+        of PcaG alpha and PcaH beta subunits.
+    - reference: PMID:8407791
+      notes: Frazee et al. 1993 characterized the pcaG and pcaH genes encoding the
+        alpha and beta subunits of protocatechuate 3,4-dioxygenase.
+    - reference: PMID:25558786
+      notes: Yamanashi et al. 2015 reconstituted protocatechuate 3,4-dioxygenase activity
+        from PcaHG.
+  - subject: pcah_beta
+    predicate: catalyzes
+    object: protocatechuate_3_4_dioxygenase_activity
+    description: The assembled PcaGH complex catalyzes intradiol dioxygenation of
+      3,4-dihydroxybenzoate (protocatechuate) to 3-carboxy-cis,cis-muconate.
+    evidence:
+    - reference: GO:7770085
+      notes: GO:7770085 is capable of GO:0018578 protocatechuate 3,4-dioxygenase activity.
+    - reference: GO:0018578
+      notes: GO:0018578 is the molecular-function term for protocatechuate 3,4-dioxygenase
+        activity.
+    - reference: PMID:25558786
+      notes: Yamanashi et al. 2015 demonstrated conversion of protocatechuate by purified
+        PcaHG.

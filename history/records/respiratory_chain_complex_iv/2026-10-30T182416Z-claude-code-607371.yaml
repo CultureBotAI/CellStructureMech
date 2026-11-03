@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  slug: respiratory_chain_complex_iv
+session:
+  id: 2026-10-30T182416Z-claude-code-607371
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Add subunit III and bacterial aa3 subunit IV nodes and complex IV subunit contribution
+    edges
+  details: Added GENE_OR_PROTEIN nodes for subunit_iii (component_ref cytochrome_c_oxidase_subunit_iii)
+    and subunit_iv (component_ref bacterial_aa3_subunit_iv) and connected subunits I-IV to
+    complex_iv via contributes to edges backed by GO:0045277, PDB:1QLE, and PMID:10559205.

@@ -34,6 +34,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): gyrase_subunit_a
+    (InterPro:IPR005743), gyrase_subunit_b (InterPro:IPR011557).'
+  llm_assisted: true
 parent_structures:
 - GO:0009330
 components:
@@ -174,10 +181,12 @@ causal_graphs:
     label: DNA gyrase subunit A
     node_type: GENE_OR_PROTEIN
     component_ref: gyrase_subunit_a
+    grounding: InterPro:IPR005743
   - node_id: gyrase_subunit_b
     label: DNA gyrase subunit B
     node_type: GENE_OR_PROTEIN
     component_ref: gyrase_subunit_b
+    grounding: InterPro:IPR011557
   - node_id: dna_segment
     label: DNA segment
     node_type: GENETIC_ELEMENT

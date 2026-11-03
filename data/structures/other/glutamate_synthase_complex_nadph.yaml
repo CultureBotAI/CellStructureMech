@@ -26,6 +26,12 @@ curation_history:
     instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
     unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'gltbd_glutamate_synthase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: Glutamate synthase [NADPH] complex
   synonym_type: EXACT_SYNONYM
@@ -212,3 +218,51 @@ complex_compositions:
     source_name: 4Fe-4S iron-sulfur cluster
     stoichiometry: '1'
     source_interactor_id: EBI-22228055
+causal_graphs:
+- graph_id: gltbd_glutamate_synthase_function
+  title: NADPH-Dependent Glutamate Synthase Subunit Coupling and Catalysis
+  description: Electron transfer from the GltD small iron-sulfur flavoprotein subunit
+    to the GltB large catalytic subunit for glutamate synthesis.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: gltd_small_chain
+    label: Glutamate synthase NADPH small chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: gltd_small_chain
+  - node_id: gltb_large_chain
+    label: Glutamate synthase NADPH large chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: gltb_large_chain
+  - node_id: glutamate_synthase_nadph_activity
+    label: glutamate synthase (NADPH) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004355
+  edges:
+  - subject: gltd_small_chain
+    predicate: transfers electrons to
+    object: gltb_large_chain
+    description: The small iron-sulfur flavoprotein subunit GltD oxidizes NADPH and
+      transfers reducing equivalents to the large catalytic subunit GltB.
+    evidence:
+    - reference: PMID:4565085
+      notes: Miller and Stadtman 1972 characterized E. coli glutamate synthase as
+        a two-subunit iron-sulfur flavoprotein.
+    - reference: ComplexPortal:CPX-5041
+      notes: Complex Portal CPX-5041 curates GltB and GltD as the constituent subunits
+        of the E. coli K-12 NADPH-dependent glutamate synthase complex.
+  - subject: gltb_large_chain
+    predicate: catalyzes
+    object: glutamate_synthase_nadph_activity
+    description: The GltBD holoenzyme couples glutamine amide transfer and NADPH-derived
+      electron transfer to convert 2-oxoglutarate and glutamine into two glutamate
+      molecules.
+    evidence:
+    - reference: GO:0009342
+      notes: GO:0009342 defines the complex by glutamate synthase (NADPH) activity.
+    - reference: GO:0004355
+      notes: GO:0004355 is the molecular-function term for glutamate synthase (NADPH)
+        activity.
+    - reference: PMID:4565085
+      notes: Miller and Stadtman 1972 characterized the NADPH-dependent conversion
+        of 2-oxoglutarate and glutamine to glutamate.

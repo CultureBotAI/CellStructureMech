@@ -27,6 +27,7 @@ components:
   - tub1
   - atb2
   - alp2
+  - nda2
   role: Alpha-tubulin class of the microtubule polymer forming the meiotic radial
     array. Functions in the radial astral microtubule aster in aster. Functions within
     the cytoplasmic astral microtubule array radiating from the spindle pole.
@@ -250,6 +251,12 @@ curation_history:
   changes: Initial curation of astral microtubule (GO:0000235) in category CYTOSKELETON
     with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols
+    to match UniProtKB:P04688 in protein_examples.'
   llm_assisted: true
 synonyms:
 - synonym_text: cytoplasmic astral microtubule

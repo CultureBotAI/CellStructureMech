@@ -25,6 +25,12 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'glycine_cleavage_cycle' with
+    5 nodes and 4 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: glycine cleavage system
   synonym_type: EXACT_SYNONYM
@@ -260,3 +266,85 @@ discussions:
       dehydrogenase complexes and as glycine cleavage L protein.
   posed_by: codex
   posed_date: '2026-10-02'
+causal_graphs:
+- graph_id: glycine_cleavage_cycle
+  title: Glycine Cleavage System Multi-Enzyme Reaction Cycle
+  description: Sequential decarboxylation, aminomethyl transfer, and lipoyl reoxidation
+    across the P-, H-, T-, and L-protein constituents.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: gcvp_p_protein
+    label: Glycine dehydrogenase (decarboxylating)
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR020581
+    component_ref: gcvp_p_protein
+  - node_id: gcvh_h_protein
+    label: Glycine cleavage system H protein
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR017453
+    component_ref: gcvh_h_protein
+  - node_id: gcvt_t_protein
+    label: Aminomethyltransferase
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006223
+    component_ref: gcvt_t_protein
+  - node_id: lpd_l_protein
+    label: Dihydrolipoyl dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    component_ref: lpd_l_protein
+  - node_id: glycine_dehydrogenase_decarboxylating_activity
+    label: glycine dehydrogenase (decarboxylating) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004375
+  edges:
+  - subject: gcvp_p_protein
+    predicate: catalyzes
+    object: glycine_dehydrogenase_decarboxylating_activity
+    description: The pyridoxal-phosphate-dependent P-protein (GcvP) catalyzes oxidative
+      decarboxylation of glycine.
+    evidence:
+    - reference: GO:0005960
+      notes: GO:0005960 links the glycine cleavage complex to glycine dehydrogenase
+        (decarboxylating) activity.
+    - reference: GO:0004375
+      notes: GO:0004375 is the molecular-function term for glycine dehydrogenase (decarboxylating)
+        activity.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 characterized the E. coli gcvTHP operon encoding
+        the P-, H-, and T-proteins.
+  - subject: gcvp_p_protein
+    predicate: transfers aminomethyl group to
+    object: gcvh_h_protein
+    description: GcvP transfers the aminomethyl moiety remaining from glycine decarboxylation
+      onto the lipoyl arm of H-protein (GcvH).
+    evidence:
+    - reference: GO:0005960
+      notes: GO:0005960 defines the complex as containing P-protein and lipoyl-GcvH-protein.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 characterized the functional coupling of E.
+        coli GcvP and lipoylated GcvH.
+  - subject: gcvh_h_protein
+    predicate: delivers aminomethyl intermediate to
+    object: gcvt_t_protein
+    description: Aminomethylated H-protein shuttles the intermediate to T-protein
+      (GcvT) for tetrahydrofolate-dependent methylene transfer and ammonia release.
+    evidence:
+    - reference: GO:0005960
+      notes: GO:0005960 defines the complex as containing aminomethyltransferase T-protein
+        and H-protein.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 characterized the E. coli T-protein and H-protein
+        reaction steps.
+  - subject: lpd_l_protein
+    predicate: reoxidizes
+    object: gcvh_h_protein
+    description: Dihydrolipoamide dehydrogenase L-protein (Lpd) oxidizes the dihydrolipoyl
+      group of H-protein back to the disulfide state.
+    evidence:
+    - reference: GO:0005960
+      notes: GO:0005960 defines dihydrolipoamide dehydrogenase (L-protein) as one
+        of the four enzymes of the glycine cleavage complex.
+    - reference: UniProtKB:P0A9P0
+      notes: UniProtKB P0A9P0 curates E. coli LpdA as the L-protein component of the
+        glycine cleavage system.
