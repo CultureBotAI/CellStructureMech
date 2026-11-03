@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_ii_succinate_dehydrogenase.yaml
+  slug: respiratory_chain_complex_ii_succinate_dehydrogenase
+session:
+  id: 2026-10-30T182416Z-claude-code-f5b043
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect flavoprotein, iron-sulfur, and membrane-anchor subunits to complex_ii node
+  details: Added contributes to edges from flavoprotein, iron_sulfur_subunit, and membrane_anchor
+    to complex_ii backed by GO:0045273, PDB:1NEK, and DOI:10.1126/science.1079605.

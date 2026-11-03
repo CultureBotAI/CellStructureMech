@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hsluv_protease_complex.yaml
+  slug: hsluv_protease_complex
+session:
+  id: 2026-10-31T110100Z-antigravity-e323f9
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Record clpY and clpQ synonym mappings on E. coli K-12 HslU and HslV protein_examples
+  details: Updated role descriptions on UniProtKB:P0A6H5 (hslU) and UniProtKB:P0A7B8 (hslV)
+    in Escherichia coli K-12 (NCBITaxon:83333) to explicitly disclose the declared synonym
+    symbols clpY and clpQ supported by PMID:21803990 and UniProt alternative protein names.

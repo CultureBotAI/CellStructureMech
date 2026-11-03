@@ -1,0 +1,535 @@
+identifier: GO:0000775
+label: chromosome, centromeric region
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: The region of a chromosome that includes the centromeric DNA and associated
+  proteins. In mitosis or meiosis II, this region connects the chromosome to spindle
+  microtubules via the kinetochore. In Saccharomyces cerevisiae, Schizosaccharomyces
+  pombe, and other microbial eukaryotes, the centromeric region comprises specialized
+  CenH3 (Cse4/Cnp1) centromeric nucleosomes, point- or regional-centromere DNA-binding
+  factors (such as the CBF3 complex), pericentromeric cohesin/heterochromatin, and
+  the assembled inner and outer kinetochore complexes.
+definition_source: GO:0000775
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-23T14:36:25Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of chromosome, centromeric region (GO:0000775) in category
+    OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: centromere
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000775
+- synonym_text: chromosomal centromeric region
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000775
+has_part:
+- GO:0000776
+- GO:0031518
+components:
+- component_id: centromeric_dna
+  label: centromere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding: SO:0000577
+  grounding_notes: Sequence Ontology term SO:0000577 (centromere) denotes the chromosomal
+    centromeric DNA sequence locus (such as the ~125 bp CDEI-CDEII-CDEIII point centromere
+    in Saccharomyces cerevisiae) that specifies assembly of centromeric chromatin.
+  role: Chromosomal centromeric DNA sequence locus that specifies assembly of the
+    Cse4/CENP-A centromeric nucleosome and the overlying kinetochore within the chromosome,
+    centromeric region.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviews how the Saccharomyces cerevisiae point centromeric
+      DNA locus nucleates the Cse4 centromeric nucleosome and kinetochore within the
+      chromosome, centromeric region.
+- component_id: centromeric_cse4_nucleosome
+  label: centromeric Cse4/CENP-A nucleosome platform
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - CSE4
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Represents the budding-yeast Cse4-containing centromeric nucleosome
+    assembled at the centromeric DNA locus within GO:0000775.
+  role: Specialized CenH3 (Cse4/CENP-A) centromeric nucleosome assembled on centromeric
+    DNA that forms the inner chromatin foundation of the chromosome, centromeric region.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviewed the Cse4-containing centromeric chromatin foundation
+      for the budding-yeast kinetochore.
+  - reference: DOI:10.1083/jcb.200305100
+    notes: Westermann et al. 2003 identified CENP-A/Cse4-linked inner kinetochore
+      proteins in the conserved budding-yeast molecular core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36012
+    protein_label: Histone H3-like centromeric protein CSE4
+    gene_symbol: CSE4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene CSE4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14581449
+      notes: Westermann S et al. 2003, ‘Architecture of the budding yeast kinetochore
+        reveals a conserved molecular core.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P36012.
+- component_id: coma_complex
+  label: COMA complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000817
+  gene_symbols:
+  - CTF19
+  - OKP1
+  - MCM21
+  - AME1
+  essentiality: CONDITIONAL
+  role: Inner kinetochore protein complex (Ctf19-Okp1-Mcm21-Ame1) that bridges Cse4
+    centromeric chromatin to outer kinetochore modules within the chromosome, centromeric
+    region.
+  evidence:
+  - reference: GO:0000817
+    notes: Gene Ontology cellular-component term for the COMA complex.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 analyzed hierarchical assembly of the
+      budding-yeast kinetochore from multiple subcomplexes, including COMA.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02732
+    protein_label: Inner kinetochore subunit CTF19
+    gene_symbol: CTF19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CTF19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q02732.
+  - uniprot_id: UniProtKB:P53298
+    protein_label: Inner kinetochore subunit OKP1
+    gene_symbol: OKP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene OKP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53298.
+    - reference: PMID:10323865
+      notes: Ortiz J et al. 1999, ‘A putative protein complex consisting of Ctf19,
+        Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore.’,
+        Genes Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome,
+        centromere, kinetochore' localisation of P53298.
+  - uniprot_id: UniProtKB:Q06675
+    protein_label: Inner kinetochore subunit MCM21
+    gene_symbol: MCM21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MCM21 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q06675.
+  - uniprot_id: UniProtKB:P38313
+    protein_label: Inner kinetochore subunit AME1
+    gene_symbol: AME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38313.
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation
+        of P38313.
+- component_id: mis12_mind_type_complex
+  label: MIS12/MIND type complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000444
+  gene_symbols:
+  - MTW1
+  - DSN1
+  - NSL1
+  - NNF1
+  essentiality: UNKNOWN
+  role: Core kinetochore subcomplex (Mtw1-Dsn1-Nsl1-Nnf1) that links inner centromeric
+    chromatin complexes to the outer Ndc80 microtubule-binding module within the chromosome,
+    centromeric region.
+  evidence:
+  - reference: GO:0000444
+    notes: Gene Ontology cellular-component term for the MIS12/MIND type kinetochore
+      subcomplex.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed the Mtw1/MIND complex within the
+      budding-yeast kinetochore hierarchy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39731
+    protein_label: Kinetochore-associated protein MTW1
+    gene_symbol: MTW1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MTW1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14602074
+      notes: Pinsky BA et al. 2003, ‘An Mtw1 complex promotes kinetochore biorientation
+        that is monitored by the Ipl1/Aurora protein kinase.’, Dev Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Cytoplasm, cytoskeleton, spindle pole'' localisation of P39731.'
+  - uniprot_id: UniProtKB:P40568
+    protein_label: Kinetochore-associated protein DSN1
+    gene_symbol: DSN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DSN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40568
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40568, the single reviewed entry
+        for gene DSN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12143
+    protein_label: Kinetochore-associated protein NSL1
+    gene_symbol: NSL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NSL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of Q12143.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12143.
+  - uniprot_id: UniProtKB:P47149
+    protein_label: Kinetochore-associated protein NNF1
+    gene_symbol: NNF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NNF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of P47149.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P47149.
+- component_id: ndc80_complex
+  label: Ndc80 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0031262
+  gene_symbols:
+  - NDC80
+  - NUF2
+  - SPC24
+  - SPC25
+  essentiality: UNKNOWN
+  role: Outer kinetochore complex (Ndc80-Nuf2-Spc24-Spc25) that couples the chromosome,
+    centromeric region to spindle microtubule plus ends.
+  evidence:
+  - reference: GO:0031262
+    notes: Gene Ontology cellular-component term for the Ndc80 complex.
+  - reference: DOI:10.1083/jcb.200305100
+    notes: Westermann et al. 2003 identified Ndc80 among the budding-yeast kinetochore
+      proteins forming a conserved molecular core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40460
+    protein_label: Kinetochore protein NDC80
+    gene_symbol: NDC80
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NDC80 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40460
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40460, the single reviewed entry
+        for gene NDC80 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33895
+    protein_label: Kinetochore protein NUF2
+    gene_symbol: NUF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33895
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33895, the single reviewed entry
+        for gene NUF2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q04477
+    protein_label: Kinetochore protein SPC24
+    gene_symbol: SPC24
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC24 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11179222
+      notes: Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact
+        with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore
+        clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q04477.
+    - reference: PMID:11266451
+      notes: Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae
+        contains conserved centromere components and has a function in chromosome
+        segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of Q04477.
+    - reference: PMID:11952896
+      notes: Le Masson I et al. 2002, ‘Spc24 interacts with Mps2 and is required for
+        chromosome segregation, but is not implicated in spindle pole body duplication.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q04477.
+  - uniprot_id: UniProtKB:P40014
+    protein_label: Kinetochore protein SPC25
+    gene_symbol: SPC25
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC25 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11179222
+      notes: Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact
+        with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore
+        clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of P40014.
+    - reference: PMID:11266451
+      notes: Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae
+        contains conserved centromere components and has a function in chromosome
+        segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome, centromere, kinetochore' localisation of P40014.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast chromosomes contain a point centromeric DNA locus wrapped in
+    a Cse4 nucleosome and bound by hierarchical inner and outer kinetochore subcomplexes.
+  reference: DOI:10.1534/genetics.112.145276
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which the centromeric DNA locus, Cse4 centromeric
+    chromatin, and hierarchical kinetochore subcomplexes of the chromosome, centromeric
+    region were dissected.
+  reference: DOI:10.1101/gad.1144403
+functions:
+- function_id: chromosome_segregation
+  label: chromosome segregation
+  grounding: GO:0007059
+  description: Centromeric DNA, Cse4 centromeric chromatin, and the assembled kinetochore
+    within the chromosome, centromeric region attach chromosomes to spindle microtubules
+    to drive faithful chromosome segregation.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviews how centromeric chromatin and kinetochore subcomplexes
+      of the chromosome, centromeric region mediate chromosome segregation.
+evidence:
+- reference: GO:0000775
+  notes: 'Gene Ontology cellular-component term for chromosome, centromeric region:
+    The region of a chromosome that includes the centromeric DNA and associated proteins.'
+- reference: DOI:10.1534/genetics.112.145276
+  notes: Biggins 2013 (Genetics) reviews the centromeric DNA, Cse4 chromatin foundation,
+    and kinetochore subcomplexes comprising the budding-yeast chromosome, centromeric
+    region.
+- reference: DOI:10.1083/jcb.200305100
+  notes: Westermann et al. 2003 (J Cell Biol) define the conserved molecular core
+    linking Cse4 centromeric chromatin to inner and outer kinetochore complexes at
+    the budding-yeast centromeric region.
+- reference: DOI:10.1101/gad.1144403
+  notes: De Wulf, McAinsh and Sorger 2003 (Genes Dev) establish the hierarchical assembly
+    of COMA, MIND/Mtw1, and Ndc80 subcomplexes on centromeric chromatin.
+causal_graphs:
+- graph_id: chromosome_centromeric_region_mechanism
+  title: Centromeric DNA specification, Cse4 chromatin assembly, and kinetochore incorporation
+    in the chromosome, centromeric region
+  description: Centromeric DNA (SO:0000577) specifies assembly of the Cse4/CENP-A
+    centromeric nucleosome platform, which recruits inner (COMA, MIS12/MIND) and outer
+    (Ndc80) kinetochore subcomplexes to form the chromosome, centromeric region (GO:0000775)
+    and mediate chromosome segregation (GO:0007059).
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Covers the core Saccharomyces cerevisiae centromeric DNA, Cse4 nucleosome,
+    and inner-to-outer kinetochore assembly hierarchy within the chromosome, centromeric
+    region (GO:0000775).
+  nodes:
+  - node_id: centromeric_dna
+    label: centromere
+    node_type: GENETIC_ELEMENT
+    grounding: SO:0000577
+    component_ref: centromeric_dna
+  - node_id: centromeric_cse4_nucleosome
+    label: centromeric Cse4/CENP-A nucleosome platform
+    node_type: GENE_OR_PROTEIN
+    component_ref: centromeric_cse4_nucleosome
+  - node_id: coma_complex
+    label: COMA complex
+    node_type: STRUCTURE
+    grounding: GO:0000817
+    component_ref: coma_complex
+  - node_id: mis12_mind_type_complex
+    label: MIS12/MIND type complex
+    node_type: STRUCTURE
+    grounding: GO:0000444
+    component_ref: mis12_mind_type_complex
+  - node_id: ndc80_complex
+    label: Ndc80 complex
+    node_type: STRUCTURE
+    grounding: GO:0031262
+    component_ref: ndc80_complex
+  - node_id: chromosome_centromeric_region
+    label: chromosome, centromeric region
+    node_type: STRUCTURE
+    grounding: GO:0000775
+    description: Assembled chromosome, centromeric region (GO:0000775) encompassing
+      centromeric DNA, Cse4 centromeric chromatin, and associated kinetochore complexes.
+  - node_id: chromosome_segregation
+    label: chromosome segregation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007059
+  edges:
+  - subject: centromeric_dna
+    predicate: recruits
+    object: centromeric_cse4_nucleosome
+    description: The chromosomal centromeric DNA locus specifies deposition and wrapping
+      of the Cse4/CENP-A centromeric nucleosome.
+    evidence:
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviews Cse4 nucleosome specification at the budding-yeast
+        centromeric DNA locus.
+  - subject: centromeric_cse4_nucleosome
+    predicate: recruits
+    object: coma_complex
+    description: Cse4-containing centromeric chromatin provides the inner platform
+      that recruits the COMA complex.
+    evidence:
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf et al. 2003 demonstrate assembly of the COMA subcomplex on centromeric
+        chromatin.
+  - subject: coma_complex
+    predicate: recruits
+    object: mis12_mind_type_complex
+    description: The inner COMA complex bridges centromeric chromatin to the MIS12/MIND
+      (Mtw1) complex.
+    evidence:
+    - reference: DOI:10.1101/gad.1144403
+      notes: Hierarchical kinetochore dissection places COMA upstream of inner-to-outer
+        Mtw1/MIND bridging.
+  - subject: mis12_mind_type_complex
+    predicate: recruits
+    object: ndc80_complex
+    description: The MIS12/MIND complex recruits the outer microtubule-binding Ndc80
+      complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.200305100
+      notes: Westermann et al. 2003 define the conserved core linking MIND/Mtw1 to
+        the outer Ndc80 complex.
+  - subject: centromeric_dna
+    predicate: is part of
+    object: chromosome_centromeric_region
+    description: Centromeric DNA forms the chromosomal nucleic-acid core of the chromosome,
+      centromeric region.
+    evidence:
+    - reference: GO:0000775
+      notes: GO:0000775 defines the chromosome, centromeric region as including the
+        centromeric DNA and associated proteins.
+  - subject: ndc80_complex
+    predicate: assembles into
+    object: chromosome_centromeric_region
+    description: Incorporation of the outer Ndc80 complex completes the microtubule-binding
+      kinetochore architecture of the chromosome, centromeric region.
+    evidence:
+    - reference: DOI:10.1083/jcb.200305100
+      notes: Westermann et al. 2003 establish Ndc80 as the outer microtubule-binding
+        module assembled at the centromeric region.
+  - subject: chromosome_centromeric_region
+    predicate: mediates
+    object: chromosome_segregation
+    description: The assembled chromosome, centromeric region couples chromosomes
+      to spindle microtubules to drive chromosome segregation.
+    evidence:
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviews how the centromeric region mediates mitotic and
+        meiotic chromosome segregation.
+parent_structures:
+- GO:0000785
+part_of:
+- GO:0005694

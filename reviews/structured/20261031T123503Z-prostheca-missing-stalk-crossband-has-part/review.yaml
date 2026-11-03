@@ -1,0 +1,221 @@
+schema_version: 1.0.0
+review_id: 20261031T123503Z-prostheca-missing-stalk-crossband-has-part
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Single-record review of prostheca (cellstructuremech:prostheca): missing reciprocal
+  has_part for stalk_crossband'
+started_at: '2026-10-31T12:31:00Z'
+finished_at: '2026-10-31T12:35:03Z'
+reviewer:
+  identity: antigravity-c6s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 6 Stage 4 record_review against committed
+    git revision 9634411be0aeec8d8f4b9cb9158e3165db87c150 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Single-record audit of prostheca.yaml (cellstructuremech:prostheca). Identity,
+  parent_structures (GO:0042995 cell projection), components (stalk_peptidoglycan,
+  stalk_envelope_lipids), and causal graph (caulobacter_stalk_wall_synthesis_extension)
+  are well-curated. However, prostheca.yaml lists has_part: [GO:0005886, GO:0009274,
+  GO:0009279] and omits cellstructuremech:stalk_crossband even though sibling record
+  data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband)
+  declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models
+  stp_crossbands in causal_graphs[0].nodes[5].'
+source:
+  git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/prostheca.yaml
+    sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record review of data/structures/appendage/prostheca.yaml (cellstructuremech:prostheca).
+  selection: Targeted single-record audit of prostheca.yaml during Cycle 6 Stage 4
+    full-corpus inspection.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:prostheca
+targets:
+- target_id: cellstructuremech:prostheca
+  path: data/structures/appendage/prostheca.yaml
+  label: prostheca
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained_record
+checks:
+- check_id: strict_prostheca
+  name: Strict corpus validation covering prostheca.yaml
+  status: passed
+  required: true
+  summary: prostheca.yaml passes current strict LinkML validation.
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_prostheca
+- check_id: history_prostheca
+  name: History ledger validation covering prostheca.yaml
+  status: passed
+  required: true
+  summary: History ledger records covering prostheca.yaml validate cleanly.
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_prostheca
+evidence:
+- evidence_id: ev_strict_prostheca
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,015 records.
+  snapshot_sha256: dac1304f2a7feba26c94eee3835f43b0d766af8799cf4ef6f24109717d585fbd
+- evidence_id: ev_history_prostheca
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,192 history records.
+  snapshot_sha256: 4f1459e8514fab4d9a4196c25cc7c27a6ec862b50ae111521446eb44924ae9db
+- evidence_id: ev_prostheca_hierarchy_and_crossband
+  kind: record_content
+  reference: data/structures/appendage/prostheca.yaml
+  locator: parent_structures, has_part, causal_graphs[0].nodes[5] (lines 59-64, 211-218)
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: 'prostheca.yaml declares parent_structures: [GO:0042995] and has_part:
+    [GO:0005886, GO:0009274, GO:0009279] and models stp_crossbands in causal_graphs[0].nodes[5],
+    but omits cellstructuremech:stalk_crossband from has_part.'
+  quote: 'parent_structures:
+
+    - GO:0042995
+
+    has_part:
+
+    - GO:0005886
+
+    - GO:0009274
+
+    - GO:0009279'
+  snapshot_sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
+assessments:
+- assessment_id: assess_prostheca_identity
+  area: identity
+  topic: Minted identity cellstructuremech:prostheca and parent_structures GO:0042995
+  outcome: supported
+  summary: cellstructuremech:prostheca is properly minted with parent_structures GO:0042995
+    (cell projection) and envelope layer substructures in has_part.
+  target_ids:
+  - cellstructuremech:prostheca
+  evidence_ids:
+  - ev_strict_prostheca
+  - ev_history_prostheca
+- assessment_id: assess_prostheca_has_part
+  area: consistency
+  topic: Reciprocal has_part linkage to curated substructure cellstructuremech:stalk_crossband
+  outcome: concern
+  summary: 'prostheca.yaml lists has_part: [GO:0005886, GO:0009274, GO:0009279] and
+    omits cellstructuremech:stalk_crossband despite stalk_crossband.yaml declaring
+    part_of: [cellstructuremech:prostheca].'
+  target_ids:
+  - cellstructuremech:prostheca
+  evidence_ids:
+  - ev_prostheca_hierarchy_and_crossband
+findings:
+- finding_id: F1
+  issue_key: prostheca-missing-stalk-crossband-has-part
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: prostheca.yaml omits cellstructuremech:stalk_crossband from has_part
+  description: 'In data/structures/appendage/prostheca.yaml (cellstructuremech:prostheca,
+    lines 61-64), has_part lists [GO:0005886, GO:0009274, GO:0009279] and omits cellstructuremech:stalk_crossband
+    even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband)
+    declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models
+    StpABCD stalk crossbands in causal_graphs[0].nodes[5] (stp_crossbands, lines 211-218).'
+  target_ids:
+  - cellstructuremech:prostheca
+  field_paths:
+  - has_part
+  evidence_ids:
+  - ev_prostheca_hierarchy_and_crossband
+  rule_id: docs/SCHEMA.md:CellStructureRecord.has_part
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained_record
+  tags:
+  - appendage
+  - has-part
+  - parthood
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Append cellstructuremech:stalk_crossband to has_part in data/structures/appendage/prostheca.yaml
+    with a curation event and history entry.
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:prostheca
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits for prostheca.yaml are queued for Cycle 6 Stage 5 (resolve_review_findings).
+tags:
+- stage4
+- record-review
+- appendage
