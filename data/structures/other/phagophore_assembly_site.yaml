@@ -43,6 +43,13 @@ curation_history:
   action: EDIT
   changes: added 5 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated phagophore_assembly_site_atg_machinery component_type from PROTEIN
+    to PROTEIN_COMPLEX for the multi-protein Atg1-Atg13-Atg17-Atg29-Atg31 initiation
+    complex (#2462).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -59,7 +66,7 @@ xrefs:
 components:
 - component_id: phagophore_assembly_site_atg_machinery
   label: phagophore assembly site Atg machinery
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY

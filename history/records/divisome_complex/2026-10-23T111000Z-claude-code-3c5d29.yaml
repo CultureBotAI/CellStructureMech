@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/divisome_complex.yaml
+session:
+  id: 2026-10-23T111000Z-claude-code-3c5d29
+  timestamp: '2026-10-23T11:10:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  - https://github.com/CultureBotAI/CellStructureMech/issues/65
+  - https://github.com/CultureBotAI/CellStructureMech/issues/91
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Addressed #2405: added structured evidence references for GitHub issues #65
+    and #91 to discussion ring_dimensions_unsourced.'
+  details: 'Stage 5 review remediation (#2405, finding division-machinery-discussion-prose-issue-links):
+    added structured evidence references for GitHub issues #65 and #91 to discussions[0]
+    (ring_dimensions_unsourced).'

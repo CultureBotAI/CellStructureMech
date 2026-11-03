@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+session:
+  id: 2026-10-23T110500Z-claude-code-df8b1d
+  timestamp: '2026-10-23T11:05:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2403
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  - https://github.com/CultureBotAI/CellStructureMech/issues/161
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: 'Addressed #2403 and #2405: removed stale unquotable CheA-to-CheY phosphotransfer
+    notes in causal graph and added structured evidence references (DOI:10.1021/bi962261k
+    and GitHub issue #161) to discussion phosphotransfer_step_unquotable.'
+  details: 'Stage 5 review remediation (#2403, #2405): updated causal_graphs[0]
+    (chemoreceptor_array_signalling) description and array -> phospho_chey edge
+    notes so they no longer falsely state that the record''s cited sources do not
+    carry a quotable sentence for CheA-to-CheY phosphotransfer (which was resolved
+    when DOI:10.1021/bi962261k was added to functions[0]), while clarifying that
+    the graph coarse-grains the array-to-phospho-CheY step at the array level.
+    Added structured evidence entries for DOI:10.1021/bi962261k and GitHub issue
+    #161 to discussions[0] (phosphotransfer_step_unquotable).'

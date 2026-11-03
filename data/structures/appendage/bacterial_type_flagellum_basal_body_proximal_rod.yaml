@@ -56,6 +56,13 @@ curation_history:
     IPR001624/P26462 while retaining the earlier label-only rationale and leaving
     FlgF unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    flie (InterPro:IPR001624).'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, proximal rod
   synonym_type: EXACT_SYNONYM
@@ -293,6 +300,7 @@ causal_graphs:
     label: flagellar basal-body protein FliE
     node_type: GENE_OR_PROTEIN
     component_ref: flie
+    grounding: InterPro:IPR001624
   - node_id: flgb
     label: flagellar basal-body rod protein FlgB
     node_type: GENE_OR_PROTEIN

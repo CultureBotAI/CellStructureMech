@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/lipopolysaccharide_transport_system.yaml
+  slug: lipopolysaccharide_transport_system
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-f96bab
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'lpt_transenvelope_lps_transport' with
+    8 nodes and 8 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0062051 (lipopolysaccharide transport
+    system): Added source-backed FUNCTION causal graph ''lpt_transenvelope_lps_transport''
+    with 8 nodes and 8 edges. Validated via write_validated_structure.'

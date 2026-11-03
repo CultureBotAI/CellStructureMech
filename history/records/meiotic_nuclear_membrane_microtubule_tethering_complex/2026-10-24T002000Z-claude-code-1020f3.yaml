@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+  slug: meiotic_nuclear_membrane_microtubule_tethering_complex
+session:
+  id: 2026-10-24T002000Z-claude-code-1020f3
+  timestamp: '2026-10-24T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2420
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2420: Updated components#bqt1_bqt2_meiotic_connector from component_type
+    PROTEIN to PROTEIN_COMPLEX.'
+  details: 'Original finding F1 (cytoskeleton-subcomplex-component-types) saved before
+    mutation in reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml.
+    Addresses #2420.'

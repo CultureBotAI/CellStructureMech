@@ -33,6 +33,12 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Retyped the hydrogenosome lumen graph node as CELLULAR_LOCALIZATION.
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected hydrogenosome_lumen to hydrogenosome and hydrogenosomal_fe_s_machinery
+    to hydrogenosome_lumen.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -282,6 +288,24 @@ causal_graphs:
     - reference: DOI:10.1016/j.ijpara.2011.10.001
       notes: Schneider et al. 2011 cataloged the Trichomonas hydrogenosomal energy
         metabolism proteins.
+  - subject: hydrogenosome_lumen
+    predicate: is part of
+    object: hydrogenosome
+    description: The hydrogenosome lumen (matrix) is the aqueous interior compartment
+      enclosed by the double hydrogenosomal membrane.
+    evidence:
+    - reference: GO:0034492
+      notes: GO:0034492 defines the hydrogenosome lumen as the volume enclosed by
+        the inner membrane of the hydrogenosome.
+  - subject: hydrogenosomal_fe_s_machinery
+    predicate: localizes to
+    object: hydrogenosome_lumen
+    description: The mitochondrial-type IscS/IscU iron-sulfur cluster assembly machinery
+      resides in the hydrogenosome lumen where it matures [Fe-S] proteins.
+    evidence:
+    - reference: DOI:10.1073/pnas.0401319101
+      notes: Sutak et al. 2004 demonstrated that Trichomonas vaginalis hydrogenosomes
+        house the lumenal IscS/IscU iron-sulfur cluster assembly machinery.
 discussions:
 - discussion_id: hydrogenosomal_import_grounding
   prompt: Resolve exact source-neutral groundings for hydrogenosomal protein-import
