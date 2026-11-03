@@ -52,6 +52,12 @@ curation_history:
   changes: Grounded reservosome_membrane component to GO:0106126 and added has_part
     links to GO:0106124, GO:0106125, and GO:0106126 (#2490).
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked reservosome_membrane component into endocytic_storage_and_proteolysis
+    causal graph.
+  llm_assisted: true
 components:
 - component_id: reservosome_membrane
   label: reservosome membrane
@@ -186,6 +192,11 @@ causal_graphs:
   - node_id: cargo_proteolysis
     label: reservosome cargo proteolysis
     node_type: BIOLOGICAL_PROCESS
+  - node_id: reservosome_membrane
+    label: reservosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0106126
+    component_ref: reservosome_membrane
   edges:
   - subject: cytostome_cytopharynx
     predicate: delivers
@@ -223,6 +234,17 @@ causal_graphs:
       notes: Sant'Anna et al. 2009 detected cruzipain and other lysosomal hydrolases
         in purified reservosomes and discussed protein degradation and regulation
         as a reservosome role.
+  - subject: reservosome_membrane
+    predicate: bounds
+    object: reservosome
+    description: The reservosome membrane bounds the posterior endocytic organelle
+      and separates its lumen from the Trypanosoma cruzi cytosol.
+    evidence:
+    - reference: GO:0106126
+      notes: GO cellular-component term for the reservosome membrane.
+    - reference: DOI:10.1017/S0031182004005797
+      notes: Figueiredo et al. 2004 described reservosomes as large membrane-bound
+        organelles in T. cruzi epimastigotes.
 discussions:
 - discussion_id: ground_reservosome_hydrolases_and_markers
   prompt: Resolve exact cruzipain isoforms, chagasin, proton pumps and other reservosome-localized

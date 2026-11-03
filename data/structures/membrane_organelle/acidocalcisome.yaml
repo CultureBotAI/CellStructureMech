@@ -43,6 +43,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked cation_transporters component into acidic_polyphosphate_cation_store
+    causal graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: metachromatic granule
   synonym_type: EXACT_SYNONYM
@@ -243,6 +249,10 @@ causal_graphs:
     label: acidocalcisome
     node_type: ORGANELLE
     grounding: GO:0020022
+  - node_id: cation_transporters
+    label: acidocalcisome cation transporters
+    node_type: GENE_OR_PROTEIN
+    component_ref: cation_transporters
   edges:
   - subject: membrane
     predicate: bounds
@@ -290,6 +300,14 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1097
       notes: Docampo et al. 2005 describe acidity and polyphosphate-rich ion storage
         as defining acidocalcisome properties.
+  - subject: cation_transporters
+    predicate: transport cations into
+    object: acidocalcisome
+    description: Acidocalcisome membrane calcium and divalent-cation transporters
+      move cations into the polyphosphate-rich organelle lumen.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00042-23
+      notes: Docampo 2024 review cation transport systems of acidocalcisome membranes.
   scope_notes: Model of membrane-bounded acidocalcisomes, not every bacterial polyphosphate
     granule. Bacterial membrane/polyphosphate evidence from Seufferheld et al. 2003
     is contested by Frank and Jendrossek 2020 and defended by Docampo 2024; see bacterial_identity_conflict.
