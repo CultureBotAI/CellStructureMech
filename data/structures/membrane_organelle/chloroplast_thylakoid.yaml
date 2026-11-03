@@ -34,6 +34,12 @@ curation_history:
     #735 by adding direct SL-0057/SL-0058 evidence for the lumen and membrane; resolved
     #736 by removing the imprecise membrane-bounds-whole-thylakoid topology edge.'
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:30Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected chloroplast_thylakoid_membrane and chloroplast_thylakoid_lumen
+    to chloroplast_thylakoid.
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 - GO:0031976
@@ -193,6 +199,30 @@ causal_graphs:
     - reference: uniprot.location:SL-0056
       notes: UniProt SL-0056 describes chloroplast thylakoids as carrying out the
         light reactions of photosynthesis.
+  - subject: chloroplast_thylakoid_membrane
+    predicate: is part of
+    object: chloroplast_thylakoid
+    description: The chloroplast thylakoid membrane is an anatomical subcompartment
+      of the chloroplast thylakoid.
+    evidence:
+    - reference: GO:0009535
+      notes: GO:0009535 places the chloroplast thylakoid membrane as a direct part
+        of the chloroplast thylakoid (GO:0009534).
+    - reference: uniprot.location:SL-0058
+      notes: uniprot.location:SL-0058 defines the chloroplast thylakoid membrane as
+        a subcompartment of the plastid thylakoid.
+  - subject: chloroplast_thylakoid_lumen
+    predicate: is part of
+    object: chloroplast_thylakoid
+    description: The chloroplast thylakoid lumen is an anatomical subcompartment of
+      the chloroplast thylakoid.
+    evidence:
+    - reference: GO:0009543
+      notes: GO:0009543 places the chloroplast thylakoid lumen as a direct part of
+        the chloroplast thylakoid (GO:0009534).
+    - reference: uniprot.location:SL-0057
+      notes: uniprot.location:SL-0057 defines the chloroplast thylakoid lumen as a
+        subcompartment of the plastid thylakoid.
 discussions:
 - discussion_id: whole_thylakoid_not_membrane_or_lumen
   prompt: Keep the chloroplast thylakoid distinct from its bounding membrane and its

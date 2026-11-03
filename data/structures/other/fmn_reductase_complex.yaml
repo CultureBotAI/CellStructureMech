@@ -20,6 +20,12 @@ curation_history:
     an E. coli canonical example, NADPH-dependent FMN reductase activity, dimer subunit
     count, and PMID/DOI evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'ssue_fmn_reductase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: FMN reductase complex, NAD(P)H-dependent
   synonym_type: EXACT_SYNONYM
@@ -104,3 +110,46 @@ evidence:
     of Biological Chemistry SsuD/SsuE characterization paper cited by GO:1990202.
 - reference: DOI:10.1074/jbc.274.38.26639
   notes: DOI for the GO:1990202-cited SsuD/SsuE characterization paper.
+causal_graphs:
+- graph_id: ssue_fmn_reductase_function
+  title: SsuE FMN Reductase Homodimer Assembly and Flavin Reduction
+  description: Homodimeric assembly of SsuE and NADPH-dependent reduction of FMN to
+    FMNH2.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ssue_fmn_reductase
+    label: NADPH-dependent FMN reductase, SsuE
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR020048
+    component_ref: ssue_fmn_reductase
+  - node_id: fmn_reductase_complex
+    label: FMN reductase complex
+    node_type: STRUCTURE
+    grounding: GO:1990202
+  - node_id: nadph_fmn_reductase
+    label: FMN reductase (NADPH) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0052873
+  edges:
+  - subject: ssue_fmn_reductase
+    predicate: homodimerizes into
+    object: fmn_reductase_complex
+    description: Two SsuE subunits assemble into the homodimeric FMN reductase complex.
+    evidence:
+    - reference: GO:1990202
+      notes: GO:1990202 defines the E. coli FMN reductase complex as a SsuE dimer.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 purified and characterized E. coli SsuE.
+  - subject: fmn_reductase_complex
+    predicate: catalyzes
+    object: nadph_fmn_reductase
+    description: The SsuE dimer catalyzes NADPH-dependent reduction of FMN to FMNH2.
+    evidence:
+    - reference: GO:1990202
+      notes: GO:1990202 defines the complex by NAD(P)H-dependent FMN reduction.
+    - reference: GO:0052873
+      notes: GO:0052873 is the molecular-function term for FMN reductase (NADPH) activity.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 demonstrated NADPH-dependent FMN reduction by purified
+        E. coli SsuE.

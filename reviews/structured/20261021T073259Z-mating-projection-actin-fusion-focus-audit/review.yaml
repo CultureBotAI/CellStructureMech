@@ -1,0 +1,680 @@
+schema_version: 1.0.0
+review_id: 20261021T073259Z-mating-projection-actin-fusion-focus-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mating projection actin fusion focus identity and functional-scope review
+started_at: '2026-10-21T07:23:30Z'
+finished_at: '2026-10-21T07:32:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The actin fusion focus identity, two part_of relations, protein identities
+  and scoped functional graph are supported. No material finding was identified. Myosin
+  focalization versus cargo delivery, mixed strain backgrounds and incomplete composition
+  remain explicit limits.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    sha256: e0b5696c74beabb751e5334fd04492a057d4b3fceeedf87f7b1c59978e172b1e
+    role: target
+  - path: data/structures/other/mating_projection_tip.yaml
+    sha256: ec2a7085e4d50080981c50bd9b523d8ffabf4de5739bbe1b696c382fddb7e1ad
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990819
+  path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  label: mating projection actin fusion focus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target plus neighboring tip record as local boundary
+    context; native identifiers, full Dudin2015 primary body/captions, supplementary
+    strain table and relevant Scott2011 biochemical passages.
+  selection: Sixth target in batch eight, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990819
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just validate data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just validate-strict data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    --out /private/tmp/cellstructure-batch8-20261021-q561gvty/mating_projection_actin_fusion_focus-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  summary: 10 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990819
+  summary: Physical cytoskeletal organization/localization and functional perturbation
+    claims; no transcriptional regulator or expression-module mechanism asserted.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - fusion-focus-agent-act1
+  - fusion-focus-agent-act1-search
+  - fusion-focus-agent-epmc
+  - fusion-focus-agent-fus1
+  - fusion-focus-agent-go
+  - fusion-focus-agent-go-relations
+  - fusion-focus-agent-myo51
+  - fusion-focus-agent-myo52
+  - fusion-focus-agent-paper-jats
+  - fusion-focus-agent-paper-meta
+  - fusion-focus-agent-paper-s3
+  - fusion-focus-agent-scott2011-jats
+  - fusion-focus-agent-species
+  - fusion-focus-agent-strain
+  - fusion-focus-agent-supplement
+  - record
+  - tip-context
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990819
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: fusion-focus-agent-act1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P10989.json
+  locator: primaryAccession, entryType, proteinDescription.recommendedName, genes,
+    organism
+  accessed_at: '2026-10-21T07:23:33.567902Z'
+  support: supports
+  summary: P10989 is reviewed Actin, act1, taxon284812; reference-protein identity,
+    not independent focus-localization evidence.
+  snapshot_sha256: 1ac2a412f7ed0e84b486b80ce65faceb178201a11785fe0cd70900d034a42a5b
+- evidence_id: fusion-focus-agent-act1-search
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Aact1%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29&format=json
+  locator: results array for exact act1, organism_id284812, reviewed:true
+  accessed_at: '2026-10-21T07:24:35.304306Z'
+  support: supports
+  summary: Exactly one returned result, P10989; verifies bounded current unique-reviewed-entry
+    statement.
+  snapshot_sha256: e12b5365cd680f6364d1bcadab05b506c56cdac77603b88ff54acd8aecdcbfd8
+  search_scope: Only the recorded native remote query at https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Aact1%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29&format=json.
+    Exact identifier queries or one accession-specific InterPro match list, as stated
+    in the locator and summary. Successful InterPro JSON lists end with next:null;
+    HTTP204 is retained as zero-byte response. No global absence or comprehensive
+    literature search is inferred. Ignored local files are not applicable to this
+    remote query.
+- evidence_id: fusion-focus-agent-epmc
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.201411124&format=json&resultType=core
+  locator: Single result DOI/title/PMID/PMCID, authors, abstract, publication metadata
+  accessed_at: '2026-10-21T07:23:33.626381Z'
+  support: supports
+  summary: DOI:10.1083/jcb.201411124 is Dudin et al. 2015, J Cell Biol 208(7):897–911,
+    PMID25825517, PMC4384723. Full abstract read, but claim inspection uses recovered
+    body.
+  snapshot_sha256: 70d4801c2ecdbed854629de16e96d9be0bcfd1a4b51755f65c1a5855c20200d4
+  search_scope: Only the recorded native remote query at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.201411124&format=json&resultType=core.
+    Exact identifier queries or one accession-specific InterPro match list, as stated
+    in the locator and summary. Successful InterPro JSON lists end with next:null;
+    HTTP204 is retained as zero-byte response. No global absence or comprehensive
+    literature search is inferred. Ignored local files are not applicable to this
+    remote query.
+- evidence_id: fusion-focus-agent-fus1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q10719.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; similarity
+    and induction comments
+  accessed_at: '2026-10-21T07:23:33.586970Z'
+  support: supports
+  summary: Q10719 is reviewed cell fusion protein fus1, primary gene fus1, taxon284812;
+    curated similarity identifies formin family/BNI1 subfamily.
+  snapshot_sha256: 10bcb4aece3b932ceef5486cdcee441eb4a67dcca0bdf1e01da16aa56b3c6799
+- evidence_id: fusion-focus-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990819,GO:0043332,GO:0015629
+  locator: GO:1990819, GO:0043332, GO:0015629 results; definitions, synonyms, isObsolete,
+    aspect, children
+  accessed_at: '2026-10-21T07:23:33.556906Z'
+  support: supports
+  summary: All three are active CC terms. Exact focus definition matches record; actin
+    fusion focus is a broad synonym. Tip and actin-cytoskeleton results both list
+    focus as part_of child.
+  snapshot_sha256: f7e1567936320ce63c4324d756a1fa421fe9410b1a8f7edc139fabad8eaf7f84
+- evidence_id: fusion-focus-agent-go-relations
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990819/paths/GO:0005575?relations=is_a,part_of
+  locator: Results paths from GO:1990819 to GO:0005575; first edges
+  accessed_at: '2026-10-21T07:23:33.575081Z'
+  support: supports
+  summary: Focus has direct part_of GO:0043332 and GO:0015629, distinct from its is_a
+    GO:0110165 edge. Neither recorded part_of is promoted to is_a.
+  snapshot_sha256: 66078c81f4fcada15257fed5d641ac3dbd22f428872d326e3a31a05a09e96e10
+- evidence_id: fusion-focus-agent-myo51
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O74805.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism
+  accessed_at: '2026-10-21T07:23:33.588480Z'
+  support: supports
+  summary: O74805 is reviewed Myosin-51, Myosin type V-1, myo51, taxon284812. Reference
+    identity does not itself establish cargo mechanism.
+  snapshot_sha256: 5a36b454db41da070ea82a6e50eeed38692dc45741d4406c3a1a0713eb5ede6b
+- evidence_id: fusion-focus-agent-myo52
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O94477.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism
+  accessed_at: '2026-10-21T07:23:34.190257Z'
+  support: supports
+  summary: O94477 is reviewed Myosin-52, Myosin type V-2, myo52, taxon284812. Primary
+    paper distinguishes cargo delivery from Myo51 structural contribution.
+  snapshot_sha256: b5b5dab12baf409d538d03d3a1cac93474dd4df9fd88d7adecb0a32f9ead5e27
+- evidence_id: fusion-focus-agent-paper-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4384723/fullTextXML
+  locator: Full article JATS recovered; body content confirmed; detailed inspection
+    used native S3 copy
+  accessed_at: '2026-10-21T07:23:51.223803Z'
+  support: supports
+  summary: Independent full-text route returned actual article, not an entitlement
+    or error stub.
+  snapshot_sha256: 740f33b6c34a93c89b6fbf1c5b9fc03e65428240db42959fd3792b3e8193383a
+- evidence_id: fusion-focus-agent-paper-meta
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4384723.1/PMC4384723.1.json
+  locator: Native PMC metadata DOI/title/PMID/version/retraction/license and xml/media
+    checksums
+  accessed_at: '2026-10-21T07:24:35.723926Z'
+  support: supports
+  summary: Metadata reports not retracted; CC BY-NC-SA. Native XML and supplementary
+    PDF MD5 checks verified. No image-hosting claim or requested corpus image mutation.
+  snapshot_sha256: 2c207e2d8d56e2830cc8dd3e70e722fabefc54206491bf69b16b5ff22f686639
+- evidence_id: fusion-focus-agent-paper-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4384723.1/PMC4384723.1.xml
+  locator: Entire Introduction/Results/Discussion/Methods and all main figure captions
+    read; body.txt numbered paragraph mapping
+  accessed_at: '2026-10-21T07:23:51.704820Z'
+  support: supports
+  summary: Primary in-vivo source for actin aster identity, Fus1 dependence, joint
+    myosin focalization and hydrolase localization. See the claim-specific graph assessments
+    below.
+  snapshot_sha256: f633bda509aa2aa9c09133ca13cf16c3f0a12105b484946bd5f80a1abe76ff52
+- evidence_id: fusion-focus-agent-scott2011-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3192862/fullTextXML
+  locator: DOI:10.1091/mbc.E11-06-0492; Results first subsection/Fig1; profilin assembly
+    subsections; Methods DNA constructs/protein purification/fluorescence spectroscopy
+  accessed_at: '2026-10-21T07:25:33.693491Z'
+  support: supports
+  summary: 'Foundational primary biochemical source cited by Dudin2015: bacterial-expressed
+    Fus1 FH1FH2(792–1277) stimulates actin nucleation; assays used chicken/rabbit
+    muscle actin. Supports Fus1 activity but is not a direct P10989 biochemical experiment
+    or an intact focus reconstitution.'
+  snapshot_sha256: 98843adf024e7b2f678e270ef38aec76d874e2a5fe0a3cdf48a63a2869da5f26
+- evidence_id: fusion-focus-agent-species
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: taxId, scientificName, rank
+  accessed_at: '2026-10-21T07:23:34.218222Z'
+  support: supports
+  summary: 4896 is Schizosaccharomyces pombe, species.
+  snapshot_sha256: cdb53b3f4ab5e6bb4476de3bf0db333ae647e307a9fa8f98108827f98fe7f4d3
+- evidence_id: fusion-focus-agent-strain
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: taxId, scientificName, rank
+  accessed_at: '2026-10-21T07:23:34.204173Z'
+  support: supports
+  summary: 284812 is Schizosaccharomyces pombe 972h-, strain. UniProt labels same
+    taxon strain972/ATCC24843.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: fusion-focus-agent-supplement
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4384723.1/supp_jcb.201411124_JCB_201411124_sm.pdf
+  locator: Extracted PDF pp.S1–S8 read; TableS1 pp.S4–S6; p.S4 visually inspected
+    from local render
+  accessed_at: '2026-10-21T07:24:49.332336Z'
+  support: supports
+  summary: Table includes WT h-972 (lab1372), h+975 (1371), h90 968 (1396), plus tagged/mutant
+    strains. Do not flatten every experiment to reference strain972. Supplemental
+    figure/video captions read; videos not watched, panels not independently evaluated.
+  snapshot_sha256: 2a7dad1fc5ba9f7437d906e82742cf893075e7a49dde5fe6d84003f980bd6a2b
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  locator: Entire YAML, including all component, graph, taxon and discussion fields
+  accessed_at: '2026-10-21T07:31:24Z'
+  support: context_only
+  summary: The actin-filament aster is directly represented; Fus1 and typeV myosins
+    are graph factors, and detailed component boundaries remain an open TODO. Graph
+    is explicitly nonmechanistic with no complete timed transport pathway or inventory
+    claim.
+- evidence_id: tip-context
+  kind: record_content
+  reference: data/structures/other/mating_projection_tip.yaml
+  locator: Entire neighboring YAML read; only regional-versus-focus boundary used
+  accessed_at: '2026-10-21T07:31:24Z'
+  support: context_only
+  summary: The neighboring record denotes a tip region and links the focus as a contained
+    assembly. This is local consistency context, not independent experimental evidence
+    or a review verdict on the neighbor.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:23:32Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml'
+  snapshot_sha256: 6d41d429306806f58293b96e562035c0ae595819346a919554d5e50acf2b863c
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    --out /private/tmp/cellstructure-batch8-20261021-q561gvty/mating_projection_actin_fusion_focus-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:23:33Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml\
+    \ --out /private/tmp/cellstructure-batch8-20261021-q561gvty/mating_projection_actin_fusion_focus-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch8-20261021-q561gvty/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch8-20261021-q561gvty/mating_projection_actin_fusion_focus-strict.tsv"
+  snapshot_sha256: edfc9e20b6828f24dcab421a7d4db95b92de26a7f56f8b8ed02320819b385fb8
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml;
+    exact collect() scope; snapshot_sha256 identifies the entire original reports/curie_check.tsv,
+    not the extracted resolver-slice.json
+  accessed_at: '2026-10-21T07:31:24Z'
+  support: supports
+  summary: '10 of 10 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Distinct Fus1-dependent actin aster
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: GO1990819 supplies the exact focus definition and broad synonym. Primary
+    live reporters, phalloidin and SIM/confocal imaging support a Fus1-dependent focus
+    with emanating filaments distinct from actin patches, longer cables and the cytokinetic
+    ring. The record does not equate the broader tip region with its actin focus.
+  evidence_ids:
+  - fusion-focus-agent-go
+  - fusion-focus-agent-paper-s3
+  - record
+  - tip-context
+- assessment_id: topology
+  area: representation
+  topic: Both part_of relations and regional context
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: Native GO paths verify direct part_of links to GO0043332 mating projection
+    tip and GO0015629 actin cytoskeleton. The prior is_a-to-part_of correction is
+    retained. The neighboring tip record supplies compatible local context; its other
+    biological assertions are outside this target review.
+  evidence_ids:
+  - fusion-focus-agent-go
+  - fusion-focus-agent-go-relations
+  - record
+  - tip-context
+- assessment_id: grounding
+  area: grounding
+  topic: Actin constituent and named protein exemplars
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: F-actin is experimentally localized and forms the aster. Reviewed P10989
+    maps to act1 in taxon284812, and the exact remote query returns the single reviewed
+    entry. Q10719 Fus1, O74805 Myo51 and O94477 Myo52 identities agree. These accessions
+    identify reference proteins and do not themselves prove localization or supply
+    a source-neutral whole-family mapping.
+  evidence_ids:
+  - fusion-focus-agent-act1
+  - fusion-focus-agent-act1-search
+  - fusion-focus-agent-fus1
+  - fusion-focus-agent-myo51
+  - fusion-focus-agent-myo52
+  - fusion-focus-agent-paper-s3
+  - record
+- assessment_id: nucleation
+  area: graph
+  topic: Fus1-dependent assembly and direct biochemical context
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: Dudin establishes in-vivo Fus1 dependence and aster architecture and explicitly
+    cites Scott2011 for direct formin nucleation. Scott uses recombinant Fus1 FH1/FH2
+    constructs and chicken/rabbit muscle actin. This supports the generic nucleates
+    edge without claiming direct reconstitution with the P10989 reference protein
+    or a complete physiological assembly mechanism.
+  evidence_ids:
+  - fusion-focus-agent-paper-s3
+  - fusion-focus-agent-scott2011-jats
+  - record
+- assessment_id: myosins
+  area: graph
+  topic: Focalization versus cargo delivery
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: Myo51 and Myo52 jointly focalize Fus1/actin, while Myo52 cargo-tail perturbation
+    specifically prevents Agn2/Eng2/Exg3 localization. Myo51 tail deletion preserves
+    that localization and fusion. The record says typeV myosins help concentrate hydrolases
+    in a nonmechanistic graph; this accommodates structural and cargo-delivery contributions
+    without asserting equivalent direct transport by both motors.
+  evidence_ids:
+  - fusion-focus-agent-paper-s3
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Focused wall dissolution during mating
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: Seven tagged glucanases accumulate at the focus, selected loss combinations
+    impair fusion, and broad distribution in fus1 mutants is insufficient for normal
+    fusion. Bgs1/Bgs4 occupy a broader synthesis zone. These results support focal
+    wall dissolution; they do not resolve direct motor-cargo binding, glucanase export
+    routes or a complete timed secretory pathway.
+  evidence_ids:
+  - fusion-focus-agent-go
+  - fusion-focus-agent-paper-s3
+  - record
+- assessment_id: taxon
+  area: scope
+  topic: Conditional mating state and mixed experimental stocks
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: The species example4896 is S.pombe and its variable presence is mating-dependent,
+    not constitutive vegetative localization. Reference protein taxon284812 is972h-;
+    Dudin uses homothallic and heterothallic backgrounds including972,975,968 and
+    tagged/mutant strains. Nitrogen-starvation mating and imaging conditions remain
+    distinct from reference-protein identity.
+  evidence_ids:
+  - fusion-focus-agent-species
+  - fusion-focus-agent-strain
+  - fusion-focus-agent-paper-s3
+  - fusion-focus-agent-supplement
+  - fusion-focus-agent-act1
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Explicitly bounded composition and mechanism
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: The record directly models the actin aster and includes its main Fus1/myosin/hydrolase
+    relationships. Source-localized Cdc8, Cam2 and Crn1 show that inventory is not
+    complete, which the record expressly acknowledges. A full protein inventory, family
+    grounding and stoichiometry are not asserted; the open component-boundary TODO
+    remains appropriate and is not automatically a curation finding.
+  evidence_ids:
+  - fusion-focus-agent-paper-s3
+  - fusion-focus-agent-fus1
+  - fusion-focus-agent-myo51
+  - fusion-focus-agent-myo52
+  - record
+- assessment_id: access
+  area: provenance
+  topic: Readable native primary text and supplements
+  outcome: supported
+  target_ids:
+  - GO:1990819
+  summary: Dudin native JATS and supplementary PDF are readable and their MD5 checks
+    agree with native metadata. Main body/captions and strain table were read; p.S4
+    was visually inspected by the source-preparation agent. The extra Scott primary
+    inspection is confined to relevant nucleation/profilin and methods passages.
+  evidence_ids:
+  - fusion-focus-agent-epmc
+  - fusion-focus-agent-paper-jats
+  - fusion-focus-agent-paper-meta
+  - fusion-focus-agent-paper-s3
+  - fusion-focus-agent-supplement
+  - fusion-focus-agent-scott2011-jats
+findings: []
+actions: []
+limitations:
+- Native primary body and main captions were read. Movies, raw microscopy and main
+  figure pixels were not independently evaluated; supplementary TableS1 text was read
+  and p.S4 visually inspected by the source agent.
+- Myo51/Myo52 joint focus organization does not establish equivalent direct cargo
+  transport. Tested hydrolase delivery is Myo52-tail dependent, whereas Myo51 tail
+  deletion preserves it.
+- Scott2011 biochemical evidence uses recombinant formin fragments and heterologous
+  muscle actin; it does not identify P10989 as the actin preparation.
+- No exhaustive family-mapping or complete focus-inventory search was performed, and
+  the component-boundary TODO is not closed. No fixed stoichiometry or broad fungal
+  prevalence is inferred.
+- The neighboring tip record informed only regional topology consistency; its independent
+  claims and cited literature were not separately audited.
+- Current source review does not reconstruct every historical curation decision or
+  establish independent historical authorship.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- 'Expanded native inspection captures both scientific repository inputs actually
+  read: the full target and neighboring mating_projection_tip.yaml.'
+- Native focused schema/strict checks passed. Shared unchanged-base gates are documented
+  by the parent reviewer before finalization.
+- The parent reviewed the draft, source scope and provenance before finalization;
+  no maintained content was changed.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
