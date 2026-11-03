@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/polar_tube_anchoring_disc.yaml
+  slug: polar_tube_anchoring_disc
+session:
+  id: 2026-11-03T055100Z-antigravity-66d203
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked enp1 component into anchoring_disc_positions_polar_tube causal graph with
+    source-backed anterior anchoring-disc localization edge.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''anchoring_disc_positions_polar_tube''
+    in data/structures/spore/polar_tube_anchoring_disc.yaml. Added node(s) [enp1] and source-backed
+    edge(s) [enp1 localizes to anchoring_disc]. Validated with write_validated_structure.'

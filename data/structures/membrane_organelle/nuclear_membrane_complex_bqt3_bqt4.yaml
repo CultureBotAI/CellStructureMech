@@ -1,0 +1,203 @@
+identifier: GO:1990862
+label: nuclear membrane complex Bqt3-Bqt4
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that resides in the inner nuclear membrane and anchors
+  telomeres to the nuclear envelope. In fission yeast, it is composed of Bqt3 and
+  Bqt4.
+definition_source: GO:1990862
+mapping_status: PROPOSED
+parent_structures:
+- GO:0098796
+- GO:0140513
+part_of:
+- GO:0005637
+components:
+- component_id: bqt3_subunit
+  label: Bouquet formation protein 3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bqt3
+  stoichiometry: Constituent multipass inner-nuclear-membrane receptor subunit
+  essentiality: DISPENSABLE
+  role: Seven-transmembrane inner nuclear membrane protein that binds the C-terminal
+    transmembrane segment of Bqt4 and protects Bqt4 from proteolytic degradation at
+    the inner nuclear membrane.
+  evidence:
+  - reference: GO:1990862
+    notes: GO:1990862 defines the fission yeast nuclear membrane complex Bqt3-Bqt4
+      as composed of Bqt3 and Bqt4.
+  - reference: PMID:19948484
+    notes: Chikashige et al. 2009 (DOI:10.1083/jcb.200902122) demonstrated that Bqt3
+      is an inner nuclear membrane protein that directly binds and stabilizes Bqt4
+      against degradation.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74510
+    protein_label: Bouquet formation protein 3
+    gene_symbol: bqt3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. pombe Bqt3 inner-nuclear-membrane subunit that anchors and stabilizes
+      Bqt4.
+    evidence:
+    - reference: UniProtKB:O74510
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe bouquet formation
+        protein 3 (Bqt3).
+    - reference: PMID:19948484
+      notes: Chikashige et al. 2009 characterized S. pombe Bqt3 as the inner nuclear
+        membrane partner of Bqt4.
+- component_id: bqt4_subunit
+  label: Bouquet formation protein 4
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR037548
+  gene_symbols:
+  - bqt4
+  stoichiometry: Constituent inner-nuclear-membrane telomere-tethering subunit
+  essentiality: DISPENSABLE
+  role: Inner nuclear membrane protein anchored by a C-terminal transmembrane segment
+    and stabilized by Bqt3; binds the telomeric shelterin component Rap1 during vegetative
+    growth and recruits the meiotic Bqt1-Bqt2 bridge to cluster telomeres at the spindle
+    pole body during meiotic prophase.
+  evidence:
+  - reference: GO:1990862
+    notes: GO:1990862 defines Bqt4 as one of the two subunits of the inner nuclear
+      membrane complex Bqt3-Bqt4.
+  - reference: PMID:19948484
+    notes: Chikashige et al. 2009 showed that Bqt4 directly binds Rap1 to tether telomeres
+      to the nuclear envelope in vegetative cells, a prerequisite for meiotic bouquet
+      formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:O60158
+    protein_label: Bouquet formation protein 4
+    gene_symbol: bqt4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. pombe Bqt4 subunit that binds telomeric Rap1 and partners with
+      Bqt3 at the inner nuclear membrane.
+    evidence:
+    - reference: UniProtKB:O60158
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe bouquet formation
+        protein 4 (Bqt4).
+    - reference: PMID:19948484
+      notes: Chikashige et al. 2009 identified S. pombe Bqt4 and its interaction with
+        Rap1 and Bqt3.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4895
+  taxon_label: Schizosaccharomyces
+  presence: COMMON
+  note: Characterized in fission yeasts (Schizosaccharomyces) as the constitutive
+    inner-nuclear-membrane telomere-anchoring complex.
+  reference: PMID:19948484
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast strain in which the inner-nuclear-membrane Bqt3-Bqt4
+    telomere-tethering complex was identified and characterized.
+  reference: PMID:19948484
+functions:
+- function_id: meiotic_telomere_nuclear_envelope_attachment
+  label: meiotic attachment of telomere to nuclear envelope
+  grounding: GO:0070197
+  description: Resides in the inner nuclear membrane where Bqt3 stabilizes Bqt4 and
+    Bqt4 binds the telomeric protein Rap1 to anchor telomeres to the nuclear envelope,
+    enabling Bqt1-Bqt2-mediated telomere clustering and chromosomal bouquet formation
+    during meiotic prophase.
+  evidence:
+  - reference: GO:1990862
+    notes: GO:1990862 carries a capable_of_part_of (RO:0002216) axiom to GO:0070197
+      (meiotic attachment of telomere to nuclear envelope).
+  - reference: PMID:19948484
+    notes: Chikashige et al. 2009 demonstrated that Bqt3 and Bqt4 anchor telomeres
+      to the inner nuclear envelope to ensure meiotic chromosomal bouquet formation.
+evidence:
+- reference: GO:1990862
+  notes: Gene Ontology cellular-component term for nuclear membrane complex Bqt3-Bqt4.
+- reference: GO:0005637
+  notes: Gene Ontology cellular-component term for nuclear inner membrane.
+- reference: GO:0070197
+  notes: Gene Ontology biological-process term for meiotic attachment of telomere
+    to nuclear envelope.
+- reference: PMID:19948484
+  notes: Chikashige et al. 2009 (J Cell Biol, DOI:10.1083/jcb.200902122), primary
+    study establishing that inner nuclear membrane proteins Bqt3 and Bqt4 anchor telomeres
+    to the nuclear envelope.
+- reference: PMID:16615890
+  notes: Chikashige et al. 2006 (Cell, DOI:10.1016/j.cell.2006.01.048), characterization
+    of meiotic bouquet proteins Bqt1 and Bqt2 that connect telomere-bound Rap1/Taz1
+    to the spindle pole body.
+causal_graphs:
+- graph_id: bqt3_bqt4_telomere_anchoring_mechanism
+  title: Inner nuclear membrane assembly of Bqt3-Bqt4 and telomere anchoring to the
+    nuclear envelope
+  description: Directed causal graph linking Bqt3-mediated stabilization of Bqt4 at
+    the inner nuclear membrane to assembly of the nuclear membrane complex Bqt3-Bqt4
+    (GO:1990862) and meiotic attachment of telomeres to the nuclear envelope (GO:0070197).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bqt3_subunit
+    label: Bouquet formation protein 3
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt3_subunit
+    description: Multipass inner-nuclear-membrane protein Bqt3 (carries no family-level
+      InterPro grounding).
+  - node_id: bqt4_subunit
+    label: Bouquet formation protein 4
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR037548
+    component_ref: bqt4_subunit
+    description: Inner-nuclear-membrane Rap1-binding protein Bqt4.
+  - node_id: bqt3_bqt4_complex_node
+    label: nuclear membrane complex Bqt3-Bqt4
+    node_type: STRUCTURE
+    grounding: GO:1990862
+    description: Assembled inner-nuclear-membrane Bqt3-Bqt4 telomere-tethering complex.
+  - node_id: meiotic_telomere_attachment
+    label: meiotic attachment of telomere to nuclear envelope
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0070197
+    description: Tethering of telomeres to the inner nuclear membrane required for
+      meiotic bouquet formation.
+  edges:
+  - subject: bqt3_subunit
+    predicate: RO:0002436
+    object: bqt3_bqt4_complex_node
+    description: Bqt3 binds the C-terminal transmembrane region of Bqt4 and protects
+      Bqt4 from degradation at the inner nuclear membrane.
+    evidence:
+    - reference: PMID:19948484
+      notes: Chikashige et al. 2009 showed that Bqt3 directly interacts with and stabilizes
+        Bqt4 at the inner nuclear membrane.
+  - subject: bqt4_subunit
+    predicate: RO:0002436
+    object: bqt3_bqt4_complex_node
+    description: Bqt4 co-assembles with Bqt3 in the inner nuclear membrane and exposes
+      its N-terminal Rap1-binding domain to the nucleoplasm.
+    evidence:
+    - reference: PMID:19948484
+      notes: Chikashige et al. 2009 demonstrated that Bqt4 forms an inner nuclear
+        membrane complex with Bqt3.
+  - subject: bqt3_bqt4_complex_node
+    predicate: RO:0002213
+    object: meiotic_telomere_attachment
+    description: The Bqt3-Bqt4 complex binds telomeric Rap1 to anchor telomeres to
+      the nuclear envelope and enable meiotic bouquet formation.
+    evidence:
+    - reference: PMID:19948484
+      notes: Chikashige et al. 2009 showed that Bqt3-Bqt4-mediated telomere tethering
+        to the nuclear envelope is required for meiotic bouquet formation.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:1990862 (nuclear membrane complex Bqt3-Bqt4)
+    with verified GO identity, source-backed components, reviewed UniProtKB protein
+    examples, taxonomic distribution, canonical examples, functions, and mechanistic
+    causal graph.
+  llm_assisted: true

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/acidocalcisome_membrane.yaml
+  slug: acidocalcisome_membrane
+session:
+  id: 2026-10-31T090230Z-claude-code-51cb7c
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added acidocalcisome_lipid_bilayer node and connected proton_pumps and cation_transporters
+    into acidocalcisome_membrane_ion_transport.
+  details: Added the acidocalcisome_lipid_bilayer node with component_ref (GO:0033102) and
+    connected proton_pumps to acidocalcisome_membrane (DOI:10.1038/nrmicro1097) and cation_transporters
+    to cation_store (DOI:10.1128/MMBR.00042-23).

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  slug: lolcde_lipoprotein_abc_transporter_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-52d12c
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect LolC, LolD, and LolE subunits to lolcde and link release to localization
+  details: Added contributes to edges from lolc, lold, and lole to lolcde (ComplexPortal:CPX-4262,
+    PDB:7MDY) and from lipoprotein_release to outer_membrane_lipoprotein_localization (ComplexPortal:CPX-4262,
+    GO:0140306).

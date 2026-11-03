@@ -620,6 +620,16 @@
   "synonyms": "contractile ring cytokinetic actomyosin ring"
  },
  {
+  "identifier": "GO:0110131",
+  "label": "Aim21-Tda2 complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/aim21_tda2_complex.html",
+  "definition": "A complex that localizes to actin cortical patches at sites of endocytosis and negatively regulates barbed end F-actin assembly, resulting in the generation of free actin pools. The Aim21-Tda2 complex is necessary for efficient endocytosis and balancing the distribution of actin between patches and cables.",
+  "synonyms": "Aim21/Tda2 complex"
+ },
+ {
   "identifier": "cellstructuremech:alfa_filament",
   "label": "AlfA filament",
   "category": "CYTOSKELETON",
@@ -1160,6 +1170,26 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0030864",
+  "label": "cortical actin cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_actin_cytoskeleton.html",
+  "definition": "The part of the actin cytoskeleton that lies just beneath the plasma membrane. In budding yeast (Saccharomyces cerevisiae), fission yeast, and other fungi and protists, the cortical actin cytoskeleton comprises Arp2/3-nucleated branched actin cortical patches and cortical actin filaments that drive endocytic vesicle internalization and cell-cortex remodeling.",
+  "synonyms": "submembranous actin cytoskeleton"
+ },
+ {
+  "identifier": "GO:0030981",
+  "label": "cortical microtubule cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_microtubule_cytoskeleton.html",
+  "definition": "The part of the microtubule cytoskeleton that lies just beneath the plasma membrane in the cell cortex. In fission yeast (Schizosaccharomyces pombe), ciliates, apicomplexans, and microalgae, the cortical microtubule cytoskeleton includes astral and cortical microtubule arrays that interact with cortical dynein and plus-end capture factors to drive nuclear movement and maintain cell-cortex polarity.",
+  "synonyms": "cortical microtubule array"
+ },
+ {
   "identifier": "cellstructuremech:crescentin_filament",
   "label": "crescentin filament",
   "category": "CYTOSKELETON",
@@ -1198,6 +1228,16 @@
   "page": "structures/cytoskeleton/cytoplasmic_microtubule.html",
   "definition": "Any microtubule in the cytoplasm of a cell.",
   "synonyms": "non-spindle-associated astral microtubule"
+ },
+ {
+  "identifier": "GO:1905720",
+  "label": "cytoplasmic microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cytoplasmic_microtubule_bundle.html",
+  "definition": "A microtubule bundle located in the cytoplasm. In fission yeast (Schizosaccharomyces pombe) and other microbial eukaryotes, cytoplasmic microtubule bundles consist of parallel or antiparallel alpha/beta-tubulin polymers nucleated by gamma-tubulin adaptor complexes (Mto1-Mto2) and crosslinked by Ase1/MAP65 family proteins and CLASP (Cls1/Peg1) to maintain cytoplasmic organization and cell-tip polarity.",
+  "synonyms": "cytoplasmic MT bundle"
  },
  {
   "identifier": "cellstructuremech:cytostomal_cord",
@@ -1710,6 +1750,16 @@
   "synonyms": "new spindle pole body SIN signalling complex"
  },
  {
+  "identifier": "GO:0106094",
+  "label": "nuclear membrane microtubule tethering complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.html",
+  "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In Schizosaccharomyces pombe and other fungi, nuclear membrane microtubule tethering complexes composed of the inner nuclear membrane SUN-domain protein Sad1 and outer nuclear membrane KASH-domain linker Kms1 (bridged during meiosis to telomeres by Bqt1-Bqt2) couple chromosomes and spindle pole body attachment sites across the nuclear envelope to cytoplasmic microtubule motors.",
+  "synonyms": "nuclear envelope microtubule tethering complex"
+ },
+ {
   "identifier": "GO:0005880",
   "label": "nuclear microtubule",
   "category": "CYTOSKELETON",
@@ -2140,6 +2190,16 @@
   "synonyms": "vorticellid spasmoneme stalk myoneme spasmoneme"
  },
  {
+  "identifier": "GO:0099070",
+  "label": "static microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/static_microtubule_bundle.html",
+  "definition": "A stable bundle of closely packed microtubules formed in quiescent cells, usually associated with the spindle pole body. In yeast cells entering quiescence, it assembles at the transition from proliferation to quiescence and disassembles rapidly upon cell cycle re-entry.",
+  "synonyms": "Q-MT bundle quiescent cell MT bundle quiescent cell microtubule bundle"
+ },
+ {
   "identifier": "cellstructuremech:stentor_km_fiber",
   "label": "Stentor Km fiber",
   "category": "CYTOSKELETON",
@@ -2330,6 +2390,46 @@
   "synonyms": "Rod complex RodA-PBP2 complex"
  },
  {
+  "identifier": "GO:1990588",
+  "label": "FtsBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB and FtsL.",
+  "synonyms": "FtsB-FtsL complex"
+ },
+ {
+  "identifier": "GO:1990587",
+  "label": "FtsQBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsqbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB, FtsL and FtsQ.",
+  "synonyms": "FtsB-FtsL-FtsQ complex"
+ },
+ {
+  "identifier": "GO:0034973",
+  "label": "Sid2-Mob1 complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/sid2_mob1_complex.html",
+  "definition": "A protein complex that contains a protein kinase (Sid2 in S. pombe) and its regulatory subunit (Mob1). The Sid2p-Mob1p kinase complex is a component of the septation initiation network in fission yeast (called the mitotic exit network in S. cerevisiae) and is required for cytokinesis. The analogous complex in S. cerevisiae is called Dbf2p-Mob1p complex.",
+  "synonyms": "Dbf2p-Mob1p complex Sid2-Mob1 kinase complex Sid2p-Mob1p complex"
+ },
+ {
+  "identifier": "GO:1990490",
+  "label": "archaeal proton-transporting A-type ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.html",
+  "definition": "A large proton-transporting two-sector ATPase protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane and is found in Archaea.",
+  "synonyms": "A-type ATPase protein complex archaeal A-type ATPase protein complex"
+ },
+ {
   "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
   "label": "chlorosome baseplate antenna complex",
   "category": "ENERGY_COMPLEX",
@@ -2430,6 +2530,16 @@
   "synonyms": "quinol-fumarate reductase"
  },
  {
+  "identifier": "GO:0016611",
+  "label": "iron-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/iron_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing an iron-only active-site cluster (FeFe-cofactor) expressed when both molybdenum and vanadium are depleted in diazotrophs such as Rhodobacter capsulatus and Azotobacter vinelandii. Although the GO:0016611 ontology definition describes an older alpha1-beta2 or alpha2-beta2 dinitrogenase stoichiometry, crystallographic and cryo-EM structures (PDB:8BOQ, PDB:8OIE) demonstrate a heterohexameric alpha2beta2delta2 catalytic component (AnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (AnfH2).",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
   "label": "LH2 peripheral light-harvesting antenna complex",
   "category": "ENERGY_COMPLEX",
@@ -2457,6 +2567,16 @@
   "status": "PROPOSED",
   "page": "structures/energy_complex/methyl_coenzyme_m_reductase_complex.html",
   "definition": "Methyl coenzyme M reductase complex is a hexameric alpha2 beta2 gamma2 enzyme complex that catalyzes coenzyme B-dependent reduction of methyl-coenzyme M to methane during the terminal step of methanogenesis.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0016612",
+  "label": "molybdenum-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/molybdenum_iron_nitrogenase_complex.html",
+  "definition": "An enzyme complex containing a molybdenum-iron cluster found in many diazotrophic species. It is composed of two component proteins, molybdenum-iron dinitrogenase (MoFe protein, an alpha2beta2 heterotetramer NifD2K2 carrying P-clusters and active-site FeMo-cofactors) and nitrogenase reductase (Fe protein, a homodimer NifH2 carrying a subunit-bridging [4Fe-4S] cluster) that transiently dock to couple MgATP hydrolysis to electron transfer and dinitrogen reduction.",
   "synonyms": ""
  },
  {
@@ -2570,6 +2690,16 @@
   "synonyms": "cyanobacterial PSII"
  },
  {
+  "identifier": "GO:0031004",
+  "label": "potassium ion-transporting ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/potassium_ion_transporting_atpase_complex.html",
+  "definition": "Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.",
+  "synonyms": "Kdp system complex"
+ },
+ {
   "identifier": "GO:0045259",
   "label": "proton-transporting ATP synthase complex",
   "category": "ENERGY_COMPLEX",
@@ -2578,6 +2708,36 @@
   "page": "structures/energy_complex/proton_transporting_atp_synthase_complex.html",
   "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit.",
   "synonyms": "F1Fo ATP synthase"
+ },
+ {
+  "identifier": "GO:0016469",
+  "label": "proton-transporting two-sector ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex.html",
+  "definition": "A large protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane. The complex comprises a membrane sector (F0 or V0) that carries out proton transport and a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis.",
+  "synonyms": "hydrogen-transporting two-sector ATPase complex vacuolar hydrogen-transporting ATPase"
+ },
+ {
+  "identifier": "GO:0033178",
+  "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and catalyzes ATP synthesis or hydrolysis. The catalytic sector consists of a hexameric head and a central stalk; substrate binding and rotary motion of the central stalk is coupled to proton transport in the membrane sector.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033177",
+  "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and mediates proton transport across a membrane.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0033176",
@@ -2698,6 +2858,16 @@
   "page": "structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v1_domain.html",
   "definition": "The V1 domain of a proton-transporting V-type ATPase found in the vacuolar membrane.",
   "synonyms": "vacuolar hydrogen ion-transporting ATPase V1 domain"
+ },
+ {
+  "identifier": "GO:0016613",
+  "label": "vanadium-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/vanadium_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing a vanadium-iron active-site cluster (FeV-cofactor) expressed under molybdenum depletion in species such as Azotobacter vinelandii. Although the GO:0016613 ontology definition retains older generic alpha2-beta2 tetramer wording, structural resolution of the A. vinelandii VFe protein (PDB:5N6Y) shows a heterohexameric alpha2beta2delta2 catalytic dinitrogenase component (VnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (VnfH2).",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0042603",
@@ -3197,6 +3367,16 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/apicoplast_membrane.html",
   "definition": "Any of the lipid bilayers that surround an apicoplast and form the apicoplast envelope.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0097658",
+  "label": "Asi complex",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/asi_complex.html",
+  "definition": "A nuclear ubiquitin ligase multiprotein complex located in the inner nuclear membrane (INM) that recognizes and ubiquitinates misfolded INM proteins and also some proteins involved in sterol biosynthesis, during ER-associated protein degradation (ERAD). In S. cerevisiae, this complex contains the ubiquitin ligases Asi1p and Asi3p.",
   "synonyms": ""
  },
  {
@@ -4640,6 +4820,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:1990862",
+  "label": "nuclear membrane complex Bqt3-Bqt4",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_membrane_complex_bqt3_bqt4.html",
+  "definition": "A protein complex that resides in the inner nuclear membrane and anchors telomeres to the nuclear envelope. In fission yeast, it is composed of Bqt3 and Bqt4.",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:nuclear_net",
   "label": "nuclear net",
   "category": "MEMBRANE_ORGANELLE",
@@ -5136,7 +5326,7 @@
   "kind": "MEMBRANE",
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/reservosome_membrane.html",
-  "definition": "The lipid bilayer surrounding a reservosome. The limiting lipid bilayer membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11 GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated lipid and protein mobilization during metacyclogenesis.",
+  "definition": "The lipid bilayer surrounding a reservosome.",
   "synonyms": ""
  },
  {
@@ -5550,6 +5740,16 @@
   "synonyms": "AMT1 complex"
  },
  {
+  "identifier": "GO:0031250",
+  "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/anaerobic_ribonucleoside_triphosphate_reductase_complex.html",
+  "definition": "An enzyme complex composed of 4 subunits, 2 copies of the large protein (nrdD in E. coli) and 2 copies of the small protein (nrdG in E. coli). It catalyzes the generation of 2'deoxyribonucleotides under anaerobic growth conditions. The larger subunit is the catalytic unit that is activated by the smaller iron-binding subunit.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030121",
   "label": "AP-1 adaptor complex",
   "category": "OTHER",
@@ -5617,6 +5817,16 @@
   "status": "PROPOSED",
   "page": "structures/other/apical_complex.html",
   "definition": "A group of cytoskeletal structures and associated membrane-bounded organelles at the anterior end of apicomplexan parasites that supports host-cell attachment, penetration, and parasite proliferation.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0034274",
+  "label": "Atg12-Atg5-Atg16 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/atg12_atg5_atg16_complex.html",
+  "definition": "A protein complex required for the expansion of the autophagosomal membrane. In budding yeast, this complex consists of Atg12p, Atg5p and Atg16p.",
   "synonyms": ""
  },
  {
@@ -5780,6 +5990,16 @@
   "synonyms": "cellulosomal complex multienzyme cellulolytic complex"
  },
  {
+  "identifier": "GO:0016465",
+  "label": "chaperonin ATPase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chaperonin_atpase_complex.html",
+  "definition": "A multimeric ATPase complex involved in protein folding. It has a symmetric ring-shaped structure and consists of multiple identical ~60kDa subunits and, in the bacterial complex, several smaller subunits; a central cavity receives unfolded peptides and promotes their folding into the native conformation.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005832",
   "label": "chaperonin-containing T-complex",
   "category": "OTHER",
@@ -5808,6 +6028,36 @@
   "page": "structures/other/chrac.html",
   "definition": "An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and additional small histone fold subunits (generally two of these, but Xenopus has only one and some additional non-conserved subunits). CHRAC plays roles in the regulation of RNA polymerase II transcription and in DNA replication and repair.",
   "synonyms": "chromatin accessibility complex ISW2 complex"
+ },
+ {
+  "identifier": "GO:0000775",
+  "label": "chromosome, centromeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_centromeric_region.html",
+  "definition": "The region of a chromosome that includes the centromeric DNA and associated proteins. In mitosis or meiosis II, this region connects the chromosome to spindle microtubules via the kinetochore. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the centromeric region comprises specialized CenH3 (Cse4/Cnp1) centromeric nucleosomes, point- or regional-centromere DNA-binding factors (such as the CBF3 complex), pericentromeric cohesin/heterochromatin, and the assembled inner and outer kinetochore complexes.",
+  "synonyms": "centromere chromosomal centromeric region"
+ },
+ {
+  "identifier": "GO:0099115",
+  "label": "chromosome, subtelomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_subtelomeric_region.html",
+  "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the chromosome, subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.",
+  "synonyms": "subtelomere subtelomeric chromatin"
+ },
+ {
+  "identifier": "GO:0000781",
+  "label": "chromosome, telomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_telomeric_region.html",
+  "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the chromosome, telomeric region comprises terminal telomeric DNA repeats bound by sequence-specific duplex repeat-binding and telomere-associated proteins (such as Rap1 and Taz1) that form a protective nucleoprotein cap at chromosome ends and mediate telomere organization.",
+  "synonyms": "telomere telomeric chromatin"
  },
  {
   "identifier": "GO:0030118",
@@ -5888,6 +6138,16 @@
   "page": "structures/other/cmg_complex.html",
   "definition": "A protein complex that contains the GINS complex, Cdc45p, and the heterohexameric MCM complex, and that is involved in unwinding DNA during replication.",
   "synonyms": "unwindosome"
+ },
+ {
+  "identifier": "GO:1990191",
+  "label": "cobalamin transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/cobalamin_transport_complex.html",
+  "definition": "Protein complex facilitating ATP-dependent cobalamin (vitamin B12) transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic cobalamin-binding protein (BtuF), an integral membrane homodimer, BtuC, and a cytoplasmic ATP-binding homodimer BtuD.",
+  "synonyms": "BtuCDF complex cobalamin-transporting BtuCDF complex vitamin B12 transport complex vitamin B12-transporting BtuCDF complex"
  },
  {
   "identifier": "GO:0017119",
@@ -6440,6 +6700,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0000408",
+  "label": "EKC/KEOPS complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ekc_keops_complex.html",
+  "definition": "A protein complex involved in t6A tRNA modification. For example, in Saccharomyces cerevisiae the complex contains Bud32p, Kae1p, Gon7p, Cgi121p, and Pcc1p.",
+  "synonyms": "KEOPS/EKC complex endopeptidase-like kinase chromatin-associated protein complex kinase, putative endopeptidase and other proteins of small size protein complex"
+ },
+ {
   "identifier": "GO:0031391",
   "label": "Elg1 RFC-like complex",
   "category": "OTHER",
@@ -6830,6 +7100,16 @@
   "synonyms": "Caulobacter holdfast holdfast adhesin"
  },
  {
+  "identifier": "GO:0009379",
+  "label": "Holliday junction helicase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/holliday_junction_helicase_complex.html",
+  "definition": "A DNA helicase complex found at Holliday junctions where the helicase activity is involved in the migration of the junction branch point. The best-characterized example is the E. coli RuvAB complex, in which a hexamer of RuvB subunits possesses helicase activity that is modulated by association with RuvA.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030897",
   "label": "HOPS complex",
   "category": "OTHER",
@@ -6838,6 +7118,16 @@
   "page": "structures/other/hops_complex.html",
   "definition": "A multimeric protein complex that associates with the vacuolar membrane, late endosomal (multivesicular body) and lysosomal membranes. HOPS is a tethering complex involved in vesicle fusion.",
   "synonyms": "homotypic fusion and vacuole protein sorting complex"
+ },
+ {
+  "identifier": "GO:0009376",
+  "label": "HslUV protease complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/hsluv_protease_complex.html",
+  "definition": "A protein complex that possesses ATP-dependent protease activity; consists of an ATPase large subunit with homology to other ClpX family ATPases and a peptidase small subunit related to the proteasomal beta-subunits of eukaryotes. In the E. coli complex, a double ring-shaped homohexamer of HslV is capped on each side by a ring-shaped HslU homohexamer.",
+  "synonyms": "ClpYQ protease complex"
  },
  {
   "identifier": "cellstructuremech:hsp78_chaperone_complex",
@@ -6888,6 +7178,16 @@
   "page": "structures/other/ino80_complex.html",
   "definition": "A multisubunit protein complex that contains the Ino80p ATPase; exhibits chromatin remodeling activity.",
   "synonyms": "INO80 chromatin remodeling complex INO80-C Ino80.com"
+ },
+ {
+  "identifier": "GO:1990330",
+  "label": "IscS-IscU complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/iscs_iscu_complex.html",
+  "definition": "A heterotetrameric protein complex involved in the sulfur transfer during iron-sulfur cluster assembly and in the modification of tRNA wobble positions. In E. coli it consists of a central IscS dimer with the IscU protomers attached to one of the IscS units each via a disulfide (-SSH) group.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0016587",
@@ -6988,6 +7288,16 @@
   "page": "structures/other/macab_tolc_complex.html",
   "definition": "The MacAB-TolC complex is a macrolide transporter complex found in E.coli and related gram-negative bacteria. Its transport activity is specific to macrolide compounds containing 14- and 15-membered lactones. It consists of the dimeric inner membrane ATPase MacB, the hexameric, periplasmic membrane fusion protein MacA and the trimeric outer membrane factor TolC.",
   "synonyms": "macrolide transporter MacAB-TolC complex"
+ },
+ {
+  "identifier": "GO:1990060",
+  "label": "maltose transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/maltose_transport_complex.html",
+  "definition": "Protein complex facilitating ATP-dependent maltose transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic maltose-binding protein (MBP), two integral membrane proteins, MalF and MalG, and two copies of the cytoplasmic ATP-binding cassette MalK.",
+  "synonyms": "maltose ABC transporter complex maltose ATP-binding cassette transporter complex"
  },
  {
   "identifier": "GO:0043332",
@@ -7120,6 +7430,16 @@
   "synonyms": "Fcj1 complex MINOS complex mitochondrial contact site and cristae organizing system MitOS complex"
  },
  {
+  "identifier": "GO:0120155",
+  "label": "MIH complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mih_complex.html",
+  "definition": "A trimeric complex involved in cytokinesis. Proposed to bridge actomyosin ring contraction and septum synthesis in yeast, resulting in the coordination of these processes, and leading to plasma membrane ingression and fusion. In the yeast Saccharomyces cerevisiae this complex consists of Mlc1p, Iqg1p and Hof1p proteins.",
+  "synonyms": "Mlc1p-Iqg1p-Hof1p complex"
+ },
+ {
   "identifier": "GO:0140595",
   "label": "MIM complex",
   "category": "OTHER",
@@ -7218,6 +7538,26 @@
   "page": "structures/other/mode_complex.html",
   "definition": "A dimeric protein complex containing two ModE subunits. Binds directly to DNA to regulate transcription, and is involved in (positively and negatively) regulating various aspects of molybdenum metabolism.",
   "synonyms": "ModE dimer"
+ },
+ {
+  "identifier": "GO:1990140",
+  "label": "molybdopterin synthase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/molybdopterin_synthase_complex.html",
+  "definition": "A heterotetrameric protein complex that catalyses sulfur transfer from the sulfur carrier subunit of molybdopterin synthase to precursor Z to synthesize molybdopterin as part of molybdopterin cofactor (Moco) biosynthesis. In E. coli the subunits are MoaE and MoaD; in human, MOCS2B and MOCS2A. Moco biosynthesis and its constituent molecules are evolutionarily conserved.",
+  "synonyms": "MPT synthase complex molybdopterin converting factor complex molybdopterin cofactor (Moco) biosynthesis sulfurtransferase complex"
+ },
+ {
+  "identifier": "GO:0035658",
+  "label": "Mon1-Ccz1 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mon1_ccz1_complex.html",
+  "definition": "A protein complex that functions as a guanine nucleotide exchange factor (GEF) and converts Rab-GDP to Rab-GTP. In S. cerevisiae, this complex consists of at least Mon1 and Ccz1, and serves as a GEF for the Rab Ypt7p.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0033551",
@@ -7770,6 +8110,26 @@
   "synonyms": "pre-RC pre-replication complex"
  },
  {
+  "identifier": "GO:0016272",
+  "label": "prefoldin complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/prefoldin_complex.html",
+  "definition": "A multisubunit chaperone that is capable of delivering unfolded proteins to cytosolic chaperonin, which it acts as a cofactor for. In humans, the complex is a heterohexamer of two PFD-alpha and four PFD-beta type subunits. In Saccharomyces cerevisiae, it also acts in the nucleus to regulate the rate of elongation by RNA polymerase II via a direct effect on histone dynamics.",
+  "synonyms": "GIM complex"
+ },
+ {
+  "identifier": "GO:1990077",
+  "label": "primosome complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/primosome_complex.html",
+  "definition": "A protein-DNA complex essential for initiation or restart of DNA replication in bacteria. At a minimum, it contains a DNA helicase and associated protein(s) which unwind the double-stranded DNA (dsDNA) and move along a single strand of DNA in the 5' to 3' direction. Typically, it also contains a primase which synthesizes a RNA primer.",
+  "synonyms": "primosome"
+ },
+ {
   "identifier": "GO:0022624",
   "label": "proteasome accessory complex",
   "category": "OTHER",
@@ -7908,6 +8268,16 @@
   "page": "structures/other/rdna_protrusion.html",
   "definition": "Any of the tandem arrays of rDNA localized at the periphery of the nucleus and protruding into the nucleolus, and associated proteins. May be visible as a single or double spot by DAPI staining. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the rDNA protrusion comprises the tandemly repeated 35S/37S ribosomal DNA array on chromosome XII or III extending from the nuclear chromatin mass into the crescent-shaped nucleolus, bound by Fob1, Sir2/RENT, Net1, Hmo1, and RNA polymerase I.",
   "synonyms": "nucleolar rDNA loop"
+ },
+ {
+  "identifier": "GO:0030869",
+  "label": "RENT complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rent_complex.html",
+  "definition": "A protein complex that mediates transcriptional silencing at the rDNA locus (the name derives from regulator of nucleolar silencing and telophase). In Saccharomyces the complex contains Net1p, Sir2p, Cdc14p, and at least one more subunit.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0005657",
@@ -8210,6 +8580,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0009337",
+  "label": "sulfite reductase complex (NADPH)",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/sulfite_reductase_complex_nadph.html",
+  "definition": "A multisubunit iron flavoprotein, which in yeast is composed of 2 alpha and 2 beta subunits. Catalyzes the reduction of sulfite to sulfide.",
+  "synonyms": "sulphite reductase complex (NADPH)"
+ },
+ {
   "identifier": "GO:0032798",
   "label": "Swi5-Sfr1 complex",
   "category": "OTHER",
@@ -8258,6 +8638,16 @@
   "page": "structures/other/taurine_dioxygenase_complex.html",
   "definition": "A protein complex capable of catalyzing the conversion of taurine and alpha-ketoglutarate to sulfite, aminoacetaldehyde and succinate under sulfur or cysteine starvation conditions. Its expression is repressed by the presence of sulfate or cysteine. In E. coli it is a homodimer or homotetramer of the protein TauD.",
   "synonyms": "2-aminoethanesulfonate dioxygenase complex alpha-ketoglutarate-dependent taurine dioxygenase complex TauD complex"
+ },
+ {
+  "identifier": "GO:0031500",
+  "label": "Tea1 cell-end complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tea1_cell_end_complex.html",
+  "definition": "A high molecular weight complex characterized in S. pombe containing the cell-end anchoring protein Tea1. This complex is transported to the cell ends by microtubules and is involved in bipolar growth and the maintennce of normal cell polarity.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0000347",
@@ -8450,6 +8840,26 @@
   "synonyms": "TUSK TUS complex TUS deubiquitinase complex"
  },
  {
+  "identifier": "GO:0031372",
+  "label": "UBC13-MMS2 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ubc13_mms2_complex.html",
+  "definition": "A heterodimeric ubiquitin conjugating enzyme complex that catalyzes assembly of K63-linked polyubiquitin chains. In Saccharomyces cerevisiae, the complex comprises Ubc13p and Mms2p; in human it comprises UBE2N and UBE2V1/UBE2V2; and in plants UBC35/UBC36 and UEV1A/UEV1B/UEV1C/UEV1D-4.",
+  "synonyms": "BEN-UEV1A complex UBE2N/UBE2NL complex UBE2V1/UBE2V2 complex Uev1A-ben complex ubc-13-uev-1 complex"
+ },
+ {
+  "identifier": "GO:0043541",
+  "label": "UDP-N-acetylglucosamine transferase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/udp_n_acetylglucosamine_transferase_complex.html",
+  "definition": "A multienzyme, heterooligomeric complex involved in dolichyl-linked oligosaccharide synthesis. In yeast the complex is composed of Alg7p, which catalyzes the first step (GlcNAc1-PP-Dol from dolichol-phosphate and UDP-GlcNAc), and Alg13p plus Alg14p, the catalytic and anchoring subunits respectively, which together catalyze the second step (GlcNAc2-PP-dolichol from GlcNAc1-PP-Dol and UDP-GlcNAc) of dolichyl-linked oligosaccharide synthesis.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0034456",
   "label": "UTP-C complex",
   "category": "OTHER",
@@ -8528,6 +8938,26 @@
   "page": "structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.html",
   "definition": "A ribonucleoprotein complex containing a box C/D type RNA that is capable of ribose-2'-O-methylation of target RNAs. Box C/D type RNAs are widespread in eukaryotes and in Archaea, suggesting that an RNA-based guide mechanism for directing specific RNA 2'-O-ribose methylations was present in the common ancestor of Archaea and Eukarya. A conserved ribonucleoprotein complex composed of a box C/D guide snoRNA (or archaeal box C/D sRNA) containing kink-turn C/D and C'/D' motifs bound by the kink-turn binding protein Snu13p (L7Ae in Archaea), the scaffold subunits Nop56p and Nop58p (Nop5 in Archaea), and the SAM-dependent 2'-O-ribose methyltransferase Nop1p/fibrillarin. The complex base-pairs with target pre-rRNA to direct site-specific 2'-O-methylation five nucleotides upstream of box D or D'.",
   "synonyms": "box C/D snoRNP ribose 2'-O methylase complex box C/D sRNP complex box C/D small nucleolar ribonucleoprotein complex box C/D snoRNP complex box C/D snoRNP ribose-2'-O-methyltransferase complex"
+ },
+ {
+  "identifier": "GO:0170049",
+  "label": "box C/D RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_c_d_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with a C/D box sequence motif that functions in the modification and processing of precursor ribosomal RNAs. Most members of this family direct site-specific 2'-O-methylation of substrate RNAs (box C/D methylation guide snoRNPs and scaRNPs), while others, such as the U3, U8, U14, and U22 snoRNPs, mediate endonucleolytic cleavage and folding of pre-rRNA.",
+  "synonyms": "SNORD ribonucleoprotein complex SNORNP"
+ },
+ {
+  "identifier": "GO:0072588",
+  "label": "box H/ACA RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_h_aca_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence motif that catalyzes pseudouridylation of RNA molecules. Most members of this family use guide RNAs to direct the site of pseudouridylation of target RNAs (for example, box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other RNAs (for example, telomerase RNP).",
+  "synonyms": "sRNP complex box H/ACA snoRNP pseudouridylase complex"
  },
  {
   "identifier": "GO:0031429",
@@ -8908,6 +9338,16 @@
   "page": "structures/ribonucleoprotein/ribosome.html",
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components.",
   "synonyms": "70S ribosome"
+ },
+ {
+  "identifier": "GO:0030958",
+  "label": "RITS complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/rits_complex.html",
+  "definition": "A protein complex required for heterochromatin assembly; contains an Argonaute homolog, a chromodomain protein, and at least one additional protein; named for RNA-induced initiation of transcriptional gene silencing.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0140365",
