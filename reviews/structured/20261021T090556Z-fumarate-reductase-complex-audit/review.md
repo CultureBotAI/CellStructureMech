@@ -1,0 +1,1108 @@
+# Fumarate reductase four-chain architecture and quinol-coupling scope review
+
+- Review: 20261021T090556Z-fumarate-reductase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:41:55Z
+- Finished UTC: 2026-10-21T09:05:56Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Four-chain identity, exact subunit examples, selective family grounding, source-specific structure and coarse quinol-coupling graph are supported. No concrete curation issue was established.
+
+## Scope And Provenance
+
+Entire target, every component/example/family/graph/discussion claim; native GO/PDB/UniProt/taxonomy and primary structure/inhibitor bodies with explicit access and preparation bounds.
+
+Selection: Tenth selected target in batch thirteen, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0045283 | data/structures/energy_complex/fumarate_reductase_complex.yaml | maintained | fumarate reductase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0045283 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0045283 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0045283 | 14 identifiers OK; 4 transport/skipped residuals independently resolved. |
+| Native UniProt verify | passed | False | GO:0045283 | Native command passed; scientific membership and graph scope assessed independently. |
+| Native UniProt causal-graphs | passed | False | GO:0045283 | Native command passed; scientific membership and graph scope assessed independently. |
+| Claim-level scientific review | passed | True | GO:0045283 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0045283 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0045283 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0045283 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0045283 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0045283 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Four-subunit respiratory assembly
+
+identity: supported. Targets: GO:0045283.
+
+GO identity, definition, energy-complex category and multiprotein kind denote the membraneFrdABCD architecture. The record does not equate it with a solitary FrdA flavoprotein or the broader succinate-dehydrogenase family. Exact synonym is supported by the cited primary title.
+
+### Respiratory-chain parent
+
+scope: supported. Targets: GO:0045283.
+
+The asserted parent is a native is-a relation. The scoped four-chain definition agrees with GO and the E.coli architecture; no universal claim that every quinol-fumarate reductase lineage has two membrane chains is inferred.
+
+### Subunit families and concrete examples
+
+grounding: supported. Targets: GO:0045283.
+
+FrdA/C/D have appropriate exact family entries, while IPR004489 spans FrdB and SdhB and cannot identify only the narrower FrdB component. All four native reviewed gene/taxon pairs and PDBentity mappings agree; membership rests on the experimental structure rather than gene lookup alone.
+
+### Catalytic and membrane-anchor modules
+
+evidence: supported. Targets: GO:0045283.
+
+The primary structure and native entry identify the FAD-bindingA chain, Fe-SB chain and15/13kDa C/D anchors as asserted. The two membrane subunits contribute to the complete complex; the graph avoids assigning an unsupported exclusive anchoring contact toFrdA. These composition observations do not independently establish the assembly-necessity assertion carried by ESSENTIAL.
+
+### Species example and K-12 proteins
+
+scope: supported. Targets: GO:0045283.
+
+Species562 matches native1KF6 source annotations; each reviewed protein instance is K-12 taxon83333. The canonical structure is inhibitor-bound and crystallized from isolated enzyme. The record does not claim a native-cell image or generalize asymmetric-unit pairing into physiological oligomerization.
+
+### Daley location annotation is correctly bounded
+
+provenance: supported. Targets: GO:0045283.
+
+Native P0A8Q0/P0A8Q3 comments cite PMID15919996 with ECO0000269 specifically for Cell inner membrane location, as the target says. This checks the attribution to UniProt; Daley abstract supplies large-scale topology context and is not presented as independently read proof of whole-complex membership.
+
+### Coarse quinol/fumarate coupling
+
+graph: supported. Targets: GO:0045283.
+
+All whole-complex, subunit-layout, donor/acceptor and product edges agree with native GO and primary architecture. NONMECHANISTIC deliberately omits cofactor order, specific quinone occupancy and inhibitor conformational claims. Neither the function nor graph asserts a demonstrated proton pump or a mandatory distal quinone role.
+
+### Actionable FrdB boundary and optional detail
+
+completeness: supported. Targets: GO:0045283.
+
+The unresolved exact FrdB family is a valid scope question, not a generic-family withholding error. Additional images, chemical groundings, explicit cofactors, kinetic values and a source-composition import are optional. No concrete curation defect was established.
+
+### Assembly necessity versus constituent membership
+
+evidence: unknown. Targets: GO:0045283.
+
+The schema defines essentiality by whether the structure forms without the component. The inspected sources establish constituent membership and functions, but those observations alone do not establish this assembly-necessity assertion. No subunit-deletion/assembly experiment was independently checked here; catalytic necessity, organismal viability and intact structural membership are distinct questions.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/energy_complex/fumarate_reductase_complex.yaml; Entire maintained YAML including all imported participants, component examples, functions, graph edges, discussions and history | context_only | All fields were read after fresh native inspection; the maintained target and PROPOSED state are unchanged. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, CausalNode and source-specific ComplexComposition contracts; docs/CURATION.md and review checklist | context_only | Component family identity, concrete protein identity and source-specific assembly membership are separate. Optional fields are not mandatory. CausalNode permits protein complexes; its xrefs contract does not inherit the top-level record equivalence restriction. |
+| fumarate-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0045283,GO:0098803; Complete two native term definitions, status and respiratory-chain parent children | supports | Active GO0045283 denotes the four-subunit membrane fumarate reductase with extrinsicA/B and membraneC/D portions and quinol-to-quinone/fumarate-to-succinate chemistry. GO0098803 explicitly lists it as an is_a child. The native definition also contains a copied subunit-D-family sentence; the maintained whole-complex definition correctly avoids that conflation. |
+| fumarate-agent-tax-562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Full native identity, rank, names and lineage | supports | Native taxonomy confirms species562 E.coli and strain83333 E.coli K-12 as distinct compatible levels. |
+| fumarate-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Full native identity, rank, names and lineage | supports | Native taxonomy confirms species562 E.coli and strain83333 E.coli K-12 as distinct compatible levels. |
+| fumarate-agent-P00363 | https://rest.uniprot.org/uniprotkb/P00363.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P00363 identifies Fumarate reductase flavoprotein subunit, gene frdA, taxon83333. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| fumarate-agent-query-frdA | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3AfrdA%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene frdA, organism83333, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P00363. This checks identifier resolution only. |
+| fumarate-agent-P0AC47 | https://rest.uniprot.org/uniprotkb/P0AC47.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P0AC47 identifies Fumarate reductase iron-sulfur subunit, gene frdB, taxon83333. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| fumarate-agent-query-frdB | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3AfrdB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene frdB, organism83333, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P0AC47. This checks identifier resolution only. |
+| fumarate-agent-P0A8Q0 | https://rest.uniprot.org/uniprotkb/P0A8Q0.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P0A8Q0 identifies Fumarate reductase subunit C, gene frdC, taxon83333. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| fumarate-agent-query-frdC | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3AfrdC%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene frdC, organism83333, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P0A8Q0. This checks identifier resolution only. |
+| fumarate-agent-P0A8Q3 | https://rest.uniprot.org/uniprotkb/P0A8Q3.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P0A8Q3 identifies Fumarate reductase subunit D, gene frdD, taxon83333. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| fumarate-agent-query-frdD | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3AfrdD%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene frdD, organism83333, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P0A8Q3. This checks identifier resolution only. |
+| fumarate-agent-IPR005884 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005884/; Complete native accession/type/name and family description | supports | The family specifically represents fumarate-reductase flavoproteins in organisms with a distinct succinate dehydrogenase; broader shared flavoprotein descriptions are background. |
+| fumarate-agent-IPR003510 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003510/; Complete native accession/type/name and family description | supports | Exact type-D fumarate-reductase15kDa subunit-C family agrees with the named row. |
+| fumarate-agent-IPR003418 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003418/; Complete native accession/type/name and family description | supports | Exact fumarate-reductase13kDa subunit-D family agrees with the named row. |
+| fumarate-agent-IPR004489 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004489/; Complete native accession/type/name and family description | supports | The Fe-S family expressly spans succinate dehydrogenase and fumarate reductase, justifying the narrower FrdB label-only decision. |
+| fumarate-agent-IPR014006 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014006/; Complete native accession/type/name and family description | supports | Shared succinate-dehydrogenase/fumarate-reductase flavoprotein family is broader than the more precise asserted FrdA family. |
+| fumarate-agent-IPR030664 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030664/; Complete native accession/type/name and family description | supports | SdhA/FrdA/AprA FAD-dependent oxidoreductase family includes APS reductase and is too broad for an exact FrdA grounding. |
+| fumarate-agent-pdb-1KF6 | https://data.rcsb.org/rest/v1/core/entry/1KF6; Entry title, exptl, citation and resolution fields | supports | 1KF6 identifies E.coli quinol-fumarate reductase with bound HQNO inhibitor, X-ray2.7A, with exact Iverson2002 primary citation. It is not the original1999 coordinate deposit. |
+| fumarate-agent-assembly-1KF6 | https://data.rcsb.org/rest/v1/core/assembly/1KF6/1; rcsb_assembly_info and pdbx_struct_assembly/gen | supports | Assembly1 is an author/software-defined tetramer with four distinct protein entities and four instances. The asymmetric unit has two sets of chains; that is not evidence of a physiological eight-chain dimer. |
+| fumarate-agent-1KF6-entity-1 | https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/1; Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt mapping | supports | 1KF6 entity1 maps exactly toP00363; source organism is species562. UniProt separately supports the K-12 protein-example taxon. |
+| fumarate-agent-1KF6-entity-2 | https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/2; Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt mapping | supports | 1KF6 entity2 maps exactly toP0AC47; source organism is species562. UniProt separately supports the K-12 protein-example taxon. |
+| fumarate-agent-1KF6-entity-3 | https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/3; Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt mapping | supports | 1KF6 entity3 maps exactly toP0A8Q0; source organism is species562. UniProt separately supports the K-12 protein-example taxon. |
+| fumarate-agent-1KF6-entity-4 | https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/4; Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt mapping | supports | 1KF6 entity4 maps exactly toP0A8Q3; source organism is species562. UniProt separately supports the K-12 protein-example taxon. |
+| fumarate-agent-iverson1999-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1126/science.284.5422.1961; Exact native bibliographic metadata and complete abstract | supports | Iverson, Luna-Chavez, Cecchini and Rees1999, PMID10373108, DOI10.1126/science.284.5422.1961. |
+| fumarate-agent-iverson2002-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1074/jbc.M200815200; Exact native bibliographic metadata and complete abstract | supports | Iverson, Luna-Chavez, Croal, Cecchini and Rees2002, PMID11850430, DOI10.1074/jbc.M200815200. |
+| fumarate-agent-daley2005-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A15919996%20AND%20SRC%3AMED; Exact native bibliographic metadata and complete abstract | supports | Daley et al.2005, Global topology analysis of the E.coli inner membrane proteome, PMID15919996, DOI10.1126/science.1109730; abstract-level methods/context only. |
+| fumarate-agent-iverson1999-colorado-pdf | https://dosequis.colorado.edu/Courses/InsaneMembrane/papers/CompII%20and%20FormateDehydro/compIIa.pdf; Public university-hosted original Science PDF, printed pp1961–1966: entire main text, all captions/Table1 and Methods notes13–16 read via native PDF text; no coordinate or figure-pixel reanalysis. | supports | The original primary crystal study resolves FrdA/B/C/D and their cofactor arrangement. FrdA/B are cytoplasmic soluble domains and C/D membrane anchors. It explicitly separates crystal pairing from physiological dimer evidence and does not establish proton pumping. |
+| fumarate-agent-iverson2002-browser | https://www.researchgate.net/publication/11511804_Crystallographic_Studies_of_the_Escherichia_coliQuinol-Fumarate_Reductase_with_Inhibitors_Bound_to_the_Quinol-binding_Site; Primary title/Introduction, Experimental Procedures and inhibitor-binding Results, printed pp16124–16127; browser primary body, no native HTTP200 claim. | supports | The later inhibitor experiment directly supports the same four-chain enzyme and identifies1KF6 as HQNO-bound; the title supplies the maintained synonym. |
+| fumarate-agent-iverson2002-browser2 | https://www.researchgate.net/publication/11511804_Crystallographic_Studies_of_the_Escherichia_coliQuinol-Fumarate_Reductase_with_Inhibitors_Bound_to_the_Quinol-binding_Site; Primary Results remainder, TableI, Discussion through Electron Transfer during Catalysis, pp16127–16129; no raw crystallographic reanalysis. | supports | The remaining Results and Discussion leave the distal quinone site and unassignedM density function unresolved. The record does not adopt them as established mechanisms. |
+| schema-result | just validate data/structures/energy_complex/fumarate_reductase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/energy_complex/fumarate_reductase_complex.yaml |
+| strict-result | just validate-strict data/structures/energy_complex/fumarate_reductase_complex.yaml --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/energy_complex/fumarate_reductase_complex.yaml --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/energy_complex/fumarate_reductase_complex.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 14 of18 collected target identifiers returned OK at the unchanged base. Residuals: PDB:1KF6: SKIPPED; resolved by evidence fumarate-agent-pdb-1KF6; PMID:10373108: UNREACHABLE; resolved by evidence fumarate-agent-iverson1999-meta; PMID:11850430: UNREACHABLE; resolved by evidence fumarate-agent-iverson2002-meta; PMID:15919996: UNREACHABLE; resolved by evidence fumarate-agent-daley2005-meta. Source-native identity checked separately. |
+| native-verify | /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml --verify; Captured focused native verify log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml --causal-graphs; Captured focused native causal-graphs log | supports | data/structures/energy_complex/fumarate_reductase_complex.yaml  (GO:0045283)<br>  fumarate_reductase_quinol_coupling	frda_flavoprotein	COVERED	-&gt;frda_flavoprotein (UniProtKB:P00363)<br>  fumarate_reductase_quinol_coupling	frdb_iron_sulfur_subunit	COVERED	-&gt;frdb_iron_sulfur_subunit (UniProtKB:P0AC47)<br>  fumarate_reductase_quinol_coupling	frdc_hydrophobic_subunit	COVERED	-&gt;frdc_hydrophobic_subunit (UniProtKB:P0A8Q0)<br>  fumarate_reductase_quinol_coupling	frdd_hydrophobic_subunit	COVERED	-&gt;frdd_hydrophobic_subunit (UniProtKB:P0A8Q3)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     4  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     4  total GENE_OR_PROTEIN causal nodes |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Iverson1999 original PDF main text, captions/Table1 and Methods notes13–16 were read. Iverson2002 primary body was recovered through browser text after publisher403/CiteSeer404; its two actual-access captures retain hashes without invented HTTP status. No figure-pixel or coordinate reanalysis was performed.
+- Daley2005 was inspected at metadata/abstract level. The exact maintained claim is that UniProt cites it for membrane localization, independently verified in both native entries; the complete Daley experimental body was not read.
+- The generic record follows the four-chain GO/E.coli architecture. Other related enzymes vary in membrane-subunit and cofactor composition; that variation is not a universal four-chain claim or an exact family synonym.
+- Candidate-family review is bounded to current complete integrated native matches and the listed family definitions, not an exhaustive search across all family databases.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The schema defines essentiality by whether the structure forms without the component. The inspected sources establish constituent membership and functions, but those observations alone do not establish this assembly-necessity assertion. No subunit-deletion/assembly experiment was independently checked here; catalytic necessity, organismal viability and intact structural membership are distinct questions.
+- All13 native inspection inputs verified after schema/strict0 and native UniProt/graph0. Every raw/meta source receipt retains its original access timestamp and verified hash.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T090556Z-fumarate-reductase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Fumarate reductase four-chain architecture and quinol-coupling scope review
+started_at: '2026-10-21T08:41:55Z'
+finished_at: '2026-10-21T09:05:56Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Four-chain identity, exact subunit examples, selective family grounding,
+  source-specific structure and coarse quinol-coupling graph are supported. No concrete
+  curation issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+    sha256: e823d8ddaac1348ad816503190e4a0c020e4b115c80831dcc6383e44346c7c6f
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0045283
+  path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+  label: fumarate reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target, every component/example/family/graph/discussion claim;
+    native GO/PDB/UniProt/taxonomy and primary structure/inhibitor bodies with explicit
+    access and preparation bounds.
+  selection: Tenth selected target in batch thirteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0045283
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just validate data/structures/energy_complex/fumarate_reductase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just validate-strict data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  summary: 14 identifiers OK; 4 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - fumarate-agent-pdb-1KF6
+  - fumarate-agent-iverson1999-meta
+  - fumarate-agent-iverson2002-meta
+  - fumarate-agent-daley2005-meta
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - GO:0045283
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - GO:0045283
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - fumarate-agent-go
+  - fumarate-agent-tax-562
+  - fumarate-agent-tax-83333
+  - fumarate-agent-P00363
+  - fumarate-agent-query-frdA
+  - fumarate-agent-P0AC47
+  - fumarate-agent-query-frdB
+  - fumarate-agent-P0A8Q0
+  - fumarate-agent-query-frdC
+  - fumarate-agent-P0A8Q3
+  - fumarate-agent-query-frdD
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - fumarate-agent-pdb-1KF6
+  - fumarate-agent-assembly-1KF6
+  - fumarate-agent-1KF6-entity-1
+  - fumarate-agent-1KF6-entity-2
+  - fumarate-agent-1KF6-entity-3
+  - fumarate-agent-1KF6-entity-4
+  - fumarate-agent-iverson1999-meta
+  - fumarate-agent-iverson2002-meta
+  - fumarate-agent-daley2005-meta
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-iverson2002-browser
+  - fumarate-agent-iverson2002-browser2
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045283
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/fumarate_reductase_complex.yaml
+  locator: Entire maintained YAML including all imported participants, component examples,
+    functions, graph edges, discussions and history
+  accessed_at: '2026-10-21T08:56:50Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; docs/CURATION.md and review checklist
+  accessed_at: '2026-10-21T08:56:50Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Optional fields are not mandatory. CausalNode
+    permits protein complexes; its xrefs contract does not inherit the top-level record
+    equivalence restriction.
+- evidence_id: fumarate-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0045283,GO:0098803
+  locator: Complete two native term definitions, status and respiratory-chain parent
+    children
+  accessed_at: '2026-10-21T08:41:59.469162Z'
+  support: supports
+  summary: Active GO0045283 denotes the four-subunit membrane fumarate reductase with
+    extrinsicA/B and membraneC/D portions and quinol-to-quinone/fumarate-to-succinate
+    chemistry. GO0098803 explicitly lists it as an is_a child. The native definition
+    also contains a copied subunit-D-family sentence; the maintained whole-complex
+    definition correctly avoids that conflation.
+  snapshot_sha256: 047ccf94c45b7805ae69796f9ae35432489d57e3b726d772ca2a1fcb424ef026
+- evidence_id: fumarate-agent-tax-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Full native identity, rank, names and lineage
+  accessed_at: '2026-10-21T08:41:59.506312Z'
+  support: supports
+  summary: Native taxonomy confirms species562 E.coli and strain83333 E.coli K-12
+    as distinct compatible levels.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: fumarate-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Full native identity, rank, names and lineage
+  accessed_at: '2026-10-21T08:41:59.801976Z'
+  support: supports
+  summary: Native taxonomy confirms species562 E.coli and strain83333 E.coli K-12
+    as distinct compatible levels.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: fumarate-agent-P00363
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P00363.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:42:00.413408Z'
+  support: supports
+  summary: Native reviewed UniProtKB P00363 identifies Fumarate reductase flavoprotein
+    subunit, gene frdA, taxon83333. Concrete identity is checked independently of
+    membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: 6c1de11801e3094429aebcd69008f7cf900dc09c4f3dd6b00e16f01bfc0676e1
+- evidence_id: fumarate-agent-query-frdA
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AfrdA%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene frdA, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:42:02.219872Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P00363. This checks identifier
+    resolution only.
+  snapshot_sha256: 86bf0306436bb8eb5e5e99cc40a3beff36444d124ad9edf348806fee56dda71c
+  search_scope: UniProtKB query gene_exact:frdA AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fumarate-agent-P0AC47
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AC47.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:42:01.486301Z'
+  support: supports
+  summary: Native reviewed UniProtKB P0AC47 identifies Fumarate reductase iron-sulfur
+    subunit, gene frdB, taxon83333. Concrete identity is checked independently of
+    membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: 5c21093c936efac36f04ee4c24da92ba42d3a9faee073c8c74ff8cf1a8106bf4
+- evidence_id: fumarate-agent-query-frdB
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AfrdB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene frdB, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:42:02.260532Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P0AC47. This checks identifier
+    resolution only.
+  snapshot_sha256: b26a34bdf210319bef7acdbbe8ca6ca49cacf460eb413458b68b82d17733125a
+  search_scope: UniProtKB query gene_exact:frdB AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fumarate-agent-P0A8Q0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A8Q0.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:42:00.813589Z'
+  support: supports
+  summary: Native reviewed UniProtKB P0A8Q0 identifies Fumarate reductase subunit
+    C, gene frdC, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: f2ba3ba9a84b01136659a1e9a142c936bccd68ed3c5d26fdaee73c4f4024a532
+- evidence_id: fumarate-agent-query-frdC
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AfrdC%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene frdC, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:42:02.780528Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P0A8Q0. This checks identifier
+    resolution only.
+  snapshot_sha256: 46fc82d717e2620fcbf937ac62fa1a733684daf87cd69f740ea828484c953ad8
+  search_scope: UniProtKB query gene_exact:frdC AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fumarate-agent-P0A8Q3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A8Q3.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:42:00.848271Z'
+  support: supports
+  summary: Native reviewed UniProtKB P0A8Q3 identifies Fumarate reductase subunit
+    D, gene frdD, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: d31086d2f97a6fe8782d8a48bc326ceef3c1e5f3d69dea68b9c64dc422f63cbf
+- evidence_id: fumarate-agent-query-frdD
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AfrdD%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene frdD, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:42:03.039420Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P0A8Q3. This checks identifier
+    resolution only.
+  snapshot_sha256: 23bdd51776fb1d88fcaace5384a7f337139058d006643b4beea9abebdaccaa48
+  search_scope: UniProtKB query gene_exact:frdD AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fumarate-agent-IPR005884
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005884/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:00.128609Z'
+  support: supports
+  summary: The family specifically represents fumarate-reductase flavoproteins in
+    organisms with a distinct succinate dehydrogenase; broader shared flavoprotein
+    descriptions are background.
+  snapshot_sha256: 4bf3c0602634a10383cd21a8a3113dde4fb16ecb0a2a8fe12c868fe1ff56e3ee
+- evidence_id: fumarate-agent-IPR003510
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003510/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:00.121744Z'
+  support: supports
+  summary: Exact type-D fumarate-reductase15kDa subunit-C family agrees with the named
+    row.
+  snapshot_sha256: 42aa57717ca2844dcd33b60f9154c188eab972d5ec3a9eeb5886c5db391a6c8e
+- evidence_id: fumarate-agent-IPR003418
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003418/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:00.004048Z'
+  support: supports
+  summary: Exact fumarate-reductase13kDa subunit-D family agrees with the named row.
+  snapshot_sha256: b7f2acbbece4adfc78db47a73c2cc58c1b4e2f41a1ab61e818a89578c3fb07d4
+- evidence_id: fumarate-agent-IPR004489
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004489/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:00.127560Z'
+  support: supports
+  summary: The Fe-S family expressly spans succinate dehydrogenase and fumarate reductase,
+    justifying the narrower FrdB label-only decision.
+  snapshot_sha256: f5209b776ca14700e78ca9330b389e07a61e46b0aea6fae21c6d558cdd1c58a7
+- evidence_id: fumarate-agent-IPR014006
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014006/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:39.248447Z'
+  support: supports
+  summary: Shared succinate-dehydrogenase/fumarate-reductase flavoprotein family is
+    broader than the more precise asserted FrdA family.
+  snapshot_sha256: 98addafe843653636aafa954821cc9126e53ae8d87669d6ceb3debf304347fe9
+- evidence_id: fumarate-agent-IPR030664
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030664/
+  locator: Complete native accession/type/name and family description
+  accessed_at: '2026-10-21T08:42:39.267624Z'
+  support: supports
+  summary: SdhA/FrdA/AprA FAD-dependent oxidoreductase family includes APS reductase
+    and is too broad for an exact FrdA grounding.
+  snapshot_sha256: 03a1506a2c0c2378f7a2c4923f6e160036c42080411192aa59051bb76ffb71a4
+- evidence_id: fumarate-agent-pdb-1KF6
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/1KF6
+  locator: Entry title, exptl, citation and resolution fields
+  accessed_at: '2026-10-21T08:42:03.051902Z'
+  support: supports
+  summary: 1KF6 identifies E.coli quinol-fumarate reductase with bound HQNO inhibitor,
+    X-ray2.7A, with exact Iverson2002 primary citation. It is not the original1999
+    coordinate deposit.
+  snapshot_sha256: 3bc53ef27badf0e2b3f882977c9c64598e85dbacf352199fec0e75e681476ae3
+- evidence_id: fumarate-agent-assembly-1KF6
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/1KF6/1
+  locator: rcsb_assembly_info and pdbx_struct_assembly/gen
+  accessed_at: '2026-10-21T08:42:03.122766Z'
+  support: supports
+  summary: Assembly1 is an author/software-defined tetramer with four distinct protein
+    entities and four instances. The asymmetric unit has two sets of chains; that
+    is not evidence of a physiological eight-chain dimer.
+  snapshot_sha256: 6c6d521fc00e8ee0c42da56ebc4eeb77102487f97b80dffcb331b930f32bad55
+- evidence_id: fumarate-agent-1KF6-entity-1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/1
+  locator: Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.370779Z'
+  support: supports
+  summary: 1KF6 entity1 maps exactly toP00363; source organism is species562. UniProt
+    separately supports the K-12 protein-example taxon.
+  snapshot_sha256: 3864d85ba4afb04944236575c90df30dbdb61c9ca4aae7785908644090d9bafa
+- evidence_id: fumarate-agent-1KF6-entity-2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/2
+  locator: Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.453426Z'
+  support: supports
+  summary: 1KF6 entity2 maps exactly toP0AC47; source organism is species562. UniProt
+    separately supports the K-12 protein-example taxon.
+  snapshot_sha256: ae279a774e86c253461b3c4e73bfe72c1305ae52180cea8c6f0c1b57b8bb1b43
+- evidence_id: fumarate-agent-1KF6-entity-3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/3
+  locator: Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.531743Z'
+  support: supports
+  summary: 1KF6 entity3 maps exactly toP0A8Q0; source organism is species562. UniProt
+    separately supports the K-12 protein-example taxon.
+  snapshot_sha256: 4aa43a26bc30547a25dac95967f1e2f9640a19092b23480b0a73c61904229131
+- evidence_id: fumarate-agent-1KF6-entity-4
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1KF6/4
+  locator: Polymer entity descriptions, source organism, chain identifiers and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.556784Z'
+  support: supports
+  summary: 1KF6 entity4 maps exactly toP0A8Q3; source organism is species562. UniProt
+    separately supports the K-12 protein-example taxon.
+  snapshot_sha256: a008fab1a105ccd49c98430ba1911d5b137612c2ae128f08183b666e7b4d7eae
+- evidence_id: fumarate-agent-iverson1999-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1126/science.284.5422.1961
+  locator: Exact native bibliographic metadata and complete abstract
+  accessed_at: '2026-10-21T08:42:03.903965Z'
+  support: supports
+  summary: Iverson, Luna-Chavez, Cecchini and Rees1999, PMID10373108, DOI10.1126/science.284.5422.1961.
+  snapshot_sha256: a07abaabae07676060259f256a249399284faab74e33e8630720be63bf0253ea
+- evidence_id: fumarate-agent-iverson2002-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1074/jbc.M200815200
+  locator: Exact native bibliographic metadata and complete abstract
+  accessed_at: '2026-10-21T08:42:04.181474Z'
+  support: supports
+  summary: Iverson, Luna-Chavez, Croal, Cecchini and Rees2002, PMID11850430, DOI10.1074/jbc.M200815200.
+  snapshot_sha256: acc328447d5f09687a3619fc703e0ec8b9a91aba087019ad68d67ccbcafd1bd2
+- evidence_id: fumarate-agent-daley2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A15919996%20AND%20SRC%3AMED
+  locator: Exact native bibliographic metadata and complete abstract
+  accessed_at: '2026-10-21T08:42:04.267523Z'
+  support: supports
+  summary: Daley et al.2005, Global topology analysis of the E.coli inner membrane
+    proteome, PMID15919996, DOI10.1126/science.1109730; abstract-level methods/context
+    only.
+  snapshot_sha256: 7c83fcb28f68a14cbc566904fbd32091121999b45f87b73b013e0396826b0102
+- evidence_id: fumarate-agent-iverson1999-colorado-pdf
+  kind: primary_source
+  reference: https://dosequis.colorado.edu/Courses/InsaneMembrane/papers/CompII%20and%20FormateDehydro/compIIa.pdf
+  locator: 'Public university-hosted original Science PDF, printed pp1961–1966: entire
+    main text, all captions/Table1 and Methods notes13–16 read via native PDF text;
+    no coordinate or figure-pixel reanalysis.'
+  accessed_at: '2026-10-21T08:50:40.531282Z'
+  support: supports
+  summary: The original primary crystal study resolves FrdA/B/C/D and their cofactor
+    arrangement. FrdA/B are cytoplasmic soluble domains and C/D membrane anchors.
+    It explicitly separates crystal pairing from physiological dimer evidence and
+    does not establish proton pumping.
+  snapshot_sha256: 5fad69d27e42fab8f675680040365887e56705bcfead152e3a15aae1fea04f6b
+- evidence_id: fumarate-agent-iverson2002-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/11511804_Crystallographic_Studies_of_the_Escherichia_coliQuinol-Fumarate_Reductase_with_Inhibitors_Bound_to_the_Quinol-binding_Site
+  locator: Primary title/Introduction, Experimental Procedures and inhibitor-binding
+    Results, printed pp16124–16127; browser primary body, no native HTTP200 claim.
+  accessed_at: '2026-10-21T08:50:34Z'
+  support: supports
+  summary: The later inhibitor experiment directly supports the same four-chain enzyme
+    and identifies1KF6 as HQNO-bound; the title supplies the maintained synonym.
+  snapshot_sha256: d1bb11a82d9ecc01bb732f223fb1decf0664a5ea349deeb3f3e81b7bcf01afd4
+- evidence_id: fumarate-agent-iverson2002-browser2
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/11511804_Crystallographic_Studies_of_the_Escherichia_coliQuinol-Fumarate_Reductase_with_Inhibitors_Bound_to_the_Quinol-binding_Site
+  locator: Primary Results remainder, TableI, Discussion through Electron Transfer
+    during Catalysis, pp16127–16129; no raw crystallographic reanalysis.
+  accessed_at: '2026-10-21T08:52:50Z'
+  support: supports
+  summary: The remaining Results and Discussion leave the distal quinone site and
+    unassignedM density function unresolved. The record does not adopt them as established
+    mechanisms.
+  snapshot_sha256: 92b661f36de6f1b9465d840797b3b6f0a99dc2ab9ae2bad097edd801334d2d61
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/fumarate_reductase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:57Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/fumarate_reductase_complex.yaml'
+  snapshot_sha256: 3035313c6d97688a6d155d66c6bd687c1d4829d5478fd995a7f547730ba5759c
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:59Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/fumarate_reductase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch13-20261021-vud60b4w/fumarate_reductase_complex-strict.tsv"
+  snapshot_sha256: 7e07a9102e8b38ff78215979bea3ffb12ce2a7ee8513d672867c15ecf3be1179
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/fumarate_reductase_complex.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:56:50Z'
+  support: supports
+  summary: '14 of18 collected target identifiers returned OK at the unchanged base.
+    Residuals: PDB:1KF6: SKIPPED; resolved by evidence fumarate-agent-pdb-1KF6; PMID:10373108:
+    UNREACHABLE; resolved by evidence fumarate-agent-iverson1999-meta; PMID:11850430:
+    UNREACHABLE; resolved by evidence fumarate-agent-iverson2002-meta; PMID:15919996:
+    UNREACHABLE; resolved by evidence fumarate-agent-daley2005-meta. Source-native
+    identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T08:43:58.360419Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/fumarate_reductase_complex.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T08:43:59.067458Z'
+  support: supports
+  summary: "data/structures/energy_complex/fumarate_reductase_complex.yaml  (GO:0045283)\n\
+    \  fumarate_reductase_quinol_coupling\tfrda_flavoprotein\tCOVERED\t->frda_flavoprotein\
+    \ (UniProtKB:P00363)\n  fumarate_reductase_quinol_coupling\tfrdb_iron_sulfur_subunit\t\
+    COVERED\t->frdb_iron_sulfur_subunit (UniProtKB:P0AC47)\n  fumarate_reductase_quinol_coupling\t\
+    frdc_hydrophobic_subunit\tCOVERED\t->frdc_hydrophobic_subunit (UniProtKB:P0A8Q0)\n\
+    \  fumarate_reductase_quinol_coupling\tfrdd_hydrophobic_subunit\tCOVERED\t->frdd_hydrophobic_subunit\
+    \ (UniProtKB:P0A8Q3)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     4  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     4\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 3c04436347002e0c6b6a63a833975eca475ee855e182ef275d3b1902cb8b4195
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Four-subunit respiratory assembly
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: GO identity, definition, energy-complex category and multiprotein kind
+    denote the membraneFrdABCD architecture. The record does not equate it with a
+    solitary FrdA flavoprotein or the broader succinate-dehydrogenase family. Exact
+    synonym is supported by the cited primary title.
+  evidence_ids:
+  - fumarate-agent-go
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-iverson2002-browser
+  - fumarate-agent-pdb-1KF6
+  - record
+- assessment_id: partonomy
+  area: scope
+  topic: Respiratory-chain parent
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: The asserted parent is a native is-a relation. The scoped four-chain definition
+    agrees with GO and the E.coli architecture; no universal claim that every quinol-fumarate
+    reductase lineage has two membrane chains is inferred.
+  evidence_ids:
+  - fumarate-agent-go
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - record
+- assessment_id: components
+  area: grounding
+  topic: Subunit families and concrete examples
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: FrdA/C/D have appropriate exact family entries, while IPR004489 spans FrdB
+    and SdhB and cannot identify only the narrower FrdB component. All four native
+    reviewed gene/taxon pairs and PDBentity mappings agree; membership rests on the
+    experimental structure rather than gene lookup alone.
+  evidence_ids:
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - fumarate-agent-P00363
+  - fumarate-agent-P0AC47
+  - fumarate-agent-P0A8Q0
+  - fumarate-agent-P0A8Q3
+  - fumarate-agent-1KF6-entity-1
+  - fumarate-agent-1KF6-entity-2
+  - fumarate-agent-1KF6-entity-3
+  - fumarate-agent-1KF6-entity-4
+  - fumarate-agent-iverson1999-colorado-pdf
+  - record
+- assessment_id: architecture
+  area: evidence
+  topic: Catalytic and membrane-anchor modules
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: The primary structure and native entry identify the FAD-bindingA chain,
+    Fe-SB chain and15/13kDa C/D anchors as asserted. The two membrane subunits contribute
+    to the complete complex; the graph avoids assigning an unsupported exclusive anchoring
+    contact toFrdA. These composition observations do not independently establish
+    the assembly-necessity assertion carried by ESSENTIAL.
+  evidence_ids:
+  - fumarate-agent-go
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-1KF6-entity-1
+  - fumarate-agent-1KF6-entity-2
+  - fumarate-agent-1KF6-entity-3
+  - fumarate-agent-1KF6-entity-4
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - record
+- assessment_id: taxon-deposit
+  area: scope
+  topic: Species example and K-12 proteins
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: Species562 matches native1KF6 source annotations; each reviewed protein
+    instance is K-12 taxon83333. The canonical structure is inhibitor-bound and crystallized
+    from isolated enzyme. The record does not claim a native-cell image or generalize
+    asymmetric-unit pairing into physiological oligomerization.
+  evidence_ids:
+  - fumarate-agent-tax-562
+  - fumarate-agent-tax-83333
+  - fumarate-agent-pdb-1KF6
+  - fumarate-agent-assembly-1KF6
+  - fumarate-agent-P00363
+  - fumarate-agent-P0AC47
+  - fumarate-agent-P0A8Q0
+  - fumarate-agent-P0A8Q3
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-iverson2002-browser
+  - record
+- assessment_id: topology-attribution
+  area: provenance
+  topic: Daley location annotation is correctly bounded
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: Native P0A8Q0/P0A8Q3 comments cite PMID15919996 with ECO0000269 specifically
+    for Cell inner membrane location, as the target says. This checks the attribution
+    to UniProt; Daley abstract supplies large-scale topology context and is not presented
+    as independently read proof of whole-complex membership.
+  evidence_ids:
+  - fumarate-agent-P0A8Q0
+  - fumarate-agent-P0A8Q3
+  - fumarate-agent-daley2005-meta
+  - record
+- assessment_id: function-graph
+  area: graph
+  topic: Coarse quinol/fumarate coupling
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: All whole-complex, subunit-layout, donor/acceptor and product edges agree
+    with native GO and primary architecture. NONMECHANISTIC deliberately omits cofactor
+    order, specific quinone occupancy and inhibitor conformational claims. Neither
+    the function nor graph asserts a demonstrated proton pump or a mandatory distal
+    quinone role.
+  evidence_ids:
+  - fumarate-agent-go
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-iverson2002-browser
+  - fumarate-agent-iverson2002-browser2
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Actionable FrdB boundary and optional detail
+  outcome: supported
+  target_ids:
+  - GO:0045283
+  summary: The unresolved exact FrdB family is a valid scope question, not a generic-family
+    withholding error. Additional images, chemical groundings, explicit cofactors,
+    kinetic values and a source-composition import are optional. No concrete curation
+    defect was established.
+  evidence_ids:
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - fumarate-agent-go
+  - record
+  - policy
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Assembly necessity versus constituent membership
+  outcome: unknown
+  target_ids:
+  - GO:0045283
+  summary: The schema defines essentiality by whether the structure forms without
+    the component. The inspected sources establish constituent membership and functions,
+    but those observations alone do not establish this assembly-necessity assertion.
+    No subunit-deletion/assembly experiment was independently checked here; catalytic
+    necessity, organismal viability and intact structural membership are distinct
+    questions.
+  evidence_ids:
+  - fumarate-agent-go
+  - fumarate-agent-iverson1999-colorado-pdf
+  - fumarate-agent-1KF6-entity-1
+  - fumarate-agent-1KF6-entity-2
+  - fumarate-agent-1KF6-entity-3
+  - fumarate-agent-1KF6-entity-4
+  - fumarate-agent-IPR005884
+  - fumarate-agent-IPR003510
+  - fumarate-agent-IPR003418
+  - fumarate-agent-IPR004489
+  - fumarate-agent-IPR014006
+  - fumarate-agent-IPR030664
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Iverson1999 original PDF main text, captions/Table1 and Methods notes13–16 were
+  read. Iverson2002 primary body was recovered through browser text after publisher403/CiteSeer404;
+  its two actual-access captures retain hashes without invented HTTP status. No figure-pixel
+  or coordinate reanalysis was performed.
+- Daley2005 was inspected at metadata/abstract level. The exact maintained claim is
+  that UniProt cites it for membrane localization, independently verified in both
+  native entries; the complete Daley experimental body was not read.
+- The generic record follows the four-chain GO/E.coli architecture. Other related
+  enzymes vary in membrane-subunit and cofactor composition; that variation is not
+  a universal four-chain claim or an exact family synonym.
+- Candidate-family review is bounded to current complete integrated native matches
+  and the listed family definitions, not an exhaustive search across all family databases.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+- The schema defines essentiality by whether the structure forms without the component.
+  The inspected sources establish constituent membership and functions, but those
+  observations alone do not establish this assembly-necessity assertion. No subunit-deletion/assembly
+  experiment was independently checked here; catalytic necessity, organismal viability
+  and intact structural membership are distinct questions.
+notes:
+- All13 native inspection inputs verified after schema/strict0 and native UniProt/graph0.
+  Every raw/meta source receipt retains its original access timestamp and verified
+  hash.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
