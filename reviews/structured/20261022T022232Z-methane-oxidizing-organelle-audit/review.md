@@ -1,0 +1,893 @@
+# Methane oxidizing organelle identity and source-scope review
+
+- Review: 20261022T022232Z-methane-oxidizing-organelle-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:02:55Z
+- Finished UTC: 2026-10-22T02:22:32Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete curation defect observed within the explicitly bounded evidence scope.
+
+## Scope And Provenance
+
+Entire single target: identity, hierarchy, composition, source/taxon scope, examples, functions and every causal graph edge.
+
+Selection: Target 2 of batch32 in strict uncovered path order from fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0044227 | data/structures/membrane_organelle/methane_oxidizing_organelle.yaml | maintained | methane-oxidizing organelle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native protein verify | passed | True | GO:0044227 | Focused native check passed; scientific coverage assessed separately. |
+| Native protein causal-graphs | passed | True | GO:0044227 | Focused native check passed; scientific coverage assessed separately. |
+| Focused native schema | passed | True | GO:0044227 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0044227 | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | GO:0044227 | No expression-module membership or regulatory module is used; direct structure, genome and microscopy evidence applies. |
+| Claim-level scientific review | passed | True | GO:0044227 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0044227 | 10 of 13 collected target identifiers returned OK. PMID:12379148: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID12379148, DOI10.1042/bj20020823 and The membrane-associated form of methane mono-oxygenase from Methylococcus capsulatus (Bath) is a copper/iron protein. Scientific scope remains limited to the separately documented inspections.; PMID:15674245: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID15674245, DOI10.1038/nature03311 and Crystal structure of a membrane-bound metalloenzyme that catalyses the biological oxidation of methane. Scientific scope remains limited to the separately documented inspections.; PMID:22013879: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID22013879, DOI10.1021/bi200801z and Crystal structure and characterization of particulate methane monooxygenase from Methylocystis species strain M. Scientific scope remains limited to the separately documented inspections. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0044227 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0044227 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0044227 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0044227 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0044227 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact organelle and hierarchy
+
+identity: supported. Targets: GO:0044227.
+
+Native GO matches the exact target, two exact synonyms and intracellular membrane-bounded parent. A connected ICM network is not asserted to be a detached vesicle.
+
+### Bilayer material and pMMO complex
+
+grounding: supported. Targets: GO:0044227.
+
+The label-only collective bilayer and three-subunit pMMO complex retain material/complex identity. Primary structures support PmoA/PmoB/PmoC; two example accessions are correctly paired to Bath. Missing pmoC example is bounded coverage, not an invented accession.
+
+### Constitution versus formation requirement
+
+grounding: unknown. Targets: GO:0044227.
+
+A lipid boundary defines the compartment, but the inspected studies do not test formation without all lipid material or establish necessity of any fixed lipid species. pMMO essentiality appropriately remains UNKNOWN.
+
+### Strain, growth and evidence placement
+
+scope: supported. Targets: GO:0044227.
+
+Bath cryo-imaging is copper-replete; type-I fluorescence experiments retain their own strains and carbon/copper conditions. The rare Bacteria scope is explicitly limited to organisms that make pMMO-containing ICMs.
+
+### Seven graph edges and catalytic evidence
+
+graph: supported. Targets: GO:0044227.
+
+All seven edges preserve boundary, embedded complex, array formation/location and pMMO-catalyzed methane-to-methanol initiation. The activity assay measures isotope-labelled methanol with substrate/reductant/enzyme omission controls. No edge asserts that arrays alone cause enhanced activity or specifies untested redox intermediates.
+
+### Entire maintained target
+
+completeness: supported. Targets: GO:0044227.
+
+All target fields, graph edges, evidence placement, discussions and history inspected. No target image asset, numeric physical-property claim or verbatim snippet is asserted. Optional inventories and unresolved exact molecular groundings are not automatic findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/methane_oxidizing_organelle.yaml; Entire maintained target, all graph edges, discussions and history | context_only | The full target was read; scientific bytes and native status are unchanged. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, grounding and component_ref definitions | context_only | Material constituents, complete structures and enclosed regions are distinct. Essentiality concerns formation without a component; generic constitution does not establish an experimental assembly requirement. |
+| root32-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044227,GO:0043231,GO:0046188,GO:0031040,GO:0005634,GO:0000228,GO:0019953,GO:0044099; Complete exact IDs/names/definitions/synonyms and typed child relations | supports | All eight requested GO identities are active. Methane-organelle synonyms and intracellular-organelle ancestry, micronucleus nucleus ancestry, chromosome identity, methane catabolism, sexual reproduction and polar-tube definitions were checked. |
+| root32-sources-zhu2022-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1038/s41467-022-32752-9%22; Exact MED bibliography and complete abstractText | supports | Exact native title, ordered authors, DOI 10.1038/s41467-022-32752-9, PMID 36064719 and complete abstract inspected. Abstract evidence is distinguished from separately inspected full-text sections. |
+| root32-sources-whiddon2019-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1111/1751-7915.13458%22; Exact MED bibliography and complete abstractText | supports | Exact native title, ordered authors, DOI 10.1111/1751-7915.13458, PMID 31264365 and complete abstract inspected. Abstract evidence is distinguished from separately inspected full-text sections. |
+| root32-sources-stolyar2001-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1128/JB.183.5.1810-1812.2001%22; Exact MED bibliography and complete abstractText | supports | Exact native title, ordered authors, DOI 10.1128/jb.183.5.1810-1812.2001, PMID 11160118 and complete abstract inspected. Abstract evidence is distinguished from separately inspected full-text sections. |
+| root32-sources-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete taxId/scientificName/rank/lineage/otherNames | supports | Exact taxon identity, rank and alternative labels verified; this is not a measured prevalence survey. |
+| root32-sources-tax243233 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/243233; Complete taxId/scientificName/rank/lineage/otherNames | supports | Exact taxon identity, rank and alternative labels verified; this is not a measured prevalence survey. |
+| root32-sources-zhu2022-numeric-pmc | https://pmc.ncbi.nlm.nih.gov/articles/9445010/; Complete Introduction Sec1, Results Sec2–6, Discussion Sec7, and Methods Sec9–14; Fig1–4 captions; no pixels, supplements or raw data | supports | Bath cells and isolated membranes support ICM continuity and embedded hexagonal pMMO arrays. Native-lipid nanodisc fractions have greater measured methane oxidation activity than single-particle fractions; this does not isolate array formation as the sole cause. Static topology supports the authors’ invagination interpretation, not a filmed biogenesis trajectory. |
+| root32-sources-whiddon2019-numeric-pmc | https://pmc.ncbi.nlm.nih.gov/articles/6680624/; Complete sections0001,0003,0004,0006,0007,0009: Introduction, staining, copper coverage, connectivity, Discussion and strains/growth; embedded captions only | supports | FM-dye imaging in type-I strains supports compressed ICM stacks and copper-dependent coverage. Area coverage is a proxy, not lipid mass. FRAP/MDH colocalization supports connectivity with explicit alternatives; the experiment is not performed in Bath. |
+| root32-sources-stolyar2001-numeric-pmc | https://pmc.ncbi.nlm.nih.gov/articles/95072/; Complete sections1–3, Table1 and Fig1–2 captions; unsectioned introduction and pixels not inspected | supports | Bath pmoCAB copies are transcribed from similar promoters with condition-dependent relative expression. Reporter and transcript assays support gene identity/expression, not direct protein localization or organelle-formation necessity. |
+| root32-sources-protein-Q607G3 | https://rest.uniprot.org/uniprotkb/Q607G3.json; Exact entry type/accession/name/taxon/genes and complete FUNCTION, SUBUNIT, CATALYTIC ACTIVITY, SUBCELLULAR LOCATION comments | supports | Reviewed Bath accession, primary/alternative pmo gene names, subunit identity and source-specific experimental membrane annotations match the retained example. A single accession covers two gene copies; it is not a claim of one genomic copy. |
+| root32-sources-protein-G1UBD1 | https://rest.uniprot.org/uniprotkb/G1UBD1.json; Exact entry type/accession/name/taxon/genes and complete FUNCTION, SUBUNIT, CATALYTIC ACTIVITY, SUBCELLULAR LOCATION comments | supports | Reviewed Bath accession, primary/alternative pmo gene names, subunit identity and source-specific experimental membrane annotations match the retained example. A single accession covers two gene copies; it is not a claim of one genomic copy. |
+| root32-sources-query-pmoA | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=gene_exact%3ApmoA%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue; Entire results list for retained literal URL; reviewed:true and gene_exact with taxonomy_id243233 | supports | Literal reviewed exact-gene query at taxon243233 returned one entry with matching primary/synonym names. |
+| root32-sources-query-pmoB | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=gene_exact%3ApmoB%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue; Entire results list for retained literal URL; reviewed:true and gene_exact with taxonomy_id243233 | supports | Literal reviewed exact-gene query at taxon243233 returned one entry with matching primary/synonym names. |
+| root32-sources-query-pmoC | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=gene_exact%3ApmoC%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue; Entire results list for retained literal URL; reviewed:true and gene_exact with taxonomy_id243233 | supports | Literal reviewed exact-gene query at taxon243233 returned zero entries. This bounded result does not prove absence of the protein or all possible identifiers. |
+| root32-sources-PMID12379148 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A12379148%20AND%20SRC%3AMED; Exact MED record and full abstract; primary full body not inspected | supports | Exact MED identity/DOI/title/authors and complete abstract read. Purified Bath enzyme or its crystal structure provides source-specific membrane/complex context. |
+| root32-sources-PMID15674245 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A15674245%20AND%20SRC%3AMED; Exact MED record and full abstract; primary full body not inspected | supports | Exact MED identity/DOI/title/authors and complete abstract read. Purified Bath enzyme or its crystal structure provides source-specific membrane/complex context. |
+| root32-sources-PMID22013879 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A22013879%20AND%20SRC%3AMED; Exact MED record and full abstract; primary full body not inspected | supports | Exact MED identity/DOI/title/authors and complete abstract read. The Smith2011 study also reports an improved Bath structural model; its Methylocystis title is not proof of an unrelated annotation. The target accurately attributes the native annotation. |
+| native-verify | /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml --verify; Entire retained native focused log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml --causal-graphs; Entire retained native focused log | supports | data/structures/membrane_organelle/methane_oxidizing_organelle.yaml  (GO:0044227)<br>  pmmo_array_methane_oxidation	pmmo	PARTIAL_EXAMPLES	-&gt;particulate_methane_monooxygenase (have: UniProtKB:Q607G3, UniProtKB:G1UBD1; missing: pmoC)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/membrane_organelle/methane_oxidizing_organelle.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/methane_oxidizing_organelle.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/methane_oxidizing_organelle.yaml --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/methane_oxidizing_organelle.yaml --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/methane_oxidizing_organelle.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 10 of 13 collected target identifiers returned OK. PMID:12379148: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID12379148, DOI10.1042/bj20020823 and The membrane-associated form of methane mono-oxygenase from Methylococcus capsulatus (Bath) is a copper/iron protein. Scientific scope remains limited to the separately documented inspections.; PMID:15674245: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID15674245, DOI10.1038/nature03311 and Crystal structure of a membrane-bound metalloenzyme that catalyses the biological oxidation of methane. Scientific scope remains limited to the separately documented inspections.; PMID:22013879: UNREACHABLE; The bulk transport returned414; the independently retrieved exact MED identity confirms PMID22013879, DOI10.1021/bi200801z and Crystal structure and characterization of particulate methane monooxygenase from Methylocystis species strain M. Scientific scope remains limited to the separately documented inspections. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Occurrence terms are qualitative. Historical authorship and issue dispositions were not independently recertified. No native status promotion, scientific edit or generated-page change is authorized by this review.
+- Zhu scope is Introduction, all Results/Discussion and Methods Sec9–14, with captions. Remaining computational methods, images, supplements and raw data were not inspected. Whiddon scope is sections0001/0003/0004/0006/0007/0009; Stolyar sections1–3 with Table1/captions. Three older protein-source papers were read as complete abstracts only.
+- Exact reviewed pmoC query returned zero; broader searches and unreviewed entries were not exhausted. No exact source-neutral pMMO complex identifier was newly established.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The user explicitly authorizes one bundle for every uncovered record, including honest zero-finding reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T022232Z-methane-oxidizing-organelle-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Methane oxidizing organelle identity and source-scope review
+started_at: '2026-10-22T02:02:55Z'
+finished_at: '2026-10-22T02:22:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation defect observed within the explicitly bounded evidence
+  scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    sha256: 467cea27775a831c959b7a2e05a1f396a9ef026e2b1c012059a59d023570da3b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0044227
+  path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  label: methane-oxidizing organelle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single target: identity, hierarchy, composition, source/taxon
+    scope, examples, functions and every causal graph edge.'
+  selection: Target 2 of batch32 in strict uncovered path order from fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0044227
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific coverage assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific coverage assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just validate data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just validate-strict data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0044227
+  summary: No expression-module membership or regulatory module is used; direct structure,
+    genome and microscopy evidence applies.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - root32-sources-go
+  - root32-sources-zhu2022-meta
+  - root32-sources-whiddon2019-meta
+  - root32-sources-stolyar2001-meta
+  - root32-sources-tax2
+  - root32-sources-tax243233
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+  - root32-sources-protein-Q607G3
+  - root32-sources-protein-G1UBD1
+  - root32-sources-query-pmoA
+  - root32-sources-query-pmoB
+  - root32-sources-query-pmoC
+  - root32-sources-PMID12379148
+  - root32-sources-PMID15674245
+  - root32-sources-PMID22013879
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  summary: '10 of 13 collected target identifiers returned OK. PMID:12379148: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID12379148, DOI10.1042/bj20020823 and The membrane-associated form
+    of methane mono-oxygenase from Methylococcus capsulatus (Bath) is a copper/iron
+    protein. Scientific scope remains limited to the separately documented inspections.;
+    PMID:15674245: UNREACHABLE; The bulk transport returned414; the independently
+    retrieved exact MED identity confirms PMID15674245, DOI10.1038/nature03311 and
+    Crystal structure of a membrane-bound metalloenzyme that catalyses the biological
+    oxidation of methane. Scientific scope remains limited to the separately documented
+    inspections.; PMID:22013879: UNREACHABLE; The bulk transport returned414; the
+    independently retrieved exact MED identity confirms PMID22013879, DOI10.1021/bi200801z
+    and Crystal structure and characterization of particulate methane monooxygenase
+    from Methylocystis species strain M. Scientific scope remains limited to the separately
+    documented inspections. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root32-sources-PMID12379148
+  - root32-sources-PMID15674245
+  - root32-sources-PMID22013879
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044227
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  locator: Entire maintained target, all graph edges, discussions and history
+  accessed_at: '2026-10-22T02:13:41Z'
+  support: context_only
+  summary: The full target was read; scientific bytes and native status are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, grounding and component_ref definitions
+  accessed_at: '2026-10-22T02:13:41Z'
+  support: context_only
+  summary: Material constituents, complete structures and enclosed regions are distinct.
+    Essentiality concerns formation without a component; generic constitution does
+    not establish an experimental assembly requirement.
+- evidence_id: root32-sources-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044227,GO:0043231,GO:0046188,GO:0031040,GO:0005634,GO:0000228,GO:0019953,GO:0044099
+  locator: Complete exact IDs/names/definitions/synonyms and typed child relations
+  accessed_at: '2026-10-22T02:04:27.271503Z'
+  support: supports
+  summary: All eight requested GO identities are active. Methane-organelle synonyms
+    and intracellular-organelle ancestry, micronucleus nucleus ancestry, chromosome
+    identity, methane catabolism, sexual reproduction and polar-tube definitions were
+    checked.
+  snapshot_sha256: 5109e403885edc18c685d1056d00e94740d3288c92ab4981b5696b1074055ab6
+- evidence_id: root32-sources-zhu2022-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1038/s41467-022-32752-9%22
+  locator: Exact MED bibliography and complete abstractText
+  accessed_at: '2026-10-22T02:04:28.771009Z'
+  support: supports
+  summary: Exact native title, ordered authors, DOI 10.1038/s41467-022-32752-9, PMID
+    36064719 and complete abstract inspected. Abstract evidence is distinguished from
+    separately inspected full-text sections.
+  snapshot_sha256: f891f1769f8da9293421c782d5a2c85713373fa04b4d9a6d85b6f919cf21352a
+- evidence_id: root32-sources-whiddon2019-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1111/1751-7915.13458%22
+  locator: Exact MED bibliography and complete abstractText
+  accessed_at: '2026-10-22T02:04:28.770902Z'
+  support: supports
+  summary: Exact native title, ordered authors, DOI 10.1111/1751-7915.13458, PMID
+    31264365 and complete abstract inspected. Abstract evidence is distinguished from
+    separately inspected full-text sections.
+  snapshot_sha256: 51bac6d94bfb6541ad65de741b30d5d73af0e4b45c50da3cc8aaeaac0d11ee6b
+- evidence_id: root32-sources-stolyar2001-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1128/JB.183.5.1810-1812.2001%22
+  locator: Exact MED bibliography and complete abstractText
+  accessed_at: '2026-10-22T02:04:28.771235Z'
+  support: supports
+  summary: Exact native title, ordered authors, DOI 10.1128/jb.183.5.1810-1812.2001,
+    PMID 11160118 and complete abstract inspected. Abstract evidence is distinguished
+    from separately inspected full-text sections.
+  snapshot_sha256: 1f9849aab501dc38e824e8343a2dea2eb4a496e29e0f8b8ec9c67d0a33056bc2
+- evidence_id: root32-sources-tax2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete taxId/scientificName/rank/lineage/otherNames
+  accessed_at: '2026-10-22T02:04:27.272523Z'
+  support: supports
+  summary: Exact taxon identity, rank and alternative labels verified; this is not
+    a measured prevalence survey.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: root32-sources-tax243233
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/243233
+  locator: Complete taxId/scientificName/rank/lineage/otherNames
+  accessed_at: '2026-10-22T02:04:27.272612Z'
+  support: supports
+  summary: Exact taxon identity, rank and alternative labels verified; this is not
+    a measured prevalence survey.
+  snapshot_sha256: 6e0d814039b9cd0fda6aed3f32644db66ec2201d0f88fcfeb2d8aace5b3cb9ff
+- evidence_id: root32-sources-zhu2022-numeric-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/9445010/
+  locator: Complete Introduction Sec1, Results Sec2–6, Discussion Sec7, and Methods
+    Sec9–14; Fig1–4 captions; no pixels, supplements or raw data
+  accessed_at: '2026-10-22T02:08:53.133082Z'
+  support: supports
+  summary: Bath cells and isolated membranes support ICM continuity and embedded hexagonal
+    pMMO arrays. Native-lipid nanodisc fractions have greater measured methane oxidation
+    activity than single-particle fractions; this does not isolate array formation
+    as the sole cause. Static topology supports the authors’ invagination interpretation,
+    not a filmed biogenesis trajectory.
+  snapshot_sha256: 0976bb0e485a93646fd85c69da78f8d5871495daddf921a44c8c9eac64dd793e
+- evidence_id: root32-sources-whiddon2019-numeric-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/6680624/
+  locator: 'Complete sections0001,0003,0004,0006,0007,0009: Introduction, staining,
+    copper coverage, connectivity, Discussion and strains/growth; embedded captions
+    only'
+  accessed_at: '2026-10-22T02:08:53.133659Z'
+  support: supports
+  summary: FM-dye imaging in type-I strains supports compressed ICM stacks and copper-dependent
+    coverage. Area coverage is a proxy, not lipid mass. FRAP/MDH colocalization supports
+    connectivity with explicit alternatives; the experiment is not performed in Bath.
+  snapshot_sha256: 36ec7aa434b21bbe44edf949a6effafe37501b1733899dd7dd42d3fa469e52c6
+- evidence_id: root32-sources-stolyar2001-numeric-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/95072/
+  locator: Complete sections1–3, Table1 and Fig1–2 captions; unsectioned introduction
+    and pixels not inspected
+  accessed_at: '2026-10-22T02:08:53.133552Z'
+  support: supports
+  summary: Bath pmoCAB copies are transcribed from similar promoters with condition-dependent
+    relative expression. Reporter and transcript assays support gene identity/expression,
+    not direct protein localization or organelle-formation necessity.
+  snapshot_sha256: 3a9afe0e5c1cd0fec92377fe425c1b220e7ad927499f54d01b4fb25dc044d51e
+- evidence_id: root32-sources-protein-Q607G3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q607G3.json
+  locator: Exact entry type/accession/name/taxon/genes and complete FUNCTION, SUBUNIT,
+    CATALYTIC ACTIVITY, SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-22T02:04:31.916623Z'
+  support: supports
+  summary: Reviewed Bath accession, primary/alternative pmo gene names, subunit identity
+    and source-specific experimental membrane annotations match the retained example.
+    A single accession covers two gene copies; it is not a claim of one genomic copy.
+  snapshot_sha256: 43cb1956e5bdf800750c2df52e35997d4c5c9ab46fa70fd1e8680f707b824446
+- evidence_id: root32-sources-protein-G1UBD1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/G1UBD1.json
+  locator: Exact entry type/accession/name/taxon/genes and complete FUNCTION, SUBUNIT,
+    CATALYTIC ACTIVITY, SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-22T02:04:31.916931Z'
+  support: supports
+  summary: Reviewed Bath accession, primary/alternative pmo gene names, subunit identity
+    and source-specific experimental membrane annotations match the retained example.
+    A single accession covers two gene copies; it is not a claim of one genomic copy.
+  snapshot_sha256: 125e292aec089f2a4942cf71ad10b34bd161af50a6d425a32497f49a8883a6d0
+- evidence_id: root32-sources-query-pmoA
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=gene_exact%3ApmoA%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue
+  locator: Entire results list for retained literal URL; reviewed:true and gene_exact
+    with taxonomy_id243233
+  accessed_at: '2026-10-22T02:04:32.966744Z'
+  support: supports
+  summary: Literal reviewed exact-gene query at taxon243233 returned one entry with
+    matching primary/synonym names.
+  snapshot_sha256: 84fc73bb2b94052e0d8fff599c38dd307c90fddd2e7cb7a6c623566206a11e2f
+- evidence_id: root32-sources-query-pmoB
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=gene_exact%3ApmoB%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue
+  locator: Entire results list for retained literal URL; reviewed:true and gene_exact
+    with taxonomy_id243233
+  accessed_at: '2026-10-22T02:04:33.129008Z'
+  support: supports
+  summary: Literal reviewed exact-gene query at taxon243233 returned one entry with
+    matching primary/synonym names.
+  snapshot_sha256: 8d550b83583596e145d82c3df4d98801d85ad571593eb06f31ebefb09f1c37b7
+- evidence_id: root32-sources-query-pmoC
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=gene_exact%3ApmoC%20AND%20taxonomy_id%3A243233%20AND%20reviewed%3Atrue
+  locator: Entire results list for retained literal URL; reviewed:true and gene_exact
+    with taxonomy_id243233
+  accessed_at: '2026-10-22T02:04:33.147296Z'
+  support: supports
+  summary: Literal reviewed exact-gene query at taxon243233 returned zero entries.
+    This bounded result does not prove absence of the protein or all possible identifiers.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root32-sources-PMID12379148
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12379148%20AND%20SRC%3AMED
+  locator: Exact MED record and full abstract; primary full body not inspected
+  accessed_at: '2026-10-22T02:04:31.392194Z'
+  support: supports
+  summary: Exact MED identity/DOI/title/authors and complete abstract read. Purified
+    Bath enzyme or its crystal structure provides source-specific membrane/complex
+    context.
+  snapshot_sha256: faf3f906a3399c5704a368b8747c0d7334fb7fac8103d1ef28d98a5c0cb32978
+- evidence_id: root32-sources-PMID15674245
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A15674245%20AND%20SRC%3AMED
+  locator: Exact MED record and full abstract; primary full body not inspected
+  accessed_at: '2026-10-22T02:04:31.915503Z'
+  support: supports
+  summary: Exact MED identity/DOI/title/authors and complete abstract read. Purified
+    Bath enzyme or its crystal structure provides source-specific membrane/complex
+    context.
+  snapshot_sha256: 1d17125fa8bee5bf7918569219ca061c7201886876431014200eab2941292aeb
+- evidence_id: root32-sources-PMID22013879
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A22013879%20AND%20SRC%3AMED
+  locator: Exact MED record and full abstract; primary full body not inspected
+  accessed_at: '2026-10-22T02:04:31.916299Z'
+  support: supports
+  summary: Exact MED identity/DOI/title/authors and complete abstract read. The Smith2011
+    study also reports an improved Bath structural model; its Methylocystis title
+    is not proof of an unrelated annotation. The target accurately attributes the
+    native annotation.
+  snapshot_sha256: 463803cf106c89e5fffd9f5588d87702d07d879bc0aca5cebc9933dbc2a34928
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --verify
+  locator: Entire retained native focused log
+  accessed_at: '2026-10-22T02:04:04.246202Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --causal-graphs
+  locator: Entire retained native focused log
+  accessed_at: '2026-10-22T02:04:04.856734Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/methane_oxidizing_organelle.yaml  (GO:0044227)\n\
+    \  pmmo_array_methane_oxidation\tpmmo\tPARTIAL_EXAMPLES\t->particulate_methane_monooxygenase\
+    \ (have: UniProtKB:Q607G3, UniProtKB:G1UBD1; missing: pmoC)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  PARTIAL_EXAMPLES          component_ref target holds\
+    \ protein_examples but has unrepresented symbols\n     0  COVERED            \
+    \       component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 196ac491709ba1a46e70c7dbf644e341519fdaf1f0dc65601e2296689187adb1
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:02:56Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/methane_oxidizing_organelle.yaml'
+  snapshot_sha256: e962b5a0a2b977c3a6e1075695bdced361a40b12c78ce21e3eecf40de62dde98
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:02:57Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/methane_oxidizing_organelle.yaml\
+    \ --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch32-20261022-k96_2wx1/methane_oxidizing_organelle-strict.tsv"
+  snapshot_sha256: f20d9b7c072abb7e716f6a3d35852a8ea514e6388a036a1b490668bd948b7198
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '10 of 13 collected target identifiers returned OK. PMID:12379148: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID12379148, DOI10.1042/bj20020823 and The membrane-associated form
+    of methane mono-oxygenase from Methylococcus capsulatus (Bath) is a copper/iron
+    protein. Scientific scope remains limited to the separately documented inspections.;
+    PMID:15674245: UNREACHABLE; The bulk transport returned414; the independently
+    retrieved exact MED identity confirms PMID15674245, DOI10.1038/nature03311 and
+    Crystal structure of a membrane-bound metalloenzyme that catalyses the biological
+    oxidation of methane. Scientific scope remains limited to the separately documented
+    inspections.; PMID:22013879: UNREACHABLE; The bulk transport returned414; the
+    independently retrieved exact MED identity confirms PMID22013879, DOI10.1021/bi200801z
+    and Crystal structure and characterization of particulate methane monooxygenase
+    from Methylocystis species strain M. Scientific scope remains limited to the separately
+    documented inspections. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0044227
+  summary: Native GO matches the exact target, two exact synonyms and intracellular
+    membrane-bounded parent. A connected ICM network is not asserted to be a detached
+    vesicle.
+  evidence_ids:
+  - record
+  - root32-sources-go
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+- assessment_id: composition
+  area: grounding
+  topic: Bilayer material and pMMO complex
+  outcome: supported
+  target_ids:
+  - GO:0044227
+  summary: The label-only collective bilayer and three-subunit pMMO complex retain
+    material/complex identity. Primary structures support PmoA/PmoB/PmoC; two example
+    accessions are correctly paired to Bath. Missing pmoC example is bounded coverage,
+    not an invented accession.
+  evidence_ids:
+  - record
+  - policy
+  - root32-sources-go
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+  - root32-sources-protein-Q607G3
+  - root32-sources-protein-G1UBD1
+  - root32-sources-query-pmoA
+  - root32-sources-query-pmoB
+  - root32-sources-query-pmoC
+  - root32-sources-PMID12379148
+  - root32-sources-PMID15674245
+  - root32-sources-PMID22013879
+- assessment_id: formation-necessity
+  area: grounding
+  topic: Constitution versus formation requirement
+  outcome: unknown
+  target_ids:
+  - GO:0044227
+  summary: A lipid boundary defines the compartment, but the inspected studies do
+    not test formation without all lipid material or establish necessity of any fixed
+    lipid species. pMMO essentiality appropriately remains UNKNOWN.
+  evidence_ids:
+  - record
+  - policy
+  - root32-sources-go
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+- assessment_id: scope
+  area: scope
+  topic: Strain, growth and evidence placement
+  outcome: supported
+  target_ids:
+  - GO:0044227
+  summary: Bath cryo-imaging is copper-replete; type-I fluorescence experiments retain
+    their own strains and carbon/copper conditions. The rare Bacteria scope is explicitly
+    limited to organisms that make pMMO-containing ICMs.
+  evidence_ids:
+  - record
+  - root32-sources-tax2
+  - root32-sources-tax243233
+  - root32-sources-zhu2022-meta
+  - root32-sources-whiddon2019-meta
+  - root32-sources-stolyar2001-meta
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+- assessment_id: graph
+  area: graph
+  topic: Seven graph edges and catalytic evidence
+  outcome: supported
+  target_ids:
+  - GO:0044227
+  summary: All seven edges preserve boundary, embedded complex, array formation/location
+    and pMMO-catalyzed methane-to-methanol initiation. The activity assay measures
+    isotope-labelled methanol with substrate/reductant/enzyme omission controls. No
+    edge asserts that arrays alone cause enhanced activity or specifies untested redox
+    intermediates.
+  evidence_ids:
+  - record
+  - root32-sources-go
+  - root32-sources-zhu2022-numeric-pmc
+  - root32-sources-whiddon2019-numeric-pmc
+  - root32-sources-stolyar2001-numeric-pmc
+- assessment_id: coverage
+  area: completeness
+  topic: Entire maintained target
+  outcome: supported
+  target_ids:
+  - GO:0044227
+  summary: All target fields, graph edges, evidence placement, discussions and history
+    inspected. No target image asset, numeric physical-property claim or verbatim
+    snippet is asserted. Optional inventories and unresolved exact molecular groundings
+    are not automatic findings.
+  evidence_ids:
+  - record
+  - policy
+  - root32-sources-go
+  - root32-sources-zhu2022-meta
+  - root32-sources-whiddon2019-meta
+  - root32-sources-stolyar2001-meta
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Occurrence terms are qualitative. Historical authorship and issue dispositions were
+  not independently recertified. No native status promotion, scientific edit or generated-page
+  change is authorized by this review.
+- Zhu scope is Introduction, all Results/Discussion and Methods Sec9–14, with captions.
+  Remaining computational methods, images, supplements and raw data were not inspected.
+  Whiddon scope is sections0001/0003/0004/0006/0007/0009; Stolyar sections1–3 with
+  Table1/captions. Three older protein-source papers were read as complete abstracts
+  only.
+- Exact reviewed pmoC query returned zero; broader searches and unreviewed entries
+  were not exhausted. No exact source-neutral pMMO complex identifier was newly established.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes one bundle for every uncovered record, including
+  honest zero-finding reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

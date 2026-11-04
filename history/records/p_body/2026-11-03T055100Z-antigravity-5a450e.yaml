@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/p_body.yaml
+  slug: p_body
+session:
+  id: 2026-11-03T055100Z-antigravity-5a450e
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked mrna_decay_protein_cohort component into yeast_p_body_assembly causal graph
+    with source-backed P-body localization edge.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''yeast_p_body_assembly''
+    in data/structures/ribonucleoprotein/p_body.yaml. Added node(s) [mrna_decay_protein_cohort]
+    and source-backed edge(s) [mrna_decay_protein_cohort accumulates in p_body]. Validated
+    with write_validated_structure.'

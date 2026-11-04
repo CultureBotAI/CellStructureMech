@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/holliday_junction_helicase_complex.yaml
+  slug: holliday_junction_helicase_complex
+session:
+  id: 2026-10-31T223046Z-antigravity-a063d5
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - parent_structures
+  - part_of
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add Holliday junction helicase complex (GO:0009379) record
+  details: Added CellStructureRecord for Holliday junction helicase complex (GO:0009379) in
+    Escherichia coli K-12 with Holliday junction recognition subunit RuvA (UniProtKB:P0A809)
+    and ATP-dependent branch-migration motor subunit RuvB (UniProtKB:P0A812), verbatim PubMed
+    abstract evidence (PMID:8832889, PMID:26658024), ComplexPortal xref (CPX-5124), canonical
+    examples, functions, and a mechanistic FUNCTION causal graph.
