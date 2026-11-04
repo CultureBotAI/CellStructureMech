@@ -1,0 +1,906 @@
+# Dbf4 dependent protein kinase complex scientific review
+
+- Review: 20261022T052919Z-dbf4-dependent-protein-kinase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:15:44Z
+- Finished UTC: 2026-10-22T05:29:19Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+DDK identity, correct yeast proteins and coarse origin-activation graph are supported. One minor identifies the exact Dbf4 family currently left label-only; Cdc7 mapping and physical formation requirements remain bounded.
+
+## Scope And Provenance
+
+Exactly one complete maintained record, exact native authorities and the source passages specified in each evidence locator; no scientific record changed.
+
+Selection: Target 5 of batch49, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031431 | data/structures/other/dbf4_dependent_protein_kinase_complex.yaml | maintained | Dbf4-dependent protein kinase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0031431 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0031431 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0031431 | Native read-only focused check passed; biological support assessed separately. |
+| Native verify | passed | True | GO:0031431 | Native read-only focused check passed; biological support assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0031431 | No expression-module or transcriptomic assertion requires this resource. |
+| Claim-level scientific review | passed | True | GO:0031431 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0031431 | 8 of 9 collected target identifiers returned OK. PMID:12045100: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0031431 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0031431 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0031431 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0031431 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0031431 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Heterodimer and synonym scope
+
+identity: supported. Targets: GO:0031431.
+
+The definition, DDK exact synonym, two narrow organism-specific names and nuclear-complex parent match native GO. Cdc7 catalytic and Dbf4 regulatory roles are directly stated by GO and reviewed protein annotations.
+
+### Correct examples and exact regulatory family
+
+grounding: concern. Targets: GO:0031431.
+
+The two S288C examples and single-hit query notes are correct. IPR051590 exactly identifies the Dbf4 regulatory class, with native example xref and independent reviewed-member support; the central-region domain is not used instead. Cdc7 remains unresolved within the bounded search, without forcing a generic protein-kinase domain.
+
+### Catalytic function differs from assembly necessity
+
+grounding: unknown. Targets: GO:0031431.
+
+The heterodimeric definition and origin-activation requirement establish composition and function; the inspected GO/protein authorities and review abstract do not supply a condition-specific physical assembly-removal experiment for either subunit. UNKNOWN remains explicit.
+
+### Yeast canonical authority and majority occurrence
+
+scope: supported. Targets: GO:0031431.
+
+The canonical note explicitly names the GO-defined budding-yeast system rather than claiming a particular purification. Species4932 and reference strain559292 are correct. COMMON retains present-in-most-members/losses-exception meaning, supported as qualitative ordinary replication machinery rather than a measured prevalence census.
+
+### Authority-backed coarse initiation function
+
+graph: supported. Targets: GO:0031431.
+
+Native GO directly supports origin activation, and the NONMECHANISTIC graph makes no MCM phosphorylation, Cdc45 recruitment or licensing sequence claim. Bell/Dutta2002 is a review verified at complete abstract tier; that abstract is not treated as direct DDK experimental data or a detailed mechanism.
+
+### Full maintained target with bounded source review
+
+completeness: supported. Targets: GO:0031431.
+
+All maintained fields, current discussions and historical entries were read. Optional new mechanisms, universal family claims and additional mandatory inventory fields were not invented. Identifier resolution and scientific support were assessed separately.
+
+## Findings
+
+### F1: Use the exact Dbf4 regulatory-subunit family
+
+minor / open / confirmed; issue key: ddk-dbf4-exact-family.
+
+The Dbf4 row remains REVIEWED_LABEL_ONLY even though IPR051590 directly identifies the DDK regulatory family and is linked to the correct reviewed example. Its generated description is not used as primary evidence. Cdc7 kinase-domain candidates remain broader.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Map the Dbf4 row to the verified exact family and narrow the remaining TODO to unresolved Cdc7 mapping; retain the correct examples and UNKNOWN formation necessity.
+
+- Verify native family type/name/signature and the P32325 xref.
+- Do not promote unchecked generated family prose to experimental mechanism evidence.
+- Preserve source-specific taxa, supported component IDs and protein examples; pass applicable native curation checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/dbf4_dependent_protein_kinase_complex.yaml; Entire maintained target including definition, all components/examples, graph, evidence, discussions and history | context_only | The full maintained record was read. Historical curation notes are retained as history rather than independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent/ProteinExample; EssentialityEnum, TaxonomicPresenceEnum and NONMECHANISTIC graph scope | context_only | Component identity is a taxon-neutral class. Assembly necessity differs from membership, catalytic requirement and viability. COMMON means present in most members, with losses the exception. |
+| curation | docs/CURATION.md; Exact family grounding and REVIEWED_LABEL_ONLY contract, especially lines159–160 | context_only | REVIEWED_LABEL_ONLY means no exact mapping can be asserted without overclaiming, not simply that an available exact mapping was deferred in this pass. |
+| complex49-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776,GO:0000940,GO:0006260,GO:0006270,GO:0008608,GO:0031431,GO:0032991,GO:0042575,GO:0042729,GO:0043601,GO:0043625,GO:0140513,GO:1990102,GO:1990125; Complete relevant identity, definition, active status, synonyms and typed child links in the14-term response; not every unrelated descendant | supports | Active GO0031431 exactly matches the heterodimeric Cdc7/Dbf4 definition, DDK exact synonym and two narrow synonyms; nuclear-complex parent and GO0006270 origin-initiation process agree. |
+| complex49-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxonomy response | supports | ENA confirms taxon4932 as Saccharomyces cerevisiae, rank species. The exact native names and available lineage/synonyms were read. |
+| complex49-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxonomy response | supports | ENA confirms taxon559292 as Saccharomyces cerevisiae S288C, rank strain. The exact native names and available lineage/synonyms were read. |
+| complex49-agent-protein-P06243 | https://rest.uniprot.org/uniprotkb/P06243.json; Native accession/status/name/genes/taxon, SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro xrefs | supports | Reviewed primary accession P06243 is Cell division control protein 7, with exact gene token CDC7 and native taxon559292. Native subunit/location/similarity annotations and family xrefs were read; database identity and annotation are distinguished from independently inspected primary experiments. |
+| complex49-agent-gene-CDC7-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC7%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete gene_exact AND taxonomy_id AND reviewed:true result, size500, all returned identities | supports | The complete current reviewed exact CDC7/taxon559292 query returns only P06243, with the declared gene token and matching native organism. This supports the current single-reviewed-entry wording. |
+| complex49-agent-protein-P32325 | https://rest.uniprot.org/uniprotkb/P32325.json; Native accession/status/name/genes/taxon, SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro xrefs | supports | Reviewed primary accession P32325 is DDK kinase regulatory subunit DBF4, with exact gene token DBF4 and native taxon559292. Native subunit/location/similarity annotations and family xrefs were read; database identity and annotation are distinguished from independently inspected primary experiments. |
+| complex49-agent-gene-DBF4-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADBF4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete gene_exact AND taxonomy_id AND reviewed:true result, size500, all returned identities | supports | The complete current reviewed exact DBF4/taxon559292 query returns only P32325, with the declared gene token and matching native organism. This supports the current single-reviewed-entry wording. |
+| complex49-agent-pmid-12045100 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12045100+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and complete native abstract | supports | Native MED12045100: DNA replication in eukaryotic cells. Authors Bell SP, Dutta A.; DOI 10.1146/annurev.biochem.71.110601.135425. Complete abstract read at secondary-review abstract tier; no full body is implied by metadata. |
+| complex49-agent-bell2002-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1146%2Fannurev.biochem.71.110601.135425%22&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and complete native abstract | supports | Native MED12045100: DNA replication in eukaryotic cells. Authors Bell SP, Dutta A.; DOI 10.1146/annurev.biochem.71.110601.135425. Complete abstract read at secondary-review abstract tier; no full body is implied by metadata. |
+| complex49-agent-bell2002-publisher | https://www.annualreviews.org/content/journals/10.1146/annurev.biochem.71.110601.135425; Exact retained unsuccessful full-body access response | context_only | Publisher HTML returnedHTTP403; no Bell/Dutta body is certified. Native GO directly supports the maintained DDK definition and coarse function. |
+| complex49-agent-ipr-IPR051590 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051590/; Native accession/name/type, complete description, hierarchy, signatures and curation flags | supports | IPR051590 has exact DDK regulatory-subunit Dbf4 family name/type and PTHR15375 signature; P32325 directly carries it. Its description is LLM-generated and unchecked, so its mechanistic prose is not independent biological evidence. |
+| complex49-agent-ipr-IPR013939 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013939/; Native accession/name/type, complete description, hierarchy, signatures and curation flags | context_only | IPR013939 is a central-region domain, not the whole Dbf4 protein family. |
+| complex49-agent-dbf4-members | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR051590+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name; Complete bounded native query response | context_only | All12 returned reviewed identities were inspected, including P32325 Dbf4 and other DDK regulatory homologues; these corroborate family scope, not uniform biological roles for every uncharacterized member. |
+| complex49-agent-ipr-search-Cdc7 | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Cdc7; Complete bounded native query response | context_only | The bounded Cdc7 query returns11 mostly Cdc73/CCDC-related terms, none a verified exact Cdc7 whole-protein family. Native P06243 kinase-domain xrefs do not supply such an exact mapping. |
+| schema-result | just validate data/structures/other/dbf4_dependent_protein_kinase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/dbf4_dependent_protein_kinase_complex.yaml |
+| strict-result | just validate-strict data/structures/other/dbf4_dependent_protein_kinase_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/dbf4_dependent_protein_kinase_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/dbf4_dependent_protein_kinase_complex.yaml  (GO:0031431)<br>  ddk_dna_replication_initiation	cdc7_kinase_subunit	COVERED	-&gt;cdc7_kinase_subunit (UniProtKB:P06243)<br>  ddk_dna_replication_initiation	dbf4_regulatory_subunit	COVERED	-&gt;dbf4_regulatory_subunit (UniProtKB:P32325)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/dbf4_dependent_protein_kinase_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 9 collected target identifiers returned OK. PMID:12045100: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Five same-base batch26 global checks are staged for guarded parent integration; this unsaved review neither finalizes nor reruns the corpus gates.
+- No figure pixels, supplementary data, sequence alignment or raw experimental measurements were independently reanalyzed. Exact literature-read scopes and authority tiers are stated in evidence locators.
+- Bell/Dutta2002 full body was not recovered after the retained publisher403. Detailed DDK chemistry is outside this authority-backed coarse record review.
+- The Cdc7 query is bounded and no universal absence of an exact family is claimed. Dbf4 family metadata and reviewed-member corroboration are separate from unchecked generated prose.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes qualified clean reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T052919Z-dbf4-dependent-protein-kinase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Dbf4 dependent protein kinase complex scientific review
+started_at: '2026-10-22T05:15:44Z'
+finished_at: '2026-10-22T05:29:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: DDK identity, correct yeast proteins and coarse origin-activation graph are
+  supported. One minor identifies the exact Dbf4 family currently left label-only;
+  Cdc7 mapping and physical formation requirements remain bounded.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    sha256: 5b0ecddabbb2373c35df54bb5993715956ea5d74dd7e42d6b3e37f6a2271a433
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031431
+  path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  label: Dbf4-dependent protein kinase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained record, exact native authorities and
+    the source passages specified in each evidence locator; no scientific record changed.
+  selection: Target 5 of batch49, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031431
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just validate data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just validate-strict data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native read-only focused check passed; biological support assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native read-only focused check passed; biological support assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0031431
+  summary: No expression-module or transcriptomic assertion requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex49-agent-go
+  - complex49-agent-tax4932
+  - complex49-agent-tax559292
+  - complex49-agent-protein-P06243
+  - complex49-agent-gene-CDC7-559292
+  - complex49-agent-protein-P32325
+  - complex49-agent-gene-DBF4-559292
+  - complex49-agent-pmid-12045100
+  - complex49-agent-bell2002-meta
+  - complex49-agent-bell2002-publisher
+  - complex49-agent-ipr-IPR051590
+  - complex49-agent-ipr-IPR013939
+  - complex49-agent-dbf4-members
+  - complex49-agent-ipr-search-Cdc7
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  summary: '8 of 9 collected target identifiers returned OK. PMID:12045100: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex49-agent-bell2002-meta
+  - complex49-agent-pmid-12045100
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031431
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  locator: Entire maintained target including definition, all components/examples,
+    graph, evidence, discussions and history
+  accessed_at: '2026-10-22T05:24:15Z'
+  support: context_only
+  summary: The full maintained record was read. Historical curation notes are retained
+    as history rather than independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent/ProteinExample; EssentialityEnum, TaxonomicPresenceEnum
+    and NONMECHANISTIC graph scope
+  accessed_at: '2026-10-22T05:24:15Z'
+  support: context_only
+  summary: Component identity is a taxon-neutral class. Assembly necessity differs
+    from membership, catalytic requirement and viability. COMMON means present in
+    most members, with losses the exception.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact family grounding and REVIEWED_LABEL_ONLY contract, especially lines159–160
+  accessed_at: '2026-10-22T05:24:15Z'
+  support: context_only
+  summary: REVIEWED_LABEL_ONLY means no exact mapping can be asserted without overclaiming,
+    not simply that an available exact mapping was deferred in this pass.
+- evidence_id: complex49-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776,GO:0000940,GO:0006260,GO:0006270,GO:0008608,GO:0031431,GO:0032991,GO:0042575,GO:0042729,GO:0043601,GO:0043625,GO:0140513,GO:1990102,GO:1990125
+  locator: Complete relevant identity, definition, active status, synonyms and typed
+    child links in the14-term response; not every unrelated descendant
+  accessed_at: '2026-10-22T05:17:17.721517Z'
+  support: supports
+  summary: Active GO0031431 exactly matches the heterodimeric Cdc7/Dbf4 definition,
+    DDK exact synonym and two narrow synonyms; nuclear-complex parent and GO0006270
+    origin-initiation process agree.
+  snapshot_sha256: effc676dda282ab5ec70dacdb4b4700afc26e2ac38836377a4f8705ee534e520
+- evidence_id: complex49-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:17:17.721925Z'
+  support: supports
+  summary: ENA confirms taxon4932 as Saccharomyces cerevisiae, rank species. The exact
+    native names and available lineage/synonyms were read.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex49-agent-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:17:17.722002Z'
+  support: supports
+  summary: ENA confirms taxon559292 as Saccharomyces cerevisiae S288C, rank strain.
+    The exact native names and available lineage/synonyms were read.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex49-agent-protein-P06243
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P06243.json
+  locator: Native accession/status/name/genes/taxon, SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    comments and InterPro xrefs
+  accessed_at: '2026-10-22T05:17:19.057605Z'
+  support: supports
+  summary: Reviewed primary accession P06243 is Cell division control protein 7, with
+    exact gene token CDC7 and native taxon559292. Native subunit/location/similarity
+    annotations and family xrefs were read; database identity and annotation are distinguished
+    from independently inspected primary experiments.
+  snapshot_sha256: 2fe80227ec5a07ef6de970843085fad4d227a0563ee62ebbb88a15ad44a951fa
+- evidence_id: complex49-agent-gene-CDC7-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC7%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete gene_exact AND taxonomy_id AND reviewed:true result, size500,
+    all returned identities
+  accessed_at: '2026-10-22T05:17:24.120446Z'
+  support: supports
+  summary: The complete current reviewed exact CDC7/taxon559292 query returns only
+    P06243, with the declared gene token and matching native organism. This supports
+    the current single-reviewed-entry wording.
+  snapshot_sha256: 54ba6b3287b7c1caf6f8f81b535f8a5b26ace9433613f389a6ba862b76243c2d
+  search_scope: UniProtKB gene_exact:CDC7 AND taxonomy_id:559292 AND reviewed:true;
+    all returned identities and aliases inspected. This is a bounded exact-organism
+    or descendant-taxonomy query as specified in its URL, not gene-absence proof.
+- evidence_id: complex49-agent-protein-P32325
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32325.json
+  locator: Native accession/status/name/genes/taxon, SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    comments and InterPro xrefs
+  accessed_at: '2026-10-22T05:17:19.535661Z'
+  support: supports
+  summary: Reviewed primary accession P32325 is DDK kinase regulatory subunit DBF4,
+    with exact gene token DBF4 and native taxon559292. Native subunit/location/similarity
+    annotations and family xrefs were read; database identity and annotation are distinguished
+    from independently inspected primary experiments.
+  snapshot_sha256: 0546ee25f8f1a6282e15dd0ef4154db5a7b7d777367e65dc1ce0702681ed8ebc
+- evidence_id: complex49-agent-gene-DBF4-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADBF4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete gene_exact AND taxonomy_id AND reviewed:true result, size500,
+    all returned identities
+  accessed_at: '2026-10-22T05:17:24.325676Z'
+  support: supports
+  summary: The complete current reviewed exact DBF4/taxon559292 query returns only
+    P32325, with the declared gene token and matching native organism. This supports
+    the current single-reviewed-entry wording.
+  snapshot_sha256: 82a8ddf9ab23f95ed7871614309b13b085bb78e7d6a6f0e1b0c1c7920f991c88
+  search_scope: UniProtKB gene_exact:DBF4 AND taxonomy_id:559292 AND reviewed:true;
+    all returned identities and aliases inspected. This is a bounded exact-organism
+    or descendant-taxonomy query as specified in its URL, not gene-absence proof.
+- evidence_id: complex49-agent-pmid-12045100
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12045100+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and complete native abstract
+  accessed_at: '2026-10-22T05:17:25.842170Z'
+  support: supports
+  summary: 'Native MED12045100: DNA replication in eukaryotic cells. Authors Bell
+    SP, Dutta A.; DOI 10.1146/annurev.biochem.71.110601.135425. Complete abstract
+    read at secondary-review abstract tier; no full body is implied by metadata.'
+  snapshot_sha256: e99580d84e00266f9f5026942a9041af276aff8231f77771d92de3f20ebafd4e
+- evidence_id: complex49-agent-bell2002-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1146%2Fannurev.biochem.71.110601.135425%22&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and complete native abstract
+  accessed_at: '2026-10-22T05:17:28.274842Z'
+  support: supports
+  summary: 'Native MED12045100: DNA replication in eukaryotic cells. Authors Bell
+    SP, Dutta A.; DOI 10.1146/annurev.biochem.71.110601.135425. Complete abstract
+    read at secondary-review abstract tier; no full body is implied by metadata.'
+  snapshot_sha256: 97c836b55790a0129e8bdf25c0715f52d30d1095fa96f9c6369e5a878bb3dfe8
+- evidence_id: complex49-agent-bell2002-publisher
+  kind: database
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.biochem.71.110601.135425
+  locator: Exact retained unsuccessful full-body access response
+  accessed_at: '2026-10-22T05:18:09.394793Z'
+  support: context_only
+  summary: Publisher HTML returnedHTTP403; no Bell/Dutta body is certified. Native
+    GO directly supports the maintained DDK definition and coarse function.
+  snapshot_sha256: bd10bd4fd536a09aa73eaa6742583324d58d75ad9a8eaa36271de5ebefdc1fde
+- evidence_id: complex49-agent-ipr-IPR051590
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051590/
+  locator: Native accession/name/type, complete description, hierarchy, signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:17:52.288914Z'
+  support: supports
+  summary: IPR051590 has exact DDK regulatory-subunit Dbf4 family name/type and PTHR15375
+    signature; P32325 directly carries it. Its description is LLM-generated and unchecked,
+    so its mechanistic prose is not independent biological evidence.
+  snapshot_sha256: 71598035654916de449d61ac770f59cd4c3f98162e6fc56b7c793b03c7891e85
+- evidence_id: complex49-agent-ipr-IPR013939
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013939/
+  locator: Native accession/name/type, complete description, hierarchy, signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:17:52.177015Z'
+  support: context_only
+  summary: IPR013939 is a central-region domain, not the whole Dbf4 protein family.
+  snapshot_sha256: 6c60bd0155bc50711d42b3a15809d8eeaff6ce63784134859a2e9b3482f800f4
+- evidence_id: complex49-agent-dbf4-members
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR051590+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name
+  locator: Complete bounded native query response
+  accessed_at: '2026-10-22T05:19:08.164349Z'
+  support: context_only
+  summary: All12 returned reviewed identities were inspected, including P32325 Dbf4
+    and other DDK regulatory homologues; these corroborate family scope, not uniform
+    biological roles for every uncharacterized member.
+  snapshot_sha256: c5de157b4d1725a99661eada6a7e35c5fc1a5249259e37b7350be333a6a6ae32
+  search_scope: UniProt reviewed:true AND xref:interpro-IPR051590; size100; complete12
+    returned identities read.
+- evidence_id: complex49-agent-ipr-search-Cdc7
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=Cdc7
+  locator: Complete bounded native query response
+  accessed_at: '2026-10-22T05:17:53.579926Z'
+  support: context_only
+  summary: The bounded Cdc7 query returns11 mostly Cdc73/CCDC-related terms, none
+    a verified exact Cdc7 whole-protein family. Native P06243 kinase-domain xrefs
+    do not supply such an exact mapping.
+  snapshot_sha256: e0c2c778ef174a1da450461f88f5b01e99d167447a8d140242d3e7cc47185191
+  search_scope: InterPro native search=Cdc7; all11 returned name/type/signature metadata
+    read, no global absence assertion.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:45Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/dbf4_dependent_protein_kinase_complex.yaml'
+  snapshot_sha256: 3c621e4ec0ba4c489ac713137a0621f10b235284efe73c780895497c0cacf9a2
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:46Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/dbf4_dependent_protein_kinase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/dbf4_dependent_protein_kinase_complex-strict.tsv"
+  snapshot_sha256: 5d85dca238306e9dd9a3acd3cf4e5b87ed6d440c23b4c8d209892fda1d624e35
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:17:32.960732Z'
+  support: supports
+  summary: "data/structures/other/dbf4_dependent_protein_kinase_complex.yaml  (GO:0031431)\n\
+    \  ddk_dna_replication_initiation\tcdc7_kinase_subunit\tCOVERED\t->cdc7_kinase_subunit\
+    \ (UniProtKB:P06243)\n  ddk_dna_replication_initiation\tdbf4_regulatory_subunit\t\
+    COVERED\t->dbf4_regulatory_subunit (UniProtKB:P32325)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     2  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     2  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 69d4848530843f3d8b7c8651b0f217032da1f2bf11e09fa36969ee325d9ef6df
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:17:34.375847Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 9 collected target identifiers returned OK. PMID:12045100: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Heterodimer and synonym scope
+  outcome: supported
+  target_ids:
+  - GO:0031431
+  summary: The definition, DDK exact synonym, two narrow organism-specific names and
+    nuclear-complex parent match native GO. Cdc7 catalytic and Dbf4 regulatory roles
+    are directly stated by GO and reviewed protein annotations.
+  evidence_ids:
+  - record
+  - complex49-agent-go
+  - complex49-agent-protein-P06243
+  - complex49-agent-protein-P32325
+- assessment_id: components
+  area: grounding
+  topic: Correct examples and exact regulatory family
+  outcome: concern
+  target_ids:
+  - GO:0031431
+  summary: The two S288C examples and single-hit query notes are correct. IPR051590
+    exactly identifies the Dbf4 regulatory class, with native example xref and independent
+    reviewed-member support; the central-region domain is not used instead. Cdc7 remains
+    unresolved within the bounded search, without forcing a generic protein-kinase
+    domain.
+  evidence_ids:
+  - record
+  - curation
+  - complex49-agent-ipr-IPR051590
+  - complex49-agent-ipr-IPR013939
+  - complex49-agent-dbf4-members
+  - complex49-agent-ipr-search-Cdc7
+  - complex49-agent-protein-P06243
+  - complex49-agent-protein-P32325
+  - complex49-agent-gene-CDC7-559292
+  - complex49-agent-gene-DBF4-559292
+- assessment_id: formation
+  area: grounding
+  topic: Catalytic function differs from assembly necessity
+  outcome: unknown
+  target_ids:
+  - GO:0031431
+  summary: The heterodimeric definition and origin-activation requirement establish
+    composition and function; the inspected GO/protein authorities and review abstract
+    do not supply a condition-specific physical assembly-removal experiment for either
+    subunit. UNKNOWN remains explicit.
+  evidence_ids:
+  - record
+  - schema
+  - complex49-agent-go
+  - complex49-agent-bell2002-meta
+  - complex49-agent-protein-P06243
+  - complex49-agent-protein-P32325
+- assessment_id: scope
+  area: scope
+  topic: Yeast canonical authority and majority occurrence
+  outcome: supported
+  target_ids:
+  - GO:0031431
+  summary: The canonical note explicitly names the GO-defined budding-yeast system
+    rather than claiming a particular purification. Species4932 and reference strain559292
+    are correct. COMMON retains present-in-most-members/losses-exception meaning,
+    supported as qualitative ordinary replication machinery rather than a measured
+    prevalence census.
+  evidence_ids:
+  - record
+  - schema
+  - complex49-agent-go
+  - complex49-agent-tax4932
+  - complex49-agent-tax559292
+- assessment_id: function-graph
+  area: graph
+  topic: Authority-backed coarse initiation function
+  outcome: supported
+  target_ids:
+  - GO:0031431
+  summary: Native GO directly supports origin activation, and the NONMECHANISTIC graph
+    makes no MCM phosphorylation, Cdc45 recruitment or licensing sequence claim. Bell/Dutta2002
+    is a review verified at complete abstract tier; that abstract is not treated as
+    direct DDK experimental data or a detailed mechanism.
+  evidence_ids:
+  - record
+  - schema
+  - complex49-agent-go
+  - complex49-agent-bell2002-meta
+  - complex49-agent-pmid-12045100
+  - complex49-agent-protein-P06243
+  - complex49-agent-protein-P32325
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained target with bounded source review
+  outcome: supported
+  target_ids:
+  - GO:0031431
+  summary: All maintained fields, current discussions and historical entries were
+    read. Optional new mechanisms, universal family claims and additional mandatory
+    inventory fields were not invented. Identifier resolution and scientific support
+    were assessed separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex49-agent-go
+findings:
+- finding_id: F1
+  issue_key: ddk-dbf4-exact-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Use the exact Dbf4 regulatory-subunit family
+  description: The Dbf4 row remains REVIEWED_LABEL_ONLY even though IPR051590 directly
+    identifies the DDK regulatory family and is linked to the correct reviewed example.
+    Its generated description is not used as primary evidence. Cdc7 kinase-domain
+    candidates remain broader.
+  target_ids:
+  - GO:0031431
+  field_paths:
+  - components#dbf4_regulatory_subunit.grounding_status
+  - discussions#resolve_ddk_subunit_groundings
+  evidence_ids:
+  - record
+  - curation
+  - complex49-agent-ipr-IPR051590
+  - complex49-agent-dbf4-members
+  - complex49-agent-protein-P06243
+  - complex49-agent-protein-P32325
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component identity and condition-scoped formation evidence
+  native_severity: minor
+  normalization_reason: The complex identity, correct protein examples and supported
+    function remain intact; this is a bounded current grounding or explicitly tested
+    formation-evidence gap.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031431
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    role: maintained scientific record
+  description: Map the Dbf4 row to the verified exact family and narrow the remaining
+    TODO to unresolved Cdc7 mapping; retain the correct examples and UNKNOWN formation
+    necessity.
+  acceptance_checks:
+  - Verify native family type/name/signature and the P32325 xref.
+  - Do not promote unchecked generated family prose to experimental mechanism evidence.
+  - Preserve source-specific taxa, supported component IDs and protein examples; pass
+    applicable native curation checks.
+limitations:
+- Five same-base batch26 global checks are staged for guarded parent integration;
+  this unsaved review neither finalizes nor reruns the corpus gates.
+- No figure pixels, supplementary data, sequence alignment or raw experimental measurements
+  were independently reanalyzed. Exact literature-read scopes and authority tiers
+  are stated in evidence locators.
+- Bell/Dutta2002 full body was not recovered after the retained publisher403. Detailed
+  DDK chemistry is outside this authority-backed coarse record review.
+- The Cdc7 query is bounded and no universal absence of an exact family is claimed.
+  Dbf4 family metadata and reviewed-member corroboration are separate from unchecked
+  generated prose.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes qualified clean reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

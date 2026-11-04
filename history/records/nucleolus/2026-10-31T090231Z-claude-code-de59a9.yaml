@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleolus.yaml
+  slug: nucleolus
+session:
+  id: 2026-10-31T090231Z-claude-code-de59a9
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected nucleolar_chromatin to nucleolus and linked small_subunit_processome
+    and box_haca_snornp_complex to ribosome_biogenesis.
+  details: Added a sourced 'is part of' edge from nucleolar_chromatin to nucleolus (GO:0030874)
+    and 'contributes to' edges from small_subunit_processome (GO:0032040, DOI:10.1038/nature00769)
+    and box_haca_snornp_complex (GO:0031429, DOI:10.1146/annurev.genet.33.1.261) to ribosome_biogenesis.

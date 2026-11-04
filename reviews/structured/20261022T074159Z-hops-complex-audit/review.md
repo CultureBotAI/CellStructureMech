@@ -1,0 +1,1273 @@
+# Source-backed review of hops complex
+
+- Review: 20261022T074159Z-hops-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:12:43Z
+- Finished UTC: 2026-10-22T07:41:59Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One grouped minor exact-family gap for Vps11, Vps16 and Vps41. Six-member HOPS identity, yeast examples and functional associations are supported. Earlier Vps16-dependent core association is kept condition-specific and does not force whole-HOPS ESSENTIAL labels.
+
+## Scope And Provenance
+
+Exactly one complete target and fourteen frozen target/guidance/schema inputs. Actual primary bodies, native identities and precise access scopes were independently read; no neighboring record is an unstated premise.
+
+Selection: Batch57 strict ordered selection index 5; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030897 | data/structures/other/hops_complex.yaml | maintained | HOPS complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0030897 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0030897 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0030897 | Native check passed; scientific support independently assessed. |
+| Focused native verify | passed | True | GO:0030897 | Native check passed; scientific support independently assessed. |
+| Claim-level scientific review | passed | True | GO:0030897 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0030897 | 15 of 16 collected target identifiers returned OK. PMID:10944212: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0030897 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0030897 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0030897 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0030897 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0030897 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Correct HOPS boundary and parent
+
+identity: supported. Targets: GO:0030897.
+
+The exact GO identity, parent, vacuolar location and fusion function are supported. Ypt7, SNAREs and Sec17/Sec18 are associated actors rather than additional HOPS constituents.
+
+### Six supported members with three exact family gaps
+
+grounding: concern. Targets: GO:0030897.
+
+Primary biochemical recovery supports the six named HOPS members. Reviewed identities and all alias queries agree. Vps11, Vps16 and Vps41 have verified exact families; the other checked candidates are broader families or domains and are not forced.
+
+### Earlier core-association dependency does not establish universal HOPS necessity
+
+evidence: unknown. Targets: GO:0030897.
+
+Rieder directly supports a Vps16-dependent stable Vps33 association in the older class-C recovery experiment. This can enrich a future condition-specific account, but current generic roles do not contradict it. Whole-HOPS loss-of-subunit formation necessity remains unknown, so existing UNKNOWN labels and the absence of a detailed assembly pathway do not independently warrant a finding.
+
+### Experimental yeast and reference-strain boundaries are preserved
+
+scope: supported. Targets: GO:0030897.
+
+COMMON means present in most species members with exceptional losses. The cited yeast systems qualitatively support the model; no species-wide census was performed. S288C protein entries, BJ3505/DKY6281 assay strains, older Rieder backgrounds and recombinant bacterial expression are distinguished.
+
+### Descriptive membership and supported functional associations
+
+graph: supported. Targets: GO:0030897.
+
+The NON_MECHANISTIC graph preserves six-member composition, vacuolar association and source-supported Ypt7/fusion relationships without claiming a complete assembly mechanism. ATP/Sec18 priming and 65S/38S recovery are biochemical experimental contexts, not invariant copy numbers.
+
+### Whole-target review with explicit bounds
+
+completeness: supported. Targets: GO:0030897.
+
+All maintained scientific fields, citations, examples, causal graphs, discussions and history were read. Existing protein examples were checked directly. Findings concern current source/identity or verified family gaps rather than empty optional slots; historical statements remain historical.
+
+## Findings
+
+### F1: Ground three named HOPS subunit classes
+
+minor / open / confirmed; issue key: hops-exact-vps11-vps16-vps41-families.
+
+Vps11, Vps16 and Vps41 remain REVIEWED_LABEL_ONLY despite exact current families IPR016528, IPR016534 and IPR016902, respectively. Native family types/signatures and independently checked reviewed-protein cross-references match these named classes. Their participation in other complexes does not invalidate source-neutral protein-class identity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground Vps11 to IPR016528, Vps16 to IPR016534 and Vps41 to IPR016902 with current scope notes. Preserve label-only status for the unresolved Vps18/Vps33/Vps39 classes unless independently exact families are established.
+
+- Each adopted family is the named whole protein class, with original role evidence retained.
+- Broader Vps39/Vps3, Vps41/Vps8, Sec1-like families and isolated domains are not substituted indiscriminately.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/hops_complex.yaml; Entire current YAML, including all scientific fields, graphs, discussions and history | context_only | All target bytes were read. No neighboring maintained record is an unstated premise. |
+| curation | docs/CURATION.md; Source-neutral component classes and reviewed-label-only contract | context_only | A species protein example does not replace exact component-class grounding; a protein family need not be exclusive to one complex. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields | context_only | Formation necessity is distinct from activity or localization. COMMON means present in most members with exceptional losses; UNIVERSAL means essentially every member, rather than merely a well-studied example. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity, directed relations and edge-level evidence | context_only | Coarse physical or biochemical mechanisms can be represented without inventing every intermediate. Membership, catalytic activity and assembly necessity remain distinct. |
+| micro57-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887; Only those exact four entries and relevant definitions/synonyms/typed links in the combined response. | supports | GO0030897 identifies HOPS, GO0098796 its membrane-protein-complex parent, GO0042144 non-autophagic vacuole fusion and GO0000329 the vacuolar membrane. These are distinct structure/function/location identities. |
+| micro57-GO0030897-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030897/ancestors?relations=is_a; Complete exact-target relations=is_a ancestor array. | supports | The is_a-only HOPS ancestor response includes GO0098796 and protein-containing-complex ancestry. |
+| micro57-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA4932 identifies Saccharomyces cerevisiae species. |
+| micro57-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA559292 identifies the S288C reference strain, distinct from all experimentally named strain backgrounds. |
+| micro57-doi-10.1091_mbc.8.11.2307 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.8.11.2307%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID9362071: A novel RING finger protein complex essential for a late step in protein transport to the yeast vacuole. Rieder SE, Emr SD. (1997), DOI10.1091/mbc.8.11.2307. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-doi-10.1073_pnas.97.17.9402 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.97.17.9402%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID10944212: A Ypt/Rab effector complex containing the Sec1 homolog Vps33p is required for homotypic vacuole fusion. Seals DF, Eitzen G, Margolis N, Wickner WT, Price A. (2000), DOI10.1073/pnas.97.17.9402. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-seals2000-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC16876/; Genuine primary HTML: all Methods sec1 (sec2–4), all Results sec5 (sec6–9, Fig1–4 captions), all Discussion sec10. Abstract read; Introduction outside these containers and pixels not inspected. BJ3505/DKY6281 vacuoles and recombinant E.coli host are distinguished. | supports | Yeast vacuole assays support six-member HOPS association, ATP/Sec18-dependent priming changes, GTP-state-selective Ypt7 association and antibody-sensitive fusion. The four class-C proteins plus Vam6 are identified by mass spectrometry; Vam2 is verified by immunoblot rather than that MS identification. Core membership is distinct from larger SNARE-containing associations. |
+| micro57-rieder1997-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC25710/; Genuine primary HTML: Methods sec3 including Table1 and sec12 crosslinking; Results sec20–23 including Fig7 and embedded Fig9 caption; Discussion sec25. Other sections and pixels not read. | supports | Earlier class-C core recovery supports Vps11/Vps16/Vps18/Vps33 association. In vps16 deletion, Vps11/Vps18 recovery lacks stable Vps33 association; vps33 deletion preserves the other core members. This is a condition-specific core-association dependency, not proof of universal physical formation necessity for every subunit of whole HOPS. |
+| micro57-protein-P12868 | https://rest.uniprot.org/uniprotkb/P12868.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C P12868 is Vps11/PEP5; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS11 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS11%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P12868; primary name or declared synonym matches VPS11. |
+| micro57-gene-PEP5 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P12868; primary name or declared synonym matches PEP5. |
+| micro57-protein-Q03308 | https://rest.uniprot.org/uniprotkb/Q03308.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C Q03308 is Vps16; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS16 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, Q03308; primary name or declared synonym matches VPS16. |
+| micro57-protein-P27801 | https://rest.uniprot.org/uniprotkb/P27801.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C P27801 is Vps18/PEP3; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS18 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS18%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P27801; primary name or declared synonym matches VPS18. |
+| micro57-gene-PEP3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P27801; primary name or declared synonym matches PEP3. |
+| micro57-protein-P20795 | https://rest.uniprot.org/uniprotkb/P20795.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C P20795 is Vps33; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS33 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS33%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P20795; primary name or declared synonym matches VPS33. |
+| micro57-protein-Q07468 | https://rest.uniprot.org/uniprotkb/Q07468.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C Q07468 is Vps39/Vam6; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS39 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS39%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, Q07468; primary name or declared synonym matches VPS39. |
+| micro57-gene-VAM6 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVAM6%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, Q07468; primary name or declared synonym matches VAM6. |
+| micro57-protein-P38959 | https://rest.uniprot.org/uniprotkb/P38959.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C P38959 is Vps41/Vam2; native primary names/synonyms, HOPS subunit comments and family cross-references match. Reference strain identity is not substituted for experimental strain. |
+| micro57-gene-VPS41 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS41%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P38959; primary name or declared synonym matches VPS41. |
+| micro57-gene-VAM2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVAM2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P38959; primary name or declared synonym matches VAM2. |
+| micro57-protein-P32939 | https://rest.uniprot.org/uniprotkb/P32939.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed S288C P32939 is YPT7. Its native HOPS interaction supports an associated Rab actor, not a seventh constitutive HOPS subunit. |
+| micro57-IPR016528 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016528/; Complete native type/name/description/member signatures; mapping corroborated separately by the matching native protein entry. | supports | IPR016528 is the Vps11/Pep5 family with PIRSF007860. |
+| micro57-IPR016534 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016534/; Complete native type/name/description/member signatures; mapping corroborated separately by the matching native protein entry. | supports | IPR016534 is the Vps16 family with PIRSF007949/PTHR12811. |
+| micro57-IPR016902 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016902/; Complete native type/name/description/member signatures; mapping corroborated separately by the matching native protein entry. | supports | IPR016902 is the Vps41 family with PIRSF028921. Its family type/name/signature and whole-protein membership establish the class; ambiguous copied beta-propeller prose is not adopted as a mechanism. |
+| micro57-IPR032914 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR032914/; Complete native type/name/description and member-signature metadata. | context_only | IPR032914 is a Vam6/Vps39/TRAP1 family whose description also includes fungal Vps3; it is broader than the named Vps39 class. |
+| micro57-IPR045111 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045111/; Complete native type/name/description and member-signature metadata. | context_only | IPR045111 includes Vps41 and Vps8; the separately checked IPR016902 is the narrower family used for Vps41. |
+| micro57-IPR007810 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007810/; Complete native type/name/description and member-signature metadata. | context_only | IPR007810 is a Pep3/Vps18 beta-propeller domain, not an exact whole Vps18 family. |
+| micro57-IPR001619 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001619/; Complete native type/name/description and member-signature metadata. | context_only | IPR001619 is a broad Sec1-like family rather than an exact Vps33 class. |
+| micro57-IPR019452 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019452/; Complete native type/name/description and member-signature metadata. | context_only | IPR019452 is a Vps39/TGF-beta-receptor-associated domain, not a whole exact Vps39 family. |
+| schema-result | just validate data/structures/other/hops_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/hops_complex.yaml |
+| strict-result | just validate-strict data/structures/other/hops_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/hops_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --causal-graphs; Complete focused read-only native report | supports | data/structures/other/hops_complex.yaml  (GO:0030897)<br>  yeast_hops_vacuole_fusion	vps11_hops_subunit	COVERED	-&gt;vps11_hops_subunit (UniProtKB:P12868)<br>  yeast_hops_vacuole_fusion	vps16_hops_subunit	COVERED	-&gt;vps16_hops_subunit (UniProtKB:Q03308)<br>  yeast_hops_vacuole_fusion	vps18_hops_subunit	COVERED	-&gt;vps18_hops_subunit (UniProtKB:P27801)<br>  yeast_hops_vacuole_fusion	vps33_hops_subunit	COVERED	-&gt;vps33_hops_subunit (UniProtKB:P20795)<br>  yeast_hops_vacuole_fusion	vps39_vam6_hops_subunit	COVERED	-&gt;vps39_vam6_hops_subunit (UniProtKB:Q07468)<br>  yeast_hops_vacuole_fusion	vps41_vam2_hops_subunit	COVERED	-&gt;vps41_vam2_hops_subunit (UniProtKB:P38959)<br>  yeast_hops_vacuole_fusion	ypt7_rab	UNANCHORED_WITH_UNIPROT	Ypt7 Rab GTPase (UniProtKB:P32939)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     6  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     7  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --verify; Complete focused read-only native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/hops_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 15 of 16 collected target identifiers returned OK. PMID:10944212: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Seals was read in complete Methods, Results and Discussion plus abstract; Rieder in the precise selected Methods/Results/Discussion sections stated above. No figure pixels or supplements were inspected.
+- COMMON retains its majority-occurrence meaning, but no population census is claimed. Native reference accessions and actual experimental strains are separate.
+- Exact family checking is bounded to the retained entries; rejected broader families/domains do not establish all-authority absence. Existing UNKNOWN assembly necessity is not a standalone defect.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests one review for every unreviewed record, including qualified clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T074159Z-hops-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of hops complex
+started_at: '2026-10-22T07:12:43Z'
+finished_at: '2026-10-22T07:41:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One grouped minor exact-family gap for Vps11, Vps16 and Vps41. Six-member
+  HOPS identity, yeast examples and functional associations are supported. Earlier
+  Vps16-dependent core association is kept condition-specific and does not force whole-HOPS
+  ESSENTIAL labels.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/hops_complex.yaml
+    sha256: 17afe9c90b6a51d94e588059cea7c0cb63c37a04e8b9c656b868c5ac1ec2a57f
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030897
+  path: data/structures/other/hops_complex.yaml
+  label: HOPS complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hops_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target and fourteen frozen target/guidance/schema
+    inputs. Actual primary bodies, native identities and precise access scopes were
+    independently read; no neighboring record is an unstated premise.
+  selection: Batch57 strict ordered selection index 5; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030897
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just validate data/structures/other/hops_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just validate-strict data/structures/other/hops_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --causal-graphs
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --verify
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-doi-10.1091_mbc.8.11.2307
+  - micro57-doi-10.1073_pnas.97.17.9402
+  - micro57-seals2000-pmc
+  - micro57-rieder1997-pmc
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+  - micro57-protein-P32939
+  - micro57-IPR016528
+  - micro57-IPR016534
+  - micro57-IPR016902
+  - micro57-IPR032914
+  - micro57-IPR045111
+  - micro57-IPR007810
+  - micro57-IPR001619
+  - micro57-IPR019452
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  summary: '15 of 16 collected target identifiers returned OK. PMID:10944212: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro57-doi-10.1073_pnas.97.17.9402
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030897
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/hops_complex.yaml
+  locator: Entire current YAML, including all scientific fields, graphs, discussions
+    and history
+  accessed_at: '2026-10-22T07:30:49Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Source-neutral component classes and reviewed-label-only contract
+  accessed_at: '2026-10-22T07:30:49Z'
+  support: context_only
+  summary: A species protein example does not replace exact component-class grounding;
+    a protein family need not be exclusive to one complex.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields
+  accessed_at: '2026-10-22T07:30:49Z'
+  support: context_only
+  summary: Formation necessity is distinct from activity or localization. COMMON means
+    present in most members with exceptional losses; UNIVERSAL means essentially every
+    member, rather than merely a well-studied example.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity, directed relations and edge-level evidence
+  accessed_at: '2026-10-22T07:30:49Z'
+  support: context_only
+  summary: Coarse physical or biochemical mechanisms can be represented without inventing
+    every intermediate. Membership, catalytic activity and assembly necessity remain
+    distinct.
+- evidence_id: micro57-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887
+  locator: Only those exact four entries and relevant definitions/synonyms/typed links
+    in the combined response.
+  accessed_at: '2026-10-22T07:18:56.250395Z'
+  support: supports
+  summary: GO0030897 identifies HOPS, GO0098796 its membrane-protein-complex parent,
+    GO0042144 non-autophagic vacuole fusion and GO0000329 the vacuolar membrane. These
+    are distinct structure/function/location identities.
+  snapshot_sha256: 90ba34735100f633c06aadb1b833873e8935dd557fcefaba8dfd7e3273689b38
+- evidence_id: micro57-GO0030897-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030897/ancestors?relations=is_a
+  locator: Complete exact-target relations=is_a ancestor array.
+  accessed_at: '2026-10-22T07:18:56.250917Z'
+  support: supports
+  summary: The is_a-only HOPS ancestor response includes GO0098796 and protein-containing-complex
+    ancestry.
+  snapshot_sha256: 9e944d49c6252d12d30072154f77bcb6fe909eedbab2d94203cb2ef3f298ebbe
+- evidence_id: micro57-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.917463Z'
+  support: supports
+  summary: ENA4932 identifies Saccharomyces cerevisiae species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro57-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.930018Z'
+  support: supports
+  summary: ENA559292 identifies the S288C reference strain, distinct from all experimentally
+    named strain backgrounds.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro57-doi-10.1091_mbc.8.11.2307
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.8.11.2307%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:01.379837Z'
+  support: supports
+  summary: 'PMID9362071: A novel RING finger protein complex essential for a late
+    step in protein transport to the yeast vacuole. Rieder SE, Emr SD. (1997), DOI10.1091/mbc.8.11.2307.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 137333976480e9a77fdb9a5e1f4db744d45a60180e6c0d9194326c241799974e
+- evidence_id: micro57-doi-10.1073_pnas.97.17.9402
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.97.17.9402%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:01.450484Z'
+  support: supports
+  summary: 'PMID10944212: A Ypt/Rab effector complex containing the Sec1 homolog Vps33p
+    is required for homotypic vacuole fusion. Seals DF, Eitzen G, Margolis N, Wickner
+    WT, Price A. (2000), DOI10.1073/pnas.97.17.9402. The complete native abstract
+    was read; no unlisted body scope is implied.'
+  snapshot_sha256: c4c6e567aabfdfa6da624b8190d3517b7a58a41b9faca612e98d138784016e75
+- evidence_id: micro57-seals2000-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC16876/
+  locator: 'Genuine primary HTML: all Methods sec1 (sec2–4), all Results sec5 (sec6–9,
+    Fig1–4 captions), all Discussion sec10. Abstract read; Introduction outside these
+    containers and pixels not inspected. BJ3505/DKY6281 vacuoles and recombinant E.coli
+    host are distinguished.'
+  accessed_at: '2026-10-22T07:20:28.650162Z'
+  support: supports
+  summary: Yeast vacuole assays support six-member HOPS association, ATP/Sec18-dependent
+    priming changes, GTP-state-selective Ypt7 association and antibody-sensitive fusion.
+    The four class-C proteins plus Vam6 are identified by mass spectrometry; Vam2
+    is verified by immunoblot rather than that MS identification. Core membership
+    is distinct from larger SNARE-containing associations.
+  snapshot_sha256: e6046f7a5c6b1b27fd54daed9999b9c50677a4b06b4bfcf582831835a3eda4d6
+- evidence_id: micro57-rieder1997-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC25710/
+  locator: 'Genuine primary HTML: Methods sec3 including Table1 and sec12 crosslinking;
+    Results sec20–23 including Fig7 and embedded Fig9 caption; Discussion sec25. Other
+    sections and pixels not read.'
+  accessed_at: '2026-10-22T07:20:28.563282Z'
+  support: supports
+  summary: Earlier class-C core recovery supports Vps11/Vps16/Vps18/Vps33 association.
+    In vps16 deletion, Vps11/Vps18 recovery lacks stable Vps33 association; vps33
+    deletion preserves the other core members. This is a condition-specific core-association
+    dependency, not proof of universal physical formation necessity for every subunit
+    of whole HOPS.
+  snapshot_sha256: 16dd8af58ba597df6caa0ea0186f34a492c214018d72444e350b38c72e8d7c66
+- evidence_id: micro57-protein-P12868
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P12868.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T05:02:32.411007Z'
+  support: supports
+  summary: Reviewed S288C P12868 is Vps11/PEP5; native primary names/synonyms, HOPS
+    subunit comments and family cross-references match. Reference strain identity
+    is not substituted for experimental strain.
+  snapshot_sha256: ff283afab18523326c61ef44b5c5ae24ea501a36b0b32d75e46d7b5834d4a2b0
+- evidence_id: micro57-gene-VPS11
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS11%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:40.700800Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P12868; primary name or
+    declared synonym matches VPS11.
+  snapshot_sha256: 2d7ec548d4f724f09d2f3c966ca4b44cd93914500f4413fef040aa9da6c29b2e
+- evidence_id: micro57-gene-PEP5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:37.425228Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P12868; primary name or
+    declared synonym matches PEP5.
+  snapshot_sha256: 2d7ec548d4f724f09d2f3c966ca4b44cd93914500f4413fef040aa9da6c29b2e
+- evidence_id: micro57-protein-Q03308
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03308.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T05:02:35.587305Z'
+  support: supports
+  summary: Reviewed S288C Q03308 is Vps16; native primary names/synonyms, HOPS subunit
+    comments and family cross-references match. Reference strain identity is not substituted
+    for experimental strain.
+  snapshot_sha256: 572e18358d76bb4a5bcaa5f12a16aa6c5e0d24f6e8c11a5ad3637907f79c35f1
+- evidence_id: micro57-gene-VPS16
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:40.716692Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, Q03308; primary name or
+    declared synonym matches VPS16.
+  snapshot_sha256: 4f1949a2b20f0131930173f14291d988c2119a19df78c13000dba74e842bc037
+- evidence_id: micro57-protein-P27801
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27801.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T05:02:33.224355Z'
+  support: supports
+  summary: Reviewed S288C P27801 is Vps18/PEP3; native primary names/synonyms, HOPS
+    subunit comments and family cross-references match. Reference strain identity
+    is not substituted for experimental strain.
+  snapshot_sha256: 6b73997591488f3066e961f073293728183c0b1b17eefa4c162d1abf133dd37d
+- evidence_id: micro57-gene-VPS18
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS18%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:41.516204Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P27801; primary name or
+    declared synonym matches VPS18.
+  snapshot_sha256: cdc80fa77df47d8e14c7b1aad16a2b8b33747ae02fcfffecc4e8a1397a172656
+- evidence_id: micro57-gene-PEP3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:36.602583Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P27801; primary name or
+    declared synonym matches PEP3.
+  snapshot_sha256: cdc80fa77df47d8e14c7b1aad16a2b8b33747ae02fcfffecc4e8a1397a172656
+- evidence_id: micro57-protein-P20795
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P20795.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T05:02:33.168109Z'
+  support: supports
+  summary: Reviewed S288C P20795 is Vps33; native primary names/synonyms, HOPS subunit
+    comments and family cross-references match. Reference strain identity is not substituted
+    for experimental strain.
+  snapshot_sha256: 74c8787eb68381dc26a6e70ba85414e3a05c4cc15f45e0686a0b57a4882755d6
+- evidence_id: micro57-gene-VPS33
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS33%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T05:02:41.592539Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P20795; primary name or
+    declared synonym matches VPS33.
+  snapshot_sha256: 3c912aef86561cdacce29565228c60917e9a991c97d59e453244354cb9551705
+- evidence_id: micro57-protein-Q07468
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q07468.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:57.597149Z'
+  support: supports
+  summary: Reviewed S288C Q07468 is Vps39/Vam6; native primary names/synonyms, HOPS
+    subunit comments and family cross-references match. Reference strain identity
+    is not substituted for experimental strain.
+  snapshot_sha256: ba8c57ae7fbf39f49c7891bbc839a740cfa77ef3d1bf2ac2d8a507fd20adf87d
+- evidence_id: micro57-gene-VPS39
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS39%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:18:59.224010Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, Q07468; primary name or
+    declared synonym matches VPS39.
+  snapshot_sha256: af496615b04336c15fffe8ce5354941cb4e4c75f4da3cd4a7aefa41d35bac141
+- evidence_id: micro57-gene-VAM6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVAM6%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:18:59.304400Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, Q07468; primary name or
+    declared synonym matches VAM6.
+  snapshot_sha256: af496615b04336c15fffe8ce5354941cb4e4c75f4da3cd4a7aefa41d35bac141
+- evidence_id: micro57-protein-P38959
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38959.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:58.124677Z'
+  support: supports
+  summary: Reviewed S288C P38959 is Vps41/Vam2; native primary names/synonyms, HOPS
+    subunit comments and family cross-references match. Reference strain identity
+    is not substituted for experimental strain.
+  snapshot_sha256: f00f0e9596601755a992f645d763e1863206965b84892c7987d446315d22157b
+- evidence_id: micro57-gene-VPS41
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS41%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:19:00.237113Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P38959; primary name or
+    declared synonym matches VPS41.
+  snapshot_sha256: 229de087a4a3ca30215759ff934c3ac89a9f90068fed97acd29537c874333127
+- evidence_id: micro57-gene-VAM2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVAM2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:19:00.297678Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P38959; primary name or
+    declared synonym matches VAM2.
+  snapshot_sha256: 229de087a4a3ca30215759ff934c3ac89a9f90068fed97acd29537c874333127
+- evidence_id: micro57-protein-P32939
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32939.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:58.130691Z'
+  support: supports
+  summary: Reviewed S288C P32939 is YPT7. Its native HOPS interaction supports an
+    associated Rab actor, not a seventh constitutive HOPS subunit.
+  snapshot_sha256: ebc258b2b618f56b878b0360989fa01631b889f6d324dc3f6b011770d7dd00e5
+- evidence_id: micro57-IPR016528
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016528/
+  locator: Complete native type/name/description/member signatures; mapping corroborated
+    separately by the matching native protein entry.
+  accessed_at: '2026-10-22T05:04:39.364262Z'
+  support: supports
+  summary: IPR016528 is the Vps11/Pep5 family with PIRSF007860.
+  snapshot_sha256: 73b2d50cac8002fc54c640905ed1b5cede4fcd263942ae55daa674e0ab172bf7
+- evidence_id: micro57-IPR016534
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016534/
+  locator: Complete native type/name/description/member signatures; mapping corroborated
+    separately by the matching native protein entry.
+  accessed_at: '2026-10-22T05:04:39.482280Z'
+  support: supports
+  summary: IPR016534 is the Vps16 family with PIRSF007949/PTHR12811.
+  snapshot_sha256: ddcd8dd9da4c7607ff524d7af0615638c065e447fa9bd7868b7597340f06610d
+- evidence_id: micro57-IPR016902
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016902/
+  locator: Complete native type/name/description/member signatures; mapping corroborated
+    separately by the matching native protein entry.
+  accessed_at: '2026-10-22T07:23:33.145793Z'
+  support: supports
+  summary: IPR016902 is the Vps41 family with PIRSF028921. Its family type/name/signature
+    and whole-protein membership establish the class; ambiguous copied beta-propeller
+    prose is not adopted as a mechanism.
+  snapshot_sha256: 9d0f8c9a0ea59cc3f93ec8a65860f10f2508123176137e46ae4430ec4ee93eba
+- evidence_id: micro57-IPR032914
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR032914/
+  locator: Complete native type/name/description and member-signature metadata.
+  accessed_at: '2026-10-22T05:04:39.488332Z'
+  support: context_only
+  summary: IPR032914 is a Vam6/Vps39/TRAP1 family whose description also includes
+    fungal Vps3; it is broader than the named Vps39 class.
+  snapshot_sha256: c9031c40d2d3cf9701bf98487804ee589d51d46a9af9dd84feb925fba5177ea1
+- evidence_id: micro57-IPR045111
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045111/
+  locator: Complete native type/name/description and member-signature metadata.
+  accessed_at: '2026-10-22T05:04:39.497743Z'
+  support: context_only
+  summary: IPR045111 includes Vps41 and Vps8; the separately checked IPR016902 is
+    the narrower family used for Vps41.
+  snapshot_sha256: 392e9408a0425a750cca044426425c79c8b9f5970104987bb5107552373f42aa
+- evidence_id: micro57-IPR007810
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007810/
+  locator: Complete native type/name/description and member-signature metadata.
+  accessed_at: '2026-10-22T05:04:40.081800Z'
+  support: context_only
+  summary: IPR007810 is a Pep3/Vps18 beta-propeller domain, not an exact whole Vps18
+    family.
+  snapshot_sha256: 23fc282051545d1bba2c2c0c8c893a58ba403301736facb4d3506ab1012a7e77
+- evidence_id: micro57-IPR001619
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001619/
+  locator: Complete native type/name/description and member-signature metadata.
+  accessed_at: '2026-10-22T05:04:39.954606Z'
+  support: context_only
+  summary: IPR001619 is a broad Sec1-like family rather than an exact Vps33 class.
+  snapshot_sha256: 6c3475a301aecf6077b4679c28ba0660810bb1681644a8a5323fcb0a80eddcd9
+- evidence_id: micro57-IPR019452
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019452/
+  locator: Complete native type/name/description and member-signature metadata.
+  accessed_at: '2026-10-22T07:23:33.829878Z'
+  support: context_only
+  summary: IPR019452 is a Vps39/TGF-beta-receptor-associated domain, not a whole exact
+    Vps39 family.
+  snapshot_sha256: 3da29371cac4cecb71d36a361d4eacf049beed7fac7f0110153edcff17f4f4a8
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/hops_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:44Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/hops_complex.yaml'
+  snapshot_sha256: eae0d9cfc6defc5b983e9c81bac53750c62b3d378e731c5b372e49d5a20b3d85
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/hops_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:45Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/hops_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hops_complex-strict.tsv"
+  snapshot_sha256: 189829f6f1fb7c5f72b569ccc8768f55bc6874cd9f2df6e2869af2d7977dfc5a
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --causal-graphs
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:51.982377Z'
+  support: supports
+  summary: "data/structures/other/hops_complex.yaml  (GO:0030897)\n  yeast_hops_vacuole_fusion\t\
+    vps11_hops_subunit\tCOVERED\t->vps11_hops_subunit (UniProtKB:P12868)\n  yeast_hops_vacuole_fusion\t\
+    vps16_hops_subunit\tCOVERED\t->vps16_hops_subunit (UniProtKB:Q03308)\n  yeast_hops_vacuole_fusion\t\
+    vps18_hops_subunit\tCOVERED\t->vps18_hops_subunit (UniProtKB:P27801)\n  yeast_hops_vacuole_fusion\t\
+    vps33_hops_subunit\tCOVERED\t->vps33_hops_subunit (UniProtKB:P20795)\n  yeast_hops_vacuole_fusion\t\
+    vps39_vam6_hops_subunit\tCOVERED\t->vps39_vam6_hops_subunit (UniProtKB:Q07468)\n\
+    \  yeast_hops_vacuole_fusion\tvps41_vam2_hops_subunit\tCOVERED\t->vps41_vam2_hops_subunit\
+    \ (UniProtKB:P38959)\n  yeast_hops_vacuole_fusion\typt7_rab\tUNANCHORED_WITH_UNIPROT\t\
+    Ypt7 Rab GTPase (UniProtKB:P32939)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n\
+    \     6  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     1  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or\
+    \ xref on the node\n     7  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 892cd259b2c321099f6cac2b190f08044881c771012d46f67414f536f65de7dd
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hops_complex.yaml --verify
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:53.337346Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/hops_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '15 of 16 collected target identifiers returned OK. PMID:10944212: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Correct HOPS boundary and parent
+  outcome: supported
+  target_ids:
+  - GO:0030897
+  summary: The exact GO identity, parent, vacuolar location and fusion function are
+    supported. Ypt7, SNAREs and Sec17/Sec18 are associated actors rather than additional
+    HOPS constituents.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-seals2000-pmc
+  - micro57-protein-P32939
+- assessment_id: composition
+  area: grounding
+  topic: Six supported members with three exact family gaps
+  outcome: concern
+  target_ids:
+  - GO:0030897
+  summary: Primary biochemical recovery supports the six named HOPS members. Reviewed
+    identities and all alias queries agree. Vps11, Vps16 and Vps41 have verified exact
+    families; the other checked candidates are broader families or domains and are
+    not forced.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-doi-10.1091_mbc.8.11.2307
+  - micro57-doi-10.1073_pnas.97.17.9402
+  - micro57-seals2000-pmc
+  - micro57-rieder1997-pmc
+  - micro57-protein-P32939
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+  - micro57-IPR016528
+  - micro57-IPR016534
+  - micro57-IPR016902
+  - micro57-IPR032914
+  - micro57-IPR045111
+  - micro57-IPR007810
+  - micro57-IPR001619
+  - micro57-IPR019452
+- assessment_id: formation
+  area: evidence
+  topic: Earlier core-association dependency does not establish universal HOPS necessity
+  outcome: unknown
+  target_ids:
+  - GO:0030897
+  summary: Rieder directly supports a Vps16-dependent stable Vps33 association in
+    the older class-C recovery experiment. This can enrich a future condition-specific
+    account, but current generic roles do not contradict it. Whole-HOPS loss-of-subunit
+    formation necessity remains unknown, so existing UNKNOWN labels and the absence
+    of a detailed assembly pathway do not independently warrant a finding.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-rieder1997-pmc
+  - micro57-seals2000-pmc
+- assessment_id: scope
+  area: scope
+  topic: Experimental yeast and reference-strain boundaries are preserved
+  outcome: supported
+  target_ids:
+  - GO:0030897
+  summary: COMMON means present in most species members with exceptional losses. The
+    cited yeast systems qualitatively support the model; no species-wide census was
+    performed. S288C protein entries, BJ3505/DKY6281 assay strains, older Rieder backgrounds
+    and recombinant bacterial expression are distinguished.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-seals2000-pmc
+  - micro57-rieder1997-pmc
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+- assessment_id: graph
+  area: graph
+  topic: Descriptive membership and supported functional associations
+  outcome: supported
+  target_ids:
+  - GO:0030897
+  summary: The NON_MECHANISTIC graph preserves six-member composition, vacuolar association
+    and source-supported Ypt7/fusion relationships without claiming a complete assembly
+    mechanism. ATP/Sec18 priming and 65S/38S recovery are biochemical experimental
+    contexts, not invariant copy numbers.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-seals2000-pmc
+  - micro57-rieder1997-pmc
+  - micro57-protein-P32939
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-target review with explicit bounds
+  outcome: supported
+  target_ids:
+  - GO:0030897
+  summary: All maintained scientific fields, citations, examples, causal graphs, discussions
+    and history were read. Existing protein examples were checked directly. Findings
+    concern current source/identity or verified family gaps rather than empty optional
+    slots; historical statements remain historical.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-doi-10.1091_mbc.8.11.2307
+  - micro57-doi-10.1073_pnas.97.17.9402
+  - micro57-seals2000-pmc
+  - micro57-rieder1997-pmc
+  - micro57-protein-P32939
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+  - micro57-IPR016528
+  - micro57-IPR016534
+  - micro57-IPR016902
+  - micro57-IPR032914
+  - micro57-IPR045111
+  - micro57-IPR007810
+  - micro57-IPR001619
+  - micro57-IPR019452
+findings:
+- finding_id: F1
+  issue_key: hops-exact-vps11-vps16-vps41-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground three named HOPS subunit classes
+  description: Vps11, Vps16 and Vps41 remain REVIEWED_LABEL_ONLY despite exact current
+    families IPR016528, IPR016534 and IPR016902, respectively. Native family types/signatures
+    and independently checked reviewed-protein cross-references match these named
+    classes. Their participation in other complexes does not invalidate source-neutral
+    protein-class identity.
+  target_ids:
+  - GO:0030897
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - components[1].grounding_status
+  - components[1].grounding_notes
+  - components[5].grounding_status
+  - components[5].grounding_notes
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-GO0030897-ancestors
+  - micro57-IPR016528
+  - micro57-IPR016534
+  - micro57-IPR016902
+  - micro57-protein-P12868
+  - micro57-gene-VPS11
+  - micro57-gene-PEP5
+  - micro57-protein-Q03308
+  - micro57-gene-VPS16
+  - micro57-protein-P27801
+  - micro57-gene-VPS18
+  - micro57-gene-PEP3
+  - micro57-protein-P20795
+  - micro57-gene-VPS33
+  - micro57-protein-Q07468
+  - micro57-gene-VPS39
+  - micro57-gene-VAM6
+  - micro57-protein-P38959
+  - micro57-gene-VPS41
+  - micro57-gene-VAM2
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hops_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: minor
+  normalization_reason: A grouped minor current grounding gap under the explicit reviewed-label-only
+    contract; correct membership and protein examples already exist. This is not a
+    blanket demand for all six optional mappings or a retrospective claim that old
+    searches were false.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030897
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hops_complex.yaml
+    role: maintained scientific record
+  description: Ground Vps11 to IPR016528, Vps16 to IPR016534 and Vps41 to IPR016902
+    with current scope notes. Preserve label-only status for the unresolved Vps18/Vps33/Vps39
+    classes unless independently exact families are established.
+  acceptance_checks:
+  - Each adopted family is the named whole protein class, with original role evidence
+    retained.
+  - Broader Vps39/Vps3, Vps41/Vps8, Sec1-like families and isolated domains are not
+    substituted indiscriminately.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Seals was read in complete Methods, Results and Discussion plus abstract; Rieder
+  in the precise selected Methods/Results/Discussion sections stated above. No figure
+  pixels or supplements were inspected.
+- COMMON retains its majority-occurrence meaning, but no population census is claimed.
+  Native reference accessions and actual experimental strains are separate.
+- Exact family checking is bounded to the retained entries; rejected broader families/domains
+  do not establish all-authority absence. Existing UNKNOWN assembly necessity is not
+  a standalone defect.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established
+  from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests one review for every unreviewed record, including qualified
+  clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

@@ -1,0 +1,1488 @@
+# Source-backed review of kinetochore
+
+- Review: 20261022T080129Z-kinetochore-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:34:46Z
+- Finished UTC: 2026-10-22T08:01:29Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One minor exact-class grounding gap for the Cse4/CENP-A nucleosome. Kinetochore identity, selected complex membership, twelve yeast examples and coarse descriptive architecture are supported, with formation and mutant-context limits preserved.
+
+## Scope And Provenance
+
+Exactly one complete target and thirteen frozen target/guidance/schema inputs. Primary bodies, native identities and stated access scopes were independently read; no neighboring record is an unstated premise.
+
+Selection: Batch58 strict ordered selection index 4; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000776 | data/structures/other/kinetochore.yaml | maintained | kinetochore |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0000776 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0000776 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0000776 | Native check passed; scientific support independently assessed. |
+| Focused native verify | passed | True | GO:0000776 | Native check passed; scientific support independently assessed. |
+| Claim-level scientific review | passed | True | GO:0000776 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0000776 | 22 of 31 collected target identifiers returned OK. PMID:10323865: UNREACHABLE; Native Europe PMC uniquely identifies MED10323865: A putative protein complex consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore. (1999); DOI 10.1101/gad.13.9.1140. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11179222: UNREACHABLE; Native Europe PMC uniquely identifies MED11179222: The budding yeast proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering and checkpoint control. (2001); DOI 10.1093/emboj/20.4.777. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11266451: UNREACHABLE; Native Europe PMC uniquely identifies MED11266451: The Ndc80p complex from Saccharomyces cerevisiae contains conserved centromere components and has a function in chromosome segregation. (2001); DOI 10.1083/jcb.152.2.349. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11952896: UNREACHABLE; Native Europe PMC uniquely identifies MED11952896: Spc24 interacts with Mps2 and is required for chromosome segregation, but is not implicated in spindle pole body duplication. (2002); DOI 10.1046/j.1365-2958.2002.02844.x. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:12455957: UNREACHABLE; Native Europe PMC uniquely identifies MED12455957: Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae. (2002); DOI 10.1128/ec.1.2.229-240.2002. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095: Global analysis of protein localization in budding yeast. (2003); DOI 10.1038/nature02026. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14602074: UNREACHABLE; Native Europe PMC uniquely identifies MED14602074: An Mtw1 complex promotes kinetochore biorientation that is monitored by the Ipl1/Aurora protein kinase. (2003); DOI 10.1016/s1534-5807(03)00322-8. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14657030: UNREACHABLE; Native Europe PMC uniquely identifies MED14657030: Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex. (2003); DOI 10.1093/emboj/cdg636. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:29046335: UNREACHABLE; Native Europe PMC uniquely identifies MED29046335: Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions. (2017); DOI 10.15252/embj.201796636. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0000776 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0000776 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0000776 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0000776 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0000776 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Correct kinetochore and selected subcomplex boundaries
+
+identity: supported. Targets: GO:0000776.
+
+The exact GO identity and named COMA/MIND/Ndc80 modules are supported. The Cse4-containing platform is modeled at the nucleosome level; it does not equate bare centromeric DNA with the kinetochore. Missing additional modules are acknowledged selective scope, not a claimed exhaustive list.
+
+### One available exact nucleosome class
+
+grounding: concern. Targets: GO:0000776.
+
+The three protein complexes already have exact GO identities. The label-only Cse4/CENP-A nucleosome platform has current exact class GO0043505; protein-only Cse4 or generic nucleosome terms would be less precise. The historical first-record rationale is not judged as a false past search.
+
+### Whole-kinetochore formation necessity remains bounded
+
+evidence: unknown. Targets: GO:0000776.
+
+Existing UNKNOWN labels appropriately separate physical association and function from formation. COMA CONDITIONAL is not promoted into universal essentiality: the inspected conditional mutants reveal subcomplex-specific stability/recruitment effects, and other modules can remain CEN-associated. Exact conditions for formation of the complete structure remain unknown.
+
+### Yeast reference examples and experimental conditions
+
+scope: supported. Targets: GO:0000776.
+
+The twelve S288C reference entries and exact reviewed queries agree. COMMON retains its most-members/exceptional-loss meaning; the inspected yeast models qualitatively support it but provide no species-wide census. W303 and other primary experimental backgrounds are not silently replaced by S288C.
+
+### Coarse descriptive assembly graph with preserved source differences
+
+graph: supported. Targets: GO:0000776.
+
+The NON_MECHANISTIC graph identifies inner/outer modules and MIND–Ndc80 linkage without a complete temporal assembly pathway. De Wulf independent CEN association and Westermann conditional localization dependencies use different mutants/readouts; both are retained. Later Biggins synthesis supports the coarse linkage without rewriting either primary result.
+
+### Entire target with bounded positive evidence
+
+completeness: supported. Targets: GO:0000776.
+
+All scientific fields, examples, citations, graphs, discussions and history were read. Existing protein examples were checked directly; no empty optional slot alone is treated as an error. Source tiers and actual reading extents are explicit.
+
+## Findings
+
+### F1: Ground the named CENP-A nucleosome class
+
+minor / open / confirmed; issue key: kinetochore-cenpa-nucleosome-grounding.
+
+The centromeric Cse4/CENP-A nucleosome platform remains REVIEWED_LABEL_ONLY despite active exact GO0043505, CENP-A containing nucleosome. Its native definition and primary Cse4/H3 replacement context match the named class. The linked graph node labels and references this complete nucleosome platform, so its current GENE_OR_PROTEIN typing should be aligned to the structural class in the same correction.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground the existing component to GO0043505 with a current scope note. Preserve its Cse4 yeast role, OTHER constituent representation and unknown stoichiometry/formation limits. Align the corresponding whole-nucleosome graph node to STRUCTURE with the same exact GO grounding, retaining the component_ref.
+
+- The adopted term denotes the nucleosome class rather than Cse4 alone or generic chromatin.
+- The graph actor denotes the whole nucleosome platform, not Cse4 alone, and its node type/grounding agree with that identity.
+- No fixed octameric arrangement or universal formation necessity is inferred from the class mapping.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/kinetochore.yaml; Entire current YAML, including every scientific field, graph, discussion and history entry | context_only | All target bytes were read. No neighboring maintained record is an unstated premise. |
+| curation | docs/CURATION.md; Component-class grounding and reviewed-label-only contract | context_only | A verified species protein example does not replace exact source-neutral class grounding; protein families need not be exclusive to one complex. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and graph fields | context_only | Assembly necessity is distinct from catalytic activity, viability and localization. COMMON means present in most members with exceptional losses; VARIABLE does not merely mean unmeasured prevalence. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity and edge-level evidence | context_only | A coarse supported physical mechanism can be represented without inventing every intermediate; a source-specific demonstration claim must match the actual experiment. |
+| micro58-pmid-10323865 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10323865+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID10323865: A putative protein complex consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore. Ortiz J, Stemmann O, Rank S, Lechner J. (1999), DOI10.1101/gad.13.9.1140. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-11179222 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11179222+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID11179222: The budding yeast proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering and checkpoint control. Janke C, Ortiz J, Lechner J, Shevchenko A, Shevchenko A, Magiera MM, Schramm C, Schiebel E. (2001), DOI10.1093/emboj/20.4.777. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-11266451 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11266451+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID11266451: The Ndc80p complex from Saccharomyces cerevisiae contains conserved centromere components and has a function in chromosome segregation. Wigge PA, Kilmartin JV. (2001), DOI10.1083/jcb.152.2.349. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-11952896 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11952896+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID11952896: Spc24 interacts with Mps2 and is required for chromosome segregation, but is not implicated in spindle pole body duplication. Le Masson I, Saveanu C, Chevalier A, Namane A, Gobin R, Fromont-Racine M, Jacquier A, Mann C. (2002), DOI10.1046/j.1365-2958.2002.02844.x. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-12455957 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12455957+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID12455957: Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae. Euskirchen GM. (2002), DOI10.1128/ec.1.2.229-240.2002. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID14562095: Global analysis of protein localization in budding yeast. Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK. (2003), DOI10.1038/nature02026. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-14602074 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14602074+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID14602074: An Mtw1 complex promotes kinetochore biorientation that is monitored by the Ipl1/Aurora protein kinase. Pinsky BA, Tatsutani SY, Collins KA, Biggins S. (2003), DOI10.1016/s1534-5807(03)00322-8. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-14657030 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14657030+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID14657030: Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex. Scharfenberger M, Ortiz J, Grau N, Janke C, Schiebel E, Lechner J. (2003), DOI10.1093/emboj/cdg636. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-29046335 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29046335+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID29046335: Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions. Schmitzberger F, Richter MM, Gordiyenko Y, Robinson CV, Dadlez M, Westermann S. (2017), DOI10.15252/embj.201796636. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1083_jcb.200305100 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200305100%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID14581449: Architecture of the budding yeast kinetochore reveals a conserved molecular core. Westermann S, Cheeseman IM, Anderson S, Yates JR, Drubin DG, Barnes G. (2003), DOI10.1083/jcb.200305100. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1101_gad.1144403 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1101%2Fgad.1144403%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID14633972: Hierarchical assembly of the budding yeast kinetochore from multiple subcomplexes. De Wulf P, McAinsh AD, Sorger PK. (2003), DOI10.1101/gad.1144403. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1534_genetics.112.145276 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1534%2Fgenetics.112.145276%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID23908374: The composition, functions, and regulation of the budding yeast kinetochore. Biggins S. (2013), DOI10.1534/genetics.112.145276. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-protein-Q02732 | https://rest.uniprot.org/uniprotkb/Q02732.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed Q02732 identifies CTF19 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-CTF19 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACTF19%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed CTF19 query returns one entry, Q02732, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P53298 | https://rest.uniprot.org/uniprotkb/P53298.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P53298 identifies OKP1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-OKP1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AOKP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed OKP1 query returns one entry, P53298, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-Q06675 | https://rest.uniprot.org/uniprotkb/Q06675.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed Q06675 identifies MCM21 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-MCM21 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMCM21%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed MCM21 query returns one entry, Q06675, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P38313 | https://rest.uniprot.org/uniprotkb/P38313.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P38313 identifies AME1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-AME1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAME1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed AME1 query returns one entry, P38313, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P39731 | https://rest.uniprot.org/uniprotkb/P39731.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P39731 identifies MTW1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-MTW1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMTW1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed MTW1 query returns one entry, P39731, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P40568 | https://rest.uniprot.org/uniprotkb/P40568.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P40568 identifies DSN1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-DSN1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADSN1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed DSN1 query returns one entry, P40568, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-Q12143 | https://rest.uniprot.org/uniprotkb/Q12143.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed Q12143 identifies NSL1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-NSL1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANSL1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed NSL1 query returns one entry, Q12143, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P47149 | https://rest.uniprot.org/uniprotkb/P47149.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P47149 identifies NNF1 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-NNF1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANNF1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed NNF1 query returns one entry, P47149, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P40460 | https://rest.uniprot.org/uniprotkb/P40460.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P40460 identifies NDC80 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-NDC80 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANDC80%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed NDC80 query returns one entry, P40460, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P33895 | https://rest.uniprot.org/uniprotkb/P33895.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P33895 identifies NUF2 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-NUF2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANUF2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed NUF2 query returns one entry, P33895, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-Q04477 | https://rest.uniprot.org/uniprotkb/Q04477.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed Q04477 identifies SPC24 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-SPC24 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed SPC24 query returns one entry, Q04477, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P40014 | https://rest.uniprot.org/uniprotkb/P40014.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P40014 identifies SPC25 in taxon559292; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-SPC25 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPC25%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed SPC25 query returns one entry, P40014, with matching primary gene or declared synonym and exact organism. |
+| micro58-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000444,GO:0000776,GO:0000817,GO:0006303,GO:0007059,GO:0031262,GO:0043564,GO:0045027,GO:0062051,GO:0140513,GO:1990351; Only these five exact entries, definitions/synonyms and typed links in the combined response. | supports | GO0000776 identifies the kinetochore; GO0000817, GO0000444 and GO0031262 identify the distinct COMA, MIND and Ndc80 complexes, and GO0007059 is chromosome segregation. Native definitions support these identities; the record is a selected-module account rather than a complete inventory. |
+| micro58-GO0000776-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776/ancestors?relations=is_a; Complete exact-target ancestors and comment; no missing transitive relationship inferred from the children array. | supports | The is_a-only response places kinetochore among non-membrane-bounded organelle/assemblage classes. Its comment distinguishes overlapping centromeric DNA from the kinetochore itself. |
+| micro58-GO0043505 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043505; Complete exact term identity, active status, definition and synonyms; no reliance on unrelated synonym wording. | supports | Active GO0043505 is CENP-A containing nucleosome, defined as the centromeric nucleosome with H3 replaced by CENP-A/CenH3. The definition matches the named Cse4/CENP-A nucleosome class without imposing an invariant histone stoichiometry. |
+| micro58-go-nucleosome-search | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=CENP-A%20nucleosome&amp;limit=25; Complete native QuickGO query response and original URL/limit. | context_only | The bounded CENP-A nucleosome query recovered the exact candidate subsequently verified through its native term endpoint. This is a candidate search, not an all-authority absence claim. |
+| micro58-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA4932 identifies Saccharomyces cerevisiae species. |
+| micro58-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA559292 identifies the S288C reference strain, distinct from every experimentally named strain background. |
+| micro58-PMC2173538-xml-native | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2173538/fullTextXML; Genuine primary JATS: complete Introduction sec1, Results/Discussion sec3–7 and Methods sec8–14, embedded Fig1–5 captions and TableI. Supplementary files and figure pixels not read. | supports | Affinity purification and mass spectrometry support Cse4-associated histones and four-member MIND, with weak/substoichiometric associations distinguished from core membership. Conditional nnf1 and mif2 experiments support context-specific localization dependencies, not universal loss of whole-kinetochore formation. |
+| micro58-dewulf2003-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC289150/?_escaped_fragment_=; Genuine primary HTML, copied unchanged from B48 with original receipt: Results sec3–6 including Fig2–6 captions/Table2; Discussion sec11; Methods sec14–15. Other sections and pixels not read. | supports | COMA and MIND each contain four core proteins. W303-congenic conditional mutants shifted from24 to37C support particular subcomplex stability/dependency patterns; the paper reports independent CEN association for COMA/MIND/Ndc80 under its conditions. This is not an invariant assembly order across all mutants. |
+| micro58-PMC3730914-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3730914/; Secondary review: complete s9; s10 direct opening only, excluding nested subsections/table; complete s14–16, s18 and s21, including embedded Fig5/6 captions. Other sections and pixels not read. | supports | The secondary synthesis supports Cse4 chromatin, COMA, MIND and Ndc80 roles and later direct MIND–Ndc80 linkage. Centromeric nucleosome stoichiometry and a minimal universal assembly pathway remain unresolved; alternative recruitment contexts are described. |
+| schema-result | just validate data/structures/other/kinetochore.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/kinetochore.yaml |
+| strict-result | just validate-strict data/structures/other/kinetochore.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/kinetochore.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --causal-graphs; Complete focused read-only native report | supports | data/structures/other/kinetochore.yaml  (GO:0000776)<br>  yeast_inner_outer_kinetochore_bridge	centromeric_cse4_nucleosome	HAS_SYMBOLS_NO_EXAMPLES	-&gt;centromeric_cse4_nucleosome (OTHER: CSE4)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --verify; Complete focused read-only native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/kinetochore.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 22 of 31 collected target identifiers returned OK. PMID:10323865: UNREACHABLE; Native Europe PMC uniquely identifies MED10323865: A putative protein complex consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore. (1999); DOI 10.1101/gad.13.9.1140. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11179222: UNREACHABLE; Native Europe PMC uniquely identifies MED11179222: The budding yeast proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering and checkpoint control. (2001); DOI 10.1093/emboj/20.4.777. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11266451: UNREACHABLE; Native Europe PMC uniquely identifies MED11266451: The Ndc80p complex from Saccharomyces cerevisiae contains conserved centromere components and has a function in chromosome segregation. (2001); DOI 10.1083/jcb.152.2.349. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:11952896: UNREACHABLE; Native Europe PMC uniquely identifies MED11952896: Spc24 interacts with Mps2 and is required for chromosome segregation, but is not implicated in spindle pole body duplication. (2002); DOI 10.1046/j.1365-2958.2002.02844.x. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:12455957: UNREACHABLE; Native Europe PMC uniquely identifies MED12455957: Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae. (2002); DOI 10.1128/ec.1.2.229-240.2002. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095: Global analysis of protein localization in budding yeast. (2003); DOI 10.1038/nature02026. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14602074: UNREACHABLE; Native Europe PMC uniquely identifies MED14602074: An Mtw1 complex promotes kinetochore biorientation that is monitored by the Ipl1/Aurora protein kinase. (2003); DOI 10.1016/s1534-5807(03)00322-8. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:14657030: UNREACHABLE; Native Europe PMC uniquely identifies MED14657030: Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex. (2003); DOI 10.1093/emboj/cdg636. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:29046335: UNREACHABLE; Native Europe PMC uniquely identifies MED29046335: Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions. (2017); DOI 10.15252/embj.201796636. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Biggins is secondary synthesis, not a new primary experiment. Primary and review reading is confined to the exact declared sections/captions; no figure pixels or actual supplementary files were inspected.
+- The present model is deliberately selective, not an exhaustive kinetochore inventory. No optional CSE4 protein example is forced. Current GO class verification does not reconstruct a historical search.
+- Conditional-mutant stability, CEN occupancy, chromosome segregation and physical formation of the complete kinetochore remain distinct; COMMON is not a measured population census.
+- All reused source bytes preserve their original URL, UTC and SHA256. Readability is established from content rather than HTTP200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests one review for every unreviewed record, including qualified clean cases.
+- No maintained scientific record, historical review or initial native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T080129Z-kinetochore-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of kinetochore
+started_at: '2026-10-22T07:34:46Z'
+finished_at: '2026-10-22T08:01:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One minor exact-class grounding gap for the Cse4/CENP-A nucleosome. Kinetochore
+  identity, selected complex membership, twelve yeast examples and coarse descriptive
+  architecture are supported, with formation and mutant-context limits preserved.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/kinetochore.yaml
+    sha256: aefa8aee06e9c0d6c20b86cf110f44bd6ead107d28e5ae579027cf07a957bf9e
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000776
+  path: data/structures/other/kinetochore.yaml
+  label: kinetochore
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/kinetochore.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target and thirteen frozen target/guidance/schema
+    inputs. Primary bodies, native identities and stated access scopes were independently
+    read; no neighboring record is an unstated premise.
+  selection: Batch58 strict ordered selection index 4; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000776
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just validate data/structures/other/kinetochore.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just validate-strict data/structures/other/kinetochore.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --causal-graphs
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --verify
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-pmid-10323865
+  - micro58-pmid-11179222
+  - micro58-pmid-11266451
+  - micro58-pmid-11952896
+  - micro58-pmid-12455957
+  - micro58-pmid-14562095
+  - micro58-pmid-14602074
+  - micro58-pmid-14657030
+  - micro58-pmid-29046335
+  - micro58-doi-10.1083_jcb.200305100
+  - micro58-doi-10.1101_gad.1144403
+  - micro58-doi-10.1534_genetics.112.145276
+  - micro58-protein-Q02732
+  - micro58-gene-CTF19
+  - micro58-protein-P53298
+  - micro58-gene-OKP1
+  - micro58-protein-Q06675
+  - micro58-gene-MCM21
+  - micro58-protein-P38313
+  - micro58-gene-AME1
+  - micro58-protein-P39731
+  - micro58-gene-MTW1
+  - micro58-protein-P40568
+  - micro58-gene-DSN1
+  - micro58-protein-Q12143
+  - micro58-gene-NSL1
+  - micro58-protein-P47149
+  - micro58-gene-NNF1
+  - micro58-protein-P40460
+  - micro58-gene-NDC80
+  - micro58-protein-P33895
+  - micro58-gene-NUF2
+  - micro58-protein-Q04477
+  - micro58-gene-SPC24
+  - micro58-protein-P40014
+  - micro58-gene-SPC25
+  - micro58-go
+  - micro58-GO0000776-ancestors
+  - micro58-GO0043505
+  - micro58-go-nucleosome-search
+  - micro58-tax4932
+  - micro58-tax559292
+  - micro58-PMC2173538-xml-native
+  - micro58-dewulf2003-legacy
+  - micro58-PMC3730914-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  summary: '22 of 31 collected target identifiers returned OK. PMID:10323865: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10323865: A putative protein complex
+    consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding
+    yeast kinetochore. (1999); DOI 10.1101/gad.13.9.1140. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:11179222:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED11179222: The budding yeast
+    proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and
+    are important for kinetochore clustering and checkpoint control. (2001); DOI 10.1093/emboj/20.4.777.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:11266451: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED11266451: The Ndc80p complex from Saccharomyces cerevisiae contains conserved
+    centromere components and has a function in chromosome segregation. (2001); DOI
+    10.1083/jcb.152.2.349. This resolves the identifier transport residual only; primary-source
+    reading remains separately scoped.; PMID:11952896: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED11952896: Spc24 interacts with Mps2 and is required
+    for chromosome segregation, but is not implicated in spindle pole body duplication.
+    (2002); DOI 10.1046/j.1365-2958.2002.02844.x. This resolves the identifier transport
+    residual only; primary-source reading remains separately scoped.; PMID:12455957:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED12455957: Nnf1p, Dsn1p,
+    Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation
+    in Saccharomyces cerevisiae. (2002); DOI 10.1128/ec.1.2.229-240.2002. This resolves
+    the identifier transport residual only; primary-source reading remains separately
+    scoped.; PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095:
+    Global analysis of protein localization in budding yeast. (2003); DOI 10.1038/nature02026.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:14602074: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED14602074: An Mtw1 complex promotes kinetochore biorientation that is monitored
+    by the Ipl1/Aurora protein kinase. (2003); DOI 10.1016/s1534-5807(03)00322-8.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:14657030: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED14657030: Nsl1p is essential for the establishment of bipolarity and the localization
+    of the Dam-Duo complex. (2003); DOI 10.1093/emboj/cdg636. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:29046335:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED29046335: Molecular basis
+    for inner kinetochore configuration through RWD domain-peptide interactions. (2017);
+    DOI 10.15252/embj.201796636. This resolves the identifier transport residual only;
+    primary-source reading remains separately scoped. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro58-pmid-10323865
+  - micro58-pmid-11179222
+  - micro58-pmid-11266451
+  - micro58-pmid-11952896
+  - micro58-pmid-12455957
+  - micro58-pmid-14562095
+  - micro58-pmid-14602074
+  - micro58-pmid-14657030
+  - micro58-pmid-29046335
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000776
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/kinetochore.yaml
+  locator: Entire current YAML, including every scientific field, graph, discussion
+    and history entry
+  accessed_at: '2026-10-22T07:50:56Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component-class grounding and reviewed-label-only contract
+  accessed_at: '2026-10-22T07:50:56Z'
+  support: context_only
+  summary: A verified species protein example does not replace exact source-neutral
+    class grounding; protein families need not be exclusive to one complex.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and graph fields
+  accessed_at: '2026-10-22T07:50:56Z'
+  support: context_only
+  summary: Assembly necessity is distinct from catalytic activity, viability and localization.
+    COMMON means present in most members with exceptional losses; VARIABLE does not
+    merely mean unmeasured prevalence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity and edge-level evidence
+  accessed_at: '2026-10-22T07:50:56Z'
+  support: context_only
+  summary: A coarse supported physical mechanism can be represented without inventing
+    every intermediate; a source-specific demonstration claim must match the actual
+    experiment.
+- evidence_id: micro58-pmid-10323865
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10323865+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:52.378939Z'
+  support: supports
+  summary: 'PMID10323865: A putative protein complex consisting of Ctf19, Mcm21, and
+    Okp1 represents a missing link in the budding yeast kinetochore. Ortiz J, Stemmann
+    O, Rank S, Lechner J. (1999), DOI10.1101/gad.13.9.1140. The complete native abstract
+    was read; no unlisted body scope is implied.'
+  snapshot_sha256: 4078bcf704c82c6d090581f02d764dadc69f324e90f882c286bf6e9c5aef0e53
+- evidence_id: micro58-pmid-11179222
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11179222+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:52.384319Z'
+  support: supports
+  summary: 'PMID11179222: The budding yeast proteins Spc24p and Spc25p interact with
+    Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering
+    and checkpoint control. Janke C, Ortiz J, Lechner J, Shevchenko A, Shevchenko
+    A, Magiera MM, Schramm C, Schiebel E. (2001), DOI10.1093/emboj/20.4.777. The complete
+    native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: f6c190daa26efb4a5c689cec1ea68b4a182598a0a50a87596ba856e1661008cb
+- evidence_id: micro58-pmid-11266451
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11266451+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:52.410445Z'
+  support: supports
+  summary: 'PMID11266451: The Ndc80p complex from Saccharomyces cerevisiae contains
+    conserved centromere components and has a function in chromosome segregation.
+    Wigge PA, Kilmartin JV. (2001), DOI10.1083/jcb.152.2.349. The complete native
+    abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 79d144f024fc477be9b09210d98149ea98b0c93899dd439ea4db87e263fd3bc4
+- evidence_id: micro58-pmid-11952896
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11952896+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:52.993302Z'
+  support: supports
+  summary: 'PMID11952896: Spc24 interacts with Mps2 and is required for chromosome
+    segregation, but is not implicated in spindle pole body duplication. Le Masson
+    I, Saveanu C, Chevalier A, Namane A, Gobin R, Fromont-Racine M, Jacquier A, Mann
+    C. (2002), DOI10.1046/j.1365-2958.2002.02844.x. The complete native abstract was
+    read; no unlisted body scope is implied.'
+  snapshot_sha256: 890bb66531ec1e990e7f5197f3aa069309fa7400fd0ec92880617d080c8d74f7
+- evidence_id: micro58-pmid-12455957
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12455957+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.025018Z'
+  support: supports
+  summary: 'PMID12455957: Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins
+    important for chromosome segregation in Saccharomyces cerevisiae. Euskirchen GM.
+    (2002), DOI10.1128/ec.1.2.229-240.2002. The complete native abstract was read;
+    no unlisted body scope is implied.'
+  snapshot_sha256: 7a71968b1ea22b087d7c1d9dcbc068d04e513551d758d7ce73f17e072ba047d8
+- evidence_id: micro58-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.609860Z'
+  support: supports
+  summary: 'PMID14562095: Global analysis of protein localization in budding yeast.
+    Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea EK. (2003),
+    DOI10.1038/nature02026. The complete native abstract was read; no unlisted body
+    scope is implied.'
+  snapshot_sha256: 8bbeed3381c96852db4221aac079da00e1bf5c50630629c24d4d9136e1645c21
+- evidence_id: micro58-pmid-14602074
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14602074+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.637490Z'
+  support: supports
+  summary: 'PMID14602074: An Mtw1 complex promotes kinetochore biorientation that
+    is monitored by the Ipl1/Aurora protein kinase. Pinsky BA, Tatsutani SY, Collins
+    KA, Biggins S. (2003), DOI10.1016/s1534-5807(03)00322-8. The complete native abstract
+    was read; no unlisted body scope is implied.'
+  snapshot_sha256: a676acbcf518843c271abab06599f85944c2d0f9b74d5014538f3130df61faf9
+- evidence_id: micro58-pmid-14657030
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14657030+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.945861Z'
+  support: supports
+  summary: 'PMID14657030: Nsl1p is essential for the establishment of bipolarity and
+    the localization of the Dam-Duo complex. Scharfenberger M, Ortiz J, Grau N, Janke
+    C, Schiebel E, Lechner J. (2003), DOI10.1093/emboj/cdg636. The complete native
+    abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 17565952da68a57e5ff2c3776d082ab2c571c01c68de349b505e443154882a64
+- evidence_id: micro58-pmid-29046335
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29046335+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:55.436105Z'
+  support: supports
+  summary: 'PMID29046335: Molecular basis for inner kinetochore configuration through
+    RWD domain-peptide interactions. Schmitzberger F, Richter MM, Gordiyenko Y, Robinson
+    CV, Dadlez M, Westermann S. (2017), DOI10.15252/embj.201796636. The complete native
+    abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: d717c792f19e86311fade7b6d9e8fd4d86fd7995ed0cd5ddfbe4deaf57391085
+- evidence_id: micro58-doi-10.1083_jcb.200305100
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200305100%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:57.635732Z'
+  support: supports
+  summary: 'PMID14581449: Architecture of the budding yeast kinetochore reveals a
+    conserved molecular core. Westermann S, Cheeseman IM, Anderson S, Yates JR, Drubin
+    DG, Barnes G. (2003), DOI10.1083/jcb.200305100. The complete native abstract was
+    read; no unlisted body scope is implied.'
+  snapshot_sha256: 8ab81413d4b686c740364a7cc1ae9ebba91be533e0e8d40c25940616a23c650a
+- evidence_id: micro58-doi-10.1101_gad.1144403
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1101%2Fgad.1144403%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:58.012288Z'
+  support: supports
+  summary: 'PMID14633972: Hierarchical assembly of the budding yeast kinetochore from
+    multiple subcomplexes. De Wulf P, McAinsh AD, Sorger PK. (2003), DOI10.1101/gad.1144403.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 1ab5f7662e3b915cc93715e07cd73a41bd5c923dbbeaed72d181bbd9458b80bc
+- evidence_id: micro58-doi-10.1534_genetics.112.145276
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1534%2Fgenetics.112.145276%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:58.717114Z'
+  support: supports
+  summary: 'PMID23908374: The composition, functions, and regulation of the budding
+    yeast kinetochore. Biggins S. (2013), DOI10.1534/genetics.112.145276. The complete
+    native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: ebb88c65303a9ae2a67c024540bce508cb883271be65620a32109ff98e6b9670
+- evidence_id: micro58-protein-Q02732
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02732.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:51.215535Z'
+  support: supports
+  summary: Reviewed Q02732 identifies CTF19 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 4300f75049f2449011c3e78557ed639585c8206f4ea707ce6abda1aaa5b6b62d
+- evidence_id: micro58-gene-CTF19
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACTF19%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:38:58.945354Z'
+  support: supports
+  summary: The exact reviewed CTF19 query returns one entry, Q02732, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: a9a47e880c6ddf126c5a8cfc5e899ce09ebe7ebc7a00b39ff7594e40f4a32309
+- evidence_id: micro58-protein-P53298
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53298.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:50.518150Z'
+  support: supports
+  summary: Reviewed P53298 identifies OKP1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: e286b14d37ffacdfdacead4d28a714fb2cd7647ebcccc49df73d642fe0756906
+- evidence_id: micro58-gene-OKP1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AOKP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:38:59.241009Z'
+  support: supports
+  summary: The exact reviewed OKP1 query returns one entry, P53298, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: cbe45d27fdfe19adae898e1527e55b3a9c8b4ecc618ec106ea301c3e7c94c4a3
+- evidence_id: micro58-protein-Q06675
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06675.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:51.440156Z'
+  support: supports
+  summary: Reviewed Q06675 identifies MCM21 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: a284987a228269755202e144975329d40045d32097395fa0a3b5efbc26dcd801
+- evidence_id: micro58-gene-MCM21
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMCM21%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:38:59.341483Z'
+  support: supports
+  summary: The exact reviewed MCM21 query returns one entry, Q06675, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: a3cc24e2df5723fb6cec03e1893aaf4548a563624f8dc245d6c6e518e7334abd
+- evidence_id: micro58-protein-P38313
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38313.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:49.344574Z'
+  support: supports
+  summary: Reviewed P38313 identifies AME1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 053d6d5cadc71a57b6b685c5ac036757f82d889c4efce071a4a694908c5e0d07
+- evidence_id: micro58-gene-AME1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAME1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:38:59.430011Z'
+  support: supports
+  summary: The exact reviewed AME1 query returns one entry, P38313, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 0d24b7575005296c4ba534d40d5e66dd54a2d6aebf6625ad1180ceb8ff885018
+- evidence_id: micro58-protein-P39731
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39731.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:49.369659Z'
+  support: supports
+  summary: Reviewed P39731 identifies MTW1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: b37940b084e0c71e437af46a461aefb2da2688e1d94fe6985d2cba3a837d0822
+- evidence_id: micro58-gene-MTW1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMTW1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:38:59.866886Z'
+  support: supports
+  summary: The exact reviewed MTW1 query returns one entry, P39731, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 4e1c13f94acaeac92e3bd48e22247f98dd74e7ad41dc26a37b6d69c904646d51
+- evidence_id: micro58-protein-P40568
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40568.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:50.328615Z'
+  support: supports
+  summary: Reviewed P40568 identifies DSN1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 96137f8354085cb9072053d5c31c4cddc8b6c2c8623b3799b94e7aacad26b4c2
+- evidence_id: micro58-gene-DSN1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADSN1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.062236Z'
+  support: supports
+  summary: The exact reviewed DSN1 query returns one entry, P40568, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 33d7623f58dbfaaa46ba87f4147bb0903002d81d5cab87589771b415136dffb6
+- evidence_id: micro58-protein-Q12143
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12143.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:52.373721Z'
+  support: supports
+  summary: Reviewed Q12143 identifies NSL1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 95ff5d2d38d1e8a898ac78e592ce030278a36553b4b9da0848c23c911cd96d47
+- evidence_id: micro58-gene-NSL1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANSL1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.174433Z'
+  support: supports
+  summary: The exact reviewed NSL1 query returns one entry, Q12143, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 7e452ae2cb97c8e5816fec9b342591a9b9c637a8e0a5f9cb4426019af035dc19
+- evidence_id: micro58-protein-P47149
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P47149.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:50.371429Z'
+  support: supports
+  summary: Reviewed P47149 identifies NNF1 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 44813039d8c829e0a812002be1831fd38c887accf5ef3c34740df83eb00283a8
+- evidence_id: micro58-gene-NNF1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANNF1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.249000Z'
+  support: supports
+  summary: The exact reviewed NNF1 query returns one entry, P47149, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: c3360e0ca5a435d02211fbfbe88566357a5f1e4a1b3658ef3a9ee3e7eadda293
+- evidence_id: micro58-protein-P40460
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40460.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:50.265115Z'
+  support: supports
+  summary: Reviewed P40460 identifies NDC80 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: e9118ff7804c75195f78434aabd4f7b07fe4678b12faf54aa90a012fede3f5a6
+- evidence_id: micro58-gene-NDC80
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANDC80%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.578735Z'
+  support: supports
+  summary: The exact reviewed NDC80 query returns one entry, P40460, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: cb9e2605da1af744ac1cc58f6ff8bc03bd477da0d59ba0361168eca14361e1dc
+- evidence_id: micro58-protein-P33895
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P33895.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:49.246887Z'
+  support: supports
+  summary: Reviewed P33895 identifies NUF2 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 571967574ce29a5f5b3a43ad0c65267df722a3e258d80aeb78fea83a2b7323fe
+- evidence_id: micro58-gene-NUF2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANUF2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.791379Z'
+  support: supports
+  summary: The exact reviewed NUF2 query returns one entry, P33895, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: bf43297dd64c38303056413208f9510db1c067a22e6649517a171a0292db1d07
+- evidence_id: micro58-protein-Q04477
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04477.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:51.368076Z'
+  support: supports
+  summary: Reviewed Q04477 identifies SPC24 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 7c4ad50bf5ae4e1eb7738038fdb2a60c4f3ba91ee1b8fd9f7484489ef732d559
+- evidence_id: micro58-gene-SPC24
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.974786Z'
+  support: supports
+  summary: The exact reviewed SPC24 query returns one entry, Q04477, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: bd05a8bed40ca05510ff106131c3f13e1b21aab5c8d4e54f4e340e8f45786292
+- evidence_id: micro58-protein-P40014
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40014.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:49.794492Z'
+  support: supports
+  summary: Reviewed P40014 identifies SPC25 in taxon559292; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: a89a4a422be89dd670679ec99deba6afbbca7b2af4b4c447c31ab4bdf254eabe
+- evidence_id: micro58-gene-SPC25
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPC25%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:00.993989Z'
+  support: supports
+  summary: The exact reviewed SPC25 query returns one entry, P40014, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: d4a85f3c865f28fd598736cb170c803b1e3cb8d91105103746f3c78450d9f785
+- evidence_id: micro58-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000444,GO:0000776,GO:0000817,GO:0006303,GO:0007059,GO:0031262,GO:0043564,GO:0045027,GO:0062051,GO:0140513,GO:1990351
+  locator: Only these five exact entries, definitions/synonyms and typed links in
+    the combined response.
+  accessed_at: '2026-10-22T07:38:46.369929Z'
+  support: supports
+  summary: GO0000776 identifies the kinetochore; GO0000817, GO0000444 and GO0031262
+    identify the distinct COMA, MIND and Ndc80 complexes, and GO0007059 is chromosome
+    segregation. Native definitions support these identities; the record is a selected-module
+    account rather than a complete inventory.
+  snapshot_sha256: 250f8bb7ef6c3e14e15534276b68530200b6490913906399353bb07481b31f71
+- evidence_id: micro58-GO0000776-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776/ancestors?relations=is_a
+  locator: Complete exact-target ancestors and comment; no missing transitive relationship
+    inferred from the children array.
+  accessed_at: '2026-10-22T07:38:46.370206Z'
+  support: supports
+  summary: The is_a-only response places kinetochore among non-membrane-bounded organelle/assemblage
+    classes. Its comment distinguishes overlapping centromeric DNA from the kinetochore
+    itself.
+  snapshot_sha256: abafadbe6273a784ab51f1ebaa39abfccb54b8022354c9b1f21faf99f99cdf49
+- evidence_id: micro58-GO0043505
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043505
+  locator: Complete exact term identity, active status, definition and synonyms; no
+    reliance on unrelated synonym wording.
+  accessed_at: '2026-10-22T07:42:01.095658Z'
+  support: supports
+  summary: Active GO0043505 is CENP-A containing nucleosome, defined as the centromeric
+    nucleosome with H3 replaced by CENP-A/CenH3. The definition matches the named
+    Cse4/CENP-A nucleosome class without imposing an invariant histone stoichiometry.
+  snapshot_sha256: ef6a95bddfb44836946f94f6cebc2e43458d66369ee0400ab2b2a9ca13148139
+- evidence_id: micro58-go-nucleosome-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=CENP-A%20nucleosome&limit=25
+  locator: Complete native QuickGO query response and original URL/limit.
+  accessed_at: '2026-10-22T07:41:01.904348Z'
+  support: context_only
+  summary: The bounded CENP-A nucleosome query recovered the exact candidate subsequently
+    verified through its native term endpoint. This is a candidate search, not an
+    all-authority absence claim.
+  snapshot_sha256: 6360408778753f5f80f07dac6146bd33375db8d4edb65067178161ba5e87ccb8
+  search_scope: Remote QuickGO ontology search for CENP-A nucleosome, limit25, as
+    recorded in the original URL. Ignored files are not applicable to this remote
+    query; no local absence claim.
+- evidence_id: micro58-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:38:47.039448Z'
+  support: supports
+  summary: ENA4932 identifies Saccharomyces cerevisiae species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro58-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:38:47.039624Z'
+  support: supports
+  summary: ENA559292 identifies the S288C reference strain, distinct from every experimentally
+    named strain background.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro58-PMC2173538-xml-native
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2173538/fullTextXML
+  locator: 'Genuine primary JATS: complete Introduction sec1, Results/Discussion sec3–7
+    and Methods sec8–14, embedded Fig1–5 captions and TableI. Supplementary files
+    and figure pixels not read.'
+  accessed_at: '2026-10-22T07:40:10.551509Z'
+  support: supports
+  summary: Affinity purification and mass spectrometry support Cse4-associated histones
+    and four-member MIND, with weak/substoichiometric associations distinguished from
+    core membership. Conditional nnf1 and mif2 experiments support context-specific
+    localization dependencies, not universal loss of whole-kinetochore formation.
+  snapshot_sha256: 3b73205f56276092dc53bee8db153b161db527f40d9c9b7ed88b11556df53bcd
+- evidence_id: micro58-dewulf2003-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC289150/?_escaped_fragment_=
+  locator: 'Genuine primary HTML, copied unchanged from B48 with original receipt:
+    Results sec3–6 including Fig2–6 captions/Table2; Discussion sec11; Methods sec14–15.
+    Other sections and pixels not read.'
+  accessed_at: '2026-10-22T05:06:26.103217Z'
+  support: supports
+  summary: COMA and MIND each contain four core proteins. W303-congenic conditional
+    mutants shifted from24 to37C support particular subcomplex stability/dependency
+    patterns; the paper reports independent CEN association for COMA/MIND/Ndc80 under
+    its conditions. This is not an invariant assembly order across all mutants.
+  snapshot_sha256: 034589bcc14f7128bc0921e6ff7a638b367bf790c2daa08097624425d5a556af
+- evidence_id: micro58-PMC3730914-legacy
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3730914/
+  locator: 'Secondary review: complete s9; s10 direct opening only, excluding nested
+    subsections/table; complete s14–16, s18 and s21, including embedded Fig5/6 captions.
+    Other sections and pixels not read.'
+  accessed_at: '2026-10-22T07:40:40.004617Z'
+  support: supports
+  summary: The secondary synthesis supports Cse4 chromatin, COMA, MIND and Ndc80 roles
+    and later direct MIND–Ndc80 linkage. Centromeric nucleosome stoichiometry and
+    a minimal universal assembly pathway remain unresolved; alternative recruitment
+    contexts are described.
+  snapshot_sha256: 193885e1dbf849224acdff87ed14eaf48d9ec0e45a475287ae593941fd3de8f5
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/kinetochore.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:47Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/kinetochore.yaml'
+  snapshot_sha256: ab3a06dee687da40082ac782c229b9d3cb73705cf869bd00901ac34d660254d1
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/kinetochore.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:47Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/kinetochore.yaml\
+    \ --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/kinetochore-strict.tsv"
+  snapshot_sha256: b5118a9cd482093498bbb2898996df541052140950c7d5598893f3f3d3d27625
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --causal-graphs
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:39:21.613420Z'
+  support: supports
+  summary: "data/structures/other/kinetochore.yaml  (GO:0000776)\n  yeast_inner_outer_kinetochore_bridge\t\
+    centromeric_cse4_nucleosome\tHAS_SYMBOLS_NO_EXAMPLES\t->centromeric_cse4_nucleosome\
+    \ (OTHER: CSE4)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: d91c4bdda8429cfe72eb2e1841ff5e5fc5300f37426c7308de9bdfc8b093f8bd
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/kinetochore.yaml --verify
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:39:22.843865Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/kinetochore.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '22 of 31 collected target identifiers returned OK. PMID:10323865: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10323865: A putative protein complex
+    consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding
+    yeast kinetochore. (1999); DOI 10.1101/gad.13.9.1140. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:11179222:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED11179222: The budding yeast
+    proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and
+    are important for kinetochore clustering and checkpoint control. (2001); DOI 10.1093/emboj/20.4.777.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:11266451: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED11266451: The Ndc80p complex from Saccharomyces cerevisiae contains conserved
+    centromere components and has a function in chromosome segregation. (2001); DOI
+    10.1083/jcb.152.2.349. This resolves the identifier transport residual only; primary-source
+    reading remains separately scoped.; PMID:11952896: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED11952896: Spc24 interacts with Mps2 and is required
+    for chromosome segregation, but is not implicated in spindle pole body duplication.
+    (2002); DOI 10.1046/j.1365-2958.2002.02844.x. This resolves the identifier transport
+    residual only; primary-source reading remains separately scoped.; PMID:12455957:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED12455957: Nnf1p, Dsn1p,
+    Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation
+    in Saccharomyces cerevisiae. (2002); DOI 10.1128/ec.1.2.229-240.2002. This resolves
+    the identifier transport residual only; primary-source reading remains separately
+    scoped.; PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095:
+    Global analysis of protein localization in budding yeast. (2003); DOI 10.1038/nature02026.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:14602074: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED14602074: An Mtw1 complex promotes kinetochore biorientation that is monitored
+    by the Ipl1/Aurora protein kinase. (2003); DOI 10.1016/s1534-5807(03)00322-8.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:14657030: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED14657030: Nsl1p is essential for the establishment of bipolarity and the localization
+    of the Dam-Duo complex. (2003); DOI 10.1093/emboj/cdg636. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:29046335:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED29046335: Molecular basis
+    for inner kinetochore configuration through RWD domain-peptide interactions. (2017);
+    DOI 10.15252/embj.201796636. This resolves the identifier transport residual only;
+    primary-source reading remains separately scoped. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Correct kinetochore and selected subcomplex boundaries
+  outcome: supported
+  target_ids:
+  - GO:0000776
+  summary: The exact GO identity and named COMA/MIND/Ndc80 modules are supported.
+    The Cse4-containing platform is modeled at the nucleosome level; it does not equate
+    bare centromeric DNA with the kinetochore. Missing additional modules are acknowledged
+    selective scope, not a claimed exhaustive list.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-go
+  - micro58-GO0000776-ancestors
+  - micro58-PMC2173538-xml-native
+  - micro58-dewulf2003-legacy
+  - micro58-PMC3730914-legacy
+- assessment_id: grounding
+  area: grounding
+  topic: One available exact nucleosome class
+  outcome: concern
+  target_ids:
+  - GO:0000776
+  summary: The three protein complexes already have exact GO identities. The label-only
+    Cse4/CENP-A nucleosome platform has current exact class GO0043505; protein-only
+    Cse4 or generic nucleosome terms would be less precise. The historical first-record
+    rationale is not judged as a false past search.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-GO0043505
+  - micro58-go-nucleosome-search
+  - micro58-PMC2173538-xml-native
+  - micro58-PMC3730914-legacy
+- assessment_id: formation
+  area: evidence
+  topic: Whole-kinetochore formation necessity remains bounded
+  outcome: unknown
+  target_ids:
+  - GO:0000776
+  summary: 'Existing UNKNOWN labels appropriately separate physical association and
+    function from formation. COMA CONDITIONAL is not promoted into universal essentiality:
+    the inspected conditional mutants reveal subcomplex-specific stability/recruitment
+    effects, and other modules can remain CEN-associated. Exact conditions for formation
+    of the complete structure remain unknown.'
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-PMC2173538-xml-native
+  - micro58-dewulf2003-legacy
+  - micro58-PMC3730914-legacy
+- assessment_id: scope
+  area: scope
+  topic: Yeast reference examples and experimental conditions
+  outcome: supported
+  target_ids:
+  - GO:0000776
+  summary: The twelve S288C reference entries and exact reviewed queries agree. COMMON
+    retains its most-members/exceptional-loss meaning; the inspected yeast models
+    qualitatively support it but provide no species-wide census. W303 and other primary
+    experimental backgrounds are not silently replaced by S288C.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-tax4932
+  - micro58-tax559292
+  - micro58-protein-Q02732
+  - micro58-protein-P53298
+  - micro58-protein-Q06675
+  - micro58-protein-P38313
+  - micro58-protein-P39731
+  - micro58-protein-P40568
+  - micro58-protein-Q12143
+  - micro58-protein-P47149
+  - micro58-protein-P40460
+  - micro58-protein-P33895
+  - micro58-protein-Q04477
+  - micro58-protein-P40014
+  - micro58-gene-CTF19
+  - micro58-gene-OKP1
+  - micro58-gene-MCM21
+  - micro58-gene-AME1
+  - micro58-gene-MTW1
+  - micro58-gene-DSN1
+  - micro58-gene-NSL1
+  - micro58-gene-NNF1
+  - micro58-gene-NDC80
+  - micro58-gene-NUF2
+  - micro58-gene-SPC24
+  - micro58-gene-SPC25
+  - micro58-dewulf2003-legacy
+  - micro58-PMC2173538-xml-native
+  - micro58-PMC3730914-legacy
+- assessment_id: graph
+  area: graph
+  topic: Coarse descriptive assembly graph with preserved source differences
+  outcome: supported
+  target_ids:
+  - GO:0000776
+  summary: The NON_MECHANISTIC graph identifies inner/outer modules and MIND–Ndc80
+    linkage without a complete temporal assembly pathway. De Wulf independent CEN
+    association and Westermann conditional localization dependencies use different
+    mutants/readouts; both are retained. Later Biggins synthesis supports the coarse
+    linkage without rewriting either primary result.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-PMC2173538-xml-native
+  - micro58-dewulf2003-legacy
+  - micro58-PMC3730914-legacy
+  - micro58-go
+- assessment_id: coverage
+  area: completeness
+  topic: Entire target with bounded positive evidence
+  outcome: supported
+  target_ids:
+  - GO:0000776
+  summary: All scientific fields, examples, citations, graphs, discussions and history
+    were read. Existing protein examples were checked directly; no empty optional
+    slot alone is treated as an error. Source tiers and actual reading extents are
+    explicit.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-go
+  - micro58-GO0000776-ancestors
+  - micro58-GO0043505
+  - micro58-go-nucleosome-search
+  - micro58-PMC2173538-xml-native
+  - micro58-dewulf2003-legacy
+  - micro58-PMC3730914-legacy
+  - micro58-tax4932
+  - micro58-tax559292
+  - micro58-pmid-10323865
+  - micro58-pmid-11179222
+  - micro58-pmid-11266451
+  - micro58-pmid-11952896
+  - micro58-pmid-12455957
+  - micro58-pmid-14562095
+  - micro58-pmid-14602074
+  - micro58-pmid-14657030
+  - micro58-pmid-29046335
+  - micro58-doi-10.1083_jcb.200305100
+  - micro58-doi-10.1101_gad.1144403
+  - micro58-doi-10.1534_genetics.112.145276
+  - micro58-protein-Q02732
+  - micro58-protein-P53298
+  - micro58-protein-Q06675
+  - micro58-protein-P38313
+  - micro58-protein-P39731
+  - micro58-protein-P40568
+  - micro58-protein-Q12143
+  - micro58-protein-P47149
+  - micro58-protein-P40460
+  - micro58-protein-P33895
+  - micro58-protein-Q04477
+  - micro58-protein-P40014
+  - micro58-gene-CTF19
+  - micro58-gene-OKP1
+  - micro58-gene-MCM21
+  - micro58-gene-AME1
+  - micro58-gene-MTW1
+  - micro58-gene-DSN1
+  - micro58-gene-NSL1
+  - micro58-gene-NNF1
+  - micro58-gene-NDC80
+  - micro58-gene-NUF2
+  - micro58-gene-SPC24
+  - micro58-gene-SPC25
+findings:
+- finding_id: F1
+  issue_key: kinetochore-cenpa-nucleosome-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the named CENP-A nucleosome class
+  description: The centromeric Cse4/CENP-A nucleosome platform remains REVIEWED_LABEL_ONLY
+    despite active exact GO0043505, CENP-A containing nucleosome. Its native definition
+    and primary Cse4/H3 replacement context match the named class. The linked graph
+    node labels and references this complete nucleosome platform, so its current GENE_OR_PROTEIN
+    typing should be aligned to the structural class in the same correction.
+  target_ids:
+  - GO:0000776
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - causal_graphs[0].nodes[0].node_type
+  - causal_graphs[0].nodes[0].grounding
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-GO0043505
+  - micro58-go-nucleosome-search
+  - micro58-PMC2173538-xml-native
+  - micro58-PMC3730914-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/kinetochore.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: minor
+  normalization_reason: Localized current class-grounding gap; correct platform biology,
+    OTHER typing and source-supported roles remain intact. This does not claim that
+    the earlier curation search was false.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000776
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/kinetochore.yaml
+    role: maintained scientific record
+  description: Ground the existing component to GO0043505 with a current scope note.
+    Preserve its Cse4 yeast role, OTHER constituent representation and unknown stoichiometry/formation
+    limits. Align the corresponding whole-nucleosome graph node to STRUCTURE with
+    the same exact GO grounding, retaining the component_ref.
+  acceptance_checks:
+  - The adopted term denotes the nucleosome class rather than Cse4 alone or generic
+    chromatin.
+  - The graph actor denotes the whole nucleosome platform, not Cse4 alone, and its
+    node type/grounding agree with that identity.
+  - No fixed octameric arrangement or universal formation necessity is inferred from
+    the class mapping.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Biggins is secondary synthesis, not a new primary experiment. Primary and review
+  reading is confined to the exact declared sections/captions; no figure pixels or
+  actual supplementary files were inspected.
+- The present model is deliberately selective, not an exhaustive kinetochore inventory.
+  No optional CSE4 protein example is forced. Current GO class verification does not
+  reconstruct a historical search.
+- Conditional-mutant stability, CEN occupancy, chromosome segregation and physical
+  formation of the complete kinetochore remain distinct; COMMON is not a measured
+  population census.
+- All reused source bytes preserve their original URL, UTC and SHA256. Readability
+  is established from content rather than HTTP200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests one review for every unreviewed record, including qualified
+  clean cases.
+- No maintained scientific record, historical review or initial native inspection
+  snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

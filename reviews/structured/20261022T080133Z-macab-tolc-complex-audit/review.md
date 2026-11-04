@@ -1,0 +1,1097 @@
+# Macab tolc complex scientific review
+
+- Review: 20261022T080133Z-macab-tolc-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:34:58Z
+- Finished UTC: 2026-10-22T08:01:33Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+MacAB-TolC identity,2:6:3 structure and coarse causal function are supported. Two minors qualify substrate-specificity wording and correct the Lin2009 author attribution; assembly necessity remains unknown.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen guidance and protein-example skill. Actual source-reading extents appear per evidence row; no unlisted primary experiments or assets are certified.
+
+Selection: Target 10 of batch58, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990196 | data/structures/other/macab_tolc_complex.yaml | maintained | MacAB-TolC complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990196 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990196 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:1990196 | Native focused check passed; biological claims assessed separately. |
+| Native verify | passed | True | GO:1990196 | Native focused check passed; biological claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:1990196 | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | GO:1990196 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:1990196 | 13 of 16 collected target identifiers returned OK. PDB:5NIK: SKIPPED; Native RCSB released entry 5NIK: Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump; primary DOI 10.1038/nmicrobiol.2017.70. Entry identity is distinct from coordinate or assay reanalysis.; PMID:18955484: UNREACHABLE; Native Europe PMC uniquely identifies MED18955484: MacB ABC transporter is a dimer whose ATPase activity and macrolide-binding capacity are regulated by the membrane fusion protein MacA. (2009); DOI 10.1074/jbc.m806964200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:28504659: UNREACHABLE; Native Europe PMC uniquely identifies MED28504659: Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump. (2017); DOI 10.1038/nmicrobiol.2017.70. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:1990196 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990196 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990196 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990196 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:1990196 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Tripartite transporter and deposited stoichiometry
+
+identity: supported. Targets: GO:1990196.
+
+The exact GO class/parent, native3proteins and2:6:3 ordered-model stoichiometry agree. The current family mappings are supported by exact native metadata and independent UniProt membership.
+
+### Macrolide-subclass selectivity versus complete substrate repertoire
+
+scope: concern. Targets: GO:1990196.
+
+The copied GO sentence can read as restricting all transport to14/15-membered macrolides, whereas the cited structural paper and the record’s own broader function describe other cargo. Qualifying the sentence as macrolide selectivity resolves this localized inconsistency without changing complex identity or denying the reported resistance profile.
+
+### Correct2009author attribution
+
+evidence: concern. Targets: GO:1990196.
+
+PMID18955484 and the genuine body identify LinHT etal2009, not Tikhonova. The reported dimerization/ATPase conclusions themselves are supported.
+
+### Coarse but causal ATPase and bridging mechanism
+
+graph: supported. Targets: GO:1990196.
+
+MacA modulation of MacB ATPase and the continuous periplasmic bridge support the declared coarse causal graph. The graph does not assert the full kinetic cycle, a universal substrate entry route or WT atomic behavior from the engineered preparation.
+
+### E.coli examples and broader bacterial occurrence
+
+scope: supported. Targets: GO:1990196.
+
+CorrectK12reference proteins, species-levelcanonicalE.coli and engineered expression backgrounds are distinct. VARIABLE retains lineage/strain patchiness, not mere antibiotic-response variability; no population census is claimed.
+
+### Formation necessity remains unknown
+
+grounding: unknown. Targets: GO:1990196.
+
+Dimerization, ordered assembly and transport/ATPase tests establish membership and activity but not universal individual formation requirements. UNKNOWN is retained without conflating pump function with formation.
+
+### Whole maintained target and declared source coverage
+
+completeness: supported. Targets: GO:1990196.
+
+Every maintained field, source note, graph and discussion was inspected at the declared extents. Optional inventory/contact enrichment and acknowledged unknowns alone do not create findings.
+
+## Findings
+
+### F1: Qualify the macrolide-specificity sentence
+
+minor / open / confirmed; issue key: macab-substrate-specificity-qualification.
+
+The definition says transport activity is specific to14/15-membered macrolides, while its cited structural source and retained broader function cover other cargo. The sentence is faithfully inherited from current GO, but that provenance does not remove its overexclusive reading.
+
+### F2: Correct the2009paper author attribution
+
+minor / open / confirmed; issue key: macab-lin2009-author-attribution.
+
+Two evidence notes call PMID18955484 Tikhonova etal2009. The exact native identity and full primary body identify LinHT etal2009; the DOI and biological conclusions remain correct.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+State the14/15-membered preference as the reported macrolide-subclass profile, and preserve the broader source-supported transport scope with an appropriate source.
+
+- Do not change the supported2:6:3 identity or claim every cargo listed in introductory context was assayed by the structural study.
+- Preserve supported source-specific claims and pass applicable native gates.
+
+### A2
+
+Replace the two author-name attributions with Lin etal2009 while retaining the exact PMID and supported assay descriptions.
+
+- Check both the function evidence and the first causal-edge evidence note.
+- Preserve supported source-specific claims and pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/macab_tolc_complex.yaml; Entire maintained record, all examples, evidence, graphs, properties, images, history and discussions | context_only | Every maintained field was read. Historical curation statements are context, not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from function, viability and membership. COMMON means most members with losses the exception; VARIABLE means lineage- or strain-level patchiness, not cell-type-specific visibility. |
+| curation | docs/CURATION.md; Component grounding and REVIEWED_LABEL_ONLY at159–160 | context_only | Exact full-family mappings differ from shared domains or broader paralog classes. Label-only is not merely uncurated in this pass. |
+| complex58-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005743,GO:0005745,GO:0008559,GO:0016604,GO:0016605,GO:0016606,GO:0031981,GO:0034982,GO:0043190,GO:0044874,GO:0098800,GO:0140306,GO:1905368,GO:1990195,GO:1990196; Complete target-relevant definitions/synonyms and typed relationships; unrelated combined entries not attributed to this target | supports | GO1990196 identifies MacAB-TolC and its2:6:3 class composition, and currently repeats the14/15-membered macrolide-specificity sentence. GO1990195 identifies its broader complex parent; this authority wording is not independent experimental validation of the restriction. |
+| complex58-agent-go-1990196-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990196/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only closure includes the maintained parent class or classes. It establishes classification, not parthood, experimental assembly necessity or prevalence. |
+| complex58-agent-tax-2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete ENA identity/names/lineage | supports | Taxon2: Bacteria, rank domain; exact native names and lineage inspected. |
+| complex58-agent-tax-562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete ENA identity/names/lineage | supports | Taxon562: Escherichia coli, rank species; exact native names and lineage inspected. |
+| complex58-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete ENA identity/names/lineage | supports | Taxon83333: Escherichia coli K-12, rank strain; exact native names and lineage inspected. |
+| complex58-agent-protein-P02930 | https://rest.uniprot.org/uniprotkb/P02930.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P02930, Outer membrane protein TolC; primary genes tolC, synonyms colE1-i, mtcB, mukA, refI, toc, weeA, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-protein-P75830 | https://rest.uniprot.org/uniprotkb/P75830.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P75830, Macrolide export protein MacA; primary genes macA, synonyms ybjY, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-protein-P75831 | https://rest.uniprot.org/uniprotkb/P75831.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P75831, Macrolide export ATP-binding/permease protein MacB; primary genes macB, synonyms ybjZ, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-query-macA | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacA%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P75830. Every returned identity/gene/organism was read. |
+| complex58-agent-query-macB | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P75831. Every returned identity/gene/organism was read. |
+| complex58-agent-query-tolC | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AtolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P02930. Every returned identity/gene/organism was read. |
+| complex58-agent-pmid-18955484 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18955484+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED18955484: MacB ABC transporter is a dimer whose ATPase activity and macrolide-binding capacity are regulated by the membrane fusion protein MacA. Lin HT, Bavro VN, Barrera NP, Frankish HM, Velamakanni S, van Veen HW, Robinson CV, Borges-Walmsley MI, Walmsley AR. (2009), DOI10.1074/jbc.m806964200. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex58-agent-pmid-28504659 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28504659+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED28504659: Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump. Fitzpatrick AWP, Llabrés S, Neuberger A, Blaza JN, Bai XC, Okada U, Murakami S, van Veen HW, Zachariae U, Scheres SHW, Luisi BF, Du D, Du D. (2017), DOI10.1038/nmicrobiol.2017.70. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex58-agent-PMC5447821-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5447821/fullTextXML; Complete Introduction; Results S2–S7, Discussion S8, Methods S10–S13; embedded captions. No figure pixels/supplements or atomic coordinate inspection. | supports | Fitzpatrick2017 resolves a MacAhexamer bridging MacBdimer and TolCtrimer in an engineered fusion/disulfide preparation. Its Introduction explicitly lists nonmacrolide cargo contexts; its mechanotransmission model retains uncertain substrate entry. W3110genes and recombinantC43DE3delta-acrAB expression are distinguished. |
+| complex58-agent-PMC2613632-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC2613632/; Complete Results sec2 and Discussion sec3, embedded captions; Experimental Procedures sec1 ATPaseAssays and QuantificationOfErythromycinBinding paragraphs only. No figure pixels/supplements. | supports | LinHT etal2009 measures MacBdimerization, MacA-modulated steady-state ATPase activity and enhanced erythromycin binding. Kinetic interpretation distinguishes hydrolysis from product release, and erythromycin did not stimulate ATPase in these assays. The source is not authored by Tikhonova. |
+| complex58-agent-pdb-5NIK | https://data.rcsb.org/rest/v1/core/entry/5NIK; Entry identity/title/primary citation | supports | PDB5NIK identifies the Fitzpatrick2017 MacAB-TolC structure. |
+| complex58-agent-pdb-5NIK-assembly1 | https://data.rcsb.org/rest/v1/core/assembly/5NIK/1; Complete assembly1 protein composition/counts/generation fields | supports | Assembly1 contains11 deposited protein copies from3classes, matching3TolC+6MacA+2MacB. This is deposited ordered-model composition, not a claim that every molecule in the engineered preparation was ordered. |
+| complex58-agent-pdb-5NIK-entity1 | https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/1; Complete polymer identity/source-organism/chain-count fields | supports | This polymer entity supplies the corresponding deposited protein identity, source organism and chain multiplicity; assembly composition is assessed jointly across the three entries. |
+| complex58-agent-pdb-5NIK-entity2 | https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/2; Complete polymer identity/source-organism/chain-count fields | supports | This polymer entity supplies the corresponding deposited protein identity, source organism and chain multiplicity; assembly composition is assessed jointly across the three entries. |
+| complex58-agent-pdb-5NIK-entity3 | https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/3; Complete polymer identity/source-organism/chain-count fields | supports | This polymer entity supplies the corresponding deposited protein identity, source organism and chain multiplicity; assembly composition is assessed jointly across the three entries. |
+| complex58-agent-ipr-IPR058623 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058623/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | IPR058623 identifies the full MacA family. |
+| complex58-agent-ipr-IPR050250 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050250/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | IPR050250 identifies the full MacB exporter family; unchecked descriptive prose is not treated as primary transport evidence. |
+| complex58-agent-ipr-IPR058622 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | IPR058622 identifies the full TolC outer-membrane channel family. |
+| schema-result | just validate data/structures/other/macab_tolc_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/macab_tolc_complex.yaml |
+| strict-result | just validate-strict data/structures/other/macab_tolc_complex.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/macab_tolc_complex.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/macab_tolc_complex.yaml  (GO:1990196)<br>  macab_tolc_efflux_function	macb_atp_binding_permease	COVERED	-&gt;macb_atp_binding_permease (UniProtKB:P75831)<br>  macab_tolc_efflux_function	maca_membrane_fusion_protein	COVERED	-&gt;maca_membrane_fusion_protein (UniProtKB:P75830)<br>  macab_tolc_efflux_function	tolc_outer_membrane_channel	COVERED	-&gt;tolc_outer_membrane_channel (UniProtKB:P02930)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/macab_tolc_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 16 collected target identifiers returned OK. PDB:5NIK: SKIPPED; Native RCSB released entry 5NIK: Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump; primary DOI 10.1038/nmicrobiol.2017.70. Entry identity is distinct from coordinate or assay reanalysis.; PMID:18955484: UNREACHABLE; Native Europe PMC uniquely identifies MED18955484: MacB ABC transporter is a dimer whose ATPase activity and macrolide-binding capacity are regulated by the membrane fusion protein MacA. (2009); DOI 10.1074/jbc.m806964200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:28504659: UNREACHABLE; Native Europe PMC uniquely identifies MED28504659: Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump. (2017); DOI 10.1038/nmicrobiol.2017.70. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements, atomic coordinates or raw experimental data were analyzed.
+- The2017ordered structure used a fusion/disulfide strategy; unmodeled fusion-linked protein copies are not counted as additional ordered subunits. No atomic coordinates or figure pixels were inspected.
+- An initially retrieved PMC2643481 article was unrelated to the2009MacB paper and is retained only as a diagnostic; scientific conclusions use the exact PMC2613632 body.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T080133Z-macab-tolc-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Macab tolc complex scientific review
+started_at: '2026-10-22T07:34:58Z'
+finished_at: '2026-10-22T08:01:33Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: MacAB-TolC identity,2:6:3 structure and coarse causal function are supported.
+  Two minors qualify substrate-specificity wording and correct the Lin2009 author
+  attribution; assembly necessity remains unknown.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/macab_tolc_complex.yaml
+    sha256: b2f794251b4bbc18fa1e7c1bdc93d9fc0098d20d1160e8230ee4b0a9b247e636
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990196
+  path: data/structures/other/macab_tolc_complex.yaml
+  label: MacAB-TolC complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen guidance and protein-example
+    skill. Actual source-reading extents appear per evidence row; no unlisted primary
+    experiments or assets are certified.
+  selection: Target 10 of batch58, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990196
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just validate data/structures/other/macab_tolc_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just validate-strict data/structures/other/macab_tolc_complex.yaml --out
+    /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990196
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex58-agent-go
+  - complex58-agent-go-1990196-ancestors
+  - complex58-agent-tax-2
+  - complex58-agent-tax-562
+  - complex58-agent-tax-83333
+  - complex58-agent-protein-P02930
+  - complex58-agent-protein-P75830
+  - complex58-agent-protein-P75831
+  - complex58-agent-query-macA
+  - complex58-agent-query-macB
+  - complex58-agent-query-tolC
+  - complex58-agent-pmid-18955484
+  - complex58-agent-pmid-28504659
+  - complex58-agent-PMC5447821-xml
+  - complex58-agent-PMC2613632-legacy
+  - complex58-agent-pdb-5NIK
+  - complex58-agent-pdb-5NIK-assembly1
+  - complex58-agent-pdb-5NIK-entity1
+  - complex58-agent-pdb-5NIK-entity2
+  - complex58-agent-pdb-5NIK-entity3
+  - complex58-agent-ipr-IPR058623
+  - complex58-agent-ipr-IPR050250
+  - complex58-agent-ipr-IPR058622
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  summary: '13 of 16 collected target identifiers returned OK. PDB:5NIK: SKIPPED;
+    Native RCSB released entry 5NIK: Structure of the MacAB-TolC ABC-type tripartite
+    multidrug efflux pump; primary DOI 10.1038/nmicrobiol.2017.70. Entry identity
+    is distinct from coordinate or assay reanalysis.; PMID:18955484: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED18955484: MacB ABC transporter is a dimer
+    whose ATPase activity and macrolide-binding capacity are regulated by the membrane
+    fusion protein MacA. (2009); DOI 10.1074/jbc.m806964200. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:28504659:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED28504659: Structure of the
+    MacAB-TolC ABC-type tripartite multidrug efflux pump. (2017); DOI 10.1038/nmicrobiol.2017.70.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex58-agent-pdb-5NIK
+  - complex58-agent-pmid-18955484
+  - complex58-agent-pmid-28504659
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990196
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/macab_tolc_complex.yaml
+  locator: Entire maintained record, all examples, evidence, graphs, properties, images,
+    history and discussions
+  accessed_at: '2026-10-22T07:47:51Z'
+  support: context_only
+  summary: Every maintained field was read. Historical curation statements are context,
+    not independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T07:47:51Z'
+  support: context_only
+  summary: Formation necessity differs from function, viability and membership. COMMON
+    means most members with losses the exception; VARIABLE means lineage- or strain-level
+    patchiness, not cell-type-specific visibility.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding and REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T07:47:51Z'
+  support: context_only
+  summary: Exact full-family mappings differ from shared domains or broader paralog
+    classes. Label-only is not merely uncurated in this pass.
+- evidence_id: complex58-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005743,GO:0005745,GO:0008559,GO:0016604,GO:0016605,GO:0016606,GO:0031981,GO:0034982,GO:0043190,GO:0044874,GO:0098800,GO:0140306,GO:1905368,GO:1990195,GO:1990196
+  locator: Complete target-relevant definitions/synonyms and typed relationships;
+    unrelated combined entries not attributed to this target
+  accessed_at: '2026-10-22T07:36:57.609631Z'
+  support: supports
+  summary: GO1990196 identifies MacAB-TolC and its2:6:3 class composition, and currently
+    repeats the14/15-membered macrolide-specificity sentence. GO1990195 identifies
+    its broader complex parent; this authority wording is not independent experimental
+    validation of the restriction.
+  snapshot_sha256: 242f72bf78cb9fffe4670986a4651eb5296e5987f4f8f28a92533f2d5764045d
+- evidence_id: complex58-agent-go-1990196-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990196/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T07:37:06.211800Z'
+  support: supports
+  summary: The is_a-only closure includes the maintained parent class or classes.
+    It establishes classification, not parthood, experimental assembly necessity or
+    prevalence.
+  snapshot_sha256: 8120216524da941cc23167cd8a5283877080de1a2b8bf55aefb4402972dd977b
+- evidence_id: complex58-agent-tax-2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:37:00.773017Z'
+  support: supports
+  summary: 'Taxon2: Bacteria, rank domain; exact native names and lineage inspected.'
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: complex58-agent-tax-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:37:01.371668Z'
+  support: supports
+  summary: 'Taxon562: Escherichia coli, rank species; exact native names and lineage
+    inspected.'
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: complex58-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:37:01.921388Z'
+  support: supports
+  summary: 'Taxon83333: Escherichia coli K-12, rank strain; exact native names and
+    lineage inspected.'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: complex58-agent-protein-P02930
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P02930.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:57.610186Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P02930, Outer membrane protein TolC;
+    primary genes tolC, synonyms colE1-i, mtcB, mukA, refI, toc, weeA, taxon83333.
+    Its own native comments and family cross-references were inspected with their
+    original evidence qualifiers.'
+  snapshot_sha256: cef14f6af1999fe0b5218d959cca8788ec00afc1b145201ba48344a4b15bbb04
+- evidence_id: complex58-agent-protein-P75830
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P75830.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:58.544585Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P75830, Macrolide export protein MacA;
+    primary genes macA, synonyms ybjY, taxon83333. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 0465a58120398458818561f76d7fc68cdaa56d02690ab95f7ca5f730656067a4
+- evidence_id: complex58-agent-protein-P75831
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P75831.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:59.072535Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P75831, Macrolide export ATP-binding/permease
+    protein MacB; primary genes macB, synonyms ybjZ, taxon83333. Its own native comments
+    and family cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 544d28caf979f42b50802e05fe332a5350cb8ba79df24df0002874c3ef36ce42
+- evidence_id: complex58-agent-query-macA
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacA%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:12.835244Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P75830. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 27c0caf5770fe21cab614b751a0d12c0e15448ed3ce1ab11bfe27f8415b4aa90
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacA%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-query-macB
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:12.906814Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P75831. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: b499c3c03b744afbc926cfa35dd5af14d32141a991b2631a270aeb4e941f7259
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmacB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-query-tolC
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AtolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:13.196891Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P02930. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 3e284eede466d8aa6d6eac091b434ce033083e18848c220476a3bdb06463365a
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AtolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-pmid-18955484
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18955484+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:37:02.509461Z'
+  support: supports
+  summary: 'MED18955484: MacB ABC transporter is a dimer whose ATPase activity and
+    macrolide-binding capacity are regulated by the membrane fusion protein MacA.
+    Lin HT, Bavro VN, Barrera NP, Frankish HM, Velamakanni S, van Veen HW, Robinson
+    CV, Borges-Walmsley MI, Walmsley AR. (2009), DOI10.1074/jbc.m806964200. Exact
+    metadata and complete available abstract read; this does not claim body access. '
+  snapshot_sha256: 31d8bab03fe6526782e4a1734bbd513cbe614f7f7c82ac7425e4e8d97d64a80a
+- evidence_id: complex58-agent-pmid-28504659
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28504659+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:37:03.125720Z'
+  support: supports
+  summary: 'MED28504659: Structure of the MacAB-TolC ABC-type tripartite multidrug
+    efflux pump. Fitzpatrick AWP, Llabrés S, Neuberger A, Blaza JN, Bai XC, Okada
+    U, Murakami S, van Veen HW, Zachariae U, Scheres SHW, Luisi BF, Du D, Du D. (2017),
+    DOI10.1038/nmicrobiol.2017.70. Exact metadata and complete available abstract
+    read; this does not claim body access. '
+  snapshot_sha256: d681a58d4861f1f006b3568bfa6827f46362954997e505c2329738be68ba78ba
+- evidence_id: complex58-agent-PMC5447821-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5447821/fullTextXML
+  locator: Complete Introduction; Results S2–S7, Discussion S8, Methods S10–S13; embedded
+    captions. No figure pixels/supplements or atomic coordinate inspection.
+  accessed_at: '2026-10-22T07:37:42.337004Z'
+  support: supports
+  summary: Fitzpatrick2017 resolves a MacAhexamer bridging MacBdimer and TolCtrimer
+    in an engineered fusion/disulfide preparation. Its Introduction explicitly lists
+    nonmacrolide cargo contexts; its mechanotransmission model retains uncertain substrate
+    entry. W3110genes and recombinantC43DE3delta-acrAB expression are distinguished.
+  snapshot_sha256: 17f1f92a83a410f832103c4465106df7d8faf7c304ffae586062f1b8e8f4f5a3
+- evidence_id: complex58-agent-PMC2613632-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2613632/
+  locator: Complete Results sec2 and Discussion sec3, embedded captions; Experimental
+    Procedures sec1 ATPaseAssays and QuantificationOfErythromycinBinding paragraphs
+    only. No figure pixels/supplements.
+  accessed_at: '2026-10-22T07:38:24.792863Z'
+  support: supports
+  summary: LinHT etal2009 measures MacBdimerization, MacA-modulated steady-state ATPase
+    activity and enhanced erythromycin binding. Kinetic interpretation distinguishes
+    hydrolysis from product release, and erythromycin did not stimulate ATPase in
+    these assays. The source is not authored by Tikhonova.
+  snapshot_sha256: 9b3b688322888aea7c2ac7611c9ccf76d4b78017e37534069fd6ec5857767e6e
+- evidence_id: complex58-agent-pdb-5NIK
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/5NIK
+  locator: Entry identity/title/primary citation
+  accessed_at: '2026-10-22T07:37:07.940894Z'
+  support: supports
+  summary: PDB5NIK identifies the Fitzpatrick2017 MacAB-TolC structure.
+  snapshot_sha256: d2799b6484764d471a1ce9763e705aede07783c33badce15004e594d5d443be9
+- evidence_id: complex58-agent-pdb-5NIK-assembly1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/5NIK/1
+  locator: Complete assembly1 protein composition/counts/generation fields
+  accessed_at: '2026-10-22T07:37:08.006570Z'
+  support: supports
+  summary: Assembly1 contains11 deposited protein copies from3classes, matching3TolC+6MacA+2MacB.
+    This is deposited ordered-model composition, not a claim that every molecule in
+    the engineered preparation was ordered.
+  snapshot_sha256: 07d19775fead4956f862ae07ba21095603eb223cd94d349391187ab37af99776
+- evidence_id: complex58-agent-pdb-5NIK-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/1
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:08.065258Z'
+  support: supports
+  summary: This polymer entity supplies the corresponding deposited protein identity,
+    source organism and chain multiplicity; assembly composition is assessed jointly
+    across the three entries.
+  snapshot_sha256: 937dada371851d777da4de5f60aa2c6ed87329e7ec1542782b255552ebfbea43
+- evidence_id: complex58-agent-pdb-5NIK-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/2
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:08.144869Z'
+  support: supports
+  summary: This polymer entity supplies the corresponding deposited protein identity,
+    source organism and chain multiplicity; assembly composition is assessed jointly
+    across the three entries.
+  snapshot_sha256: 8c555d8a5b6c9a95e73fbf756c2f92ece29930eae1eaed73bf08c5addea7e6e2
+- evidence_id: complex58-agent-pdb-5NIK-entity3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/5NIK/3
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:08.223113Z'
+  support: supports
+  summary: This polymer entity supplies the corresponding deposited protein identity,
+    source organism and chain multiplicity; assembly composition is assessed jointly
+    across the three entries.
+  snapshot_sha256: b4c165292c70fe2023ccff93384ca3cc1ed60dcd27efe29e5286454483bad38c
+- evidence_id: complex58-agent-ipr-IPR058623
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058623/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:00.697847Z'
+  support: supports
+  summary: IPR058623 identifies the full MacA family.
+  snapshot_sha256: d3ed15d36e942a9a5ab5ef5d0f6538ae597d289bf7747c7ac54c91f400418ce8
+- evidence_id: complex58-agent-ipr-IPR050250
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050250/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:00.083684Z'
+  support: supports
+  summary: IPR050250 identifies the full MacB exporter family; unchecked descriptive
+    prose is not treated as primary transport evidence.
+  snapshot_sha256: 0446bff126f9f98bdb8ce3b393de25b559ab55bd88ea2a207353dcb3bad360fc
+- evidence_id: complex58-agent-ipr-IPR058622
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:00.681836Z'
+  support: supports
+  summary: IPR058622 identifies the full TolC outer-membrane channel family.
+  snapshot_sha256: d3c58cbb9737d5f395f703b634f84df048f355555af2b817f321a5e474b8e310
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/macab_tolc_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:59Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/macab_tolc_complex.yaml'
+  snapshot_sha256: 5b5e3a519b41561bf162832d893754eba38fb76d7d323e0a17dcc401cfb70d49
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/macab_tolc_complex.yaml --out
+    /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:35:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/macab_tolc_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/macab_tolc_complex-strict.tsv"
+  snapshot_sha256: 2bf182f6574d9013befd9d8ad313991d79cc868d5327e9c77350cba06ebbef8b
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:37:31.560779Z'
+  support: supports
+  summary: "data/structures/other/macab_tolc_complex.yaml  (GO:1990196)\n  macab_tolc_efflux_function\t\
+    macb_atp_binding_permease\tCOVERED\t->macb_atp_binding_permease (UniProtKB:P75831)\n\
+    \  macab_tolc_efflux_function\tmaca_membrane_fusion_protein\tCOVERED\t->maca_membrane_fusion_protein\
+    \ (UniProtKB:P75830)\n  macab_tolc_efflux_function\ttolc_outer_membrane_channel\t\
+    COVERED\t->tolc_outer_membrane_channel (UniProtKB:P02930)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     3  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 404a309417e082e13a78e994b12da77302a38ee7f6546a78f8f98b0a9743e762
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/macab_tolc_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:37:32.753562Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/macab_tolc_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 16 collected target identifiers returned OK. PDB:5NIK: SKIPPED;
+    Native RCSB released entry 5NIK: Structure of the MacAB-TolC ABC-type tripartite
+    multidrug efflux pump; primary DOI 10.1038/nmicrobiol.2017.70. Entry identity
+    is distinct from coordinate or assay reanalysis.; PMID:18955484: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED18955484: MacB ABC transporter is a dimer
+    whose ATPase activity and macrolide-binding capacity are regulated by the membrane
+    fusion protein MacA. (2009); DOI 10.1074/jbc.m806964200. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:28504659:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED28504659: Structure of the
+    MacAB-TolC ABC-type tripartite multidrug efflux pump. (2017); DOI 10.1038/nmicrobiol.2017.70.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Tripartite transporter and deposited stoichiometry
+  outcome: supported
+  target_ids:
+  - GO:1990196
+  summary: The exact GO class/parent, native3proteins and2:6:3 ordered-model stoichiometry
+    agree. The current family mappings are supported by exact native metadata and
+    independent UniProt membership.
+  evidence_ids:
+  - record
+  - complex58-agent-go
+  - complex58-agent-go-1990196-ancestors
+  - complex58-agent-PMC5447821-xml
+  - complex58-agent-pdb-5NIK
+  - complex58-agent-pdb-5NIK-assembly1
+  - complex58-agent-pdb-5NIK-entity1
+  - complex58-agent-pdb-5NIK-entity2
+  - complex58-agent-pdb-5NIK-entity3
+  - complex58-agent-protein-P02930
+  - complex58-agent-protein-P75830
+  - complex58-agent-protein-P75831
+  - complex58-agent-query-macA
+  - complex58-agent-query-macB
+  - complex58-agent-query-tolC
+  - complex58-agent-ipr-IPR058623
+  - complex58-agent-ipr-IPR050250
+  - complex58-agent-ipr-IPR058622
+  - complex58-agent-tax-2
+  - complex58-agent-tax-562
+  - complex58-agent-tax-83333
+- assessment_id: definition
+  area: scope
+  topic: Macrolide-subclass selectivity versus complete substrate repertoire
+  outcome: concern
+  target_ids:
+  - GO:1990196
+  summary: The copied GO sentence can read as restricting all transport to14/15-membered
+    macrolides, whereas the cited structural paper and the record’s own broader function
+    describe other cargo. Qualifying the sentence as macrolide selectivity resolves
+    this localized inconsistency without changing complex identity or denying the
+    reported resistance profile.
+  evidence_ids:
+  - record
+  - complex58-agent-go
+  - complex58-agent-PMC5447821-xml
+- assessment_id: attribution
+  area: evidence
+  topic: Correct2009author attribution
+  outcome: concern
+  target_ids:
+  - GO:1990196
+  summary: PMID18955484 and the genuine body identify LinHT etal2009, not Tikhonova.
+    The reported dimerization/ATPase conclusions themselves are supported.
+  evidence_ids:
+  - record
+  - complex58-agent-PMC2613632-legacy
+  - complex58-agent-pmid-18955484
+- assessment_id: graph
+  area: graph
+  topic: Coarse but causal ATPase and bridging mechanism
+  outcome: supported
+  target_ids:
+  - GO:1990196
+  summary: MacA modulation of MacB ATPase and the continuous periplasmic bridge support
+    the declared coarse causal graph. The graph does not assert the full kinetic cycle,
+    a universal substrate entry route or WT atomic behavior from the engineered preparation.
+  evidence_ids:
+  - record
+  - complex58-agent-PMC5447821-xml
+  - complex58-agent-PMC2613632-legacy
+  - complex58-agent-pdb-5NIK-assembly1
+- assessment_id: scope
+  area: scope
+  topic: E.coli examples and broader bacterial occurrence
+  outcome: supported
+  target_ids:
+  - GO:1990196
+  summary: CorrectK12reference proteins, species-levelcanonicalE.coli and engineered
+    expression backgrounds are distinct. VARIABLE retains lineage/strain patchiness,
+    not mere antibiotic-response variability; no population census is claimed.
+  evidence_ids:
+  - record
+  - schema
+  - complex58-agent-PMC5447821-xml
+  - complex58-agent-tax-2
+  - complex58-agent-tax-562
+  - complex58-agent-tax-83333
+  - complex58-agent-protein-P02930
+  - complex58-agent-protein-P75830
+  - complex58-agent-protein-P75831
+- assessment_id: formation
+  area: grounding
+  topic: Formation necessity remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:1990196
+  summary: Dimerization, ordered assembly and transport/ATPase tests establish membership
+    and activity but not universal individual formation requirements. UNKNOWN is retained
+    without conflating pump function with formation.
+  evidence_ids:
+  - record
+  - schema
+  - complex58-agent-PMC5447821-xml
+  - complex58-agent-PMC2613632-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and declared source coverage
+  outcome: supported
+  target_ids:
+  - GO:1990196
+  summary: Every maintained field, source note, graph and discussion was inspected
+    at the declared extents. Optional inventory/contact enrichment and acknowledged
+    unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex58-agent-go
+findings:
+- finding_id: F1
+  issue_key: macab-substrate-specificity-qualification
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the macrolide-specificity sentence
+  description: The definition says transport activity is specific to14/15-membered
+    macrolides, while its cited structural source and retained broader function cover
+    other cargo. The sentence is faithfully inherited from current GO, but that provenance
+    does not remove its overexclusive reading.
+  target_ids:
+  - GO:1990196
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - record
+  - complex58-agent-go
+  - complex58-agent-PMC5447821-xml
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-backed identity, grounding and claim scope
+  native_severity: minor
+  normalization_reason: A bounded correction preserves the supported complex identity
+    and principal biological function.
+- finding_id: F2
+  issue_key: macab-lin2009-author-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the2009paper author attribution
+  description: Two evidence notes call PMID18955484 Tikhonova etal2009. The exact
+    native identity and full primary body identify LinHT etal2009; the DOI and biological
+    conclusions remain correct.
+  target_ids:
+  - GO:1990196
+  field_paths:
+  - functions
+  - causal_graphs#macab_tolc_efflux_function.edges
+  evidence_ids:
+  - record
+  - complex58-agent-PMC2613632-legacy
+  - complex58-agent-pmid-18955484
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-backed identity, grounding and claim scope
+  native_severity: minor
+  normalization_reason: A bounded correction preserves the supported complex identity
+    and principal biological function.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990196
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained scientific record
+  description: State the14/15-membered preference as the reported macrolide-subclass
+    profile, and preserve the broader source-supported transport scope with an appropriate
+    source.
+  acceptance_checks:
+  - Do not change the supported2:6:3 identity or claim every cargo listed in introductory
+    context was assayed by the structural study.
+  - Preserve supported source-specific claims and pass applicable native gates.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:1990196
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained scientific record
+  description: Replace the two author-name attributions with Lin etal2009 while retaining
+    the exact PMID and supported assay descriptions.
+  acceptance_checks:
+  - Check both the function evidence and the first causal-edge evidence note.
+  - Preserve supported source-specific claims and pass applicable native gates.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements,
+  atomic coordinates or raw experimental data were analyzed.
+- The2017ordered structure used a fusion/disulfide strategy; unmodeled fusion-linked
+  protein copies are not counted as additional ordered subunits. No atomic coordinates
+  or figure pixels were inspected.
+- An initially retrieved PMC2643481 article was unrelated to the2009MacB paper and
+  is retained only as a diagnostic; scientific conclusions use the exact PMC2613632
+  body.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

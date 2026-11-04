@@ -1,0 +1,1230 @@
+# Source-grounded review of epsilon DNA polymerase complex
+
+- Review: 20261022T063720Z-epsilon-dna-polymerase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:16:10Z
+- Finished UTC: 2026-10-22T06:37:20Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two minor findings resolve exact Pol2/Dpb2/Dpb4 family mappings and add the directly observed, condition-specific Dpb4 stability contribution. Heterotetramer identity, protein examples and broad replication graph are supported with explicit abstract/body and assay limits.
+
+## Scope And Provenance
+
+Exactly one complete maintained target; source-native and primary reading scopes are declared individually. Scientific inputs remain unchanged.
+
+Selection: One complete record in strict-path batch 54 of the explicit all-unreviewed-record goal.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0008622 | data/structures/other/epsilon_dna_polymerase_complex.yaml | maintained | epsilon DNA polymerase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0008622 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0008622 | Focused validator passed. |
+| Native focused causal-graphs | passed | True | GO:0008622 | Focused check passed; source claims assessed separately. |
+| Native focused verify | passed | True | GO:0008622 | Focused check passed; source claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0008622 | No iModulon-specific claim is made; May2009 expression assays are assessed directly where applicable. |
+| Claim-level scientific review | passed | True | GO:0008622 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0008622 | 9 of 16 collected target identifiers returned OK. PMID:11024162: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:12571237: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15814431: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:16369485: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:25538242: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:9745046: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0008622 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0008622 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0008622 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0008622 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0008622 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact four-subunit polymerase identity
+
+identity: supported. Targets: GO:0008622.
+
+GO identity and DNA-polymerase-complex parent match the maintained heterotetramer. Chilkova’s complete native abstract directly reports four subunits and1:1:1:1 stoichiometry, supported by sedimentation/gel-filtration and equilibrium-ultracentrifugation analysis. It does not imply four separate oligomeric polymerases.
+
+### Four correct examples and three available exact families
+
+grounding: concern. Targets: GO:0008622.
+
+All four S288C reference proteins and gene identities match. Pol2, Dpb2 and Dpb4 have exact full-protein or homologous-family mappings. The Dpb3 candidate requires finer scope control; a generic histone fold or generated description is not enough to resolve a particular named subunit.
+
+### Direct but condition-specific Dpb4 stability dependence
+
+grounding: concern. Targets: GO:0008622.
+
+Ohya supplies a physical complex-stability measurement: Dpb2/Dpb3 dissociate more readily from Pol2 after chromatography of dpb4-deletion extracts. This is more specific than the existing generic membership statements, but does not establish every subunit as universally essential or prove complete assembly loss in vivo.
+
+### Descriptive replication graph and missing bounded stability detail
+
+graph: concern. Targets: GO:0008622.
+
+The NONMECHANISTIC four-membership plus replication graph is supported. It deliberately leaves leading-strand assignment,PCNA,replisome and repair mechanisms unresolved. The one actionable enhancement is the directly measured Dpb4-associated stability effect, not a demand to expand every catalytic pathway.
+
+### Evidence-tier and catalytic-region distinctions
+
+evidence: supported. Targets: GO:0008622.
+
+Asturias’ complete abstract describes a20A low-resolution full-polymerase reconstruction; it is not an atomic all-subunit structure. Ganai changes both the catalytic subunit C-terminus and accessory proteins and thus cannot isolate any one contributor. Generic UniProt accessory-subunit proofreading prose is not imported as autonomous Dpb2/3/4 catalysis.
+
+### Reference proteins, experimental strains and localization
+
+scope: supported. Targets: GO:0008622.
+
+S288C reference accessions are distinguished from Ohya’s listed experimental strains and Ganai’s Py116 expression strain. Huh’s localization abstract does not independently identify each individual protein’s imaging result; native accession links supply those associations. COMMON is a qualitative category, not a measured population survey.
+
+### Whole maintained target and bounded follow-up
+
+completeness: supported. Targets: GO:0008622.
+
+Every maintained field, evidence row, component/example, graph edge, discussion and history entry was read. Required defects are distinguished from optional enrichment and unavailable source detail. Scientific status/history remain unchanged.
+
+## Findings
+
+### F1: Resolve the Pol2, Dpb2 and Dpb4 family mappings
+
+minor / open / confirmed; issue key: epsilon-pol2-dpb2-dpb4-exact-families.
+
+Pol2, Dpb2 and Dpb4 remain REVIEWED_LABEL_ONLY under an open exact-grounding task, although native IPR029703, IPR016266 and IPR051377 identify their full-protein classes and their reference proteins independently carry the respective cross-references.
+
+### F2: Record the directly observed Dpb4 stability contribution
+
+minor / open / confirmed; issue key: epsilon-dpb4-bounded-complex-stability.
+
+The current Dpb4 role and graph only state membership. The already cited Ohya2000 source directly reports easier Dpb2/Dpb3 dissociation from Pol2 in dpb4-deletion extracts after MonoQ chromatography. This concrete structure-level dependence can be recorded without replacing UNKNOWN with an unsupported universal ESSENTIAL.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground Pol2 with IPR029703, Dpb2 with IPR016266 and Dpb4 with IPR051377, keeping the reference accession/taxon pairs separate and narrowing the open task to classes not yet securely resolved.
+
+- Verify exact family identity/type and separate representative membership.
+- Do not substitute a shared histone fold or broad transcription-factor family for an unresolved subunit.
+- Pass applicable native schema, strict, identifier and graph checks after separately authorized curation.
+
+### A2
+
+Add a source-scoped Dpb4 contribution to stability/retention of Dpb2 and Dpb3 with Pol2, explicitly tied to the mutant-extract chromatography experiment. Preserve UNKNOWN where whole-complex formation necessity remains unestablished.
+
+- Cite Results sec15 and Figure1 for the physical readout.
+- Distinguish observed association/stability from cell viability, replication timing and intrinsic polymerase activity.
+- Pass applicable native schema, strict, identifier and graph checks after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/epsilon_dna_polymerase_complex.yaml; Entire maintained record, including evidence, components, graphs, discussions, imported composition and history where present | context_only | The complete maintained target was read. Neighboring records are not automatically reviewed by this observation. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; EssentialityEnum, StructuralComponent, PresenceEnum and graph scope | context_only | Formation necessity differs from activity, recruitment into a larger assembly or viability. Where used, COMMON means present in most members with exceptional losses. This category is distinct from a measured prevalence census. |
+| curation | docs/CURATION.md; Exact class mapping and protein-example boundaries | context_only | A whole-protein family grounds a constituent class; a taxon-paired accession supplies a representative instance. Domain or broader superfamily mappings do not necessarily resolve exact class tasks. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Directed evidence and mechanistic scope | context_only | Descriptive membership and function graphs are distinguished from causal assembly dependencies and detailed molecular mechanisms. |
+| root54-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005784,GO:0005789,GO:0006260,GO:0008622,GO:0031205,GO:0031207,GO:0042575,GO:0042910,GO:0140330,GO:0140534,GO:1990281; Eleven native terms: identity/status, complete definitions, synonyms/comments and relevant typed child relations only | supports | GO0008622 exactly identifies heterotetrameric epsilon DNA polymerase, with Pol2/Dpb2/Dpb3/Dpb4 named for budding yeast. GO0042575 is its polymerase-complex parent and GO0006260 is the DNA replication process. The inherited definition preserves historical caution about leading-strand assignment. |
+| root54-sources-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxonomy response | supports | ENA taxId4932 identifies Saccharomyces cerevisiae; the complete name/rank/lineage response was read. |
+| root54-sources-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxonomy response | supports | ENA taxId559292 identifies Saccharomyces cerevisiae S288C; the complete name/rank/lineage response was read. |
+| root54-sources-GO0008622-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0008622/ancestors?relations=is_a; Complete native ancestor response | supports | The complete is_a-only ancestry contains the declared parent. It is not a parthood or distribution census. |
+| root54-sources-GO0008622-constraints | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0008622/constraints; Focal taxonConstraints array only | context_only | The focal term is constrained to Eukaryota; this restriction does not establish occurrence in every eukaryotic organism. |
+| root54-sources-pmid-11024162 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11024162+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED11024162: Structure and function of the fourth subunit (Dpb4p) of DNA polymerase epsilon in Saccharomyces cerevisiae. Authors Ohya T, Maki S, Kawasaki Y, Sugino A.; year 2000; DOI10.1093/nar/28.20.3846. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-12571237 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12571237+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED12571237: The quaternary structure of DNA polymerase epsilon from Saccharomyces cerevisiae. Authors Chilkova O, Jonsson BH, Johansson E.; year 2003; DOI10.1074/jbc.m211818200. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED14562095: Global analysis of protein localization in budding yeast. Authors Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK.; year 2003; DOI10.1038/nature02026. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-15814431 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15814431+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED15814431: DNA polymerases that propagate the eukaryotic DNA replication fork. Authors Garg P, Burgers PM.; year 2005; DOI10.1080/10409230590935433. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-16369485 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16369485+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED16369485: Structure of Saccharomyces cerevisiae DNA polymerase epsilon by cryo-electron microscopy. Authors Asturias FJ, Cheung IK, Sabouri N, Chilkova O, Wepplo D, Johansson E.; year 2006; DOI10.1038/nsmb1040. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-25538242 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25538242+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED25538242: Yeast DNA polymerase ϵ catalytic core and holoenzyme have comparable catalytic rates. Authors Ganai RA, Osterman P, Johansson E.; year 2015; DOI10.1074/jbc.m114.615278. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-pmid-9745046 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9745046+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and entire abstractText | supports | MED9745046: Eukaryotic DNA polymerases in DNA replication and DNA repair. Authors Burgers PM.; year 1998; DOI10.1007/s004120050300. The complete native abstract was read; primary-body scopes are separate. |
+| root54-sources-protein-P21951 | https://rest.uniprot.org/uniprotkb/P21951.json; Identity/status, recommended/alternative names, genes/aliases and organism; InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and CATALYTIC ACTIVITY comments where present | supports | P21951 is the reviewed POL2 reference entry in taxon559292. The catalytic Pol2 subunit has polymerase/exonuclease activity and an exact IPR029703 family cross-reference. |
+| root54-sources-gene-POL2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOL2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Entire returned identity set, names/aliases and organism; exact gene, organism_id, reviewed and size500 query parameters | supports | The exact-gene reviewed query restricted to the declared organism_id returns the single accession P21951. |
+| root54-sources-protein-P24482 | https://rest.uniprot.org/uniprotkb/P24482.json; Identity/status, recommended/alternative names, genes/aliases and organism; InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and CATALYTIC ACTIVITY comments where present | supports | P24482 is the reviewed DPB2 reference entry in taxon559292. The Dpb2 entry has IPR016266; cytoplasmic and nuclear localization links do not move the entire polymerase to every individual-subunit location. Its generic FUNCTION prose is not proof that the accessory subunit independently catalyzes exonucleolysis. |
+| root54-sources-gene-DPB2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Entire returned identity set, names/aliases and organism; exact gene, organism_id, reviewed and size500 query parameters | supports | The exact-gene reviewed query restricted to the declared organism_id returns the single accession P24482. |
+| root54-sources-protein-P27344 | https://rest.uniprot.org/uniprotkb/P27344.json; Identity/status, recommended/alternative names, genes/aliases and organism; InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and CATALYTIC ACTIVITY comments where present | supports | P27344 is the reviewed DPB3 reference entry in taxon559292. The Dpb3 example is part of the four-subunit polymerase. Generic complex-level proofreading prose is not attributed to an autonomous Dpb3 active site. |
+| root54-sources-gene-DPB3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Entire returned identity set, names/aliases and organism; exact gene, organism_id, reviewed and size500 query parameters | supports | The exact-gene reviewed query restricted to the declared organism_id returns the single accession P27344. |
+| root54-sources-protein-Q04603 | https://rest.uniprot.org/uniprotkb/Q04603.json; Identity/status, recommended/alternative names, genes/aliases and organism; InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and CATALYTIC ACTIVITY comments where present | supports | Q04603 is the reviewed DPB4 reference entry in taxon559292. The Dpb4 example participates in polymerase epsilon and ISW2; shared membership does not merge the two complexes. Generic proofreading prose is not evidence of Dpb4 catalysis. |
+| root54-sources-gene-DPB4 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Entire returned identity set, names/aliases and organism; exact gene, organism_id, reviewed and size500 query parameters | supports | The exact-gene reviewed query restricted to the declared organism_id returns the single accession Q04603. |
+| root54-sources-primary-PMC110797 | https://pmc.ncbi.nlm.nih.gov/articles/PMC110797/; Ohya2000 Methods sec3 strain table and sec5 purification; complete Results sec13-16 including Figures1/2 captions. Other results/methods,Discussion,sequence alignment and pixels not read. | supports | Dpb4/YDR121W is identified by peptide matching and antibodies. Dpb4 deletion is viable but delays replication. After MonoQ chromatography, mutant extracts show easier Dpb2/Dpb3 dissociation from Pol2 and reduced associated Dpb3, directly supporting a bounded stability effect. The resulting mixture still has assayed polymerase activity, so this is not evidence of universal absence of the entire complex or a direct Dpb4 catalytic role. |
+| root54-sources-primary-PMC4319046 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4319046/; Ganai2015 Methods sec5-7; Results sec16-18,sec20-21 with embedded Figures1-4,6-7 captions and Tables1-5. Other sections and pixels not read. | supports | Purified full four-subunit polymerase is compared with Pol2 residues1-1228 catalytic core. Single-nucleotide polymerization rates and substrate affinity are comparable, while loading/first extension on longer substrates is facilitated by the Pol2 C-terminus and/or accessory subunits. Both regions change between preparations, so the assay does not isolate a particular accessory subunit or establish assembly essentiality. |
+| root54-sources-ipr-IPR029703 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029703/; Native accession/name/type, entire description with curation/LLM flags and integrated signatures; no exhaustive domain-hierarchy survey | supports | Exact whole-protein DNA polymerase epsilon catalytic subunit family, integrated PTHR10670; separate P21951 corroborates membership. |
+| root54-sources-ipr-IPR016266 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016266/; Native accession/name/type, entire description with curation/LLM flags and integrated signatures; no exhaustive domain-hierarchy survey | supports | Exact DNA polymerase epsilon subunit B family, integrated PIRSF000799/PTHR12708; separate P24482 corroborates membership. |
+| root54-sources-ipr-IPR051377 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051377/; Native accession/name/type, entire description with curation/LLM flags and integrated signatures; no exhaustive domain-hierarchy survey | supports | Whole-protein Dpb4/POLE3 homologous family integrated PTHR46172; exact class scope is corroborated by separate reviewed-member identities and Q04603 cross-reference, not its LLM-generated unchecked description. |
+| root54-sources-ipr-IPR050568 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050568/; Native accession/name/type, entire description with curation/LLM flags and integrated signatures; no exhaustive domain-hierarchy survey | supports | Broad histone-fold transcription/replication regulator family, with LLM-generated checked description. It does not by itself establish an exact Dpb3 class. |
+| root54-sources-IPR051377-reviewed | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR051377/?page_size=200; Complete15-result metadata identities/names/genes/taxa, count15 and next:null; reviewed membership only | supports | All15 returned reviewed identities have Dpb4/POLE3-type names, including fungal DPB4, animal/amoebal POLE3, Drosophila Chrac-14 and Arabidopsis NF-YB11 annotated DNA polymerase II subunit B4. This corroborates the homologous protein class and Q04603 membership; it does not assert that every member was experimentally shown in a yeast polymerase or that the protein has only one complex role. |
+| schema-result | just validate data/structures/other/epsilon_dna_polymerase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/epsilon_dna_polymerase_complex.yaml |
+| strict-result | just validate-strict data/structures/other/epsilon_dna_polymerase_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/epsilon_dna_polymerase_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/epsilon_dna_polymerase_complex.yaml; Complete focused native report | supports | data/structures/other/epsilon_dna_polymerase_complex.yaml  (GO:0008622)<br>  pol_epsilon_supports_dna_replication	pol2_catalytic_subunit	COVERED	-&gt;pol2_catalytic_subunit (UniProtKB:P21951)<br>  pol_epsilon_supports_dna_replication	dpb2_subunit	COVERED	-&gt;dpb2_subunit (UniProtKB:P24482)<br>  pol_epsilon_supports_dna_replication	dpb3_subunit	COVERED	-&gt;dpb3_subunit (UniProtKB:P27344)<br>  pol_epsilon_supports_dna_replication	dpb4_subunit	COVERED	-&gt;dpb4_subunit (UniProtKB:Q04603)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     4  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     4  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/epsilon_dna_polymerase_complex.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/epsilon_dna_polymerase_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 16 collected target identifiers returned OK. PMID:11024162: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:12571237: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15814431: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:16369485: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:25538242: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:9745046: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, raw datasets, atomic coordinates, sequence alignments or supplemental data files were reanalyzed. Primary reading is limited to the exact sections declared in individual evidence rows.
+- Chilkova2003 and Asturias2006 were read at complete native abstract tier. Verified Chilkova publisher/PDF routes returned403; the Asturias publisher response was a JavaScript challenge despite HTTP200. A preliminary guessed Chilkova PII route is retained as a failed retrieval attempt but is not treated as the article identity.
+- Historical Burgers1998 and Garg/Burgers2005 reviews were read at native abstract tier. Their changing replication models do not alone invalidate this deliberately broad descriptive graph. The bounded family check does not prove that no finer Dpb3 identifier exists.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes clean observations and issue-bearing reviews alike.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T063720Z-epsilon-dna-polymerase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of epsilon DNA polymerase complex
+started_at: '2026-10-22T06:16:10Z'
+finished_at: '2026-10-22T06:37:20Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Two minor findings resolve exact Pol2/Dpb2/Dpb4 family mappings and add the
+  directly observed, condition-specific Dpb4 stability contribution. Heterotetramer
+  identity, protein examples and broad replication graph are supported with explicit
+  abstract/body and assay limits.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    sha256: d2ba24b44d526b14423e20d02b567e0564f8cf162bc811572fa69fce15878635
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0008622
+  path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+  label: epsilon DNA polymerase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target; source-native and primary reading
+    scopes are declared individually. Scientific inputs remain unchanged.
+  selection: One complete record in strict-path batch 54 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0008622
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just validate data/structures/other/epsilon_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just validate-strict data/structures/other/epsilon_dna_polymerase_complex.yaml
+    --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/epsilon_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Focused check passed; source claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/epsilon_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Focused check passed; source claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0008622
+  summary: No iModulon-specific claim is made; May2009 expression assays are assessed
+    directly where applicable.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root54-sources-go
+  - root54-sources-tax4932
+  - root54-sources-tax559292
+  - root54-sources-GO0008622-ancestors
+  - root54-sources-GO0008622-constraints
+  - root54-sources-pmid-11024162
+  - root54-sources-pmid-12571237
+  - root54-sources-pmid-14562095
+  - root54-sources-pmid-15814431
+  - root54-sources-pmid-16369485
+  - root54-sources-pmid-25538242
+  - root54-sources-pmid-9745046
+  - root54-sources-protein-P21951
+  - root54-sources-gene-POL2
+  - root54-sources-protein-P24482
+  - root54-sources-gene-DPB2
+  - root54-sources-protein-P27344
+  - root54-sources-gene-DPB3
+  - root54-sources-protein-Q04603
+  - root54-sources-gene-DPB4
+  - root54-sources-primary-PMC110797
+  - root54-sources-primary-PMC4319046
+  - root54-sources-ipr-IPR029703
+  - root54-sources-ipr-IPR016266
+  - root54-sources-ipr-IPR051377
+  - root54-sources-ipr-IPR050568
+  - root54-sources-IPR051377-reviewed
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  summary: '9 of 16 collected target identifiers returned OK. PMID:11024162: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:12571237: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15814431: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:16369485: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:25538242: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:9745046: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - root54-sources-pmid-11024162
+  - root54-sources-pmid-12571237
+  - root54-sources-pmid-14562095
+  - root54-sources-pmid-15814431
+  - root54-sources-pmid-16369485
+  - root54-sources-pmid-25538242
+  - root54-sources-pmid-9745046
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0008622
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/epsilon_dna_polymerase_complex.yaml
+  locator: Entire maintained record, including evidence, components, graphs, discussions,
+    imported composition and history where present
+  accessed_at: '2026-10-22T06:31:09Z'
+  support: context_only
+  summary: The complete maintained target was read. Neighboring records are not automatically
+    reviewed by this observation.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum, StructuralComponent, PresenceEnum and graph scope
+  accessed_at: '2026-10-22T06:31:09Z'
+  support: context_only
+  summary: Formation necessity differs from activity, recruitment into a larger assembly
+    or viability. Where used, COMMON means present in most members with exceptional
+    losses. This category is distinct from a measured prevalence census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact class mapping and protein-example boundaries
+  accessed_at: '2026-10-22T06:31:09Z'
+  support: context_only
+  summary: A whole-protein family grounds a constituent class; a taxon-paired accession
+    supplies a representative instance. Domain or broader superfamily mappings do
+    not necessarily resolve exact class tasks.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Directed evidence and mechanistic scope
+  accessed_at: '2026-10-22T06:31:09Z'
+  support: context_only
+  summary: Descriptive membership and function graphs are distinguished from causal
+    assembly dependencies and detailed molecular mechanisms.
+- evidence_id: root54-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005784,GO:0005789,GO:0006260,GO:0008622,GO:0031205,GO:0031207,GO:0042575,GO:0042910,GO:0140330,GO:0140534,GO:1990281
+  locator: 'Eleven native terms: identity/status, complete definitions, synonyms/comments
+    and relevant typed child relations only'
+  accessed_at: '2026-10-22T06:18:43.212342Z'
+  support: supports
+  summary: GO0008622 exactly identifies heterotetrameric epsilon DNA polymerase, with
+    Pol2/Dpb2/Dpb3/Dpb4 named for budding yeast. GO0042575 is its polymerase-complex
+    parent and GO0006260 is the DNA replication process. The inherited definition
+    preserves historical caution about leading-strand assignment.
+  snapshot_sha256: 19cd6bbb55b31ec2bbb98181c611734e9319f4dce2181b144c23335d9ab9cc1e
+- evidence_id: root54-sources-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T06:18:43.212607Z'
+  support: supports
+  summary: ENA taxId4932 identifies Saccharomyces cerevisiae; the complete name/rank/lineage
+    response was read.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root54-sources-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T06:18:43.212764Z'
+  support: supports
+  summary: ENA taxId559292 identifies Saccharomyces cerevisiae S288C; the complete
+    name/rank/lineage response was read.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root54-sources-GO0008622-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0008622/ancestors?relations=is_a
+  locator: Complete native ancestor response
+  accessed_at: '2026-10-22T06:18:49.014022Z'
+  support: supports
+  summary: The complete is_a-only ancestry contains the declared parent. It is not
+    a parthood or distribution census.
+  snapshot_sha256: 89a33f2beac0f62b1f2d0e1ef7c88b50e1c004182f25ca3a2dabc51071cc5d09
+- evidence_id: root54-sources-GO0008622-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0008622/constraints
+  locator: Focal taxonConstraints array only
+  accessed_at: '2026-10-22T06:18:49.032719Z'
+  support: context_only
+  summary: The focal term is constrained to Eukaryota; this restriction does not establish
+    occurrence in every eukaryotic organism.
+  snapshot_sha256: 18a7e4aa1a61e0aa8dd0799726105880b500fea393c8aa50f0716697687c0a52
+- evidence_id: root54-sources-pmid-11024162
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11024162+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:46.821569Z'
+  support: supports
+  summary: 'MED11024162: Structure and function of the fourth subunit (Dpb4p) of DNA
+    polymerase epsilon in Saccharomyces cerevisiae. Authors Ohya T, Maki S, Kawasaki
+    Y, Sugino A.; year 2000; DOI10.1093/nar/28.20.3846. The complete native abstract
+    was read; primary-body scopes are separate.'
+  snapshot_sha256: 7bbbb94e8d38953570648bbe635c8f3a2f900b108fe47be7925cde80b102c5c9
+- evidence_id: root54-sources-pmid-12571237
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12571237+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:46.880644Z'
+  support: supports
+  summary: 'MED12571237: The quaternary structure of DNA polymerase epsilon from Saccharomyces
+    cerevisiae. Authors Chilkova O, Jonsson BH, Johansson E.; year 2003; DOI10.1074/jbc.m211818200.
+    The complete native abstract was read; primary-body scopes are separate.'
+  snapshot_sha256: 1c78a402d599c29a015cd4aaf7ca33fe922a67cc2414530fd802d6cc8b4bf5d8
+- evidence_id: root54-sources-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:46.942085Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    Authors Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea
+    EK.; year 2003; DOI10.1038/nature02026. The complete native abstract was read;
+    primary-body scopes are separate.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: root54-sources-pmid-15814431
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15814431+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:47.081798Z'
+  support: supports
+  summary: 'MED15814431: DNA polymerases that propagate the eukaryotic DNA replication
+    fork. Authors Garg P, Burgers PM.; year 2005; DOI10.1080/10409230590935433. The
+    complete native abstract was read; primary-body scopes are separate.'
+  snapshot_sha256: 920ebbb9d96bf3adb9109d6ccc13122db72089a21f0ce7ade1b8138645c8ce70
+- evidence_id: root54-sources-pmid-16369485
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16369485+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:47.443232Z'
+  support: supports
+  summary: 'MED16369485: Structure of Saccharomyces cerevisiae DNA polymerase epsilon
+    by cryo-electron microscopy. Authors Asturias FJ, Cheung IK, Sabouri N, Chilkova
+    O, Wepplo D, Johansson E.; year 2006; DOI10.1038/nsmb1040. The complete native
+    abstract was read; primary-body scopes are separate.'
+  snapshot_sha256: cdd61a0fa5d999e2464131874463a01596719d41450d58483150b456e36565c4
+- evidence_id: root54-sources-pmid-25538242
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25538242+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:47.544811Z'
+  support: supports
+  summary: 'MED25538242: Yeast DNA polymerase ϵ catalytic core and holoenzyme have
+    comparable catalytic rates. Authors Ganai RA, Osterman P, Johansson E.; year 2015;
+    DOI10.1074/jbc.m114.615278. The complete native abstract was read; primary-body
+    scopes are separate.'
+  snapshot_sha256: d542fa14f007f9d653e1bd07e2bfcdffc41c13621eded35af99bc7ee0d2ecb7a
+- evidence_id: root54-sources-pmid-9745046
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9745046+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:47.695389Z'
+  support: supports
+  summary: 'MED9745046: Eukaryotic DNA polymerases in DNA replication and DNA repair.
+    Authors Burgers PM.; year 1998; DOI10.1007/s004120050300. The complete native
+    abstract was read; primary-body scopes are separate.'
+  snapshot_sha256: b120377422e7a10eff4cbc1c179bda0a37f2537f6878705c45c8b33d32aa3447
+- evidence_id: root54-sources-protein-P21951
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P21951.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:44.351959Z'
+  support: supports
+  summary: P21951 is the reviewed POL2 reference entry in taxon559292. The catalytic
+    Pol2 subunit has polymerase/exonuclease activity and an exact IPR029703 family
+    cross-reference.
+  snapshot_sha256: 93f959f4353502db7273f103877fba046b94397be479ee785e2ab018a104a4c6
+- evidence_id: root54-sources-gene-POL2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOL2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.738024Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P21951.
+  snapshot_sha256: 47d1fa9f1e1fce809e4c93659a9a89d5ebd5f6a9a2ce5f441d758eefdbc130ac
+- evidence_id: root54-sources-protein-P24482
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P24482.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:44.359455Z'
+  support: supports
+  summary: P24482 is the reviewed DPB2 reference entry in taxon559292. The Dpb2 entry
+    has IPR016266; cytoplasmic and nuclear localization links do not move the entire
+    polymerase to every individual-subunit location. Its generic FUNCTION prose is
+    not proof that the accessory subunit independently catalyzes exonucleolysis.
+  snapshot_sha256: 5e9c208313068eeb7e8a9ba38e8acb9fdabe4eb238cc6bcb52e26f3649d38683
+- evidence_id: root54-sources-gene-DPB2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.811959Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P24482.
+  snapshot_sha256: f3324b19b03ab6c1cc4195389444fa0d48c1a69a42a0bc8e7f334e6f8cbfc5b5
+- evidence_id: root54-sources-protein-P27344
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27344.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:44.372371Z'
+  support: supports
+  summary: P27344 is the reviewed DPB3 reference entry in taxon559292. The Dpb3 example
+    is part of the four-subunit polymerase. Generic complex-level proofreading prose
+    is not attributed to an autonomous Dpb3 active site.
+  snapshot_sha256: 813a343e236dd50328b6b92db68f7a188f1f7c23ffc79f9829bd283f3b97357a
+- evidence_id: root54-sources-gene-DPB3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.961373Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P27344.
+  snapshot_sha256: e340f607e1f62ce868849b03af903413a50178691c9063f9fd0e5ee0571391db
+- evidence_id: root54-sources-protein-Q04603
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04603.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:45.007246Z'
+  support: supports
+  summary: Q04603 is the reviewed DPB4 reference entry in taxon559292. The Dpb4 example
+    participates in polymerase epsilon and ISW2; shared membership does not merge
+    the two complexes. Generic proofreading prose is not evidence of Dpb4 catalysis.
+  snapshot_sha256: bc6495bed9da52fb9fd473800c575ee298e2bc5cac981a70b218ddd5ca507944
+- evidence_id: root54-sources-gene-DPB4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPB4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:46.727709Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession Q04603.
+  snapshot_sha256: 832a7fb8258ecf2347addedf27fe8c0cf6df41aaf016ee00ef78a5e8fe759233
+- evidence_id: root54-sources-primary-PMC110797
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC110797/
+  locator: Ohya2000 Methods sec3 strain table and sec5 purification; complete Results
+    sec13-16 including Figures1/2 captions. Other results/methods,Discussion,sequence
+    alignment and pixels not read.
+  accessed_at: '2026-10-22T06:20:24.977279Z'
+  support: supports
+  summary: Dpb4/YDR121W is identified by peptide matching and antibodies. Dpb4 deletion
+    is viable but delays replication. After MonoQ chromatography, mutant extracts
+    show easier Dpb2/Dpb3 dissociation from Pol2 and reduced associated Dpb3, directly
+    supporting a bounded stability effect. The resulting mixture still has assayed
+    polymerase activity, so this is not evidence of universal absence of the entire
+    complex or a direct Dpb4 catalytic role.
+  snapshot_sha256: 3047acfe35b93008356726345bf5d0d69f909980cda11225cca6f71afd8d77ad
+- evidence_id: root54-sources-primary-PMC4319046
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4319046/
+  locator: Ganai2015 Methods sec5-7; Results sec16-18,sec20-21 with embedded Figures1-4,6-7
+    captions and Tables1-5. Other sections and pixels not read.
+  accessed_at: '2026-10-22T06:20:24.977340Z'
+  support: supports
+  summary: Purified full four-subunit polymerase is compared with Pol2 residues1-1228
+    catalytic core. Single-nucleotide polymerization rates and substrate affinity
+    are comparable, while loading/first extension on longer substrates is facilitated
+    by the Pol2 C-terminus and/or accessory subunits. Both regions change between
+    preparations, so the assay does not isolate a particular accessory subunit or
+    establish assembly essentiality.
+  snapshot_sha256: 89640306decc6a4fd462891af729a8f593ff159b544a3514575090b4568af988
+- evidence_id: root54-sources-ipr-IPR029703
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029703/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.390387Z'
+  support: supports
+  summary: Exact whole-protein DNA polymerase epsilon catalytic subunit family, integrated
+    PTHR10670; separate P21951 corroborates membership.
+  snapshot_sha256: b80776af3402c4cd286ab6bb2c65fa27e91a155fd759fbe22de2c1ef72567dd6
+- evidence_id: root54-sources-ipr-IPR016266
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016266/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.504154Z'
+  support: supports
+  summary: Exact DNA polymerase epsilon subunit B family, integrated PIRSF000799/PTHR12708;
+    separate P24482 corroborates membership.
+  snapshot_sha256: fe69489e66565a275d910dbdf6d6ecdc8c9906a06f70df0c785051fba5a13432
+- evidence_id: root54-sources-ipr-IPR051377
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051377/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.545584Z'
+  support: supports
+  summary: Whole-protein Dpb4/POLE3 homologous family integrated PTHR46172; exact
+    class scope is corroborated by separate reviewed-member identities and Q04603
+    cross-reference, not its LLM-generated unchecked description.
+  snapshot_sha256: 9bdfe311b53f978a624fea4228263d4408ef60630986f7a2e4649c9474aa9c95
+- evidence_id: root54-sources-ipr-IPR050568
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050568/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.519927Z'
+  support: supports
+  summary: Broad histone-fold transcription/replication regulator family, with LLM-generated
+    checked description. It does not by itself establish an exact Dpb3 class.
+  snapshot_sha256: 11f3355159a9e41625de92336d1d3d830ae1f087f1a4ed5ff9a86470bca3ef83
+- evidence_id: root54-sources-IPR051377-reviewed
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR051377/?page_size=200
+  locator: Complete15-result metadata identities/names/genes/taxa, count15 and next:null;
+    reviewed membership only
+  accessed_at: '2026-10-22T06:27:46.162242Z'
+  support: supports
+  summary: All15 returned reviewed identities have Dpb4/POLE3-type names, including
+    fungal DPB4, animal/amoebal POLE3, Drosophila Chrac-14 and Arabidopsis NF-YB11
+    annotated DNA polymerase II subunit B4. This corroborates the homologous protein
+    class and Q04603 membership; it does not assert that every member was experimentally
+    shown in a yeast polymerase or that the protein has only one complex role.
+  snapshot_sha256: 328683d246ad79b5e3568faf6c1f0774b6b07f3a1b60d4f1aabcbde50b793a3a
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/epsilon_dna_polymerase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:11Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/epsilon_dna_polymerase_complex.yaml'
+  snapshot_sha256: a996d61075e216d350af9e581006c2d879a3f9b7dff57e4ed56edf4ba087af18
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/epsilon_dna_polymerase_complex.yaml
+    --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:12Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/epsilon_dna_polymerase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/epsilon_dna_polymerase_complex-strict.tsv"
+  snapshot_sha256: 88c7c6f53a185df7a43b9ce3aff20fee8eb51a91f5cba113ebe9fa8c67ef0028
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/epsilon_dna_polymerase_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T06:19:54.973207Z'
+  support: supports
+  summary: "data/structures/other/epsilon_dna_polymerase_complex.yaml  (GO:0008622)\n\
+    \  pol_epsilon_supports_dna_replication\tpol2_catalytic_subunit\tCOVERED\t->pol2_catalytic_subunit\
+    \ (UniProtKB:P21951)\n  pol_epsilon_supports_dna_replication\tdpb2_subunit\tCOVERED\t\
+    ->dpb2_subunit (UniProtKB:P24482)\n  pol_epsilon_supports_dna_replication\tdpb3_subunit\t\
+    COVERED\t->dpb3_subunit (UniProtKB:P27344)\n  pol_epsilon_supports_dna_replication\t\
+    dpb4_subunit\tCOVERED\t->dpb4_subunit (UniProtKB:Q04603)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     4  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     4  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 6f8e9867949e29c1044c6f57d6788b7d019afd1c2891b5256df95d0edf86a29d
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/epsilon_dna_polymerase_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T06:19:57.015050Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/epsilon_dna_polymerase_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 16 collected target identifiers returned OK. PMID:11024162: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:12571237: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15814431: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:16369485: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:25538242: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:9745046: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact four-subunit polymerase identity
+  outcome: supported
+  target_ids:
+  - GO:0008622
+  summary: GO identity and DNA-polymerase-complex parent match the maintained heterotetramer.
+    Chilkova’s complete native abstract directly reports four subunits and1:1:1:1
+    stoichiometry, supported by sedimentation/gel-filtration and equilibrium-ultracentrifugation
+    analysis. It does not imply four separate oligomeric polymerases.
+  evidence_ids:
+  - record
+  - root54-sources-go
+  - root54-sources-pmid-12571237
+  - root54-sources-primary-PMC110797
+  - root54-sources-GO0008622-ancestors
+  - root54-sources-GO0008622-constraints
+- assessment_id: composition
+  area: grounding
+  topic: Four correct examples and three available exact families
+  outcome: concern
+  target_ids:
+  - GO:0008622
+  summary: All four S288C reference proteins and gene identities match. Pol2, Dpb2
+    and Dpb4 have exact full-protein or homologous-family mappings. The Dpb3 candidate
+    requires finer scope control; a generic histone fold or generated description
+    is not enough to resolve a particular named subunit.
+  evidence_ids:
+  - record
+  - root54-sources-ipr-IPR029703
+  - root54-sources-ipr-IPR016266
+  - root54-sources-ipr-IPR051377
+  - root54-sources-IPR051377-reviewed
+  - root54-sources-ipr-IPR050568
+  - root54-sources-protein-P21951
+  - root54-sources-protein-P24482
+  - root54-sources-protein-P27344
+  - root54-sources-protein-Q04603
+  - root54-sources-gene-POL2
+  - root54-sources-gene-DPB2
+  - root54-sources-gene-DPB3
+  - root54-sources-gene-DPB4
+- assessment_id: formation
+  area: grounding
+  topic: Direct but condition-specific Dpb4 stability dependence
+  outcome: concern
+  target_ids:
+  - GO:0008622
+  summary: 'Ohya supplies a physical complex-stability measurement: Dpb2/Dpb3 dissociate
+    more readily from Pol2 after chromatography of dpb4-deletion extracts. This is
+    more specific than the existing generic membership statements, but does not establish
+    every subunit as universally essential or prove complete assembly loss in vivo.'
+  evidence_ids:
+  - record
+  - schema
+  - root54-sources-primary-PMC110797
+- assessment_id: graph
+  area: graph
+  topic: Descriptive replication graph and missing bounded stability detail
+  outcome: concern
+  target_ids:
+  - GO:0008622
+  summary: The NONMECHANISTIC four-membership plus replication graph is supported.
+    It deliberately leaves leading-strand assignment,PCNA,replisome and repair mechanisms
+    unresolved. The one actionable enhancement is the directly measured Dpb4-associated
+    stability effect, not a demand to expand every catalytic pathway.
+  evidence_ids:
+  - record
+  - graphs
+  - root54-sources-go
+  - root54-sources-primary-PMC110797
+  - root54-sources-primary-PMC4319046
+  - root54-sources-pmid-12571237
+- assessment_id: evidence
+  area: evidence
+  topic: Evidence-tier and catalytic-region distinctions
+  outcome: supported
+  target_ids:
+  - GO:0008622
+  summary: Asturias’ complete abstract describes a20A low-resolution full-polymerase
+    reconstruction; it is not an atomic all-subunit structure. Ganai changes both
+    the catalytic subunit C-terminus and accessory proteins and thus cannot isolate
+    any one contributor. Generic UniProt accessory-subunit proofreading prose is not
+    imported as autonomous Dpb2/3/4 catalysis.
+  evidence_ids:
+  - record
+  - root54-sources-primary-PMC4319046
+  - root54-sources-pmid-16369485
+  - root54-sources-protein-P21951
+  - root54-sources-protein-P24482
+  - root54-sources-protein-P27344
+  - root54-sources-protein-Q04603
+- assessment_id: scope
+  area: scope
+  topic: Reference proteins, experimental strains and localization
+  outcome: supported
+  target_ids:
+  - GO:0008622
+  summary: S288C reference accessions are distinguished from Ohya’s listed experimental
+    strains and Ganai’s Py116 expression strain. Huh’s localization abstract does
+    not independently identify each individual protein’s imaging result; native accession
+    links supply those associations. COMMON is a qualitative category, not a measured
+    population survey.
+  evidence_ids:
+  - record
+  - schema
+  - root54-sources-primary-PMC110797
+  - root54-sources-primary-PMC4319046
+  - root54-sources-tax4932
+  - root54-sources-tax559292
+  - root54-sources-protein-P21951
+  - root54-sources-protein-P24482
+  - root54-sources-protein-P27344
+  - root54-sources-protein-Q04603
+  - root54-sources-GO0008622-ancestors
+  - root54-sources-GO0008622-constraints
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and bounded follow-up
+  outcome: supported
+  target_ids:
+  - GO:0008622
+  summary: Every maintained field, evidence row, component/example, graph edge, discussion
+    and history entry was read. Required defects are distinguished from optional enrichment
+    and unavailable source detail. Scientific status/history remain unchanged.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root54-sources-go
+findings:
+- finding_id: F1
+  issue_key: epsilon-pol2-dpb2-dpb4-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the Pol2, Dpb2 and Dpb4 family mappings
+  description: Pol2, Dpb2 and Dpb4 remain REVIEWED_LABEL_ONLY under an open exact-grounding
+    task, although native IPR029703, IPR016266 and IPR051377 identify their full-protein
+    classes and their reference proteins independently carry the respective cross-references.
+  target_ids:
+  - GO:0008622
+  field_paths:
+  - components[0].grounding_status
+  - components[1].grounding_status
+  - components[3].grounding_status
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - root54-sources-ipr-IPR029703
+  - root54-sources-ipr-IPR016266
+  - root54-sources-ipr-IPR051377
+  - root54-sources-IPR051377-reviewed
+  - root54-sources-protein-P21951
+  - root54-sources-protein-P24482
+  - root54-sources-protein-P27344
+  - root54-sources-protein-Q04603
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact protein class grounding
+  native_severity: minor
+  normalization_reason: This is a bounded available class mapping; supported complex
+    identity and composition remain intact.
+- finding_id: F2
+  issue_key: epsilon-dpb4-bounded-complex-stability
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the directly observed Dpb4 stability contribution
+  description: The current Dpb4 role and graph only state membership. The already
+    cited Ohya2000 source directly reports easier Dpb2/Dpb3 dissociation from Pol2
+    in dpb4-deletion extracts after MonoQ chromatography. This concrete structure-level
+    dependence can be recorded without replacing UNKNOWN with an unsupported universal
+    ESSENTIAL.
+  target_ids:
+  - GO:0008622
+  field_paths:
+  - components[3].role
+  - causal_graphs[0]
+  evidence_ids:
+  - record
+  - schema
+  - root54-sources-primary-PMC110797
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  rule_id: Resolvable source-backed structure-level dependency
+  native_severity: minor
+  normalization_reason: This is a bounded missing assembly-stability claim in an otherwise
+    correct complex; no whole-complex identity error or universal necessity is inferred.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0008622
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  description: Ground Pol2 with IPR029703, Dpb2 with IPR016266 and Dpb4 with IPR051377,
+    keeping the reference accession/taxon pairs separate and narrowing the open task
+    to classes not yet securely resolved.
+  acceptance_checks:
+  - Verify exact family identity/type and separate representative membership.
+  - Do not substitute a shared histone fold or broad transcription-factor family for
+    an unresolved subunit.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0008622
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  description: Add a source-scoped Dpb4 contribution to stability/retention of Dpb2
+    and Dpb3 with Pol2, explicitly tied to the mutant-extract chromatography experiment.
+    Preserve UNKNOWN where whole-complex formation necessity remains unestablished.
+  acceptance_checks:
+  - Cite Results sec15 and Figure1 for the physical readout.
+  - Distinguish observed association/stability from cell viability, replication timing
+    and intrinsic polymerase activity.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw datasets, atomic coordinates, sequence alignments or supplemental
+  data files were reanalyzed. Primary reading is limited to the exact sections declared
+  in individual evidence rows.
+- Chilkova2003 and Asturias2006 were read at complete native abstract tier. Verified
+  Chilkova publisher/PDF routes returned403; the Asturias publisher response was a
+  JavaScript challenge despite HTTP200. A preliminary guessed Chilkova PII route is
+  retained as a failed retrieval attempt but is not treated as the article identity.
+- Historical Burgers1998 and Garg/Burgers2005 reviews were read at native abstract
+  tier. Their changing replication models do not alone invalidate this deliberately
+  broad descriptive graph. The bounded family check does not prove that no finer Dpb3
+  identifier exists.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes clean observations and issue-bearing reviews
+  alike.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

@@ -1,0 +1,1038 @@
+# Lolcde lipoprotein abc transporter complex scientific review
+
+- Review: 20261022T080132Z-lolcde-lipoprotein-abc-transporter-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:34:51Z
+- Finished UTC: 2026-10-22T08:01:32Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+LolCDE identity,1:2:1 architecture and qualified release function are supported. One grouped minor resolves three exact family mappings; individual formation necessity remains separately unresolved.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen guidance and protein-example skill. Actual source-reading extents appear per evidence row; no unlisted primary experiments or assets are certified.
+
+Selection: Target 7 of batch58, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml | maintained | LolCDE lipoprotein ABC transporter complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Focused validator passed. |
+| Native causal-graphs | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Native focused check passed; biological claims assessed separately. |
+| Native verify | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Native focused check passed; biological claims assessed separately. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | 11 of 16 collected target identifiers returned OK. ECO:0000353: SKIPPED; Native ECO identifies physical interaction evidence used in manual assertion (ECO0000353); the term does not itself prove universal formation necessity.; PDB:7MDY: SKIPPED; Native RCSB released entry 7MDY: LolCDE nucleotide-bound; primary DOI 10.1038/s41467-021-24965-1. Entry identity is distinct from coordinate or assay reanalysis.; PMID:10783239: UNREACHABLE; Native Europe PMC uniquely identifies MED10783239: A new ABC transporter mediating the detachment of lipid-modified proteins from membranes. (2000); DOI 10.1038/35008635. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18634750: UNREACHABLE; Native Europe PMC uniquely identifies MED18634750: ATP-binding cassette transporters in Escherichia coli. (2008); DOI 10.1016/j.bbamem.2008.06.009. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex: SKIPPED; The exact maintained identifier uniquely resolves to this target in the complete data/structures YAML traversal, including ignored files. This is local identity rather than external authority resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Local identity and four-copy transporter
+
+identity: supported. Targets: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex.
+
+The unique local record matches CPX4262 and deposited LolCDE: three protein classes and four copies. Native proteins/taxon and the correct coarse NONMECHANISTIC release/localization graph agree.
+
+### Three exact full-family alternatives
+
+grounding: concern. Targets: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex.
+
+Exact LolC, LolD and LolE families are available and independently joined to the correct native examples. Their present label-only notes defer mapping because only shared classes were considered; these exact alternatives resolve that bounded gap.
+
+### Assembly necessity versus essential cellular function
+
+grounding: unknown. Targets: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex.
+
+Physical complex membership and canonical1:2:1 architecture are supported. The reviewed source extents do not independently settle every categorical ESSENTIAL field as an omission-based formation requirement; cellular survival, ATPase loss and loss of substrate binding are different readouts. This uncertainty is retained without inventing a dispensability result or optional enrichment finding.
+
+### Canonical E.coli and qualified release model
+
+scope: supported. Targets: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex.
+
+The canonical E.coli complex and recombinant K12/BL21 experiment are distinguished. Current evidence supports lipoprotein extraction and ATP-coupled changes without certifying every general bacterial sorting rule or kinetic flux step.
+
+### Whole maintained target and declared source coverage
+
+completeness: supported. Targets: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex.
+
+Every maintained field, source note, graph and discussion was inspected at the declared extents. Optional inventory/contact enrichment and acknowledged unknowns alone do not create findings.
+
+## Findings
+
+### F1: Ground the three exact LolCDE subunit families
+
+minor / open / confirmed; issue key: lolcde-exact-subunit-families.
+
+All three protein rows remain REVIEWED_LABEL_ONLY while native full-family identities and independent example membership now resolve their retained classes.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Map LolC to NCBIfam:NF008076, LolD to InterPro:IPR011924 and LolE to NCBIfam:NF008357; retain correct examples,1:2:1 architecture and source-specific scope.
+
+- Do not substitute the broader LolC/E or LolD-like classes for these exact subunit families.
+- Preserve supported source-specific claims and pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml; Entire maintained record, all examples, evidence, graphs, properties, images, history and discussions | context_only | Every maintained field was read. Historical curation statements are context, not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from function, viability and membership. COMMON means most members with losses the exception; VARIABLE means lineage- or strain-level patchiness, not cell-type-specific visibility. |
+| curation | docs/CURATION.md; Component grounding and REVIEWED_LABEL_ONLY at159–160 | context_only | Exact full-family mappings differ from shared domains or broader paralog classes. Label-only is not merely uncurated in this pass. |
+| complex58-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005743,GO:0005745,GO:0008559,GO:0016604,GO:0016605,GO:0016606,GO:0031981,GO:0034982,GO:0043190,GO:0044874,GO:0098800,GO:0140306,GO:1905368,GO:1990195,GO:1990196; Complete target-relevant definitions/synonyms and typed relationships; unrelated combined entries not attributed to this target | supports | GO0043190 identifies the ATP-binding cassette transporter parent; GO0140306/0044874 identify the lipoprotein release/localization functions. The local LolCDE identity is assessed separately against ComplexPortal. |
+| complex58-agent-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete ENA identity/names/lineage | supports | Taxon83333: Escherichia coli K-12, rank strain; exact native names and lineage inspected. |
+| complex58-agent-protein-P0ADC3 | https://rest.uniprot.org/uniprotkb/P0ADC3.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P0ADC3, Lipoprotein-releasing system transmembrane protein LolC; primary genes lolC, synonyms ycfU, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-protein-P75957 | https://rest.uniprot.org/uniprotkb/P75957.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P75957, Lipoprotein-releasing system ATP-binding protein LolD; primary genes lolD, synonyms ycfV, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-protein-P75958 | https://rest.uniprot.org/uniprotkb/P75958.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P75958, Lipoprotein-releasing system transmembrane protein LolE; primary genes lolE, synonyms ycfW, taxon83333. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex58-agent-query-lolC | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P0ADC3. Every returned identity/gene/organism was read. |
+| complex58-agent-query-lolD | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P75957. Every returned identity/gene/organism was read. |
+| complex58-agent-query-lolE | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolE%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete query results | supports | Exact native query returns 1 entry: P75958. Every returned identity/gene/organism was read. |
+| complex58-agent-pmid-10783239 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10783239+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED10783239: A new ABC transporter mediating the detachment of lipid-modified proteins from membranes. Yakushi T, Masuda K, Narita S, Matsuyama S, Tokuda H. (2000), DOI10.1038/35008635. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex58-agent-pmid-18634750 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18634750+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED18634750: ATP-binding cassette transporters in Escherichia coli. Moussatova A, Kandt C, O'Mara ML, Tieleman DP. (2008), DOI10.1016/j.bbamem.2008.06.009. Exact metadata and complete available abstract read; this does not claim body access. This is secondary-review context. |
+| complex58-agent-doi-10.1038_s41467-021-24965-1 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-021-24965-1%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: Mechanism of LolCDE as a molecular extruder of bacterial triacylated lipoproteins. Sharma S, Zhou R, Wan L, Feng S, Song K, Xu C, Li Y, Liao M. (2021), PMID34344901. Complete available abstract read. |
+| complex58-agent-cpx-4262 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4262; Complex identity/taxon/function, properties, all participants/stoichiometries/evidence codes | supports | CPX4262 identifies the E.coli LolCDE transporter, with LolC:1,LolD:2,LolE:1, ATP-dependent lipoprotein release and physical-interaction evidence. Native participant identities and taxon agree. |
+| complex58-agent-eco-0000353 | https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO:0000353; Exact native ECO definition | supports | ECO0000353 denotes physical-interaction evidence used in a manual assertion. It is not by itself an individual-subunit omission experiment. |
+| complex58-agent-PMC8333309-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8333309/fullTextXML; Complete Introduction Sec1, Results Sec3–8 and Discussion Sec9; Methods Sec11/13/14/15; all embedded Fig1–5 captions. No figure pixels/supplements. | supports | Sharma2021 resolves nucleotide-free/bound nanodisc LolCDE and tests lipoprotein recognition. E.coli K12 genes are expressed in BL21(DE3); ATPase measurements are distinct from direct transport flux. ATP binding produces large conformational changes, while hydrolysis/reset is a qualified mechanistic model. The +2 rule is described for E.coli/related organisms. |
+| complex58-agent-pdb-7MDY | https://data.rcsb.org/rest/v1/core/entry/7MDY; Entry identity/title/primary citation | supports | PDB7MDY is the nucleotide-bound LolCDE deposition linked to Sharma2021. Its metadata establish the structural source identity. |
+| complex58-agent-pdb-7MDY-assembly1 | https://data.rcsb.org/rest/v1/core/assembly/7MDY/1; Assembly1 composition/counts/generation metadata | supports | The deposited biological assembly contains four protein copies from three entity classes, consistent with1:2:1 LolCDE. |
+| complex58-agent-pdb-7MDY-entity1 | https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/1; Complete polymer identity/source-organism/chain-count fields | supports | The entity response supplies this deposited protein identity, source organism and chain multiplicity; the three separate responses are joined to assembly1. |
+| complex58-agent-pdb-7MDY-entity2 | https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/2; Complete polymer identity/source-organism/chain-count fields | supports | The entity response supplies this deposited protein identity, source organism and chain multiplicity; the three separate responses are joined to assembly1. |
+| complex58-agent-pdb-7MDY-entity3 | https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/3; Complete polymer identity/source-organism/chain-count fields | supports | The entity response supplies this deposited protein identity, source organism and chain multiplicity; the three separate responses are joined to assembly1. |
+| complex58-agent-ncbifam-NF008076 | https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF008076/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | NF008076 identifies the full LolC lipoprotein-releasing transporter subunit family. |
+| complex58-agent-ipr-IPR011924 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011924/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | IPR011924 identifies the full LolD lipoprotein-releasing ATP-binding subunit family. |
+| complex58-agent-ncbifam-NF008357 | https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF008357/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | NF008357 identifies the full LolE lipoprotein-releasing transporter subunit family. |
+| complex58-agent-ipr-IPR011925 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011925/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | The LolC/E family spans both transmembrane paralogs and is broader than either individual row. |
+| complex58-agent-ipr-IPR015854 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015854/; Native name/type, description and curation flags/signatures; example membership is independently supplied by UniProt | supports | The LolD-like family is broader than the retained specific LolD class. |
+| local-id | rg -uu -n ^identifier: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex$ data/structures; Ignored-inclusive full data/structures exact identifier search | supports | Exactly one maintained record has the minted identifier, the current target. |
+| schema-result | just validate data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml |
+| strict-result | just validate-strict data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml  (cellstructuremech:lolcde_lipoprotein_abc_transporter_complex)<br>  lolcde_lipoprotein_release	lolc	COVERED	-&gt;lolc_transmembrane_subunit (UniProtKB:P0ADC3)<br>  lolcde_lipoprotein_release	lold	COVERED	-&gt;lold_atp_binding_subunit (UniProtKB:P75957)<br>  lolcde_lipoprotein_release	lole	COVERED	-&gt;lole_transmembrane_subunit (UniProtKB:P75958)<br>  lolcde_lipoprotein_release	mature_outer_membrane_lipoprotein	UNANCHORED_NO_UNIPROT	mature outer-membrane lipoprotein<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     4  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 16 collected target identifiers returned OK. ECO:0000353: SKIPPED; Native ECO identifies physical interaction evidence used in manual assertion (ECO0000353); the term does not itself prove universal formation necessity.; PDB:7MDY: SKIPPED; Native RCSB released entry 7MDY: LolCDE nucleotide-bound; primary DOI 10.1038/s41467-021-24965-1. Entry identity is distinct from coordinate or assay reanalysis.; PMID:10783239: UNREACHABLE; Native Europe PMC uniquely identifies MED10783239: A new ABC transporter mediating the detachment of lipid-modified proteins from membranes. (2000); DOI 10.1038/35008635. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18634750: UNREACHABLE; Native Europe PMC uniquely identifies MED18634750: ATP-binding cassette transporters in Escherichia coli. (2008); DOI 10.1016/j.bbamem.2008.06.009. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex: SKIPPED; The exact maintained identifier uniquely resolves to this target in the complete data/structures YAML traversal, including ignored files. This is local identity rather than external authority resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements, atomic coordinates or raw experimental data were analyzed.
+- Yakushi2000 publisher returned HTTP200 client-challenge HTML, not a paper body; its complete native abstract was read. Moussatova2008 was read only as secondary-review abstract context.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T080132Z-lolcde-lipoprotein-abc-transporter-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Lolcde lipoprotein abc transporter complex scientific review
+started_at: '2026-10-22T07:34:51Z'
+finished_at: '2026-10-22T08:01:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: LolCDE identity,1:2:1 architecture and qualified release function are supported.
+  One grouped minor resolves three exact family mappings; individual formation necessity
+  remains separately unresolved.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    sha256: 9bc1e320681a91bb883829715c5e4db10330c4f5505b7155f8485e6e662d0f80
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  label: LolCDE lipoprotein ABC transporter complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen guidance and protein-example
+    skill. Actual source-reading extents appear per evidence row; no unlisted primary
+    experiments or assets are certified.
+  selection: Target 7 of batch58, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just validate data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just validate-strict data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex58-agent-go
+  - complex58-agent-tax-83333
+  - complex58-agent-protein-P0ADC3
+  - complex58-agent-protein-P75957
+  - complex58-agent-protein-P75958
+  - complex58-agent-query-lolC
+  - complex58-agent-query-lolD
+  - complex58-agent-query-lolE
+  - complex58-agent-pmid-10783239
+  - complex58-agent-pmid-18634750
+  - complex58-agent-doi-10.1038_s41467-021-24965-1
+  - complex58-agent-cpx-4262
+  - complex58-agent-eco-0000353
+  - complex58-agent-PMC8333309-xml
+  - complex58-agent-pdb-7MDY
+  - complex58-agent-pdb-7MDY-assembly1
+  - complex58-agent-pdb-7MDY-entity1
+  - complex58-agent-pdb-7MDY-entity2
+  - complex58-agent-pdb-7MDY-entity3
+  - complex58-agent-ncbifam-NF008076
+  - complex58-agent-ipr-IPR011924
+  - complex58-agent-ncbifam-NF008357
+  - complex58-agent-ipr-IPR011925
+  - complex58-agent-ipr-IPR015854
+  - local-id
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: '11 of 16 collected target identifiers returned OK. ECO:0000353: SKIPPED;
+    Native ECO identifies physical interaction evidence used in manual assertion (ECO0000353);
+    the term does not itself prove universal formation necessity.; PDB:7MDY: SKIPPED;
+    Native RCSB released entry 7MDY: LolCDE nucleotide-bound; primary DOI 10.1038/s41467-021-24965-1.
+    Entry identity is distinct from coordinate or assay reanalysis.; PMID:10783239:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED10783239: A new ABC transporter
+    mediating the detachment of lipid-modified proteins from membranes. (2000); DOI
+    10.1038/35008635. This resolves the identifier transport residual only; primary-source
+    reading remains separately scoped.; PMID:18634750: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED18634750: ATP-binding cassette transporters in Escherichia
+    coli. (2008); DOI 10.1016/j.bbamem.2008.06.009. This resolves the identifier transport
+    residual only; primary-source reading remains separately scoped.; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex:
+    SKIPPED; The exact maintained identifier uniquely resolves to this target in the
+    complete data/structures YAML traversal, including ignored files. This is local
+    identity rather than external authority resolution. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex58-agent-eco-0000353
+  - complex58-agent-pdb-7MDY
+  - complex58-agent-pmid-10783239
+  - complex58-agent-pmid-18634750
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  locator: Entire maintained record, all examples, evidence, graphs, properties, images,
+    history and discussions
+  accessed_at: '2026-10-22T07:46:24Z'
+  support: context_only
+  summary: Every maintained field was read. Historical curation statements are context,
+    not independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T07:46:24Z'
+  support: context_only
+  summary: Formation necessity differs from function, viability and membership. COMMON
+    means most members with losses the exception; VARIABLE means lineage- or strain-level
+    patchiness, not cell-type-specific visibility.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding and REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T07:46:24Z'
+  support: context_only
+  summary: Exact full-family mappings differ from shared domains or broader paralog
+    classes. Label-only is not merely uncurated in this pass.
+- evidence_id: complex58-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005743,GO:0005745,GO:0008559,GO:0016604,GO:0016605,GO:0016606,GO:0031981,GO:0034982,GO:0043190,GO:0044874,GO:0098800,GO:0140306,GO:1905368,GO:1990195,GO:1990196
+  locator: Complete target-relevant definitions/synonyms and typed relationships;
+    unrelated combined entries not attributed to this target
+  accessed_at: '2026-10-22T07:36:57.609631Z'
+  support: supports
+  summary: GO0043190 identifies the ATP-binding cassette transporter parent; GO0140306/0044874
+    identify the lipoprotein release/localization functions. The local LolCDE identity
+    is assessed separately against ComplexPortal.
+  snapshot_sha256: 242f72bf78cb9fffe4670986a4651eb5296e5987f4f8f28a92533f2d5764045d
+- evidence_id: complex58-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:37:01.921388Z'
+  support: supports
+  summary: 'Taxon83333: Escherichia coli K-12, rank strain; exact native names and
+    lineage inspected.'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: complex58-agent-protein-P0ADC3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADC3.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:57.610140Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P0ADC3, Lipoprotein-releasing system
+    transmembrane protein LolC; primary genes lolC, synonyms ycfU, taxon83333. Its
+    own native comments and family cross-references were inspected with their original
+    evidence qualifiers.'
+  snapshot_sha256: a9b53bf112c3ddac173aa28de70bab78e43ff7104a2b4e33f32ffcc337527470
+- evidence_id: complex58-agent-protein-P75957
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P75957.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:59.205546Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P75957, Lipoprotein-releasing system
+    ATP-binding protein LolD; primary genes lolD, synonyms ycfV, taxon83333. Its own
+    native comments and family cross-references were inspected with their original
+    evidence qualifiers.'
+  snapshot_sha256: 4a90a4d028ffd3b16115b94edd516cb4b88e9a9ba1e1d667e5cb3851fb333e4d
+- evidence_id: complex58-agent-protein-P75958
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P75958.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:36:59.326149Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P75958, Lipoprotein-releasing system
+    transmembrane protein LolE; primary genes lolE, synonyms ycfW, taxon83333. Its
+    own native comments and family cross-references were inspected with their original
+    evidence qualifiers.'
+  snapshot_sha256: d90ee551682661d6bd97c04e3a399814bacec9688257988b268467314b152459
+- evidence_id: complex58-agent-query-lolC
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:08.297416Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P0ADC3. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 24e5e117fdd695734205da1b44dfbece3dfb1c69250abab110a2b53502aa67ad
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-query-lolD
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:09.117837Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P75957. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 6301389cebcd2127dda9ededfdb40589c9f7ea17c64bc3d413420d858ca726f2
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-query-lolE
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolE%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:37:09.954277Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P75958. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 7116f3a87e7c09a2364fe937867b284c48682d6c1262adaec07f9c8c14df4ae2
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlolE%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex58-agent-pmid-10783239
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10783239+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:37:01.967048Z'
+  support: supports
+  summary: 'MED10783239: A new ABC transporter mediating the detachment of lipid-modified
+    proteins from membranes. Yakushi T, Masuda K, Narita S, Matsuyama S, Tokuda H.
+    (2000), DOI10.1038/35008635. Exact metadata and complete available abstract read;
+    this does not claim body access. '
+  snapshot_sha256: 0b1e9f11874fa4cac50d71456cd401e4da2885fe433d603a82f5010019516bad
+- evidence_id: complex58-agent-pmid-18634750
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18634750+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:37:02.507337Z'
+  support: supports
+  summary: 'MED18634750: ATP-binding cassette transporters in Escherichia coli. Moussatova
+    A, Kandt C, O''Mara ML, Tieleman DP. (2008), DOI10.1016/j.bbamem.2008.06.009.
+    Exact metadata and complete available abstract read; this does not claim body
+    access. This is secondary-review context.'
+  snapshot_sha256: 9cba3f4667b8637d6d604c0fcc1ec61026be16d1833f31c5cba109bf764f92ec
+- evidence_id: complex58-agent-doi-10.1038_s41467-021-24965-1
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-021-24965-1%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:37:04.953477Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: Mechanism of LolCDE as a molecular extruder
+    of bacterial triacylated lipoproteins. Sharma S, Zhou R, Wan L, Feng S, Song K,
+    Xu C, Li Y, Liao M. (2021), PMID34344901. Complete available abstract read.'
+  snapshot_sha256: 321a64843f86a8b60bcc3a1e9a4d5d610bea9d4bfde5b35c240b87fcbcb03bea
+- evidence_id: complex58-agent-cpx-4262
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4262
+  locator: Complex identity/taxon/function, properties, all participants/stoichiometries/evidence
+    codes
+  accessed_at: '2026-10-22T07:37:06.241866Z'
+  support: supports
+  summary: CPX4262 identifies the E.coli LolCDE transporter, with LolC:1,LolD:2,LolE:1,
+    ATP-dependent lipoprotein release and physical-interaction evidence. Native participant
+    identities and taxon agree.
+  snapshot_sha256: 3c4e0c4393d6f59630afb789cce126b6e62e400378f807563f6c97d217928b01
+- evidence_id: complex58-agent-eco-0000353
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO:0000353
+  locator: Exact native ECO definition
+  accessed_at: '2026-10-22T07:37:07.523330Z'
+  support: supports
+  summary: ECO0000353 denotes physical-interaction evidence used in a manual assertion.
+    It is not by itself an individual-subunit omission experiment.
+  snapshot_sha256: a85f179a3fca3a554fa914be25c4972efe9e487088eb9d16fdaf28961e63a057
+- evidence_id: complex58-agent-PMC8333309-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8333309/fullTextXML
+  locator: Complete Introduction Sec1, Results Sec3–8 and Discussion Sec9; Methods
+    Sec11/13/14/15; all embedded Fig1–5 captions. No figure pixels/supplements.
+  accessed_at: '2026-10-22T07:37:40.915288Z'
+  support: supports
+  summary: Sharma2021 resolves nucleotide-free/bound nanodisc LolCDE and tests lipoprotein
+    recognition. E.coli K12 genes are expressed in BL21(DE3); ATPase measurements
+    are distinct from direct transport flux. ATP binding produces large conformational
+    changes, while hydrolysis/reset is a qualified mechanistic model. The +2 rule
+    is described for E.coli/related organisms.
+  snapshot_sha256: d54df46c74b7b62a0623a6b7517a731f9450791e3e8838d816c61a1a1f46a43d
+- evidence_id: complex58-agent-pdb-7MDY
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/7MDY
+  locator: Entry identity/title/primary citation
+  accessed_at: '2026-10-22T07:37:07.574264Z'
+  support: supports
+  summary: PDB7MDY is the nucleotide-bound LolCDE deposition linked to Sharma2021.
+    Its metadata establish the structural source identity.
+  snapshot_sha256: dfe61154e5964c515f6da17c9f088704793731a4a5ca927366456049a5484392
+- evidence_id: complex58-agent-pdb-7MDY-assembly1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/7MDY/1
+  locator: Assembly1 composition/counts/generation metadata
+  accessed_at: '2026-10-22T07:37:07.636226Z'
+  support: supports
+  summary: The deposited biological assembly contains four protein copies from three
+    entity classes, consistent with1:2:1 LolCDE.
+  snapshot_sha256: f36d97824690e5893d5685e056bf423569429b20139a3f4b4b7092af70ec4d35
+- evidence_id: complex58-agent-pdb-7MDY-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/1
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:07.698203Z'
+  support: supports
+  summary: The entity response supplies this deposited protein identity, source organism
+    and chain multiplicity; the three separate responses are joined to assembly1.
+  snapshot_sha256: bf004734e86db917e6208a1c58377a74961b0ea6f0b225263528d8f973388502
+- evidence_id: complex58-agent-pdb-7MDY-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/2
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:07.775167Z'
+  support: supports
+  summary: The entity response supplies this deposited protein identity, source organism
+    and chain multiplicity; the three separate responses are joined to assembly1.
+  snapshot_sha256: 211509b30083b3cc372fdd69a25db4ec044d81d2b14ce3177b641d5335cdec40
+- evidence_id: complex58-agent-pdb-7MDY-entity3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7MDY/3
+  locator: Complete polymer identity/source-organism/chain-count fields
+  accessed_at: '2026-10-22T07:37:07.857305Z'
+  support: supports
+  summary: The entity response supplies this deposited protein identity, source organism
+    and chain multiplicity; the three separate responses are joined to assembly1.
+  snapshot_sha256: 2edf94f92414d704b0c8f378f9780e6b3ff5efecc95cab23916432497ab5318d
+- evidence_id: complex58-agent-ncbifam-NF008076
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF008076/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:44.776394Z'
+  support: supports
+  summary: NF008076 identifies the full LolC lipoprotein-releasing transporter subunit
+    family.
+  snapshot_sha256: 25245b083fe05c65934c02caa3000a91071ccc8d9ce8f9a86e51bf8578f0e467
+- evidence_id: complex58-agent-ipr-IPR011924
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011924/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:43.448417Z'
+  support: supports
+  summary: IPR011924 identifies the full LolD lipoprotein-releasing ATP-binding subunit
+    family.
+  snapshot_sha256: 43f64974d9b0c477d5e3e6fb416e9a35d79e2322428fe780481bdf2937eb6bef
+- evidence_id: complex58-agent-ncbifam-NF008357
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF008357/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:45.132677Z'
+  support: supports
+  summary: NF008357 identifies the full LolE lipoprotein-releasing transporter subunit
+    family.
+  snapshot_sha256: a190a0b893efd7e75bb191ecf35d6ba381aaa3a04aecc1e6045abfcf13ac79c6
+- evidence_id: complex58-agent-ipr-IPR011925
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011925/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:42.830232Z'
+  support: supports
+  summary: The LolC/E family spans both transmembrane paralogs and is broader than
+    either individual row.
+  snapshot_sha256: efb3b57d6da640ce7de3071f41d7a161baad0daabd7b09521086ce41a6467216
+- evidence_id: complex58-agent-ipr-IPR015854
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015854/
+  locator: Native name/type, description and curation flags/signatures; example membership
+    is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:37:43.417105Z'
+  support: supports
+  summary: The LolD-like family is broader than the retained specific LolD class.
+  snapshot_sha256: 272d9a8c0574e7444f45a89946d06ba7730f9113cf8f157862f10bd4440c6640
+- evidence_id: local-id
+  kind: search
+  reference: 'rg -uu -n ^identifier: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex$
+    data/structures'
+  locator: Ignored-inclusive full data/structures exact identifier search
+  accessed_at: '2026-10-22T07:46:24.791605Z'
+  support: supports
+  summary: Exactly one maintained record has the minted identifier, the current target.
+  snapshot_sha256: f093ee379ccab134cd5e7472679061a00d673075d776f54bb3a4b28969484127
+  search_scope: All files under data/structures, including ignored and hidden files;
+    exact identifier line.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:53Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml'
+  snapshot_sha256: aa0f31d16c344c4fe554bd49712192a4841b7a8b770f1bdaa04527d62f52b14a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:53Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lolcde_lipoprotein_abc_transporter_complex-strict.tsv"
+  snapshot_sha256: 3d4ce9fb6c3ed3c0d80de4bd8303cfa946ee66b8d4441b38afaefa6d28a6d569
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:37:26.592872Z'
+  support: supports
+  summary: "data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml\
+    \  (cellstructuremech:lolcde_lipoprotein_abc_transporter_complex)\n  lolcde_lipoprotein_release\t\
+    lolc\tCOVERED\t->lolc_transmembrane_subunit (UniProtKB:P0ADC3)\n  lolcde_lipoprotein_release\t\
+    lold\tCOVERED\t->lold_atp_binding_subunit (UniProtKB:P75957)\n  lolcde_lipoprotein_release\t\
+    lole\tCOVERED\t->lole_transmembrane_subunit (UniProtKB:P75958)\n  lolcde_lipoprotein_release\t\
+    mature_outer_membrane_lipoprotein\tUNANCHORED_NO_UNIPROT\tmature outer-membrane\
+    \ lipoprotein\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     3  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     1  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB\
+    \ grounding or xref on the node\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     4 \
+    \ total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0f64c202b1c8d183c3ae57d2de034043cc92630a4157d3d3dad1798b1129b3fe
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:37:27.892906Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 16 collected target identifiers returned OK. ECO:0000353: SKIPPED;
+    Native ECO identifies physical interaction evidence used in manual assertion (ECO0000353);
+    the term does not itself prove universal formation necessity.; PDB:7MDY: SKIPPED;
+    Native RCSB released entry 7MDY: LolCDE nucleotide-bound; primary DOI 10.1038/s41467-021-24965-1.
+    Entry identity is distinct from coordinate or assay reanalysis.; PMID:10783239:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED10783239: A new ABC transporter
+    mediating the detachment of lipid-modified proteins from membranes. (2000); DOI
+    10.1038/35008635. This resolves the identifier transport residual only; primary-source
+    reading remains separately scoped.; PMID:18634750: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED18634750: ATP-binding cassette transporters in Escherichia
+    coli. (2008); DOI 10.1016/j.bbamem.2008.06.009. This resolves the identifier transport
+    residual only; primary-source reading remains separately scoped.; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex:
+    SKIPPED; The exact maintained identifier uniquely resolves to this target in the
+    complete data/structures YAML traversal, including ignored files. This is local
+    identity rather than external authority resolution. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Local identity and four-copy transporter
+  outcome: supported
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: 'The unique local record matches CPX4262 and deposited LolCDE: three protein
+    classes and four copies. Native proteins/taxon and the correct coarse NONMECHANISTIC
+    release/localization graph agree.'
+  evidence_ids:
+  - record
+  - local-id
+  - complex58-agent-go
+  - complex58-agent-cpx-4262
+  - complex58-agent-PMC8333309-xml
+  - complex58-agent-pdb-7MDY
+  - complex58-agent-pdb-7MDY-assembly1
+  - complex58-agent-pdb-7MDY-entity1
+  - complex58-agent-pdb-7MDY-entity2
+  - complex58-agent-pdb-7MDY-entity3
+  - complex58-agent-protein-P0ADC3
+  - complex58-agent-protein-P75957
+  - complex58-agent-protein-P75958
+  - complex58-agent-query-lolC
+  - complex58-agent-query-lolD
+  - complex58-agent-query-lolE
+  - complex58-agent-tax-83333
+- assessment_id: grounding
+  area: grounding
+  topic: Three exact full-family alternatives
+  outcome: concern
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: Exact LolC, LolD and LolE families are available and independently joined
+    to the correct native examples. Their present label-only notes defer mapping because
+    only shared classes were considered; these exact alternatives resolve that bounded
+    gap.
+  evidence_ids:
+  - record
+  - curation
+  - complex58-agent-ncbifam-NF008076
+  - complex58-agent-ipr-IPR011924
+  - complex58-agent-ncbifam-NF008357
+  - complex58-agent-ipr-IPR011925
+  - complex58-agent-ipr-IPR015854
+  - complex58-agent-protein-P0ADC3
+  - complex58-agent-protein-P75957
+  - complex58-agent-protein-P75958
+- assessment_id: formation
+  area: grounding
+  topic: Assembly necessity versus essential cellular function
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: Physical complex membership and canonical1:2:1 architecture are supported.
+    The reviewed source extents do not independently settle every categorical ESSENTIAL
+    field as an omission-based formation requirement; cellular survival, ATPase loss
+    and loss of substrate binding are different readouts. This uncertainty is retained
+    without inventing a dispensability result or optional enrichment finding.
+  evidence_ids:
+  - record
+  - schema
+  - complex58-agent-PMC8333309-xml
+  - complex58-agent-cpx-4262
+  - complex58-agent-eco-0000353
+- assessment_id: scope
+  area: scope
+  topic: Canonical E.coli and qualified release model
+  outcome: supported
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: The canonical E.coli complex and recombinant K12/BL21 experiment are distinguished.
+    Current evidence supports lipoprotein extraction and ATP-coupled changes without
+    certifying every general bacterial sorting rule or kinetic flux step.
+  evidence_ids:
+  - record
+  - complex58-agent-PMC8333309-xml
+  - complex58-agent-cpx-4262
+  - complex58-agent-tax-83333
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and declared source coverage
+  outcome: supported
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  summary: Every maintained field, source note, graph and discussion was inspected
+    at the declared extents. Optional inventory/contact enrichment and acknowledged
+    unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex58-agent-go
+findings:
+- finding_id: F1
+  issue_key: lolcde-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the three exact LolCDE subunit families
+  description: All three protein rows remain REVIEWED_LABEL_ONLY while native full-family
+    identities and independent example membership now resolve their retained classes.
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  field_paths:
+  - components#lolc_transmembrane_subunit.grounding_status
+  - components#lold_atp_binding_subunit.grounding_status
+  - components#lole_transmembrane_subunit.grounding_status
+  - discussions
+  evidence_ids:
+  - record
+  - curation
+  - complex58-agent-ncbifam-NF008076
+  - complex58-agent-ipr-IPR011924
+  - complex58-agent-ncbifam-NF008357
+  - complex58-agent-protein-P0ADC3
+  - complex58-agent-protein-P75957
+  - complex58-agent-protein-P75958
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-backed identity, grounding and claim scope
+  native_severity: minor
+  normalization_reason: A bounded correction preserves the supported complex identity
+    and principal biological function.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    role: maintained scientific record
+  description: Map LolC to NCBIfam:NF008076, LolD to InterPro:IPR011924 and LolE to
+    NCBIfam:NF008357; retain correct examples,1:2:1 architecture and source-specific
+    scope.
+  acceptance_checks:
+  - Do not substitute the broader LolC/E or LolD-like classes for these exact subunit
+    families.
+  - Preserve supported source-specific claims and pass applicable native gates.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements,
+  atomic coordinates or raw experimental data were analyzed.
+- Yakushi2000 publisher returned HTTP200 client-challenge HTML, not a paper body;
+  its complete native abstract was read. Moussatova2008 was read only as secondary-review
+  abstract context.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

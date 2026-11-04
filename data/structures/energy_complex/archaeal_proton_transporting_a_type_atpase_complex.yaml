@@ -1,0 +1,314 @@
+identifier: GO:1990490
+label: archaeal proton-transporting A-type ATPase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large proton-transporting two-sector ATPase protein complex that catalyzes
+  the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport
+  of protons across a membrane and is found in Archaea.
+definition_source: GO:1990490
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: A-type ATPase protein complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:1990490
+- synonym_text: archaeal A-type ATPase protein complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:1990490
+parent_structures:
+- GO:0016469
+- GO:1904949
+components:
+- component_id: atpa_catalytic_subunit
+  label: A-type ATP synthase subunit A
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005726
+  gene_symbols:
+  - atpA
+  stoichiometry: 3 copies per A1 catalytic headpiece (A3B3 hexamer)
+  essentiality: ESSENTIAL
+  role: Catalytic nucleotide-binding subunit of the peripheral A1 sector that alternates
+    with subunit B in the A3B3 hexamer and catalyzes rotational ATP synthesis or hydrolysis.
+  evidence:
+  - reference: PMID:12768457
+    notes: Lingl et al. 2003 (DOI:10.1007/s00792-003-0318-7) isolated the intact nine-subunit
+      A1AO ATP synthase from Methanocaldococcus jannaschii containing catalytic subunit
+      A (AtpA).
+  - reference: PMID:15220347
+    notes: Coskun et al. 2004 (DOI:10.1074/jbc.M406196200) resolved the A3B3 headpiece
+      and peripheral stalk organization of the M. jannaschii A-type ATP synthase by
+      electron microscopy.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57670
+    protein_label: A-type ATP synthase subunit A
+    gene_symbol: atpA
+    taxon_id: NCBITaxon:243232
+    taxon_label: Methanocaldococcus jannaschii DSM 2661
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed M. jannaschii catalytic subunit A of the archaeal A1AO ATP synthase
+      characterized in PMID:12768457 and PMID:15220347.
+    evidence:
+    - reference: UniProtKB:Q57670
+      notes: Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP
+        synthase subunit A.
+    - reference: PMID:12768457
+      notes: Lingl et al. 2003 purified the intact M. jannaschii A1AO ATP synthase
+        containing subunit A.
+- component_id: atpb_regulatory_subunit
+  label: A-type ATP synthase subunit B
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005724
+  gene_symbols:
+  - atpB
+  stoichiometry: 3 copies per A1 headpiece (A3B3 hexamer)
+  essentiality: ESSENTIAL
+  role: Non-catalytic nucleotide-binding subunit of the peripheral A1 sector that
+    assembles with three AtpA subunits into the A3B3 catalytic hexamer.
+  evidence:
+  - reference: PMID:12768457
+    notes: Lingl et al. 2003 identified subunit B (AtpB) in the purified M. jannaschii
+      A1AO ATP synthase.
+  - reference: PMID:15220347
+    notes: Coskun et al. 2004 resolved the A3B3 catalytic headpiece of the M. jannaschii
+      A-type ATP synthase.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57669
+    protein_label: A-type ATP synthase subunit B
+    gene_symbol: atpB
+    taxon_id: NCBITaxon:243232
+    taxon_label: Methanocaldococcus jannaschii DSM 2661
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed M. jannaschii subunit B of the archaeal A1AO ATP synthase characterized
+      in PMID:12768457.
+    evidence:
+    - reference: UniProtKB:Q57669
+      notes: Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP
+        synthase subunit B.
+    - reference: PMID:12768457
+      notes: Lingl et al. 2003 purified the nine-subunit M. jannaschii A1AO ATP synthase
+        containing AtpB.
+- component_id: atpk_rotor_ring_subunit
+  label: A-type ATP synthase subunit K
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000245
+  gene_symbols:
+  - atpK
+  stoichiometry: Oligomeric membrane rotor ring (c/K-ring) in the AO sector
+  essentiality: ESSENTIAL
+  role: Membrane-embedded proteolipid rotor-ring subunit of the AO sector that translocates
+    ions across the archaeal membrane to drive rotation of the central stalk.
+  evidence:
+  - reference: PMID:12768457
+    notes: Lingl et al. 2003 demonstrated that the M. jannaschii A1AO ATP synthase
+      contains the membrane proteolipid subunit K (AtpK) in the AO sector.
+  - reference: PMID:19203996
+    notes: Vonck et al. 2009 (DOI:10.1074/jbc.M808498200) resolved the membrane-embedded
+      AO rotor ring and stator architecture of the archaeal A1AO ATP synthase.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57674
+    protein_label: A-type ATP synthase subunit K
+    gene_symbol: atpK
+    taxon_id: NCBITaxon:243232
+    taxon_label: Methanocaldococcus jannaschii DSM 2661
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed M. jannaschii proteolipid rotor-ring subunit K of the archaeal
+      A1AO ATP synthase.
+    evidence:
+    - reference: UniProtKB:Q57674
+      notes: Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP
+        synthase subunit K.
+    - reference: PMID:12768457
+      notes: Lingl et al. 2003 verified subunit K as part of the intact M. jannaschii
+        A1AO ATP synthase.
+- component_id: atpi_stator_subunit
+  label: A-type ATP synthase subunit I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002490
+  gene_symbols:
+  - atpI
+  stoichiometry: 1 copy per A1AO holoenzyme
+  essentiality: ESSENTIAL
+  role: Integral membrane stator subunit of the AO sector that forms proton-access
+    half-channels at the interface with the AtpK rotor ring and anchors the peripheral
+    stalks.
+  evidence:
+  - reference: PMID:12768457
+    notes: Lingl et al. 2003 identified the membrane stator subunit I (AtpI) in the
+      purified M. jannaschii A1AO ATP synthase.
+  - reference: PMID:19203996
+    notes: Vonck et al. 2009 showed how the membrane-embedded subunit I anchors the
+      two peripheral stalks against the AO rotor ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57675
+    protein_label: A-type ATP synthase subunit I
+    gene_symbol: atpI
+    taxon_id: NCBITaxon:243232
+    taxon_label: Methanocaldococcus jannaschii DSM 2661
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed M. jannaschii AO membrane stator subunit I of the archaeal A-type
+      ATP synthase.
+    evidence:
+    - reference: UniProtKB:Q57675
+      notes: Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP
+        synthase subunit I.
+    - reference: PMID:12768457
+      notes: Lingl et al. 2003 confirmed subunit I in the isolated M. jannaschii A1AO
+        ATP synthase.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: GO:1990490 carries an explicit RO:0002162 (in taxon) constraint to NCBITaxon:2157
+    (Archaea), where the A1AO ATP synthase serves as the primary rotary bioenergetic
+    ATP synthase.
+  reference: GO:1990490
+canonical_examples:
+- taxon_id: NCBITaxon:243232
+  taxon_label: Methanocaldococcus jannaschii DSM 2661
+  note: Hyperthermophilic methanogenic archaeon from which the intact nine-subunit
+    A1AO ATP synthase was isolated and structurally characterized.
+  reference: PMID:12768457
+- taxon_id: NCBITaxon:186497
+  taxon_label: Pyrococcus furiosus DSM 3638
+  note: Hyperthermophilic archaeon in which the three-dimensional electron-microscopy
+    reconstruction of the A1AO ATP synthase was determined.
+  reference: PMID:19203996
+functions:
+- function_id: proton_motive_force_driven_atp_synthesis
+  label: proton motive force-driven ATP synthesis
+  grounding: GO:0015986
+  description: Couples transmembrane proton translocation through the membrane-embedded
+    AO sector (AtpI-AtpK) to rotational catalysis in the peripheral A1 (AtpA3AtpB3)
+    headpiece to synthesize or hydrolyze ATP.
+  evidence:
+  - reference: GO:1990490
+    notes: GO:1990490 defines the archaeal proton-transporting A-type ATPase complex
+      as catalyzing the synthesis or hydrolysis of ATP by a rotational mechanism coupled
+      to proton transport across a membrane.
+  - reference: PMID:15220347
+    notes: Coskun et al. 2004 characterized the rotational coupling architecture between
+      the AO membrane domain and A1 catalytic headpiece in M. jannaschii.
+evidence:
+- reference: GO:1990490
+  notes: Gene Ontology cellular-component term for archaeal proton-transporting A-type
+    ATPase complex.
+- reference: GO:0016469
+  notes: Gene Ontology parent term for proton-transporting two-sector ATPase complex.
+- reference: GO:1904949
+  notes: Gene Ontology parent term for ATPase complex.
+- reference: PMID:12768457
+  notes: Lingl et al. 2003 (Extremophiles, DOI:10.1007/s00792-003-0318-7), isolation
+    of the complete nine-subunit A1AO ATP synthase from Methanocaldococcus jannaschii.
+- reference: PMID:15220347
+  notes: Coskun et al. 2004 (J Biol Chem, DOI:10.1074/jbc.M406196200), electron microscopy
+    structure and subunit arrangement of the M. jannaschii A-type ATP synthase.
+- reference: PMID:19203996
+  notes: Vonck et al. 2009 (J Biol Chem, DOI:10.1074/jbc.M808498200), 3D structure
+    of the A1AO ATP synthase from Pyrococcus furiosus.
+causal_graphs:
+- graph_id: archaeal_a_type_atpase_rotary_catalysis
+  title: Two-sector assembly and rotary ATP synthesis by the archaeal proton-transporting
+    A-type ATPase complex
+  description: Directed causal graph linking the AO membrane sector (AtpI stator and
+    AtpK rotor ring) and A1 catalytic sector (AtpA and AtpB) to assembly of the archaeal
+    proton-transporting A-type ATPase complex (GO:1990490) and proton motive force-driven
+    ATP synthesis (GO:0015986).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: atpi_stator_subunit
+    label: A-type ATP synthase subunit I
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002490
+    component_ref: atpi_stator_subunit
+    description: AO sector integral membrane stator subunit AtpI.
+  - node_id: atpk_rotor_ring_subunit
+    label: A-type ATP synthase subunit K
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000245
+    component_ref: atpk_rotor_ring_subunit
+    description: AO sector proteolipid rotor-ring subunit AtpK.
+  - node_id: atpa_catalytic_subunit
+    label: A-type ATP synthase subunit A
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005726
+    component_ref: atpa_catalytic_subunit
+    description: A1 sector catalytic nucleotide-binding subunit AtpA.
+  - node_id: atpb_regulatory_subunit
+    label: A-type ATP synthase subunit B
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005724
+    component_ref: atpb_regulatory_subunit
+    description: A1 sector non-catalytic hexamer subunit AtpB.
+  - node_id: archaeal_a_type_atpase_holoenzyme
+    label: archaeal proton-transporting A-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:1990490
+    description: Intact two-sector archaeal A1AO ATPase holocomplex.
+  - node_id: proton_motive_force_driven_atp_synthesis
+    label: proton motive force-driven ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015986
+    description: Rotational synthesis of ATP driven by transmembrane proton transport.
+  edges:
+  - subject: atpi_stator_subunit
+    predicate: RO:0002436
+    object: archaeal_a_type_atpase_holoenzyme
+    description: Subunit I forms the membrane stator proton half-channels and anchors
+      the peripheral stalks in the A1AO holoenzyme.
+    evidence:
+    - reference: PMID:19203996
+      notes: Vonck et al. 2009 resolved how subunit I anchors the peripheral stalks
+        and abuts the rotor ring in the AO membrane sector.
+  - subject: atpk_rotor_ring_subunit
+    predicate: RO:0002436
+    object: archaeal_a_type_atpase_holoenzyme
+    description: Subunit K oligomerizes into the membrane-embedded rotor ring of the
+      AO sector.
+    evidence:
+    - reference: PMID:12768457
+      notes: Lingl et al. 2003 identified proteolipid subunit K in the intact M. jannaschii
+        A1AO ATP synthase.
+  - subject: atpa_catalytic_subunit
+    predicate: RO:0002436
+    object: archaeal_a_type_atpase_holoenzyme
+    description: Three catalytic AtpA subunits alternate with AtpB to form the A1
+      catalytic hexamer.
+    evidence:
+    - reference: PMID:15220347
+      notes: Coskun et al. 2004 resolved the A3B3 catalytic headpiece of the M. jannaschii
+        A-type ATP synthase.
+  - subject: atpb_regulatory_subunit
+    predicate: RO:0002436
+    object: archaeal_a_type_atpase_holoenzyme
+    description: Three AtpB subunits co-assemble with AtpA to complete the A3B3 headpiece
+      of the A1 sector.
+    evidence:
+    - reference: PMID:15220347
+      notes: Coskun et al. 2004 established the hexameric A3B3 arrangement of the
+        M. jannaschii A1 sector.
+  - subject: archaeal_a_type_atpase_holoenzyme
+    predicate: RO:0002213
+    object: proton_motive_force_driven_atp_synthesis
+    description: Proton translocation through the AtpI-AtpK interface drives central-stalk
+      rotation and conformational ATP synthesis in the A3B3 headpiece.
+    evidence:
+    - reference: GO:1990490
+      notes: GO:1990490 defines the complex as catalyzing rotational ATP synthesis
+        or hydrolysis coupled to transmembrane proton transport.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:1990490 (archaeal proton-transporting
+    A-type ATPase complex) with verified GO identity, source-backed components, reviewed
+    UniProtKB protein examples, taxonomic distribution, canonical examples, functions,
+    and mechanistic causal graph.
+  llm_assisted: true

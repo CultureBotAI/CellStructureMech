@@ -1,0 +1,851 @@
+schema_version: 1.0.0
+review_id: 20261022T063718Z-emrky-tolc-multidrug-efflux-transport-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of EmrKY-TolC multidrug efflux transport complex
+started_at: '2026-10-22T06:16:04Z'
+finished_at: '2026-10-22T06:37:18Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major finding concerns unsupported ESSENTIAL formation assertions for
+  all three constituents. Exact CPX identity, source-scoped composition, protein examples,
+  TolC family and descriptive export model are supported at their stated inferential
+  tiers.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 1db4b3ec61bb37a31a2c8888ca43d294cbd73241734f58891d8b3bbc4bac53b1
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  label: EmrKY-TolC multidrug efflux transport complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target; source-native and primary reading
+    scopes are declared individually. Scientific inputs remain unchanged.
+  selection: One complete record in strict-path batch 54 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just validate data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just validate-strict data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/emrky_tolc_multidrug_efflux_transport_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Focused check passed; source claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Focused check passed; source claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: No iModulon-specific claim is made; May2009 expression assays are assessed
+    directly where applicable.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root54-sources-go
+  - root54-sources-tax83333
+  - root54-sources-pmid-19721076
+  - root54-sources-doi-10.1128_AAC.00454-09
+  - root54-sources-protein-P52599
+  - root54-sources-gene-emrK
+  - root54-sources-protein-P52600
+  - root54-sources-gene-emrY
+  - root54-sources-protein-P02930
+  - root54-sources-gene-tolC
+  - root54-sources-complex-CPX-4273
+  - root54-sources-eco0005547
+  - root54-sources-primary-PMC2772303
+  - root54-sources-ipr-IPR058622
+  - root54-sources-ipr-IPR005694
+  - root54-sources-ipr-IPR050739
+  - root54-sources-ipr-IPR004638
+  - root54-sources-family-TIGR00998
+  - root54-sources-family-TIGR00711
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: '10 of 13 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Exact active ECO0005547 native identifier, label and complete definition independently
+    read: manual assertion by biological-system reconstruction from background knowledge.
+    This evidence type does not itself provide physical interaction evidence; no ECO
+    adapter exists in the bulk gate.; PMID:19721076: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex:
+    SKIPPED; Repository-minted identifier independently checked in the complete ignored-inclusive
+    978-record YAML universe; exactly one record declares this identifier, at the
+    reviewed target path. This is local identity verification, not external ontology
+    resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root54-sources-eco0005547
+  - root54-sources-pmid-19721076
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Entire maintained record, including evidence, components, graphs, discussions,
+    imported composition and history where present
+  accessed_at: '2026-10-22T06:30:30Z'
+  support: context_only
+  summary: The complete maintained target was read. Neighboring records are not automatically
+    reviewed by this observation.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum, StructuralComponent, PresenceEnum and graph scope
+  accessed_at: '2026-10-22T06:30:30Z'
+  support: context_only
+  summary: Formation necessity differs from activity, recruitment into a larger assembly
+    or viability. Where used, COMMON means present in most members with exceptional
+    losses. This category is distinct from a measured prevalence census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact class mapping and protein-example boundaries
+  accessed_at: '2026-10-22T06:30:30Z'
+  support: context_only
+  summary: A whole-protein family grounds a constituent class; a taxon-paired accession
+    supplies a representative instance. Domain or broader superfamily mappings do
+    not necessarily resolve exact class tasks.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Directed evidence and mechanistic scope
+  accessed_at: '2026-10-22T06:30:30Z'
+  support: context_only
+  summary: Descriptive membership and function graphs are distinguished from causal
+    assembly dependencies and detailed molecular mechanisms.
+- evidence_id: root54-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005784,GO:0005789,GO:0006260,GO:0008622,GO:0031205,GO:0031207,GO:0042575,GO:0042910,GO:0140330,GO:0140534,GO:1990281
+  locator: 'Eleven native terms: identity/status, complete definitions, synonyms/comments
+    and relevant typed child relations only'
+  accessed_at: '2026-10-22T06:18:43.212342Z'
+  support: supports
+  summary: GO1990281 is the broader efflux-pump complex parent, while GO0042910 and
+    GO0140330 identify xenobiotic transport activity and outer-membrane export process.
+    None of these three denotes the exact named EmrKY system.
+  snapshot_sha256: 19cd6bbb55b31ec2bbb98181c611734e9319f4dce2181b144c23335d9ab9cc1e
+- evidence_id: root54-sources-tax83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T06:18:43.212858Z'
+  support: supports
+  summary: ENA taxId83333 identifies Escherichia coli K-12; the complete name/rank/lineage
+    response was read.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: root54-sources-pmid-19721076
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19721076+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and entire abstractText
+  accessed_at: '2026-10-22T06:18:47.484785Z'
+  support: supports
+  summary: 'MED19721076: Induction of multidrug resistance mechanism in Escherichia
+    coli biofilms by interplay between tetracycline and ampicillin resistance genes.
+    Authors May T, Ito A, Okabe S.; year 2009; DOI10.1128/aac.00454-09. The complete
+    native abstract was read; primary-body scopes are separate.'
+  snapshot_sha256: 7c3b8b0c3e2eaf17deab67b869c2fb96a92e9afaa7a9f8eea51ebf16bfb0c059
+- evidence_id: root54-sources-doi-10.1128_AAC.00454-09
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FAAC.00454-09%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI result, exact PMID/DOI/PMCID and complete abstractText
+  accessed_at: '2026-10-22T06:18:48.348433Z'
+  support: supports
+  summary: 'Unique DOI result is MED19721076: Induction of multidrug resistance mechanism
+    in Escherichia coli biofilms by interplay between tetracycline and ampicillin
+    resistance genes., May T, Ito A, Okabe S. (2009). Its whole native abstract and
+    bibliographic identity were read.'
+  snapshot_sha256: 77979d542ca9d1f1204ac1a0be115359d6d658b4d6575f131fbe6c0fc17b2625
+- evidence_id: root54-sources-protein-P52599
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P52599.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:44.383164Z'
+  support: supports
+  summary: P52599 is the reviewed emrK reference entry in taxon83333. EmrK FUNCTION
+    and SUBUNIT statements are by similarity (ECO0000250), not direct EmrK-removal
+    assembly assays.
+  snapshot_sha256: 73d8b15e32b36811389905fe157087caa8db607f214ddaa847d1bfa2ac5da303
+- evidence_id: root54-sources-gene-emrK
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrK%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.100285Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P52599.
+  snapshot_sha256: a7fbbf1bcf29b644cd4a992c79b779ffb9d8eb0fd6dc758825e76a9f2a227121
+- evidence_id: root54-sources-protein-P52600
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P52600.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:44.392154Z'
+  support: supports
+  summary: P52600 is the reviewed emrY reference entry in taxon83333. EmrY FUNCTION
+    and SUBUNIT statements are by similarity; experimental membrane localization is
+    a separate annotation.
+  snapshot_sha256: 3f181e1d711d29b67e08b91b88cc9036d45788d3217d69446b60152005a21921
+- evidence_id: root54-sources-gene-emrY
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrY%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.144705Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P52600.
+  snapshot_sha256: 43c6be5c7d064c5aa9379d8f12345a1f4618256ee823cb50ccf72c84984969d4
+- evidence_id: root54-sources-protein-P02930
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P02930.json
+  locator: Identity/status, recommended/alternative names, genes/aliases and organism;
+    InterPro/Pfam/NCBIfam xrefs; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION
+    and CATALYTIC ACTIVITY comments where present
+  accessed_at: '2026-10-22T06:18:43.214164Z'
+  support: supports
+  summary: P02930 is the reviewed tolC reference entry in taxon83333. TolC is homotrimeric
+    and serves several efflux systems; experiments on AcrAB, EmrAB or MacAB do not
+    automatically establish EmrKY-specific absence behavior.
+  snapshot_sha256: cef14f6af1999fe0b5218d959cca8788ec00afc1b145201ba48344a4b15bbb04
+- evidence_id: root54-sources-gene-tolC
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AtolC%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Entire returned identity set, names/aliases and organism; exact gene, organism_id,
+    reviewed and size500 query parameters
+  accessed_at: '2026-10-22T06:18:45.487048Z'
+  support: supports
+  summary: The exact-gene reviewed query restricted to the declared organism_id returns
+    the single accession P02930.
+  snapshot_sha256: 3e284eede466d8aa6d6eac091b434ce033083e18848c220476a3bdb06463365a
+- evidence_id: root54-sources-complex-CPX-4273
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4273
+  locator: Entire native accession response including identity/taxon, all participants,
+    stoichiometry/interactorIDs, systematic name, evidence type, assembly, functions/properties,
+    features and bibliographic xrefs
+  accessed_at: '2026-10-22T06:18:48.719691Z'
+  support: supports
+  summary: CPX4273 is the E.coliK12 EmrKY-TolC system with participants P52599/EmrK,
+    P52600/EmrY and P02930/TolC, matching imported interactor identifiers. TolC count
+    is3; EmrK/EmrY counts and assembly label are absent. Evidence type is inferred
+    by curator, ECO0005547. The record accurately preserves those source limitations.
+  snapshot_sha256: bd52e87eee7859fba78183d5dfab8a1e0c5a8fd9edc2461d046bd629667f4aee
+- evidence_id: root54-sources-eco0005547
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FECO_0005547
+  locator: Exact active identifier/label and complete definition/description
+  accessed_at: '2026-10-22T06:27:45.556223Z'
+  support: supports
+  summary: Active ECO0005547 denotes biological-system reconstruction by inference
+    from background scientific knowledge used in manual assertion. Its native explanation
+    explicitly distinguishes this from physical interaction evidence.
+  snapshot_sha256: 5e079c708429feead41b2264cd1bf4f73131b706add51786aeaa9ad1f0de949b
+- evidence_id: root54-sources-primary-PMC2772303
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2772303/
+  locator: May2009 Methods sec2 bacterial strains and sec7 expression/qPCR; complete
+    Results/Discussion sec14 including Figure4 caption. Other methods/results, supplementary
+    tables and image pixels not inspected.
+  accessed_at: '2026-10-22T06:20:24.977200Z'
+  support: supports
+  summary: The study uses MG1655/pBR322 and a modified multi-locus OCL62 deletion
+    affecting emrY,emrK,evgA,evgS with TetR counteraction. Transcript measurements
+    and biofilm phenotypes support a resistance-context role. These experiments do
+    not isolate removal of each pump constituent or directly measure EmrKY-TolC assembly.
+    The related systems and pBR322 TetA(C) effects must remain separate.
+  snapshot_sha256: e6bdcb19ac8daa81942008de5d0496a6d3d657f52becfe0acc5fec3011c3d469
+- evidence_id: root54-sources-ipr-IPR058622
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:18:48.351850Z'
+  support: supports
+  summary: TolC is an exact family integrating NF007002, with native E.coli/gammaproteobacterial
+    scope and trimeric channel description. Separate P02930 xrefs corroborate membership.
+  snapshot_sha256: d3c58cbb9737d5f395f703b634f84df048f355555af2b817f321a5e474b8e310
+- evidence_id: root54-sources-ipr-IPR005694
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005694/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.998219Z'
+  support: supports
+  summary: Broad proteobacterial membrane-fusion family explicitly includes MdtN,EmrA
+    and EmrK; TIGR00998 is an integrated EmrA/EmrK family, not an EmrK-specific class.
+  snapshot_sha256: 2a06789ed6f0e233d35d7d3e1848aecc8646a06959cd8cb470d2086c6133afea
+- evidence_id: root54-sources-ipr-IPR050739
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050739/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:25.574868Z'
+  support: supports
+  summary: Broad membrane-fusion protein family; description is LLM-generated and
+    unchecked. That prose is not independent experimental support.
+  snapshot_sha256: 09777ecee81e4a86375105705c31afe25c2f5f254e1e9dbf4513720dd3c17f9d
+- evidence_id: root54-sources-ipr-IPR004638
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004638/
+  locator: Native accession/name/type, entire description with curation/LLM flags
+    and integrated signatures; no exhaustive domain-hierarchy survey
+  accessed_at: '2026-10-22T06:20:26.172753Z'
+  support: supports
+  summary: EmrB-like/DHA2 family includes EmrB,FarB,TcmA and RibZ, rather than an
+    exact EmrY-only class.
+  snapshot_sha256: 633ee99cb1562d934fe7f86ce75875bc69f1394a42250bdf6a58ce6a0fc00caf
+- evidence_id: root54-sources-family-TIGR00998
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/TIGR00998/
+  locator: Native family accession/name/type, integration and complete description
+    if present
+  accessed_at: '2026-10-22T06:20:26.180443Z'
+  support: supports
+  summary: Integrated into IPR005694; name explicitly spans EmrA/EmrK, and no descriptive
+    text is supplied.
+  snapshot_sha256: 6653c029cd39ecfce72b96666d4c2839fc67058ff8b4a91a1215825cb6ade00d
+- evidence_id: root54-sources-family-TIGR00711
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/TIGR00711/
+  locator: Native family accession/name/type, integration and complete description
+    if present
+  accessed_at: '2026-10-22T06:20:26.604642Z'
+  support: supports
+  summary: DHA2 MFS permease family integrated into IPR004638; examples include EmrB,FarB
+    and TcmA, so it does not resolve EmrY-specific grounding.
+  snapshot_sha256: 64ebca0523316cf2b3a8f28d0002d62b30d42fdc4d08f0185bd0dac38d11296c
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:06Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml'
+  snapshot_sha256: 30cdaedc14d2ba4d1b175760d49e4e050753fa9876eb2fa849cd691376bfbb2a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/emrky_tolc_multidrug_efflux_transport_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:07Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/emrky_tolc_multidrug_efflux_transport_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/emrky_tolc_multidrug_efflux_transport_complex-strict.tsv"
+  snapshot_sha256: 2f2c5f25d5c928d222322439ec1ed5cbc62bf140f8ed4c5c6843331ff24c43ef
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T06:18:45.526863Z'
+  support: supports
+  summary: "data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml\
+    \  (cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex)\n  emrky_tolc_xenobiotic_efflux\t\
+    emrk\tCOVERED\t->emrk_membrane_fusion_protein (UniProtKB:P52599)\n  emrky_tolc_xenobiotic_efflux\t\
+    emry\tCOVERED\t->emry_inner_membrane_transporter (UniProtKB:P52600)\n  emrky_tolc_xenobiotic_efflux\t\
+    tolc\tCOVERED\t->tolc_outer_membrane_channel (UniProtKB:P02930)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     3  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 8c7e3458522c33d3bce89abbe58b15f4f8f468d3b01f0625bd807e3e464c9a6c
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T06:19:51.846713Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '10 of 13 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Exact active ECO0005547 native identifier, label and complete definition independently
+    read: manual assertion by biological-system reconstruction from background knowledge.
+    This evidence type does not itself provide physical interaction evidence; no ECO
+    adapter exists in the bulk gate.; PMID:19721076: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex:
+    SKIPPED; Repository-minted identifier independently checked in the complete ignored-inclusive
+    978-record YAML universe; exactly one record declares this identifier, at the
+    reviewed target path. This is local identity verification, not external ontology
+    resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact species system and broader ontology parent
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: The minted identity uniquely belongs to this target in the ignored-inclusive978-record
+    universe. CPX4273 independently matches the named E.coli system; GO1990281 is
+    correctly a broader parent. No exact GO identity was established in this bounded
+    check.
+  evidence_ids:
+  - record
+  - root54-sources-go
+  - root54-sources-complex-CPX-4273
+  - root54-sources-tax83333
+- assessment_id: composition
+  area: grounding
+  topic: Imported composition and bounded class mappings
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: All three reference accession/gene/taxon identities, imported interactor
+    identifiers and source counts match. TolC has an exact family. The inspected EmrK/EmrY
+    family candidates remain broader or domain-level and do not resolve the existing
+    exact-class TODO.
+  evidence_ids:
+  - record
+  - root54-sources-complex-CPX-4273
+  - root54-sources-ipr-IPR058622
+  - root54-sources-ipr-IPR005694
+  - root54-sources-ipr-IPR050739
+  - root54-sources-ipr-IPR004638
+  - root54-sources-family-TIGR00998
+  - root54-sources-family-TIGR00711
+  - root54-sources-protein-P52599
+  - root54-sources-protein-P52600
+  - root54-sources-protein-P02930
+  - root54-sources-gene-emrK
+  - root54-sources-gene-emrY
+  - root54-sources-gene-tolC
+- assessment_id: formation
+  area: grounding
+  topic: Unsupported categorical assembly essentiality
+  outcome: concern
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: All three ESSENTIAL values assert a stronger formation dependency than
+    the cited inferred participants, similarity annotations and biofilm assays establish.
+    Membership and necessity are separate claims. This review does not conclude that
+    any component is dispensable.
+  evidence_ids:
+  - record
+  - schema
+  - root54-sources-complex-CPX-4273
+  - root54-sources-eco0005547
+  - root54-sources-primary-PMC2772303
+  - root54-sources-protein-P52599
+  - root54-sources-protein-P52600
+  - root54-sources-protein-P02930
+- assessment_id: graph
+  area: graph
+  topic: Descriptive coupling and transport with inference retained
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: The NONMECHANISTIC graph follows the curator-asserted tripartite model
+    and coarse export role, while excluding antiport states and TolC gating. It should
+    be interpreted at the same inferential tier as its cited CPX and similarity annotations;
+    it is not a direct structure or binding-affinity determination.
+  evidence_ids:
+  - record
+  - graphs
+  - root54-sources-go
+  - root54-sources-complex-CPX-4273
+  - root54-sources-eco0005547
+  - root54-sources-primary-PMC2772303
+  - root54-sources-protein-P52599
+  - root54-sources-protein-P52600
+  - root54-sources-protein-P02930
+- assessment_id: scope
+  area: scope
+  topic: Source K12 system versus experimental backgrounds
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: CPX and protein examples consistently use K12. May2009 assays use MG1655
+    and the specifically modified OCL62 system; those strains and multi-gene changes
+    cannot be silently recast as single-component deletion tests in the K12 reference
+    entry.
+  evidence_ids:
+  - record
+  - root54-sources-complex-CPX-4273
+  - root54-sources-primary-PMC2772303
+  - root54-sources-tax83333
+  - root54-sources-protein-P52599
+  - root54-sources-protein-P52600
+  - root54-sources-protein-P02930
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and bounded follow-up
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  summary: Every maintained field, evidence row, component/example, graph edge, discussion
+    and history entry was read. Required defects are distinguished from optional enrichment
+    and unavailable source detail. Scientific status/history remain unchanged.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root54-sources-go
+  - root54-sources-doi-10.1128_AAC.00454-09
+findings:
+- finding_id: F1
+  issue_key: emrky-tolc-unsupported-formation-essentiality
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify the three unsupported formation-essentiality assertions
+  description: Each constituent is marked ESSENTIAL, while CPX4273 is curator-inferred
+    and the EmrK/EmrY subunit annotations are by similarity. The cited May2009 experiment
+    changes multiple loci and TetA(C) regulation and measures expression/biofilms;
+    it is not a constituent-specific structural absence assay. The record supplies
+    no source-scoped inference explaining these categorical formation requirements.
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  field_paths:
+  - components[0].essentiality
+  - components[1].essentiality
+  - components[2].essentiality
+  evidence_ids:
+  - record
+  - schema
+  - root54-sources-complex-CPX-4273
+  - root54-sources-eco0005547
+  - root54-sources-primary-PMC2772303
+  - root54-sources-protein-P52599
+  - root54-sources-protein-P52600
+  - root54-sources-protein-P02930
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  rule_id: Formation essentiality requires appropriately scoped support
+  native_severity: major
+  normalization_reason: The unsupported values make categorical causal claims for
+    every component; this materially exceeds the supplied evidence rather than merely
+    omitting optional enrichment.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  description: Use UNKNOWN for the unsupported formation-essentiality values, or supply
+    explicit component-specific formation evidence and delimit any inference to its
+    tested system. Keep the supported composition, TolC count and evidence-tier annotations.
+  acceptance_checks:
+  - Do not infer assembly necessity from membership, drug resistance, viability or
+    another TolC pump.
+  - Preserve the CPX curator-inference qualifier and the absent EmrK/EmrY source counts.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw datasets, atomic coordinates, sequence alignments or supplemental
+  data files were reanalyzed. Primary reading is limited to the exact sections declared
+  in individual evidence rows.
+- The family check is bounded to retrieved native cross-references and the explicit
+  candidate records; it does not prove that no exact EmrK/EmrY family exists anywhere.
+- The first focused UniProt verification failed because sandbox DNS could not resolve
+  UniProt; that attempt and log are preserved separately. A network-enabled retry
+  passed, and both outcomes remain auditable.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes clean observations and issue-bearing reviews
+  alike.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
