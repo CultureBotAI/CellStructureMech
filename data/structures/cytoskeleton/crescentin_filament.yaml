@@ -47,6 +47,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T11:10:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2405 (Stage 4 finding cytoskeleton-discussion-prose-issue-links):
+    added structured evidence reference for GitHub issue #1260 to discussion woldemeskel_goley_2017_citation_date.'
+  llm_assisted: true
 parent_structures:
 - GO:0099513
 synonyms:
@@ -223,6 +229,9 @@ discussions:
   evidence:
   - reference: DOI:10.1016/j.tim.2017.03.006
     notes: Article front matter and PMID:28359631 agree on the 2017 publication year.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/1260
+    notes: Repository issue tracking the historical citation-replacement event referenced
+      in this discussion.
   posed_by: codex
   posed_date: '2026-10-11'
   resolved_date: '2026-10-11'

@@ -1,0 +1,981 @@
+# Peritrich body myoneme identity, assay boundaries and image review
+
+- Review: 20261021T080756Z-peritrich-body-myoneme-system-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:53:42Z
+- Finished UTC: 2026-10-21T08:07:56Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The body-network identity, scoped centrin/spasmin localization, two calcium-response edges, morphological examples and CIL preview provenance are supported. No concrete correction was identified within the inspected scope. Two citations remain abstract-bounded, and proposed molecular mechanisms and inventories remain explicitly unresolved.
+
+## Scope And Provenance
+
+Entire target and tracked CIL preview; native GO, taxon and family responses; all three cited DOI primary abstracts, Konior and Allen primary scientific text, selected figures and CIL item-level metadata.
+
+Selection: First target in batch ten, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:peritrich_body_myoneme_system | data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml | maintained | Peritrich body myoneme system |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:peritrich_body_myoneme_system | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:peritrich_body_myoneme_system | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:peritrich_body_myoneme_system | 9 identifiers OK; 2 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:peritrich_body_myoneme_system | Physical cytoskeletal localization, morphology and calcium-response claims; no regulatory or expression-module mechanism is asserted. |
+| Tracked preview identity and primary PDF integrity | passed | True | cellstructuremech:peritrich_body_myoneme_system | Tracked preview equals the freshly retrieved CIL image and its SHA-256 matches the record. Allen primary PDF MD5 matches the official PMC version 1 package. CIL per-item license, attribution and acquisition/publication context inspected. |
+| Claim-level scientific review | passed | True | cellstructuremech:peritrich_body_myoneme_system | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:peritrich_body_myoneme_system | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:peritrich_body_myoneme_system | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:peritrich_body_myoneme_system | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:peritrich_body_myoneme_system | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:peritrich_body_myoneme_system | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Interconnected body network distinct from stalk organelle
+
+identity: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+Konior primary body fluorescence shows longitudinal fibers with interconnections and peristomial fibers, converging aborally into the distinct stalk spasmoneme. Allen ultrastructure corroborates body/stalk continuity and compartment boundaries. Campanella abstract supplies a second genus with an interconnected body system. The record does not equate the network with a protein, ciliary apparatus, every rhizoplast or Spirostomum fishnet.
+
+### Broad intracellular class and cytoskeletal parthood
+
+grounding: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+GO:0005622 is the active broad intracellular anatomical structure term; GO:0005856 defines cytoskeleton. Primary morphology/localization supports treating the body fiber system as intracellular and part of the cytoskeleton. OTHER is appropriate for the interconnected system. Neither authority is presented as an exact myoneme mapping or as a native GO relation to the local identifier.
+
+### Scoped centrin/spasmin constituent class
+
+evidence: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+Konior Figure 3 supports body-network localization of the N-termVcCentrin4 and 1F5 antibody signals in V. convallaria. Western analysis distinguishes one N-terminal-antibody band from two 1F5 bands; it does not yield native copy number, a complete paralogue inventory or single-protein sufficiency. The class remains REVIEWED_LABEL_ONLY because IPR050145 includes broader CML/obelin/caltractin scope. No required exact family or protein accession is falsely assigned.
+
+### Separate live and extracted calcium interventions
+
+graph: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+The primary Katoh abstract directly supports both graph edges: graded body shrinkage following intracellular calcium-buffer injection in living Vorticella and calcium-dependent body contraction following raised external calcium in Triton-extracted preparations. The graph keeps these interventions separate, does not transfer stalk all-or-nothing behavior to the body and does not identify a species, threshold, channel or molecular motor from the abstract.
+
+### Contractility versus molecular proposals
+
+scope: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+Body contraction is supported at the stated organelle-response level. Calcium-induced calcium release remains an interpretation of Katoh pharmacology; Konior Sfi1-like scaffold and tubule contraction/extension roles are proposed for future tests. The record neither imports stalk ATP-independent cycling into body physiology nor turns Campanella morphology into a tested contraction perturbation.
+
+### Species examples and preparation context
+
+scope: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+60850 and 168242 resolve exactly to Vorticella convallaria and Campanella umbellaria. Vorticella body-network localization is directly supported by Konior and separately by the CIL dataset. Campanella is an abstract-bounded protargol morphology example; centrin membership is not transferred to it. Konior rejuvenated cells and Allen LB1690/1 are source contexts, not a single inferred culture accession for every Vorticella observation.
+
+### Morphological ER-myoneme linkage research lead
+
+completeness: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+Allen primary conventional TEM supports recognizable midpiece, rails and cradle at the ER-myoneme interface. Section geometry and fixation affect interpretation; the drawing is a morphological reconstruction. The paper explicitly labels calcium-transport, ATPase and excitation-transmission roles as speculative. Deferring molecular components and separate linkage-complex curation does not omit an experimentally identified family or resolved mechanism.
+
+### CIL preview identity, interpretation and dedication
+
+provenance: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+CIL:39513 per-item JSON-LD confirms DOI, V. convallaria, Richard Allen attribution, D. Kunkel TEM acquisition in 1994, catalog publication in 2012, public-domain dedication and the exact preview URL. Tracked and source image bytes are identical. The caption correctly limits use to the source-described anti-alpha-centrin immunogold thin section and does not treat the uncalibrated preview as the archival negative or an isoform/copy-number assay.
+
+### Konior fluorescence versus separate CIL body TEM
+
+consistency: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+The current assay-boundaries discussion names Konior explicitly: its body-network localization is light microscopy, while its compartment percentages refer to stalk spasmoneme immunogold. The separate CIL body-myoneme immunogold dataset is correctly distinguished. Historical issue 2004 describes that former wording ambiguity; the current target retains the requested distinction without conflating the experiments.
+
+### Readable primary bodies and retained access limits
+
+provenance: supported. Targets: cellstructuremech:peritrich_body_myoneme_system.
+
+Konior and Allen primary scientific text and relevant figures are readable. Shi and Katoh remain primary-abstract bounded after failed publisher routes; no full-paper knowledge is inferred. The Python CIL TLS failure is recorded separately from successful system curl retrieval. Historical no-hit searches and past access notes are not converted into fresh absence assertions or new data defects.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| peritrich-agent-allen-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.xml; article/front/article-meta/article-id, title-group and permissions; body/preformat; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-jats.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-jats.meta.json | context_only | Native JATS metadata identifies PMC2108889.1 and DOI 10.1083/jcb.56.2.559. Permissions explicitly link CC BY-NC-SA 4.0. Scientific body reading and figure visual inspection are attested against separately hashed allen-pdf, not under this XML hash. |
+| peritrich-agent-allen-package | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.json; pmcid/version/pmid/doi/is_pmc_openaccess/is_manuscript/is_retracted/license_code/pdf_url; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-package.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-package.meta.json | supports | Official PMC version 1 JSON identifies Allen 1973, PMID 4630196, open-access true, manuscript false, retracted false and CC BY-NC-SA label. pdf_url supplies MD5 c6f9bd76a0ff18f549f1c15e2ee9f476; downloaded PDF matches. The package does not attest image pixels or independently supply experimental interpretation. |
+| peritrich-agent-allen-pdf | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.pdf; Allen 1973, printed pp. 559-562 Introduction/Methods/distribution; pp. 565-572 ER-myoneme linkage morphology; pp. 573-578 stalk comparison and Discussion; Figures 1, 7-10 and 19 visually inspected on PDF pages 3, 9 and 14; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-pdf.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-pdf.meta.json | supports | Scientific body and main captions read in primary 21-page PDF, through final Discussion; bibliography not independently audited. V. convallaria culture LB1690/1, conventional glutaraldehyde/osmium fixation, thin-section TEM. Body myonemes lie below pellicle and converge into stalk spasmoneme. ER-myoneme complexes have midpiece, rails and cradle recognizable by section geometry, with tentative contacts and preservation-sensitive ER vesiculation. Figure 19 is a structural reconstruction schematic, not direct molecular inventory. Functional Speculations (p. 577) explicitly restricts certainty to ER attachment; calcium transport, ATPase association and transmission of excitation are hypotheses requiring tests. No identified protein family, channel or tether is demonstrated by the morphology. |
+| peritrich-agent-cil-image | https://cildata.crbs.ucsd.edu/media/thumbnail_display/39513/39513_thumbnailx512.jpg; Entire source-served 512x512 thumbnail preview, compared byte-for-byte with tracked data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-image.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-image.meta.json | supports | Source preview SHA-256 feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f equals tracked image and YAML file_sha256. Tracked preview visually inspected: cortical thin section with membrane profile, myoneme region and small gold particles; no calibrated scale bar. Image supports qualitative source-described localization only, not a count, molecular isoform assignment or full raw-negative measurement. |
+| peritrich-agent-cil-item-curl | https://www.cellimagelibrary.org/images/39513; Both application/ld+json Dataset objects; name/description/image.url/identifier/license/sourceOrganization/datePublished; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item-curl.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item-curl.meta.json | supports | Per-item CIL:39513 JSON-LD identifies V. convallaria, DOI 10.7295/W9CIL39513, Richard Allen (University of Hawaii) attribution, public-domain dedication link and exact 512x512 preview URL. Full description names thin cryosection, rabbit polyclonal alpha-centrin antibody, gold anti-rabbit IgG, and source interpretation that myoneme contains alpha-centrin. It names D. Kunkel, Zeiss 10A 80kV acquisition on 1994-08-18, negative magnification 19,800X; datePublished is 2012-01-22. Preview is distinct from archival negative/high-resolution distribution; no scale calibration, native isoform or NCBI taxon ID is supplied by the item JSON-LD. The successful system curl used normal TLS validation; access time is download completion file mtime. |
+| peritrich-agent-cil-item | https://www.cellimagelibrary.org/images/39513; Serialized Python requests SSLError; no HTTP response; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item.meta.json | unknown | Python requests failed its TLS issuer-chain verification. No HTTP status or landing-page bytes were obtained by this route. A separate system curl receipt successfully retrieved the item using normal TLS validation; this failure does not imply item unavailability. |
+| peritrich-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=DOI%3A%2210.1002/jmor.10225%22%20OR%20DOI%3A%2210.1242/jeb.189.1.163%22%20OR%20DOI%3A%2210.1083/jcb.56.2.559%22; resultList.result exact DOIs 10.1002/jmor.10225, 10.1242/jeb.189.1.163 and 10.1083/jcb.56.2.559; metadata and complete abstractText; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/epmc.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/epmc.meta.json | supports | Exact primary citation identities verified: Shi et al. 2004 PMID 15164366; Katoh and Naitoh 1994 PMID 9317557; Allen 1973 PMID 4630196 / PMC2108889. All returned abstracts read. Shi uses protargol morphology to reveal interconnected longitudinal/circular Campanella fibers and proposes skeletal/contraction/relaxation roles; it does not test molecular identity or perturb contraction. Katoh separates external-calcium responses in Triton-extracted Vorticella from injected calcium-buffer responses in living cells. Body shrinkage is graded in both; live stalk response is all-or-nothing in the ordinary calcium injection experiment. Regenerative calcium release is an interpretation of pharmacology, not identified channels. No species or strain is given in the Katoh abstract. Allen abstract describes morphological ER-myoneme linkage and proposes calcium/excitation roles. |
+| peritrich-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005622,GO:0005856; results[id=GO:0005622/GO:0005856], names/definitions/isObsolete; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/go.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/go.meta.json | supports | Both terms are active. GO:0005622 is intracellular anatomical structure, a broad class; GO:0005856 is cytoskeleton, the internal filamentous cellular framework. These terms establish broad identity/parthood context, not an exact native GO myoneme class or a native ontology edge for the locally minted target. |
+| peritrich-agent-ipr050145 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/; metadata.accession/type/name/description/member_databases; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/ipr050145.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/ipr050145.meta.json | supports | IPR050145 is Centrin/CML-like, an authority family whose reviewed description includes caltractin, obelin and Arabidopsis CML37/38. Its scope is broader than Vorticella centrin/spasmin body-myoneme constituents. The historical InterPro spasmin no-hit query was not rerun, and no exhaustive family absence is asserted. |
+| peritrich-agent-issue-2004 | https://api.github.com/repos/CultureBotAI/CellStructureMech/issues/2004; GitHub issue number/title/body/state/created_at/closed_at/updated_at; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/issue-2004.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/issue-2004.meta.json | context_only | Read-only issue API confirms the historical report concerned ambiguity in an unqualified microscopy statement and requested that it explicitly name Konior 2009 and distinguish the separate CIL TEM dataset. The present target does so. Issue is closed. This is provenance context, not independent biological evidence or a newly performed structured finding disposition. |
+| peritrich-agent-katoh-pdf | https://journals.biologists.com/jeb/article-pdf/189/1/163/1254862/163.pdf; Attempted candidate publisher PDF URL response only; URL identity not verified; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-pdf.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-pdf.meta.json | unknown | Candidate publisher PDF route returned HTTP 403. Correct document bytes were not retrieved, so this is only a failed access attempt, not full-text support or verification of that candidate PDF URL. |
+| peritrich-agent-katoh-publisher | https://doi.org/10.1242/jeb.189.1.163; Exact DOI redirect response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-publisher.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-publisher.meta.json | unknown | Publisher DOI route returned HTTP 403. No full paper was read from this response. Primary abstract was read separately through Europe PMC; this response does not establish global unavailability. |
+| peritrich-agent-konior-pdf | https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf; Konior et al. 2009, printed pp. 161-167 main text and Methods/Results/Discussion; pp. 170-174 Figures 1-8 captions; Figure 3 on PDF page 11 / printed p. 171 visually inspected; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/konior-pdf.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/konior-pdf.meta.json | supports | Complete scientific main text and figure captions read from primary PDF. V. convallaria rejuvenated cells grown in bacteria-containing wheat-grass medium; body-network preparation includes EGTA/Triton relaxation and methanol fixation. The N-terminal VcCentrin4 rabbit antibody recognizes one Western band; stalk-derived mouse 1F5 recognizes two and recognizes recombinant spasmin from prior work. Figure 3 fluorescence demonstrates longitudinal branching/interconnected body fibers and peristomial fibers; the body fibers converge aborally into distinct stalk spasmoneme. This does not give a complete isoform inventory or stoichiometry. Figures 4-8 immunogold compartment measurements are explicitly stalk spasmoneme, not body-network copy numbers. Discussion proposes Sfi1-like backbone and tubule contraction/relaxation roles for future testing; those proteins were not identified as native Vorticella constituents in this study. No comparative antibody specificity beyond reported blot/localization is inferred. |
+| peritrich-agent-shi-pdfdirect | https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jmor.10225; Publisher DOI pdfdirect route response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-pdfdirect.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-pdfdirect.meta.json | unknown | Publisher pdfdirect route returned HTTP 403. No body read; primary abstract remains the highest inspected source tier. |
+| peritrich-agent-shi-publisher | https://doi.org/10.1002/jmor.10225; Exact DOI redirect response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-publisher.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-publisher.meta.json | unknown | Publisher DOI route returned HTTP 403. Primary abstract was read separately through Europe PMC; full text/Methods/figures remain uninspected. |
+| peritrich-agent-taxon-campanella | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/168242; taxId/scientificName/rank; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-campanella.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-campanella.meta.json | supports | 168242 is Campanella umbellaria at species rank. Exact label/identifier verified; no contractility or molecular evidence supplied by the taxonomy record. |
+| peritrich-agent-taxon-vorticella | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/60850; taxId/scientificName/rank; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-vorticella.raw; metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-vorticella.meta.json | supports | 60850 is Vorticella convallaria at species rank. Exact label/identifier verified; no reference culture or experimental strain equivalence inferred. |
+| record | data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml; Entire maintained YAML including definition, component, canonical examples, function, both graph edges, all discussions, history and image metadata | context_only | Full target read. Body-network identity is distinct from stalk spasmoneme and ciliary structures. Composition is scoped to V. convallaria; the response graph separates living and detergent-extracted preparations and remains nonmechanistic. |
+| tracked-image | data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg; Entire tracked preview visually inspected; image included in expanded native inspect inputs | context_only | The tracked 512x512 preview depicts a cortical thin-section TEM field and is byte-identical to the source-served image. It is a qualitative centrin-localization image, not a calibrated raw negative or isoform-resolved quantitative assay. |
+| schema-result | just validate data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml; exact collect() scope; snapshot_sha256 identifies the entire original reports/curie_check.tsv, not resolver-slice.json | supports | 9 of 11 collected target identifiers returned OK at the unchanged base. Residuals: CIL:39513: SKIPPED; resolved by evidence peritrich-agent-cil-item-curl; cellstructuremech:peritrich_body_myoneme_system: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Katoh 1994 and Shi 2004 remain primary-abstract bounded. Exact DOI routes and attempted PDF routes returned 403; the candidate Katoh PDF URL itself is not verified. Browser DOI opens were also unavailable. No claim of global full-text absence is made.
+- Konior main text and captions were read, with Figure 3 visually inspected. Allen scientific body and captions were read, with Figures 1, 7-10 and 19 visually inspected. Other figure pixels and original experiment data were not exhaustively audited.
+- Antibody localization supports a scoped centrin/spasmin constituent class in V. convallaria, not an exhaustive isoform inventory, essentiality, native stoichiometry or Campanella composition.
+- The nonmechanistic response graph retains live injection versus extracted external-calcium assays, and does not specify Vorticella species for the abstract-bounded Katoh experiments.
+- Native calcium handling, Sfi1-like partners and ER-myoneme linkage molecular composition remain explicit proposals or open questions. Stalk ATP-independent contraction and relaxation findings are not imported into a universal body-network mechanism.
+- Historical no-hit GO/InterPro and whole-repository deduplication claims were not rerun; no new absence claim is made. Receipt reuse lead search included hidden and ignored filenames under /private/tmp, and no old scientific source receipt was reused.
+- Current source review does not establish independent historical authorship. GitHub issue 2004 is cited only as historical context; no issue or structured prior finding is mutated or formally retired.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Source packet: /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/source-inspection.json. Seventeen fresh raw/meta receipts retain original retrieval timestamps and raw hashes; no prior scientific snapshot was reused.
+- Expanded native inspection captures the full target and tracked image plus unchanged guidance/schema inputs. No adjacent scientific record informed this assessment.
+- Root read the complete target and review, verified native-input/source hashes, checked selected primary claim-bearing sections, and visually inspected the unchanged tracked figure; a separate collaborator also audited source scope. Source reading limits remain as listed.
+- Only this target receives scientific review coverage. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T080756Z-peritrich-body-myoneme-system-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Peritrich body myoneme identity, assay boundaries and image review
+started_at: '2026-10-21T07:53:42Z'
+finished_at: '2026-10-21T08:07:56Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The body-network identity, scoped centrin/spasmin localization, two calcium-response
+  edges, morphological examples and CIL preview provenance are supported. No concrete
+  correction was identified within the inspected scope. Two citations remain abstract-bounded,
+  and proposed molecular mechanisms and inventories remain explicitly unresolved.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg
+    sha256: feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+    role: context
+  - path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:peritrich_body_myoneme_system
+  path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  label: Peritrich body myoneme system
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target and tracked CIL preview; native GO, taxon and family
+    responses; all three cited DOI primary abstracts, Konior and Allen primary scientific
+    text, selected figures and CIL item-level metadata.
+  selection: First target in batch ten, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate-strict data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    --out /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: 9 identifiers OK; 2 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+  - peritrich-agent-cil-item-curl
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Physical cytoskeletal localization, morphology and calcium-response claims;
+    no regulatory or expression-module mechanism is asserted.
+- check_id: source-media
+  name: Tracked preview identity and primary PDF integrity
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Tracked preview equals the freshly retrieved CIL image and its SHA-256
+    matches the record. Allen primary PDF MD5 matches the official PMC version 1 package.
+    CIL per-item license, attribution and acquisition/publication context inspected.
+  evidence_ids:
+  - peritrich-agent-cil-image
+  - peritrich-agent-cil-item-curl
+  - peritrich-agent-allen-package
+  - peritrich-agent-allen-pdf
+  - tracked-image
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - peritrich-agent-allen-jats
+  - peritrich-agent-allen-package
+  - peritrich-agent-allen-pdf
+  - peritrich-agent-cil-image
+  - peritrich-agent-cil-item-curl
+  - peritrich-agent-cil-item
+  - peritrich-agent-epmc
+  - peritrich-agent-go
+  - peritrich-agent-ipr050145
+  - peritrich-agent-issue-2004
+  - peritrich-agent-katoh-pdf
+  - peritrich-agent-katoh-publisher
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-shi-pdfdirect
+  - peritrich-agent-shi-publisher
+  - peritrich-agent-taxon-campanella
+  - peritrich-agent-taxon-vorticella
+  - record
+  - tracked-image
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: peritrich-agent-allen-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.xml
+  locator: article/front/article-meta/article-id, title-group and permissions; body/preformat;
+    raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-jats.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-jats.meta.json
+  accessed_at: '2026-10-21T07:55:03.092595Z'
+  support: context_only
+  summary: Native JATS metadata identifies PMC2108889.1 and DOI 10.1083/jcb.56.2.559.
+    Permissions explicitly link CC BY-NC-SA 4.0. Scientific body reading and figure
+    visual inspection are attested against separately hashed allen-pdf, not under
+    this XML hash.
+  snapshot_sha256: e5414575b4758bcdb92094175502b9385c53f13c95339cac3e9c07d6e634b8f7
+- evidence_id: peritrich-agent-allen-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.json
+  locator: pmcid/version/pmid/doi/is_pmc_openaccess/is_manuscript/is_retracted/license_code/pdf_url;
+    raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-package.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-package.meta.json
+  accessed_at: '2026-10-21T07:56:09.909880Z'
+  support: supports
+  summary: Official PMC version 1 JSON identifies Allen 1973, PMID 4630196, open-access
+    true, manuscript false, retracted false and CC BY-NC-SA label. pdf_url supplies
+    MD5 c6f9bd76a0ff18f549f1c15e2ee9f476; downloaded PDF matches. The package does
+    not attest image pixels or independently supply experimental interpretation.
+  snapshot_sha256: 75aed52f83cf5ce674de1c0fe0bd4f0bbdff9a9c4c4e9d3241ada4b74ea5e337
+- evidence_id: peritrich-agent-allen-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108889.1/PMC2108889.1.pdf
+  locator: Allen 1973, printed pp. 559-562 Introduction/Methods/distribution; pp.
+    565-572 ER-myoneme linkage morphology; pp. 573-578 stalk comparison and Discussion;
+    Figures 1, 7-10 and 19 visually inspected on PDF pages 3, 9 and 14; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-pdf.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/allen-pdf.meta.json
+  accessed_at: '2026-10-21T07:55:03.139465Z'
+  support: supports
+  summary: Scientific body and main captions read in primary 21-page PDF, through
+    final Discussion; bibliography not independently audited. V. convallaria culture
+    LB1690/1, conventional glutaraldehyde/osmium fixation, thin-section TEM. Body
+    myonemes lie below pellicle and converge into stalk spasmoneme. ER-myoneme complexes
+    have midpiece, rails and cradle recognizable by section geometry, with tentative
+    contacts and preservation-sensitive ER vesiculation. Figure 19 is a structural
+    reconstruction schematic, not direct molecular inventory. Functional Speculations
+    (p. 577) explicitly restricts certainty to ER attachment; calcium transport, ATPase
+    association and transmission of excitation are hypotheses requiring tests. No
+    identified protein family, channel or tether is demonstrated by the morphology.
+  snapshot_sha256: 345178622514906260714e1ffcbb9a30c91a83a2d60f5df552b4c2e6cb3e1030
+- evidence_id: peritrich-agent-cil-image
+  kind: primary_source
+  reference: https://cildata.crbs.ucsd.edu/media/thumbnail_display/39513/39513_thumbnailx512.jpg
+  locator: Entire source-served 512x512 thumbnail preview, compared byte-for-byte
+    with tracked data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg;
+    raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-image.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-image.meta.json
+  accessed_at: '2026-10-21T07:55:02.806665Z'
+  support: supports
+  summary: 'Source preview SHA-256 feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+    equals tracked image and YAML file_sha256. Tracked preview visually inspected:
+    cortical thin section with membrane profile, myoneme region and small gold particles;
+    no calibrated scale bar. Image supports qualitative source-described localization
+    only, not a count, molecular isoform assignment or full raw-negative measurement.'
+  snapshot_sha256: feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+- evidence_id: peritrich-agent-cil-item-curl
+  kind: database
+  reference: https://www.cellimagelibrary.org/images/39513
+  locator: Both application/ld+json Dataset objects; name/description/image.url/identifier/license/sourceOrganization/datePublished;
+    raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item-curl.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item-curl.meta.json
+  accessed_at: '2026-10-21T07:55:21.883191Z'
+  support: supports
+  summary: Per-item CIL:39513 JSON-LD identifies V. convallaria, DOI 10.7295/W9CIL39513,
+    Richard Allen (University of Hawaii) attribution, public-domain dedication link
+    and exact 512x512 preview URL. Full description names thin cryosection, rabbit
+    polyclonal alpha-centrin antibody, gold anti-rabbit IgG, and source interpretation
+    that myoneme contains alpha-centrin. It names D. Kunkel, Zeiss 10A 80kV acquisition
+    on 1994-08-18, negative magnification 19,800X; datePublished is 2012-01-22. Preview
+    is distinct from archival negative/high-resolution distribution; no scale calibration,
+    native isoform or NCBI taxon ID is supplied by the item JSON-LD. The successful
+    system curl used normal TLS validation; access time is download completion file
+    mtime.
+  snapshot_sha256: 4f1119925d1007907b295d248b57199f7a90888565488ec2c67f1b41915bcf80
+- evidence_id: peritrich-agent-cil-item
+  kind: database
+  reference: https://www.cellimagelibrary.org/images/39513
+  locator: Serialized Python requests SSLError; no HTTP response; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/cil-item.meta.json
+  accessed_at: '2026-10-21T07:56:09.594012Z'
+  support: unknown
+  summary: Python requests failed its TLS issuer-chain verification. No HTTP status
+    or landing-page bytes were obtained by this route. A separate system curl receipt
+    successfully retrieved the item using normal TLS validation; this failure does
+    not imply item unavailability.
+  snapshot_sha256: 13d4c1d0d29e5dc6dff960c0b5fecb95d4a2a611b540f6d99776951059c043ff
+- evidence_id: peritrich-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1002/jmor.10225%22%20OR%20DOI%3A%2210.1242/jeb.189.1.163%22%20OR%20DOI%3A%2210.1083/jcb.56.2.559%22
+  locator: resultList.result exact DOIs 10.1002/jmor.10225, 10.1242/jeb.189.1.163
+    and 10.1083/jcb.56.2.559; metadata and complete abstractText; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/epmc.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/epmc.meta.json
+  accessed_at: '2026-10-21T07:55:02.636633Z'
+  support: supports
+  summary: 'Exact primary citation identities verified: Shi et al. 2004 PMID 15164366;
+    Katoh and Naitoh 1994 PMID 9317557; Allen 1973 PMID 4630196 / PMC2108889. All
+    returned abstracts read. Shi uses protargol morphology to reveal interconnected
+    longitudinal/circular Campanella fibers and proposes skeletal/contraction/relaxation
+    roles; it does not test molecular identity or perturb contraction. Katoh separates
+    external-calcium responses in Triton-extracted Vorticella from injected calcium-buffer
+    responses in living cells. Body shrinkage is graded in both; live stalk response
+    is all-or-nothing in the ordinary calcium injection experiment. Regenerative calcium
+    release is an interpretation of pharmacology, not identified channels. No species
+    or strain is given in the Katoh abstract. Allen abstract describes morphological
+    ER-myoneme linkage and proposes calcium/excitation roles.'
+  snapshot_sha256: 1b08ccdcc05189280438c79b2c876f4f3751e791f87e835a993965e1d26e8882
+- evidence_id: peritrich-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005622,GO:0005856
+  locator: results[id=GO:0005622/GO:0005856], names/definitions/isObsolete; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/go.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/go.meta.json
+  accessed_at: '2026-10-21T07:55:02.557094Z'
+  support: supports
+  summary: Both terms are active. GO:0005622 is intracellular anatomical structure,
+    a broad class; GO:0005856 is cytoskeleton, the internal filamentous cellular framework.
+    These terms establish broad identity/parthood context, not an exact native GO
+    myoneme class or a native ontology edge for the locally minted target.
+  snapshot_sha256: 4c92d4bbf13d30275ed9de644403094d01d5fad35bbc787f9663ab07f4e01771
+- evidence_id: peritrich-agent-ipr050145
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/
+  locator: metadata.accession/type/name/description/member_databases; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/ipr050145.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/ipr050145.meta.json
+  accessed_at: '2026-10-21T07:55:02.575000Z'
+  support: supports
+  summary: IPR050145 is Centrin/CML-like, an authority family whose reviewed description
+    includes caltractin, obelin and Arabidopsis CML37/38. Its scope is broader than
+    Vorticella centrin/spasmin body-myoneme constituents. The historical InterPro
+    spasmin no-hit query was not rerun, and no exhaustive family absence is asserted.
+  snapshot_sha256: 386371fb67a7de41d9f9a6ded2bbb77530d9a27411b46349d2ac050d45832910
+- evidence_id: peritrich-agent-issue-2004
+  kind: prior_review
+  reference: https://api.github.com/repos/CultureBotAI/CellStructureMech/issues/2004
+  locator: GitHub issue number/title/body/state/created_at/closed_at/updated_at; raw
+    /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/issue-2004.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/issue-2004.meta.json
+  accessed_at: '2026-10-21T07:55:02.911389Z'
+  support: context_only
+  summary: Read-only issue API confirms the historical report concerned ambiguity
+    in an unqualified microscopy statement and requested that it explicitly name Konior
+    2009 and distinguish the separate CIL TEM dataset. The present target does so.
+    Issue is closed. This is provenance context, not independent biological evidence
+    or a newly performed structured finding disposition.
+  snapshot_sha256: 1aa1df9d550301f20dbe7eb275576e169694382be8bb6e28c4eb5e5349588026
+- evidence_id: peritrich-agent-katoh-pdf
+  kind: primary_source
+  reference: https://journals.biologists.com/jeb/article-pdf/189/1/163/1254862/163.pdf
+  locator: Attempted candidate publisher PDF URL response only; URL identity not verified;
+    raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-pdf.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-pdf.meta.json
+  accessed_at: '2026-10-21T07:56:09.600680Z'
+  support: unknown
+  summary: Candidate publisher PDF route returned HTTP 403. Correct document bytes
+    were not retrieved, so this is only a failed access attempt, not full-text support
+    or verification of that candidate PDF URL.
+  snapshot_sha256: a5d6735e4d1f52c8344de576ad7e831f1a5abed0429832ae45471495d8da1cea
+- evidence_id: peritrich-agent-katoh-publisher
+  kind: primary_source
+  reference: https://doi.org/10.1242/jeb.189.1.163
+  locator: Exact DOI redirect response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-publisher.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/katoh-publisher.meta.json
+  accessed_at: '2026-10-21T07:55:02.759247Z'
+  support: unknown
+  summary: Publisher DOI route returned HTTP 403. No full paper was read from this
+    response. Primary abstract was read separately through Europe PMC; this response
+    does not establish global unavailability.
+  snapshot_sha256: a4974e2904ed8a3649270898a5f6be45b9298a31f1896029a782840224293835
+- evidence_id: peritrich-agent-konior-pdf
+  kind: primary_source
+  reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+  locator: Konior et al. 2009, printed pp. 161-167 main text and Methods/Results/Discussion;
+    pp. 170-174 Figures 1-8 captions; Figure 3 on PDF page 11 / printed p. 171 visually
+    inspected; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/konior-pdf.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/konior-pdf.meta.json
+  accessed_at: '2026-10-21T07:55:02.311453Z'
+  support: supports
+  summary: Complete scientific main text and figure captions read from primary PDF.
+    V. convallaria rejuvenated cells grown in bacteria-containing wheat-grass medium;
+    body-network preparation includes EGTA/Triton relaxation and methanol fixation.
+    The N-terminal VcCentrin4 rabbit antibody recognizes one Western band; stalk-derived
+    mouse 1F5 recognizes two and recognizes recombinant spasmin from prior work. Figure
+    3 fluorescence demonstrates longitudinal branching/interconnected body fibers
+    and peristomial fibers; the body fibers converge aborally into distinct stalk
+    spasmoneme. This does not give a complete isoform inventory or stoichiometry.
+    Figures 4-8 immunogold compartment measurements are explicitly stalk spasmoneme,
+    not body-network copy numbers. Discussion proposes Sfi1-like backbone and tubule
+    contraction/relaxation roles for future testing; those proteins were not identified
+    as native Vorticella constituents in this study. No comparative antibody specificity
+    beyond reported blot/localization is inferred.
+  snapshot_sha256: 2e671848682f3941d8897979290ebf7ef7704335692c2cf4dbd1af69286ca70b
+- evidence_id: peritrich-agent-shi-pdfdirect
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jmor.10225
+  locator: Publisher DOI pdfdirect route response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-pdfdirect.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-pdfdirect.meta.json
+  accessed_at: '2026-10-21T07:56:09.614034Z'
+  support: unknown
+  summary: Publisher pdfdirect route returned HTTP 403. No body read; primary abstract
+    remains the highest inspected source tier.
+  snapshot_sha256: 8911b9371244f082e8b2d9c80d0d5476781453e119beaae233f43b9f789d27be
+- evidence_id: peritrich-agent-shi-publisher
+  kind: primary_source
+  reference: https://doi.org/10.1002/jmor.10225
+  locator: Exact DOI redirect response only; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-publisher.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/shi-publisher.meta.json
+  accessed_at: '2026-10-21T07:55:02.762422Z'
+  support: unknown
+  summary: Publisher DOI route returned HTTP 403. Primary abstract was read separately
+    through Europe PMC; full text/Methods/figures remain uninspected.
+  snapshot_sha256: 558e15ad785ca65378b220f419a824b79877fed3f23b645bbae1cc80f47075a3
+- evidence_id: peritrich-agent-taxon-campanella
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/168242
+  locator: taxId/scientificName/rank; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-campanella.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-campanella.meta.json
+  accessed_at: '2026-10-21T07:55:02.557199Z'
+  support: supports
+  summary: 168242 is Campanella umbellaria at species rank. Exact label/identifier
+    verified; no contractility or molecular evidence supplied by the taxonomy record.
+  snapshot_sha256: b3aa5b9b9d388b22c1db683671db225eba103797d019a9427ccbe00a92e7f8e0
+- evidence_id: peritrich-agent-taxon-vorticella
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/60850
+  locator: taxId/scientificName/rank; raw /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-vorticella.raw;
+    metadata /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/taxon-vorticella.meta.json
+  accessed_at: '2026-10-21T07:55:02.568023Z'
+  support: supports
+  summary: 60850 is Vorticella convallaria at species rank. Exact label/identifier
+    verified; no reference culture or experimental strain equivalence inferred.
+  snapshot_sha256: aa82bc0781d6c2eaf1e2d47276d7a7b5601358a6034cb62d201fdaa8aca2c907
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  locator: Entire maintained YAML including definition, component, canonical examples,
+    function, both graph edges, all discussions, history and image metadata
+  accessed_at: '2026-10-21T07:59:10Z'
+  support: context_only
+  summary: Full target read. Body-network identity is distinct from stalk spasmoneme
+    and ciliary structures. Composition is scoped to V. convallaria; the response
+    graph separates living and detergent-extracted preparations and remains nonmechanistic.
+- evidence_id: tracked-image
+  kind: record_content
+  reference: data/images/cytoskeleton/peritrich_body_myoneme_system/cil_39513.jpg
+  locator: Entire tracked preview visually inspected; image included in expanded native
+    inspect inputs
+  accessed_at: '2026-10-21T07:59:10Z'
+  support: context_only
+  summary: The tracked 512x512 preview depicts a cortical thin-section TEM field and
+    is byte-identical to the source-served image. It is a qualitative centrin-localization
+    image, not a calibrated raw negative or isoform-resolved quantitative assay.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:53:43Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml'
+  snapshot_sha256: 0b2acf71097f2eb01758946de5b44b3b8121eef85a6be20485a58cbcae14c3c8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    --out /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:53:45Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml\
+    \ --out /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich_body_myoneme_system-strict.tsv"
+  snapshot_sha256: b505163313652628b1bc83a84febc2ec5041e7e140f8201913145ddbadabc2fb
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml; exact
+    collect() scope; snapshot_sha256 identifies the entire original reports/curie_check.tsv,
+    not resolver-slice.json
+  accessed_at: '2026-10-21T07:59:10Z'
+  support: supports
+  summary: '9 of 11 collected target identifiers returned OK at the unchanged base.
+    Residuals: CIL:39513: SKIPPED; resolved by evidence peritrich-agent-cil-item-curl;
+    cellstructuremech:peritrich_body_myoneme_system: SKIPPED; resolved by evidence
+    record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Interconnected body network distinct from stalk organelle
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Konior primary body fluorescence shows longitudinal fibers with interconnections
+    and peristomial fibers, converging aborally into the distinct stalk spasmoneme.
+    Allen ultrastructure corroborates body/stalk continuity and compartment boundaries.
+    Campanella abstract supplies a second genus with an interconnected body system.
+    The record does not equate the network with a protein, ciliary apparatus, every
+    rhizoplast or Spirostomum fishnet.
+  evidence_ids:
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-allen-pdf
+  - peritrich-agent-epmc
+  - record
+- assessment_id: topology
+  area: grounding
+  topic: Broad intracellular class and cytoskeletal parthood
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: GO:0005622 is the active broad intracellular anatomical structure term;
+    GO:0005856 defines cytoskeleton. Primary morphology/localization supports treating
+    the body fiber system as intracellular and part of the cytoskeleton. OTHER is
+    appropriate for the interconnected system. Neither authority is presented as an
+    exact myoneme mapping or as a native GO relation to the local identifier.
+  evidence_ids:
+  - peritrich-agent-go
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-allen-pdf
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Scoped centrin/spasmin constituent class
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Konior Figure 3 supports body-network localization of the N-termVcCentrin4
+    and 1F5 antibody signals in V. convallaria. Western analysis distinguishes one
+    N-terminal-antibody band from two 1F5 bands; it does not yield native copy number,
+    a complete paralogue inventory or single-protein sufficiency. The class remains
+    REVIEWED_LABEL_ONLY because IPR050145 includes broader CML/obelin/caltractin scope.
+    No required exact family or protein accession is falsely assigned.
+  evidence_ids:
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-ipr050145
+  - record
+- assessment_id: assays
+  area: graph
+  topic: Separate live and extracted calcium interventions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: 'The primary Katoh abstract directly supports both graph edges: graded
+    body shrinkage following intracellular calcium-buffer injection in living Vorticella
+    and calcium-dependent body contraction following raised external calcium in Triton-extracted
+    preparations. The graph keeps these interventions separate, does not transfer
+    stalk all-or-nothing behavior to the body and does not identify a species, threshold,
+    channel or molecular motor from the abstract.'
+  evidence_ids:
+  - peritrich-agent-epmc
+  - record
+- assessment_id: mechanistic-limits
+  area: scope
+  topic: Contractility versus molecular proposals
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Body contraction is supported at the stated organelle-response level. Calcium-induced
+    calcium release remains an interpretation of Katoh pharmacology; Konior Sfi1-like
+    scaffold and tubule contraction/extension roles are proposed for future tests.
+    The record neither imports stalk ATP-independent cycling into body physiology
+    nor turns Campanella morphology into a tested contraction perturbation.
+  evidence_ids:
+  - peritrich-agent-epmc
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-allen-pdf
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Species examples and preparation context
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: 60850 and 168242 resolve exactly to Vorticella convallaria and Campanella
+    umbellaria. Vorticella body-network localization is directly supported by Konior
+    and separately by the CIL dataset. Campanella is an abstract-bounded protargol
+    morphology example; centrin membership is not transferred to it. Konior rejuvenated
+    cells and Allen LB1690/1 are source contexts, not a single inferred culture accession
+    for every Vorticella observation.
+  evidence_ids:
+  - peritrich-agent-taxon-vorticella
+  - peritrich-agent-taxon-campanella
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-allen-pdf
+  - peritrich-agent-cil-item-curl
+  - peritrich-agent-epmc
+  - record
+- assessment_id: linkage
+  area: completeness
+  topic: Morphological ER-myoneme linkage research lead
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Allen primary conventional TEM supports recognizable midpiece, rails and
+    cradle at the ER-myoneme interface. Section geometry and fixation affect interpretation;
+    the drawing is a morphological reconstruction. The paper explicitly labels calcium-transport,
+    ATPase and excitation-transmission roles as speculative. Deferring molecular components
+    and separate linkage-complex curation does not omit an experimentally identified
+    family or resolved mechanism.
+  evidence_ids:
+  - peritrich-agent-allen-pdf
+  - record
+- assessment_id: image
+  area: provenance
+  topic: CIL preview identity, interpretation and dedication
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: CIL:39513 per-item JSON-LD confirms DOI, V. convallaria, Richard Allen
+    attribution, D. Kunkel TEM acquisition in 1994, catalog publication in 2012, public-domain
+    dedication and the exact preview URL. Tracked and source image bytes are identical.
+    The caption correctly limits use to the source-described anti-alpha-centrin immunogold
+    thin section and does not treat the uncalibrated preview as the archival negative
+    or an isoform/copy-number assay.
+  evidence_ids:
+  - peritrich-agent-cil-item-curl
+  - peritrich-agent-cil-image
+  - tracked-image
+  - record
+- assessment_id: study-boundaries
+  area: consistency
+  topic: Konior fluorescence versus separate CIL body TEM
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: 'The current assay-boundaries discussion names Konior explicitly: its body-network
+    localization is light microscopy, while its compartment percentages refer to stalk
+    spasmoneme immunogold. The separate CIL body-myoneme immunogold dataset is correctly
+    distinguished. Historical issue 2004 describes that former wording ambiguity;
+    the current target retains the requested distinction without conflating the experiments.'
+  evidence_ids:
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-cil-item-curl
+  - peritrich-agent-issue-2004
+  - record
+- assessment_id: source-tier
+  area: provenance
+  topic: Readable primary bodies and retained access limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:peritrich_body_myoneme_system
+  summary: Konior and Allen primary scientific text and relevant figures are readable.
+    Shi and Katoh remain primary-abstract bounded after failed publisher routes; no
+    full-paper knowledge is inferred. The Python CIL TLS failure is recorded separately
+    from successful system curl retrieval. Historical no-hit searches and past access
+    notes are not converted into fresh absence assertions or new data defects.
+  evidence_ids:
+  - peritrich-agent-konior-pdf
+  - peritrich-agent-allen-pdf
+  - peritrich-agent-allen-jats
+  - peritrich-agent-allen-package
+  - peritrich-agent-epmc
+  - peritrich-agent-katoh-publisher
+  - peritrich-agent-katoh-pdf
+  - peritrich-agent-shi-publisher
+  - peritrich-agent-shi-pdfdirect
+  - peritrich-agent-cil-item
+  - peritrich-agent-cil-item-curl
+  - record
+findings: []
+actions: []
+limitations:
+- Katoh 1994 and Shi 2004 remain primary-abstract bounded. Exact DOI routes and attempted
+  PDF routes returned 403; the candidate Katoh PDF URL itself is not verified. Browser
+  DOI opens were also unavailable. No claim of global full-text absence is made.
+- Konior main text and captions were read, with Figure 3 visually inspected. Allen
+  scientific body and captions were read, with Figures 1, 7-10 and 19 visually inspected.
+  Other figure pixels and original experiment data were not exhaustively audited.
+- Antibody localization supports a scoped centrin/spasmin constituent class in V.
+  convallaria, not an exhaustive isoform inventory, essentiality, native stoichiometry
+  or Campanella composition.
+- The nonmechanistic response graph retains live injection versus extracted external-calcium
+  assays, and does not specify Vorticella species for the abstract-bounded Katoh experiments.
+- Native calcium handling, Sfi1-like partners and ER-myoneme linkage molecular composition
+  remain explicit proposals or open questions. Stalk ATP-independent contraction and
+  relaxation findings are not imported into a universal body-network mechanism.
+- Historical no-hit GO/InterPro and whole-repository deduplication claims were not
+  rerun; no new absence claim is made. Receipt reuse lead search included hidden and
+  ignored filenames under /private/tmp, and no old scientific source receipt was reused.
+- Current source review does not establish independent historical authorship. GitHub
+  issue 2004 is cited only as historical context; no issue or structured prior finding
+  is mutated or formally retired.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- 'Source packet: /private/tmp/cellstructure-batch10-20261021-giynduuy/peritrich-agent/source-inspection.json.
+  Seventeen fresh raw/meta receipts retain original retrieval timestamps and raw hashes;
+  no prior scientific snapshot was reused.'
+- Expanded native inspection captures the full target and tracked image plus unchanged
+  guidance/schema inputs. No adjacent scientific record informed this assessment.
+- Root read the complete target and review, verified native-input/source hashes, checked
+  selected primary claim-bearing sections, and visually inspected the unchanged tracked
+  figure; a separate collaborator also audited source scope. Source reading limits
+  remain as listed.
+- Only this target receives scientific review coverage. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

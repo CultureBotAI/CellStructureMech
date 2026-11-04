@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/quiescent_telomere_hypercluster.yaml
+  slug: quiescent_telomere_hypercluster
+session:
+  id: 2026-10-25T121500Z-antigravity-c3s5
+  timestamp: '2026-10-25T12:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2432
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): bqt4 (InterPro:IPR037548).'
+  details: 'Original finding F2 (other-causal-node-component-ref-grounding) saved
+    before mutation in reviews/structured/20261025T071010Z-other-category-review/review.yaml.
+    Addresses #2432.'

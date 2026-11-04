@@ -1,0 +1,305 @@
+schema_version: 1.0.0
+review_id: 20261030T082005Z-division-machinery-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: Category review of data/structures/division_machinery/ (4 records)
+started_at: '2026-10-30T08:09:00Z'
+finished_at: '2026-10-30T08:20:05Z'
+reviewer:
+  identity: antigravity-c4s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 4 Stage 4 record_review against committed
+    git revision 5c642e4080ef3a0f026845843c559d3b46de8871 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full cohort audit of all 4 DIVISION_MACHINERY records in data/structures/division_machinery/
+  (divisome_complex, elongasome, ftsbl_complex, ftsqbl_complex). Note: the major hierarchy
+  duplication on ftsqbl_complex.yaml (GO:1990587) is reported in dedicated single-record
+  review bundle 20261030T082001Z-ftsqbl-complex-parent-partof-duplication (issue_key
+  ftsqbl-complex-parent-partof-duplication) and is not duplicated here. Across the
+  remaining cohort records, one minor component_type consistency issue was identified
+  in elongasome.yaml (cellstructuremech:elongasome): components[2] (component_id:
+  mrec_mred, label: MreC and MreD, gene_symbols: [mreC, mreD], referenced by causal_graphs[0].nodes[9]
+  ''MreC-MreD transmembrane scaffold'') is typed PROTEIN instead of PROTEIN_COMPLEX.'
+source:
+  git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/division_machinery/divisome_complex.yaml
+    sha256: b4f4919cc610dcb396b0646a715c51b071b0d7c05674b8f93e533130d225ac59
+    role: target
+  - path: data/structures/division_machinery/elongasome.yaml
+    sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+    role: target
+  - path: data/structures/division_machinery/ftsbl_complex.yaml
+    sha256: dde89c1c0094b667c97e5d226c447bcbf6882b307809ea5bc6996f42ea882c0f
+    role: target
+  - path: data/structures/division_machinery/ftsqbl_complex.yaml
+    sha256: c6563e47cef93b8807aaebfdd48e746d54d985e1b42f35b1ff42f0eab32e296a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 4 CellStructureRecord YAML files under data/structures/division_machinery/.
+  selection: Complete folder cohort data/structures/division_machinery/*.yaml in the
+    frozen 1,001-record Cycle 4 Stage 4 inventory.
+  coverage: full
+  population_size: 4
+  reviewed_target_ids:
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:1990588
+  - GO:1990587
+targets:
+- target_id: GO:1990586
+  path: data/structures/division_machinery/divisome_complex.yaml
+  label: divisome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b4f4919cc610dcb396b0646a715c51b071b0d7c05674b8f93e533130d225ac59
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/divisome_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:elongasome
+  path: data/structures/division_machinery/elongasome.yaml
+  label: elongasome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+- target_id: GO:1990588
+  path: data/structures/division_machinery/ftsbl_complex.yaml
+  label: FtsBL complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dde89c1c0094b667c97e5d226c447bcbf6882b307809ea5bc6996f42ea882c0f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsbl_complex.yaml
+    role: maintained_record
+- target_id: GO:1990587
+  path: data/structures/division_machinery/ftsqbl_complex.yaml
+  label: FtsQBL complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c6563e47cef93b8807aaebfdd48e746d54d985e1b42f35b1ff42f0eab32e296a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_division_machinery
+  name: Strict corpus validation covering division_machinery cohort
+  status: passed
+  required: true
+  summary: All 4 division_machinery records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:1990588
+  - GO:1990587
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_division_machinery
+- check_id: history_division_machinery
+  name: History ledger validation covering division_machinery cohort
+  status: passed
+  required: true
+  summary: All history ledger records covering division_machinery validate cleanly.
+  target_ids:
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:1990588
+  - GO:1990587
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_division_machinery
+evidence:
+- evidence_id: ev_strict_division_machinery
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T08:20:05Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,001 records including all 4 division_machinery
+    records.
+  snapshot_sha256: 1ebf6e7daebc19797861570fcac0d3cf8b06c18f7f40abf3277d35ef5867f442
+- evidence_id: ev_history_division_machinery
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T08:20:05Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,082 history records covering
+    division_machinery.
+  snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
+- evidence_id: ev_divmach_elongasome_comp
+  kind: record_content
+  reference: data/structures/division_machinery/elongasome.yaml
+  locator: components[2] (lines 98-105)
+  accessed_at: '2026-10-30T08:14:00Z'
+  support: supports
+  summary: elongasome.yaml components[2] (mrec_mred, [mreC, mreD]) is typed PROTEIN.
+  quote: "- component_id: mrec_mred\n  label: MreC and MreD\n  component_type: PROTEIN\n\
+    \  component_role: CONSTITUENT\n  gene_symbols:\n  - mreC\n  - mreD\n  essentiality:\
+    \ ESSENTIAL"
+  snapshot_sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+- evidence_id: ev_divmach_elongasome_node
+  kind: record_content
+  reference: data/structures/division_machinery/elongasome.yaml
+  locator: causal_graphs[0].nodes[9] (lines 443-446)
+  accessed_at: '2026-10-30T08:14:00Z'
+  support: supports
+  summary: elongasome.yaml causal_graphs[0].nodes[9] labels mrec_mred as 'MreC-MreD
+    transmembrane scaffold'.
+  quote: "  - node_id: mrec_mred\n    label: MreC-MreD transmembrane scaffold\n  \
+    \  node_type: GENE_OR_PROTEIN\n    component_ref: mrec_mred"
+  snapshot_sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+assessments:
+- assessment_id: assess_division_machinery_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/division_machinery/
+  outcome: supported
+  summary: All 4 records in data/structures/division_machinery/ represent distinct
+    microbial cell structures or subcomplexes with valid schema and history provenance.
+  target_ids:
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:1990588
+  - GO:1990587
+  evidence_ids:
+  - ev_strict_division_machinery
+  - ev_history_division_machinery
+- assessment_id: assess_divmach_elongasome_mrec_mred
+  area: representation
+  topic: ComponentTypeEnum typing of heteromeric MreC-MreD transmembrane scaffold
+    in elongasome.yaml
+  outcome: concern
+  summary: elongasome.yaml components[2] (mrec_mred, [mreC, mreD]) represents the
+    two-subunit MreC-MreD transmembrane scaffold subcomplex (UniProtKB:P16926 and
+    P0ABH4) and should be typed PROTEIN_COMPLEX rather than PROTEIN (matching components[2]
+    septal_pg_synthase in divisome_complex.yaml).
+  target_ids:
+  - cellstructuremech:elongasome
+  evidence_ids:
+  - ev_divmach_elongasome_comp
+  - ev_divmach_elongasome_node
+findings:
+- finding_id: F1
+  issue_key: division-machinery-elongasome-mrec-mred-component-type
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: elongasome.yaml types heteromeric components[2] (mrec_mred, [mreC, mreD])
+    as PROTEIN instead of PROTEIN_COMPLEX
+  description: 'In data/structures/division_machinery/elongasome.yaml (cellstructuremech:elongasome,
+    lines 98-105), components[2] (component_id: mrec_mred, label: ''MreC and MreD'',
+    gene_symbols: [mreC, mreD], referenced as ''MreC-MreD transmembrane scaffold''
+    in causal_graphs[0].nodes[9] at lines 443-446) combines two distinct membrane/periplasmic
+    subunits (MreC UniProtKB:P16926 and MreD UniProtKB:P0ABH4 in Escherichia coli
+    K-12, PMID:15612918) into a single scaffold subcomplex entry but sets component_type:
+    PROTEIN instead of PROTEIN_COMPLEX (unlike sibling divisome_complex.yaml, which
+    types two-subunit septal_pg_synthase [ftsW, ftsI] as PROTEIN_COMPLEX).'
+  target_ids:
+  - cellstructuremech:elongasome
+  field_paths:
+  - components[2].component_type
+  evidence_ids:
+  - ev_divmach_elongasome_comp
+  - ev_divmach_elongasome_node
+  rule_id: docs/SCHEMA.md:ComponentTypeEnum.PROTEIN_COMPLEX
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+  tags:
+  - division-machinery
+  - component-type
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Update components[2].component_type from PROTEIN to PROTEIN_COMPLEX
+    in data/structures/division_machinery/elongasome.yaml and record the curation
+    event and history ledger entry.
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:elongasome
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:1990588
+  - GO:1990587
+  rationale: All 4 division_machinery records represent distinct prokaryotic division
+    or elongation assemblies.
+  evidence_ids:
+  - ev_strict_division_machinery
+  - ev_history_division_machinery
+limitations:
+- Record edits for division_machinery cohort findings are queued for Cycle 4 Stage
+  5 (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- division-machinery
