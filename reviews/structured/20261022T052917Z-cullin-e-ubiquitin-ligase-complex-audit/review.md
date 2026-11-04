@@ -1,0 +1,1172 @@
+# Cullin e ubiquitin ligase complex scientific review
+
+- Review: 20261022T052917Z-cullin-e-ubiquitin-ligase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:15:34Z
+- Finished UTC: 2026-10-22T05:29:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The Cullin-E source-defined association and bounded perturbation graph are supported. One major finding corrects the Skp1.2 accession using independent source-locus bridges, with reference-strain and assay discrepancies retained.
+
+## Scope And Provenance
+
+Exactly one entire target reviewed for identity, source support, composition, scope, graph and completeness.
+
+Selection: Target 1 of batch49 in strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:cullin_e_ubiquitin_ligase_complex | data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml | maintained | Cullin-E ubiquitin ligase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Focused validator passed. |
+| Focused native causal-graphs | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Focused native check passed; identity and biological support assessed independently. |
+| Focused native verify | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Focused native check passed; identity and biological support assessed independently. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:cullin_e_ubiquitin_ligase_complex | No maintained expression-module assertion requires this resource. |
+| Claim-level scientific review | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | 12 of 13 collected target identifiers returned OK. cellstructuremech:cullin_e_ubiquitin_ligase_complex: SKIPPED; Exact repository-minted identifier has one maintained-record match in the ignored-inclusive search. Its actual referenced record is a frozen input and is explicitly inspected by the linked local evidence; cross-record dependencies are not mistaken for the reviewed target. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:cullin_e_ubiquitin_ligase_complex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Source-locus-defined Cullin-E assembly
+
+identity: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+The custom identity and broader CRL parent preserve the source-defined divergent scaffold. The 2017 WDR1 assembly uses another locus. Conservative affinity-defined membership does not imply all kelch partners occupy one particle.
+
+### One wrong accession among three examples
+
+grounding: concern. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+Q383D5 maps through VEuPathDB to source Cullin-E locus and Q38C61 to source Rbx1. Q384S1 instead carries ORF Tb11.02.5340 and212aa. The source Skp1.2 is Tb927.9.8370,158aa, independently mapped to Q38ED0 by native VEuPathDB and Ensembl. ORF identifiers are not primary gene names or verified native Cul-E/Rbx1 aliases.
+
+### Paralog identity remains narrower than shared families
+
+grounding: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+Broad Cullin, RING-box, Skp1-like and Elongin-C family entries do not distinguish the source-defined paralogs or a single shared kelch adaptor class. IPR051031 description is unchecked LLM prose and is not biological evidence. Q38ED0 generated Elongin-C name does not invalidate its exact locus mapping to paper Skp1.2.
+
+### No physical assembly necessity inferred from RNAi
+
+grounding: unknown. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+Affinity isolation and depletion outputs do not measure persistence of the complete assembly without each constituent. UNKNOWN essentialities and unresolved direct interfaces remain appropriate.
+
+### Isolation culture and RNAi context stay separate
+
+scope: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+Procyclic Lister427 isolation is explicit, RNAi methods do not uniformly restate stage/strain, qPCR names2T1 and Fig6 shows bloodstream forms. TREU927 accessions/database are reference annotations rather than cultured specimens. Species canonical scope is retained.
+
+### Separate organelle and proteome outputs
+
+evidence: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+The1K2N timecourse, representative single-Golgi images and24-hour whole-cell abundance changes support a coordination role without identifying molecular mediation or direct substrates. Existing ambiguity in duplicate Fig7 labels is excluded from the graph.
+
+### Bounded nonmechanistic intervention graph
+
+graph: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+Each edge starts at the experimental intervention. Phenotype images do not locate Cullin-E, and increased KKT9 or decreased Tb927.10.8810 do not prove ubiquitylation or degradation rates.
+
+### Correct the protein mapping while retaining source discrepancies
+
+completeness: supported. Targets: cellstructuremech:cullin_e_ubiquitin_ligase_complex.
+
+The four constituent classes, bounded assay outputs and native dataset are well documented. Correcting the wrong Skp1.2 example and reconciling outdated example TODO text are actionable; raw-spectrum analysis, structural imaging and untested additional interactors remain outside scope.
+
+## Findings
+
+### F1: Replace the Skp1.2 example with the source-locus-matched protein
+
+major / open / confirmed; issue key: cullin-e-skp1-2-wrong-accession.
+
+The record explicitly identifies Skp1.2 as Tb927.9.8370 but gives UniProtKB:Q384S1, ORF Tb11.02.5340,212aa. Source Table1 and S3 specify Tb927.9.8370,158aa. Native Q38ED0 has historical ORF Tb09.211.0300 and the exact VEuPathDB Tb927.9.8370 cross-reference; independent Ensembl lookup also maps that locus to Q38ED0 and158aa. Correct Q383D5/Q38C61 mappings are retained. Their historical ORF names should not be called primary gene names.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Replace the Skp1.2 example with verified Q38ED0 and its actual native identity/status/taxon fields, documenting the paper-locus versus historical-ORF bridge. Retain Q383D5/Q38C61 with verified locus bridges and precise ORF wording. Reconcile stale example-related discussion text without treating family names as exact paralog identity.
+
+- Check exact source identifiers and reconcile the named current fields and associated TODO.
+- Preserve supported biology, taxon scope, assay limits and distinctions between identity and membership.
+- Use guarded curation and pass applicable schema, strict, protein and graph validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; Entire maintained record including history, components, evidence, graph and discussions | context_only | All maintained fields were read. Historical curation notes document earlier decisions rather than independently proving current assertions. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component grounding, formation essentiality, taxonomic presence and graph scope | context_only | Whole-protein families differ from domains and individual examples. Assembly necessity differs from viability or function. COMMON means present in most members, with losses the exception; a qualitative ordinary-machinery assertion need not imply a numerical census. |
+| curation | docs/CURATION.md; Exact identities and claim-specific evidence | context_only | A verified component identity and its membership in a complex require distinct support. Reviewed label-only status is reserved for the absence of an exact term; historical deferred searches can be revisited without alleging historical fabrication. |
+| root49-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005737,GO:0005886,GO:0031461,GO:0031910,GO:0032258,GO:0032991,GO:0033107,GO:0034270; Complete maintained-term identity and definition fields and relevant typed links; not every descendant | supports | All eight requested native GO identities, active status, definitions, synonyms, comments and relevant typed links inspected. The cytostome is explicitly a part_of child of plasma membrane, while the Cvt pathway definition includes Atg19 in formation of the Cvt complex. |
+| root49-sources-doi-3 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41598-025-32077-9%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED41413177: Evolution, composition and functions of cullin E3 ubiquitin ligases in trypanosomes. DOI 10.1038/s41598-025-32077-9. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-doi-7 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.ppat.1006146%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED28052114: CRL4WDR1 Controls Polo-like Kinase Protein Abundance to Promote Bilobe Duplication, Basal Body Segregation and Flagellum Attachment in Trypanosoma brucei. DOI 10.1371/journal.ppat.1006146. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-pmid-41413177 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41413177+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED41413177: Evolution, composition and functions of cullin E3 ubiquitin ligases in trypanosomes. DOI 10.1038/s41598-025-32077-9. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-pmid-28052114 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28052114+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED28052114: CRL4WDR1 Controls Polo-like Kinase Protein Abundance to Promote Bilobe Duplication, Basal Body Segregation and Flagellum Attachment in Trypanosoma brucei. DOI 10.1371/journal.ppat.1006146. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-protein-Q383D5 | https://rest.uniprot.org/uniprotkb/Q383D5.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references, sequence length and generated-name provenance | supports | Native Q383D5 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root49-sources-protein-Q38C61 | https://rest.uniprot.org/uniprotkb/Q38C61.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references, sequence length and generated-name provenance | supports | Native Q38C61 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root49-sources-protein-Q384S1 | https://rest.uniprot.org/uniprotkb/Q384S1.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references, sequence length and generated-name provenance | supports | Native Q384S1 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root49-sources-protein-Q38ED0 | https://rest.uniprot.org/uniprotkb/Q38ED0.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references, sequence length and generated-name provenance | supports | Native Q38ED0 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root49-sources-tax185431 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/185431; Complete native taxonomy response | supports | Native taxon 185431 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root49-sources-tax5691 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691; Complete native taxonomy response | supports | Native taxon 5691 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root49-sources-ipr-IPR045093 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045093/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR045093 is classified as family and named Cullin. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-ipr-IPR051031 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051031/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR051031 is classified as family and named RING-box E3 Ubiquitin Ligase. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-ipr-IPR001232 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001232/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR001232 is classified as family and named S-phase kinase-associated protein 1-like. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-ipr-IPR016897 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016897/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR016897 is classified as family and named S-phase kinase-associated protein 1. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-ipr-IPR039948 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039948/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR039948 is classified as family and named Elongin-C. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-locus-Tb927.11.11430 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.11.11430%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 0 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-locus-Tb927.10.1810 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.10.1810%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 0 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-locus-Tb927.9.8370 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.9.8370%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 0 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-locus-Tb11.01.3260 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb11.01.3260%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 1 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-locus-Tb10.70.6035 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb10.70.6035%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 1 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-locus-Tb11.02.5340 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb11.02.5340%29+AND+%28organism_id%3A185431%29&amp;format=json&amp;size=100; Complete query URL and all returned accession/status/name/ORF/taxon identities | supports | Exact gene/taxon query returned 1 entry/entries. Native gene arrays use historical ORF names; zero exact new-locus gene hits do not establish absence. |
+| root49-sources-ensembl-Skp1_2 | https://rest.ensembl.org/lookup/id/Tb927.9.8370?expand=1;content-type=application/json; Complete native gene/transcript/translation response | supports | Native Ensembl lookup identifies source locus Tb927.9.8370, chromosome9, translation length158, and UniProtKB/TrEMBL Q38ED0. This independent mapping agrees with Q38ED0 VEuPathDB cross-reference and the source supplement. |
+| root49-sources-cullins2025-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC12816148/?_escaped_fragment_=; Complete Table1, Results Sec5/Sec6, all Cul-E passages and Fig6/7 captions in Sec9, Discussion Sec10, Methods Sec12/Sec13/Sec15/Sec17/Sec18/Sec19/Sec21; Fig2 caption; no claim to every unrelated Cul-A passage | supports | Table1 and affinity-isolation Results define Cullin-E Tb927.11.11430 with Rbx1 Tb927.10.1810, Skp1.2 Tb927.9.8370 and four kelch proteins. Enrichment does not prove co-occupancy, contacts or direct client recognition. The Cul-E knockdown passages and Fig6/7 captions support distinct karyotype, Golgi and abundance readouts. Methods distinguish procyclic isolation from incompletely specified RNAi stage and 927 database context; seven WT controls are stated. |
+| root49-sources-cullins2025-S3-s3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC12816148.1/41598_2025_32077_MOESM3_ESM.xlsx; Workbook Legend complete nonempty rows, CULE complete header and columnsA-H of rows2,3,4,5,7,9,10 only; no quantitative reanalysis of full workbook | supports | The genuine XLSX identifies the bait, Skp1.2, Rbx1 and four kelch loci at CULE rows2/3/7/4/5/9/10. All seven rows have both enrichment flags. Skp1.2 is158aa, whereas the maintained Q384S1 is212aa. Header lists seven WT controls. Legend explains both significance classes. |
+| root49-sources-cullins2025-Fig2 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/60c8f8921df5/41598_2025_32077_Fig2_HTML.jpg; Complete figure pixels, all panels, compared with corresponding full native caption | supports | Original Figure2 pixels and the full native caption were inspected. The Cullin-E panel supports enrichment of the scaffold-associated RING, adaptor and kelch proteins; it does not resolve co-occupancy, copy number or direct contacts. |
+| root49-sources-cullins2025-Fig6 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/55fe1026949a/41598_2025_32077_Fig6_HTML.jpg; Complete figure pixels, all panels, compared with corresponding full native caption | supports | Original Figure6 pixels and the full native caption were inspected. The DAPI timecourse supports the increased1K2N fraction and representative GRASP images show a single Golgi in imaged1K2N cells. These are phenotype readouts, not complex localization or a purified assembly. |
+| root49-sources-cullins2025-Fig7 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/748152b87b25/41598_2025_32077_Fig7_HTML.jpg; Complete figure pixels, all panels, compared with corresponding full native caption | supports | Original Figure7 pixels and the full native caption were inspected. The24-hour LFQ comparison shows decreased Cullin-E and Tb927.10.8810 and increased KKT9 abundance. It does not establish direct ligase substrates or degradation rates; the duplicated ESAG11/VSG locus labels are not used in the graph. |
+| root49-sources-hu2017-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC5241021/?_escaped_fragment_=; Complete Results sec004-sec008, Discussion sec009, Methods sec011/sec013-sec017 and embedded Fig2-8 captions, inspected in preceding batch and reused with original source receipt; no new image or supplement reanalysis | supports | The older source assigns WDR1-DDB1 association to TbCUL4 Tb927.3.1290 and explicitly reports that TbCUL1 Tb927.11.11430 did not co-precipitate WDR1. The newer discussion cannot transfer the older PLK mechanism to Cullin-E by naming alone. |
+| root49-sources-pride-PXD042022 | https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD042022; Native title/project description, complete sample and data processing protocols, organism and reference fields | supports | Native project identity, organism and publication agree. Sample protocol states six WT controls, unlike seven in paper and supplement, and separates Cul-E label-free RNAi from Cul-A SILAC. The record already retains this discrepancy. |
+| schema-result | just validate data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml |
+| strict-result | just validate-strict data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv |
+| native-cullin_e_ubiquitin_ligase_complex-causal-graphs | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; Complete focused native report | supports | data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml  (cellstructuremech:cullin_e_ubiquitin_ligase_complex)<br>  cullin_e_depletion_outputs	cullin_e	COVERED	-&gt;cullin_e (UniProtKB:Q383D5)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-cullin_e_ubiquitin_ligase_complex-verify-network | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 12 of 13 collected target identifiers returned OK. cellstructuremech:cullin_e_ubiquitin_ligase_complex: SKIPPED; Exact repository-minted identifier has one maintained-record match in the ignored-inclusive search. Its actual referenced record is a frozen input and is explicitly inspected by the linked local evidence; cross-record dependencies are not mistaken for the reviewed target. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Primary reading is limited to the explicitly recorded sections, captions and datasets; no raw spectra or sequence alignments were reanalyzed.
+- The first focused UniProt verification failed with DNS/transport errors; its original log is retained and a separately captured network-enabled retry passed. No review-bundle validation failed.
+- Failed TriTrypDB routes and the PMC supplement download interstitial are not evidence. The genuine S3 XLSX was read only at the stated identifier/flag/header scope.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Independent peer refinement before finalization: scope each figure summary to its own source, preserve actual article accessibility and distinguish unresolved formation necessity. Scientific findings unchanged; prior draft and validation receipts retained.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T052917Z-cullin-e-ubiquitin-ligase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cullin e ubiquitin ligase complex scientific review
+started_at: '2026-10-22T05:15:34Z'
+finished_at: '2026-10-22T05:29:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The Cullin-E source-defined association and bounded perturbation graph are
+  supported. One major finding corrects the Skp1.2 accession using independent source-locus
+  bridges, with reference-strain and assay discrepancies retained.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    sha256: 24cfaf2e2cd189ff59a4b9889fbbb3fe13e8f30fed4d282f41323e21c78e4c96
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  label: Cullin-E ubiquitin ligase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph and completeness.
+  selection: Target 1 of batch49 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just validate data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just validate-strict data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-cullin_e_ubiquitin_ligase_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cullin_e_ubiquitin_ligase_complex-causal-graphs
+- check_id: native-cullin_e_ubiquitin_ligase_complex-verify-network
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cullin_e_ubiquitin_ligase_complex-verify-network
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: No maintained expression-module assertion requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root49-sources-go
+  - root49-sources-doi-3
+  - root49-sources-doi-7
+  - root49-sources-pmid-41413177
+  - root49-sources-pmid-28052114
+  - root49-sources-protein-Q383D5
+  - root49-sources-protein-Q38C61
+  - root49-sources-protein-Q384S1
+  - root49-sources-protein-Q38ED0
+  - root49-sources-tax185431
+  - root49-sources-tax5691
+  - root49-sources-ipr-IPR045093
+  - root49-sources-ipr-IPR051031
+  - root49-sources-ipr-IPR001232
+  - root49-sources-ipr-IPR016897
+  - root49-sources-ipr-IPR039948
+  - root49-sources-locus-Tb927.11.11430
+  - root49-sources-locus-Tb927.10.1810
+  - root49-sources-locus-Tb927.9.8370
+  - root49-sources-locus-Tb11.01.3260
+  - root49-sources-locus-Tb10.70.6035
+  - root49-sources-locus-Tb11.02.5340
+  - root49-sources-ensembl-Skp1_2
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-S3-s3
+  - root49-sources-cullins2025-Fig2
+  - root49-sources-cullins2025-Fig6
+  - root49-sources-cullins2025-Fig7
+  - root49-sources-hu2017-legacy
+  - root49-sources-pride-PXD042022
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: '12 of 13 collected target identifiers returned OK. cellstructuremech:cullin_e_ubiquitin_ligase_complex:
+    SKIPPED; Exact repository-minted identifier has one maintained-record match in
+    the ignored-inclusive search. Its actual referenced record is a frozen input and
+    is explicitly inspected by the linked local evidence; cross-record dependencies
+    are not mistaken for the reviewed target. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  locator: Entire maintained record including history, components, evidence, graph
+    and discussions
+  accessed_at: '2026-10-22T05:26:42Z'
+  support: context_only
+  summary: All maintained fields were read. Historical curation notes document earlier
+    decisions rather than independently proving current assertions.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component grounding, formation essentiality, taxonomic presence and graph
+    scope
+  accessed_at: '2026-10-22T05:26:42Z'
+  support: context_only
+  summary: Whole-protein families differ from domains and individual examples. Assembly
+    necessity differs from viability or function. COMMON means present in most members,
+    with losses the exception; a qualitative ordinary-machinery assertion need not
+    imply a numerical census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact identities and claim-specific evidence
+  accessed_at: '2026-10-22T05:26:42Z'
+  support: context_only
+  summary: A verified component identity and its membership in a complex require distinct
+    support. Reviewed label-only status is reserved for the absence of an exact term;
+    historical deferred searches can be revisited without alleging historical fabrication.
+- evidence_id: root49-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005737,GO:0005886,GO:0031461,GO:0031910,GO:0032258,GO:0032991,GO:0033107,GO:0034270
+  locator: Complete maintained-term identity and definition fields and relevant typed
+    links; not every descendant
+  accessed_at: '2026-10-22T05:16:37.461732Z'
+  support: supports
+  summary: All eight requested native GO identities, active status, definitions, synonyms,
+    comments and relevant typed links inspected. The cytostome is explicitly a part_of
+    child of plasma membrane, while the Cvt pathway definition includes Atg19 in formation
+    of the Cvt complex.
+  snapshot_sha256: d24e5122fae367cf9a2d8fb7c6570ebcb8f08890d0147e4ae81b987297a086a9
+- evidence_id: root49-sources-doi-3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41598-025-32077-9%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:40.478021Z'
+  support: supports
+  summary: 'MED41413177: Evolution, composition and functions of cullin E3 ubiquitin
+    ligases in trypanosomes. DOI 10.1038/s41598-025-32077-9. Complete bibliographic
+    identity and abstract inspected; full-body access is certified only in separate
+    evidence rows.'
+  snapshot_sha256: 6a57458ec7bdfd5752a26ff751d7af8150c150b0c45c9ffa4467dcd87fffa62c
+- evidence_id: root49-sources-doi-7
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.ppat.1006146%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:41.449427Z'
+  support: supports
+  summary: 'MED28052114: CRL4WDR1 Controls Polo-like Kinase Protein Abundance to Promote
+    Bilobe Duplication, Basal Body Segregation and Flagellum Attachment in Trypanosoma
+    brucei. DOI 10.1371/journal.ppat.1006146. Complete bibliographic identity and
+    abstract inspected; full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: 6315391006d877c6a628567d08585d34fb06f79180ac9bf13511662f9fe8ca11
+- evidence_id: root49-sources-pmid-41413177
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41413177+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:42.140719Z'
+  support: supports
+  summary: 'MED41413177: Evolution, composition and functions of cullin E3 ubiquitin
+    ligases in trypanosomes. DOI 10.1038/s41598-025-32077-9. Complete bibliographic
+    identity and abstract inspected; full-body access is certified only in separate
+    evidence rows.'
+  snapshot_sha256: 1dc3992bffd24694825191c8c67aa4e4b99b068910dccb334c769c915821c9a4
+- evidence_id: root49-sources-pmid-28052114
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28052114+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:42.023664Z'
+  support: supports
+  summary: 'MED28052114: CRL4WDR1 Controls Polo-like Kinase Protein Abundance to Promote
+    Bilobe Duplication, Basal Body Segregation and Flagellum Attachment in Trypanosoma
+    brucei. DOI 10.1371/journal.ppat.1006146. Complete bibliographic identity and
+    abstract inspected; full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: 7efd892562fda7d70cc92d3dc22a018a49cc0dde8f126840b337b4e57f7678b0
+- evidence_id: root49-sources-protein-Q383D5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q383D5.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references,
+    sequence length and generated-name provenance
+  accessed_at: '2026-10-22T05:16:38.720190Z'
+  support: supports
+  summary: Native Q383D5 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 152a4a4bd8f8f33b3ba49f17c8caa5134d28363c5a500eb0e7565dced9fb763c
+- evidence_id: root49-sources-protein-Q38C61
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q38C61.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references,
+    sequence length and generated-name provenance
+  accessed_at: '2026-10-22T05:16:39.115095Z'
+  support: supports
+  summary: Native Q38C61 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 78fe97e60a37095c4aa6e599bf63d145c366255c9577179761ecffc93cc40782
+- evidence_id: root49-sources-protein-Q384S1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q384S1.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references,
+    sequence length and generated-name provenance
+  accessed_at: '2026-10-22T05:16:38.881804Z'
+  support: supports
+  summary: Native Q384S1 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 1391c6ae29806ecef62c8d00049662c0cb4efe398752d7345226a55dffc145bd
+- evidence_id: root49-sources-protein-Q38ED0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q38ED0.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references,
+    sequence length and generated-name provenance
+  accessed_at: '2026-10-22T05:20:51.089479Z'
+  support: supports
+  summary: Native Q38ED0 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: f62ef0e39d903ebf16a805be44e4a1f598dfc72ef3d6803d10983685a936bfc0
+- evidence_id: root49-sources-tax185431
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/185431
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:16:37.461463Z'
+  support: supports
+  summary: Native taxon 185431 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: 37f4acd608d79bb144d706335e37a83a0f97a94595aca5175855c8c390ec652d
+- evidence_id: root49-sources-tax5691
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:16:37.463148Z'
+  support: supports
+  summary: Native taxon 5691 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+- evidence_id: root49-sources-ipr-IPR045093
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045093/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:16:39.471734Z'
+  support: supports
+  summary: IPR045093 is classified as family and named Cullin. Native metadata, full
+    description and curation flags inspected. This row supports identity scope, not
+    an independent primary biological experiment.
+  snapshot_sha256: 3c1fabca973d9704f4e57ccb886f8ae6284079c9178bdf627cccc8bb35bac5aa
+- evidence_id: root49-sources-ipr-IPR051031
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051031/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:16:39.481239Z'
+  support: supports
+  summary: IPR051031 is classified as family and named RING-box E3 Ubiquitin Ligase.
+    Native metadata, full description and curation flags inspected. This row supports
+    identity scope, not an independent primary biological experiment.
+  snapshot_sha256: d08c2762d364d25fa692b43c86e131a812cd93c8008d5978ef4531027b694e91
+- evidence_id: root49-sources-ipr-IPR001232
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001232/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:16:39.328068Z'
+  support: supports
+  summary: IPR001232 is classified as family and named S-phase kinase-associated protein
+    1-like. Native metadata, full description and curation flags inspected. This row
+    supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: b53bf5571f84de756d3b93f4d5a19006dbf485dee5970c88249fdd202ec46c71
+- evidence_id: root49-sources-ipr-IPR016897
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016897/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:16:39.427345Z'
+  support: supports
+  summary: IPR016897 is classified as family and named S-phase kinase-associated protein
+    1. Native metadata, full description and curation flags inspected. This row supports
+    identity scope, not an independent primary biological experiment.
+  snapshot_sha256: e47550d5dfd19baea033f543ef6823c3e10ca974faaae5d49d823b994c794df7
+- evidence_id: root49-sources-ipr-IPR039948
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039948/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:18:33.845511Z'
+  support: supports
+  summary: IPR039948 is classified as family and named Elongin-C. Native metadata,
+    full description and curation flags inspected. This row supports identity scope,
+    not an independent primary biological experiment.
+  snapshot_sha256: da4415887cee4aa91d7d7d8df32fa20a2b171e8a3cb6f04fa0c5033bb17cfc56
+- evidence_id: root49-sources-locus-Tb927.11.11430
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.11.11430%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:32.168674Z'
+  support: supports
+  summary: Exact gene/taxon query returned 0 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root49-sources-locus-Tb927.10.1810
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.10.1810%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:32.674657Z'
+  support: supports
+  summary: Exact gene/taxon query returned 0 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root49-sources-locus-Tb927.9.8370
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb927.9.8370%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:32.686494Z'
+  support: supports
+  summary: Exact gene/taxon query returned 0 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root49-sources-locus-Tb11.01.3260
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb11.01.3260%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:32.731202Z'
+  support: supports
+  summary: Exact gene/taxon query returned 1 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: 53476065c4397e87a405cccd47451050589c263135a3c9d1e76f5f4e425803b1
+- evidence_id: root49-sources-locus-Tb10.70.6035
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb10.70.6035%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:32.989227Z'
+  support: supports
+  summary: Exact gene/taxon query returned 1 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: c0446b7e2c052654bc8700b43c690a9dc71bec365e5c811985bae9258a23cf36
+- evidence_id: root49-sources-locus-Tb11.02.5340
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATb11.02.5340%29+AND+%28organism_id%3A185431%29&format=json&size=100
+  locator: Complete query URL and all returned accession/status/name/ORF/taxon identities
+  accessed_at: '2026-10-22T05:18:33.132337Z'
+  support: supports
+  summary: Exact gene/taxon query returned 1 entry/entries. Native gene arrays use
+    historical ORF names; zero exact new-locus gene hits do not establish absence.
+  snapshot_sha256: 1cd95dc4118fe4e5318b41367a17ae9cbed28b119af4cd95fa03698b795afa8a
+- evidence_id: root49-sources-ensembl-Skp1_2
+  kind: database
+  reference: https://rest.ensembl.org/lookup/id/Tb927.9.8370?expand=1;content-type=application/json
+  locator: Complete native gene/transcript/translation response
+  accessed_at: '2026-10-22T05:19:41.035508Z'
+  support: supports
+  summary: Native Ensembl lookup identifies source locus Tb927.9.8370, chromosome9,
+    translation length158, and UniProtKB/TrEMBL Q38ED0. This independent mapping agrees
+    with Q38ED0 VEuPathDB cross-reference and the source supplement.
+  snapshot_sha256: 9aa4a75e24e835a5f4655244588b7b6e3c28df07b5fd2d56dedbdbd0c6abf62d
+- evidence_id: root49-sources-cullins2025-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12816148/?_escaped_fragment_=
+  locator: Complete Table1, Results Sec5/Sec6, all Cul-E passages and Fig6/7 captions
+    in Sec9, Discussion Sec10, Methods Sec12/Sec13/Sec15/Sec17/Sec18/Sec19/Sec21;
+    Fig2 caption; no claim to every unrelated Cul-A passage
+  accessed_at: '2026-10-22T05:06:26.391432Z'
+  support: supports
+  summary: Table1 and affinity-isolation Results define Cullin-E Tb927.11.11430 with
+    Rbx1 Tb927.10.1810, Skp1.2 Tb927.9.8370 and four kelch proteins. Enrichment does
+    not prove co-occupancy, contacts or direct client recognition. The Cul-E knockdown
+    passages and Fig6/7 captions support distinct karyotype, Golgi and abundance readouts.
+    Methods distinguish procyclic isolation from incompletely specified RNAi stage
+    and 927 database context; seven WT controls are stated.
+  snapshot_sha256: a9128c1eeb9cc873a09188b50029ef58a7f99e0d7c83b77281bfe4bb9dfc05a9
+- evidence_id: root49-sources-cullins2025-S3-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12816148.1/41598_2025_32077_MOESM3_ESM.xlsx
+  locator: Workbook Legend complete nonempty rows, CULE complete header and columnsA-H
+    of rows2,3,4,5,7,9,10 only; no quantitative reanalysis of full workbook
+  accessed_at: '2026-10-22T05:20:51.089843Z'
+  support: supports
+  summary: The genuine XLSX identifies the bait, Skp1.2, Rbx1 and four kelch loci
+    at CULE rows2/3/7/4/5/9/10. All seven rows have both enrichment flags. Skp1.2
+    is158aa, whereas the maintained Q384S1 is212aa. Header lists seven WT controls.
+    Legend explains both significance classes.
+  snapshot_sha256: 626696993829fdc5cc4f09a9f8ce2cf2cb2549c70aaac34731cd5b39fa86e0df
+- evidence_id: root49-sources-cullins2025-Fig2
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/60c8f8921df5/41598_2025_32077_Fig2_HTML.jpg
+  locator: Complete figure pixels, all panels, compared with corresponding full native
+    caption
+  accessed_at: '2026-10-22T05:19:40.431793Z'
+  support: supports
+  summary: Original Figure2 pixels and the full native caption were inspected. The
+    Cullin-E panel supports enrichment of the scaffold-associated RING, adaptor and
+    kelch proteins; it does not resolve co-occupancy, copy number or direct contacts.
+  snapshot_sha256: 13daf221f68f2bc7c8e1b63ff4983f479f049717645561e27f6da295607ab996
+- evidence_id: root49-sources-cullins2025-Fig6
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/55fe1026949a/41598_2025_32077_Fig6_HTML.jpg
+  locator: Complete figure pixels, all panels, compared with corresponding full native
+    caption
+  accessed_at: '2026-10-22T05:19:40.432204Z'
+  support: supports
+  summary: Original Figure6 pixels and the full native caption were inspected. The
+    DAPI timecourse supports the increased1K2N fraction and representative GRASP images
+    show a single Golgi in imaged1K2N cells. These are phenotype readouts, not complex
+    localization or a purified assembly.
+  snapshot_sha256: 62e3270920d35279077ac04a9766900897d113a1f502e993220c834522bf6d15
+- evidence_id: root49-sources-cullins2025-Fig7
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2663/12816148/748152b87b25/41598_2025_32077_Fig7_HTML.jpg
+  locator: Complete figure pixels, all panels, compared with corresponding full native
+    caption
+  accessed_at: '2026-10-22T05:19:40.432335Z'
+  support: supports
+  summary: Original Figure7 pixels and the full native caption were inspected. The24-hour
+    LFQ comparison shows decreased Cullin-E and Tb927.10.8810 and increased KKT9 abundance.
+    It does not establish direct ligase substrates or degradation rates; the duplicated
+    ESAG11/VSG locus labels are not used in the graph.
+  snapshot_sha256: b1d42ffcb258c107925e7fdd0b77f3238662a6a6672d2872baba0bd31ac14ede
+- evidence_id: root49-sources-hu2017-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5241021/?_escaped_fragment_=
+  locator: Complete Results sec004-sec008, Discussion sec009, Methods sec011/sec013-sec017
+    and embedded Fig2-8 captions, inspected in preceding batch and reused with original
+    source receipt; no new image or supplement reanalysis
+  accessed_at: '2026-10-22T05:06:26.252895Z'
+  support: supports
+  summary: The older source assigns WDR1-DDB1 association to TbCUL4 Tb927.3.1290 and
+    explicitly reports that TbCUL1 Tb927.11.11430 did not co-precipitate WDR1. The
+    newer discussion cannot transfer the older PLK mechanism to Cullin-E by naming
+    alone.
+  snapshot_sha256: 9fa8977198676a6de79e1076f47b9b4cc559f2f9d56a92e1cd48eba26c371a98
+- evidence_id: root49-sources-pride-PXD042022
+  kind: database
+  reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD042022
+  locator: Native title/project description, complete sample and data processing protocols,
+    organism and reference fields
+  accessed_at: '2026-10-22T05:18:35.465790Z'
+  support: supports
+  summary: Native project identity, organism and publication agree. Sample protocol
+    states six WT controls, unlike seven in paper and supplement, and separates Cul-E
+    label-free RNAi from Cul-A SILAC. The record already retains this discrepancy.
+  snapshot_sha256: 721d9e5e65021043b62e7d0834951a3fb9020d5384dd579e90bdc1f54161fc9c
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:36Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml'
+  snapshot_sha256: 3c5fa62af7e45bba6b25b402bf79cf75d655dcec6ea9c6f434f801c0a4cb18d0
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:37Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cullin_e_ubiquitin_ligase_complex-strict.tsv"
+  snapshot_sha256: 8f6a885f4e1e7de38fe5008406735c8e869534439b025150badfff04c61b1c0e
+- evidence_id: native-cullin_e_ubiquitin_ligase_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:19:51.961095Z'
+  support: supports
+  summary: "data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml  (cellstructuremech:cullin_e_ubiquitin_ligase_complex)\n\
+    \  cullin_e_depletion_outputs\tcullin_e\tCOVERED\t->cullin_e (UniProtKB:Q383D5)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 541d8ce82ac8de035386b41bcda3588ae6f68e6299387757256e00060caf6729
+- evidence_id: native-cullin_e_ubiquitin_ligase_complex-verify-network
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:20:51.805451Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 13 collected target identifiers returned OK. cellstructuremech:cullin_e_ubiquitin_ligase_complex:
+    SKIPPED; Exact repository-minted identifier has one maintained-record match in
+    the ignored-inclusive search. Its actual referenced record is a frozen input and
+    is explicitly inspected by the linked local evidence; cross-record dependencies
+    are not mistaken for the reviewed target. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Source-locus-defined Cullin-E assembly
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: The custom identity and broader CRL parent preserve the source-defined
+    divergent scaffold. The 2017 WDR1 assembly uses another locus. Conservative affinity-defined
+    membership does not imply all kelch partners occupy one particle.
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-cullins2025-legacy
+  - root49-sources-hu2017-legacy
+  - root49-sources-cullins2025-S3-s3
+- assessment_id: examples
+  area: grounding
+  topic: One wrong accession among three examples
+  outcome: concern
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: Q383D5 maps through VEuPathDB to source Cullin-E locus and Q38C61 to source
+    Rbx1. Q384S1 instead carries ORF Tb11.02.5340 and212aa. The source Skp1.2 is Tb927.9.8370,158aa,
+    independently mapped to Q38ED0 by native VEuPathDB and Ensembl. ORF identifiers
+    are not primary gene names or verified native Cul-E/Rbx1 aliases.
+  evidence_ids:
+  - record
+  - root49-sources-ensembl-Skp1_2
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-S3-s3
+  - root49-sources-protein-Q383D5
+  - root49-sources-protein-Q38C61
+  - root49-sources-protein-Q384S1
+  - root49-sources-protein-Q38ED0
+  - root49-sources-locus-Tb927.11.11430
+  - root49-sources-locus-Tb927.10.1810
+  - root49-sources-locus-Tb927.9.8370
+  - root49-sources-locus-Tb11.01.3260
+  - root49-sources-locus-Tb10.70.6035
+  - root49-sources-locus-Tb11.02.5340
+- assessment_id: families
+  area: grounding
+  topic: Paralog identity remains narrower than shared families
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: Broad Cullin, RING-box, Skp1-like and Elongin-C family entries do not distinguish
+    the source-defined paralogs or a single shared kelch adaptor class. IPR051031
+    description is unchecked LLM prose and is not biological evidence. Q38ED0 generated
+    Elongin-C name does not invalidate its exact locus mapping to paper Skp1.2.
+  evidence_ids:
+  - record
+  - curation
+  - root49-sources-ipr-IPR045093
+  - root49-sources-ipr-IPR051031
+  - root49-sources-ipr-IPR001232
+  - root49-sources-ipr-IPR016897
+  - root49-sources-ipr-IPR039948
+  - root49-sources-protein-Q383D5
+  - root49-sources-protein-Q38C61
+  - root49-sources-protein-Q384S1
+  - root49-sources-protein-Q38ED0
+- assessment_id: necessity
+  area: grounding
+  topic: No physical assembly necessity inferred from RNAi
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: Affinity isolation and depletion outputs do not measure persistence of
+    the complete assembly without each constituent. UNKNOWN essentialities and unresolved
+    direct interfaces remain appropriate.
+  evidence_ids:
+  - record
+  - schema
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-S3-s3
+- assessment_id: scope
+  area: scope
+  topic: Isolation culture and RNAi context stay separate
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: Procyclic Lister427 isolation is explicit, RNAi methods do not uniformly
+    restate stage/strain, qPCR names2T1 and Fig6 shows bloodstream forms. TREU927
+    accessions/database are reference annotations rather than cultured specimens.
+    Species canonical scope is retained.
+  evidence_ids:
+  - record
+  - root49-sources-cullins2025-legacy
+  - root49-sources-tax185431
+  - root49-sources-tax5691
+  - root49-sources-cullins2025-Fig2
+  - root49-sources-cullins2025-Fig6
+  - root49-sources-cullins2025-Fig7
+- assessment_id: functions
+  area: evidence
+  topic: Separate organelle and proteome outputs
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: The1K2N timecourse, representative single-Golgi images and24-hour whole-cell
+    abundance changes support a coordination role without identifying molecular mediation
+    or direct substrates. Existing ambiguity in duplicate Fig7 labels is excluded
+    from the graph.
+  evidence_ids:
+  - record
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-Fig2
+  - root49-sources-cullins2025-Fig6
+  - root49-sources-cullins2025-Fig7
+- assessment_id: graph
+  area: graph
+  topic: Bounded nonmechanistic intervention graph
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: Each edge starts at the experimental intervention. Phenotype images do
+    not locate Cullin-E, and increased KKT9 or decreased Tb927.10.8810 do not prove
+    ubiquitylation or degradation rates.
+  evidence_ids:
+  - record
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-Fig2
+  - root49-sources-cullins2025-Fig6
+  - root49-sources-cullins2025-Fig7
+- assessment_id: coverage
+  area: completeness
+  topic: Correct the protein mapping while retaining source discrepancies
+  outcome: supported
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  summary: The four constituent classes, bounded assay outputs and native dataset
+    are well documented. Correcting the wrong Skp1.2 example and reconciling outdated
+    example TODO text are actionable; raw-spectrum analysis, structural imaging and
+    untested additional interactors remain outside scope.
+  evidence_ids:
+  - record
+  - root49-sources-pride-PXD042022
+  - root49-sources-ensembl-Skp1_2
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-S3-s3
+findings:
+- finding_id: F1
+  issue_key: cullin-e-skp1-2-wrong-accession
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the Skp1.2 example with the source-locus-matched protein
+  description: The record explicitly identifies Skp1.2 as Tb927.9.8370 but gives UniProtKB:Q384S1,
+    ORF Tb11.02.5340,212aa. Source Table1 and S3 specify Tb927.9.8370,158aa. Native
+    Q38ED0 has historical ORF Tb09.211.0300 and the exact VEuPathDB Tb927.9.8370 cross-reference;
+    independent Ensembl lookup also maps that locus to Q38ED0 and158aa. Correct Q383D5/Q38C61
+    mappings are retained. Their historical ORF names should not be called primary
+    gene names.
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  field_paths:
+  - components#skp1_2.protein_examples
+  - components#cullin_e.protein_examples
+  - components#rbx1.protein_examples
+  - discussions
+  evidence_ids:
+  - record
+  - root49-sources-ensembl-Skp1_2
+  - root49-sources-cullins2025-legacy
+  - root49-sources-cullins2025-S3-s3
+  - root49-sources-protein-Q383D5
+  - root49-sources-protein-Q38C61
+  - root49-sources-protein-Q384S1
+  - root49-sources-protein-Q38ED0
+  - root49-sources-locus-Tb927.11.11430
+  - root49-sources-locus-Tb927.10.1810
+  - root49-sources-locus-Tb927.9.8370
+  - root49-sources-locus-Tb11.01.3260
+  - root49-sources-locus-Tb10.70.6035
+  - root49-sources-locus-Tb11.02.5340
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component identity and source-specific biological support
+  native_severity: major
+  normalization_reason: The asserted molecular identity, structural boundary or typed
+    hierarchy is materially incorrect, rather than an optional enrichment.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    role: maintained scientific record
+  description: Replace the Skp1.2 example with verified Q38ED0 and its actual native
+    identity/status/taxon fields, documenting the paper-locus versus historical-ORF
+    bridge. Retain Q383D5/Q38C61 with verified locus bridges and precise ORF wording.
+    Reconcile stale example-related discussion text without treating family names
+    as exact paralog identity.
+  acceptance_checks:
+  - Check exact source identifiers and reconcile the named current fields and associated
+    TODO.
+  - Preserve supported biology, taxon scope, assay limits and distinctions between
+    identity and membership.
+  - Use guarded curation and pass applicable schema, strict, protein and graph validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Primary reading is limited to the explicitly recorded sections, captions and datasets;
+  no raw spectra or sequence alignments were reanalyzed.
+- The first focused UniProt verification failed with DNS/transport errors; its original
+  log is retained and a separately captured network-enabled retry passed. No review-bundle
+  validation failed.
+- Failed TriTrypDB routes and the PMC supplement download interstitial are not evidence.
+  The genuine S3 XLSX was read only at the stated identifier/flag/header scope.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- 'Independent peer refinement before finalization: scope each figure summary to its
+  own source, preserve actual article accessibility and distinguish unresolved formation
+  necessity. Scientific findings unchanged; prior draft and validation receipts retained.'
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

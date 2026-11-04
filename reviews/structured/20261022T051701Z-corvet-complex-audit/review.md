@@ -1,0 +1,1202 @@
+# Source-backed review of corvet complex
+
+- Review: 20261022T051701Z-corvet-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:01:09Z
+- Finished UTC: 2026-10-22T05:17:01Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+CORVET identity, six-subunit membership, verified reference proteins and descriptive graph are supported at explicit ontology/abstract tiers. One minor resolves the exact Vps11 and Vps16 family groundings; detailed primary assays remain a stated access limitation.
+
+## Scope And Provenance
+
+Exactly one complete target; no neighboring scientific-record verdict is imported. Exact authority, all current component/function/graph/source placements, taxonomic scope, formation semantics, history and discussions were reviewed.
+
+Selection: Batch48 fixed strict path order, index 8; exactly one maintained target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033263 | data/structures/other/corvet_complex.yaml | maintained | CORVET complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0033263 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0033263 | Focused validator passed. |
+| Focused native proteins | passed | True | GO:0033263 | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Focused native graphs | passed | True | GO:0033263 | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Claim-level scientific review | passed | True | GO:0033263 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0033263 | 13 of 14 collected target identifiers returned OK. PMID:10944212: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0033263 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0033263 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0033263 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0033263 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0033263 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### CORVET identity and tethering class
+
+identity: supported. Targets: GO:0033263.
+
+GO0033263 is exact active CORVET, a typed child of vesicle tethering complex. Its definition names the six yeast subunits and endosomal pre-SNARE function, matching the target. The definition is ontology authority; the complete Peplowska abstract independently supports six-subunit identity, Vps21 association and endolysosomal role.
+
+### Six subunits and bounded family resolution
+
+grounding: concern. Targets: GO:0033263.
+
+The Peplowska abstract explicitly distinguishes the Vps11/Vps16/Vps18/Vps33 shared core plus CORVET-specific Vps3/Vps8 from HOPS Vps39/Vps41. Vps21 remains an interaction partner rather than a seventh constituent. Exact IPR016528 and IPR016534 resolve two current label-only rows; the other inspected candidates are broad homolog groups or a partial domain and are not forced onto the remaining classes.
+
+### Reference proteins and shared-core localization
+
+grounding: supported. Targets: GO:0033263.
+
+All six constituent examples and the Vps21 graph xref resolve to the intended reviewed S288C identities. PEP5/VPS11 and PEP3/VPS18 aliases are correct. Native P12868’s PMID10944212 vacuole-membrane annotation concerns a shared HOPS core protein; the Seals abstract explicitly identifies HOPS. This location evidence does not substitute for CORVET membership, independently supported by Peplowska and GO.
+
+### Source tier and scope of CORVET claims
+
+evidence: supported. Targets: GO:0033263.
+
+Peplowska’s complete native abstract supports the named core/specific subunits, Vps21 interaction, modular intermediate complexes and endolysosomal interpretation. Its detailed Results, Methods, strains and figures were not recovered, so purification details, individual direct contacts and physiological interconversion kinetics are not certified. The record’s coarse claims do not require an invented assay-level reading.
+
+### Descriptive CORVET graph
+
+graph: supported. Targets: GO:0033263.
+
+The ten-node/nine-edge NONMECHANISTIC FUNCTION graph separates six constituent parthood links, the Vps21 interaction, endosome-membrane localization and endolysosomal participation. It does not model a complete SNARE fusion sequence, make Vps21 a constituent, or assert a directed HOPS/CORVET interconversion pathway.
+
+### Species, reference strain and COMMON meaning
+
+scope: supported. Targets: GO:0033263.
+
+Species4932 and strain559292 identities are correct. COMMON means present in most taxon members with exceptional losses; ordinary yeast-system evidence provides qualitative support, not a measured prevalence census. Native reference accessions are not evidence that every cited experiment used S288C.
+
+### Formation necessity remains unknown
+
+grounding: unknown. Targets: GO:0033263.
+
+All current constituent essentiality labels are UNKNOWN. The inspected membership, localization, transport and reconstitution evidence is not promoted to an unqualified requirement for formation of every represented structure. No necessity finding is inferred from a missing depletion experiment.
+
+### Whole-record coverage and bounded enrichment
+
+completeness: supported. Targets: GO:0033263.
+
+All target bytes, component/examples, function/evidence placements, canonical example, graph, discussions and history were reviewed. Findings concern exact current statements or verified available mappings, not optional inventory expansion or a declaration that historical searches were false. No neighboring record’s scientific verdict is imported.
+
+## Findings
+
+### F1: Resolve two exact CORVET core-protein families
+
+minor / open / confirmed; issue key: corvet.exact_vps11_vps16_families.
+
+Vps11/Pep5 and Vps16 remain REVIEWED_LABEL_ONLY even though native whole-protein families IPR016528 and IPR016534 match those declared classes and their reviewed yeast examples. Shared membership in HOPS does not invalidate their protein-family identity. The broader Vps3/Vps39, Vps8/Vps41, Sec1 and domain-level Vps18 candidates are explicitly excluded from this finding.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Map Vps11/Pep5 to InterPro:IPR016528 and Vps16 to InterPro:IPR016534; synchronize current label-only notes/status and linked nodes while preserving IDs, UNKNOWN necessity and the bounded unresolved classes.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/corvet_complex.yaml; Complete maintained YAML; all components, source notes, graphs, discussions and historical entries | context_only | The entire maintained target was read; no scientific record was changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes | context_only | ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic or transport function. |
+| curation | docs/CURATION.md; Components; groundings; associated machinery and chaperone boundaries | context_only | Components are taxon-agnostic molecular families/classes; exact family grounding is preferred when verified. Mature constituents and assembled-structure maintenance machinery differ from transient preassembly chaperones. |
+| micro48-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000139,GO:0005789,GO:0006890,GO:0010008,GO:0030120,GO:0030126,GO:0030127,GO:0030134,GO:0030137,GO:0033263,GO:0035964,GO:0090114,GO:0099023; Complete id/name/isObsolete/definition/synonym/typed-children fields of all 13 returned terms; the hash identifies this combined response, not a source paper. | supports | The 13 exact active entries distinguish COPI/COPII protein coats, their vesicles and membrane locations, and CORVET from its endosome membrane. GO0030120 typed children include both coat classes; GO0099023 typed children include CORVET. Coat-to-whole-vesicle parthood is supported by the definitions, rather than an exposed direct typed relation in this response. GO0033263 explicitly names the six yeast CORVET subunits and pre-SNARE endosomal tethering. |
+| micro48-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 4932 identifies Saccharomyces cerevisiae at rank species; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro48-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 559292 identifies Saccharomyces cerevisiae S288C at rank strain; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro48-protein-P23643 | https://rest.uniprot.org/uniprotkb/P23643.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P23643 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS3']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P39702 | https://rest.uniprot.org/uniprotkb/P39702.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P39702 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS8']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P12868 | https://rest.uniprot.org/uniprotkb/P12868.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P12868 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['PEP5']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-Q03308 | https://rest.uniprot.org/uniprotkb/Q03308.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | Q03308 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS16']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P27801 | https://rest.uniprot.org/uniprotkb/P27801.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P27801 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['PEP3']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P20795 | https://rest.uniprot.org/uniprotkb/P20795.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P20795 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS33']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P36017 | https://rest.uniprot.org/uniprotkb/P36017.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P36017 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS21']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-gene-VPS3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P23643. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-VPS8 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS8%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P39702. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-VPS11 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS11%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P12868. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-VPS16 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: Q03308. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-VPS18 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS18%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P27801. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-VPS33 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS33%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P20795. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-PEP5 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P12868. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-PEP3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P27801. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-peplowska2007-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.devcel.2007.03.006&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED17488625: The CORVET tethering complex interacts with the yeast Rab5 homolog Vps21 and is involved in endo-lysosomal biogenesis. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid10944212 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10944212+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED10944212: A Ypt/Rab effector complex containing the Sec1 homolog Vps33p is required for homotypic vacuole fusion. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-peplowska2007-publisher | https://doi.org/10.1016/j.devcel.2007.03.006; Exact retained response status/title/signature and matching original metadata; no main-body content certified. | context_only | The DOI route returned HTTP200 but only a short LinkingHub Redirecting locator page. Scientific interpretation is limited to the separately retained complete native abstract. |
+| micro48-peplowska2007-cell-pdf | https://www.cell.com/article/S1534580707001062/pdf; Exact retained response status/title/signature and matching original metadata; no main-body content certified. | context_only | The public Cell PDF route returned HTTP403 HTML, not a primary PDF. Scientific interpretation is limited to the separately retained complete native abstract. |
+| micro48-peplowska2007-sciencedirect | https://www.sciencedirect.com/science/article/pii/S1534580707001062; Exact retained response status/title/signature and matching original metadata; no main-body content certified. | context_only | The ScienceDirect route returned HTTP403 access/challenge HTML; its large byte count does not establish readable primary body content. Scientific interpretation is limited to the separately retained complete native abstract. |
+| micro48-IPR016528 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016528/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | IPR016528 is a family for Vps11/Pep5, including the fungal E3 ubiquitin ligase/vacuolar sorting protein and homologues. Its scope matches the declared Vps11/Pep5 component, independently of whether that protein participates in CORVET or HOPS. |
+| micro48-IPR016534 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016534/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | IPR016534 is a family for Vps16 and matches the declared Vps16 constituent class. Native Q03308 carries this exact cross-reference. |
+| micro48-IPR032914 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR032914/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | Vam6/VPS39/TRAP1 includes fungal Vps3 as well as other homologues, so it is broader than a CORVET-specific Vps3 class. |
+| micro48-IPR045111 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045111/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | Vps41/Vps8 includes both HOPS- and CORVET-associated paralogues, rather than exactly Vps8. |
+| micro48-IPR007810 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007810/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | Pep3/Vps18 beta-propeller is a domain, not a whole-protein family identity. |
+| micro48-IPR001619 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001619/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | Sec1-like is a broader family of trafficking regulators, not exactly the Vps33 class. |
+| schema-result | just validate data/structures/other/corvet_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/corvet_complex.yaml |
+| strict-result | just validate-strict data/structures/other/corvet_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/corvet_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv |
+| native-proteins | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/corvet_complex.yaml; Complete read-only focused native proteins log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-graphs | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/corvet_complex.yaml; Complete read-only focused native graphs log | supports | data/structures/other/corvet_complex.yaml  (GO:0033263)<br>  yeast_corvet_endosomal_tethering	vps3_corvet_subunit	COVERED	-&gt;vps3_corvet_subunit (UniProtKB:P23643)<br>  yeast_corvet_endosomal_tethering	vps8_corvet_subunit	COVERED	-&gt;vps8_corvet_subunit (UniProtKB:P39702)<br>  yeast_corvet_endosomal_tethering	vps11_pep5_corvet_subunit	COVERED	-&gt;vps11_pep5_corvet_subunit (UniProtKB:P12868)<br>  yeast_corvet_endosomal_tethering	vps16_corvet_subunit	COVERED	-&gt;vps16_corvet_subunit (UniProtKB:Q03308)<br>  yeast_corvet_endosomal_tethering	vps18_pep3_corvet_subunit	COVERED	-&gt;vps18_pep3_corvet_subunit (UniProtKB:P27801)<br>  yeast_corvet_endosomal_tethering	vps33_corvet_subunit	COVERED	-&gt;vps33_corvet_subunit (UniProtKB:P20795)<br>  yeast_corvet_endosomal_tethering	vps21_rab	UNANCHORED_WITH_UNIPROT	Vps21 Rab5 homolog (UniProtKB:P36017)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     6  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     7  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/other/corvet_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 14 collected target identifiers returned OK. PMID:10944212: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- COMMON retains its schema meaning present in most members with exceptional losses. Yeast experiments support ordinary species-level occurrence qualitatively, without measuring a species-wide prevalence census.
+- Reference-entry S288C identity is distinguished from experimental strains, tagged constructs, purified fragments and reconstitution conditions.
+- No microscopy pixels, videos or supplementary files were inspected. Primary text and embedded captions were read only at the explicitly named extents.
+- All constituent essentiality values are UNKNOWN. Membership, protein function, transport phenotype and necessity for formation of the entire structure are separate claims.
+- Peplowska2007 and Seals2000 were read at complete native abstract tier only. The cited Peplowska main body, exact experimental strains, Methods and figures were not accessible through the retained DOI/Cell/ScienceDirect routes.
+- No assay-level distinction among direct binary binding, copurification and cellular localization is claimed from the unseen Peplowska body. GO supplies authority-level tethering context; detailed physiological modular interconversion remains unverified here.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User expressly requests one review for every unreviewed record, including scientifically clean records.
+- iModulonDB is not applicable to these vesicle-coat and CORVET identity, molecular-family, localization and formation claims.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T051701Z-corvet-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of corvet complex
+started_at: '2026-10-22T05:01:09Z'
+finished_at: '2026-10-22T05:17:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: CORVET identity, six-subunit membership, verified reference proteins and
+  descriptive graph are supported at explicit ontology/abstract tiers. One minor resolves
+  the exact Vps11 and Vps16 family groundings; detailed primary assays remain a stated
+  access limitation.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/corvet_complex.yaml
+    sha256: a3bf0da311e1d6b869043ba0b102130ef6e9e1dcb5009a8996058b43c40945a0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0033263
+  path: data/structures/other/corvet_complex.yaml
+  label: CORVET complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/corvet_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target; no neighboring scientific-record verdict
+    is imported. Exact authority, all current component/function/graph/source placements,
+    taxonomic scope, formation semantics, history and discussions were reviewed.
+  selection: Batch48 fixed strict path order, index 8; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033263
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just validate data/structures/other/corvet_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just validate-strict data/structures/other/corvet_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-proteins
+  name: Focused native proteins
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/corvet_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-proteins
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/corvet_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - micro48-go
+  - micro48-tax4932
+  - micro48-tax559292
+  - micro48-protein-P23643
+  - micro48-protein-P39702
+  - micro48-protein-P12868
+  - micro48-protein-Q03308
+  - micro48-protein-P27801
+  - micro48-protein-P20795
+  - micro48-protein-P36017
+  - micro48-gene-VPS3
+  - micro48-gene-VPS8
+  - micro48-gene-VPS11
+  - micro48-gene-VPS16
+  - micro48-gene-VPS18
+  - micro48-gene-VPS33
+  - micro48-gene-PEP5
+  - micro48-gene-PEP3
+  - micro48-peplowska2007-meta
+  - micro48-pmid10944212
+  - micro48-peplowska2007-publisher
+  - micro48-peplowska2007-cell-pdf
+  - micro48-peplowska2007-sciencedirect
+  - micro48-IPR016528
+  - micro48-IPR016534
+  - micro48-IPR032914
+  - micro48-IPR045111
+  - micro48-IPR007810
+  - micro48-IPR001619
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  summary: '13 of 14 collected target identifiers returned OK. PMID:10944212: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro48-pmid10944212
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033263
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/corvet_complex.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T05:08:47Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T05:08:47Z'
+  support: context_only
+  summary: ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite
+    class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic
+    or transport function.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T05:08:47Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: micro48-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000139,GO:0005789,GO:0006890,GO:0010008,GO:0030120,GO:0030126,GO:0030127,GO:0030134,GO:0030137,GO:0033263,GO:0035964,GO:0090114,GO:0099023
+  locator: Complete id/name/isObsolete/definition/synonym/typed-children fields of
+    all 13 returned terms; the hash identifies this combined response, not a source
+    paper.
+  accessed_at: '2026-10-22T05:02:32.410565Z'
+  support: supports
+  summary: The 13 exact active entries distinguish COPI/COPII protein coats, their
+    vesicles and membrane locations, and CORVET from its endosome membrane. GO0030120
+    typed children include both coat classes; GO0099023 typed children include CORVET.
+    Coat-to-whole-vesicle parthood is supported by the definitions, rather than an
+    exposed direct typed relation in this response. GO0033263 explicitly names the
+    six yeast CORVET subunits and pre-SNARE endosomal tethering.
+  snapshot_sha256: 7169ecfe80eda6fc5cc8b61c60a3d9b2bd09a42c1fe2bfbcb3ae7a42259a994f
+- evidence_id: micro48-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:15:34.948894Z'
+  support: supports
+  summary: ENA taxId 4932 identifies Saccharomyces cerevisiae at rank species; aliases
+    and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro48-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:15:34.948991Z'
+  support: supports
+  summary: ENA taxId 559292 identifies Saccharomyces cerevisiae S288C at rank strain;
+    aliases and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro48-protein-P23643
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P23643.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.221634Z'
+  support: supports
+  summary: P23643 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS3'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 0d2c8a76a41038fa09099f851ea972dab3b2267d53915877617c7724af91e99f
+- evidence_id: micro48-protein-P39702
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39702.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.889094Z'
+  support: supports
+  summary: P39702 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS8'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 18f49e165869c5037ce9fa87a74d1ac71a7c461f6d189f21c42b2d801987b510
+- evidence_id: micro48-protein-P12868
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P12868.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:32.411007Z'
+  support: supports
+  summary: P12868 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['PEP5'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: ff283afab18523326c61ef44b5c5ae24ea501a36b0b32d75e46d7b5834d4a2b0
+- evidence_id: micro48-protein-Q03308
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03308.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:35.587305Z'
+  support: supports
+  summary: Q03308 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS16'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 572e18358d76bb4a5bcaa5f12a16aa6c5e0d24f6e8c11a5ad3637907f79c35f1
+- evidence_id: micro48-protein-P27801
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27801.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.224355Z'
+  support: supports
+  summary: P27801 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['PEP3'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 6b73997591488f3066e961f073293728183c0b1b17eefa4c162d1abf133dd37d
+- evidence_id: micro48-protein-P20795
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P20795.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.168109Z'
+  support: supports
+  summary: P20795 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS33'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 74c8787eb68381dc26a6e70ba85414e3a05c4cc15f45e0686a0b57a4882755d6
+- evidence_id: micro48-protein-P36017
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P36017.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.849913Z'
+  support: supports
+  summary: P36017 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['VPS21'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 205505359e867eb9af64b706eb08ba86c8df3feefde7dec12aafeec068b36058
+- evidence_id: micro48-gene-VPS3
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:41.586589Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P23643. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: d99c30f290b8a5722ad06766050723b231f0862187e6ab9d3dcba6f8daf83aea
+  search_scope: Remote UniProt query for exact gene VPS3, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-VPS8
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS8%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:41.666035Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P39702. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 32b41096045213773f336ae7da820d7424394dfe3d2dbd8aa2b2a6ae7fed2651
+  search_scope: Remote UniProt query for exact gene VPS8, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-VPS11
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS11%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:40.700800Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P12868. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 2d7ec548d4f724f09d2f3c966ca4b44cd93914500f4413fef040aa9da6c29b2e
+  search_scope: Remote UniProt query for exact gene VPS11, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-VPS16
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:40.716692Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: Q03308. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 4f1949a2b20f0131930173f14291d988c2119a19df78c13000dba74e842bc037
+  search_scope: Remote UniProt query for exact gene VPS16, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-VPS18
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS18%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:41.516204Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P27801. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: cdc80fa77df47d8e14c7b1aad16a2b8b33747ae02fcfffecc4e8a1397a172656
+  search_scope: Remote UniProt query for exact gene VPS18, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-VPS33
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS33%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:41.592539Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P20795. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 3c912aef86561cdacce29565228c60917e9a991c97d59e453244354cb9551705
+  search_scope: Remote UniProt query for exact gene VPS33, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-PEP5
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:37.425228Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P12868. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 2d7ec548d4f724f09d2f3c966ca4b44cd93914500f4413fef040aa9da6c29b2e
+  search_scope: Remote UniProt query for exact gene PEP5, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-PEP3
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:36.602583Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P27801. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: cdc80fa77df47d8e14c7b1aad16a2b8b33747ae02fcfffecc4e8a1397a172656
+  search_scope: Remote UniProt query for exact gene PEP3, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-peplowska2007-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.devcel.2007.03.006&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:43.590598Z'
+  support: supports
+  summary: 'Unique MED17488625: The CORVET tethering complex interacts with the yeast
+    Rab5 homolog Vps21 and is involved in endo-lysosomal biogenesis. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 1d16e010a997cd06cba0ccc0d530cd67c5ec3146af7764a03e72ab35fbadd2b3
+- evidence_id: micro48-pmid10944212
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10944212+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:42.480861Z'
+  support: supports
+  summary: 'Unique MED10944212: A Ypt/Rab effector complex containing the Sec1 homolog
+    Vps33p is required for homotypic vacuole fusion. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: bf7ab3e135e3141e1498f6f492865cc0a53e312370e4c20662b3432141c67fcd
+- evidence_id: micro48-peplowska2007-publisher
+  kind: database
+  reference: https://doi.org/10.1016/j.devcel.2007.03.006
+  locator: Exact retained response status/title/signature and matching original metadata;
+    no main-body content certified.
+  accessed_at: '2026-10-22T05:04:38.857213Z'
+  support: context_only
+  summary: The DOI route returned HTTP200 but only a short LinkingHub Redirecting
+    locator page. Scientific interpretation is limited to the separately retained
+    complete native abstract.
+  snapshot_sha256: ede17ddc7aef64f9987203fe9f5844c36ba3876623e1d241439f63bab1b549a4
+- evidence_id: micro48-peplowska2007-cell-pdf
+  kind: database
+  reference: https://www.cell.com/article/S1534580707001062/pdf
+  locator: Exact retained response status/title/signature and matching original metadata;
+    no main-body content certified.
+  accessed_at: '2026-10-22T05:04:50.174847Z'
+  support: context_only
+  summary: The public Cell PDF route returned HTTP403 HTML, not a primary PDF. Scientific
+    interpretation is limited to the separately retained complete native abstract.
+  snapshot_sha256: e3bc1891634ff88b455cda8e92c5b016616dbb3157c8a51cb19e06659f7a1d51
+- evidence_id: micro48-peplowska2007-sciencedirect
+  kind: database
+  reference: https://www.sciencedirect.com/science/article/pii/S1534580707001062
+  locator: Exact retained response status/title/signature and matching original metadata;
+    no main-body content certified.
+  accessed_at: '2026-10-22T05:04:50.175325Z'
+  support: context_only
+  summary: The ScienceDirect route returned HTTP403 access/challenge HTML; its large
+    byte count does not establish readable primary body content. Scientific interpretation
+    is limited to the separately retained complete native abstract.
+  snapshot_sha256: 0da687be6606818623d29a044b6b9153bbc1522ee21e347202565d0dd85e5325
+- evidence_id: micro48-IPR016528
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016528/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:39.364262Z'
+  support: supports
+  summary: IPR016528 is a family for Vps11/Pep5, including the fungal E3 ubiquitin
+    ligase/vacuolar sorting protein and homologues. Its scope matches the declared
+    Vps11/Pep5 component, independently of whether that protein participates in CORVET
+    or HOPS.
+  snapshot_sha256: 73b2d50cac8002fc54c640905ed1b5cede4fcd263942ae55daa674e0ab172bf7
+- evidence_id: micro48-IPR016534
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016534/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:39.482280Z'
+  support: supports
+  summary: IPR016534 is a family for Vps16 and matches the declared Vps16 constituent
+    class. Native Q03308 carries this exact cross-reference.
+  snapshot_sha256: ddcd8dd9da4c7607ff524d7af0615638c065e447fa9bd7868b7597340f06610d
+- evidence_id: micro48-IPR032914
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR032914/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:39.488332Z'
+  support: supports
+  summary: Vam6/VPS39/TRAP1 includes fungal Vps3 as well as other homologues, so it
+    is broader than a CORVET-specific Vps3 class.
+  snapshot_sha256: c9031c40d2d3cf9701bf98487804ee589d51d46a9af9dd84feb925fba5177ea1
+- evidence_id: micro48-IPR045111
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045111/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:39.497743Z'
+  support: supports
+  summary: Vps41/Vps8 includes both HOPS- and CORVET-associated paralogues, rather
+    than exactly Vps8.
+  snapshot_sha256: 392e9408a0425a750cca044426425c79c8b9f5970104987bb5107552373f42aa
+- evidence_id: micro48-IPR007810
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007810/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:40.081800Z'
+  support: supports
+  summary: Pep3/Vps18 beta-propeller is a domain, not a whole-protein family identity.
+  snapshot_sha256: 23fc282051545d1bba2c2c0c8c893a58ba403301736facb4d3506ab1012a7e77
+- evidence_id: micro48-IPR001619
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001619/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:39.954606Z'
+  support: supports
+  summary: Sec1-like is a broader family of trafficking regulators, not exactly the
+    Vps33 class.
+  snapshot_sha256: 6c3475a301aecf6077b4679c28ba0660810bb1681644a8a5323fcb0a80eddcd9
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/corvet_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:01:10Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/corvet_complex.yaml'
+  snapshot_sha256: 835f7afe5bac64de161e6ed2dbfa9a49f03aa380454d6cf34ec09c4dbd7ee2b8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/corvet_complex.yaml --out
+    /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:01:11Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/corvet_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/corvet_complex-strict.tsv"
+  snapshot_sha256: 1270ad45fb80b32f1d903278577239be27fe021892a3b8d60e5767e6eb3279a7
+- evidence_id: native-proteins
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/corvet_complex.yaml
+  locator: Complete read-only focused native proteins log
+  accessed_at: '2026-10-22T05:02:37.598293Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/corvet_complex.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T05:02:38.011993Z'
+  support: supports
+  summary: "data/structures/other/corvet_complex.yaml  (GO:0033263)\n  yeast_corvet_endosomal_tethering\t\
+    vps3_corvet_subunit\tCOVERED\t->vps3_corvet_subunit (UniProtKB:P23643)\n  yeast_corvet_endosomal_tethering\t\
+    vps8_corvet_subunit\tCOVERED\t->vps8_corvet_subunit (UniProtKB:P39702)\n  yeast_corvet_endosomal_tethering\t\
+    vps11_pep5_corvet_subunit\tCOVERED\t->vps11_pep5_corvet_subunit (UniProtKB:P12868)\n\
+    \  yeast_corvet_endosomal_tethering\tvps16_corvet_subunit\tCOVERED\t->vps16_corvet_subunit\
+    \ (UniProtKB:Q03308)\n  yeast_corvet_endosomal_tethering\tvps18_pep3_corvet_subunit\t\
+    COVERED\t->vps18_pep3_corvet_subunit (UniProtKB:P27801)\n  yeast_corvet_endosomal_tethering\t\
+    vps33_corvet_subunit\tCOVERED\t->vps33_corvet_subunit (UniProtKB:P20795)\n  yeast_corvet_endosomal_tethering\t\
+    vps21_rab\tUNANCHORED_WITH_UNIPROT\tVps21 Rab5 homolog (UniProtKB:P36017)\n\n\
+    causal_graphs GENE_OR_PROTEIN node summary:\n     6  COVERED                 \
+    \  component_ref target holds protein_examples covering all declared symbols\n\
+    \     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  PARTIAL_EXAMPLES          component_ref target holds\
+    \ protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     7\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 7712e85ade0de1347ea909a9aaf2d0adab299bcdae10f215c03089983bbde0ff
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/corvet_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 14 collected target identifiers returned OK. PMID:10944212: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: CORVET identity and tethering class
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: GO0033263 is exact active CORVET, a typed child of vesicle tethering complex.
+    Its definition names the six yeast subunits and endosomal pre-SNARE function,
+    matching the target. The definition is ontology authority; the complete Peplowska
+    abstract independently supports six-subunit identity, Vps21 association and endolysosomal
+    role.
+  evidence_ids:
+  - micro48-go
+  - micro48-peplowska2007-meta
+  - record
+- assessment_id: components
+  area: grounding
+  topic: Six subunits and bounded family resolution
+  outcome: concern
+  target_ids:
+  - GO:0033263
+  summary: The Peplowska abstract explicitly distinguishes the Vps11/Vps16/Vps18/Vps33
+    shared core plus CORVET-specific Vps3/Vps8 from HOPS Vps39/Vps41. Vps21 remains
+    an interaction partner rather than a seventh constituent. Exact IPR016528 and
+    IPR016534 resolve two current label-only rows; the other inspected candidates
+    are broad homolog groups or a partial domain and are not forced onto the remaining
+    classes.
+  evidence_ids:
+  - micro48-go
+  - micro48-peplowska2007-meta
+  - micro48-IPR016528
+  - micro48-IPR016534
+  - micro48-IPR032914
+  - micro48-IPR045111
+  - micro48-IPR007810
+  - micro48-IPR001619
+  - micro48-protein-P23643
+  - micro48-protein-P39702
+  - micro48-protein-P12868
+  - micro48-protein-Q03308
+  - micro48-protein-P27801
+  - micro48-protein-P20795
+  - micro48-protein-P36017
+  - record
+  - curation
+- assessment_id: proteins
+  area: grounding
+  topic: Reference proteins and shared-core localization
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: All six constituent examples and the Vps21 graph xref resolve to the intended
+    reviewed S288C identities. PEP5/VPS11 and PEP3/VPS18 aliases are correct. Native
+    P12868’s PMID10944212 vacuole-membrane annotation concerns a shared HOPS core
+    protein; the Seals abstract explicitly identifies HOPS. This location evidence
+    does not substitute for CORVET membership, independently supported by Peplowska
+    and GO.
+  evidence_ids:
+  - micro48-protein-P23643
+  - micro48-protein-P39702
+  - micro48-protein-P12868
+  - micro48-protein-Q03308
+  - micro48-protein-P27801
+  - micro48-protein-P20795
+  - micro48-protein-P36017
+  - micro48-gene-VPS3
+  - micro48-gene-VPS8
+  - micro48-gene-VPS11
+  - micro48-gene-VPS16
+  - micro48-gene-VPS18
+  - micro48-gene-VPS33
+  - micro48-gene-PEP5
+  - micro48-gene-PEP3
+  - micro48-go
+  - micro48-peplowska2007-meta
+  - micro48-pmid10944212
+- assessment_id: sources
+  area: evidence
+  topic: Source tier and scope of CORVET claims
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: Peplowska’s complete native abstract supports the named core/specific subunits,
+    Vps21 interaction, modular intermediate complexes and endolysosomal interpretation.
+    Its detailed Results, Methods, strains and figures were not recovered, so purification
+    details, individual direct contacts and physiological interconversion kinetics
+    are not certified. The record’s coarse claims do not require an invented assay-level
+    reading.
+  evidence_ids:
+  - micro48-peplowska2007-meta
+  - micro48-peplowska2007-publisher
+  - micro48-peplowska2007-cell-pdf
+  - micro48-peplowska2007-sciencedirect
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Descriptive CORVET graph
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: The ten-node/nine-edge NONMECHANISTIC FUNCTION graph separates six constituent
+    parthood links, the Vps21 interaction, endosome-membrane localization and endolysosomal
+    participation. It does not model a complete SNARE fusion sequence, make Vps21
+    a constituent, or assert a directed HOPS/CORVET interconversion pathway.
+  evidence_ids:
+  - micro48-go
+  - micro48-peplowska2007-meta
+  - micro48-protein-P36017
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species, reference strain and COMMON meaning
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: Species4932 and strain559292 identities are correct. COMMON means present
+    in most taxon members with exceptional losses; ordinary yeast-system evidence
+    provides qualitative support, not a measured prevalence census. Native reference
+    accessions are not evidence that every cited experiment used S288C.
+  evidence_ids:
+  - micro48-tax4932
+  - micro48-tax559292
+  - schema
+  - micro48-peplowska2007-meta
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:0033263
+  summary: All current constituent essentiality labels are UNKNOWN. The inspected
+    membership, localization, transport and reconstitution evidence is not promoted
+    to an unqualified requirement for formation of every represented structure. No
+    necessity finding is inferred from a missing depletion experiment.
+  evidence_ids:
+  - micro48-go
+  - schema
+  - record
+  - micro48-peplowska2007-meta
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-record coverage and bounded enrichment
+  outcome: supported
+  target_ids:
+  - GO:0033263
+  summary: All target bytes, component/examples, function/evidence placements, canonical
+    example, graph, discussions and history were reviewed. Findings concern exact
+    current statements or verified available mappings, not optional inventory expansion
+    or a declaration that historical searches were false. No neighboring record’s
+    scientific verdict is imported.
+  evidence_ids:
+  - micro48-go
+  - record
+  - curation
+  - micro48-peplowska2007-meta
+findings:
+- finding_id: F1
+  issue_key: corvet.exact_vps11_vps16_families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve two exact CORVET core-protein families
+  description: Vps11/Pep5 and Vps16 remain REVIEWED_LABEL_ONLY even though native
+    whole-protein families IPR016528 and IPR016534 match those declared classes and
+    their reviewed yeast examples. Shared membership in HOPS does not invalidate their
+    protein-family identity. The broader Vps3/Vps39, Vps8/Vps41, Sec1 and domain-level
+    Vps18 candidates are explicitly excluded from this finding.
+  target_ids:
+  - GO:0033263
+  field_paths:
+  - components[2].grounding
+  - components[2].grounding_status
+  - components[2].grounding_notes
+  - components[3].grounding
+  - components[3].grounding_status
+  - components[3].grounding_notes
+  evidence_ids:
+  - micro48-IPR016528
+  - micro48-IPR016534
+  - micro48-protein-P12868
+  - micro48-protein-Q03308
+  - record
+  - curation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/corvet_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: 'Minor: subunit biology and the six-member complex remain
+    correct; two exact available families resolve a bounded non-blocking grounding
+    gap.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0033263
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/corvet_complex.yaml
+    role: maintained scientific record
+  description: Map Vps11/Pep5 to InterPro:IPR016528 and Vps16 to InterPro:IPR016534;
+    synchronize current label-only notes/status and linked nodes while preserving
+    IDs, UNKNOWN necessity and the bounded unresolved classes.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+limitations:
+- COMMON retains its schema meaning present in most members with exceptional losses.
+  Yeast experiments support ordinary species-level occurrence qualitatively, without
+  measuring a species-wide prevalence census.
+- Reference-entry S288C identity is distinguished from experimental strains, tagged
+  constructs, purified fragments and reconstitution conditions.
+- No microscopy pixels, videos or supplementary files were inspected. Primary text
+  and embedded captions were read only at the explicitly named extents.
+- All constituent essentiality values are UNKNOWN. Membership, protein function, transport
+  phenotype and necessity for formation of the entire structure are separate claims.
+- Peplowska2007 and Seals2000 were read at complete native abstract tier only. The
+  cited Peplowska main body, exact experimental strains, Methods and figures were
+  not accessible through the retained DOI/Cell/ScienceDirect routes.
+- No assay-level distinction among direct binary binding, copurification and cellular
+  localization is claimed from the unseen Peplowska body. GO supplies authority-level
+  tethering context; detailed physiological modular interconversion remains unverified
+  here.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these vesicle-coat and CORVET identity, molecular-family,
+  localization and formation claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

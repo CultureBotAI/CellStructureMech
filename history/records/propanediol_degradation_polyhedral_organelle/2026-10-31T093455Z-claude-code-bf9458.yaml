@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml
+  slug: propanediol_degradation_polyhedral_organelle
+session:
+  id: 2026-10-31T093455Z-claude-code-bf9458
+  timestamp: '2026-10-31T09:34:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex
+    in pdu_shell_cargo_convergent_biogenesis and aligned pducde_diol_dehydratase node_type
+    to STRUCTURE.
+  details: 'Added sourced edges from pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to
+    pdu_shell_cargo_complex (DOI:10.1038/s41467-022-30608-w, DOI:10.1128/JB.185.17.5086-5095.2003)
+    and set pducde_diol_dehydratase node_type to STRUCTURE to match its PROTEIN_COMPLEX component_ref
+    (fixes #2484).'

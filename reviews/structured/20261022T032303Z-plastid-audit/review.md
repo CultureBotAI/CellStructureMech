@@ -1,0 +1,850 @@
+# Plastid scientific review
+
+- Review: 20261022T032303Z-plastid-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:05:47Z
+- Finished UTC: 2026-10-22T03:23:03Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact plastid identity, broad lineage scope, canonical Chlamydomonas context and descriptive topology are supported. One major finding concerns explicit LIPID component grounding to complete membrane structures and the associated graph references.
+
+## Scope And Provenance
+
+Entire single target with all components, hierarchy, taxon/examples, functions/graphs, evidence, history and discussions; all explicitly frozen boundary neighbors read. Primary/review/abstract and native-authority scopes are stated per evidence row.
+
+Selection: Batch38 exact path-ordered target 6; fresh f97b native inspection/schema/strict passed before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009536 | data/structures/membrane_organelle/plastid.yaml | maintained | plastid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0009536 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0009536 | Focused validator passed. |
+| Native graph protein coverage | passed | True | GO:0009536 | Zero GENE_OR_PROTEIN nodes; scientific edge scope independently assessed. |
+| Individual protein verification applicability | not_applicable | False | GO:0009536 | No individual protein accession or gene/protein graph node occurs in the target. |
+| Expression-module applicability | not_applicable | False | GO:0009536 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0009536 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0009536 | 11 of 11 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0009536 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0009536 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0009536 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0009536 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0009536 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Broad plastid organelle identity
+
+identity: supported. Targets: GO:0009536.
+
+The full maintained definition matches current GO0009536, with typed intracellular membrane-bounded-organelle parent and cytoplasm parthood, and exact SL0209 xref. Stroma is a positive plastid part. Generic topology deliberately does not imply every plastid is photosynthetic or bears the same membrane count.
+
+### Broad lineage occurrence and canonical green alga
+
+scope: supported. Targets: GO:0009536.
+
+Keeling supports primary/secondary/reduced-plastid diversity; Terashima directly supports the Chlamydomonas model and proteome/protein-biogenesis context. RARE and COMMON are read as qualitative distribution categories, not measured fractions of eukaryotic cells or taxa. The sources do not provide a contemporary numerical census.
+
+### Supported generic topology
+
+graph: supported. Targets: GO:0009536.
+
+The NONMECHANISTIC cytoplasm residency, membrane boundary and stroma containment graph is supported by exact native definitions. Its whole membrane node remains a valid structural node; the problem is linking that node to molecular LIPID grounding. The resolved generic-boundary policy is appropriately conservative.
+
+### Whole membrane versus molecular lipid identity
+
+grounding: concern. Targets: GO:0009536.
+
+The component rows explicitly declare LIPID while grounding them to GO0042170, which identify complete membrane structures. Correct membrane parthood and a bilayer-containing definition do not make those structural CURIEs chemical identities. The same conflation is inherited by the linked component_ref fields. Structural nodes and parthood should be retained independently.
+
+### Formation requirements are not inferred
+
+evidence: unknown. Targets: GO:0009536.
+
+The plastid component row already uses UNKNOWN essentiality. Constitutive membrane topology and translocon observation do not establish experimental necessity of individual lipid/protein species for organelle formation, and this review does not convert them to such a claim.
+
+### Bounded evidence and unchanged maintained status
+
+provenance: supported. Targets: GO:0009536.
+
+All target claims were reviewed with native identities, exact declared source read extents, explicit primary-versus-review tiers and frozen boundary context. No scientific mutation, mapping-status promotion, persistence or publication is implied.
+
+## Findings
+
+### F1: Separate membrane structures from molecular lipid grounding
+
+major / open / confirmed; issue key: plastid-lipid-whole-membrane-grounding.
+
+The maintained LIPID component row uses GO0042170 for the complete generic plastid membrane class. These are structural cellular-component identities, not the molecular lipid material identity required by the declared component type. Linked graph component_ref fields perpetuate that typing mismatch even though the structural nodes and topology are sound.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Keep correct GO membrane entities as structural nodes/parts. If the rows mean collective lipid material, relabel and use honest reviewed-label-only grounding pending a justified chemical identifier; if they mean structural subparts, represent them with an appropriate explicit structural type rather than LIPID. Align component_ref links with the chosen model.
+
+- No LIPID molecular row uses a complete membrane GO identity as its chemical grounding.
+- Valid membrane identities, has_part topology and boundaries remain intact.
+- No specific lipid species or obligatory protein inventory is invented.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/plastid.yaml; Entire maintained YAML including all fields, graphs, history and discussions | context_only | The entire target was read; maintained science, status and history remain unchanged. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent molecular-building-block/grounding/type and formation-necessity contracts; graph scope and node/component_ref contracts | context_only | A LIPID molecular constituent is distinct from a complete GO membrane structure; correct structural parthood does not validate molecular lipid grounding. OTHER structural-part models are not categorically forbidden. Assembly necessity is not inferred from localization, catalytic function or generic constitution. |
+| neighbor-plastid_envelope | data/structures/membrane_organelle/plastid_envelope.yaml; Entire frozen maintained boundary neighbor; context only | context_only | The full maintained neighbor was read to distinguish organelle, membrane and volume identities. It is not independent experimental evidence or a certification of every neighboring assertion. |
+| neighbor-plastid_membrane | data/structures/membrane_organelle/plastid_membrane.yaml; Entire frozen maintained boundary neighbor; context only | context_only | The full maintained neighbor was read to distinguish organelle, membrane and volume identities. It is not independent experimental evidence or a certification of every neighboring assertion. |
+| neighbor-plastid_stroma | data/structures/membrane_organelle/plastid_stroma.yaml; Entire frozen maintained boundary neighbor; context only | context_only | The full maintained neighbor was read to distinguish organelle, membrane and volume identities. It is not independent experimental evidence or a certification of every neighboring assertion. |
+| plastid-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009536,GO:0009526,GO:0043231,GO:0005737,GO:0042170,GO:0009532,GO:0031967,GO:0009527,GO:0009528,GO:0009529; Complete ten native entries:0009536/0009526/0043231/0005737/0042170/0009532/0031967/0009527/0009528/0009529, definitions and typed children | supports | Ten active entries verify exact plastid/envelope definitions and broader organelle/cytoplasm/stroma boundaries. GO0043231 lists0009536 is_a;0005737 lists0009536 part_of;0031967 lists0009526 is_a;0009536 lists0009526/0009532/0042170 part_of. Envelope0009526 lists0009529 and0042170 part_of; inner/outer definitions and0042170 child relations distinguish the bilayers. |
+| plastid-agent-SL0209 | https://rest.uniprot.org/locations/SL-0209.json; Complete native location definition, GO mapping, synonyms and hierarchy | supports | SL0209 maps Plastid to GO0009536 and explicitly includes photosynthetic and non-photosynthetic forms. Its reference description supplies broad organelle context rather than a lineage-specific membrane count or universal photosynthetic function. |
+| plastid-agent-tax2759 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759; Complete native taxId/scientificName/rank/lineage | supports | ENA confirms taxId2759 as Eukaryota domain. Taxonomy identity does not itself establish organelle presence or prevalence. |
+| plastid-agent-tax33090 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/33090; Complete native taxId/scientificName/rank/lineage | supports | ENA confirms taxId33090 as Viridiplantae kingdom. Taxonomy identity does not itself establish organelle presence or prevalence. |
+| plastid-agent-tax3055 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; Complete native taxId/scientificName/rank/lineage | supports | ENA confirms taxId3055 as Chlamydomonas reinhardtii species. Taxonomy identity does not itself establish organelle presence or prevalence. |
+| plastid-agent-doi-10.1098_rstb.2009.0103 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1098/rstb.2009.0103; Unique MED identity and complete secondary-review abstract | supports | Exact DOI/PMID20124341/title/author identifies Keeling2010, a secondary review. Complete abstract distinguishes primary/secondary plastids, loss of photosynthesis and cryptic plastids; historical evolutionary hypotheses are not treated as new measurements. |
+| plastid-agent-keeling2010-legacy-fresh | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2817223/; Genuine legacy PMC2817223 HTML: complete sections s1, s3, s6 and s9 with embedded Figures1–3 captions; no pixels, other sections or original cited studies certified. | supports | The genuine review describes two bounding membranes of primary plastids in glaucophytes/red/green lineages, subsequent secondary transfers with additional membranes, and the distinction between loss of photosynthesis and loss of plastids. Sections1/3/6/9 support broad lineage diversity and primary-envelope context. Their historical chromalveolate and mitochondrial-loss claims are not promoted into new generic facts or population-frequency measurements. |
+| plastid-agent-doi-10.1007_s00294-011-0339-1 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1007/s00294-011-0339-1; Unique MED title/authors/DOI/year and complete review abstract | supports | PMID21533645/DOI10.1007/s00294-011-0339-1 exactly identifies Terashima, Specht and Hippler2011, a review synthesizing a Chlamydomonas chloroplast proteome. Its complete abstract supports the stated model/proteome example rather than a new experiment performed in2011. |
+| plastid-agent-terashima2011-pdf | https://link.springer.com/content/pdf/10.1007/s00294-011-0339-1.pdf; Exact front-page DOI/title/REVIEW identity and complete abstract/Introduction pp151–152, including prior proteomics comparison; no remaining metabolism sections, figure pixels or supplementary protein lists certified. | supports | The genuine publisher review identifies C. reinhardtii as a chloroplast/photosynthesis model, describes cyanobacterial origin, plastid gene retention and nucleus-encoded protein import. Introduction pp151–152 reviews prior isolated chloroplast/mitochondria proteomics, contamination comparisons and core/candidate protein localization; it explicitly distinguishes these synthesis-level data from evolutionary conclusions. |
+| schema-result | just validate data/structures/membrane_organelle/plastid.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/plastid.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/plastid.yaml --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/plastid.yaml --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv |
+| plastid-causal-graphs | /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/plastid.yaml; Complete native read-only GENE_OR_PROTEIN coverage log | supports | The native coverage command exited0 and reports zero GENE_OR_PROTEIN nodes; accession-specific verification is not applicable. |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/plastid.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 11 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Terashima2011 is a review; only the exact complete abstract and Introduction pp151–152 were inspected here. Its proteome compilation is not treated as an independently reproduced experiment or mandatory generic-plastid inventory.
+- Keeling2010 is a secondary review read at explicitly declared sections. Its historical evolutionary models are not a current universal taxonomic census, and no primary studies cited within it were independently audited.
+- Old retained Keeling PMC challenge HTML, unsuccessful BioC payload and JATS500 are diagnostic access artifacts, superseded for the stated sections by the genuine fresh legacy HTML. The fresh publisher route remains403. No body text is inferred solely from HTTP200.
+- Optional molecular inventories and individual formation requirements remain unresolved. The finding preserves correct structural identities and does not forbid accurate OTHER structural-subpart representations merely because components documentation uses molecular language.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes honest clean reviews; no finding was invented to satisfy a local issue-only convention. Parent owns finalization/persistence and integration of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T032303Z-plastid-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Plastid scientific review
+started_at: '2026-10-22T03:05:47Z'
+finished_at: '2026-10-22T03:23:03Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact plastid identity, broad lineage scope, canonical Chlamydomonas context
+  and descriptive topology are supported. One major finding concerns explicit LIPID
+  component grounding to complete membrane structures and the associated graph references.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/plastid.yaml
+    sha256: 1be30ab06bc2fbae9294930ceaf74b20a2d43d8af60986aa9ed0e07b9645ae81
+    role: target
+  - path: data/structures/membrane_organelle/plastid_envelope.yaml
+    sha256: 9033a6955c21d6043019061509c7ca1bf470bec884e7f4e1a5edc0080b680968
+    role: context
+  - path: data/structures/membrane_organelle/plastid_membrane.yaml
+    sha256: ae09183c12ecb85ac2135b3615b9a613985285039f5730126227fde982e55bef
+    role: context
+  - path: data/structures/membrane_organelle/plastid_stroma.yaml
+    sha256: 86d19307cbe21273498f0d7d6741e61f5ebf002cf78418c34b922d9d4963503b
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009536
+  path: data/structures/membrane_organelle/plastid.yaml
+  label: plastid
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target with all components, hierarchy, taxon/examples,
+    functions/graphs, evidence, history and discussions; all explicitly frozen boundary
+    neighbors read. Primary/review/abstract and native-authority scopes are stated
+    per evidence row.
+  selection: Batch38 exact path-ordered target 6; fresh f97b native inspection/schema/strict
+    passed before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009536
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just validate data/structures/membrane_organelle/plastid.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just validate-strict data/structures/membrane_organelle/plastid.yaml --out
+    /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: causal-graphs
+  name: Native graph protein coverage
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/plastid.yaml
+  exit_code: 0
+  summary: Zero GENE_OR_PROTEIN nodes; scientific edge scope independently assessed.
+  evidence_ids:
+  - plastid-causal-graphs
+- check_id: protein-applicability
+  name: Individual protein verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0009536
+  summary: No individual protein accession or gene/protein graph node occurs in the
+    target.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0009536
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - neighbor-plastid_envelope
+  - neighbor-plastid_membrane
+  - neighbor-plastid_stroma
+  - plastid-agent-go
+  - plastid-agent-SL0209
+  - plastid-agent-tax2759
+  - plastid-agent-tax33090
+  - plastid-agent-tax3055
+  - plastid-agent-doi-10.1098_rstb.2009.0103
+  - plastid-agent-keeling2010-legacy-fresh
+  - plastid-agent-doi-10.1007_s00294-011-0339-1
+  - plastid-agent-terashima2011-pdf
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009536
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/plastid.yaml
+  locator: Entire maintained YAML including all fields, graphs, history and discussions
+  accessed_at: '2026-10-22T03:13:16Z'
+  support: context_only
+  summary: The entire target was read; maintained science, status and history remain
+    unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent molecular-building-block/grounding/type and formation-necessity
+    contracts; graph scope and node/component_ref contracts
+  accessed_at: '2026-10-22T03:13:16Z'
+  support: context_only
+  summary: A LIPID molecular constituent is distinct from a complete GO membrane structure;
+    correct structural parthood does not validate molecular lipid grounding. OTHER
+    structural-part models are not categorically forbidden. Assembly necessity is
+    not inferred from localization, catalytic function or generic constitution.
+- evidence_id: neighbor-plastid_envelope
+  kind: record_content
+  reference: data/structures/membrane_organelle/plastid_envelope.yaml
+  locator: Entire frozen maintained boundary neighbor; context only
+  accessed_at: '2026-10-22T03:13:16Z'
+  support: context_only
+  summary: The full maintained neighbor was read to distinguish organelle, membrane
+    and volume identities. It is not independent experimental evidence or a certification
+    of every neighboring assertion.
+- evidence_id: neighbor-plastid_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/plastid_membrane.yaml
+  locator: Entire frozen maintained boundary neighbor; context only
+  accessed_at: '2026-10-22T03:13:16Z'
+  support: context_only
+  summary: The full maintained neighbor was read to distinguish organelle, membrane
+    and volume identities. It is not independent experimental evidence or a certification
+    of every neighboring assertion.
+- evidence_id: neighbor-plastid_stroma
+  kind: record_content
+  reference: data/structures/membrane_organelle/plastid_stroma.yaml
+  locator: Entire frozen maintained boundary neighbor; context only
+  accessed_at: '2026-10-22T03:13:16Z'
+  support: context_only
+  summary: The full maintained neighbor was read to distinguish organelle, membrane
+    and volume identities. It is not independent experimental evidence or a certification
+    of every neighboring assertion.
+- evidence_id: plastid-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009536,GO:0009526,GO:0043231,GO:0005737,GO:0042170,GO:0009532,GO:0031967,GO:0009527,GO:0009528,GO:0009529
+  locator: Complete ten native entries:0009536/0009526/0043231/0005737/0042170/0009532/0031967/0009527/0009528/0009529,
+    definitions and typed children
+  accessed_at: '2026-10-22T03:09:41.114803Z'
+  support: supports
+  summary: Ten active entries verify exact plastid/envelope definitions and broader
+    organelle/cytoplasm/stroma boundaries. GO0043231 lists0009536 is_a;0005737 lists0009536
+    part_of;0031967 lists0009526 is_a;0009536 lists0009526/0009532/0042170 part_of.
+    Envelope0009526 lists0009529 and0042170 part_of; inner/outer definitions and0042170
+    child relations distinguish the bilayers.
+  snapshot_sha256: 8471c7c51a94dca1e8c4ebec83ba387f870f612d69694783fc994701a764972b
+- evidence_id: plastid-agent-SL0209
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0209.json
+  locator: Complete native location definition, GO mapping, synonyms and hierarchy
+  accessed_at: '2026-10-22T03:09:41.114326Z'
+  support: supports
+  summary: SL0209 maps Plastid to GO0009536 and explicitly includes photosynthetic
+    and non-photosynthetic forms. Its reference description supplies broad organelle
+    context rather than a lineage-specific membrane count or universal photosynthetic
+    function.
+  snapshot_sha256: 857c3318daeb72c42cf4c273a21fc9e99243ad68301147a01a796a906c371b58
+- evidence_id: plastid-agent-tax2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T03:09:41.829233Z'
+  support: supports
+  summary: ENA confirms taxId2759 as Eukaryota domain. Taxonomy identity does not
+    itself establish organelle presence or prevalence.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: plastid-agent-tax33090
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/33090
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T03:09:41.837455Z'
+  support: supports
+  summary: ENA confirms taxId33090 as Viridiplantae kingdom. Taxonomy identity does
+    not itself establish organelle presence or prevalence.
+  snapshot_sha256: b1394e36c6896d7ec64cdb301a239f2bc49bc435a22cc21fdba8fdc6217e2d11
+- evidence_id: plastid-agent-tax3055
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T03:09:41.892023Z'
+  support: supports
+  summary: ENA confirms taxId3055 as Chlamydomonas reinhardtii species. Taxonomy identity
+    does not itself establish organelle presence or prevalence.
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+- evidence_id: plastid-agent-doi-10.1098_rstb.2009.0103
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1098/rstb.2009.0103
+  locator: Unique MED identity and complete secondary-review abstract
+  accessed_at: '2026-10-21T10:41:48.128898Z'
+  support: supports
+  summary: Exact DOI/PMID20124341/title/author identifies Keeling2010, a secondary
+    review. Complete abstract distinguishes primary/secondary plastids, loss of photosynthesis
+    and cryptic plastids; historical evolutionary hypotheses are not treated as new
+    measurements.
+  snapshot_sha256: cb4b9f46ce9002adf2521e02ef9aa676bb65af752c0b025c4015b37a21d9aa0b
+- evidence_id: plastid-agent-keeling2010-legacy-fresh
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2817223/
+  locator: 'Genuine legacy PMC2817223 HTML: complete sections s1, s3, s6 and s9 with
+    embedded Figures1–3 captions; no pixels, other sections or original cited studies
+    certified.'
+  accessed_at: '2026-10-22T03:10:09.264490Z'
+  support: supports
+  summary: The genuine review describes two bounding membranes of primary plastids
+    in glaucophytes/red/green lineages, subsequent secondary transfers with additional
+    membranes, and the distinction between loss of photosynthesis and loss of plastids.
+    Sections1/3/6/9 support broad lineage diversity and primary-envelope context.
+    Their historical chromalveolate and mitochondrial-loss claims are not promoted
+    into new generic facts or population-frequency measurements.
+  snapshot_sha256: b00d7b5af35e8b00a2bee348bdb1b68c01c070514bf9adb1af7bd337ecae8394
+- evidence_id: plastid-agent-doi-10.1007_s00294-011-0339-1
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s00294-011-0339-1
+  locator: Unique MED title/authors/DOI/year and complete review abstract
+  accessed_at: '2026-10-21T10:41:48.103033Z'
+  support: supports
+  summary: PMID21533645/DOI10.1007/s00294-011-0339-1 exactly identifies Terashima,
+    Specht and Hippler2011, a review synthesizing a Chlamydomonas chloroplast proteome.
+    Its complete abstract supports the stated model/proteome example rather than a
+    new experiment performed in2011.
+  snapshot_sha256: aec76518f370734a76392741bffd319ac61df223c77fad628910ec04da56412e
+- evidence_id: plastid-agent-terashima2011-pdf
+  kind: authority
+  reference: https://link.springer.com/content/pdf/10.1007/s00294-011-0339-1.pdf
+  locator: Exact front-page DOI/title/REVIEW identity and complete abstract/Introduction
+    pp151–152, including prior proteomics comparison; no remaining metabolism sections,
+    figure pixels or supplementary protein lists certified.
+  accessed_at: '2026-10-21T10:41:52.689991Z'
+  support: supports
+  summary: The genuine publisher review identifies C. reinhardtii as a chloroplast/photosynthesis
+    model, describes cyanobacterial origin, plastid gene retention and nucleus-encoded
+    protein import. Introduction pp151–152 reviews prior isolated chloroplast/mitochondria
+    proteomics, contamination comparisons and core/candidate protein localization;
+    it explicitly distinguishes these synthesis-level data from evolutionary conclusions.
+  snapshot_sha256: e42edb346d375e4e083e2eb79c6d9eff9fc217513e1ae9ecf808acb143129c6b
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/plastid.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:05:48Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/plastid.yaml'
+  snapshot_sha256: aa8ca39862111e0ca9abfc00b46b96f1bcfb9a6537de2e72bf145efc4d328a96
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/plastid.yaml
+    --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:05:49Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/plastid.yaml\
+    \ --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch38-20261022-tpqg0c05/plastid-strict.tsv"
+  snapshot_sha256: 6d4e05c14f49b2840ee11403450ab742a97b257ef77068fbc50e764e61ea67ef
+- evidence_id: plastid-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/plastid.yaml
+  locator: Complete native read-only GENE_OR_PROTEIN coverage log
+  accessed_at: '2026-10-22T03:11:06.467914Z'
+  support: supports
+  summary: The native coverage command exited0 and reports zero GENE_OR_PROTEIN nodes;
+    accession-specific verification is not applicable.
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/plastid.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Broad plastid organelle identity
+  outcome: supported
+  target_ids:
+  - GO:0009536
+  summary: The full maintained definition matches current GO0009536, with typed intracellular
+    membrane-bounded-organelle parent and cytoplasm parthood, and exact SL0209 xref.
+    Stroma is a positive plastid part. Generic topology deliberately does not imply
+    every plastid is photosynthetic or bears the same membrane count.
+  evidence_ids:
+  - record
+  - plastid-agent-go
+  - plastid-agent-SL0209
+  - plastid-agent-keeling2010-legacy-fresh
+- assessment_id: scope
+  area: scope
+  topic: Broad lineage occurrence and canonical green alga
+  outcome: supported
+  target_ids:
+  - GO:0009536
+  summary: Keeling supports primary/secondary/reduced-plastid diversity; Terashima
+    directly supports the Chlamydomonas model and proteome/protein-biogenesis context.
+    RARE and COMMON are read as qualitative distribution categories, not measured
+    fractions of eukaryotic cells or taxa. The sources do not provide a contemporary
+    numerical census.
+  evidence_ids:
+  - record
+  - plastid-agent-doi-10.1098_rstb.2009.0103
+  - plastid-agent-keeling2010-legacy-fresh
+  - plastid-agent-doi-10.1007_s00294-011-0339-1
+  - plastid-agent-terashima2011-pdf
+  - plastid-agent-tax2759
+  - plastid-agent-tax33090
+  - plastid-agent-tax3055
+- assessment_id: graph
+  area: graph
+  topic: Supported generic topology
+  outcome: supported
+  target_ids:
+  - GO:0009536
+  summary: The NONMECHANISTIC cytoplasm residency, membrane boundary and stroma containment
+    graph is supported by exact native definitions. Its whole membrane node remains
+    a valid structural node; the problem is linking that node to molecular LIPID grounding.
+    The resolved generic-boundary policy is appropriately conservative.
+  evidence_ids:
+  - record
+  - plastid-agent-go
+  - plastid-agent-SL0209
+  - plastid-agent-keeling2010-legacy-fresh
+- assessment_id: grounding
+  area: grounding
+  topic: Whole membrane versus molecular lipid identity
+  outcome: concern
+  target_ids:
+  - GO:0009536
+  summary: The component rows explicitly declare LIPID while grounding them to GO0042170,
+    which identify complete membrane structures. Correct membrane parthood and a bilayer-containing
+    definition do not make those structural CURIEs chemical identities. The same conflation
+    is inherited by the linked component_ref fields. Structural nodes and parthood
+    should be retained independently.
+  evidence_ids:
+  - record
+  - schema
+  - plastid-agent-go
+  - plastid-agent-SL0209
+- assessment_id: necessity
+  area: evidence
+  topic: Formation requirements are not inferred
+  outcome: unknown
+  target_ids:
+  - GO:0009536
+  summary: The plastid component row already uses UNKNOWN essentiality. Constitutive
+    membrane topology and translocon observation do not establish experimental necessity
+    of individual lipid/protein species for organelle formation, and this review does
+    not convert them to such a claim.
+  evidence_ids:
+  - record
+  - schema
+  - plastid-agent-go
+  - plastid-agent-keeling2010-legacy-fresh
+- assessment_id: provenance
+  area: provenance
+  topic: Bounded evidence and unchanged maintained status
+  outcome: supported
+  target_ids:
+  - GO:0009536
+  summary: All target claims were reviewed with native identities, exact declared
+    source read extents, explicit primary-versus-review tiers and frozen boundary
+    context. No scientific mutation, mapping-status promotion, persistence or publication
+    is implied.
+  evidence_ids:
+  - record
+  - plastid-agent-go
+  - plastid-agent-SL0209
+  - plastid-agent-tax2759
+  - plastid-agent-tax33090
+  - plastid-agent-tax3055
+  - plastid-agent-doi-10.1098_rstb.2009.0103
+  - plastid-agent-keeling2010-legacy-fresh
+  - plastid-agent-doi-10.1007_s00294-011-0339-1
+  - plastid-agent-terashima2011-pdf
+findings:
+- finding_id: F1
+  issue_key: plastid-lipid-whole-membrane-grounding
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate membrane structures from molecular lipid grounding
+  description: The maintained LIPID component row uses GO0042170 for the complete
+    generic plastid membrane class. These are structural cellular-component identities,
+    not the molecular lipid material identity required by the declared component type.
+    Linked graph component_ref fields perpetuate that typing mismatch even though
+    the structural nodes and topology are sound.
+  target_ids:
+  - GO:0009536
+  field_paths:
+  - components[0].component_type
+  - components[0].grounding
+  - causal_graphs[0].nodes[1].component_ref
+  evidence_ids:
+  - record
+  - schema
+  - plastid-agent-go
+  - plastid-agent-SL0209
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid.yaml
+    role: maintained scientific record
+  rule_id: Source-specific support and molecular/structural grounding contract
+  native_severity: major
+  normalization_reason: This materially misrepresents the component category/grounding
+    and contaminates its graph association; it is not merely an optional missing lipid
+    identifier or an argument against valid structural parthood.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009536
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid.yaml
+    role: maintained scientific record
+  description: Keep correct GO membrane entities as structural nodes/parts. If the
+    rows mean collective lipid material, relabel and use honest reviewed-label-only
+    grounding pending a justified chemical identifier; if they mean structural subparts,
+    represent them with an appropriate explicit structural type rather than LIPID.
+    Align component_ref links with the chosen model.
+  acceptance_checks:
+  - No LIPID molecular row uses a complete membrane GO identity as its chemical grounding.
+  - Valid membrane identities, has_part topology and boundaries remain intact.
+  - No specific lipid species or obligatory protein inventory is invented.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+limitations:
+- Terashima2011 is a review; only the exact complete abstract and Introduction pp151–152
+  were inspected here. Its proteome compilation is not treated as an independently
+  reproduced experiment or mandatory generic-plastid inventory.
+- Keeling2010 is a secondary review read at explicitly declared sections. Its historical
+  evolutionary models are not a current universal taxonomic census, and no primary
+  studies cited within it were independently audited.
+- Old retained Keeling PMC challenge HTML, unsuccessful BioC payload and JATS500 are
+  diagnostic access artifacts, superseded for the stated sections by the genuine fresh
+  legacy HTML. The fresh publisher route remains403. No body text is inferred solely
+  from HTTP200.
+- Optional molecular inventories and individual formation requirements remain unresolved.
+  The finding preserves correct structural identities and does not forbid accurate
+  OTHER structural-subpart representations merely because components documentation
+  uses molecular language.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes honest clean reviews; no finding was invented to
+  satisfy a local issue-only convention. Parent owns finalization/persistence and
+  integration of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

@@ -1,0 +1,957 @@
+# Cellulosome scientific review
+
+- Review: 20261022T045417Z-cellulosome-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T04:37:07Z
+- Finished UTC: 2026-10-22T04:54:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Cellulosome identity, scaffoldin/dockerin assembly, exact examples and bounded mechanistic graph are supported. No actionable finding was established within the declared primary-body and secondary-abstract access scope.
+
+## Scope And Provenance
+
+Exactly one entire target reviewed for identity, source support, composition, scope, graph claims and completeness.
+
+Selection: Target 9 of batch46 in strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0043263 | data/structures/other/cellulosome.yaml | maintained | cellulosome |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0043263 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0043263 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0043263 | Focused native check passed; claim-level support assessed separately. |
+| Focused native verify | passed | True | GO:0043263 | Focused native check passed; claim-level support assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0043263 | No expression-module claim is maintained. |
+| Claim-level scientific review | passed | True | GO:0043263 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0043263 | 13 of 13 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0043263 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0043263 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0043263 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0043263 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0043263 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Extracellular scaffoldin-enzyme assembly
+
+identity: supported. Targets: GO:0043263.
+
+GO0043263 and extracellular membraneless parent GO0043264 agree with the record. The structure remains a multiprotein complex; the broad organelle wording does not imply a bounding lipid membrane.
+
+### Role-based scaffoldin and enzyme cohorts
+
+grounding: supported. Targets: GO:0043263.
+
+Primary scaffoldin, dockerin-bearing enzymes and conditional surface anchoring are supported at the modeled class level. These heterogeneous cohorts are not identical to individual cohesin/dockerin domains or a single enzyme family, so native domain xrefs are not forced as whole-component groundings.
+
+### Reviewed and unreviewed examples remain distinguished
+
+grounding: supported. Targets: GO:0043263.
+
+The five accessions, symbols and species/strain taxa match. P71143 is correctly marked unreviewed, and P0C2S2 is a fragment whose identity-only example wording makes no full-length sequence claim. Query scope preserves that distinction.
+
+### Scaffold requirement and conditional cargo/anchoring
+
+grounding: unknown. Targets: GO:0043263.
+
+The defining scaffoldin organization supports its structural necessity at the modeled level. Conditional individual cargo and cell-associated anchoring are compatible with varying natural assemblies. A single isolated cohesin/dockerin experiment does not establish a universal all-components depletion matrix.
+
+### Restricted bacterial distribution and canonical organism
+
+scope: supported. Targets: GO:0043263.
+
+VARIABLE within Bacteria and the Acetivibrio thermocellus canonical example are consistent with the specialized anaerobic bacterial machinery in the cited reviews. Historical Clostridium naming is reconciled with current ENA species/strain identities. No exhaustive lineage survey was performed.
+
+### Cooperative polysaccharide degradation
+
+evidence: supported. Targets: GO:0043263.
+
+The review abstracts directly support spatial enzyme organization, substrate targeting and catalytic synergy in cellulose and hemicellulose deconstruction. The interaction paper supplies primary molecular-binding evidence, not the complete degradation phenotype.
+
+### Direct binding supports a bounded mechanistic assembly graph
+
+graph: supported. Targets: GO:0043263.
+
+The dockerin-to-cohesin binding step has direct structural and calorimetric support; broader organization, surface attachment, substrate binding and hydrolysis steps are synthesis from reviews. Crystallographic trimerization and engineered host identity are not imported as mature complex features.
+
+### Complete target with limited review-body access
+
+completeness: supported. Targets: GO:0043263.
+
+All maintained fields and examples were inspected. No actionable scientific contradiction was established in the readable sources. Exact secondary-body details about every named scaffoldin and lineage remain a limitation rather than invented verification.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/cellulosome.yaml; Entire maintained target, history, components, evidence, discussions and graphs | context_only | All maintained fields were read; history is provenance rather than independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Components, essentiality, COMMON and graph scope | context_only | Whole-protein families differ from shared domains and example accessions; formation necessity differs from functional or cellular essentiality. COMMON means present in most members, with losses the exception. |
+| curation | docs/CURATION.md; Components and REVIEWED_LABEL_ONLY contract | context_only | Reviewed label-only means no exact term exists; a currently verified exact family makes the grounding gap actionable despite a historical TODO. |
+| root46-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000288,GO:0004535,GO:0005829,GO:0005832,GO:0006457,GO:0030015,GO:0032991,GO:0043263,GO:0043264; All9 requested terms: complete id/name/active/definition/synonyms/comments and relevant maintained typed links; not all ontology descendants | supports | Native GO identities, definitions, synonyms and inspected maintained typed relationships agree with the target classes and functions. Missing direct ontology links alone do not disprove biologically sourced parentage. |
+| root46-sources-doi-5 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.1936124100&amp;format=json&amp;resultType=core; Complete native id/title/authors/year/DOI and abstract | supports | MED14623971: Cellulosome assembly revealed by the crystal structure of the cohesin-dockerin complex. DOI 10.1073/pnas.1936124100. Complete native bibliographic identity and abstract inspected. This row certifies abstract-level access only; no full-text access is implied. |
+| root46-sources-doi-6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev-biochem-091208-085603&amp;format=json&amp;resultType=core; Complete native id/title/authors/year/DOI and abstract | supports | MED20373916: Cellulosomes: highly efficient nanomachines designed to deconstruct plant cell wall complex carbohydrates. DOI 10.1146/annurev-biochem-091208-085603. Complete native bibliographic identity and abstract inspected. This row certifies abstract-level access only; no full-text access is implied. |
+| root46-sources-doi-7 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev.micro.57.030502.091022&amp;format=json&amp;resultType=core; Complete native id/title/authors/year/DOI and abstract | supports | MED15487947: The cellulosomes: multienzyme machines for degradation of plant cell wall polysaccharides. DOI 10.1146/annurev.micro.57.030502.091022. Complete native bibliographic identity and abstract inspected. This row certifies abstract-level access only; no full-text access is implied. |
+| root46-sources-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete native taxonomy response | supports | ENA verifies the maintained taxonomic identity and lineage for 2. |
+| root46-sources-tax1515 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1515; Complete native taxonomy response | supports | ENA verifies the maintained taxonomic identity and lineage for 1515. |
+| root46-sources-tax203119 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/203119; Complete native taxonomy response | supports | ENA verifies the maintained taxonomic identity and lineage for 203119. |
+| root46-sources-protein-Q06851 | https://rest.uniprot.org/uniprotkb/Q06851.json; Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers | supports | Q06851 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained name, genes/aliases and taxon. Membership remains a separate source question. |
+| root46-sources-protein-P0C2S2 | https://rest.uniprot.org/uniprotkb/P0C2S2.json; Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers | supports | P0C2S2 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained name, genes/aliases and taxon. Membership remains a separate source question. |
+| root46-sources-protein-P0C2S5 | https://rest.uniprot.org/uniprotkb/P0C2S5.json; Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers | supports | P0C2S5 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained name, genes/aliases and taxon. Membership remains a separate source question. |
+| root46-sources-protein-Q06852 | https://rest.uniprot.org/uniprotkb/Q06852.json; Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers | supports | Q06852 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained name, genes/aliases and taxon. Membership remains a separate source question. |
+| root46-sources-protein-P71143 | https://rest.uniprot.org/uniprotkb/P71143.json; Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers | supports | P71143 has status UniProtKB unreviewed (TrEMBL) and agrees with maintained name, genes/aliases and taxon. Membership remains a separate source question. |
+| root46-sources-gene-cipA-203119 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcipA%29+AND+%28organism_id%3A203119%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query URL, result count and all accession/status/name/gene/taxon result fields | supports | Exact gene/taxon query returns the single maintained accession with its stated entry status. |
+| root46-sources-gene-celA-1515 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcelA%29+AND+%28organism_id%3A1515%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query URL, result count and all accession/status/name/gene/taxon result fields | supports | Exact gene/taxon query returns the single maintained accession with its stated entry status. |
+| root46-sources-gene-celS-1515 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcelS%29+AND+%28organism_id%3A1515%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query URL, result count and all accession/status/name/gene/taxon result fields | supports | Exact gene/taxon query returns the single maintained accession with its stated entry status. |
+| root46-sources-gene-olpB-203119 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AolpB%29+AND+%28organism_id%3A203119%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query URL, result count and all accession/status/name/gene/taxon result fields | supports | Exact gene/taxon query returns the single maintained accession with its stated entry status. |
+| root46-sources-gene-sdbA-1515 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AsdbA%29+AND+%28organism_id%3A1515%29&amp;format=json&amp;size=100; Complete query URL, result count and all accession/status/name/gene/taxon result fields | supports | Exact gene/taxon query returns the single maintained accession with its stated entry status. sdbA queries omit the reviewed-only filter because its maintained example is unreviewed. |
+| root46-sources-legacy-PMC283503 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC283503/; Complete Methods sec1, Results/Discussion sec2 and Conclusion sec3, including embedded Fig1–5 captions; referenced supplements and figure pixels not read | supports | C.thermocellum CipA cohesin2 and Xyn10B dockerin fragments were coexpressed in E.coli, purified and crystallized; binding calorimetry and the heterodimer structure support direct domain interaction. The observed crystallographic trimer is not a solution oligomer and is not presented as native whole-cellulosome stoichiometry. |
+| root46-sources-fontes2010-publisher | https://doi.org/10.1146/annurev-biochem-091208-085603; Complete publisher abstract and body-availability/heading inspection; reference lists are not treated as read source papers | supports | Complete publisher abstract describes scaffoldin-organized enzyme assembly, cohesin/dockerin specificity and synergistic cellulose/hemicellulose degradation. This retained page does not provide the complete review body. |
+| root46-sources-bayer2004-publisher | https://doi.org/10.1146/annurev.micro.57.030502.091022; Complete publisher abstract and body-availability/heading inspection; reference lists are not treated as read source papers | supports | Complete publisher abstract describes scaffoldin-organized enzyme assembly, cohesin/dockerin specificity and synergistic cellulose/hemicellulose degradation. This retained page does not provide the complete review body. |
+| schema-result | just validate data/structures/other/cellulosome.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/cellulosome.yaml |
+| strict-result | just validate-strict data/structures/other/cellulosome.yaml --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/cellulosome.yaml --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv |
+| native-cellulosome-causal-graphs | /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cellulosome.yaml; Complete focused native report | supports | data/structures/other/cellulosome.yaml  (GO:0043263)<br>  cohesin_dockerin_enzyme_scaffold_assembly	primary_scaffoldin	PARTIAL_EXAMPLES	-&gt;primary_scaffoldin (have: UniProtKB:Q06851; missing: scaA)<br>  cohesin_dockerin_enzyme_scaffold_assembly	dockerin_hydrolases	PARTIAL_EXAMPLES	-&gt;dockerin_bearing_hydrolases (have: UniProtKB:P0C2S2, UniProtKB:P0C2S5; missing: xyn)<br>  cohesin_dockerin_enzyme_scaffold_assembly	anchoring_scaffoldins	PARTIAL_EXAMPLES	-&gt;cell_surface_anchoring_scaffoldins (have: UniProtKB:Q06852, UniProtKB:P71143; missing: orf2p)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| native-cellulosome-verify | /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/cellulosome.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/cellulosome.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 13 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, raw data, supplements or sequence alignments were reanalyzed. Primary-body inspection is limited to the explicitly listed sections.
+- Fontes2010 and Bayer2004 are secondary reviews accessed as complete abstracts only; their full bodies were not available in retained publisher pages. Detailed universal necessity, every scaffoldin symbol and exhaustive taxonomic prevalence are not certified.
+- P0C2S2 is a sequence fragment and P71143 is unreviewed; neither status is misrepresented in this identity-only example assessment.
+- The InterPro IPR051465 request returned410; this obsolete candidate occurs in source cross-references but is not a maintained grounding. No exact family absence is claimed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorizes reviews for all uncovered records, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T045417Z-cellulosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cellulosome scientific review
+started_at: '2026-10-22T04:37:07Z'
+finished_at: '2026-10-22T04:54:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Cellulosome identity, scaffoldin/dockerin assembly, exact examples and bounded
+  mechanistic graph are supported. No actionable finding was established within the
+  declared primary-body and secondary-abstract access scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/cellulosome.yaml
+    sha256: 0e83fd2a0ab90882843eebd81c1db0d8353744efa4830039e8ee302c54ad1e0b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0043263
+  path: data/structures/other/cellulosome.yaml
+  label: cellulosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellulosome.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph claims and completeness.
+  selection: Target 9 of batch46 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0043263
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just validate data/structures/other/cellulosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just validate-strict data/structures/other/cellulosome.yaml --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-cellulosome-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cellulosome.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-cellulosome-causal-graphs
+- check_id: native-cellulosome-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cellulosome.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-cellulosome-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0043263
+  summary: No expression-module claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root46-sources-go
+  - root46-sources-doi-5
+  - root46-sources-doi-6
+  - root46-sources-doi-7
+  - root46-sources-tax2
+  - root46-sources-tax1515
+  - root46-sources-tax203119
+  - root46-sources-protein-Q06851
+  - root46-sources-protein-P0C2S2
+  - root46-sources-protein-P0C2S5
+  - root46-sources-protein-Q06852
+  - root46-sources-protein-P71143
+  - root46-sources-gene-cipA-203119
+  - root46-sources-gene-celA-1515
+  - root46-sources-gene-celS-1515
+  - root46-sources-gene-olpB-203119
+  - root46-sources-gene-sdbA-1515
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  summary: 13 of 13 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043263
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/cellulosome.yaml
+  locator: Entire maintained target, history, components, evidence, discussions and
+    graphs
+  accessed_at: '2026-10-22T04:45:57Z'
+  support: context_only
+  summary: All maintained fields were read; history is provenance rather than independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Components, essentiality, COMMON and graph scope
+  accessed_at: '2026-10-22T04:45:57Z'
+  support: context_only
+  summary: Whole-protein families differ from shared domains and example accessions;
+    formation necessity differs from functional or cellular essentiality. COMMON means
+    present in most members, with losses the exception.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and REVIEWED_LABEL_ONLY contract
+  accessed_at: '2026-10-22T04:45:57Z'
+  support: context_only
+  summary: Reviewed label-only means no exact term exists; a currently verified exact
+    family makes the grounding gap actionable despite a historical TODO.
+- evidence_id: root46-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000288,GO:0004535,GO:0005829,GO:0005832,GO:0006457,GO:0030015,GO:0032991,GO:0043263,GO:0043264
+  locator: 'All9 requested terms: complete id/name/active/definition/synonyms/comments
+    and relevant maintained typed links; not all ontology descendants'
+  accessed_at: '2026-10-22T04:37:41.642935Z'
+  support: supports
+  summary: Native GO identities, definitions, synonyms and inspected maintained typed
+    relationships agree with the target classes and functions. Missing direct ontology
+    links alone do not disprove biologically sourced parentage.
+  snapshot_sha256: ec8a67921ee38714d049e648bd88fa03897f191156b58757054dabeec944dbe1
+- evidence_id: root46-sources-doi-5
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.1936124100&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:46.948665Z'
+  support: supports
+  summary: 'MED14623971: Cellulosome assembly revealed by the crystal structure of
+    the cohesin-dockerin complex. DOI 10.1073/pnas.1936124100. Complete native bibliographic
+    identity and abstract inspected. This row certifies abstract-level access only;
+    no full-text access is implied.'
+  snapshot_sha256: 8a9f0ca8bfaa88560edc424832af4daff172ddc4c621b17a1a2b62c1b0fb3b08
+- evidence_id: root46-sources-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev-biochem-091208-085603&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:46.985458Z'
+  support: supports
+  summary: 'MED20373916: Cellulosomes: highly efficient nanomachines designed to deconstruct
+    plant cell wall complex carbohydrates. DOI 10.1146/annurev-biochem-091208-085603.
+    Complete native bibliographic identity and abstract inspected. This row certifies
+    abstract-level access only; no full-text access is implied.'
+  snapshot_sha256: 2e24e7c82ba49614ea2cdb11ff7ac68900189ee58321328a7297cdd03eff2be3
+- evidence_id: root46-sources-doi-7
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev.micro.57.030502.091022&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:47.198069Z'
+  support: supports
+  summary: 'MED15487947: The cellulosomes: multienzyme machines for degradation of
+    plant cell wall polysaccharides. DOI 10.1146/annurev.micro.57.030502.091022. Complete
+    native bibliographic identity and abstract inspected. This row certifies abstract-level
+    access only; no full-text access is implied.'
+  snapshot_sha256: 73ce722d6eb25e033083938741842ff1c873ba3bdb570a1ea39340db53f1ba1d
+- evidence_id: root46-sources-tax2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:37:41.643017Z'
+  support: supports
+  summary: ENA verifies the maintained taxonomic identity and lineage for 2.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: root46-sources-tax1515
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1515
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:37:41.642614Z'
+  support: supports
+  summary: ENA verifies the maintained taxonomic identity and lineage for 1515.
+  snapshot_sha256: 0aa41d5a3d00cd2be66c0d2f23f6c1bfffec72e35689fc6c9dd4ae6f395db82a
+- evidence_id: root46-sources-tax203119
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/203119
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:37:41.643075Z'
+  support: supports
+  summary: ENA verifies the maintained taxonomic identity and lineage for 203119.
+  snapshot_sha256: cc712e5e5dadbb351fdc70c0931cb910e180b4ffc39cc01c98b1fe1ca9863dac
+- evidence_id: root46-sources-protein-Q06851
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06851.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:45.283510Z'
+  support: supports
+  summary: Q06851 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: f781c7a099bdc6b57d937c02213c6c27794d4c2213c266ab9ad03334edf1721b
+- evidence_id: root46-sources-protein-P0C2S2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0C2S2.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:42.298818Z'
+  support: supports
+  summary: P0C2S2 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 3e7f0135fea71f46230ea528afb27c8d9aeb8f08414971f9c00088b1368856e0
+- evidence_id: root46-sources-protein-P0C2S5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0C2S5.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:42.312223Z'
+  support: supports
+  summary: P0C2S5 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 271b812679cc0339b559ed859e63490e40fc351ecec9477259fb41d8792b9c95
+- evidence_id: root46-sources-protein-Q06852
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06852.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:45.367456Z'
+  support: supports
+  summary: Q06852 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 96644dcac460181852584f214e323a8a702ff5bf9c826c9bf4b5a19db7ca92fc
+- evidence_id: root46-sources-protein-P71143
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P71143.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:45.278613Z'
+  support: supports
+  summary: P71143 has status UniProtKB unreviewed (TrEMBL) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: f3266036f8a91e289d1852986e76aeb5059ea92661557e8859f82130872423ae
+- evidence_id: root46-sources-gene-cipA-203119
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcipA%29+AND+%28organism_id%3A203119%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:40.641131Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: 265b0c1632a43dd2721f9e334cdc0eaf0e068fa1dbd9c57145cba6f36c9d88e7
+- evidence_id: root46-sources-gene-celA-1515
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcelA%29+AND+%28organism_id%3A1515%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:41.248657Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: 99e06b372a3349644f00406400df115b8b2edd336cf0e337925060a897ab83b3
+- evidence_id: root46-sources-gene-celS-1515
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcelS%29+AND+%28organism_id%3A1515%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:41.408435Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: b0a9942c145dc8eb4cde7a7b6ba2391a8f1f7ae2f3697c926c3dcf8e0946b0f1
+- evidence_id: root46-sources-gene-olpB-203119
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AolpB%29+AND+%28organism_id%3A203119%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:41.450914Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: db36dd1f79057a22118ee41277c3d624ad9c4345cf10ae58b8225cce7a560cfd
+- evidence_id: root46-sources-gene-sdbA-1515
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AsdbA%29+AND+%28organism_id%3A1515%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:41.537392Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status. sdbA queries omit the reviewed-only filter because its maintained
+    example is unreviewed.
+  snapshot_sha256: bd333553655de5ec0ca98bff3c9f66900bf0617593783dafa00b36f95449426e
+- evidence_id: root46-sources-legacy-PMC283503
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC283503/
+  locator: Complete Methods sec1, Results/Discussion sec2 and Conclusion sec3, including
+    embedded Fig1–5 captions; referenced supplements and figure pixels not read
+  accessed_at: '2026-10-22T04:39:21.338776Z'
+  support: supports
+  summary: C.thermocellum CipA cohesin2 and Xyn10B dockerin fragments were coexpressed
+    in E.coli, purified and crystallized; binding calorimetry and the heterodimer
+    structure support direct domain interaction. The observed crystallographic trimer
+    is not a solution oligomer and is not presented as native whole-cellulosome stoichiometry.
+  snapshot_sha256: c4a35e2f5fbc1bff88bb7870e7a1805f5c8783378a70c3432238873dc664ad05
+- evidence_id: root46-sources-fontes2010-publisher
+  kind: authority
+  reference: https://doi.org/10.1146/annurev-biochem-091208-085603
+  locator: Complete publisher abstract and body-availability/heading inspection; reference
+    lists are not treated as read source papers
+  accessed_at: '2026-10-22T04:38:44.724010Z'
+  support: supports
+  summary: Complete publisher abstract describes scaffoldin-organized enzyme assembly,
+    cohesin/dockerin specificity and synergistic cellulose/hemicellulose degradation.
+    This retained page does not provide the complete review body.
+  snapshot_sha256: a36353f63f7459cb231baa55f393cc4c4244276b4378271a26c65d1075ae7938
+- evidence_id: root46-sources-bayer2004-publisher
+  kind: authority
+  reference: https://doi.org/10.1146/annurev.micro.57.030502.091022
+  locator: Complete publisher abstract and body-availability/heading inspection; reference
+    lists are not treated as read source papers
+  accessed_at: '2026-10-22T04:38:44.935010Z'
+  support: supports
+  summary: Complete publisher abstract describes scaffoldin-organized enzyme assembly,
+    cohesin/dockerin specificity and synergistic cellulose/hemicellulose degradation.
+    This retained page does not provide the complete review body.
+  snapshot_sha256: 814860910aab331e7b1fb678b770e029cdc8ca50bb78c69224aba0c541f02b0b
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/cellulosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:37:08Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/cellulosome.yaml'
+  snapshot_sha256: a82399e864104fff16b2f2714d1a813ed5834bfc8fd3039b5de5ccab5badab86
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/cellulosome.yaml --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:37:09Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/cellulosome.yaml\
+    \ --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/cellulosome-strict.tsv"
+  snapshot_sha256: d106100781a903d1ae53b1e2c177f4b4849c8d9868a22d4f0b95bf93fc2d2f44
+- evidence_id: native-cellulosome-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cellulosome.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:37:56.499373Z'
+  support: supports
+  summary: "data/structures/other/cellulosome.yaml  (GO:0043263)\n  cohesin_dockerin_enzyme_scaffold_assembly\t\
+    primary_scaffoldin\tPARTIAL_EXAMPLES\t->primary_scaffoldin (have: UniProtKB:Q06851;\
+    \ missing: scaA)\n  cohesin_dockerin_enzyme_scaffold_assembly\tdockerin_hydrolases\t\
+    PARTIAL_EXAMPLES\t->dockerin_bearing_hydrolases (have: UniProtKB:P0C2S2, UniProtKB:P0C2S5;\
+    \ missing: xyn)\n  cohesin_dockerin_enzyme_scaffold_assembly\tanchoring_scaffoldins\t\
+    PARTIAL_EXAMPLES\t->cell_surface_anchoring_scaffoldins (have: UniProtKB:Q06852,\
+    \ UniProtKB:P71143; missing: orf2p)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n\
+    \     3  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref\
+    \ on the node\n     3  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 705ed44738693fbecadb2c58c7c72651d8e4c912e0eb0eb254febcd948285e55
+- evidence_id: native-cellulosome-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cellulosome.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:37:59.523615Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/cellulosome.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 13 of 13 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Extracellular scaffoldin-enzyme assembly
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: GO0043263 and extracellular membraneless parent GO0043264 agree with the
+    record. The structure remains a multiprotein complex; the broad organelle wording
+    does not imply a bounding lipid membrane.
+  evidence_ids:
+  - record
+  - root46-sources-go
+  - root46-sources-legacy-PMC283503
+  - root46-sources-doi-5
+  - root46-sources-doi-6
+  - root46-sources-doi-7
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- assessment_id: composition
+  area: grounding
+  topic: Role-based scaffoldin and enzyme cohorts
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: Primary scaffoldin, dockerin-bearing enzymes and conditional surface anchoring
+    are supported at the modeled class level. These heterogeneous cohorts are not
+    identical to individual cohesin/dockerin domains or a single enzyme family, so
+    native domain xrefs are not forced as whole-component groundings.
+  evidence_ids:
+  - record
+  - curation
+  - root46-sources-legacy-PMC283503
+  - root46-sources-protein-Q06851
+  - root46-sources-protein-P0C2S2
+  - root46-sources-protein-P0C2S5
+  - root46-sources-protein-Q06852
+  - root46-sources-protein-P71143
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- assessment_id: examples
+  area: grounding
+  topic: Reviewed and unreviewed examples remain distinguished
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: The five accessions, symbols and species/strain taxa match. P71143 is correctly
+    marked unreviewed, and P0C2S2 is a fragment whose identity-only example wording
+    makes no full-length sequence claim. Query scope preserves that distinction.
+  evidence_ids:
+  - record
+  - root46-sources-protein-Q06851
+  - root46-sources-protein-P0C2S2
+  - root46-sources-protein-P0C2S5
+  - root46-sources-protein-Q06852
+  - root46-sources-protein-P71143
+  - root46-sources-gene-cipA-203119
+  - root46-sources-gene-celA-1515
+  - root46-sources-gene-celS-1515
+  - root46-sources-gene-olpB-203119
+  - root46-sources-gene-sdbA-1515
+  - root46-sources-tax2
+  - root46-sources-tax1515
+  - root46-sources-tax203119
+- assessment_id: necessity
+  area: grounding
+  topic: Scaffold requirement and conditional cargo/anchoring
+  outcome: unknown
+  target_ids:
+  - GO:0043263
+  summary: The defining scaffoldin organization supports its structural necessity
+    at the modeled level. Conditional individual cargo and cell-associated anchoring
+    are compatible with varying natural assemblies. A single isolated cohesin/dockerin
+    experiment does not establish a universal all-components depletion matrix.
+  evidence_ids:
+  - record
+  - schema
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- assessment_id: scope
+  area: scope
+  topic: Restricted bacterial distribution and canonical organism
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: VARIABLE within Bacteria and the Acetivibrio thermocellus canonical example
+    are consistent with the specialized anaerobic bacterial machinery in the cited
+    reviews. Historical Clostridium naming is reconciled with current ENA species/strain
+    identities. No exhaustive lineage survey was performed.
+  evidence_ids:
+  - record
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+  - root46-sources-tax2
+  - root46-sources-tax1515
+  - root46-sources-tax203119
+- assessment_id: function
+  area: evidence
+  topic: Cooperative polysaccharide degradation
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: The review abstracts directly support spatial enzyme organization, substrate
+    targeting and catalytic synergy in cellulose and hemicellulose deconstruction.
+    The interaction paper supplies primary molecular-binding evidence, not the complete
+    degradation phenotype.
+  evidence_ids:
+  - record
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- assessment_id: graph
+  area: graph
+  topic: Direct binding supports a bounded mechanistic assembly graph
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: The dockerin-to-cohesin binding step has direct structural and calorimetric
+    support; broader organization, surface attachment, substrate binding and hydrolysis
+    steps are synthesis from reviews. Crystallographic trimerization and engineered
+    host identity are not imported as mature complex features.
+  evidence_ids:
+  - record
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+- assessment_id: coverage
+  area: completeness
+  topic: Complete target with limited review-body access
+  outcome: supported
+  target_ids:
+  - GO:0043263
+  summary: All maintained fields and examples were inspected. No actionable scientific
+    contradiction was established in the readable sources. Exact secondary-body details
+    about every named scaffoldin and lineage remain a limitation rather than invented
+    verification.
+  evidence_ids:
+  - record
+  - root46-sources-go
+  - root46-sources-legacy-PMC283503
+  - root46-sources-fontes2010-publisher
+  - root46-sources-bayer2004-publisher
+  - root46-sources-protein-Q06851
+  - root46-sources-protein-P0C2S2
+  - root46-sources-protein-P0C2S5
+  - root46-sources-protein-Q06852
+  - root46-sources-protein-P71143
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw data, supplements or sequence alignments were reanalyzed.
+  Primary-body inspection is limited to the explicitly listed sections.
+- Fontes2010 and Bayer2004 are secondary reviews accessed as complete abstracts only;
+  their full bodies were not available in retained publisher pages. Detailed universal
+  necessity, every scaffoldin symbol and exhaustive taxonomic prevalence are not certified.
+- P0C2S2 is a sequence fragment and P71143 is unreviewed; neither status is misrepresented
+  in this identity-only example assessment.
+- The InterPro IPR051465 request returned410; this obsolete candidate occurs in source
+  cross-references but is not a maintained grounding. No exact family absence is claimed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes reviews for all uncovered records, including honest zero-finding
+  bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

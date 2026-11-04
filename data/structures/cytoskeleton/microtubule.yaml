@@ -45,6 +45,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 synonyms:
 - synonym_text: microtubuli
   synonym_type: EXACT_SYNONYM
@@ -99,6 +105,40 @@ components:
       notes: UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas
         reinhardtii. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P09204
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: TUBA1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene TUA1, which UniProt lists under
+      the primary name TUBA1, in Chlamydomonas reinhardtii, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P09204
+      notes: UniProtKB reviewed (Swiss-Prot) entry P09204, the single reviewed entry
+        for gene TUA1 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:P04690
+    protein_label: Tubulin beta-1/beta-2 chain
+    gene_symbol: TUBB1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene TUB1, which UniProt lists under
+      the primary name TUBB1, in Chlamydomonas reinhardtii, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure (also declared as synonym TUB2).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04690
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04690, the single reviewed entry
+        for gene TUB1 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

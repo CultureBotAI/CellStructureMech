@@ -1,0 +1,805 @@
+schema_version: 1.0.0
+review_id: 20261022T034126Z-reservosome-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Reservosome membrane scientific review
+started_at: '2026-10-22T03:25:04Z'
+finished_at: '2026-10-22T03:41:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The exact membrane identity and parthood are supported. One major finding
+  concerns the unsupported enrichment/mechanistic definition extension; one minor
+  concerns the parthood-only graph labeled mechanistic.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/reservosome.yaml
+    sha256: 0e733e8adbe97aaadfaaa43aafd271069aaa3fb14cad36f8c3281b31852e7aeb
+    role: context
+  - path: data/structures/membrane_organelle/reservosome_lumen.yaml
+    sha256: d792cf1b253ed384ca734154902e13ebb5ac760a45635226ebe3c110bf4682a4
+    role: context
+  - path: data/structures/membrane_organelle/reservosome_matrix.yaml
+    sha256: 96579f72d8aa8c8570ed688ff44ac93574640e579a33349333074f4b9e72a174
+    role: context
+  - path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    sha256: 73604615ebff7b587a19bac850af2728c5ff9cee59e065977e9498f59092a831
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0106126
+  path: data/structures/membrane_organelle/reservosome_membrane.yaml
+  label: reservosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, every field/graph/history/discussion, and the
+    complete four-record reservosome boundary set (target plus three neighbors). Additional
+    incoming-reference records, where frozen, were inspected only at the exact search-returned
+    grounding lines. Native and literature read scopes are declared separately for
+    each evidence row.
+  selection: Batch40 exact path-ordered target 5; fresh f97b initial native inspect/schema/strict
+    passed before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0106126
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just validate data/structures/membrane_organelle/reservosome_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just validate-strict data/structures/membrane_organelle/reservosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/reservosome_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/reservosome_membrane.yaml
+  exit_code: 0
+  summary: Native check passed; source-level gene and mechanism claims were assessed
+    independently.
+  evidence_ids:
+  - reservosome-membrane-causal-graphs
+- check_id: protein-applicability
+  name: Individual protein verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0106126
+  summary: No individual protein accession or GENE_OR_PROTEIN graph node occurs in
+    this target; ungrounded definition names are assessed scientifically.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0106126
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - neighbor-reservosome
+  - neighbor-reservosome_lumen
+  - neighbor-reservosome_matrix
+  - reservosome-agent-go
+  - reservosome-agent-go-ancestors
+  - reservosome-agent-tax5693
+  - local-reservosome-resolution
+  - reservosome-agent-figueiredo2004-meta
+  - reservosome-agent-santanna2008-meta
+  - reservosome-agent-santanna2009-meta
+  - reservosome-agent-santanna2009-legacy
+  - reservosome-agent-pereira2011-meta
+  - reservosome-agent-pereira2011-xml
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  summary: '9 of 11 collected target identifiers returned OK. PMID:18452191: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; cellstructuremech:reservosome: SKIPPED; Exact current local
+    identity occurs once in an ignored-inclusive identifier search and is a frozen
+    maintained input. Resolver existence does not overturn the independent exact-GO
+    identity curation finding. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - reservosome-agent-santanna2008-meta
+  - neighbor-reservosome
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106126
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/reservosome_membrane.yaml
+  locator: 'Entire maintained YAML: every field, graph, evidence note, discussion
+    and history'
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: The entire target was independently read; no scientific record or status
+    is changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CellStructureRecord.identifier, StructuralComponent and ProteinExample
+    classes; graph types
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: Exact identity, component/material versus complete structural entity, source-backed
+    protein examples, and formation necessity are distinct contracts. Localization,
+    catalytic function or material constitution does not demonstrate individual assembly
+    necessity.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identifiers rules1–3, Evidence and Causal graphs sections
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: Use an exact GO cellular-component identity when available; preserve superseded
+    identifiers through deprecation and successor replaces, never silently rename
+    or reuse an identifier. Evidence applies to each actual scientific claim.
+- evidence_id: neighbor-reservosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/reservosome.yaml
+  locator: Complete maintained boundary neighbor
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: The full four-record boundary set (target plus three neighbors) was read,
+    distinguishing the organelle, enclosed volume, internal matrix and limiting membrane.
+    Neighbor claims are context rather than independent primary evidence.
+- evidence_id: neighbor-reservosome_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/reservosome_lumen.yaml
+  locator: Complete maintained boundary neighbor
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: The full four-record boundary set (target plus three neighbors) was read,
+    distinguishing the organelle, enclosed volume, internal matrix and limiting membrane.
+    Neighbor claims are context rather than independent primary evidence.
+- evidence_id: neighbor-reservosome_matrix
+  kind: record_content
+  reference: data/structures/membrane_organelle/reservosome_matrix.yaml
+  locator: Complete maintained boundary neighbor
+  accessed_at: '2026-10-22T03:32:23Z'
+  support: context_only
+  summary: The full four-record boundary set (target plus three neighbors) was read,
+    distinguishing the organelle, enclosed volume, internal matrix and limiting membrane.
+    Neighbor claims are context rather than independent primary evidence.
+- evidence_id: reservosome-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0106123,GO:0106124,GO:0106125,GO:0106126,GO:0043231,GO:0110165
+  locator: Complete six exact term identities/definitions; filtered quartet typed-child
+    relations; not a claim about every other returned child
+  accessed_at: '2026-10-22T03:25:17.665855Z'
+  support: supports
+  summary: Active GO0106123 defines the posterior epimastigote endocytic storage organelle;0106124
+    is its enclosed volume,0106125 its planar-membrane/vesicle/lipid-inclusion matrix,0106126
+    its surrounding bilayer. The response directly lists all three part_of children
+    of0106123 and their is_a links under0110165. GO0043231 supplies the intracellular
+    membrane-bounded-organelle parent.
+  snapshot_sha256: 1f8ae8902a5fb16d7ee0b17e585335b691ae509122b2be1de7a2db7cc7904c93
+- evidence_id: reservosome-agent-go-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0106123,GO:0106124,GO:0106125,GO:0106126/ancestors?relations=is_a
+  locator: Complete four is_a-only ancestor lists, including self identifiers
+  accessed_at: '2026-10-22T03:29:13.710157Z'
+  support: supports
+  summary: The is_a-only response places reservosome under0043231 and the three substructure
+    terms under0110165. It does not conflate is_a with parthood, which is independently
+    visible in the term response.
+  snapshot_sha256: 1b14e31af3c4a78a2b2fa1d7d7147663f880f1623699e7737d54ab309ceb275e
+- evidence_id: reservosome-agent-tax5693
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5693
+  locator: Complete native taxId/name/rank/lineage
+  accessed_at: '2026-10-22T03:25:17.666488Z'
+  support: supports
+  summary: ENA5693 identifies Trypanosoma cruzi at species rank within Schizotrypanum;
+    this authority establishes identity and lineage, not a prevalence census or experimental
+    strain.
+  snapshot_sha256: 29ca5f9c41995471a462d22be4406f02aa99f2f23760f2ea91ac33282f22482f
+- evidence_id: local-reservosome-resolution
+  kind: search
+  reference: rg --no-ignore --hidden -n cellstructuremech:reservosome|GO:0106123 data/structures
+  locator: Complete all-occurrence corpus string search, including anchored identifier
+    inspection
+  accessed_at: '2026-10-22T03:29:31.029961Z'
+  support: supports
+  summary: The ignored- and hidden-inclusive maintained corpus has one cellstructuremech:reservosome
+    identifier declaration, the frozen whole record; GO0106123 occurs as authority
+    references but has no identifier declaration. Incoming references include the
+    three quartet neighbors plus cytostome and early_endosome. This resolves the local
+    target without treating its present identifier choice as scientifically optimal.
+  snapshot_sha256: 4905c28c83b1643392de484c732b12bd5bdcbaba30314ffbc53538701499df30
+  search_scope: All data/structures recursively including ignored and hidden files;
+    exact local/GO identifier strings, all occurrences, not only declarations; current
+    f97b corpus. All returned lines manually classified as identifier, grounding,
+    parthood, evidence or history.
+- evidence_id: reservosome-agent-figueiredo2004-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1017/S0031182004005797%22
+  locator: Unique MED title/authors/DOI/PMID/year and complete primary abstract; original
+    Methods/body not recovered
+  accessed_at: '2026-10-22T03:25:17.667191Z'
+  support: supports
+  summary: Exact Figueiredo et al.2004 DOI10.1017/S0031182004005797/PMID15521631 primary
+    study. Its complete abstract describes transferrin-gold during bloodstream-form
+    differentiation, posterior reservosomes only in free-swimming epimastigotes, and
+    cysteine-proteinase labeling of all reservosomes without tracer/enzyme colocalization
+    in all of them.
+  snapshot_sha256: 43dacf6cae8a9ff1f22b52d1ec026ca44b923db051a7660de47cef94c3cdc1c8
+- evidence_id: reservosome-agent-santanna2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1002/jemt.20592%22
+  locator: Unique MED identity and complete primary abstract; no original full body
+    or image pixels recovered
+  accessed_at: '2026-10-22T03:25:18.450316Z'
+  support: supports
+  summary: Exact Sant'Anna et al.2008 DOI10.1002/jemt.20592/PMID18452191 primary study.
+    Complete abstract reports ultrathin, uranyl-acetate and freeze-fracture microscopy
+    of epimastigotes and isolated reservosomes, internal profiles/vesicles and monolayer-surrounded
+    lipid inclusions. Incoming cargo is described as entering the lumen by boundary
+    fusion, not association with internal vesicles.
+  snapshot_sha256: ca1bc970edc5602182448807a7905f4bd2d2781766ad0dced75354765b715c70
+- evidence_id: reservosome-agent-santanna2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1002/pmic.200800730%22
+  locator: Unique MED identity and complete abstract
+  accessed_at: '2026-10-22T03:25:18.436807Z'
+  support: supports
+  summary: Exact Sant'Anna et al.2009 DOI10.1002/pmic.200800730/PMID19288526/PMC2763633
+    primary proteomics study; metadata and abstract identify isolated whole-reservosome
+    and membrane preparations and709 T. cruzi proteins.
+  snapshot_sha256: 5d6f3ceed89f0e205cdd01ba7f6aa759e9ef8edc6e9ddf8054055bbc12c333d4
+- evidence_id: reservosome-agent-santanna2009-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763633/
+  locator: 'Genuine PMC2763633 HTML: complete Introduction S1, Methods S3–S10, Results
+    S12–S14 and Discussion S15 including complete Table1 and Figure1–3 captions. No
+    figure pixels, supplementary protein datasets or independently cited prior experiments
+    inspected.'
+  accessed_at: '2026-10-22T03:25:57.264825Z'
+  support: supports
+  summary: Dm28c epimastigote B1 and total-membrane B1M fractions contain hydrolases
+    including cruzipain, pumps and transporters. Discussion explicitly cannot distinguish
+    limiting from internal membranes, did not detect Rab11, and distinguishes prior
+    immunofluorescence-only Rab11 localization from confirmed assignments. ABC/lipid
+    mobilization and several Rab functions are hypotheses; possible contaminants/cargo
+    and preparation/strain effects remain. Related LROs in other stages are discussed
+    without making every such organelle the exact epimastigote reservosome class.
+  snapshot_sha256: 69d6be78f8c338a6304cc006628145ad4ac481e6c5aa10fd691675950dc1e869
+- evidence_id: reservosome-agent-pereira2011-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pone.0022359%22
+  locator: Unique MED identity and complete primary abstract
+  accessed_at: '2026-10-22T03:25:18.592886Z'
+  support: supports
+  summary: Exact Pereira et al.2011 DOI10.1371/journal.pone.0022359/PMID21818313/PMC3144899
+    identifies the primary lipid-fraction study used here as a bounded cross-check
+    on the added definition.
+  snapshot_sha256: d51ccf88d88fc3dc623b2dfa73d7d0665b0524d5db0698652e630c2fe6aa9f97
+- evidence_id: reservosome-agent-pereira2011-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3144899/fullTextXML
+  locator: 'Genuine PMC3144899 JATS: complete Introduction s1, Methods s2a–s2k, Results
+    s3a–s3c and Discussion s4; Table1/Figures1–10 captions. No pixels or supplementary
+    datasets inspected.'
+  accessed_at: '2026-10-22T03:25:57.264949Z'
+  support: supports
+  summary: Purified reservosomes contain1.5% ergosterol among measured neutral lipids,
+    while isolated inclusions contain cholesterol/cholesteryl esters and no detected
+    ergosterol. Discussion attributes earlier high ergosterol to probable mitochondrial
+    contamination; membrane traffic/lipid-efflux mechanisms remain largely unknown,
+    with ABCA1/Rab18 proposed. Serum starvation did not produce metacyclic trypomastigotes.
+  snapshot_sha256: c3217d07622d7ebc3d2570502d336b68dd0920266ea5b36e919e6a4cb3e1d1fb
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/reservosome_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:05Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/reservosome_membrane.yaml'
+  snapshot_sha256: dcf96fa02479520391d56a121022bb9588ea0b7ac670815da50c781927c601b5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/reservosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/reservosome_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:07Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/reservosome_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/reservosome_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch40-20261022-pllys1sh/reservosome_membrane-strict.tsv"
+  snapshot_sha256: b561bcaa622e2787998f2e588b7a343a1b6169004ffce1e901d673ce903b9a4d
+- evidence_id: reservosome-membrane-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/reservosome_membrane.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:30:00.309434Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/reservosome_membrane.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 11 collected target identifiers returned OK. PMID:18452191: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; cellstructuremech:reservosome: SKIPPED; Exact current local
+    identity occurs once in an ignored-inclusive identifier search and is a frozen
+    maintained input. Resolver existence does not overturn the independent exact-GO
+    identity curation finding. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Organelle, volume, matrix and membrane boundary
+  outcome: supported
+  target_ids:
+  - GO:0106126
+  summary: The biological referents and distinct types are consistent with native
+    GO and the complete frozen quartet. Existing local parthood/graph links resolve
+    uniquely. The whole-record identifier choice is separately assessed; its successors
+    must preserve stable provenance rather than invalidate current links.
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-go-ancestors
+  - local-reservosome-resolution
+- assessment_id: scope
+  area: scope
+  topic: Species, developmental stage and canonical microscopy
+  outcome: supported
+  target_ids:
+  - GO:0106126
+  summary: Native5693 and exact primary abstracts support the T. cruzi epimastigote
+    example and stage-qualified occurrence. VARIABLE denotes life-cycle context, not
+    a measured prevalence. The canonical microscopy wording matches the2008 abstract;
+    whole-record transferrin labeling matches2004. Dm28c2009 and Y-strain2011 experiments
+    are not silently treated as the same strain.
+  evidence_ids:
+  - record
+  - reservosome-agent-tax5693
+  - reservosome-agent-figueiredo2004-meta
+  - reservosome-agent-santanna2008-meta
+  - reservosome-agent-santanna2009-legacy
+  - reservosome-agent-pereira2011-xml
+- assessment_id: definition
+  area: evidence
+  topic: Unsupported limiting-membrane mechanism extension
+  outcome: concern
+  target_ids:
+  - GO:0106126
+  summary: GO0106126 supports only the surrounding bilayer. The appended definition
+    assigns established ergosterol enrichment, membrane-tethered Rab11 and coordinated
+    fusion/acidification/mobilization during metacyclogenesis.2009 cannot distinguish
+    limiting/internal membranes, did not detect Rab11 and qualifies its earlier localization;2011
+    revises high ergosterol and leaves lipid-efflux mechanisms hypothetical. These
+    sources do not establish the stated integrated boundary mechanism.
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-santanna2009-legacy
+  - reservosome-agent-pereira2011-xml
+- assessment_id: graph
+  area: graph
+  topic: Parthood mislabeled as an assembly mechanism
+  outcome: concern
+  target_ids:
+  - GO:0106126
+  summary: The only graph edge is membrane part_of reservosome. That topology is supported,
+    but it supplies no assembly transition or causal molecular mechanism despite MECHANISTIC
+    scope and assembly/mechanism title.
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-santanna2008-meta
+- assessment_id: composition
+  area: grounding
+  topic: No forced boundary protein inventory
+  outcome: supported
+  target_ids:
+  - GO:0106126
+  summary: Absence of component rows is not itself a finding. Total-membrane proteomics
+    does not identify an exact obligatory limiting-membrane cohort, and the source
+    explicitly distinguishes detection, hypotheses and preparation limits.
+  evidence_ids:
+  - record
+  - schema
+  - reservosome-agent-santanna2009-legacy
+- assessment_id: provenance
+  area: provenance
+  topic: Source scopes and unchanged scientific state
+  outcome: supported
+  target_ids:
+  - GO:0106126
+  summary: Every target claim was read against the explicitly scoped source packet,
+    with primary bodies, native abstracts, authority identities and search evidence
+    distinguished. No draft claims scientific curation, promotion, persistence or
+    publication.
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-go-ancestors
+  - reservosome-agent-tax5693
+  - reservosome-agent-figueiredo2004-meta
+  - reservosome-agent-santanna2008-meta
+  - reservosome-agent-santanna2009-meta
+  - reservosome-agent-santanna2009-legacy
+  - reservosome-agent-pereira2011-meta
+  - reservosome-agent-pereira2011-xml
+findings:
+- finding_id: F1
+  issue_key: reservosome-membrane-definition-mechanism-overclaim
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate the membrane definition from unestablished enrichment and mechanisms
+  description: The ontology defines a surrounding lipid bilayer, while the maintained
+    extension presents specific enrichment and Rab11-mediated trafficking/mobilization
+    as established defining facts. The cited proteomics paper explicitly failed to
+    detect Rab11 and could not distinguish limiting from internal membranes. The2011
+    primary cross-check revises high ergosterol as probable contamination and leaves
+    efflux pathways hypothetical. This is not merely a missing citation.
+  target_ids:
+  - GO:0106126
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-santanna2009-legacy
+  - reservosome-agent-pereira2011-xml
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Claim-level identity and evidence contract
+  native_severity: major
+  normalization_reason: The extension materially misstates composition and functional
+    mechanism of the named membrane; correct core ontology identity does not make
+    this scope inflation a minor wording issue.
+- finding_id: F2
+  issue_key: reservosome-membrane-graph-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Label the parthood-only graph as descriptive topology
+  description: The graph contains two structural nodes and one is-part-of edge. It
+    is valid topology, but the MECHANISTIC ASSEMBLY label and title overstate the
+    explanatory content.
+  target_ids:
+  - GO:0106126
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  evidence_ids:
+  - record
+  - reservosome-agent-go
+  - reservosome-agent-santanna2008-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Claim-level identity and evidence contract
+  native_severity: minor
+  normalization_reason: The relation itself is correct; the defect is the bounded
+    explanatory-scope label, independent of the definition mechanism error.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0106126
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained scientific record
+  description: Retain the exact surrounding-bilayer identity. Remove or qualify the
+    added protein/lipid and mechanistic assertions; if retained separately, cite each
+    at its actual preparation/localization and experimental scope. Preserve supported
+    proton-pump evidence without implying that all named factors form a demonstrated
+    mechanism.
+  acceptance_checks:
+  - No unqualified Rab11 enrichment/fusion mechanism is inferred from2009.
+  - Whole-organelle or mixed-membrane measurements are not assigned specifically to
+    the limiting bilayer.
+  - Ergosterol and metacyclogenesis claims reflect actual measurements and uncertainty.
+  - The exact GO definition is distinguishable from any separately sourced functional
+    hypothesis.
+  - Focused schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0106126
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained scientific record
+  description: Use NONMECHANISTIC scope and topology wording while retaining the supported
+    parthood edge; do not invent molecular assembly steps to satisfy the label.
+  acceptance_checks:
+  - Graph scope/title accurately describe the existing topology.
+  - The supported membrane-to-reservosome relation is preserved.
+  - Focused schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+limitations:
+- Figueiredo2004 and Sant'Anna2008 were verified by exact native metadata and complete
+  abstracts. Cambridge DOI and linked PDF routes returned publisher HTML rather than
+  a PDF; Wiley returned403. No full original body, figure pixels or strain details
+  from these two papers are certified.
+- Sant'Anna2009 EuropePMC XML returned500, but genuine legacy PMC full main science,
+  Methods and Table1 were recovered and read. No figures or supplementary datasets
+  were independently inspected. Whole-reservosome and total-membrane preparations
+  do not establish limiting-membrane localization for every protein.
+- The maintained stage restriction follows the exact GO class and Figueiredo abstract.
+  Sant'Anna2009 discusses related lysosome-related organelles in other life-cycle
+  stages; this review does not equate all such LROs with the exact epimastigote reservosome
+  or claim all other-stage degradative compartments are absent.
+- Pereira2011 is a primary cross-check beyond the membrane record's own listed references.
+  Its full main science/Methods and captions were read, not figure pixels or supplementary
+  datasets.
+- Rab11 nondetection is not proof that the protein can never localize there. The finding
+  addresses the maintained affirmative enrichment/mechanism claim and the cited source's
+  explicit uncertainty, not universal biological absence.
+- The taxon note uses lumens in this membrane record; the same containing-organelle
+  stage scope is intended. This minor wording imprecision is not counted as a separate
+  consequential finding.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes clean reviews. Parent owns finalization/persistence
+  and integration of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
