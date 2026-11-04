@@ -39,6 +39,13 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T11:10:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2405 (Stage 4 finding cytoskeleton-discussion-prose-issue-links):
+    added structured evidence references for GitHub issues #481 and #482 to discussion
+    phuz_spindle_excludes_goslar_vortex.'
+  llm_assisted: true
 synonyms:
 - synonym_text: phage tubulin spindle
   synonym_type: RELATED_SYNONYM
@@ -265,6 +272,12 @@ discussions:
   - reference: DOI:10.1126/science.aal2130
     notes: Figure 1 and time-lapse experiments connect the bipolar spindle with both
       nucleus positioning and rotation.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/481
+    notes: Earlier review issue referenced in the rationale regarding Goslar PhuZ
+      rotation scope.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/482
+    notes: Earlier review issue referenced in the rationale regarding PhuZ component
+      wording.
   posed_by: codex
   posed_date: '2026-10-11'
   resolved_date: '2026-10-11'

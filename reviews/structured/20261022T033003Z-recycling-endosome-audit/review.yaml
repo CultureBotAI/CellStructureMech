@@ -1,0 +1,727 @@
+schema_version: 1.0.0
+review_id: 20261022T033003Z-recycling-endosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Recycling endosome scientific review
+started_at: '2026-10-22T03:14:14Z'
+finished_at: '2026-10-22T03:30:03Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact recycling-endosome identity, stage-scoped T. brucei example and selective
+  Rab11 traffic are supported. One major finding concerns LIPID grounding to the complete
+  membrane structure and its linked graph component reference.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/recycling_endosome.yaml
+    sha256: 7a806e4e4eaddd3578c517d587c4eaaf1c458e4f5cfc2e59065fc0f26594ac48
+    role: target
+  - path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+    sha256: 69bc318299125a4de316f2ba3b7fc20e0655bca2d37fa6d43c12afcfa3fc3ce2
+    role: context
+  - path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+    sha256: cc07cfcf4d3c8fcfac3594e3dec18791b1e5f40e13d867fcdb4ef355f07aebf0
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0055037
+  path: data/structures/membrane_organelle/recycling_endosome.yaml
+  label: recycling endosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target including every component, hierarchy, taxon/example,
+    function/graph, source, discussion and history. Additional frozen local inputs
+    are read at the precise scope declared in their evidence rows; literature read
+    extents and image inspection are separately stated.
+  selection: Batch39 exact path-ordered target 9; fresh f97b native inspection/schema/strict
+    passed before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0055037
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just validate data/structures/membrane_organelle/recycling_endosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just validate-strict data/structures/membrane_organelle/recycling_endosome.yaml
+    --out /private/tmp/cellstructure-batch39-20261022-9ejlvnby/recycling_endosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: /private/tmp/cellstructure-batch39-20261022-9ejlvnby/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/recycling_endosome.yaml
+  exit_code: 0
+  summary: Native check passed; exact scientific scope was assessed separately.
+  evidence_ids:
+  - recycling-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: /private/tmp/cellstructure-batch39-20261022-9ejlvnby/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/recycling_endosome.yaml
+  exit_code: 0
+  summary: Native check passed; exact scientific scope was assessed separately.
+  evidence_ids:
+  - recycling-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0055037
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - recycling-agent-go
+  - recycling-agent-SL0232
+  - recycling-agent-tax5691
+  - recycling-agent-PMID-11683389
+  - neighbor-recycling_endosome_lumen
+  - neighbor-recycling_endosome_membrane
+  - recycling-agent-PMID-12744719
+  - recycling-agent-PMID-29582527
+  - recycling-agent-umaer2018-legacy
+  - recycling-agent-Q9NJE8
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  summary: '7 of 10 collected target identifiers returned OK. PMID:11683389: UNREACHABLE;
+    Unique native MED result verifies exact PMID, title, DOI and PMC/null identity
+    after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly
+    bounded in separate evidence rows.; PMID:12744719: UNREACHABLE; Unique native
+    MED result verifies exact PMID, title, DOI and PMC/null identity after the bulk
+    eutils414 failure. Abstract/body scientific scopes remain explicitly bounded in
+    separate evidence rows.; PMID:29582527: UNREACHABLE; Unique native MED result
+    verifies exact PMID, title, DOI and PMC/null identity after the bulk eutils414
+    failure. Abstract/body scientific scopes remain explicitly bounded in separate
+    evidence rows. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - recycling-agent-PMID-11683389
+  - recycling-agent-PMID-12744719
+  - recycling-agent-PMID-29582527
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch39 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch39 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch39 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch39 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055037
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch39 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/recycling_endosome.yaml
+  locator: Entire maintained YAML including all fields, graphs, history and discussions
+  accessed_at: '2026-10-22T03:22:41Z'
+  support: context_only
+  summary: The entire target was read; scientific content, status and history remain
+    unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent type/grounding/formation-necessity and graph/component_ref
+    contracts
+  accessed_at: '2026-10-22T03:22:41Z'
+  support: context_only
+  summary: A LIPID molecular constituent is distinct from a complete GO membrane structure.
+    Accurate OTHER structural constituents are not categorically forbidden. Constitution,
+    localization, regulatory activity and cell viability do not establish individual
+    formation necessity.
+- evidence_id: recycling-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0055037,GO:0055038,GO:0034777,GO:0005768,GO:0031904
+  locator: Complete native definitions, synonyms and explicitly typed child relations
+  accessed_at: '2026-10-22T03:15:32.604047Z'
+  support: supports
+  summary: Five active GO entries distinguish recycling endosome, its whole membrane
+    and lumen, generic endosome and endosome lumen. GO0005768 lists0055037 is_a;0055037
+    lists0055038 and0034777 part_of;0031904 lists0034777 is_a. Exact whole synonyms
+    and lumen definition agree.
+  snapshot_sha256: b5375b82c484a03cfcc9a63275193399fc2f0bda198944f0d0721c8ed14d9eb4
+- evidence_id: recycling-agent-SL0232
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0232.json
+  locator: Complete exact native location definition, synonym, GO map and typed hierarchy
+  accessed_at: '2026-10-22T03:15:32.604462Z'
+  support: supports
+  summary: SL0232 exactly maps Recycling endosome to GO0055037 and includes Endosomal
+    recycling compartment/ERC; its Endosome link is partOf, not an isA edge, so the
+    GO is_a is independently used.
+  snapshot_sha256: 0736135ed5a32ec69b72230194e431e0f6ea8eff90192e13e34594c7ce68163b
+- evidence_id: recycling-agent-tax5691
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691
+  locator: Complete native taxId/name/rank/lineage
+  accessed_at: '2026-10-22T03:15:32.604662Z'
+  support: supports
+  summary: ENA5691 confirms Trypanosoma brucei at species rank. This response alone
+    does not establish stage-specific anatomy, strain or abundance.
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+- evidence_id: recycling-agent-PMID-11683389
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A11683389%20AND%20SRC%3AMED
+  locator: Unique MED identity/title/authors/DOI/year and complete primary abstract;
+    no main body
+  accessed_at: '2026-10-22T03:15:33.333082Z'
+  support: supports
+  summary: Exact PMID11683389/DOI10.1242/jcs.114.14.2617 identifies Jeffries/Morgan/Field2001.
+    Complete abstract describes TbRAB11-positive procyclic and bloodstream compartments,
+    higher bloodstream expression, larger posterior compartment, and transferrin-receptor/internalized
+    anti-VSG colocalization.
+  snapshot_sha256: 47119d081d8f1c7a80b63125de10f3688288733071805146639a1877e40653f0
+- evidence_id: neighbor-recycling_endosome_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+  locator: Entire frozen maintained boundary neighbor
+  accessed_at: '2026-10-22T03:22:41Z'
+  support: context_only
+  summary: Whole organelle, membrane and enclosed volume are distinct; neighbor content
+    is contextual, not independent experimental evidence.
+- evidence_id: neighbor-recycling_endosome_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+  locator: Entire frozen maintained boundary neighbor
+  accessed_at: '2026-10-22T03:22:41Z'
+  support: context_only
+  summary: Whole organelle, membrane and enclosed volume are distinct; neighbor content
+    is contextual, not independent experimental evidence.
+- evidence_id: recycling-agent-PMID-12744719
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12744719%20AND%20SRC%3AMED
+  locator: Unique MED identity and complete primary abstract
+  accessed_at: '2026-10-22T03:15:33.335751Z'
+  support: supports
+  summary: Exact PMID12744719/DOI10.1042/bj20030469 identifies Pal et al.2003. The
+    complete abstract describes live-cell assays, Rab mutants, uptake/degradation/exocytosis
+    of products and extensive degradation of recycled Tf/anti-VSG antibody proteins.
+    It does not prove intact antibody/ligand return.
+  snapshot_sha256: 3be1fa23a23d055aa5b322ef45b4310805f0c68e64e0402f14aa6920fec56ae6
+- evidence_id: recycling-agent-PMID-29582527
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A29582527%20AND%20SRC%3AMED
+  locator: Unique MED identity and complete primary abstract
+  accessed_at: '2026-10-22T03:15:33.347598Z'
+  support: supports
+  summary: Exact PMID29582527/DOI10.1111/tra.12565 identifies Umaer/Bush/Bangs2018.
+    Complete abstract distinguishes selective transmembrane-protein recycling from
+    unaffected VSG/TfR trafficking under TbRab11 depletion.
+  snapshot_sha256: f899dc3e557112a849610b2e3c7b9e0253d18e31bd14cc7c1768cef9cd01a0d8
+- evidence_id: recycling-agent-umaer2018-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5948159/
+  locator: 'Genuine PMC5948159 HTML: complete Introduction S3, all Results S5–S11
+    with captions and Discussion S12; Methods S14 cell lines, S17 endocytosis, S19
+    VSG recycling, S20 ISG65 turnover, S21 surface biotinylation and S25 analysis.
+    No figure pixels or supplementary datasets inspected.'
+  accessed_at: '2026-10-22T03:16:03.365504Z'
+  support: supports
+  summary: In bloodstream T. b. brucei SM cells, RNAi depletion supports selective
+    ISG65 trafficking while VSG recycling and TfR synthesis/turnover/surface localization
+    are largely unaffected. The study distinguishes exocytosis of degraded Tf/IgG
+    products from recycling endogenous proteins; its VSG surface assay is dominated
+    by VSG but does not resolve every cargo. Cell death after depletion is not a test
+    of compartment assembly necessity.
+  snapshot_sha256: 5da6671ccc558750e40f3c9cb973978fe71aff078dbb4d131836389bf4423891
+- evidence_id: recycling-agent-Q9NJE8
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9NJE8.json
+  locator: Complete native accession/entryType/organism/protein names/gene names and
+    crossreferences
+  accessed_at: '2026-10-22T03:15:32.604725Z'
+  support: supports
+  summary: Current unreviewed UniProtKB Q9NJE8 identifies T. brucei5691 Rab11/RAB11A,
+    submitted RAB11A GTPase/Small GTPase Rab11 names and protein-sequence crossreferences.
+    It supports the graph accession identity, not an experimental localization annotation
+    or conversion to a structural component.
+  snapshot_sha256: 69f602df124a0fc610ec0b6bfa97586217334d88d3a6ab4dd8c8f02840268343
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/recycling_endosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:14:15Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/recycling_endosome.yaml'
+  snapshot_sha256: 19acdcf3b73a1c485f800b7628216ccddf0537f91e06aabefa42ac78bd92902d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/recycling_endosome.yaml
+    --out /private/tmp/cellstructure-batch39-20261022-9ejlvnby/recycling_endosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:14:16Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/recycling_endosome.yaml\
+    \ --out /private/tmp/cellstructure-batch39-20261022-9ejlvnby/recycling_endosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch39-20261022-9ejlvnby/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch39-20261022-9ejlvnby/recycling_endosome-strict.tsv"
+  snapshot_sha256: 0fc3197d2047d7359faba136fffe43030b2586fc0b0c6e03c7b7cdde3ef63e16
+- evidence_id: recycling-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch39-20261022-9ejlvnby/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/recycling_endosome.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:20:20.511429Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: recycling-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch39-20261022-9ejlvnby/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/recycling_endosome.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:20:20.950628Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/recycling_endosome.yaml  (GO:0055037)\n\
+    \  trypanosome_recycling_endosome_topology\ttbrab11\tUNANCHORED_WITH_UNIPROT\t\
+    TbRAB11 (UniProtKB:Q9NJE8)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n  \
+    \   1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or\
+    \ xref on the node\n     1  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 8ec13ce57264c182b589096a0cec398aeb141a38ec3be5d93c48ecc41174dcbe
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/recycling_endosome.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '7 of 10 collected target identifiers returned OK. PMID:11683389: UNREACHABLE;
+    Unique native MED result verifies exact PMID, title, DOI and PMC/null identity
+    after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly
+    bounded in separate evidence rows.; PMID:12744719: UNREACHABLE; Unique native
+    MED result verifies exact PMID, title, DOI and PMC/null identity after the bulk
+    eutils414 failure. Abstract/body scientific scopes remain explicitly bounded in
+    separate evidence rows.; PMID:29582527: UNREACHABLE; Unique native MED result
+    verifies exact PMID, title, DOI and PMC/null identity after the bulk eutils414
+    failure. Abstract/body scientific scopes remain explicitly bounded in separate
+    evidence rows. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle/volume identity and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0055037
+  summary: The active GO identity, declared definition, hierarchy/parthood, literal
+    synonym scopes and exact SL mapping are supported. Complete boundary neighbors
+    preserve whole-versus-membrane-versus-volume distinctions. The graph uses the
+    proper types for these structural entities.
+  evidence_ids:
+  - record
+  - recycling-agent-go
+  - recycling-agent-SL0232
+- assessment_id: scope
+  area: scope
+  topic: Species and life-stage occurrence
+  outcome: supported
+  target_ids:
+  - GO:0055037
+  summary: The native species identity and Jeffries complete primary abstract support
+    the bounded T. brucei stage-dependent compartment example. VARIABLE describes
+    the qualitative difference in expression/compartment morphology; it is not a measured
+    prevalence fraction. Enclosed lumen is the structural interpretation of those
+    membrane compartments, not an assertion that transferrin receptor is soluble luminal
+    cargo.
+  evidence_ids:
+  - record
+  - recycling-agent-tax5691
+  - recycling-agent-PMID-11683389
+  - recycling-agent-go
+- assessment_id: grounding
+  area: grounding
+  topic: Whole membrane is not molecular lipid grounding
+  outcome: concern
+  target_ids:
+  - GO:0055037
+  summary: The sole component declares LIPID but grounds it to GO0055038, the complete
+    recycling-endosome membrane. Correct bilayer topology does not make this cellular-component
+    identity a chemical lipid identifier. Its graph component_ref inherits the mismatch,
+    independently of the correct whole membrane node.
+  evidence_ids:
+  - record
+  - schema
+  - recycling-agent-go
+- assessment_id: necessity
+  area: evidence
+  topic: Constitution versus experimental assembly requirement
+  outcome: unknown
+  target_ids:
+  - GO:0055037
+  summary: The boundary constitutively encloses the compartment, but ESSENTIAL does
+    not establish individual lipid-species formation necessity. The available ontology/localization
+    and trafficking interventions do not test that formation requirement; Rab11 viability
+    effects cannot substitute for it.
+  evidence_ids:
+  - record
+  - schema
+  - recycling-agent-go
+  - recycling-agent-umaer2018-legacy
+- assessment_id: function-graph
+  area: graph
+  topic: Selective recycling with an external Rab11 regulator
+  outcome: supported
+  target_ids:
+  - GO:0055037
+  summary: The coarse NONMECHANISTIC topology and TbRAB11 localization/support edges
+    are supported within the stated Rab11-dependent/selective cargo scope. Pal assays
+    include extensive degradation before product release; Umaer does not show universal
+    Rab11 dependence of VSG or TfR. The maintained wording does not expressly claim
+    intact ligand recycling or universal VSG dependence, so these distinctions are
+    retained as limitations rather than a contradictory new finding.
+  evidence_ids:
+  - record
+  - recycling-agent-go
+  - recycling-agent-PMID-11683389
+  - recycling-agent-PMID-12744719
+  - recycling-agent-PMID-29582527
+  - recycling-agent-umaer2018-legacy
+  - recycling-agent-Q9NJE8
+- assessment_id: protein
+  area: grounding
+  topic: Rab11 accession and component boundary
+  outcome: supported
+  target_ids:
+  - GO:0055037
+  summary: Q9NJE8 correctly identifies the same species/gene class named by the graph;
+    its current unreviewed status is not misrepresented in the target. Primary localization/regulatory
+    evidence supports its external marker role without asserting a stable structural
+    constituent. The native coverage diagnostic UNANCHORED_WITH_UNIPROT is intentional,
+    not a dangling component reference.
+  evidence_ids:
+  - record
+  - recycling-agent-Q9NJE8
+  - recycling-agent-PMID-11683389
+  - recycling-agent-umaer2018-legacy
+- assessment_id: provenance
+  area: provenance
+  topic: Bounded source audit and unchanged status
+  outcome: supported
+  target_ids:
+  - GO:0055037
+  summary: All target claims were reviewed at the declared source read scopes, with
+    primary/secondary/abstract/native authority tiers separated. No scientific mutation,
+    mapping-status promotion, review persistence or publication is implied.
+  evidence_ids:
+  - record
+  - recycling-agent-go
+  - recycling-agent-SL0232
+  - recycling-agent-tax5691
+  - recycling-agent-PMID-11683389
+  - recycling-agent-PMID-12744719
+  - recycling-agent-PMID-29582527
+  - recycling-agent-umaer2018-legacy
+  - recycling-agent-Q9NJE8
+findings:
+- finding_id: F1
+  issue_key: recycling-endosome-lipid-whole-membrane-grounding
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate whole-membrane structure from molecular lipid grounding
+  description: The LIPID component uses GO0055038 for the entire membrane and the
+    graph links that node through component_ref. GO identifies the structural boundary,
+    not a molecular lipid class. Valid membrane parthood does not repair this explicit
+    type/grounding mismatch.
+  target_ids:
+  - GO:0055037
+  field_paths:
+  - components[0].component_type
+  - components[0].grounding
+  - causal_graphs[0].nodes[2].component_ref
+  evidence_ids:
+  - record
+  - schema
+  - recycling-agent-go
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome.yaml
+    role: maintained scientific record
+  rule_id: StructuralComponent type and grounding contract
+  native_severity: major
+  normalization_reason: The molecular component category is materially misrepresented
+    and propagated into the graph link; this is not merely an optional missing lipid
+    identifier.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0055037
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome.yaml
+    role: maintained scientific record
+  description: Retain the valid membrane structural node and has_part. Represent collective
+    lipid material with an honest label-only or justified chemical grounding, or explicitly
+    represent the intended structural subpart with an appropriate type; align component_ref
+    with that choice.
+  acceptance_checks:
+  - No LIPID molecular row is grounded to the whole membrane GO identity.
+  - Correct membrane/lumen topology and Rab11 external-regulator distinction remain
+    intact.
+  - No exact lipid species or obligatory protein inventory is invented.
+  - Focused native schema, strict, identifier, graph and history checks pass after
+    separately authorized curation.
+limitations:
+- Jeffries2001 was verified by exact native MED identity and its complete abstract;
+  the attempted publisher body returned403. No strain-specific ultrastructural measurements
+  or complete original Methods were certified.
+- Pal2003 remains complete native abstract/bibliographic PMC scope. The listed PMC
+  PDF returnedHTTP200 challenge HTML and EuropePMCfullTextXML500; no body/figure/scan
+  was recovered. Umaer2018 main science and declared Methods were genuinely read.
+- 'The cargo terminology spans distinct assays: Pal measures substantial degradation/product
+  exocytosis, while Umaer demonstrates selective ISG65 effects and largely unaffected
+  GPI-anchored VSG/TfR traffic. No universal Rab11 dependence or intact Tf/IgG return
+  is certified.'
+- No sequence-level comparison between Q9NJE8 and the2018 Tb927.8.4330 RNAi target
+  was performed; the accession-specific conclusion is native gene/species identity
+  and original-source localization class, not a verified experimental construct identity.
+  Individual lipid formation necessity remains unknown.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes honest clean reviews; no issue was invented for
+  the local issue-only convention. Parent owns finalization, persistence and integration
+  of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.

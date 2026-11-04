@@ -1,0 +1,1068 @@
+# Mst2 histone acetyltransferase complex scientific review
+
+- Review: 20261022T090917Z-mst2-histone-acetyltransferase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T08:40:05Z
+- Finished UTC: 2026-10-22T09:09:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The five named fission-yeast members, activity distinctions, reference proteins and coarse graph are supported. One minor resolves Eaf6 whole-family grounding; broader candidates and assembly necessity remain bounded unknowns.
+
+## Scope And Provenance
+
+Exactly one full maintained target and fourteen frozen local inputs, including schema, review guidance, protein-example and causal-graph skills. Actual primary/native reading scopes are declared per evidence row with original URL/UTC/hash receipts.
+
+Selection: Target 9 of batch61, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0036410 | data/structures/other/mst2_histone_acetyltransferase_complex.yaml | maintained | Mst2 histone acetyltransferase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0036410 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0036410 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0036410 | Native focused check passed; scientific claims reviewed separately. |
+| Native verify | passed | True | GO:0036410 | Native focused check passed; scientific claims reviewed separately. |
+| Expression-module applicability | not_applicable | False | GO:0036410 | No expression-module inference is used to establish the structure. |
+| Claim-level scientific review | passed | True | GO:0036410 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0036410 | 11 of 13 collected target identifiers returned OK. PMID:16823372: UNREACHABLE; Native Europe PMC uniquely identifies PMID:16823372: ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe. (2006), DOI10.1038/nbt1222. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:21289066: UNREACHABLE; Native Europe PMC uniquely identifies PMID:21289066: Elimination of a specific histone H3K14 acetyltransferase complex bypasses the RNAi pathway to regulate pericentric heterochromatin functions. (2011), DOI10.1101/gad.1993611. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0036410 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0036410 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0036410 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0036410 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0036410 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Named complex with an explicitly nonexhaustive inventory
+
+identity: supported. Targets: GO:0036410.
+
+GO identity, all three exact synonyms and H3K14-complex parent agree. Five represented members are supported by the primary report and their native identities. The definition says at least five; the additional pdp3/tfg3 annotations in current UniProt do not contradict this bounded inventory.
+
+### Exact Eaf6 family versus broader candidates
+
+grounding: concern. Targets: GO:0036410.
+
+IPR015418 is the whole Eaf6 family and O14240 independently matches it. Its roles in several HAT complexes do not change its protein identity. MYST-family IPR050603 and Histone Modification Regulator IPR050701 span broader classes and have unchecked machine-generated descriptions; those descriptions are not primary evidence. Ptf1 hydrolase families and unresolved Ptf2 do not establish exact Mst2-role-specific families.
+
+### Activity versus assembly
+
+graph: supported. Targets: GO:0036410.
+
+The NONMECHANISTIC graph correctly limits itself to constituent membership and H3K14 acetyltransferase activity. Nto1/Ptf2 activity dependence and Ptf1/Eaf6 activity dispensability remain source-reported functional distinctions, not assignments of structural ESSENTIAL or DISPENSABLE. The paper distinguishes maintaining from re-establishing heterochromatin and does not prove H3K14 is the sole substrate.
+
+### Fission-yeast reference proteins and localization citation placement
+
+scope: supported. Targets: GO:0036410.
+
+All five reviewed972h- reference identities and single-hit queries match. Species-level canonical context is not a claim that every strain constructed in Reddy is exactly the reference genome. COMMON keeps most-members/losses-exception semantics with qualitative support, not a measured census. Matsuyama2006 is verified at complete-abstract tier; the three cytoplasm evidence notes match the exact UniProt localization citation placement and are not used as complex-membership evidence.
+
+### Individual formation necessity remains unresolved
+
+grounding: unknown. Targets: GO:0036410.
+
+The record retains UNKNOWN component formation necessity. Positive membership, enzyme activity, viability and condition-specific oligomer observations do not alone establish universal individual assembly requirements. Optional additional interaction detail is not required merely because the paper contains it.
+
+### Whole maintained target
+
+completeness: supported. Targets: GO:0036410.
+
+All maintained scientific fields, attached evidence, graph scope and current discussion rationale were compared with the declared sources. No maintained images or datasets are introduced; old history is preserved and native scientific status is not promoted.
+
+## Findings
+
+### F1: Ground the Eaf6 row to its verified family
+
+minor / open / confirmed; issue key: mst2-eaf6-exact-family.
+
+The existing Eaf6 component remains REVIEWED_LABEL_ONLY although IPR015418 is the whole Eaf6 family and O14240 independently carries that match. Its use in NuA4/NuA3/MOZ complexes is shared biological deployment of the same class, not a reason to withhold this identity grounding.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground Eaf6 to InterPro:IPR015418 and narrow the current family TODO while preserving the four unresolved component classes and their supported membership.
+
+- Keep biological-role evidence separate from the family entry and retain broad MYST/scaffold/domain candidates as unresolved.
+- Pass schema, strict and applicable identifier/protein checks after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/mst2_histone_acetyltransferase_complex.yaml; Entire maintained record including definition, hierarchy, all components, examples, evidence, graphs, discussions and history | context_only | Every maintained field was read; historical curator statements are not inherited as present source-reading attestations. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component, ProteinExample, EssentialityEnum, PresenceEnum and causal-graph contracts | context_only | Membership, catalytic activity and growth are distinct from complex formation necessity. COMMON means present in most members with losses the exception. A protein example is an organism-specific instance, not a substitute for a component family. |
+| curation | docs/CURATION.md; Grounding and REVIEWED_LABEL_ONLY contracts | context_only | Exact whole-protein families differ from domains and broader paralog families; an optional unrepresented enrichment alone does not establish a defect. |
+| complex61-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0006298,GO:0006370,GO:0015437,GO:0031533,GO:0032991,GO:0036408,GO:0036409,GO:0036410,GO:0140513,GO:1902495,GO:1990199,GO:1990710; Complete target-relevant definitions, synonyms, comments and typed relationships; unrelated entries not used | supports | GO0036410 defines an H3K14 acetyltransferase with at least the five named fission-yeast proteins; its three exact synonyms, H3K14-complex parent and activity term agree. |
+| complex61-agent-go-0036410-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036410/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The exact is_a-only ancestor closure contains the maintained parent. This establishes the native class relation, not independent biological mechanism or prevalence. |
+| complex61-agent-tax-284812 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812; Complete exact ENA taxonomy response | supports | Native taxon 284812 is Schizosaccharomyces pombe 972h-, rank strain; this response's names and lineage were inspected. |
+| complex61-agent-tax-4896 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; Complete exact ENA taxonomy response | supports | Native taxon 4896 is Schizosaccharomyces pombe, rank species; this response's names and lineage were inspected. |
+| complex61-agent-protein-O14240 | https://rest.uniprot.org/uniprotkb/O14240.json; Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY and family crossreferences | supports | UniProtKB reviewed (Swiss-Prot): O14240, genes eaf6, aliases none, taxon 284812. Its own function, subunit, location and family annotations were inspected with their original evidence qualifiers. |
+| complex61-agent-protein-O60127 | https://rest.uniprot.org/uniprotkb/O60127.json; Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY and family crossreferences | supports | UniProtKB reviewed (Swiss-Prot): O60127, genes ptf2, aliases none, taxon 284812. Its own function, subunit, location and family annotations were inspected with their original evidence qualifiers. |
+| complex61-agent-protein-O74759 | https://rest.uniprot.org/uniprotkb/O74759.json; Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY and family crossreferences | supports | UniProtKB reviewed (Swiss-Prot): O74759, genes nto1, aliases none, taxon 284812. Its own function, subunit, location and family annotations were inspected with their original evidence qualifiers. |
+| complex61-agent-protein-Q10325 | https://rest.uniprot.org/uniprotkb/Q10325.json; Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY and family crossreferences | supports | UniProtKB reviewed (Swiss-Prot): Q10325, genes mst2, aliases none, taxon 284812. Its own function, subunit, location and family annotations were inspected with their original evidence qualifiers. |
+| complex61-agent-protein-Q9P6N2 | https://rest.uniprot.org/uniprotkb/Q9P6N2.json; Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY and family crossreferences | supports | UniProtKB reviewed (Swiss-Prot): Q9P6N2, genes ptf1, aliases none, taxon 284812. Its own function, subunit, location and family annotations were inspected with their original evidence qualifiers. |
+| complex61-agent-gene-mst2 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Amst2+AND+organism_id%3A284812+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete returned identity set | supports | The exact reviewed taxon-paired query returns Q10325. All returned identity/status/gene-token/organism fields were inspected. |
+| complex61-agent-gene-nto1 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Anto1+AND+organism_id%3A284812+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete returned identity set | supports | The exact reviewed taxon-paired query returns O74759. All returned identity/status/gene-token/organism fields were inspected. |
+| complex61-agent-gene-ptf2 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf2+AND+organism_id%3A284812+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete returned identity set | supports | The exact reviewed taxon-paired query returns O60127. All returned identity/status/gene-token/organism fields were inspected. |
+| complex61-agent-gene-ptf1 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf1+AND+organism_id%3A284812+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete returned identity set | supports | The exact reviewed taxon-paired query returns Q9P6N2. All returned identity/status/gene-token/organism fields were inspected. |
+| complex61-agent-gene-eaf6 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aeaf6+AND+organism_id%3A284812+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete returned identity set | supports | The exact reviewed taxon-paired query returns O14240. All returned identity/status/gene-token/organism fields were inspected. |
+| complex61-agent-pmid-16823372 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16823372+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED 16823372: ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe. Matsuyama A, Arai R, Yashiroda Y, Shirai A, Kamata A, Sekido S, Kobayashi Y, Hashimoto A, Hamamoto M, Hiraoka Y, Horinouchi S, Yoshida M. (2006), DOI 10.1038/nbt1222. Exact bibliographic identity and complete available abstract read; this is not full-body attestation. |
+| complex61-agent-pmid-21289066 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21289066+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED 21289066: Elimination of a specific histone H3K14 acetyltransferase complex bypasses the RNAi pathway to regulate pericentric heterochromatin functions. Reddy BD, Wang Y, Niu L, Higuchi EC, Marguerat SB, Bähler J, Smith GR, Jia S. (2011), DOI 10.1101/gad.1993611. Exact bibliographic identity and complete available abstract read; this is not full-body attestation. |
+| complex61-agent-reddy2011-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC3034895/?report=xml; Complete abstract, Results/Discussion sec1 including all Fig1–5 captions, and Materials/Methods sec2–5. Introduction, figure pixels, supplements and unpublished data not read. | supports | Reddy2011 identifies Mst2 as catalytic, describes Nto1/Ptf2 as required for activity and Ptf1/Eaf6 as not required for that activity, and tests suppression of RNAi-mutant phenotypes. Some characterization is attributed to unpublished Wang/Jia work or data not shown; main results establish the stated heterochromatin phenotype scope, not universal assembly necessity. |
+| access-reddy2011-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3034895/fullTextXML; Exact retained response only; no paper body inferred | context_only | The XML route returned HTTP500; genuine legacy full primary text was recovered separately. |
+| complex61-agent-ipr-IPR015418 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015418/; Exact entry identity, type, complete description, signatures and quality flags | supports | Native IPR015418 is type family, named Chromatin modification-related protein Eaf6. Complete descriptions, member signatures and machine-generation flags were inspected. Protein membership is established by the separately cited UniProt response. |
+| complex61-agent-ipr-IPR050701 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050701/; Exact entry identity, type, complete description, signatures and quality flags | supports | Native IPR050701 is type family, named Histone Modification Regulator. Complete descriptions, member signatures and machine-generation flags were inspected. Protein membership is established by the separately cited UniProt response. |
+| complex61-agent-ipr-IPR050603 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050603/; Exact entry identity, type, complete description, signatures and quality flags | supports | Native IPR050603 is type family, named MYST family histone acetyltransferases. Complete descriptions, member signatures and machine-generation flags were inspected. Protein membership is established by the separately cited UniProt response. |
+| access-panther-PTHR13793-SF107 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR13793:SF107/; Exact retained response only; no paper body inferred | context_only | The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is an access/query limitation, not evidence that the exact component family does not exist. |
+| access-panther-PTHR10615-SF161 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10615:SF161/; Exact retained response only; no paper body inferred | context_only | The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is an access/query limitation, not evidence that the exact component family does not exist. |
+| access-panther-PTHR28181-SF2 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR28181:SF2/; Exact retained response only; no paper body inferred | context_only | The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is an access/query limitation, not evidence that the exact component family does not exist. |
+| schema-result | just validate data/structures/other/mst2_histone_acetyltransferase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/mst2_histone_acetyltransferase_complex.yaml |
+| strict-result | just validate-strict data/structures/other/mst2_histone_acetyltransferase_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/mst2_histone_acetyltransferase_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/mst2_histone_acetyltransferase_complex.yaml  (GO:0036410)<br>  spombe_mst2_histone_h3k14_acetyltransferase_activity	mst2_complex_catalytic_subunit	COVERED	-&gt;mst2_complex_catalytic_subunit (UniProtKB:Q10325)<br>  spombe_mst2_histone_h3k14_acetyltransferase_activity	nto1_mst2_complex_subunit	COVERED	-&gt;nto1_mst2_complex_subunit (UniProtKB:O74759)<br>  spombe_mst2_histone_h3k14_acetyltransferase_activity	ptf2_mst2_complex_subunit	COVERED	-&gt;ptf2_mst2_complex_subunit (UniProtKB:O60127)<br>  spombe_mst2_histone_h3k14_acetyltransferase_activity	ptf1_mst2_complex_subunit	COVERED	-&gt;ptf1_mst2_complex_subunit (UniProtKB:Q9P6N2)<br>  spombe_mst2_histone_h3k14_acetyltransferase_activity	eaf6_mst2_complex_subunit	COVERED	-&gt;eaf6_mst2_complex_subunit (UniProtKB:O14240)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     5  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     5  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/mst2_histone_acetyltransferase_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 13 collected target identifiers returned OK. PMID:16823372: UNREACHABLE; Native Europe PMC uniquely identifies PMID:16823372: ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe. (2006), DOI10.1038/nbt1222. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:21289066: UNREACHABLE; Native Europe PMC uniquely identifies PMID:21289066: Elimination of a specific histone H3K14 acetyltransferase complex bypasses the RNAi pathway to regulate pericentric heterochromatin functions. (2011), DOI10.1101/gad.1993611. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicit source sections below were read. No figure pixels, supplements, raw experimental data or atomic coordinates were analysed. Native database annotation is distinguished from a newly inspected primary experiment.
+- Reddy2011 reports some biochemical characterization as unpublished or data not shown. Supplements, the later PMID22184112 body and the full Matsuyama localization dataset were not inspected; no raw activity result or exhaustive stoichiometry is certified.
+- Three empty PANTHER responses do not prove family absence. The other four component-family identities remain unresolved at this exact scope.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes qualified clean and issue-bearing reviews alike.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T090917Z-mst2-histone-acetyltransferase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mst2 histone acetyltransferase complex scientific review
+started_at: '2026-10-22T08:40:05Z'
+finished_at: '2026-10-22T09:09:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The five named fission-yeast members, activity distinctions, reference proteins
+  and coarse graph are supported. One minor resolves Eaf6 whole-family grounding;
+  broader candidates and assembly necessity remain bounded unknowns.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    sha256: ddbf7f44b54b5ac0f78470f3abf7551780aac7fd80849df29b75e77dd9d39a7c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0036410
+  path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  label: Mst2 histone acetyltransferase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one full maintained target and fourteen frozen local inputs,
+    including schema, review guidance, protein-example and causal-graph skills. Actual
+    primary/native reading scopes are declared per evidence row with original URL/UTC/hash
+    receipts.
+  selection: Target 9 of batch61, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0036410
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just validate data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just validate-strict data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims reviewed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims reviewed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0036410
+  summary: No expression-module inference is used to establish the structure.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex61-agent-go
+  - complex61-agent-go-0036410-ancestors
+  - complex61-agent-tax-284812
+  - complex61-agent-tax-4896
+  - complex61-agent-protein-O14240
+  - complex61-agent-protein-O60127
+  - complex61-agent-protein-O74759
+  - complex61-agent-protein-Q10325
+  - complex61-agent-protein-Q9P6N2
+  - complex61-agent-gene-mst2
+  - complex61-agent-gene-nto1
+  - complex61-agent-gene-ptf2
+  - complex61-agent-gene-ptf1
+  - complex61-agent-gene-eaf6
+  - complex61-agent-pmid-16823372
+  - complex61-agent-pmid-21289066
+  - complex61-agent-reddy2011-legacy
+  - access-reddy2011-xml
+  - complex61-agent-ipr-IPR015418
+  - complex61-agent-ipr-IPR050701
+  - complex61-agent-ipr-IPR050603
+  - access-panther-PTHR13793-SF107
+  - access-panther-PTHR10615-SF161
+  - access-panther-PTHR28181-SF2
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  summary: '11 of 13 collected target identifiers returned OK. PMID:16823372: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:16823372: ORFeome cloning and global
+    analysis of protein localization in the fission yeast Schizosaccharomyces pombe.
+    (2006), DOI10.1038/nbt1222. Identifier/bibliographic verification is separate
+    from the declared body or abstract scientific-reading scope.; PMID:21289066: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:21289066: Elimination of a specific
+    histone H3K14 acetyltransferase complex bypasses the RNAi pathway to regulate
+    pericentric heterochromatin functions. (2011), DOI10.1101/gad.1993611. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex61-agent-pmid-16823372
+  - complex61-agent-pmid-21289066
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036410
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  locator: Entire maintained record including definition, hierarchy, all components,
+    examples, evidence, graphs, discussions and history
+  accessed_at: '2026-10-22T08:54:52Z'
+  support: context_only
+  summary: Every maintained field was read; historical curator statements are not
+    inherited as present source-reading attestations.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, ProteinExample, EssentialityEnum, PresenceEnum and causal-graph
+    contracts
+  accessed_at: '2026-10-22T08:54:52Z'
+  support: context_only
+  summary: Membership, catalytic activity and growth are distinct from complex formation
+    necessity. COMMON means present in most members with losses the exception. A protein
+    example is an organism-specific instance, not a substitute for a component family.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Grounding and REVIEWED_LABEL_ONLY contracts
+  accessed_at: '2026-10-22T08:54:52Z'
+  support: context_only
+  summary: Exact whole-protein families differ from domains and broader paralog families;
+    an optional unrepresented enrichment alone does not establish a defect.
+- evidence_id: complex61-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0006298,GO:0006370,GO:0015437,GO:0031533,GO:0032991,GO:0036408,GO:0036409,GO:0036410,GO:0140513,GO:1902495,GO:1990199,GO:1990710
+  locator: Complete target-relevant definitions, synonyms, comments and typed relationships;
+    unrelated entries not used
+  accessed_at: '2026-10-22T08:44:13.522230Z'
+  support: supports
+  summary: GO0036410 defines an H3K14 acetyltransferase with at least the five named
+    fission-yeast proteins; its three exact synonyms, H3K14-complex parent and activity
+    term agree.
+  snapshot_sha256: 18f1b31f1932cadf2ab478899206385fd1c2b67756b8c25723a366cc5e297308
+- evidence_id: complex61-agent-go-0036410-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036410/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T08:44:21.409131Z'
+  support: supports
+  summary: The exact is_a-only ancestor closure contains the maintained parent. This
+    establishes the native class relation, not independent biological mechanism or
+    prevalence.
+  snapshot_sha256: f622f2a45fb55679ff5953fed764c1c7694610bc043893ba415c4066e2d7b56c
+- evidence_id: complex61-agent-tax-284812
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:44:15.857947Z'
+  support: supports
+  summary: Native taxon 284812 is Schizosaccharomyces pombe 972h-, rank strain; this
+    response's names and lineage were inspected.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: complex61-agent-tax-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:44:16.287909Z'
+  support: supports
+  summary: Native taxon 4896 is Schizosaccharomyces pombe, rank species; this response's
+    names and lineage were inspected.
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+- evidence_id: complex61-agent-protein-O14240
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O14240.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:13.522509Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): O14240, genes eaf6, aliases none, taxon
+    284812. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: f674025de1d3acaafd1398652f261ac37a855503a2b7e2818258ef871e39cae4
+- evidence_id: complex61-agent-protein-O60127
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O60127.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:14.186552Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): O60127, genes ptf2, aliases none, taxon
+    284812. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: 9f51923581e850305721e19f2f49e9930837b77dfb8e5328b69dd24f51c1e66e
+- evidence_id: complex61-agent-protein-O74759
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O74759.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:14.347219Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): O74759, genes nto1, aliases none, taxon
+    284812. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: 8ab2b6b0053a949d38f36595b08372d7f1f34dd97d27c897252d2ccd61d45f3c
+- evidence_id: complex61-agent-protein-Q10325
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q10325.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:15.226162Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q10325, genes mst2, aliases none, taxon
+    284812. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: b7248537d41c005a1d29429157d0fee91b08984a0d5fbf4b0a5c4226d6deac6f
+- evidence_id: complex61-agent-protein-Q9P6N2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9P6N2.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:15.653465Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q9P6N2, genes ptf1, aliases none, taxon
+    284812. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: 3626935a1f2c7f92800e59464de1b026cd87925c344992b6532cdc7ee6730faa
+- evidence_id: complex61-agent-gene-mst2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Amst2+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:22.328673Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns Q10325. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: 1c4429a2469e0b00651360d214ad26e153887db9f67818a535bc23d86eb4cf04
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Amst2+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-gene-nto1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Anto1+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:22.647261Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns O74759. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: 8b0e81baf3c2a443380a022d4d3ac547b9f563ee67bad40b9e3a407928551380
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Anto1+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-gene-ptf2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf2+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:23.068929Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns O60127. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: 249430717a0e5ab83b205b74440c02ddd023d6de03f218eae8f74c828422e16e
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf2+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-gene-ptf1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf1+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:23.148666Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns Q9P6N2. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: 656e957f60f8cd1fadd6f0ae47fa72e93de195450d9a18385c3e0f4448c6e577
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aptf1+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-gene-eaf6
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aeaf6+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:23.377215Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns O14240. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: b8f68f821d38741bea946a1948ca69cf924c4b554b44dc470a7f37077b9b8a8f
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aeaf6+AND+organism_id%3A284812+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-pmid-16823372
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16823372+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T08:44:18.118879Z'
+  support: supports
+  summary: 'MED 16823372: ORFeome cloning and global analysis of protein localization
+    in the fission yeast Schizosaccharomyces pombe. Matsuyama A, Arai R, Yashiroda
+    Y, Shirai A, Kamata A, Sekido S, Kobayashi Y, Hashimoto A, Hamamoto M, Hiraoka
+    Y, Horinouchi S, Yoshida M. (2006), DOI 10.1038/nbt1222. Exact bibliographic identity
+    and complete available abstract read; this is not full-body attestation.'
+  snapshot_sha256: bc97fb418a2596aeb5ce583afd10616b89a5b71b7d3e4557d84e566c4a67a992
+- evidence_id: complex61-agent-pmid-21289066
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21289066+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T08:44:18.621265Z'
+  support: supports
+  summary: 'MED 21289066: Elimination of a specific histone H3K14 acetyltransferase
+    complex bypasses the RNAi pathway to regulate pericentric heterochromatin functions.
+    Reddy BD, Wang Y, Niu L, Higuchi EC, Marguerat SB, Bähler J, Smith GR, Jia S.
+    (2011), DOI 10.1101/gad.1993611. Exact bibliographic identity and complete available
+    abstract read; this is not full-body attestation.'
+  snapshot_sha256: a0591ec6ebe883dd34ac0a9a71248de734be5ca60349b2b7d4a42ff0dd784b02
+- evidence_id: complex61-agent-reddy2011-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3034895/?report=xml
+  locator: Complete abstract, Results/Discussion sec1 including all Fig1–5 captions,
+    and Materials/Methods sec2–5. Introduction, figure pixels, supplements and unpublished
+    data not read.
+  accessed_at: '2026-10-22T08:46:10.543558Z'
+  support: supports
+  summary: Reddy2011 identifies Mst2 as catalytic, describes Nto1/Ptf2 as required
+    for activity and Ptf1/Eaf6 as not required for that activity, and tests suppression
+    of RNAi-mutant phenotypes. Some characterization is attributed to unpublished
+    Wang/Jia work or data not shown; main results establish the stated heterochromatin
+    phenotype scope, not universal assembly necessity.
+  snapshot_sha256: 70f97b816b161a84bf818e291593d54b7e08c79e4c009ca3192a472b09b44c80
+- evidence_id: access-reddy2011-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3034895/fullTextXML
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:10.491963Z'
+  support: context_only
+  summary: The XML route returned HTTP500; genuine legacy full primary text was recovered
+    separately.
+  snapshot_sha256: 2862d0174b88fe8cf313b93a1d12531fc51cedb9d2b353c4dc80f5ce00104d00
+- evidence_id: complex61-agent-ipr-IPR015418
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015418/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:12.452877Z'
+  support: supports
+  summary: Native IPR015418 is type family, named Chromatin modification-related protein
+    Eaf6. Complete descriptions, member signatures and machine-generation flags were
+    inspected. Protein membership is established by the separately cited UniProt response.
+  snapshot_sha256: f0f8cc13f4bfabdda7979150db997c8d8efdd154d06487861c357d28781b5878
+- evidence_id: complex61-agent-ipr-IPR050701
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050701/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:13.080412Z'
+  support: supports
+  summary: Native IPR050701 is type family, named Histone Modification Regulator.
+    Complete descriptions, member signatures and machine-generation flags were inspected.
+    Protein membership is established by the separately cited UniProt response.
+  snapshot_sha256: fb4d32df67a0213c1e82aa99f7fdf4635086b1fa4b440f683f48b516f827ceca
+- evidence_id: complex61-agent-ipr-IPR050603
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050603/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:13.870187Z'
+  support: supports
+  summary: Native IPR050603 is type family, named MYST family histone acetyltransferases.
+    Complete descriptions, member signatures and machine-generation flags were inspected.
+    Protein membership is established by the separately cited UniProt response.
+  snapshot_sha256: d3ebb8a4abbf6aeb37b5a408c909799df8cb7d70d10264873d162b7b679969d7
+- evidence_id: access-panther-PTHR13793-SF107
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR13793:SF107/
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:14.886852Z'
+  support: context_only
+  summary: The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is
+    an access/query limitation, not evidence that the exact component family does
+    not exist.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: access-panther-PTHR10615-SF161
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10615:SF161/
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:15.410758Z'
+  support: context_only
+  summary: The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is
+    an access/query limitation, not evidence that the exact component family does
+    not exist.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: access-panther-PTHR28181-SF2
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR28181:SF2/
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:15.450725Z'
+  support: context_only
+  summary: The candidate PANTHER subfamily endpoint returned HTTP204 empty. This is
+    an access/query limitation, not evidence that the exact component family does
+    not exist.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:40:06Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mst2_histone_acetyltransferase_complex.yaml'
+  snapshot_sha256: 00ab3c088c534acd2e0bda0f0ae765733f68584016e02cde7a931d40f117cf87
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:40:08Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mst2_histone_acetyltransferase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mst2_histone_acetyltransferase_complex-strict.tsv"
+  snapshot_sha256: 28f2f8381f15012c86746164839cadc739fb50a5380c69df8e8251f3107cec60
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:47:19.804392Z'
+  support: supports
+  summary: "data/structures/other/mst2_histone_acetyltransferase_complex.yaml  (GO:0036410)\n\
+    \  spombe_mst2_histone_h3k14_acetyltransferase_activity\tmst2_complex_catalytic_subunit\t\
+    COVERED\t->mst2_complex_catalytic_subunit (UniProtKB:Q10325)\n  spombe_mst2_histone_h3k14_acetyltransferase_activity\t\
+    nto1_mst2_complex_subunit\tCOVERED\t->nto1_mst2_complex_subunit (UniProtKB:O74759)\n\
+    \  spombe_mst2_histone_h3k14_acetyltransferase_activity\tptf2_mst2_complex_subunit\t\
+    COVERED\t->ptf2_mst2_complex_subunit (UniProtKB:O60127)\n  spombe_mst2_histone_h3k14_acetyltransferase_activity\t\
+    ptf1_mst2_complex_subunit\tCOVERED\t->ptf1_mst2_complex_subunit (UniProtKB:Q9P6N2)\n\
+    \  spombe_mst2_histone_h3k14_acetyltransferase_activity\teaf6_mst2_complex_subunit\t\
+    COVERED\t->eaf6_mst2_complex_subunit (UniProtKB:O14240)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     5  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     5  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: ef0dc13252c57f3215704782abdc5dd509a089ceebe65d9cd0cb240549b8b3e9
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:47:21.105259Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mst2_histone_acetyltransferase_complex.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 13 collected target identifiers returned OK. PMID:16823372: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:16823372: ORFeome cloning and global
+    analysis of protein localization in the fission yeast Schizosaccharomyces pombe.
+    (2006), DOI10.1038/nbt1222. Identifier/bibliographic verification is separate
+    from the declared body or abstract scientific-reading scope.; PMID:21289066: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:21289066: Elimination of a specific
+    histone H3K14 acetyltransferase complex bypasses the RNAi pathway to regulate
+    pericentric heterochromatin functions. (2011), DOI10.1101/gad.1993611. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Named complex with an explicitly nonexhaustive inventory
+  outcome: supported
+  target_ids:
+  - GO:0036410
+  summary: GO identity, all three exact synonyms and H3K14-complex parent agree. Five
+    represented members are supported by the primary report and their native identities.
+    The definition says at least five; the additional pdp3/tfg3 annotations in current
+    UniProt do not contradict this bounded inventory.
+  evidence_ids:
+  - record
+  - complex61-agent-go
+  - complex61-agent-go-0036410-ancestors
+  - complex61-agent-reddy2011-legacy
+  - complex61-agent-protein-O14240
+  - complex61-agent-protein-O60127
+  - complex61-agent-protein-O74759
+  - complex61-agent-protein-Q10325
+  - complex61-agent-protein-Q9P6N2
+- assessment_id: grounding
+  area: grounding
+  topic: Exact Eaf6 family versus broader candidates
+  outcome: concern
+  target_ids:
+  - GO:0036410
+  summary: IPR015418 is the whole Eaf6 family and O14240 independently matches it.
+    Its roles in several HAT complexes do not change its protein identity. MYST-family
+    IPR050603 and Histone Modification Regulator IPR050701 span broader classes and
+    have unchecked machine-generated descriptions; those descriptions are not primary
+    evidence. Ptf1 hydrolase families and unresolved Ptf2 do not establish exact Mst2-role-specific
+    families.
+  evidence_ids:
+  - record
+  - curation
+  - complex61-agent-ipr-IPR015418
+  - complex61-agent-ipr-IPR050701
+  - complex61-agent-ipr-IPR050603
+  - complex61-agent-protein-O14240
+  - complex61-agent-protein-O60127
+  - complex61-agent-protein-O74759
+  - complex61-agent-protein-Q10325
+  - complex61-agent-protein-Q9P6N2
+  - complex61-agent-gene-mst2
+  - complex61-agent-gene-nto1
+  - complex61-agent-gene-ptf2
+  - complex61-agent-gene-ptf1
+  - complex61-agent-gene-eaf6
+- assessment_id: graph
+  area: graph
+  topic: Activity versus assembly
+  outcome: supported
+  target_ids:
+  - GO:0036410
+  summary: The NONMECHANISTIC graph correctly limits itself to constituent membership
+    and H3K14 acetyltransferase activity. Nto1/Ptf2 activity dependence and Ptf1/Eaf6
+    activity dispensability remain source-reported functional distinctions, not assignments
+    of structural ESSENTIAL or DISPENSABLE. The paper distinguishes maintaining from
+    re-establishing heterochromatin and does not prove H3K14 is the sole substrate.
+  evidence_ids:
+  - record
+  - schema
+  - complex61-agent-go
+  - complex61-agent-reddy2011-legacy
+- assessment_id: scope
+  area: scope
+  topic: Fission-yeast reference proteins and localization citation placement
+  outcome: supported
+  target_ids:
+  - GO:0036410
+  summary: All five reviewed972h- reference identities and single-hit queries match.
+    Species-level canonical context is not a claim that every strain constructed in
+    Reddy is exactly the reference genome. COMMON keeps most-members/losses-exception
+    semantics with qualitative support, not a measured census. Matsuyama2006 is verified
+    at complete-abstract tier; the three cytoplasm evidence notes match the exact
+    UniProt localization citation placement and are not used as complex-membership
+    evidence.
+  evidence_ids:
+  - record
+  - schema
+  - complex61-agent-reddy2011-legacy
+  - complex61-agent-pmid-16823372
+  - complex61-agent-tax-284812
+  - complex61-agent-tax-4896
+  - complex61-agent-protein-O14240
+  - complex61-agent-protein-O60127
+  - complex61-agent-protein-O74759
+  - complex61-agent-protein-Q10325
+  - complex61-agent-protein-Q9P6N2
+  - complex61-agent-gene-mst2
+  - complex61-agent-gene-nto1
+  - complex61-agent-gene-ptf2
+  - complex61-agent-gene-ptf1
+  - complex61-agent-gene-eaf6
+- assessment_id: formation
+  area: grounding
+  topic: Individual formation necessity remains unresolved
+  outcome: unknown
+  target_ids:
+  - GO:0036410
+  summary: The record retains UNKNOWN component formation necessity. Positive membership,
+    enzyme activity, viability and condition-specific oligomer observations do not
+    alone establish universal individual assembly requirements. Optional additional
+    interaction detail is not required merely because the paper contains it.
+  evidence_ids:
+  - record
+  - schema
+  - complex61-agent-reddy2011-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target
+  outcome: supported
+  target_ids:
+  - GO:0036410
+  summary: All maintained scientific fields, attached evidence, graph scope and current
+    discussion rationale were compared with the declared sources. No maintained images
+    or datasets are introduced; old history is preserved and native scientific status
+    is not promoted.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex61-agent-go
+findings:
+- finding_id: F1
+  issue_key: mst2-eaf6-exact-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the Eaf6 row to its verified family
+  description: The existing Eaf6 component remains REVIEWED_LABEL_ONLY although IPR015418
+    is the whole Eaf6 family and O14240 independently carries that match. Its use
+    in NuA4/NuA3/MOZ complexes is shared biological deployment of the same class,
+    not a reason to withhold this identity grounding.
+  target_ids:
+  - GO:0036410
+  field_paths:
+  - components[4].grounding_status
+  - components[4].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - complex61-agent-ipr-IPR015418
+  - complex61-agent-protein-O14240
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope and family-grounding correspondence
+  native_severity: minor
+  normalization_reason: A bounded existing-row grounding correction preserves the
+    supported complex identity, membership and biological function.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0036410
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    role: maintained scientific record
+  description: Ground Eaf6 to InterPro:IPR015418 and narrow the current family TODO
+    while preserving the four unresolved component classes and their supported membership.
+  acceptance_checks:
+  - Keep biological-role evidence separate from the family entry and retain broad
+    MYST/scaffold/domain candidates as unresolved.
+  - Pass schema, strict and applicable identifier/protein checks after separately
+    authorized curation.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicit source sections below were read. No figure pixels, supplements,
+  raw experimental data or atomic coordinates were analysed. Native database annotation
+  is distinguished from a newly inspected primary experiment.
+- Reddy2011 reports some biochemical characterization as unpublished or data not shown.
+  Supplements, the later PMID22184112 body and the full Matsuyama localization dataset
+  were not inspected; no raw activity result or exhaustive stoichiometry is certified.
+- Three empty PANTHER responses do not prove family absence. The other four component-family
+  identities remain unresolved at this exact scope.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes qualified clean and issue-bearing reviews
+  alike.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

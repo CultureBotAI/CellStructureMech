@@ -22,6 +22,8 @@ components:
   gene_symbols:
   - ccmK
   - csoS1
+  - ccmK3
+  - ccmK4
   essentiality: ESSENTIAL
   role: Tile the shell facets; central pores admit bicarbonate and RuBP.
   evidence:
@@ -354,6 +356,33 @@ components:
         in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
         PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
         of P27134, as cited by UniProt.'
+  - uniprot_id: UniProtKB:O85042
+    protein_label: Carboxysome shell carbonic anhydrase
+    gene_symbol: csoS3
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus c2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene csoSCA, which UniProt lists
+      under the primary name csoS3, in Halothiobacillus neapolitanus c2, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10816046
+      notes: Baker SH et al. 2000, ‘Identification and localization of the carboxysome
+        peptide Csos3 and its corresponding gene in Thiobacillus neapolitanus.’, Arch
+        Microbiol. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of O85042.
+    - reference: PMID:14729686
+      notes: So AK et al. 2004, ‘A novel evolutionary lineage of carbonic anhydrase
+        (epsilon class) is a component of the carboxysome shell.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Carboxysome' localisation
+        of O85042.
+    - reference: PMID:17012396
+      notes: Heinhorst S et al. 2006, ‘Characterization of the carboxysomal carbonic
+        anhydrase CsoSCA from Halothiobacillus neapolitanus.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Carboxysome' localisation
+        of O85042.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The beta-carboxysome CcaA example has IPR045066, while alpha-carboxysome
     CsoSCA has IPR014074; they share no integrated InterPro family, so neither lineage-specific
@@ -602,7 +631,6 @@ causal_graphs:
   - node_id: shell
     label: carboxysome shell
     node_type: STRUCTURE
-    component_ref: bmc_h
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -617,7 +645,7 @@ causal_graphs:
     grounding: CHEBI:16526
   - node_id: rubisco
     label: RuBisCO
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: rubisco
   - node_id: fixation
     label: carbon fixation
@@ -685,7 +713,7 @@ causal_graphs:
     component_ref: scaffold
   - node_id: rubisco
     label: RuBisCO
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: rubisco
   - node_id: procarboxysome
     label: pre-carboxysome cargo condensate
@@ -702,6 +730,10 @@ causal_graphs:
     label: BMC-H shell hexamers
     node_type: GENE_OR_PROTEIN
     component_ref: bmc_h
+  - node_id: bmc_p
+    label: BMC-P shell pentamers (CcmL / CsoS4)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_p
   - node_id: shell
     label: carboxysome shell
     node_type: STRUCTURE
@@ -773,6 +805,18 @@ causal_graphs:
     - reference: PMID:23572529
       notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked
         trimers within the shell.
+  - subject: bmc_p
+    predicate: caps vertices of
+    object: shell
+    description: BMC-P pentamers (CcmL or CsoS4) cap the vertices of the icosahedral
+      carboxysome shell so it functions as a CO2 leakage barrier.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1913
+      notes: Yeates et al. 2008 describe BMC-P pentamers capping the vertices of the
+        icosahedral shell.
+    - reference: PMID:19844578
+      notes: Cai F et al. 2009 show that the pentameric vertex proteins are necessary
+        for the icosahedral carboxysome shell to function as a CO2 leakage barrier.
   - subject: shell
     predicate: encapsulates
     object: procarboxysome
@@ -789,6 +833,19 @@ causal_graphs:
     - reference: PMID:30520729
       notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
         carboxysome spacing.
+  - subject: mcdb
+    predicate: binds
+    object: shell
+    description: The partner protein McdB associates with the outer surface of assembled
+      carboxysome shells to couple carboxysomes to the nucleoid-bound McdA ATPase
+      gradient.
+    evidence:
+    - reference: PMID:30520729
+      notes: MacCready et al. 2018 demonstrated that McdB localizes to carboxysome
+        shells and interacts with McdA to distribute carboxysomes along the nucleoid.
+    - reference: PMID:34406783
+      notes: Hakim et al. 2021 dissected how McdB-bound carboxysome shells interact
+        with the McdA ATPase to drive carboxysome positioning along the nucleoid.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -907,6 +964,38 @@ curation_history:
   curator: claude-opus-4-7
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
+- timestamp: '2026-10-23T19:30:57Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: 'Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping
+    edge to carboxysome_assembly.'
+  llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2421: Added beta-carboxysome hexamer paralogue symbols ccmK3
+    and ccmK4 to components#bmc_h.gene_symbols to match Synechococcus elongatus PCC
+    7942 protein_examples.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating
+    since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers
+    (#2463).'
+  llm_assisted: true
+- timestamp: '2026-10-31T09:34:54Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type
+    to STRUCTURE.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

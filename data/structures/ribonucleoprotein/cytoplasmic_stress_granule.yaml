@@ -41,6 +41,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:14:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: cytoplasmic mRNP granule
   synonym_type: EXACT_SYNONYM
@@ -167,6 +174,24 @@ components:
   - reference: DOI:10.1242/jcs.045104
     notes: Grousl et al. 2009 showed that robust heat-shock stress granules in Saccharomyces
       contain eIF3 and small but not large ribosomal subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38249
+    protein_label: Eukaryotic translation initiation factor 3 subunit A
+    gene_symbol: RPG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene TIF32, which UniProt lists
+      under the primary name RPG1, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38249
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38249, the single reviewed entry
+        for gene TIF32 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -35,6 +35,8 @@ from linkml.validator import Validator
 from linkml.validator.plugins import JsonschemaValidationPlugin
 from linkml.validator.report import Severity
 
+from cellstructuremech.validation.validator import validate_record_semantics
+
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = _REPO_ROOT / "src" / "cellstructuremech" / "schema" / "cellstructuremech.yaml"
 DEFAULT_ROOTS = [_REPO_ROOT / "data" / "structures"]
@@ -135,6 +137,15 @@ def validate_one(path: Path) -> list[dict]:
             "path": result.instance_index or "",
             "message": result.message[:300],
         })
+    if isinstance(instance, dict):
+        for msg in validate_record_semantics(instance):
+            rows.append({
+                "file": str(path),
+                "category": "semantic_validation",
+                "detail": "",
+                "path": "",
+                "message": msg[:300],
+            })
     return rows
 
 
