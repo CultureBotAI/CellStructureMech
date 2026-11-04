@@ -1,0 +1,1072 @@
+# Cbf3 complex scientific review
+
+- Review: 20261022T044325Z-cbf3-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T04:25:48Z
+- Finished UTC: 2026-10-22T04:43:25Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+CBF3 identity, four yeast subunit classes, exact examples and bounded centromeric assembly graph are supported. One minor finding resolves the Skp1-family grounding.
+
+## Scope And Provenance
+
+Exactly one entire target reviewed for identity, source support, composition, scope, graph claims and completeness.
+
+Selection: Target 10 of batch45 in strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031518 | data/structures/other/cbf3_complex.yaml | maintained | CBF3 complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0031518 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0031518 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0031518 | Focused native check passed; claim-level support assessed separately. |
+| Focused native verify | passed | True | GO:0031518 | Focused native check passed; claim-level support assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0031518 | No expression-module claim is maintained. |
+| Claim-level scientific review | passed | True | GO:0031518 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0031518 | 12 of 14 collected target identifiers returned OK. PMID:10427094: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0031518 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0031518 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0031518 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0031518 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0031518 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Point-centromere CBF3 identity and parthood
+
+identity: supported. Targets: GO:0031518.
+
+GO0031518 identifies the four subunit classes and nuclear-protein-complex parent. Native centromeric parthood and primary kinetochore structures support the two maintained part_of claims; absence of a direct GO kinetochore edge alone is not a defect.
+
+### Four classes with a resolvable Skp1 family
+
+grounding: concern. Targets: GO:0031518.
+
+Ctf13/Skp1/Cep3/Ndc10 membership is supported. IPR016897 is the full Skp1 family, distinct from broader Skp1/elonginC and from the domain-only Ctf13/Cep3/Ndc10 candidates. A family identifies the protein class; the record separately states its CBF3 role.
+
+### Exact four yeast protein references
+
+grounding: supported. Targets: GO:0031518.
+
+All four reviewed S288C accessions and single-hit queries agree. NDC10 resolves to the native CBF2 primary name as explicitly stated; the historical alias cleanup is not a current error. Huh and Zeng localization citations are native annotation provenance, not sole membership evidence.
+
+### Conservative assembly labels
+
+grounding: unknown. Targets: GO:0031518.
+
+UNKNOWN is appropriate for an unresolved whole-component formation matrix. Skp1 interface substitutions and partial-core recovery give specific assembly evidence without converting all four entries to generic essentiality.
+
+### Yeast canonical system and construct boundaries
+
+scope: supported. Targets: GO:0031518.
+
+S.cerevisiae is the actual molecular source in the cited CBF3-centromere structure, despite recombinant insect-cell production. COMMON is qualitative normal point-centromere machinery present in most members with losses exceptional, not a numerical strain census.
+
+### Centromere recognition and kinetochore initiation
+
+evidence: supported. Targets: GO:0031518.
+
+Primary structures support sequence-specific DNA recognition and the early kinetochore context. The record does not claim a directly resolved complete downstream Cse4/Mif2 recruitment trajectory.
+
+### Bounded assembly graph
+
+graph: supported. Targets: GO:0031518.
+
+Ctf13-Skp1 interaction, core incorporation and DNA binding agree with the primary data. NONMECHANISTIC explicitly withholds complete contact stoichiometry and downstream recruitment.
+
+### Current grounding TODO is partly resolvable
+
+completeness: supported. Targets: GO:0031518.
+
+All maintained fields, history and discussion were reviewed. Skp1 has an exact available family despite the stated role-specific search concern; other inspected hits do not justify whole-protein substitutions.
+
+## Findings
+
+### F1: Ground Skp1 independently of its complex-specific role
+
+minor / open / confirmed; issue key: cbf3-skp1-family.
+
+IPR016897 is the full Skp1 family and is cross-referenced by P52286. The current note withholds grounding because it seeks a CURIE separating CBF3-specific Skp1 from other complex contexts. Protein-class grounding and its source-backed role are separate fields, so that requirement need not prevent this exact identity grounding.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground Skp1 to IPR016897 and retain its CBF3-specific role/evidence separately. Narrow the TODO while leaving domain-only Ctf13/Cep3/Ndc10 candidates unresolved.
+
+- Verify exact family identity and reconcile affected label-only notes and TODO scope.
+- Preserve supported examples and membership, with unresolved classes explicitly bounded.
+- Use guarded curation and pass applicable schema, strict, protein and graph checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/cbf3_complex.yaml; Entire maintained target, history, components, evidence, discussions and graphs | context_only | All maintained fields were read; history is provenance rather than independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Components, essentiality, COMMON and graph scope | context_only | Whole-protein families differ from domains and organism accessions; formation necessity differs from cellular or catalytic essentiality. COMMON means present in most members, with losses the exception. |
+| curation | docs/CURATION.md; Components and REVIEWED_LABEL_ONLY contract, especially lines159–160 | context_only | Reviewed label-only means no exact term exists; an explicitly verified exact family resolves a current gap despite a historical TODO. |
+| root45-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000775,GO:0000776,GO:0006270,GO:0006334,GO:0031518,GO:0032991,GO:0032993,GO:0033186,GO:0036387,GO:0036389,GO:0098796,GO:0140513,GO:1990100,GO:1990101,GO:1990102,GO:1990103,GO:7770042; All17 requested terms: complete id/name/active/definition/synonyms/comments and maintained relevant typed links; not all ontology descendants | supports | Native GO identities, definitions, synonyms and inspected maintained typed relationships support the exact complex classes. A missing direct relationship alone is not treated as disproving biologically sourced parthood. |
+| root45-sources-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Native id/title/authors/year/DOI and complete abstract | supports | MED14562095: Global analysis of protein localization in budding yeast. DOI 10.1038/nature02026. Complete native bibliographic identity and abstract read. This source was reviewed at abstract tier, with exact UniProt annotation provenance checked separately; its primary body was not read. |
+| root45-sources-pmid-10427094 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10427094+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Native id/title/authors/year/DOI and complete abstract | supports | MED10427094: Slk19p is a centromere protein that functions to stabilize mitotic spindles. DOI 10.1083/jcb.146.2.415. Complete native bibliographic identity and abstract read; body reading has its own evidence row. |
+| root45-sources-protein-P35203 | https://rest.uniprot.org/uniprotkb/P35203.json; Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro/Pfam xref ids | supports | Reviewed accession P35203 agrees with maintained name, gene/aliases and taxon; membership was assessed against separate complex sources. |
+| root45-sources-protein-P52286 | https://rest.uniprot.org/uniprotkb/P52286.json; Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro/Pfam xref ids | supports | Reviewed accession P52286 agrees with maintained name, gene/aliases and taxon; membership was assessed against separate complex sources. |
+| root45-sources-protein-P40969 | https://rest.uniprot.org/uniprotkb/P40969.json; Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro/Pfam xref ids | supports | Reviewed accession P40969 agrees with maintained name, gene/aliases and taxon; membership was assessed against separate complex sources. |
+| root45-sources-protein-P32504 | https://rest.uniprot.org/uniprotkb/P32504.json; Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and InterPro/Pfam xref ids | supports | Reviewed accession P32504 agrees with maintained name, gene/aliases and taxon; membership was assessed against separate complex sources. |
+| root45-sources-gene-CTF13 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACTF13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete result count, accession/status/name/gene/taxon fields | supports | Exact reviewed gene/taxon query returns the single maintained accession; complete result identity was inspected. |
+| root45-sources-gene-SKP1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASKP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete result count, accession/status/name/gene/taxon fields | supports | Exact reviewed gene/taxon query returns the single maintained accession; complete result identity was inspected. |
+| root45-sources-gene-CEP3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete result count, accession/status/name/gene/taxon fields | supports | Exact reviewed gene/taxon query returns the single maintained accession; complete result identity was inspected. |
+| root45-sources-gene-NDC10 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANDC10%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete result count, accession/status/name/gene/taxon fields | supports | Exact reviewed gene/taxon query returns the single maintained accession; complete result identity was inspected. |
+| root45-sources-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxonomy response | supports | ENA confirms the maintained taxonomic identity and lineage for 4932. |
+| root45-sources-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxonomy response | supports | ENA confirms the maintained taxonomic identity and lineage for 559292. |
+| root45-sources-ipr-IPR016897 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016897/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR016897 is a family named S-phase kinase-associated protein 1. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-ipr-IPR001232 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001232/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR001232 is a family named S-phase kinase-associated protein 1-like. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-ipr-IPR031760 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031760/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR031760 is a domain named Centromere DNA-binding protein complex CBF3 subunit B, C-terminal. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-ipr-IPR022210 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022210/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR022210 is a domain named Transcription activator GCR1-like domain. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-ipr-IPR062588 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR062588/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR062588 is a domain named CTF13, N-terminal domain. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-ipr-IPR063542 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR063542/; Complete native accession/name/type/description including curation/LLM flags; cross-referenced example identity checked separately | supports | IPR063542 is a domain named CTF13, C-terminal domain. Native class identity and its complete description were inspected; database descriptions do not replace primary evidence of complex membership. |
+| root45-sources-doi-3 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41594-018-0154-1&amp;format=json&amp;resultType=core; Complete DOI-selected native MED record and abstract | supports | Complete exact DOI query result confirms the cited bibliographic identity and abstract. Primary body inspection is recorded separately. |
+| root45-sources-doi-6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.15252%2Fembj.201798134&amp;format=json&amp;resultType=core; Complete DOI-selected native MED record and abstract | supports | Complete exact DOI query result confirms the cited bibliographic identity and abstract. Primary body inspection is recorded separately. |
+| root45-sources-xml-PMC5771398 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5771398/fullTextXML; Complete Results sec0003/0005/0006/0007 and Methods0012 including Fig1/EV1,3/EV2,4,5/EV3,6/EV4 captions; other sections and images not certified | supports | The yeast CBF3 core contains Cep3 dimer, Ctf13 and Skp1; Ndc10 dissociates during core preparation. Interface substitutions disrupt Skp1 incorporation. Four named subunit classes do not imply a four-copy assembly or a complete depletion matrix. |
+| root45-sources-xml-PMC6292502 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6292502/fullTextXML; Complete S2/S3/S7 including Table1 and Fig2–4 captions; other sections, images and supplements not certified | supports | Reconstituted S.cerevisiae CBF3 and CEN3 DNA establish centromeric contacts and dimeric architecture. Yeast coding sequences expressed in insect cells remain yeast molecular components; the Ndc10-DBD truncation and additional Ndc10 are experimental context. Cse4 deposition remains a model, not a directly observed complete trajectory. |
+| root45-sources-xml-PMC3206577 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3206577/fullTextXML; Complete Methods sec13 and Results sec18 including Fig2/3 captions; later results and images not read | supports | The inspected methods establish functional CBF2-GFP tagging and the results use Cbf2 as a centromere-control context in the Slk19/Kar3 study. The exact P32504 nuclear annotation was verified independently in UniProt; no uninspected Cbf2 localization result is claimed. |
+| schema-result | just validate data/structures/other/cbf3_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/cbf3_complex.yaml |
+| strict-result | just validate-strict data/structures/other/cbf3_complex.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/cbf3_complex.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv |
+| native-cbf3_complex-causal-graphs | /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cbf3_complex.yaml; Complete focused native report | supports | data/structures/other/cbf3_complex.yaml  (GO:0031518)<br>  cbf3_point_centromere_kinetochore_assembly	ctf13_subunit	COVERED	-&gt;ctf13_subunit (UniProtKB:P35203)<br>  cbf3_point_centromere_kinetochore_assembly	skp1_subunit	COVERED	-&gt;skp1_subunit (UniProtKB:P52286)<br>  cbf3_point_centromere_kinetochore_assembly	cep3_subunit	COVERED	-&gt;cep3_subunit (UniProtKB:P40969)<br>  cbf3_point_centromere_kinetochore_assembly	ndc10_cbf2_subunit	COVERED	-&gt;ndc10_cbf2_subunit (UniProtKB:P32504)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     4  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     4  total GENE_OR_PROTEIN causal nodes |
+| native-cbf3_complex-verify | /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/cbf3_complex.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/cbf3_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 12 of 14 collected target identifiers returned OK. PMID:10427094: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, raw experiments, supplemental datasets or sequence alignments were reanalyzed. Exact body reading scope is stated in each evidence row.
+- Huh2003 is complete-abstract plus exact native annotation only. Zeng1999 reading is limited to the stated methods/results; no independent complete Cbf2 localization experiment was certified.
+- Native domain hits were not exhaustively supplemented with every external family catalog. No absence claim is made for ungrounded subunits.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorizes reviews for all uncovered records, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T044325Z-cbf3-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cbf3 complex scientific review
+started_at: '2026-10-22T04:25:48Z'
+finished_at: '2026-10-22T04:43:25Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: CBF3 identity, four yeast subunit classes, exact examples and bounded centromeric
+  assembly graph are supported. One minor finding resolves the Skp1-family grounding.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/cbf3_complex.yaml
+    sha256: 8afa05438831e653a16909b6f127778342b1de47b324a3994c5f374937d9829a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031518
+  path: data/structures/other/cbf3_complex.yaml
+  label: CBF3 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cbf3_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph claims and completeness.
+  selection: Target 10 of batch45 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031518
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just validate data/structures/other/cbf3_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just validate-strict data/structures/other/cbf3_complex.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-cbf3_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cbf3_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-cbf3_complex-causal-graphs
+- check_id: native-cbf3_complex-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cbf3_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-cbf3_complex-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0031518
+  summary: No expression-module claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root45-sources-go
+  - root45-sources-pmid-14562095
+  - root45-sources-pmid-10427094
+  - root45-sources-protein-P35203
+  - root45-sources-protein-P52286
+  - root45-sources-protein-P40969
+  - root45-sources-protein-P32504
+  - root45-sources-gene-CTF13
+  - root45-sources-gene-SKP1
+  - root45-sources-gene-CEP3
+  - root45-sources-gene-NDC10
+  - root45-sources-tax4932
+  - root45-sources-tax559292
+  - root45-sources-ipr-IPR016897
+  - root45-sources-ipr-IPR001232
+  - root45-sources-ipr-IPR031760
+  - root45-sources-ipr-IPR022210
+  - root45-sources-ipr-IPR062588
+  - root45-sources-ipr-IPR063542
+  - root45-sources-doi-3
+  - root45-sources-doi-6
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+  - root45-sources-xml-PMC3206577
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  summary: '12 of 14 collected target identifiers returned OK. PMID:10427094: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:14562095:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root45-sources-pmid-10427094
+  - root45-sources-pmid-14562095
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031518
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/cbf3_complex.yaml
+  locator: Entire maintained target, history, components, evidence, discussions and
+    graphs
+  accessed_at: '2026-10-22T04:34:54Z'
+  support: context_only
+  summary: All maintained fields were read; history is provenance rather than independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Components, essentiality, COMMON and graph scope
+  accessed_at: '2026-10-22T04:34:54Z'
+  support: context_only
+  summary: Whole-protein families differ from domains and organism accessions; formation
+    necessity differs from cellular or catalytic essentiality. COMMON means present
+    in most members, with losses the exception.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and REVIEWED_LABEL_ONLY contract, especially lines159–160
+  accessed_at: '2026-10-22T04:34:54Z'
+  support: context_only
+  summary: Reviewed label-only means no exact term exists; an explicitly verified
+    exact family resolves a current gap despite a historical TODO.
+- evidence_id: root45-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000775,GO:0000776,GO:0006270,GO:0006334,GO:0031518,GO:0032991,GO:0032993,GO:0033186,GO:0036387,GO:0036389,GO:0098796,GO:0140513,GO:1990100,GO:1990101,GO:1990102,GO:1990103,GO:7770042
+  locator: 'All17 requested terms: complete id/name/active/definition/synonyms/comments
+    and maintained relevant typed links; not all ontology descendants'
+  accessed_at: '2026-10-22T04:26:42.196832Z'
+  support: supports
+  summary: Native GO identities, definitions, synonyms and inspected maintained typed
+    relationships support the exact complex classes. A missing direct relationship
+    alone is not treated as disproving biologically sourced parthood.
+  snapshot_sha256: cf8ada27d4abfce727f009911e1c8bb844cf82c075ee96f0802f36e12067e704
+- evidence_id: root45-sources-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Native id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:26:45.779721Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    DOI 10.1038/nature02026. Complete native bibliographic identity and abstract read.
+    This source was reviewed at abstract tier, with exact UniProt annotation provenance
+    checked separately; its primary body was not read.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: root45-sources-pmid-10427094
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10427094+AND+SRC%3AMED&format=json&resultType=core
+  locator: Native id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:26:45.336429Z'
+  support: supports
+  summary: 'MED10427094: Slk19p is a centromere protein that functions to stabilize
+    mitotic spindles. DOI 10.1083/jcb.146.2.415. Complete native bibliographic identity
+    and abstract read; body reading has its own evidence row.'
+  snapshot_sha256: 225ba8b22e78b5a886ff0e4811d5f2ed265d2a45a987d0800c349a668021b0d2
+- evidence_id: root45-sources-protein-P35203
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P35203.json
+  locator: Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and InterPro/Pfam xref ids
+  accessed_at: '2026-10-22T04:26:43.527221Z'
+  support: supports
+  summary: Reviewed accession P35203 agrees with maintained name, gene/aliases and
+    taxon; membership was assessed against separate complex sources.
+  snapshot_sha256: b7ac0e2d1e660c8e882898f8d58c3decbcc9e23ce70b6fb2126ef523012fbc28
+- evidence_id: root45-sources-protein-P52286
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P52286.json
+  locator: Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and InterPro/Pfam xref ids
+  accessed_at: '2026-10-22T04:26:43.725577Z'
+  support: supports
+  summary: Reviewed accession P52286 agrees with maintained name, gene/aliases and
+    taxon; membership was assessed against separate complex sources.
+  snapshot_sha256: 384b52723af6931a974983b14bd8a4064b1b36dcb976ac07a81b8fbf8c309823
+- evidence_id: root45-sources-protein-P40969
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40969.json
+  locator: Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and InterPro/Pfam xref ids
+  accessed_at: '2026-10-22T04:26:43.596461Z'
+  support: supports
+  summary: Reviewed accession P40969 agrees with maintained name, gene/aliases and
+    taxon; membership was assessed against separate complex sources.
+  snapshot_sha256: 75fb8c2b58c1436e83bfc12c58a4f95dead30bbea2b351fbfa2f4f7eb15bb1b6
+- evidence_id: root45-sources-protein-P32504
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32504.json
+  locator: Complete identity/status/name/genes/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and InterPro/Pfam xref ids
+  accessed_at: '2026-10-22T04:26:42.984811Z'
+  support: supports
+  summary: Reviewed accession P32504 agrees with maintained name, gene/aliases and
+    taxon; membership was assessed against separate complex sources.
+  snapshot_sha256: b783ceedfc9758cde2f501520f0d344c49da696f9d1ef8b5d1ad609d041a291c
+- evidence_id: root45-sources-gene-CTF13
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACTF13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:27:18.582302Z'
+  support: supports
+  summary: Exact reviewed gene/taxon query returns the single maintained accession;
+    complete result identity was inspected.
+  snapshot_sha256: 73fd0f00d38565ca289217eccf9b8265bb87c4ae463943d136d2c334f3f60730
+- evidence_id: root45-sources-gene-SKP1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASKP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:27:18.668020Z'
+  support: supports
+  summary: Exact reviewed gene/taxon query returns the single maintained accession;
+    complete result identity was inspected.
+  snapshot_sha256: d48806e41db085a4fc8c5d5c585b01bd3fcb3a7cbae52656786ef60352eae3ee
+- evidence_id: root45-sources-gene-CEP3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACEP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:27:19.030043Z'
+  support: supports
+  summary: Exact reviewed gene/taxon query returns the single maintained accession;
+    complete result identity was inspected.
+  snapshot_sha256: 57f9c786d5411057e1ffdd23c9299304e76f268a3cd21520ae9891d77e59781f
+- evidence_id: root45-sources-gene-NDC10
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANDC10%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:27:19.140796Z'
+  support: supports
+  summary: Exact reviewed gene/taxon query returns the single maintained accession;
+    complete result identity was inspected.
+  snapshot_sha256: 32261bf36b3ce28be0eee85677906862da986cfa5af86dbf260ba75d60c31377
+- evidence_id: root45-sources-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:26:42.197435Z'
+  support: supports
+  summary: ENA confirms the maintained taxonomic identity and lineage for 4932.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root45-sources-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:26:42.197742Z'
+  support: supports
+  summary: ENA confirms the maintained taxonomic identity and lineage for 559292.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root45-sources-ipr-IPR016897
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016897/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.052618Z'
+  support: supports
+  summary: IPR016897 is a family named S-phase kinase-associated protein 1. Native
+    class identity and its complete description were inspected; database descriptions
+    do not replace primary evidence of complex membership.
+  snapshot_sha256: e47550d5dfd19baea033f543ef6823c3e10ca974faaae5d49d823b994c794df7
+- evidence_id: root45-sources-ipr-IPR001232
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001232/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.265528Z'
+  support: supports
+  summary: IPR001232 is a family named S-phase kinase-associated protein 1-like. Native
+    class identity and its complete description were inspected; database descriptions
+    do not replace primary evidence of complex membership.
+  snapshot_sha256: b53bf5571f84de756d3b93f4d5a19006dbf485dee5970c88249fdd202ec46c71
+- evidence_id: root45-sources-ipr-IPR031760
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031760/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.381592Z'
+  support: supports
+  summary: IPR031760 is a domain named Centromere DNA-binding protein complex CBF3
+    subunit B, C-terminal. Native class identity and its complete description were
+    inspected; database descriptions do not replace primary evidence of complex membership.
+  snapshot_sha256: f294c0cc3c83c69350fb0de39053a5afd42062cb6d865c21666bcef3134bb605
+- evidence_id: root45-sources-ipr-IPR022210
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022210/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.512680Z'
+  support: supports
+  summary: IPR022210 is a domain named Transcription activator GCR1-like domain. Native
+    class identity and its complete description were inspected; database descriptions
+    do not replace primary evidence of complex membership.
+  snapshot_sha256: fc37d61bd0c9c45b679494e572f472b578e22688948c3db9dd84ae2d9c9880a5
+- evidence_id: root45-sources-ipr-IPR062588
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR062588/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.683455Z'
+  support: supports
+  summary: IPR062588 is a domain named CTF13, N-terminal domain. Native class identity
+    and its complete description were inspected; database descriptions do not replace
+    primary evidence of complex membership.
+  snapshot_sha256: 73f81b9f3346b9f4c7f8ae84099ca7e6c04f335c0fbba56a1de23dc19451eb24
+- evidence_id: root45-sources-ipr-IPR063542
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR063542/
+  locator: Complete native accession/name/type/description including curation/LLM
+    flags; cross-referenced example identity checked separately
+  accessed_at: '2026-10-22T04:27:17.616763Z'
+  support: supports
+  summary: IPR063542 is a domain named CTF13, C-terminal domain. Native class identity
+    and its complete description were inspected; database descriptions do not replace
+    primary evidence of complex membership.
+  snapshot_sha256: f5d44ee4f75fc4b36cb680088f7705d6b94c4920884f925d2af1f3f3f247aa6d
+- evidence_id: root45-sources-doi-3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41594-018-0154-1&format=json&resultType=core
+  locator: Complete DOI-selected native MED record and abstract
+  accessed_at: '2026-10-22T04:26:44.654153Z'
+  support: supports
+  summary: Complete exact DOI query result confirms the cited bibliographic identity
+    and abstract. Primary body inspection is recorded separately.
+  snapshot_sha256: abec6322ace00dfabd1889cedf0943bf478655940878291a0733590975a980a4
+- evidence_id: root45-sources-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.15252%2Fembj.201798134&format=json&resultType=core
+  locator: Complete DOI-selected native MED record and abstract
+  accessed_at: '2026-10-22T04:26:45.186822Z'
+  support: supports
+  summary: Complete exact DOI query result confirms the cited bibliographic identity
+    and abstract. Primary body inspection is recorded separately.
+  snapshot_sha256: c771fc911a812ab25e38d8c734640fa8e13f115188c619faa793db16a75037d3
+- evidence_id: root45-sources-xml-PMC5771398
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5771398/fullTextXML
+  locator: Complete Results sec0003/0005/0006/0007 and Methods0012 including Fig1/EV1,3/EV2,4,5/EV3,6/EV4
+    captions; other sections and images not certified
+  accessed_at: '2026-10-22T04:27:14.992291Z'
+  support: supports
+  summary: The yeast CBF3 core contains Cep3 dimer, Ctf13 and Skp1; Ndc10 dissociates
+    during core preparation. Interface substitutions disrupt Skp1 incorporation. Four
+    named subunit classes do not imply a four-copy assembly or a complete depletion
+    matrix.
+  snapshot_sha256: c8ca7b90221886f7d03a5b3cd48e7ade3052f3be35e50f737ecfe800c7d349ea
+- evidence_id: root45-sources-xml-PMC6292502
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6292502/fullTextXML
+  locator: Complete S2/S3/S7 including Table1 and Fig2–4 captions; other sections,
+    images and supplements not certified
+  accessed_at: '2026-10-22T04:27:14.992378Z'
+  support: supports
+  summary: Reconstituted S.cerevisiae CBF3 and CEN3 DNA establish centromeric contacts
+    and dimeric architecture. Yeast coding sequences expressed in insect cells remain
+    yeast molecular components; the Ndc10-DBD truncation and additional Ndc10 are
+    experimental context. Cse4 deposition remains a model, not a directly observed
+    complete trajectory.
+  snapshot_sha256: a50ead85ccc9a5732e92a112dc417d4d3412b62a59861510a705d6295c1b19f2
+- evidence_id: root45-sources-xml-PMC3206577
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3206577/fullTextXML
+  locator: Complete Methods sec13 and Results sec18 including Fig2/3 captions; later
+    results and images not read
+  accessed_at: '2026-10-22T04:27:15.931037Z'
+  support: supports
+  summary: The inspected methods establish functional CBF2-GFP tagging and the results
+    use Cbf2 as a centromere-control context in the Slk19/Kar3 study. The exact P32504
+    nuclear annotation was verified independently in UniProt; no uninspected Cbf2
+    localization result is claimed.
+  snapshot_sha256: 057daf698f6a1c2a91cf894793d9750c7f60bc82f7b5392baa1c65ae8bd8f5f1
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/cbf3_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:25:49Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/cbf3_complex.yaml'
+  snapshot_sha256: cf674363f3b092867a9e44d5c2e508bb4969acdf2791060fda46006df983a795
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/cbf3_complex.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:25:51Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/cbf3_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch45-20261022-mptgrq24/cbf3_complex-strict.tsv"
+  snapshot_sha256: 11d265ebfc564a321898a7664e76442c94c3a000c5e218d5c5a1610b12a54def
+- evidence_id: native-cbf3_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cbf3_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:27:02.136595Z'
+  support: supports
+  summary: "data/structures/other/cbf3_complex.yaml  (GO:0031518)\n  cbf3_point_centromere_kinetochore_assembly\t\
+    ctf13_subunit\tCOVERED\t->ctf13_subunit (UniProtKB:P35203)\n  cbf3_point_centromere_kinetochore_assembly\t\
+    skp1_subunit\tCOVERED\t->skp1_subunit (UniProtKB:P52286)\n  cbf3_point_centromere_kinetochore_assembly\t\
+    cep3_subunit\tCOVERED\t->cep3_subunit (UniProtKB:P40969)\n  cbf3_point_centromere_kinetochore_assembly\t\
+    ndc10_cbf2_subunit\tCOVERED\t->ndc10_cbf2_subunit (UniProtKB:P32504)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     4  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     4  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: f028d171b3b55fd59304e552aebec98f3c543e05a312100bc617d82e1397131f
+- evidence_id: native-cbf3_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cbf3_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:27:03.467285Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/cbf3_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 14 collected target identifiers returned OK. PMID:10427094: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:14562095:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Point-centromere CBF3 identity and parthood
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: GO0031518 identifies the four subunit classes and nuclear-protein-complex
+    parent. Native centromeric parthood and primary kinetochore structures support
+    the two maintained part_of claims; absence of a direct GO kinetochore edge alone
+    is not a defect.
+  evidence_ids:
+  - record
+  - root45-sources-go
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+- assessment_id: composition
+  area: grounding
+  topic: Four classes with a resolvable Skp1 family
+  outcome: concern
+  target_ids:
+  - GO:0031518
+  summary: Ctf13/Skp1/Cep3/Ndc10 membership is supported. IPR016897 is the full Skp1
+    family, distinct from broader Skp1/elonginC and from the domain-only Ctf13/Cep3/Ndc10
+    candidates. A family identifies the protein class; the record separately states
+    its CBF3 role.
+  evidence_ids:
+  - record
+  - curation
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+  - root45-sources-ipr-IPR016897
+  - root45-sources-ipr-IPR001232
+  - root45-sources-ipr-IPR031760
+  - root45-sources-ipr-IPR022210
+  - root45-sources-ipr-IPR062588
+  - root45-sources-ipr-IPR063542
+  - root45-sources-protein-P35203
+  - root45-sources-protein-P52286
+  - root45-sources-protein-P40969
+  - root45-sources-protein-P32504
+- assessment_id: examples
+  area: grounding
+  topic: Exact four yeast protein references
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: All four reviewed S288C accessions and single-hit queries agree. NDC10
+    resolves to the native CBF2 primary name as explicitly stated; the historical
+    alias cleanup is not a current error. Huh and Zeng localization citations are
+    native annotation provenance, not sole membership evidence.
+  evidence_ids:
+  - record
+  - root45-sources-xml-PMC3206577
+  - root45-sources-protein-P35203
+  - root45-sources-protein-P52286
+  - root45-sources-protein-P40969
+  - root45-sources-protein-P32504
+  - root45-sources-gene-CTF13
+  - root45-sources-gene-SKP1
+  - root45-sources-gene-CEP3
+  - root45-sources-gene-NDC10
+  - root45-sources-tax4932
+  - root45-sources-tax559292
+  - root45-sources-pmid-14562095
+  - root45-sources-pmid-10427094
+- assessment_id: necessity
+  area: grounding
+  topic: Conservative assembly labels
+  outcome: unknown
+  target_ids:
+  - GO:0031518
+  summary: UNKNOWN is appropriate for an unresolved whole-component formation matrix.
+    Skp1 interface substitutions and partial-core recovery give specific assembly
+    evidence without converting all four entries to generic essentiality.
+  evidence_ids:
+  - record
+  - schema
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+- assessment_id: scope
+  area: scope
+  topic: Yeast canonical system and construct boundaries
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: S.cerevisiae is the actual molecular source in the cited CBF3-centromere
+    structure, despite recombinant insect-cell production. COMMON is qualitative normal
+    point-centromere machinery present in most members with losses exceptional, not
+    a numerical strain census.
+  evidence_ids:
+  - record
+  - schema
+  - root45-sources-xml-PMC6292502
+  - root45-sources-xml-PMC5771398
+  - root45-sources-tax4932
+  - root45-sources-tax559292
+- assessment_id: function
+  area: evidence
+  topic: Centromere recognition and kinetochore initiation
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: Primary structures support sequence-specific DNA recognition and the early
+    kinetochore context. The record does not claim a directly resolved complete downstream
+    Cse4/Mif2 recruitment trajectory.
+  evidence_ids:
+  - record
+  - root45-sources-go
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+- assessment_id: graph
+  area: graph
+  topic: Bounded assembly graph
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: Ctf13-Skp1 interaction, core incorporation and DNA binding agree with the
+    primary data. NONMECHANISTIC explicitly withholds complete contact stoichiometry
+    and downstream recruitment.
+  evidence_ids:
+  - record
+  - root45-sources-xml-PMC5771398
+  - root45-sources-xml-PMC6292502
+- assessment_id: coverage
+  area: completeness
+  topic: Current grounding TODO is partly resolvable
+  outcome: supported
+  target_ids:
+  - GO:0031518
+  summary: All maintained fields, history and discussion were reviewed. Skp1 has an
+    exact available family despite the stated role-specific search concern; other
+    inspected hits do not justify whole-protein substitutions.
+  evidence_ids:
+  - record
+  - curation
+  - root45-sources-ipr-IPR016897
+  - root45-sources-ipr-IPR001232
+  - root45-sources-ipr-IPR031760
+  - root45-sources-ipr-IPR022210
+  - root45-sources-ipr-IPR062588
+  - root45-sources-ipr-IPR063542
+findings:
+- finding_id: F1
+  issue_key: cbf3-skp1-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground Skp1 independently of its complex-specific role
+  description: IPR016897 is the full Skp1 family and is cross-referenced by P52286.
+    The current note withholds grounding because it seeks a CURIE separating CBF3-specific
+    Skp1 from other complex contexts. Protein-class grounding and its source-backed
+    role are separate fields, so that requirement need not prevent this exact identity
+    grounding.
+  target_ids:
+  - GO:0031518
+  field_paths:
+  - components[1].grounding_status
+  - components[1].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - root45-sources-ipr-IPR016897
+  - root45-sources-protein-P52286
+  - root45-sources-xml-PMC5771398
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cbf3_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md REVIEWED_LABEL_ONLY
+  native_severity: minor
+  normalization_reason: Correct biological identity and membership; a verified exact
+    family makes this bounded grounding gap actionable. Historical search honesty
+    is not questioned.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031518
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cbf3_complex.yaml
+    role: maintained scientific record
+  description: Ground Skp1 to IPR016897 and retain its CBF3-specific role/evidence
+    separately. Narrow the TODO while leaving domain-only Ctf13/Cep3/Ndc10 candidates
+    unresolved.
+  acceptance_checks:
+  - Verify exact family identity and reconcile affected label-only notes and TODO
+    scope.
+  - Preserve supported examples and membership, with unresolved classes explicitly
+    bounded.
+  - Use guarded curation and pass applicable schema, strict, protein and graph checks.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw experiments, supplemental datasets or sequence alignments
+  were reanalyzed. Exact body reading scope is stated in each evidence row.
+- Huh2003 is complete-abstract plus exact native annotation only. Zeng1999 reading
+  is limited to the stated methods/results; no independent complete Cbf2 localization
+  experiment was certified.
+- Native domain hits were not exhaustively supplemented with every external family
+  catalog. No absence claim is made for ungrounded subunits.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes reviews for all uncovered records, including honest zero-finding
+  bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

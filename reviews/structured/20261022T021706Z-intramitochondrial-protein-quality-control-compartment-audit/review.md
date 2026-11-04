@@ -1,0 +1,1104 @@
+# Yeast IMiQ compartment identity, intervention and source-boundary review
+
+- Review: 20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T01:50:40Z
+- Finished UTC: 2026-10-22T02:17:06Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The yeast IMiQ identity,2018 intervention graph, sequestration/inheritance functions, native families and linked-image provenance are supported within the inspected scopes. Precise later2025 chaperone/strain explanations remain access-limited; no concrete contradiction or curation finding was established.
+
+## Scope And Provenance
+
+Full single target; two frozen boundary-neighbor identity portions; native identities/proteins/families/taxa/dataset, complete2018 scientific main text, bounded2018 supplement, specified2020 and2025 body portions and both actual Figure1 images.
+
+Selection: Batch31 target3; initial native inspect/schema/strict passed before assessment at immutable f97b1abe.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:intramitochondrial_protein_quality_control_compartment | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml | maintained | intramitochondrial protein quality control compartment |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native verify | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Read-only check passed; diagnostic coverage is assessed separately. |
+| Native causal-graphs | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Read-only check passed; diagnostic coverage is assessed separately. |
+| Focused native schema | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:intramitochondrial_protein_quality_control_compartment | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | 10 of 11 collected target identifiers returned OK. cellstructuremech:intramitochondrial_protein_quality_control_compartment: SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained intramitochondrial protein quality control compartment record at data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml. An anchored hidden/ignored-inclusive corpus search and exact input hash confirm reference identity, not all biological assertions. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:intramitochondrial_protein_quality_control_compartment | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Membrane-enclosed compartment versus cargo
+
+identity: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The source-defined yeast IMiQ compartment is distinct from the aggregate cargo alone. Broader parent0043231 is appropriate by definition and primary membrane enclosure, without claiming an exact GO identity or autonomous replication. The local identifier uniquely resolves in the full ignored-inclusive978-record corpus.
+
+### Yeast reporter model and strain boundaries
+
+scope: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Primary evidence supports budding yeast under engineered reporter induction; mouse DHFR/GFP origin does not establish native IMiQ taxa. Native S288C accessions are explicitly reference examples, separate from experiment backgrounds. The inspected2018 strain table verifies multiple backgrounds. No universal copy number or taxonomic prevalence is asserted.
+
+### Heterogeneous cargo and sequence-family identities
+
+grounding: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Variable coaggregating matrix cargo is not a single family or invariant engineered reporter. Hsp70 family grounding matches its family-level label; broader ClpA/B matches do not force an exact Hsp78-type grounding. Domain/site matches and general chaperone activities are not evidence of compartment composition.
+
+### Specific2025 localization, shell and exclusion claims
+
+evidence: unknown. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The complete2025 abstract supports broad chaperone recruitment and Hsp70-associated protection, but this review did not recover later Figures4–5 Results, the full Discussion or Methods. Specific Hsp78/Ssc1 localization versus sedimentation, conspicuous fis1 rings, Hsp60 alternative explanations and YPH499 details therefore remain independently unverified here. The record reports historical body inspection; present access limits do not establish that those historical statements are false.
+
+### Formation requirement versus association
+
+evidence: unknown. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Aggregate cargo defines the deposit material, while Hsp78 and Hsp70 remain associated machinery with UNKNOWN essentiality. Intervention-dependent organization does not prove invariant molecular membership, a fixed coat or formation necessity for every cargo/chaperone class.
+
+### Sequestration and biased inheritance
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The2018 primary data support insoluble matrix sequestration and approximately7-percent daughter aggregate inheritance versus98-percent control mitochondrial GFP under the cited induction/shutoff protocol. Preserved initial growth/import is qualified by prolonged-expression menadione sensitivity and cytochrome-b translation costs. Sequestration is not demonstrated clearance or universal benefit.
+
+### Seven bounded intervention and phenotype edges
+
+graph: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The2018 study supports all seven edges, including HSP78 morphology atFigure7A,C–D and100-microgram/ml benomyl for5hours. The graph explicitly preserves respiratory deficiency in its2018 fzo1 background and does not transfer the different2025 preparation. Genetic/pharmacologic effects do not identify direct binding, a molecular tether or temporal assembly order.
+
+### Proteomics provenance and limits
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The native PRIDE record verifies the accession, yeast taxon, publication, sample classes, SILAC and instrument. Its deposited project title differs from the target descriptive dataset title without changing identity. Affinity enrichment is not fixed structural stoichiometry; raw files and the paper Data availability section were not reanalyzed or newly certified.
+
+### Actual figures, caption scope and licenses
+
+evidence: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+Both linked Figure1 images were visually inspected and agree with their maintained captions. The2018 native JATS license is CC BY-NC-SA3.0 and image MD5 matches; the2025 publication uses User Licence1.2. OTHER is appropriate for these licenses and no image bytes are hosted in the maintained record.
+
+### Unresolved DUMP equivalence and candidate exclusions
+
+scope: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The2020 primary discussion argues distinction, whereas inspected2025 Introduction allows possible similarity/identity. Keeping DUMP equivalence open is justified; no human DUMP or lipid-regulatory mechanism is transferred. The biological principle distinguishing formation factors, cargo and associated machinery is sound, but later2025 panel-specific Hsp60 reasoning remains access-limited.
+
+### Bounded inventory and historical open questions
+
+completeness: supported. Targets: cellstructuremech:intramitochondrial_protein_quality_control_compartment.
+
+The record already separates reporter material, recruited machinery and intervention factors, and explicitly leaves prevalence, membrane composition, lifetime and exact Hsp78 identity unresolved. No optional complete inventory or physical measurement is invented as a missing required field.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml; Entire maintained record, all components, functions, seven graph edges, discussions, dataset and images | context_only | Every maintained claim was read; no scientific content, history or status changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, graph intervention states and essentiality | context_only | Constituent cargo, associated machinery, reference-sequence identity, experimental strain and formation necessity are separate claims. |
+| mitostore | data/structures/inclusion/mitostore.yaml; Identity, definition and boundary-context portions of frozen neighbor only | context_only | Boundary context was inspected; this does not certify the entire neighboring record or conflate its structure with IMiQ. |
+| mdc | data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; Identity, definition and boundary-context portions of frozen neighbor only | context_only | Boundary context was inspected; this does not certify the entire neighboring record or conflate its structure with IMiQ. |
+| imiq-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0016234; Complete exact labels, definitions, active flags and returned relations | supports | Active GO0043231 is a broader intracellular membrane-bounded organelle class. GO0016234 defines aggregated inclusion material and does not identify the entire membrane-enclosed IMiQ compartment. |
+| imiq-agent-local-identity | local:ignored-inclusive-parsed-corpus-identity; Entire search result and recorded exact scope | supports | An ignored-inclusive parsed search of all978 structure YAMLs finds exactly one matching identifier, exact label or IMiQ synonym: this target. This resolves the local minted identifier, not an exhaustive claim about external ontologies. |
+| imiq-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Exact taxId, scientificName, rank and lineage | supports | ENA confirms Saccharomyces cerevisiae for taxon4932. This native reference taxonomy does not reassign experimental strains. |
+| imiq-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Exact taxId, scientificName, rank and lineage | supports | ENA confirms Saccharomyces cerevisiae S288C for taxon559292. This native reference taxonomy does not reassign experimental strains. |
+| imiq-agent-bruderek2018-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1091%2Fmbc.E17-01-0027; Complete MED DOI/title/authors/year/PMID and abstract | supports | Exact native publication identity and complete abstract were read for bruderek2018. This is a primary study; abstract support remains bounded to its stated claims. |
+| imiq-agent-ruland2025-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1242%2Fjcs.263680; Complete MED DOI/title/authors/year/PMID and abstract | supports | Exact native publication identity and complete abstract were read for ruland2025. This is a primary study; abstract support remains bounded to its stated claims. |
+| imiq-agent-dump2020-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1126%2Fsciadv.abc7288; Complete MED DOI/title/authors/year/PMID and abstract | supports | Exact native publication identity and complete abstract were read for dump2020. This is a primary study; abstract support remains bounded to its stated claims. |
+| imiq-agent-bruderek2018-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/PMC5996957.1.xml; Entire scientific Introduction, all Results, Discussion and Methods; complete Figures1–7 captions. Supplementary data are limited to the separate listed table/protocol evidence; only Figure1 pixels separately inspected. | supports | The primary yeast reporter study demonstrates matrix-targeted sedimentable deposits, frequent perinuclear positioning, mother-biased retention and distinct HSP78/FZO1/FIS1/benomyl intervention phenotypes. Prolonged expression has stress/translation costs. Low biochemical chaperone co-sedimentation does not prove absence in all imaging conditions. |
+| imiq-agent-bruderek2018-supp-resumed | https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-s001.pdf; Supplement PDF TableS2 and opening immunofluorescence protocol only; TableS1 and remaining supplemental experiments not comprehensively analyzed. | supports | TableS2 distinguishes WVY49 wild type, BY4741 and rho-minus controls, ssc1-3 and deletion backgrounds. The hsp78/fzo1/fis1 deletion genotypes are BY4741-background strains. The source does not justify assigning a single reference strain to all experiments. |
+| imiq-agent-dump2020-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC7406381.1/PMC7406381.1.xml; Complete scientific Abstract, Introduction, Discussion and Conclusion only; no full Results/Methods or pixels audit. | supports | DUMP authors distinguish deposits within mitochondrial networks from perinuclear separated IMiQ; lipid mechanisms and human-cell observations belong to that source and are not transferred as IMiQ facts. |
+| imiq-agent-ruland2025-browser | https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key; Browser-displayed complete Abstract and Introduction; Results Analysis of amorphous aggregate formation and Fusion and fission are necessary, through first Figure3 caption, displayed lines412–483. Later chaperone Results, Discussion and Methods were not recovered. | supports | The inspected primary body supports matrix deposits bounded by mitochondrial membranes, reporter controls, altered fission/fusion morphology and unresolved DUMP similarity. Its respiratory-competent2025 fzo1 deletion preparation differs from the2018 respiratory-deficient context. The snapshot is browser output, not an attested HTTP200 native body response. |
+| imiq-agent-P33416 | https://rest.uniprot.org/uniprotkb/P33416.json; Complete entry status, protein/gene names, organism and annotation comments | supports | Reviewed S288C Hsp78 identity, primary HSP78 gene and mitochondrial chaperone context are confirmed. |
+| imiq-agent-P0CS90 | https://rest.uniprot.org/uniprotkb/P0CS90.json; Complete entry status, protein/gene names, organism and annotation comments | supports | Reviewed S288C mitochondrial import-motor subunit identity and SSC1 gene are confirmed. General import/chaperone function alone is not independent IMiQ localization evidence. |
+| imiq-agent-ipr-P33416 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200; Complete native match list and pagination, or exact family type/name/scope as appropriate | supports | All nine integrated matches, next=null, contain broader ClpA/B family matches and domains/sites/superfamilies; no exact Hsp78-type family is present in this bounded accession result. |
+| imiq-agent-ipr-P0CS90 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CS90/?page_size=200; Complete native match list and pagination, or exact family type/name/scope as appropriate | supports | All six integrated matches, next=null, include Hsp70 family IPR013126; family identity and localized recruitment remain distinct. |
+| imiq-agent-IPR001270 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/; Complete native match list and pagination, or exact family type/name/scope as appropriate | supports | The native family scope is broader than the exact Hsp78-type component. |
+| imiq-agent-IPR050130 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/; Complete native match list and pagination, or exact family type/name/scope as appropriate | supports | Native family name/type/scope is broader than Hsp78-type. Its automatically generated description is not promoted to experimental mechanistic evidence. |
+| imiq-agent-IPR013126 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/; Complete native match list and pagination, or exact family type/name/scope as appropriate | supports | The native entry identifies Heat shock protein70 family, matching the deliberately broad component label. |
+| imiq-agent-pride | https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD059828; Entire project identity, sample/data processing, instrument, publication and license metadata; no raw mass-spectrometry files downloaded or reanalyzed | supports | PXD059828 native project identity links the2025 paper, yeast taxon, SILAC, mitochondrial lysate/GFP-affinity workflows and Orbitrap Fusion Lumos. Its CC0 dataset license does not license publisher figures. |
+| imiq-agent-bruderek2018-fig1 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-g001.jpg; Actual complete Figure1 image pixels; corresponding main-text caption gives10-micrometer microscopy scales. | supports | All actual panels were visually inspected: reporter schematics, protection blots, fluorescence localization/controls and heat comparison. The image does not resolve mitochondrial membrane ultrastructure. Native image MD5 equals7d0f983ae366b95f1c5424f921e91b4e. |
+| imiq-agent-ruland2025-fig1 | https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/138/16/10.1242_jcs.263680/1/jcs26368001.png?Expires=1795000470&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&amp;Signature=pFjs7eQjgM2X91mkkJoeIhqlQsZBgTtaCC7-l4bwA9uMgTcXBcokPIbG1kNVsGRF2AJnePdY989SNI9bl3y~aKlTqgGtrCcELTBK7HKMaKBHQQx-~~Th3DxRivdUJ~UmOrmJdonhRNDBaAnX8Na8ysqz44BlOJLotQjfb3ooFe-cE6lQO0Q0XZT2m-mnr~0eoC9gmEGCVhT7cFVfS8F7rFUNjNHSgucb5uQculMTJAY0X6R9646UyBXNkJpTkpHk9QsnUzYb3xJv62FSWxMYff1kjqySX-0b9y9YZRWHrExjPaa0VzoXIiyD1lvFbOPD0yc0hzA6LIzom1~HlWBt6Q__; Actual complete Figure1 pixels and inspected publisher caption,2-micrometer microscopy scales. Transport receipt is the actual signed CDN URL; durable source is DOI10.1242/jcs.263680 Figure1 on the publisher article. | supports | All actual Figure1 panels were visually inspected: reporter diagram, blots, fluorescence/Sod2/DAPI and TEM. PanelE contains enlarged uncolored micrographs plus author-colored organelle outlines. These are not newly generated or edited images. |
+| imiq-agent-ruland2025-crossref | https://api.crossref.org/works/10.1242/jcs.263680; Exact DOI/title/authors and license URL/start/version fields | supports | Exact DOI metadata identifies the primary publication and User Licence1.2 for the version of record, not a Creative Commons image-hosting license. |
+| imiq-agent-biologists-license | https://www.biologists.com/user-licence-1-2/; Complete native User Licence1.2 terms | supports | The actual User Licence1.2 text permits specified personal research use and retains publisher restrictions. The record links to the figure without committing image bytes; dataset CC0 does not override paper terms. |
+| imiq-agent-verify | /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --verify; Complete native read-only log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| imiq-agent-causal-graphs | /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --causal-graphs; Complete native read-only log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 10 of 11 collected target identifiers returned OK. cellstructuremech:intramitochondrial_protein_quality_control_compartment: SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained intramitochondrial protein quality control compartment record at data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml. An anchored hidden/ignored-inclusive corpus search and exact input hash confirm reference identity, not all biological assertions. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Ruland2025 was read at complete native abstract, Introduction and early Results through the first Figure3 caption, plus actual Figure1 pixels. Later chaperone Results/Figures4–5, full Discussion and Methods were not recovered. Native publisher/VOR/CDN PDF requests returned403, minimal route404 and browser follow-ups failed or timed out. These are current access limits, not proof the maintained historical full-body reading did not occur.
+- Specific2025 Hsp78/Ssc1 localization, fis1 rings, Hsp60 cargo-versus-machinery reasoning and YPH499 assignment remain unknown in this review. Broad abstract recruitment is not substituted for panel-level verification.
+- The2018 full scientific main text and all main captions were read; only TableS2 and opening immunofluorescence protocol were read in its supplement. Only Figure1 pixels were inspected, not all main/supplemental images or raw measurements.
+- DUMP2020 was inspected only in its scientific Abstract, Introduction, Discussion and Conclusion. It does not resolve exact equivalence, authorize human IMiQ scope or transfer lipid mechanisms.
+- PRIDE metadata was read, not raw proteomics. No fixed shell stoichiometry, direct molecular tether, mitophagic disposal or molecular formation requirement is inferred from enrichment or perturbation.
+- Native family matches are exact accession-bounded queries, not an exhaustive authority-absence claim. Current local uniqueness covers all978 ignored-inclusive parsed records; historical886-record searches are preserved as historical context.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- Source URLs, original UTC access and SHA256 are retained, including actual signed image transport URL and durable article locator. No scientific promotion or corpus mutation; parent owns finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T021706Z-intramitochondrial-protein-quality-control-compartment-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Yeast IMiQ compartment identity, intervention and source-boundary review
+started_at: '2026-10-22T01:50:40Z'
+finished_at: '2026-10-22T02:17:06Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The yeast IMiQ identity,2018 intervention graph, sequestration/inheritance
+  functions, native families and linked-image provenance are supported within the
+  inspected scopes. Precise later2025 chaperone/strain explanations remain access-limited;
+  no concrete contradiction or curation finding was established.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/inclusion/mitostore.yaml
+    sha256: c932945c5ae1c4501b217b75333c4ae85551096cd4630bdae07f3ef84b0a7dd4
+    role: context
+  - path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    sha256: c7a83f3db0bb05a7016b5c3991e79bd21c9a6ec4f723335fc3a1d14864d1c5c8
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  label: intramitochondrial protein quality control compartment
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    role: maintained scientific record
+scope:
+  description: Full single target; two frozen boundary-neighbor identity portions;
+    native identities/proteins/families/taxa/dataset, complete2018 scientific main
+    text, bounded2018 supplement, specified2020 and2025 body portions and both actual
+    Figure1 images.
+  selection: Batch31 target3; initial native inspect/schema/strict passed before assessment
+    at immutable f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+checks:
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - imiq-agent-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - imiq-agent-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate-strict data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - mitostore
+  - mdc
+  - imiq-agent-go
+  - imiq-agent-local-identity
+  - imiq-agent-tax4932
+  - imiq-agent-tax559292
+  - imiq-agent-bruderek2018-meta
+  - imiq-agent-ruland2025-meta
+  - imiq-agent-dump2020-meta
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-bruderek2018-supp-resumed
+  - imiq-agent-dump2020-jats
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-P33416
+  - imiq-agent-P0CS90
+  - imiq-agent-ipr-P33416
+  - imiq-agent-ipr-P0CS90
+  - imiq-agent-IPR001270
+  - imiq-agent-IPR050130
+  - imiq-agent-IPR013126
+  - imiq-agent-pride
+  - imiq-agent-bruderek2018-fig1
+  - imiq-agent-ruland2025-fig1
+  - imiq-agent-ruland2025-crossref
+  - imiq-agent-biologists-license
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: '10 of 11 collected target identifiers returned OK. cellstructuremech:intramitochondrial_protein_quality_control_compartment:
+    SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained
+    intramitochondrial protein quality control compartment record at data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml.
+    An anchored hidden/ignored-inclusive corpus search and exact input hash confirm
+    reference identity, not all biological assertions. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - record
+  - imiq-agent-local-identity
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  locator: Entire maintained record, all components, functions, seven graph edges,
+    discussions, dataset and images
+  accessed_at: '2026-10-22T02:05:03Z'
+  support: context_only
+  summary: Every maintained claim was read; no scientific content, history or status
+    changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, graph intervention states and essentiality
+  accessed_at: '2026-10-22T02:05:03Z'
+  support: context_only
+  summary: Constituent cargo, associated machinery, reference-sequence identity, experimental
+    strain and formation necessity are separate claims.
+- evidence_id: mitostore
+  kind: record_content
+  reference: data/structures/inclusion/mitostore.yaml
+  locator: Identity, definition and boundary-context portions of frozen neighbor only
+  accessed_at: '2026-10-22T02:05:03Z'
+  support: context_only
+  summary: Boundary context was inspected; this does not certify the entire neighboring
+    record or conflate its structure with IMiQ.
+- evidence_id: mdc
+  kind: record_content
+  reference: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  locator: Identity, definition and boundary-context portions of frozen neighbor only
+  accessed_at: '2026-10-22T02:05:03Z'
+  support: context_only
+  summary: Boundary context was inspected; this does not certify the entire neighboring
+    record or conflate its structure with IMiQ.
+- evidence_id: imiq-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0016234
+  locator: Complete exact labels, definitions, active flags and returned relations
+  accessed_at: '2026-10-22T01:51:17.617318Z'
+  support: supports
+  summary: Active GO0043231 is a broader intracellular membrane-bounded organelle
+    class. GO0016234 defines aggregated inclusion material and does not identify the
+    entire membrane-enclosed IMiQ compartment.
+  snapshot_sha256: decd25d42e9176aff35e97f32bba55bff2ce44ec55865ace7fa8266592545a2b
+- evidence_id: imiq-agent-local-identity
+  kind: record_content
+  reference: local:ignored-inclusive-parsed-corpus-identity
+  locator: Entire search result and recorded exact scope
+  accessed_at: '2026-10-22T02:04:12.801373Z'
+  support: supports
+  summary: 'An ignored-inclusive parsed search of all978 structure YAMLs finds exactly
+    one matching identifier, exact label or IMiQ synonym: this target. This resolves
+    the local minted identifier, not an exhaustive claim about external ontologies.'
+  snapshot_sha256: b6d42efb8bb02d98ac6efb7414ab531ac8cf727ea7281310d0609955da1c8698
+- evidence_id: imiq-agent-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:51:17.617550Z'
+  support: supports
+  summary: ENA confirms Saccharomyces cerevisiae for taxon4932. This native reference
+    taxonomy does not reassign experimental strains.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: imiq-agent-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:51:17.617641Z'
+  support: supports
+  summary: ENA confirms Saccharomyces cerevisiae S288C for taxon559292. This native
+    reference taxonomy does not reassign experimental strains.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: imiq-agent-bruderek2018-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1091%2Fmbc.E17-01-0027
+  locator: Complete MED DOI/title/authors/year/PMID and abstract
+  accessed_at: '2026-10-22T01:51:16.043414Z'
+  support: supports
+  summary: Exact native publication identity and complete abstract were read for bruderek2018.
+    This is a primary study; abstract support remains bounded to its stated claims.
+  snapshot_sha256: 7c055ceaa2aaf5b08a6bf1703ab944e71b0e9d8fbe6663bb2757eb6e4dcddce0
+- evidence_id: imiq-agent-ruland2025-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1242%2Fjcs.263680
+  locator: Complete MED DOI/title/authors/year/PMID and abstract
+  accessed_at: '2026-10-22T01:51:16.043614Z'
+  support: supports
+  summary: Exact native publication identity and complete abstract were read for ruland2025.
+    This is a primary study; abstract support remains bounded to its stated claims.
+  snapshot_sha256: 45d1677e1d9c0271a044fb373ab0e58ceee543a1cefd18fd3f894d75b3654282
+- evidence_id: imiq-agent-dump2020-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1126%2Fsciadv.abc7288
+  locator: Complete MED DOI/title/authors/year/PMID and abstract
+  accessed_at: '2026-10-22T01:51:17.275808Z'
+  support: supports
+  summary: Exact native publication identity and complete abstract were read for dump2020.
+    This is a primary study; abstract support remains bounded to its stated claims.
+  snapshot_sha256: 2580d3e4946b83b60559c5857c93a490fbe4a88644aaee9804073055a2edc070
+- evidence_id: imiq-agent-bruderek2018-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/PMC5996957.1.xml
+  locator: Entire scientific Introduction, all Results, Discussion and Methods; complete
+    Figures1–7 captions. Supplementary data are limited to the separate listed table/protocol
+    evidence; only Figure1 pixels separately inspected.
+  accessed_at: '2026-10-22T01:51:50.210297Z'
+  support: supports
+  summary: The primary yeast reporter study demonstrates matrix-targeted sedimentable
+    deposits, frequent perinuclear positioning, mother-biased retention and distinct
+    HSP78/FZO1/FIS1/benomyl intervention phenotypes. Prolonged expression has stress/translation
+    costs. Low biochemical chaperone co-sedimentation does not prove absence in all
+    imaging conditions.
+  snapshot_sha256: 794a8b8a1053c852b9188826194230175c1e74acdb4e66f150df3e57056fbff4
+- evidence_id: imiq-agent-bruderek2018-supp-resumed
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-s001.pdf
+  locator: Supplement PDF TableS2 and opening immunofluorescence protocol only; TableS1
+    and remaining supplemental experiments not comprehensively analyzed.
+  accessed_at: '2026-10-22T02:00:42.091724Z'
+  support: supports
+  summary: TableS2 distinguishes WVY49 wild type, BY4741 and rho-minus controls, ssc1-3
+    and deletion backgrounds. The hsp78/fzo1/fis1 deletion genotypes are BY4741-background
+    strains. The source does not justify assigning a single reference strain to all
+    experiments.
+  snapshot_sha256: 14ae80dea3bc92be30c992d0e9150b4082d6540662aca170b2a46d7c228759da
+- evidence_id: imiq-agent-dump2020-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7406381.1/PMC7406381.1.xml
+  locator: Complete scientific Abstract, Introduction, Discussion and Conclusion only;
+    no full Results/Methods or pixels audit.
+  accessed_at: '2026-10-22T01:51:50.210578Z'
+  support: supports
+  summary: DUMP authors distinguish deposits within mitochondrial networks from perinuclear
+    separated IMiQ; lipid mechanisms and human-cell observations belong to that source
+    and are not transferred as IMiQ facts.
+  snapshot_sha256: c8c8b80aa59c08a99bb4664a58b2d579a381241265e901303acfd34d2c3c9d1b
+- evidence_id: imiq-agent-ruland2025-browser
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  locator: Browser-displayed complete Abstract and Introduction; Results Analysis
+    of amorphous aggregate formation and Fusion and fission are necessary, through
+    first Figure3 caption, displayed lines412–483. Later chaperone Results, Discussion
+    and Methods were not recovered.
+  accessed_at: '2026-10-22T01:54:25Z'
+  support: supports
+  summary: The inspected primary body supports matrix deposits bounded by mitochondrial
+    membranes, reporter controls, altered fission/fusion morphology and unresolved
+    DUMP similarity. Its respiratory-competent2025 fzo1 deletion preparation differs
+    from the2018 respiratory-deficient context. The snapshot is browser output, not
+    an attested HTTP200 native body response.
+  snapshot_sha256: 551e25c72b26e2772befaea11c55eed24e7ea85538937a69bd2f9a5fa0b68fae
+- evidence_id: imiq-agent-P33416
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P33416.json
+  locator: Complete entry status, protein/gene names, organism and annotation comments
+  accessed_at: '2026-10-22T01:51:17.619417Z'
+  support: supports
+  summary: Reviewed S288C Hsp78 identity, primary HSP78 gene and mitochondrial chaperone
+    context are confirmed.
+  snapshot_sha256: bf59e546b5cce1e31ae58140fdd5adcae71159693e3d628ddb5b5dbec385da19
+- evidence_id: imiq-agent-P0CS90
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0CS90.json
+  locator: Complete entry status, protein/gene names, organism and annotation comments
+  accessed_at: '2026-10-22T01:51:18.535257Z'
+  support: supports
+  summary: Reviewed S288C mitochondrial import-motor subunit identity and SSC1 gene
+    are confirmed. General import/chaperone function alone is not independent IMiQ
+    localization evidence.
+  snapshot_sha256: 4df0de893445eb18540f618d07d81e9f05c76edae6083cc2aa2e0419e36f0d50
+- evidence_id: imiq-agent-ipr-P33416
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+  locator: Complete native match list and pagination, or exact family type/name/scope
+    as appropriate
+  accessed_at: '2026-10-22T01:51:18.534970Z'
+  support: supports
+  summary: All nine integrated matches, next=null, contain broader ClpA/B family matches
+    and domains/sites/superfamilies; no exact Hsp78-type family is present in this
+    bounded accession result.
+  snapshot_sha256: 371cfdd22ff27bb840a73ea823bc75a849ff53f83a8637c7f386a923149e309f
+- evidence_id: imiq-agent-ipr-P0CS90
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CS90/?page_size=200
+  locator: Complete native match list and pagination, or exact family type/name/scope
+    as appropriate
+  accessed_at: '2026-10-22T01:51:18.536141Z'
+  support: supports
+  summary: All six integrated matches, next=null, include Hsp70 family IPR013126;
+    family identity and localized recruitment remain distinct.
+  snapshot_sha256: 9e827587d94b39905ce28c4724cc9c58c87c6095b2610e1b5ac9435d4c1164a1
+- evidence_id: imiq-agent-IPR001270
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/
+  locator: Complete native match list and pagination, or exact family type/name/scope
+    as appropriate
+  accessed_at: '2026-10-22T01:51:18.650830Z'
+  support: supports
+  summary: The native family scope is broader than the exact Hsp78-type component.
+  snapshot_sha256: ed0a09c17fa611e58cd0d00b904d4dce2757228cd7e411301eddcfb9b391e0dd
+- evidence_id: imiq-agent-IPR050130
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+  locator: Complete native match list and pagination, or exact family type/name/scope
+    as appropriate
+  accessed_at: '2026-10-22T01:51:18.730554Z'
+  support: supports
+  summary: Native family name/type/scope is broader than Hsp78-type. Its automatically
+    generated description is not promoted to experimental mechanistic evidence.
+  snapshot_sha256: e654bc8d2d359d203a225be0690247071616a63341156fcd507f197717f78701
+- evidence_id: imiq-agent-IPR013126
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013126/
+  locator: Complete native match list and pagination, or exact family type/name/scope
+    as appropriate
+  accessed_at: '2026-10-22T01:51:19.713421Z'
+  support: supports
+  summary: The native entry identifies Heat shock protein70 family, matching the deliberately
+    broad component label.
+  snapshot_sha256: 43e5cb816d24b41f9660bca2ce79602ba65d8013352745427fc0fb1f4a3a6d9c
+- evidence_id: imiq-agent-pride
+  kind: database
+  reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD059828
+  locator: Entire project identity, sample/data processing, instrument, publication
+    and license metadata; no raw mass-spectrometry files downloaded or reanalyzed
+  accessed_at: '2026-10-22T01:51:20.235737Z'
+  support: supports
+  summary: PXD059828 native project identity links the2025 paper, yeast taxon, SILAC,
+    mitochondrial lysate/GFP-affinity workflows and Orbitrap Fusion Lumos. Its CC0
+    dataset license does not license publisher figures.
+  snapshot_sha256: 8f422f81a3488e90ccff15b071153003f2cfc654dae2fa2b02c638f7dc4b3047
+- evidence_id: imiq-agent-bruderek2018-fig1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5996957.1/mbc-29-256-g001.jpg
+  locator: Actual complete Figure1 image pixels; corresponding main-text caption gives10-micrometer
+    microscopy scales.
+  accessed_at: '2026-10-22T01:57:15.449905Z'
+  support: supports
+  summary: 'All actual panels were visually inspected: reporter schematics, protection
+    blots, fluorescence localization/controls and heat comparison. The image does
+    not resolve mitochondrial membrane ultrastructure. Native image MD5 equals7d0f983ae366b95f1c5424f921e91b4e.'
+  snapshot_sha256: dd127988653bf020aff14d986ad10265458e1deb71d26ef0a18296924eb2ccba
+- evidence_id: imiq-agent-ruland2025-fig1
+  kind: primary_source
+  reference: https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/138/16/10.1242_jcs.263680/1/jcs26368001.png?Expires=1795000470&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&Signature=pFjs7eQjgM2X91mkkJoeIhqlQsZBgTtaCC7-l4bwA9uMgTcXBcokPIbG1kNVsGRF2AJnePdY989SNI9bl3y~aKlTqgGtrCcELTBK7HKMaKBHQQx-~~Th3DxRivdUJ~UmOrmJdonhRNDBaAnX8Na8ysqz44BlOJLotQjfb3ooFe-cE6lQO0Q0XZT2m-mnr~0eoC9gmEGCVhT7cFVfS8F7rFUNjNHSgucb5uQculMTJAY0X6R9646UyBXNkJpTkpHk9QsnUzYb3xJv62FSWxMYff1kjqySX-0b9y9YZRWHrExjPaa0VzoXIiyD1lvFbOPD0yc0hzA6LIzom1~HlWBt6Q__
+  locator: Actual complete Figure1 pixels and inspected publisher caption,2-micrometer
+    microscopy scales. Transport receipt is the actual signed CDN URL; durable source
+    is DOI10.1242/jcs.263680 Figure1 on the publisher article.
+  accessed_at: '2026-10-22T02:00:42.091304Z'
+  support: supports
+  summary: 'All actual Figure1 panels were visually inspected: reporter diagram, blots,
+    fluorescence/Sod2/DAPI and TEM. PanelE contains enlarged uncolored micrographs
+    plus author-colored organelle outlines. These are not newly generated or edited
+    images.'
+  snapshot_sha256: 595b17acb6e4da7d2d237c8e2ad5d198f125da244d5388095510df88feffef9e
+- evidence_id: imiq-agent-ruland2025-crossref
+  kind: database
+  reference: https://api.crossref.org/works/10.1242/jcs.263680
+  locator: Exact DOI/title/authors and license URL/start/version fields
+  accessed_at: '2026-10-22T01:51:20.236655Z'
+  support: supports
+  summary: Exact DOI metadata identifies the primary publication and User Licence1.2
+    for the version of record, not a Creative Commons image-hosting license.
+  snapshot_sha256: 537618b1ca85c8098f57c7b48a2eda6b0146492598c018cfaeafaa523282bc52
+- evidence_id: imiq-agent-biologists-license
+  kind: authority
+  reference: https://www.biologists.com/user-licence-1-2/
+  locator: Complete native User Licence1.2 terms
+  accessed_at: '2026-10-22T01:51:20.348779Z'
+  support: supports
+  summary: The actual User Licence1.2 text permits specified personal research use
+    and retains publisher restrictions. The record links to the figure without committing
+    image bytes; dataset CC0 does not override paper terms.
+  snapshot_sha256: 63324eb545e0e639456c5f1b7cd1e6d7da5431e7b298f3d93e2ed16f535a85bd
+- evidence_id: imiq-agent-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --verify
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T01:55:23.621660Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: imiq-agent-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --causal-graphs
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T01:55:24.208838Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:50:41Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml'
+  snapshot_sha256: e67bcd19751dfeb834be83b2f93bdfbbb269606f4ea158976f88b2032ff8e553
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:50:43Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml\
+    \ --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch31-20261022-ag46a4d4/intramitochondrial_protein_quality_control_compartment-strict.tsv"
+  snapshot_sha256: da49adc1fa0f07e8573d66fbdaa207383d231b989740715ceb1cad20bf0bf206
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '10 of 11 collected target identifiers returned OK. cellstructuremech:intramitochondrial_protein_quality_control_compartment:
+    SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained
+    intramitochondrial protein quality control compartment record at data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml.
+    An anchored hidden/ignored-inclusive corpus search and exact input hash confirm
+    reference identity, not all biological assertions. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Membrane-enclosed compartment versus cargo
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The source-defined yeast IMiQ compartment is distinct from the aggregate
+    cargo alone. Broader parent0043231 is appropriate by definition and primary membrane
+    enclosure, without claiming an exact GO identity or autonomous replication. The
+    local identifier uniquely resolves in the full ignored-inclusive978-record corpus.
+  evidence_ids:
+  - record
+  - imiq-agent-go
+  - imiq-agent-local-identity
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-bruderek2018-fig1
+  - imiq-agent-ruland2025-fig1
+  - mitostore
+  - mdc
+- assessment_id: scope
+  area: scope
+  topic: Yeast reporter model and strain boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: Primary evidence supports budding yeast under engineered reporter induction;
+    mouse DHFR/GFP origin does not establish native IMiQ taxa. Native S288C accessions
+    are explicitly reference examples, separate from experiment backgrounds. The inspected2018
+    strain table verifies multiple backgrounds. No universal copy number or taxonomic
+    prevalence is asserted.
+  evidence_ids:
+  - record
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-bruderek2018-supp-resumed
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-tax4932
+  - imiq-agent-tax559292
+  - imiq-agent-P33416
+  - imiq-agent-P0CS90
+- assessment_id: composition
+  area: grounding
+  topic: Heterogeneous cargo and sequence-family identities
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: Variable coaggregating matrix cargo is not a single family or invariant
+    engineered reporter. Hsp70 family grounding matches its family-level label; broader
+    ClpA/B matches do not force an exact Hsp78-type grounding. Domain/site matches
+    and general chaperone activities are not evidence of compartment composition.
+  evidence_ids:
+  - record
+  - schema
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-P33416
+  - imiq-agent-P0CS90
+  - imiq-agent-ipr-P33416
+  - imiq-agent-ipr-P0CS90
+  - imiq-agent-IPR001270
+  - imiq-agent-IPR050130
+  - imiq-agent-IPR013126
+- assessment_id: later-recruitment
+  area: evidence
+  topic: Specific2025 localization, shell and exclusion claims
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The complete2025 abstract supports broad chaperone recruitment and Hsp70-associated
+    protection, but this review did not recover later Figures4–5 Results, the full
+    Discussion or Methods. Specific Hsp78/Ssc1 localization versus sedimentation,
+    conspicuous fis1 rings, Hsp60 alternative explanations and YPH499 details therefore
+    remain independently unverified here. The record reports historical body inspection;
+    present access limits do not establish that those historical statements are false.
+  evidence_ids:
+  - record
+  - imiq-agent-ruland2025-meta
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-pride
+  - imiq-agent-P33416
+  - imiq-agent-P0CS90
+- assessment_id: necessity
+  area: evidence
+  topic: Formation requirement versus association
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: Aggregate cargo defines the deposit material, while Hsp78 and Hsp70 remain
+    associated machinery with UNKNOWN essentiality. Intervention-dependent organization
+    does not prove invariant molecular membership, a fixed coat or formation necessity
+    for every cargo/chaperone class.
+  evidence_ids:
+  - record
+  - schema
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-ruland2025-browser
+- assessment_id: functions
+  area: evidence
+  topic: Sequestration and biased inheritance
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The2018 primary data support insoluble matrix sequestration and approximately7-percent
+    daughter aggregate inheritance versus98-percent control mitochondrial GFP under
+    the cited induction/shutoff protocol. Preserved initial growth/import is qualified
+    by prolonged-expression menadione sensitivity and cytochrome-b translation costs.
+    Sequestration is not demonstrated clearance or universal benefit.
+  evidence_ids:
+  - record
+  - imiq-agent-bruderek2018-jats
+- assessment_id: graph
+  area: graph
+  topic: Seven bounded intervention and phenotype edges
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The2018 study supports all seven edges, including HSP78 morphology atFigure7A,C–D
+    and100-microgram/ml benomyl for5hours. The graph explicitly preserves respiratory
+    deficiency in its2018 fzo1 background and does not transfer the different2025
+    preparation. Genetic/pharmacologic effects do not identify direct binding, a molecular
+    tether or temporal assembly order.
+  evidence_ids:
+  - record
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-bruderek2018-supp-resumed
+  - imiq-agent-ruland2025-browser
+- assessment_id: dataset
+  area: evidence
+  topic: Proteomics provenance and limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The native PRIDE record verifies the accession, yeast taxon, publication,
+    sample classes, SILAC and instrument. Its deposited project title differs from
+    the target descriptive dataset title without changing identity. Affinity enrichment
+    is not fixed structural stoichiometry; raw files and the paper Data availability
+    section were not reanalyzed or newly certified.
+  evidence_ids:
+  - record
+  - imiq-agent-pride
+  - imiq-agent-ruland2025-meta
+- assessment_id: figures
+  area: evidence
+  topic: Actual figures, caption scope and licenses
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: Both linked Figure1 images were visually inspected and agree with their
+    maintained captions. The2018 native JATS license is CC BY-NC-SA3.0 and image MD5
+    matches; the2025 publication uses User Licence1.2. OTHER is appropriate for these
+    licenses and no image bytes are hosted in the maintained record.
+  evidence_ids:
+  - record
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-bruderek2018-fig1
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-ruland2025-fig1
+  - imiq-agent-ruland2025-crossref
+  - imiq-agent-biologists-license
+- assessment_id: boundaries
+  area: scope
+  topic: Unresolved DUMP equivalence and candidate exclusions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The2020 primary discussion argues distinction, whereas inspected2025 Introduction
+    allows possible similarity/identity. Keeping DUMP equivalence open is justified;
+    no human DUMP or lipid-regulatory mechanism is transferred. The biological principle
+    distinguishing formation factors, cargo and associated machinery is sound, but
+    later2025 panel-specific Hsp60 reasoning remains access-limited.
+  evidence_ids:
+  - record
+  - imiq-agent-dump2020-jats
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-bruderek2018-jats
+  - mitostore
+  - mdc
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded inventory and historical open questions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  summary: The record already separates reporter material, recruited machinery and
+    intervention factors, and explicitly leaves prevalence, membrane composition,
+    lifetime and exact Hsp78 identity unresolved. No optional complete inventory or
+    physical measurement is invented as a missing required field.
+  evidence_ids:
+  - record
+  - imiq-agent-bruderek2018-jats
+  - imiq-agent-ruland2025-browser
+  - imiq-agent-ipr-P33416
+  - imiq-agent-ipr-P0CS90
+  - imiq-agent-IPR001270
+  - imiq-agent-IPR050130
+  - imiq-agent-IPR013126
+findings: []
+actions: []
+limitations:
+- Ruland2025 was read at complete native abstract, Introduction and early Results
+  through the first Figure3 caption, plus actual Figure1 pixels. Later chaperone Results/Figures4–5,
+  full Discussion and Methods were not recovered. Native publisher/VOR/CDN PDF requests
+  returned403, minimal route404 and browser follow-ups failed or timed out. These
+  are current access limits, not proof the maintained historical full-body reading
+  did not occur.
+- Specific2025 Hsp78/Ssc1 localization, fis1 rings, Hsp60 cargo-versus-machinery reasoning
+  and YPH499 assignment remain unknown in this review. Broad abstract recruitment
+  is not substituted for panel-level verification.
+- The2018 full scientific main text and all main captions were read; only TableS2
+  and opening immunofluorescence protocol were read in its supplement. Only Figure1
+  pixels were inspected, not all main/supplemental images or raw measurements.
+- DUMP2020 was inspected only in its scientific Abstract, Introduction, Discussion
+  and Conclusion. It does not resolve exact equivalence, authorize human IMiQ scope
+  or transfer lipid mechanisms.
+- PRIDE metadata was read, not raw proteomics. No fixed shell stoichiometry, direct
+  molecular tether, mitophagic disposal or molecular formation requirement is inferred
+  from enrichment or perturbation.
+- Native family matches are exact accession-bounded queries, not an exhaustive authority-absence
+  claim. Current local uniqueness covers all978 ignored-inclusive parsed records;
+  historical886-record searches are preserved as historical context.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Source URLs, original UTC access and SHA256 are retained, including actual signed
+  image transport URL and durable article locator. No scientific promotion or corpus
+  mutation; parent owns finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

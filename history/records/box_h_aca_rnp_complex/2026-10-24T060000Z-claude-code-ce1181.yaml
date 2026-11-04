@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+  slug: box_h_aca_rnp_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-ce1181
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added guide-RNA scaffolding edge to protein core in box H/ACA RNP complex causal
+    graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added directed edge from box_h_aca_rna
+    to cbf5_gar1_nhp2_nop10_core.'

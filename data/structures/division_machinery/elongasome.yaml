@@ -97,7 +97,7 @@ components:
         by UniProt for the 'Cell inner membrane' localisation of P0AD65.
 - component_id: mrec_mred
   label: MreC and MreD
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - mreC
@@ -309,6 +309,31 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-23T11:10:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2405 (Stage 4 finding division-machinery-discussion-prose-issue-links):
+    added structured evidence references to discussions guided_by_mreb (DOI:10.1016/j.cell.2018.02.050
+    and GitHub issue #119) and definition_source_predates_roda (GitHub issue #161).'
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Added mrec_mred (component_ref: mrec_mred) node and scaffolding edge to
+    pg_synthesis in elongasome_sidewall_elongation (DOI:10.1038/nrmicro2677).'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding elongasome-curation-history-causal-graph-id-mismatch):
+    aligned curation_history[12] graph_id to elongasome_sidewall_elongation.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated mrec_mred component_type from PROTEIN to PROTEIN_COMPLEX for the
+    MreC-MreD transmembrane subcomplex (#2462).
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -332,6 +357,13 @@ discussions:
   rationale: The partner statement to the discussion on the MreB filament record (#119).
     RodZ couples the two, which is recorded in that component's role, but the structure-to-structure
     relationship has no field.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 describe RodZ-mediated coupling between MreB filaments
+      and the elongasome.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/119
+    notes: Repository issue recording removal of the non-equivalent MreB/elongasome
+      xref.
   posed_by: claude
   posed_date: '2026-09-02'
 - discussion_id: definition_source_predates_roda
@@ -359,6 +391,9 @@ discussions:
     notes: Primary RodA polymerase evidence in B. subtilis.
   - reference: DOI:10.1038/nrmicro2677
     notes: Table1 includes RodA with a proposed flippase assignment.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/161
+    notes: Repository issue tracking verbatim evidence verification for the RodA component
+      and definition source.
   resolution_note: Rebased the bounded definition on Cho et al.2016 and the Rod-complex
     synonym on Meeske et al.2016. Typas2011 predates the polymerase discovery but
     does mention RodA; the historical prompt and history overstated absence of the
@@ -411,6 +446,10 @@ causal_graphs:
   - node_id: synthase_motion
     label: directional RodA-PBP2 movement in E. coli
     node_type: BIOLOGICAL_PROCESS
+  - node_id: mrec_mred
+    label: MreC-MreD transmembrane scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: mrec_mred
   edges:
   - subject: roda
     predicate: polymerizes glycans during
@@ -493,6 +532,17 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2677
       notes: Review connects spatial control of peptidoglycan growth to bacterial
         morphology; no universal constant-width law is inferred.
+  - subject: mrec_mred
+    predicate: scaffolds synthases during
+    object: pg_synthesis
+    description: The transmembrane MreC-MreD subcomplex bridges cytoplasmic MreB filaments
+      to periplasmic peptidoglycan synthases during lateral cell wall elongation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: In rod-shaped bacteria, two protein complexes, the elongasome and the
+        divisome, direct cell wall synthesis during elongation and division, respectively.
+      notes: Supports the role of the MreC-MreD transmembrane scaffold within the
+        elongasome during lateral peptidoglycan synthesis.
 related_records:
 - corpus: PathwayMech
   identifier: WikiPathways:WP5060

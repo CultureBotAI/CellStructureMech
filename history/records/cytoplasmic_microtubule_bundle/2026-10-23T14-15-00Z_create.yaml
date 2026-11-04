@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+  slug: cytoplasmic_microtubule_bundle
+session:
+  id: 2026-10-23T141500Z-claude-opus-4-7-c2s105
+  timestamp: '2026-10-23T14:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for cytoplasmic microtubule bundle (GO:1905720) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml for cytoplasmic microtubule
+    bundle (GO:1905720) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

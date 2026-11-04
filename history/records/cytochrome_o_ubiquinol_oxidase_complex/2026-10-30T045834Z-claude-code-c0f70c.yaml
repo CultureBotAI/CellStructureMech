@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  slug: cytochrome_o_ubiquinol_oxidase_complex
+session:
+  id: 2026-10-30T045834Z-claude-code-c0f70c
+  timestamp: '2026-10-30T04:58:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added InterPro-grounded component_ref causal nodes and constituent edges for CyoB/A/C/D
+  details: Connected all 4 cytochrome bo3 ubiquinol oxidase subunits (CyoB, CyoA, CyoC, CyoD)
+    with their exact InterPro family groundings to cytochrome_o_oxidase via component_ref
+    GENE_OR_PROTEIN nodes and directed contributes to edges backed by InterPro, PDB:1FFT,
+    Abramson et al. 2000 (DOI:10.1038/82824), and UniProtKB:P0ABJ6. Validated via write_validated_structure.
