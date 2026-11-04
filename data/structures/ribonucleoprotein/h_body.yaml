@@ -30,6 +30,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Grounded self-referential causal node 'h_body' to cellstructuremech:h_body.
   llm_assisted: true
+- timestamp: '2026-10-23T19:30:57Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: 'Added ATP-dependent RNA helicase RhlB type node (rhlb, component_ref:
+    rhlb, InterPro:IPR023554) and H-body client enrichment edge to polyp_modulated_h_body_assembly.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Hfq condensate
   synonym_type: RELATED_SYNONYM
@@ -286,6 +292,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR028878
     component_ref: rnase_e
+  - node_id: rhlb
+    label: ATP-dependent RNA helicase RhlB type
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023554
+    component_ref: rhlb
   - node_id: mrna
     label: mRNA
     node_type: RNA
@@ -350,6 +361,15 @@ causal_graphs:
       notes: Figure 4G-I combines HMW-complex association with live-cell RNase E/Hfq
         colocalization. These experiments do not establish whether the sequestered
         enzyme is catalytically inactive.
+  - subject: h_body
+    predicate: concentrates
+    object: rhlb
+    description: Nitrogen-starvation H-bodies enrich the RNA helicase RhlB as an RNA-processing
+      client in the presence of polyphosphate.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3003775
+      notes: Figure 5C directly images endogenous RhlB/Hfq colocalization in nitrogen-starved
+        WT cells and loss of RhlB foci in the ppk deletion background.
   - subject: h_body
     predicate: sequesters
     object: mrna

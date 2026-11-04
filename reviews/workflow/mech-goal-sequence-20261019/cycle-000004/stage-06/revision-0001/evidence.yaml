@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-30T13:29:08Z (sha256 de7077b2c974fe53133e47b07b7be9bbb43e3045d20f7dfa8a90d3c597286f8d),
+  mapped the bounded Cycle 4 infrastructure task (cellstructuremech-infra-0007) to
+  real GitHub issue #2457, implemented hierarchy/parthood/constituent CURIE relation
+  disjointness and CausalNode component_ref grounding and node_type consistency checks
+  in src/cellstructuremech/validation/validator.py in commit a9ef9122da76840af7b3aaa137eadae346ce1906,
+  updated INFRA_TASKS.md and reviews/workflow/latest.yaml, and passed all 10 quality
+  gates in scripts/run_qc.py (1,077 passed tests, 2,101 history records validated,
+  1,001 structure records validated with 0 errors and 0 deferred tasks).'
+source_revision: a9ef9122da76840af7b3aaa137eadae346ce1906
+scope_frozen_at: '2026-10-30T13:29:08Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/infra_snapshot.md
+  sha256: de7077b2c974fe53133e47b07b7be9bbb43e3045d20f7dfa8a90d3c597286f8d
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/implementation_plan.md
+  sha256: 61776c32c9fd043edaf684e67ec3e8cfd8ab63db2e9a826c2bf3c52c85337f94
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/validation.md
+  sha256: 6bc42ab9f5e9ec5c407cbb81e4a8667aa6f5c9b71eed98ac3ca4c18fb84e94f2
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0007
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2457
+  status: resolved
+  summary: Extend src/cellstructuremech/validation/validator.py to check hierarchy/component
+    relation disjointness and CausalNode component_ref grounding consistency
+  disposition: 'Added validate_hierarchy_relations() and extended validate_causal_graphs()
+    in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics,
+    write_validated_structure, and scripts/validate_strict.py); verified 0 errors
+    across all 1,001 structure records and added unit and corpus-integrity tests in
+    tests/test_validator.py and tests/test_corpus_integrity.py (commit a9ef9122da76840af7b3aaa137eadae346ce1906).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/validation.md

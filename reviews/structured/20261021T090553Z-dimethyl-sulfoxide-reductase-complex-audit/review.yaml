@@ -1,0 +1,920 @@
+schema_version: 1.0.0
+review_id: 20261021T090553Z-dimethyl-sulfoxide-reductase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: DmsABC identity, source composition and cofactor-count review
+started_at: '2026-10-21T08:41:40Z'
+finished_at: '2026-10-21T09:05:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: DmsABC identity, three protein constituents, scoped CPX import and whole-complex
+  function are supported. Two minor provenance issues are an unqualified CPX cofactor-count
+  conflict and incorrect Cheng attribution for the Tang2011 paper.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    sha256: 2422ae4303bcaafc3a0c60fa5bb3ac71cde37b650a4352868c91e32437c6308d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009390
+  path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+  label: dimethyl sulfoxide reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, exact native identifiers/families/protein examples
+    and CPX participant counts; primary purification/maturation evidence, graph and
+    condition limits.
+  selection: Seventh selected target in batch thirteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009390
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just validate data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just validate-strict data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/dimethyl_sulfoxide_reductase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  summary: 15 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - dmso-agent-eco-0000353
+  - dmso-agent-cheng2011-meta
+  - dmso-agent-weiner1988-meta
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - GO:0009390
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - GO:0009390
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - dmso-agent-go
+  - dmso-agent-tax-83333
+  - dmso-agent-CPX-320
+  - dmso-agent-P18775
+  - dmso-agent-query-dmsA
+  - dmso-agent-P18776
+  - dmso-agent-query-dmsB
+  - dmso-agent-P18777
+  - dmso-agent-query-dmsC
+  - dmso-agent-IPR011888
+  - dmso-agent-IPR014297
+  - dmso-agent-IPR007059
+  - dmso-agent-chebi-49883
+  - dmso-agent-chebi-60539
+  - dmso-agent-eco-0000353
+  - dmso-agent-cheng2011-meta
+  - dmso-agent-weiner1988-meta
+  - dmso-agent-cheng2011-html
+  - dmso-agent-weiner-page-1505
+  - dmso-agent-weiner-page-1507
+  - dmso-agent-weiner-page-1508
+  - dmso-agent-weiner-page-1509
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009390
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+  locator: Entire maintained YAML including all imported participants, component examples,
+    functions, graph edges, discussions and history
+  accessed_at: '2026-10-21T08:55:56Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; docs/CURATION.md and review checklist
+  accessed_at: '2026-10-21T08:55:56Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Optional fields are not mandatory. CausalNode
+    permits protein complexes; its xrefs contract does not inherit the top-level record
+    equivalence restriction.
+- evidence_id: dmso-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009389,GO:0009390,GO:0032991
+  locator: 'Complete three native term results: identity, definition, synonyms, isObsolete
+    and parent child relation'
+  accessed_at: '2026-10-21T08:41:48.348209Z'
+  support: supports
+  summary: Active GO0009390 denotes the DMSO reductase complex, with the exact sulphoxide
+    synonym and protein-containing-complex parent; GO0009389 gives the redox reaction.
+    The written conventional reaction direction does not contradict physiological
+    DMSO reduction.
+  snapshot_sha256: ad71108a0e0191ec2d96f57114c86484ca22e74c54fdb496d6c84f65b411e4ca
+- evidence_id: dmso-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Full native taxon result, names/rank/lineage
+  accessed_at: '2026-10-21T08:41:48.349568Z'
+  support: supports
+  summary: Native ENA taxonomy identifies83333 as Escherichia coli K-12, strain rank.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: dmso-agent-CPX-320
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-320
+  locator: name, systematicName, organism, properties, all participants with stoichiometry/identifier
+    and crossreferences; source provenance/evidence
+  accessed_at: '2026-10-21T08:41:51.191827Z'
+  support: supports
+  summary: Native CPX320 identifies E.coli K-12 heterotrimeric DmsABC and reproduces
+    all five imported participants, EBI interactor identifiers and counts, including
+    one CHEBI49883. The native name itself is DmaABC. This proves import fidelity,
+    not completeness of the biological cofactor inventory.
+  snapshot_sha256: d871ffaef521a9b0416499800f3bac1d04a0b0c29eb6d3a908dcc98cd00ab80b
+- evidence_id: dmso-agent-P18775
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P18775.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:49.087730Z'
+  support: supports
+  summary: Native reviewed UniProtKB P18775 identifies Dimethyl sulfoxide reductase
+    DmsA, gene dmsA, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 882b519e44ea0cc348a9d7ccb5ab23933cb119815edcbe3ce7fc8d88068b1990
+- evidence_id: dmso-agent-query-dmsA
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AdmsA%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene dmsA, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:50.470026Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P18775. This checks identifier
+    resolution only.
+  snapshot_sha256: 367364f8747fe2bc7fe81056b07d340267946ba7afeaaa91ead70178e4795d0a
+  search_scope: UniProtKB query gene_exact:dmsA AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: dmso-agent-P18776
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P18776.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:49.098026Z'
+  support: supports
+  summary: Native reviewed UniProtKB P18776 identifies Anaerobic dimethyl sulfoxide
+    reductase chain B, gene dmsB, taxon83333. Concrete identity is checked independently
+    of membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: 385cfb1333e08e406ae28b0398e4666bacc87c79ed3e23888caaaf86753a5cf8
+- evidence_id: dmso-agent-query-dmsB
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AdmsB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene dmsB, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:50.523369Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P18776. This checks identifier
+    resolution only.
+  snapshot_sha256: 10c79bfff8805e9f22294b89f903b593cf1853e38ca6c3b7a2eb374e033a5762
+  search_scope: UniProtKB query gene_exact:dmsB AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: dmso-agent-P18777
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P18777.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:49.147916Z'
+  support: supports
+  summary: Native reviewed UniProtKB P18777 identifies Anaerobic dimethyl sulfoxide
+    reductase chain C, gene dmsC, taxon83333. Concrete identity is checked independently
+    of membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: e67c7c95c981fb28692f22af99ab80c20b64e6418ab0775d39279cf156ec6f87
+- evidence_id: dmso-agent-query-dmsC
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AdmsC%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene dmsC, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:51.016180Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P18777. This checks identifier
+    resolution only.
+  snapshot_sha256: 22e0b3b250a144ce9efe2d5a29c0da3e3ebc2e0a04faded3f8820af6524a2114
+  search_scope: UniProtKB query gene_exact:dmsC AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: dmso-agent-IPR011888
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011888/
+  locator: metadata accession/type/name and complete family description
+  accessed_at: '2026-10-21T08:41:48.350377Z'
+  support: supports
+  summary: A-chain family is currently named DmsA/YnfE and includes related YnfE/YnfF
+    proteins. It is the conventional DMSO-reductase-A family, not an exclusive list
+    of proteins that assemble with E.coli DmsBC.
+  snapshot_sha256: c5dc624f10ba9cff0c08a54281b5d60c660cb962c4c8cb354c57a538c0defa64
+- evidence_id: dmso-agent-IPR014297
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014297/
+  locator: metadata accession/type/name and complete family description
+  accessed_at: '2026-10-21T08:41:48.350773Z'
+  support: supports
+  summary: Exact DMSO reductase chain-B family matches the row.
+  snapshot_sha256: 33a4a68ecaf046cce94409a9787f2890b85fcb64bec5ccdb9cc1fc1872ddeae6
+- evidence_id: dmso-agent-IPR007059
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007059/
+  locator: metadata accession/type/name and complete family description
+  accessed_at: '2026-10-21T08:41:48.350048Z'
+  support: supports
+  summary: Exact DmsC membrane-anchor family matches the row.
+  snapshot_sha256: cf22dbf987f3ef184ab600ee1287a967adb1ac693d57a51374503707163d8f22
+- evidence_id: dmso-agent-chebi-49883
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/49883/
+  locator: Native identifier/name/definition and synonyms
+  accessed_at: '2026-10-21T08:41:49.800432Z'
+  support: supports
+  summary: CHEBI49883 denotes a4Fe-4S cluster, not a five-cluster cohort.
+  snapshot_sha256: df96d028bc1da5e8b8ed6ca1e96d3a0c004cdda59afbc734fe900b61f6fcdb00
+- evidence_id: dmso-agent-chebi-60539
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/60539/
+  locator: Native identifier/name/definition and synonyms
+  accessed_at: '2026-10-21T08:41:49.818079Z'
+  support: supports
+  summary: CHEBI60539 denotes the Mo-bisMGD cofactor used by the import.
+  snapshot_sha256: e9ffe51dd2489ba6c59e45d20a75c43d8b34f660eb48899d3fc6e5c52c2fb033
+- evidence_id: dmso-agent-eco-0000353
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO:0000353
+  locator: Exact OLS term id/label/definition
+  accessed_at: '2026-10-21T08:42:04.356975Z'
+  support: supports
+  summary: ECO0000353 denotes physical interaction evidence used in manual assertion.
+  snapshot_sha256: a85f179a3fca3a554fa914be25c4972efe9e487088eb9d16fdaf28961e63a057
+- evidence_id: dmso-agent-cheng2011-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1074/jbc.M110.213306
+  locator: resultList.result exact bibliographic fields
+  accessed_at: '2026-10-21T08:42:03.198695Z'
+  support: supports
+  summary: Exact DOI/title/author/year/PMID identify Tang et al.2011, PMID21357619,
+    DOI10.1074/jbc.M110.213306.
+  snapshot_sha256: 0a90b68a928f504db6892717f6bfe9a2f81f55a0e17470af1299d70c5879ea31
+- evidence_id: dmso-agent-weiner1988-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/jb.170.4.1505-1510.1988
+  locator: resultList.result exact bibliographic fields
+  accessed_at: '2026-10-21T08:42:03.407441Z'
+  support: supports
+  summary: Exact DOI/title/author/year/PMID identify Weiner et al.1988, PMID3280546,
+    DOI10.1128/jb.170.4.1505-1510.1988.
+  snapshot_sha256: 5845ee29ddd3dfed8604d5d677659600f6230fe487ffcc398dc33770645b5b67
+- evidence_id: dmso-agent-cheng2011-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3083165/
+  locator: 'Genuine PMC3083165 article HTML: abstract, complete Introduction and Experimental
+    Procedures; claim-bearing Results/Discussion sec21–25, especially sec23 four DmsB
+    clusters and separate DmsA FS0, and conclusions. Not a DmsABC atomic structure.'
+  accessed_at: '2026-10-21T08:43:24.807454Z'
+  support: supports
+  summary: Primary experimental work distinguishes DmsA FS0 from the four DmsB4Fe-4S
+    clusters. Its mutant/cofactor analyses address maturation and Mo-cofactor insertion;
+    impaired cofactor insertion can coexist with membrane assembly. It supports the
+    DmsABC identity, not a one-cluster total.
+  snapshot_sha256: 3b4a8632c1b4e0245d2d418f5c4dec24eb17b2c6687b31a0fce19ea22c75780f
+- evidence_id: dmso-agent-weiner-page-1505
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e056/210994/8235e651f1aa/jbacter00182-0101.png
+  locator: Native PMC210994 page scan, printed p1505; complete page visually read
+  accessed_at: '2026-10-21T08:45:22.196424Z'
+  support: supports
+  summary: Primary title/authors/abstract and experimental strain/growth context;
+    overexpressed E.coli enzyme purification and three unlike chains.
+  snapshot_sha256: 5efd21d61d703a9c2557e168a2a2392ad5ed8254f17ee6720442c38b5dc8b381
+- evidence_id: dmso-agent-weiner-page-1507
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e056/210994/b64208b944bb/jbacter00182-0103.png
+  locator: Native PMC210994 page scan, printed p1507; complete page visually read
+  accessed_at: '2026-10-21T08:45:22.197082Z'
+  support: supports
+  summary: Results purification and subunit analysis give an approximately1:1:1 ratio;
+    this historical analysis alone did not exclude all alternative copy arrangements.
+  snapshot_sha256: cfb21bef6022f48fb7338fcafde14eef9ac90d8e71337fdea7d2de48df8ea6aa
+- evidence_id: dmso-agent-weiner-page-1508
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e056/210994/c316e9e75152/jbacter00182-0104.png
+  locator: Native PMC210994 page scan, printed p1508; complete page visually read
+  accessed_at: '2026-10-21T08:45:22.197226Z'
+  support: supports
+  summary: Table2 and surrounding Results establish broad N-oxide/sulfoxide reduction,
+    Mo-cofactor evidence and sample-specific metal measurements; these are not a complete
+    modern Fe-S count.
+  snapshot_sha256: 93af004a60f52aaab9ed29030093a1692fab74a99a4dcc287dd5a867a4611a5f
+- evidence_id: dmso-agent-weiner-page-1509
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e056/210994/0f0f6582bd1d/jbacter00182-0105.png
+  locator: Native PMC210994 page scan, printed p1509; complete page visually read
+  accessed_at: '2026-10-21T08:45:22.197535Z'
+  support: supports
+  summary: Discussion supports a membrane-bound heterotrimeric enzyme with broad substrate
+    specificity; other bacterial enzymes are compared without assigning their architectures
+    to DmsABC.
+  snapshot_sha256: d69f7c5ab68d91b90f84b338f3a981649c4ca5d597312a62feebd24c807c0a98
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:43Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml'
+  snapshot_sha256: 56805bfa29b4fc1774aa97bb33488b46b204fcfa1ff79aaaf9061df6f6530a7e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/dimethyl_sulfoxide_reductase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:45Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/dimethyl_sulfoxide_reductase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch13-20261021-vud60b4w/dimethyl_sulfoxide_reductase_complex-strict.tsv"
+  snapshot_sha256: e107ea1866954466041649cf28e54bf365f933df2d857f2ef24117a542d4eb32
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml;
+    exact collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:55:56Z'
+  support: supports
+  summary: '15 of18 collected target identifiers returned OK at the unchanged base.
+    Residuals: ECO:0000353: SKIPPED; resolved by evidence dmso-agent-eco-0000353;
+    PMID:21357619: UNREACHABLE; resolved by evidence dmso-agent-cheng2011-meta; PMID:3280546:
+    UNREACHABLE; resolved by evidence dmso-agent-weiner1988-meta. Source-native identity
+    checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T08:43:49.321141Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T08:43:50.050581Z'
+  support: supports
+  summary: "data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml\
+    \  (GO:0009390)\n  dmso_reductase_whole_complex_function\tdmsa\tCOVERED\t->dmsa_catalytic_subunit\
+    \ (UniProtKB:P18775)\n  dmso_reductase_whole_complex_function\tdmsb\tCOVERED\t\
+    ->dmsb_iron_sulfur_subunit (UniProtKB:P18776)\n  dmso_reductase_whole_complex_function\t\
+    dmsc\tCOVERED\t->dmsc_anchor_subunit (UniProtKB:P18777)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     3  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 3c131d8c293f9a20c6bffe37b9f1c58a4452fb734c06ceaba38bece7803a7711
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Membrane DmsABC complex
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: The GO identity, label, category, kind, synonym scopes and protein-complex
+    parent describe the membrane DmsABC respiratory enzyme. They do not identify soluble
+    single-chain DMSO reductases or the generic catalytic protein as the whole complex.
+  evidence_ids:
+  - dmso-agent-go
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - dmso-agent-weiner-page-1505
+  - dmso-agent-weiner-page-1507
+  - dmso-agent-weiner-page-1508
+  - dmso-agent-weiner-page-1509
+  - record
+- assessment_id: components
+  area: grounding
+  topic: Family and exact protein scopes
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: The three conventional family mappings and native reviewed gene/taxon pairs
+    are supported. IPR011888 includes DmsA-like YnfE/YnfF homologues; family membership
+    alone is not evidence that each homolog forms DmsABC. The example proteins and
+    actual membership are independently fixed by CPX320 and the primary studies.
+  evidence_ids:
+  - dmso-agent-IPR011888
+  - dmso-agent-IPR014297
+  - dmso-agent-IPR007059
+  - dmso-agent-P18775
+  - dmso-agent-P18776
+  - dmso-agent-P18777
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - record
+- assessment_id: assembly
+  area: evidence
+  topic: Constituents versus assembly necessity
+  outcome: unknown
+  target_ids:
+  - GO:0009390
+  summary: DmsA/B/C are established constituents of the intact heterotrimer. Tang2011
+    distinguishes cofactor maturation from final membrane assembly, so an activity
+    or cofactor defect does not by itself establish absence of the protein complex.
+    The schema defines ESSENTIAL as assembly necessity; that assertion was not independently
+    established by the inspected evidence.
+  evidence_ids:
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - dmso-agent-weiner-page-1505
+  - dmso-agent-weiner-page-1507
+  - dmso-agent-weiner-page-1508
+  - dmso-agent-weiner-page-1509
+  - record
+- assessment_id: source-composition
+  area: provenance
+  topic: Faithful CPX import with unresolved cofactor conflict
+  outcome: concern
+  target_ids:
+  - GO:0009390
+  summary: All source participant identities/counts and the native DmaABC label are
+    faithfully imported. However, the one-cluster CPX row and canonical summary lack
+    a qualification against the cited primary one-plus-four cluster account. Preserve
+    the source count while documenting its incompleteness/conflict; do not rewrite
+    it as if CPX reported five.
+  evidence_ids:
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - dmso-agent-chebi-49883
+  - dmso-agent-chebi-60539
+  - dmso-agent-P18775
+  - dmso-agent-P18776
+  - dmso-agent-P18777
+  - record
+- assessment_id: taxon
+  area: scope
+  topic: K-12 canonical example
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: The CPX example and reviewed protein entries are K-12 scoped. Primary work
+    uses defined overexpression/mutant strains and assay preparations; no all-bacterial
+    architecture, prevalence, or universal substrate exclusivity is asserted.
+  evidence_ids:
+  - dmso-agent-tax-83333
+  - dmso-agent-CPX-320
+  - dmso-agent-P18775
+  - dmso-agent-P18776
+  - dmso-agent-P18777
+  - dmso-agent-cheng2011-html
+  - dmso-agent-weiner-page-1505
+  - dmso-agent-weiner-page-1507
+  - dmso-agent-weiner-page-1508
+  - dmso-agent-weiner-page-1509
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Physiological reduction and broad specificity
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: DMSO-to-DMS respiratory function agrees with native GO and primary purification
+    assays. The function description states redox conversion without claiming that
+    DMSO is the sole substrate or that GO reaction formatting determines physiological
+    direction.
+  evidence_ids:
+  - dmso-agent-go
+  - dmso-agent-weiner-page-1505
+  - dmso-agent-weiner-page-1507
+  - dmso-agent-weiner-page-1508
+  - dmso-agent-weiner-page-1509
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Whole-complex nonmechanistic graph
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: All three constituent edges and the enables edge are supported and anchored
+    to the same local component rows. NONMECHANISTIC correctly avoids a full cofactor
+    electron-transfer sequence, recruitment cascade or claim that FS0 controls final
+    complex assembly.
+  evidence_ids:
+  - dmso-agent-go
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - record
+- assessment_id: citation-attribution
+  area: provenance
+  topic: Exact article authors
+  outcome: concern
+  target_ids:
+  - GO:0009390
+  summary: Native metadata and the primary title page identify Huipo Tang, Richard
+    A Rothery, James E Voss and Joel H Weiner. The target wrongly calls the paper
+    Cheng et al.2011 in two evidence notes; its title, DOI and PMID identify the correct
+    work.
+  evidence_ids:
+  - dmso-agent-cheng2011-meta
+  - dmso-agent-cheng2011-html
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Cofactor qualification and optional extensions
+  outcome: supported
+  target_ids:
+  - GO:0009390
+  summary: The needed follow-up is to reconcile source scope and correct author attribution
+    in prose. Adding separate maturation-protein, chemical or condition rows, an atomic
+    image, numerical properties or a complete mechanistic graph is not otherwise required.
+  evidence_ids:
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: dmso-cpx-cofactor-count-unqualified
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the imported one-cluster count against the cited five-cluster account
+  description: CPX320 currently supplies stoichiometry1 for CHEBI49883, and the record
+    correctly preserves that source row. The canonical note repeats a4Fe-4S cluster
+    without noting that cited Tang2011 separately identifies one DmsA FS0 and four
+    DmsB clusters. Add a source-conflict/inventory qualification near the canonical
+    example and imported composition. Preserve the actual CPX count and distinguish
+    it from the biological total; the source-scoped import is not itself a transcription
+    error.
+  target_ids:
+  - GO:0009390
+  field_paths:
+  - canonical_examples[0].note
+  - complex_compositions[composition_id=complex_portal_cpx_320].notes
+  evidence_ids:
+  - dmso-agent-CPX-320
+  - dmso-agent-cheng2011-html
+  - dmso-agent-P18775
+  - dmso-agent-P18776
+  - dmso-agent-P18777
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    standard; Complex composition
+  native_severity: minor
+  normalization_reason: The exact complex, proteins and source import are correct.
+    The defect is a non-blocking missing qualification of conflicting source inventories,
+    not an asserted fivefold protein stoichiometry or wrong complex identity.
+- finding_id: F2
+  issue_key: dmso-tang2011-author-attribution
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the Tang2011 paper attribution
+  description: Both evidence notes for PMID21357619 and DOI10.1074/jbc.M110.213306
+    call the study Cheng et al.2011. Native article metadata and the primary author
+    list instead identify Tang, Rothery, Voss and Weiner. Correct the attribution
+    to Tang et al.2011 while preserving the valid DOI, PMID, title and scientific
+    support.
+  target_ids:
+  - GO:0009390
+  field_paths:
+  - evidence[reference=PMID:21357619].notes
+  - evidence[reference=DOI:10.1074/jbc.M110.213306].notes
+  evidence_ids:
+  - dmso-agent-cheng2011-meta
+  - dmso-agent-cheng2011-html
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: This is a bibliographic attribution error; identifiers, primary
+    source identity and supported biological claims remain intact.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009390
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    role: maintained scientific record
+  description: During authorized curation, qualify the canonical/import notes with
+    the cited DmsA1 plus DmsB4 cluster account and retain CPX320 participant stoichiometry1
+    as the source-reported value.
+  acceptance_checks:
+  - Keep CPX participant identity, source interactor and imported count unchanged
+    unless a separately versioned source update supports a new import.
+  - Attach Tang2011 evidence to the biological cofactor-count qualification; do not
+    infer cofactor loss prevents final membrane assembly.
+  - Run required native schema, strict, history and generated-page checks after curation.
+  generator: Maintained structure YAML; derived pages regenerate from that source.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009390
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+    role: maintained scientific record
+  description: Correct the two maintained author-attribution notes to Tang et al.2011
+    without changing the valid identifiers.
+  acceptance_checks:
+  - Check authors against PMID21357619 and the primary title page.
+  - Run required native checks after authorized curation; do not rewrite historical
+    source filenames or timestamps.
+  generator: Maintained structure YAML and derived pages.
+limitations:
+- The cited source count is faithful to current CPX320 but is not a complete biological
+  Fe-S inventory. The review flags the missing conflict qualification without silently
+  correcting native imported data.
+- Weiner1988 primary scans p1505,1507–1509 were visually read; p1506 and1510 were
+  retrieved but not used. Native PMC HTML supplied Tang2011 claim-bearing text; failed
+  S3/JATS/PDF routes and HTML challenges are not treated as paper bodies.
+- Tang2011 Introduction/Methods and specified Results/Discussion paragraphs were read;
+  figure pixels, raw EPR data and every unrelated paragraph were not reanalyzed.
+- Family entries define homologous classes. DmsA/YnfE family coverage does not establish
+  DmsBC compatibility for all homologues; exact examples and assembly membership remain
+  source-specific.
+- Constitutive membership of the named intactABC architecture does not establish each
+  gene is indispensable for cell viability or that no partial enzyme assembles.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+- The schema defines essentiality by whether the structure forms without the component.
+  The inspected sources establish constituent membership and functions, but those
+  observations alone do not establish this assembly-necessity assertion. No subunit-deletion/assembly
+  experiment was independently checked here; catalytic necessity, organismal viability
+  and intact structural membership are distinct questions.
+notes:
+- Fresh13 native inspect/schema/strict passed before assessment. All13 native inputs
+  and every raw/meta source receipt hash verified; no scientific content or status
+  promotion.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
