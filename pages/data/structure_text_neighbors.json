@@ -1847,6 +1847,11 @@
           "cosine_similarity": 0.84179393
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.81541661
+        },
+        {
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.81432871
@@ -1860,11 +1865,6 @@
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.75804179
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.75355237
         }
       ]
     },
@@ -1876,6 +1876,11 @@
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.92954585
+        },
+        {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.90610513
         },
         {
           "identifier": "GO:0005885",
@@ -1891,11 +1896,6 @@
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
           "cosine_similarity": 0.80170607
-        },
-        {
-          "identifier": "GO:0099079",
-          "label": "actin body",
-          "cosine_similarity": 0.79720876
         }
       ]
     },
@@ -1924,9 +1924,40 @@
           "cosine_similarity": 0.88622944
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.86369493
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0110131",
+      "label": "Aim21-Tda2 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005885",
+          "label": "Arp2/3 protein complex",
+          "cosine_similarity": 0.83812997
+        },
+        {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.79377093
+        },
+        {
+          "identifier": "GO:0034993",
+          "label": "meiotic nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.78771819
+        },
+        {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
-          "cosine_similarity": 0.81573999
+          "cosine_similarity": 0.78101527
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.77399989
         }
       ]
     },
@@ -1966,6 +1997,11 @@
       "label": "Arp2/3 protein complex",
       "neighbors": [
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.86695211
+        },
+        {
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.86605159
@@ -1981,14 +2017,9 @@
           "cosine_similarity": 0.84179393
         },
         {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.77610611
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.76898399
+          "identifier": "GO:0110131",
+          "label": "Aim21-Tda2 complex",
+          "cosine_similarity": 0.83812997
         }
       ]
     },
@@ -2017,9 +2048,9 @@
           "cosine_similarity": 0.84093492
         },
         {
-          "identifier": "GO:0005819",
-          "label": "spindle",
-          "cosine_similarity": 0.82062811
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.83617693
         }
       ]
     },
@@ -2048,9 +2079,9 @@
           "cosine_similarity": 0.85850037
         },
         {
-          "identifier": "GO:1990295",
-          "label": "post-anaphase microtubule array",
-          "cosine_similarity": 0.84014968
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.84558272
         }
       ]
     },
@@ -3605,6 +3636,68 @@
       ]
     },
     {
+      "identifier": "GO:0030864",
+      "label": "cortical actin cytoskeleton",
+      "neighbors": [
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.90610513
+        },
+        {
+          "identifier": "GO:0061645",
+          "label": "endocytic patch",
+          "cosine_similarity": 0.8699419
+        },
+        {
+          "identifier": "GO:0005885",
+          "label": "Arp2/3 protein complex",
+          "cosine_similarity": 0.86695211
+        },
+        {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.86616781
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.86369493
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030981",
+      "label": "cortical microtubule cytoskeleton",
+      "neighbors": [
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.86399823
+        },
+        {
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.85924686
+        },
+        {
+          "identifier": "GO:0005880",
+          "label": "nuclear microtubule",
+          "cosine_similarity": 0.8491033
+        },
+        {
+          "identifier": "GO:0000235",
+          "label": "astral microtubule",
+          "cosine_similarity": 0.84558272
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.84446986
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:crescentin_filament",
       "label": "crescentin filament",
       "neighbors": [
@@ -3722,9 +3815,40 @@
           "cosine_similarity": 0.88214648
         },
         {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.87154353
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.87725654
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1905720",
+      "label": "cytoplasmic microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.95559086
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.89504792
+        },
+        {
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.88154617
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.865707
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.85457695
         }
       ]
     },
@@ -3862,6 +3986,11 @@
           "cosine_similarity": 0.92954585
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.8699419
+        },
+        {
           "identifier": "GO:0005885",
           "label": "Arp2/3 protein complex",
           "cosine_similarity": 0.86605159
@@ -3875,11 +4004,6 @@
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.81042948
-        },
-        {
-          "identifier": "GO:0110085",
-          "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.77157044
         }
       ]
     },
@@ -3929,6 +4053,11 @@
           "cosine_similarity": 0.8663443
         },
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.865707
+        },
+        {
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.84822566
@@ -3937,11 +4066,6 @@
           "identifier": "GO:0000931",
           "label": "gamma-tubulin ring complex",
           "cosine_similarity": 0.84661765
-        },
-        {
-          "identifier": "cellstructuremech:radial_microtubule_organizing_center",
-          "label": "radial microtubule organizing center",
-          "cosine_similarity": 0.83202051
         }
       ]
     },
@@ -4275,14 +4399,14 @@
           "cosine_similarity": 0.87168976
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.84371165
+        },
+        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.82251792
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.82222626
         }
       ]
     },
@@ -4425,6 +4549,11 @@
           "cosine_similarity": 0.72537353
         },
         {
+          "identifier": "GO:0110131",
+          "label": "Aim21-Tda2 complex",
+          "cosine_similarity": 0.70815422
+        },
+        {
           "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
           "label": "Cullin-E ubiquitin ligase complex",
           "cosine_similarity": 0.69946346
@@ -4433,11 +4562,6 @@
           "identifier": "cellstructuremech:basal_body_a_c_linker",
           "label": "basal body A-C linker",
           "cosine_similarity": 0.69396843
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_inner_scaffold",
-          "label": "basal body inner scaffold",
-          "cosine_similarity": 0.692225
         }
       ]
     },
@@ -4642,6 +4766,11 @@
           "cosine_similarity": 0.85571694
         },
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.85457695
+        },
+        {
           "identifier": "GO:0000931",
           "label": "gamma-tubulin ring complex",
           "cosine_similarity": 0.84049555
@@ -4650,11 +4779,6 @@
           "identifier": "cellstructuremech:radial_microtubule_organizing_center",
           "label": "radial microtubule organizing center",
           "cosine_similarity": 0.82858164
-        },
-        {
-          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
-          "label": "quiescent nuclear microtubule bundle",
-          "cosine_similarity": 0.82398854
         }
       ]
     },
@@ -4735,6 +4859,11 @@
           "cosine_similarity": 0.79936894
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.79909224
+        },
+        {
           "identifier": "GO:0110086",
           "label": "meiotic actomyosin contractile ring",
           "cosine_similarity": 0.78858018
@@ -4743,11 +4872,6 @@
           "identifier": "GO:0110143",
           "label": "magnetosome",
           "cosine_similarity": 0.78394336
-        },
-        {
-          "identifier": "GO:0005826",
-          "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.77866414
         }
       ]
     },
@@ -4755,6 +4879,11 @@
       "identifier": "GO:1990819",
       "label": "mating projection actin fusion focus",
       "neighbors": [
+        {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.80612142
+        },
         {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
@@ -4774,11 +4903,6 @@
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.75977247
-        },
-        {
-          "identifier": "GO:0099079",
-          "label": "actin body",
-          "cosine_similarity": 0.75804179
         }
       ]
     },
@@ -4926,14 +5050,14 @@
           "cosine_similarity": 0.91355416
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.86035224
+        },
+        {
           "identifier": "GO:0000142",
           "label": "cellular bud neck contractile ring",
           "cosine_similarity": 0.84506932
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.79995799
         }
       ]
     },
@@ -4941,6 +5065,11 @@
       "identifier": "GO:0034993",
       "label": "meiotic nuclear membrane microtubule tethering complex",
       "neighbors": [
+        {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.94698974
+        },
         {
           "identifier": "GO:1990612",
           "label": "Sad1-Kms1 LINC complex",
@@ -4952,19 +5081,14 @@
           "cosine_similarity": 0.86047181
         },
         {
+          "identifier": "GO:1990862",
+          "label": "nuclear membrane complex Bqt3-Bqt4",
+          "cosine_similarity": 0.85466987
+        },
+        {
           "identifier": "cellstructuremech:telocentrosome",
           "label": "telocentrosome",
           "cosine_similarity": 0.84642184
-        },
-        {
-          "identifier": "GO:0044732",
-          "label": "mitotic spindle pole body",
-          "cosine_similarity": 0.84405063
-        },
-        {
-          "identifier": "GO:0008275",
-          "label": "gamma-tubulin small complex",
-          "cosine_similarity": 0.80983607
         }
       ]
     },
@@ -5117,9 +5241,9 @@
           "cosine_similarity": 0.86923078
         },
         {
-          "identifier": "GO:0030479",
-          "label": "actin cortical patch",
-          "cosine_similarity": 0.80170607
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.86616781
         }
       ]
     },
@@ -5310,6 +5434,37 @@
       ]
     },
     {
+      "identifier": "GO:0106094",
+      "label": "nuclear membrane microtubule tethering complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034993",
+          "label": "meiotic nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.94698974
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.8979128
+        },
+        {
+          "identifier": "GO:1990862",
+          "label": "nuclear membrane complex Bqt3-Bqt4",
+          "cosine_similarity": 0.85473901
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.83461102
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.82764039
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005880",
       "label": "nuclear microtubule",
       "neighbors": [
@@ -5329,14 +5484,14 @@
           "cosine_similarity": 0.8738685
         },
         {
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.86801157
+        },
+        {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.85907865
-        },
-        {
-          "identifier": "GO:0033289",
-          "label": "intraconoid microtubule",
-          "cosine_similarity": 0.84591822
         }
       ]
     },
@@ -5675,9 +5830,9 @@
           "cosine_similarity": 0.85403718
         },
         {
-          "identifier": "GO:0032169",
-          "label": "prospore septin ring",
-          "cosine_similarity": 0.8177109
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.83167293
         }
       ]
     },
@@ -5779,9 +5934,19 @@
       "label": "quiescent cell microtubule bundle",
       "neighbors": [
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.95559086
+        },
+        {
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.87132076
         },
         {
           "identifier": "GO:0000923",
@@ -5792,16 +5957,6 @@
           "identifier": "GO:0031021",
           "label": "interphase microtubule organizing center",
           "cosine_similarity": 0.85571694
-        },
-        {
-          "identifier": "GO:1990295",
-          "label": "post-anaphase microtubule array",
-          "cosine_similarity": 0.81356791
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
-          "label": "basal body A-B inner junction",
-          "cosine_similarity": 0.79615281
         }
       ]
     },
@@ -5815,6 +5970,16 @@
           "cosine_similarity": 0.93343159
         },
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.89504792
+        },
+        {
+          "identifier": "GO:0099070",
+          "label": "static microtubule bundle",
+          "cosine_similarity": 0.84369994
+        },
+        {
           "identifier": "GO:0031021",
           "label": "interphase microtubule organizing center",
           "cosine_similarity": 0.82398854
@@ -5823,16 +5988,6 @@
           "identifier": "GO:0000923",
           "label": "equatorial microtubule organizing center",
           "cosine_similarity": 0.82126253
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
-          "label": "basal body A-B inner junction",
-          "cosine_similarity": 0.81851054
-        },
-        {
-          "identifier": "GO:0000930",
-          "label": "gamma-tubulin complex",
-          "cosine_similarity": 0.80071815
         }
       ]
     },
@@ -6001,24 +6156,24 @@
           "cosine_similarity": 0.94346415
         },
         {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.8979128
+        },
+        {
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.87542364
         },
         {
+          "identifier": "GO:1990862",
+          "label": "nuclear membrane complex Bqt3-Bqt4",
+          "cosine_similarity": 0.84590045
+        },
+        {
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.8398523
-        },
-        {
-          "identifier": "cellstructuremech:telocentrosome",
-          "label": "telocentrosome",
-          "cosine_similarity": 0.82786948
-        },
-        {
-          "identifier": "GO:0044732",
-          "label": "mitotic spindle pole body",
-          "cosine_similarity": 0.79794846
         }
       ]
     },
@@ -6643,6 +6798,37 @@
       ]
     },
     {
+      "identifier": "GO:0099070",
+      "label": "static microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.88154617
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.87725654
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.87132076
+        },
+        {
+          "identifier": "GO:0005880",
+          "label": "nuclear microtubule",
+          "cosine_similarity": 0.86801157
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.86577822
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:stentor_km_fiber",
       "label": "Stentor Km fiber",
       "neighbors": [
@@ -6662,14 +6848,14 @@
           "cosine_similarity": 0.77673779
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.77561325
+        },
+        {
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.77377982
-        },
-        {
-          "identifier": "GO:0005881",
-          "label": "cytoplasmic microtubule",
-          "cosine_similarity": 0.77327717
         }
       ]
     },
@@ -6709,6 +6895,11 @@
       "label": "Stentor perialgal microtubule meshwork",
       "neighbors": [
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.80835335
+        },
+        {
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.79173136
@@ -6727,11 +6918,6 @@
           "identifier": "cellstructuremech:tubulin_spool",
           "label": "tubulin spool",
           "cosine_similarity": 0.7832951
-        },
-        {
-          "identifier": "GO:0032117",
-          "label": "horsetail-astral microtubule array",
-          "cosine_similarity": 0.77884859
         }
       ]
     },
@@ -6807,6 +6993,11 @@
           "cosine_similarity": 0.84642184
         },
         {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.83461102
+        },
+        {
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.82795996
@@ -6820,11 +7011,6 @@
           "identifier": "GO:0031021",
           "label": "interphase microtubule organizing center",
           "cosine_similarity": 0.78798931
-        },
-        {
-          "identifier": "GO:0000923",
-          "label": "equatorial microtubule organizing center",
-          "cosine_similarity": 0.78185016
         }
       ]
     },
@@ -7174,6 +7360,16 @@
       "label": "divisome complex",
       "neighbors": [
         {
+          "identifier": "GO:1990587",
+          "label": "FtsQBL complex",
+          "cosine_similarity": 0.81529439
+        },
+        {
+          "identifier": "GO:1990588",
+          "label": "FtsBL complex",
+          "cosine_similarity": 0.78775863
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.72784702
@@ -7187,16 +7383,6 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.69365453
-        },
-        {
-          "identifier": "GO:0030428",
-          "label": "cell septum",
-          "cosine_similarity": 0.69163891
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.68603682
         }
       ]
     },
@@ -7228,6 +7414,130 @@
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.73451252
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990588",
+      "label": "FtsBL complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990587",
+          "label": "FtsQBL complex",
+          "cosine_similarity": 0.9633764
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.78775863
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.65999734
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.65800036
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.65527788
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990587",
+      "label": "FtsQBL complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990588",
+          "label": "FtsBL complex",
+          "cosine_similarity": 0.9633764
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.81529439
+        },
+        {
+          "identifier": "GO:0032151",
+          "label": "mitotic septin complex",
+          "cosine_similarity": 0.6742526
+        },
+        {
+          "identifier": "GO:0031105",
+          "label": "septin complex",
+          "cosine_similarity": 0.66509431
+        },
+        {
+          "identifier": "GO:0032152",
+          "label": "meiotic septin complex",
+          "cosine_similarity": 0.65846757
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034973",
+      "label": "Sid2-Mob1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.7662043
+        },
+        {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.755579
+        },
+        {
+          "identifier": "GO:0160066",
+          "label": "interphase SIN signaling complex",
+          "cosine_similarity": 0.74977019
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.74235471
+        },
+        {
+          "identifier": "GO:0030869",
+          "label": "RENT complex",
+          "cosine_similarity": 0.74062394
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990490",
+      "label": "archaeal proton-transporting A-type ATPase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.89213573
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.89176454
+        },
+        {
+          "identifier": "GO:0033176",
+          "label": "proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.84713361
+        },
+        {
+          "identifier": "GO:0016471",
+          "label": "vacuolar proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.83699978
+        },
+        {
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.83415961
         }
       ]
     },
@@ -7396,6 +7706,11 @@
           "cosine_similarity": 0.73235856
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.73136113
+        },
+        {
           "identifier": "GO:0044674",
           "label": "methyl coenzyme M reductase complex",
           "cosine_similarity": 0.73080816
@@ -7409,11 +7724,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.72242073
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.71694239
         }
       ]
     },
@@ -7494,19 +7804,19 @@
           "cosine_similarity": 0.74576656
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.68414533
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.71987092
         },
         {
-          "identifier": "GO:0005960",
-          "label": "glycine cleavage complex",
-          "cosine_similarity": 0.68296478
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.70687088
         },
         {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.67851564
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.70143618
         }
       ]
     },
@@ -7538,6 +7848,37 @@
           "identifier": "GO:0044799",
           "label": "NarGHI complex",
           "cosine_similarity": 0.71355928
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016611",
+      "label": "iron-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.92979004
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.92121672
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.8362705
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.73874629
+        },
+        {
+          "identifier": "GO:0009326",
+          "label": "formate dehydrogenase complex",
+          "cosine_similarity": 0.73125236
         }
       ]
     },
@@ -7628,9 +7969,40 @@
           "cosine_similarity": 0.65842586
         },
         {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.64687576
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.64799055
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016612",
+      "label": "molybdenum-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.92979004
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.87998554
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.87445706
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.7661376
+        },
+        {
+          "identifier": "GO:0044799",
+          "label": "NarGHI complex",
+          "cosine_similarity": 0.73425956
         }
       ]
     },
@@ -7685,14 +8057,14 @@
           "cosine_similarity": 0.79433411
         },
         {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.7661376
+        },
+        {
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
           "cosine_similarity": 0.76543321
-        },
-        {
-          "identifier": "GO:0031026",
-          "label": "glutamate synthase complex",
-          "cosine_similarity": 0.73311516
         }
       ]
     },
@@ -7700,6 +8072,21 @@
       "identifier": "GO:0016610",
       "label": "nitrogenase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.87445706
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.85586877
+        },
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.8362705
+        },
         {
           "identifier": "GO:0009325",
           "label": "nitrate reductase complex",
@@ -7709,21 +8096,6 @@
           "identifier": "GO:0044799",
           "label": "NarGHI complex",
           "cosine_similarity": 0.78143219
-        },
-        {
-          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
-          "label": "formate dehydrogenase N complex",
-          "cosine_similarity": 0.75800857
-        },
-        {
-          "identifier": "GO:0009326",
-          "label": "formate dehydrogenase complex",
-          "cosine_similarity": 0.70705635
-        },
-        {
-          "identifier": "GO:1990202",
-          "label": "FMN reductase complex",
-          "cosine_similarity": 0.70369888
         }
       ]
     },
@@ -7976,33 +8348,157 @@
       ]
     },
     {
+      "identifier": "GO:0031004",
+      "label": "potassium ion-transporting ATPase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.79985784
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.79914572
+        },
+        {
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.78909307
+        },
+        {
+          "identifier": "GO:1990490",
+          "label": "archaeal proton-transporting A-type ATPase complex",
+          "cosine_similarity": 0.77566685
+        },
+        {
+          "identifier": "GO:0033176",
+          "label": "proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.76755801
+        }
+      ]
+    },
+    {
       "identifier": "GO:0045259",
       "label": "proton-transporting ATP synthase complex",
       "neighbors": [
         {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.86927367
+        },
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.85551906
+        },
+        {
+          "identifier": "GO:1990490",
+          "label": "archaeal proton-transporting A-type ATPase complex",
+          "cosine_similarity": 0.83350499
+        },
+        {
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.81530523
+        },
+        {
           "identifier": "GO:0033176",
           "label": "proton-transporting V-type ATPase complex",
           "cosine_similarity": 0.77302027
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016469",
+      "label": "proton-transporting two-sector ATPase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.95286807
         },
         {
-          "identifier": "GO:0033180",
-          "label": "proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.76780314
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.92554576
+        },
+        {
+          "identifier": "GO:0033176",
+          "label": "proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.9155865
         },
         {
           "identifier": "GO:0033179",
           "label": "proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.76768353
+          "cosine_similarity": 0.91427715
         },
         {
-          "identifier": "GO:0016471",
-          "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.76133702
+          "identifier": "GO:0033180",
+          "label": "proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.91376915
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033178",
+      "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+      "neighbors": [
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.95286807
         },
         {
-          "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
-          "label": "archaeal-type flagellum motor",
-          "cosine_similarity": 0.73920242
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.93386441
+        },
+        {
+          "identifier": "GO:0033180",
+          "label": "proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.90085924
+        },
+        {
+          "identifier": "GO:0033179",
+          "label": "proton-transporting V-type ATPase, V0 domain",
+          "cosine_similarity": 0.89939837
+        },
+        {
+          "identifier": "GO:1990490",
+          "label": "archaeal proton-transporting A-type ATPase complex",
+          "cosine_similarity": 0.89176454
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033177",
+      "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+      "neighbors": [
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.93386441
+        },
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.92554576
+        },
+        {
+          "identifier": "GO:0033179",
+          "label": "proton-transporting V-type ATPase, V0 domain",
+          "cosine_similarity": 0.90185573
+        },
+        {
+          "identifier": "GO:0033180",
+          "label": "proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.86444942
+        },
+        {
+          "identifier": "GO:0033176",
+          "label": "proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.84662404
         }
       ]
     },
@@ -8145,19 +8641,19 @@
           "cosine_similarity": 0.83130559
         },
         {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.78352184
+        },
+        {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.77582899
         },
         {
-          "identifier": "GO:0033179",
-          "label": "proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.76977761
-        },
-        {
-          "identifier": "GO:0045277",
-          "label": "respiratory chain complex IV",
-          "cosine_similarity": 0.76854425
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.77381115
         }
       ]
     },
@@ -8186,9 +8682,9 @@
           "cosine_similarity": 0.77700758
         },
         {
-          "identifier": "GO:0009334",
-          "label": "3-phenylpropionate dioxygenase complex",
-          "cosine_similarity": 0.72079392
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74074121
         }
       ]
     },
@@ -8375,6 +8871,37 @@
           "identifier": "GO:0033179",
           "label": "proton-transporting V-type ATPase, V0 domain",
           "cosine_similarity": 0.94605891
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016613",
+      "label": "vanadium-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.92121672
+        },
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.87998554
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.85586877
+        },
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.69920133
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.69740276
         }
       ]
     },
@@ -9592,6 +10119,11 @@
       "label": "sulfur globule",
       "neighbors": [
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.65574019
+        },
+        {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
           "cosine_similarity": 0.63481886
@@ -9602,19 +10134,14 @@
           "cosine_similarity": 0.62953638
         },
         {
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.61118542
+        },
+        {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
           "cosine_similarity": 0.60706138
-        },
-        {
-          "identifier": "GO:0033172",
-          "label": "gas vesicle shell",
-          "cosine_similarity": 0.60525579
-        },
-        {
-          "identifier": "GO:0031469",
-          "label": "bacterial microcompartment",
-          "cosine_similarity": 0.60424991
         }
       ]
     },
@@ -9925,6 +10452,37 @@
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
           "cosine_similarity": 0.82784599
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097658",
+      "label": "Asi complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031372",
+          "label": "UBC13-MMS2 complex",
+          "cosine_similarity": 0.77511157
+        },
+        {
+          "identifier": "GO:1990862",
+          "label": "nuclear membrane complex Bqt3-Bqt4",
+          "cosine_similarity": 0.7550933
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.74496574
+        },
+        {
+          "identifier": "GO:0005783",
+          "label": "endoplasmic reticulum",
+          "cosine_similarity": 0.74233221
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.73868805
         }
       ]
     },
@@ -10477,7 +11035,7 @@
         {
           "identifier": "GO:0106126",
           "label": "reservosome membrane",
-          "cosine_similarity": 0.80729364
+          "cosine_similarity": 0.80803363
         },
         {
           "identifier": "cellstructuremech:mitosome_outer_membrane",
@@ -14257,14 +14815,14 @@
           "cosine_similarity": 0.77806443
         },
         {
+          "identifier": "GO:0106126",
+          "label": "reservosome membrane",
+          "cosine_similarity": 0.77756257
+        },
+        {
           "identifier": "GO:0031039",
           "label": "macronucleus",
           "cosine_similarity": 0.77214441
-        },
-        {
-          "identifier": "cellstructuremech:pusule",
-          "label": "pusule",
-          "cosine_similarity": 0.77167554
         }
       ]
     },
@@ -14389,6 +14947,37 @@
           "identifier": "GO:0005640",
           "label": "nuclear outer membrane",
           "cosine_similarity": 0.78714483
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990862",
+      "label": "nuclear membrane complex Bqt3-Bqt4",
+      "neighbors": [
+        {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.85473901
+        },
+        {
+          "identifier": "GO:0034993",
+          "label": "meiotic nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.85466987
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.84590045
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.79189314
+        },
+        {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.75677583
         }
       ]
     },
@@ -15828,14 +16417,14 @@
           "cosine_similarity": 0.86028298
         },
         {
-          "identifier": "GO:0106126",
-          "label": "reservosome membrane",
-          "cosine_similarity": 0.83612823
-        },
-        {
           "identifier": "GO:0106124",
           "label": "reservosome lumen",
           "cosine_similarity": 0.8276086
+        },
+        {
+          "identifier": "GO:0106126",
+          "label": "reservosome membrane",
+          "cosine_similarity": 0.81207571
         },
         {
           "identifier": "GO:0055037",
@@ -15856,7 +16445,7 @@
         {
           "identifier": "GO:0106126",
           "label": "reservosome membrane",
-          "cosine_similarity": 0.87036139
+          "cosine_similarity": 0.87977974
         },
         {
           "identifier": "GO:0071682",
@@ -15897,7 +16486,7 @@
         {
           "identifier": "GO:0106126",
           "label": "reservosome membrane",
-          "cosine_similarity": 0.82989847
+          "cosine_similarity": 0.83510731
         },
         {
           "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
@@ -15916,29 +16505,29 @@
       "label": "reservosome membrane",
       "neighbors": [
         {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.87324942
-        },
-        {
           "identifier": "GO:0106124",
           "label": "reservosome lumen",
-          "cosine_similarity": 0.87036139
+          "cosine_similarity": 0.87977974
         },
         {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.86315085
+          "identifier": "GO:0030666",
+          "label": "endocytic vesicle membrane",
+          "cosine_similarity": 0.87332569
         },
         {
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
-          "cosine_similarity": 0.86261437
+          "cosine_similarity": 0.87104331
         },
         {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.85799729
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.86782855
+        },
+        {
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.8651301
         }
       ]
     },
@@ -16908,6 +17497,11 @@
       "label": "1,3-beta-D-glucan synthase complex",
       "neighbors": [
         {
+          "identifier": "GO:0043541",
+          "label": "UDP-N-acetylglucosamine transferase complex",
+          "cosine_similarity": 0.76909326
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.70043015
@@ -16926,11 +17520,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.69489664
-        },
-        {
-          "identifier": "GO:0031415",
-          "label": "NatA complex",
-          "cosine_similarity": 0.69420243
         }
       ]
     },
@@ -17145,9 +17734,9 @@
           "cosine_similarity": 0.7191081
         },
         {
-          "identifier": "GO:0031026",
-          "label": "glutamate synthase complex",
-          "cosine_similarity": 0.71316558
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.71368936
         }
       ]
     },
@@ -17159,6 +17748,11 @@
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.82905031
+        },
+        {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.80900716
         },
         {
           "identifier": "GO:0005760",
@@ -17174,11 +17768,6 @@
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.79483778
-        },
-        {
-          "identifier": "GO:0043625",
-          "label": "delta DNA polymerase complex",
-          "cosine_similarity": 0.79264471
         }
       ]
     },
@@ -17210,6 +17799,37 @@
           "identifier": "GO:0140275",
           "label": "MIB complex",
           "cosine_similarity": 0.69303797
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031250",
+      "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009326",
+          "label": "formate dehydrogenase complex",
+          "cosine_similarity": 0.762854
+        },
+        {
+          "identifier": "GO:0048492",
+          "label": "ribulose bisphosphate carboxylase complex",
+          "cosine_similarity": 0.75956901
+        },
+        {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74096958
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.74059952
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.73773391
         }
       ]
     },
@@ -17431,6 +18051,37 @@
       ]
     },
     {
+      "identifier": "GO:0034274",
+      "label": "Atg12-Atg5-Atg16 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000407",
+          "label": "phagophore assembly site",
+          "cosine_similarity": 0.7687673
+        },
+        {
+          "identifier": "GO:0120155",
+          "label": "MIH complex",
+          "cosine_similarity": 0.73793392
+        },
+        {
+          "identifier": "GO:0160066",
+          "label": "interphase SIN signaling complex",
+          "cosine_similarity": 0.73689601
+        },
+        {
+          "identifier": "GO:0097658",
+          "label": "Asi complex",
+          "cosine_similarity": 0.72168994
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.72055478
+        }
+      ]
+    },
+    {
       "identifier": "GO:0097691",
       "label": "bacterial extracellular vesicle",
       "neighbors": [
@@ -17512,14 +18163,14 @@
           "cosine_similarity": 0.82095905
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.80734471
+        },
+        {
           "identifier": "GO:1990103",
           "label": "DnaA-HU complex",
           "cosine_similarity": 0.78564266
-        },
-        {
-          "identifier": "GO:1990157",
-          "label": "DnaA-DnaB-DnaC complex",
-          "cosine_similarity": 0.78367829
         }
       ]
     },
@@ -17927,9 +18578,50 @@
       ]
     },
     {
+      "identifier": "GO:0016465",
+      "label": "chaperonin ATPase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990220",
+          "label": "GroEL-GroES complex",
+          "cosine_similarity": 0.88119393
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.79950395
+        },
+        {
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.79778395
+        },
+        {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.793868
+        },
+        {
+          "identifier": "cellstructuremech:hsp78_chaperone_complex",
+          "label": "Hsp78 chaperone complex",
+          "cosine_similarity": 0.78229281
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005832",
       "label": "chaperonin-containing T-complex",
       "neighbors": [
+        {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.78684755
+        },
+        {
+          "identifier": "GO:0016465",
+          "label": "chaperonin ATPase complex",
+          "cosine_similarity": 0.77859632
+        },
         {
           "identifier": "GO:1990220",
           "label": "GroEL-GroES complex",
@@ -17944,16 +18636,6 @@
           "identifier": "GO:0070985",
           "label": "transcription factor TFIIK complex",
           "cosine_similarity": 0.69328158
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.69277957
-        },
-        {
-          "identifier": "GO:0034270",
-          "label": "Cvt complex",
-          "cosine_similarity": 0.69229911
         }
       ]
     },
@@ -18016,6 +18698,99 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.80613211
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000775",
+      "label": "chromosome, centromeric region",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.90977928
+        },
+        {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.82586177
+        },
+        {
+          "identifier": "GO:0000786",
+          "label": "nucleosome",
+          "cosine_similarity": 0.79440019
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.78370269
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.78144151
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0099115",
+      "label": "chromosome, subtelomeric region",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.87752706
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.84106232
+        },
+        {
+          "identifier": "GO:0000786",
+          "label": "nucleosome",
+          "cosine_similarity": 0.83575575
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80334998
+        },
+        {
+          "identifier": "GO:0030874",
+          "label": "nucleolar chromatin",
+          "cosine_similarity": 0.793508
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000781",
+      "label": "chromosome, telomeric region",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.85092657
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.84330888
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.7928306
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.76569002
+        },
+        {
+          "identifier": "GO:0000786",
+          "label": "nucleosome",
+          "cosine_similarity": 0.76214395
         }
       ]
     },
@@ -18268,6 +19043,37 @@
       ]
     },
     {
+      "identifier": "GO:1990191",
+      "label": "cobalamin transport complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.71106693
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.67508422
+        },
+        {
+          "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
+          "label": "MdtABC-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.67220755
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.66303207
+        },
+        {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.66175101
+        }
+      ]
+    },
+    {
       "identifier": "GO:0017119",
       "label": "COG complex",
       "neighbors": [
@@ -18396,6 +19202,11 @@
       "label": "core primosome complex",
       "neighbors": [
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.92742241
+        },
+        {
           "identifier": "GO:1990099",
           "label": "pre-primosome complex",
           "cosine_similarity": 0.9149215
@@ -18414,11 +19225,6 @@
           "identifier": "GO:1990160",
           "label": "DnaB-DnaC-Rep-PriC complex",
           "cosine_similarity": 0.83439264
-        },
-        {
-          "identifier": "GO:1990159",
-          "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
-          "cosine_similarity": 0.83120019
         }
       ]
     },
@@ -18525,6 +19331,16 @@
           "cosine_similarity": 0.78604842
         },
         {
+          "identifier": "GO:0034973",
+          "label": "Sid2-Mob1 complex",
+          "cosine_similarity": 0.72008828
+        },
+        {
+          "identifier": "GO:0031372",
+          "label": "UBC13-MMS2 complex",
+          "cosine_similarity": 0.71978
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.7138622
@@ -18533,16 +19349,6 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.71077854
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.71061893
-        },
-        {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.70929885
         }
       ]
     },
@@ -19682,14 +20488,14 @@
           "cosine_similarity": 0.89470319
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.88962884
+        },
+        {
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.8428515
-        },
-        {
-          "identifier": "GO:1990098",
-          "label": "core primosome complex",
-          "cosine_similarity": 0.84012143
         }
       ]
     },
@@ -19713,14 +20519,14 @@
           "cosine_similarity": 0.88505173
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.87621344
+        },
+        {
           "identifier": "GO:1990098",
           "label": "core primosome complex",
           "cosine_similarity": 0.83120019
-        },
-        {
-          "identifier": "GO:1990156",
-          "label": "DnaB-DnaG complex",
-          "cosine_similarity": 0.81522142
         }
       ]
     },
@@ -19744,14 +20550,14 @@
           "cosine_similarity": 0.88963982
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.87182705
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.83754992
-        },
-        {
-          "identifier": "GO:1990098",
-          "label": "core primosome complex",
-          "cosine_similarity": 0.83439264
         }
       ]
     },
@@ -19759,6 +20565,11 @@
       "identifier": "GO:1990156",
       "label": "DnaB-DnaG complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.88879222
+        },
         {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
@@ -19778,11 +20589,6 @@
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.8428515
-        },
-        {
-          "identifier": "GO:0030894",
-          "label": "replisome",
-          "cosine_similarity": 0.84141008
         }
       ]
     },
@@ -19811,9 +20617,9 @@
           "cosine_similarity": 0.80194295
         },
         {
-          "identifier": "GO:1990160",
-          "label": "DnaB-DnaC-Rep-PriC complex",
-          "cosine_similarity": 0.78485245
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.79614346
         }
       ]
     },
@@ -19899,14 +20705,14 @@
           "cosine_similarity": 0.71090292
         },
         {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.70813018
+        },
+        {
           "identifier": "GO:0070939",
           "label": "Dsl1/NZR complex",
           "cosine_similarity": 0.70726103
-        },
-        {
-          "identifier": "GO:0005960",
-          "label": "glycine cleavage complex",
-          "cosine_similarity": 0.69416357
         }
       ]
     },
@@ -19969,6 +20775,37 @@
           "identifier": "GO:0031912",
           "label": "oral apparatus",
           "cosine_similarity": 0.61993242
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000408",
+      "label": "EKC/KEOPS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.74312392
+        },
+        {
+          "identifier": "GO:0005675",
+          "label": "transcription factor TFIIH holo complex",
+          "cosine_similarity": 0.73944185
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.73388018
+        },
+        {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.72670032
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.7193514
         }
       ]
     },
@@ -20473,6 +21310,11 @@
       "label": "exodeoxyribonuclease V complex",
       "neighbors": [
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.716498
+        },
+        {
           "identifier": "GO:1903095",
           "label": "ribonuclease III complex",
           "cosine_similarity": 0.68501582
@@ -20491,11 +21333,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.67570642
-        },
-        {
-          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
-          "label": "formate dehydrogenase N complex",
-          "cosine_similarity": 0.66586592
         }
       ]
     },
@@ -20576,19 +21413,19 @@
           "cosine_similarity": 0.77510908
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.76651182
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.73773391
+        },
+        {
           "identifier": "GO:0009390",
           "label": "dimethyl sulfoxide reductase complex",
           "cosine_similarity": 0.73065503
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.7206893
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.71891396
         }
       ]
     },
@@ -20855,19 +21692,19 @@
           "cosine_similarity": 0.77788041
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.75026825
+        },
+        {
           "identifier": "GO:0009325",
           "label": "nitrate reductase complex",
           "cosine_similarity": 0.73311516
         },
         {
-          "identifier": "GO:1990200",
-          "label": "SsuD-SsuE complex",
-          "cosine_similarity": 0.72468585
-        },
-        {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.71886094
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.72620553
         }
       ]
     },
@@ -20886,6 +21723,11 @@
           "cosine_similarity": 0.72923634
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.72713149
+        },
+        {
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
           "cosine_similarity": 0.71081652
@@ -20894,11 +21736,6 @@
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.68907581
-        },
-        {
-          "identifier": "GO:0030700",
-          "label": "glycine reductase complex",
-          "cosine_similarity": 0.67308803
         }
       ]
     },
@@ -20948,6 +21785,11 @@
           "cosine_similarity": 0.69356343
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.680073
+        },
+        {
           "identifier": "GO:0009342",
           "label": "glutamate synthase complex (NADPH)",
           "cosine_similarity": 0.67308803
@@ -20956,11 +21798,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.6603281
-        },
-        {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.65305936
         }
       ]
     },
@@ -21000,6 +21837,16 @@
       "label": "GroEL-GroES complex",
       "neighbors": [
         {
+          "identifier": "GO:0016465",
+          "label": "chaperonin ATPase complex",
+          "cosine_similarity": 0.88119393
+        },
+        {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.76635419
+        },
+        {
           "identifier": "GO:0005832",
           "label": "chaperonin-containing T-complex",
           "cosine_similarity": 0.74236187
@@ -21010,19 +21857,9 @@
           "cosine_similarity": 0.72674939
         },
         {
-          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
-          "label": "Cullin-E ubiquitin ligase complex",
-          "cosine_similarity": 0.69966735
-        },
-        {
-          "identifier": "GO:0008540",
-          "label": "proteasome regulatory particle, base subcomplex",
-          "cosine_similarity": 0.69605145
-        },
-        {
-          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
-          "label": "mitochondrial Lon protease complex",
-          "cosine_similarity": 0.69069607
+          "identifier": "GO:0009376",
+          "label": "HslUV protease complex",
+          "cosine_similarity": 0.72127242
         }
       ]
     },
@@ -21182,6 +22019,37 @@
       ]
     },
     {
+      "identifier": "GO:0009379",
+      "label": "Holliday junction helicase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.78664303
+        },
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.75651627
+        },
+        {
+          "identifier": "GO:0030894",
+          "label": "replisome",
+          "cosine_similarity": 0.7542509
+        },
+        {
+          "identifier": "GO:1990082",
+          "label": "DnaA-L2 complex",
+          "cosine_similarity": 0.72917298
+        },
+        {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.72757474
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030897",
       "label": "HOPS complex",
       "neighbors": [
@@ -21213,6 +22081,37 @@
       ]
     },
     {
+      "identifier": "GO:0009376",
+      "label": "HslUV protease complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.81381163
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.81237036
+        },
+        {
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.81154706
+        },
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.80420281
+        },
+        {
+          "identifier": "GO:0008540",
+          "label": "proteasome regulatory particle, base subcomplex",
+          "cosine_similarity": 0.80299775
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:hsp78_chaperone_complex",
       "label": "Hsp78 chaperone complex",
       "neighbors": [
@@ -21222,24 +22121,24 @@
           "cosine_similarity": 0.78576841
         },
         {
+          "identifier": "GO:0016465",
+          "label": "chaperonin ATPase complex",
+          "cosine_similarity": 0.78229281
+        },
+        {
+          "identifier": "GO:0009376",
+          "label": "HslUV protease complex",
+          "cosine_similarity": 0.75983799
+        },
+        {
           "identifier": "GO:0005745",
           "label": "m-AAA complex",
           "cosine_similarity": 0.75831094
         },
         {
-          "identifier": "GO:0031942",
-          "label": "i-AAA complex",
-          "cosine_similarity": 0.7466793
-        },
-        {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.74296807
-        },
-        {
-          "identifier": "GO:0033180",
-          "label": "proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.72936558
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.75023679
         }
       ]
     },
@@ -21330,9 +22229,9 @@
           "cosine_similarity": 0.82998193
         },
         {
-          "identifier": "GO:0042721",
-          "label": "TIM22 mitochondrial import inner membrane insertion complex",
-          "cosine_similarity": 0.78467011
+          "identifier": "GO:0009376",
+          "label": "HslUV protease complex",
+          "cosine_similarity": 0.78814121
         }
       ]
     },
@@ -21364,6 +22263,37 @@
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.71642108
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990330",
+      "label": "IscS-IscU complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74257007
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.71368936
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.69737164
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.67930305
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.66964306
         }
       ]
     },
@@ -21470,6 +22400,11 @@
           "cosine_similarity": 0.9309768
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.90977928
+        },
+        {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.85967834
@@ -21483,11 +22418,6 @@
           "identifier": "GO:0005819",
           "label": "spindle",
           "cosine_similarity": 0.80887312
-        },
-        {
-          "identifier": "GO:0020023",
-          "label": "kinetoplast",
-          "cosine_similarity": 0.79700616
         }
       ]
     },
@@ -21499,6 +22429,11 @@
           "identifier": "GO:0005675",
           "label": "transcription factor TFIIH holo complex",
           "cosine_similarity": 0.7190945
+        },
+        {
+          "identifier": "GO:0000408",
+          "label": "EKC/KEOPS complex",
+          "cosine_similarity": 0.7127671
         },
         {
           "identifier": "GO:0031431",
@@ -21514,11 +22449,6 @@
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.69862037
-        },
-        {
-          "identifier": "GO:0005662",
-          "label": "DNA replication factor A complex",
-          "cosine_similarity": 0.69820313
         }
       ]
     },
@@ -21558,6 +22488,11 @@
       "label": "LolCDE lipoprotein ABC transporter complex",
       "neighbors": [
         {
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.73272503
+        },
+        {
           "identifier": "GO:1990063",
           "label": "Bam protein complex",
           "cosine_similarity": 0.72760636
@@ -21576,11 +22511,6 @@
           "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAD-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.72242908
-        },
-        {
-          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrAB-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.71044166
         }
       ]
     },
@@ -21635,14 +22565,14 @@
           "cosine_similarity": 0.84808703
         },
         {
+          "identifier": "GO:0009376",
+          "label": "HslUV protease complex",
+          "cosine_similarity": 0.81154706
+        },
+        {
           "identifier": "GO:0008540",
           "label": "proteasome regulatory particle, base subcomplex",
           "cosine_similarity": 0.80479971
-        },
-        {
-          "identifier": "GO:0140595",
-          "label": "MIM complex",
-          "cosine_similarity": 0.79549615
         }
       ]
     },
@@ -21674,6 +22604,37 @@
           "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
           "label": "MdtABC-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.76196294
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990060",
+      "label": "maltose transport complex",
+      "neighbors": [
+        {
+          "identifier": "GO:7770042",
+          "label": "bindosome complex",
+          "cosine_similarity": 0.70627936
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.68549594
+        },
+        {
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.67414988
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.65949929
+        },
+        {
+          "identifier": "GO:0062051",
+          "label": "lipopolysaccharide transport system",
+          "cosine_similarity": 0.65784325
         }
       ]
     },
@@ -21847,19 +22808,19 @@
           "cosine_similarity": 0.86691408
         },
         {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.84330888
+        },
+        {
           "identifier": "cellstructuremech:telocentrosome",
           "label": "telocentrosome",
           "cosine_similarity": 0.82795996
         },
         {
-          "identifier": "GO:0034993",
-          "label": "meiotic nuclear membrane microtubule tethering complex",
-          "cosine_similarity": 0.79076184
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.72408078
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.82764039
         }
       ]
     },
@@ -22007,14 +22968,14 @@
           "cosine_similarity": 0.78858969
         },
         {
+          "identifier": "GO:0120155",
+          "label": "MIH complex",
+          "cosine_similarity": 0.70697181
+        },
+        {
           "identifier": "GO:0031942",
           "label": "i-AAA complex",
           "cosine_similarity": 0.70193487
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.69659342
         }
       ]
     },
@@ -22038,14 +22999,14 @@
           "cosine_similarity": 0.80369429
         },
         {
+          "identifier": "GO:0120155",
+          "label": "MIH complex",
+          "cosine_similarity": 0.71313046
+        },
+        {
           "identifier": "GO:0071162",
           "label": "CMG complex",
           "cosine_similarity": 0.70898681
-        },
-        {
-          "identifier": "GO:0031942",
-          "label": "i-AAA complex",
-          "cosine_similarity": 0.70837401
         }
       ]
     },
@@ -22077,6 +23038,37 @@
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.85098369
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0120155",
+      "label": "MIH complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.81570893
+        },
+        {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.8060557
+        },
+        {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.78808274
+        },
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.78335684
+        },
+        {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.77785386
         }
       ]
     },
@@ -22136,9 +23128,9 @@
           "cosine_similarity": 0.78215721
         },
         {
-          "identifier": "GO:0070939",
-          "label": "Dsl1/NZR complex",
-          "cosine_similarity": 0.71845081
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.76483387
         }
       ]
     },
@@ -22198,9 +23190,9 @@
           "cosine_similarity": 0.81662732
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.80201814
+          "identifier": "GO:0009376",
+          "label": "HslUV protease complex",
+          "cosine_similarity": 0.81381163
         }
       ]
     },
@@ -22229,9 +23221,9 @@
           "cosine_similarity": 0.7394116
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.73136105
+          "identifier": "GO:0120155",
+          "label": "MIH complex",
+          "cosine_similarity": 0.7319325
         }
       ]
     },
@@ -22387,6 +23379,68 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.63678063
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990140",
+      "label": "molybdopterin synthase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.72064125
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.67428508
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.67250921
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.6667051
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.65567178
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0035658",
+      "label": "Mon1-Ccz1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.7707678
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.76821985
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.76540223
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.76296909
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.76273969
         }
       ]
     },
@@ -22989,6 +24043,11 @@
           "cosine_similarity": 0.88868179
         },
         {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.84106232
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.81081038
@@ -22999,14 +24058,9 @@
           "cosine_similarity": 0.79336625
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.76987047
-        },
-        {
-          "identifier": "GO:0042645",
-          "label": "mitochondrial nucleoid",
-          "cosine_similarity": 0.76276185
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.78370269
         }
       ]
     },
@@ -23376,9 +24430,9 @@
           "cosine_similarity": 0.80539808
         },
         {
-          "identifier": "GO:0031261",
-          "label": "DNA replication preinitiation complex",
-          "cosine_similarity": 0.78956115
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.79934295
         }
       ]
     },
@@ -23433,14 +24487,14 @@
           "cosine_similarity": 0.8789282
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.8331263
+        },
+        {
           "identifier": "GO:0032040",
           "label": "small-subunit processome",
           "cosine_similarity": 0.81147718
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.80595009
         }
       ]
     },
@@ -23452,6 +24506,11 @@
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.88868179
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.83575575
         },
         {
           "identifier": "GO:0035101",
@@ -23467,11 +24526,6 @@
           "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
           "label": "quiescent telomere hypercluster",
           "cosine_similarity": 0.79770825
-        },
-        {
-          "identifier": "GO:0009295",
-          "label": "nucleoid",
-          "cosine_similarity": 0.78234222
         }
       ]
     },
@@ -23702,6 +24756,11 @@
           "cosine_similarity": 0.9309768
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.82586177
+        },
+        {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.82069473
@@ -23715,11 +24774,6 @@
           "identifier": "GO:0005819",
           "label": "spindle",
           "cosine_similarity": 0.79603452
-        },
-        {
-          "identifier": "GO:0051233",
-          "label": "spindle midzone",
-          "cosine_similarity": 0.7910129
         }
       ]
     },
@@ -23826,6 +24880,11 @@
           "cosine_similarity": 0.78204785
         },
         {
+          "identifier": "GO:0034274",
+          "label": "Atg12-Atg5-Atg16 complex",
+          "cosine_similarity": 0.7687673
+        },
+        {
           "identifier": "GO:0005776",
           "label": "autophagosome",
           "cosine_similarity": 0.75054688
@@ -23839,11 +24898,6 @@
           "identifier": "GO:0043332",
           "label": "mating projection tip",
           "cosine_similarity": 0.71904541
-        },
-        {
-          "identifier": "GO:0005938",
-          "label": "cell cortex",
-          "cosine_similarity": 0.71724588
         }
       ]
     },
@@ -24043,6 +25097,11 @@
           "cosine_similarity": 0.9149215
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.90465066
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.89470319
@@ -24056,11 +25115,6 @@
           "identifier": "GO:1990159",
           "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
           "cosine_similarity": 0.88505173
-        },
-        {
-          "identifier": "GO:1990156",
-          "label": "DnaB-DnaG complex",
-          "cosine_similarity": 0.83061977
         }
       ]
     },
@@ -24089,9 +25143,71 @@
           "cosine_similarity": 0.81701428
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.81072286
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016272",
+      "label": "prefoldin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016465",
+          "label": "chaperonin ATPase complex",
+          "cosine_similarity": 0.793868
+        },
+        {
+          "identifier": "GO:0005832",
+          "label": "chaperonin-containing T-complex",
+          "cosine_similarity": 0.78684755
+        },
+        {
+          "identifier": "GO:0005885",
+          "label": "Arp2/3 protein complex",
+          "cosine_similarity": 0.78430618
+        },
+        {
+          "identifier": "GO:0008275",
+          "label": "gamma-tubulin small complex",
+          "cosine_similarity": 0.78370931
+        },
+        {
+          "identifier": "GO:0000930",
+          "label": "gamma-tubulin complex",
+          "cosine_similarity": 0.78190578
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990077",
+      "label": "primosome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.92742241
+        },
+        {
           "identifier": "GO:1990099",
           "label": "pre-primosome complex",
-          "cosine_similarity": 0.81044378
+          "cosine_similarity": 0.90465066
+        },
+        {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.88962884
+        },
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.88879222
+        },
+        {
+          "identifier": "GO:1990159",
+          "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
+          "cosine_similarity": 0.87621344
         }
       ]
     },
@@ -24379,9 +25495,19 @@
       "label": "quiescent telomere hypercluster",
       "neighbors": [
         {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.87752706
+        },
+        {
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.86691408
+        },
+        {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.85092657
         },
         {
           "identifier": "GO:0000786",
@@ -24392,16 +25518,6 @@
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.79336625
-        },
-        {
-          "identifier": "GO:1990612",
-          "label": "Sad1-Kms1 LINC complex",
-          "cosine_similarity": 0.77942997
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77025985
         }
       ]
     },
@@ -24518,14 +25634,45 @@
           "cosine_similarity": 0.82510078
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.77676018
+        },
+        {
           "identifier": "GO:0000786",
           "label": "nucleosome",
           "cosine_similarity": 0.75973633
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030869",
+      "label": "RENT complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80650857
         },
         {
-          "identifier": "GO:0101019",
-          "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.75710463
+          "identifier": "GO:0030874",
+          "label": "nucleolar chromatin",
+          "cosine_similarity": 0.79352531
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77877148
+        },
+        {
+          "identifier": "GO:0016581",
+          "label": "NuRD complex",
+          "cosine_similarity": 0.77760187
+        },
+        {
+          "identifier": "GO:1990468",
+          "label": "NuA3b histone acetyltransferase complex",
+          "cosine_similarity": 0.76938785
         }
       ]
     },
@@ -24575,6 +25722,11 @@
           "cosine_similarity": 0.87324328
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.85954979
+        },
+        {
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.85173744
@@ -24583,11 +25735,6 @@
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.84141008
-        },
-        {
-          "identifier": "GO:1990099",
-          "label": "pre-primosome complex",
-          "cosine_similarity": 0.80660801
         }
       ]
     },
@@ -24756,6 +25903,11 @@
           "cosine_similarity": 0.76131375
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.75956901
+        },
+        {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.73090805
@@ -24769,11 +25921,6 @@
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.70899892
-        },
-        {
-          "identifier": "GO:1990732",
-          "label": "pyrenoid",
-          "cosine_similarity": 0.70667148
         }
       ]
     },
@@ -25381,6 +26528,11 @@
           "cosine_similarity": 0.77510908
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.7553853
+        },
+        {
           "identifier": "GO:0009326",
           "label": "formate dehydrogenase complex",
           "cosine_similarity": 0.72890412
@@ -25389,11 +26541,6 @@
           "identifier": "GO:0031026",
           "label": "glutamate synthase complex",
           "cosine_similarity": 0.72468585
-        },
-        {
-          "identifier": "GO:0045273",
-          "label": "respiratory chain complex II (succinate dehydrogenase)",
-          "cosine_similarity": 0.70697699
         }
       ]
     },
@@ -25456,6 +26603,37 @@
           "identifier": "cellstructuremech:crl4wdr1_ubiquitin_ligase_complex",
           "label": "CRL4WDR1 ubiquitin ligase complex",
           "cosine_similarity": 0.65093493
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009337",
+      "label": "sulfite reductase complex (NADPH)",
+      "neighbors": [
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.76651182
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.7553853
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.75026825
+        },
+        {
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.74257007
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.74096958
         }
       ]
     },
@@ -25611,6 +26789,37 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.66166306
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031500",
+      "label": "Tea1 cell-end complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031561",
+          "label": "cellular bud tip polarisome",
+          "cosine_similarity": 0.77078664
+        },
+        {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.74230243
+        },
+        {
+          "identifier": "GO:0000930",
+          "label": "gamma-tubulin complex",
+          "cosine_similarity": 0.7379656
+        },
+        {
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.7343103
+        },
+        {
+          "identifier": "GO:0008275",
+          "label": "gamma-tubulin small complex",
+          "cosine_similarity": 0.73021205
         }
       ]
     },
@@ -26151,6 +27360,11 @@
           "cosine_similarity": 0.81202612
         },
         {
+          "identifier": "GO:0033177",
+          "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+          "cosine_similarity": 0.80838101
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.805895
@@ -26161,14 +27375,9 @@
           "cosine_similarity": 0.77937958
         },
         {
-          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrAD-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.774661
-        },
-        {
-          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrAB-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.77211125
+          "identifier": "GO:0016469",
+          "label": "proton-transporting two-sector ATPase complex",
+          "cosine_similarity": 0.77786109
         }
       ]
     },
@@ -26200,6 +27409,68 @@
           "identifier": "GO:0000439",
           "label": "transcription factor TFIIH core complex",
           "cosine_similarity": 0.70439637
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031372",
+      "label": "UBC13-MMS2 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0097658",
+          "label": "Asi complex",
+          "cosine_similarity": 0.77511157
+        },
+        {
+          "identifier": "GO:0008540",
+          "label": "proteasome regulatory particle, base subcomplex",
+          "cosine_similarity": 0.76632163
+        },
+        {
+          "identifier": "GO:0005838",
+          "label": "proteasome regulatory particle",
+          "cosine_similarity": 0.74700961
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.74237786
+        },
+        {
+          "identifier": "GO:0008541",
+          "label": "proteasome regulatory particle, lid subcomplex",
+          "cosine_similarity": 0.73561371
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0043541",
+      "label": "UDP-N-acetylglucosamine transferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000148",
+          "label": "1,3-beta-D-glucan synthase complex",
+          "cosine_similarity": 0.76909326
+        },
+        {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.70544119
+        },
+        {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.69865653
+        },
+        {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.68611489
+        },
+        {
+          "identifier": "GO:0034274",
+          "label": "Atg12-Atg5-Atg16 complex",
+          "cosine_similarity": 0.67118286
         }
       ]
     },
@@ -26383,9 +27654,9 @@
           "cosine_similarity": 0.84652231
         },
         {
-          "identifier": "GO:0071010",
-          "label": "prespliceosome",
-          "cosine_similarity": 0.79334315
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.81223089
         }
       ]
     },
@@ -26425,9 +27696,19 @@
       "label": "box C/D methylation guide snoRNP complex",
       "neighbors": [
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.94080269
+        },
+        {
           "identifier": "GO:0031429",
           "label": "box H/ACA snoRNP complex",
           "cosine_similarity": 0.87505499
+        },
+        {
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.84929839
         },
         {
           "identifier": "GO:0005732",
@@ -26438,16 +27719,68 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.78998538
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0170049",
+      "label": "box C/D RNP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031428",
+          "label": "box C/D methylation guide snoRNP complex",
+          "cosine_similarity": 0.94080269
+        },
+        {
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.89917065
         },
         {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.78495678
+          "cosine_similarity": 0.87527848
         },
         {
-          "identifier": "GO:0005686",
-          "label": "U2 snRNP",
-          "cosine_similarity": 0.78375396
+          "identifier": "GO:0031429",
+          "label": "box H/ACA snoRNP complex",
+          "cosine_similarity": 0.86603275
+        },
+        {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.86552299
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0072588",
+      "label": "box H/ACA RNP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031429",
+          "label": "box H/ACA snoRNP complex",
+          "cosine_similarity": 0.94808312
+        },
+        {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.89917065
+        },
+        {
+          "identifier": "GO:0031428",
+          "label": "box C/D methylation guide snoRNP complex",
+          "cosine_similarity": 0.84929839
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.81311044
+        },
+        {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.79543091
         }
       ]
     },
@@ -26456,9 +27789,19 @@
       "label": "box H/ACA snoRNP complex",
       "neighbors": [
         {
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.94808312
+        },
+        {
           "identifier": "GO:0031428",
           "label": "box C/D methylation guide snoRNP complex",
           "cosine_similarity": 0.87505499
+        },
+        {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.86603275
         },
         {
           "identifier": "GO:0005732",
@@ -26469,16 +27812,6 @@
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.77218831
-        },
-        {
-          "identifier": "GO:0005736",
-          "label": "RNA polymerase I complex",
-          "cosine_similarity": 0.76375918
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.76094552
         }
       ]
     },
@@ -26817,9 +28150,9 @@
           "cosine_similarity": 0.70213702
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.67694471
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.68123633
         }
       ]
     },
@@ -26831,6 +28164,11 @@
           "identifier": "GO:0000786",
           "label": "nucleosome",
           "cosine_similarity": 0.74690446
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.73026077
         },
         {
           "identifier": "GO:0000228",
@@ -26846,11 +28184,6 @@
           "identifier": "GO:0030874",
           "label": "nucleolar chromatin",
           "cosine_similarity": 0.70166089
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.70150254
         }
       ]
     },
@@ -26910,9 +28243,9 @@
           "cosine_similarity": 0.81137098
         },
         {
-          "identifier": "GO:0030688",
-          "label": "preribosome, small subunit precursor",
-          "cosine_similarity": 0.80957668
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.81118158
         }
       ]
     },
@@ -26988,6 +28321,11 @@
           "cosine_similarity": 0.69805057
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.69418409
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.67494618
@@ -27001,11 +28339,6 @@
           "identifier": "GO:0030875",
           "label": "rDNA protrusion",
           "cosine_similarity": 0.66351068
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.65498352
         }
       ]
     },
@@ -27293,6 +28626,16 @@
       "label": "perinucleolar compartment",
       "neighbors": [
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.70780295
+        },
+        {
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.69895617
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.6985624
@@ -27306,16 +28649,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.69695697
-        },
-        {
-          "identifier": "GO:0000932",
-          "label": "P-body",
-          "cosine_similarity": 0.69165642
-        },
-        {
-          "identifier": "GO:0005655",
-          "label": "nucleolar ribonuclease P complex",
-          "cosine_similarity": 0.68496145
         }
       ]
     },
@@ -27437,9 +28770,9 @@
           "cosine_similarity": 0.83303804
         },
         {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.82394676
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.82922651
         }
       ]
     },
@@ -27551,6 +28884,11 @@
           "cosine_similarity": 0.88322698
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.87527848
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.87504929
@@ -27559,11 +28897,6 @@
           "identifier": "GO:0030677",
           "label": "ribonuclease P complex",
           "cosine_similarity": 0.8658137
-        },
-        {
-          "identifier": "GO:0030679",
-          "label": "cyanelle ribonuclease P complex",
-          "cosine_similarity": 0.84467556
         }
       ]
     },
@@ -27613,6 +28946,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.81392724
+        },
+        {
           "identifier": "GO:0032040",
           "label": "small-subunit processome",
           "cosine_similarity": 0.8015435
@@ -27621,11 +28959,37 @@
           "identifier": "GO:0030688",
           "label": "preribosome, small subunit precursor",
           "cosine_similarity": 0.79665034
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030958",
+      "label": "RITS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.76398872
         },
         {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.79338868
+          "identifier": "GO:0030874",
+          "label": "nucleolar chromatin",
+          "cosine_similarity": 0.76397919
+        },
+        {
+          "identifier": "GO:0030869",
+          "label": "RENT complex",
+          "cosine_similarity": 0.76277103
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.74996314
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.74909518
         }
       ]
     },
@@ -27654,9 +29018,9 @@
           "cosine_similarity": 0.73720595
         },
         {
-          "identifier": "cellstructuremech:h_body",
-          "label": "H-body",
-          "cosine_similarity": 0.72512989
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.72636456
         }
       ]
     },
@@ -27670,6 +29034,16 @@
           "cosine_similarity": 0.79338868
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.77830366
+        },
+        {
+          "identifier": "GO:0072588",
+          "label": "box H/ACA RNP complex",
+          "cosine_similarity": 0.77636945
+        },
+        {
           "identifier": "GO:0140365",
           "label": "RNP body",
           "cosine_similarity": 0.75979593
@@ -27678,16 +29052,6 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.74867015
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.74396436
-        },
-        {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.73775026
         }
       ]
     },
@@ -27778,9 +29142,9 @@
           "cosine_similarity": 0.84418998
         },
         {
-          "identifier": "GO:0030684",
-          "label": "preribosome",
-          "cosine_similarity": 0.82394676
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.83339503
         }
       ]
     },
@@ -27825,6 +29189,11 @@
           "cosine_similarity": 0.91565821
         },
         {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.86552299
+        },
+        {
           "identifier": "GO:0071024",
           "label": "SL snRNP",
           "cosine_similarity": 0.85150657
@@ -27838,11 +29207,6 @@
           "identifier": "GO:0005686",
           "label": "U2 snRNP",
           "cosine_similarity": 0.83505352
-        },
-        {
-          "identifier": "GO:0005685",
-          "label": "U1 snRNP",
-          "cosine_similarity": 0.82473949
         }
       ]
     },
@@ -28052,14 +29416,14 @@
           "cosine_similarity": 0.65463878
         },
         {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.6348284
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.62932189
-        },
-        {
-          "identifier": "GO:0043684",
-          "label": "type IV secretion system complex",
-          "cosine_similarity": 0.62079188
         }
       ]
     },

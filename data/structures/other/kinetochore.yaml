@@ -40,6 +40,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:13:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: condensed chromosome kinetochore
   synonym_type: EXACT_SYNONYM
@@ -72,6 +79,22 @@ components:
   - reference: DOI:10.1083/jcb.200305100
     notes: Westermann et al. 2003 identified CENP-A/Cse4-linked inner kinetochore
       proteins in the conserved budding-yeast molecular core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36012
+    protein_label: Histone H3-like centromeric protein CSE4
+    gene_symbol: CSE4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene CSE4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14581449
+      notes: Westermann S et al. 2003, ‘Architecture of the budding yeast kinetochore
+        reveals a conserved molecular core.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P36012.
 - component_id: coma_complex
   label: COMA complex
   component_type: PROTEIN_COMPLEX

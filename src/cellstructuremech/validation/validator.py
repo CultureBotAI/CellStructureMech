@@ -1,0 +1,584 @@
+"""Semantic validation checks for CellStructureRecord documents
+(#2408, #2410, #2417, #2428, #2457, #2472, #2486).
+
+Complements closed-schema LinkML validation (``write_validated.py``) with
+cross-field and graph-completeness invariants that JSON Schema alone cannot
+express:
+
+- ``parent_structures`` (is-a), ``part_of`` (parthood), and ``has_part`` /
+  ``CONSTITUENT`` ``components[].grounding`` are pairwise disjoint.
+- Every ``CausalEdge.subject`` and ``CausalEdge.object`` references a declared
+  ``CausalNode.node_id`` in the same graph.
+- Every ``CausalNode.component_ref`` resolves to a declared ``component_id`` on
+  the record, propagates and agrees with the referenced component's
+  ``grounding`` (unless the node description explicitly documents a sub-region
+  grounding omission), and does not type a ``PROTEIN`` component as
+  ``node_type: STRUCTURE``.
+- Every declared ``CausalNode`` participates in at least one incident
+  ``CausalEdge`` (no isolated nodes).
+- Every ``CausalEdge`` carries a non-blank ``description``.
+- No 2-node, 1-edge ``STRUCTURE`` ``CausalGraph`` (on a non-``SUBCELLULAR_REGION``
+  record) whose sole edge predicate is parthood-only (``"is part of"``,
+  ``"part_of"``, ``"BFO:0000050"``) carries ``scope_status: MECHANISTIC``.
+- No ``CausalNode`` with ``node_type == 'GENE_OR_PROTEIN'`` carries a ``GO:``
+  or ``cellstructuremech:`` structure/complex ``grounding`` or references a
+  ``PROTEIN_COMPLEX`` component grounded to ``GO:`` or ``cellstructuremech:``
+  (such multiprotein complexes/substructures must use ``node_type: STRUCTURE``).
+- Every ``functions[]`` entry that matches a ``CausalNode`` by ``function_id`` /
+  ``node_id``, ``label``, or ``grounding`` agrees on ``GO:`` ``grounding`` and
+  does not contradict the GO aspect (``MOLECULAR_FUNCTION`` vs
+  ``BIOLOGICAL_PROCESS``) documented in the function or GO reference evidence.
+- Every ``components[].protein_examples[].gene_symbol`` is included in a
+  non-empty parent ``components[].gene_symbols`` list or explicitly disclosed
+  as an organism-specific synonym/locus tag in ``protein_examples[].role``
+  (including components whose ``gene_symbols`` list is empty).
+- When top-level ``evidence`` cites ``PMID:`` primary literature references,
+  primary ``PMID:`` citations in ``components``, ``taxonomic_distribution``,
+  ``functions``, and ``causal_graphs`` are also present in top-level ``evidence``
+  (or component ``protein_examples``).
+- Every ``curation_history`` entry with ``action == 'CURATED_CAUSAL_GRAPH'``
+  that names a target causal-graph slug resolves to a declared
+  ``causal_graphs[].graph_id`` on the record.
+- Every ``#NNN`` GitHub issue mention and every ``DOI`` or ``PMID`` citation in
+  ``discussions`` prose (``prompt``, ``rationale``, ``resolution_note``,
+  ``notes``) is backed by a matching reference in that discussion's
+  ``evidence`` list, and every ``attaches_to`` anchor resolves to a local ID on
+  the record.
+"""
+
+from __future__ import annotations
+
+import re
+from typing import Any
+
+DEFAULT_GITHUB_REPO = "CultureBotAI/CellStructureMech"
+_PROSE_ISSUE_RE = re.compile(r"(?<![A-Za-z0-9_/])#([1-9]\d*)\b")
+_PROSE_DOI_RE = re.compile(
+    r"\b(?:DOI:\s*)?(10\.\d{4,9}/[^\s,;)\]\"]*[A-Za-z0-9])", re.IGNORECASE
+)
+_PROSE_PMID_RE = re.compile(r"\bPMID:\s*([1-9]\d*)\b", re.IGNORECASE)
+_CURATED_CG_TARGET_RE = re.compile(
+    r"(?:\b(?:in|Enriched)\s+|\bcausal[ -]graph\s+|\bcausal_graphs(?:\[\d+\])?\s*\(\s*)"
+    r"`?([a-z][a-z0-9]*(?:_[a-z0-9]+)+)`?"
+)
+_STRUCTURE_GROUNDING_PREFIXES = ("GO:", "cellstructuremech:")
+_SYNONYM_ROLE_RE = re.compile(
+    r"\bgene ([^\s,()]+), which UniProt lists (?:under the primary name\b|without a gene symbol\b)"
+)
+_ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
+_MF_ASPECT_TOKENS = ("molecular-function", "molecular_function", "molecular function")
+_BP_ASPECT_TOKENS = ("biological-process", "biological_process", "biological process")
+_PARTHOOD_PREDICATES = {"is part of", "part_of", "BFO:0000050"}
+
+
+def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
+    """Return semantic validation error strings for ``doc['causal_graphs']``."""
+    errors: list[str] = []
+    comps_by_id = {
+        c.get("component_id"): c
+        for c in (doc.get("components") or [])
+        if isinstance(c, dict) and c.get("component_id")
+    }
+    comp_ids = set(comps_by_id)
+    funcs = [f for f in (doc.get("functions") or []) if isinstance(f, dict)]
+    record_go_ev_notes: dict[str, list[str]] = {}
+    for ev in doc.get("evidence") or []:
+        if not isinstance(ev, dict):
+            continue
+        ref = str(ev.get("reference") or "").strip()
+        notes = str(ev.get("notes") or "").strip()
+        if ref.startswith("GO:") and notes:
+            record_go_ev_notes.setdefault(ref, []).append(notes.lower())
+    for graph in doc.get("causal_graphs") or []:
+        if not isinstance(graph, dict):
+            continue
+        gid = graph.get("graph_id") or "<graph>"
+        nodes = [n for n in (graph.get("nodes") or []) if isinstance(n, dict)]
+        edges = [e for e in (graph.get("edges") or []) if isinstance(e, dict)]
+        node_ids = {n.get("node_id") for n in nodes if n.get("node_id")}
+
+        if (
+            graph.get("scope_status") == "MECHANISTIC"
+            and doc.get("structure_kind") != "SUBCELLULAR_REGION"
+            and len(nodes) == 2
+            and len(edges) == 1
+            and all(n.get("node_type") == "STRUCTURE" for n in nodes)
+        ):
+            sole_pred = str(edges[0].get("predicate") or "").strip()
+            if sole_pred in _PARTHOOD_PREDICATES:
+                errors.append(
+                    f"{gid}: 2-node 1-edge STRUCTURE graph with parthood-only predicate "
+                    f"{sole_pred!r} has scope_status 'MECHANISTIC' "
+                    f"(expected 'NONMECHANISTIC' or 'INCOMPLETE')"
+                )
+
+        incident: set[str] = set()
+        edge_go_ev_notes: dict[str, list[str]] = {}
+        for idx, edge in enumerate(edges):
+            subj = edge.get("subject")
+            obj = edge.get("object")
+            if subj not in node_ids:
+                errors.append(
+                    f"{gid}: edge[{idx}] subject {subj!r} is not a declared node_id"
+                )
+            else:
+                incident.add(subj)
+            if obj not in node_ids:
+                errors.append(
+                    f"{gid}: edge[{idx}] object {obj!r} is not a declared node_id"
+                )
+            else:
+                incident.add(obj)
+            desc = edge.get("description")
+            if not isinstance(desc, str) or not desc.strip():
+                errors.append(
+                    f"{gid}: edge[{idx}] ({subj} -> {obj}) lacks a non-empty description"
+                )
+            for ev in edge.get("evidence") or []:
+                if not isinstance(ev, dict):
+                    continue
+                ref = str(ev.get("reference") or "").strip()
+                notes = str(ev.get("notes") or "").strip()
+                if ref.startswith("GO:") and notes:
+                    edge_go_ev_notes.setdefault(ref, []).append(notes.lower())
+
+        for node in nodes:
+            nid = node.get("node_id")
+            cref = node.get("component_ref")
+            if cref and cref not in comp_ids:
+                errors.append(
+                    f"{gid}: node {nid!r} component_ref {cref!r} does not resolve to a component"
+                )
+            if nid and nid not in incident:
+                errors.append(
+                    f"{gid}: isolated CausalNode {nid!r} has zero incident edges"
+                )
+            grounding = str(node.get("grounding") or "").strip()
+            ref_comp = comps_by_id.get(cref) if cref else None
+            comp_grounding = str((ref_comp or {}).get("grounding") or "").strip()
+            node_desc = str(node.get("description") or "").lower()
+            if node.get("node_type") == "GENE_OR_PROTEIN" and grounding.startswith(
+                _STRUCTURE_GROUNDING_PREFIXES
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' with "
+                    f"structure/complex grounding {grounding!r} (expected 'STRUCTURE')"
+                )
+            elif (
+                node.get("node_type") == "GENE_OR_PROTEIN"
+                and ref_comp
+                and ref_comp.get("component_type") == "PROTEIN_COMPLEX"
+                and comp_grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES)
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' referencing "
+                    f"grounded PROTEIN_COMPLEX component {cref!r} ({comp_grounding!r}; "
+                    f"expected 'STRUCTURE')"
+                )
+            elif (
+                node.get("node_type") == "STRUCTURE"
+                and ref_comp
+                and ref_comp.get("component_type") == "PROTEIN"
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'STRUCTURE' referencing "
+                    f"PROTEIN component {cref!r} (expected 'GENE_OR_PROTEIN')"
+                )
+            elif (
+                ref_comp
+                and comp_grounding
+                and not grounding
+                and not ("carries no " in node_desc and "grounding" in node_desc)
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} with component_ref {cref!r} omits "
+                    f"grounding {comp_grounding!r} from referenced component"
+                )
+            if (
+                ref_comp
+                and comp_grounding
+                and grounding
+                and grounding != comp_grounding
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} with component_ref {cref!r} has "
+                    f"grounding {grounding!r} conflicting with referenced component "
+                    f"grounding {comp_grounding!r}"
+                )
+
+            nid_str = str(nid or "").strip()
+            nlabel = str(node.get("label") or "").strip().lower()
+            ntype = node.get("node_type")
+            for fn in funcs:
+                fid = str(fn.get("function_id") or "").strip()
+                flabel = str(fn.get("label") or "").strip().lower()
+                fgrounding = str(fn.get("grounding") or "").strip()
+                same_id_or_label = (bool(fid) and fid == nid_str) or (
+                    bool(flabel) and flabel == nlabel
+                )
+                same_grounding = (
+                    bool(fgrounding) and bool(grounding) and fgrounding == grounding
+                )
+                if same_id_or_label:
+                    if not fgrounding and grounding.startswith("GO:"):
+                        errors.append(
+                            f"functions#{fid or '<function>'}: omits grounding {grounding!r} "
+                            f"present on matching CausalNode {nid_str!r} in {gid}"
+                        )
+                    elif fgrounding.startswith("GO:") and not grounding:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} omits grounding {fgrounding!r} "
+                            f"from matching functions#{fid or '<function>'}"
+                        )
+                    elif fgrounding and grounding and fgrounding != grounding:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} has grounding {grounding!r} "
+                            f"conflicting with matching functions#{fid or '<function>'} "
+                            f"grounding {fgrounding!r}"
+                        )
+                if same_id_or_label or same_grounding:
+                    go_curie = grounding or fgrounding
+                    fn_ev_notes = [
+                        str(ev.get("notes") or "").lower()
+                        for ev in (fn.get("evidence") or [])
+                        if isinstance(ev, dict)
+                    ]
+                    aspect_notes = " ".join(
+                        [
+                            *fn_ev_notes,
+                            *(record_go_ev_notes.get(go_curie) or []),
+                            *(edge_go_ev_notes.get(go_curie) or []),
+                        ]
+                    )
+                    has_mf = any(tok in aspect_notes for tok in _MF_ASPECT_TOKENS)
+                    has_bp = any(tok in aspect_notes for tok in _BP_ASPECT_TOKENS)
+                    if ntype == "BIOLOGICAL_PROCESS" and has_mf and not has_bp:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} ({go_curie!r}) has node_type "
+                            f"'BIOLOGICAL_PROCESS' contradicting molecular_function aspect "
+                            f"on functions#{fid or '<function>'} (expected 'MOLECULAR_FUNCTION')"
+                        )
+                    elif ntype == "MOLECULAR_FUNCTION" and has_bp and not has_mf:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} ({go_curie!r}) has node_type "
+                            f"'MOLECULAR_FUNCTION' contradicting biological_process aspect "
+                            f"on functions#{fid or '<function>'} (expected 'BIOLOGICAL_PROCESS')"
+                        )
+    return errors
+
+
+def validate_hierarchy_relations(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when CURIEs collide across hierarchy, parthood, or constituent fields."""
+    errors: list[str] = []
+    parents = {
+        str(x).strip()
+        for x in (doc.get("parent_structures") or [])
+        if x is not None and str(x).strip()
+    }
+    part_of = {
+        str(x).strip()
+        for x in (doc.get("part_of") or [])
+        if x is not None and str(x).strip()
+    }
+    has_part = {
+        str(x).strip()
+        for x in (doc.get("has_part") or [])
+        if x is not None and str(x).strip()
+    }
+    for curie in sorted(parents & part_of):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both parent_structures (is-a) and part_of (parthood)"
+        )
+    for curie in sorted(parents & has_part):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both parent_structures (is-a) and has_part"
+        )
+    for curie in sorted(part_of & has_part):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both part_of and has_part"
+        )
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict) or comp.get("component_role") != "CONSTITUENT":
+            continue
+        cid = comp.get("component_id") or "<component>"
+        cg = str(comp.get("grounding") or "").strip()
+        if not cg:
+            continue
+        if cg in parents:
+            errors.append(
+                f"components#{cid}: CONSTITUENT grounding {cg!r} duplicates parent_structures (is-a)"
+            )
+        if cg in part_of:
+            errors.append(
+                f"components#{cid}: CONSTITUENT grounding {cg!r} duplicates part_of (enclosing structure)"
+            )
+    return errors
+
+
+def validate_component_protein_examples(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when ``protein_examples[].gene_symbol`` drifts from ``component.gene_symbols``."""
+    errors: list[str] = []
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        cid = comp.get("component_id") or "<component>"
+        gs = [
+            str(s).strip()
+            for s in (comp.get("gene_symbols") or [])
+            if s is not None and str(s).strip()
+        ]
+        if not gs:
+            for pe in comp.get("protein_examples") or []:
+                if not isinstance(pe, dict):
+                    continue
+                pe_sym = str(pe.get("gene_symbol") or "").strip()
+                if not pe_sym:
+                    continue
+                role = str(pe.get("role") or "")
+                if "declared gene symbol" not in role.lower() and (
+                    _SYNONYM_ROLE_RE.search(role) or _ALSO_SYNONYM_RE.search(role)
+                ):
+                    continue
+                errors.append(
+                    f"components#{cid}: protein_example {pe.get('uniprot_id')!r} "
+                    f"declares gene_symbol {pe_sym!r} on a component with empty gene_symbols"
+                )
+            continue
+        gs_lower = {s.lower() for s in gs}
+        for pe in comp.get("protein_examples") or []:
+            if not isinstance(pe, dict):
+                continue
+            pe_sym = str(pe.get("gene_symbol") or "").strip()
+            if not pe_sym or pe_sym.lower() in gs_lower:
+                continue
+            role = str(pe.get("role") or "")
+            disclosed: set[str] = set()
+            m1 = _SYNONYM_ROLE_RE.search(role)
+            if m1:
+                disclosed.add(m1.group(1).lower())
+            m2 = _ALSO_SYNONYM_RE.search(role)
+            if m2:
+                for tok in re.split(r"[,;\s]+", m2.group(1)):
+                    if tok and tok.lower() != "and":
+                        disclosed.add(tok.lower())
+            if pe_sym.lower() in role.lower() or (disclosed & gs_lower):
+                continue
+            errors.append(
+                f"components#{cid}: protein_example {pe.get('uniprot_id')!r} "
+                f"gene_symbol {pe_sym!r} is not in component.gene_symbols {gs!r} "
+                f"or disclosed as a synonym in role"
+            )
+    return errors
+
+
+def validate_discussion_issue_links(
+    doc: dict[str, Any],
+    *,
+    github_repo: str = DEFAULT_GITHUB_REPO,
+) -> list[str]:
+    """Return error strings for ``discussions`` anchor or ``#NNN`` issue-link defects."""
+    errors: list[str] = []
+    anchors = {
+        "components": {
+            c.get("component_id")
+            for c in (doc.get("components") or [])
+            if isinstance(c, dict) and c.get("component_id")
+        },
+        "functions": {
+            f.get("function_id")
+            for f in (doc.get("functions") or [])
+            if isinstance(f, dict) and f.get("function_id")
+        },
+        "causal_graphs": {
+            g.get("graph_id")
+            for g in (doc.get("causal_graphs") or [])
+            if isinstance(g, dict) and g.get("graph_id")
+        },
+    }
+    issue_prefix = f"https://github.com/{github_repo}/issues/"
+    for disc in doc.get("discussions") or []:
+        if not isinstance(disc, dict):
+            continue
+        did = disc.get("discussion_id") or "<discussion>"
+        for anchor in disc.get("attaches_to") or []:
+            if not isinstance(anchor, str):
+                continue
+            section, _, local = anchor.partition("#")
+            if section in anchors and local not in anchors[section]:
+                errors.append(
+                    f"{did}: attaches_to anchor {anchor!r} does not resolve"
+                )
+        ev_refs = {
+            str(ev.get("reference") or "").strip()
+            for ev in (disc.get("evidence") or [])
+            if isinstance(ev, dict)
+        }
+        ev_refs_lower = {r.lower() for r in ev_refs if r}
+        prose = " ".join(
+            str(disc.get(field) or "")
+            for field in ("prompt", "rationale", "resolution_note", "notes", "text")
+        )
+        seen_nums: set[str] = set()
+        for match in _PROSE_ISSUE_RE.finditer(prose):
+            num = match.group(1)
+            if num in seen_nums:
+                continue
+            seen_nums.add(num)
+            expected_url = f"{issue_prefix}{num}"
+            if expected_url not in ev_refs:
+                errors.append(
+                    f"{did}: prose mentions #{num} without {expected_url!r} in discussion.evidence"
+                )
+        seen_dois: set[str] = set()
+        for match in _PROSE_DOI_RE.finditer(prose):
+            doi = match.group(1)
+            doi_lower = doi.lower()
+            if doi_lower in seen_dois:
+                continue
+            seen_dois.add(doi_lower)
+            if not any(doi_lower in r for r in ev_refs_lower):
+                errors.append(
+                    f"{did}: prose mentions DOI:{doi} without 'DOI:{doi}' in discussion.evidence"
+                )
+        seen_pmids: set[str] = set()
+        for match in _PROSE_PMID_RE.finditer(prose):
+            pmid = match.group(1)
+            if pmid in seen_pmids:
+                continue
+            seen_pmids.add(pmid)
+            if f"pmid:{pmid}" not in ev_refs_lower:
+                errors.append(
+                    f"{did}: prose mentions PMID:{pmid} without 'PMID:{pmid}' in discussion.evidence"
+                )
+    return errors
+
+
+def validate_curation_history(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when ``CURATED_CAUSAL_GRAPH`` entries cite nonexistent ``graph_id`` slugs."""
+    errors: list[str] = []
+    graph_ids = {
+        g.get("graph_id")
+        for g in (doc.get("causal_graphs") or [])
+        if isinstance(g, dict) and g.get("graph_id")
+    }
+    for idx, entry in enumerate(doc.get("curation_history") or []):
+        if not isinstance(entry, dict) or entry.get("action") != "CURATED_CAUSAL_GRAPH":
+            continue
+        if not graph_ids:
+            errors.append(
+                f"curation_history[{idx}]: action 'CURATED_CAUSAL_GRAPH' on record with no causal_graphs"
+            )
+            continue
+        changes = str(entry.get("changes") or "")
+        for match in _CURATED_CG_TARGET_RE.finditer(changes):
+            target = match.group(1)
+            if target not in graph_ids:
+                errors.append(
+                    f"curation_history[{idx}]: CURATED_CAUSAL_GRAPH target {target!r} "
+                    f"is not in causal_graphs ({sorted(graph_ids)!r})"
+                )
+    return errors
+
+
+def validate_top_level_pmid_parity(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when top-level ``evidence`` cites ``PMID:`` entries
+    while omitting primary ``PMID:`` references cited in ``components``,
+    ``taxonomic_distribution``, ``functions``, or ``causal_graphs``."""
+    errors: list[str] = []
+    top_refs = [
+        str(ev.get("reference") or "").strip()
+        for ev in (doc.get("evidence") or [])
+        if isinstance(ev, dict) and str(ev.get("reference") or "").strip()
+    ]
+    top_pmids = {r for r in top_refs if r.startswith("PMID:")}
+    top_dois = {r for r in top_refs if r.startswith("DOI:")}
+    if (
+        not top_pmids
+        or len(top_dois) > len(top_pmids)
+        or any(r.startswith("CHEBI:") for r in top_refs)
+    ):
+        return errors
+
+    pe_pmids: set[str] = set()
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        for pe in comp.get("protein_examples") or []:
+            if not isinstance(pe, dict):
+                continue
+            for ev in pe.get("evidence") or []:
+                if isinstance(ev, dict):
+                    ref = str(ev.get("reference") or "").strip()
+                    if ref.startswith("PMID:"):
+                        pe_pmids.add(ref)
+    covered_pmids = top_pmids | pe_pmids
+
+    def _check_ev_list(ev_list: Any, path_label: str) -> None:
+        items = [e for e in (ev_list or []) if isinstance(e, dict)]
+        list_pmids = {
+            str(e.get("reference") or "").strip()
+            for e in items
+            if str(e.get("reference") or "").strip().startswith("PMID:")
+        }
+        has_covered_sibling = bool(list_pmids & covered_pmids)
+        for ev in items:
+            ref = str(ev.get("reference") or "").strip()
+            if not ref.startswith("PMID:") or ref in covered_pmids:
+                continue
+            notes = str(ev.get("notes") or "")
+            if has_covered_sibling and "DOI:10." in notes:
+                continue
+            errors.append(
+                f"{path_label}: cites {ref!r} not present in top-level evidence "
+                f"({sorted(top_pmids)!r})"
+            )
+
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        cid = comp.get("component_id") or "<component>"
+        _check_ev_list(comp.get("evidence"), f"components#{cid}")
+
+    for idx, td in enumerate(doc.get("taxonomic_distribution") or []):
+        if not isinstance(td, dict):
+            continue
+        ref = str(td.get("reference") or "").strip()
+        if ref.startswith("PMID:") and ref not in covered_pmids:
+            tid = td.get("taxon_id") or f"[{idx}]"
+            errors.append(
+                f"taxonomic_distribution#{tid}: cites {ref!r} not present in "
+                f"top-level evidence ({sorted(top_pmids)!r})"
+            )
+
+    for fn in doc.get("functions") or []:
+        if not isinstance(fn, dict):
+            continue
+        fid = fn.get("function_id") or "<function>"
+        _check_ev_list(fn.get("evidence"), f"functions#{fid}")
+
+    for graph in doc.get("causal_graphs") or []:
+        if not isinstance(graph, dict):
+            continue
+        gid = graph.get("graph_id") or "<graph>"
+        for eidx, edge in enumerate(graph.get("edges") or []):
+            if not isinstance(edge, dict):
+                continue
+            _check_ev_list(edge.get("evidence"), f"causal_graphs#{gid}.edges[{eidx}]")
+
+    return errors
+
+
+def validate_record_semantics(
+    doc: dict[str, Any],
+    *,
+    github_repo: str = DEFAULT_GITHUB_REPO,
+) -> list[str]:
+    """Run all semantic record checks on ``doc``."""
+    return [
+        *validate_hierarchy_relations(doc),
+        *validate_causal_graphs(doc),
+        *validate_component_protein_examples(doc),
+        *validate_top_level_pmid_parity(doc),
+        *validate_curation_history(doc),
+        *validate_discussion_issue_links(doc, github_repo=github_repo),
+    ]

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml
+  slug: small_ribosomal_subunit
+session:
+  id: 2026-10-31T090232Z-claude-code-0efdb1
+  timestamp: '2026-10-31T09:02:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added ssu_protein_cohort node with component_ref and connected it to small_ribosomal_subunit
+    in ssu_decoding_center.
+  details: Added the ssu_protein_cohort causal node referencing the small-subunit ribosomal
+    protein component and linked it to small_ribosomal_subunit (DOI:10.1038/35030006, DOI:10.1128/MMBR.00013-07).

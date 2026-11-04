@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bam_protein_complex.yaml
+  slug: bam_protein_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-aaba09
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked BamB, BamC, BamD, and BamE lipoprotein components into the BAM complex causal
+    graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added GENE_OR_PROTEIN nodes bam_b, bam_c,
+    bam_d, and bam_e linked via component_ref to their respective components with parthood
+    edges into bam_b_to_e_lipoproteins, and completed bam_b_to_e_lipoproteins.xrefs with UniProtKB:P0A937.'

@@ -1,0 +1,990 @@
+# Multivesicular body intraluminal vesicle scientific review
+
+- Review: 20261022T024034Z-multivesicular-body-intraluminal-vesicle-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:27:41Z
+- Finished UTC: 2026-10-22T02:40:34Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The internal-vesicle biology, label-only bilayer, yeast example and descriptive graph are supported. One major grounding finding identifies the unused exact native GO0097487 identity; preserve the local identifier through explicit supersession rather than silent renaming.
+
+## Scope And Provenance
+
+Entire exact target and complete MVB quartet boundary context; every asserted native identity and citation; specified primary body/abstract scope; components, taxon, functions, all directed edges, discussions, and exact identifier candidates.
+
+Selection: Batch34 target 8; exact initial native inspect/schema/strict passed before assessment at unchanged f97b1abe.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:multivesicular_body_intraluminal_vesicle | data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml | maintained | multivesicular body intraluminal vesicle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:multivesicular_body_intraluminal_vesicle | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Native protein-instance applicability | not_applicable | False | cellstructuremech:multivesicular_body_intraluminal_vesicle | No accession-bearing protein_examples, gene-symbol rows or GENE_OR_PROTEIN nodes occur in this target. GO-grounded ESCRT complex identities were read directly; no expression-module or individual-protein inference is made. |
+| Claim-level scientific review | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | 8 of 12 collected target identifiers returned OK. PMID:11511343: UNREACHABLE; Native Europe PMC MED result independently read: PMID:11511343, DOI:10.1016/s0092-8674(01)00434-2, Ubiquitin-dependent sorting into the multivesicular body pathway requires the function of a conserved endosomal protein sorting complex, ESCRT-I. (2001). Exact identity and complete abstract are verified; original bulk-resolver HTTP414 is a transport failure. No full-body verification follows from this abstract.; PMID:12194857: UNREACHABLE; Native Europe PMC MED result independently read: PMID:12194857, DOI:10.1016/s1534-5807(02)00220-4, Escrt-III: an endosome-associated heterooligomeric protein complex required for mvb sorting. (2002). Exact identity and complete abstract are verified; original bulk-resolver HTTP414 is a transport failure. No full-body verification follows from this abstract.; cellstructuremech:multivesicular_body_intraluminal_vesicle: SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml at frozen SHA256 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916. The maintained identity, definition and compartment boundary were independently read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen definition. Local-reference validity is separate from any GO-first curation finding; no scientific identifier is renamed.; cellstructuremech:multivesicular_body_lumen: SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_lumen.yaml at frozen SHA256 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6. The maintained identity, definition and compartment boundary were independently read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen definition. Local-reference validity is separate from any GO-first curation finding; no scientific identifier is renamed. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:multivesicular_body_intraluminal_vesicle | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Correct vesicle concept but missed exact GO identity
+
+identity: concern. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+The maintained definition denotes an internal MVB vesicle, not the organelle or its outer lumen. Native GO0097487 exactly matches that entity, with vesicle ancestry and MVB parthood. The local identifier therefore leaves an exact GO identity unadopted despite the frozen GO-first contract.
+
+### Collective bilayer and transient ESCRT boundary
+
+grounding: supported. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+The reviewed-label-only lipid row denotes material forming the vesicle bilayer and does not assert an exact whole-membrane GO as a molecular lipid identity. ESCRT-III is an external assembly actor rather than a stable ILV constituent. The open molecular-lipid mapping is distinct from the record-level GO identity finding.
+
+### Individual formation requirements unresolved
+
+evidence: unknown. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+The collective bilayer is constitutive of this membrane-bounded vesicle. The ESSENTIAL annotation does not experimentally establish that each lipid species or protein is necessary for formation; no molecular removal experiment or source-independent composition is asserted.
+
+### Cargo destination and four descriptive formation edges
+
+graph: supported. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+The function describes cargo entry during MVB sorting, not permanent retention of ubiquitin on every completed cargo. The four NONMECHANISTIC edges retain membrane remodeling, inward budding, ILV containment in the outer MVB lumen, and the limiting membrane enclosing the whole MVB. The added bounds edge preserves the correct boundary; it does not imply the ILV membrane surrounds the whole MVB.
+
+### Budding-yeast model and qualitative occurrence
+
+scope: supported. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+Native4932 verifies the species name. The primary2001/2002 abstracts and organism metadata identify budding-yeast ESCRT sorting context, while Teo2004 explicitly uses S.cerevisiae genes. This supports the qualitative COMMON/model-system examples without certifying an unreported frequency, particular strain, or direct imaging protocol from abstract-only sources.
+
+### Precise citation identity and actual reading scope
+
+evidence: supported. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+All cited literature identities and complete native abstracts were read. Teo2004 genuine primary body was read in its stated page scope. Henne2011 is review-tier and currently abstract-only; neither it nor the primary2001/2002 abstracts substitutes for unread detailed Methods or complete scission experiments. No snippet, image or numerical claim occurs in the target.
+
+### No invented optional machinery inventory
+
+completeness: supported. Targets: cellstructuremech:multivesicular_body_intraluminal_vesicle.
+
+The existing discussions distinguish constituent material from assembly machinery and compartment boundary from contents. Optional lipid chemistry, stoichiometry, full ESCRT inventory and atomic mechanisms are not mandatory additions to these intentionally coarse records. The exact record identity concern, where present, is independent of those optional details.
+
+## Findings
+
+### F1: Reconcile the local identity with exact native GO:0097487
+
+major / open / confirmed; issue key: multivesicular-body-intraluminal-vesicle-unused-exact-go-identity.
+
+The maintained local identifier denotes the same biological entity as active GO:0097487. The candidate definition, ancestry and MVB parthood match; this is not a broader or merely label-similar term. An ignored-inclusive corpus search finds no existing use of the exact GO term. The record therefore misses the repository-required exact GO identity, while its biological boundary remains correct.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, reconcile the entity with GO:0097487 using the documented identifier-preserving supersession process: retain the old local record as DEPRECATED and create or adopt the exact-GO successor with replaces. Coordinate references and evidence to the successor without silently reusing or renaming the old identifier. Preserve the verified lumen/vesicle boundary, species scope and optional lipid mapping limits.
+
+- The adopted GO definition still exactly matches the maintained biological entity; no broader class is substituted.
+- The old local identifier remains recoverable and the successor records replaces according to the curation contract.
+- Ignored-inclusive corpus reference checks and native schema/strict/history/product/identifier gates pass after any separately authorized migration.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml; Entire maintained record, including every history, evidence, component, function, graph and discussion field | context_only | Complete target read; no scientific edit or status promotion. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent lines388–444; component_role, grounding and essentiality | context_only | Molecular constituents are distinguished from whole structures and transient machinery. Essentiality means formation necessity, not activity or membership alone. |
+| go-first | CLAUDE.md; Granularity and identity, lines68–70 | context_only | Use an exact GO cellular-component identity when available; use a local mint only when no exact GO identity applies. |
+| identifier-preservation | docs/CURATION.md; Identifiers, rules1–3 and following paragraph | context_only | GO-first applies to exact definitions. Existing identifiers are not silently renamed: a superseded record remains deprecated and its successor names it in replaces. |
+| neighbor-multivesicular_body | data/structures/membrane_organelle/multivesicular_body.yaml; Complete maintained MVB boundary neighbor | context_only | Neighbor identity and boundary context were read and frozen; this is maintained context, not independent experimental evidence. |
+| neighbor-multivesicular_body_lumen | data/structures/membrane_organelle/multivesicular_body_lumen.yaml; Complete maintained MVB boundary neighbor | context_only | Neighbor identity and boundary context were read and frozen; this is maintained context, not independent experimental evidence. |
+| neighbor-multivesicular_body_membrane | data/structures/membrane_organelle/multivesicular_body_membrane.yaml; Complete maintained MVB boundary neighbor | context_only | Neighbor identity and boundary context were read and frozen; this is maintained context, not independent experimental evidence. |
+| mvb-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005771,GO:0005770,GO:0032585,GO:0071985,GO:0031982,GO:0031904,GO:0010008,GO:0000813,GO:0000814,GO:0000815; Complete requested term results: definitions, active status, synonyms and returned child relations; exact IDs in URL | supports | All10 requested active GO terms were inspected. Definitions distinguish whole MVB, outer limiting membrane, lumenal destination, vesicle and ESCRT complexes. GO0005770 directly lists GO0005771 as is_a; GO0005771 lists membrane and the two newly verified candidates as part_of children. GO0071985 describes ubiquitinated transmembrane cargo entry into lumenal vesicles and subsequent degradation. |
+| mvb-agent-go-local-candidates | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097486,GO:0097487; Both complete native term results, including definitions and active flags | supports | Active GO0097486 exactly denotes MVB lumen enclosed by the outermost membrane; active GO0097487 exactly denotes a membrane-bounded vesicle wholly within an MVB. Neither candidate conflates the whole organelle with its membrane or with a generic extracellular vesicle. |
+| mvb-agent-candidate-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097486,GO:0097487/ancestors?relations=is_a; Exact requested relations=is_a ancestor lists for both candidates | supports | The is_a-only response places GO0097486 beneath endosome lumen GO0031904 and GO0097487 beneath vesicle GO0031982. These are ancestor results, not assertions that every listed ancestor is an immediate parent. |
+| mvb-agent-SL0174 | https://rest.uniprot.org/locations/SL-0174.json; Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry prose used only for boundary context | supports | SL0174 matches whole MVB, its five maintained synonyms and late-endosome parent; inward budding and limiting-membrane distinction agree. |
+| mvb-agent-SL0175 | https://rest.uniprot.org/locations/SL-0175.json; Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry prose used only for boundary context | supports | SL0175 matches the outer MVB membrane, its five maintained synonyms, endosome-membrane is_a and MVB part_of relationships. |
+| mvb-agent-SL0340 | https://rest.uniprot.org/locations/SL-0340.json; Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry prose used only for boundary context | supports | SL0340 identifies the MVB lumen, its five maintained synonyms, endosome-lumen is_a and MVB part_of relationships; it does not denote the lumen inside each internal vesicle. |
+| mvb-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName, rank and lineage | supports | Native ENA confirms Saccharomyces cerevisiae4932 at species rank; this does not itself measure occurrence frequency or identify an experimental strain. |
+| mvb-agent-katzmann2001-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A11511343%20AND%20SRC%3AMED; Unique MED result, full abstract and organism metadata; primary abstract only | supports | Exact PMID11511343/DOI identity, title, authors/year and complete abstract read. The primary abstract identifies ESCRT-I ubiquitinated-cargo recognition and requirement for MVB sorting in the yeast/mammalian context; no complete study Methods, strain-specific result or quantitative reanalysis is claimed. |
+| mvb-agent-babst2002-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:12194857%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Unique MED result, complete abstract and Saccharomyces cerevisiae organism metadata; primary abstract only | supports | Exact PMID12194857/DOI10.1016/S1534-5807(02)00220-4 identity and complete abstract read. The primary abstract identifies ESCRT-III membrane recruitment/oligomerization, its functional subcomplexes and sorting or concentration of MVB cargoes. It is not itself a direct vesicle-scission reconstitution result. |
+| mvb-agent-henne2011-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.devcel.2011.05.015; Unique MED result and complete abstract; review tier, abstract only | supports | Exact DOI10.1016/j.devcel.2011.05.015, title, authors/year and complete abstract read. This is a literature review: its abstract describes the ESCRT pathway as cargo-recognition/membrane-sculpting machinery and MVB delivery to vacuole or lysosome. Detailed subunit-specific claims in the unread body are not certified from the abstract. |
+| mvb-agent-teo2004-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.devcel.2004.09.003; Unique native MED result and complete abstract | supports | Exact DOI10.1016/j.devcel.2004.09.003/PMID15469844 metadata and full abstract match the recovered primary PDF. |
+| mvb-agent-teo2004-primary-pdf | https://www2.mrc-lmb.cam.ac.uk/groups/rlw/download/publications/15469844.pdf; Printed p559 identity/abstract/Introduction; complete pp564–567 including interaction Results, Conclusions, Figure4–6 captions and experimental procedures. No image pixels, remaining structural Results or separate supplements were inspected. | supports | The primary study demonstrates direct purified ESCRT-II/Vps20 interaction through Vps25 and increased binding of both proteins to brain-lipid liposomes. Yeast genes were cloned from ATCC9763D genomic DNA and proteins expressed in E.coli; this is not direct observation of complete ILV scission in vivo. Introduction describes inward budding, MVB topology and lysosomal fusion; Figure6 is explicitly a model. |
+| local-identity-search | rg -n --no-ignore --hidden -g *.yaml ^(identifier: (GO:0097486&#124;GO:0097487&#124;cellstructuremech:multivesicular_body_lumen&#124;cellstructuremech:multivesicular_body_intraluminal_vesicle)&#124;.*(GO:0097486&#124;GO:0097487).*)$ data/structures; Full maintained data/structures YAML universe, ignored and hidden files included | supports | Both exact local identifiers each occur as an identifier in their single intended maintained record. No occurrence of GO0097486 or GO0097487 was found in this full-corpus search. The valid local references are not broken links; missing native mappings are assessed separately. |
+| schema-result | just validate data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml --out /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml --out /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch34-20261022-36gi391b/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 12 collected target identifiers returned OK. PMID:11511343: UNREACHABLE; Native Europe PMC MED result independently read: PMID:11511343, DOI:10.1016/s0092-8674(01)00434-2, Ubiquitin-dependent sorting into the multivesicular body pathway requires the function of a conserved endosomal protein sorting complex, ESCRT-I. (2001). Exact identity and complete abstract are verified; original bulk-resolver HTTP414 is a transport failure. No full-body verification follows from this abstract.; PMID:12194857: UNREACHABLE; Native Europe PMC MED result independently read: PMID:12194857, DOI:10.1016/s1534-5807(02)00220-4, Escrt-III: an endosome-associated heterooligomeric protein complex required for mvb sorting. (2002). Exact identity and complete abstract are verified; original bulk-resolver HTTP414 is a transport failure. No full-body verification follows from this abstract.; cellstructuremech:multivesicular_body_intraluminal_vesicle: SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml at frozen SHA256 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916. The maintained identity, definition and compartment boundary were independently read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen definition. Local-reference validity is separate from any GO-first curation finding; no scientific identifier is renamed.; cellstructuremech:multivesicular_body_lumen: SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_lumen.yaml at frozen SHA256 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6. The maintained identity, definition and compartment boundary were independently read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen definition. Local-reference validity is separate from any GO-first curation finding; no scientific identifier is renamed. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Katzmann2001, Babst2002 and Henne2011 complete native abstracts were readable, but their publisher HTML routes returned403; bounded public search and ScienceDirect browser routes did not recover genuine body text. Detailed unread Methods, strain and subunit-specific review passages remain unverified. This is an access limit, not evidence of biological absence.
+- Teo2004 genuine PDF was read only in p559 and pp564–567 as precisely listed; no figure pixels or supplemental reanalysis. Direct recruitment assays use purified proteins and brain-lipid liposomes, and Figure6 is a model, not a full in-vivo scission measurement.
+- Native ontology and UniProt location definitions provide boundary and coarse-process support, not experiments quantifying dynamics or prevalence. COMMON is qualitative; organism identity does not establish frequency in every culture.
+- No source-neutral lipid species composition, stoichiometry or individual molecular formation necessity is inferred. Collective material identity remains separate from experimental assembly requirements.
+- The exact native lumen and ILV identities require coordinated identifier-preserving curation in their owning records; existing local references currently resolve correctly. No scientific record, history or status was changed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes an honest clean draft where no issue is observed; no finding is invented to satisfy the local issue-only gate. Parent owns finalization and persistence.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T024034Z-multivesicular-body-intraluminal-vesicle-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Multivesicular body intraluminal vesicle scientific review
+started_at: '2026-10-22T02:27:41Z'
+finished_at: '2026-10-22T02:40:34Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The internal-vesicle biology, label-only bilayer, yeast example and descriptive
+  graph are supported. One major grounding finding identifies the unused exact native
+  GO0097487 identity; preserve the local identifier through explicit supersession
+  rather than silent renaming.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/endosome_lumen.yaml
+    sha256: 7522ffb363729241f2263bef6ebf96cb135a807c677df546e0b4ae92fe2bc604
+    role: context
+  - path: data/structures/membrane_organelle/endosome_membrane.yaml
+    sha256: 564b0ecf02448e0dab2210a213597b20b57ebfe09bf7637dfe2bed79a1b95270
+    role: context
+  - path: data/structures/membrane_organelle/late_endosome.yaml
+    sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+    role: context
+  - path: data/structures/membrane_organelle/multivesicular_body.yaml
+    sha256: cf6713b73e225eb2413a2a8b8a0fc9dfb6cf84a12f10133e3dcbec03791585a9
+    role: context
+  - path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+    sha256: 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6
+    role: context
+  - path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+    sha256: f4b66123e8565c11507c55cd1184da62efd23de4b37e20995a6561bee8634db7
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:multivesicular_body_intraluminal_vesicle
+  path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  label: multivesicular body intraluminal vesicle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    role: maintained scientific record
+scope:
+  description: Entire exact target and complete MVB quartet boundary context; every
+    asserted native identity and citation; specified primary body/abstract scope;
+    components, taxon, functions, all directed edges, discussions, and exact identifier
+    candidates.
+  selection: Batch34 target 8; exact initial native inspect/schema/strict passed before
+    assessment at unchanged f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just validate data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just validate-strict data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    --out /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: protein-applicability
+  name: Native protein-instance applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: No accession-bearing protein_examples, gene-symbol rows or GENE_OR_PROTEIN
+    nodes occur in this target. GO-grounded ESCRT complex identities were read directly;
+    no expression-module or individual-protein inference is made.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - go-first
+  - identifier-preservation
+  - neighbor-multivesicular_body
+  - neighbor-multivesicular_body_lumen
+  - neighbor-multivesicular_body_membrane
+  - mvb-agent-go
+  - mvb-agent-go-local-candidates
+  - mvb-agent-candidate-ancestors
+  - mvb-agent-SL0174
+  - mvb-agent-SL0175
+  - mvb-agent-SL0340
+  - mvb-agent-tax4932
+  - mvb-agent-katzmann2001-meta
+  - mvb-agent-babst2002-meta
+  - mvb-agent-henne2011-meta
+  - mvb-agent-teo2004-meta
+  - mvb-agent-teo2004-primary-pdf
+  - local-identity-search
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: '8 of 12 collected target identifiers returned OK. PMID:11511343: UNREACHABLE;
+    Native Europe PMC MED result independently read: PMID:11511343, DOI:10.1016/s0092-8674(01)00434-2,
+    Ubiquitin-dependent sorting into the multivesicular body pathway requires the
+    function of a conserved endosomal protein sorting complex, ESCRT-I. (2001). Exact
+    identity and complete abstract are verified; original bulk-resolver HTTP414 is
+    a transport failure. No full-body verification follows from this abstract.; PMID:12194857:
+    UNREACHABLE; Native Europe PMC MED result independently read: PMID:12194857, DOI:10.1016/s1534-5807(02)00220-4,
+    Escrt-III: an endosome-associated heterooligomeric protein complex required for
+    mvb sorting. (2002). Exact identity and complete abstract are verified; original
+    bulk-resolver HTTP414 is a transport failure. No full-body verification follows
+    from this abstract.; cellstructuremech:multivesicular_body_intraluminal_vesicle:
+    SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    at frozen SHA256 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916.
+    The maintained identity, definition and compartment boundary were independently
+    read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen
+    definition. Local-reference validity is separate from any GO-first curation finding;
+    no scientific identifier is renamed.; cellstructuremech:multivesicular_body_lumen:
+    SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+    at frozen SHA256 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6.
+    The maintained identity, definition and compartment boundary were independently
+    read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen
+    definition. Local-reference validity is separate from any GO-first curation finding;
+    no scientific identifier is renamed. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - mvb-agent-katzmann2001-meta
+  - mvb-agent-babst2002-meta
+  - record
+  - mvb-agent-go-local-candidates
+  - neighbor-multivesicular_body_lumen
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  locator: Entire maintained record, including every history, evidence, component,
+    function, graph and discussion field
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Complete target read; no scientific edit or status promotion.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent lines388–444; component_role, grounding and essentiality
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Molecular constituents are distinguished from whole structures and transient
+    machinery. Essentiality means formation necessity, not activity or membership
+    alone.
+- evidence_id: go-first
+  kind: record_content
+  reference: CLAUDE.md
+  locator: Granularity and identity, lines68–70
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Use an exact GO cellular-component identity when available; use a local
+    mint only when no exact GO identity applies.
+- evidence_id: identifier-preservation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identifiers, rules1–3 and following paragraph
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: 'GO-first applies to exact definitions. Existing identifiers are not silently
+    renamed: a superseded record remains deprecated and its successor names it in
+    replaces.'
+- evidence_id: neighbor-multivesicular_body
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body.yaml
+  locator: Complete maintained MVB boundary neighbor
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Neighbor identity and boundary context were read and frozen; this is maintained
+    context, not independent experimental evidence.
+- evidence_id: neighbor-multivesicular_body_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+  locator: Complete maintained MVB boundary neighbor
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Neighbor identity and boundary context were read and frozen; this is maintained
+    context, not independent experimental evidence.
+- evidence_id: neighbor-multivesicular_body_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+  locator: Complete maintained MVB boundary neighbor
+  accessed_at: '2026-10-22T02:32:25Z'
+  support: context_only
+  summary: Neighbor identity and boundary context were read and frozen; this is maintained
+    context, not independent experimental evidence.
+- evidence_id: mvb-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005771,GO:0005770,GO:0032585,GO:0071985,GO:0031982,GO:0031904,GO:0010008,GO:0000813,GO:0000814,GO:0000815
+  locator: 'Complete requested term results: definitions, active status, synonyms
+    and returned child relations; exact IDs in URL'
+  accessed_at: '2026-10-22T02:29:15.845413Z'
+  support: supports
+  summary: All10 requested active GO terms were inspected. Definitions distinguish
+    whole MVB, outer limiting membrane, lumenal destination, vesicle and ESCRT complexes.
+    GO0005770 directly lists GO0005771 as is_a; GO0005771 lists membrane and the two
+    newly verified candidates as part_of children. GO0071985 describes ubiquitinated
+    transmembrane cargo entry into lumenal vesicles and subsequent degradation.
+  snapshot_sha256: 70b3108a4e7b5229867288f6b5e7f8817d7ac9c363c0928ebd08028e61372cc7
+- evidence_id: mvb-agent-go-local-candidates
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097486,GO:0097487
+  locator: Both complete native term results, including definitions and active flags
+  accessed_at: '2026-10-22T02:29:38.667784Z'
+  support: supports
+  summary: Active GO0097486 exactly denotes MVB lumen enclosed by the outermost membrane;
+    active GO0097487 exactly denotes a membrane-bounded vesicle wholly within an MVB.
+    Neither candidate conflates the whole organelle with its membrane or with a generic
+    extracellular vesicle.
+  snapshot_sha256: 2ca9d19ecf4324cf41385613c41c9227fb9f361198d6fe062b82157c8fa4b8b7
+- evidence_id: mvb-agent-candidate-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097486,GO:0097487/ancestors?relations=is_a
+  locator: Exact requested relations=is_a ancestor lists for both candidates
+  accessed_at: '2026-10-22T02:30:19.223414Z'
+  support: supports
+  summary: The is_a-only response places GO0097486 beneath endosome lumen GO0031904
+    and GO0097487 beneath vesicle GO0031982. These are ancestor results, not assertions
+    that every listed ancestor is an immediate parent.
+  snapshot_sha256: 855ffa9a1b76fa3c4252a211f8b8d750083bb34bf68a754766ebe22ce8b52864
+- evidence_id: mvb-agent-SL0174
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0174.json
+  locator: Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry
+    prose used only for boundary context
+  accessed_at: '2026-10-22T02:29:15.845107Z'
+  support: supports
+  summary: SL0174 matches whole MVB, its five maintained synonyms and late-endosome
+    parent; inward budding and limiting-membrane distinction agree.
+  snapshot_sha256: 8052073d7abddf51eeec63cfcb269be2bd66c8811719dddbcce96da3ae469329
+- evidence_id: mvb-agent-SL0175
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0175.json
+  locator: Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry
+    prose used only for boundary context
+  accessed_at: '2026-10-22T02:29:15.845875Z'
+  support: supports
+  summary: SL0175 matches the outer MVB membrane, its five maintained synonyms, endosome-membrane
+    is_a and MVB part_of relationships.
+  snapshot_sha256: edbdb71c1abf69e1d5b60336733b967a335566cc9dedc94608bc600aa0ebea31
+- evidence_id: mvb-agent-SL0340
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0340.json
+  locator: Complete native entry, synonyms, isA/partOf and GO links; nested broader-entry
+    prose used only for boundary context
+  accessed_at: '2026-10-22T02:29:15.845900Z'
+  support: supports
+  summary: SL0340 identifies the MVB lumen, its five maintained synonyms, endosome-lumen
+    is_a and MVB part_of relationships; it does not denote the lumen inside each internal
+    vesicle.
+  snapshot_sha256: 8e50a2ed2c762cf87ee99c3fdc6742225f4e9669f81b50640f776066000860ad
+- evidence_id: mvb-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T02:29:15.845767Z'
+  support: supports
+  summary: Native ENA confirms Saccharomyces cerevisiae4932 at species rank; this
+    does not itself measure occurrence frequency or identify an experimental strain.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: mvb-agent-katzmann2001-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A11511343%20AND%20SRC%3AMED
+  locator: Unique MED result, full abstract and organism metadata; primary abstract
+    only
+  accessed_at: '2026-10-22T01:10:57.861587Z'
+  support: supports
+  summary: Exact PMID11511343/DOI identity, title, authors/year and complete abstract
+    read. The primary abstract identifies ESCRT-I ubiquitinated-cargo recognition
+    and requirement for MVB sorting in the yeast/mammalian context; no complete study
+    Methods, strain-specific result or quantitative reanalysis is claimed.
+  snapshot_sha256: 89b0ab16f1c997094ab3253063701f5097b815c030e16320d5d41f485e3d50a9
+- evidence_id: mvb-agent-babst2002-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:12194857%20AND%20SRC:MED&format=json&resultType=core
+  locator: Unique MED result, complete abstract and Saccharomyces cerevisiae organism
+    metadata; primary abstract only
+  accessed_at: '2026-10-22T02:29:16.440456Z'
+  support: supports
+  summary: Exact PMID12194857/DOI10.1016/S1534-5807(02)00220-4 identity and complete
+    abstract read. The primary abstract identifies ESCRT-III membrane recruitment/oligomerization,
+    its functional subcomplexes and sorting or concentration of MVB cargoes. It is
+    not itself a direct vesicle-scission reconstitution result.
+  snapshot_sha256: fb4cf9223f5eeb6ef65116513b561cd88d8b4e52fac850f906db9d7b538a2319
+- evidence_id: mvb-agent-henne2011-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.devcel.2011.05.015
+  locator: Unique MED result and complete abstract; review tier, abstract only
+  accessed_at: '2026-10-22T01:10:57.861442Z'
+  support: supports
+  summary: 'Exact DOI10.1016/j.devcel.2011.05.015, title, authors/year and complete
+    abstract read. This is a literature review: its abstract describes the ESCRT pathway
+    as cargo-recognition/membrane-sculpting machinery and MVB delivery to vacuole
+    or lysosome. Detailed subunit-specific claims in the unread body are not certified
+    from the abstract.'
+  snapshot_sha256: 460a530ee4c6be779250900ab8aa406f9e827f57f923f35fbf21cc507303cb55
+- evidence_id: mvb-agent-teo2004-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.devcel.2004.09.003
+  locator: Unique native MED result and complete abstract
+  accessed_at: '2026-10-22T01:10:57.877564Z'
+  support: supports
+  summary: Exact DOI10.1016/j.devcel.2004.09.003/PMID15469844 metadata and full abstract
+    match the recovered primary PDF.
+  snapshot_sha256: 092a112c9409a79c051d42786aeccd62376d565f07ed37f3176165fd5bc1fddf
+- evidence_id: mvb-agent-teo2004-primary-pdf
+  kind: primary_source
+  reference: https://www2.mrc-lmb.cam.ac.uk/groups/rlw/download/publications/15469844.pdf
+  locator: Printed p559 identity/abstract/Introduction; complete pp564–567 including
+    interaction Results, Conclusions, Figure4–6 captions and experimental procedures.
+    No image pixels, remaining structural Results or separate supplements were inspected.
+  accessed_at: '2026-10-22T01:12:25.464317Z'
+  support: supports
+  summary: The primary study demonstrates direct purified ESCRT-II/Vps20 interaction
+    through Vps25 and increased binding of both proteins to brain-lipid liposomes.
+    Yeast genes were cloned from ATCC9763D genomic DNA and proteins expressed in E.coli;
+    this is not direct observation of complete ILV scission in vivo. Introduction
+    describes inward budding, MVB topology and lysosomal fusion; Figure6 is explicitly
+    a model.
+  snapshot_sha256: 9a62830da92c7a92939524b134a277cf6381382e5539dfdfb47ab58e22817dce
+- evidence_id: local-identity-search
+  kind: search
+  reference: 'rg -n --no-ignore --hidden -g *.yaml ^(identifier: (GO:0097486|GO:0097487|cellstructuremech:multivesicular_body_lumen|cellstructuremech:multivesicular_body_intraluminal_vesicle)|.*(GO:0097486|GO:0097487).*)$
+    data/structures'
+  locator: Full maintained data/structures YAML universe, ignored and hidden files
+    included
+  accessed_at: '2026-10-22T02:30:16.536204Z'
+  support: supports
+  summary: Both exact local identifiers each occur as an identifier in their single
+    intended maintained record. No occurrence of GO0097486 or GO0097487 was found
+    in this full-corpus search. The valid local references are not broken links; missing
+    native mappings are assessed separately.
+  snapshot_sha256: 62eddb42d43b6e8586b6a0d38448c9edd1272be0f78e0af65026828ba94b83d2
+  search_scope: All maintained data/structures YAML files, with ignored and hidden
+    files included; exact identifier rows for local targets and all occurrences of
+    GO candidates.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:42Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml'
+  snapshot_sha256: 919fede77bac1b8ccacc8888478571a43a2e3cea8dbc1c6fd67acd77397dd5c9
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    --out /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:43Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml\
+    \ --out /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch34-20261022-36gi391b/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch34-20261022-36gi391b/multivesicular_body_intraluminal_vesicle-strict.tsv"
+  snapshot_sha256: 107b4306452d61b3d1d30d6257d609e838071df2ed3d7f99c11e86a225b8901c
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 12 collected target identifiers returned OK. PMID:11511343: UNREACHABLE;
+    Native Europe PMC MED result independently read: PMID:11511343, DOI:10.1016/s0092-8674(01)00434-2,
+    Ubiquitin-dependent sorting into the multivesicular body pathway requires the
+    function of a conserved endosomal protein sorting complex, ESCRT-I. (2001). Exact
+    identity and complete abstract are verified; original bulk-resolver HTTP414 is
+    a transport failure. No full-body verification follows from this abstract.; PMID:12194857:
+    UNREACHABLE; Native Europe PMC MED result independently read: PMID:12194857, DOI:10.1016/s1534-5807(02)00220-4,
+    Escrt-III: an endosome-associated heterooligomeric protein complex required for
+    mvb sorting. (2002). Exact identity and complete abstract are verified; original
+    bulk-resolver HTTP414 is a transport failure. No full-body verification follows
+    from this abstract.; cellstructuremech:multivesicular_body_intraluminal_vesicle:
+    SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    at frozen SHA256 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916.
+    The maintained identity, definition and compartment boundary were independently
+    read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen
+    definition. Local-reference validity is separate from any GO-first curation finding;
+    no scientific identifier is renamed.; cellstructuremech:multivesicular_body_lumen:
+    SKIPPED; Exact local identifier uniquely resolves to data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+    at frozen SHA256 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6.
+    The maintained identity, definition and compartment boundary were independently
+    read and match the cited native GO0097487 internal-vesicle or GO0097486 outer-lumen
+    definition. Local-reference validity is separate from any GO-first curation finding;
+    no scientific identifier is renamed. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Correct vesicle concept but missed exact GO identity
+  outcome: concern
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: The maintained definition denotes an internal MVB vesicle, not the organelle
+    or its outer lumen. Native GO0097487 exactly matches that entity, with vesicle
+    ancestry and MVB parthood. The local identifier therefore leaves an exact GO identity
+    unadopted despite the frozen GO-first contract.
+  evidence_ids:
+  - record
+  - mvb-agent-go
+  - mvb-agent-go-local-candidates
+  - mvb-agent-candidate-ancestors
+  - go-first
+  - local-identity-search
+- assessment_id: components
+  area: grounding
+  topic: Collective bilayer and transient ESCRT boundary
+  outcome: supported
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: The reviewed-label-only lipid row denotes material forming the vesicle
+    bilayer and does not assert an exact whole-membrane GO as a molecular lipid identity.
+    ESCRT-III is an external assembly actor rather than a stable ILV constituent.
+    The open molecular-lipid mapping is distinct from the record-level GO identity
+    finding.
+  evidence_ids:
+  - record
+  - schema
+  - mvb-agent-go
+  - mvb-agent-babst2002-meta
+  - mvb-agent-teo2004-primary-pdf
+- assessment_id: necessity
+  area: evidence
+  topic: Individual formation requirements unresolved
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: The collective bilayer is constitutive of this membrane-bounded vesicle.
+    The ESSENTIAL annotation does not experimentally establish that each lipid species
+    or protein is necessary for formation; no molecular removal experiment or source-independent
+    composition is asserted.
+  evidence_ids:
+  - record
+  - schema
+  - mvb-agent-go
+  - mvb-agent-teo2004-primary-pdf
+- assessment_id: function-graph
+  area: graph
+  topic: Cargo destination and four descriptive formation edges
+  outcome: supported
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: The function describes cargo entry during MVB sorting, not permanent retention
+    of ubiquitin on every completed cargo. The four NONMECHANISTIC edges retain membrane
+    remodeling, inward budding, ILV containment in the outer MVB lumen, and the limiting
+    membrane enclosing the whole MVB. The added bounds edge preserves the correct
+    boundary; it does not imply the ILV membrane surrounds the whole MVB.
+  evidence_ids:
+  - record
+  - mvb-agent-go
+  - mvb-agent-SL0340
+  - mvb-agent-katzmann2001-meta
+  - mvb-agent-babst2002-meta
+  - mvb-agent-henne2011-meta
+  - mvb-agent-teo2004-primary-pdf
+- assessment_id: species-example
+  area: scope
+  topic: Budding-yeast model and qualitative occurrence
+  outcome: supported
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: Native4932 verifies the species name. The primary2001/2002 abstracts and
+    organism metadata identify budding-yeast ESCRT sorting context, while Teo2004
+    explicitly uses S.cerevisiae genes. This supports the qualitative COMMON/model-system
+    examples without certifying an unreported frequency, particular strain, or direct
+    imaging protocol from abstract-only sources.
+  evidence_ids:
+  - record
+  - mvb-agent-tax4932
+  - mvb-agent-katzmann2001-meta
+  - mvb-agent-babst2002-meta
+  - mvb-agent-teo2004-primary-pdf
+- assessment_id: citation-access
+  area: evidence
+  topic: Precise citation identity and actual reading scope
+  outcome: supported
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: All cited literature identities and complete native abstracts were read.
+    Teo2004 genuine primary body was read in its stated page scope. Henne2011 is review-tier
+    and currently abstract-only; neither it nor the primary2001/2002 abstracts substitutes
+    for unread detailed Methods or complete scission experiments. No snippet, image
+    or numerical claim occurs in the target.
+  evidence_ids:
+  - record
+  - mvb-agent-katzmann2001-meta
+  - mvb-agent-babst2002-meta
+  - mvb-agent-henne2011-meta
+  - mvb-agent-teo2004-meta
+  - mvb-agent-teo2004-primary-pdf
+- assessment_id: completeness
+  area: completeness
+  topic: No invented optional machinery inventory
+  outcome: supported
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  summary: The existing discussions distinguish constituent material from assembly
+    machinery and compartment boundary from contents. Optional lipid chemistry, stoichiometry,
+    full ESCRT inventory and atomic mechanisms are not mandatory additions to these
+    intentionally coarse records. The exact record identity concern, where present,
+    is independent of those optional details.
+  evidence_ids:
+  - record
+  - schema
+  - mvb-agent-go
+  - mvb-agent-go-local-candidates
+findings:
+- finding_id: F1
+  issue_key: multivesicular-body-intraluminal-vesicle-unused-exact-go-identity
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reconcile the local identity with exact native GO:0097487
+  description: The maintained local identifier denotes the same biological entity
+    as active GO:0097487. The candidate definition, ancestry and MVB parthood match;
+    this is not a broader or merely label-similar term. An ignored-inclusive corpus
+    search finds no existing use of the exact GO term. The record therefore misses
+    the repository-required exact GO identity, while its biological boundary remains
+    correct.
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  field_paths:
+  - identifier
+  - definition_source
+  - causal_graphs[0].nodes
+  evidence_ids:
+  - record
+  - mvb-agent-go-local-candidates
+  - mvb-agent-candidate-ancestors
+  - mvb-agent-go
+  - local-identity-search
+  - go-first
+  - identifier-preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    role: maintained scientific record
+  rule_id: CLAUDE.md:GO cellular component first; docs/CURATION.md:Identifiers rules1–3
+  native_severity: major
+  normalization_reason: This is a concrete exact ontology-identity grounding defect
+    under the native GO-first rule, not an empty optional component slot or wrong
+    biological boundary. It is not a blocker because the existing local identity is
+    valid and resolves uniquely.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    role: maintained scientific record
+  description: 'In separately authorized curation, reconcile the entity with GO:0097487
+    using the documented identifier-preserving supersession process: retain the old
+    local record as DEPRECATED and create or adopt the exact-GO successor with replaces.
+    Coordinate references and evidence to the successor without silently reusing or
+    renaming the old identifier. Preserve the verified lumen/vesicle boundary, species
+    scope and optional lipid mapping limits.'
+  acceptance_checks:
+  - The adopted GO definition still exactly matches the maintained biological entity;
+    no broader class is substituted.
+  - The old local identifier remains recoverable and the successor records replaces
+    according to the curation contract.
+  - Ignored-inclusive corpus reference checks and native schema/strict/history/product/identifier
+    gates pass after any separately authorized migration.
+limitations:
+- Katzmann2001, Babst2002 and Henne2011 complete native abstracts were readable, but
+  their publisher HTML routes returned403; bounded public search and ScienceDirect
+  browser routes did not recover genuine body text. Detailed unread Methods, strain
+  and subunit-specific review passages remain unverified. This is an access limit,
+  not evidence of biological absence.
+- Teo2004 genuine PDF was read only in p559 and pp564–567 as precisely listed; no
+  figure pixels or supplemental reanalysis. Direct recruitment assays use purified
+  proteins and brain-lipid liposomes, and Figure6 is a model, not a full in-vivo scission
+  measurement.
+- Native ontology and UniProt location definitions provide boundary and coarse-process
+  support, not experiments quantifying dynamics or prevalence. COMMON is qualitative;
+  organism identity does not establish frequency in every culture.
+- No source-neutral lipid species composition, stoichiometry or individual molecular
+  formation necessity is inferred. Collective material identity remains separate from
+  experimental assembly requirements.
+- The exact native lumen and ILV identities require coordinated identifier-preserving
+  curation in their owning records; existing local references currently resolve correctly.
+  No scientific record, history or status was changed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes an honest clean draft where no issue is observed;
+  no finding is invented to satisfy the local issue-only gate. Parent owns finalization
+  and persistence.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
