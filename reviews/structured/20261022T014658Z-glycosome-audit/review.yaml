@@ -1,0 +1,1419 @@
+schema_version: 1.0.0
+review_id: 20261022T014658Z-glycosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Glycosome identity, composition and source-scope review
+started_at: '2026-10-22T01:27:46Z'
+finished_at: '2026-10-22T01:46:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major finding separates the assembled membrane from molecular lipid composition;
+  two minor findings concern PEX14 first-author attribution and the glucose-specific
+  strength of the2008 mechanistic evidence. Organelle identity and qualified import
+  biology are supported.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/glycosome.yaml
+    sha256: e4e8d4917968433f370c60a2f571b3c3e1f11034b01373015911772e014d2b1e
+    role: target
+  - path: data/structures/membrane_organelle/glycosome_lumen.yaml
+    sha256: 86388cc4813e19a29b617f1800e0499e8b280823c7f3240b75c45fa7d1b8b544
+    role: context
+  - path: data/structures/membrane_organelle/glycosome_membrane.yaml
+    sha256: 3d72e1e3fa6653b4d605c490e50da8b348c78773fa0e08947088b4e7ab2f43e9
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0020015
+  path: data/structures/membrane_organelle/glycosome.yaml
+  label: glycosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single maintained target; exact identity, parthood, components/formation
+    necessity, taxa, protein/source mappings, functions and every graph edge, with
+    explicit primary/abstract/review tiers.
+  selection: Target 6 of batch twenty-nine in strict uncovered path order; native
+    initial inspection/schema/strict passed before assessment at fresh f97b1abe base.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0020015
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/glycosome.yaml
+  exit_code: 0
+  summary: The native command passed; biological membership and optional coverage
+    are assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/glycosome.yaml
+  exit_code: 0
+  summary: The native command passed; biological membership and optional coverage
+    are assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just validate data/structures/membrane_organelle/glycosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just validate-strict data/structures/membrane_organelle/glycosome.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glycosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0020015
+  summary: No expression-module or regulatory transcriptomics claim is used; physical
+    compartment, protein identity and primary perturbation evidence are the applicable
+    sources.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - protein-policy
+  - glycosome-agent-go
+  - glycosome-agent-whole-ancestors
+  - glycosome-agent-lumen-ancestors
+  - glycosome-agent-SL0129
+  - glycosome-agent-SL0332
+  - glycosome-agent-SL0128
+  - glycosome-agent-tax5653
+  - glycosome-agent-tax5691
+  - glycosome-agent-tax5702
+  - glycosome-agent-tax31285
+  - glycosome-agent-tax185431
+  - glycosome-agent-opperdoes1977-title
+  - glycosome-agent-haanstra2016-meta
+  - glycosome-agent-haanstra2008-meta
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-moyersoen2003-meta
+  - glycosome-agent-furuya2002-pmc
+  - glycosome-agent-bauer2017-jats
+  - glycosome-agent-P13377
+  - glycosome-agent-O15648
+  - glycosome-agent-A0A3G1VTN5
+  - glycosome-agent-O96429
+  - glycosome-agent-Q4GZG4
+  - glycosome-agent-Q57W55
+  - glycosome-agent-Q57W97
+  - glycosome-agent-Q38CL4
+  - glycosome-agent-reviewed-genes
+  - glycosome-agent-reviewed-TIM
+  - glycosome-agent-reviewed-TPI-name
+  - glycosome-agent-IPR024111
+  - glycosome-agent-IPR044536
+  - glycosome-agent-IPR025655
+  - glycosome-agent-PMID2940090
+  - glycosome-agent-PMID10589985
+  - glycosome-agent-PMID17320990
+  - glycosome-agent-PMID23994617
+  - glycosome-agent-PMID12386344
+  - glycosome-agent-PMID12709066
+  - glycosome-agent-PMID22809509
+  - access-opperdoes1977-publisher
+  - access-moyersoen2003-publisher
+  - access-moyersoen2003-pdf
+  - access-haanstra2016-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  summary: '22 of 29 collected target identifiers returned OK. PMID:10589985: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID10589985, DOI10.1016/s0166-6851(99)00144-9 and Cloning and analysis
+    of the PTS-1 receptor in Trypanosoma brucei. Bibliographic identity is resolved;
+    scientific scope remains restricted to the separately documented abstract/body
+    inspections.; PMID:12386344: UNREACHABLE; The bulk PMID transport returned414;
+    the independently retrieved exact MED record verifies PMID12386344, DOI10.1073/pnas.222454899
+    and Glucose is toxic to glycosome-deficient trypanosomes. Bibliographic identity
+    is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections.; PMID:12709066: UNREACHABLE; The bulk PMID transport
+    returned414; the independently retrieved exact MED record verifies PMID12709066,
+    DOI10.1046/j.1432-1033.2003.03582.x and Characterization of Trypanosoma brucei
+    PEX14 and its role in the import of glycosomal matrix proteins. Bibliographic
+    identity is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections.; PMID:17320990: UNREACHABLE; The bulk PMID transport
+    returned414; the independently retrieved exact MED record verifies PMID17320990,
+    DOI10.1016/j.bbamcr.2007.01.006 and Characterization of the role of the receptors
+    PEX5 and PEX7 in the import of proteins into glycosomes of Trypanosoma brucei.
+    Bibliographic identity is resolved; scientific scope remains restricted to the
+    separately documented abstract/body inspections.; PMID:22809509: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID22809509, DOI10.1016/j.bbrc.2012.07.035 and Studies on the organization
+    of the docking complex involved in matrix protein import into glycosomes of Trypanosoma
+    brucei. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:23994617: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID23994617, DOI10.1016/j.bbamcr.2013.08.008 and Ubiquitination of the
+    glycosomal matrix protein receptor PEX5 in Trypanosoma brucei by PEX4 displays
+    novel features. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:2940090: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID2940090, DOI10.1111/j.1432-1033.1986.tb09687.x and Glycolytic enzymes
+    of Trypanosoma brucei. Simultaneous purification, intraglycosomal concentrations
+    and physical properties. Bibliographic identity is resolved; scientific scope
+    remains restricted to the separately documented abstract/body inspections. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - glycosome-agent-PMID10589985
+  - glycosome-agent-PMID12386344
+  - glycosome-agent-PMID12709066
+  - glycosome-agent-PMID17320990
+  - glycosome-agent-PMID22809509
+  - glycosome-agent-PMID23994617
+  - glycosome-agent-PMID2940090
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020015
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/glycosome.yaml
+  locator: Entire maintained YAML, every field, evidence note, discussion, history
+    entry and graph edge
+  accessed_at: '2026-10-22T01:42:08Z'
+  support: context_only
+  summary: The exact single target was fully read; maintained scientific content is
+    unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component identity/grounding, essentiality, graph and protein-example contracts
+  accessed_at: '2026-10-22T01:42:08Z'
+  support: context_only
+  summary: Constituent identity, functional importance and necessity for organelle
+    formation are distinct. A collective bilayer is not an exact individual lipid
+    species.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Evidence and scope of causal edges
+  accessed_at: '2026-10-22T01:42:08Z'
+  support: context_only
+  summary: Graph mechanism requires claim-level causal support; topology can be described
+    without implying molecular assembly mechanism.
+- evidence_id: protein-policy
+  kind: record_content
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Native identity verification, evidence localization, reviewed status and
+    gene-less-entry attribution
+  accessed_at: '2026-10-22T01:42:08Z'
+  support: context_only
+  summary: Existing accessions and their source annotations are verified. This review
+    does not invoke an enrichment mutation or infer membership solely from an accession.
+    Optional absent examples are not automatic findings.
+- evidence_id: glycosome-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020015,GO:0034468,GO:0046860,GO:0005777,GO:0043233,GO:0005778
+  locator: All six exact identifiers, definitions, active flags and returned child
+    relations
+  accessed_at: '2026-10-22T01:33:40.446056Z'
+  support: supports
+  summary: All six native GO terms are active. GO0020015 matches glycosome; its broader
+    peroxisome relationship is checked in the separate exact ancestry response; GO0046860
+    and GO0034468 are part_of glycosome. GO0046860 is an is_a child of peroxisomal
+    membrane GO0005778. GO0043233 is the broader organelle-lumen class; direct versus
+    ancestral lumen relation is checked separately.
+  snapshot_sha256: facc9847059d6bee3b8ef37cca9b5dc06236198089219562db140ac1c4770195
+- evidence_id: glycosome-agent-whole-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020015/ancestors?relations=is_a
+  locator: Exact GO0020015 identifier and complete is_a ancestor list
+  accessed_at: '2026-10-22T01:41:49.515761Z'
+  support: supports
+  summary: GO0020015 has GO0005777 among its is_a ancestors. This verifies the record’s
+    broader peroxisome parent without asserting a direct edge.
+  snapshot_sha256: 9425be9946b6ce52ccd4145f55fd33bc8e7160b5cb93a3dd8aab3bce522645d3
+- evidence_id: glycosome-agent-lumen-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034468/ancestors?relations=is_a
+  locator: Exact lumen ID and complete is_a ancestor list
+  accessed_at: '2026-10-22T01:33:40.454690Z'
+  support: supports
+  summary: GO0034468 has GO0043233 among its is_a ancestors. This establishes a broader
+    class relationship, not an asserted direct edge.
+  snapshot_sha256: d00024e9ab50105b15553a2ffb64a3bcae2a9c8abde352c5dd510f161e3f7e4d
+- evidence_id: glycosome-agent-SL0129
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0129.json
+  locator: Exact ID/name/definition, synonym list, direct GO mapping and nested isA/partOf
+    relations; protein counts not used
+  accessed_at: '2026-10-22T01:33:42.332830Z'
+  support: supports
+  summary: Native glycosome maps directly to GO0020015 and is a specialized peroxisome;
+    its definition explicitly refers to examined kinetoplastids and glucose/glycerol
+    enzymes.
+  snapshot_sha256: 3ccdcd832fab1e23ae58f1c83d96fad980b02693753c9ad5b6d485bbcb86b509
+- evidence_id: glycosome-agent-SL0332
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0332.json
+  locator: Exact ID/name/definition, synonym list, direct GO mapping and nested isA/partOf
+    relations; protein counts not used
+  accessed_at: '2026-10-22T01:33:41.820487Z'
+  support: supports
+  summary: Native Glycosome matrix maps directly to GO0034468, lists glycosomal lumen/glycosomal
+    matrix/glycosome lumen synonyms, is_a peroxisome matrix and part_of glycosome.
+  snapshot_sha256: e285497fc15ef710692ee1c0724633d21532888659475d2a1e4fcaf2d1146a56
+- evidence_id: glycosome-agent-SL0128
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0128.json
+  locator: Exact ID/name/definition, synonym list, direct GO mapping and nested isA/partOf
+    relations; protein counts not used
+  accessed_at: '2026-10-22T01:33:42.288631Z'
+  support: supports
+  summary: Native glycosome membrane maps directly to GO0046860, lists glycosomal
+    membrane as synonym, is_a peroxisome membrane and part_of glycosome. Nested parent
+    information is not mistaken for another target.
+  snapshot_sha256: b38283b04408b2c4ca030d1cd42c83316ef00566eb140f2fb5a758a82893987a
+- evidence_id: glycosome-agent-tax5653
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5653
+  locator: Exact taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T01:33:40.563693Z'
+  support: supports
+  summary: ENA identifies Kinetoplastea, class rank, with Kinetoplastida explicitly
+    a synonym. Database taxonomy is not a claim that all experiments used this reference
+    strain.
+  snapshot_sha256: 6e467f5ff25d9bd8189b9c916942db46996eee6ad67fa41afd146096c2fb0556
+- evidence_id: glycosome-agent-tax5691
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691
+  locator: Exact taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T01:33:41.225782Z'
+  support: supports
+  summary: ENA identifies Trypanosoma brucei, species rank. Database taxonomy is not
+    a claim that all experiments used this reference strain.
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+- evidence_id: glycosome-agent-tax5702
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5702
+  locator: Exact taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T01:33:40.482188Z'
+  support: supports
+  summary: ENA identifies Trypanosoma brucei brucei, subspecies rank. Database taxonomy
+    is not a claim that all experiments used this reference strain.
+  snapshot_sha256: 58eb2177763e8dba0d0b497ab0bda5d4329e0c6000c046ece035669c31a4513c
+- evidence_id: glycosome-agent-tax31285
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/31285
+  locator: Exact taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T01:33:40.449489Z'
+  support: supports
+  summary: ENA identifies Trypanosoma brucei gambiense, subspecies rank. Database
+    taxonomy is not a claim that all experiments used this reference strain.
+  snapshot_sha256: 77ea2ba864ae768fa8d01d204eb39ece17e6f2837474f3709e37411570217c7f
+- evidence_id: glycosome-agent-tax185431
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/185431
+  locator: Exact taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T01:33:41.145219Z'
+  support: supports
+  summary: ENA identifies Trypanosoma brucei brucei TREU927, strain rank, with strain927/4
+    GUTat10.1 as synonym. Database taxonomy is not a claim that all experiments used
+    this reference strain.
+  snapshot_sha256: 37f4acd608d79bb144d706335e37a83a0f97a94595aca5175855c8c390ec652d
+- evidence_id: glycosome-agent-opperdoes1977-title
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=TITLE:%22Localization%20of%20nine%20glycolytic%20enzymes%22
+  locator: Exact returned MED ID, DOI, authors, title, issue/year/pages and absence
+    of abstractText
+  accessed_at: '2026-10-22T01:34:23.268726Z'
+  support: supports
+  summary: The exact native MED record is PMID142663, Opperdoes and Borst1977, FEBS
+    Letters80:360–364, DOI10.1016/0014-5793(77)80476-6. Its title identifies nine
+    enzymes and the microbody-like glycosome; no abstract is present and no methods
+    or full-body claim is made from this metadata.
+  snapshot_sha256: c9d36dfb3d23668b2a5d9df081c897ac090a0210bd3a0cf81dc22b71b1c4f5e6
+- evidence_id: glycosome-agent-haanstra2016-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.bbamcr.2015.09.015
+  locator: Exact PMID26384872/DOI/authors/title and complete abstractText
+  accessed_at: '2026-10-22T01:33:42.945022Z'
+  support: supports
+  summary: The complete review abstract identifies specialized kinetoplastid peroxisomes,
+    sequestration of the majority of glycolytic enzymes, varying enzyme content across
+    species/life-cycle stages and conserved but divergent peroxin biogenesis machinery.
+    It is review-tier synthesis, not a newly inspected primary experiment.
+  snapshot_sha256: a0a62b80bfc07aaec977a621651c88879a8015ba2c6e20dd5939512e56e10b4a
+- evidence_id: glycosome-agent-haanstra2008-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0806664105
+  locator: Exact bibliographic identity and complete primary abstractText
+  accessed_at: '2026-10-22T01:33:42.586669Z'
+  support: supports
+  summary: Native PMID19008351/PMC2584722/DOI10.1073/pnas.0806664105 identifies Haanstra
+    et al.2008. The complete abstract reports Glc6P accumulation after glucose addition
+    and stronger glycerol/GK rescue evidence; detailed qualifications are read in
+    the separately captured body.
+  snapshot_sha256: f8d1a43be70c2a8f07b58c3a866f619c60cbfaab73a09f23cd462b3b458d0a54
+- evidence_id: glycosome-agent-haanstra2008-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2584722/
+  locator: Complete Results sec1 including sec2–4 and Fig2–5 captions, complete Discussion
+    sec5 and Experimental Procedures sec6 including sec7–13. No figure pixels, separate
+    supplement or raw measurements inspected.
+  accessed_at: '2026-10-22T01:34:23.141484Z'
+  support: supports
+  summary: 'The genuine primary body measures Glc6P accumulation in procyclic29–13
+    PEX14-RNAi cells after glucose addition, but Results/Discussion explicitly say
+    this does not stringently test the compartmentation model: PGI pathway truncation
+    is an alternative, and PF449 did not show significant Glc6P accumulation. Glycerol/Gly3P
+    mislocalization and GK-knockdown rescue supply the stronger mechanistic test.
+    These are not membrane-deletion experiments or universal strain phenotypes.'
+  snapshot_sha256: 3f10cabad24860b9d2987dfbf1f4eb229b76376a7efe67eecd6cf5090302df31
+- evidence_id: glycosome-agent-moyersoen2003-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1046/j.1432-1033.2003.03582.x
+  locator: Exact ID/title/DOI/ordered authorList and complete abstractText; full body
+    unavailable
+  accessed_at: '2026-10-22T01:33:42.446467Z'
+  support: supports
+  summary: Native PMID12709066/DOI10.1046/j.1432-1033.2003.03582.x lists Moyersoen
+    first and Choe second. The complete primary abstract directly reports glycosomal
+    PEX14, N-terminal binding to PEX5 and matrix-protein mislocalization after PEX14
+    RNAi in bloodstream and procyclic forms; survival requirement is not organelle-formation
+    necessity.
+  snapshot_sha256: c239969526968117d4ce7f3b2137505805fb0c01127c046f44783b76be637274
+- evidence_id: glycosome-agent-furuya2002-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/137857/
+  locator: Methods sec5, Results sec9/10/12 including Fig1–3 captions, complete Discussion
+    sec14. Other sections, original pixels and supplements not independently inspected.
+  accessed_at: '2026-10-22T01:34:23.184427Z'
+  support: supports
+  summary: The primary study directly supports PEX14 glycosomal-membrane localization
+    by fractionation/carbonate extraction and punctate staining, and protein mislocalization/glucose-dependent
+    toxicity after RNAi. The study distinguishes procyclic29–13 and bloodstream cells;
+    predicted metabolic explanations are not measured mechanism or formation necessity.
+  snapshot_sha256: abe87b22e6a15e52ed793316b022e94c17f403a465c3d0ced8d81a1778964a3c
+- evidence_id: glycosome-agent-bauer2017-jats
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5398534/fullTextXML
+  locator: Complete body sec001–sec003 including Fig1 caption. sec004 and figure pixels
+    not independently read.
+  accessed_at: '2026-10-22T01:34:23.768828Z'
+  support: supports
+  summary: This review supports glycosome/peroxisome relationship, PEX5/PEX7 receptors
+    and membrane PEX13/PEX14 docking, and explicitly treats de novo ER-derived glycosome
+    biogenesis as a hypothesis supported by indirect findings. The record does not
+    assert that hypothesis as demonstrated origin.
+  snapshot_sha256: 49a30d06a6a94e016c60b0fd50654462d994acd9df9dc88526e508f8dfe0e3c1
+- evidence_id: glycosome-agent-P13377
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P13377.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.199114Z'
+  support: supports
+  summary: Reviewed PGI, Glucose-6-phosphate isomerase glycosomal, tax5702; native
+    geneName PGI and glycosome annotation match.
+  snapshot_sha256: 42fadddb809c3f4130e04abd3167ac80fd16f8c7479ce88ac6dbd31bd3f92b48
+- evidence_id: glycosome-agent-O15648
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O15648.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.215876Z'
+  support: supports
+  summary: Reviewed ATP-dependent6-phosphofructokinase, tax5702; native geneName pfk
+    matches case-insensitively. Glycosome localization explicitly cites PMID2940090
+    with ECO0000269 alongside automated evidence.
+  snapshot_sha256: 61d5449c02f5dc485b684a62c989fc1640f8206df600dd68972f81eee11f4fd2
+- evidence_id: glycosome-agent-A0A3G1VTN5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A0A3G1VTN5.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.103784Z'
+  support: supports
+  summary: Unreviewed Phosphotransferase, tax5702, native Hk1; no native localization
+    comment is used as membership evidence.
+  snapshot_sha256: fac58372e414be455f3095b62bdc2402cd85976f3f472bbfb1e3d169e2231a21
+- evidence_id: glycosome-agent-O96429
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O96429.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.172690Z'
+  support: supports
+  summary: Unreviewed GAPDH fragment, tax31285, exact native geneName GAPDH; fragment/automated
+    metadata establish representative identity only, not a complete measured glycosomal
+    enzyme.
+  snapshot_sha256: 8f4147f5eb3585b5a7daa71d01bb24a371fdf99f610e9ea85c88e9d652bca093
+- evidence_id: glycosome-agent-Q4GZG4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q4GZG4.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.735855Z'
+  support: supports
+  summary: Unreviewed Phosphoglycerate kinase, tax185431, native PGKC and ORF TB927.1.700;
+    identity is distinct from life-stage-specific localization.
+  snapshot_sha256: 8c47c8b1cee6761bac8d749997f75a2291f5226ed122df0231039ecefc15bdae
+- evidence_id: glycosome-agent-Q57W55
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57W55.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.947072Z'
+  support: supports
+  summary: Reviewed PEX5 targeting-signal receptor, tax185431. Cytosol localization
+    cites PMID10589985/17320990/23994617 with ECO0000269; native matrix annotation
+    separately cites10589985/23994617. Receptor cycling is not permanent membrane
+    residence.
+  snapshot_sha256: 86ae923215ae2007a36fc6746e09d1ff2b6c4737b310356843a38ce166c758fa
+- evidence_id: glycosome-agent-Q57W97
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57W97.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:41.807399Z'
+  support: supports
+  summary: Reviewed PEX7 targeting-signal2 receptor, tax185431. Cytosol location cites
+    PMID17320990 with ECO0000269; matrix localization is by similarity to E9BKM3,
+    not another direct experiment.
+  snapshot_sha256: 17eb8f82547e20f56476e6c80dfcac6cfb12237dc0eb195d62c7a6a85b0c6eb7
+- evidence_id: glycosome-agent-Q38CL4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q38CL4.json
+  locator: Exact accession/review status, recommended or submission name, genes, organism,
+    localization evidence codes/citations and relevant native family links
+  accessed_at: '2026-10-22T01:33:42.485964Z'
+  support: supports
+  summary: Reviewed glycosomal membrane PEX14, tax185431. Exact PEX14 gene/ORF Tb10.100.0130;
+    glycosome-membrane localization cites PMID12386344/12709066/22809509 with ECO0000269.
+    Single-pass topology is separately predictive.
+  snapshot_sha256: 8f717db05261f969fe531e7bd7a625eb994d4310b16be58bb9bbee0901f3ca25
+- evidence_id: glycosome-agent-reviewed-genes
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APGI%20AND%20organism_id%3A5702%20OR%20gene_exact%3APFK%20AND%20organism_id%3A5702%20OR%20gene_exact%3APEX5%20AND%20organism_id%3A185431%20OR%20gene_exact%3APEX7%20AND%20organism_id%3A185431%20OR%20gene_exact%3APEX14%20AND%20organism_id%3A185431%29%20AND%20reviewed%3Atrue&format=json&size=100
+  locator: Literal query and all five returned accession/organism/gene rows; no global
+    uniqueness assertion
+  accessed_at: '2026-10-22T01:33:44.263809Z'
+  support: supports
+  summary: 'The complete exact-organism reviewed query returns exactly five entries:
+    PGI/P13377 and pfk/O15648 at5702, plus PEX5/Q57W55, PEX7/Q57W97 and PEX14/Q38CL4
+    at185431. This verifies the existing five uniqueness claims within this bounded
+    query.'
+  snapshot_sha256: 901ed1bcda98b22cd20c3d2a4756b0a70128e6a9cfd01235d2b0c5784066fae4
+- evidence_id: glycosome-agent-reviewed-TIM
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ATIM%20AND%20taxonomy_id%3A5691%20AND%20reviewed%3Atrue&format=json&size=100
+  locator: Exact query and complete zero-result response
+  accessed_at: '2026-10-22T01:37:17.766486Z'
+  support: context_only
+  summary: The literal reviewed gene_exact:TIM query under taxonomy5691 returns no
+    entries. This does not show the enzyme or a suitable protein example is absent.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Remote UniProtKB query gene_exact:TIM AND taxonomy_id:5691 AND reviewed:true,
+    size100; complete zero-hit response inspected. Local ignored files are not applicable
+    to this remote query. This is not a global absence claim.
+- evidence_id: glycosome-agent-reviewed-TPI-name
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22triosephosphate%20isomerase%22%20AND%20taxonomy_id%3A5691%20AND%20reviewed%3Atrue&format=json&size=100
+  locator: Exact protein-name/taxonomy query; complete single returned accession,
+    status, recommended name/shortNames, absence of genes and organism/localization
+  accessed_at: '2026-10-22T01:37:45.699859Z'
+  support: supports
+  summary: The complementary reviewed enzyme-name query returns exactly P04789, glycosomal
+    triosephosphate isomerase at5702, with protein shortName TIM and no genes field.
+    It is a possible optional example; the review does not invent an indexed geneName
+    or treat a protein synonym as an automatic gene-symbol correction.
+  snapshot_sha256: 3d148624c46b3e05f1c48d60b330c5b1cb860bc1cb234f36628c247602b69714
+- evidence_id: glycosome-agent-IPR024111
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR024111/
+  locator: metadata exact accession/type/name and complete non-LLM description
+  accessed_at: '2026-10-22T01:35:50.178481Z'
+  support: supports
+  summary: Native family PEX5/PEX5L includes PEX5 and vertebrate PEX5L; it is broader
+    than one glycosomal receptor and cannot identify the entire three-protein machinery.
+  snapshot_sha256: c8de3b8e3989f7d4c8fd494b92cf8f4401a36f632eabbdf607f8e87771c0688e
+- evidence_id: glycosome-agent-IPR044536
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044536/
+  locator: metadata exact accession/type/name and complete non-LLM description
+  accessed_at: '2026-10-22T01:35:50.181412Z'
+  support: supports
+  summary: Native family Peroxisomal targeting signal2 receptor covers PEX7 and explicitly
+    includes glycosomal PEX7. It is one member family, not the entire PEX5/PEX7/PEX14
+    cohort.
+  snapshot_sha256: e4f14b115e211e1f8006e9bc7bdfa4db45f54952c64966047c01a44bf59fd3e9
+- evidence_id: glycosome-agent-IPR025655
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR025655/
+  locator: metadata exact accession/type/name and complete non-LLM description
+  accessed_at: '2026-10-22T01:35:50.184881Z'
+  support: supports
+  summary: Native family Peroxisomal membrane protein14 includes PEX14 and PEX33/Pex14–17.
+    It is not an exact three-peroxin import-machinery class.
+  snapshot_sha256: 40e1bf52261db079f7fe27c19bad2e60775de3e6c1b5da3e06d58d753af4f1d8
+- evidence_id: glycosome-agent-PMID2940090
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A2940090%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.071617Z'
+  support: supports
+  summary: Native MED PMID2940090, DOI10.1111/j.1432-1033.1986.tb09687.x, Misset O,
+    Bos OJ, Opperdoes FR., Glycolytic enzymes of Trypanosoma brucei. Simultaneous
+    purification, intraglycosomal concentrations and physical properties. Exact bibliographic
+    identity and complete abstract were inspected; no full body is inferred from this
+    metadata. Misset1986 directly describes purification of nine enzymes from crude
+    glycosomes, including phosphofructokinase and TIM; no exact modern strain accession
+    is inferred.
+  snapshot_sha256: ce6444055b433224a388a9fd7c1c355366fdd1c6ad784fbe27c33c94f375724b
+- evidence_id: glycosome-agent-PMID10589985
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A10589985%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.132116Z'
+  support: supports
+  summary: Native MED PMID10589985, DOI10.1016/s0166-6851(99)00144-9, de Walque S,
+    Kiel JA, Veenhuis M, Opperdoes FR, Michels PA., Cloning and analysis of the PTS-1
+    receptor in Trypanosoma brucei. Exact bibliographic identity and complete abstract
+    were inspected; no full body is inferred from this metadata. The abstract reports
+    PEX5 receptor predominantly cytosolic, with in-vitro PGKC binding and receptor
+    cycling interpretation.
+  snapshot_sha256: 9d905239e00930c783a06fe8d9829395ca6b8cbed25778b45ac67098ee1493b7
+- evidence_id: glycosome-agent-PMID17320990
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A17320990%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.281366Z'
+  support: supports
+  summary: Native MED PMID17320990, DOI10.1016/j.bbamcr.2007.01.006, Galland N, Demeure
+    F, Hannaert V, Verplaetse E, Vertommen D, Van der Smissen P, Courtoy PJ, Michels
+    PA., Characterization of the role of the receptors PEX5 and PEX7 in the import
+    of proteins into glycosomes of Trypanosoma brucei. Exact bibliographic identity
+    and complete abstract were inspected; no full body is inferred from this metadata.
+    The abstract reports receptor RNAi/import effects and apparently intact glycosomes
+    in procyclic cells, separating protein import from organelle formation.
+  snapshot_sha256: 985c12a51e7e0ae1e0315d87642e6bb8cf6288b3c0bd04f36bddaa403ccf7a21
+- evidence_id: glycosome-agent-PMID23994617
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A23994617%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.233594Z'
+  support: supports
+  summary: Native MED PMID23994617, DOI10.1016/j.bbamcr.2013.08.008, Gualdrón-López
+    M, Chevalier N, Van Der Smissen P, Courtoy PJ, Rigden DJ, Michels PAM., Ubiquitination
+    of the glycosomal matrix protein receptor PEX5 in Trypanosoma brucei by PEX4 displays
+    novel features. Exact bibliographic identity and complete abstract were inspected;
+    no full body is inferred from this metadata. The abstract reports cytosolic monoubiquitinated
+    PEX5 and PEX4 recycling biology, not a constitutive membrane-only PEX5 assignment.
+  snapshot_sha256: b480abfc7db346160b62183c1d6a6b40c5d5ae62d6e09e84299ce928dca8e73c
+- evidence_id: glycosome-agent-PMID12386344
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12386344%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.562268Z'
+  support: supports
+  summary: Native MED PMID12386344, DOI10.1073/pnas.222454899, Furuya T, Kessler P,
+    Jardim A, Schnaufer A, Crudder C, Parsons M., Glucose is toxic to glycosome-deficient
+    trypanosomes. Exact bibliographic identity and complete abstract were inspected;
+    no full body is inferred from this metadata. Detailed primary localization is
+    separately read from its genuine body.
+  snapshot_sha256: 14ec39249c6941a9318f2a064e9be252cb1cc4619f6bfc63a8b89a51edc66e71
+- evidence_id: glycosome-agent-PMID12709066
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12709066%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.681726Z'
+  support: supports
+  summary: Native MED PMID12709066, DOI10.1046/j.1432-1033.2003.03582.x, Moyersoen
+    J, Choe J, Kumar A, Voncken FG, Hol WG, Michels PA., Characterization of Trypanosoma
+    brucei PEX14 and its role in the import of glycosomal matrix proteins. Exact bibliographic
+    identity and complete abstract were inspected; no full body is inferred from this
+    metadata. Ordered authors establish Moyersoen as first author, Choe second.
+  snapshot_sha256: 0bacb44133d1b64f86d326acb4f534c6bf810aaadfb8a75cb27528badc7316ac
+- evidence_id: glycosome-agent-PMID22809509
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A22809509%20AND%20SRC%3AMED
+  locator: Exact MED PMID/title/DOI/authorList and complete abstractText
+  accessed_at: '2026-10-22T01:33:43.766274Z'
+  support: supports
+  summary: Native MED PMID22809509, DOI10.1016/j.bbrc.2012.07.035, Verplaetse E, Gualdrón-López
+    M, Chevalier N, Michels PA., Studies on the organization of the docking complex
+    involved in matrix protein import into glycosomes of Trypanosoma brucei. Exact
+    bibliographic identity and complete abstract were inspected; no full body is inferred
+    from this metadata. The abstract reports PEX13.1 anchoring/positioning of PEX14
+    and a cytosolic SH3 domain.
+  snapshot_sha256: ffde24009547724fdb8b901ba99e2fcf196a4d5c0ee7e25726a0e6f781419835
+- evidence_id: access-opperdoes1977-publisher
+  kind: authority
+  reference: https://febs.onlinelibrary.wiley.com/doi/pdf/10.1016/0014-5793%2877%2980476-6
+  locator: Actual retained access response, not scientific full text
+  accessed_at: '2026-10-22T01:34:23.200838Z'
+  support: context_only
+  summary: Native request returned HTTP403; the response was not used as an article
+    body. Readable native abstract or independently captured body scopes are stated
+    separately.
+  snapshot_sha256: ee63f55bea3edabab9c639a824b96375309c53a84fe8b75f8fc6ea49d806ada9
+- evidence_id: access-moyersoen2003-publisher
+  kind: authority
+  reference: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.1432-1033.2003.03582.x
+  locator: Actual retained access response, not scientific full text
+  accessed_at: '2026-10-22T01:34:23.039364Z'
+  support: context_only
+  summary: Native request returned HTTP403; the response was not used as an article
+    body. Readable native abstract or independently captured body scopes are stated
+    separately.
+  snapshot_sha256: bf3959a84ebadb57c92154781123a51ebd2abe325d3af06feecb81dbcff345a0
+- evidence_id: access-moyersoen2003-pdf
+  kind: authority
+  reference: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1046/j.1432-1033.2003.03582.x
+  locator: Actual retained access response, not scientific full text
+  accessed_at: '2026-10-22T01:34:23.214466Z'
+  support: context_only
+  summary: Native request returned HTTP403; the response was not used as an article
+    body. Readable native abstract or independently captured body scopes are stated
+    separately.
+  snapshot_sha256: 6de74dc81e7158135b5ef8667a7ec748ce341936ffb14c18c8b547e997d42053
+- evidence_id: access-haanstra2016-publisher
+  kind: authority
+  reference: https://www.sciencedirect.com/science/article/pii/S0167488915003080
+  locator: Actual retained access response, not scientific full text
+  accessed_at: '2026-10-22T01:34:23.163711Z'
+  support: context_only
+  summary: Native request returned HTTP403; the response was not used as an article
+    body. Readable native abstract or independently captured body scopes are stated
+    separately.
+  snapshot_sha256: 37c89f9423322b10055bcd01341ab2478adc3fde16d3578fa6983d89fdfef1d8
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/glycosome.yaml
+  locator: Entire retained focused native output
+  accessed_at: '2026-10-22T01:35:40.696600Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/glycosome.yaml
+  locator: Entire retained focused native output
+  accessed_at: '2026-10-22T01:35:54.417347Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/glycosome.yaml  (GO:0020015)\n  pex14_glycolytic_import_compartmentation\t\
+    peroxin_import_machinery\tCOVERED\t->peroxin_import_machinery (UniProtKB:Q57W55,\
+    \ UniProtKB:Q57W97, UniProtKB:Q38CL4)\n  pex14_glycolytic_import_compartmentation\t\
+    glycolytic_enzymes\tPARTIAL_EXAMPLES\t->glycolytic_enzymes (have: UniProtKB:P13377,\
+    \ UniProtKB:O15648, UniProtKB:A0A3G1VTN5, UniProtKB:O96429, UniProtKB:Q4GZG4;\
+    \ missing: TIM)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     1  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: b0c4704eb985f71fc32cb03d86b875b714f9261873fa85e1079c8ca8cec5365e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/glycosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:47Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/glycosome.yaml'
+  snapshot_sha256: 60a00e51b4f8ed980875eefc572c74f5001dcd858d52b4bfe026629641c92f0a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/glycosome.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glycosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:48Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/glycosome.yaml\
+    \ --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glycosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glycosome-strict.tsv"
+  snapshot_sha256: 16cf4ca4d25018af5e288445bb4f81c075e4cec6b30f5a42b254884ad5c93161
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/glycosome.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '22 of 29 collected target identifiers returned OK. PMID:10589985: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID10589985, DOI10.1016/s0166-6851(99)00144-9 and Cloning and analysis
+    of the PTS-1 receptor in Trypanosoma brucei. Bibliographic identity is resolved;
+    scientific scope remains restricted to the separately documented abstract/body
+    inspections.; PMID:12386344: UNREACHABLE; The bulk PMID transport returned414;
+    the independently retrieved exact MED record verifies PMID12386344, DOI10.1073/pnas.222454899
+    and Glucose is toxic to glycosome-deficient trypanosomes. Bibliographic identity
+    is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections.; PMID:12709066: UNREACHABLE; The bulk PMID transport
+    returned414; the independently retrieved exact MED record verifies PMID12709066,
+    DOI10.1046/j.1432-1033.2003.03582.x and Characterization of Trypanosoma brucei
+    PEX14 and its role in the import of glycosomal matrix proteins. Bibliographic
+    identity is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections.; PMID:17320990: UNREACHABLE; The bulk PMID transport
+    returned414; the independently retrieved exact MED record verifies PMID17320990,
+    DOI10.1016/j.bbamcr.2007.01.006 and Characterization of the role of the receptors
+    PEX5 and PEX7 in the import of proteins into glycosomes of Trypanosoma brucei.
+    Bibliographic identity is resolved; scientific scope remains restricted to the
+    separately documented abstract/body inspections.; PMID:22809509: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID22809509, DOI10.1016/j.bbrc.2012.07.035 and Studies on the organization
+    of the docking complex involved in matrix protein import into glycosomes of Trypanosoma
+    brucei. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:23994617: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID23994617, DOI10.1016/j.bbamcr.2013.08.008 and Ubiquitination of the
+    glycosomal matrix protein receptor PEX5 in Trypanosoma brucei by PEX4 displays
+    novel features. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:2940090: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID2940090, DOI10.1111/j.1432-1033.1986.tb09687.x and Glycolytic enzymes
+    of Trypanosoma brucei. Simultaneous purification, intraglycosomal concentrations
+    and physical properties. Bibliographic identity is resolved; scientific scope
+    remains restricted to the separately documented abstract/body inspections. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact whole/region/membrane identity and relations
+  outcome: supported
+  target_ids:
+  - GO:0020015
+  summary: The exact GO identity and peroxisomal relationship are supported. Whole
+    glycosome, lumen and bounding membrane are distinct; the lumen parent is an is_a
+    ancestor, and its boundary is not a lumen constituent. SL synonyms and direct
+    mappings support their stated scopes.
+  evidence_ids:
+  - record
+  - glycosome-agent-go
+  - glycosome-agent-whole-ancestors
+  - glycosome-agent-lumen-ancestors
+  - glycosome-agent-SL0129
+  - glycosome-agent-SL0332
+  - glycosome-agent-SL0128
+- assessment_id: scope
+  area: scope
+  topic: Kinetoplastid class and reference-strain versus experimental context
+  outcome: supported
+  target_ids:
+  - GO:0020015
+  summary: ENA5653 is class Kinetoplastea with Kinetoplastida as a synonym; the legacy
+    order wording is not a taxon mismatch. Native source synthesis supports glycosomes
+    across examined kinetoplastids. T.brucei is the directly studied canonical species;
+    reference-strain protein examples are not relabelled as experiments in TREU927.
+    Glycolytic composition varies with species and life stage.
+  evidence_ids:
+  - record
+  - glycosome-agent-tax5653
+  - glycosome-agent-tax5691
+  - glycosome-agent-tax5702
+  - glycosome-agent-tax31285
+  - glycosome-agent-tax185431
+  - glycosome-agent-haanstra2016-meta
+  - glycosome-agent-haanstra2008-meta
+  - glycosome-agent-haanstra2008-pmc
+- assessment_id: composition
+  area: grounding
+  topic: Collective constituents and bounded inventory
+  outcome: concern
+  target_ids:
+  - GO:0020015
+  summary: The membrane boundary and enzyme/peroxin cohorts are biologically supported,
+    but the whole membrane is incorrectly represented as a molecular LIPID constituent
+    grounded to its assembled-structure GO term. Enzymes and peroxins span unrelated
+    families, so no one exact family should replace either full cohort. Verified individual
+    peroxin family candidates do not require splitting the established cohort in a
+    read-only review. The membrane-residence edge description specifically selects
+    PEX14; it does not assert that cytosolic PEX5/PEX7 reside permanently there.
+  evidence_ids:
+  - record
+  - policy
+  - glycosome-agent-go
+  - glycosome-agent-haanstra2016-meta
+  - glycosome-agent-moyersoen2003-meta
+  - glycosome-agent-furuya2002-pmc
+  - glycosome-agent-IPR024111
+  - glycosome-agent-IPR044536
+  - glycosome-agent-IPR025655
+  - glycosome-agent-P13377
+  - glycosome-agent-O15648
+  - glycosome-agent-A0A3G1VTN5
+  - glycosome-agent-O96429
+  - glycosome-agent-Q4GZG4
+  - glycosome-agent-Q57W55
+  - glycosome-agent-Q57W97
+  - glycosome-agent-Q38CL4
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity versus functional or survival requirement
+  outcome: unknown
+  target_ids:
+  - GO:0020015
+  summary: The collective membrane is constitutive of the named bounded organelle/membrane.
+    Individual lipid-removal requirements and individual enzyme/peroxin requirements
+    for organelle formation are not established here. Protein-import defects, catalytic
+    effects and cell death do not alone demonstrate loss of glycosome formation. UNKNOWN
+    protein-cohort necessity remains appropriate; the lumen record makes no component-necessity
+    claim.
+  evidence_ids:
+  - record
+  - policy
+  - glycosome-agent-haanstra2016-meta
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-moyersoen2003-meta
+  - glycosome-agent-furuya2002-pmc
+- assessment_id: protein-identity
+  area: grounding
+  topic: Existing exemplar identity and evidence placement
+  outcome: supported
+  target_ids:
+  - GO:0020015
+  summary: Existing native accession/status/gene/taxon pairs and their cited localization
+    PMIDs match. Species, subspecies and reference-strain names are distinguished.
+    Protein identity evidence is not treated as direct localization by itself; gene-less
+    and by-similarity annotations retain their limits.
+  evidence_ids:
+  - record
+  - protein-policy
+  - glycosome-agent-tax5653
+  - glycosome-agent-tax5691
+  - glycosome-agent-tax5702
+  - glycosome-agent-tax31285
+  - glycosome-agent-tax185431
+  - glycosome-agent-P13377
+  - glycosome-agent-O15648
+  - glycosome-agent-A0A3G1VTN5
+  - glycosome-agent-O96429
+  - glycosome-agent-Q4GZG4
+  - glycosome-agent-Q57W55
+  - glycosome-agent-Q57W97
+  - glycosome-agent-Q38CL4
+  - glycosome-agent-reviewed-genes
+  - glycosome-agent-PMID2940090
+  - glycosome-agent-PMID10589985
+  - glycosome-agent-PMID17320990
+  - glycosome-agent-PMID23994617
+  - glycosome-agent-PMID12386344
+  - glycosome-agent-PMID12709066
+  - glycosome-agent-PMID22809509
+- assessment_id: optional-TIM
+  area: completeness
+  topic: Declared TIM activity and optional exemplar coverage
+  outcome: supported
+  target_ids:
+  - GO:0020015
+  summary: Native graph audit reports PARTIAL_EXAMPLES for TIM. Source2008 supports
+    TIM activity in the glycosomal pathway; the complementary native query resolves
+    reviewed P04789 with protein alias TIM but no indexed geneName. This is optional
+    enrichment, not an unsupported biological member or a required schema failure;
+    no finding is manufactured from example coverage alone.
+  evidence_ids:
+  - record
+  - protein-policy
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-reviewed-TIM
+  - glycosome-agent-reviewed-TPI-name
+- assessment_id: function
+  area: evidence
+  topic: Observed Glc6P phenotype versus proof of glucose mechanism
+  outcome: concern
+  target_ids:
+  - GO:0020015
+  summary: Protein import and glycolytic enzyme compartmentation are supported, but
+    the nearest2008 paper explicitly limits its glucose mechanism test. Accumulation
+    after glucose addition is observed in one line; PGI truncation remains an alternative
+    and another line lacked this response. Glycerol/GK rescue gives the stronger mechanistic
+    evidence. The record should preserve those distinctions when attributing prevention
+    of Glc6P accumulation to that study.
+  evidence_ids:
+  - record
+  - glycosome-agent-haanstra2008-meta
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-moyersoen2003-meta
+  - glycosome-agent-furuya2002-pmc
+  - glycosome-agent-haanstra2016-meta
+- assessment_id: graph
+  area: graph
+  topic: Five import/compartmentation edges
+  outcome: concern
+  target_ids:
+  - GO:0020015
+  summary: The import and localization sequence has mechanistic support at the stated
+    source tiers. PEX14 docking/import, glycosomal enzyme localization and the bounding
+    membrane are supported. The final glucose-specific causal endpoint needs the same
+    experimental qualification as the function evidence; no unsupported direct metabolite-transport
+    edge is inferred.
+  evidence_ids:
+  - record
+  - graph-policy
+  - glycosome-agent-go
+  - glycosome-agent-moyersoen2003-meta
+  - glycosome-agent-furuya2002-pmc
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-haanstra2016-meta
+- assessment_id: attribution
+  area: provenance
+  topic: Exact first-author attribution
+  outcome: concern
+  target_ids:
+  - GO:0020015
+  summary: The repeatedly cited DOI identifies Moyersoen et al.2003; Choe is the second
+    author. Biological import claims match its abstract, but the repeated Choe et
+    al. attribution should be corrected without replacing the paper.
+  evidence_ids:
+  - record
+  - glycosome-agent-moyersoen2003-meta
+- assessment_id: coverage
+  area: completeness
+  topic: Whole target and bounded source inspection
+  outcome: supported
+  target_ids:
+  - GO:0020015
+  summary: All maintained fields, source placements, discussions and graph edges were
+    read. No maintained image asset, quantitative physical-property field or verbatim
+    snippet is asserted. Historical status and events are not edited or independently
+    recertified. No complete protein/lipid inventory, missing optional representative
+    or access failure alone is converted to a finding.
+  evidence_ids:
+  - record
+  - policy
+  - glycosome-agent-go
+  - glycosome-agent-opperdoes1977-title
+  - glycosome-agent-haanstra2016-meta
+  - glycosome-agent-haanstra2008-pmc
+findings:
+- finding_id: F1
+  issue_key: glycosome-pex14-first-author-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the PEX14 paper’s first-author attribution
+  description: DOI10.1046/j.1432-1033.2003.03582.x is Moyersoen et al.2003, with Choe
+    second. Several source notes call it Choe et al.2003. The DOI/title and relevant
+    import biology are correct; the first-author attribution is not.
+  target_ids:
+  - GO:0020015
+  field_paths:
+  - components#peroxin_import_machinery.evidence
+  - functions#glycosomal_matrix_protein_import.evidence
+  - evidence
+  - causal_graphs#pex14_glycolytic_import_compartmentation.edges
+  evidence_ids:
+  - record
+  - glycosome-agent-moyersoen2003-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim-level support and severity
+    rubric
+  native_severity: minor
+  normalization_reason: Minor bibliographic provenance defect; source identity and
+    the supported PEX14 mechanism are not invalidated.
+- finding_id: F2
+  issue_key: glycosome-glucose-mechanism-evidence-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Retain the paper’s glucose-mechanism qualification
+  description: 'The function evidence says Haanstra2008 showed compartmentation prevents
+    toxic Glc6P accumulation, and the final graph edge states that causal endpoint
+    without the paper’s qualification. Its Results and Discussion explicitly say the
+    glucose experiment is not a stringent test: PGI truncation is an alternative,
+    PF449 lacked significant Glc6P accumulation, and glycerol/GK rescue provides the
+    stronger mechanistic test. The observed29–13 glucose phenotype is valid but does
+    not uniquely resolve that mechanism.'
+  target_ids:
+  - GO:0020015
+  field_paths:
+  - functions#glycolytic_compartmentation.description
+  - functions#glycolytic_compartmentation.evidence
+  - causal_graphs#pex14_glycolytic_import_compartmentation.edges
+  evidence_ids:
+  - record
+  - glycosome-agent-haanstra2008-meta
+  - glycosome-agent-haanstra2008-pmc
+  - glycosome-agent-haanstra2016-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim-level support and severity
+    rubric
+  native_severity: minor
+  normalization_reason: 'Minor source-specific wording overstatement: the general
+    compartmentation function and measured Glc6P phenotype are supported; the correction
+    preserves the study’s explicit limits instead of declaring that biology false.'
+- finding_id: F3
+  issue_key: glycosome-membrane-molecular-component-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate the membrane substructure from molecular lipid composition
+  description: The glycosome_membrane component names the complete membrane, declares
+    type LIPID, and grounds it to GO0046860, which identifies the assembled bilayer
+    surrounding a glycosome. The frozen schema defines StructuralComponent as a molecular
+    building block, with lipid grounding to chemical classes. The graph itself correctly
+    types this object as STRUCTURE but attaches the molecular component_ref. Correct
+    has_part and boundary topology already represent the membrane; they do not make
+    the whole structure a lipid identity.
+  target_ids:
+  - GO:0020015
+  field_paths:
+  - components#glycosome_membrane
+  - causal_graphs#pex14_glycolytic_import_compartmentation.nodes#glycosome_membrane.component_ref
+  evidence_ids:
+  - record
+  - policy
+  - glycosome-agent-go
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:claim-level support and severity
+    rubric
+  native_severity: major
+  normalization_reason: 'Major incorrect molecular-component grounding: the encoded
+    object is an assembled substructure rather than the claimed lipid building-block
+    identity. The whole organelle identity and membrane topology remain supported.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0020015
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, change the repeated author attribution
+    to Moyersoen et al.2003 while retaining the verified DOI and supported claim scopes.
+  acceptance_checks:
+  - Preserve supported structure, protein identities and source-specific experimental
+    boundaries.
+  - Run focused schema, strict and relevant native graph checks after separately authorized
+    curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0020015
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, distinguish the observed glucose-addition
+    phenotype and competing PGI explanation from the stronger glycerol proof; qualify
+    the glucose-specific causal wording and source note while preserving supported
+    import and pathway compartmentation.
+  acceptance_checks:
+  - Preserve supported structure, protein identities and source-specific experimental
+    boundaries.
+  - Run focused schema, strict and relevant native graph checks after separately authorized
+    curation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0020015
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, retain GO0046860 in has_part and
+    as the grounded membrane graph node; remove its molecular component_ref if removing
+    the whole-membrane component, or replace that component only with an independently
+    supported molecular/material lipid description and appropriate grounding. Do not
+    invent a lipid composition.
+  acceptance_checks:
+  - Preserve supported structure, protein identities and source-specific experimental
+    boundaries.
+  - Run focused schema, strict and relevant native graph checks after separately authorized
+    curation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- The fresh target-resolver slice and all five corpus receipt/manifest checks are
+  integrated in this completed review.
+- 'Opperdoes1977 is bibliographic/title-level only: native metadata has no abstract
+  and the publisher body request returned403. No nine-enzyme original fractionation
+  table was inspected. Haanstra2016 is complete review abstract only.'
+- Haanstra2008 body scope is complete Results/Discussion/main Experimental Procedures
+  and included Fig2–5 captions; no raw data, figure pixels or separate supplements
+  were inspected. Procyclic29–13 and PF449 responses, and glycerol versus glucose
+  mechanism tests, remain distinct.
+- COMMON denotes supported occurrence in the stated taxon context, not a measured
+  prevalence. Experimental strains and life-cycle stages are not equated with reference-strain
+  protein exemplars.
+- Moyersoen2003 is complete primary abstract only, with exact authors/DOI verified.
+  Furuya2002 body inspection is limited to the explicitly listed Methods/Results/Discussion
+  sections and captions; no figure pixels or raw-data reanalysis. Individual import-protein
+  necessity for organelle formation remains unknown.
+- Bauer/Morris2017 is review evidence read in sec001–003 only, retaining ER-origin
+  hypotheses. Other protein-localization annotation studies are complete native abstracts
+  only; their full primary bodies are not claimed.
+- The optional TIM exemplar gap is reported by the native audit. P04789 is a resolved
+  reviewed protein candidate with shortName TIM but no indexed geneName; this is retained
+  for optional enrichment without inventing a gene symbol. Family candidates for individual
+  peroxins do not identify the entire cohort.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requires one review per uncovered target, including justified
+  clean reviews; no finding is invented to satisfy the local issue-only gate.
+- Only unsaved review/support artifacts are written outside the repository; no scientific
+  record, history, index or Git/publication mutation.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.

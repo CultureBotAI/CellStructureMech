@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/elongasome.yaml
+  slug: elongasome
+session:
+  id: 2026-10-24T060000Z-claude-code-60b7ca
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked MreC-MreD transmembrane scaffold component into the elongasome causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added mrec_mred node (component_ref: mrec_mred)
+    and directed edge to pg_synthesis.'

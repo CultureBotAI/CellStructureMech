@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/i_aaa_complex.yaml
+  slug: i_aaa_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-ee7092
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked Yme1 subunit and zinc(2+) cofactor into the i-AAA complex causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added yme1 (GENE_OR_PROTEIN, component_ref:
+    yme1) and zinc (CHEMICAL, component_ref: zinc, grounding: CHEBI:29105) nodes and directed
+    edges into iaaa.'

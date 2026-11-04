@@ -1,0 +1,1213 @@
+# Trichocyst scientific review
+
+- Review: 20261022T041015Z-trichocyst-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:46:41Z
+- Finished UTC: 2026-10-22T04:10:15Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One minor evidence-provenance finding: correct the TMP2/TMP4 gene-alias and single-reviewed-entry notes while retaining the three correct protein examples. Exact organelle identity, matrix family, species example and coarse calcium-triggered discharge graph are supported.
+
+## Scope And Provenance
+
+Exactly one complete trichocyst record, its frozen guidance/schema and protein-example skill; all maintained source/identity/component/function/graph/discussion claims audited. Primary printed649–658 scientific text and figures visually read; secondary PDF read only at declared sections. No maintained scientific changes or save.
+
+Selection: Batch42 exact path-ordered target1; initial native inspect/schema/strict passed on fresh f97b before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0055039 | data/structures/membrane_organelle/trichocyst.yaml | maintained | trichocyst |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0055039 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0055039 | Focused validator passed. |
+| Native verify | passed | True | GO:0055039 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Native causal-graphs | passed | True | GO:0055039 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0055039 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0055039 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0055039 | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0055039 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0055039 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0055039 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0055039 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0055039 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact organelle identity and physiological scope
+
+identity: supported. Targets: GO:0055039.
+
+Native GO matches the maintained identity/definition and the primary matrix study supports the Paramecium organelle context. The small acidic and disulfide-linked features are also described in the secondary review. The GO predator-defense wording is not converted into a quantitative toxicity or universal predator assay claim.
+
+### Species example with explicit experimental strains
+
+scope: supported. Targets: GO:0055039.
+
+The source directly studies P. tetraurelia and names d4-2; it also uses P. primaurelia156 for comparisons. The record only asserts the supported tetraurelia occurrence/canonical example. COMMON is qualitative occurrence, not a measured population prevalence.
+
+### Related matrix proteins, subfamilies and optional inventory
+
+grounding: supported. Targets: GO:0055039.
+
+The one component is a supported matrix-protein class. Primary T1/T2/T4 subfamily evidence supports related coassembling polypeptides, while direct coexpression data are T1-specific and full sequence equivalence is outside this review. IPR059991/PF27870 are domain candidates, not exact whole-family replacements; the historical reviewed-label-only rationale and open tip/membrane inventory remain bounded work.
+
+### Correct identities with unsupported query/alias prose
+
+grounding: concern. Targets: GO:0055039.
+
+All three accession/name/primary-gene/taxon/status combinations are correct. The roles and evidence notes overstate TMP2/TMP4 as unique UniProt gene identities: two separate genes are both called the single TMP2 entry, while native genes fields and exact/current broad queries do not supply those aliases. The biological family and the individual protein identities remain supported; correction is limited to the provenance/nomenclature prose.
+
+### Coarse matrix discharge relation and calcium sequence
+
+graph: supported. Targets: GO:0055039.
+
+All four NONMECHANISTIC edges distinguish matrix proteins, stored matrix, organelle, extracellular Ca2+ and extended filament. The primary study supports the matrix class and the review supports contact-triggered expansion after fusion. The graph does not claim an atomic mechanism, assign an exact calcium-binding domain or conflate extracellular trigger with all upstream fusion signaling.
+
+### Individual formation requirements remain unresolved
+
+evidence: unknown. Targets: GO:0055039.
+
+The component has no asserted essentiality. The source discusses correct collective core assembly as relevant to function and proposes reasons for gene microheterogeneity; it does not establish necessity of every individual paralog. No missing individual depletion experiment is treated as a record defect.
+
+### Full target and bounded source inspection
+
+provenance: supported. Targets: GO:0055039.
+
+The complete maintained record, all graph edges, source identities, three individual examples and current exact gene queries were checked. Genuine primary scans were visually read through the end of scientific discussion; the secondary PDF has an explicitly bounded section scope. No new figure, scientific status or complete subunit inventory is imposed.
+
+## Findings
+
+### F1: Correct the TMP2/TMP4 alias and unique-query claims
+
+minor / open / confirmed; issue key: trichocyst-protein-example-query-provenance.
+
+The three protein_example roles/evidence notes state that TMP2 or TMP4 is a UniProt gene identity with a single reviewed entry; two distinct entries are each called the single TMP2 result. Native records instead provide primary genes T2A, T2B and T4B without these gene aliases. Current exact and broader TMP queries return zero, while the precise primary-gene queries each return one intended accession. The accessions, protein labels, species and reviewed statuses themselves are correct.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, describe Q27173/T2A and Q27174/T2B as distinct T2 matrix-family examples and A0C767/T4B as a T4 example. Remove unsupported TMP2/TMP4 gene-alias and single-result language, or cite an exact reproducible source/query for any retained alias. Preserve the verified identifiers, names, species/status and distinct protein membership evidence.
+
+- Each example retains its correct accession and primary gene, with accurate taxon and reviewed status.
+- Any uniqueness statement names the actual query and its bounded result; two distinct genes are not each called the unique TMP2 entry.
+- Subfamily/protein nomenclature is distinguished from an exact UniProt gene alias; historical retrieval metadata is not silently rewritten.
+- Focused schema, strict, native protein and graph checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/trichocyst.yaml; Entire maintained target including every field, graph, discussion and history | context_only | The complete record was read; historical author notes are not independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component, ProteinExample, graph and evidence contracts | context_only | Protein identity, family nomenclature, localization, biochemical function and individual formation necessity are distinct claims. |
+| uniprot-skill | .claude/skills/uniprot-protein-examples/SKILL.md; Exact gene, accession, taxon and evidence-scope verification requirements | context_only | A successful accession check does not itself establish an alias or a unique query result. |
+| trichocyst-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0055039; Complete one-term name, definition, active status and source xref; no unstated parent relation inferred | supports | Active GO0055039 exactly matches trichocyst and its current definition, including the crystalline acidic protein/disulphide-linked and predator-defense description. The identity is an organelle, not one matrix protein. |
+| trichocyst-agent-tax5888 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5888; Complete taxId, scientificName, rank and lineage | supports | ENA5888 is Paramecium tetraurelia at species rank, within Ciliophora. This does not identify a particular experimental strain or quantify population prevalence. |
+| trichocyst-agent-calcium | https://www.ebi.ac.uk/chebi/backend/api/public/compound/29108/; Exact accession/name/charge and synonyms; no new chemical mechanism inferred | supports | CHEBI29108 is calcium(2+), with charge2 and Ca2+ synonym; this matches the extracellular chemical node. |
+| trichocyst-agent-madeddu1995-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1091/mbc.6.6.649%22; Unique native MED title/authors/year/DOI/PMID/PMC and complete abstract | supports | Exact primary identity: Madeddu L, Gautier MC, Vayssie L, Houari A and Sperling L1995; DOI10.1091/mbc.6.6.649, PMID7579685, PMC301226. Complete abstract describes multiple related precursors, three subfamilies and direct coexpression evidence for one subfamily. |
+| trichocyst-agent-plattner2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1111/jeu.12332%22; Unique native MED title/author/print year/DOI/PMID and complete abstract | supports | Exact secondary review identity: Plattner H; DOI10.1111/jeu.12332, PMID27251227; print2017 and earlier online2016 dates are consistent. Complete abstract distinguishes matrix expansion, membrane fusion and possible additional defense functions. |
+| trichocyst-agent-madeddu-page649 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/ef65e271575b/mbc00075-0029.png; Genuine native PMC scanned printed page649: Title/authors and complete primary abstract; Introduction opening. Visually read; no independent densitometry or sequence realignment. | supports | The original article identifies a crystalline secretory-granule matrix comprising related precursor-derived proteins. Its abstract distinguishes direct coexpression evidence for one subfamily from the broader family hypothesis. |
+| trichocyst-agent-madeddu-page650 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/be91729968e3/mbc00075-0030.png; Genuine native PMC scanned printed page650: Introduction continuation and complete printed-page Materials and Methods, including cells/culture, gels, sequencing, DNA preparation, PCR and probes. Visually read; no independent densitometry or sequence realignment. | supports | Methods name P. tetraurelia strain d4-2 and P. primaurelia strain156, grown at27C with Enterobacter aerogenes. T1/T2/T4 are N-terminal protein sequences used for genomic amplification; the study is not strain-unspecified sequence verification of every modern accession. |
+| trichocyst-agent-madeddu-page651 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/d548aa6f9cb0/mbc00075-0031.png; Genuine native PMC scanned printed page651: Methods continuation and Results: A Family of Related Proteins; Multiple PCR Products opening. Visually read; no independent densitometry or sequence realignment. | supports | The source describes small acidic mature matrix polypeptides, proteolytic precursor processing, heterogeneous two-dimensional gels and amplification from three sequenced protein spots. It does not reduce the matrix to one protein. |
+| trichocyst-agent-madeddu-page652 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/426e031bfda6/mbc00075-0032.png; Genuine native PMC scanned printed page652: Figure1 pixels/caption and Results PCR sequence, intron and transcript discussion. Visually read; no independent densitometry or sequence realignment. | supports | Figure1 distinguishes trichocyst body from tip and shows the T1/T2/T4 protein spots; Results identify several nucleotide variants and state that only gene fragments were sequenced in this study. |
+| trichocyst-agent-madeddu-page653 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/eaf4ae320cad/mbc00075-0033.png; Genuine native PMC scanned printed page653: Results: Genomic Blots Probed with Exon and Intron Sequences; Figure2 pixels/caption. Visually read; no independent densitometry or sequence realignment. | supports | Genomic blots and PCR variants support multiple related genes, with species comparisons between P. tetraurelia and P. primaurelia. Figure2 labels T1-a through f, T2-a/b/c and T4-a/b/c, not a unique gene called TMP2. |
+| trichocyst-agent-madeddu-page654 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/15b248a549f4/mbc00075-0034.png; Genuine native PMC scanned printed page654: Figure3 and Figure4 pixels/captions; Results continuation and T1 Genes Are Coexpressed opening. Visually read; no independent densitometry or sequence realignment. | supports | RT-PCR confirms T1 introns; Northern signals support precursor-sized transcripts. The coexpression analysis is explicitly directed at the T1 subfamily and discusses limits of individual amplified variants. |
+| trichocyst-agent-madeddu-page655 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/679cfd5423c5/mbc00075-0035.png; Genuine native PMC scanned printed page655: Figure5 pixels/caption; coexpression conclusion; Each Subfamily Has a Distinct Location; Discussion opening. Visually read; no independent densitometry or sequence realignment. | supports | The direct T1 coexpression conclusion is followed by an explicit extrapolation to other subfamilies. Chromosome blots place the three studied subfamilies on different macronuclear chromosomes; discussion describes the related acidic matrix proteins. |
+| trichocyst-agent-madeddu-page656 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/9caf66d8c97b/mbc00075-0036.png; Genuine native PMC scanned printed page656: Table1, Figure6 pixels/caption and Discussion continuation. Visually read; no independent densitometry or sequence realignment. | supports | Table1 records T1 genomic/cDNA sequence counts. The estimate of roughly100 genes is tentative, and the source states that the relation between particular genes and two-dimensional gel spots remains unclear. |
+| trichocyst-agent-madeddu-page657 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/b1de217ee90a/mbc00075-0037.png; Genuine native PMC scanned printed page657: Figure7 pixels/caption and Discussion: A Large Multigene Family; Redundancy or Functional Microheterogeneity. Visually read; no independent densitometry or sequence realignment. | supports | The source contrasts possible functional microheterogeneity with redundancy and proposes future tests; it does not demonstrate that every individual paralog is required for organelle formation. |
+| trichocyst-agent-madeddu-page658 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/1616a5ca707c/mbc00075-0038.png; Genuine native PMC scanned printed page658: Discussion conclusion, acknowledgments and Note added in proof; bibliography not independently audited. Visually read; no independent densitometry or sequence realignment. | supports | The microheterogeneity/assembly interpretation remains a proposed explanation. The note supplies GenBank accessions for partial coding sequences, including T2a/b/c and T4a/b/c; no full-accession sequence equivalence is newly inferred here. |
+| trichocyst-agent-plattner2017-pdf | https://kops.uni-konstanz.de/server/api/core/bitstreams/e9e5fd4a-6135-4130-8fe0-6fe50f52419b/content; Genuine public Konstanz PDF, exact title/DOI/author and print106 abstract; printed107 Introduction and structure text,108 matrix/disulfide/defense and synchronous-exocytosis text continuing onto109; printed118 Trichocyst Matrix and Ca2+-binding proteins through119–120, with Figures9–10 captions. Selected text read from PDF derivative; review figure pixels, other sections and underlying cited experiments not independently audited. | supports | The review distinguishes membrane fusion from subsequent matrix expansion when extracellular Ca2+ accesses the contents. It describes acidic TMP proteins and disulfide-linked dimers, condensed crystalline storage, elongated discharged bodies, and calcium-removal/mutant experiments summarized from prior studies. It explicitly leaves the precise decondensation mechanism unresolved; a detailed conformational model is not established by the record. |
+| trichocyst-agent-protein-Q27173 | https://rest.uniprot.org/uniprotkb/Q27173.json; Exact accession, entryType, recommended/alternative names, genes, organism and function/location/similarity comments; domain crossrefs inspected separately | supports | Current reviewed Q27173 is trichocyst matrix protein T2-A, primary gene T2A, organism5888. Function/location comments identify a matrix structural protein and trichocyst localization. TMP is a family/protein-name context; the genes field does not list TMP2 or TMP4 as an alias. |
+| trichocyst-agent-protein-Q27174 | https://rest.uniprot.org/uniprotkb/Q27174.json; Exact accession, entryType, recommended/alternative names, genes, organism and function/location/similarity comments; domain crossrefs inspected separately | supports | Current reviewed Q27174 is trichocyst matrix protein T2-B, primary gene T2B, organism5888. Function/location comments identify a matrix structural protein and trichocyst localization. TMP is a family/protein-name context; the genes field does not list TMP2 or TMP4 as an alias. |
+| trichocyst-agent-protein-A0C767 | https://rest.uniprot.org/uniprotkb/A0C767.json; Exact accession, entryType, recommended/alternative names, genes, organism and function/location/similarity comments; domain crossrefs inspected separately | supports | Current reviewed A0C767 is trichocyst matrix protein T4-B, primary gene T4B, organism5888. Function/location comments identify a matrix structural protein and trichocyst localization. TMP is a family/protein-name context; the genes field does not list TMP2 or TMP4 as an alias. |
+| trichocyst-agent-gene-TMP1 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3ATMP1%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene_exact:TMP1, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-broad-TMP1 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene%3ATMP1%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene:TMP1, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-TMP2 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3ATMP2%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene_exact:TMP2, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-broad-TMP2 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene%3ATMP2%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene:TMP2, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-TMP4 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3ATMP4%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene_exact:TMP4, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-broad-TMP4 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene%3ATMP4%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; size500; no returned entries or further pages | context_only | The current gene:TMP4, organism_id5888, reviewed:true query returns an empty results array. This is a bounded current-query result, not proof that the biological family is absent or that a historical query had the same result. |
+| trichocyst-agent-gene-primary-T2A | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AT2A%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; one accession; size500 | supports | Exact reviewed gene T2A, organism5888 returns one entry, Q27173, with the expected primary symbol. This verifies that precise primary-gene query, not equivalence to a TMP2/TMP4 gene alias. |
+| trichocyst-agent-gene-primary-T2B | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AT2B%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; one accession; size500 | supports | Exact reviewed gene T2B, organism5888 returns one entry, Q27174, with the expected primary symbol. This verifies that precise primary-gene query, not equivalence to a TMP2/TMP4 gene alias. |
+| trichocyst-agent-gene-primary-T4B | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AT4B%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29; Complete JSON results; one accession; size500 | supports | Exact reviewed gene T4B, organism5888 returns one entry, A0C767, with the expected primary symbol. This verifies that precise primary-gene query, not equivalence to a TMP2/TMP4 gene alias. |
+| trichocyst-agent-family-IPR059991 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR059991/; Complete native metadata accession/type/name/description and integrated Pfam mapping; no protein-cohort equivalence or full alignment analysis | supports | IPR059991 is explicitly a domain: Trichocyst matrix protein T1-F, coiled-coil. Its description says the domain occurs in TMP-family proteins but does not equate this domain with the entire matrix-protein family. |
+| trichocyst-agent-family-PF27870 | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27870/; Complete native metadata accession/type/name/description/integrated identifier | supports | PF27870 is also typed domain and integrated into IPR059991. A relevant name or occurrence in all three examples does not establish exact full-family identity for the broad component. |
+| schema-result | just validate data/structures/membrane_organelle/trichocyst.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/trichocyst.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/trichocyst.yaml --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/trichocyst.yaml --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv |
+| trichocyst-verify | /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/trichocyst.yaml; Complete native read-only log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| trichocyst-causal-graphs | /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/trichocyst.yaml; Complete native read-only log | supports | data/structures/membrane_organelle/trichocyst.yaml  (GO:0055039)<br>  matrix_filament_discharge	trichocyst_matrix_proteins	PARTIAL_EXAMPLES	-&gt;trichocyst_matrix_proteins (have: UniProtKB:Q27173, UniProtKB:Q27174, UniProtKB:A0C767; missing: TMP1)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/trichocyst.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Primary Madeddu1995 printed649–658 scans were visually read, including Methods, Results, Discussion, Figures1–7 and Table1. Page659 is retained but contains remaining references and was not scientifically audited; no gel densitometry, sequence realignment or underlying cited experiment was repeated. Each page evidence row is scoped to that page.
+- Plattner2017 is a review, with only the exact PDF sections and captions declared above inspected. The review separates established extracellular-calcium dependence from unresolved detailed decondensation mechanisms; its primary references were not independently reanalyzed.
+- Publisher PDF1995 and Wiley2017 routes returned403; the native1995 PDF route returned HTTP200 challenge HTML, not PDF. Genuine PMC scans and the public Konstanz PDF supplied the body evidence, so those route failures are not claims that the source bodies were unavailable.
+- Current exact/broader TMP1/TMP2/TMP4 queries are bounded to reviewed UniProt entries in taxon5888. Their zero results do not prove biological absence or reconstruct the unretained2026-10-17 search. The source uses T1/T2/T4 subfamily nomenclature, while native primary genes are specific T2A/T2B/T4B.
+- Native graph coverage reports PARTIAL_EXAMPLES with TMP1 unrepresented; this is an acknowledged example-census limitation, not proof of absent TMP1 proteins or a required complete accession inventory. No exact whole-family grounding is established by the domain candidates, and optional tip/sheath/membrane constituents remain unresolved.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes one review per target. Parent owns integration of the five same-base batch26 full-corpus gates and subsequent finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T041015Z-trichocyst-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Trichocyst scientific review
+started_at: '2026-10-22T03:46:41Z'
+finished_at: '2026-10-22T04:10:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'One minor evidence-provenance finding: correct the TMP2/TMP4 gene-alias
+  and single-reviewed-entry notes while retaining the three correct protein examples.
+  Exact organelle identity, matrix family, species example and coarse calcium-triggered
+  discharge graph are supported.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/trichocyst.yaml
+    sha256: ef268c8f1bf2c657fd36ac7d1cbd4f7bbc5076e628cebfb99c8e3e1db79c5aa0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0055039
+  path: data/structures/membrane_organelle/trichocyst.yaml
+  label: trichocyst
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trichocyst.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete trichocyst record, its frozen guidance/schema
+    and protein-example skill; all maintained source/identity/component/function/graph/discussion
+    claims audited. Primary printed649–658 scientific text and figures visually read;
+    secondary PDF read only at declared sections. No maintained scientific changes
+    or save.
+  selection: Batch42 exact path-ordered target1; initial native inspect/schema/strict
+    passed on fresh f97b before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0055039
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just validate data/structures/membrane_organelle/trichocyst.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just validate-strict data/structures/membrane_organelle/trichocyst.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/trichocyst.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - trichocyst-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/trichocyst.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - trichocyst-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0055039
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - uniprot-skill
+  - trichocyst-agent-go
+  - trichocyst-agent-tax5888
+  - trichocyst-agent-calcium
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-plattner2017-meta
+  - trichocyst-agent-madeddu-page649
+  - trichocyst-agent-madeddu-page650
+  - trichocyst-agent-madeddu-page651
+  - trichocyst-agent-madeddu-page652
+  - trichocyst-agent-madeddu-page653
+  - trichocyst-agent-madeddu-page654
+  - trichocyst-agent-madeddu-page655
+  - trichocyst-agent-madeddu-page656
+  - trichocyst-agent-madeddu-page657
+  - trichocyst-agent-madeddu-page658
+  - trichocyst-agent-plattner2017-pdf
+  - trichocyst-agent-protein-Q27173
+  - trichocyst-agent-protein-Q27174
+  - trichocyst-agent-protein-A0C767
+  - trichocyst-agent-gene-TMP1
+  - trichocyst-agent-gene-broad-TMP1
+  - trichocyst-agent-gene-TMP2
+  - trichocyst-agent-gene-broad-TMP2
+  - trichocyst-agent-gene-TMP4
+  - trichocyst-agent-gene-broad-TMP4
+  - trichocyst-agent-gene-primary-T2A
+  - trichocyst-agent-gene-primary-T2B
+  - trichocyst-agent-gene-primary-T4B
+  - trichocyst-agent-family-IPR059991
+  - trichocyst-agent-family-PF27870
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055039
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/trichocyst.yaml
+  locator: Entire maintained target including every field, graph, discussion and history
+  accessed_at: '2026-10-22T03:56:56Z'
+  support: context_only
+  summary: The complete record was read; historical author notes are not independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, ProteinExample, graph and evidence contracts
+  accessed_at: '2026-10-22T03:56:56Z'
+  support: context_only
+  summary: Protein identity, family nomenclature, localization, biochemical function
+    and individual formation necessity are distinct claims.
+- evidence_id: uniprot-skill
+  kind: record_content
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Exact gene, accession, taxon and evidence-scope verification requirements
+  accessed_at: '2026-10-22T03:56:56Z'
+  support: context_only
+  summary: A successful accession check does not itself establish an alias or a unique
+    query result.
+- evidence_id: trichocyst-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0055039
+  locator: Complete one-term name, definition, active status and source xref; no unstated
+    parent relation inferred
+  accessed_at: '2026-10-22T03:54:02.707231Z'
+  support: supports
+  summary: Active GO0055039 exactly matches trichocyst and its current definition,
+    including the crystalline acidic protein/disulphide-linked and predator-defense
+    description. The identity is an organelle, not one matrix protein.
+  snapshot_sha256: 36c1439cf808e37a295917856d2d59cb49b0fccea3ed43e4d5a689e80347920a
+- evidence_id: trichocyst-agent-tax5888
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5888
+  locator: Complete taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T03:54:02.707582Z'
+  support: supports
+  summary: ENA5888 is Paramecium tetraurelia at species rank, within Ciliophora. This
+    does not identify a particular experimental strain or quantify population prevalence.
+  snapshot_sha256: 32e2fd3cdbcb32e6fab085f51738111a1d695a8e8a1159e754fb8c601d413a3c
+- evidence_id: trichocyst-agent-calcium
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/29108/
+  locator: Exact accession/name/charge and synonyms; no new chemical mechanism inferred
+  accessed_at: '2026-10-22T03:54:02.707681Z'
+  support: supports
+  summary: CHEBI29108 is calcium(2+), with charge2 and Ca2+ synonym; this matches
+    the extracellular chemical node.
+  snapshot_sha256: 57e7436e8b01b433b538501a52915087997670931768a5160ae9842bcee92797
+- evidence_id: trichocyst-agent-madeddu1995-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1091/mbc.6.6.649%22
+  locator: Unique native MED title/authors/year/DOI/PMID/PMC and complete abstract
+  accessed_at: '2026-10-22T03:54:03.609359Z'
+  support: supports
+  summary: 'Exact primary identity: Madeddu L, Gautier MC, Vayssie L, Houari A and
+    Sperling L1995; DOI10.1091/mbc.6.6.649, PMID7579685, PMC301226. Complete abstract
+    describes multiple related precursors, three subfamilies and direct coexpression
+    evidence for one subfamily.'
+  snapshot_sha256: 1058139d5b724d780c99da0b61d4c00ed1320e10962d78009f157a883fd4498f
+- evidence_id: trichocyst-agent-plattner2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1111/jeu.12332%22
+  locator: Unique native MED title/author/print year/DOI/PMID and complete abstract
+  accessed_at: '2026-10-22T03:54:04.275779Z'
+  support: supports
+  summary: 'Exact secondary review identity: Plattner H; DOI10.1111/jeu.12332, PMID27251227;
+    print2017 and earlier online2016 dates are consistent. Complete abstract distinguishes
+    matrix expansion, membrane fusion and possible additional defense functions.'
+  snapshot_sha256: 1a9c469c4d2e974b53c8e1f063e3e60f34b213919da9c088a18c24ede9c9b233
+- evidence_id: trichocyst-agent-madeddu-page649
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/ef65e271575b/mbc00075-0029.png
+  locator: 'Genuine native PMC scanned printed page649: Title/authors and complete
+    primary abstract; Introduction opening. Visually read; no independent densitometry
+    or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:03.808247Z'
+  support: supports
+  summary: The original article identifies a crystalline secretory-granule matrix
+    comprising related precursor-derived proteins. Its abstract distinguishes direct
+    coexpression evidence for one subfamily from the broader family hypothesis.
+  snapshot_sha256: ec2cf2a7884da1708e47bba841c76b6fc45e77b83eb3d66893411aaf4e8fa18f
+- evidence_id: trichocyst-agent-madeddu-page650
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/be91729968e3/mbc00075-0030.png
+  locator: 'Genuine native PMC scanned printed page650: Introduction continuation
+    and complete printed-page Materials and Methods, including cells/culture, gels,
+    sequencing, DNA preparation, PCR and probes. Visually read; no independent densitometry
+    or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:03.808590Z'
+  support: supports
+  summary: Methods name P. tetraurelia strain d4-2 and P. primaurelia strain156, grown
+    at27C with Enterobacter aerogenes. T1/T2/T4 are N-terminal protein sequences used
+    for genomic amplification; the study is not strain-unspecified sequence verification
+    of every modern accession.
+  snapshot_sha256: ada9651cf2ac5c048483147b2de441fb06e83f43d400b1dc26b057ee0606dcde
+- evidence_id: trichocyst-agent-madeddu-page651
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/d548aa6f9cb0/mbc00075-0031.png
+  locator: 'Genuine native PMC scanned printed page651: Methods continuation and Results:
+    A Family of Related Proteins; Multiple PCR Products opening. Visually read; no
+    independent densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:03.809030Z'
+  support: supports
+  summary: The source describes small acidic mature matrix polypeptides, proteolytic
+    precursor processing, heterogeneous two-dimensional gels and amplification from
+    three sequenced protein spots. It does not reduce the matrix to one protein.
+  snapshot_sha256: 7803d400f2bcedb44c77fdf62b9c7e7560d92c433db1be55a4339f2b59a03993
+- evidence_id: trichocyst-agent-madeddu-page652
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/426e031bfda6/mbc00075-0032.png
+  locator: 'Genuine native PMC scanned printed page652: Figure1 pixels/caption and
+    Results PCR sequence, intron and transcript discussion. Visually read; no independent
+    densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:03.809146Z'
+  support: supports
+  summary: Figure1 distinguishes trichocyst body from tip and shows the T1/T2/T4 protein
+    spots; Results identify several nucleotide variants and state that only gene fragments
+    were sequenced in this study.
+  snapshot_sha256: ef1c10346586ab5b48d98eb30eed9f72f33a6bcc8352f33fd7c3b909e24713b4
+- evidence_id: trichocyst-agent-madeddu-page653
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/eaf4ae320cad/mbc00075-0033.png
+  locator: 'Genuine native PMC scanned printed page653: Results: Genomic Blots Probed
+    with Exon and Intron Sequences; Figure2 pixels/caption. Visually read; no independent
+    densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:03.809234Z'
+  support: supports
+  summary: Genomic blots and PCR variants support multiple related genes, with species
+    comparisons between P. tetraurelia and P. primaurelia. Figure2 labels T1-a through
+    f, T2-a/b/c and T4-a/b/c, not a unique gene called TMP2.
+  snapshot_sha256: c8fec160bc53f947b1ed5e9a7f33e3e67982a52a48de62f6cc87500211381b04
+- evidence_id: trichocyst-agent-madeddu-page654
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/15b248a549f4/mbc00075-0034.png
+  locator: 'Genuine native PMC scanned printed page654: Figure3 and Figure4 pixels/captions;
+    Results continuation and T1 Genes Are Coexpressed opening. Visually read; no independent
+    densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:04.197671Z'
+  support: supports
+  summary: RT-PCR confirms T1 introns; Northern signals support precursor-sized transcripts.
+    The coexpression analysis is explicitly directed at the T1 subfamily and discusses
+    limits of individual amplified variants.
+  snapshot_sha256: af8ed4d89ead957523b5293cb7580f67bbc4967bee8d252bebb9c87cce8bfc77
+- evidence_id: trichocyst-agent-madeddu-page655
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/679cfd5423c5/mbc00075-0035.png
+  locator: 'Genuine native PMC scanned printed page655: Figure5 pixels/caption; coexpression
+    conclusion; Each Subfamily Has a Distinct Location; Discussion opening. Visually
+    read; no independent densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:04.236553Z'
+  support: supports
+  summary: The direct T1 coexpression conclusion is followed by an explicit extrapolation
+    to other subfamilies. Chromosome blots place the three studied subfamilies on
+    different macronuclear chromosomes; discussion describes the related acidic matrix
+    proteins.
+  snapshot_sha256: af1a61e7de2df78b116a2d067639ca1c5efd0c32eac2a49588150edd7614fc09
+- evidence_id: trichocyst-agent-madeddu-page656
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/9caf66d8c97b/mbc00075-0036.png
+  locator: 'Genuine native PMC scanned printed page656: Table1, Figure6 pixels/caption
+    and Discussion continuation. Visually read; no independent densitometry or sequence
+    realignment.'
+  accessed_at: '2026-10-22T03:55:04.264748Z'
+  support: supports
+  summary: Table1 records T1 genomic/cDNA sequence counts. The estimate of roughly100
+    genes is tentative, and the source states that the relation between particular
+    genes and two-dimensional gel spots remains unclear.
+  snapshot_sha256: 8d2fc7050a4fac85609abd88381f45f75dcce9152b34e9b722a6f9ce84277c3d
+- evidence_id: trichocyst-agent-madeddu-page657
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/b1de217ee90a/mbc00075-0037.png
+  locator: 'Genuine native PMC scanned printed page657: Figure7 pixels/caption and
+    Discussion: A Large Multigene Family; Redundancy or Functional Microheterogeneity.
+    Visually read; no independent densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:04.321186Z'
+  support: supports
+  summary: The source contrasts possible functional microheterogeneity with redundancy
+    and proposes future tests; it does not demonstrate that every individual paralog
+    is required for organelle formation.
+  snapshot_sha256: a72cb64d0cc42e2ef6be8c8501a3b2aadb6f8272ef2ab7ae697a342b440ea957
+- evidence_id: trichocyst-agent-madeddu-page658
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8b8c/301226/1616a5ca707c/mbc00075-0038.png
+  locator: 'Genuine native PMC scanned printed page658: Discussion conclusion, acknowledgments
+    and Note added in proof; bibliography not independently audited. Visually read;
+    no independent densitometry or sequence realignment.'
+  accessed_at: '2026-10-22T03:55:04.321625Z'
+  support: supports
+  summary: The microheterogeneity/assembly interpretation remains a proposed explanation.
+    The note supplies GenBank accessions for partial coding sequences, including T2a/b/c
+    and T4a/b/c; no full-accession sequence equivalence is newly inferred here.
+  snapshot_sha256: 4e5284bd4d8b2d3734969d898ec1c132b3970436e0ee86472d53d612d1dd3b63
+- evidence_id: trichocyst-agent-plattner2017-pdf
+  kind: authority
+  reference: https://kops.uni-konstanz.de/server/api/core/bitstreams/e9e5fd4a-6135-4130-8fe0-6fe50f52419b/content
+  locator: Genuine public Konstanz PDF, exact title/DOI/author and print106 abstract;
+    printed107 Introduction and structure text,108 matrix/disulfide/defense and synchronous-exocytosis
+    text continuing onto109; printed118 Trichocyst Matrix and Ca2+-binding proteins
+    through119–120, with Figures9–10 captions. Selected text read from PDF derivative;
+    review figure pixels, other sections and underlying cited experiments not independently
+    audited.
+  accessed_at: '2026-10-22T03:54:49.633773Z'
+  support: supports
+  summary: The review distinguishes membrane fusion from subsequent matrix expansion
+    when extracellular Ca2+ accesses the contents. It describes acidic TMP proteins
+    and disulfide-linked dimers, condensed crystalline storage, elongated discharged
+    bodies, and calcium-removal/mutant experiments summarized from prior studies.
+    It explicitly leaves the precise decondensation mechanism unresolved; a detailed
+    conformational model is not established by the record.
+  snapshot_sha256: a5bb03f0dcd6b29964110a4ec3056292c35ab893ab294145bd06607501076a79
+- evidence_id: trichocyst-agent-protein-Q27173
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27173.json
+  locator: Exact accession, entryType, recommended/alternative names, genes, organism
+    and function/location/similarity comments; domain crossrefs inspected separately
+  accessed_at: '2026-10-22T03:54:02.707997Z'
+  support: supports
+  summary: Current reviewed Q27173 is trichocyst matrix protein T2-A, primary gene
+    T2A, organism5888. Function/location comments identify a matrix structural protein
+    and trichocyst localization. TMP is a family/protein-name context; the genes field
+    does not list TMP2 or TMP4 as an alias.
+  snapshot_sha256: d9aa1d7c68e2f735b0a752e8e9dbd52b043980f5e73b2e2cd06e5170d21b1a5d
+- evidence_id: trichocyst-agent-protein-Q27174
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q27174.json
+  locator: Exact accession, entryType, recommended/alternative names, genes, organism
+    and function/location/similarity comments; domain crossrefs inspected separately
+  accessed_at: '2026-10-22T03:54:02.708100Z'
+  support: supports
+  summary: Current reviewed Q27174 is trichocyst matrix protein T2-B, primary gene
+    T2B, organism5888. Function/location comments identify a matrix structural protein
+    and trichocyst localization. TMP is a family/protein-name context; the genes field
+    does not list TMP2 or TMP4 as an alias.
+  snapshot_sha256: e58501ea047190ec0dd6d8cda3b856d7d5dd8733f20abcd3440e12763c952dcc
+- evidence_id: trichocyst-agent-protein-A0C767
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A0C767.json
+  locator: Exact accession, entryType, recommended/alternative names, genes, organism
+    and function/location/similarity comments; domain crossrefs inspected separately
+  accessed_at: '2026-10-22T03:54:03.559691Z'
+  support: supports
+  summary: Current reviewed A0C767 is trichocyst matrix protein T4-B, primary gene
+    T4B, organism5888. Function/location comments identify a matrix structural protein
+    and trichocyst localization. TMP is a family/protein-name context; the genes field
+    does not list TMP2 or TMP4 as an alias.
+  snapshot_sha256: 7616c97709b54c4dec4cdbdb485a6dacd6020e5bc9aec998c7a57462c35dc699
+- evidence_id: trichocyst-agent-gene-TMP1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3ATMP1%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:03.569493Z'
+  support: context_only
+  summary: The current gene_exact:TMP1, organism_id5888, reviewed:true query returns
+    an empty results array. This is a bounded current-query result, not proof that
+    the biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene_exact:TMP1 AND organism_id:5888 AND
+    reviewed:true, JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-broad-TMP1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene%3ATMP1%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:26.221088Z'
+  support: context_only
+  summary: The current gene:TMP1, organism_id5888, reviewed:true query returns an
+    empty results array. This is a bounded current-query result, not proof that the
+    biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene:TMP1 AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-TMP2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3ATMP2%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:03.571752Z'
+  support: context_only
+  summary: The current gene_exact:TMP2, organism_id5888, reviewed:true query returns
+    an empty results array. This is a bounded current-query result, not proof that
+    the biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene_exact:TMP2 AND organism_id:5888 AND
+    reviewed:true, JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-broad-TMP2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene%3ATMP2%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:26.396261Z'
+  support: context_only
+  summary: The current gene:TMP2, organism_id5888, reviewed:true query returns an
+    empty results array. This is a bounded current-query result, not proof that the
+    biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene:TMP2 AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-TMP4
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3ATMP4%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:03.583300Z'
+  support: context_only
+  summary: The current gene_exact:TMP4, organism_id5888, reviewed:true query returns
+    an empty results array. This is a bounded current-query result, not proof that
+    the biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene_exact:TMP4 AND organism_id:5888 AND
+    reviewed:true, JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-broad-TMP4
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene%3ATMP4%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; size500; no returned entries or further pages
+  accessed_at: '2026-10-22T03:54:26.458906Z'
+  support: context_only
+  summary: The current gene:TMP4, organism_id5888, reviewed:true query returns an
+    empty results array. This is a bounded current-query result, not proof that the
+    biological family is absent or that a historical query had the same result.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: Current public UniProtKB gene:TMP4 AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete returned results array.
+- evidence_id: trichocyst-agent-gene-primary-T2A
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AT2A%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; one accession; size500
+  accessed_at: '2026-10-22T03:54:26.756281Z'
+  support: supports
+  summary: Exact reviewed gene T2A, organism5888 returns one entry, Q27173, with the
+    expected primary symbol. This verifies that precise primary-gene query, not equivalence
+    to a TMP2/TMP4 gene alias.
+  snapshot_sha256: 745ff585f3d8b9cc523d1659aa1dff51681c02e5a2e48cc2a19ad3464087d702
+  search_scope: Current public UniProtKB gene_exact:T2A AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete one-entry result.
+- evidence_id: trichocyst-agent-gene-primary-T2B
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AT2B%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; one accession; size500
+  accessed_at: '2026-10-22T03:54:26.850346Z'
+  support: supports
+  summary: Exact reviewed gene T2B, organism5888 returns one entry, Q27174, with the
+    expected primary symbol. This verifies that precise primary-gene query, not equivalence
+    to a TMP2/TMP4 gene alias.
+  snapshot_sha256: eaca896d41b26dbb07f968c22536bd62ecf4a3ccc693e637697f0ec397f330e1
+  search_scope: Current public UniProtKB gene_exact:T2B AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete one-entry result.
+- evidence_id: trichocyst-agent-gene-primary-T4B
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AT4B%29%20AND%20%28organism_id%3A5888%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete JSON results; one accession; size500
+  accessed_at: '2026-10-22T03:54:26.868434Z'
+  support: supports
+  summary: Exact reviewed gene T4B, organism5888 returns one entry, A0C767, with the
+    expected primary symbol. This verifies that precise primary-gene query, not equivalence
+    to a TMP2/TMP4 gene alias.
+  snapshot_sha256: 77d9ac1a3862161c45f2e4d6ddb5979f4f53b7471866ef1f3c83827bc2e7ddb6
+  search_scope: Current public UniProtKB gene_exact:T4B AND organism_id:5888 AND reviewed:true,
+    JSON size500; complete one-entry result.
+- evidence_id: trichocyst-agent-family-IPR059991
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR059991/
+  locator: Complete native metadata accession/type/name/description and integrated
+    Pfam mapping; no protein-cohort equivalence or full alignment analysis
+  accessed_at: '2026-10-22T03:54:25.982935Z'
+  support: supports
+  summary: 'IPR059991 is explicitly a domain: Trichocyst matrix protein T1-F, coiled-coil.
+    Its description says the domain occurs in TMP-family proteins but does not equate
+    this domain with the entire matrix-protein family.'
+  snapshot_sha256: 51c9b7bc251110dbaa4ad460dcc8f931f129c4c259f36c9a72d8afc5c273fe67
+- evidence_id: trichocyst-agent-family-PF27870
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27870/
+  locator: Complete native metadata accession/type/name/description/integrated identifier
+  accessed_at: '2026-10-22T03:54:26.178847Z'
+  support: supports
+  summary: PF27870 is also typed domain and integrated into IPR059991. A relevant
+    name or occurrence in all three examples does not establish exact full-family
+    identity for the broad component.
+  snapshot_sha256: fa383d3dc778e7ce315233d5e761f1e18be1fbb78fc30d141edc56c63bee22c0
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/trichocyst.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:46:43Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/trichocyst.yaml'
+  snapshot_sha256: 9103618a64e6fe3c6383b99bcf0c4894ba1c0aff8adf2954cfd6fcd18f449873
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/trichocyst.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:46:44Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/trichocyst.yaml\
+    \ --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/trichocyst-strict.tsv"
+  snapshot_sha256: 3573824a82868b9de8345288527e9fa11f2198e1876d4132f658c6762195b703
+- evidence_id: trichocyst-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/trichocyst.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:54:54.932154Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: trichocyst-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/trichocyst.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:54:55.368174Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/trichocyst.yaml  (GO:0055039)\n  matrix_filament_discharge\t\
+    trichocyst_matrix_proteins\tPARTIAL_EXAMPLES\t->trichocyst_matrix_proteins (have:\
+    \ UniProtKB:Q27173, UniProtKB:Q27174, UniProtKB:A0C767; missing: TMP1)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     1  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 38a7e1e8d7e87a0f4cb393ef15b93eee1fc40678109f0472c746a21a39598490
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/trichocyst.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle identity and physiological scope
+  outcome: supported
+  target_ids:
+  - GO:0055039
+  summary: Native GO matches the maintained identity/definition and the primary matrix
+    study supports the Paramecium organelle context. The small acidic and disulfide-linked
+    features are also described in the secondary review. The GO predator-defense wording
+    is not converted into a quantitative toxicity or universal predator assay claim.
+  evidence_ids:
+  - record
+  - trichocyst-agent-go
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-madeddu-page649
+  - trichocyst-agent-madeddu-page651
+  - trichocyst-agent-plattner2017-pdf
+- assessment_id: taxonomy
+  area: scope
+  topic: Species example with explicit experimental strains
+  outcome: supported
+  target_ids:
+  - GO:0055039
+  summary: The source directly studies P. tetraurelia and names d4-2; it also uses
+    P. primaurelia156 for comparisons. The record only asserts the supported tetraurelia
+    occurrence/canonical example. COMMON is qualitative occurrence, not a measured
+    population prevalence.
+  evidence_ids:
+  - record
+  - trichocyst-agent-tax5888
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-madeddu-page650
+  - trichocyst-agent-madeddu-page653
+  - trichocyst-agent-madeddu-page655
+- assessment_id: matrix
+  area: grounding
+  topic: Related matrix proteins, subfamilies and optional inventory
+  outcome: supported
+  target_ids:
+  - GO:0055039
+  summary: The one component is a supported matrix-protein class. Primary T1/T2/T4
+    subfamily evidence supports related coassembling polypeptides, while direct coexpression
+    data are T1-specific and full sequence equivalence is outside this review. IPR059991/PF27870
+    are domain candidates, not exact whole-family replacements; the historical reviewed-label-only
+    rationale and open tip/membrane inventory remain bounded work.
+  evidence_ids:
+  - record
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-madeddu-page649
+  - trichocyst-agent-madeddu-page650
+  - trichocyst-agent-madeddu-page651
+  - trichocyst-agent-madeddu-page652
+  - trichocyst-agent-madeddu-page653
+  - trichocyst-agent-madeddu-page654
+  - trichocyst-agent-madeddu-page655
+  - trichocyst-agent-madeddu-page656
+  - trichocyst-agent-madeddu-page657
+  - trichocyst-agent-madeddu-page658
+  - trichocyst-agent-family-IPR059991
+  - trichocyst-agent-family-PF27870
+- assessment_id: proteins
+  area: grounding
+  topic: Correct identities with unsupported query/alias prose
+  outcome: concern
+  target_ids:
+  - GO:0055039
+  summary: 'All three accession/name/primary-gene/taxon/status combinations are correct.
+    The roles and evidence notes overstate TMP2/TMP4 as unique UniProt gene identities:
+    two separate genes are both called the single TMP2 entry, while native genes fields
+    and exact/current broad queries do not supply those aliases. The biological family
+    and the individual protein identities remain supported; correction is limited
+    to the provenance/nomenclature prose.'
+  evidence_ids:
+  - record
+  - trichocyst-agent-protein-Q27173
+  - trichocyst-agent-protein-Q27174
+  - trichocyst-agent-protein-A0C767
+  - trichocyst-agent-gene-TMP1
+  - trichocyst-agent-gene-broad-TMP1
+  - trichocyst-agent-gene-TMP2
+  - trichocyst-agent-gene-broad-TMP2
+  - trichocyst-agent-gene-TMP4
+  - trichocyst-agent-gene-broad-TMP4
+  - trichocyst-agent-gene-primary-T2A
+  - trichocyst-agent-gene-primary-T2B
+  - trichocyst-agent-gene-primary-T4B
+  - trichocyst-agent-madeddu-page653
+  - trichocyst-agent-madeddu-page658
+- assessment_id: function-graph
+  area: graph
+  topic: Coarse matrix discharge relation and calcium sequence
+  outcome: supported
+  target_ids:
+  - GO:0055039
+  summary: All four NONMECHANISTIC edges distinguish matrix proteins, stored matrix,
+    organelle, extracellular Ca2+ and extended filament. The primary study supports
+    the matrix class and the review supports contact-triggered expansion after fusion.
+    The graph does not claim an atomic mechanism, assign an exact calcium-binding
+    domain or conflate extracellular trigger with all upstream fusion signaling.
+  evidence_ids:
+  - record
+  - trichocyst-agent-go
+  - trichocyst-agent-calcium
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-madeddu-page651
+  - trichocyst-agent-madeddu-page655
+  - trichocyst-agent-plattner2017-pdf
+- assessment_id: formation
+  area: evidence
+  topic: Individual formation requirements remain unresolved
+  outcome: unknown
+  target_ids:
+  - GO:0055039
+  summary: The component has no asserted essentiality. The source discusses correct
+    collective core assembly as relevant to function and proposes reasons for gene
+    microheterogeneity; it does not establish necessity of every individual paralog.
+    No missing individual depletion experiment is treated as a record defect.
+  evidence_ids:
+  - record
+  - schema
+  - trichocyst-agent-madeddu-page656
+  - trichocyst-agent-madeddu-page657
+  - trichocyst-agent-madeddu-page658
+  - trichocyst-agent-plattner2017-pdf
+- assessment_id: coverage
+  area: provenance
+  topic: Full target and bounded source inspection
+  outcome: supported
+  target_ids:
+  - GO:0055039
+  summary: The complete maintained record, all graph edges, source identities, three
+    individual examples and current exact gene queries were checked. Genuine primary
+    scans were visually read through the end of scientific discussion; the secondary
+    PDF has an explicitly bounded section scope. No new figure, scientific status
+    or complete subunit inventory is imposed.
+  evidence_ids:
+  - record
+  - trichocyst-agent-go
+  - trichocyst-agent-madeddu1995-meta
+  - trichocyst-agent-plattner2017-meta
+  - trichocyst-agent-plattner2017-pdf
+  - trichocyst-agent-protein-Q27173
+  - trichocyst-agent-protein-Q27174
+  - trichocyst-agent-protein-A0C767
+findings:
+- finding_id: F1
+  issue_key: trichocyst-protein-example-query-provenance
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the TMP2/TMP4 alias and unique-query claims
+  description: The three protein_example roles/evidence notes state that TMP2 or TMP4
+    is a UniProt gene identity with a single reviewed entry; two distinct entries
+    are each called the single TMP2 result. Native records instead provide primary
+    genes T2A, T2B and T4B without these gene aliases. Current exact and broader TMP
+    queries return zero, while the precise primary-gene queries each return one intended
+    accession. The accessions, protein labels, species and reviewed statuses themselves
+    are correct.
+  target_ids:
+  - GO:0055039
+  field_paths:
+  - components[0].protein_examples[0].role
+  - components[0].protein_examples[0].evidence[0].notes
+  - components[0].protein_examples[1].role
+  - components[0].protein_examples[1].evidence[0].notes
+  - components[0].protein_examples[2].role
+  - components[0].protein_examples[2].evidence[0].notes
+  evidence_ids:
+  - record
+  - trichocyst-agent-protein-Q27173
+  - trichocyst-agent-protein-Q27174
+  - trichocyst-agent-protein-A0C767
+  - trichocyst-agent-gene-TMP1
+  - trichocyst-agent-gene-broad-TMP1
+  - trichocyst-agent-gene-TMP2
+  - trichocyst-agent-gene-broad-TMP2
+  - trichocyst-agent-gene-TMP4
+  - trichocyst-agent-gene-broad-TMP4
+  - trichocyst-agent-gene-primary-T2A
+  - trichocyst-agent-gene-primary-T2B
+  - trichocyst-agent-gene-primary-T4B
+  - trichocyst-agent-madeddu-page653
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trichocyst.yaml
+    role: maintained scientific record
+  rule_id: Exact protein-example identity and evidence provenance contract
+  native_severity: minor
+  normalization_reason: Localized incorrect alias/query provenance does not change
+    the three correct protein identities or their supported matrix-family membership;
+    minor is proportionate. Historical retrieval dates are preserved and no undocumented
+    historical query is reconstructed.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0055039
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trichocyst.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, describe Q27173/T2A and Q27174/T2B
+    as distinct T2 matrix-family examples and A0C767/T4B as a T4 example. Remove unsupported
+    TMP2/TMP4 gene-alias and single-result language, or cite an exact reproducible
+    source/query for any retained alias. Preserve the verified identifiers, names,
+    species/status and distinct protein membership evidence.
+  acceptance_checks:
+  - Each example retains its correct accession and primary gene, with accurate taxon
+    and reviewed status.
+  - Any uniqueness statement names the actual query and its bounded result; two distinct
+    genes are not each called the unique TMP2 entry.
+  - Subfamily/protein nomenclature is distinguished from an exact UniProt gene alias;
+    historical retrieval metadata is not silently rewritten.
+  - Focused schema, strict, native protein and graph checks pass after separately
+    authorized curation.
+limitations:
+- Primary Madeddu1995 printed649–658 scans were visually read, including Methods,
+  Results, Discussion, Figures1–7 and Table1. Page659 is retained but contains remaining
+  references and was not scientifically audited; no gel densitometry, sequence realignment
+  or underlying cited experiment was repeated. Each page evidence row is scoped to
+  that page.
+- Plattner2017 is a review, with only the exact PDF sections and captions declared
+  above inspected. The review separates established extracellular-calcium dependence
+  from unresolved detailed decondensation mechanisms; its primary references were
+  not independently reanalyzed.
+- Publisher PDF1995 and Wiley2017 routes returned403; the native1995 PDF route returned
+  HTTP200 challenge HTML, not PDF. Genuine PMC scans and the public Konstanz PDF supplied
+  the body evidence, so those route failures are not claims that the source bodies
+  were unavailable.
+- Current exact/broader TMP1/TMP2/TMP4 queries are bounded to reviewed UniProt entries
+  in taxon5888. Their zero results do not prove biological absence or reconstruct
+  the unretained2026-10-17 search. The source uses T1/T2/T4 subfamily nomenclature,
+  while native primary genes are specific T2A/T2B/T4B.
+- Native graph coverage reports PARTIAL_EXAMPLES with TMP1 unrepresented; this is
+  an acknowledged example-census limitation, not proof of absent TMP1 proteins or
+  a required complete accession inventory. No exact whole-family grounding is established
+  by the domain candidates, and optional tip/sheath/membrane constituents remain unresolved.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes one review per target. Parent owns integration of
+  the five same-base batch26 full-corpus gates and subsequent finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

@@ -1,0 +1,7271 @@
+# PR 2374: current-input review of ten records and adversarial follow-up
+
+- Review: 20261103T192931Z-pr2374-current-record-followup
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-11-03T19:19:08.260647Z
+- Finished UTC: 2026-11-03T19:29:31Z
+- Reviewer: Codex root synthesis with three independent read-only adversarial reviewers (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Current-input adversarial follow-up for the complete ten-record cohort after merging main. All ten original target hashes still match, so no stale refresh is required. Three omitted structured-source applicability checks are supplied and six unsupported expression-only exclusions corrected; the periplastidial membrane retains a genuine physical/material-topology exclusion. Eleven inherited scientific findings remain open (four major and seven minor) across seven records. One inherited rationale-only finding is rejected with exact lineage and policy evidence. Three targets retain qualified positive assessments. All original review observations and scientific records remain unchanged.
+
+## Scope And Provenance
+
+Exact ten-record PR cohort reassessed against current main 9ae1b698031132849ac7e6843d552cd68f184566. Changed inputs are substantively reassessed. Scientific records remain unchanged.
+
+Selection: Complete cohort of ten maintained records reviewed in original PR head f0596066e8a1e61a55e88adb5f95a19964f57ff0.
+Coverage: full; 10 reviewed / 10 in the declared population.
+Source: working_tree at Git base f1ebcdd9788bfee294f3276788874b3860033d23.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:parasitophorous_vacuole_membrane | data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml | maintained | parasitophorous vacuole membrane |
+| GO:7770041 | data/structures/membrane_organelle/periplastidial_membrane.yaml | maintained | periplastidial membrane |
+| GO:0005782 | data/structures/membrane_organelle/peroxisomal_matrix.yaml | maintained | peroxisomal matrix |
+| GO:0005778 | data/structures/membrane_organelle/peroxisomal_membrane.yaml | maintained | peroxisomal membrane |
+| GO:0005777 | data/structures/membrane_organelle/peroxisome.yaml | maintained | peroxisome |
+| GO:0045335 | data/structures/membrane_organelle/phagocytic_vesicle.yaml | maintained | phagocytic vesicle |
+| GO:0097013 | data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml | maintained | phagocytic vesicle lumen |
+| GO:0030670 | data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml | maintained | phagocytic vesicle membrane |
+| GO:0032010 | data/structures/membrane_organelle/phagolysosome.yaml | maintained | phagolysosome |
+| GO:0061474 | data/structures/membrane_organelle/phagolysosome_membrane.yaml | maintained | phagolysosome membrane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full native QC | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| Native label correspondence | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| TraitMech references | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Native TraitMech link check passed. |
+| Pinned governed files | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Pinned governed files match; native vendored check passed. |
+| Native identifier resolver | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| validate cellstructuremech:parasitophorous_vacuole_membrane | passed | True | cellstructuremech:parasitophorous_vacuole_membrane | Documented focused command passed. |
+| validate-strict cellstructuremech:parasitophorous_vacuole_membrane | passed | True | cellstructuremech:parasitophorous_vacuole_membrane | Documented focused command passed. |
+| validate GO:7770041 | passed | True | GO:7770041 | Documented focused command passed. |
+| validate-strict GO:7770041 | passed | True | GO:7770041 | Documented focused command passed. |
+| validate GO:0005782 | passed | True | GO:0005782 | Documented focused command passed. |
+| validate-strict GO:0005782 | passed | True | GO:0005782 | Documented focused command passed. |
+| validate GO:0005778 | passed | True | GO:0005778 | Documented focused command passed. |
+| validate-strict GO:0005778 | passed | True | GO:0005778 | Documented focused command passed. |
+| validate GO:0005777 | passed | True | GO:0005777 | Documented focused command passed. |
+| validate-strict GO:0005777 | passed | True | GO:0005777 | Documented focused command passed. |
+| validate GO:0045335 | passed | True | GO:0045335 | Documented focused command passed. |
+| validate-strict GO:0045335 | passed | True | GO:0045335 | Documented focused command passed. |
+| validate GO:0097013 | passed | True | GO:0097013 | Documented focused command passed. |
+| validate-strict GO:0097013 | passed | True | GO:0097013 | Documented focused command passed. |
+| validate GO:0030670 | passed | True | GO:0030670 | Documented focused command passed. |
+| validate-strict GO:0030670 | passed | True | GO:0030670 | Documented focused command passed. |
+| validate GO:0032010 | passed | True | GO:0032010 | Documented focused command passed. |
+| validate-strict GO:0032010 | passed | True | GO:0032010 | Documented focused command passed. |
+| validate GO:0061474 | passed | True | GO:0061474 | Documented focused command passed. |
+| validate-strict GO:0061474 | passed | True | GO:0061474 | Documented focused command passed. |
+| Supplemental bounded PMID authority checks | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | 909 PMIDs all OK in bounded native requests; full-command limitations remain separate. |
+| Official structured-source applicability and covered-dataset cross-checks | passed | False | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Nine records positively assert molecular/pathway or metabolic and maturation properties: PVM BioID-associated proteins, three peroxisome records with import/metabolism/peroxin machinery, three phagocytic vesicle records with maturation/acidification, and two phagolysosome records with molecular properties. Three omitted checks and six unsupported expression-only exclusions are corrected using actual host/strain catalogue coverage. The periplastidial membrane retains a genuine physical/material boundary exclusion. Noncoverage is not biological absence; unmatched datasets are not proxies. Historical runner unavailability remains historical and public-source fallback preserves actual access timestamps and limits. |
+| Independent claim-level source review | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Three read-only reviewers covered the complete ten-record cohort, including changed inputs, with explicit scientific findings and source-access limits. Final artifact/head acceptance occurs after saving. |
+| Retained historical adapter runner availability | unavailable | False | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | Historical00:49Z invocation unavailable due to OS access restriction. Official catalogue fallback was inspected separately; no fresh invocation is claimed. Actual historical exit1 is retained in the evidence receipt; the native unavailable-check model has no execution exit-code field. |
+| Native parasitophorous vacuole membrane UniProt verify check | passed | True | cellstructuremech:parasitophorous_vacuole_membrane | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native parasitophorous vacuole membrane UniProt causal check | passed | True | cellstructuremech:parasitophorous_vacuole_membrane | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native periplastidial membrane UniProt verify check | passed | True | GO:7770041 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native periplastidial membrane UniProt causal check | passed | True | GO:7770041 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native peroxisomal matrix UniProt verify check | passed | True | GO:0005782 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native peroxisomal matrix UniProt causal check | passed | True | GO:0005782 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native peroxisomal membrane UniProt verify check | passed | True | GO:0005778 | One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Native command returned zero. |
+| Native peroxisomal membrane UniProt causal check | passed | True | GO:0005778 | One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Native command returned zero. |
+| Native peroxisome UniProt verify check | passed | True | GO:0005777 | One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Native command returned zero. |
+| Native peroxisome UniProt causal check | passed | True | GO:0005777 | One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Native command returned zero. |
+| Native phagocytic vesicle UniProt verify check | passed | True | GO:0045335 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagocytic vesicle UniProt causal check | passed | True | GO:0045335 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagocytic vesicle lumen UniProt verify check | passed | True | GO:0097013 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagocytic vesicle lumen UniProt causal check | passed | True | GO:0097013 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagocytic vesicle membrane UniProt verify check | passed | True | GO:0030670 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagocytic vesicle membrane UniProt causal check | passed | True | GO:0030670 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagolysosome UniProt verify check | passed | True | GO:0032010 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagolysosome UniProt causal check | passed | True | GO:0032010 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagolysosome membrane UniProt verify check | passed | True | GO:0061474 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native phagolysosome membrane UniProt causal check | passed | True | GO:0061474 | Zero protein examples and zero typed molecular nodes. Native command returned zero. |
+| Native pinned pathway-link consistency | passed | True | cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474 | OK: 6 pathway links match the pinned target snapshot |
+
+## Scientific And Domain Assessments
+
+### Original validation/render and frozen inputs
+
+schema: supported. Targets: GO:0045335.
+
+Both original native commands pass with exact Markdown; historical frozen target is byte-identical to current record. No assigned input is stale. Scientific findings remain independent of schema validity.
+
+### Exact identity, taxonomy-independent boundary and hierarchy
+
+identity: supported. Targets: GO:0045335.
+
+GO0045335 exact phagocytic vesicle definition, phagosome synonym, cytoplasmic-vesicle parent and membrane/lumen parts agree. SL0206 is exact. Early phagosome and phagolysosome are stage subclasses, not interchangeable identities.
+
+### Definition source and biological range
+
+scope: supported. Targets: GO:0045335.
+
+The exact ontology definition is not expanded into an unsupported fixed molecular inventory or cross-taxon mechanism; current topological identity remains supported.
+
+### Canonical experimental host, strain and qualitative occurrence
+
+scope: supported. Targets: GO:0045335.
+
+Current NCBITaxon44689 is D. discoideum. Both inspected primary papers use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative model-system presence, not a numeric census or every-strain maturation timetable. Broader examples in introductory prose do not extend the Ax2 experiment to all taxa.
+
+### Collective bilayer material and constituent identity
+
+grounding: supported. Targets: GO:0045335.
+
+The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes constitutive bilayer material, not necessity of a particular molecular species. Exact lipid composition remains an explicit unresolved grounding question.
+
+### Intact-phagosome time course versus membrane enrichment
+
+evidence: supported. Targets: GO:0045335.
+
+The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched identification samples are distinguished. Current whole-organelle example fits the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis is claimed.
+
+### Direct assay versus discussion/schematic acidification
+
+evidence: concern. Targets: GO:0045335.
+
+Inherited source-attribution finding persists in the specified function/example/edge notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH model is explicitly adapted from macropinocytosis. Qualitative acidification remains plausible and supported context; direct pH-phase measurement must be attributed to an actually inspected direct source.
+
+### Protein localization and trafficking versus mechanism and necessity
+
+evidence: supported. Targets: GO:0045335.
+
+Positive maturation/trafficking narrative is supported at stage-dependent association scope. Transient Rab, V-ATPase, protease or actin context is not silently promoted to universal permanent components. No optional source-identified protein row is mandated.
+
+### Declared mechanism versus represented relations
+
+graph: supported. Targets: GO:0045335.
+
+Complete graph is NONMECHANISTIC and retains explicit limits: topology, broad maturation and/or acidification outcomes are not represented as a complete protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3; constituent and stage relationships remain distinct.
+
+### Formation necessity and inventory remain bounded
+
+evidence: unknown. Targets: GO:0045335.
+
+Ontology anatomy and Ax2 trafficking/proteomics do not establish exact universal lipid/protein composition, stoichiometry, every taxon or individual molecular necessity for forming the structure. The absence of optional examples is not a mandatory defect; no chemical/protein CURIE is guessed.
+
+### Actual native identifier/graph coverage
+
+provenance: supported. Targets: GO:0045335.
+
+Both actual commands exit0; independent full-record count confirms0 examples,0 typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+
+### Corrected positive-pathway structured-source applicability
+
+scope: supported. Targets: GO:0045335.
+
+Actual positive maturation/trafficking/acidification narratives trigger the review policy, including lumen acidification despite excluded specific molecular mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo or unrelated host substitutes for this record. Historical00:49Z runner failure remains historical; this is completed applicability assessment, not fresh runner success.
+
+### Append-only discussion and historical context
+
+provenance: supported. Targets: GO:0045335.
+
+PROPOSED status and dated curation/discussion provenance are retained. RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions are read in their field scope; no rewriting history, new neighbor verdict or grouped issue closure is inferred.
+
+### Unasserted image, measurement and protein domains
+
+scope: not_applicable. Targets: GO:0045335.
+
+No maintained image/license claim, individual protein example/accession, quantitative measurement, associated-trait mapping or verbatim snippet occurs in these assigned records. Primary text captions were read without pixels, raw data or supplements; those domains are not certified by textual inspection.
+
+### Current scientific verdict and exact inherited disposition
+
+completeness: concern. Targets: GO:0045335.
+
+needs_curation: one inherited minor experimental-attribution finding remains open; no new scientific finding. All record-curation actions remain for separately authorized curation; this PR changes review bundles only.
+
+### Original validation/render and frozen inputs
+
+schema: supported. Targets: GO:0097013.
+
+Both original native commands pass with exact Markdown; historical frozen target is byte-identical to current record. No assigned input is stale. Scientific findings remain independent of schema validity.
+
+### Exact identity, taxonomy-independent boundary and hierarchy
+
+identity: supported. Targets: GO:0097013.
+
+GO0097013 exact enclosed lumen, cytoplasmic-vesicle-lumen parent and whole-vesicle parthood agree with GO/SL0342. Boundary membrane remains a structure rather than lumen material. SL0342 supplies explicit broader-lumen hierarchy without inventing a missing direct GO cross-map.
+
+### Definition source and biological range
+
+scope: supported. Targets: GO:0097013.
+
+The exact ontology definition is not expanded into an unsupported fixed molecular inventory or cross-taxon mechanism; current topological identity remains supported.
+
+### Canonical experimental host, strain and qualitative occurrence
+
+scope: supported. Targets: GO:0097013.
+
+Current NCBITaxon44689 is D. discoideum. Both inspected primary papers use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative model-system presence, not a numeric census or every-strain maturation timetable. Broader examples in introductory prose do not extend the Ax2 experiment to all taxa.
+
+### Collective bilayer material and constituent identity
+
+grounding: supported. Targets: GO:0097013.
+
+No lumen component is asserted; membrane is a separate boundary STRUCTURE without component_ref. Variable cargo or acidification outcome is not a stable molecular inventory.
+
+### Intact-phagosome time course versus membrane enrichment
+
+evidence: supported. Targets: GO:0097013.
+
+The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched identification samples are distinguished. Current whole-organelle example fits the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis is claimed.
+
+### Direct assay versus discussion/schematic acidification
+
+evidence: concern. Targets: GO:0097013.
+
+Inherited source-attribution finding persists in the specified function/example/edge notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH model is explicitly adapted from macropinocytosis. Qualitative acidification remains plausible and supported context; direct pH-phase measurement must be attributed to an actually inspected direct source.
+
+### Protein localization and trafficking versus mechanism and necessity
+
+evidence: supported. Targets: GO:0097013.
+
+Positive maturation/trafficking narrative is supported at stage-dependent association scope. Transient Rab, V-ATPase, protease or actin context is not silently promoted to universal permanent components. No optional source-identified protein row is mandated.
+
+### Declared mechanism versus represented relations
+
+graph: supported. Targets: GO:0097013.
+
+Complete graph is NONMECHANISTIC and retains explicit limits: topology, broad maturation and/or acidification outcomes are not represented as a complete protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3; constituent and stage relationships remain distinct.
+
+### Formation necessity and inventory remain bounded
+
+evidence: unknown. Targets: GO:0097013.
+
+Ontology anatomy and Ax2 trafficking/proteomics do not establish exact universal lipid/protein composition, stoichiometry, every taxon or individual molecular necessity for forming the structure. The absence of optional examples is not a mandatory defect; no chemical/protein CURIE is guessed.
+
+### Actual native identifier/graph coverage
+
+provenance: supported. Targets: GO:0097013.
+
+Both actual commands exit0; independent full-record count confirms0 examples,0 typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+
+### Corrected positive-pathway structured-source applicability
+
+scope: supported. Targets: GO:0097013.
+
+Actual positive maturation/trafficking/acidification narratives trigger the review policy, including lumen acidification despite excluded specific molecular mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo or unrelated host substitutes for this record. Historical00:49Z runner failure remains historical; this is completed applicability assessment, not fresh runner success.
+
+### Append-only discussion and historical context
+
+provenance: supported. Targets: GO:0097013.
+
+PROPOSED status and dated curation/discussion provenance are retained. RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions are read in their field scope; no rewriting history, new neighbor verdict or grouped issue closure is inferred.
+
+### Unasserted image, measurement and protein domains
+
+scope: not_applicable. Targets: GO:0097013.
+
+No maintained image/license claim, individual protein example/accession, quantitative measurement, associated-trait mapping or verbatim snippet occurs in these assigned records. Primary text captions were read without pixels, raw data or supplements; those domains are not certified by textual inspection.
+
+### Current scientific verdict and exact inherited disposition
+
+completeness: concern. Targets: GO:0097013.
+
+needs_curation: one inherited minor experimental-attribution finding remains open; no new scientific finding. All record-curation actions remain for separately authorized curation; this PR changes review bundles only.
+
+### Original validation/render and frozen inputs
+
+schema: supported. Targets: GO:0030670.
+
+Both original native commands pass with exact Markdown; historical frozen target is byte-identical to current record. No assigned input is stale. Scientific findings remain independent of schema validity.
+
+### Exact identity, taxonomy-independent boundary and hierarchy
+
+identity: supported. Targets: GO:0030670.
+
+GO0030670 exact membrane definition/synonyms, cytoplasmic-vesicle-membrane parent and phagocytic-vesicle parthood agree with SL0205.
+
+### Definition source and biological range
+
+scope: supported. Targets: GO:0030670.
+
+The exact ontology definition is not expanded into an unsupported fixed molecular inventory or cross-taxon mechanism; current topological identity remains supported.
+
+### Canonical experimental host, strain and qualitative occurrence
+
+scope: supported. Targets: GO:0030670.
+
+Current NCBITaxon44689 is D. discoideum. Both inspected primary papers use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative model-system presence, not a numeric census or every-strain maturation timetable. Broader examples in introductory prose do not extend the Ax2 experiment to all taxa.
+
+### Collective bilayer material and constituent identity
+
+grounding: supported. Targets: GO:0030670.
+
+The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes constitutive bilayer material, not necessity of a particular molecular species. Exact lipid composition remains an explicit unresolved grounding question.
+
+### Intact-phagosome time course versus membrane enrichment
+
+evidence: concern. Targets: GO:0030670.
+
+Inherited preparation finding persists: the canonical note says purified phagosome membranes were profiled across maturation, but the2006 time course measured intact-phagosome extracts. Carbonate-enriched pooled membranes were a distinct protein-identification preparation. Preserve the correct remodeling outcome while qualifying the experimental preparation.
+
+### Direct assay versus discussion/schematic acidification
+
+evidence: supported. Targets: GO:0030670.
+
+Current trafficking/maturation evidence is not separately rejected as a direct pH trace. Source context still distinguishes measured protein trafficking, discussion-level acidification and a macropinocytosis-derived schematic.
+
+### Protein localization and trafficking versus mechanism and necessity
+
+evidence: supported. Targets: GO:0030670.
+
+Positive maturation/trafficking narrative is supported at stage-dependent association scope. Transient Rab, V-ATPase, protease or actin context is not silently promoted to universal permanent components. No optional source-identified protein row is mandated.
+
+### Declared mechanism versus represented relations
+
+graph: supported. Targets: GO:0030670.
+
+Complete graph is NONMECHANISTIC and retains explicit limits: topology, broad maturation and/or acidification outcomes are not represented as a complete protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3; constituent and stage relationships remain distinct.
+
+### Formation necessity and inventory remain bounded
+
+evidence: unknown. Targets: GO:0030670.
+
+Ontology anatomy and Ax2 trafficking/proteomics do not establish exact universal lipid/protein composition, stoichiometry, every taxon or individual molecular necessity for forming the structure. The absence of optional examples is not a mandatory defect; no chemical/protein CURIE is guessed.
+
+### Actual native identifier/graph coverage
+
+provenance: supported. Targets: GO:0030670.
+
+Both actual commands exit0; independent full-record count confirms0 examples,0 typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+
+### Corrected positive-pathway structured-source applicability
+
+scope: supported. Targets: GO:0030670.
+
+Actual positive maturation/trafficking/acidification narratives trigger the review policy, including lumen acidification despite excluded specific molecular mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo or unrelated host substitutes for this record. Historical00:49Z runner failure remains historical; this is completed applicability assessment, not fresh runner success.
+
+### Append-only discussion and historical context
+
+provenance: supported. Targets: GO:0030670.
+
+PROPOSED status and dated curation/discussion provenance are retained. RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions are read in their field scope; no rewriting history, new neighbor verdict or grouped issue closure is inferred.
+
+### Unasserted image, measurement and protein domains
+
+scope: not_applicable. Targets: GO:0030670.
+
+No maintained image/license claim, individual protein example/accession, quantitative measurement, associated-trait mapping or verbatim snippet occurs in these assigned records. Primary text captions were read without pixels, raw data or supplements; those domains are not certified by textual inspection.
+
+### Current scientific verdict and exact inherited disposition
+
+completeness: concern. Targets: GO:0030670.
+
+needs_curation: one inherited minor experimental-attribution finding remains open; no new scientific finding. All record-curation actions remain for separately authorized curation; this PR changes review bundles only.
+
+### Original validation/render and frozen inputs
+
+schema: supported. Targets: GO:0032010.
+
+Both original native commands pass with exact Markdown; historical frozen target is byte-identical to current record. No assigned input is stale. Scientific findings remain independent of schema validity.
+
+### Exact identity, taxonomy-independent boundary and hierarchy
+
+identity: supported. Targets: GO:0032010.
+
+GO0032010 exact opening definition, secondary-lysosome and phagocytic-vesicle parents, membrane0061474 and lumen0106174 parts agree. Late-phagosome related synonyms retain their source scope. Added molecular definition is assessed separately.
+
+### Definition source and biological range
+
+scope: concern. Targets: GO:0032010.
+
+The exact ontology opening remains valid, but the expanded definition adds cross-taxon molecular programs not stated by GO and not established in full by the two Ax2 studies. This is inherited major F1, not evidence that any individual mechanism is absent from Entamoeba or ciliates.
+
+### Canonical experimental host, strain and qualitative occurrence
+
+scope: supported. Targets: GO:0032010.
+
+Current NCBITaxon44689 is D. discoideum. Both inspected primary papers use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative model-system presence, not a numeric census or every-strain maturation timetable. Broader examples in introductory prose do not extend the Ax2 experiment to all taxa.
+
+### Collective bilayer material and constituent identity
+
+grounding: supported. Targets: GO:0032010.
+
+The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes constitutive bilayer material, not necessity of a particular molecular species. Exact lipid composition remains an explicit unresolved grounding question.
+
+### Intact-phagosome time course versus membrane enrichment
+
+evidence: supported. Targets: GO:0032010.
+
+The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched identification samples are distinguished. Current whole-organelle example fits the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis is claimed.
+
+### Direct assay versus discussion/schematic acidification
+
+evidence: concern. Targets: GO:0032010.
+
+Inherited source-attribution finding persists in the specified function/example/edge notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH model is explicitly adapted from macropinocytosis. Qualitative acidification remains plausible and supported context; direct pH-phase measurement must be attributed to an actually inspected direct source.
+
+### Protein localization and trafficking versus mechanism and necessity
+
+evidence: concern. Targets: GO:0032010.
+
+Inherited expanded-definition finding includes fixed or cross-taxon V-ATPase/hydrolase/SNARE/Nramp/LAMP-style claims, with membrane enrichment propagated into its material role/graph.2002 identifies early V-ATPase, differential Lmp CD36/LIMPII kinetics and trafficking-associated Vti1/VAMP7; it does not directly test LAMP-mediated protection or establish the complete added mechanism across taxa.
+
+### Declared mechanism versus represented relations
+
+graph: concern. Targets: GO:0032010.
+
+Inherited minor graph-scope finding persists: MECHANISTIC and assembly/functional-mechanism wording promise actor transitions, while actual edges are material/parthood and broad whole-structure process associations. Relabel descriptive scope or separately curate an evidenced mechanism. GO0006909 itself includes lysosomal delivery/fusion/digestion; no new false actor contradiction is invented.
+
+### Formation necessity and inventory remain bounded
+
+evidence: unknown. Targets: GO:0032010.
+
+Ontology anatomy and Ax2 trafficking/proteomics do not establish exact universal lipid/protein composition, stoichiometry, every taxon or individual molecular necessity for forming the structure. The absence of optional examples is not a mandatory defect; no chemical/protein CURIE is guessed.
+
+### Actual native identifier/graph coverage
+
+provenance: supported. Targets: GO:0032010.
+
+Both actual commands exit0; independent full-record count confirms0 examples,0 typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+
+### Corrected positive-pathway structured-source applicability
+
+scope: supported. Targets: GO:0032010.
+
+Actual positive maturation/trafficking/acidification narratives trigger the review policy, including lumen acidification despite excluded specific molecular mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo or unrelated host substitutes for this record. Historical00:49Z runner failure remains historical; this is completed applicability assessment, not fresh runner success.
+
+### Append-only discussion and historical context
+
+provenance: supported. Targets: GO:0032010.
+
+PROPOSED status and dated curation/discussion provenance are retained. RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions are read in their field scope; no rewriting history, new neighbor verdict or grouped issue closure is inferred.
+
+### Unasserted image, measurement and protein domains
+
+scope: not_applicable. Targets: GO:0032010.
+
+No maintained image/license claim, individual protein example/accession, quantitative measurement, associated-trait mapping or verbatim snippet occurs in these assigned records. Primary text captions were read without pixels, raw data or supplements; those domains are not certified by textual inspection.
+
+### Current scientific verdict and exact inherited disposition
+
+completeness: concern. Targets: GO:0032010.
+
+needs_curation: inherited major definition-scope and two minor graph/experimental-scope findings remain open. All record-curation actions remain for separately authorized curation; this PR changes review bundles only.
+
+### Original validation/render and frozen inputs
+
+schema: supported. Targets: GO:0061474.
+
+Both original native commands pass with exact Markdown; historical frozen target is byte-identical to current record. No assigned input is stale. Scientific findings remain independent of schema validity.
+
+### Exact identity, taxonomy-independent boundary and hierarchy
+
+identity: supported. Targets: GO:0061474.
+
+GO0061474 exact opening membrane definition, broader GO0030670 parent and GO0032010 parthood are correct. Ordinary phagolysosomal-membrane wording is semantically compatible; no material identity defect is invented from lexical source variation. Appended mechanism and broader SL0205 provenance are separate.
+
+### Definition source and biological range
+
+scope: concern. Targets: GO:0061474.
+
+The exact ontology opening remains valid, but the expanded definition adds cross-taxon molecular programs not stated by GO and not established in full by the two Ax2 studies. This is inherited major F1, not evidence that any individual mechanism is absent from Entamoeba or ciliates.
+
+### Canonical experimental host, strain and qualitative occurrence
+
+scope: supported. Targets: GO:0061474.
+
+Current NCBITaxon44689 is D. discoideum. Both inspected primary papers use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative model-system presence, not a numeric census or every-strain maturation timetable. Broader examples in introductory prose do not extend the Ax2 experiment to all taxa.
+
+### Collective bilayer material and constituent identity
+
+grounding: supported. Targets: GO:0061474.
+
+The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes constitutive bilayer material, not necessity of a particular molecular species. Exact lipid composition remains an explicit unresolved grounding question.
+
+### Intact-phagosome time course versus membrane enrichment
+
+evidence: concern. Targets: GO:0061474.
+
+Inherited preparation finding persists: the canonical note says purified phagosome membranes were profiled across maturation, but the2006 time course measured intact-phagosome extracts. Carbonate-enriched pooled membranes were a distinct protein-identification preparation. Preserve the correct remodeling outcome while qualifying the experimental preparation.
+
+### Direct assay versus discussion/schematic acidification
+
+evidence: supported. Targets: GO:0061474.
+
+Current trafficking/maturation evidence is not separately rejected as a direct pH trace. Source context still distinguishes measured protein trafficking, discussion-level acidification and a macropinocytosis-derived schematic.
+
+### Protein localization and trafficking versus mechanism and necessity
+
+evidence: concern. Targets: GO:0061474.
+
+Inherited expanded-definition finding includes fixed or cross-taxon V-ATPase/hydrolase/SNARE/Nramp/LAMP-style claims, with membrane enrichment propagated into its material role/graph.2002 identifies early V-ATPase, differential Lmp CD36/LIMPII kinetics and trafficking-associated Vti1/VAMP7; it does not directly test LAMP-mediated protection or establish the complete added mechanism across taxa.
+
+### Declared mechanism versus represented relations
+
+graph: concern. Targets: GO:0061474.
+
+Inherited minor graph-scope finding persists: MECHANISTIC and assembly/functional-mechanism wording promise actor transitions, while actual edges are material/parthood and broad whole-structure process associations. Relabel descriptive scope or separately curate an evidenced mechanism. GO0006909 itself includes lysosomal delivery/fusion/digestion; no new false actor contradiction is invented.
+
+### Formation necessity and inventory remain bounded
+
+evidence: unknown. Targets: GO:0061474.
+
+Ontology anatomy and Ax2 trafficking/proteomics do not establish exact universal lipid/protein composition, stoichiometry, every taxon or individual molecular necessity for forming the structure. The absence of optional examples is not a mandatory defect; no chemical/protein CURIE is guessed.
+
+### Actual native identifier/graph coverage
+
+provenance: supported. Targets: GO:0061474.
+
+Both actual commands exit0; independent full-record count confirms0 examples,0 typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+
+### Corrected positive-pathway structured-source applicability
+
+scope: supported. Targets: GO:0061474.
+
+Actual positive maturation/trafficking/acidification narratives trigger the review policy, including lumen acidification despite excluded specific molecular mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo or unrelated host substitutes for this record. Historical00:49Z runner failure remains historical; this is completed applicability assessment, not fresh runner success.
+
+### Append-only discussion and historical context
+
+provenance: supported. Targets: GO:0061474.
+
+Original F4/A4 recognized no alteration of dated history and no closing the lipid TODO. Its remaining mandatory current-rationale correction nevertheless conflates provenance with current state. Current exact identity is GO0061474 and collective material is intentionally label-only with broader context. CURATION makes rationale append-only and notes current state even while OPEN. Reject that mandatory record finding; optional appended clarification may distinguish exact and broader identity. Underlying lipid TODO remains open.
+
+### Unasserted image, measurement and protein domains
+
+scope: not_applicable. Targets: GO:0061474.
+
+No maintained image/license claim, individual protein example/accession, quantitative measurement, associated-trait mapping or verbatim snippet occurs in these assigned records. Primary text captions were read without pixels, raw data or supplements; those domains are not certified by textual inspection.
+
+### Current scientific verdict and exact inherited disposition
+
+completeness: concern. Targets: GO:0061474.
+
+needs_curation: inherited major definition-scope and two minor graph/experimental-scope findings remain open. Inherited F4 is explicitly rejected as an unsupported mandatory provenance correction, without resolving the underlying lipid TODO. All record-curation actions remain for separately authorized curation; this PR changes review bundles only.
+
+### Unchanged target and exact immutable original
+
+schema: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+Both original native formats validate/render exactly, target freeze matches current,15historical source hashes each verified. Actual current native protein checks cover empty inventories. Root owns full local/publication gates.
+
+### Unchanged target and exact immutable original
+
+schema: supported. Targets: GO:7770041.
+
+Both original native formats validate/render exactly, target freeze matches current,15historical source hashes each verified. Actual current native protein checks cover empty inventories. Root owns full local/publication gates.
+
+### Narrow PVM and broad symbiont-membrane parent
+
+identity: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+SL0193 exactly defines the membrane and synonym; broader GO0020005 has general symbiont scope despite lexical exact synonym. Narrow local Apicomplexa-scoped identity plus broad parent remains defensible.
+
+### Descriptive membrane boundary and local parthood
+
+graph: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+Single NONMECHANISTIC bounds edge and containingPV link agree withSL0193/0194 and frozenwhole/lumen contexts. No secretory construction/remodeling mechanism is claimed by this edge.
+
+### Label-only collective bilayer
+
+grounding: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+Constituent is generic bilayer without a whole-membrane CURIE falsely used as chemical identity. Structural component_ref is coherent for this membrane-only record; source-neutral lipid TODO remains bounded.
+
+### Individual formation requirements remain unknown
+
+evidence: unknown. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+ESSENTIAL describes constitutive bilayer, not tested necessity of every lipid/protein. BioID localization/candidates do not supply depletion/reconstitution evidence for formation or require importing a complete protein inventory.
+
+### Qualitative most-apicomplexan scope and Toxoplasma
+
+scope: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+ENA confirms taxa. COMMON expressly inherits most-apicomplexan native location scope, not universal every-stage prevalence. Complete secondary Clough abstract supports the Toxoplasma parasite-modified interface example.
+
+### Inherited BioID canonical species mismatch
+
+evidence: concern. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+The exact cited survey used P.berghei ANKA mCherryHsp70; maintained canonical example1 names P.falciparum. Ortholog/prior-literature comparisons do not support that experimental attribution. Preserve originalmajor key and exactpredecessor.
+
+### Positive PVM protein survey triggers coverage
+
+evidence: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+Even with topology-only graph and empty accession inventory, canonical example positively asserts BioID PVM-protein survey. Expression-only exemption bypasses native whole-claim applicability. Fresh catalogue lacks matched host; no foreignproxy or absence inference.
+
+### Source tiers and neighbor separation
+
+provenance: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane.
+
+Schnider declared JATS sections/captions independently reread with18:42Z originaltime; no pixels/supplement/rawdata. Lingelbach/Clough are secondaryabstracts only. This finding concerns PVM, not closure/disposition of wholePV neighbor or history.
+
+### Second outermost membrane of complex plastids
+
+identity: supported. Targets: GO:7770041.
+
+Fresh GO7770041 definition/synonym exactly matches target. Plastid-membrane is_a and plastidparthood are distinct; ancestry response is not misreported as direct part_of. PPM remains separate fromEpM andcanonicaloEM.
+
+### Constitutive generic bilayer
+
+grounding: supported. Targets: GO:7770041.
+
+Label-only collective lipid material does not misground a whole membrane as a chemical. Individual lipid composition is not invented from ultrastructure or MGDlocalization; optional components are not mandatory completeness defects.
+
+### Specific lipid or protein formation necessity
+
+evidence: unknown. Targets: GO:7770041.
+
+Inspected localization/ultrastructure does not establish required particular lipid species or a formation-essential enzyme. ESSENTIAL is interpreted as constitutive bilayer material; native inventories remain intentionally empty.
+
+### Species occurrence versus experimental cultures
+
+scope: supported. Targets: GO:7770041.
+
+P.tricornutum2850 identity and qualitative occurrence/ultrastructural example supported. FloriPt1CCAP1055/3 and GueguenPt1strain8.6CCAP1055/1(CCMP2561) are separate experimental contexts, not a specieswide exact strain/protocol claim.
+
+### Coarse physical material-to-boundary function
+
+graph: supported. Targets: GO:7770041.
+
+Bilayer forms secondoutermostmembrane and helps delimitPPC together withoEM. The twoedges explain a physical boundary function at coarse resolution; MECHANISTIC does not assert specific membrane-maintenance machinery, assembly kinetics or import system. Lowresolutionalone is not a defect.
+
+### Authority definition versus experimental ancestry
+
+evidence: supported. Targets: GO:7770041.
+
+Maintained evolutionary wording reproduces currentGO. Flori treats symbiontplasmamembrane origin as considered and acknowledges alternativehostER proposal. Neither membrane topology nor MGDlocalization uniquely experimentally traces ancestry; retain this evidence limitation without inventing a refutation.
+
+### Forward-looking boundary and grounding discussions
+
+provenance: supported. Targets: GO:7770041.
+
+Current record already distinguishes secondoutermostPPM fromoutermostEpM andcanonicalouterenvelope. Open boundary/grounding prompts are futurecurationcontext, not mandatory closure or proofhistoricalrationale waswrong. Neighborfindings remain outside this assignedreview.
+
+### Genuine material and boundary exclusion
+
+evidence: not_applicable. Targets: GO:7770041.
+
+Entirepositivecontent concerns bilayer, topological delimitation, qualitativeoccurrence and evolutionaryorigin. A citedMGDpaper title does not itself assert an enzymepathway in thisrecord. No namedgene/protein/regulator/stress/trait/transcriptomic claim is maintained; preserve exclusion with preciseactualscope.
+
+### Bounded reused primary and secondary readings
+
+evidence: supported. Targets: GO:7770041.
+
+FloriPDF scientificmaintext/Methods/captions reread at unchanged13:39Zsnapshot; no pixels/movies. Gueguen onlydeclaredlocalization/discussion/culture/confocalsections, no new fullmutantlipidomicaudit. Hashimoto is complete secondaryabstractonly.
+
+### Exact anatomy, synonyms, hierarchy and parthood
+
+identity: supported. Targets: GO:0005782.
+
+GO0005782 exactly identifies matrix/lumen and microbody-lumen subclass; it is volume, not membrane or universal yeast urate-oxidase core.
+
+### Anatomical identity versus constituent chemistry
+
+grounding: supported. Targets: GO:0005782.
+
+No components; resolved discussion correctly excludes bounding membrane from matrix constituents.
+
+### Species, strain and experimental limits
+
+scope: supported. Targets: GO:0005782.
+
+4932 species and559292 S288c strain verified separately. COMMON is qualitative occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no newly demonstrated S288c localization experiment is inferred from the model taxon or representative accession.
+
+### Positive metabolic/import function claims
+
+evidence: supported. Targets: GO:0005782.
+
+Matrix beta-oxidation and import context are consistent with secondary sources; no all-pathway-reaction localization implied.
+
+### Every node/edge and declared NONMECHANISTIC scope
+
+graph: supported. Targets: GO:0005782.
+
+Three descriptive relations correctly place matrix within organelle, membrane around matrix and beta-oxidation in matrix.
+
+### Individual protein identity versus complete machinery
+
+grounding: supported. Targets: GO:0005782.
+
+No individual protein inventory or typed protein node; optional examples are not mandatory.
+
+### Pinned pathway correspondence
+
+scope: supported. Targets: GO:0005782.
+
+Exact pinned model bytes/id/label/S288c taxon verified. SITE_OF explicitly covers the beta-oxidation segment, not every activation/auxiliary reaction. Native offline snapshot gate and fresh remote hash check are separate from localization evidence; no upstream mechanistic-edge certification.
+
+### Structured-source applicability from whole record
+
+evidence: concern. Targets: GO:0005782.
+
+Original explicit expression-only N/A is unsupported: matrix beta-oxidation and import context trigger host coverage checks. Fresh complete official catalogue lacks matching yeast/S288c; no matched downstream query or biological absence inferred. This repairs a bundle assessment, not a record.
+
+### Append-only history and unresolved source-neutral grounding
+
+provenance: supported. Targets: GO:0005782.
+
+Historical discussions remain provenance; source-neutral grounding questions can remain open despite taxon-specific representative xrefs. No history rewriting, wider issue resolution or status promotion. All target bytes unchanged.
+
+### Native validation/render and actual command coverage
+
+schema: supported. Targets: GO:0005782.
+
+All48 original frozen inputs verify; three original YAML/Markdown pairs validate/render exactly; current target unchanged. Actual native protein commands pass with independently counted inventory, not proof of biological completeness.
+
+### Complete claim surfaces and source access
+
+completeness: supported. Targets: GO:0005782.
+
+Entire current record reviewed, including no image/measurement/snippet claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections; primary Pex14 papers abstract-only. Source access unknown is not refutation. No supported scientific finding; qualified pass.
+
+### Exact anatomy, synonyms, hierarchy and parthood
+
+identity: supported. Targets: GO:0005778.
+
+GO0005778 exactly identifies the surrounding membrane, with microbody-membrane subclass and peroxisome parthood.
+
+### Anatomical identity versus constituent chemistry
+
+grounding: supported. Targets: GO:0005778.
+
+Collective bilayer is LIPID/CONSTITUENT, REVIEWED_LABEL_ONLY with explicit rationale and no anatomical GO chemical grounding. ESSENTIAL denotes defining bilayer, not every lipid species.
+
+### Species, strain and experimental limits
+
+scope: supported. Targets: GO:0005778.
+
+4932 species and559292 S288c strain verified separately. COMMON is qualitative occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no newly demonstrated S288c localization experiment is inferred from the model taxon or representative accession.
+
+### Positive metabolic/import function claims
+
+evidence: supported. Targets: GO:0005778.
+
+Boundary role and membrane-associated PEX docking/import platform supported by review context and primary abstracts; detailed pore mechanism/assembly necessity not asserted.
+
+### Every node/edge and declared NONMECHANISTIC scope
+
+graph: supported. Targets: GO:0005778.
+
+Four descriptive relations distinguish membrane parthood, matrix enclosure, docking machinery membrane residence and import support. P53112 is representative xref; broad machinery identity is not falsely equated with one accession.
+
+### Individual protein identity versus complete machinery
+
+grounding: supported. Targets: GO:0005778.
+
+P53112 is reviewed PEX14/YGL153W in S288c; family/domain annotations verified, but they do not supply a source-neutral CURIE for the entire docking machinery. Native UNANCHORED_WITH_UNIPROT is allowed coverage classification.
+
+### Pinned pathway correspondence
+
+scope: not_applicable. Targets: GO:0005778.
+
+No related_pathways assertion on membrane record.
+
+### Structured-source applicability from whole record
+
+evidence: concern. Targets: GO:0005778.
+
+Original explicit expression-only N/A is unsupported: PEX docking/import platform and representative Pex14 trigger host coverage checks. Fresh complete official catalogue lacks matching yeast/S288c; no matched downstream query or biological absence inferred. This repairs a bundle assessment, not a record.
+
+### Append-only history and unresolved source-neutral grounding
+
+provenance: supported. Targets: GO:0005778.
+
+Historical discussions remain provenance; source-neutral grounding questions can remain open despite taxon-specific representative xrefs. No history rewriting, wider issue resolution or status promotion. All target bytes unchanged.
+
+### Native validation/render and actual command coverage
+
+schema: supported. Targets: GO:0005778.
+
+All48 original frozen inputs verify; three original YAML/Markdown pairs validate/render exactly; current target unchanged. Actual native protein commands pass with independently counted inventory, not proof of biological completeness.
+
+### Complete claim surfaces and source access
+
+completeness: supported. Targets: GO:0005778.
+
+Entire current record reviewed, including no image/measurement/snippet claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections; primary Pex14 papers abstract-only. Source access unknown is not refutation. No supported scientific finding; qualified pass.
+
+### Exact anatomy, synonyms, hierarchy and parthood
+
+identity: supported. Targets: GO:0005777.
+
+GO0005777 exact single-membrane organelle; matrix and membrane are distinct supported parts.
+
+### Anatomical identity versus constituent chemistry
+
+grounding: concern. Targets: GO:0005777.
+
+Inherited F1 remains confirmed: component is LIPID but labeled/grounded as whole GO0005778 membrane; structural node joins that component. Preserve supported membrane topology while separating material and anatomical identity.
+
+### Species, strain and experimental limits
+
+scope: supported. Targets: GO:0005777.
+
+4932 species and559292 S288c strain verified separately. COMMON is qualitative occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no newly demonstrated S288c localization experiment is inferred from the model taxon or representative accession.
+
+### Positive metabolic/import function claims
+
+evidence: supported. Targets: GO:0005777.
+
+Beta-oxidation in matrix and broad PTS-dependent cargo import supported at declared descriptive scope, not an exhaustive inventory or universal detailed mechanism.
+
+### Every node/edge and declared NONMECHANISTIC scope
+
+graph: supported. Targets: GO:0005777.
+
+Three descriptive relations cover membrane bounding matrix, broad PTS-bearing proteins imported into matrix and matrix compartmentalizing beta-oxidation. Topological relations remain true; F1 concerns component identity/type join, not whether the membrane bounds the matrix.
+
+### Individual protein identity versus complete machinery
+
+grounding: supported. Targets: GO:0005777.
+
+Broad PTS-bearing cargo class has no one universal accession. Native UNANCHORED_NO_UNIPROT is not itself evidence of a scientific defect or compulsory exhaustive inventory.
+
+### Pinned pathway correspondence
+
+scope: supported. Targets: GO:0005777.
+
+Exact pinned model bytes/id/label/S288c taxon verified. SITE_OF explicitly covers the beta-oxidation segment, not every activation/auxiliary reaction. Native offline snapshot gate and fresh remote hash check are separate from localization evidence; no upstream mechanistic-edge certification.
+
+### Structured-source applicability from whole record
+
+evidence: concern. Targets: GO:0005777.
+
+Original explicit expression-only N/A is unsupported: metabolism and PTS cargo import trigger host coverage checks. Fresh complete official catalogue lacks matching yeast/S288c; no matched downstream query or biological absence inferred. This repairs a bundle assessment, not a record.
+
+### Append-only history and unresolved source-neutral grounding
+
+provenance: supported. Targets: GO:0005777.
+
+Historical discussions remain provenance; source-neutral grounding questions can remain open despite taxon-specific representative xrefs. No history rewriting, wider issue resolution or status promotion. All target bytes unchanged.
+
+### Native validation/render and actual command coverage
+
+schema: supported. Targets: GO:0005777.
+
+All48 original frozen inputs verify; three original YAML/Markdown pairs validate/render exactly; current target unchanged. Actual native protein commands pass with independently counted inventory, not proof of biological completeness.
+
+### Complete claim surfaces and source access
+
+completeness: supported. Targets: GO:0005777.
+
+Entire current record reviewed, including no image/measurement/snippet claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections; primary Pex14 papers abstract-only. Source access unknown is not refutation. Inherited major F1 retained; record curation separately filed.
+
+### Complete frozen-input comparison and bounded refresh
+
+provenance: supported. Targets: cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474.
+
+0 of ten original target hashes differ from current main. The changed content is substantively reassessed in the target-specific assessments; original observations remain historical and unchanged. All current target and used context bytes are frozen.
+
+## Findings
+
+### septin-phagocytic_vesicle-F1: Distinguish measured trafficking from the cited acidification model
+
+minor / open / confirmed; issue key: phagocytic-vesicle-experimental-attribution.
+
+The2002 citation note says the study dissected stages with distinct luminal-acidification behavior. Its Methods/Results directly characterize protein/lipid content and trafficking, whereas Discussionsec20 integrates acidification from prior work and cites Maniak1999/2001. Qualify this source note so it does not imply a direct pH-phase measurement by Gotthardt2002. The general maturation and acidification biology remains supported.
+
+### septin-phagocytic_vesicle_lumen-F1: Qualify the acidification experiment attributed to Gotthardt2002
+
+minor / open / confirmed; issue key: phagocytic-vesicle-lumen-experimental-attribution.
+
+The canonical example and evidence notes say that Gotthardt2002 resolved ordered acidification behavior/phases. Complete Methods/Results instead report purification, protein/lipid profiling and membrane/hydrolase trafficking; acidification appears in the Discussion model with prior Maniak1999/2001 citations. Preserve the accepted acidification outcome while separating that synthesis from a directly measured pH time course.
+
+### septin-phagocytic_vesicle_membrane-F1: Separate intact-phagosome profiling from membrane-enriched identification
+
+minor / open / confirmed; issue key: phagocytic-vesicle-membrane-experimental-attribution.
+
+The canonical note calls the2006 time-course samples purified latex-bead phagosome membranes. The source distinguishes intact purified phagosomes used for the dynamic series from carbonate-stripped membrane-enriched preparations used for pooled preparative identification. Qualify the preparation description so a whole-organelle protein time course is not presented as a selectively isolated membrane time course. Membrane remodeling and the presence of membrane proteins in that experiment remain supported.
+
+### septin-phagolysosome-F1: Bound the expanded definition to demonstrated taxa and mechanisms
+
+major / open / confirmed; issue key: phagolysosome-expanded-definition-scope.
+
+The first ontology-based clause is exact, but the appended molecular and taxonomic description is not contained in the cited GO entry. The primary evidence establishes staged Dictyostelium phagosome behavior; it does not demonstrate the entire added cross-taxon mechanistic definition. Supported digestion/acidification in the studied context should be retained, but not silently generalized into a defining molecular program for all listed microbial groups.
+
+### septin-phagolysosome-F2: Match the graph scope to its descriptive edges
+
+minor / open / confirmed; issue key: phagolysosome-graph-scope-label.
+
+The graph is labeled MECHANISTIC and titled an assembly and functional mechanism, but its edges give material/parthood and generic whole-structure process associations. The primary papers contain mechanisms worth separately curating, yet those actors and transitions are not represented in this graph.
+
+### septin-phagolysosome-F3: Qualify the source scope of the acidification note
+
+minor / open / confirmed; issue key: phagolysosome-acidification-source-method-scope.
+
+functions[1].evidence[1].notes attributes distinct luminal-acidification behavior to the Gotthardt2002 dissection. Its Methods/Results do not present a direct luminal-pH assay; acidification is synthesized in Discussion from earlier work, and the2006 Fig4C pH scheme is explicitly adapted from macropinocytosis. Trafficking-phase measurements are genuine and should be retained.
+
+### septin-phagolysosome_membrane-F1: Bound the expanded definition to demonstrated taxa and mechanisms
+
+major / open / confirmed; issue key: phagolysosome-membrane-expanded-definition-scope.
+
+The first ontology-based clause is exact, but the appended molecular and taxonomic description is not contained in the cited GO entry. The primary evidence establishes staged Dictyostelium phagosome behavior; it does not demonstrate the entire added cross-taxon mechanistic definition. The added V-ATPase-enrichment clause also propagates into the material role and graph. Lmp CD36/LIMPII detection is not a direct LAMP-protection experiment.
+
+### septin-phagolysosome_membrane-F2: Match the graph scope to its descriptive edges
+
+minor / open / confirmed; issue key: phagolysosome-membrane-graph-scope-label.
+
+The graph is labeled MECHANISTIC and titled an assembly and functional mechanism, but its edges give material/parthood and generic whole-structure process associations. The primary papers contain mechanisms worth separately curating, yet those actors and transitions are not represented in this graph.
+
+### septin-phagolysosome_membrane-F3: Distinguish the time course from membrane enrichment
+
+minor / open / confirmed; issue key: phagolysosome-membrane-timecourse-preparation-scope.
+
+canonical_examples[0].note says purified phagosome membranes were profiled across maturation. Gotthardt2006 used intact phagosome extracts for the time series; a separate carbonate membrane-enrichment preparation improved identification of membrane proteins. The generic remodeling biology is supported, but this note should not imply an isolated-membrane temporal dataset.
+
+### septin-phagolysosome_membrane-F4: Correct the current lipid-grounding rationale's exact identity
+
+minor / rejected / confirmed; issue key: phagolysosome-membrane-current-rationale-generic-identity.
+
+discussions[0].rationale says this record is exactly grounded to GO0030670 and SL0205. Its actual exact identity is GO0061474; the cited generic phagosome-membrane terms provide broader context. This is current OPEN task text, not a demand to rewrite historical curation events.
+
+Disposition: Original A4 explicitly forbids altering dated history or closing the lipid TODO; rejection does not mischaracterize it as an erasure request. Its mandatory current-rationale correction is unsupported because CURATION treats rationale as provenance and notes as current state, regardless of OPEN status. The exact current identity and label-only broader material context are correct. Optional appended clarification is permitted but no mandatory record correction or TODO closure follows.
+
+### plaque-t0-F1: Correct the species attached to the PVM BioID example
+
+major / open / confirmed; issue key: parasitophorous-vacuole-membrane-bioid-canonical-species-misattribution.
+
+canonical_examples[1] calls the cited BioID survey a P. falciparum intraerythrocytic PVM experiment. Schnider2018 explicitly performed that experiment in P. berghei ANKA blood-stage parasites. The falciparum comparisons are orthology and prior-literature context, not this study's experimental organism.
+
+### micro-F1: Separate whole membrane identity from lipid material
+
+major / open / confirmed; issue key: peroxisome-whole-membrane-lipid-grounding.
+
+The peroxisomal_membrane component has type LIPID but labels and grounds the whole anatomical membrane GO0005778. The structural graph node points to this component. A valid membrane parthood statement does not make that GO cellular component a chemical lipid.
+
+## Recommended Actions And Acceptance Checks
+
+### septin-phagocytic_vesicle-A1
+
+In separately authorized curation, Describe Gotthardt2002 as a direct membrane/cargo-trafficking study that discusses acidification based on prior work; if direct pH kinetics are intended, attach an actually inspected direct measurement source.
+
+- The source note/canonical example matches the exact primary assay and preparation.
+- Correct ontology identity, topology and supported biological outcomes are retained.
+- Native schema, strict, identifier, graph and history gates pass after authorized curation.
+
+### septin-phagocytic_vesicle_lumen-A1
+
+In separately authorized curation, Narrow the canonical example and source notes to the measured trafficking/luminal-composition phases and identify the acidification account as discussion-based; add a directly inspected pH study only if claiming direct pH-phase resolution.
+
+- The source note/canonical example matches the exact primary assay and preparation.
+- Correct ontology identity, topology and supported biological outcomes are retained.
+- Native schema, strict, identifier, graph and history gates pass after authorized curation.
+
+### septin-phagocytic_vesicle_membrane-A1
+
+In separately authorized curation, State that the time course profiled proteins of purified latex-bead phagosomes, including membrane-associated proteins; distinguish the separate carbonate-enriched pooled preparation if it is mentioned.
+
+- The source note/canonical example matches the exact primary assay and preparation.
+- Correct ontology identity, topology and supported biological outcomes are retained.
+- Native schema, strict, identifier, graph and history gates pass after authorized curation.
+
+### septin-phagolysosome-A1
+
+Retain the exact ontology boundary/maturation definition and move supported extra biology into explicitly taxon-, stage- and source-qualified fields. Remove or qualify unestablished extensions, or add directly inspected evidence that actually supports each retained mechanism and taxon.
+
+- Native GO text is distinguished from curator-added biology.
+- No comparative mechanism or fixed molecular inventory is inferred solely from Dictyostelium time profiles.
+- Correct organelle identity, boundary hierarchy and experimentally supported maturation remain intact.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome-A2
+
+Use NONMECHANISTIC with a precise descriptive scope note and aligned title, or separately curate a source-backed mechanistic path without inventing obligatory actors.
+
+- Declared scope and title describe the actual edges.
+- Correct identities, parthood and broad process associations are preserved.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome-A3
+
+State that the study directly dissected trafficking/component phases and discussed acidification using earlier evidence, or cite an inspected direct pH study for a measurement claim.
+
+- Measured trafficking phases are distinguished from review/synthesis-level pH context.
+- The note does not imply a direct pH assay in the cited2002 experiment.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome_membrane-A1
+
+Retain the exact ontology boundary/maturation definition and move supported extra biology into explicitly taxon-, stage- and source-qualified fields. Remove or qualify unestablished extensions, or add directly inspected evidence that actually supports each retained mechanism and taxon.
+
+- Native GO text is distinguished from curator-added biology.
+- No comparative mechanism or fixed molecular inventory is inferred solely from Dictyostelium time profiles.
+- Correct organelle identity, boundary hierarchy and experimentally supported maturation remain intact.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome_membrane-A2
+
+Use NONMECHANISTIC with a precise descriptive scope note and aligned title, or separately curate a source-backed mechanistic path without inventing obligatory actors.
+
+- Declared scope and title describe the actual edges.
+- Correct identities, parthood and broad process associations are preserved.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome_membrane-A3
+
+Describe the intact latex-bead-phagosome protein time course accurately and, if relevant, distinguish the separate carbonate membrane-enrichment identification experiment.
+
+- The note separates intact phagosomes from isolated/enriched membrane preparations.
+- No unsupported membrane-only temporal measurement is implied.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### septin-phagolysosome_membrane-A4
+
+Record the exact inherited F4 as rejected in the successor review and track the bundle correction. Original A4 already prohibited altering dated history; do not claim otherwise. No maintained-record change is required by this disposition; optional future appended clarification is allowed and the chemical-grounding TODO remains open.
+
+- Successor preserves exact repository/review/F4 predecessor and explains the native provenance rule.
+- No mandatory record rewrite, change to immutable original artifacts, or resolution of the lipid TODO is implied.
+- Review-only correction is issue-linked and native successor validation/render passes.
+
+### plaque-t0-A1
+
+Align the example with verified P. berghei5821 and the actual study background, or supply independently inspected P. falciparum-specific experimental evidence. Preserve the PVM identity and Toxoplasma example.
+
+- Example taxon and claimed experiment name the same species.
+- No orthology comparison is relabeled as a performed BioID experiment.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### micro-A1
+
+Retain supported membrane parthood. Model a whole structural constituent with an appropriate type, or describe supported lipid material separately with chemical grounding or justified label-only status; align the component_ref.
+
+- Verify component type, identity and graph join against the exact source definition.
+- After separately authorized curation, run schema, strict, graph and label checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| current-record-0 | data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da; current SHA256 fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da. Record bytes unchanged since the original review. |
+| original-review-0 | reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-1 | data/structures/membrane_organelle/periplastidial_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a; current SHA256 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a. Record bytes unchanged since the original review. |
+| original-review-1 | reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-2 | data/structures/membrane_organelle/peroxisomal_matrix.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23; current SHA256 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23. Record bytes unchanged since the original review. |
+| original-review-2 | reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-3 | data/structures/membrane_organelle/peroxisomal_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87; current SHA256 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87. Record bytes unchanged since the original review. |
+| original-review-3 | reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-4 | data/structures/membrane_organelle/peroxisome.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828; current SHA256 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828. Record bytes unchanged since the original review. |
+| original-review-4 | reviews/structured/20261022T031041Z-peroxisome-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-5 | data/structures/membrane_organelle/phagocytic_vesicle.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f; current SHA256 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f. Record bytes unchanged since the original review. |
+| original-review-5 | reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-6 | data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19; current SHA256 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19. Record bytes unchanged since the original review. |
+| original-review-6 | reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-7 | data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f; current SHA256 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f. Record bytes unchanged since the original review. |
+| original-review-7 | reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-8 | data/structures/membrane_organelle/phagolysosome.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e; current SHA256 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e. Record bytes unchanged since the original review. |
+| original-review-8 | reviews/structured/20261022T031046Z-phagolysosome-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-9 | data/structures/membrane_organelle/phagolysosome_membrane.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32; current SHA256 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32. Record bytes unchanged since the original review. |
+| original-review-9 | reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| septin-review-policy | .claude/skills/review-yaml-record/SKILL.md; Current native review process, especially molecular/pathway structured-source applicability and unavailable-source fallback | supports | Positive molecular or pathway assertions trigger applicability assessment even without expression claims or an individual protein inventory. Matched-host evidence and bounded fallback are required; missing coverage is not biological refutation. |
+| septin-curation-policy | docs/CURATION.md; Identity/evidence rules and Discussions lines305–324, freshly re-read | supports | Exact identity is distinct from constituent grounding. Discussion is provenance, not task description: rationale is append-only; notes hold current state. OPEN does not convert rationale into an authoritative current inventory. Optional appended clarification is allowed; it is not automatically mandatory curation. |
+| septin-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; Current structure, material, graph and evidence definitions | supports | Structure identities, collective material and molecular examples are distinct. Generic protein classes and complexes are allowed; no optional representative or enum-only defect is invented. |
+| septin-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Current graph scope, typed actors, evidence and mechanism contract | supports | Descriptive parthood/process associations must not be advertised as a represented actor-and-transition mechanism. Direct experimental scope and necessity remain distinct from association. |
+| septin-protein-policy | .claude/skills/uniprot-protein-examples/SKILL.md; Current protein examples and graph coverage rules | supports | Native success covers represented accession scope. Empty inventories do not prove molecular completeness, and optional protein examples are not mandatory solely because a paper identifies proteins. |
+| septin-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032010,GO:0061474,GO:0106174,GO:0005767,GO:0045335,GO:0030670,GO:0097013,GO:0032009,GO:0006909,GO:0090382,GO:0031410,GO:0030659,GO:0060205,GO:0090383; All14 current exact GO entries: identifiers, definitions, synonyms, immediate typed child relations | supports | Exact identities/topology for five targets and their stated parents/parts are supported. GO0032010 andGO0061474 supply the opening definitions but not the appended cross-taxon molecular programs. GO0006909 includes uptake and lysosomal delivery/fusion/digestion, so a broad phagolysosome association is not rejected merely from its name. GO0090383 defines pH reduction, without certifying a particular experiment measured it. |
+| septin-SL0206 | https://rest.uniprot.org/locations/SL-0206.json; Exact location definition, identity/synonyms and immediate isA/partOf fields; relevant nested anatomy read | supports | Phagosome maps GO0045335, synonyms include phagocytic vesicle and isA cytoplasmic vesicle GO0031410. Parent molecular narrative is not silently assigned to a child as direct mechanism evidence. |
+| septin-SL0205 | https://rest.uniprot.org/locations/SL-0205.json; Exact location definition, identity/synonyms and immediate isA/partOf fields; relevant nested anatomy read | supports | Phagosome membrane maps GO0030670 with phagocytic/phagosomal membrane synonyms, isA cytoplasmic vesicle membrane GO0030659 and partOf phagosome. This is broader context for exact phagolysosome membrane GO0061474. Parent molecular narrative is not silently assigned to a child as direct mechanism evidence. |
+| septin-SL0342 | https://rest.uniprot.org/locations/SL-0342.json; Exact location definition, identity/synonyms and immediate isA/partOf fields; relevant nested anatomy read | supports | Phagosome lumen definition/synonyms match the target and isA cytoplasmic vesicle lumen GO0060205, partOf phagosome. No absent direct top-level GO mapping is fabricated. Parent molecular narrative is not silently assigned to a child as direct mechanism evidence. |
+| septin-tax44689 | https://rest.uniprot.org/taxonomy/44689.json; Complete current taxonomy JSON: identifier, active status, rank, lineage and listed strains | supports | NCBITaxon44689 is active Dictyostelium discoideum at species rank with Amoebozoa lineage. The two papers independently specify Ax2 in HL5c at22C. Species identity and qualitative COMMON occurrence do not constitute a prevalence census or universal strain guarantee. |
+| septin-PMID12388753 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12388753+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact EuropePMC MED identifier result: complete metadata and abstract | supports | Gotthardt2002 High-resolution dissection of phagosome maturation reveals distinct membrane trafficking phases, DOI10.1091/mbc.e02-04-0206, PMID12388753/PMC129962. Bibliography and abstract support are distinct from the separately inspected university-held primary PDF body. |
+| septin-PMID16926386 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16926386+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact EuropePMC MED identifier result: complete metadata and abstract | supports | Gotthardt2006 Proteomics fingerprinting of phagosome maturation and evidence for the role of a Galpha during uptake, DOI10.1074/mcp.M600113-MCP200, PMID16926386. Bibliography and abstract support are distinct from the separately inspected university-held primary PDF body. |
+| septin-gotthardt2002-unige-pdf | https://access.archive-ouverte.unige.ch/access/metadata/7ba3d74f-e1a5-4cae-8646-670a6fd9a236/download; Published PDF main scientific text pp3508–3518: Methods, Results, Discussion and Fig1–7 text captions; no pixel/raw/supplement audit | supports | Ax2 latex-bead pulse/chase phagosome purification, ATP stripping, immunoblot/protein-lipid MS, electron microscopy and confocal trafficking assays support stage-dependent composition. Methods/Results do not present a direct luminal-pH assay. Discussion p3517 combines own and earlier work and cites Maniak1999/2001 for acidification. V-ATPase is identified even early; this is not a universal fixed dense-stage inventory. Lmp proteins are CD36/LIMPII family with different kinetics; no direct LAMP-protection experiment. Vti1/VAMP7 trafficking does not establish the entire added cross-taxon SNARE/Nramp/LAMP mechanism. Heterogeneity/asynchrony is explicit. |
+| septin-gotthardt2006-pdf | https://access.archive-ouverte.unige.ch/access/metadata/eae2ae90-5a91-4330-85a9-04fa245d5d63/download; Published PDF main text pp2228–2233 and2235–2241, Fig1/2/3/4/6 text captions; TableI image, Fig5 full caption/pixels, supplements/raw data not audited | supports | Ax2 intact latex-bead phagosome extracts were measured across six time points. Separate carbonate-enriched pooled early/late membrane preparations improved protein identification; they were not an isolated-membrane temporal dataset. Fig4C pH scheme is explicitly adapted from macropinocytosis. Source supports remodeling/protein trajectories, with pathway heterogeneity and method-dependent quantification limits; it does not demonstrate the full added broad phagolysosome mechanism across Entamoeba/ciliates. |
+| septin-catalogue | https://imodulondb.org/api/datasets; Complete fresh official organism/dataset catalogue, all rows and all listed dataset strings | supports | No Dictyostelium discoideum/Ax2, Entamoeba or ciliate host dataset occurs. All five records positively assert maturation, trafficking or acidification pathways despite empty individual protein inventories. No matched-host downstream gene/module query is available; bacterial cargo or another organism is not a proxy. Noncoverage is not evidence that the host pathway or proteins are absent. |
+| septin-body-discovery-search | https://archive-ouverte.unige.ch/unige%3A18917; Bounded web result discovery only; selected university-held published PDF | supports | Search located the genuine University of Geneva copy. Returned snippets were used only to locate the paper, not to certify a mechanism. |
+| septin-retrieval-source-receipts | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/source-receipts.json; Actual HTTP outcomes, times and saved byte hashes | supports | Fresh official metadata/ontology/catalogue and two genuine university PDF bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies the actually inspected published body. No prior2374 or2364 source-body reuse is claimed. |
+| septin-retrieval-additional-source-receipts | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/additional-source-receipts.json; Actual HTTP outcomes, times and saved byte hashes | supports | Fresh official metadata/ontology/catalogue and two genuine university PDF bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies the actually inspected published body. No prior2374 or2364 source-body reuse is claimed. |
+| septin-retrieval-recovery-source-receipts | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/recovery-source-receipts.json; Actual HTTP outcomes, times and saved byte hashes | supports | Fresh official metadata/ontology/catalogue and two genuine university PDF bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies the actually inspected published body. No prior2374 or2364 source-body reuse is claimed. |
+| septin-adapter-runner-historical | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical attempted runner only; no fresh invocation | supports | Actual2026-11-03T00:49:00.848907Z–00:49:00.863225Z attempt ended exit1 PermissionError reading pyvenv.cfg. Historical availability failure is separate from fresh official catalogue success and source fallback; no new runner execution is claimed. |
+| septin-context-early_phagosome | data/structures/membrane_organelle/early_phagosome.yaml; Frozen boundary context only: identity, label, definition, parent_structures, part_of, has_part and xrefs | supports | Read only for reciprocal boundary and stage identities. This is not a whole-neighbor scientific verdict, mechanistic endorsement or issue disposition. |
+| septin-context-phagolysosome_vesicle_lumen | data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; Frozen boundary context only: identity, label, definition, parent_structures, part_of, has_part and xrefs | supports | Read only for reciprocal boundary and stage identities. This is not a whole-neighbor scientific verdict, mechanistic endorsement or issue disposition. |
+| septin-rationale-independent-challenge | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/phagolysosome-rationale-challenge.json; Independent auxiliary read of existing discussion/component, exact identity, original F4/A4 and CURATION305–324 only | supports | Independent micro reviewer corroborates rejection of mandatory current-rationale correction, without claiming original A4 demanded history deletion/replacement. Optional appended clarification remains allowed and chemical TODO open. This auxiliary scope is not a complete second scientific review of the target. |
+| septin-record-phagocytic_vesicle | data/structures/membrane_organelle/phagocytic_vesicle.yaml; Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23 | supports | Every identity, hierarchy, definition, component, taxon/example, source note, function, history/discussion and graph field read. Zero protein examples, zero typed molecular nodes and no UniProtKB graph xrefs or maintained images. This inventory is independently read, not inferred from generic successful native output. |
+| septin-original-phagocytic_vesicle | reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.yaml; Complete original pair, findings/actions, verdict, limitations, scope and frozen inputs | supports | Original YAML/Markdown remains immutable and exact target hash is unchanged. Historical source access and old checks are not represented as current executions. Every original finding is explicitly retained or rejected with exact lineage. |
+| septin-original-validation-phagocytic_vesicle | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json; Actual native validate/render and historical frozen/current target hash verification | supports | Both commands exit0, Markdown byte equality, frozen historical source/current target hashes agree. Schema validity is separate from scientific support. |
+| septin-native-phagocytic_vesicle-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-native-phagocytic_vesicle-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-record-phagocytic_vesicle_lumen | data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml; Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23 | supports | Every identity, hierarchy, definition, component, taxon/example, source note, function, history/discussion and graph field read. Zero protein examples, zero typed molecular nodes and no UniProtKB graph xrefs or maintained images. This inventory is independently read, not inferred from generic successful native output. |
+| septin-original-phagocytic_vesicle_lumen | reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.yaml; Complete original pair, findings/actions, verdict, limitations, scope and frozen inputs | supports | Original YAML/Markdown remains immutable and exact target hash is unchanged. Historical source access and old checks are not represented as current executions. Every original finding is explicitly retained or rejected with exact lineage. |
+| septin-original-validation-phagocytic_vesicle_lumen | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json; Actual native validate/render and historical frozen/current target hash verification | supports | Both commands exit0, Markdown byte equality, frozen historical source/current target hashes agree. Schema validity is separate from scientific support. |
+| septin-native-phagocytic_vesicle_lumen-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-native-phagocytic_vesicle_lumen-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-record-phagocytic_vesicle_membrane | data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml; Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23 | supports | Every identity, hierarchy, definition, component, taxon/example, source note, function, history/discussion and graph field read. Zero protein examples, zero typed molecular nodes and no UniProtKB graph xrefs or maintained images. This inventory is independently read, not inferred from generic successful native output. |
+| septin-original-phagocytic_vesicle_membrane | reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.yaml; Complete original pair, findings/actions, verdict, limitations, scope and frozen inputs | supports | Original YAML/Markdown remains immutable and exact target hash is unchanged. Historical source access and old checks are not represented as current executions. Every original finding is explicitly retained or rejected with exact lineage. |
+| septin-original-validation-phagocytic_vesicle_membrane | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json; Actual native validate/render and historical frozen/current target hash verification | supports | Both commands exit0, Markdown byte equality, frozen historical source/current target hashes agree. Schema validity is separate from scientific support. |
+| septin-native-phagocytic_vesicle_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-native-phagocytic_vesicle_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-record-phagolysosome | data/structures/membrane_organelle/phagolysosome.yaml; Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23 | supports | Every identity, hierarchy, definition, component, taxon/example, source note, function, history/discussion and graph field read. Zero protein examples, zero typed molecular nodes and no UniProtKB graph xrefs or maintained images. This inventory is independently read, not inferred from generic successful native output. |
+| septin-original-phagolysosome | reviews/structured/20261022T031046Z-phagolysosome-audit/review.yaml; Complete original pair, findings/actions, verdict, limitations, scope and frozen inputs | supports | Original YAML/Markdown remains immutable and exact target hash is unchanged. Historical source access and old checks are not represented as current executions. Every original finding is explicitly retained or rejected with exact lineage. |
+| septin-original-validation-phagolysosome | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json; Actual native validate/render and historical frozen/current target hash verification | supports | Both commands exit0, Markdown byte equality, frozen historical source/current target hashes agree. Schema validity is separate from scientific support. |
+| septin-native-phagolysosome-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-native-phagolysosome-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-record-phagolysosome_membrane | data/structures/membrane_organelle/phagolysosome_membrane.yaml; Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23 | supports | Every identity, hierarchy, definition, component, taxon/example, source note, function, history/discussion and graph field read. Zero protein examples, zero typed molecular nodes and no UniProtKB graph xrefs or maintained images. This inventory is independently read, not inferred from generic successful native output. |
+| septin-original-phagolysosome_membrane | reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml; Complete original pair, findings/actions, verdict, limitations, scope and frozen inputs | supports | Original YAML/Markdown remains immutable and exact target hash is unchanged. Historical source access and old checks are not represented as current executions. Every original finding is explicitly retained or rejected with exact lineage. |
+| septin-original-validation-phagolysosome_membrane | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json; Actual native validate/render and historical frozen/current target hash verification | supports | Both commands exit0, Markdown byte equality, frozen historical source/current target hashes agree. Schema validity is separate from scientific support. |
+| septin-native-phagolysosome_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| septin-native-phagolysosome_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal-receipt.json; Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope; it is not molecular completeness or full scientific validation. |
+| plaque-current-0 | data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml; Entire current maintained record at f1ebcdd9788bfee294f3276788874b3860033d23; all fields, graphs, discussions and history | supports | Complete exact target read. Current bytes equal original target freeze; this is current reassessment, not a stale-input refresh. |
+| plaque-original-0 | reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.yaml; Exact staleness-selected original YAML and native Markdown; all evidence, assessments, checks, finding/action and source fields | supports | Immutable original independently validated/rendered. All15 historical inputs match its recorded source; current target also matches. |
+| plaque-current-1 | data/structures/membrane_organelle/periplastidial_membrane.yaml; Entire current maintained record at f1ebcdd9788bfee294f3276788874b3860033d23; all fields, graphs, discussions and history | supports | Complete exact target read. Current bytes equal original target freeze; this is current reassessment, not a stale-input refresh. |
+| plaque-original-1 | reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.yaml; Exact staleness-selected original YAML and native Markdown; all evidence, assessments, checks, finding/action and source fields | supports | Immutable original independently validated/rendered. All15 historical inputs match its recorded source; current target also matches. |
+| plaque-policy | .claude/skills/review-yaml-record/SKILL.md; Current skill Structured Source Cross-Checks and evidence rules reread | context_only | Positive protein/pathway assertions trigger applicability even without expression-module assertions; physical-only boundary records can remain excluded. |
+| plaque-rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Previously read exact frozen checklist, bytes unchanged | context_only | Identity, source scope, organism, material, mechanism and necessity assessed separately. Optional molecular inventory gaps alone are not findings. |
+| plaque-graph-rubric | .claude/skills/curate-causal-graphs/SKILL.md; Previously read exact native graph contract, bytes unchanged | context_only | Coarse physical material-to-boundary function is distinct from bare parthood or a specific protein assembly mechanism. |
+| plaque-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; Exact frozen StructuralComponent/CausalNode policy, unchanged | context_only | Label-only collective lipid material differs from grounding a chemical to a whole membrane. GENE_OR_PROTEIN permits protein families and complexes. |
+| plaque-history-policy | docs/CURATION.md; Previously read frozen discussion and history rules, unchanged | context_only | Historical rationale is append-only; a future-facing boundary or source-neutral grounding prompt need not be closed merely because neighboring identities are known. |
+| plaque-context-parasitophorous_vacuole | data/structures/membrane_organelle/parasitophorous_vacuole.yaml; Entire neighbor read after root froze exact path; boundary identity/context only | context_only | Distinguishes whole/lumen/PVM and second complex-plastid membrane versus outermost epiplastidial/canonical outer envelope. Other scientific assertions and existing neighbor issues are not adjudicated or resolved. |
+| plaque-context-parasitophorous_vacuole_lumen | data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml; Entire neighbor read after root froze exact path; boundary identity/context only | context_only | Distinguishes whole/lumen/PVM and second complex-plastid membrane versus outermost epiplastidial/canonical outer envelope. Other scientific assertions and existing neighbor issues are not adjudicated or resolved. |
+| plaque-context-epiplastidial_membrane | data/structures/membrane_organelle/epiplastidial_membrane.yaml; Entire neighbor read after root froze exact path; boundary identity/context only | context_only | Distinguishes whole/lumen/PVM and second complex-plastid membrane versus outermost epiplastidial/canonical outer envelope. Other scientific assertions and existing neighbor issues are not adjudicated or resolved. |
+| plaque-context-plastid_outer_membrane | data/structures/membrane_organelle/plastid_outer_membrane.yaml; Entire neighbor read after root froze exact path; boundary identity/context only | context_only | Distinguishes whole/lumen/PVM and second complex-plastid membrane versus outermost epiplastidial/canonical outer envelope. Other scientific assertions and existing neighbor issues are not adjudicated or resolved. |
+| plaque-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020003,GO:0020004,GO:0020005,GO:7770041,GO:7770040,GO:0042170,GO:0009536,GO:0009527; Complete fresh8-term native response; definitions, synonyms, typed children and comments | supports | PVM maps to broad GO0020005 with native membrane parthood; exact lexical synonym does not erase broader symbiont scope. GO7770041 definition and PPM synonym exactly match maintained PPM;0042170 lists it is_a and0009536 lists plastid membrane part_of. |
+| plaque-go-ppm-isa | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:7770041/ancestors?relations=is_a; Complete exact GO7770041 ancestors request with relations=is_a | supports | Confirms plastid-membrane ancestry. This is_a-only response is not asserted to demonstrate a direct PPM-to-plastid part_of edge. |
+| plaque-SL0193 | https://rest.uniprot.org/locations/SL-0193.json; Complete fresh UniProt location JSON; definition, synonym, mappings and typed hierarchy | supports | SL0193 exact surrounding membrane, synonym and partOfSL0194 agree; SL0194 supports most-apicomplexan host-cell compartment scope, not every species/stage or a measured frequency. |
+| plaque-SL0194 | https://rest.uniprot.org/locations/SL-0194.json; Complete fresh UniProt location JSON; definition, synonym, mappings and typed hierarchy | supports | SL0193 exact surrounding membrane, synonym and partOfSL0194 agree; SL0194 supports most-apicomplexan host-cell compartment scope, not every species/stage or a measured frequency. |
+| plaque-tax5794 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794; Complete fresh ENA taxonomy identity/rank/lineage/alternate names | supports | Exact maintained taxon label and rank verified. Taxonomy alone does not establish localization, prevalence or experimental strain; P.falciparum and P.berghei remain distinct. |
+| plaque-tax5811 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811; Complete fresh ENA taxonomy identity/rank/lineage/alternate names | supports | Exact maintained taxon label and rank verified. Taxonomy alone does not establish localization, prevalence or experimental strain; P.falciparum and P.berghei remain distinct. |
+| plaque-tax5833 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833; Complete fresh ENA taxonomy identity/rank/lineage/alternate names | supports | Exact maintained taxon label and rank verified. Taxonomy alone does not establish localization, prevalence or experimental strain; P.falciparum and P.berghei remain distinct. |
+| plaque-tax5821 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5821; Complete fresh ENA taxonomy identity/rank/lineage/alternate names | supports | Exact maintained taxon label and rank verified. Taxonomy alone does not establish localization, prevalence or experimental strain; P.falciparum and P.berghei remain distinct. |
+| plaque-tax2850 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2850; Complete fresh ENA taxonomy identity/rank/lineage/alternate names | supports | Exact maintained taxon label and rank verified. Taxonomy alone does not establish localization, prevalence or experimental strain; P.falciparum and P.berghei remain distinct. |
+| plaque-lingelbach1998-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1242%2Fjcs.111.11.1467&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling context; Hashimoto supports additional secondary-plastid membranes and lineage-specific continuity. Abstracts do not certify full review bodies or directly prove membrane ancestry/mechanistic necessity. |
+| plaque-clough2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.pt.2017.02.007&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling context; Hashimoto supports additional secondary-plastid membranes and lineage-specific continuity. Abstracts do not certify full review bodies or directly prove membrane ancestry/mechanistic necessity. |
+| plaque-hashimoto2005-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1007/s10265-005-0214-6; Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling context; Hashimoto supports additional secondary-plastid membranes and lineage-specific continuity. Abstracts do not certify full review bodies or directly prove membrane ancestry/mechanistic necessity. |
+| plaque-schnider2018-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1128%2FmSphere.00522-17&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment scope is assessed with separately inspected bodies. |
+| plaque-flori2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.protis.2016.04.001; Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment scope is assessed with separately inspected bodies. |
+| plaque-gueguen2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1093/plcell/koae275; Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment scope is assessed with separately inspected bodies. |
+| plaque-schnider2018-body | https://pmc-oa-opendata.s3.amazonaws.com/PMC5784244.1/PMC5784244.1.xml; Genuine PMC5784244.1 JATS: Results s1.1/s1.2 including embedded captions, full Discussion s2, Methods s3.6/s3.9; no pixels, supplemental files or raw data Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | P.berghei ANKA mCherryHsp70 blood-stage schizonts express EXP1-BirA*-V5;18h150µM biotin precedes affinity capture/MS.61proximity candidates are not61established PVM constituents; off-target labeling is explicit. P.falciparum ortholog/prior-study comparisons do not change the experimental species. |
+| plaque-flori2016-oceanomics-pdf | https://www.oceanomics.eu/sites/default/files/documents/oceanomics-flori-et-al-protist-2016-484.pdf; Genuine primary PDF pp254–264: complete Introduction, Results/Discussion, Methods and Fig1–7 captions; regenerated pdftotext matches retained text. No figure pixels/supplemental movies Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | Serial FIB-SEM in Pt1 CCAP1055/3,ESAW,19C,12:12h light/dark supports PPM second membrane/PPC between PPM andoEM; VN continuity withPPM. Intro acknowledges alternative proposed host-ER origin; p263 says individual membrane lipid composition unknown. Topology is not an experimental ancestry trace. |
+| plaque-gueguen2024-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11638560/fullTextXML; Genuine PMC11638560 JATS: Results2.4 with Fig2/3 captions; Discussion3.2/3.3; Methods4.4/4.13. No pixels, supplement files or remaining mutant/lipidomic sections Retained public snapshot independently reread for this target; original fetch time and hash preserved, not a new retrieval. | supports | MGDbeta-eGFP localizes to blob/VN and colocalizes withsDer1-2; extension overPPM/cytokinesis role remains qualified. Pt1strain8.6 CCAP1055/1(CCMP2561),20C differs from2016culture. This localization does not establish isolated PPM lipid composition or mandatory individual lipid/protein necessity. |
+| plaque-catalogue | https://imodulondb.org/api/datasets; Fresh complete official /api/datasets response; all20 organism rows/28organism-dataset pairs inspected | supports | No Plasmodium,Toxoplasma or Phaeodactylum host dataset. PVM positive protein survey triggers coverage assessment followed by actual noncoverage. PPM physical boundary claims remain genuinely excluded. No unrelated bacterial proxy/downstream query or negative biology. |
+| plaque-historical-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Retained historical00:49Z unavailable runner receipt and stdout/stderr | context_only | PermissionError accessing pyvenv.cfg; no new invocation or success claimed. Current official-source fallback assessed separately. |
+| plaque-original-checks | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-plaque/original-checks.json; Actual2 original validate/render commands and all30 historical input hashes | supports | Both original pairs validate/render exactly and each15 historical inputs match; both targets remain unchanged. |
+| plaque-native-parasitophorous_vacuole_membrane-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml --verify; Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-verify-receipt.json and stdoutSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native pass is empty represented accession/node coverage, not scientific confirmation of every narrative claim or a required missing-inventory finding. |
+| plaque-native-parasitophorous_vacuole_membrane-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml --causal-graphs; Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-causal-receipt.json and stdoutSHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native pass is empty represented accession/node coverage, not scientific confirmation of every narrative claim or a required missing-inventory finding. |
+| plaque-native-periplastidial_membrane-verify | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml --verify; Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-verify-receipt.json and stdoutSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native pass is empty represented accession/node coverage, not scientific confirmation of every narrative claim or a required missing-inventory finding. |
+| plaque-native-periplastidial_membrane-causal | .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml --causal-graphs; Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-causal-receipt.json and stdoutSHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native pass is empty represented accession/node coverage, not scientific confirmation of every narrative claim or a required missing-inventory finding. |
+| micro-policy | .claude/skills/review-yaml-record/SKILL.md; Native skill/profile/config/checklist including structured-source applicability | context_only | All positive molecular/pathway assertions trigger host coverage assessment, not merely claims about expression modules. No mandatory finding follows solely from empty optional slots. |
+| micro-component-policy | src/cellstructuremech/schema/cellstructuremech.yaml; ComponentTypeEnum/StructuralComponent and CURATION component identity guidance | context_only | Whole anatomical membrane identities are distinct from chemical lipid material. Label-only collective bilayer material is valid; essentiality of defining collective material does not establish necessity of every particular molecule. |
+| micro-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Node identities, source scope, component joins and declared graph scope | context_only | NONMECHANISTIC topology/import associations do not promise a complete experimental mechanism. GENE_OR_PROTEIN includes molecular classes and complexes; no enum-only or optional-accession defect inferred. |
+| micro-discussion-policy | docs/CURATION.md; Discussion rules305–324 and component/taxon guidance | context_only | Rationale is append-only provenance; notes hold current state. A Pex14 instance xref does not settle an explicitly source-neutral PEX-complex grounding question. |
+| micro-pathway-snapshot | conf/pathwaymech_targets.json; Exact gomodel:YeastPathways_YEAST-FAO-PWY target entry and snapshot provenance | context_only | Pinned source d8ec2b69f7a4c615aecddff80498fef1e1fab0ce, target fatty acid oxidation pathway, taxon559292, content SHA e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc and CC BY4.0 source metadata. |
+| micro-pathway-checker | scripts/check_pathway_links.py; Complete native checker read; default snapshot checks versus optional external checkout verification | context_only | Default command verifies linked id/label/taxon/version against committed snapshot. It does not by itself fetch upstream content or establish biological localization. |
+| micro-pathway-decisions | research/cross_mech/2026-10-05-pathway-link-decisions.md; Complete provenance note, especially two peroxisome rows and source-access paragraph | context_only | Matrix and whole organelle are bounded sites of the beta-oxidation segment. The link explicitly avoids assigning every activation or auxiliary reaction to the peroxisome and distinguishes S288c model scope from new experimental evidence. |
+| micro-record-peroxisomal_matrix | data/structures/membrane_organelle/peroxisomal_matrix.yaml; Entire current record including history/discussions, definitions/taxa/components/evidence, all graph nodes/edges and pathway links | supports | Complete independently read unchanged target; current bytes equal original frozen target. No record edit. |
+| micro-prior-peroxisomal_matrix | reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.yaml; Entire original native provenance/checks/evidence/assessments/findings/actions and exact rendered Markdown | context_only | Original pass_with_limitations; no findings/actions. Explicit expression-only iModulon exclusion is present; historical commands/accesses are not current executions. |
+| micro-native-peroxisomal_matrix-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Zero examples and zero typed GENE_OR_PROTEIN nodes. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-native-peroxisomal_matrix-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal.log SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5 | supports | Zero examples and zero typed GENE_OR_PROTEIN nodes. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-record-peroxisomal_membrane | data/structures/membrane_organelle/peroxisomal_membrane.yaml; Entire current record including history/discussions, definitions/taxa/components/evidence, all graph nodes/edges and pathway links | supports | Complete independently read unchanged target; current bytes equal original frozen target. No record edit. |
+| micro-prior-peroxisomal_membrane | reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.yaml; Entire original native provenance/checks/evidence/assessments/findings/actions and exact rendered Markdown | context_only | Original pass_with_limitations; no findings/actions. Explicit expression-only iModulon exclusion is present; historical commands/accesses are not current executions. |
+| micro-native-peroxisomal_membrane-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Zero examples; one UNANCHORED_WITH_UNIPROT node carries P53112. It is not COVERED by component examples and one representative does not identify an entire complex. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-native-peroxisomal_membrane-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal.log SHA256 787e45b3923166187cf3a4eb9e38389533d74feb7b8277f4ce7d9e0d775f25be | supports | Zero examples; one UNANCHORED_WITH_UNIPROT node carries P53112. It is not COVERED by component examples and one representative does not identify an entire complex. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-record-peroxisome | data/structures/membrane_organelle/peroxisome.yaml; Entire current record including history/discussions, definitions/taxa/components/evidence, all graph nodes/edges and pathway links | supports | Complete independently read unchanged target; current bytes equal original frozen target. No record edit. |
+| micro-prior-peroxisome | reviews/structured/20261022T031041Z-peroxisome-audit/review.yaml; Entire original native provenance/checks/evidence/assessments/findings/actions and exact rendered Markdown | context_only | Original needs_curation; one major F1 retained with exact lineage. Explicit expression-only iModulon exclusion is present; historical commands/accesses are not current executions. |
+| micro-native-peroxisome-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify.log SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Zero examples; one UNANCHORED_NO_UNIPROT broad PTS-bearing cargo node. A source-supported generic cargo class does not require inventing one universal accession. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-native-peroxisome-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal-receipt.json; Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal.log SHA256 bc989831a9f0e6b9c6e96c12ed5543938d7226aabb2a937281c771f930cbacf6 | supports | Zero examples; one UNANCHORED_NO_UNIPROT broad PTS-bearing cargo node. A source-supported generic cargo class does not require inventing one universal accession. Actual exit0; generic verify success is not evidence of complete molecular coverage. |
+| micro-original-pairs | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/original-checks.json; Three actual native validates and three render --content exact comparisons | supports | All three original YAMLs validate and all three Markdown artifacts render exactly. |
+| micro-original-inputs | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/original-frozen-inputs.json; All48 original frozen input entries checked at original retained source | supports | All historical inputs verify and all three targets remain unchanged; hashing historical neighbors is not a new scientific assessment. |
+| micro-native-pathway-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links-receipt.json; Actual default command .venv/bin/python scripts/check_pathway_links.py; log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links.log SHA256 19688121d930c04c7ad1def60f0887d3c3afc1da1b02b8d237e4d9de925ed745 | supports | Exit0: six corpus links match pinned snapshot. This is default offline metadata consistency, separate from fresh remote byte verification and source-bounded localization assessment. |
+| micro-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005782,GO:0005778,GO:0005777,GO:0031907,GO:0031903,GO:0006635; All six requested terms: exact id/name/definition/synonyms/isObsolete/typed children | supports | Active GO0005782 matrix,0005778 membrane,0005777 peroxisome,0031907 microbody lumen,0031903 microbody membrane and0006635 beta-oxidation. Exact matrix/membrane subclass and parthood relationships are explicit. GO0005778 is an anatomical cellular component, not a chemical lipid. Matrix crystalloid-core language says many cells, not every yeast peroxisome. |
+| micro-go-0005782-isa | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005782/ancestors?relations=is_a; Complete exact-term ancestors request relations=is_a | supports | Verified transitive subclass ancestry for GO:0005782; not used to invent a direct parthood edge. |
+| micro-go-0005778-isa | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005778/ancestors?relations=is_a; Complete exact-term ancestors request relations=is_a | supports | Verified transitive subclass ancestry for GO:0005778; not used to invent a direct parthood edge. |
+| micro-tax4932 | https://rest.uniprot.org/taxonomy/4932.json; Complete authority taxon identity/rank/active/parent/lineage | supports | Saccharomyces cerevisiae4932 is active species. |
+| micro-tax559292 | https://rest.uniprot.org/taxonomy/559292.json; Complete authority taxon identity/rank/active/parent/lineage | supports | Saccharomyces cerevisiae ATCC204508/S288c559292 is active strain directly within4932; pathway/model identity is not a new strain localization experiment. |
+| micro-P53112 | https://rest.uniprot.org/uniprotkb/P53112.json; Current entryType/recommendedName/genes/organism plus complete FUNCTION/SUBUNIT/LOCATION/CAUTION comments and their explicit citations | supports | Reviewed S288c559292 PEX14, ordered locusYGL153W, aliasG1870, recommended Peroxisomal membrane protein PEX14. Member of PEX13–PEX14 docking machinery. Current annotation calls it single-pass and cautions that older peripheral localization was superseded. Record only says membrane-associated. One instance is representative, not source-neutral full-complex grounding. |
+| micro-family-P53112 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53112/?page_size=200; Exact protein association response, count3,next=null; all metadata types and locations | supports | IPR025655 is Pex14 family; IPR006785 is N-terminal Pex14/PEX33 domain; IPR036388 homologous superfamily. These establish family/domain distinctions for the individual Pex14 example, not an exact CURIE for all membrane-associated peroxin docking machinery. |
+| micro-catalogue | https://imodulondb.org/api/datasets; Full official unpaginated catalogue; all20 organisms/28 organism-dataset pairs inspected | supports | No matching Saccharomyces, cerevisiae, S288c or yeast host entry occurs. All three targets trigger applicability because they assert import/metabolism; current catalogue noncoverage explains no matched downstream gene/module query. No unrelated bacterial proxy or biological absence inferred. |
+| micro-historical-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical command /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources imodulondb datasets; actual00:49Z exit1 PermissionError pyvenv.cfg | context_only | Historical unavailable optional runner, not a fresh invocation or current passing command. Fresh official catalogue fallback completed independently. |
+| micro-sibirny2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Ffemsyr%2Ffow038%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact DOI core metadata result and complete abstract; bounded pageSize25 unique MED result | context_only | Sibirny2016 PMID27189367 is a secondary yeast review. Abstract supports beta-oxidation, peroxins and import signals; it is not a strain experiment or complete localization census. |
+| micro-yuan2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbamcr.2015.09.008%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact DOI core metadata result and complete abstract; bounded pageSize25 unique MED result | context_only | Yuan/Veenhuis/van der Klei2016 PMID26367802 is a secondary review. Abstract describes differing mutant-marker interpretations and membrane remnants containing Pex13/Pex14; its biogenesis model is not an experimentally universal claim. |
+| micro-smith2013-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrm3700%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact DOI core metadata result and complete abstract; bounded pageSize25 unique MED result | context_only | Smith/Aitchison2013 PMID24263361 PMCID4060825 is a secondary review, not new primary experimental evidence. |
+| micro-smith2013-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC4060825.1/PMC4060825.1.xml; Genuine JATS title/identity; complete Box1, S5 Matrix protein import including Figure2 caption, S10 growth/fission and S11 de novo biogenesis; Box2 also read but no extra claim derived; no pixels/supplements | context_only | Secondary context supports beta-oxidation, broad PTS cargo import and membrane docking. It explicitly distinguishes PTS receptors/taxa and models of import/biogenesis; record does not assert every pathway step, universal stoichiometry or specific fission mechanism. |
+| micro-pex14-primary | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9094717+OR+EXT_ID%3A20154681+OR+EXT_ID%3A33323485&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact three-PMID EuropePMC core query; complete primary abstracts and bibliographic identities for9094717,20154681,33323485; no primary full body | supports | Primary9094717 supports S.cerevisiae Pex14 membrane-associated PTS receptor docking;20154681 supports Pex5/Pex14 gated-channel assays;33323485 supports yeast Pex14/Pex17 membrane docking assembly and explicitly leaves detailed mechanism unresolved. The record needs only bounded docking/import membership; abstract-only access does not certify constructs, full Methods, images or mechanistic universality. |
+| micro-pathway | https://raw.githubusercontent.com/CultureBotAI/PathwayMech/d8ec2b69f7a4c615aecddff80498fef1e1fab0ce/data/pathways/fatty-acid-oxidation-pathway.yaml; Exact immutable remote source bytes verified against local SHA; identity/description/taxa, all27 participant IDs/labels and11 reaction IDs/labels read; mechanistic-edge quotations/upstream model not audited | supports | Source d8ec2b69f7a4c615aecddff80498fef1e1fab0ce bytes exactly e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc. Model includes fatty-acid activation and auxiliary reactions as well as beta-oxidation; both links expressly limit SITE_OF to beta-oxidation and disclose narrower S288c scope. |
+| micro-access-smith2013-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC4060825/; Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/smith2013-pmc.receipt.json | context_only | HTTP200 recaptcha, not article; genuine S3 review body separately read. |
+| micro-access-sibirny2016-publisher | https://academic.oup.com/femsyr/article/16/4/fow038/2470127; Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/sibirny2016-publisher.receipt.json | context_only | HTTP403 publisher route, no full-body access. |
+| micro-access-pex14-2020-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC7776778.1/PMC7776778.1.xml; Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-jats.receipt.json | context_only | HTTP404 S3 candidate, no primary body. |
+| micro-access-pex14-2020-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC7776778/; Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-pmc.receipt.json | context_only | HTTP200 recaptcha, not primary body. |
+| micro-access-pex14-2020-bioc | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC7776778/unicode; Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-bioc.receipt.json | context_only | HTTP200 service error says no result; not primary body. |
+| check-qc | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/qc.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| check-labels | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/labels.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| check-trait-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/trait-links.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Native TraitMech link check passed. |
+| check-vendored | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/vendored.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Pinned governed files match; native vendored check passed. |
+| check-curies | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/curies.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| focused | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/focused-results.json; All twenty actual target schema/strict command outputs | supports | Ten schema and ten strict commands returned exit zero. |
+| supplemental-pmid | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pmid-chunks-receipt.json; Complete native-report PMID set checked with unchanged resolver in batches of at most fifty | supports | 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers remain unverified. |
+| historical-adapter-runner-availability | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical runner invocation receipt, exact SHA256 reverified during PR2374 synthesis | context_only | Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS PermissionError reading the configured runner pyvenv.cfg. This is retained historical availability evidence, not a fresh attempt or a scientific validation failure. Native policy permits inspected source-catalogue fallback. |
+| root-native-parasitophorous_vacuole_membrane-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-parasitophorous_vacuole_membrane-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-periplastidial_membrane-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-periplastidial_membrane-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisomal_matrix-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisomal_matrix-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisomal_membrane-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisomal_membrane-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisome-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-peroxisome-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle_lumen-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle_lumen-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle_membrane-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagocytic_vesicle_membrane-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagolysosome-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagolysosome-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagolysosome_membrane-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-native-phagolysosome_membrane-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | Zero protein examples and zero typed molecular nodes. Actual command exit0; native inventory is distinct from source-scope and mechanistic assessment. |
+| root-pathway-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links.log; Actual native offline pathway-link command and exact source-head receipt | context_only | OK: 6 pathway links match the pinned target snapshot. Link consistency alone is not biological localization evidence. |
+
+## Limits And Additional Notes
+
+- Phagocytic vesicle and phagolysosome independent subreview: Independent read-only source review of five unchanged targets at the exact source head. Nine inherited scientific findings remain open (2major7minor); one inherited minor rationale finding is rejected with exact lineage. No new scientific finding, record edit, neighbor verdict, grouped closure or future CI/queue certification is asserted.
+- Phagocytic vesicle and phagolysosome independent subreview: Fresh current GO/SL/taxonomy/catalogue and exact EuropePMC metadata/abstracts are distinguished from fresh genuine university-held primary PDF bodies. Two HTTP200 PMC challenge pages and one HTTP500 fullTextXML attempt are not body evidence. No cached2364 body is claimed as current access.
+- Phagocytic vesicle and phagolysosome independent subreview: Gotthardt2002 main scientific text pp3508–3518 and Fig1–7 captions were read. Gotthardt2006 reading is bounded to main text pp2228–2233 and2235–2241, Fig1/2/3/4/6 captions. TableI images, Fig5 full caption, all source pixels, supplements/raw datasets and reference-list source bodies were not independently audited.
+- Phagocytic vesicle and phagolysosome independent subreview: Both papers directly study D. discoideum Ax2 in HL5c at22C using latex-bead phagosomes. Trafficking/composition is measured directly; the2002 acidification account integrates prior discussion evidence, and2006 Fig4C pH is a macropinocytosis-derived scheme. No new pH trace or complete molecular census is inferred.
+- Phagocytic vesicle and phagolysosome independent subreview: The2006 temporal proteomics used intact-phagosome extracts; separate carbonate-enriched pooled membrane samples served identification. Lmp CD36/LIMPII trafficking is not a direct LAMP-protection test, and Ax2 observations do not establish the full unqualified cross-taxon molecular definitions. These are evidence limits, not biological absence claims.
+- Phagocytic vesicle and phagolysosome independent subreview: All ten actual native protein commands pass on independently confirmed empty represented scopes. Positive narrative maturation/trafficking/acidification still triggers applicability; fresh full catalogue has no matching host. Historical00:49Z runner failure is historical only; no proxy bacterial prey or unrelated-organism query is used.
+- Phagocytic vesicle and phagolysosome independent subreview: Collective label-only bilayer constitution is distinct from exact chemistry or individual formation necessity. Discussion rationale is append-only provenance even when OPEN. The rejected original action already forbids altering dated history; the correction rejects an unsupported mandatory current-rationale requirement, not an alleged erasure demand. The unresolved lipid-grounding TODO remains open.
+- Phagocytic vesicle and phagolysosome independent subreview: All34 used local inputs were frozen before use:17 common policy/schema/script inputs,5 targets,10 original artifacts and2 bounded boundary neighbors. No unreviewed neighbor mechanism or historical issue is newly resolved.
+- Parasitophorous and periplastidial membrane independent subreview: Both targets unchanged. One inheritedmajor PVMspecies finding/action retains exact key/severity and repository/review/finding predecessor. PPM has no inherited or newly confirmedscientificfinding and remains qualified.
+- Parasitophorous and periplastidial membrane independent subreview: Original2pairs natively validate/render byte-for-byte; each15 historicalinputs match retainedsource. Historicalhash verification doesnot scientificallyassess every oldcontext. Allcurrent actuallyused localinputs werefrozen beforeuse; no record/original/status/history edits.
+- Parasitophorous and periplastidial membrane independent subreview: Tenfresh officialauthority/catalogue requests are separate from nine retained publicliterature snapshots independently reread with actual original fetchdates and hashes. No reused response is represented as newly retrieved.
+- Parasitophorous and periplastidial membrane independent subreview: Schnider genuineJATS Results1.1/1.2,fullDiscussion2,Methods3.6/3.9 and embeddedcaptions reread at original18:42Zsnapshot. ActualorganismP.bergheiANKAmCherryHsp70; P.falciparumorthologcomparisons remainseparate. No pixels,supplementfiles,rawmassspectra or newquantitativereanalysis.61candidateproteins are not61provenPVMconstituents.
+- Parasitophorous and periplastidial membrane independent subreview: Lingelbach1998,Clough2017 andHashimoto2005 are complete depositedsecondaryabstracts only. No fullreviewbody or newlyinspectedprimarymechanism isclaimed from thoseabstracts; earlieraccesslimitations remainhistorical.
+- Parasitophorous and periplastidial membrane independent subreview: Flori2016 genuinePDF pp254–264 scientificmaintext,Methods andFig1–7captions independently reread; textregeneration exact. No figurepixels/supplementalmovies/rawdata. Pt1CCAP1055/3,ESAW19C12:12h; precise individualmembranelipidcomposition unknown in that study.
+- Parasitophorous and periplastidial membrane independent subreview: Gueguen2024 genuineJATS onlyResults2.4/Fig2–3captions,Discussion3.2/3.3,Methods4.4/4.13. No figurepixels,supplementfiles or remainingmutant/lipidomicresults audited. Pt1strain8.6CCAP1055/1(CCMP2561),20C distinctfrom2016culture. MGDbetaassociation/localization isnot isolatedPPMcomposition or formationnecessity.
+- Parasitophorous and periplastidial membrane independent subreview: GO7770041supplies maintainedoriginstatement; Floriacknowledges an alternativeproposedhostERorigin. Topologyprovidesstronger directobservation than a uniquelyprovedancestraltrace. Thisboundeduncertainty doesnot refute exactGOidentity.
+- Parasitophorous and periplastidial membrane independent subreview: Bothcurrentnativeproteincommandpairs pass on0examples/0typedmolecularnodes. Genericverify-success isnot fullscientific/proteincompleteness certification. Noimages or quantitativephysicalproperties aremaintained in assignedrecords.
+- Parasitophorous and periplastidial membrane independent subreview: PVMpositiveproteinsurvey triggers applicability; PPMpositiveclaims aregenuinelyphysical/material/topological. Freshofficialcatalogue hasnoPlasmodium,Toxoplasma orPhaeodactylumhost; noforeignhostproxy/downstreamquery ornegativebiology. Historical00:49Zrunner failure remains unavailable,no newinvocation.
+- Parasitophorous and periplastidial membrane independent subreview: Four frozenneighbors are boundarycontext only; theirseparate scientificissues/history dispositions are not adjudicatedorclosed. OpenPPMboundary/groundingprompts do notmandate rewritingappend-onlyrationale or closingvalidfuturecuration. Rootowns globalgates,issuededup/publication,successor and finalCI/queue.
+- Three peroxisome records independent subreview: Three complete unchanged peroxisome targets; matrix/membrane qualified pass, whole retains exact inherited major F1 and request-curation action. Three bundle applicability exclusions need successor correction; no record edits.
+- Three peroxisome records independent subreview: Sibirny2016 and Yuan2016 are secondary abstracts, not primary strain experiments. Smith2013 genuine S3 secondary body read only at declared Box1/S5/Figure2caption/S10/S11 (plus Box2); no pixels/supplements. Publisher/PMC blocked or service-error bodies are not article access.
+- Three peroxisome records independent subreview: Primary Pex14 papers9094717/20154681/33323485 were read as complete abstracts with exact metadata, not full Methods, constructs, images or all raw assays. 2020 S3/PMC/BioC attempts failed or returned challenge/error. Broad docking/import membership is supported; precise mechanism and per-protein organelle formation necessity not certified.
+- Three peroxisome records independent subreview: Current P53112 reviewed species/strain/name/locus and protein-to-InterPro associations are verified, but one taxon-specific representative is not an exact identity for the entire peroxin docking machinery. Historical rationale remains append-only; no invented completed complex grounding.
+- Three peroxisome records independent subreview: All three have zero protein examples; matrix has zero typed nodes, membrane one UNANCHORED_WITH_UNIPROT, whole one UNANCHORED_NO_UNIPROT. Generic native success messages do not imply populated or complete family coverage.
+- Three peroxisome records independent subreview: All three positive molecular/pathway scopes trigger adapter checks; fresh official20-organism/28-pair catalogue lacks matching Saccharomyces/S288c. No unrelated proxy or downstream unmatched query; noncoverage is not biological absence. Historical00:49Z runner failure is not rerun.
+- Three peroxisome records independent subreview: Pinned PathwayMech source exact bytes/id/label/S288c taxon plus description/27participantIDs/11reactionlabels reviewed; mechanistic-edge quotes/upstream GO-CAM not audited. Native default pathway gate checks metadata snapshot only; remote hash checked separately. SITE_OF is bounded to beta-oxidation segment, not all activation/auxiliary reactions.
+- Three peroxisome records independent subreview: Phagolysosome discussion auxiliary challenge is a separately scoped receipt, not a fourth complete scientific review here. No terminal broader issue/category resolution, record/history/review/Git/GitHub mutation or future CI/merge certification. Root owns global and final gates.
+- Historical observations remain immutable; their old checks are not represented as current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure. Catalogue-based coverage is assessed directly; fresh and reused responses retain actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include 909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head CI and merge-group CI occur after saving this immutable observation and are not represented here as already completed.
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally and pushed without force. All ten target hashes match their original frozen inputs; no stale-refresh issue is invented.
+- This explicit issue-bearing ten-record cohort follows native persistence policy. Inherited scientific findings retain stable keys and exact predecessor repository/review/finding identities; rejected findings retain explicit evidence and disposition.
+- Issue2760 tracks three omitted source-applicability checks (phagocytic vesicle, lumen, membrane) and six unsupported expression-only exclusions (PVM, peroxisomal matrix, peroxisomal membrane, peroxisome, phagolysosome and membrane). The periplastidial membrane exclusion is genuine because the bounded record asserts material/topology, not a positive enzyme mechanism.
+- Issue2761 tracks the rationale-only review finding. Native policy treats rationale as append-only provenance even while OPEN. The exact current phagolysosome-membrane identity is correct, broader lipid context and chemical-grounding TODO remain valid, and optional appended clarification remains allowed. The original action explicitly avoided altering dated history; the rejected defect is its mandatory current-rationale correction, not an invented demand to erase history.
+- Source commit f1ebcdd9788bfee294f3276788874b3860033d23 is retained by tag review-base/pr2374-current-record-followup-20261103.
+- CLAUDE.md aliases AGENTS.md; canonical regular AGENTS.md bytes are frozen. All used local boundary, source-policy, schema, pathway-checker and original-review inputs were frozen before assessment.
+- Fresh and reused primary snapshots preserve actual timestamps and inspection tiers. Source access challenges are not represented as paper-body inspection.
+- All twenty native protein commands returned zero with zero protein examples. The peroxisomal-membrane node is UNANCHORED_WITH_UNIPROT (P53112); the whole-peroxisome broad cargo node is UNANCHORED_NO_UNIPROT. The other eight targets have zero typed molecular nodes. These are inventory results, not proof of mechanism or automatic grounding defects.
+- The native CausalNode schema permits broad protein groups and complexes. Whole membrane anatomical identities typed as LIPID are distinct from valid reviewed-label-only bilayer material.
+- The peroxisomal PathwayMech links are checked against the frozen pinned snapshot and independently inspected exact external source bytes. Link consistency alone does not independently establish cellular localization.
+- Related issue2759 concerns the whole parasitophorous-vacuole record, a distinct maintained owner from this cohort's membrane finding. Existing validator2514 remains open and reused. No record or resolver is edited.
+- Final trusted-base review-check, exact-head independent acceptance, final-head CI and merge-group CI occur after this immutable observation and are not represented as already completed.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261103T192931Z-pr2374-current-record-followup
+kind: batch
+repository: CultureBotAI/CellStructureMech
+title: 'PR 2374: current-input review of ten records and adversarial follow-up'
+started_at: '2026-11-03T19:19:08.260647Z'
+finished_at: '2026-11-03T19:29:31Z'
+reviewer:
+  identity: Codex root synthesis with three independent read-only adversarial reviewers
+  kind: agent
+  independence: self_review
+  independence_basis: Root authors this synthesis of three separate read-only reviews.
+    Independent reviewers inspected original bundles, current record bytes and primary/authority
+    sources, and did not author or modify repository files. They independently re-review
+    the final saved head before merge-queue admission. This is not human scientific
+    sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md; explicit batch route in docs/record-review-profile.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Current-input adversarial follow-up for the complete ten-record cohort after
+  merging main. All ten original target hashes still match, so no stale refresh is
+  required. Three omitted structured-source applicability checks are supplied and
+  six unsupported expression-only exclusions corrected; the periplastidial membrane
+  retains a genuine physical/material-topology exclusion. Eleven inherited scientific
+  findings remain open (four major and seven minor) across seven records. One inherited
+  rationale-only finding is rejected with exact lineage and policy evidence. Three
+  targets retain qualified positive assessments. All original review observations
+  and scientific records remain unchanged.
+source:
+  git_revision: f1ebcdd9788bfee294f3276788874b3860033d23
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-cell-structure/SKILL.md
+    sha256: eee04ee51d2c82c05df98570674084bdce9001e5aa67d6230ac1ed50064a3175
+    role: context
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/pathwaymech_targets.json
+    sha256: 625e474ce45903a482587deb9b26237088d1298d88a017920a69370c89db5dd0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/membrane_organelle/early_phagosome.yaml
+    sha256: 9b6c5d68e60dd7e28c33d369c72e84353e5415993837864471571dd2d4bb294e
+    role: context
+  - path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    sha256: 15876d75b2efb4115edcf9f6ffa44a5254fcf104c9f543d7eb07b78a5f06db8a
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+    sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+    sha256: 4a2a0820584215f4a76152f44d66e365ed67a663527da333d2e6c00d24bc244f
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+    role: target
+  - path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+    sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+    role: target
+  - path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    sha256: 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23
+    role: target
+  - path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    sha256: 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87
+    role: target
+  - path: data/structures/membrane_organelle/peroxisome.yaml
+    sha256: 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    sha256: 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    sha256: 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    sha256: 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome.yaml
+    sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    sha256: 096069e6ecc9f33d640dfb9621fa69dedfab50cb9a9f08e6186e9583a823c319
+    role: context
+  - path: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+    sha256: 59bd8548931d27f711233f542b5f927c0e7b0a68dd611eabb4777ee08003deaa
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: research/cross_mech/2026-10-05-pathway-link-decisions.md
+    sha256: d209257e5c81e5189f4003b9aac347f8dbe7f3a6b59fb28f238db900d894fc73
+    role: context
+  - path: reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.md
+    sha256: 634d7da19a1bff5005ce6dd7f63da227a16bea6af53c3f03a291aef950873f3f
+    role: context
+  - path: reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.yaml
+    sha256: ab144e6ca14ead1150bd38ccd91d28f93e9d99d3d12edec80b047206c2a16db9
+    role: context
+  - path: reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.md
+    sha256: 5cd03d682798c8409478fe5fbd271bd8e2b32a30d5c7fc6ef05ee4d37c28470d
+    role: context
+  - path: reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.yaml
+    sha256: a4962f45295c336141017b26dce5b1ce05ae0f16816d69fd1d2cc18575d23209
+    role: context
+  - path: reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.md
+    sha256: 76315cba89742e6198e6e10244e664d399aa772f5c49dfcdfd035d101f8ef68f
+    role: context
+  - path: reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.yaml
+    sha256: 6c1d359dba665a85d3c089438031cc876e5ac8877993b666c69e33df2098bce5
+    role: context
+  - path: reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.md
+    sha256: f0e7c1ff2fcca72f50dc28f780ac82bc3139cba742ca6513f7568cc0288cc4f4
+    role: context
+  - path: reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.yaml
+    sha256: b8d38cf347edd8aa33485b515cf2f20fafe4aee5f785b7796cbea0e1092c57b8
+    role: context
+  - path: reviews/structured/20261022T031041Z-peroxisome-audit/review.md
+    sha256: cdf1036cb0744abf75de21fd931ba25e1198a102a4c45d4a97dcac72907fff62
+    role: context
+  - path: reviews/structured/20261022T031041Z-peroxisome-audit/review.yaml
+    sha256: 5b9d19d31b452b88405b1d8286404a9feb72dfe4ee0ff72ce03b884b284368b4
+    role: context
+  - path: reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.md
+    sha256: 07107302e7f85da78ad8a826e98a21be18351d9edb2bd8b2a95d0399987413ea
+    role: context
+  - path: reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.yaml
+    sha256: 6b421c53d7985ef3c576148772748d93715672f0eb8aeb7643352064635ed799
+    role: context
+  - path: reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.md
+    sha256: ab6bf71a5adb1bab5db39e1f215aa79254bb41fd70e1b921f85339040ab8814c
+    role: context
+  - path: reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.yaml
+    sha256: 8b503c9a581304557223e381830056fec89d1a2eec43c50cf99536723aea947c
+    role: context
+  - path: reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.md
+    sha256: f690da8c55e38f11da2fa1ee3934aee9550de756a5685da4050de9da7416d2dc
+    role: context
+  - path: reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.yaml
+    sha256: d4d1023db781c84008dc13dc1cfd158137f60ba1379c620c0fe8c8fd9c100c50
+    role: context
+  - path: reviews/structured/20261022T031046Z-phagolysosome-audit/review.md
+    sha256: 9b90a56e8ecdeb9112b54b6f9b9ee9eee668df6c4598f81dd0f14320586ee082
+    role: context
+  - path: reviews/structured/20261022T031046Z-phagolysosome-audit/review.yaml
+    sha256: bf609784306ad99c53060d16342282bf17236ffdfca1ea871058caad9de98487
+    role: context
+  - path: reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.md
+    sha256: 494f379c21b65f9b4c023bf2ef1c0eb5769e1e31466f5155d378a83c63f30f97
+    role: context
+  - path: reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml
+    sha256: e837aabb6471078981dd080528103c3700416021a3b1e7d03d4a1a5a5098550a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/check_pathway_links.py
+    sha256: 054e0e3a5d7b8c8e7a9f661bcc1c096707aa4ee43e8537d60a9b1b6fd036b226
+    role: context
+  - path: scripts/corpus.py
+    sha256: e93295dde12136ccc7e030bf83311f2f318973c12dc1ccdc2a97a1d517c598c3
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:parasitophorous_vacuole_membrane
+  path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  label: parasitophorous vacuole membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:7770041
+  path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  label: periplastidial membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0005782
+  path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  label: peroxisomal matrix
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    role: maintained scientific record
+- target_id: GO:0005778
+  path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  label: peroxisomal membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0005777
+  path: data/structures/membrane_organelle/peroxisome.yaml
+  label: peroxisome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisome.yaml
+    role: maintained scientific record
+- target_id: GO:0045335
+  path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  label: phagocytic vesicle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    role: maintained scientific record
+- target_id: GO:0097013
+  path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  label: phagocytic vesicle lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    role: maintained scientific record
+- target_id: GO:0030670
+  path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  label: phagocytic vesicle membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    role: maintained scientific record
+- target_id: GO:0032010
+  path: data/structures/membrane_organelle/phagolysosome.yaml
+  label: phagolysosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+- target_id: GO:0061474
+  path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  label: phagolysosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Exact ten-record PR cohort reassessed against current main 9ae1b698031132849ac7e6843d552cd68f184566.
+    Changed inputs are substantively reassessed. Scientific records remain unchanged.
+  selection: Complete cohort of ten maintained records reviewed in original PR head
+    f0596066e8a1e61a55e88adb5f95a19964f57ff0.
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+checks:
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: just qc
+  exit_code: 0
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  scope_note: Actual local execution at main-merge head f1ebcdd9788bfee294f3276788874b3860033d23.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-qc
+- check_id: labels
+  name: Native label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: just validate-products
+  exit_code: 0
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  scope_note: Actual local execution at main-merge head f1ebcdd9788bfee294f3276788874b3860033d23.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-labels
+- check_id: trait-links
+  name: TraitMech references
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Native TraitMech link check passed.
+  scope_note: Actual local execution at main-merge head f1ebcdd9788bfee294f3276788874b3860033d23.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-trait-links
+- check_id: vendored
+  name: Pinned governed files
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: just vendored-check
+  exit_code: 0
+  summary: Pinned governed files match; native vendored check passed.
+  scope_note: Actual local execution at main-merge head f1ebcdd9788bfee294f3276788874b3860033d23.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-vendored
+- check_id: curies
+  name: Native identifier resolver
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: just check-curies
+  exit_code: 0
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  scope_note: Actual local execution at main-merge head f1ebcdd9788bfee294f3276788874b3860033d23.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-curies
+- check_id: focused-0
+  name: validate cellstructuremech:parasitophorous_vacuole_membrane
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-1
+  name: validate-strict cellstructuremech:parasitophorous_vacuole_membrane
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate-strict data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-2
+  name: validate GO:7770041
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770041
+  command: just validate data/structures/membrane_organelle/periplastidial_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-3
+  name: validate-strict GO:7770041
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770041
+  command: just validate-strict data/structures/membrane_organelle/periplastidial_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-4
+  name: validate GO:0005782
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005782
+  command: just validate data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-5
+  name: validate-strict GO:0005782
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005782
+  command: just validate-strict data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-6
+  name: validate GO:0005778
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005778
+  command: just validate data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-7
+  name: validate-strict GO:0005778
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005778
+  command: just validate-strict data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-8
+  name: validate GO:0005777
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005777
+  command: just validate data/structures/membrane_organelle/peroxisome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-9
+  name: validate-strict GO:0005777
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005777
+  command: just validate-strict data/structures/membrane_organelle/peroxisome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-10
+  name: validate GO:0045335
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045335
+  command: just validate data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-11
+  name: validate-strict GO:0045335
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045335
+  command: just validate-strict data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-12
+  name: validate GO:0097013
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097013
+  command: just validate data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-13
+  name: validate-strict GO:0097013
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097013
+  command: just validate-strict data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-14
+  name: validate GO:0030670
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030670
+  command: just validate data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-15
+  name: validate-strict GO:0030670
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030670
+  command: just validate-strict data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-16
+  name: validate GO:0032010
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032010
+  command: just validate data/structures/membrane_organelle/phagolysosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-17
+  name: validate-strict GO:0032010
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032010
+  command: just validate-strict data/structures/membrane_organelle/phagolysosome.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-18
+  name: validate GO:0061474
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061474
+  command: just validate data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-19
+  name: validate-strict GO:0061474
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061474
+  command: just validate-strict data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: supplemental-pmid
+  name: Supplemental bounded PMID authority checks
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: .venv/bin/python /private/tmp/cellstructure-batches-2346-2397-20261103/check_pmid_chunks.py
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374
+  exit_code: 0
+  summary: 909 PMIDs all OK in bounded native requests; full-command limitations remain
+    separate.
+  evidence_ids:
+  - supplemental-pmid
+- check_id: structured-source-applicability
+  name: Official structured-source applicability and covered-dataset cross-checks
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  summary: 'Nine records positively assert molecular/pathway or metabolic and maturation
+    properties: PVM BioID-associated proteins, three peroxisome records with import/metabolism/peroxin
+    machinery, three phagocytic vesicle records with maturation/acidification, and
+    two phagolysosome records with molecular properties. Three omitted checks and
+    six unsupported expression-only exclusions are corrected using actual host/strain
+    catalogue coverage. The periplastidial membrane retains a genuine physical/material
+    boundary exclusion. Noncoverage is not biological absence; unmatched datasets
+    are not proxies. Historical runner unavailability remains historical and public-source
+    fallback preserves actual access timestamps and limits.'
+  evidence_ids:
+  - septin-catalogue
+  - plaque-catalogue
+  - micro-catalogue
+- check_id: independent-scientific-review
+  name: Independent claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  summary: Three read-only reviewers covered the complete ten-record cohort, including
+    changed inputs, with explicit scientific findings and source-access limits. Final
+    artifact/head acceptance occurs after saving.
+  evidence_ids:
+  - septin-review-policy
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-graph-policy
+  - septin-protein-policy
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-tax44689
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - plaque-policy
+  - plaque-rubric
+  - plaque-graph-rubric
+  - plaque-schema-policy
+  - plaque-history-policy
+  - plaque-go
+  - plaque-go-ppm-isa
+  - plaque-SL0193
+  - plaque-SL0194
+  - plaque-tax5794
+  - plaque-tax5811
+  - plaque-tax5833
+  - plaque-tax5821
+  - plaque-tax2850
+  - plaque-lingelbach1998-meta
+  - plaque-clough2017-meta
+  - plaque-hashimoto2005-meta
+  - plaque-schnider2018-meta
+  - plaque-flori2016-meta
+  - plaque-gueguen2024-meta
+  - plaque-schnider2018-body
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-gueguen2024-jats
+  - plaque-catalogue
+  - micro-policy
+  - micro-component-policy
+  - micro-graph-policy
+  - micro-discussion-policy
+  - micro-pathway-snapshot
+  - micro-pathway-checker
+  - micro-pathway-decisions
+  - micro-go
+  - micro-go-0005782-isa
+  - micro-go-0005778-isa
+  - micro-tax4932
+  - micro-tax559292
+  - micro-P53112
+  - micro-family-P53112
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-smith2013-meta
+  - micro-smith2013-jats
+  - micro-pex14-primary
+  - micro-pathway
+- check_id: historical-adapter-runner
+  name: Retained historical adapter runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  summary: Historical00:49Z invocation unavailable due to OS access restriction. Official
+    catalogue fallback was inspected separately; no fresh invocation is claimed. Actual
+    historical exit1 is retained in the evidence receipt; the native unavailable-check
+    model has no execution exit-code field.
+  scope_note: Historical canary receipt reread and hash-verified. Native policy permits
+    source-page fallback.
+  evidence_ids:
+  - historical-adapter-runner-availability
+- check_id: parasitophorous_vacuole_membrane-uniprot-verify
+  name: Native parasitophorous vacuole membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-parasitophorous_vacuole_membrane-uniprot-verify
+- check_id: parasitophorous_vacuole_membrane-uniprot-causal
+  name: Native parasitophorous vacuole membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-parasitophorous_vacuole_membrane-uniprot-causal
+- check_id: periplastidial_membrane-uniprot-verify
+  name: Native periplastidial membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770041
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-periplastidial_membrane-uniprot-verify
+- check_id: periplastidial_membrane-uniprot-causal
+  name: Native periplastidial membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:7770041
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-periplastidial_membrane-uniprot-causal
+- check_id: peroxisomal_matrix-uniprot-verify
+  name: Native peroxisomal matrix UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005782
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisomal_matrix-uniprot-verify
+- check_id: peroxisomal_matrix-uniprot-causal
+  name: Native peroxisomal matrix UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005782
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisomal_matrix-uniprot-causal
+- check_id: peroxisomal_membrane-uniprot-verify
+  name: Native peroxisomal membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005778
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Native
+    command returned zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisomal_membrane-uniprot-verify
+- check_id: peroxisomal_membrane-uniprot-causal
+  name: Native peroxisomal membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005778
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Native
+    command returned zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisomal_membrane-uniprot-causal
+- check_id: peroxisome-uniprot-verify
+  name: Native peroxisome UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005777
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml
+    --verify
+  exit_code: 0
+  summary: One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Native command
+    returned zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisome-uniprot-verify
+- check_id: peroxisome-uniprot-causal
+  name: Native peroxisome UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005777
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Native command
+    returned zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-peroxisome-uniprot-causal
+- check_id: phagocytic_vesicle-uniprot-verify
+  name: Native phagocytic vesicle UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045335
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle-uniprot-verify
+- check_id: phagocytic_vesicle-uniprot-causal
+  name: Native phagocytic vesicle UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0045335
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle-uniprot-causal
+- check_id: phagocytic_vesicle_lumen-uniprot-verify
+  name: Native phagocytic vesicle lumen UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097013
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle_lumen-uniprot-verify
+- check_id: phagocytic_vesicle_lumen-uniprot-causal
+  name: Native phagocytic vesicle lumen UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097013
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle_lumen-uniprot-causal
+- check_id: phagocytic_vesicle_membrane-uniprot-verify
+  name: Native phagocytic vesicle membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030670
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle_membrane-uniprot-verify
+- check_id: phagocytic_vesicle_membrane-uniprot-causal
+  name: Native phagocytic vesicle membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030670
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagocytic_vesicle_membrane-uniprot-causal
+- check_id: phagolysosome-uniprot-verify
+  name: Native phagolysosome UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032010
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagolysosome.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagolysosome-uniprot-verify
+- check_id: phagolysosome-uniprot-causal
+  name: Native phagolysosome UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032010
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagolysosome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagolysosome-uniprot-causal
+- check_id: phagolysosome_membrane-uniprot-verify
+  name: Native phagolysosome membrane UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061474
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagolysosome_membrane-uniprot-verify
+- check_id: phagolysosome_membrane-uniprot-causal
+  name: Native phagolysosome membrane UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061474
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Zero protein examples and zero typed molecular nodes. Native command returned
+    zero.
+  scope_note: Actual current source-head execution; broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-phagolysosome_membrane-uniprot-causal
+- check_id: native-pathway-links
+  name: Native pinned pathway-link consistency
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  command: .venv/bin/python scripts/check_pathway_links.py
+  exit_code: 0
+  summary: 'OK: 6 pathway links match the pinned target snapshot'
+  evidence_ids:
+  - root-pathway-links
+evidence:
+- evidence_id: current-record-0
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da;
+    current SHA256 fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+- evidence_id: original-review-0
+  kind: prior_review
+  reference: reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: ab144e6ca14ead1150bd38ccd91d28f93e9d99d3d12edec80b047206c2a16db9
+- evidence_id: current-record-1
+  kind: record_content
+  reference: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a;
+    current SHA256 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+- evidence_id: original-review-1
+  kind: prior_review
+  reference: reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: a4962f45295c336141017b26dce5b1ce05ae0f16816d69fd1d2cc18575d23209
+- evidence_id: current-record-2
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23;
+    current SHA256 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23
+- evidence_id: original-review-2
+  kind: prior_review
+  reference: reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 6c1d359dba665a85d3c089438031cc876e5ac8877993b666c69e33df2098bce5
+- evidence_id: current-record-3
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87;
+    current SHA256 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87
+- evidence_id: original-review-3
+  kind: prior_review
+  reference: reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: b8d38cf347edd8aa33485b515cf2f20fafe4aee5f785b7796cbea0e1092c57b8
+- evidence_id: current-record-4
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisome.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828;
+    current SHA256 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828
+- evidence_id: original-review-4
+  kind: prior_review
+  reference: reviews/structured/20261022T031041Z-peroxisome-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 5b9d19d31b452b88405b1d8286404a9feb72dfe4ee0ff72ce03b884b284368b4
+- evidence_id: current-record-5
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f;
+    current SHA256 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f
+- evidence_id: original-review-5
+  kind: prior_review
+  reference: reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 6b421c53d7985ef3c576148772748d93715672f0eb8aeb7643352064635ed799
+- evidence_id: current-record-6
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19;
+    current SHA256 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19
+- evidence_id: original-review-6
+  kind: prior_review
+  reference: reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 8b503c9a581304557223e381830056fec89d1a2eec43c50cf99536723aea947c
+- evidence_id: current-record-7
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f;
+    current SHA256 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f
+- evidence_id: original-review-7
+  kind: prior_review
+  reference: reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: d4d1023db781c84008dc13dc1cfd158137f60ba1379c620c0fe8c8fd9c100c50
+- evidence_id: current-record-8
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e;
+    current SHA256 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+- evidence_id: original-review-8
+  kind: prior_review
+  reference: reviews/structured/20261022T031046Z-phagolysosome-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: bf609784306ad99c53060d16342282bf17236ffdfca1ea871058caad9de98487
+- evidence_id: current-record-9
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Original frozen SHA256 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32;
+    current SHA256 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+- evidence_id: original-review-9
+  kind: prior_review
+  reference: reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: e837aabb6471078981dd080528103c3700416021a3b1e7d03d4a1a5a5098550a
+- evidence_id: septin-review-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Current native review process, especially molecular/pathway structured-source
+    applicability and unavailable-source fallback
+  summary: Positive molecular or pathway assertions trigger applicability assessment
+    even without expression claims or an individual protein inventory. Matched-host
+    evidence and bounded fallback are required; missing coverage is not biological
+    refutation.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: septin-curation-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Identity/evidence rules and Discussions lines305–324, freshly re-read
+  summary: 'Exact identity is distinct from constituent grounding. Discussion is provenance,
+    not task description: rationale is append-only; notes hold current state. OPEN
+    does not convert rationale into an authoritative current inventory. Optional appended
+    clarification is allowed; it is not automatically mandatory curation.'
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: septin-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Current structure, material, graph and evidence definitions
+  summary: Structure identities, collective material and molecular examples are distinct.
+    Generic protein classes and complexes are allowed; no optional representative
+    or enum-only defect is invented.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: septin-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Current graph scope, typed actors, evidence and mechanism contract
+  summary: Descriptive parthood/process associations must not be advertised as a represented
+    actor-and-transition mechanism. Direct experimental scope and necessity remain
+    distinct from association.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: septin-protein-policy
+  kind: authority
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Current protein examples and graph coverage rules
+  summary: Native success covers represented accession scope. Empty inventories do
+    not prove molecular completeness, and optional protein examples are not mandatory
+    solely because a paper identifies proteins.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+- evidence_id: septin-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032010,GO:0061474,GO:0106174,GO:0005767,GO:0045335,GO:0030670,GO:0097013,GO:0032009,GO:0006909,GO:0090382,GO:0031410,GO:0030659,GO:0060205,GO:0090383
+  locator: 'All14 current exact GO entries: identifiers, definitions, synonyms, immediate
+    typed child relations'
+  summary: Exact identities/topology for five targets and their stated parents/parts
+    are supported. GO0032010 andGO0061474 supply the opening definitions but not the
+    appended cross-taxon molecular programs. GO0006909 includes uptake and lysosomal
+    delivery/fusion/digestion, so a broad phagolysosome association is not rejected
+    merely from its name. GO0090383 defines pH reduction, without certifying a particular
+    experiment measured it.
+  accessed_at: '2026-11-03T19:21:28.697078Z'
+  support: supports
+  snapshot_sha256: cdf75cf230842d89dfe26b485b0bbe45c045828f840905426be7944b501fc385
+- evidence_id: septin-SL0206
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0206.json
+  locator: Exact location definition, identity/synonyms and immediate isA/partOf fields;
+    relevant nested anatomy read
+  summary: Phagosome maps GO0045335, synonyms include phagocytic vesicle and isA cytoplasmic
+    vesicle GO0031410. Parent molecular narrative is not silently assigned to a child
+    as direct mechanism evidence.
+  accessed_at: '2026-11-03T19:21:28.697354Z'
+  support: supports
+  snapshot_sha256: 2dad97fc89fd4ac3bb8dd8e488d84eaf3a59f68f79c8686828f9d7c2d6b7408e
+- evidence_id: septin-SL0205
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0205.json
+  locator: Exact location definition, identity/synonyms and immediate isA/partOf fields;
+    relevant nested anatomy read
+  summary: Phagosome membrane maps GO0030670 with phagocytic/phagosomal membrane synonyms,
+    isA cytoplasmic vesicle membrane GO0030659 and partOf phagosome. This is broader
+    context for exact phagolysosome membrane GO0061474. Parent molecular narrative
+    is not silently assigned to a child as direct mechanism evidence.
+  accessed_at: '2026-11-03T19:21:28.697433Z'
+  support: supports
+  snapshot_sha256: 7dbc46aeba8b802034e48acf5e9b1b59bdb39a9047fb204de722d452ba8cc9e6
+- evidence_id: septin-SL0342
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0342.json
+  locator: Exact location definition, identity/synonyms and immediate isA/partOf fields;
+    relevant nested anatomy read
+  summary: Phagosome lumen definition/synonyms match the target and isA cytoplasmic
+    vesicle lumen GO0060205, partOf phagosome. No absent direct top-level GO mapping
+    is fabricated. Parent molecular narrative is not silently assigned to a child
+    as direct mechanism evidence.
+  accessed_at: '2026-11-03T19:21:28.697483Z'
+  support: supports
+  snapshot_sha256: b241eb5f4701f414d2e4911c8d661922bd28e3523f6082c25a73e56375a18dd8
+- evidence_id: septin-tax44689
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/44689.json
+  locator: 'Complete current taxonomy JSON: identifier, active status, rank, lineage
+    and listed strains'
+  summary: NCBITaxon44689 is active Dictyostelium discoideum at species rank with
+    Amoebozoa lineage. The two papers independently specify Ax2 in HL5c at22C. Species
+    identity and qualitative COMMON occurrence do not constitute a prevalence census
+    or universal strain guarantee.
+  accessed_at: '2026-11-03T19:21:28.697603Z'
+  support: supports
+  snapshot_sha256: 749f42224d79bdc22740e8f5dd7260bfbba1275b617d521669ef094b1fd4344b
+- evidence_id: septin-PMID12388753
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12388753+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: 'Exact EuropePMC MED identifier result: complete metadata and abstract'
+  summary: Gotthardt2002 High-resolution dissection of phagosome maturation reveals
+    distinct membrane trafficking phases, DOI10.1091/mbc.e02-04-0206, PMID12388753/PMC129962.
+    Bibliography and abstract support are distinct from the separately inspected university-held
+    primary PDF body.
+  accessed_at: '2026-11-03T19:21:29.422467Z'
+  support: supports
+  snapshot_sha256: 7ba1845e0950b4eb8287d04190a939a374cb06b9baee8d880bbd3829a813c22c
+  search_scope: EuropePMC REST search query EXT_ID:12388753 AND SRC:MED, resultType=core,
+    pageSize25, exact one result inspected; no date filter. Actual fetch 2026-11-03T19:21:29.422467Z.
+    No broader literature absence claimed.
+- evidence_id: septin-PMID16926386
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16926386+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: 'Exact EuropePMC MED identifier result: complete metadata and abstract'
+  summary: Gotthardt2006 Proteomics fingerprinting of phagosome maturation and evidence
+    for the role of a Galpha during uptake, DOI10.1074/mcp.M600113-MCP200, PMID16926386.
+    Bibliography and abstract support are distinct from the separately inspected university-held
+    primary PDF body.
+  accessed_at: '2026-11-03T19:21:29.488972Z'
+  support: supports
+  snapshot_sha256: e5f5f2cbd73c18efa9d189a4a4b4684b409aa3ad9d262fa7982c522348f20a6a
+  search_scope: EuropePMC REST search query EXT_ID:16926386 AND SRC:MED, resultType=core,
+    pageSize25, exact one result inspected; no date filter. Actual fetch 2026-11-03T19:21:29.488972Z.
+    No broader literature absence claimed.
+- evidence_id: septin-gotthardt2002-unige-pdf
+  kind: primary_source
+  reference: https://access.archive-ouverte.unige.ch/access/metadata/7ba3d74f-e1a5-4cae-8646-670a6fd9a236/download
+  locator: 'Published PDF main scientific text pp3508–3518: Methods, Results, Discussion
+    and Fig1–7 text captions; no pixel/raw/supplement audit'
+  summary: Ax2 latex-bead pulse/chase phagosome purification, ATP stripping, immunoblot/protein-lipid
+    MS, electron microscopy and confocal trafficking assays support stage-dependent
+    composition. Methods/Results do not present a direct luminal-pH assay. Discussion
+    p3517 combines own and earlier work and cites Maniak1999/2001 for acidification.
+    V-ATPase is identified even early; this is not a universal fixed dense-stage inventory.
+    Lmp proteins are CD36/LIMPII family with different kinetics; no direct LAMP-protection
+    experiment. Vti1/VAMP7 trafficking does not establish the entire added cross-taxon
+    SNARE/Nramp/LAMP mechanism. Heterogeneity/asynchrony is explicit.
+  accessed_at: '2026-11-03T19:23:10.499151Z'
+  support: supports
+  snapshot_sha256: b04b33f2e5723103549505bc97a1c300da11fa3f6fc279ed8315c18e1c8e1602
+- evidence_id: septin-gotthardt2006-pdf
+  kind: primary_source
+  reference: https://access.archive-ouverte.unige.ch/access/metadata/eae2ae90-5a91-4330-85a9-04fa245d5d63/download
+  locator: Published PDF main text pp2228–2233 and2235–2241, Fig1/2/3/4/6 text captions;
+    TableI image, Fig5 full caption/pixels, supplements/raw data not audited
+  summary: Ax2 intact latex-bead phagosome extracts were measured across six time
+    points. Separate carbonate-enriched pooled early/late membrane preparations improved
+    protein identification; they were not an isolated-membrane temporal dataset. Fig4C
+    pH scheme is explicitly adapted from macropinocytosis. Source supports remodeling/protein
+    trajectories, with pathway heterogeneity and method-dependent quantification limits;
+    it does not demonstrate the full added broad phagolysosome mechanism across Entamoeba/ciliates.
+  accessed_at: '2026-11-03T19:21:29.942672Z'
+  support: supports
+  snapshot_sha256: 298610142cd6791836708dbe9bb2c32c90975718046f5b97a0324c965431389e
+- evidence_id: septin-catalogue
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete fresh official organism/dataset catalogue, all rows and all listed
+    dataset strings
+  summary: No Dictyostelium discoideum/Ax2, Entamoeba or ciliate host dataset occurs.
+    All five records positively assert maturation, trafficking or acidification pathways
+    despite empty individual protein inventories. No matched-host downstream gene/module
+    query is available; bacterial cargo or another organism is not a proxy. Noncoverage
+    is not evidence that the host pathway or proteins are absent.
+  accessed_at: '2026-11-03T19:21:29.422353Z'
+  support: supports
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  search_scope: GET https://imodulondb.org/api/datasets at 2026-11-03T19:21:29.422353Z;
+    complete response of20 organism rows and28 organism-dataset pairs (22 distinct
+    strings), no filters/truncation/date restriction; inspected host names/IDs/descriptions
+    and datasets for Dictyostelium/discoideum/Ax2, Entamoeba and ciliates. No inference
+    beyond this catalogue snapshot.
+- evidence_id: septin-body-discovery-search
+  kind: search
+  reference: https://archive-ouverte.unige.ch/unige%3A18917
+  locator: Bounded web result discovery only; selected university-held published PDF
+  summary: Search located the genuine University of Geneva copy. Returned snippets
+    were used only to locate the paper, not to certify a mechanism.
+  accessed_at: '2026-11-03T19:23:10.462925Z'
+  support: supports
+  snapshot_sha256: 29dd70fd90ba6aae3cdff9e5c6df6d5f44f5848fd4f25582015b1816886ed45e
+  search_scope: Web search at recorded 2026-11-03T19:23:10.462925Z; exact query "High-resolution
+    dissection of phagosome maturation" Gotthardt 2002 pdf; One search, no date or
+    domain filter; returned result list inspected only to locate authoritative university-held
+    published paper. No snippets used as mechanism proof.
+- evidence_id: septin-retrieval-source-receipts
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/source-receipts.json
+  locator: Actual HTTP outcomes, times and saved byte hashes
+  summary: Fresh official metadata/ontology/catalogue and two genuine university PDF
+    bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC
+    fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies
+    the actually inspected published body. No prior2374 or2364 source-body reuse is
+    claimed.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 24153f100a9382c0fc0d1ebeaf093c1a0f69e3ef2aab9b6c50e744baa16f89ef
+- evidence_id: septin-retrieval-additional-source-receipts
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/additional-source-receipts.json
+  locator: Actual HTTP outcomes, times and saved byte hashes
+  summary: Fresh official metadata/ontology/catalogue and two genuine university PDF
+    bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC
+    fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies
+    the actually inspected published body. No prior2374 or2364 source-body reuse is
+    claimed.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: a6dcd27ebeaf6bb287d02894ce3c65b2ff36b1eff4bcd942eddf00da78675ea4
+- evidence_id: septin-retrieval-recovery-source-receipts
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/recovery-source-receipts.json
+  locator: Actual HTTP outcomes, times and saved byte hashes
+  summary: Fresh official metadata/ontology/catalogue and two genuine university PDF
+    bodies are distinguished from two HTTP200 reCAPTCHA PMC pages and an HTTP500 EuropePMC
+    fullTextXML attempt. Failed body access is not scientific evidence; recovery supplies
+    the actually inspected published body. No prior2374 or2364 source-body reuse is
+    claimed.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 3e93933281e911c23d89cbdd7d5345eea02639b8f695680d12349682f8db5961
+- evidence_id: septin-adapter-runner-historical
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical attempted runner only; no fresh invocation
+  summary: Actual2026-11-03T00:49:00.848907Z–00:49:00.863225Z attempt ended exit1
+    PermissionError reading pyvenv.cfg. Historical availability failure is separate
+    from fresh official catalogue success and source fallback; no new runner execution
+    is claimed.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: supports
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: septin-context-early_phagosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/early_phagosome.yaml
+  locator: 'Frozen boundary context only: identity, label, definition, parent_structures,
+    part_of, has_part and xrefs'
+  summary: Read only for reciprocal boundary and stage identities. This is not a whole-neighbor
+    scientific verdict, mechanistic endorsement or issue disposition.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 9b6c5d68e60dd7e28c33d369c72e84353e5415993837864471571dd2d4bb294e
+- evidence_id: septin-context-phagolysosome_vesicle_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  locator: 'Frozen boundary context only: identity, label, definition, parent_structures,
+    part_of, has_part and xrefs'
+  summary: Read only for reciprocal boundary and stage identities. This is not a whole-neighbor
+    scientific verdict, mechanistic endorsement or issue disposition.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 096069e6ecc9f33d640dfb9621fa69dedfab50cb9a9f08e6186e9583a823c319
+- evidence_id: septin-rationale-independent-challenge
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/phagolysosome-rationale-challenge.json
+  locator: Independent auxiliary read of existing discussion/component, exact identity,
+    original F4/A4 and CURATION305–324 only
+  summary: Independent micro reviewer corroborates rejection of mandatory current-rationale
+    correction, without claiming original A4 demanded history deletion/replacement.
+    Optional appended clarification remains allowed and chemical TODO open. This auxiliary
+    scope is not a complete second scientific review of the target.
+  accessed_at: '2026-11-03T19:24:10.303922Z'
+  support: supports
+  snapshot_sha256: 314773cf655a8dbeda6a8e146c8fe3ea097ee3a372944922ba66c20ebf943064
+- evidence_id: septin-record-phagocytic_vesicle
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  locator: Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23
+  summary: Every identity, hierarchy, definition, component, taxon/example, source
+    note, function, history/discussion and graph field read. Zero protein examples,
+    zero typed molecular nodes and no UniProtKB graph xrefs or maintained images.
+    This inventory is independently read, not inferred from generic successful native
+    output.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f
+- evidence_id: septin-original-phagocytic_vesicle
+  kind: prior_review
+  reference: reviews/structured/20261022T031042Z-phagocytic-vesicle-audit/review.yaml
+  locator: Complete original pair, findings/actions, verdict, limitations, scope and
+    frozen inputs
+  summary: Original YAML/Markdown remains immutable and exact target hash is unchanged.
+    Historical source access and old checks are not represented as current executions.
+    Every original finding is explicitly retained or rejected with exact lineage.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 6b421c53d7985ef3c576148772748d93715672f0eb8aeb7643352064635ed799
+- evidence_id: septin-original-validation-phagocytic_vesicle
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json
+  locator: Actual native validate/render and historical frozen/current target hash
+    verification
+  summary: Both commands exit0, Markdown byte equality, frozen historical source/current
+    target hashes agree. Schema validity is separate from scientific support.
+  accessed_at: '2026-11-03T19:21:42.440008Z'
+  support: supports
+  snapshot_sha256: 1365d4411301f43b8f6d0b94f396db98d7a455419d18f9e20d8be84dcdef3d6b
+- evidence_id: septin-native-phagocytic_vesicle-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:33.513592Z'
+  support: supports
+  snapshot_sha256: 70e801379cae74a2256d68a772a3ded3a85d1ac06f34f5ed10b08f429a7186be
+- evidence_id: septin-native-phagocytic_vesicle-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:33.943771Z'
+  support: supports
+  snapshot_sha256: 983c697769b5583591e45bae6ecac86b92b1246e4d0f4e41ee4075d8ed772c67
+- evidence_id: septin-record-phagocytic_vesicle_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  locator: Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23
+  summary: Every identity, hierarchy, definition, component, taxon/example, source
+    note, function, history/discussion and graph field read. Zero protein examples,
+    zero typed molecular nodes and no UniProtKB graph xrefs or maintained images.
+    This inventory is independently read, not inferred from generic successful native
+    output.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19
+- evidence_id: septin-original-phagocytic_vesicle_lumen
+  kind: prior_review
+  reference: reviews/structured/20261022T031043Z-phagocytic-vesicle-lumen-audit/review.yaml
+  locator: Complete original pair, findings/actions, verdict, limitations, scope and
+    frozen inputs
+  summary: Original YAML/Markdown remains immutable and exact target hash is unchanged.
+    Historical source access and old checks are not represented as current executions.
+    Every original finding is explicitly retained or rejected with exact lineage.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 8b503c9a581304557223e381830056fec89d1a2eec43c50cf99536723aea947c
+- evidence_id: septin-original-validation-phagocytic_vesicle_lumen
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json
+  locator: Actual native validate/render and historical frozen/current target hash
+    verification
+  summary: Both commands exit0, Markdown byte equality, frozen historical source/current
+    target hashes agree. Schema validity is separate from scientific support.
+  accessed_at: '2026-11-03T19:21:43.637231Z'
+  support: supports
+  snapshot_sha256: 1365d4411301f43b8f6d0b94f396db98d7a455419d18f9e20d8be84dcdef3d6b
+- evidence_id: septin-native-phagocytic_vesicle_lumen-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:34.374073Z'
+  support: supports
+  snapshot_sha256: 4146c0e7ce89b75042693a41de1410b0d2fa9bbb7088750b7dcfec7de5bb8c7d
+- evidence_id: septin-native-phagocytic_vesicle_lumen-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:34.802938Z'
+  support: supports
+  snapshot_sha256: 86f67d96682dbf38de515430ac6f06f2801ff2b43d26d78d30ab768e6c961ab0
+- evidence_id: septin-record-phagocytic_vesicle_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  locator: Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23
+  summary: Every identity, hierarchy, definition, component, taxon/example, source
+    note, function, history/discussion and graph field read. Zero protein examples,
+    zero typed molecular nodes and no UniProtKB graph xrefs or maintained images.
+    This inventory is independently read, not inferred from generic successful native
+    output.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f
+- evidence_id: septin-original-phagocytic_vesicle_membrane
+  kind: prior_review
+  reference: reviews/structured/20261022T031045Z-phagocytic-vesicle-membrane-audit/review.yaml
+  locator: Complete original pair, findings/actions, verdict, limitations, scope and
+    frozen inputs
+  summary: Original YAML/Markdown remains immutable and exact target hash is unchanged.
+    Historical source access and old checks are not represented as current executions.
+    Every original finding is explicitly retained or rejected with exact lineage.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: d4d1023db781c84008dc13dc1cfd158137f60ba1379c620c0fe8c8fd9c100c50
+- evidence_id: septin-original-validation-phagocytic_vesicle_membrane
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json
+  locator: Actual native validate/render and historical frozen/current target hash
+    verification
+  summary: Both commands exit0, Markdown byte equality, frozen historical source/current
+    target hashes agree. Schema validity is separate from scientific support.
+  accessed_at: '2026-11-03T19:21:44.833740Z'
+  support: supports
+  snapshot_sha256: 1365d4411301f43b8f6d0b94f396db98d7a455419d18f9e20d8be84dcdef3d6b
+- evidence_id: septin-native-phagocytic_vesicle_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:35.233688Z'
+  support: supports
+  snapshot_sha256: e6834079c506795357c158c08edbe6e7980b6d9f96f1e815faa3cac1dba3ec91
+- evidence_id: septin-native-phagocytic_vesicle_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:35.638528Z'
+  support: supports
+  snapshot_sha256: 46b4fdf51d0d60123494693ee29b05525ee2a7c0d5fccdf653535b43e4870d0f
+- evidence_id: septin-record-phagolysosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome.yaml
+  locator: Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23
+  summary: Every identity, hierarchy, definition, component, taxon/example, source
+    note, function, history/discussion and graph field read. Zero protein examples,
+    zero typed molecular nodes and no UniProtKB graph xrefs or maintained images.
+    This inventory is independently read, not inferred from generic successful native
+    output.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+- evidence_id: septin-original-phagolysosome
+  kind: prior_review
+  reference: reviews/structured/20261022T031046Z-phagolysosome-audit/review.yaml
+  locator: Complete original pair, findings/actions, verdict, limitations, scope and
+    frozen inputs
+  summary: Original YAML/Markdown remains immutable and exact target hash is unchanged.
+    Historical source access and old checks are not represented as current executions.
+    Every original finding is explicitly retained or rejected with exact lineage.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: bf609784306ad99c53060d16342282bf17236ffdfca1ea871058caad9de98487
+- evidence_id: septin-original-validation-phagolysosome
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json
+  locator: Actual native validate/render and historical frozen/current target hash
+    verification
+  summary: Both commands exit0, Markdown byte equality, frozen historical source/current
+    target hashes agree. Schema validity is separate from scientific support.
+  accessed_at: '2026-11-03T19:21:46.034452Z'
+  support: supports
+  snapshot_sha256: 1365d4411301f43b8f6d0b94f396db98d7a455419d18f9e20d8be84dcdef3d6b
+- evidence_id: septin-native-phagolysosome-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:36.044157Z'
+  support: supports
+  snapshot_sha256: 37dba35f75b1a29ef47f420f87e1b975fb9174cbd784b9ea863f8f067b01d779
+- evidence_id: septin-native-phagolysosome-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:36.440985Z'
+  support: supports
+  snapshot_sha256: 361f754a0dc26496d433a982adde7c76acf0ce00a04e13f40bec1ef65fb07900
+- evidence_id: septin-record-phagolysosome_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  locator: Complete current record at f1ebcdd9788bfee294f3276788874b3860033d23
+  summary: Every identity, hierarchy, definition, component, taxon/example, source
+    note, function, history/discussion and graph field read. Zero protein examples,
+    zero typed molecular nodes and no UniProtKB graph xrefs or maintained images.
+    This inventory is independently read, not inferred from generic successful native
+    output.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+- evidence_id: septin-original-phagolysosome_membrane
+  kind: prior_review
+  reference: reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml
+  locator: Complete original pair, findings/actions, verdict, limitations, scope and
+    frozen inputs
+  summary: Original YAML/Markdown remains immutable and exact target hash is unchanged.
+    Historical source access and old checks are not represented as current executions.
+    Every original finding is explicitly retained or rejected with exact lineage.
+  accessed_at: '2026-11-03T19:28:25.142001Z'
+  support: supports
+  snapshot_sha256: e837aabb6471078981dd080528103c3700416021a3b1e7d03d4a1a5a5098550a
+- evidence_id: septin-original-validation-phagolysosome_membrane
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-septin/original-checks.json
+  locator: Actual native validate/render and historical frozen/current target hash
+    verification
+  summary: Both commands exit0, Markdown byte equality, frozen historical source/current
+    target hashes agree. Schema validity is separate from scientific support.
+  accessed_at: '2026-11-03T19:21:47.223563Z'
+  support: supports
+  snapshot_sha256: 1365d4411301f43b8f6d0b94f396db98d7a455419d18f9e20d8be84dcdef3d6b
+- evidence_id: septin-native-phagolysosome_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:36.848937Z'
+  support: supports
+  snapshot_sha256: a537563682d9aece1e804333dd86e926445db173d26b9510b693d81ddbc1dd72
+- evidence_id: septin-native-phagolysosome_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal-receipt.json
+  locator: Actual receipt and stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Exit0. Independently counted zero individual protein examples, zero GENE_OR_PROTEIN
+    nodes and zero UniProtKB graph xrefs. Exit0 validates this empty represented scope;
+    it is not molecular completeness or full scientific validation.
+  accessed_at: '2026-11-03T19:20:37.250759Z'
+  support: supports
+  snapshot_sha256: 83586002f7c165d16ead7d27c93108515ce2ecfd4320d425452ec05da555e890
+- evidence_id: plaque-current-0
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  locator: Entire current maintained record at f1ebcdd9788bfee294f3276788874b3860033d23;
+    all fields, graphs, discussions and history
+  summary: Complete exact target read. Current bytes equal original target freeze;
+    this is current reassessment, not a stale-input refresh.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: supports
+  snapshot_sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+- evidence_id: plaque-original-0
+  kind: prior_review
+  reference: reviews/structured/20261022T031035Z-parasitophorous-vacuole-membrane-audit/review.yaml
+  locator: Exact staleness-selected original YAML and native Markdown; all evidence,
+    assessments, checks, finding/action and source fields
+  summary: Immutable original independently validated/rendered. All15 historical inputs
+    match its recorded source; current target also matches.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: supports
+  snapshot_sha256: ab144e6ca14ead1150bd38ccd91d28f93e9d99d3d12edec80b047206c2a16db9
+- evidence_id: plaque-current-1
+  kind: record_content
+  reference: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  locator: Entire current maintained record at f1ebcdd9788bfee294f3276788874b3860033d23;
+    all fields, graphs, discussions and history
+  summary: Complete exact target read. Current bytes equal original target freeze;
+    this is current reassessment, not a stale-input refresh.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: supports
+  snapshot_sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+- evidence_id: plaque-original-1
+  kind: prior_review
+  reference: reviews/structured/20261022T031037Z-periplastidial-membrane-audit/review.yaml
+  locator: Exact staleness-selected original YAML and native Markdown; all evidence,
+    assessments, checks, finding/action and source fields
+  summary: Immutable original independently validated/rendered. All15 historical inputs
+    match its recorded source; current target also matches.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: supports
+  snapshot_sha256: a4962f45295c336141017b26dce5b1ce05ae0f16816d69fd1d2cc18575d23209
+- evidence_id: plaque-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Current skill Structured Source Cross-Checks and evidence rules reread
+  summary: Positive protein/pathway assertions trigger applicability even without
+    expression-module assertions; physical-only boundary records can remain excluded.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: plaque-rubric
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Previously read exact frozen checklist, bytes unchanged
+  summary: Identity, source scope, organism, material, mechanism and necessity assessed
+    separately. Optional molecular inventory gaps alone are not findings.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+- evidence_id: plaque-graph-rubric
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Previously read exact native graph contract, bytes unchanged
+  summary: Coarse physical material-to-boundary function is distinct from bare parthood
+    or a specific protein assembly mechanism.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: plaque-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Exact frozen StructuralComponent/CausalNode policy, unchanged
+  summary: Label-only collective lipid material differs from grounding a chemical
+    to a whole membrane. GENE_OR_PROTEIN permits protein families and complexes.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: plaque-history-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Previously read frozen discussion and history rules, unchanged
+  summary: Historical rationale is append-only; a future-facing boundary or source-neutral
+    grounding prompt need not be closed merely because neighboring identities are
+    known.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: plaque-context-parasitophorous_vacuole
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+  locator: Entire neighbor read after root froze exact path; boundary identity/context
+    only
+  summary: Distinguishes whole/lumen/PVM and second complex-plastid membrane versus
+    outermost epiplastidial/canonical outer envelope. Other scientific assertions
+    and existing neighbor issues are not adjudicated or resolved.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+- evidence_id: plaque-context-parasitophorous_vacuole_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+  locator: Entire neighbor read after root froze exact path; boundary identity/context
+    only
+  summary: Distinguishes whole/lumen/PVM and second complex-plastid membrane versus
+    outermost epiplastidial/canonical outer envelope. Other scientific assertions
+    and existing neighbor issues are not adjudicated or resolved.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: 4a2a0820584215f4a76152f44d66e365ed67a663527da333d2e6c00d24bc244f
+- evidence_id: plaque-context-epiplastidial_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  locator: Entire neighbor read after root froze exact path; boundary identity/context
+    only
+  summary: Distinguishes whole/lumen/PVM and second complex-plastid membrane versus
+    outermost epiplastidial/canonical outer envelope. Other scientific assertions
+    and existing neighbor issues are not adjudicated or resolved.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: 15876d75b2efb4115edcf9f6ffa44a5254fcf104c9f543d7eb07b78a5f06db8a
+- evidence_id: plaque-context-plastid_outer_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+  locator: Entire neighbor read after root froze exact path; boundary identity/context
+    only
+  summary: Distinguishes whole/lumen/PVM and second complex-plastid membrane versus
+    outermost epiplastidial/canonical outer envelope. Other scientific assertions
+    and existing neighbor issues are not adjudicated or resolved.
+  accessed_at: '2026-11-03T19:24:55.176677Z'
+  support: context_only
+  snapshot_sha256: 59bd8548931d27f711233f542b5f927c0e7b0a68dd611eabb4777ee08003deaa
+- evidence_id: plaque-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020003,GO:0020004,GO:0020005,GO:7770041,GO:7770040,GO:0042170,GO:0009536,GO:0009527
+  locator: Complete fresh8-term native response; definitions, synonyms, typed children
+    and comments
+  summary: PVM maps to broad GO0020005 with native membrane parthood; exact lexical
+    synonym does not erase broader symbiont scope. GO7770041 definition and PPM synonym
+    exactly match maintained PPM;0042170 lists it is_a and0009536 lists plastid membrane
+    part_of.
+  accessed_at: '2026-11-03T19:21:00.304698Z'
+  support: supports
+  snapshot_sha256: 0b3cc072d91637b699eebe5c012f2e762a843fe391fb04d1092045934c788485
+- evidence_id: plaque-go-ppm-isa
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:7770041/ancestors?relations=is_a
+  locator: Complete exact GO7770041 ancestors request with relations=is_a
+  summary: Confirms plastid-membrane ancestry. This is_a-only response is not asserted
+    to demonstrate a direct PPM-to-plastid part_of edge.
+  accessed_at: '2026-11-03T19:21:00.304904Z'
+  support: supports
+  snapshot_sha256: 5f5233f2232fae5c2865d05e1a38d82c644a26e52ee374d30f76576fad126e21
+- evidence_id: plaque-SL0193
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0193.json
+  locator: Complete fresh UniProt location JSON; definition, synonym, mappings and
+    typed hierarchy
+  summary: SL0193 exact surrounding membrane, synonym and partOfSL0194 agree; SL0194
+    supports most-apicomplexan host-cell compartment scope, not every species/stage
+    or a measured frequency.
+  accessed_at: '2026-11-03T19:21:00.304973Z'
+  support: supports
+  snapshot_sha256: cb9c8cc4e3f7cd3af9100ecc94eab5c05ba6eedd56c152d10301377e82642988
+- evidence_id: plaque-SL0194
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0194.json
+  locator: Complete fresh UniProt location JSON; definition, synonym, mappings and
+    typed hierarchy
+  summary: SL0193 exact surrounding membrane, synonym and partOfSL0194 agree; SL0194
+    supports most-apicomplexan host-cell compartment scope, not every species/stage
+    or a measured frequency.
+  accessed_at: '2026-11-03T19:21:00.305036Z'
+  support: supports
+  snapshot_sha256: 4bf6005753182d32a68bbb20ed4d7e75a92745c7f24d7ecdf19d78b23465fc28
+- evidence_id: plaque-tax5794
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Complete fresh ENA taxonomy identity/rank/lineage/alternate names
+  summary: Exact maintained taxon label and rank verified. Taxonomy alone does not
+    establish localization, prevalence or experimental strain; P.falciparum and P.berghei
+    remain distinct.
+  accessed_at: '2026-11-03T19:21:00.305085Z'
+  support: supports
+  snapshot_sha256: 617b42c27ae95a801b69abf63e1a545eff8565fd0af2f4a81be359d3fb6b3cbf
+- evidence_id: plaque-tax5811
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Complete fresh ENA taxonomy identity/rank/lineage/alternate names
+  summary: Exact maintained taxon label and rank verified. Taxonomy alone does not
+    establish localization, prevalence or experimental strain; P.falciparum and P.berghei
+    remain distinct.
+  accessed_at: '2026-11-03T19:21:00.305125Z'
+  support: supports
+  snapshot_sha256: 11679825fa4d00b18d5848862450ab6b3770aaa47ad6676d1196d9df61124b16
+- evidence_id: plaque-tax5833
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Complete fresh ENA taxonomy identity/rank/lineage/alternate names
+  summary: Exact maintained taxon label and rank verified. Taxonomy alone does not
+    establish localization, prevalence or experimental strain; P.falciparum and P.berghei
+    remain distinct.
+  accessed_at: '2026-11-03T19:21:00.305460Z'
+  support: supports
+  snapshot_sha256: 2df2a0981f04c32092ca60753a3398e45ed0d84ac8c090ca31e269edd7fffd25
+- evidence_id: plaque-tax5821
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5821
+  locator: Complete fresh ENA taxonomy identity/rank/lineage/alternate names
+  summary: Exact maintained taxon label and rank verified. Taxonomy alone does not
+    establish localization, prevalence or experimental strain; P.falciparum and P.berghei
+    remain distinct.
+  accessed_at: '2026-11-03T19:21:00.305526Z'
+  support: supports
+  snapshot_sha256: b0491db442378c1d00975990420c6b2ac5d551752d1af21f2b02f199ddf3244e
+- evidence_id: plaque-tax2850
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2850
+  locator: Complete fresh ENA taxonomy identity/rank/lineage/alternate names
+  summary: Exact maintained taxon label and rank verified. Taxonomy alone does not
+    establish localization, prevalence or experimental strain; P.falciparum and P.berghei
+    remain distinct.
+  accessed_at: '2026-11-03T19:21:00.908468Z'
+  support: supports
+  snapshot_sha256: b6d69eacb3d411eba55cf0cc28d869546514e6d8f84d90a0368382c63fa324d1
+- evidence_id: plaque-lingelbach1998-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1242%2Fjcs.111.11.1467&format=json&resultType=core&pageSize=25
+  locator: Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling
+    context; Hashimoto supports additional secondary-plastid membranes and lineage-specific
+    continuity. Abstracts do not certify full review bodies or directly prove membrane
+    ancestry/mechanistic necessity.
+  accessed_at: '2026-11-03T18:41:19.403029Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T18:41:19.403029Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: 6b9eec294c99e8412b64453bcfcf68c83854acb45595b9591fde9850efcf8514
+- evidence_id: plaque-clough2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.pt.2017.02.007&format=json&resultType=core&pageSize=25
+  locator: Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling
+    context; Hashimoto supports additional secondary-plastid membranes and lineage-specific
+    continuity. Abstracts do not certify full review bodies or directly prove membrane
+    ancestry/mechanistic necessity.
+  accessed_at: '2026-11-03T18:41:19.420976Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T18:41:19.420976Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: 521123ddd61ffc2a314a1ab7befda839d63f4557c933dcee2cc3ac66199f663d
+- evidence_id: plaque-hashimoto2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s10265-005-0214-6
+  locator: Exact bibliographic metadata and complete deposited SECONDARY REVIEW abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Lingelbach/Clough support PVM invasion/interface and Toxoplasma remodeling
+    context; Hashimoto supports additional secondary-plastid membranes and lineage-specific
+    continuity. Abstracts do not certify full review bodies or directly prove membrane
+    ancestry/mechanistic necessity.
+  accessed_at: '2026-11-03T13:39:49.193288Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T13:39:49.193288Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: 53585862732582c8319845c15dd54898911c31ef4f9baa8018b548b791b049b8
+- evidence_id: plaque-schnider2018-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1128%2FmSphere.00522-17&format=json&resultType=core&pageSize=25
+  locator: Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum
+    ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment
+    scope is assessed with separately inspected bodies.
+  accessed_at: '2026-11-03T18:41:19.525886Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T18:41:19.525886Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: a26c2a3487f720e0de26e0a0c892babf16aedc16985d8f5c7dc22bbb792adf75
+- evidence_id: plaque-flori2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.protis.2016.04.001
+  locator: Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum
+    ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment
+    scope is assessed with separately inspected bodies.
+  accessed_at: '2026-11-03T13:39:49.168494Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T13:39:49.168494Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: b0d1f3a82b3c7ccfe807918a0ab4820af2bf8959d77c2b961b466fccc8b37a51
+- evidence_id: plaque-gueguen2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1093/plcell/koae275
+  locator: Exact DOI/PMID/title/authors/year and complete deposited PRIMARY abstract
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.
+  summary: Schnider explicitly identifies P.berghei BioID; Flori identifies P.tricornutum
+    ultrastructure; Gueguen identifies MGD isoform localization. Exact experiment
+    scope is assessed with separately inspected bodies.
+  accessed_at: '2026-11-03T13:39:49.171228Z'
+  support: supports
+  search_scope: EuropePMC exact DOI query in URL at 2026-11-03T13:39:49.171228Z; one
+    retained result page, 1 total hits and 1 metadata results inspected; no open-ended
+    search or uninspected pagination.
+  snapshot_sha256: b08f31cdb1c1f54505f232ad176837466d659b8b2603e746b6b8d064a98dd354
+- evidence_id: plaque-schnider2018-body
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5784244.1/PMC5784244.1.xml
+  locator: 'Genuine PMC5784244.1 JATS: Results s1.1/s1.2 including embedded captions,
+    full Discussion s2, Methods s3.6/s3.9; no pixels, supplemental files or raw data
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.'
+  summary: P.berghei ANKA mCherryHsp70 blood-stage schizonts express EXP1-BirA*-V5;18h150µM
+    biotin precedes affinity capture/MS.61proximity candidates are not61established
+    PVM constituents; off-target labeling is explicit. P.falciparum ortholog/prior-study
+    comparisons do not change the experimental species.
+  accessed_at: '2026-11-03T18:42:00.109955Z'
+  support: supports
+  snapshot_sha256: 6620bb99b97b1902508bd0dbb91c058c45d0f41580cadeed6c318e456f1ca35e
+- evidence_id: plaque-flori2016-oceanomics-pdf
+  kind: primary_source
+  reference: https://www.oceanomics.eu/sites/default/files/documents/oceanomics-flori-et-al-protist-2016-484.pdf
+  locator: 'Genuine primary PDF pp254–264: complete Introduction, Results/Discussion,
+    Methods and Fig1–7 captions; regenerated pdftotext matches retained text. No figure
+    pixels/supplemental movies Retained public snapshot independently reread for this
+    target; original fetch time and hash preserved, not a new retrieval.'
+  summary: Serial FIB-SEM in Pt1 CCAP1055/3,ESAW,19C,12:12h light/dark supports PPM
+    second membrane/PPC between PPM andoEM; VN continuity withPPM. Intro acknowledges
+    alternative proposed host-ER origin; p263 says individual membrane lipid composition
+    unknown. Topology is not an experimental ancestry trace.
+  accessed_at: '2026-11-03T13:39:49.196858Z'
+  support: supports
+  snapshot_sha256: e2ca79ebda9c385dfc7a1a99b7b9e0227f615d4b4127b36efb616fc97170bf35
+- evidence_id: plaque-gueguen2024-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11638560/fullTextXML
+  locator: 'Genuine PMC11638560 JATS: Results2.4 with Fig2/3 captions; Discussion3.2/3.3;
+    Methods4.4/4.13. No pixels, supplement files or remaining mutant/lipidomic sections
+    Retained public snapshot independently reread for this target; original fetch
+    time and hash preserved, not a new retrieval.'
+  summary: MGDbeta-eGFP localizes to blob/VN and colocalizes withsDer1-2; extension
+    overPPM/cytokinesis role remains qualified. Pt1strain8.6 CCAP1055/1(CCMP2561),20C
+    differs from2016culture. This localization does not establish isolated PPM lipid
+    composition or mandatory individual lipid/protein necessity.
+  accessed_at: '2026-11-03T13:39:49.204958Z'
+  support: supports
+  snapshot_sha256: 0078d6a856bbf8cc5b6769112284c598a161cacf7a7508cfba3e18bac1f14ed0
+- evidence_id: plaque-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Fresh complete official /api/datasets response; all20 organism rows/28organism-dataset
+    pairs inspected
+  summary: No Plasmodium,Toxoplasma or Phaeodactylum host dataset. PVM positive protein
+    survey triggers coverage assessment followed by actual noncoverage. PPM physical
+    boundary claims remain genuinely excluded. No unrelated bacterial proxy/downstream
+    query or negative biology.
+  accessed_at: '2026-11-03T19:21:00.912651Z'
+  support: supports
+  search_scope: Official /api/datasets complete returned catalogue at 2026-11-03T19:21:00.912651Z;
+    exact target host names/keys checked across every returned row/pair; no matching
+    host, so no downstream gene/module query.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: plaque-historical-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Retained historical00:49Z unavailable runner receipt and stdout/stderr
+  summary: PermissionError accessing pyvenv.cfg; no new invocation or success claimed.
+    Current official-source fallback assessed separately.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: plaque-original-checks
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-plaque/original-checks.json
+  locator: Actual2 original validate/render commands and all30 historical input hashes
+  summary: Both original pairs validate/render exactly and each15 historical inputs
+    match; both targets remain unchanged.
+  accessed_at: '2026-11-03T19:21:31.080264Z'
+  support: supports
+  snapshot_sha256: d27dabd4b913e9bab36acb5512f6ddb281140b3b43896deb961e0252513b58e4
+- evidence_id: plaque-native-parasitophorous_vacuole_membrane-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --verify
+  locator: Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-verify-receipt.json
+    and stdoutSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native
+    pass is empty represented accession/node coverage, not scientific confirmation
+    of every narrative claim or a required missing-inventory finding.
+  accessed_at: '2026-11-03T19:20:28.636657Z'
+  support: supports
+  snapshot_sha256: d5dd6d0d41216ed077870b4eca1ff8b78a3d98a6249efeda6abbeffa2044205a
+- evidence_id: plaque-native-parasitophorous_vacuole_membrane-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --causal-graphs
+  locator: Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-causal-receipt.json
+    and stdoutSHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native
+    pass is empty represented accession/node coverage, not scientific confirmation
+    of every narrative claim or a required missing-inventory finding.
+  accessed_at: '2026-11-03T19:20:29.016187Z'
+  support: supports
+  snapshot_sha256: 6083110111faa9f56c55a2bb200febfdb2bf2aede28acaf057b070d4a81ceaca
+- evidence_id: plaque-native-periplastidial_membrane-verify
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml
+    --verify
+  locator: Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-verify-receipt.json
+    and stdoutSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native
+    pass is empty represented accession/node coverage, not scientific confirmation
+    of every narrative claim or a required missing-inventory finding.
+  accessed_at: '2026-11-03T19:20:29.416271Z'
+  support: supports
+  snapshot_sha256: a74be15b716348551fed4b042beb789fe4fba505e07bcab9ed75013ade96701f
+- evidence_id: plaque-native-periplastidial_membrane-causal
+  kind: validation
+  reference: .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/periplastidial_membrane.yaml
+    --causal-graphs
+  locator: Actual receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-causal-receipt.json
+    and stdoutSHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Independently confirmed0protein_examples and0GENE_OR_PROTEINnodes. Native
+    pass is empty represented accession/node coverage, not scientific confirmation
+    of every narrative claim or a required missing-inventory finding.
+  accessed_at: '2026-11-03T19:20:29.840054Z'
+  support: supports
+  snapshot_sha256: f0aa9c1d6926e0a6022a8baf05ff2a82e292333c4c8a877ce120cc0dacf7c557
+- evidence_id: micro-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Native skill/profile/config/checklist including structured-source applicability
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+  summary: All positive molecular/pathway assertions trigger host coverage assessment,
+    not merely claims about expression modules. No mandatory finding follows solely
+    from empty optional slots.
+  support: context_only
+- evidence_id: micro-component-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: ComponentTypeEnum/StructuralComponent and CURATION component identity guidance
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  summary: Whole anatomical membrane identities are distinct from chemical lipid material.
+    Label-only collective bilayer material is valid; essentiality of defining collective
+    material does not establish necessity of every particular molecule.
+  support: context_only
+- evidence_id: micro-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Node identities, source scope, component joins and declared graph scope
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+  summary: NONMECHANISTIC topology/import associations do not promise a complete experimental
+    mechanism. GENE_OR_PROTEIN includes molecular classes and complexes; no enum-only
+    or optional-accession defect inferred.
+  support: context_only
+- evidence_id: micro-discussion-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Discussion rules305–324 and component/taxon guidance
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  summary: Rationale is append-only provenance; notes hold current state. A Pex14
+    instance xref does not settle an explicitly source-neutral PEX-complex grounding
+    question.
+  support: context_only
+- evidence_id: micro-pathway-snapshot
+  kind: authority
+  reference: conf/pathwaymech_targets.json
+  locator: Exact gomodel:YeastPathways_YEAST-FAO-PWY target entry and snapshot provenance
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 625e474ce45903a482587deb9b26237088d1298d88a017920a69370c89db5dd0
+  summary: Pinned source d8ec2b69f7a4c615aecddff80498fef1e1fab0ce, target fatty acid
+    oxidation pathway, taxon559292, content SHA e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc
+    and CC BY4.0 source metadata.
+  support: context_only
+- evidence_id: micro-pathway-checker
+  kind: authority
+  reference: scripts/check_pathway_links.py
+  locator: Complete native checker read; default snapshot checks versus optional external
+    checkout verification
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 054e0e3a5d7b8c8e7a9f661bcc1c096707aa4ee43e8537d60a9b1b6fd036b226
+  summary: Default command verifies linked id/label/taxon/version against committed
+    snapshot. It does not by itself fetch upstream content or establish biological
+    localization.
+  support: context_only
+- evidence_id: micro-pathway-decisions
+  kind: authority
+  reference: research/cross_mech/2026-10-05-pathway-link-decisions.md
+  locator: Complete provenance note, especially two peroxisome rows and source-access
+    paragraph
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: d209257e5c81e5189f4003b9aac347f8dbe7f3a6b59fb28f238db900d894fc73
+  summary: Matrix and whole organelle are bounded sites of the beta-oxidation segment.
+    The link explicitly avoids assigning every activation or auxiliary reaction to
+    the peroxisome and distinguishes S288c model scope from new experimental evidence.
+  support: context_only
+- evidence_id: micro-record-peroxisomal_matrix
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  locator: Entire current record including history/discussions, definitions/taxa/components/evidence,
+    all graph nodes/edges and pathway links
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23
+  summary: Complete independently read unchanged target; current bytes equal original
+    frozen target. No record edit.
+  support: supports
+- evidence_id: micro-prior-peroxisomal_matrix
+  kind: prior_review
+  reference: reviews/structured/20261022T031038Z-peroxisomal-matrix-audit/review.yaml
+  locator: Entire original native provenance/checks/evidence/assessments/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 6c1d359dba665a85d3c089438031cc876e5ac8877993b666c69e33df2098bce5
+  summary: Original pass_with_limitations; no findings/actions. Explicit expression-only
+    iModulon exclusion is present; historical commands/accesses are not current executions.
+  support: context_only
+- evidence_id: micro-native-peroxisomal_matrix-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T19:20:30.254067Z'
+  snapshot_sha256: b9a1219a4f55fc987fa53e3c8a14d20958f1270980bd2cae279139c87e4f95b8
+  summary: Zero examples and zero typed GENE_OR_PROTEIN nodes. Actual exit0; generic
+    verify success is not evidence of complete molecular coverage.
+  support: supports
+- evidence_id: micro-native-peroxisomal_matrix-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal.log
+    SHA256 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  accessed_at: '2026-11-03T19:20:30.674904Z'
+  snapshot_sha256: 12d70d9392f2daddb260cc53da063cd1857c5feee325a6dde92d3b343c9cec7a
+  summary: Zero examples and zero typed GENE_OR_PROTEIN nodes. Actual exit0; generic
+    verify success is not evidence of complete molecular coverage.
+  support: supports
+- evidence_id: micro-record-peroxisomal_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  locator: Entire current record including history/discussions, definitions/taxa/components/evidence,
+    all graph nodes/edges and pathway links
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87
+  summary: Complete independently read unchanged target; current bytes equal original
+    frozen target. No record edit.
+  support: supports
+- evidence_id: micro-prior-peroxisomal_membrane
+  kind: prior_review
+  reference: reviews/structured/20261022T031039Z-peroxisomal-membrane-audit/review.yaml
+  locator: Entire original native provenance/checks/evidence/assessments/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: b8d38cf347edd8aa33485b515cf2f20fafe4aee5f785b7796cbea0e1092c57b8
+  summary: Original pass_with_limitations; no findings/actions. Explicit expression-only
+    iModulon exclusion is present; historical commands/accesses are not current executions.
+  support: context_only
+- evidence_id: micro-native-peroxisomal_membrane-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T19:20:31.832924Z'
+  snapshot_sha256: 9475ef80c0d24f0856cdcd8bb55e8957fa40407634e63aba6ddc65bd8587c1c2
+  summary: Zero examples; one UNANCHORED_WITH_UNIPROT node carries P53112. It is not
+    COVERED by component examples and one representative does not identify an entire
+    complex. Actual exit0; generic verify success is not evidence of complete molecular
+    coverage.
+  support: supports
+- evidence_id: micro-native-peroxisomal_membrane-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal.log
+    SHA256 787e45b3923166187cf3a4eb9e38389533d74feb7b8277f4ce7d9e0d775f25be
+  accessed_at: '2026-11-03T19:20:32.257154Z'
+  snapshot_sha256: adc01c0e2b773bbf7d88ab9d2e80420d27f8b35803638cb334e66fd479509128
+  summary: Zero examples; one UNANCHORED_WITH_UNIPROT node carries P53112. It is not
+    COVERED by component examples and one representative does not identify an entire
+    complex. Actual exit0; generic verify success is not evidence of complete molecular
+    coverage.
+  support: supports
+- evidence_id: micro-record-peroxisome
+  kind: record_content
+  reference: data/structures/membrane_organelle/peroxisome.yaml
+  locator: Entire current record including history/discussions, definitions/taxa/components/evidence,
+    all graph nodes/edges and pathway links
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828
+  summary: Complete independently read unchanged target; current bytes equal original
+    frozen target. No record edit.
+  support: supports
+- evidence_id: micro-prior-peroxisome
+  kind: prior_review
+  reference: reviews/structured/20261022T031041Z-peroxisome-audit/review.yaml
+  locator: Entire original native provenance/checks/evidence/assessments/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 5b9d19d31b452b88405b1d8286404a9feb72dfe4ee0ff72ce03b884b284368b4
+  summary: Original needs_curation; one major F1 retained with exact lineage. Explicit
+    expression-only iModulon exclusion is present; historical commands/accesses are
+    not current executions.
+  support: context_only
+- evidence_id: micro-native-peroxisome-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml
+    --verify; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify.log
+    SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-03T19:20:32.670729Z'
+  snapshot_sha256: e2e3aedb7b71b419d930e36cfa4fda2bda5ada1b2d667b589154f43c9ffb4541
+  summary: Zero examples; one UNANCHORED_NO_UNIPROT broad PTS-bearing cargo node.
+    A source-supported generic cargo class does not require inventing one universal
+    accession. Actual exit0; generic verify success is not evidence of complete molecular
+    coverage.
+  support: supports
+- evidence_id: micro-native-peroxisome-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal-receipt.json
+  locator: Actual command .venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/peroxisome.yaml
+    --causal-graphs; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal.log
+    SHA256 bc989831a9f0e6b9c6e96c12ed5543938d7226aabb2a937281c771f930cbacf6
+  accessed_at: '2026-11-03T19:20:33.092096Z'
+  snapshot_sha256: fcbb4b1ee0d84685aa1668ff0d144bb9d7da28df800cecfdce79c065f3e8f821
+  summary: Zero examples; one UNANCHORED_NO_UNIPROT broad PTS-bearing cargo node.
+    A source-supported generic cargo class does not require inventing one universal
+    accession. Actual exit0; generic verify success is not evidence of complete molecular
+    coverage.
+  support: supports
+- evidence_id: micro-original-pairs
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/original-checks.json
+  locator: Three actual native validates and three render --content exact comparisons
+  accessed_at: '2026-11-03T19:21:11.713231Z'
+  snapshot_sha256: efe590d2441470bfddc2a4efc7674a80b462806d689b3708a0162fd93eb4e188
+  summary: All three original YAMLs validate and all three Markdown artifacts render
+    exactly.
+  support: supports
+- evidence_id: micro-original-inputs
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/original-frozen-inputs.json
+  locator: All48 original frozen input entries checked at original retained source
+  accessed_at: '2026-11-03T19:26:27.284159Z'
+  snapshot_sha256: 948155138138fbb53ac85c1c8ac457370fe1004c112c197017bfbe52df2003e2
+  summary: All historical inputs verify and all three targets remain unchanged; hashing
+    historical neighbors is not a new scientific assessment.
+  support: supports
+- evidence_id: micro-native-pathway-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links-receipt.json
+  locator: Actual default command .venv/bin/python scripts/check_pathway_links.py;
+    log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links.log
+    SHA256 19688121d930c04c7ad1def60f0887d3c3afc1da1b02b8d237e4d9de925ed745
+  accessed_at: '2026-11-03T19:21:05.072832Z'
+  snapshot_sha256: 3c6d966419b92e59d38ff8674bbd9c4f23e45f7f461cf0cac1c3c79c554752d7
+  summary: 'Exit0: six corpus links match pinned snapshot. This is default offline
+    metadata consistency, separate from fresh remote byte verification and source-bounded
+    localization assessment.'
+  support: supports
+- evidence_id: micro-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005782,GO:0005778,GO:0005777,GO:0031907,GO:0031903,GO:0006635
+  locator: 'All six requested terms: exact id/name/definition/synonyms/isObsolete/typed
+    children'
+  accessed_at: '2026-11-03T19:21:00.660270Z'
+  snapshot_sha256: bdca0c71b912962cf7e8c7339f43ce92105f098c16bc50a3306e6fe035723611
+  summary: Active GO0005782 matrix,0005778 membrane,0005777 peroxisome,0031907 microbody
+    lumen,0031903 microbody membrane and0006635 beta-oxidation. Exact matrix/membrane
+    subclass and parthood relationships are explicit. GO0005778 is an anatomical cellular
+    component, not a chemical lipid. Matrix crystalloid-core language says many cells,
+    not every yeast peroxisome.
+  support: supports
+- evidence_id: micro-go-0005782-isa
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005782/ancestors?relations=is_a
+  locator: Complete exact-term ancestors request relations=is_a
+  accessed_at: '2026-11-03T19:21:00.660523Z'
+  snapshot_sha256: f7ce849e67cc0e9ec0e1718bf1c798304ce3e4323af3015e0ec4ce3da9612c9f
+  summary: Verified transitive subclass ancestry for GO:0005782; not used to invent
+    a direct parthood edge.
+  support: supports
+- evidence_id: micro-go-0005778-isa
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005778/ancestors?relations=is_a
+  locator: Complete exact-term ancestors request relations=is_a
+  accessed_at: '2026-11-03T19:21:00.660608Z'
+  snapshot_sha256: 52c1a6158844ed1e0f4857853d776e4243b41a67ea5b044dbba6bffdba65570c
+  summary: Verified transitive subclass ancestry for GO:0005778; not used to invent
+    a direct parthood edge.
+  support: supports
+- evidence_id: micro-tax4932
+  kind: database
+  reference: https://rest.uniprot.org/taxonomy/4932.json
+  locator: Complete authority taxon identity/rank/active/parent/lineage
+  accessed_at: '2026-11-03T19:21:00.660745Z'
+  snapshot_sha256: 963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688
+  summary: Saccharomyces cerevisiae4932 is active species.
+  support: supports
+- evidence_id: micro-tax559292
+  kind: database
+  reference: https://rest.uniprot.org/taxonomy/559292.json
+  locator: Complete authority taxon identity/rank/active/parent/lineage
+  accessed_at: '2026-11-03T19:21:01.933250Z'
+  snapshot_sha256: 9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810
+  summary: Saccharomyces cerevisiae ATCC204508/S288c559292 is active strain directly
+    within4932; pathway/model identity is not a new strain localization experiment.
+  support: supports
+- evidence_id: micro-P53112
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53112.json
+  locator: Current entryType/recommendedName/genes/organism plus complete FUNCTION/SUBUNIT/LOCATION/CAUTION
+    comments and their explicit citations
+  accessed_at: '2026-11-03T19:21:00.660666Z'
+  snapshot_sha256: b4ed5a4ee48d71b257e667bde8af9b0f066f3ffae07b957763086aec3e9e5bb8
+  summary: Reviewed S288c559292 PEX14, ordered locusYGL153W, aliasG1870, recommended
+    Peroxisomal membrane protein PEX14. Member of PEX13–PEX14 docking machinery. Current
+    annotation calls it single-pass and cautions that older peripheral localization
+    was superseded. Record only says membrane-associated. One instance is representative,
+    not source-neutral full-complex grounding.
+  support: supports
+- evidence_id: micro-family-P53112
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53112/?page_size=200
+  locator: Exact protein association response, count3,next=null; all metadata types
+    and locations
+  accessed_at: '2026-11-03T19:21:00.660708Z'
+  snapshot_sha256: b06591275ef498686159fb75bb9453f19176e263408438d3a9ee179a05b8b9f6
+  summary: IPR025655 is Pex14 family; IPR006785 is N-terminal Pex14/PEX33 domain;
+    IPR036388 homologous superfamily. These establish family/domain distinctions for
+    the individual Pex14 example, not an exact CURIE for all membrane-associated peroxin
+    docking machinery.
+  support: supports
+- evidence_id: micro-catalogue
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Full official unpaginated catalogue; all20 organisms/28 organism-dataset
+    pairs inspected
+  accessed_at: '2026-11-03T19:21:01.933506Z'
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  summary: No matching Saccharomyces, cerevisiae, S288c or yeast host entry occurs.
+    All three targets trigger applicability because they assert import/metabolism;
+    current catalogue noncoverage explains no matched downstream gene/module query.
+    No unrelated bacterial proxy or biological absence inferred.
+  support: supports
+  search_scope: Official iModulonDB /api/datasets at 2026-11-03T19:21:01.933506Z;
+    complete HTTP200 unpaginated20 organism rows/28 organism-dataset pairs. Inspect
+    id/name/description/datasets for Saccharomyces,cerevisiae,S288c and yeast. This
+    response/date only, not universal absence; no matched host means no downstream
+    module query.
+- evidence_id: micro-historical-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical command /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets; actual00:49Z exit1 PermissionError pyvenv.cfg
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Historical unavailable optional runner, not a fresh invocation or current
+    passing command. Fresh official catalogue fallback completed independently.
+  support: context_only
+- evidence_id: micro-sibirny2016-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Ffemsyr%2Ffow038%22&format=json&resultType=core&pageSize=25
+  locator: Exact DOI core metadata result and complete abstract; bounded pageSize25
+    unique MED result
+  accessed_at: '2026-11-03T19:21:02.239417Z'
+  snapshot_sha256: 2a544ddfcf6f12f5fc270d42b04c3d9649cb0b5dc82e7855cb82b03ec4138577
+  summary: Sibirny2016 PMID27189367 is a secondary yeast review. Abstract supports
+    beta-oxidation, peroxins and import signals; it is not a strain experiment or
+    complete localization census.
+  support: context_only
+- evidence_id: micro-yuan2016-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbamcr.2015.09.008%22&format=json&resultType=core&pageSize=25
+  locator: Exact DOI core metadata result and complete abstract; bounded pageSize25
+    unique MED result
+  accessed_at: '2026-11-03T19:21:02.325020Z'
+  snapshot_sha256: 3b913c91f710e662ddc6faffad48e3d6d2548dcd8336d38d8c2fea6a42b449db
+  summary: Yuan/Veenhuis/van der Klei2016 PMID26367802 is a secondary review. Abstract
+    describes differing mutant-marker interpretations and membrane remnants containing
+    Pex13/Pex14; its biogenesis model is not an experimentally universal claim.
+  support: context_only
+- evidence_id: micro-smith2013-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrm3700%22&format=json&resultType=core&pageSize=25
+  locator: Exact DOI core metadata result and complete abstract; bounded pageSize25
+    unique MED result
+  accessed_at: '2026-11-03T19:21:02.438584Z'
+  snapshot_sha256: 35c33a1e7b474b9eac26ecced52329d59396406d4865aaacd258c4cc89bb986d
+  summary: Smith/Aitchison2013 PMID24263361 PMCID4060825 is a secondary review, not
+    new primary experimental evidence.
+  support: context_only
+- evidence_id: micro-smith2013-jats
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4060825.1/PMC4060825.1.xml
+  locator: Genuine JATS title/identity; complete Box1, S5 Matrix protein import including
+    Figure2 caption, S10 growth/fission and S11 de novo biogenesis; Box2 also read
+    but no extra claim derived; no pixels/supplements
+  accessed_at: '2026-11-03T19:23:22.254670Z'
+  snapshot_sha256: 15a29dfe3a67a4ec5303aeffa2bd9bf1981c2696a0f1f828ccb67caafdfabe0d
+  summary: Secondary context supports beta-oxidation, broad PTS cargo import and membrane
+    docking. It explicitly distinguishes PTS receptors/taxa and models of import/biogenesis;
+    record does not assert every pathway step, universal stoichiometry or specific
+    fission mechanism.
+  support: context_only
+- evidence_id: micro-pex14-primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9094717+OR+EXT_ID%3A20154681+OR+EXT_ID%3A33323485&format=json&resultType=core&pageSize=25
+  locator: Exact three-PMID EuropePMC core query; complete primary abstracts and bibliographic
+    identities for9094717,20154681,33323485; no primary full body
+  accessed_at: '2026-11-03T19:23:22.254939Z'
+  snapshot_sha256: a4b518b19bec0c53f29fba75c7cd676d490db2010e9523a17c7cd9bb2fdbaded
+  summary: Primary9094717 supports S.cerevisiae Pex14 membrane-associated PTS receptor
+    docking;20154681 supports Pex5/Pex14 gated-channel assays;33323485 supports yeast
+    Pex14/Pex17 membrane docking assembly and explicitly leaves detailed mechanism
+    unresolved. The record needs only bounded docking/import membership; abstract-only
+    access does not certify constructs, full Methods, images or mechanistic universality.
+  support: supports
+- evidence_id: micro-pathway
+  kind: database
+  reference: https://raw.githubusercontent.com/CultureBotAI/PathwayMech/d8ec2b69f7a4c615aecddff80498fef1e1fab0ce/data/pathways/fatty-acid-oxidation-pathway.yaml
+  locator: Exact immutable remote source bytes verified against local SHA; identity/description/taxa,
+    all27 participant IDs/labels and11 reaction IDs/labels read; mechanistic-edge
+    quotations/upstream model not audited
+  accessed_at: '2026-11-03T19:21:01.933587Z'
+  snapshot_sha256: e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc
+  summary: Source d8ec2b69f7a4c615aecddff80498fef1e1fab0ce bytes exactly e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc.
+    Model includes fatty-acid activation and auxiliary reactions as well as beta-oxidation;
+    both links expressly limit SITE_OF to beta-oxidation and disclose narrower S288c
+    scope.
+  support: supports
+- evidence_id: micro-access-smith2013-pmc
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4060825/
+  locator: Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/smith2013-pmc.receipt.json
+  accessed_at: '2026-11-03T19:21:01.933669Z'
+  snapshot_sha256: 37dc82192eec527cb108d375c9e2e0a94c8e52596985cd441c45d226aaa82bac
+  summary: HTTP200 recaptcha, not article; genuine S3 review body separately read.
+  support: context_only
+- evidence_id: micro-access-sibirny2016-publisher
+  kind: validation
+  reference: https://academic.oup.com/femsyr/article/16/4/fow038/2470127
+  locator: Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/sibirny2016-publisher.receipt.json
+  accessed_at: '2026-11-03T19:23:22.255027Z'
+  snapshot_sha256: a1585718c9ea8748f5dbae1284ec110589a52aa6e8412b6d99f25b009baa3472
+  summary: HTTP403 publisher route, no full-body access.
+  support: context_only
+- evidence_id: micro-access-pex14-2020-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7776778.1/PMC7776778.1.xml
+  locator: Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-jats.receipt.json
+  accessed_at: '2026-11-03T19:24:21.282611Z'
+  snapshot_sha256: 4fa4cb3c4b59f71ab4ba4577b3d0a968649876985e8a7a7f197b17469abded5c
+  summary: HTTP404 S3 candidate, no primary body.
+  support: context_only
+- evidence_id: micro-access-pex14-2020-pmc
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7776778/
+  locator: Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-pmc.receipt.json
+  accessed_at: '2026-11-03T19:24:35.828960Z'
+  snapshot_sha256: d89f1d7bcfedc95dcb7ac6edcf2e9fc2307be0687f095f4f6c08ec5b6a54cb71
+  summary: HTTP200 recaptcha, not primary body.
+  support: context_only
+- evidence_id: micro-access-pex14-2020-bioc
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC7776778/unicode
+  locator: Actual route status/body inspection; receipt /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/adversary-microtubule/pex14-2020-bioc.receipt.json
+  accessed_at: '2026-11-03T19:24:35.829218Z'
+  snapshot_sha256: 478f38e0765ee9c406831bb2fc27e8019ac5227c20c6b28ca0de582d8449354a
+  summary: HTTP200 service error says no result; not primary body.
+  support: context_only
+- evidence_id: check-qc
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/qc.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T19:25:51.206782Z'
+  support: supports
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  snapshot_sha256: 9607aa2adb186b8b5f7839d476ff4d251c2272d12c2ecd1b7e10591b9fefa720
+- evidence_id: check-labels
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/labels.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T19:20:58.120244Z'
+  support: supports
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  snapshot_sha256: 6cdfb05df9a27194f05a5fd7f851783f817ac1523ca0bbfa54fe0e0d18775905
+- evidence_id: check-trait-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/trait-links.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T19:20:34.961121Z'
+  support: supports
+  summary: Native TraitMech link check passed.
+  snapshot_sha256: 8b336cdefbbd3daf6da8787990efdbe346c95e2c8361d50b7eb68a18f2d5a44a
+- evidence_id: check-vendored
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/vendored.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T19:20:32.801262Z'
+  support: supports
+  summary: Pinned governed files match; native vendored check passed.
+  snapshot_sha256: b1f169d103aaefa930745468bcca171e5867b9cc49e4e74311e458097e3252a6
+- evidence_id: check-curies
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/curies.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-03T19:20:35.243218Z'
+  support: supports
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  snapshot_sha256: bc12b1285f5747707643f7a98e03dbb3a6c88fb062ad49f99db9cb42ececf3d2
+- evidence_id: focused
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/focused-results.json
+  locator: All twenty actual target schema/strict command outputs
+  accessed_at: '2026-11-03T19:29:31Z'
+  support: supports
+  summary: Ten schema and ten strict commands returned exit zero.
+  snapshot_sha256: fac75def7a847ccea3c0f97489fcffbf6efd0641d9c97fd36c86c10276ec70a2
+- evidence_id: supplemental-pmid
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pmid-chunks-receipt.json
+  locator: Complete native-report PMID set checked with unchanged resolver in batches
+    of at most fifty
+  accessed_at: '2026-11-03T19:21:59.070756Z'
+  support: supports
+  summary: 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers
+    remain unverified.
+  snapshot_sha256: 87b05a05df0b6e6bc3659f8f276b96cdc3eff0127834412c361c2600bdf68c4a
+- evidence_id: historical-adapter-runner-availability
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical runner invocation receipt, exact SHA256 reverified during PR2374
+    synthesis
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS
+    PermissionError reading the configured runner pyvenv.cfg. This is retained historical
+    availability evidence, not a fresh attempt or a scientific validation failure.
+    Native policy permits inspected source-catalogue fallback.
+- evidence_id: root-native-parasitophorous_vacuole_membrane-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:28.636657Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-parasitophorous_vacuole_membrane-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/parasitophorous_vacuole_membrane-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:29.016187Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-periplastidial_membrane-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:29.416271Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-periplastidial_membrane-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/periplastidial_membrane-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:29.840054Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-peroxisomal_matrix-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:30.254067Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-peroxisomal_matrix-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_matrix-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:30.674904Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-peroxisomal_membrane-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:31.832924Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Actual
+    command exit0; native inventory is distinct from source-scope and mechanistic
+    assessment.
+- evidence_id: root-native-peroxisomal_membrane-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisomal_membrane-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:32.257154Z'
+  support: context_only
+  snapshot_sha256: 787e45b3923166187cf3a4eb9e38389533d74feb7b8277f4ce7d9e0d775f25be
+  summary: One UNANCHORED_WITH_UNIPROT typed node with P53112; zero examples. Actual
+    command exit0; native inventory is distinct from source-scope and mechanistic
+    assessment.
+- evidence_id: root-native-peroxisome-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:32.670729Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Actual command
+    exit0; native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-peroxisome-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/peroxisome-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:33.092096Z'
+  support: context_only
+  snapshot_sha256: bc989831a9f0e6b9c6e96c12ed5543938d7226aabb2a937281c771f930cbacf6
+  summary: One UNANCHORED_NO_UNIPROT broad cargo node; zero examples. Actual command
+    exit0; native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:33.513592Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:33.943771Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle_lumen-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:34.374073Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle_lumen-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_lumen-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:34.802938Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle_membrane-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:35.233688Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagocytic_vesicle_membrane-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagocytic_vesicle_membrane-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:35.638528Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagolysosome-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:36.044157Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagolysosome-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:36.440985Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagolysosome_membrane-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:36.848937Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-native-phagolysosome_membrane-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/phagolysosome_membrane-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-03T19:20:37.250759Z'
+  support: context_only
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+  summary: Zero protein examples and zero typed molecular nodes. Actual command exit0;
+    native inventory is distinct from source-scope and mechanistic assessment.
+- evidence_id: root-pathway-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2374/pathway-links.log
+  locator: Actual native offline pathway-link command and exact source-head receipt
+  accessed_at: '2026-11-03T19:21:05.072832Z'
+  support: context_only
+  snapshot_sha256: 19688121d930c04c7ad1def60f0887d3c3afc1da1b02b8d237e4d9de925ed745
+  summary: 'OK: 6 pathway links match the pinned target snapshot. Link consistency
+    alone is not biological localization evidence.'
+assessments:
+- assessment_id: septin-phagocytic_vesicle-schema
+  area: schema
+  topic: Original validation/render and frozen inputs
+  outcome: supported
+  summary: Both original native commands pass with exact Markdown; historical frozen
+    target is byte-identical to current record. No assigned input is stale. Scientific
+    findings remain independent of schema validity.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-original-validation-phagocytic_vesicle
+- assessment_id: septin-phagocytic_vesicle-identity
+  area: identity
+  topic: Exact identity, taxonomy-independent boundary and hierarchy
+  outcome: supported
+  summary: GO0045335 exact phagocytic vesicle definition, phagosome synonym, cytoplasmic-vesicle
+    parent and membrane/lumen parts agree. SL0206 is exact. Early phagosome and phagolysosome
+    are stage subclasses, not interchangeable identities.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-context-early_phagosome
+  - septin-context-phagolysosome_vesicle_lumen
+- assessment_id: septin-phagocytic_vesicle-definition
+  area: scope
+  topic: Definition source and biological range
+  outcome: supported
+  summary: The exact ontology definition is not expanded into an unsupported fixed
+    molecular inventory or cross-taxon mechanism; current topological identity remains
+    supported.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+- assessment_id: septin-phagocytic_vesicle-taxon
+  area: scope
+  topic: Canonical experimental host, strain and qualitative occurrence
+  outcome: supported
+  summary: Current NCBITaxon44689 is D. discoideum. Both inspected primary papers
+    use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative
+    model-system presence, not a numeric census or every-strain maturation timetable.
+    Broader examples in introductory prose do not extend the Ax2 experiment to all
+    taxa.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-tax44689
+- assessment_id: septin-phagocytic_vesicle-material
+  area: grounding
+  topic: Collective bilayer material and constituent identity
+  outcome: supported
+  summary: The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without
+    pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes
+    constitutive bilayer material, not necessity of a particular molecular species.
+    Exact lipid composition remains an explicit unresolved grounding question.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle-preparation
+  area: evidence
+  topic: Intact-phagosome time course versus membrane enrichment
+  outcome: supported
+  summary: The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched
+    identification samples are distinguished. Current whole-organelle example fits
+    the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis
+    is claimed.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID16926386
+- assessment_id: septin-phagocytic_vesicle-acidification
+  area: evidence
+  topic: Direct assay versus discussion/schematic acidification
+  outcome: concern
+  summary: Inherited source-attribution finding persists in the specified function/example/edge
+    notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification
+    with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH
+    model is explicitly adapted from macropinocytosis. Qualitative acidification remains
+    plausible and supported context; direct pH-phase measurement must be attributed
+    to an actually inspected direct source.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID12388753
+- assessment_id: septin-phagocytic_vesicle-molecular-scope
+  area: evidence
+  topic: Protein localization and trafficking versus mechanism and necessity
+  outcome: supported
+  summary: Positive maturation/trafficking narrative is supported at stage-dependent
+    association scope. Transient Rab, V-ATPase, protease or actin context is not silently
+    promoted to universal permanent components. No optional source-identified protein
+    row is mandated.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle-graph
+  area: graph
+  topic: Declared mechanism versus represented relations
+  outcome: supported
+  summary: 'Complete graph is NONMECHANISTIC and retains explicit limits: topology,
+    broad maturation and/or acidification outcomes are not represented as a complete
+    protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3;
+    constituent and stage relationships remain distinct.'
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-graph-policy
+  - septin-schema-policy
+- assessment_id: septin-phagocytic_vesicle-formation
+  area: evidence
+  topic: Formation necessity and inventory remain bounded
+  outcome: unknown
+  summary: Ontology anatomy and Ax2 trafficking/proteomics do not establish exact
+    universal lipid/protein composition, stoichiometry, every taxon or individual
+    molecular necessity for forming the structure. The absence of optional examples
+    is not a mandatory defect; no chemical/protein CURIE is guessed.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle-native
+  area: provenance
+  topic: Actual native identifier/graph coverage
+  outcome: supported
+  summary: Both actual commands exit0; independent full-record count confirms0 examples,0
+    typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither
+    refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-native-phagocytic_vesicle-verify
+  - septin-native-phagocytic_vesicle-causal
+- assessment_id: septin-phagocytic_vesicle-adapter
+  area: scope
+  topic: Corrected positive-pathway structured-source applicability
+  outcome: supported
+  summary: Actual positive maturation/trafficking/acidification narratives trigger
+    the review policy, including lumen acidification despite excluded specific molecular
+    mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba
+    or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo
+    or unrelated host substitutes for this record. Historical00:49Z runner failure
+    remains historical; this is completed applicability assessment, not fresh runner
+    success.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+  - septin-original-phagocytic_vesicle
+- assessment_id: septin-phagocytic_vesicle-history
+  area: provenance
+  topic: Append-only discussion and historical context
+  outcome: supported
+  summary: PROPOSED status and dated curation/discussion provenance are retained.
+    RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions
+    are read in their field scope; no rewriting history, new neighbor verdict or grouped
+    issue closure is inferred.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-original-phagocytic_vesicle
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle-optional
+  area: scope
+  topic: Unasserted image, measurement and protein domains
+  outcome: not_applicable
+  summary: No maintained image/license claim, individual protein example/accession,
+    quantitative measurement, associated-trait mapping or verbatim snippet occurs
+    in these assigned records. Primary text captions were read without pixels, raw
+    data or supplements; those domains are not certified by textual inspection.
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle-verdict
+  area: completeness
+  topic: Current scientific verdict and exact inherited disposition
+  outcome: concern
+  summary: 'needs_curation: one inherited minor experimental-attribution finding remains
+    open; no new scientific finding. All record-curation actions remain for separately
+    authorized curation; this PR changes review bundles only.'
+  target_ids:
+  - GO:0045335
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-original-phagocytic_vesicle
+  - septin-curation-policy
+- assessment_id: septin-phagocytic_vesicle_lumen-schema
+  area: schema
+  topic: Original validation/render and frozen inputs
+  outcome: supported
+  summary: Both original native commands pass with exact Markdown; historical frozen
+    target is byte-identical to current record. No assigned input is stale. Scientific
+    findings remain independent of schema validity.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-original-validation-phagocytic_vesicle_lumen
+- assessment_id: septin-phagocytic_vesicle_lumen-identity
+  area: identity
+  topic: Exact identity, taxonomy-independent boundary and hierarchy
+  outcome: supported
+  summary: GO0097013 exact enclosed lumen, cytoplasmic-vesicle-lumen parent and whole-vesicle
+    parthood agree with GO/SL0342. Boundary membrane remains a structure rather than
+    lumen material. SL0342 supplies explicit broader-lumen hierarchy without inventing
+    a missing direct GO cross-map.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-context-early_phagosome
+  - septin-context-phagolysosome_vesicle_lumen
+- assessment_id: septin-phagocytic_vesicle_lumen-definition
+  area: scope
+  topic: Definition source and biological range
+  outcome: supported
+  summary: The exact ontology definition is not expanded into an unsupported fixed
+    molecular inventory or cross-taxon mechanism; current topological identity remains
+    supported.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+- assessment_id: septin-phagocytic_vesicle_lumen-taxon
+  area: scope
+  topic: Canonical experimental host, strain and qualitative occurrence
+  outcome: supported
+  summary: Current NCBITaxon44689 is D. discoideum. Both inspected primary papers
+    use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative
+    model-system presence, not a numeric census or every-strain maturation timetable.
+    Broader examples in introductory prose do not extend the Ax2 experiment to all
+    taxa.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-tax44689
+- assessment_id: septin-phagocytic_vesicle_lumen-material
+  area: grounding
+  topic: Collective bilayer material and constituent identity
+  outcome: supported
+  summary: No lumen component is asserted; membrane is a separate boundary STRUCTURE
+    without component_ref. Variable cargo or acidification outcome is not a stable
+    molecular inventory.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle_lumen-preparation
+  area: evidence
+  topic: Intact-phagosome time course versus membrane enrichment
+  outcome: supported
+  summary: The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched
+    identification samples are distinguished. Current whole-organelle example fits
+    the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis
+    is claimed.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID16926386
+- assessment_id: septin-phagocytic_vesicle_lumen-acidification
+  area: evidence
+  topic: Direct assay versus discussion/schematic acidification
+  outcome: concern
+  summary: Inherited source-attribution finding persists in the specified function/example/edge
+    notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification
+    with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH
+    model is explicitly adapted from macropinocytosis. Qualitative acidification remains
+    plausible and supported context; direct pH-phase measurement must be attributed
+    to an actually inspected direct source.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID12388753
+- assessment_id: septin-phagocytic_vesicle_lumen-molecular-scope
+  area: evidence
+  topic: Protein localization and trafficking versus mechanism and necessity
+  outcome: supported
+  summary: Positive maturation/trafficking narrative is supported at stage-dependent
+    association scope. Transient Rab, V-ATPase, protease or actin context is not silently
+    promoted to universal permanent components. No optional source-identified protein
+    row is mandated.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_lumen-graph
+  area: graph
+  topic: Declared mechanism versus represented relations
+  outcome: supported
+  summary: 'Complete graph is NONMECHANISTIC and retains explicit limits: topology,
+    broad maturation and/or acidification outcomes are not represented as a complete
+    protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3;
+    constituent and stage relationships remain distinct.'
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-graph-policy
+  - septin-schema-policy
+- assessment_id: septin-phagocytic_vesicle_lumen-formation
+  area: evidence
+  topic: Formation necessity and inventory remain bounded
+  outcome: unknown
+  summary: Ontology anatomy and Ax2 trafficking/proteomics do not establish exact
+    universal lipid/protein composition, stoichiometry, every taxon or individual
+    molecular necessity for forming the structure. The absence of optional examples
+    is not a mandatory defect; no chemical/protein CURIE is guessed.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_lumen-native
+  area: provenance
+  topic: Actual native identifier/graph coverage
+  outcome: supported
+  summary: Both actual commands exit0; independent full-record count confirms0 examples,0
+    typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither
+    refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-native-phagocytic_vesicle_lumen-verify
+  - septin-native-phagocytic_vesicle_lumen-causal
+- assessment_id: septin-phagocytic_vesicle_lumen-adapter
+  area: scope
+  topic: Corrected positive-pathway structured-source applicability
+  outcome: supported
+  summary: Actual positive maturation/trafficking/acidification narratives trigger
+    the review policy, including lumen acidification despite excluded specific molecular
+    mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba
+    or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo
+    or unrelated host substitutes for this record. Historical00:49Z runner failure
+    remains historical; this is completed applicability assessment, not fresh runner
+    success.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+  - septin-original-phagocytic_vesicle_lumen
+- assessment_id: septin-phagocytic_vesicle_lumen-history
+  area: provenance
+  topic: Append-only discussion and historical context
+  outcome: supported
+  summary: PROPOSED status and dated curation/discussion provenance are retained.
+    RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions
+    are read in their field scope; no rewriting history, new neighbor verdict or grouped
+    issue closure is inferred.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-original-phagocytic_vesicle_lumen
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle_lumen-optional
+  area: scope
+  topic: Unasserted image, measurement and protein domains
+  outcome: not_applicable
+  summary: No maintained image/license claim, individual protein example/accession,
+    quantitative measurement, associated-trait mapping or verbatim snippet occurs
+    in these assigned records. Primary text captions were read without pixels, raw
+    data or supplements; those domains are not certified by textual inspection.
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_lumen-verdict
+  area: completeness
+  topic: Current scientific verdict and exact inherited disposition
+  outcome: concern
+  summary: 'needs_curation: one inherited minor experimental-attribution finding remains
+    open; no new scientific finding. All record-curation actions remain for separately
+    authorized curation; this PR changes review bundles only.'
+  target_ids:
+  - GO:0097013
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-original-phagocytic_vesicle_lumen
+  - septin-curation-policy
+- assessment_id: septin-phagocytic_vesicle_membrane-schema
+  area: schema
+  topic: Original validation/render and frozen inputs
+  outcome: supported
+  summary: Both original native commands pass with exact Markdown; historical frozen
+    target is byte-identical to current record. No assigned input is stale. Scientific
+    findings remain independent of schema validity.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-original-validation-phagocytic_vesicle_membrane
+- assessment_id: septin-phagocytic_vesicle_membrane-identity
+  area: identity
+  topic: Exact identity, taxonomy-independent boundary and hierarchy
+  outcome: supported
+  summary: GO0030670 exact membrane definition/synonyms, cytoplasmic-vesicle-membrane
+    parent and phagocytic-vesicle parthood agree with SL0205.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-context-early_phagosome
+  - septin-context-phagolysosome_vesicle_lumen
+- assessment_id: septin-phagocytic_vesicle_membrane-definition
+  area: scope
+  topic: Definition source and biological range
+  outcome: supported
+  summary: The exact ontology definition is not expanded into an unsupported fixed
+    molecular inventory or cross-taxon mechanism; current topological identity remains
+    supported.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+- assessment_id: septin-phagocytic_vesicle_membrane-taxon
+  area: scope
+  topic: Canonical experimental host, strain and qualitative occurrence
+  outcome: supported
+  summary: Current NCBITaxon44689 is D. discoideum. Both inspected primary papers
+    use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative
+    model-system presence, not a numeric census or every-strain maturation timetable.
+    Broader examples in introductory prose do not extend the Ax2 experiment to all
+    taxa.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-tax44689
+- assessment_id: septin-phagocytic_vesicle_membrane-material
+  area: grounding
+  topic: Collective bilayer material and constituent identity
+  outcome: supported
+  summary: The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without
+    pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes
+    constitutive bilayer material, not necessity of a particular molecular species.
+    Exact lipid composition remains an explicit unresolved grounding question.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle_membrane-preparation
+  area: evidence
+  topic: Intact-phagosome time course versus membrane enrichment
+  outcome: concern
+  summary: 'Inherited preparation finding persists: the canonical note says purified
+    phagosome membranes were profiled across maturation, but the2006 time course measured
+    intact-phagosome extracts. Carbonate-enriched pooled membranes were a distinct
+    protein-identification preparation. Preserve the correct remodeling outcome while
+    qualifying the experimental preparation.'
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID16926386
+- assessment_id: septin-phagocytic_vesicle_membrane-acidification
+  area: evidence
+  topic: Direct assay versus discussion/schematic acidification
+  outcome: supported
+  summary: Current trafficking/maturation evidence is not separately rejected as a
+    direct pH trace. Source context still distinguishes measured protein trafficking,
+    discussion-level acidification and a macropinocytosis-derived schematic.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID12388753
+- assessment_id: septin-phagocytic_vesicle_membrane-molecular-scope
+  area: evidence
+  topic: Protein localization and trafficking versus mechanism and necessity
+  outcome: supported
+  summary: Positive maturation/trafficking narrative is supported at stage-dependent
+    association scope. Transient Rab, V-ATPase, protease or actin context is not silently
+    promoted to universal permanent components. No optional source-identified protein
+    row is mandated.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_membrane-graph
+  area: graph
+  topic: Declared mechanism versus represented relations
+  outcome: supported
+  summary: 'Complete graph is NONMECHANISTIC and retains explicit limits: topology,
+    broad maturation and/or acidification outcomes are not represented as a complete
+    protein-recruitment mechanism. Whole vesicle has8 edges, lumen3 and membrane3;
+    constituent and stage relationships remain distinct.'
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-graph-policy
+  - septin-schema-policy
+- assessment_id: septin-phagocytic_vesicle_membrane-formation
+  area: evidence
+  topic: Formation necessity and inventory remain bounded
+  outcome: unknown
+  summary: Ontology anatomy and Ax2 trafficking/proteomics do not establish exact
+    universal lipid/protein composition, stoichiometry, every taxon or individual
+    molecular necessity for forming the structure. The absence of optional examples
+    is not a mandatory defect; no chemical/protein CURIE is guessed.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_membrane-native
+  area: provenance
+  topic: Actual native identifier/graph coverage
+  outcome: supported
+  summary: Both actual commands exit0; independent full-record count confirms0 examples,0
+    typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither
+    refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-native-phagocytic_vesicle_membrane-verify
+  - septin-native-phagocytic_vesicle_membrane-causal
+- assessment_id: septin-phagocytic_vesicle_membrane-adapter
+  area: scope
+  topic: Corrected positive-pathway structured-source applicability
+  outcome: supported
+  summary: Actual positive maturation/trafficking/acidification narratives trigger
+    the review policy, including lumen acidification despite excluded specific molecular
+    mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba
+    or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo
+    or unrelated host substitutes for this record. Historical00:49Z runner failure
+    remains historical; this is completed applicability assessment, not fresh runner
+    success.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+  - septin-original-phagocytic_vesicle_membrane
+- assessment_id: septin-phagocytic_vesicle_membrane-history
+  area: provenance
+  topic: Append-only discussion and historical context
+  outcome: supported
+  summary: PROPOSED status and dated curation/discussion provenance are retained.
+    RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions
+    are read in their field scope; no rewriting history, new neighbor verdict or grouped
+    issue closure is inferred.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-original-phagocytic_vesicle_membrane
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagocytic_vesicle_membrane-optional
+  area: scope
+  topic: Unasserted image, measurement and protein domains
+  outcome: not_applicable
+  summary: No maintained image/license claim, individual protein example/accession,
+    quantitative measurement, associated-trait mapping or verbatim snippet occurs
+    in these assigned records. Primary text captions were read without pixels, raw
+    data or supplements; those domains are not certified by textual inspection.
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-protein-policy
+- assessment_id: septin-phagocytic_vesicle_membrane-verdict
+  area: completeness
+  topic: Current scientific verdict and exact inherited disposition
+  outcome: concern
+  summary: 'needs_curation: one inherited minor experimental-attribution finding remains
+    open; no new scientific finding. All record-curation actions remain for separately
+    authorized curation; this PR changes review bundles only.'
+  target_ids:
+  - GO:0030670
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-original-phagocytic_vesicle_membrane
+  - septin-curation-policy
+- assessment_id: septin-phagolysosome-schema
+  area: schema
+  topic: Original validation/render and frozen inputs
+  outcome: supported
+  summary: Both original native commands pass with exact Markdown; historical frozen
+    target is byte-identical to current record. No assigned input is stale. Scientific
+    findings remain independent of schema validity.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-original-validation-phagolysosome
+- assessment_id: septin-phagolysosome-identity
+  area: identity
+  topic: Exact identity, taxonomy-independent boundary and hierarchy
+  outcome: supported
+  summary: GO0032010 exact opening definition, secondary-lysosome and phagocytic-vesicle
+    parents, membrane0061474 and lumen0106174 parts agree. Late-phagosome related
+    synonyms retain their source scope. Added molecular definition is assessed separately.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-context-early_phagosome
+  - septin-context-phagolysosome_vesicle_lumen
+- assessment_id: septin-phagolysosome-definition
+  area: scope
+  topic: Definition source and biological range
+  outcome: concern
+  summary: The exact ontology opening remains valid, but the expanded definition adds
+    cross-taxon molecular programs not stated by GO and not established in full by
+    the two Ax2 studies. This is inherited major F1, not evidence that any individual
+    mechanism is absent from Entamoeba or ciliates.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+- assessment_id: septin-phagolysosome-taxon
+  area: scope
+  topic: Canonical experimental host, strain and qualitative occurrence
+  outcome: supported
+  summary: Current NCBITaxon44689 is D. discoideum. Both inspected primary papers
+    use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative
+    model-system presence, not a numeric census or every-strain maturation timetable.
+    Broader examples in introductory prose do not extend the Ax2 experiment to all
+    taxa.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-tax44689
+- assessment_id: septin-phagolysosome-material
+  area: grounding
+  topic: Collective bilayer material and constituent identity
+  outcome: supported
+  summary: The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without
+    pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes
+    constitutive bilayer material, not necessity of a particular molecular species.
+    Exact lipid composition remains an explicit unresolved grounding question.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagolysosome-preparation
+  area: evidence
+  topic: Intact-phagosome time course versus membrane enrichment
+  outcome: supported
+  summary: The2006 intact-phagosome six-time-point experiment and separate carbonate-enriched
+    identification samples are distinguished. Current whole-organelle example fits
+    the intact preparation; no isolated-membrane time course or raw-proteomics reanalysis
+    is claimed.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID16926386
+- assessment_id: septin-phagolysosome-acidification
+  area: evidence
+  topic: Direct assay versus discussion/schematic acidification
+  outcome: concern
+  summary: Inherited source-attribution finding persists in the specified function/example/edge
+    notes. Gotthardt2002 directly measures trafficking/composition and discusses acidification
+    with earlier citations, not a direct luminal-pH assay. Gotthardt2006 Fig4C pH
+    model is explicitly adapted from macropinocytosis. Qualitative acidification remains
+    plausible and supported context; direct pH-phase measurement must be attributed
+    to an actually inspected direct source.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID12388753
+- assessment_id: septin-phagolysosome-molecular-scope
+  area: evidence
+  topic: Protein localization and trafficking versus mechanism and necessity
+  outcome: concern
+  summary: Inherited expanded-definition finding includes fixed or cross-taxon V-ATPase/hydrolase/SNARE/Nramp/LAMP-style
+    claims, with membrane enrichment propagated into its material role/graph.2002
+    identifies early V-ATPase, differential Lmp CD36/LIMPII kinetics and trafficking-associated
+    Vti1/VAMP7; it does not directly test LAMP-mediated protection or establish the
+    complete added mechanism across taxa.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome-graph
+  area: graph
+  topic: Declared mechanism versus represented relations
+  outcome: concern
+  summary: 'Inherited minor graph-scope finding persists: MECHANISTIC and assembly/functional-mechanism
+    wording promise actor transitions, while actual edges are material/parthood and
+    broad whole-structure process associations. Relabel descriptive scope or separately
+    curate an evidenced mechanism. GO0006909 itself includes lysosomal delivery/fusion/digestion;
+    no new false actor contradiction is invented.'
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-graph-policy
+  - septin-schema-policy
+- assessment_id: septin-phagolysosome-formation
+  area: evidence
+  topic: Formation necessity and inventory remain bounded
+  outcome: unknown
+  summary: Ontology anatomy and Ax2 trafficking/proteomics do not establish exact
+    universal lipid/protein composition, stoichiometry, every taxon or individual
+    molecular necessity for forming the structure. The absence of optional examples
+    is not a mandatory defect; no chemical/protein CURIE is guessed.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome-native
+  area: provenance
+  topic: Actual native identifier/graph coverage
+  outcome: supported
+  summary: Both actual commands exit0; independent full-record count confirms0 examples,0
+    typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither
+    refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-native-phagolysosome-verify
+  - septin-native-phagolysosome-causal
+- assessment_id: septin-phagolysosome-adapter
+  area: scope
+  topic: Corrected positive-pathway structured-source applicability
+  outcome: supported
+  summary: Actual positive maturation/trafficking/acidification narratives trigger
+    the review policy, including lumen acidification despite excluded specific molecular
+    mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba
+    or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo
+    or unrelated host substitutes for this record. Historical00:49Z runner failure
+    remains historical; this is completed applicability assessment, not fresh runner
+    success.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+  - septin-original-phagolysosome
+- assessment_id: septin-phagolysosome-history
+  area: provenance
+  topic: Append-only discussion and historical context
+  outcome: supported
+  summary: PROPOSED status and dated curation/discussion provenance are retained.
+    RESOLVED boundary/variable-cargo discussions and OPEN source-neutral lipid questions
+    are read in their field scope; no rewriting history, new neighbor verdict or grouped
+    issue closure is inferred.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-original-phagolysosome
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagolysosome-optional
+  area: scope
+  topic: Unasserted image, measurement and protein domains
+  outcome: not_applicable
+  summary: No maintained image/license claim, individual protein example/accession,
+    quantitative measurement, associated-trait mapping or verbatim snippet occurs
+    in these assigned records. Primary text captions were read without pixels, raw
+    data or supplements; those domains are not certified by textual inspection.
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome-verdict
+  area: completeness
+  topic: Current scientific verdict and exact inherited disposition
+  outcome: concern
+  summary: 'needs_curation: inherited major definition-scope and two minor graph/experimental-scope
+    findings remain open. All record-curation actions remain for separately authorized
+    curation; this PR changes review bundles only.'
+  target_ids:
+  - GO:0032010
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-original-phagolysosome
+  - septin-curation-policy
+- assessment_id: septin-phagolysosome_membrane-schema
+  area: schema
+  topic: Original validation/render and frozen inputs
+  outcome: supported
+  summary: Both original native commands pass with exact Markdown; historical frozen
+    target is byte-identical to current record. No assigned input is stale. Scientific
+    findings remain independent of schema validity.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-validation-phagolysosome_membrane
+- assessment_id: septin-phagolysosome_membrane-identity
+  area: identity
+  topic: Exact identity, taxonomy-independent boundary and hierarchy
+  outcome: supported
+  summary: GO0061474 exact opening membrane definition, broader GO0030670 parent and
+    GO0032010 parthood are correct. Ordinary phagolysosomal-membrane wording is semantically
+    compatible; no material identity defect is invented from lexical source variation.
+    Appended mechanism and broader SL0205 provenance are separate.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-SL0206
+  - septin-SL0205
+  - septin-SL0342
+  - septin-context-early_phagosome
+  - septin-context-phagolysosome_vesicle_lumen
+- assessment_id: septin-phagolysosome_membrane-definition
+  area: scope
+  topic: Definition source and biological range
+  outcome: concern
+  summary: The exact ontology opening remains valid, but the expanded definition adds
+    cross-taxon molecular programs not stated by GO and not established in full by
+    the two Ax2 studies. This is inherited major F1, not evidence that any individual
+    mechanism is absent from Entamoeba or ciliates.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+- assessment_id: septin-phagolysosome_membrane-taxon
+  area: scope
+  topic: Canonical experimental host, strain and qualitative occurrence
+  outcome: supported
+  summary: Current NCBITaxon44689 is D. discoideum. Both inspected primary papers
+    use Ax2 at22C in HL5c with latex-bead uptake/pulse-chase. COMMON is qualitative
+    model-system presence, not a numeric census or every-strain maturation timetable.
+    Broader examples in introductory prose do not extend the Ax2 experiment to all
+    taxa.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-tax44689
+- assessment_id: septin-phagolysosome_membrane-material
+  area: grounding
+  topic: Collective bilayer material and constituent identity
+  outcome: supported
+  summary: The REVIEWED_LABEL_ONLY LIPID denotes collective bilayer material without
+    pretending whole membrane GO is a chemical constituent CURIE. ESSENTIAL denotes
+    constitutive bilayer material, not necessity of a particular molecular species.
+    Exact lipid composition remains an explicit unresolved grounding question.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagolysosome_membrane-preparation
+  area: evidence
+  topic: Intact-phagosome time course versus membrane enrichment
+  outcome: concern
+  summary: 'Inherited preparation finding persists: the canonical note says purified
+    phagosome membranes were profiled across maturation, but the2006 time course measured
+    intact-phagosome extracts. Carbonate-enriched pooled membranes were a distinct
+    protein-identification preparation. Preserve the correct remodeling outcome while
+    qualifying the experimental preparation.'
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID16926386
+- assessment_id: septin-phagolysosome_membrane-acidification
+  area: evidence
+  topic: Direct assay versus discussion/schematic acidification
+  outcome: supported
+  summary: Current trafficking/maturation evidence is not separately rejected as a
+    direct pH trace. Source context still distinguishes measured protein trafficking,
+    discussion-level acidification and a macropinocytosis-derived schematic.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-PMID12388753
+- assessment_id: septin-phagolysosome_membrane-molecular-scope
+  area: evidence
+  topic: Protein localization and trafficking versus mechanism and necessity
+  outcome: concern
+  summary: Inherited expanded-definition finding includes fixed or cross-taxon V-ATPase/hydrolase/SNARE/Nramp/LAMP-style
+    claims, with membrane enrichment propagated into its material role/graph.2002
+    identifies early V-ATPase, differential Lmp CD36/LIMPII kinetics and trafficking-associated
+    Vti1/VAMP7; it does not directly test LAMP-mediated protection or establish the
+    complete added mechanism across taxa.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome_membrane-graph
+  area: graph
+  topic: Declared mechanism versus represented relations
+  outcome: concern
+  summary: 'Inherited minor graph-scope finding persists: MECHANISTIC and assembly/functional-mechanism
+    wording promise actor transitions, while actual edges are material/parthood and
+    broad whole-structure process associations. Relabel descriptive scope or separately
+    curate an evidenced mechanism. GO0006909 itself includes lysosomal delivery/fusion/digestion;
+    no new false actor contradiction is invented.'
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-graph-policy
+  - septin-schema-policy
+- assessment_id: septin-phagolysosome_membrane-formation
+  area: evidence
+  topic: Formation necessity and inventory remain bounded
+  outcome: unknown
+  summary: Ontology anatomy and Ax2 trafficking/proteomics do not establish exact
+    universal lipid/protein composition, stoichiometry, every taxon or individual
+    molecular necessity for forming the structure. The absence of optional examples
+    is not a mandatory defect; no chemical/protein CURIE is guessed.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome_membrane-native
+  area: provenance
+  topic: Actual native identifier/graph coverage
+  outcome: supported
+  summary: Both actual commands exit0; independent full-record count confirms0 examples,0
+    typed molecular nodes and0 UniProtKB graph xrefs. The empty native scope neither
+    refutes positive pathway assertions nor validates unsupported narrative mechanisms.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-native-phagolysosome_membrane-verify
+  - septin-native-phagolysosome_membrane-causal
+- assessment_id: septin-phagolysosome_membrane-adapter
+  area: scope
+  topic: Corrected positive-pathway structured-source applicability
+  outcome: supported
+  summary: Actual positive maturation/trafficking/acidification narratives trigger
+    the review policy, including lumen acidification despite excluded specific molecular
+    mechanisms. Fresh complete catalogue has no matched D. discoideum/Ax2, Entamoeba
+    or ciliate host; bounded primary/authority fallback is used. No bacterial prey/cargo
+    or unrelated host substitutes for this record. Historical00:49Z runner failure
+    remains historical; this is completed applicability assessment, not fresh runner
+    success.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+  - septin-original-phagolysosome_membrane
+- assessment_id: septin-phagolysosome_membrane-history
+  area: provenance
+  topic: Append-only discussion and historical context
+  outcome: supported
+  summary: Original F4/A4 recognized no alteration of dated history and no closing
+    the lipid TODO. Its remaining mandatory current-rationale correction nevertheless
+    conflates provenance with current state. Current exact identity is GO0061474 and
+    collective material is intentionally label-only with broader context. CURATION
+    makes rationale append-only and notes current state even while OPEN. Reject that
+    mandatory record finding; optional appended clarification may distinguish exact
+    and broader identity. Underlying lipid TODO remains open.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-phagolysosome_membrane
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+- assessment_id: septin-phagolysosome_membrane-optional
+  area: scope
+  topic: Unasserted image, measurement and protein domains
+  outcome: not_applicable
+  summary: No maintained image/license claim, individual protein example/accession,
+    quantitative measurement, associated-trait mapping or verbatim snippet occurs
+    in these assigned records. Primary text captions were read without pixels, raw
+    data or supplements; those domains are not certified by textual inspection.
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-protein-policy
+- assessment_id: septin-phagolysosome_membrane-verdict
+  area: completeness
+  topic: Current scientific verdict and exact inherited disposition
+  outcome: concern
+  summary: 'needs_curation: inherited major definition-scope and two minor graph/experimental-scope
+    findings remain open. Inherited F4 is explicitly rejected as an unsupported mandatory
+    provenance correction, without resolving the underlying lipid TODO. All record-curation
+    actions remain for separately authorized curation; this PR changes review bundles
+    only.'
+  target_ids:
+  - GO:0061474
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-original-phagolysosome_membrane
+  - septin-curation-policy
+- assessment_id: plaque-t0-schema
+  area: schema
+  topic: Unchanged target and exact immutable original
+  outcome: supported
+  summary: Both original native formats validate/render exactly, target freeze matches
+    current,15historical source hashes each verified. Actual current native protein
+    checks cover empty inventories. Root owns full local/publication gates.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-original-0
+  - plaque-original-checks
+  - plaque-native-parasitophorous_vacuole_membrane-verify
+  - plaque-native-parasitophorous_vacuole_membrane-causal
+- assessment_id: plaque-t1-schema
+  area: schema
+  topic: Unchanged target and exact immutable original
+  outcome: supported
+  summary: Both original native formats validate/render exactly, target freeze matches
+    current,15historical source hashes each verified. Actual current native protein
+    checks cover empty inventories. Root owns full local/publication gates.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-original-1
+  - plaque-original-checks
+  - plaque-native-periplastidial_membrane-verify
+  - plaque-native-periplastidial_membrane-causal
+- assessment_id: plaque-t0-identity
+  area: identity
+  topic: Narrow PVM and broad symbiont-membrane parent
+  outcome: supported
+  summary: SL0193 exactly defines the membrane and synonym; broader GO0020005 has
+    general symbiont scope despite lexical exact synonym. Narrow local Apicomplexa-scoped
+    identity plus broad parent remains defensible.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-go
+  - plaque-SL0193
+  - plaque-SL0194
+- assessment_id: plaque-t0-topology
+  area: graph
+  topic: Descriptive membrane boundary and local parthood
+  outcome: supported
+  summary: Single NONMECHANISTIC bounds edge and containingPV link agree withSL0193/0194
+    and frozenwhole/lumen contexts. No secretory construction/remodeling mechanism
+    is claimed by this edge.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-SL0193
+  - plaque-SL0194
+  - plaque-context-parasitophorous_vacuole
+  - plaque-context-parasitophorous_vacuole_lumen
+- assessment_id: plaque-t0-material
+  area: grounding
+  topic: Label-only collective bilayer
+  outcome: supported
+  summary: Constituent is generic bilayer without a whole-membrane CURIE falsely used
+    as chemical identity. Structural component_ref is coherent for this membrane-only
+    record; source-neutral lipid TODO remains bounded.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-schema-policy
+  - plaque-SL0193
+  - plaque-lingelbach1998-meta
+- assessment_id: plaque-t0-necessity
+  area: evidence
+  topic: Individual formation requirements remain unknown
+  outcome: unknown
+  summary: ESSENTIAL describes constitutive bilayer, not tested necessity of every
+    lipid/protein. BioID localization/candidates do not supply depletion/reconstitution
+    evidence for formation or require importing a complete protein inventory.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-schnider2018-body
+  - plaque-schema-policy
+  - plaque-rubric
+- assessment_id: plaque-t0-taxon
+  area: scope
+  topic: Qualitative most-apicomplexan scope and Toxoplasma
+  outcome: supported
+  summary: ENA confirms taxa. COMMON expressly inherits most-apicomplexan native location
+    scope, not universal every-stage prevalence. Complete secondary Clough abstract
+    supports the Toxoplasma parasite-modified interface example.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-tax5794
+  - plaque-tax5811
+  - plaque-SL0194
+  - plaque-clough2017-meta
+- assessment_id: plaque-t0-F1
+  area: evidence
+  topic: Inherited BioID canonical species mismatch
+  outcome: concern
+  summary: The exact cited survey used P.berghei ANKA mCherryHsp70; maintained canonical
+    example1 names P.falciparum. Ortholog/prior-literature comparisons do not support
+    that experimental attribution. Preserve originalmajor key and exactpredecessor.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-original-0
+  - plaque-tax5833
+  - plaque-tax5821
+  - plaque-schnider2018-meta
+  - plaque-schnider2018-body
+- assessment_id: plaque-t0-adapter
+  area: evidence
+  topic: Positive PVM protein survey triggers coverage
+  outcome: supported
+  summary: Even with topology-only graph and empty accession inventory, canonical
+    example positively asserts BioID PVM-protein survey. Expression-only exemption
+    bypasses native whole-claim applicability. Fresh catalogue lacks matched host;
+    no foreignproxy or absence inference.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-current-0
+  - plaque-original-0
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-historical-runner
+- assessment_id: plaque-t0-limits
+  area: provenance
+  topic: Source tiers and neighbor separation
+  outcome: supported
+  summary: Schnider declared JATS sections/captions independently reread with18:42Z
+    originaltime; no pixels/supplement/rawdata. Lingelbach/Clough are secondaryabstracts
+    only. This finding concerns PVM, not closure/disposition of wholePV neighbor or
+    history.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  evidence_ids:
+  - plaque-original-0
+  - plaque-schnider2018-body
+  - plaque-lingelbach1998-meta
+  - plaque-clough2017-meta
+  - plaque-context-parasitophorous_vacuole
+  - plaque-history-policy
+- assessment_id: plaque-t1-identity
+  area: identity
+  topic: Second outermost membrane of complex plastids
+  outcome: supported
+  summary: Fresh GO7770041 definition/synonym exactly matches target. Plastid-membrane
+    is_a and plastidparthood are distinct; ancestry response is not misreported as
+    direct part_of. PPM remains separate fromEpM andcanonicaloEM.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-go
+  - plaque-go-ppm-isa
+  - plaque-context-epiplastidial_membrane
+  - plaque-context-plastid_outer_membrane
+  - plaque-flori2016-oceanomics-pdf
+- assessment_id: plaque-t1-material
+  area: grounding
+  topic: Constitutive generic bilayer
+  outcome: supported
+  summary: Label-only collective lipid material does not misground a whole membrane
+    as a chemical. Individual lipid composition is not invented from ultrastructure
+    or MGDlocalization; optional components are not mandatory completeness defects.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-schema-policy
+  - plaque-rubric
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-gueguen2024-jats
+- assessment_id: plaque-t1-necessity
+  area: evidence
+  topic: Specific lipid or protein formation necessity
+  outcome: unknown
+  summary: Inspected localization/ultrastructure does not establish required particular
+    lipid species or a formation-essential enzyme. ESSENTIAL is interpreted as constitutive
+    bilayer material; native inventories remain intentionally empty.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-gueguen2024-jats
+  - plaque-schema-policy
+- assessment_id: plaque-t1-scope
+  area: scope
+  topic: Species occurrence versus experimental cultures
+  outcome: supported
+  summary: P.tricornutum2850 identity and qualitative occurrence/ultrastructural example
+    supported. FloriPt1CCAP1055/3 and GueguenPt1strain8.6CCAP1055/1(CCMP2561) are
+    separate experimental contexts, not a specieswide exact strain/protocol claim.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-tax2850
+  - plaque-flori2016-meta
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-gueguen2024-meta
+  - plaque-gueguen2024-jats
+- assessment_id: plaque-t1-graph
+  area: graph
+  topic: Coarse physical material-to-boundary function
+  outcome: supported
+  summary: Bilayer forms secondoutermostmembrane and helps delimitPPC together withoEM.
+    The twoedges explain a physical boundary function at coarse resolution; MECHANISTIC
+    does not assert specific membrane-maintenance machinery, assembly kinetics or
+    import system. Lowresolutionalone is not a defect.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-graph-rubric
+  - plaque-go
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-hashimoto2005-meta
+- assessment_id: plaque-t1-evolution
+  area: evidence
+  topic: Authority definition versus experimental ancestry
+  outcome: supported
+  summary: Maintained evolutionary wording reproduces currentGO. Flori treats symbiontplasmamembrane
+    origin as considered and acknowledges alternativehostER proposal. Neither membrane
+    topology nor MGDlocalization uniquely experimentally traces ancestry; retain this
+    evidence limitation without inventing a refutation.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-go
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-hashimoto2005-meta
+- assessment_id: plaque-t1-discussion
+  area: provenance
+  topic: Forward-looking boundary and grounding discussions
+  outcome: supported
+  summary: Current record already distinguishes secondoutermostPPM fromoutermostEpM
+    andcanonicalouterenvelope. Open boundary/grounding prompts are futurecurationcontext,
+    not mandatory closure or proofhistoricalrationale waswrong. Neighborfindings remain
+    outside this assignedreview.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-history-policy
+  - plaque-go
+  - plaque-context-epiplastidial_membrane
+  - plaque-context-plastid_outer_membrane
+- assessment_id: plaque-t1-adapter
+  area: evidence
+  topic: Genuine material and boundary exclusion
+  outcome: not_applicable
+  summary: Entirepositivecontent concerns bilayer, topological delimitation, qualitativeoccurrence
+    and evolutionaryorigin. A citedMGDpaper title does not itself assert an enzymepathway
+    in thisrecord. No namedgene/protein/regulator/stress/trait/transcriptomic claim
+    is maintained; preserve exclusion with preciseactualscope.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-current-1
+  - plaque-original-1
+  - plaque-policy
+  - plaque-catalogue
+  - plaque-gueguen2024-jats
+- assessment_id: plaque-t1-limits
+  area: evidence
+  topic: Bounded reused primary and secondary readings
+  outcome: supported
+  summary: FloriPDF scientificmaintext/Methods/captions reread at unchanged13:39Zsnapshot;
+    no pixels/movies. Gueguen onlydeclaredlocalization/discussion/culture/confocalsections,
+    no new fullmutantlipidomicaudit. Hashimoto is complete secondaryabstractonly.
+  target_ids:
+  - GO:7770041
+  evidence_ids:
+  - plaque-flori2016-oceanomics-pdf
+  - plaque-gueguen2024-jats
+  - plaque-hashimoto2005-meta
+- assessment_id: micro-peroxisomal_matrix-identity
+  area: identity
+  topic: Exact anatomy, synonyms, hierarchy and parthood
+  outcome: supported
+  summary: GO0005782 exactly identifies matrix/lumen and microbody-lumen subclass;
+    it is volume, not membrane or universal yeast urate-oxidase core.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-go
+  - micro-go-0005782-isa
+- assessment_id: micro-peroxisomal_matrix-material
+  area: grounding
+  topic: Anatomical identity versus constituent chemistry
+  outcome: supported
+  summary: No components; resolved discussion correctly excludes bounding membrane
+    from matrix constituents.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-component-policy
+  - micro-go
+  - micro-prior-peroxisomal_matrix
+- assessment_id: micro-peroxisomal_matrix-taxon
+  area: scope
+  topic: Species, strain and experimental limits
+  outcome: supported
+  summary: 4932 species and559292 S288c strain verified separately. COMMON is qualitative
+    occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no
+    newly demonstrated S288c localization experiment is inferred from the model taxon
+    or representative accession.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-tax4932
+  - micro-tax559292
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+- assessment_id: micro-peroxisomal_matrix-functions
+  area: evidence
+  topic: Positive metabolic/import function claims
+  outcome: supported
+  summary: Matrix beta-oxidation and import context are consistent with secondary
+    sources; no all-pathway-reaction localization implied.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-smith2013-jats
+  - micro-pex14-primary
+- assessment_id: micro-peroxisomal_matrix-graph
+  area: graph
+  topic: Every node/edge and declared NONMECHANISTIC scope
+  outcome: supported
+  summary: Three descriptive relations correctly place matrix within organelle, membrane
+    around matrix and beta-oxidation in matrix.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-graph-policy
+  - micro-go
+  - micro-smith2013-jats
+- assessment_id: micro-peroxisomal_matrix-proteins
+  area: grounding
+  topic: Individual protein identity versus complete machinery
+  outcome: supported
+  summary: No individual protein inventory or typed protein node; optional examples
+    are not mandatory.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-graph-policy
+  - micro-native-peroxisomal_matrix-causal
+- assessment_id: micro-peroxisomal_matrix-pathway
+  area: scope
+  topic: Pinned pathway correspondence
+  outcome: supported
+  summary: Exact pinned model bytes/id/label/S288c taxon verified. SITE_OF explicitly
+    covers the beta-oxidation segment, not every activation/auxiliary reaction. Native
+    offline snapshot gate and fresh remote hash check are separate from localization
+    evidence; no upstream mechanistic-edge certification.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-pathway
+  - micro-pathway-snapshot
+  - micro-pathway-checker
+  - micro-pathway-decisions
+  - micro-native-pathway-links
+  - micro-sibirny2016-meta
+- assessment_id: micro-peroxisomal_matrix-adapter
+  area: evidence
+  topic: Structured-source applicability from whole record
+  outcome: concern
+  summary: 'Original explicit expression-only N/A is unsupported: matrix beta-oxidation
+    and import context trigger host coverage checks. Fresh complete official catalogue
+    lacks matching yeast/S288c; no matched downstream query or biological absence
+    inferred. This repairs a bundle assessment, not a record.'
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-prior-peroxisomal_matrix
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-peroxisomal_matrix-history
+  area: provenance
+  topic: Append-only history and unresolved source-neutral grounding
+  outcome: supported
+  summary: Historical discussions remain provenance; source-neutral grounding questions
+    can remain open despite taxon-specific representative xrefs. No history rewriting,
+    wider issue resolution or status promotion. All target bytes unchanged.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-prior-peroxisomal_matrix
+  - micro-discussion-policy
+- assessment_id: micro-peroxisomal_matrix-native
+  area: schema
+  topic: Native validation/render and actual command coverage
+  outcome: supported
+  summary: All48 original frozen inputs verify; three original YAML/Markdown pairs
+    validate/render exactly; current target unchanged. Actual native protein commands
+    pass with independently counted inventory, not proof of biological completeness.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-prior-peroxisomal_matrix
+  - micro-original-inputs
+  - micro-original-pairs
+  - micro-native-peroxisomal_matrix-verify
+  - micro-native-peroxisomal_matrix-causal
+- assessment_id: micro-peroxisomal_matrix-limits
+  area: completeness
+  topic: Complete claim surfaces and source access
+  outcome: supported
+  summary: Entire current record reviewed, including no image/measurement/snippet
+    claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections;
+    primary Pex14 papers abstract-only. Source access unknown is not refutation. No
+    supported scientific finding; qualified pass.
+  target_ids:
+  - GO:0005782
+  evidence_ids:
+  - micro-record-peroxisomal_matrix
+  - micro-prior-peroxisomal_matrix
+  - micro-smith2013-jats
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-pex14-primary
+  - micro-original-pairs
+- assessment_id: micro-peroxisomal_membrane-identity
+  area: identity
+  topic: Exact anatomy, synonyms, hierarchy and parthood
+  outcome: supported
+  summary: GO0005778 exactly identifies the surrounding membrane, with microbody-membrane
+    subclass and peroxisome parthood.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-go
+  - micro-go-0005778-isa
+- assessment_id: micro-peroxisomal_membrane-material
+  area: grounding
+  topic: Anatomical identity versus constituent chemistry
+  outcome: supported
+  summary: Collective bilayer is LIPID/CONSTITUENT, REVIEWED_LABEL_ONLY with explicit
+    rationale and no anatomical GO chemical grounding. ESSENTIAL denotes defining
+    bilayer, not every lipid species.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-component-policy
+  - micro-go
+  - micro-prior-peroxisomal_membrane
+- assessment_id: micro-peroxisomal_membrane-taxon
+  area: scope
+  topic: Species, strain and experimental limits
+  outcome: supported
+  summary: 4932 species and559292 S288c strain verified separately. COMMON is qualitative
+    occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no
+    newly demonstrated S288c localization experiment is inferred from the model taxon
+    or representative accession.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-tax4932
+  - micro-tax559292
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+- assessment_id: micro-peroxisomal_membrane-functions
+  area: evidence
+  topic: Positive metabolic/import function claims
+  outcome: supported
+  summary: Boundary role and membrane-associated PEX docking/import platform supported
+    by review context and primary abstracts; detailed pore mechanism/assembly necessity
+    not asserted.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-smith2013-jats
+  - micro-pex14-primary
+- assessment_id: micro-peroxisomal_membrane-graph
+  area: graph
+  topic: Every node/edge and declared NONMECHANISTIC scope
+  outcome: supported
+  summary: Four descriptive relations distinguish membrane parthood, matrix enclosure,
+    docking machinery membrane residence and import support. P53112 is representative
+    xref; broad machinery identity is not falsely equated with one accession.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-graph-policy
+  - micro-go
+  - micro-smith2013-jats
+  - micro-P53112
+  - micro-family-P53112
+  - micro-pex14-primary
+- assessment_id: micro-peroxisomal_membrane-proteins
+  area: grounding
+  topic: Individual protein identity versus complete machinery
+  outcome: supported
+  summary: P53112 is reviewed PEX14/YGL153W in S288c; family/domain annotations verified,
+    but they do not supply a source-neutral CURIE for the entire docking machinery.
+    Native UNANCHORED_WITH_UNIPROT is allowed coverage classification.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-graph-policy
+  - micro-native-peroxisomal_membrane-causal
+  - micro-P53112
+  - micro-family-P53112
+  - micro-pex14-primary
+- assessment_id: micro-peroxisomal_membrane-pathway
+  area: scope
+  topic: Pinned pathway correspondence
+  outcome: not_applicable
+  summary: No related_pathways assertion on membrane record.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-pathway
+  - micro-pathway-snapshot
+  - micro-pathway-checker
+  - micro-pathway-decisions
+  - micro-native-pathway-links
+  - micro-sibirny2016-meta
+- assessment_id: micro-peroxisomal_membrane-adapter
+  area: evidence
+  topic: Structured-source applicability from whole record
+  outcome: concern
+  summary: 'Original explicit expression-only N/A is unsupported: PEX docking/import
+    platform and representative Pex14 trigger host coverage checks. Fresh complete
+    official catalogue lacks matching yeast/S288c; no matched downstream query or
+    biological absence inferred. This repairs a bundle assessment, not a record.'
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-prior-peroxisomal_membrane
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-peroxisomal_membrane-history
+  area: provenance
+  topic: Append-only history and unresolved source-neutral grounding
+  outcome: supported
+  summary: Historical discussions remain provenance; source-neutral grounding questions
+    can remain open despite taxon-specific representative xrefs. No history rewriting,
+    wider issue resolution or status promotion. All target bytes unchanged.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-prior-peroxisomal_membrane
+  - micro-discussion-policy
+- assessment_id: micro-peroxisomal_membrane-native
+  area: schema
+  topic: Native validation/render and actual command coverage
+  outcome: supported
+  summary: All48 original frozen inputs verify; three original YAML/Markdown pairs
+    validate/render exactly; current target unchanged. Actual native protein commands
+    pass with independently counted inventory, not proof of biological completeness.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-prior-peroxisomal_membrane
+  - micro-original-inputs
+  - micro-original-pairs
+  - micro-native-peroxisomal_membrane-verify
+  - micro-native-peroxisomal_membrane-causal
+- assessment_id: micro-peroxisomal_membrane-limits
+  area: completeness
+  topic: Complete claim surfaces and source access
+  outcome: supported
+  summary: Entire current record reviewed, including no image/measurement/snippet
+    claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections;
+    primary Pex14 papers abstract-only. Source access unknown is not refutation. No
+    supported scientific finding; qualified pass.
+  target_ids:
+  - GO:0005778
+  evidence_ids:
+  - micro-record-peroxisomal_membrane
+  - micro-prior-peroxisomal_membrane
+  - micro-smith2013-jats
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-pex14-primary
+  - micro-original-pairs
+- assessment_id: micro-peroxisome-identity
+  area: identity
+  topic: Exact anatomy, synonyms, hierarchy and parthood
+  outcome: supported
+  summary: GO0005777 exact single-membrane organelle; matrix and membrane are distinct
+    supported parts.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-go
+- assessment_id: micro-peroxisome-material
+  area: grounding
+  topic: Anatomical identity versus constituent chemistry
+  outcome: concern
+  summary: 'Inherited F1 remains confirmed: component is LIPID but labeled/grounded
+    as whole GO0005778 membrane; structural node joins that component. Preserve supported
+    membrane topology while separating material and anatomical identity.'
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-component-policy
+  - micro-go
+  - micro-prior-peroxisome
+- assessment_id: micro-peroxisome-taxon
+  area: scope
+  topic: Species, strain and experimental limits
+  outcome: supported
+  summary: 4932 species and559292 S288c strain verified separately. COMMON is qualitative
+    occurrence, not prevalence measurement. Cited reviews discuss yeast biology; no
+    newly demonstrated S288c localization experiment is inferred from the model taxon
+    or representative accession.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-tax4932
+  - micro-tax559292
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+- assessment_id: micro-peroxisome-functions
+  area: evidence
+  topic: Positive metabolic/import function claims
+  outcome: supported
+  summary: Beta-oxidation in matrix and broad PTS-dependent cargo import supported
+    at declared descriptive scope, not an exhaustive inventory or universal detailed
+    mechanism.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-smith2013-jats
+  - micro-pex14-primary
+- assessment_id: micro-peroxisome-graph
+  area: graph
+  topic: Every node/edge and declared NONMECHANISTIC scope
+  outcome: supported
+  summary: Three descriptive relations cover membrane bounding matrix, broad PTS-bearing
+    proteins imported into matrix and matrix compartmentalizing beta-oxidation. Topological
+    relations remain true; F1 concerns component identity/type join, not whether the
+    membrane bounds the matrix.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-graph-policy
+  - micro-go
+  - micro-smith2013-jats
+- assessment_id: micro-peroxisome-proteins
+  area: grounding
+  topic: Individual protein identity versus complete machinery
+  outcome: supported
+  summary: Broad PTS-bearing cargo class has no one universal accession. Native UNANCHORED_NO_UNIPROT
+    is not itself evidence of a scientific defect or compulsory exhaustive inventory.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-graph-policy
+  - micro-native-peroxisome-causal
+- assessment_id: micro-peroxisome-pathway
+  area: scope
+  topic: Pinned pathway correspondence
+  outcome: supported
+  summary: Exact pinned model bytes/id/label/S288c taxon verified. SITE_OF explicitly
+    covers the beta-oxidation segment, not every activation/auxiliary reaction. Native
+    offline snapshot gate and fresh remote hash check are separate from localization
+    evidence; no upstream mechanistic-edge certification.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-pathway
+  - micro-pathway-snapshot
+  - micro-pathway-checker
+  - micro-pathway-decisions
+  - micro-native-pathway-links
+  - micro-sibirny2016-meta
+- assessment_id: micro-peroxisome-adapter
+  area: evidence
+  topic: Structured-source applicability from whole record
+  outcome: concern
+  summary: 'Original explicit expression-only N/A is unsupported: metabolism and PTS
+    cargo import trigger host coverage checks. Fresh complete official catalogue lacks
+    matching yeast/S288c; no matched downstream query or biological absence inferred.
+    This repairs a bundle assessment, not a record.'
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-prior-peroxisome
+  - micro-policy
+  - micro-catalogue
+  - micro-historical-runner
+- assessment_id: micro-peroxisome-history
+  area: provenance
+  topic: Append-only history and unresolved source-neutral grounding
+  outcome: supported
+  summary: Historical discussions remain provenance; source-neutral grounding questions
+    can remain open despite taxon-specific representative xrefs. No history rewriting,
+    wider issue resolution or status promotion. All target bytes unchanged.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-prior-peroxisome
+  - micro-discussion-policy
+- assessment_id: micro-peroxisome-native
+  area: schema
+  topic: Native validation/render and actual command coverage
+  outcome: supported
+  summary: All48 original frozen inputs verify; three original YAML/Markdown pairs
+    validate/render exactly; current target unchanged. Actual native protein commands
+    pass with independently counted inventory, not proof of biological completeness.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-prior-peroxisome
+  - micro-original-inputs
+  - micro-original-pairs
+  - micro-native-peroxisome-verify
+  - micro-native-peroxisome-causal
+- assessment_id: micro-peroxisome-limits
+  area: completeness
+  topic: Complete claim surfaces and source access
+  outcome: supported
+  summary: Entire current record reviewed, including no image/measurement/snippet
+    claims. Sibirny/Yuan secondary abstracts; Smith declared secondary body sections;
+    primary Pex14 papers abstract-only. Source access unknown is not refutation. Inherited
+    major F1 retained; record curation separately filed.
+  target_ids:
+  - GO:0005777
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-prior-peroxisome
+  - micro-smith2013-jats
+  - micro-sibirny2016-meta
+  - micro-yuan2016-meta
+  - micro-pex14-primary
+  - micro-original-pairs
+- assessment_id: current-input-comparison
+  area: provenance
+  topic: Complete frozen-input comparison and bounded refresh
+  outcome: supported
+  summary: 0 of ten original target hashes differ from current main. The changed content
+    is substantively reassessed in the target-specific assessments; original observations
+    remain historical and unchanged. All current target and used context bytes are
+    frozen.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  evidence_ids:
+  - current-record-0
+  - original-review-0
+  - current-record-1
+  - original-review-1
+  - current-record-2
+  - original-review-2
+  - current-record-3
+  - original-review-3
+  - current-record-4
+  - original-review-4
+  - current-record-5
+  - original-review-5
+  - current-record-6
+  - original-review-6
+  - current-record-7
+  - original-review-7
+  - current-record-8
+  - original-review-8
+  - current-record-9
+  - original-review-9
+findings:
+- finding_id: septin-phagocytic_vesicle-F1
+  issue_key: phagocytic-vesicle-experimental-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish measured trafficking from the cited acidification model
+  description: The2002 citation note says the study dissected stages with distinct
+    luminal-acidification behavior. Its Methods/Results directly characterize protein/lipid
+    content and trafficking, whereas Discussionsec20 integrates acidification from
+    prior work and cites Maniak1999/2001. Qualify this source note so it does not
+    imply a direct pH-phase measurement by Gotthardt2002. The general maturation and
+    acidification biology remains supported.
+  target_ids:
+  - GO:0045335
+  field_paths:
+  - functions[1].evidence[1].notes
+  evidence_ids:
+  - septin-record-phagocytic_vesicle
+  - septin-original-phagocytic_vesicle
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope and experimental attribution
+  native_severity: minor
+  normalization_reason: The structure identity and biological maturation/remodeling
+    outcome remain supported. The defect is a bounded, nonblocking description of
+    what the named experiment directly measured or isolated, rather than a false biological
+    mechanism or cross-taxon generalization.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031042Z-phagocytic-vesicle-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2764
+- finding_id: septin-phagocytic_vesicle_lumen-F1
+  issue_key: phagocytic-vesicle-lumen-experimental-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the acidification experiment attributed to Gotthardt2002
+  description: The canonical example and evidence notes say that Gotthardt2002 resolved
+    ordered acidification behavior/phases. Complete Methods/Results instead report
+    purification, protein/lipid profiling and membrane/hydrolase trafficking; acidification
+    appears in the Discussion model with prior Maniak1999/2001 citations. Preserve
+    the accepted acidification outcome while separating that synthesis from a directly
+    measured pH time course.
+  target_ids:
+  - GO:0097013
+  field_paths:
+  - canonical_examples[0].note
+  - functions[0].evidence[1].notes
+  - causal_graphs[0].edges[2].evidence[1].notes
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_lumen
+  - septin-original-phagocytic_vesicle_lumen
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope and experimental attribution
+  native_severity: minor
+  normalization_reason: The structure identity and biological maturation/remodeling
+    outcome remain supported. The defect is a bounded, nonblocking description of
+    what the named experiment directly measured or isolated, rather than a false biological
+    mechanism or cross-taxon generalization.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031043Z-phagocytic-vesicle-lumen-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2765
+- finding_id: septin-phagocytic_vesicle_membrane-F1
+  issue_key: phagocytic-vesicle-membrane-experimental-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate intact-phagosome profiling from membrane-enriched identification
+  description: The canonical note calls the2006 time-course samples purified latex-bead
+    phagosome membranes. The source distinguishes intact purified phagosomes used
+    for the dynamic series from carbonate-stripped membrane-enriched preparations
+    used for pooled preparative identification. Qualify the preparation description
+    so a whole-organelle protein time course is not presented as a selectively isolated
+    membrane time course. Membrane remodeling and the presence of membrane proteins
+    in that experiment remain supported.
+  target_ids:
+  - GO:0030670
+  field_paths:
+  - canonical_examples[0].note
+  evidence_ids:
+  - septin-record-phagocytic_vesicle_membrane
+  - septin-original-phagocytic_vesicle_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope and experimental attribution
+  native_severity: minor
+  normalization_reason: The structure identity and biological maturation/remodeling
+    outcome remain supported. The defect is a bounded, nonblocking description of
+    what the named experiment directly measured or isolated, rather than a false biological
+    mechanism or cross-taxon generalization.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031045Z-phagocytic-vesicle-membrane-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2766
+- finding_id: septin-phagolysosome-F1
+  issue_key: phagolysosome-expanded-definition-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Bound the expanded definition to demonstrated taxa and mechanisms
+  description: The first ontology-based clause is exact, but the appended molecular
+    and taxonomic description is not contained in the cited GO entry. The primary
+    evidence establishes staged Dictyostelium phagosome behavior; it does not demonstrate
+    the entire added cross-taxon mechanistic definition. Supported digestion/acidification
+    in the studied context should be retained, but not silently generalized into a
+    defining molecular program for all listed microbial groups.
+  target_ids:
+  - GO:0032010
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-original-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: major
+  normalization_reason: The unqualified additions define molecular mechanism, stage
+    properties and biological scope; this is materially unsupported scope, not merely
+    a missing citation or damaged ontology identity.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031046Z-phagolysosome-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2767
+- finding_id: septin-phagolysosome-F2
+  issue_key: phagolysosome-graph-scope-label
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Match the graph scope to its descriptive edges
+  description: The graph is labeled MECHANISTIC and titled an assembly and functional
+    mechanism, but its edges give material/parthood and generic whole-structure process
+    associations. The primary papers contain mechanisms worth separately curating,
+    yet those actors and transitions are not represented in this graph.
+  target_ids:
+  - GO:0032010
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-original-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: minor
+  normalization_reason: The existing identities and coarse associations remain useful;
+    the bounded mismatch is the scope/title promise, not evidence that the structure
+    or process is wrong.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031046Z-phagolysosome-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2768
+- finding_id: septin-phagolysosome-F3
+  issue_key: phagolysosome-acidification-source-method-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the source scope of the acidification note
+  description: functions[1].evidence[1].notes attributes distinct luminal-acidification
+    behavior to the Gotthardt2002 dissection. Its Methods/Results do not present a
+    direct luminal-pH assay; acidification is synthesized in Discussion from earlier
+    work, and the2006 Fig4C pH scheme is explicitly adapted from macropinocytosis.
+    Trafficking-phase measurements are genuine and should be retained.
+  target_ids:
+  - GO:0032010
+  field_paths:
+  - functions[1].evidence[1].notes
+  evidence_ids:
+  - septin-record-phagolysosome
+  - septin-original-phagolysosome
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: minor
+  normalization_reason: This is a bounded assay-attribution precision problem, independent
+    of the broader definition-scope finding; the evidence does support maturation
+    and qualitative acidification context.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031046Z-phagolysosome-audit
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2769
+- finding_id: septin-phagolysosome_membrane-F1
+  issue_key: phagolysosome-membrane-expanded-definition-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Bound the expanded definition to demonstrated taxa and mechanisms
+  description: The first ontology-based clause is exact, but the appended molecular
+    and taxonomic description is not contained in the cited GO entry. The primary
+    evidence establishes staged Dictyostelium phagosome behavior; it does not demonstrate
+    the entire added cross-taxon mechanistic definition. The added V-ATPase-enrichment
+    clause also propagates into the material role and graph. Lmp CD36/LIMPII detection
+    is not a direct LAMP-protection experiment.
+  target_ids:
+  - GO:0061474
+  field_paths:
+  - definition
+  - definition_source
+  - components[0].role
+  - causal_graphs[0].nodes[1].description
+  - causal_graphs[0].edges[0].description
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: major
+  normalization_reason: The unqualified additions define molecular mechanism, stage
+    properties and biological scope; this is materially unsupported scope, not merely
+    a missing citation or damaged ontology identity.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031047Z-phagolysosome-membrane-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2770
+- finding_id: septin-phagolysosome_membrane-F2
+  issue_key: phagolysosome-membrane-graph-scope-label
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Match the graph scope to its descriptive edges
+  description: The graph is labeled MECHANISTIC and titled an assembly and functional
+    mechanism, but its edges give material/parthood and generic whole-structure process
+    associations. The primary papers contain mechanisms worth separately curating,
+    yet those actors and transitions are not represented in this graph.
+  target_ids:
+  - GO:0061474
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: minor
+  normalization_reason: The existing identities and coarse associations remain useful;
+    the bounded mismatch is the scope/title promise, not evidence that the structure
+    or process is wrong.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031047Z-phagolysosome-membrane-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2771
+- finding_id: septin-phagolysosome_membrane-F3
+  issue_key: phagolysosome-membrane-timecourse-preparation-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish the time course from membrane enrichment
+  description: canonical_examples[0].note says purified phagosome membranes were profiled
+    across maturation. Gotthardt2006 used intact phagosome extracts for the time series;
+    a separate carbonate membrane-enrichment preparation improved identification of
+    membrane proteins. The generic remodeling biology is supported, but this note
+    should not imply an isolated-membrane temporal dataset.
+  target_ids:
+  - GO:0061474
+  field_paths:
+  - canonical_examples[0].note
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-phagolysosome_membrane
+  - septin-go
+  - septin-gotthardt2002-unige-pdf
+  - septin-gotthardt2006-pdf
+  - septin-curation-policy
+  - septin-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: minor
+  normalization_reason: The wrong preparation granularity is a bounded experimental-provenance
+    error; correct taxon and organelle remodeling remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031047Z-phagolysosome-membrane-audit
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2772
+- finding_id: septin-phagolysosome_membrane-F4
+  issue_key: phagolysosome-membrane-current-rationale-generic-identity
+  category: evidence
+  severity: minor
+  status: rejected
+  certainty: confirmed
+  title: Correct the current lipid-grounding rationale's exact identity
+  description: discussions[0].rationale says this record is exactly grounded to GO0030670
+    and SL0205. Its actual exact identity is GO0061474; the cited generic phagosome-membrane
+    terms provide broader context. This is current OPEN task text, not a demand to
+    rewrite historical curation events.
+  target_ids:
+  - GO:0061474
+  field_paths:
+  - discussions[0].rationale
+  evidence_ids:
+  - septin-record-phagolysosome_membrane
+  - septin-original-phagolysosome_membrane
+  - septin-curation-policy
+  - septin-go
+  - septin-SL0205
+  - septin-rationale-independent-challenge
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: minor
+  normalization_reason: A bounded current discussion statement confuses exact and
+    broader identity; the top-level identity remains correct and the underlying lipid
+    task can remain open.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031047Z-phagolysosome-membrane-audit
+    finding_id: F4
+  disposition_reason: Original A4 explicitly forbids altering dated history or closing
+    the lipid TODO; rejection does not mischaracterize it as an erasure request. Its
+    mandatory current-rationale correction is unsupported because CURATION treats
+    rationale as provenance and notes as current state, regardless of OPEN status.
+    The exact current identity and label-only broader material context are correct.
+    Optional appended clarification is permitted but no mandatory record correction
+    or TODO closure follows.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2761
+- finding_id: plaque-t0-F1
+  issue_key: parasitophorous-vacuole-membrane-bioid-canonical-species-misattribution
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the species attached to the PVM BioID example
+  description: canonical_examples[1] calls the cited BioID survey a P. falciparum
+    intraerythrocytic PVM experiment. Schnider2018 explicitly performed that experiment
+    in P. berghei ANKA blood-stage parasites. The falciparum comparisons are orthology
+    and prior-literature context, not this study's experimental organism.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  field_paths:
+  - canonical_examples[1].taxon_id
+  - canonical_examples[1].taxon_label
+  - canonical_examples[1].note
+  - canonical_examples[1].reference
+  evidence_ids:
+  - plaque-current-0
+  - plaque-original-0
+  - plaque-schnider2018-meta
+  - plaque-schnider2018-body
+  - plaque-tax5833
+  - plaque-tax5821
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: major
+  normalization_reason: This corrupts the concrete experimental species/evidence link,
+    not merely author metadata; correct broad PVM identity and occurrence in both
+    species remain intact.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031035Z-parasitophorous-vacuole-membrane-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2762
+- finding_id: micro-F1
+  issue_key: peroxisome-whole-membrane-lipid-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate whole membrane identity from lipid material
+  description: The peroxisomal_membrane component has type LIPID but labels and grounds
+    the whole anatomical membrane GO0005778. The structural graph node points to this
+    component. A valid membrane parthood statement does not make that GO cellular
+    component a chemical lipid.
+  target_ids:
+  - GO:0005777
+  field_paths:
+  - components[0].component_type
+  - components[0].grounding
+  - causal_graphs[0].nodes[0].component_ref
+  evidence_ids:
+  - micro-record-peroxisome
+  - micro-component-policy
+  - micro-go
+  - micro-prior-peroxisome
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisome.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:component identity and molecular grounding
+  native_severity: major
+  normalization_reason: Whole-anatomical identity is materially mismatched to molecular
+    lipid typing.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T031041Z-peroxisome-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2763
+actions:
+- action_id: septin-phagocytic_vesicle-A1
+  finding_ids:
+  - septin-phagocytic_vesicle-F1
+  target_ids:
+  - GO:0045335
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, Describe Gotthardt2002 as a direct
+    membrane/cargo-trafficking study that discusses acidification based on prior work;
+    if direct pH kinetics are intended, attach an actually inspected direct measurement
+    source.
+  acceptance_checks:
+  - The source note/canonical example matches the exact primary assay and preparation.
+  - Correct ontology identity, topology and supported biological outcomes are retained.
+  - Native schema, strict, identifier, graph and history gates pass after authorized
+    curation.
+- action_id: septin-phagocytic_vesicle_lumen-A1
+  finding_ids:
+  - septin-phagocytic_vesicle_lumen-F1
+  target_ids:
+  - GO:0097013
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, Narrow the canonical example and
+    source notes to the measured trafficking/luminal-composition phases and identify
+    the acidification account as discussion-based; add a directly inspected pH study
+    only if claiming direct pH-phase resolution.
+  acceptance_checks:
+  - The source note/canonical example matches the exact primary assay and preparation.
+  - Correct ontology identity, topology and supported biological outcomes are retained.
+  - Native schema, strict, identifier, graph and history gates pass after authorized
+    curation.
+- action_id: septin-phagocytic_vesicle_membrane-A1
+  finding_ids:
+  - septin-phagocytic_vesicle_membrane-F1
+  target_ids:
+  - GO:0030670
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, State that the time course profiled
+    proteins of purified latex-bead phagosomes, including membrane-associated proteins;
+    distinguish the separate carbonate-enriched pooled preparation if it is mentioned.
+  acceptance_checks:
+  - The source note/canonical example matches the exact primary assay and preparation.
+  - Correct ontology identity, topology and supported biological outcomes are retained.
+  - Native schema, strict, identifier, graph and history gates pass after authorized
+    curation.
+- action_id: septin-phagolysosome-A1
+  finding_ids:
+  - septin-phagolysosome-F1
+  target_ids:
+  - GO:0032010
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  description: Retain the exact ontology boundary/maturation definition and move supported
+    extra biology into explicitly taxon-, stage- and source-qualified fields. Remove
+    or qualify unestablished extensions, or add directly inspected evidence that actually
+    supports each retained mechanism and taxon.
+  acceptance_checks:
+  - Native GO text is distinguished from curator-added biology.
+  - No comparative mechanism or fixed molecular inventory is inferred solely from
+    Dictyostelium time profiles.
+  - Correct organelle identity, boundary hierarchy and experimentally supported maturation
+    remain intact.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome-A2
+  finding_ids:
+  - septin-phagolysosome-F2
+  target_ids:
+  - GO:0032010
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  description: Use NONMECHANISTIC with a precise descriptive scope note and aligned
+    title, or separately curate a source-backed mechanistic path without inventing
+    obligatory actors.
+  acceptance_checks:
+  - Declared scope and title describe the actual edges.
+  - Correct identities, parthood and broad process associations are preserved.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome-A3
+  finding_ids:
+  - septin-phagolysosome-F3
+  target_ids:
+  - GO:0032010
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained scientific record
+  description: State that the study directly dissected trafficking/component phases
+    and discussed acidification using earlier evidence, or cite an inspected direct
+    pH study for a measurement claim.
+  acceptance_checks:
+  - Measured trafficking phases are distinguished from review/synthesis-level pH context.
+  - The note does not imply a direct pH assay in the cited2002 experiment.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome_membrane-A1
+  finding_ids:
+  - septin-phagolysosome_membrane-F1
+  target_ids:
+  - GO:0061474
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  description: Retain the exact ontology boundary/maturation definition and move supported
+    extra biology into explicitly taxon-, stage- and source-qualified fields. Remove
+    or qualify unestablished extensions, or add directly inspected evidence that actually
+    supports each retained mechanism and taxon.
+  acceptance_checks:
+  - Native GO text is distinguished from curator-added biology.
+  - No comparative mechanism or fixed molecular inventory is inferred solely from
+    Dictyostelium time profiles.
+  - Correct organelle identity, boundary hierarchy and experimentally supported maturation
+    remain intact.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome_membrane-A2
+  finding_ids:
+  - septin-phagolysosome_membrane-F2
+  target_ids:
+  - GO:0061474
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  description: Use NONMECHANISTIC with a precise descriptive scope note and aligned
+    title, or separately curate a source-backed mechanistic path without inventing
+    obligatory actors.
+  acceptance_checks:
+  - Declared scope and title describe the actual edges.
+  - Correct identities, parthood and broad process associations are preserved.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome_membrane-A3
+  finding_ids:
+  - septin-phagolysosome_membrane-F3
+  target_ids:
+  - GO:0061474
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained scientific record
+  description: Describe the intact latex-bead-phagosome protein time course accurately
+    and, if relevant, distinguish the separate carbonate membrane-enrichment identification
+    experiment.
+  acceptance_checks:
+  - The note separates intact phagosomes from isolated/enriched membrane preparations.
+  - No unsupported membrane-only temporal measurement is implied.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: septin-phagolysosome_membrane-A4
+  finding_ids:
+  - septin-phagolysosome_membrane-F4
+  target_ids:
+  - GO:0061474
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: reviews/structured/20261022T031047Z-phagolysosome-membrane-audit/review.yaml
+    role: immutable prior review whose disposition is superseded by a new review bundle
+  description: Record the exact inherited F4 as rejected in the successor review and
+    track the bundle correction. Original A4 already prohibited altering dated history;
+    do not claim otherwise. No maintained-record change is required by this disposition;
+    optional future appended clarification is allowed and the chemical-grounding TODO
+    remains open.
+  acceptance_checks:
+  - Successor preserves exact repository/review/F4 predecessor and explains the native
+    provenance rule.
+  - No mandatory record rewrite, change to immutable original artifacts, or resolution
+    of the lipid TODO is implied.
+  - Review-only correction is issue-linked and native successor validation/render
+    passes.
+- action_id: plaque-t0-A1
+  finding_ids:
+  - plaque-t0-F1
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+  description: Align the example with verified P. berghei5821 and the actual study
+    background, or supply independently inspected P. falciparum-specific experimental
+    evidence. Preserve the PVM identity and Toxoplasma example.
+  acceptance_checks:
+  - Example taxon and claimed experiment name the same species.
+  - No orthology comparison is relabeled as a performed BioID experiment.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: micro-A1
+  finding_ids:
+  - micro-F1
+  target_ids:
+  - GO:0005777
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisome.yaml
+    role: maintained scientific record
+  description: Retain supported membrane parthood. Model a whole structural constituent
+    with an appropriate type, or describe supported lipid material separately with
+    chemical grounding or justified label-only status; align the component_ref.
+  acceptance_checks:
+  - Verify component type, identity and graph join against the exact source definition.
+  - After separately authorized curation, run schema, strict, graph and label checks.
+limitations:
+- 'Phagocytic vesicle and phagolysosome independent subreview: Independent read-only
+  source review of five unchanged targets at the exact source head. Nine inherited
+  scientific findings remain open (2major7minor); one inherited minor rationale finding
+  is rejected with exact lineage. No new scientific finding, record edit, neighbor
+  verdict, grouped closure or future CI/queue certification is asserted.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: Fresh current GO/SL/taxonomy/catalogue
+  and exact EuropePMC metadata/abstracts are distinguished from fresh genuine university-held
+  primary PDF bodies. Two HTTP200 PMC challenge pages and one HTTP500 fullTextXML
+  attempt are not body evidence. No cached2364 body is claimed as current access.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: Gotthardt2002 main
+  scientific text pp3508–3518 and Fig1–7 captions were read. Gotthardt2006 reading
+  is bounded to main text pp2228–2233 and2235–2241, Fig1/2/3/4/6 captions. TableI
+  images, Fig5 full caption, all source pixels, supplements/raw datasets and reference-list
+  source bodies were not independently audited.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: Both papers directly
+  study D. discoideum Ax2 in HL5c at22C using latex-bead phagosomes. Trafficking/composition
+  is measured directly; the2002 acidification account integrates prior discussion
+  evidence, and2006 Fig4C pH is a macropinocytosis-derived scheme. No new pH trace
+  or complete molecular census is inferred.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: The2006 temporal proteomics
+  used intact-phagosome extracts; separate carbonate-enriched pooled membrane samples
+  served identification. Lmp CD36/LIMPII trafficking is not a direct LAMP-protection
+  test, and Ax2 observations do not establish the full unqualified cross-taxon molecular
+  definitions. These are evidence limits, not biological absence claims.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: All ten actual native
+  protein commands pass on independently confirmed empty represented scopes. Positive
+  narrative maturation/trafficking/acidification still triggers applicability; fresh
+  full catalogue has no matching host. Historical00:49Z runner failure is historical
+  only; no proxy bacterial prey or unrelated-organism query is used.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: Collective label-only
+  bilayer constitution is distinct from exact chemistry or individual formation necessity.
+  Discussion rationale is append-only provenance even when OPEN. The rejected original
+  action already forbids altering dated history; the correction rejects an unsupported
+  mandatory current-rationale requirement, not an alleged erasure demand. The unresolved
+  lipid-grounding TODO remains open.'
+- 'Phagocytic vesicle and phagolysosome independent subreview: All34 used local inputs
+  were frozen before use:17 common policy/schema/script inputs,5 targets,10 original
+  artifacts and2 bounded boundary neighbors. No unreviewed neighbor mechanism or historical
+  issue is newly resolved.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Both targets
+  unchanged. One inheritedmajor PVMspecies finding/action retains exact key/severity
+  and repository/review/finding predecessor. PPM has no inherited or newly confirmedscientificfinding
+  and remains qualified.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Original2pairs
+  natively validate/render byte-for-byte; each15 historicalinputs match retainedsource.
+  Historicalhash verification doesnot scientificallyassess every oldcontext. Allcurrent
+  actuallyused localinputs werefrozen beforeuse; no record/original/status/history
+  edits.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Tenfresh officialauthority/catalogue
+  requests are separate from nine retained publicliterature snapshots independently
+  reread with actual original fetchdates and hashes. No reused response is represented
+  as newly retrieved.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Schnider genuineJATS
+  Results1.1/1.2,fullDiscussion2,Methods3.6/3.9 and embeddedcaptions reread at original18:42Zsnapshot.
+  ActualorganismP.bergheiANKAmCherryHsp70; P.falciparumorthologcomparisons remainseparate.
+  No pixels,supplementfiles,rawmassspectra or newquantitativereanalysis.61candidateproteins
+  are not61provenPVMconstituents.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Lingelbach1998,Clough2017
+  andHashimoto2005 are complete depositedsecondaryabstracts only. No fullreviewbody
+  or newlyinspectedprimarymechanism isclaimed from thoseabstracts; earlieraccesslimitations
+  remainhistorical.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Flori2016 genuinePDF
+  pp254–264 scientificmaintext,Methods andFig1–7captions independently reread; textregeneration
+  exact. No figurepixels/supplementalmovies/rawdata. Pt1CCAP1055/3,ESAW19C12:12h;
+  precise individualmembranelipidcomposition unknown in that study.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Gueguen2024
+  genuineJATS onlyResults2.4/Fig2–3captions,Discussion3.2/3.3,Methods4.4/4.13. No
+  figurepixels,supplementfiles or remainingmutant/lipidomicresults audited. Pt1strain8.6CCAP1055/1(CCMP2561),20C
+  distinctfrom2016culture. MGDbetaassociation/localization isnot isolatedPPMcomposition
+  or formationnecessity.'
+- 'Parasitophorous and periplastidial membrane independent subreview: GO7770041supplies
+  maintainedoriginstatement; Floriacknowledges an alternativeproposedhostERorigin.
+  Topologyprovidesstronger directobservation than a uniquelyprovedancestraltrace.
+  Thisboundeduncertainty doesnot refute exactGOidentity.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Bothcurrentnativeproteincommandpairs
+  pass on0examples/0typedmolecularnodes. Genericverify-success isnot fullscientific/proteincompleteness
+  certification. Noimages or quantitativephysicalproperties aremaintained in assignedrecords.'
+- 'Parasitophorous and periplastidial membrane independent subreview: PVMpositiveproteinsurvey
+  triggers applicability; PPMpositiveclaims aregenuinelyphysical/material/topological.
+  Freshofficialcatalogue hasnoPlasmodium,Toxoplasma orPhaeodactylumhost; noforeignhostproxy/downstreamquery
+  ornegativebiology. Historical00:49Zrunner failure remains unavailable,no newinvocation.'
+- 'Parasitophorous and periplastidial membrane independent subreview: Four frozenneighbors
+  are boundarycontext only; theirseparate scientificissues/history dispositions are
+  not adjudicatedorclosed. OpenPPMboundary/groundingprompts do notmandate rewritingappend-onlyrationale
+  or closingvalidfuturecuration. Rootowns globalgates,issuededup/publication,successor
+  and finalCI/queue.'
+- 'Three peroxisome records independent subreview: Three complete unchanged peroxisome
+  targets; matrix/membrane qualified pass, whole retains exact inherited major F1
+  and request-curation action. Three bundle applicability exclusions need successor
+  correction; no record edits.'
+- 'Three peroxisome records independent subreview: Sibirny2016 and Yuan2016 are secondary
+  abstracts, not primary strain experiments. Smith2013 genuine S3 secondary body read
+  only at declared Box1/S5/Figure2caption/S10/S11 (plus Box2); no pixels/supplements.
+  Publisher/PMC blocked or service-error bodies are not article access.'
+- 'Three peroxisome records independent subreview: Primary Pex14 papers9094717/20154681/33323485
+  were read as complete abstracts with exact metadata, not full Methods, constructs,
+  images or all raw assays. 2020 S3/PMC/BioC attempts failed or returned challenge/error.
+  Broad docking/import membership is supported; precise mechanism and per-protein
+  organelle formation necessity not certified.'
+- 'Three peroxisome records independent subreview: Current P53112 reviewed species/strain/name/locus
+  and protein-to-InterPro associations are verified, but one taxon-specific representative
+  is not an exact identity for the entire peroxin docking machinery. Historical rationale
+  remains append-only; no invented completed complex grounding.'
+- 'Three peroxisome records independent subreview: All three have zero protein examples;
+  matrix has zero typed nodes, membrane one UNANCHORED_WITH_UNIPROT, whole one UNANCHORED_NO_UNIPROT.
+  Generic native success messages do not imply populated or complete family coverage.'
+- 'Three peroxisome records independent subreview: All three positive molecular/pathway
+  scopes trigger adapter checks; fresh official20-organism/28-pair catalogue lacks
+  matching Saccharomyces/S288c. No unrelated proxy or downstream unmatched query;
+  noncoverage is not biological absence. Historical00:49Z runner failure is not rerun.'
+- 'Three peroxisome records independent subreview: Pinned PathwayMech source exact
+  bytes/id/label/S288c taxon plus description/27participantIDs/11reactionlabels reviewed;
+  mechanistic-edge quotes/upstream GO-CAM not audited. Native default pathway gate
+  checks metadata snapshot only; remote hash checked separately. SITE_OF is bounded
+  to beta-oxidation segment, not all activation/auxiliary reactions.'
+- 'Three peroxisome records independent subreview: Phagolysosome discussion auxiliary
+  challenge is a separately scoped receipt, not a fourth complete scientific review
+  here. No terminal broader issue/category resolution, record/history/review/Git/GitHub
+  mutation or future CI/merge certification. Root owns global and final gates.'
+- Historical observations remain immutable; their old checks are not represented as
+  current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure.
+  Catalogue-based coverage is assessed directly; fresh and reused responses retain
+  actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include
+  909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks
+  independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited
+  by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head
+  CI and merge-group CI occur after saving this immutable observation and are not
+  represented here as already completed.
+notes:
+- All ten original YAML/Markdown pairs remain unchanged. Current main was merged normally
+  and pushed without force. All ten target hashes match their original frozen inputs;
+  no stale-refresh issue is invented.
+- This explicit issue-bearing ten-record cohort follows native persistence policy.
+  Inherited scientific findings retain stable keys and exact predecessor repository/review/finding
+  identities; rejected findings retain explicit evidence and disposition.
+- Issue2760 tracks three omitted source-applicability checks (phagocytic vesicle,
+  lumen, membrane) and six unsupported expression-only exclusions (PVM, peroxisomal
+  matrix, peroxisomal membrane, peroxisome, phagolysosome and membrane). The periplastidial
+  membrane exclusion is genuine because the bounded record asserts material/topology,
+  not a positive enzyme mechanism.
+- Issue2761 tracks the rationale-only review finding. Native policy treats rationale
+  as append-only provenance even while OPEN. The exact current phagolysosome-membrane
+  identity is correct, broader lipid context and chemical-grounding TODO remain valid,
+  and optional appended clarification remains allowed. The original action explicitly
+  avoided altering dated history; the rejected defect is its mandatory current-rationale
+  correction, not an invented demand to erase history.
+- Source commit f1ebcdd9788bfee294f3276788874b3860033d23 is retained by tag review-base/pr2374-current-record-followup-20261103.
+- CLAUDE.md aliases AGENTS.md; canonical regular AGENTS.md bytes are frozen. All used
+  local boundary, source-policy, schema, pathway-checker and original-review inputs
+  were frozen before assessment.
+- Fresh and reused primary snapshots preserve actual timestamps and inspection tiers.
+  Source access challenges are not represented as paper-body inspection.
+- All twenty native protein commands returned zero with zero protein examples. The
+  peroxisomal-membrane node is UNANCHORED_WITH_UNIPROT (P53112); the whole-peroxisome
+  broad cargo node is UNANCHORED_NO_UNIPROT. The other eight targets have zero typed
+  molecular nodes. These are inventory results, not proof of mechanism or automatic
+  grounding defects.
+- The native CausalNode schema permits broad protein groups and complexes. Whole membrane
+  anatomical identities typed as LIPID are distinct from valid reviewed-label-only
+  bilayer material.
+- The peroxisomal PathwayMech links are checked against the frozen pinned snapshot
+  and independently inspected exact external source bytes. Link consistency alone
+  does not independently establish cellular localization.
+- Related issue2759 concerns the whole parasitophorous-vacuole record, a distinct
+  maintained owner from this cohort's membrane finding. Existing validator2514 remains
+  open and reused. No record or resolver is edited.
+- Final trusted-base review-check, exact-head independent acceptance, final-head CI
+  and merge-group CI occur after this immutable observation and are not represented
+  as already completed.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031035Z-parasitophorous-vacuole-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031037Z-periplastidial-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031038Z-peroxisomal-matrix-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031039Z-peroxisomal-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031041Z-peroxisome-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031042Z-phagocytic-vesicle-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031043Z-phagocytic-vesicle-lumen-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031045Z-phagocytic-vesicle-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031046Z-phagolysosome-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T031047Z-phagolysosome-membrane-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2374
+- https://github.com/CultureBotAI/CellStructureMech/issues/2514
+- https://github.com/CultureBotAI/CellStructureMech/issues/2760
+- https://github.com/CultureBotAI/CellStructureMech/issues/2761
+- https://github.com/CultureBotAI/CellStructureMech/issues/2762
+- https://github.com/CultureBotAI/CellStructureMech/issues/2763
+- https://github.com/CultureBotAI/CellStructureMech/issues/2764
+- https://github.com/CultureBotAI/CellStructureMech/issues/2765
+- https://github.com/CultureBotAI/CellStructureMech/issues/2766
+- https://github.com/CultureBotAI/CellStructureMech/issues/2767
+- https://github.com/CultureBotAI/CellStructureMech/issues/2768
+- https://github.com/CultureBotAI/CellStructureMech/issues/2769
+- https://github.com/CultureBotAI/CellStructureMech/issues/2770
+- https://github.com/CultureBotAI/CellStructureMech/issues/2771
+- https://github.com/CultureBotAI/CellStructureMech/issues/2772
+```

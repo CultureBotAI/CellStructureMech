@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/primosome_complex.yaml
+  slug: primosome_complex
+session:
+  id: 2026-10-25T121500Z-antigravity-c3s5
+  timestamp: '2026-10-25T12:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2430
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2430 (finding primosome-complex-pmid-citation-and-graph-id):
+    corrected bibliographic notes for PMID:8663105 (Ng & Marians 1996, J Biol Chem)
+    and PMID:21856207 (Kaguni 2011, Curr Opin Chem Biol) and aligned curation_history[1]
+    graph_id to primosome_primer_synthesis.'
+  details: 'Original finding F1 (primosome-complex-pmid-citation-and-graph-id) saved
+    before mutation in reviews/structured/20261025T071002Z-primosome-complex-pmid-citation-misattribution/review.yaml.
+    Addresses #2430.'

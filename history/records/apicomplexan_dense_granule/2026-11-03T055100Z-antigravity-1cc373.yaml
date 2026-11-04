@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule.yaml
+  slug: apicomplexan_dense_granule
+session:
+  id: 2026-11-03T055100Z-antigravity-1cc373
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked exported_dense_granule_effectors component and host_cell_effector_delivery
+    process into dense_granule_cargo_pvm_permeability causal graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''dense_granule_cargo_pvm_permeability''
+    in data/structures/membrane_organelle/apicomplexan_dense_granule.yaml. Added node(s) [exported_dense_granule_effectors,
+    host_cell_effector_delivery] and source-backed edge(s) [dense_granule_exocytosis delivers
+    exported_dense_granule_effectors; exported_dense_granule_effectors mediate host_cell_effector_delivery].
+    Validated with write_validated_structure.'

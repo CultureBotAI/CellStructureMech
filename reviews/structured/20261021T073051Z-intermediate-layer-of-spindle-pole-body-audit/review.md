@@ -1,0 +1,693 @@
+# Intermediate layer identity, topology and component-boundary review
+
+- Review: 20261021T073051Z-intermediate-layer-of-spindle-pole-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:22:39Z
+- Finished UTC: 2026-10-21T07:30:51Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact intermediate-layer identity, hierarchy, budding-yeast scope and bounded topology are supported. The acknowledged component gap remains a limitation; no concrete curation defect was established.
+
+## Scope And Provenance
+
+Entire single target; all asserted native GO, taxon and DOI identities; relevant 2004 author-manuscript passages; scoped 2017 primary-source context; optional component candidates checked in native databases.
+
+Selection: Fourth unreviewed path in batch eight, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005821 | data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml | maintained | intermediate layer of spindle pole body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0005821 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0005821 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0005821 | 6 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0005821 | The target asserts structural topology, not a transcriptional-regulator or expression-module mechanism. Optional native constituent candidates do not require expression-module inference. |
+| Claim-level scientific review | passed | True | GO:0005821 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0005821 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0005821 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0005821 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0005821 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0005821 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact layer and structural boundary
+
+identity: supported. Targets: GO:0005821.
+
+The native target identity, definition and SPB parthood agree with the record. The generic intermediate layer is not collapsed into the central/outer plaques or the narrower IL2 protein complex.
+
+### Species example and cell-cycle interpretation
+
+scope: supported. Targets: GO:0005821.
+
+The species-level S. cerevisiae example is supported. Candidate sequence and complex entries use S288C and are not evidence for universal strain composition. The general GO identity is broader than the studied budding-yeast molecular example; the record does not claim exhaustive fungal coverage.
+
+### Bounded topology
+
+graph: supported. Targets: GO:0005821.
+
+The graph expresses parthood and position between central and outer plaques. These edges do not assert ordered molecular recruitment, direct binding or autonomous microtubule-nucleation activity.
+
+### Acknowledged constituent inventory and bounded candidates
+
+completeness: supported. Targets: GO:0005821.
+
+The open component TODO is honest and partly resolvable for IL2: Spc42 has an exact family entry and Spc42/Cnm67 have a curated organism-specific complex. The source distinguishes IL1 and IL2, while the existing generic layer record leaves its constituent boundary open. No wrong mapping or complete inventory is asserted; broader Cnm67-family scope and unresolved IL1 coverage must survive future enrichment.
+
+### Source identities and evidence tiers
+
+provenance: supported. Targets: GO:0005821.
+
+Citation identity and inspected source passages support the bounded assertions. The cited 2004 source is a literature review; the 2017 primary study supplies corroborating structural context. Native databases delimit candidate identities, not new experiments.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| intermediate-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005821%2CGO%3A0005816%2CGO%3A0005823%2CGO%3A0005824; All returned target and context definitions; parent-term child relations; isObsolete flags | supports | Native GO confirms the exact active target name and definition, its SPB parthood. Central and outer plaques remain distinct bounding structures; the generic intermediate-layer definition does not identify IL2 alone. |
+| intermediate-agent-taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName, rank and lineage | supports | ENA confirms Saccharomyces cerevisiae, NCBITaxon:4932, at species rank. |
+| intermediate-agent-strain | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; taxId, scientificName and strain rank | context_only | ENA confirms NCBITaxon:559292 is the S. cerevisiae S288C strain used by candidate native protein and complex entries. The target itself declares the broader species example. |
+| intermediate-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&amp;format=json&amp;resultType=core; Both returned records: title, authors, DOI, PMID, publication year and journal metadata | supports | Native bibliographic metadata confirms the cited Jaspersen and Winey 2004 DOI/PMID15473833 pair and the corroborating Viswanath et al. 2017 DOI/PMID28814505 pair. The original metadata retrieval timestamp is preserved. |
+| intermediate-agent-jaspersen-browser | https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function; Public author-manuscript pp.5-10, SPB Structure and The Core SPB; browser read 2026-10-21T07:24:18Z to 07:24:19Z. Hash identifies serialized browser-extracted text, not native HTTP/PDF bytes; this is a literature review, not a new primary experiment. | supports | This review describes nuclear-side inner plaques and two cytoplasmic intermediate layers, supporting the record topology and budding-yeast context. |
+| intermediate-agent-viswanath2017 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml; Introduction/Figure1A caption; Results paragraphs on IL2 structure and Cnm67 position; Methods Stage1 layer-localization information; original native JATS receipt retained | supports | Figure1A separates three plaques from IL1 and IL2. The IL2 Results and Methods place the C termini of Spc42 and Cnm67 in IL2, with Spc42 extending from the central plaque. The integrative model concerns CP/IL2 core architecture and does not establish a complete IL1 inventory or make every intermediate layer identical to IL2. |
+| intermediate-agent-candidate-proteins | https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&amp;format=json&amp;size=50; Relevant returned accessions: reviewed status, recommended name, genes, organism and family/complex cross-references. The broad query also returned other SPB candidates and the TRM2 historical NUD1 alias; those are not adopted as target constituents. | context_only | Reviewed S288C entries resolve Spc42 P36094 and Cnm67 P53865, with native InterPro and Complex Portal links. These optional candidates do not imply that the entire proteins lie exclusively in one layer or that a complete intermediate-layer inventory is established. |
+| intermediate-agent-CPX-1420 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1420; complexAc, name, species, systematicName, participants, properties, evidenceType and GO:0005823 cross-reference | context_only | CPX-1420 is the S288C Spindle pole body intermediate layer2 complex, with Spc42 and Cnm67 participants. Its name and properties delimit IL2; its GO cross-reference instead names central plaque. Preserve that database discrepancy and do not use this narrower complex as the identity of the generic intermediate-layer target. |
+| intermediate-agent-IPR021611 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021611/; metadata accession, name, type=family, hierarchy and description | context_only | IPR021611 is the Spindle pole body component Spc42 family, with PF11544 as a member signature. This is an exact named-family candidate; layer localization must still be supported separately. |
+| intermediate-agent-IPR021750 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/; metadata accession, name, type=family and description | context_only | IPR021750 is the Septation initiation Sid4-like family and explicitly includes Sid4, Ady3 and Cnm67. Its label and scope are broader than Cnm67 alone, so it is not an exact Cnm67-specific family mapping. |
+| record | data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml; Entire maintained YAML including history, definitions, examples, all graph edges and both discussions | context_only | The target remains PROPOSED. It records bounded layer topology and a species example, explicitly defers constituent grounding, and asserts no molecular copy count or ordered recruitment mechanism. No image or quantitative dimensions are present in this target. |
+| policy | docs/CURATION.md; Structure identity, hierarchy, composition and protein-example rules | context_only | A layer remains a structure rather than a constituent protein. Is-a and parthood differ; whole-family grounding must not be replaced with a domain. Optional empty fields alone are not curation defects. |
+| schema-result | just validate data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch8-20261021-q561gvty/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml; exact collect() scope; SHA-256 is the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv, not the derived resolver-slice.json | supports | 6 of 6 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The 2004 paper was read as a public author manuscript through browser extraction; its snapshot is serialized tool output, not a native PDF. Publisher-version PDF byte identity was not established, and underlying papers cited by that review were not all independently re-read.
+- The 2017 primary source supports bounded structural context; this audit did not reproduce its Bayesian modeling or inspect all underlying raw data and supplements.
+- The optional composition inventory remains incomplete. Candidate family, domain and subcomplex identities are prospective enrichment material, not accessions currently asserted by this target.
+- COMMON is qualitative occurrence in a characterized species, not a measured fraction of strains, cells or fungal lineages.
+- IL1 and IL2 are distinct source-described layers. CPX-1420 is an IL2-specific complex with a central-plaque GO cross-reference; neither that mismatch nor its narrower identity warrants collapsing the generic target. Exact IL1 inventory and Cnm67-specific whole-family grounding remain unresolved here.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The explicit user goal requests a review for every selected target, including clean records; no finding was invented to meet that persistence instruction.
+- Native inspection preceded judgment. The source collaborator read the full target and drafted the review; the parent independently checked target content, source passages, candidate boundaries and provenance before finalization.
+- Only a review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T073051Z-intermediate-layer-of-spindle-pole-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Intermediate layer identity, topology and component-boundary review
+started_at: '2026-10-21T07:22:39Z'
+finished_at: '2026-10-21T07:30:51Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact intermediate-layer identity, hierarchy, budding-yeast scope and bounded
+  topology are supported. The acknowledged component gap remains a limitation; no
+  concrete curation defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    sha256: 3c889767d96b20dae86ccb3327892d5d33a5892591133cd4dcea4ad17a4b07c0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005821
+  path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  label: intermediate layer of spindle pole body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target; all asserted native GO, taxon and DOI identities;
+    relevant 2004 author-manuscript passages; scoped 2017 primary-source context;
+    optional component candidates checked in native databases.
+  selection: Fourth unreviewed path in batch eight, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005821
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just validate data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just validate-strict data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005821
+  summary: The target asserts structural topology, not a transcriptional-regulator
+    or expression-module mechanism. Optional native constituent candidates do not
+    require expression-module inference.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - intermediate-agent-go
+  - intermediate-agent-taxon
+  - intermediate-agent-strain
+  - intermediate-agent-epmc
+  - intermediate-agent-jaspersen-browser
+  - intermediate-agent-viswanath2017
+  - intermediate-agent-candidate-proteins
+  - intermediate-agent-CPX-1420
+  - intermediate-agent-IPR021611
+  - intermediate-agent-IPR021750
+  - record
+  - policy
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005821
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch8 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: intermediate-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005821%2CGO%3A0005816%2CGO%3A0005823%2CGO%3A0005824
+  locator: All returned target and context definitions; parent-term child relations;
+    isObsolete flags
+  accessed_at: '2026-10-21T07:24:14.421463Z'
+  support: supports
+  summary: Native GO confirms the exact active target name and definition, its SPB
+    parthood. Central and outer plaques remain distinct bounding structures; the generic
+    intermediate-layer definition does not identify IL2 alone.
+  snapshot_sha256: 82f4a8df198cf19ed0507988957487c9d97c21b2b6b7aedf54b918398ba0c3ae
+- evidence_id: intermediate-agent-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-21T07:24:14.421716Z'
+  support: supports
+  summary: ENA confirms Saccharomyces cerevisiae, NCBITaxon:4932, at species rank.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: intermediate-agent-strain
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName and strain rank
+  accessed_at: '2026-10-21T07:24:55.988431Z'
+  support: context_only
+  summary: ENA confirms NCBITaxon:559292 is the S. cerevisiae S288C strain used by
+    candidate native protein and complex entries. The target itself declares the broader
+    species example.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: intermediate-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&format=json&resultType=core
+  locator: 'Both returned records: title, authors, DOI, PMID, publication year and
+    journal metadata'
+  accessed_at: '2026-10-21T07:04:09.393029Z'
+  support: supports
+  summary: Native bibliographic metadata confirms the cited Jaspersen and Winey 2004
+    DOI/PMID15473833 pair and the corroborating Viswanath et al. 2017 DOI/PMID28814505
+    pair. The original metadata retrieval timestamp is preserved.
+  snapshot_sha256: c03e88f13293f0e6a1c03a44e0c1aa2cf7fd5b4fc1ca21bcf036afe44015f741
+- evidence_id: intermediate-agent-jaspersen-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: Public author-manuscript pp.5-10, SPB Structure and The Core SPB; browser
+    read 2026-10-21T07:24:18Z to 07:24:19Z. Hash identifies serialized browser-extracted
+    text, not native HTTP/PDF bytes; this is a literature review, not a new primary
+    experiment.
+  accessed_at: '2026-10-21T07:24:18Z'
+  support: supports
+  summary: This review describes nuclear-side inner plaques and two cytoplasmic intermediate
+    layers, supporting the record topology and budding-yeast context.
+  snapshot_sha256: 8aa2398ded5512b2450c936e832c11bc46d77ac317e4c01a2f7a6b9f1a4fce4e
+- evidence_id: intermediate-agent-viswanath2017
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml
+  locator: Introduction/Figure1A caption; Results paragraphs on IL2 structure and
+    Cnm67 position; Methods Stage1 layer-localization information; original native
+    JATS receipt retained
+  accessed_at: '2026-10-20T07:38:52.830471Z'
+  support: supports
+  summary: Figure1A separates three plaques from IL1 and IL2. The IL2 Results and
+    Methods place the C termini of Spc42 and Cnm67 in IL2, with Spc42 extending from
+    the central plaque. The integrative model concerns CP/IL2 core architecture and
+    does not establish a complete IL1 inventory or make every intermediate layer identical
+    to IL2.
+  snapshot_sha256: 004836a027b7fad21def4f6e9eebc94ec5f1e07679d123407a062241f6edb580
+- evidence_id: intermediate-agent-candidate-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&format=json&size=50
+  locator: 'Relevant returned accessions: reviewed status, recommended name, genes,
+    organism and family/complex cross-references. The broad query also returned other
+    SPB candidates and the TRM2 historical NUD1 alias; those are not adopted as target
+    constituents.'
+  accessed_at: '2026-10-21T07:24:14.422164Z'
+  support: context_only
+  summary: Reviewed S288C entries resolve Spc42 P36094 and Cnm67 P53865, with native
+    InterPro and Complex Portal links. These optional candidates do not imply that
+    the entire proteins lie exclusively in one layer or that a complete intermediate-layer
+    inventory is established.
+  snapshot_sha256: 773c38e1acac076de463c8ca995c32fde95d19a569acc8605352db6fa2134126
+- evidence_id: intermediate-agent-CPX-1420
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1420
+  locator: complexAc, name, species, systematicName, participants, properties, evidenceType
+    and GO:0005823 cross-reference
+  accessed_at: '2026-10-21T07:24:55.987399Z'
+  support: context_only
+  summary: CPX-1420 is the S288C Spindle pole body intermediate layer2 complex, with
+    Spc42 and Cnm67 participants. Its name and properties delimit IL2; its GO cross-reference
+    instead names central plaque. Preserve that database discrepancy and do not use
+    this narrower complex as the identity of the generic intermediate-layer target.
+  snapshot_sha256: 629216f46c134e503436c972d2879084e6065dce79a71fd68113f650ce6cca4c
+- evidence_id: intermediate-agent-IPR021611
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021611/
+  locator: metadata accession, name, type=family, hierarchy and description
+  accessed_at: '2026-10-21T07:24:55.986255Z'
+  support: context_only
+  summary: IPR021611 is the Spindle pole body component Spc42 family, with PF11544
+    as a member signature. This is an exact named-family candidate; layer localization
+    must still be supported separately.
+  snapshot_sha256: aef911d443ea6bf22900e5ff3818f2d89f7d431d884a0cbb4c89b816e1175f34
+- evidence_id: intermediate-agent-IPR021750
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/
+  locator: metadata accession, name, type=family and description
+  accessed_at: '2026-10-21T07:24:55.986765Z'
+  support: context_only
+  summary: IPR021750 is the Septation initiation Sid4-like family and explicitly includes
+    Sid4, Ady3 and Cnm67. Its label and scope are broader than Cnm67 alone, so it
+    is not an exact Cnm67-specific family mapping.
+  snapshot_sha256: f1fe20d4b8df21ce0b199b723bafd32ae02fce926221a25124470b9b93f07def
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  locator: Entire maintained YAML including history, definitions, examples, all graph
+    edges and both discussions
+  accessed_at: '2026-10-21T07:28:54Z'
+  support: context_only
+  summary: The target remains PROPOSED. It records bounded layer topology and a species
+    example, explicitly defers constituent grounding, and asserts no molecular copy
+    count or ordered recruitment mechanism. No image or quantitative dimensions are
+    present in this target.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structure identity, hierarchy, composition and protein-example rules
+  accessed_at: '2026-10-21T07:28:54Z'
+  support: context_only
+  summary: A layer remains a structure rather than a constituent protein. Is-a and
+    parthood differ; whole-family grounding must not be replaced with a domain. Optional
+    empty fields alone are not curation defects.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:22:41Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml'
+  snapshot_sha256: a9786af61ea26014d775e0872b479f4fe3a5eafb4cea94696621083d12032116
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:22:43Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml\
+    \ --out /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch8-20261021-q561gvty/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch8-20261021-q561gvty/intermediate_layer_of_spindle_pole_body-strict.tsv"
+  snapshot_sha256: b47cfdcace69646190069ee04fbc10a03a4ad7a3c9325b6f77682d9c174a8c84
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml;
+    exact collect() scope; SHA-256 is the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv,
+    not the derived resolver-slice.json
+  accessed_at: '2026-10-21T07:28:54Z'
+  support: supports
+  summary: '6 of 6 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact layer and structural boundary
+  outcome: supported
+  target_ids:
+  - GO:0005821
+  summary: The native target identity, definition and SPB parthood agree with the
+    record. The generic intermediate layer is not collapsed into the central/outer
+    plaques or the narrower IL2 protein complex.
+  evidence_ids:
+  - intermediate-agent-go
+  - intermediate-agent-viswanath2017
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species example and cell-cycle interpretation
+  outcome: supported
+  target_ids:
+  - GO:0005821
+  summary: The species-level S. cerevisiae example is supported. Candidate sequence
+    and complex entries use S288C and are not evidence for universal strain composition.
+    The general GO identity is broader than the studied budding-yeast molecular example;
+    the record does not claim exhaustive fungal coverage.
+  evidence_ids:
+  - intermediate-agent-go
+  - intermediate-agent-taxon
+  - intermediate-agent-strain
+  - intermediate-agent-viswanath2017
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Bounded topology
+  outcome: supported
+  target_ids:
+  - GO:0005821
+  summary: The graph expresses parthood and position between central and outer plaques.
+    These edges do not assert ordered molecular recruitment, direct binding or autonomous
+    microtubule-nucleation activity.
+  evidence_ids:
+  - intermediate-agent-go
+  - intermediate-agent-viswanath2017
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Acknowledged constituent inventory and bounded candidates
+  outcome: supported
+  target_ids:
+  - GO:0005821
+  summary: 'The open component TODO is honest and partly resolvable for IL2: Spc42
+    has an exact family entry and Spc42/Cnm67 have a curated organism-specific complex.
+    The source distinguishes IL1 and IL2, while the existing generic layer record
+    leaves its constituent boundary open. No wrong mapping or complete inventory is
+    asserted; broader Cnm67-family scope and unresolved IL1 coverage must survive
+    future enrichment.'
+  evidence_ids:
+  - intermediate-agent-candidate-proteins
+  - intermediate-agent-CPX-1420
+  - intermediate-agent-IPR021611
+  - intermediate-agent-IPR021750
+  - intermediate-agent-strain
+  - intermediate-agent-viswanath2017
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Source identities and evidence tiers
+  outcome: supported
+  target_ids:
+  - GO:0005821
+  summary: Citation identity and inspected source passages support the bounded assertions.
+    The cited 2004 source is a literature review; the 2017 primary study supplies
+    corroborating structural context. Native databases delimit candidate identities,
+    not new experiments.
+  evidence_ids:
+  - intermediate-agent-epmc
+  - intermediate-agent-jaspersen-browser
+  - intermediate-agent-viswanath2017
+  - intermediate-agent-CPX-1420
+  - record
+  dimensions:
+  - name: cited_source_type
+    value: Literature review
+    definition: The record-cited 2004 paper synthesizes earlier studies rather than
+      reporting a new experiment for each target claim.
+    evidence_ids:
+    - intermediate-agent-epmc
+    - intermediate-agent-jaspersen-browser
+findings: []
+actions: []
+limitations:
+- The 2004 paper was read as a public author manuscript through browser extraction;
+  its snapshot is serialized tool output, not a native PDF. Publisher-version PDF
+  byte identity was not established, and underlying papers cited by that review were
+  not all independently re-read.
+- The 2017 primary source supports bounded structural context; this audit did not
+  reproduce its Bayesian modeling or inspect all underlying raw data and supplements.
+- The optional composition inventory remains incomplete. Candidate family, domain
+  and subcomplex identities are prospective enrichment material, not accessions currently
+  asserted by this target.
+- COMMON is qualitative occurrence in a characterized species, not a measured fraction
+  of strains, cells or fungal lineages.
+- IL1 and IL2 are distinct source-described layers. CPX-1420 is an IL2-specific complex
+  with a central-plaque GO cross-reference; neither that mismatch nor its narrower
+  identity warrants collapsing the generic target. Exact IL1 inventory and Cnm67-specific
+  whole-family grounding remain unresolved here.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The explicit user goal requests a review for every selected target, including clean
+  records; no finding was invented to meet that persistence instruction.
+- Native inspection preceded judgment. The source collaborator read the full target
+  and drafted the review; the parent independently checked target content, source
+  passages, candidate boundaries and provenance before finalization.
+- Only a review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```

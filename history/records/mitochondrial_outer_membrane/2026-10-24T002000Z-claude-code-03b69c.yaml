@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+  slug: mitochondrial_outer_membrane
+session:
+  id: 2026-10-24T002000Z-claude-code-03b69c
+  timestamp: '2026-10-24T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2419
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2419: Typed causal-graph node tom_complex (GO:0005742) as STRUCTURE
+    in mitochondrial_outer_membrane_topology.'
+  details: 'Original finding F1 (membrane-organelle-subcomplex-causal-node-types)
+    saved before mutation in reviews/structured/20261023T230505Z-membrane-organelle-category-review/review.yaml.
+    Addresses #2419.'
