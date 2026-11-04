@@ -43,6 +43,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-31T09:02:30Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected septin_filaments to septin_ring in septin_oligomer_filament_ring_assembly.
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -287,6 +292,18 @@ causal_graphs:
     - reference: DOI:10.3389/fcell.2016.00123
       notes: Glomb and Gronemeyer 2016 review septin-ring organization and cytokinesis
         functions at the budding-yeast bud neck.
+  - subject: septin_filaments
+    predicate: organize into
+    object: septin_ring
+    description: Paired cortical septin filaments assemble and remodel into the higher-order
+      septin ring and hourglass collar at the division site.
+    evidence:
+    - reference: GO:0005940
+      notes: GO:0005940 defines the septin ring as a ring-shaped structure formed
+        from septin filaments at the cytokinesis site.
+    - reference: DOI:10.3389/fcell.2016.00123
+      notes: Septin filaments recruited to the cortex organize into the nascent septin
+        ring and mature hourglass collar at the mother-bud neck.
 discussions:
 - discussion_id: septin_ring_not_septin_complex
   prompt: Keep the septin ring distinct from the smaller septin hetero-oligomer complexes

@@ -1,0 +1,897 @@
+# Chloroplast thylakoid membrane identity, topology and evidence review
+
+- Review: 20261021T110932Z-chloroplast-thylakoid-membrane-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T10:51:32Z
+- Finished UTC: 2026-10-21T11:09:32Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No substantive issue was established. Exact native identity and compartment hierarchy, the direct Chlamydomonas cryo-tomography example and explicitly nonmechanistic topology are supported; source-access and molecular-scope limitations remain explicit.
+
+## Scope And Provenance
+
+Entire maintained target and both mutual thylakoid neighbors; native GO/UniProt Location/taxonomy; exact citation identities, scoped direct tomography evidence and explicitly review-tier source passages.
+
+Selection: Sixth selected target in batch twenty-two, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009535 | data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml | maintained | chloroplast thylakoid membrane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0009535 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0009535 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0009535 | 14 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0009535 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0009535 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0009535 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0009535 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0009535 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0009535 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Chloroplast-specific membrane and broader parents
+
+identity: supported. Targets: GO:0009535.
+
+GO0009535 and SL0058 exactly identify the chloroplast thylakoid membrane. Direct plastid-thylakoid-membrane ancestry plus transitive generic thylakoid-membrane ancestry are coherent, and parthood in the whole chloroplast thylakoid is supported. Bacterial and cyanelle membranes remain broader-class context, not exact synonyms.
+
+### Collective lipid bilayer without forced molecular grounding
+
+grounding: supported. Targets: GO:0009535.
+
+The component names collective thylakoid lipid material. Exact location authorities identify the complete membrane, not an individual source-neutral lipid class; reviewed-label-only representation and the open grounding discussion are appropriate. The source does not require a complete photosystem or antenna inventory in this membrane record.
+
+### Material constitution and empirical formation requirements
+
+evidence: unknown. Targets: GO:0009535.
+
+The ESSENTIAL row represents constituting membrane material. None of the reviewed photosynthetic proteins, pigments or lipid species is thereby demonstrated necessary for forming a thylakoid membrane. Activity, light acclimation, proteomic localization and proposed biogenesis do not resolve those individual assembly requirements.
+
+### Light reactions at the membrane surface
+
+evidence: supported. Targets: GO:0009535.
+
+GO0019684, SL0058 and the inspected Terashima/Perez review sections support the membrane’s light-reaction site, electron transfer and trans-thylakoid proton gradient. The function does not equate electron transport with carbon fixation or assert a complete source-neutral protein mechanism.
+
+### Collective membrane node and boundary/function edges
+
+graph: supported. Targets: GO:0009535.
+
+The membrane node’s component_ref denotes its collective lipid-bilayer constituent, consistent with this membrane-only record; it does not identify the complete thylakoid compartment as lipid material. Encloses and supports edges correctly express boundary and general functional site. Explicit NONMECHANISTIC scope avoids unsupported complete carrier chemistry.
+
+### Green-lineage occurrence with a direct Chlamydomonas example
+
+scope: supported. Targets: GO:0009535.
+
+Native taxonomy verifies Viridiplantae kingdom and C. reinhardtii species. The photosynthetic green-lineage qualification avoids claiming all nonphotosynthetic plastids possess thylakoids. Review-tier Perez/Terashima context and Engel’s primary Introduction support the broader occurrence; Keeling, where cited, is available only as broad plastid-evolution abstract context. Engel directly studies CC-124/137c native membrane and lumen architecture under constant illumination, supporting the species example without turning COMMON into a measured prevalence.
+
+### Bounded clean assessment
+
+completeness: supported. Targets: GO:0009535.
+
+No corrective issue was established. All maintained claims and native identities were assessed, including literature tier and topology. Optional molecular inventories, quantitative dimensions, images and expanded mechanisms are not mandatory. The linked Engel correction concerns a Figure3 scale unit absent from this target; there is no maintained image or measurement to repair.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml; Entire maintained YAML including definition/source, hierarchy, synonyms, component, functions if present, taxonomy, examples, every graph node/edge, discussions and history | context_only | The entire target was read against fresh native inspection. No scientific record, mapping status or history was changed. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent essentiality; CausalNode component_ref; docs/CURATION.md and native review checklist | context_only | Essentiality asks whether the structure forms without a component; observed membership and activity do not establish experimental formation necessity. component_ref identifies an own-component node. Optional slots are not mandatory. Reviewed-label-only collective lipid material is distinct from a whole membrane-bounded compartment. |
+| thylakoid-membrane-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009534,GO:0009579,GO:0031976,GO:0009507,GO:0009535,GO:0009543,GO:0009570,GO:0009767,GO:0031978,GO:0042651,GO:0055035,GO:0019684; Complete returned identities, definitions, comments and relevant relationships for GO0009534/0009579/0031976/0009507/0009535/0009543/0009570/0009767/0031978/0042651/0055035/0019684; only relevant target claims are assessed | supports | Native GO distinguishes whole chloroplast thylakoid, chloroplast-specific membrane and enclosed lumen. The broad thylakoid term explicitly excludes organelle status. Direct plastid-child and membrane/lumen part relations plus transitive broad parents are consistent; GO0009767 and GO0019684 separately describe electron transport and light reactions. |
+| thylakoid-membrane-agent-SL-0056 | https://rest.uniprot.org/locations/SL-0056.json; Complete id, name, definition, geneOntologies, isA and partOf fields; recursive returned context read; no protein count is used as occurrence evidence | supports | Native UniProt Location SL-0056 explicitly maps to GO0009534 (whole chloroplast thylakoid). Its complete definition, isA and partOf hierarchy distinguish these compartments; the membrane/whole entries describe light reactions, while the lumen is the enclosed space. These are location authorities, not protein-membership or formation assays. |
+| thylakoid-membrane-agent-SL-0057 | https://rest.uniprot.org/locations/SL-0057.json; Complete id, name, definition, geneOntologies, isA and partOf fields; recursive returned context read; no protein count is used as occurrence evidence | supports | Native UniProt Location SL-0057 explicitly maps to GO0009543 (chloroplast thylakoid lumen). Its complete definition, isA and partOf hierarchy distinguish these compartments; the membrane/whole entries describe light reactions, while the lumen is the enclosed space. These are location authorities, not protein-membership or formation assays. |
+| thylakoid-membrane-agent-SL-0058 | https://rest.uniprot.org/locations/SL-0058.json; Complete id, name, definition, geneOntologies, isA and partOf fields; recursive returned context read; no protein count is used as occurrence evidence | supports | Native UniProt Location SL-0058 explicitly maps to GO0009535 (chloroplast thylakoid membrane). Its complete definition, isA and partOf hierarchy distinguish these compartments; the membrane/whole entries describe light reactions, while the lumen is the enclosed space. These are location authorities, not protein-membership or formation assays. |
+| thylakoid-membrane-agent-NCBITaxon-33090 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/33090; Complete taxId, scientificName, rank, lineage and alternative names | supports | Native ENA identifies Viridiplantae at kingdom rank. Only this taxon identity and rank are established by this receipt, not experimental strain or occurrence. |
+| thylakoid-membrane-agent-NCBITaxon-3055 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; Complete taxId, scientificName, rank, lineage and alternative names | supports | Native ENA identifies Chlamydomonas reinhardtii at species rank. Only this taxon identity and rank are established by this receipt, not experimental strain or occurrence. |
+| thylakoid-membrane-agent-engel2015-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.7554%2FeLife.04889; Complete returned bibliographic identity and abstract | supports | Exact native metadata identifies Native architecture of the Chlamydomonas chloroplast revealed by in situ cryo-electron tomography. Authors: Engel BD, Schaffer M, Kuhn Cuellar L, Villa E, Plitzko JM, Baumeister W.; PMID 25584625; DOI 10.7554/elife.04889. Bibliographic identity, publication type and available abstract were read; metadata is not a full-body substitute. |
+| thylakoid-membrane-agent-engel2015-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC4292175.1/PMC4292175.1.xml; Entire Introduction s1; Results s2-1 Native3D architecture, s2-2 tip convergence and s2-3 inner-membrane relationship, with embedded captions; Discussion s3-1 and s3-2; Methods s4-1 cell culture, s4-2 vitrification, s4-3 cryo-FIB, s4-4 cryo-ET. Other pyrenoid/eyespot Results and remaining Methods were not comprehensively audited; no image/movie reanalysis. | supports | Engel2015 primary cryo-FIB/cryo-ET resolves thylakoid membranes and lumina in native C. reinhardtii CC-124 (137c) grown in TAP under constant light. It directly observes variable stacks and complex connecting membrane regions. The study distinguishes algal organization from higher-plant grana and explicitly cannot definitively establish one globally continuous lumen from confined tomogram volumes. Its structural observations do not prove all proposed lipid-transport or assembly mechanisms. |
+| thylakoid-membrane-agent-engel2015-correction | https://elifesciences.org/articles/11383; Complete correction text for DOI10.7554/eLife.11383 and linked original-article identity | context_only | The linked publisher correction changes the Figure3 scale-bar unit from micrometres to nanometres; the corrected value is200nm. The maintained target has no Figure3 image or quantitative size assertion, so this does not create a record defect. |
+| thylakoid-membrane-agent-perez2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev-cellbio-120823-022747&amp;format=json&amp;resultType=core; Complete returned bibliographic identity and abstract | supports | Exact native metadata identifies Evolution of Thylakoid Structural Diversity. Authors: Perez-Boerema A, Engel BD, Wietrzynski W.; PMID 38950450; DOI 10.1146/annurev-cellbio-120823-022747. Bibliographic identity, publication type and available abstract were read; metadata is not a full-body substitute. |
+| thylakoid-membrane-agent-perez2024-browser-introduction | https://doi.org/10.1146%2Fannurev-cellbio-120823-022747; Publisher Introduction paragraphs beginning Since the dawn of photosynthesis and Although the core photosynthetic complexes; selected introductory evolutionary context only; mixed browser response contains additional results not used here | supports | Perez-Boerema2024 is review-tier context. The accessible publisher Introduction describes thylakoids across oxygenic plants/algae/cyanobacteria, their enclosing membrane and distinct lumen, and the resulting proton-gradient compartment. This supports the photosynthetic green-lineage scope without implying every plastid or all nonphotosynthetic Viridiplantae possess this structure. The original timestamp records browser-artifact capture completion, not a native HTTP request; no HTTP200 full-body retrieval is asserted. |
+| thylakoid-membrane-agent-perez2024-browser-search | https://doi.org/10.1146%2Fannurev-cellbio-120823-022747; Only publisher Electron Transport Chain Complexes body paragraphs in captured search output; unrelated search results and other discontinuous passages are not used as support | supports | The review-tier publisher Electron Transport Chain Complexes section explains that thylakoid membranes organize light-reaction complexes, electron transfer and lumen-directed proton accumulation. It distinguishes membrane-soluble and lumen-soluble carriers. It supports general function and compartmentalization, not a universal experimentally necessary protein inventory. The original timestamp records browser-artifact capture completion, not a native HTTP request; no HTTP200 full-body retrieval is asserted. |
+| thylakoid-membrane-agent-perez2024-publisher | https://www.annualreviews.org/content/journals/10.1146/annurev-cellbio-120823-022747; Actual response body and retrieval receipt | context_only | The original native publisher request returned403; the separately cited browser excerpts and native metadata are available, but no full native publisher-body read is claimed. |
+| thylakoid-membrane-agent-doi-10.1007_s00294-011-0339-1 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1007/s00294-011-0339-1; Complete returned bibliographic identity and abstract | supports | Exact native metadata identifies The chloroplast proteome: a survey from the Chlamydomonas reinhardtii perspective with a focus on distinctive features. Authors: Terashima M, Specht M, Hippler M.; PMID 21533645; DOI 10.1007/s00294-011-0339-1. Bibliographic identity, publication type and available abstract were read; metadata is not a full-body substitute. |
+| thylakoid-membrane-agent-terashima2011-pdf | https://link.springer.com/content/pdf/10.1007/s00294-011-0339-1.pdf; Publisher PDF printedpp151-156: complete Introduction and Photosynthesis section, ending before Chlorophyll biosynthesis. Remaining metabolic sections, full supplementary proteome and all underlying experiments were not independently audited. | supports | Terashima/Specht/Hippler2011 is explicitly a review. Its Chlamydomonas-versus-vascular-plant comparison supports conserved photosynthetic core complexes with divergent antennae/regulation, and explicitly links active electron transfer to the thylakoid pH gradient. Proteome localization and regulatory-depletion examples do not establish a universal membrane-formation requirement. |
+| thylakoid-membrane-agent-doi-10.1098_rstb.2009.0103 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1098/rstb.2009.0103; Complete returned bibliographic identity and abstract | supports | Exact native metadata identifies The endosymbiotic origin, diversification and fate of plastids. Authors: Keeling PJ.; PMID 20124341; DOI 10.1098/rstb.2009.0103. Bibliographic identity, publication type and available abstract were read; metadata is not a full-body substitute. |
+| thylakoid-membrane-agent-keeling2010-pmc | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2817223/; Actual response body and retrieval receipt | context_only | DespiteHTTP200, this response is reCAPTCHA challenge HTML, not the Keeling article body. Its exact native metadata/abstract is available separately. |
+| thylakoid-membrane-agent-keeling2010-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2817223/fullTextXML; Actual response body and retrieval receipt | context_only | The EuropePMC fullTextXML route returnedHTTP500; no full-body read is claimed. Keeling2010 is retained at broad plastid-evolution abstract scope. |
+| boundary-0 | data/structures/membrane_organelle/chloroplast_thylakoid.yaml; Entire mutual thylakoid neighbor read; definition, hierarchy/parthood, component and graph boundary fields used here | context_only | The frozen neighboring whole/lumen/membrane record supports internal boundary checking only. Its own scientific judgments are kept in a separate review. |
+| boundary-1 | data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml; Entire mutual thylakoid neighbor read; definition, hierarchy/parthood, component and graph boundary fields used here | context_only | The frozen neighboring whole/lumen/membrane record supports internal boundary checking only. Its own scientific judgments are kept in a separate review. |
+| schema-result | just validate data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml --out /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml --out /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch22-20261021-xfifxerh/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 14 of14 collected target identifiers returned OK in this fresh base resolver run. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Engel2015 was read at the exact main-text/Methods sections stated in evidence, not every pyrenoid/eyespot result or supplement. No figure pixels, raw tomograms, movies or quantitative measurements were reanalysed. The linked Figure3 scale correction was checked and does not affect a maintained target measurement.
+- Engel’s confined volumes do not establish a single globally continuous lumen; algal organization is distinguished from the grana/stroma architecture of higher plants. The target’s qualitative occurrence/example does not quantify prevalence or extend one strain’s morphology to all green plants.
+- Perez-Boerema2024 was read through the explicitly named publisher body excerpts captured by the browser, plus native metadata/abstract. Native publisher access returned403. Browser receipt timestamps are artifact capture completion times, not HTTP request timestamps; no complete native full-text read is claimed.
+- Terashima2011 was read as review-tier synthesis at printedpp151-156 Introduction/Photosynthesis only. Keeling2010 was available at exact native metadata/abstract scope; its PMC response was challenge HTML and fullTextXML returned500. The broader green-lineage conclusion is independently supported by the inspected thylakoid-specific review and primary-study Introduction, not represented as a verified detailed Keeling body claim.
+- Collective membrane constitution is supported. Experimental formation requirements for individual lipids, pigments and proteins remain unresolved; no complete molecular inventory or assembly requirement is inferred from photosynthetic activity.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T110932Z-chloroplast-thylakoid-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Chloroplast thylakoid membrane identity, topology and evidence review
+started_at: '2026-10-21T10:51:32Z'
+finished_at: '2026-10-21T11:09:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No substantive issue was established. Exact native identity and compartment
+  hierarchy, the direct Chlamydomonas cryo-tomography example and explicitly nonmechanistic
+  topology are supported; source-access and molecular-scope limitations remain explicit.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid.yaml
+    sha256: ed335bb9dbdc4ba22ed33046fa25d64796c2eadefe71b1e04eaeb7d67156723c
+    role: context
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml
+    sha256: 6efd0a2e86462ae192dc2f27f9edc945dc6b522a31d8e233458cd25e661fb2af
+    role: context
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    sha256: 16f50bd615bee75edd15004622bae49a9a25e71dd4b9573584ca1659139d0999
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009535
+  path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  label: chloroplast thylakoid membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained target and both mutual thylakoid neighbors; native
+    GO/UniProt Location/taxonomy; exact citation identities, scoped direct tomography
+    evidence and explicitly review-tier source passages.
+  selection: Sixth selected target in batch twenty-two, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009535
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just validate data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just validate-strict data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    --out /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  summary: 14 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - thylakoid-membrane-agent-NCBITaxon-33090
+  - thylakoid-membrane-agent-NCBITaxon-3055
+  - thylakoid-membrane-agent-engel2015-meta
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-engel2015-correction
+  - thylakoid-membrane-agent-perez2024-meta
+  - thylakoid-membrane-agent-perez2024-browser-introduction
+  - thylakoid-membrane-agent-perez2024-browser-search
+  - thylakoid-membrane-agent-perez2024-publisher
+  - thylakoid-membrane-agent-doi-10.1007_s00294-011-0339-1
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - thylakoid-membrane-agent-doi-10.1098_rstb.2009.0103
+  - thylakoid-membrane-agent-keeling2010-pmc
+  - thylakoid-membrane-agent-keeling2010-jats
+  - boundary-0
+  - boundary-1
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009535
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  locator: Entire maintained YAML including definition/source, hierarchy, synonyms,
+    component, functions if present, taxonomy, examples, every graph node/edge, discussions
+    and history
+  accessed_at: '2026-10-21T11:03:57Z'
+  support: context_only
+  summary: The entire target was read against fresh native inspection. No scientific
+    record, mapping status or history was changed.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent essentiality; CausalNode component_ref; docs/CURATION.md
+    and native review checklist
+  accessed_at: '2026-10-21T11:03:57Z'
+  support: context_only
+  summary: Essentiality asks whether the structure forms without a component; observed
+    membership and activity do not establish experimental formation necessity. component_ref
+    identifies an own-component node. Optional slots are not mandatory. Reviewed-label-only
+    collective lipid material is distinct from a whole membrane-bounded compartment.
+- evidence_id: thylakoid-membrane-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009534,GO:0009579,GO:0031976,GO:0009507,GO:0009535,GO:0009543,GO:0009570,GO:0009767,GO:0031978,GO:0042651,GO:0055035,GO:0019684
+  locator: Complete returned identities, definitions, comments and relevant relationships
+    for GO0009534/0009579/0031976/0009507/0009535/0009543/0009570/0009767/0031978/0042651/0055035/0019684;
+    only relevant target claims are assessed
+  accessed_at: '2026-10-21T11:01:10.369927Z'
+  support: supports
+  summary: Native GO distinguishes whole chloroplast thylakoid, chloroplast-specific
+    membrane and enclosed lumen. The broad thylakoid term explicitly excludes organelle
+    status. Direct plastid-child and membrane/lumen part relations plus transitive
+    broad parents are consistent; GO0009767 and GO0019684 separately describe electron
+    transport and light reactions.
+  snapshot_sha256: 92d47639b6085622899587365a26395fab0c4e3b13fc1b06ad31f4a5032acc2c
+- evidence_id: thylakoid-membrane-agent-SL-0056
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0056.json
+  locator: Complete id, name, definition, geneOntologies, isA and partOf fields; recursive
+    returned context read; no protein count is used as occurrence evidence
+  accessed_at: '2026-10-21T11:01:10.370691Z'
+  support: supports
+  summary: Native UniProt Location SL-0056 explicitly maps to GO0009534 (whole chloroplast
+    thylakoid). Its complete definition, isA and partOf hierarchy distinguish these
+    compartments; the membrane/whole entries describe light reactions, while the lumen
+    is the enclosed space. These are location authorities, not protein-membership
+    or formation assays.
+  snapshot_sha256: 180c1e15539e59f5cbe7f5c5539af13380b4d3010eef9ce3950e38615f478624
+- evidence_id: thylakoid-membrane-agent-SL-0057
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0057.json
+  locator: Complete id, name, definition, geneOntologies, isA and partOf fields; recursive
+    returned context read; no protein count is used as occurrence evidence
+  accessed_at: '2026-10-21T11:01:10.370832Z'
+  support: supports
+  summary: Native UniProt Location SL-0057 explicitly maps to GO0009543 (chloroplast
+    thylakoid lumen). Its complete definition, isA and partOf hierarchy distinguish
+    these compartments; the membrane/whole entries describe light reactions, while
+    the lumen is the enclosed space. These are location authorities, not protein-membership
+    or formation assays.
+  snapshot_sha256: 87f24980e13db67fbfb9fd757639366068a4af0424a21bbaf1ff5a2338e52f44
+- evidence_id: thylakoid-membrane-agent-SL-0058
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0058.json
+  locator: Complete id, name, definition, geneOntologies, isA and partOf fields; recursive
+    returned context read; no protein count is used as occurrence evidence
+  accessed_at: '2026-10-21T11:01:10.371120Z'
+  support: supports
+  summary: Native UniProt Location SL-0058 explicitly maps to GO0009535 (chloroplast
+    thylakoid membrane). Its complete definition, isA and partOf hierarchy distinguish
+    these compartments; the membrane/whole entries describe light reactions, while
+    the lumen is the enclosed space. These are location authorities, not protein-membership
+    or formation assays.
+  snapshot_sha256: 2f36a70ab825e0e0f5d2936a98e1938b3bc6dcf279d8cd017176b064a10588da
+- evidence_id: thylakoid-membrane-agent-NCBITaxon-33090
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/33090
+  locator: Complete taxId, scientificName, rank, lineage and alternative names
+  accessed_at: '2026-10-21T10:41:48.003081Z'
+  support: supports
+  summary: Native ENA identifies Viridiplantae at kingdom rank. Only this taxon identity
+    and rank are established by this receipt, not experimental strain or occurrence.
+  snapshot_sha256: 5edd98868e71b65ad827c23592102272c4e9e3ce6f29421e9263dcff0a3410f4
+- evidence_id: thylakoid-membrane-agent-NCBITaxon-3055
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: Complete taxId, scientificName, rank, lineage and alternative names
+  accessed_at: '2026-10-21T10:41:48.009244Z'
+  support: supports
+  summary: Native ENA identifies Chlamydomonas reinhardtii at species rank. Only this
+    taxon identity and rank are established by this receipt, not experimental strain
+    or occurrence.
+  snapshot_sha256: a24c8f85014097148d9e865ea324b01b8d04f6bae27e893834f8abb5bd8b6a1f
+- evidence_id: thylakoid-membrane-agent-engel2015-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.7554%2FeLife.04889
+  locator: Complete returned bibliographic identity and abstract
+  accessed_at: '2026-10-21T11:01:10.371715Z'
+  support: supports
+  summary: 'Exact native metadata identifies Native architecture of the Chlamydomonas
+    chloroplast revealed by in situ cryo-electron tomography. Authors: Engel BD, Schaffer
+    M, Kuhn Cuellar L, Villa E, Plitzko JM, Baumeister W.; PMID 25584625; DOI 10.7554/elife.04889.
+    Bibliographic identity, publication type and available abstract were read; metadata
+    is not a full-body substitute.'
+  snapshot_sha256: c30d2941371215d2eed83b9d86986b676a2c175c8787ac448c807a43d06a936a
+- evidence_id: thylakoid-membrane-agent-engel2015-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4292175.1/PMC4292175.1.xml
+  locator: Entire Introduction s1; Results s2-1 Native3D architecture, s2-2 tip convergence
+    and s2-3 inner-membrane relationship, with embedded captions; Discussion s3-1
+    and s3-2; Methods s4-1 cell culture, s4-2 vitrification, s4-3 cryo-FIB, s4-4 cryo-ET.
+    Other pyrenoid/eyespot Results and remaining Methods were not comprehensively
+    audited; no image/movie reanalysis.
+  accessed_at: '2026-10-21T11:01:34.555892Z'
+  support: supports
+  summary: Engel2015 primary cryo-FIB/cryo-ET resolves thylakoid membranes and lumina
+    in native C. reinhardtii CC-124 (137c) grown in TAP under constant light. It directly
+    observes variable stacks and complex connecting membrane regions. The study distinguishes
+    algal organization from higher-plant grana and explicitly cannot definitively
+    establish one globally continuous lumen from confined tomogram volumes. Its structural
+    observations do not prove all proposed lipid-transport or assembly mechanisms.
+  snapshot_sha256: 16b5f264ce209350b41d8797dc53e59d7e3d2b1b8f14ca35ca21c0752e7bcb4e
+- evidence_id: thylakoid-membrane-agent-engel2015-correction
+  kind: primary_source
+  reference: https://elifesciences.org/articles/11383
+  locator: Complete correction text for DOI10.7554/eLife.11383 and linked original-article
+    identity
+  accessed_at: '2026-10-21T11:01:34.556475Z'
+  support: context_only
+  summary: The linked publisher correction changes the Figure3 scale-bar unit from
+    micrometres to nanometres; the corrected value is200nm. The maintained target
+    has no Figure3 image or quantitative size assertion, so this does not create a
+    record defect.
+  snapshot_sha256: 3dc3275606a79f8ec885e78ca7a73599767fb6a24b7d6cc29c4f5ab909e2a08c
+- evidence_id: thylakoid-membrane-agent-perez2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1146%2Fannurev-cellbio-120823-022747&format=json&resultType=core
+  locator: Complete returned bibliographic identity and abstract
+  accessed_at: '2026-10-21T10:44:30.997805Z'
+  support: supports
+  summary: 'Exact native metadata identifies Evolution of Thylakoid Structural Diversity.
+    Authors: Perez-Boerema A, Engel BD, Wietrzynski W.; PMID 38950450; DOI 10.1146/annurev-cellbio-120823-022747.
+    Bibliographic identity, publication type and available abstract were read; metadata
+    is not a full-body substitute.'
+  snapshot_sha256: f9df3427bb3b35764922628c9e89cc9378fa7875a4a103bde71a75b130d54926
+- evidence_id: thylakoid-membrane-agent-perez2024-browser-introduction
+  kind: authority
+  reference: https://doi.org/10.1146%2Fannurev-cellbio-120823-022747
+  locator: Publisher Introduction paragraphs beginning Since the dawn of photosynthesis
+    and Although the core photosynthetic complexes; selected introductory evolutionary
+    context only; mixed browser response contains additional results not used here
+  accessed_at: '2026-10-21T10:46:36.113233Z'
+  support: supports
+  summary: Perez-Boerema2024 is review-tier context. The accessible publisher Introduction
+    describes thylakoids across oxygenic plants/algae/cyanobacteria, their enclosing
+    membrane and distinct lumen, and the resulting proton-gradient compartment. This
+    supports the photosynthetic green-lineage scope without implying every plastid
+    or all nonphotosynthetic Viridiplantae possess this structure. The original timestamp
+    records browser-artifact capture completion, not a native HTTP request; no HTTP200
+    full-body retrieval is asserted.
+  snapshot_sha256: 634c866a9cd76eae27d4820d7734d7e25ef595d42781bf95f8b816821065e9ba
+- evidence_id: thylakoid-membrane-agent-perez2024-browser-search
+  kind: authority
+  reference: https://doi.org/10.1146%2Fannurev-cellbio-120823-022747
+  locator: Only publisher Electron Transport Chain Complexes body paragraphs in captured
+    search output; unrelated search results and other discontinuous passages are not
+    used as support
+  accessed_at: '2026-10-21T08:46:38.912004Z'
+  support: supports
+  summary: The review-tier publisher Electron Transport Chain Complexes section explains
+    that thylakoid membranes organize light-reaction complexes, electron transfer
+    and lumen-directed proton accumulation. It distinguishes membrane-soluble and
+    lumen-soluble carriers. It supports general function and compartmentalization,
+    not a universal experimentally necessary protein inventory. The original timestamp
+    records browser-artifact capture completion, not a native HTTP request; no HTTP200
+    full-body retrieval is asserted.
+  snapshot_sha256: 1e2a20aee1043d6a8c9b511e909b825174d51fe9374f438c494e924d20992a0e
+- evidence_id: thylakoid-membrane-agent-perez2024-publisher
+  kind: authority
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev-cellbio-120823-022747
+  locator: Actual response body and retrieval receipt
+  accessed_at: '2026-10-21T08:40:22.497603Z'
+  support: context_only
+  summary: The original native publisher request returned403; the separately cited
+    browser excerpts and native metadata are available, but no full native publisher-body
+    read is claimed.
+  snapshot_sha256: 612f1ea71f956ce62c4c4368da941d4b7d5d783926e00d8540a0c3f0684da909
+- evidence_id: thylakoid-membrane-agent-doi-10.1007_s00294-011-0339-1
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s00294-011-0339-1
+  locator: Complete returned bibliographic identity and abstract
+  accessed_at: '2026-10-21T10:41:48.103033Z'
+  support: supports
+  summary: 'Exact native metadata identifies The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features.
+    Authors: Terashima M, Specht M, Hippler M.; PMID 21533645; DOI 10.1007/s00294-011-0339-1.
+    Bibliographic identity, publication type and available abstract were read; metadata
+    is not a full-body substitute.'
+  snapshot_sha256: aec76518f370734a76392741bffd319ac61df223c77fad628910ec04da56412e
+- evidence_id: thylakoid-membrane-agent-terashima2011-pdf
+  kind: authority
+  reference: https://link.springer.com/content/pdf/10.1007/s00294-011-0339-1.pdf
+  locator: 'Publisher PDF printedpp151-156: complete Introduction and Photosynthesis
+    section, ending before Chlorophyll biosynthesis. Remaining metabolic sections,
+    full supplementary proteome and all underlying experiments were not independently
+    audited.'
+  accessed_at: '2026-10-21T10:41:52.689991Z'
+  support: supports
+  summary: Terashima/Specht/Hippler2011 is explicitly a review. Its Chlamydomonas-versus-vascular-plant
+    comparison supports conserved photosynthetic core complexes with divergent antennae/regulation,
+    and explicitly links active electron transfer to the thylakoid pH gradient. Proteome
+    localization and regulatory-depletion examples do not establish a universal membrane-formation
+    requirement.
+  snapshot_sha256: e42edb346d375e4e083e2eb79c6d9eff9fc217513e1ae9ecf808acb143129c6b
+- evidence_id: thylakoid-membrane-agent-doi-10.1098_rstb.2009.0103
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1098/rstb.2009.0103
+  locator: Complete returned bibliographic identity and abstract
+  accessed_at: '2026-10-21T10:41:48.128898Z'
+  support: supports
+  summary: 'Exact native metadata identifies The endosymbiotic origin, diversification
+    and fate of plastids. Authors: Keeling PJ.; PMID 20124341; DOI 10.1098/rstb.2009.0103.
+    Bibliographic identity, publication type and available abstract were read; metadata
+    is not a full-body substitute.'
+  snapshot_sha256: cb4b9f46ce9002adf2521e02ef9aa676bb65af752c0b025c4015b37a21d9aa0b
+- evidence_id: thylakoid-membrane-agent-keeling2010-pmc
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2817223/
+  locator: Actual response body and retrieval receipt
+  accessed_at: '2026-10-21T10:41:49.525235Z'
+  support: context_only
+  summary: DespiteHTTP200, this response is reCAPTCHA challenge HTML, not the Keeling
+    article body. Its exact native metadata/abstract is available separately.
+  snapshot_sha256: b16bf621eb2a3f358f1f623288ece9340e27da9dbb1cf7d86cbfbe75ce8fbff6
+- evidence_id: thylakoid-membrane-agent-keeling2010-jats
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2817223/fullTextXML
+  locator: Actual response body and retrieval receipt
+  accessed_at: '2026-10-21T10:41:53.762849Z'
+  support: context_only
+  summary: The EuropePMC fullTextXML route returnedHTTP500; no full-body read is claimed.
+    Keeling2010 is retained at broad plastid-evolution abstract scope.
+  snapshot_sha256: e6403bb63596b669f29df052d5f58bb6300bdc53798b238391b33d8931a1c4de
+- evidence_id: boundary-0
+  kind: record_content
+  reference: data/structures/membrane_organelle/chloroplast_thylakoid.yaml
+  locator: Entire mutual thylakoid neighbor read; definition, hierarchy/parthood,
+    component and graph boundary fields used here
+  accessed_at: '2026-10-21T11:03:57Z'
+  support: context_only
+  summary: The frozen neighboring whole/lumen/membrane record supports internal boundary
+    checking only. Its own scientific judgments are kept in a separate review.
+- evidence_id: boundary-1
+  kind: record_content
+  reference: data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml
+  locator: Entire mutual thylakoid neighbor read; definition, hierarchy/parthood,
+    component and graph boundary fields used here
+  accessed_at: '2026-10-21T11:03:57Z'
+  support: context_only
+  summary: The frozen neighboring whole/lumen/membrane record supports internal boundary
+    checking only. Its own scientific judgments are kept in a separate review.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:51:34Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml'
+  snapshot_sha256: dba925615e9027240cd3cce8c8c9972b5f5b8744dbe61b20603a6287ddf5abe0
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    --out /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:51:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch22-20261021-xfifxerh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch22-20261021-xfifxerh/chloroplast_thylakoid_membrane-strict.tsv"
+  snapshot_sha256: 3784f6109d757aff92a029031f879aaf140ca24e3da9e55fd3f05a0d19e25f51
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml;
+    exact collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T11:03:57Z'
+  support: supports
+  summary: '14 of14 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Chloroplast-specific membrane and broader parents
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: GO0009535 and SL0058 exactly identify the chloroplast thylakoid membrane.
+    Direct plastid-thylakoid-membrane ancestry plus transitive generic thylakoid-membrane
+    ancestry are coherent, and parthood in the whole chloroplast thylakoid is supported.
+    Bacterial and cyanelle membranes remain broader-class context, not exact synonyms.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - boundary-0
+  - boundary-1
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Collective lipid bilayer without forced molecular grounding
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: The component names collective thylakoid lipid material. Exact location
+    authorities identify the complete membrane, not an individual source-neutral lipid
+    class; reviewed-label-only representation and the open grounding discussion are
+    appropriate. The source does not require a complete photosystem or antenna inventory
+    in this membrane record.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - record
+  - policy
+- assessment_id: necessity
+  area: evidence
+  topic: Material constitution and empirical formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:0009535
+  summary: The ESSENTIAL row represents constituting membrane material. None of the
+    reviewed photosynthetic proteins, pigments or lipid species is thereby demonstrated
+    necessary for forming a thylakoid membrane. Activity, light acclimation, proteomic
+    localization and proposed biogenesis do not resolve those individual assembly
+    requirements.
+  evidence_ids:
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - thylakoid-membrane-agent-go
+  - record
+  - policy
+- assessment_id: functions
+  area: evidence
+  topic: Light reactions at the membrane surface
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: GO0019684, SL0058 and the inspected Terashima/Perez review sections support
+    the membrane’s light-reaction site, electron transfer and trans-thylakoid proton
+    gradient. The function does not equate electron transport with carbon fixation
+    or assert a complete source-neutral protein mechanism.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - thylakoid-membrane-agent-perez2024-browser-search
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Collective membrane node and boundary/function edges
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: The membrane node’s component_ref denotes its collective lipid-bilayer
+    constituent, consistent with this membrane-only record; it does not identify the
+    complete thylakoid compartment as lipid material. Encloses and supports edges
+    correctly express boundary and general functional site. Explicit NONMECHANISTIC
+    scope avoids unsupported complete carrier chemistry.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - thylakoid-membrane-agent-perez2024-browser-search
+  - record
+  - policy
+- assessment_id: scope
+  area: scope
+  topic: Green-lineage occurrence with a direct Chlamydomonas example
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: Native taxonomy verifies Viridiplantae kingdom and C. reinhardtii species.
+    The photosynthetic green-lineage qualification avoids claiming all nonphotosynthetic
+    plastids possess thylakoids. Review-tier Perez/Terashima context and Engel’s primary
+    Introduction support the broader occurrence; Keeling, where cited, is available
+    only as broad plastid-evolution abstract context. Engel directly studies CC-124/137c
+    native membrane and lumen architecture under constant illumination, supporting
+    the species example without turning COMMON into a measured prevalence.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-NCBITaxon-33090
+  - thylakoid-membrane-agent-NCBITaxon-3055
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-perez2024-browser-introduction
+  - thylakoid-membrane-agent-terashima2011-pdf
+  - thylakoid-membrane-agent-doi-10.1098_rstb.2009.0103
+  - record
+- assessment_id: coverage
+  area: completeness
+  topic: Bounded clean assessment
+  outcome: supported
+  target_ids:
+  - GO:0009535
+  summary: No corrective issue was established. All maintained claims and native identities
+    were assessed, including literature tier and topology. Optional molecular inventories,
+    quantitative dimensions, images and expanded mechanisms are not mandatory. The
+    linked Engel correction concerns a Figure3 scale unit absent from this target;
+    there is no maintained image or measurement to repair.
+  evidence_ids:
+  - thylakoid-membrane-agent-go
+  - thylakoid-membrane-agent-engel2015-jats
+  - thylakoid-membrane-agent-engel2015-correction
+  - thylakoid-membrane-agent-perez2024-browser-introduction
+  - thylakoid-membrane-agent-perez2024-browser-search
+  - thylakoid-membrane-agent-SL-0056
+  - thylakoid-membrane-agent-SL-0057
+  - thylakoid-membrane-agent-SL-0058
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Engel2015 was read at the exact main-text/Methods sections stated in evidence, not
+  every pyrenoid/eyespot result or supplement. No figure pixels, raw tomograms, movies
+  or quantitative measurements were reanalysed. The linked Figure3 scale correction
+  was checked and does not affect a maintained target measurement.
+- Engel’s confined volumes do not establish a single globally continuous lumen; algal
+  organization is distinguished from the grana/stroma architecture of higher plants.
+  The target’s qualitative occurrence/example does not quantify prevalence or extend
+  one strain’s morphology to all green plants.
+- Perez-Boerema2024 was read through the explicitly named publisher body excerpts
+  captured by the browser, plus native metadata/abstract. Native publisher access
+  returned403. Browser receipt timestamps are artifact capture completion times, not
+  HTTP request timestamps; no complete native full-text read is claimed.
+- Terashima2011 was read as review-tier synthesis at printedpp151-156 Introduction/Photosynthesis
+  only. Keeling2010 was available at exact native metadata/abstract scope; its PMC
+  response was challenge HTML and fullTextXML returned500. The broader green-lineage
+  conclusion is independently supported by the inspected thylakoid-specific review
+  and primary-study Introduction, not represented as a verified detailed Keeling body
+  claim.
+- Collective membrane constitution is supported. Experimental formation requirements
+  for individual lipids, pigments and proteins remain unresolved; no complete molecular
+  inventory or assembly requirement is inferred from photosynthetic activity.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

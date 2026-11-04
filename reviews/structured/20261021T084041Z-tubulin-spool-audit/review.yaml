@@ -1,0 +1,613 @@
+schema_version: 1.0.0
+review_id: 20261021T084041Z-tubulin-spool-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Tubulin spool morphology, specimen provenance and image evidence review
+started_at: '2026-10-21T08:25:10Z'
+finished_at: '2026-10-21T08:40:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The spool identity, broad tubulin composition, Takayama culture provenance,
+  pinned dataset and exact publisher image are supported. Functional and geometric
+  uncertainties remain explicitly bounded. No concrete curation issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/cytoskeleton/tubulin_spool/mikus_2025_figure2.jpg
+    sha256: e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046
+    role: context
+  - path: data/structures/cytoskeleton/tubulin_spool.yaml
+    sha256: 1180c5c0b3a5c67f58a23b99913f7b78202beb8cf3e01c40ca5aac9c56dcf072
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:tubulin_spool
+  path: data/structures/cytoskeleton/tubulin_spool.yaml
+  label: tubulin spool
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tubulin_spool.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target including all discussions, dataset references
+    and the tracked Figure2 image; exact native GO/family/taxon identities, primary
+    claim-bearing paper sections, workbook cells and pinned metadata.
+  selection: Eighth selected target in batch twelve, fixed repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:tubulin_spool
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just validate data/structures/cytoskeleton/tubulin_spool.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just validate-strict data/structures/cytoskeleton/tubulin_spool.yaml --out
+    /private/tmp/cellstructure-batch12-20261021-ipvr425j/tubulin_spool-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: 5 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - spool-agent-go
+  - spool-agent-go-spool-search
+  - spool-agent-tax-241424
+  - spool-agent-IPR000217
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-table-s1
+  - spool-agent-mikus2025-crossref
+  - spool-agent-project
+  - spool-agent-volumes-dataset
+  - spool-agent-categories
+  - spool-agent-github-readme
+  - spool-agent-publisher-figure2
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/tubulin_spool.yaml
+  locator: Entire maintained YAML, all fields and discussions read
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: context_only
+  summary: Complete target content defines the claims reviewed; historical curation
+    statements are distinguished from current observations.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/record-review-profile.md
+  locator: Full record-review profile and governing review/evidence skills in native
+    source inputs
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: context_only
+  summary: Review-only, claim-level assessment; optional empty fields are not automatic
+    defects and historical access notes are not rewritten as current absence claims.
+- evidence_id: spool-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005622,GO:0015630
+  locator: Both complete native term results, names/definitions/status/children
+  accessed_at: '2026-10-21T08:25:57.210887Z'
+  support: supports
+  summary: Active GO:0005622 supplies the broad intracellular anatomical class; GO:0015630
+    is microtubule cytoskeleton. These are not exact spool identity terms.
+  snapshot_sha256: 61990a834a77032f8a035de5072e94eafec06af437a1f1a8e9f0745584e75a9c
+- evidence_id: spool-agent-go-spool-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=spool&limit=100
+  locator: Entire bounded native QuickGO result including all returned names/definitions
+    and pagination
+  accessed_at: '2026-10-21T08:33:33.839814Z'
+  support: supports
+  summary: Native query spool returns zero hits; the bounded result is compatible
+    with retaining the local assembly identifier.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  search_scope: QuickGO public GO search; query=spool; limit=100; returned pagination
+    inspected. Ignored-file inclusion is not applicable to this remote query. This
+    is not an exhaustive synonym/ontology or local-repository absence search.
+- evidence_id: spool-agent-tax-241424
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/241424
+  locator: Full native names/rank/lineage
+  accessed_at: '2026-10-21T08:25:57.334187Z'
+  support: supports
+  summary: Native species241424 is Takayama helix within Kareniaceae; the authority
+    does not establish spool prevalence.
+  snapshot_sha256: 702ddd6d19b76ce1b78bee22afb81ca6a728b051353083804010a1c543076e79
+- evidence_id: spool-agent-IPR000217
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000217/
+  locator: Native metadata, description and hierarchy
+  accessed_at: '2026-10-21T08:25:57.453790Z'
+  support: supports
+  summary: IPR000217 is the Tubulin family with broad subtype hierarchy; family membership
+    is not a claim that all tubulin subtypes occur in the spool.
+  snapshot_sha256: ddbf902c6495d576d69c82c85daf1bdf2bc9fea5894925a4efcd87dc45ea3170
+- evidence_id: spool-agent-mikus2025-paper-pdf
+  kind: primary_source
+  reference: https://www.roscoff-culture-collection.org/sites/default/files/rcc-papers/Mikus%20et%20al.%20-%202025%20-%20Charting%20the%20landscape%20of%20cytoskeletal%20diversity%20in%20microbial%20eukaryotes.pdf
+  locator: Microtubule-array Results and Figure2 caption pp4–5; dinoflagellate Results/Figure6
+    pp9–11; Discussion, Limitations and Data availability pp14–15; key resources including
+    E7,RCC10719,RCC3511; fixation/U-ExM/microscopy/image-analysis Methods e6–e8; first-page
+    CC BY4.0 statement
+  accessed_at: '2026-10-21T06:48:18.859658Z'
+  support: supports
+  summary: Primary fixed-cell U-ExM identifies perinuclear/posterior tubulin-positive
+    spools in Takayama and surveyed Kareniaceae. Apparent continuity, desmose linkage
+    and functional hypotheses have different evidential strengths. The Figure2 legend
+    and image-analysis scale statements conflict.
+  snapshot_sha256: 117e1e97412645a193cfbb87664031ead725759d02dddce02be84ad7e3a14d16
+- evidence_id: spool-agent-table-s1
+  kind: primary_source
+  reference: https://www.dudinlab.com/s/Table-S1.xlsx
+  locator: List of Species headers and A46:K46; Dataset Annotation headers row3 and
+    D1384:V1384; rows1375–1376; exact original workbook read with openpyxl
+  accessed_at: '2026-10-21T08:25:57.473905Z'
+  support: supports
+  summary: Author-linked workbook directly identifies RCC10719 Takayama helix and
+    one-species interphase E7-labeled spool-positive material; mixed-gel filenames
+    are not strain synonyms or proof of spool occurrence in the other species.
+  snapshot_sha256: bfeb51750c59a50005f2cc7d7efe28582b164d938ca76f7c795f0b26113e61fe
+- evidence_id: spool-agent-mikus2025-crossref
+  kind: database
+  reference: https://api.crossref.org/works/10.1016/j.cell.2025.09.027
+  locator: message.DOI/title and complete license array, content-version=vor
+  accessed_at: '2026-10-21T06:47:42.183413Z'
+  support: supports
+  summary: Publisher-deposited version-of-record license is CC BY4.0; separate text/data-mining
+    license entries are not used as the reuse grant.
+  snapshot_sha256: aa413c25ebeae229047714f2fd32b689499392ca4f70acc8ef9c806feea148b0
+- evidence_id: spool-agent-project
+  kind: database
+  reference: https://raw.githubusercontent.com/Dey-Lab-Team/culture-collections/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d/data/project.json
+  locator: Complete data/project.json at commit2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d
+  accessed_at: '2026-10-21T08:25:58.008314Z'
+  support: supports
+  summary: Pinned project.json identifies datasets=[volumes], defaultDataset=volumes
+    and specVersion0.3.0.
+  snapshot_sha256: 9b526fc72e078fdbd886c2be0c9e9b400e2f7e4aec3d0004bb53b4f1dc521fe6
+- evidence_id: spool-agent-volumes-dataset
+  kind: database
+  reference: https://raw.githubusercontent.com/Dey-Lab-Team/culture-collections/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d/data/volumes/dataset.json
+  locator: Top-level keys and source/view entries for rcc10719_pfa_dna-tub-nhs_20230802_od_s00
+    and ch0–ch2; remaining5479-source archive not individually read
+  accessed_at: '2026-10-21T08:25:58.047185Z'
+  support: supports
+  summary: The pinned volumes dataset includes the exact row1384 volume and three
+    DNA/tubulin/NHS channels, with the view in the spools group. Legacy single_volumes
+    paths inside source locations do not change the project default.
+  snapshot_sha256: 36d2f61fa50ac9ccd2a42050b50eb72ed8dabc09fc1df6fb05bbf12be5a5e2a3
+- evidence_id: spool-agent-categories
+  kind: database
+  reference: https://raw.githubusercontent.com/Dey-Lab-Team/culture-collections/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d/culture_collections/notebooks/categories.csv
+  locator: Header and every RCC10719-containing row; exact source rcc10719_pfa_dna-tub-nhs_20230802_od_s00;1767
+    data rows parsed
+  accessed_at: '2026-10-21T08:27:02.875731Z'
+  support: supports
+  summary: Pinned tab-delimited categories contain specimen annotations with Yes/No/Maybe/blank
+    spool values; RCC10719 entries and the exact TableS1 volume agree. These annotations
+    are not independent-cell counts or taxon prevalence.
+  snapshot_sha256: 29b0881b8a8a3e86fce753293ebbe3c94f3c27d4ac14804fed796296487b067d
+- evidence_id: spool-agent-github-readme
+  kind: database
+  reference: https://raw.githubusercontent.com/Dey-Lab-Team/culture-collections/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d/README.md
+  locator: Data archive/access paragraph around line44; public pinned README
+  accessed_at: '2026-10-21T08:27:03.076841Z'
+  support: supports
+  summary: The pinned project README links BioImage Archive S-BIAD2095 and describes
+    archive access; raw volumes were not reanalyzed.
+  snapshot_sha256: 08257d90a998d18bd78e91066a8894d8e84b51dec08bf2a589dce1e3473252b7
+- evidence_id: spool-agent-publisher-figure2
+  kind: primary_source
+  reference: https://ars.els-cdn.com/content/image/1-s2.0-S0092867425011274-gr2_lrg.jpg
+  locator: Entire publisher Figure2 JPEG; compared exact hash with data/images/cytoskeleton/tubulin_spool/mikus_2025_figure2.jpg;
+    full tracked image viewed at original size
+  accessed_at: '2026-10-21T08:33:33.837397Z'
+  support: supports
+  summary: Fresh publisher JPEG is byte-identical to the tracked Figure2 image; SHA256
+    e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046. All panels were
+    visually inspected; D–E are the spool panels.
+  snapshot_sha256: e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/tubulin_spool.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:14Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/tubulin_spool.yaml'
+  snapshot_sha256: ec0c8547915fb1a344c29c5f0297510066c281772c458899a0ddc2e509e38599
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/tubulin_spool.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/tubulin_spool-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:16Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/tubulin_spool.yaml\
+    \ --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/tubulin_spool-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/tubulin_spool-strict.tsv"
+  snapshot_sha256: 6a6e073fe67d2df12dd6e2eb33baa0c41b80fb4014c4ce4fa0215e5cadb751be
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/tubulin_spool.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: supports
+  summary: '5 of6 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:tubulin_spool: SKIPPED; resolved by evidence record.
+    Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Morphological assembly and ontology boundary
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The local identity, exact synonym and OTHER kind describe a compact tubulin-positive
+    structure without resolving a closed-ring or single-filament lattice. Broad intracellular
+    parent and microtubule-cytoskeleton parthood are appropriate; desmose and the
+    wider cortical array are not asserted as synonyms.
+  evidence_ids:
+  - spool-agent-go
+  - spool-agent-go-spool-search
+  - spool-agent-mikus2025-paper-pdf
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Generic tubulin class and molecular limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: E7-positive spool material supports the stated Tubulin-family component,
+    while the record explicitly leaves subtype inventory, exact genes, molecular topology
+    and essentiality unresolved. IPR000217 is appropriate for this generic assertion;
+    an alpha/beta split is not automatically required from this labeling study. Neighboring
+    DNA, centrin and flagellar modification channels are not imported as constituents.
+  evidence_ids:
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-table-s1
+  - spool-agent-IPR000217
+  - record
+- assessment_id: sample
+  area: scope
+  topic: Canonical species, culture and mixed-gel boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: Species241424 and RCC10719 are supported. Row1384 explicitly records Takayama
+    helix/P22-120, E7Ab, interphase and one species in the gel with spool presence.
+    Combined RCC3511/RCC10719 filenames refer to co-embedding; the paper separately
+    identifies RCC3511 as Biecheleriopsis adriatica. Neither source establishes raw-volume-to-panel
+    identity or that the latter species has spools.
+  evidence_ids:
+  - spool-agent-tax-241424
+  - spool-agent-table-s1
+  - spool-agent-mikus2025-paper-pdf
+  - record
+- assessment_id: dataset
+  area: provenance
+  topic: Pinned project and annotation semantics
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The pinned project uses volumes as the default dataset and specVersion0.3.0;
+    exact-volume source and view entries are present. Categories include Yes/No/Maybe/blank
+    and are not universal occurrence/absence or cell-count data. README and article
+    link S-BIAD2095, without claiming raw-volume analysis.
+  evidence_ids:
+  - spool-agent-project
+  - spool-agent-volumes-dataset
+  - spool-agent-categories
+  - spool-agent-github-readme
+  - spool-agent-mikus2025-paper-pdf
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Observed morphology versus proposed physiology
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The paper observes spool morphology in fixed, expanded, stained specimens.
+    Apparent extension from a microtubule does not establish counted stoichiometry,
+    desmose attachment, force transmission, swimming performance or cell-cycle requirement.
+    Keeping functions/causal graphs absent and explicit hypothesis discussions is
+    justified.
+  evidence_ids:
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-table-s1
+  - record
+- assessment_id: quantity
+  area: quantity
+  topic: Scale statements and taxonomic prevalence
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The record accurately preserves the Figure2 legend versus Image analysis
+    Methods scale discrepancy and avoids inferred native dimensions. Diameter summaries
+    refer to measured spools, not universal counts/sizes. Surveyed Karenia/Karlodinium/Takayama
+    material supports the bounded Kareniaceae statement without universal distribution.
+  evidence_ids:
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-categories
+  - record
+- assessment_id: image
+  area: representation
+  topic: Tracked publisher figure and license
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The tracked JPEG has the declared SHA256 and matches the fresh publisher
+    image exactly. Its full visual content, D–E panel scope, DNA/tubulin colors and
+    fixed-cell U-ExM modality agree with the caption. Paper and version-of-record
+    metadata support CC BY4.0; taxon applies only to the named spool panels.
+  evidence_ids:
+  - spool-agent-publisher-figure2
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-mikus2025-crossref
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Unresolved mechanism and historical searches
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubulin_spool
+  summary: The record supplies morphology, broad composition, canonical culture, pinned
+    dataset and properly scoped image. The unresolved topology, function, prevalence
+    and scale are explicit; optional gene examples, functions and numeric properties
+    are not mandatory defects. Historical ignored-inclusive searches are not reasserted
+    as a fresh corpus-absence result.
+  evidence_ids:
+  - spool-agent-mikus2025-paper-pdf
+  - spool-agent-table-s1
+  - spool-agent-go
+  - spool-agent-IPR000217
+  - spool-agent-go-spool-search
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The primary paper was read at the explicit claim-bearing Results, Discussion, limitations,
+  key-resource and Methods sections; all unrelated organism sections, videos and supplements
+  were not independently reanalyzed.
+- TableS1 specified headers/rows and pinned exact-volume metadata were inspected;
+  raw U-ExM volumes were not downloaded, counted or reprocessed, and an exact raw-volume-to-Figure2
+  mapping was not established.
+- Culture samples were fixed once; variable labeling and expansion quality constrain
+  negative taxonomic interpretation. Spool annotations are image-level labels rather
+  than prevalence estimates.
+- The apparent microtubule continuity, full tubulin subtype inventory, assembly mechanism
+  and proposed functions remain unresolved; generic family grounding does not prove
+  every subtype.
+- The conflicting expansion-scale statements are retained without deriving native
+  dimensions from image pixels.
+- The current bounded QuickGO spool search has zero hits but does not establish exhaustive
+  absence from all ontologies or local ignored files. Historical corpus search notes
+  are not repeated as new findings.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- All13 expanded native input hashes verified. Reused Mikus paper/Crossref/EuropePMC
+  receipts retain their original UTCZ times and raw hashes. The fresh publisher JPEG
+  matches the tracked image byte-for-byte.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.

@@ -34,6 +34,13 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): gap45_glideosome_associated_protein
+    (Pfam:PF29346).'
+  llm_assisted: true
 synonyms:
 - synonym_text: actin-myosin glideosome
   synonym_type: EXACT_SYNONYM
@@ -262,6 +269,7 @@ causal_graphs:
     label: Glideosome-associated protein 45
     node_type: GENE_OR_PROTEIN
     component_ref: gap45_glideosome_associated_protein
+    grounding: Pfam:PF29346
   - node_id: gap50_membrane_receptor
     label: GAP50 membrane receptor
     node_type: GENE_OR_PROTEIN

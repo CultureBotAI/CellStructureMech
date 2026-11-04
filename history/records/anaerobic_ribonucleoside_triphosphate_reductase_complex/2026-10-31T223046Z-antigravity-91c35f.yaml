@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/anaerobic_ribonucleoside_triphosphate_reductase_complex.yaml
+  slug: anaerobic_ribonucleoside_triphosphate_reductase_complex
+session:
+  id: 2026-10-31T223046Z-antigravity-91c35f
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - parent_structures
+  - part_of
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add anaerobic ribonucleoside-triphosphate reductase complex (GO:0031250) record
+  details: Added CellStructureRecord for anaerobic ribonucleoside-triphosphate reductase complex
+    (GO:0031250) in Escherichia coli K-12 with catalytic subunit NrdD (UniProtKB:P28903) and
+    radical-SAM activase subunit NrdG (UniProtKB:P0A9N8), verbatim PubMed abstract evidence
+    (PMID:9305874, PMID:11427536), ComplexPortal xref (CPX-3821), canonical examples, functions,
+    and a mechanistic FUNCTION causal graph.
