@@ -41,3 +41,6 @@ local/
 .DS_Store
 .idea/
 .vscode/
+
+# Shared quote gate reports (kg-microbe-evidence writes them here by default).
+workspace/reports/
