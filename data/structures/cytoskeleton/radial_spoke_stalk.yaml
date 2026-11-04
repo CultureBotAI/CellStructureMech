@@ -39,6 +39,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -145,6 +151,22 @@ components:
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q27YU2
       notes: UniProtKB unreviewed (TrEMBL) entry Q27YU2 for gene RSP12 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q27YU3
+    protein_label: Radial spoke protein 11
+    gene_symbol: PF25
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP11, which
+      UniProt lists under the primary name PF25, in Chlamydomonas reinhardtii. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27YU3
+      notes: UniProtKB unreviewed (TrEMBL) entry Q27YU3 for gene RSP11 in Chlamydomonas
         reinhardtii. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
 taxonomic_distribution:

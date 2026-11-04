@@ -1,0 +1,1064 @@
+schema_version: 1.0.0
+review_id: 20261022T045418Z-chaperonin-containing-t-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Chaperonin containing t complex scientific review
+started_at: '2026-10-22T04:37:09Z'
+finished_at: '2026-10-22T04:54:18Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: CCT identity, eight subunits and double-ring stoichiometry are supported.
+  Two minor findings resolve exact paralogue families and an outdated CCT1 query-uniqueness
+  note.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/chaperonin_containing_t_complex.yaml
+    sha256: 4274a8163f3bdd1939542d87eb5bca53a4897c7c760c027091440c72448b6e7b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005832
+  path: data/structures/other/chaperonin_containing_t_complex.yaml
+  label: chaperonin-containing T-complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph claims and completeness.
+  selection: Target 10 of batch46 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005832
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just validate data/structures/other/chaperonin_containing_t_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just validate-strict data/structures/other/chaperonin_containing_t_complex.yaml
+    --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/chaperonin_containing_t_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-chaperonin_containing_t_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/chaperonin_containing_t_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-chaperonin_containing_t_complex-causal-graphs
+- check_id: native-chaperonin_containing_t_complex-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/chaperonin_containing_t_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-chaperonin_containing_t_complex-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005832
+  summary: No expression-module claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root46-sources-go
+  - root46-sources-pmid-8771707
+  - root46-sources-doi-2
+  - root46-sources-doi-4
+  - root46-sources-tax4932
+  - root46-sources-tax559292
+  - root46-sources-protein-P12612
+  - root46-sources-protein-P39076
+  - root46-sources-protein-P39077
+  - root46-sources-protein-P39078
+  - root46-sources-protein-P40413
+  - root46-sources-protein-P39079
+  - root46-sources-protein-P42943
+  - root46-sources-protein-P47079
+  - root46-sources-gene-CCT1-559292
+  - root46-sources-gene-CCT2-559292
+  - root46-sources-gene-CCT3-559292
+  - root46-sources-gene-CCT4-559292
+  - root46-sources-gene-CCT5-559292
+  - root46-sources-gene-CCT6-559292
+  - root46-sources-gene-CCT7-559292
+  - root46-sources-gene-CCT8-559292
+  - root46-sources-ipr-IPR012715
+  - root46-sources-ipr-IPR012716
+  - root46-sources-ipr-IPR012719
+  - root46-sources-ipr-IPR012717
+  - root46-sources-ipr-IPR012718
+  - root46-sources-ipr-IPR012722
+  - root46-sources-ipr-IPR012720
+  - root46-sources-ipr-IPR012721
+  - root46-sources-legacy-PMC3160183
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  summary: '16 of 17 collected target identifiers returned OK. PMID:8771707: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root46-sources-pmid-8771707
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005832
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch46 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/chaperonin_containing_t_complex.yaml
+  locator: Entire maintained target, history, components, evidence, discussions and
+    graphs
+  accessed_at: '2026-10-22T04:45:58Z'
+  support: context_only
+  summary: All maintained fields were read; history is provenance rather than independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Components, essentiality, COMMON and graph scope
+  accessed_at: '2026-10-22T04:45:58Z'
+  support: context_only
+  summary: Whole-protein families differ from shared domains and example accessions;
+    formation necessity differs from functional or cellular essentiality. COMMON means
+    present in most members, with losses the exception.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and REVIEWED_LABEL_ONLY contract
+  accessed_at: '2026-10-22T04:45:58Z'
+  support: context_only
+  summary: Reviewed label-only means no exact term exists; a currently verified exact
+    family makes the grounding gap actionable despite a historical TODO.
+- evidence_id: root46-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000288,GO:0004535,GO:0005829,GO:0005832,GO:0006457,GO:0030015,GO:0032991,GO:0043263,GO:0043264
+  locator: 'All9 requested terms: complete id/name/active/definition/synonyms/comments
+    and relevant maintained typed links; not all ontology descendants'
+  accessed_at: '2026-10-22T04:37:41.642935Z'
+  support: supports
+  summary: Native GO identities, definitions, synonyms and inspected maintained typed
+    relationships agree with the target classes and functions. Missing direct ontology
+    links alone do not disprove biologically sourced parentage.
+  snapshot_sha256: ec8a67921ee38714d049e648bd88fa03897f191156b58757054dabeec944dbe1
+- evidence_id: root46-sources-pmid-8771707
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8771707+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:47.591706Z'
+  support: supports
+  summary: 'MED8771707: Review: the Cct eukaryotic chaperonin subunits of Saccharomyces
+    cerevisiae and other yeasts. DOI 10.1002/(sici)1097-0061(199605)12:6%3c523::aid-yea962%3e3.0.co;2-c.
+    Complete native bibliographic identity and abstract inspected. This row certifies
+    abstract-level access only; no full-text access is implied.'
+  snapshot_sha256: 3af1de390ca5e63d572789da73cb3fbbafdc278fe17cf3a06fe002fbfcf6310f
+- evidence_id: root46-sources-doi-2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1006%2Fjsbi.2001.4380&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:46.321015Z'
+  support: supports
+  summary: 'MED11580267: Review: cellular substrates of the eukaryotic chaperonin
+    TRiC/CCT. DOI 10.1006/jsbi.2001.4380. Complete native bibliographic identity and
+    abstract inspected. This row certifies abstract-level access only; no full-text
+    access is implied.'
+  snapshot_sha256: ba7447e21f63513ca3fb9a3a64fa41d6df5222d598f0dfaf832097f51dd71810
+- evidence_id: root46-sources-doi-4
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Femboj.2011.208&format=json&resultType=core
+  locator: Complete native id/title/authors/year/DOI and abstract
+  accessed_at: '2026-10-22T04:37:46.926250Z'
+  support: supports
+  summary: 'MED21701561: The crystal structure of yeast CCT reveals intrinsic asymmetry
+    of eukaryotic cytosolic chaperonins. DOI 10.1038/emboj.2011.208. Complete native
+    bibliographic identity and abstract inspected. This row certifies abstract-level
+    access only; no full-text access is implied.'
+  snapshot_sha256: 40940898f6dd10805ee39cc85cc18b1f55c247eaacfc6a10f538757c24e265fb
+- evidence_id: root46-sources-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:37:41.643299Z'
+  support: supports
+  summary: ENA verifies the maintained taxonomic identity and lineage for 4932.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root46-sources-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:37:42.238539Z'
+  support: supports
+  summary: ENA verifies the maintained taxonomic identity and lineage for 559292.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root46-sources-protein-P12612
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P12612.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:42.850123Z'
+  support: supports
+  summary: P12612 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: f6024acc8ab8a53e7fbd2ec9fb314b887ea97044ee8f5db0cef3eafd72576473
+- evidence_id: root46-sources-protein-P39076
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39076.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:43.644146Z'
+  support: supports
+  summary: P39076 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 8dacf91d0645e0dccd34bddda018c10ef524ac7fe30cfd4c447216dd5310949b
+- evidence_id: root46-sources-protein-P39077
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39077.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:43.768186Z'
+  support: supports
+  summary: P39077 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 6fd2c3c1f97b8927c8881a8f054644acd40c985c618c2ad195a1ab8bb059aa4a
+- evidence_id: root46-sources-protein-P39078
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39078.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:43.813549Z'
+  support: supports
+  summary: P39078 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: e23db6225cfe9db75206ad4ffa5cf4574c711437d2925a69ae9bc0511b05d4f5
+- evidence_id: root46-sources-protein-P40413
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40413.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:44.276607Z'
+  support: supports
+  summary: P40413 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: f792df5342a22b1c52db35a4289e4153ba2263acd87de5c045caac903e1af7bf
+- evidence_id: root46-sources-protein-P39079
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39079.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:43.837214Z'
+  support: supports
+  summary: P39079 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: 0bb86472030766cfdf7e217929a33ffc2ac7a207ee1ac7ddf380b1adfb351e72
+- evidence_id: root46-sources-protein-P42943
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P42943.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:44.414341Z'
+  support: supports
+  summary: P42943 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: ca72053bffa93a266c32c2853fa028793592db9a4035df53e4054ba36f88e0bd
+- evidence_id: root46-sources-protein-P47079
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P47079.json
+  locator: Complete identity/status/name/genes/taxon; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments; InterPro/Pfam xref identifiers
+  accessed_at: '2026-10-22T04:37:44.540411Z'
+  support: supports
+  summary: P47079 has status UniProtKB reviewed (Swiss-Prot) and agrees with maintained
+    name, genes/aliases and taxon. Membership remains a separate source question.
+  snapshot_sha256: d0f229ed8d2fd14c60ef82d6bc8aac1a8832da9be6b74ebd0f3435e92023acce
+- evidence_id: root46-sources-gene-CCT1-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:41.627933Z'
+  support: supports
+  summary: 'CCT1 query returns two reviewed entries: correct chaperonin TCP1 P12612
+    and PCT1 P13259 carrying CCT1 as an alias; this disproves query uniqueness but
+    does not invalidate P12612.'
+  snapshot_sha256: 2d6e8c860fbda065bf50776b2a0dca64802b06b0547ebc5fc041536e21131fa6
+- evidence_id: root46-sources-gene-CCT2-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:42.195974Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: e8bdee194e4569c31037645a1e70912e7c2d9e55f406ad7885eaeed7c2b0616a
+- evidence_id: root46-sources-gene-CCT3-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:42.244425Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: 4694240c5f7e83edcc3f6cd050146ff8f9da154b998ebfa6dccd002e2d2743b1
+- evidence_id: root46-sources-gene-CCT4-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:42.335354Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: af89816c7fa823492a0e86b227dba6c5c5718a57e1ba30480a1b9481415050b3
+- evidence_id: root46-sources-gene-CCT5-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:42.504090Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: 427267235561d22cb77c2d8f8d9627b480f2cf53a78679eb30cce782a49a4047
+- evidence_id: root46-sources-gene-CCT6-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT6%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:43.489607Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: 6d8cb5e0ff3cb25782a26d16f8f39e8a6685d3bc2048181cbab766a207ad9fec
+- evidence_id: root46-sources-gene-CCT7-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT7%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:43.624311Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: b140bc1b79172c276fd0ddd4289e087b1e7820920a393076cf39f2105c56938b
+- evidence_id: root46-sources-gene-CCT8-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACCT8%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL, result count and all accession/status/name/gene/taxon
+    result fields
+  accessed_at: '2026-10-22T04:38:43.649533Z'
+  support: supports
+  summary: Exact gene/taxon query returns the single maintained accession with its
+    stated entry status.
+  snapshot_sha256: bccab898278fa6a4cc8db09e6316d4e5c5c11cad4d3ad620ad92e6f7d37470ad
+- evidence_id: root46-sources-ipr-IPR012715
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012715/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:33.794640Z'
+  support: supports
+  summary: IPR012715 is a family named T-complex protein 1, alpha subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 02469a3e693e6088d745aa1084c1e6a710cd760958152d16ebe75667c1b85dfb
+- evidence_id: root46-sources-ipr-IPR012716
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012716/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:33.796898Z'
+  support: supports
+  summary: IPR012716 is a family named T-complex protein 1, beta subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 4fbadff6d1ce81fd907d0d737ce1512d421c905ee885d9ff7379f11a2af57e32
+- evidence_id: root46-sources-ipr-IPR012719
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012719/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:34.311008Z'
+  support: supports
+  summary: IPR012719 is a family named T-complex protein 1, gamma subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 730a0e877ebee77ef1c6265e3893015e924ff3cfb70443d9dde0a8492347005e
+- evidence_id: root46-sources-ipr-IPR012717
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012717/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:33.835490Z'
+  support: supports
+  summary: IPR012717 is a family named T-complex protein 1, delta subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 61b4de9ca9805c5e1f9199e3da1ff2bd4f13bd93da2b46967b5d70d728531d27
+- evidence_id: root46-sources-ipr-IPR012718
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012718/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:34.180916Z'
+  support: supports
+  summary: IPR012718 is a family named T-complex protein 1, epsilon subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 0cef9f484970a868236efd54067aad0f231826459453055a3048508af5bf6866
+- evidence_id: root46-sources-ipr-IPR012722
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012722/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:34.457966Z'
+  support: supports
+  summary: IPR012722 is a family named T-complex protein 1, zeta subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 2aa24745e10500637329c8801c391dd90453fd7ef764088dbfd545d4944e4725
+- evidence_id: root46-sources-ipr-IPR012720
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012720/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:34.411343Z'
+  support: supports
+  summary: IPR012720 is a family named T-complex protein 1, eta subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: c693519377a6c26b2d97046bd52e351e6912e2835250105e5bada67d5d3a3147
+- evidence_id: root46-sources-ipr-IPR012721
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012721/
+  locator: Complete native accession/name/type/description and description curation
+    flags
+  accessed_at: '2026-10-22T04:38:34.415738Z'
+  support: supports
+  summary: IPR012721 is a family named T-complex protein 1, theta subunit. Its complete
+    native description was read; exact example xrefs provide an independent identity
+    join. Family annotation is not primary evidence of membership.
+  snapshot_sha256: 0e43b86867e4a3f5ff914b4b3853ed6c3e514cb1c24d40dc57e49b2c1f708e06
+- evidence_id: root46-sources-legacy-PMC3160183
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3160183/
+  locator: Complete Results sec3/4/7/8, Discussion sec11, Methods sec17/18/21 including
+    embedded Fig1/4/7 captions; other sections and supplements not certified
+  accessed_at: '2026-10-22T04:39:21.338060Z'
+  support: supports
+  summary: The yeast structure assigns eight distinct subunits per ring and two stacked
+    rings. The preparation uses tagged allosterically impaired CCT4-ANC2, rabbit alpha-actin
+    and PLP2 with ATP/beryllium fluoride; rabbit actin binding is not a completed
+    native yeast folding cycle. Nucleotide occupancy is heterogeneous and does not
+    imply identical catalytic contributions of all subunits.
+  snapshot_sha256: 396fb6a3feaa0422ba2e10083ac02cca24dbacd06b700911fac5aad7e9225e0e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/chaperonin_containing_t_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:37:10Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/chaperonin_containing_t_complex.yaml'
+  snapshot_sha256: 5a51ccb2ca77b83de7fcec621c25cc6b8b5c83f87ca980870021c3764f71dfa1
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/chaperonin_containing_t_complex.yaml
+    --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/chaperonin_containing_t_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:37:11Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/chaperonin_containing_t_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/chaperonin_containing_t_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/chaperonin_containing_t_complex-strict.tsv"
+  snapshot_sha256: 2a593a9df44a26768ebd8ab4197874ce8b580af875b8a2e80c9324ece089d4d3
+- evidence_id: native-chaperonin_containing_t_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/chaperonin_containing_t_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:38:01.036067Z'
+  support: supports
+  summary: "data/structures/other/chaperonin_containing_t_complex.yaml  (GO:0005832)\n\
+    \  cct_substrate_folding\tcct1_alpha_subunit\tCOVERED\t->cct1_alpha_subunit (UniProtKB:P12612)\n\
+    \  cct_substrate_folding\tcct2_beta_subunit\tCOVERED\t->cct2_beta_subunit (UniProtKB:P39076)\n\
+    \  cct_substrate_folding\tcct3_gamma_subunit\tCOVERED\t->cct3_gamma_subunit (UniProtKB:P39077)\n\
+    \  cct_substrate_folding\tcct4_delta_subunit\tCOVERED\t->cct4_delta_subunit (UniProtKB:P39078)\n\
+    \  cct_substrate_folding\tcct5_epsilon_subunit\tCOVERED\t->cct5_epsilon_subunit\
+    \ (UniProtKB:P40413)\n  cct_substrate_folding\tcct6_zeta_subunit\tCOVERED\t->cct6_zeta_subunit\
+    \ (UniProtKB:P39079)\n  cct_substrate_folding\tcct7_eta_subunit\tCOVERED\t->cct7_eta_subunit\
+    \ (UniProtKB:P42943)\n  cct_substrate_folding\tcct8_theta_subunit\tCOVERED\t->cct8_theta_subunit\
+    \ (UniProtKB:P47079)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     8  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     8\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 9d0eb8df142defbde80e3794fe99f7febf6cf7f224c6c3bbd24c27069e5677c6
+- evidence_id: native-chaperonin_containing_t_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch46-20261022-nrgmxxyw/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/chaperonin_containing_t_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:38:02.656489Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/chaperonin_containing_t_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '16 of 17 collected target identifiers returned OK. PMID:8771707: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: CCT/TRiC cytosolic chaperonin identity
+  outcome: supported
+  target_ids:
+  - GO:0005832
+  summary: GO0005832, cytosol parthood and primary architecture agree. The copied
+    GO phrase without a cofactor is interpreted at the chaperonin/co-chaperonin boundary;
+    the maintained ATP-dependent function and the primary PLP2-assisted substrate
+    preparation show why it must not be generalized to absence of ATP or accessory
+    factors.
+  evidence_ids:
+  - record
+  - root46-sources-go
+  - root46-sources-legacy-PMC3160183
+  - root46-sources-doi-2
+  - root46-sources-doi-4
+- assessment_id: composition
+  area: grounding
+  topic: Eight exact paralogue families are available
+  outcome: concern
+  target_ids:
+  - GO:0005832
+  summary: Every alpha-through-theta row has an exact full-family InterPro mapping,
+    independently joined through its reviewed example. Two copies per complete double-ring
+    complex correctly distinguishes subunit stoichiometry from eight subunits per
+    ring.
+  evidence_ids:
+  - record
+  - curation
+  - root46-sources-legacy-PMC3160183
+  - root46-sources-ipr-IPR012715
+  - root46-sources-ipr-IPR012716
+  - root46-sources-ipr-IPR012719
+  - root46-sources-ipr-IPR012717
+  - root46-sources-ipr-IPR012718
+  - root46-sources-ipr-IPR012722
+  - root46-sources-ipr-IPR012720
+  - root46-sources-ipr-IPR012721
+  - root46-sources-protein-P12612
+  - root46-sources-protein-P39076
+  - root46-sources-protein-P39077
+  - root46-sources-protein-P39078
+  - root46-sources-protein-P40413
+  - root46-sources-protein-P39079
+  - root46-sources-protein-P42943
+  - root46-sources-protein-P47079
+- assessment_id: examples
+  area: grounding
+  topic: Correct accessions with one ambiguous symbol query
+  outcome: concern
+  target_ids:
+  - GO:0005832
+  summary: All eight maintained accessions match their named subunits and yeast taxon.
+    CCT2–8 are unique reviewed query results; CCT1 also names a PCT1 alias, so the
+    current evidence note asserting a single result needs correction while P12612
+    is retained.
+  evidence_ids:
+  - record
+  - root46-sources-protein-P12612
+  - root46-sources-protein-P39076
+  - root46-sources-protein-P39077
+  - root46-sources-protein-P39078
+  - root46-sources-protein-P40413
+  - root46-sources-protein-P39079
+  - root46-sources-protein-P42943
+  - root46-sources-protein-P47079
+  - root46-sources-gene-CCT1-559292
+  - root46-sources-gene-CCT2-559292
+  - root46-sources-gene-CCT3-559292
+  - root46-sources-gene-CCT4-559292
+  - root46-sources-gene-CCT5-559292
+  - root46-sources-gene-CCT6-559292
+  - root46-sources-gene-CCT7-559292
+  - root46-sources-gene-CCT8-559292
+  - root46-sources-tax4932
+  - root46-sources-tax559292
+- assessment_id: necessity
+  area: grounding
+  topic: Structural participation does not establish depletion necessity
+  outcome: unknown
+  target_ids:
+  - GO:0005832
+  summary: The structure supports membership and stoichiometry, while the UNKNOWN
+    formation-necessity fields remain conservative. Subunit ATP-site growth phenotypes
+    discussed in the paper are not a complete complex-assembly depletion experiment.
+  evidence_ids:
+  - record
+  - schema
+  - root46-sources-legacy-PMC3160183
+- assessment_id: scope
+  area: scope
+  topic: Yeast scope is appropriately bounded
+  outcome: supported
+  target_ids:
+  - GO:0005832
+  summary: The maintained taxonomic distribution and canonical example are yeast,
+    with eukaryotic synonym/family context kept separate. COMMON denotes ordinary
+    machinery present in most species members with losses exceptional; the support
+    is qualitative, not a census.
+  evidence_ids:
+  - record
+  - schema
+  - root46-sources-legacy-PMC3160183
+  - root46-sources-pmid-8771707
+  - root46-sources-tax4932
+  - root46-sources-tax559292
+- assessment_id: function
+  area: evidence
+  topic: ATP-dependent substrate folding with experimental limits
+  outcome: supported
+  target_ids:
+  - GO:0005832
+  summary: Dunn2001 review abstract and native protein annotation support the general
+    folding role. Dekker2011 supports architecture and a trapped actin intermediate,
+    without demonstrating successful completion of the native folding cycle in that
+    preparation.
+  evidence_ids:
+  - record
+  - root46-sources-go
+  - root46-sources-legacy-PMC3160183
+  - root46-sources-doi-2
+  - root46-sources-doi-4
+  - root46-sources-protein-P12612
+  - root46-sources-protein-P39076
+  - root46-sources-protein-P39077
+  - root46-sources-protein-P39078
+  - root46-sources-protein-P40413
+  - root46-sources-protein-P39079
+  - root46-sources-protein-P42943
+  - root46-sources-protein-P47079
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic constituent/location/function graph
+  outcome: supported
+  target_ids:
+  - GO:0005832
+  summary: Eight subunit contributions, cytosolic parthood and folding support are
+    correctly directed. NONMECHANISTIC avoids asserting a resolved ATP sequence or
+    a universal substrate-specific cycle.
+  evidence_ids:
+  - record
+  - root46-sources-go
+  - root46-sources-legacy-PMC3160183
+- assessment_id: coverage
+  area: completeness
+  topic: Family and current query wording are actionable
+  outcome: supported
+  target_ids:
+  - GO:0005832
+  summary: All history, current evidence, stoichiometry and graph fields were read.
+    The family TODO can be resolved for all eight verified classes; historical lookup
+    claims remain historical.
+  evidence_ids:
+  - record
+  - curation
+  - root46-sources-ipr-IPR012715
+  - root46-sources-ipr-IPR012716
+  - root46-sources-ipr-IPR012719
+  - root46-sources-ipr-IPR012717
+  - root46-sources-ipr-IPR012718
+  - root46-sources-ipr-IPR012722
+  - root46-sources-ipr-IPR012720
+  - root46-sources-ipr-IPR012721
+  - root46-sources-gene-CCT1-559292
+  - root46-sources-gene-CCT2-559292
+  - root46-sources-gene-CCT3-559292
+  - root46-sources-gene-CCT4-559292
+  - root46-sources-gene-CCT5-559292
+  - root46-sources-gene-CCT6-559292
+  - root46-sources-gene-CCT7-559292
+  - root46-sources-gene-CCT8-559292
+findings:
+- finding_id: F1
+  issue_key: cct-eight-exact-paralogue-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground all eight verified CCT paralogue families
+  description: 'The eight REVIEWED_LABEL_ONLY rows now have exact families: CCT1 IPR012715,
+    CCT2 IPR012716, CCT3 IPR012719, CCT4 IPR012717, CCT5 IPR012718, CCT6 IPR012722,
+    CCT7 IPR012720 and CCT8 IPR012721. Native type/name/descriptions and accession
+    cross-references verify each full subunit family.'
+  target_ids:
+  - GO:0005832
+  field_paths:
+  - components
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - root46-sources-ipr-IPR012715
+  - root46-sources-ipr-IPR012716
+  - root46-sources-ipr-IPR012719
+  - root46-sources-ipr-IPR012717
+  - root46-sources-ipr-IPR012718
+  - root46-sources-ipr-IPR012722
+  - root46-sources-ipr-IPR012720
+  - root46-sources-ipr-IPR012721
+  - root46-sources-protein-P12612
+  - root46-sources-protein-P39076
+  - root46-sources-protein-P39077
+  - root46-sources-protein-P39078
+  - root46-sources-protein-P40413
+  - root46-sources-protein-P39079
+  - root46-sources-protein-P42943
+  - root46-sources-protein-P47079
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md REVIEWED_LABEL_ONLY
+  native_severity: minor
+  normalization_reason: Bounded curation correction; supported biological identity
+    and membership remain intact. Historical search honesty is not questioned.
+- finding_id: F2
+  issue_key: cct1-symbol-query-uniqueness
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the current CCT1 lookup uniqueness note
+  description: The exact reviewed gene_exact:CCT1 organism_id:559292 query returns
+    both P12612/TCP1 and P13259/PCT1 because both carry the alias. P12612 remains
+    the correct CCT-alpha example and its representative role wording is already appropriate;
+    only the current evidence note claims a single reviewed entry.
+  target_ids:
+  - GO:0005832
+  field_paths:
+  - components[0].protein_examples[0].evidence[0].notes
+  evidence_ids:
+  - record
+  - root46-sources-protein-P12612
+  - root46-sources-gene-CCT1-559292
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained scientific record
+  rule_id: Current claim-specific source support
+  native_severity: minor
+  normalization_reason: Bounded curation correction; supported biological identity
+    and membership remain intact. Historical search honesty is not questioned.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0005832
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained scientific record
+  description: Add the eight exact family mappings and resolve the corresponding label-only
+    notes and family TODO without changing supported stoichiometry or protein examples.
+  acceptance_checks:
+  - Verify exact source identities and reconcile affected current wording and TODO
+    scope.
+  - Preserve supported example accessions, membership and explicit unresolved claims.
+  - Use guarded curation and pass applicable schema, strict, protein and graph checks.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0005832
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained scientific record
+  description: Retain P12612 and revise its current evidence note to describe a verified
+    TCP1/CCT-alpha representative selected by protein identity, without claiming a
+    unique alias-query hit. Preserve historical audit wording.
+  acceptance_checks:
+  - Verify exact source identities and reconcile affected current wording and TODO
+    scope.
+  - Preserve supported example accessions, membership and explicit unresolved claims.
+  - Use guarded curation and pass applicable schema, strict, protein and graph checks.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw data, supplements or sequence alignments were reanalyzed.
+  Primary-body inspection is limited to the explicitly listed sections.
+- Dunn2001 and Stoldt1996 were read at complete native abstract level only. The cofactor
+  wording is not treated as a claim that ATP or accessory substrate factors never
+  participate.
+- Dekker2011 uses a mutant, tagged yeast complex and rabbit substrate; no wild-type
+  complete folding cycle or figure-pixel reassessment is certified.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes reviews for all uncovered records, including honest zero-finding
+  bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
