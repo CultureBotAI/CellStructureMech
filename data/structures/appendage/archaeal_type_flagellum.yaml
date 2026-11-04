@@ -57,6 +57,26 @@ curation_history:
   changes: added 4 verified UniProtKB protein_example(s); added 1 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:54Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s); disclosed 6 same-gene synonym/locus-tag mapping(s) on existing
+    protein_examples.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_PARTHOOD
+  changes: Added has_part links to cellstructuremech:archaeal_type_flagellum_filament
+    and cellstructuremech:archaeal_type_flagellum_motor to reciprocate their part_of
+    GO:0097589 links (#2463).
+  llm_assisted: true
+- timestamp: '2026-10-31T09:02:29Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected prearchaellin maturation to archaellins and aligned PROTEIN_COMPLEX
+    component_ref node types to STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum
   synonym_type: EXACT_SYNONYM
@@ -66,6 +86,9 @@ synonyms:
   source: GO:0097589
 parent_structures:
 - GO:0042995
+has_part:
+- cellstructuremech:archaeal_type_flagellum_filament
+- cellstructuremech:archaeal_type_flagellum_motor
 components:
 - component_id: archaellins
   label: archaellin filament subunits
@@ -100,7 +123,8 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which
       UniProt lists under the primary name Saci_1178, in Sulfolobus acidocaldarius
       DSM 639. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      arlB).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4J9K5
       notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K5 for gene flaB in Sulfolobus
@@ -152,7 +176,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlI).
     evidence:
     - reference: PMID:23129770
       notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal
@@ -177,7 +202,8 @@ components:
     retrieved_on: '2026-10-17'
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus
       acidocaldarius DSM 639. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym arlJ).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4J9L1
       notes: UniProtKB unreviewed (TrEMBL) entry Q4J9L1 for gene flaJ in Sulfolobus
@@ -207,7 +233,8 @@ components:
     retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlH).
     evidence:
     - reference: PMID:24103130
       notes: Banerjee A et al. 2013, ‘Insights into subunit interactions in the Sulfolobus
@@ -247,10 +274,28 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which
       UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius
       DSM 639. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      arlG).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4J9K7
       notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K7 for gene flaG in Sulfolobus
+        acidocaldarius DSM 639. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q4J9K8
+    protein_label: Conserved flagellar protein F
+    gene_symbol: Saci_1175
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaF, which
+      UniProt lists under the primary name Saci_1175, in Sulfolobus acidocaldarius
+      DSM 639. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure (also declared as synonym
+      arlF).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4J9K8
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K8 for gene flaF in Sulfolobus
         acidocaldarius DSM 639. Establishes the accession and gene identity only;
         the component's membership in this structure rests on the record's own sources.
 - component_id: cytosolic_scaffold
@@ -291,7 +336,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlX).
     evidence:
     - reference: PMID:23129770
       notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal
@@ -395,7 +441,7 @@ causal_graphs:
     - UniProtKB:N6V0I0
   - node_id: arli_arlj
     label: ArlI/ArlJ motor core
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: arli_arlj_motor
   - node_id: arlh
     label: ArlH motor regulator
@@ -403,11 +449,11 @@ causal_graphs:
     component_ref: arlh_regulator
   - node_id: scaffold
     label: ArlX/ArlCDE cytosolic scaffold
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: cytosolic_scaffold
   - node_id: anchor
     label: ArlF/ArlG S-layer anchor
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: arlfg_anchor
   - node_id: archaellum
     label: archaeal-type flagellum
@@ -491,6 +537,16 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2015.00023
       notes: Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming
         mechanism.
+  - subject: prearchaellin
+    predicate: is processed into
+    object: archaellins
+    description: N-terminally cleaved pre-archaellins mature into assembly-competent
+      archaellin subunits that are incorporated at the base of the growing filament.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 describe how ArlK/PibD cleavage of the class
+        III signal peptide converts pre-archaellins into mature archaellin subunits
+        that polymerize into the archaellum filament.
   scope_notes: The assembly and motor-contact model summarizes characterized archaeal
     systems; bacterial motor contacts and processing details are not assigned by this
     graph.

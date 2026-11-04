@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  slug: paraflagellar_rod
+session:
+  id: 2026-10-23T214920Z-uniprot-protein-examples-skill-5fde90
+  timestamp: '2026-10-23T21:49:20Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Consolidate duplicate (also declared as synonym PFR1, PFRD) suffix on UniProtKB:Q26789
+    in pfr1 (#2415).
+  details: Consolidate duplicate (also declared as synonym PFR1, PFRD) suffix on UniProtKB:Q26789
+    in pfr1 (#2415). Validated via write_validated_structure and uniprot_genes.py
+    --verify.

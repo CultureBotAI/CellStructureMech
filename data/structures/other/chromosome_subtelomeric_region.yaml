@@ -1,0 +1,413 @@
+identifier: GO:0099115
+label: chromosome, subtelomeric region
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: The chromosomal region immediately adjacent to a telomere, including subtelomeric
+  DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal
+  heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the
+  chromosome, subtelomeric region is packaged into silent chromatin by histone H4
+  K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.
+definition_source: GO:0099115
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-23T14:36:25Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of chromosome, subtelomeric region (GO:0099115) in category
+    OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+parent_structures:
+- GO:0000785
+part_of:
+- GO:0005694
+has_part:
+- GO:0000786
+synonyms:
+- synonym_text: subtelomere
+  synonym_type: EXACT_SYNONYM
+  source: GO:0099115
+- synonym_text: subtelomeric chromatin
+  synonym_type: EXACT_SYNONYM
+  source: GO:0099115
+components:
+- component_id: subtelomeric_dna
+  label: subtelomere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Subtelomeric DNA sequence elements (such as budding-yeast X and Y' repeats)
+    that form the nucleic-acid scaffold of the chromosome, subtelomeric region.
+  grounding: SO:0001997
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Subtelomeric Y-prime FISH and chromosome-conformation capture characterize
+      subtelomeric DNA domains in Saccharomyces cerevisiae.
+  grounding_notes: Sequence Ontology term SO:0001997 (subtelomere) denotes the chromosomal
+    DNA region immediately adjacent to the terminal telomere.
+- component_id: nucleosome
+  label: nucleosome
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Histone-DNA nucleosomal core particles packaging subtelomeric DNA, whose histone
+    H4 N-terminal tail and K16 deacetylation state govern silent chromatin assembly
+    across the chromosome, subtelomeric region.
+  grounding: GO:0000786
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: Histone H4 tail and K16 substitutions establish the role of subtelomeric
+      nucleosomes in silent chromatin organization.
+  grounding_notes: GO:0000786 (nucleosome) denotes the histone octamer-DNA packaging
+    unit of subtelomeric chromatin.
+- component_id: sirtuin
+  label: Sirtuin family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: NAD-dependent histone deacetylase Sir2 that deacetylates subtelomeric nucleosomal
+    histone H4 K16 and incorporates with Sir3 and Sir4 into silent chromatin across
+    the chromosome, subtelomeric region.
+  grounding: InterPro:IPR003000
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: Immuno-FISH and live imaging confirm Sir2 association with subtelomeric
+      silent chromatin in Saccharomyces cerevisiae.
+  grounding_notes: Exact integrated family InterPro:IPR003000 (Sirtuin family) verified
+    for Saccharomyces cerevisiae SIR2 (P06700).
+  gene_symbols:
+  - SIR2
+  protein_examples:
+  - uniprot_id: UniProtKB:P06700
+    protein_label: NAD-dependent histone deacetylase SIR2
+    gene_symbol: SIR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Figure 1 immuno-FISH and dual-color localization identify telomere-associated
+        Sir2.
+    - reference: https://www.uniprot.org/uniprotkb/P06700/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: sir3
+  label: Sir3-like silencing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Silent-chromatin structural protein that binds deacetylated H4 K16 nucleosomes
+    and spreads with Sir2 and Sir4 across the budding-yeast chromosome, subtelomeric
+    region.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Sir3 localizes to subtelomeric chromatin and is required for subtelomeric
+      silent chromatin organization in Saccharomyces cerevisiae.
+  grounding_notes: UniProtKB:P06701 matches BAH and AAA+ domains within the broader
+    ORC1/CDC6 family rather than a Sir3-specific whole-protein InterPro family.
+  gene_symbols:
+  - SIR3
+  protein_examples:
+  - uniprot_id: UniProtKB:P06701
+    protein_label: Regulatory protein SIR3
+    gene_symbol: SIR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Figure 1 directly colocalizes Sir3-RFP with Sir2-marked telomeric foci.
+    - reference: https://www.uniprot.org/uniprotkb/P06701/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: sir4
+  label: Sir4-like silencing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Scaffold subunit of the budding-yeast SIR complex that bridges Rap1 and Sir2-Sir3
+    to assemble silent chromatin across the chromosome, subtelomeric region.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Sir4 associates with Sir2 and Sir3 across subtelomeric silent chromatin
+      in Saccharomyces cerevisiae.
+  grounding_notes: UniProtKB:P11978 contains the Sir4 C-terminal SID domain without
+    a single whole-protein InterPro family entry.
+  gene_symbols:
+  - SIR4
+  protein_examples:
+  - uniprot_id: UniProtKB:P11978
+    protein_label: Regulatory protein SIR4
+    gene_symbol: SIR4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Results report Sir4-GFP localization with the other SIR factors; SIR4
+        deletion impairs hyperclustering.
+    - reference: https://www.uniprot.org/uniprotkb/P11978/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: rap1
+  label: TE2IP/Rap1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: DNA-binding protein associated with subtelomeric X/Y' elements that recruits
+    the Sir2-Sir3-Sir4 complex to nucleate silent chromatin in the chromosome, subtelomeric
+    region.
+  grounding: InterPro:IPR039595
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Rap1 colocalizes with subtelomeric Y-prime FISH and Sir3-bound subtelomeric
+      chromatin in Saccharomyces cerevisiae.
+  grounding_notes: Exact integrated family InterPro:IPR039595 (TE2IP/Rap1) verified
+    for Saccharomyces cerevisiae RAP1 (P11938).
+  gene_symbols:
+  - RAP1
+  protein_examples:
+  - uniprot_id: UniProtKB:P11938
+    protein_label: DNA-binding protein RAP1
+    gene_symbol: RAP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Figure 1 tracks Rap1 foci and verifies telomeric/subtelomeric association
+        by FISH.
+    - reference: https://www.uniprot.org/uniprotkb/P11938/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: heterochromatin_protein
+  label: Heterochromatin-associated chromo domain-containing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: HP1-family chromodomain protein Swi6 that binds H3K9-methylated nucleosomes
+    across the fission-yeast chromosome, subtelomeric region to maintain subtelomeric
+    heterochromatin.
+  grounding: InterPro:IPR051219
+  evidence:
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Figure 2 shows that Swi6-GFP marks fission-yeast subtelomeric heterochromatin
+      even when terminal Taz1 telomeric repeats erode.
+  grounding_notes: Exact integrated family InterPro:IPR051219 verified for Schizosaccharomyces
+    pombe chromodomain protein swi6 (P40381).
+  gene_symbols:
+  - swi6
+  protein_examples:
+  - uniprot_id: UniProtKB:P40381
+    protein_label: Chromatin-associated protein swi6
+    gene_symbol: swi6
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Figure 2 uses Swi6-GFP to retain visibility of subtelomeric chromatin
+        when terminal-repeat Taz1 signal declines.
+    - reference: https://www.uniprot.org/uniprotkb/P40381/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1186/s13059-015-0766-2
+  note: Budding-yeast model in which subtelomeric X and Y' DNA elements are packaged
+    into Sir2-Sir3-Sir4-dependent silent nucleosomal chromatin.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1093/nar/gkaa043
+  note: Fission-yeast model in which subtelomeric chromatin is packaged into Swi6/HP1-bound
+    heterochromatin adjacent to the terminal telomere.
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Organization and silent-chromatin packaging of the subtelomeric chromosomal
+    domain immediately adjacent to the telomere.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Sir2/Sir3/Sir4-dependent subtelomeric silent chromatin organizes subtelomeric
+      domains in Saccharomyces cerevisiae.
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Swi6-bound subtelomeric heterochromatin maintains chromosome-end chromatin
+      organization in Schizosaccharomyces pombe.
+causal_graphs:
+- graph_id: chromosome_subtelomeric_region_mechanism
+  title: Subtelomeric nucleosomal heterochromatin assembly via SIR and Swi6 complexes
+  description: Subtelomeric DNA (SO:0001997) packaged into nucleosomes (GO:0000786)
+    recruits Rap1, Sir4, Sir2 (deacetylating histone H4 K16), and Sir3 in Saccharomyces
+    cerevisiae—or Swi6 heterochromatin protein in Schizosaccharomyces pombe—to assemble
+    the chromosome, subtelomeric region (GO:0099115) and mediate telomere organization
+    (GO:0032200).
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Covers subtelomeric silent chromatin assembly in S. cerevisiae (Rap1-Sir2-Sir3-Sir4
+    on H4K16-deacetylated nucleosomes) and S. pombe (Swi6 subtelomeric heterochromatin),
+    distinct from starvation-induced multi-chromosome telomere hyperclustering.
+  nodes:
+  - node_id: subtelomeric_dna
+    label: subtelomere
+    node_type: GENETIC_ELEMENT
+    grounding: SO:0001997
+    component_ref: subtelomeric_dna
+  - node_id: nucleosome
+    label: nucleosome
+    node_type: STRUCTURE
+    grounding: GO:0000786
+    component_ref: nucleosome
+  - node_id: rap1
+    label: TE2IP/Rap1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR039595
+    component_ref: rap1
+  - node_id: sir4
+    label: Sir4-like silencing protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sir4
+  - node_id: sirtuin
+    label: Sirtuin family
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003000
+    component_ref: sirtuin
+  - node_id: sir3
+    label: Sir3-like silencing protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sir3
+  - node_id: heterochromatin_protein
+    label: Heterochromatin-associated chromo domain-containing protein
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR051219
+    component_ref: heterochromatin_protein
+  - node_id: chromosome_subtelomeric_region
+    label: chromosome, subtelomeric region
+    node_type: STRUCTURE
+    grounding: GO:0099115
+    description: Assembled heterochromatic chromosome, subtelomeric region (GO:0099115)
+      immediately adjacent to the telomere.
+  - node_id: telomere_organization
+    label: telomere organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032200
+  edges:
+  - subject: subtelomeric_dna
+    predicate: assembles into
+    object: nucleosome
+    description: Subtelomeric repeat DNA wraps around histone octamers to form subtelomeric
+      nucleosomes.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Histone H4 mutations demonstrate nucleosomal packaging of subtelomeric
+        chromatin.
+  - subject: rap1
+    predicate: recruits
+    object: sir4
+    description: Subtelomere- and telomere-proximal Rap1 recruits the SIR scaffold
+      subunit Sir4.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Rap1 and Sir4 colocalize at budding-yeast subtelomeric chromatin.
+  - subject: sir4
+    predicate: recruits
+    object: sirtuin
+    description: Sir4 complexes with the NAD-dependent histone deacetylase Sir2 at
+      subtelomeric chromatin.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Sir2-GFP colocalizes with SIR components at subtelomeric regions.
+  - subject: sirtuin
+    predicate: modifies
+    object: nucleosome
+    description: Sir2 deacetylates histone H4 K16 on subtelomeric nucleosomes to enable
+      Sir3 binding.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: H4 K16 substitutions and sir2 deletion demonstrate H4K16-dependent silent
+        chromatin assembly.
+  - subject: nucleosome
+    predicate: recruits
+    object: sir3
+    description: Deacetylated H4 K16 subtelomeric nucleosomes recruit Sir3 to spread
+      silent chromatin.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Sir3 binds subtelomeric chromatin and is required for subtelomeric silent
+        domain organization.
+  - subject: sir3
+    predicate: assembles into
+    object: chromosome_subtelomeric_region
+    description: Sir3-bound nucleosomal arrays form the silent chromosome, subtelomeric
+      region in S. cerevisiae.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Y-prime FISH and 3C/Hi-C show Sir3-organized subtelomeric chromatin.
+  - subject: heterochromatin_protein
+    predicate: assembles into
+    object: chromosome_subtelomeric_region
+    description: Swi6 chromodomain proteins bind subtelomeric nucleosomes to assemble
+      the heterochromatic chromosome, subtelomeric region in S. pombe.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Swi6-GFP marks fission-yeast subtelomeric heterochromatin.
+  - subject: chromosome_subtelomeric_region
+    predicate: mediates
+    object: telomere_organization
+    description: The assembled chromosome, subtelomeric region organizes telomere-adjacent
+      silent chromatin.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Subtelomeric silent chromatin organizes chromosome-end domains.
+evidence:
+- reference: GO:0099115
+  notes: 'Gene Ontology cellular-component term for chromosome, subtelomeric region:
+    The chromosomal region immediately adjacent to a telomere, including subtelomeric
+    DNA elements and associated nucleosomal heterochromatin.'
+- reference: DOI:10.1186/s13059-015-0766-2
+  notes: Guidi et al. 2015 (Genome Biol, PMID 26399229) characterize subtelomeric
+    Y-prime DNA, Rap1, Sir3, and Sir4 organization in Saccharomyces cerevisiae.
+- reference: DOI:10.1091/mbc.E16-01-0069
+  notes: Laporte et al. 2016 (Mol Biol Cell, PMID 27122604) establish the roles of
+    Sir2, Sir3, and nucleosomal histone H4 K16 state in budding-yeast subtelomeric
+    silent chromatin.
+- reference: DOI:10.1093/nar/gkaa043
+  notes: Maestroni et al. 2020 (Nucleic Acids Res, PMID 31980821) follow Swi6-GFP
+    at the Schizosaccharomyces pombe chromosome, subtelomeric region and distinguish
+    subtelomeric Swi6 heterochromatin from terminal Taz1 telomeric repeats.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast chromosomes contain X and Y' subtelomeric repeats packaged into
+    Sir2/Sir3/Sir4-dependent silent chromatin.
+  reference: DOI:10.1186/s13059-015-0766-2
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast subtelomeric chromatin is enriched in Swi6 heterochromatin and
+    clusters near the nuclear envelope.
+  reference: DOI:10.1093/nar/gkaa043

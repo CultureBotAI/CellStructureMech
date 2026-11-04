@@ -31,8 +31,16 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_PARTHOOD
+  changes: Added has_part link to cellstructuremech:anammoxosome_membrane to reciprocate
+    anammoxosome_membrane part_of GO:0044222 (#2462).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
+has_part:
+- cellstructuremech:anammoxosome_membrane
 components:
 - component_id: ladderane_membrane
   label: ladderane lipid membrane

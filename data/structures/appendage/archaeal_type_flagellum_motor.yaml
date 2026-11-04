@@ -54,6 +54,13 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:54Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s); disclosed 5 same-gene synonym/locus-tag mapping(s) on existing
+    protein_examples.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -99,7 +106,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlI).
     evidence:
     - reference: PMID:23129770
       notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal
@@ -124,7 +132,8 @@ components:
     retrieved_on: '2026-10-17'
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus
       acidocaldarius DSM 639. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym arlJ).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4J9L1
       notes: UniProtKB unreviewed (TrEMBL) entry Q4J9L1 for gene flaJ in Sulfolobus
@@ -163,7 +172,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlH).
     evidence:
     - reference: PMID:24103130
       notes: Banerjee A et al. 2013, ‘Insights into subunit interactions in the Sulfolobus
@@ -207,10 +217,28 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which
       UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius
       DSM 639. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      arlG).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4J9K7
       notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K7 for gene flaG in Sulfolobus
+        acidocaldarius DSM 639. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q4J9K8
+    protein_label: Conserved flagellar protein F
+    gene_symbol: Saci_1175
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaF, which
+      UniProt lists under the primary name Saci_1175, in Sulfolobus acidocaldarius
+      DSM 639. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure (also declared as synonym
+      arlF).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4J9K8
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K8 for gene flaF in Sulfolobus
         acidocaldarius DSM 639. Establishes the accession and gene identity only;
         the component's membership in this structure rests on the record's own sources.
 - component_id: cytosolic_scaffold
@@ -247,7 +275,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius
       DSM 639, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym arlX).
     evidence:
     - reference: PMID:23129770
       notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal

@@ -1,0 +1,1022 @@
+# Eyespot apparatus identity, evidence and boundary review
+
+- Review: 20261022T013720Z-eyespot-apparatus-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T01:18:49Z
+- Finished UTC: 2026-10-22T01:37:20Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete curation defect observed in the eyespot apparatus record within the explicitly bounded evidence scope.
+
+## Scope And Provenance
+
+Entire single target: identity, hierarchy, component/protein scope, organisms, cited source claims and every graph edge.
+
+Selection: Target 9 of batch twenty-eight, strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990413 | data/structures/membrane_organelle/eyespot_apparatus.yaml | maintained | eyespot apparatus |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native protein verify | passed | True | GO:1990413 | Native focused check passed; biological membership is assessed from sources separately. |
+| Native protein causal-graphs | passed | True | GO:1990413 | Native focused check passed; biological membership is assessed from sources separately. |
+| Focused native schema | passed | True | GO:1990413 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990413 | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | GO:1990413 | No expression-module dataset or inference is used; protein identity and the cited physical/localization experiments provide the relevant evidence. |
+| Claim-level scientific review | passed | True | GO:1990413 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:1990413 | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:1990413 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990413 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990413 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990413 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:1990413 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Eyespot apparatus across membrane systems
+
+identity: supported. Targets: GO:1990413.
+
+Exact GO1990413 definition and two RELATED synonyms agree. OTHER kind avoids misrepresenting the apparatus as one isolated membrane-bounded compartment: original sources place plasma-membrane photoreceptors over chloroplast-associated pigment granules. An empty optional parent/parthood slot is not an identity defect.
+
+### Chlamydomonas scope and study contexts
+
+scope: supported. Targets: GO:1990413.
+
+Species3055 and the canonical/distribution labels agree. Lamb mutant loci support formation/positioning context; Schmidt cw15-derived fractions support the stated proteomics example. Other studies use specified wild-type and mutant backgrounds. Neither reference taxonomy nor COMMON implies a numerical survey or every species of green algae.
+
+### Pigment and photoreceptor cohorts
+
+grounding: supported. Targets: GO:1990413.
+
+SMALL_MOLECULE carotenoids and PROTEIN channelrhodopsins are appropriate material classes with explicit label-only scope. Exact Q8RUT8/cop4/unreviewed/species tuple is verified; source membership is independently supported by Schmidt COP4 peptide detection and the cohort literature. Awasthi COP3/4 naming agrees but its principal trafficking assays concern ChR1/Cop8, not both channelrhodopsins identically. The currently empty COP3 exact-name query is a bounded database result, not evidence of gene absence.
+
+### Plural cohort versus directly imaged member
+
+evidence: supported. Targets: GO:1990413.
+
+Mittelmeier directly localizes ChR1; Awasthi provides ChR1/Cop8 trafficking and background COP3/4 identity. The already cited record-level Schmidt paper detects both COP3 and COP4, preserving support for the plural cohort. The review does not claim a direct ChR2 localization experiment in the first two papers or transfer all IFT controls to ChR2.
+
+### Shielding and directional phototactic sign
+
+evidence: supported. Targets: GO:1990413.
+
+Ueki mutant/rescue, redox-biased assays and directly observed cellular lens effect support carotenoid-layer shielding and correct phototactic sign. Eyeless cells can retain photoreception and show strong responses under the tested conditions; the target uses supports/directional detection and UNKNOWN essentiality, rather than claiming all phototaxis requires a pigmented eyespot.
+
+### All four descriptive light-detection edges
+
+graph: supported. Targets: GO:1990413.
+
+Pigment concentration, photoreceptor localization, shielding and support for directional detection are supported at the broad Chlamydomonas cohort level. The direct localization example is ChR1, and Ueki Fig6 is a model integrating the mutant and lens observations. NONMECHANISTIC scope does not claim a complete ion-channel/flagellar signaling cascade.
+
+### Unknown formation requirements and proteome completeness
+
+evidence: unknown. Targets: GO:1990413.
+
+UNKNOWN component essentiality is appropriate: phototactic defects and reduced pigment do not establish a general absence-of-each-component structure-formation test. Whole-cell carotenoid HPLC does not resolve all eyespot-stored chemical species; fraction proteomics allows contamination. Optional family groundings and candidate constituents remain an explicit curation TODO, not a proof that all candidates are absent.
+
+### Full maintained target and honest scope
+
+completeness: supported. Targets: GO:1990413.
+
+Entire target and every graph edge were read. There are no target image assets, measurements, trait links or verbatim evidence snippets to verify. Optional molecular inventories and family groundings remain acknowledged; no finding is invented from an empty optional slot. PROPOSED status and historical events are retained.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/eyespot_apparatus.yaml; Entire maintained target including history, evidence, components, every graph node and edge, discussions | context_only | Full target was read; no scientific record, status, history or generated page is changed. |
+| policy | docs/CURATION.md; Identity, hierarchy, parthood, component and evidence rules | context_only | Whole structure, boundary material and enclosed region are distinguished. Associated machinery is not automatically a constituent, and functional necessity is distinct from structure formation. |
+| protein-contract | src/cellstructuremech/schema/cellstructuremech.yaml; Component essentiality and protein_examples; ProteinExample lines440–468 | context_only | A protein example is a taxon-paired instance whose structure role must have source support. Accession identity alone is insufficient. Collective bilayer constitution does not prove individual lipid-species necessity. |
+| root28-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031904,GO:0070013,GO:0005768,GO:0010008,GO:0005771,GO:0071985,GO:0016020,GO:0000813,GO:0000815,GO:0012507,GO:0030658,GO:0030662,GO:0030134,GO:0005789,GO:0090114,GO:0030127,GO:1990413; Complete17-term JSON: identifiers, active flags, names, definitions, synonyms and returned child relations | supports | All17 returned active GO terms were directly read. Exact endosome lumen/membrane, transport-vesicle membrane and eyespot definitions and declared synonyms agree. GO0070013 explicitly lists endosome lumen as an is-a child; GO0005768 lists lumen/membrane as parts. GO0030658/0030662 list GO0012507 as is-a child, while GO0030134 lists it as part. Exact MVB and ESCRT definitions support the limited process context. Broad membrane hierarchy is definition-based where no direct child was returned. |
+| root28-sources-tax3055 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; Exact taxId, scientificName, rank, lineage and alternate names | supports | Native ENA exact species identity and lineage agree with Chlamydomonas reinhardtii3055. This is taxonomic identity, not a measured population prevalence or an experimental strain assignment. |
+| root28-sources-lamb1999-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A10511552%20AND%20SRC%3AMED; Single-result bibliography and complete abstract; full-body inspection scope separately specified | supports | Native MED matches Eyespot-assembly mutants in Chlamydomonas reinhardtii., Lamb MR, Dutcher SK, Worley CK, Dieckmann CL., PMID10511552, DOI10.1093/genetics/153.2.721. Complete primary abstract identifies the eyespot as plasma-membrane photoreception over chloroplast carotenoid layers; four mutant loci alter pigment presence, size or positioning. This supports the bounded canonical example, without independently reading the full original body. |
+| root28-sources-schmidt2006-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A16798888%20AND%20SRC%3AMED; Single-result bibliography and complete abstract; full-body inspection scope separately specified | supports | Native MED matches Proteomic analysis of the eyespot of Chlamydomonas reinhardtii provides novel insights into its components and tactic movements., Schmidt M, Gessner G, Luff M, Heiland I, Wagner V, Kaminski M, Geimer S, Eitzinger N, Reissenweber T, Voytsekh O, Fiedler M, Mittag M, Kreimer G., PMID16798888, DOI10.1105/tpc.106.041749. Complete primary abstract reports purification of Chlamydomonas eyespot fractions and 202 proteins detected with at least two peptides. The native MED response omits a PMCID, but the original PMC1533972 body was independently retrieved and its identity matched. |
+| root28-sources-mittelmeier2011-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A21555459%20AND%20SRC%3AMED; Single-result bibliography and complete abstract; full-body inspection scope separately specified | supports | Native MED matches Asymmetric properties of the Chlamydomonas reinhardtii cytoskeleton direct rhodopsin photoreceptor localization., Mittelmeier TM, Boyd JS, Lamb MR, Dieckmann CL., PMID21555459, DOI10.1083/jcb.201009131. Complete primary abstract directly reports ChR1 patches associated with the daughter microtubule rootlet in wild-type and altered mutant cells. It does not directly image every member of the channelrhodopsin cohort. |
+| root28-sources-awasthi2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1038/srep34646%22; Single-result bibliography and complete abstract; full-body inspection scope separately specified | supports | Native MED matches The trafficking of bacterial type rhodopsins into the Chlamydomonas eyespot and flagella is IFT mediated., Awasthi M, Ranjan P, Sharma K, Veetil SK, Kateriya S., PMID27694882, DOI10.1038/srep34646. Complete primary abstract reports light-dependent rhodopsin localization and IFT-associated trafficking. The original body identifies the principal tested proteins as Cop8 and ChR1; its introduction separately maps COP3/4 to ChR1/2. |
+| root28-sources-ueki2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A27122315%20AND%20SRC%3AMED; Single-result bibliography and complete abstract; full-body inspection scope separately specified | supports | Native MED matches Eyespot-dependent determination of the phototactic sign in Chlamydomonas reinhardtii., Ueki N, Ide T, Mochiji S, Kobayashi Y, Tokutsu R, Ohnishi N, Yamaguchi K, Shigenobu S, Tanaka K, Minagawa J, Hisabori T, Hirono M, Wakabayashi K., PMID27122315, DOI10.1073/pnas.1525538113. Complete primary abstract reports reduced carotenoids, defective eyespots, reversed phototactic sign and cellular lens effects. Strong responses in eyeless mutants under particular conditions prevent a claim that all light perception requires an intact eyespot. |
+| root28-sources-protein-Q8RUT8 | https://rest.uniprot.org/uniprotkb/Q8RUT8.json; Primary accession, entryType, submitted protein names, all gene tokens, organism and complete comments; selected cross-reference/citation context | supports | Primary Q8RUT8 is unreviewed TrEMBL, named Archaeal-type opsin2, gene cop4 with acop2/CSOB synonyms, taxon3055. This exact tuple agrees with the target. Its automated location is generic membrane, so native accession metadata alone does not establish eyespot membership. |
+| root28-sources-query-COP3-true | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=gene_exact%3ACOP3%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Atrue; Full returned results at size500, exact query and entry identities | supports | The complete gene_exact:COP3, taxonomy_id:3055, reviewed:true query returns 0 entries. This bounded query result is not proof that the gene or an accession does not exist under other names. |
+| root28-sources-query-COP3-false | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=gene_exact%3ACOP3%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Afalse; Full returned results at size500, exact query and entry identities | supports | The complete gene_exact:COP3, taxonomy_id:3055, reviewed:false query returns 0 entries. This bounded query result is not proof that the gene or an accession does not exist under other names. |
+| root28-sources-query-COP4-true | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=gene_exact%3ACOP4%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Atrue; Full returned results at size500, exact query and entry identities | supports | The complete gene_exact:COP4, taxonomy_id:3055, reviewed:true query returns 0 entries. This bounded query result is not proof that the gene or an accession does not exist under other names. |
+| root28-sources-query-COP4-false | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=gene_exact%3ACOP4%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Afalse; Full returned results at size500, exact query and entry identities | supports | The complete gene_exact:COP4, taxonomy_id:3055, reviewed:false query returns 1 entries (Q8RUT8). This bounded query result is not proof that the gene or an accession does not exist under other names. |
+| root28-sources-schmidt2006-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC1533972/; Original primary HTML PMC1533972: Results sec3/6, Methods sec15/20, Table1 COP3/4 rows; captions in those sections read, other tables/supplements not fully audited | supports | Read complete sec3,sec6,sec15,sec20 and the two COP3/4 Table1 rows. Purified cw15 eyespot fragments include membrane patches and carotenoid layers; the authors explicitly allow small nonspecialized membrane/stromal/cytosolic contamination. Both COP3 (8 peptides) and COP4 (3 peptides) are detected, supporting the cohort within an existing record-level source. This does not make every proteome hit a constitutive member. |
+| root28-sources-mittelmeier2011-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC3166873/; Original primary HTML sec3/11/13; TableI text and captions; no independent image-pixel or quantitative reanalysis | supports | Read complete Results sec3 with TableI and Fig2/3 captions, Methods sec11/13. Wild-type137c/CC125 and mutant backgrounds are explicit; anti-ChR1 and acetylated-tubulin labeling directly support the local ChR1 patch/rootlet relationship. ChR2 is not silently substituted for the imaged ChR1. |
+| root28-sources-awasthi2016-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC5046144/; Original primary HTML named paragraphs and complete sec2/8/10/11/12; Fig1/8 captions included; no supplementary-file read or universal ChR2-trafficking claim | supports | Read the complete introductory COP3/4 naming paragraph, Results sec2, Discussion sec8, Methods sec10/11/12, plus the ChR2-control paragraph in sec7. Cop3 and Cop4 are identified as ChR1 and ChR2; principal trafficking/localization experiments concern ChR1 and Cop8. ChR2 interaction controls do not establish identical IFT behavior. Cohort membership additionally rests on the existing Schmidt proteomics source. |
+| root28-sources-ueki2016-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC4868408/; Original primary HTML s3/s4/s5/s6 and embedded SI si3/si4/si5, including main Fig4–6 and embedded FigS3/S4 captions; no movie or remaining SI audit | supports | Read complete Results s3/s4, Discussion s5, main Methods s6 and embedded SI assay/microscopy/carotenoid Methods si3/si4/si5. Reduced pigments and eyespot-deficient mutants with redox-dependent reversed phototaxis support shielding against cell-body-focused light. Fig5 direct lens observation is distinct from Fig6 explanatory model; whole-cell pigment measurements are not a full purified-eyespot chemical inventory. |
+| root28-sources-ueki2016-fig5 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6457/4868408/e0bab6e6b204/pnas.1525538113fig05.jpg; Complete original primary Fig5 pixels and caption | supports | Original Fig5 A–C viewed: side illumination and imaging of the letter P show the reported lens effect in wild-type and lts1-211 cells. The optical path panel is hypothetical; no image-derived quantitation was performed. |
+| root28-sources-ueki2016-fig6 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6457/4868408/a3add19d8465/pnas.1525538113fig06.jpg; Complete original primary Fig6 pixels and caption | supports | Original Fig6 model viewed: pigment layers alter incident versus rear-focused light at photoreceptors in wild-type and eyeless cells. This is explicitly a model, not direct imaging of individual light rays or a complete signaling pathway. |
+| native-verify | /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml --verify; Entire native focused output | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml --causal-graphs; Entire native focused output | supports | data/structures/membrane_organelle/eyespot_apparatus.yaml  (GO:1990413)<br>  pigment_photoreceptor_directional_sensing	channelrhodopsin_photoreceptors	PARTIAL_EXAMPLES	-&gt;channelrhodopsin_photoreceptors (have: UniProtKB:Q8RUT8; missing: COP3)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/membrane_organelle/eyespot_apparatus.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/eyespot_apparatus.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/eyespot_apparatus.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/eyespot_apparatus.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/eyespot_apparatus.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Source identity is not proof of experimental membership. Taxonomic labels do not silently assign study strains, and qualitative COMMON does not encode a prevalence survey. Historical authorship, prior searches and previous dispositions are not independently recertified.
+- Lamb1999 is complete-abstract only: PMC HTML provides an abstract and PDF link, the PDF request returned a challenge page and the Europe PMC render returned403. Neither is treated as a readable full article. The Schmidt publisher response is not used as primary body evidence; genuine PMC1533972 is used.
+- Original primary body scope is exactly the named sections/paragraphs and tables in each evidence row. Only Ueki Fig5/6 pixels were independently viewed; other figures were read through captions. Ueki embedded SI assay/microscopy/carotenoid methods were read, but movies, other SI and the complete datasets were not audited.
+- Schmidt COP4 detection supports enriched-fraction association, with explicitly acknowledged possible contamination. Direct localization is demonstrated for ChR1 in the examined studies. Q8RUT8 is unreviewed and its automated membrane annotation alone is not eyespot proof. Individual carotenoid chemistry and full apparatus composition remain unresolved.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The user explicitly authorizes review bundles for every uncovered record, including honest no-finding reviews. Scientific records are not edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T013720Z-eyespot-apparatus-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Eyespot apparatus identity, evidence and boundary review
+started_at: '2026-10-22T01:18:49Z'
+finished_at: '2026-10-22T01:37:20Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation defect observed in the eyespot apparatus record within
+  the explicitly bounded evidence scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+    sha256: 726e6433186bbdaf4cb318269e7369e07bd49d4b9d464590f0740ac5e156f36a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990413
+  path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+  label: eyespot apparatus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single target: identity, hierarchy, component/protein scope,
+    organisms, cited source claims and every graph edge.'
+  selection: Target 9 of batch twenty-eight, strict uncovered path order at fresh
+    origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990413
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological membership is assessed from sources
+    separately.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological membership is assessed from sources
+    separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just validate data/structures/membrane_organelle/eyespot_apparatus.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just validate-strict data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990413
+  summary: No expression-module dataset or inference is used; protein identity and
+    the cited physical/localization experiments provide the relevant evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - protein-contract
+  - root28-sources-go
+  - root28-sources-tax3055
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-meta
+  - root28-sources-mittelmeier2011-meta
+  - root28-sources-awasthi2016-meta
+  - root28-sources-ueki2016-meta
+  - root28-sources-protein-Q8RUT8
+  - root28-sources-query-COP3-true
+  - root28-sources-query-COP3-false
+  - root28-sources-query-COP4-true
+  - root28-sources-query-COP4-false
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990413
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/eyespot_apparatus.yaml
+  locator: Entire maintained target including history, evidence, components, every
+    graph node and edge, discussions
+  accessed_at: '2026-10-22T01:25:03Z'
+  support: context_only
+  summary: Full target was read; no scientific record, status, history or generated
+    page is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, hierarchy, parthood, component and evidence rules
+  accessed_at: '2026-10-22T01:25:03Z'
+  support: context_only
+  summary: Whole structure, boundary material and enclosed region are distinguished.
+    Associated machinery is not automatically a constituent, and functional necessity
+    is distinct from structure formation.
+- evidence_id: protein-contract
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component essentiality and protein_examples; ProteinExample lines440–468
+  accessed_at: '2026-10-22T01:25:03Z'
+  support: context_only
+  summary: A protein example is a taxon-paired instance whose structure role must
+    have source support. Accession identity alone is insufficient. Collective bilayer
+    constitution does not prove individual lipid-species necessity.
+- evidence_id: root28-sources-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031904,GO:0070013,GO:0005768,GO:0010008,GO:0005771,GO:0071985,GO:0016020,GO:0000813,GO:0000815,GO:0012507,GO:0030658,GO:0030662,GO:0030134,GO:0005789,GO:0090114,GO:0030127,GO:1990413
+  locator: 'Complete17-term JSON: identifiers, active flags, names, definitions, synonyms
+    and returned child relations'
+  accessed_at: '2026-10-22T01:21:55.127008Z'
+  support: supports
+  summary: All17 returned active GO terms were directly read. Exact endosome lumen/membrane,
+    transport-vesicle membrane and eyespot definitions and declared synonyms agree.
+    GO0070013 explicitly lists endosome lumen as an is-a child; GO0005768 lists lumen/membrane
+    as parts. GO0030658/0030662 list GO0012507 as is-a child, while GO0030134 lists
+    it as part. Exact MVB and ESCRT definitions support the limited process context.
+    Broad membrane hierarchy is definition-based where no direct child was returned.
+  snapshot_sha256: 196c0eb6263923cb4c06c3050858f88ab320a65b4a9504075dfc5796e203a956
+- evidence_id: root28-sources-tax3055
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: Exact taxId, scientificName, rank, lineage and alternate names
+  accessed_at: '2026-10-22T01:21:55.128614Z'
+  support: supports
+  summary: Native ENA exact species identity and lineage agree with Chlamydomonas
+    reinhardtii3055. This is taxonomic identity, not a measured population prevalence
+    or an experimental strain assignment.
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+- evidence_id: root28-sources-lamb1999-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A10511552%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:21:56.284117Z'
+  support: supports
+  summary: Native MED matches Eyespot-assembly mutants in Chlamydomonas reinhardtii.,
+    Lamb MR, Dutcher SK, Worley CK, Dieckmann CL., PMID10511552, DOI10.1093/genetics/153.2.721.
+    Complete primary abstract identifies the eyespot as plasma-membrane photoreception
+    over chloroplast carotenoid layers; four mutant loci alter pigment presence, size
+    or positioning. This supports the bounded canonical example, without independently
+    reading the full original body.
+  snapshot_sha256: e1f246c780df2a89267bf5ca75d5bf8740c709ab7b2bef092e58b85c8551f53d
+- evidence_id: root28-sources-schmidt2006-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A16798888%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:21:56.303645Z'
+  support: supports
+  summary: Native MED matches Proteomic analysis of the eyespot of Chlamydomonas reinhardtii
+    provides novel insights into its components and tactic movements., Schmidt M,
+    Gessner G, Luff M, Heiland I, Wagner V, Kaminski M, Geimer S, Eitzinger N, Reissenweber
+    T, Voytsekh O, Fiedler M, Mittag M, Kreimer G., PMID16798888, DOI10.1105/tpc.106.041749.
+    Complete primary abstract reports purification of Chlamydomonas eyespot fractions
+    and 202 proteins detected with at least two peptides. The native MED response
+    omits a PMCID, but the original PMC1533972 body was independently retrieved and
+    its identity matched.
+  snapshot_sha256: 850f4cc8cabfa09801d9c8b4e6f75d5d57eb23fdc230638b8e96f0d16fd0ac04
+- evidence_id: root28-sources-mittelmeier2011-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A21555459%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:21:56.550234Z'
+  support: supports
+  summary: Native MED matches Asymmetric properties of the Chlamydomonas reinhardtii
+    cytoskeleton direct rhodopsin photoreceptor localization., Mittelmeier TM, Boyd
+    JS, Lamb MR, Dieckmann CL., PMID21555459, DOI10.1083/jcb.201009131. Complete primary
+    abstract directly reports ChR1 patches associated with the daughter microtubule
+    rootlet in wild-type and altered mutant cells. It does not directly image every
+    member of the channelrhodopsin cohort.
+  snapshot_sha256: 2f766caa5745c29e75178d0f3a359bfd48e1d9aca542c3fcd47c01388c0560aa
+- evidence_id: root28-sources-awasthi2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1038/srep34646%22
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:21:56.951388Z'
+  support: supports
+  summary: Native MED matches The trafficking of bacterial type rhodopsins into the
+    Chlamydomonas eyespot and flagella is IFT mediated., Awasthi M, Ranjan P, Sharma
+    K, Veetil SK, Kateriya S., PMID27694882, DOI10.1038/srep34646. Complete primary
+    abstract reports light-dependent rhodopsin localization and IFT-associated trafficking.
+    The original body identifies the principal tested proteins as Cop8 and ChR1; its
+    introduction separately maps COP3/4 to ChR1/2.
+  snapshot_sha256: 37ef5075b93e6683ff7ff3df57e6525cd837d5d45391fe4757494e061b0de8bd
+- evidence_id: root28-sources-ueki2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A27122315%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:21:56.923263Z'
+  support: supports
+  summary: Native MED matches Eyespot-dependent determination of the phototactic sign
+    in Chlamydomonas reinhardtii., Ueki N, Ide T, Mochiji S, Kobayashi Y, Tokutsu
+    R, Ohnishi N, Yamaguchi K, Shigenobu S, Tanaka K, Minagawa J, Hisabori T, Hirono
+    M, Wakabayashi K., PMID27122315, DOI10.1073/pnas.1525538113. Complete primary
+    abstract reports reduced carotenoids, defective eyespots, reversed phototactic
+    sign and cellular lens effects. Strong responses in eyeless mutants under particular
+    conditions prevent a claim that all light perception requires an intact eyespot.
+  snapshot_sha256: cc4e32818873bd2ff38644e5fec7a83708bc70d6598f70d837bc9dcca10229b5
+- evidence_id: root28-sources-protein-Q8RUT8
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q8RUT8.json
+  locator: Primary accession, entryType, submitted protein names, all gene tokens,
+    organism and complete comments; selected cross-reference/citation context
+  accessed_at: '2026-10-22T01:21:55.129543Z'
+  support: supports
+  summary: Primary Q8RUT8 is unreviewed TrEMBL, named Archaeal-type opsin2, gene cop4
+    with acop2/CSOB synonyms, taxon3055. This exact tuple agrees with the target.
+    Its automated location is generic membrane, so native accession metadata alone
+    does not establish eyespot membership.
+  snapshot_sha256: 5576309014e3a4ed270d37783133413c0542b2274a515253521947c72acb5ac3
+- evidence_id: root28-sources-query-COP3-true
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3ACOP3%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Atrue
+  locator: Full returned results at size500, exact query and entry identities
+  accessed_at: '2026-10-22T01:21:55.129260Z'
+  support: supports
+  summary: The complete gene_exact:COP3, taxonomy_id:3055, reviewed:true query returns
+    0 entries. This bounded query result is not proof that the gene or an accession
+    does not exist under other names.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root28-sources-query-COP3-false
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3ACOP3%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Afalse
+  locator: Full returned results at size500, exact query and entry identities
+  accessed_at: '2026-10-22T01:21:55.947581Z'
+  support: supports
+  summary: The complete gene_exact:COP3, taxonomy_id:3055, reviewed:false query returns
+    0 entries. This bounded query result is not proof that the gene or an accession
+    does not exist under other names.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root28-sources-query-COP4-true
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3ACOP4%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Atrue
+  locator: Full returned results at size500, exact query and entry identities
+  accessed_at: '2026-10-22T01:21:55.961560Z'
+  support: supports
+  summary: The complete gene_exact:COP4, taxonomy_id:3055, reviewed:true query returns
+    0 entries. This bounded query result is not proof that the gene or an accession
+    does not exist under other names.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root28-sources-query-COP4-false
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3ACOP4%20AND%20taxonomy_id%3A3055%20AND%20reviewed%3Afalse
+  locator: Full returned results at size500, exact query and entry identities
+  accessed_at: '2026-10-22T01:21:56.203109Z'
+  support: supports
+  summary: The complete gene_exact:COP4, taxonomy_id:3055, reviewed:false query returns
+    1 entries (Q8RUT8). This bounded query result is not proof that the gene or an
+    accession does not exist under other names.
+  snapshot_sha256: 0bd25d61ad25cdfe1e9f616843cb530809a4a412398cc34d7b3787815b3ffe5e
+- evidence_id: root28-sources-schmidt2006-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1533972/
+  locator: 'Original primary HTML PMC1533972: Results sec3/6, Methods sec15/20, Table1
+    COP3/4 rows; captions in those sections read, other tables/supplements not fully
+    audited'
+  accessed_at: '2026-10-22T01:22:39.219510Z'
+  support: supports
+  summary: Read complete sec3,sec6,sec15,sec20 and the two COP3/4 Table1 rows. Purified
+    cw15 eyespot fragments include membrane patches and carotenoid layers; the authors
+    explicitly allow small nonspecialized membrane/stromal/cytosolic contamination.
+    Both COP3 (8 peptides) and COP4 (3 peptides) are detected, supporting the cohort
+    within an existing record-level source. This does not make every proteome hit
+    a constitutive member.
+  snapshot_sha256: f964123aeaebc9794602ef2f86bdd946279100c0d1d9f0a3cdeec155230e7365
+- evidence_id: root28-sources-mittelmeier2011-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3166873/
+  locator: Original primary HTML sec3/11/13; TableI text and captions; no independent
+    image-pixel or quantitative reanalysis
+  accessed_at: '2026-10-22T01:21:57.311510Z'
+  support: supports
+  summary: Read complete Results sec3 with TableI and Fig2/3 captions, Methods sec11/13.
+    Wild-type137c/CC125 and mutant backgrounds are explicit; anti-ChR1 and acetylated-tubulin
+    labeling directly support the local ChR1 patch/rootlet relationship. ChR2 is not
+    silently substituted for the imaged ChR1.
+  snapshot_sha256: 10365c3176df221789db773855a2cdfc3582b8fa5b78e0af106d43824ffee049
+- evidence_id: root28-sources-awasthi2016-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5046144/
+  locator: Original primary HTML named paragraphs and complete sec2/8/10/11/12; Fig1/8
+    captions included; no supplementary-file read or universal ChR2-trafficking claim
+  accessed_at: '2026-10-22T01:22:28.743974Z'
+  support: supports
+  summary: Read the complete introductory COP3/4 naming paragraph, Results sec2, Discussion
+    sec8, Methods sec10/11/12, plus the ChR2-control paragraph in sec7. Cop3 and Cop4
+    are identified as ChR1 and ChR2; principal trafficking/localization experiments
+    concern ChR1 and Cop8. ChR2 interaction controls do not establish identical IFT
+    behavior. Cohort membership additionally rests on the existing Schmidt proteomics
+    source.
+  snapshot_sha256: 7ce7068d278c715eaf728ea9226485aa531c7484a30d09aa9d5d2cde7e7e9153
+- evidence_id: root28-sources-ueki2016-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4868408/
+  locator: Original primary HTML s3/s4/s5/s6 and embedded SI si3/si4/si5, including
+    main Fig4–6 and embedded FigS3/S4 captions; no movie or remaining SI audit
+  accessed_at: '2026-10-22T01:22:28.744523Z'
+  support: supports
+  summary: Read complete Results s3/s4, Discussion s5, main Methods s6 and embedded
+    SI assay/microscopy/carotenoid Methods si3/si4/si5. Reduced pigments and eyespot-deficient
+    mutants with redox-dependent reversed phototaxis support shielding against cell-body-focused
+    light. Fig5 direct lens observation is distinct from Fig6 explanatory model; whole-cell
+    pigment measurements are not a full purified-eyespot chemical inventory.
+  snapshot_sha256: 1a46bd011428b0c4e0f2ccf01074d0f586f63fdb6c7155b9688fbd7e9df7f0d1
+- evidence_id: root28-sources-ueki2016-fig5
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6457/4868408/e0bab6e6b204/pnas.1525538113fig05.jpg
+  locator: Complete original primary Fig5 pixels and caption
+  accessed_at: '2026-10-22T01:23:28.167389Z'
+  support: supports
+  summary: 'Original Fig5 A–C viewed: side illumination and imaging of the letter
+    P show the reported lens effect in wild-type and lts1-211 cells. The optical path
+    panel is hypothetical; no image-derived quantitation was performed.'
+  snapshot_sha256: cc142a56cc9998f56ffe011eba4372d0cdf86fb041648398f04f380d48f74a9d
+- evidence_id: root28-sources-ueki2016-fig6
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6457/4868408/a3add19d8465/pnas.1525538113fig06.jpg
+  locator: Complete original primary Fig6 pixels and caption
+  accessed_at: '2026-10-22T01:23:28.167946Z'
+  support: supports
+  summary: 'Original Fig6 model viewed: pigment layers alter incident versus rear-focused
+    light at photoreceptors in wild-type and eyeless cells. This is explicitly a model,
+    not direct imaging of individual light rays or a complete signaling pathway.'
+  snapshot_sha256: 9bebe1126e5e232054e8359c9782198255879c0c0f9da19b62c9218e484a1dd9
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --verify
+  locator: Entire native focused output
+  accessed_at: '2026-10-22T01:22:15.757001Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --causal-graphs
+  locator: Entire native focused output
+  accessed_at: '2026-10-22T01:22:17.129296Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/eyespot_apparatus.yaml  (GO:1990413)\n\
+    \  pigment_photoreceptor_directional_sensing\tchannelrhodopsin_photoreceptors\t\
+    PARTIAL_EXAMPLES\t->channelrhodopsin_photoreceptors (have: UniProtKB:Q8RUT8; missing:\
+    \ COP3)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: be8a0490f21243562703c3ff5e9e6ee667b41176a889bcf517305f78456c4b29
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/eyespot_apparatus.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:50Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/eyespot_apparatus.yaml'
+  snapshot_sha256: 480784a157ae01105acefa3724334f06aa8de37f480edf4feb475054bd4870bf
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/eyespot_apparatus.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:51Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/eyespot_apparatus.yaml\
+    \ --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/eyespot_apparatus-strict.tsv"
+  snapshot_sha256: f3ba68049eacf03950da3f820a52425a3f793bcf1b5c85ec7c013c8e1f142f70
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/eyespot_apparatus.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Eyespot apparatus across membrane systems
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: 'Exact GO1990413 definition and two RELATED synonyms agree. OTHER kind
+    avoids misrepresenting the apparatus as one isolated membrane-bounded compartment:
+    original sources place plasma-membrane photoreceptors over chloroplast-associated
+    pigment granules. An empty optional parent/parthood slot is not an identity defect.'
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - policy
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: scope
+  area: scope
+  topic: Chlamydomonas scope and study contexts
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: Species3055 and the canonical/distribution labels agree. Lamb mutant loci
+    support formation/positioning context; Schmidt cw15-derived fractions support
+    the stated proteomics example. Other studies use specified wild-type and mutant
+    backgrounds. Neither reference taxonomy nor COMMON implies a numerical survey
+    or every species of green algae.
+  evidence_ids:
+  - record
+  - root28-sources-tax3055
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-meta
+  - root28-sources-mittelmeier2011-meta
+  - root28-sources-awasthi2016-meta
+  - root28-sources-ueki2016-meta
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: composition
+  area: grounding
+  topic: Pigment and photoreceptor cohorts
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: SMALL_MOLECULE carotenoids and PROTEIN channelrhodopsins are appropriate
+    material classes with explicit label-only scope. Exact Q8RUT8/cop4/unreviewed/species
+    tuple is verified; source membership is independently supported by Schmidt COP4
+    peptide detection and the cohort literature. Awasthi COP3/4 naming agrees but
+    its principal trafficking assays concern ChR1/Cop8, not both channelrhodopsins
+    identically. The currently empty COP3 exact-name query is a bounded database result,
+    not evidence of gene absence.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - protein-contract
+  - root28-sources-protein-Q8RUT8
+  - root28-sources-query-COP3-true
+  - root28-sources-query-COP3-false
+  - root28-sources-query-COP4-true
+  - root28-sources-query-COP4-false
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: source-placement
+  area: evidence
+  topic: Plural cohort versus directly imaged member
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: Mittelmeier directly localizes ChR1; Awasthi provides ChR1/Cop8 trafficking
+    and background COP3/4 identity. The already cited record-level Schmidt paper detects
+    both COP3 and COP4, preserving support for the plural cohort. The review does
+    not claim a direct ChR2 localization experiment in the first two papers or transfer
+    all IFT controls to ChR2.
+  evidence_ids:
+  - record
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-meta
+  - root28-sources-mittelmeier2011-meta
+  - root28-sources-awasthi2016-meta
+  - root28-sources-ueki2016-meta
+- assessment_id: function
+  area: evidence
+  topic: Shielding and directional phototactic sign
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: Ueki mutant/rescue, redox-biased assays and directly observed cellular
+    lens effect support carotenoid-layer shielding and correct phototactic sign. Eyeless
+    cells can retain photoreception and show strong responses under the tested conditions;
+    the target uses supports/directional detection and UNKNOWN essentiality, rather
+    than claiming all phototaxis requires a pigmented eyespot.
+  evidence_ids:
+  - record
+  - root28-sources-ueki2016-meta
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: graph
+  area: graph
+  topic: All four descriptive light-detection edges
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: Pigment concentration, photoreceptor localization, shielding and support
+    for directional detection are supported at the broad Chlamydomonas cohort level.
+    The direct localization example is ChR1, and Ueki Fig6 is a model integrating
+    the mutant and lens observations. NONMECHANISTIC scope does not claim a complete
+    ion-channel/flagellar signaling cascade.
+  evidence_ids:
+  - record
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-meta
+  - root28-sources-mittelmeier2011-meta
+  - root28-sources-awasthi2016-meta
+  - root28-sources-ueki2016-meta
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: necessity
+  area: evidence
+  topic: Unknown formation requirements and proteome completeness
+  outcome: unknown
+  target_ids:
+  - GO:1990413
+  summary: 'UNKNOWN component essentiality is appropriate: phototactic defects and
+    reduced pigment do not establish a general absence-of-each-component structure-formation
+    test. Whole-cell carotenoid HPLC does not resolve all eyespot-stored chemical
+    species; fraction proteomics allows contamination. Optional family groundings
+    and candidate constituents remain an explicit curation TODO, not a proof that
+    all candidates are absent.'
+  evidence_ids:
+  - record
+  - protein-contract
+  - root28-sources-schmidt2006-pmc
+  - root28-sources-mittelmeier2011-pmc
+  - root28-sources-awasthi2016-pmc
+  - root28-sources-ueki2016-pmc
+  - root28-sources-ueki2016-fig5
+  - root28-sources-ueki2016-fig6
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained target and honest scope
+  outcome: supported
+  target_ids:
+  - GO:1990413
+  summary: Entire target and every graph edge were read. There are no target image
+    assets, measurements, trait links or verbatim evidence snippets to verify. Optional
+    molecular inventories and family groundings remain acknowledged; no finding is
+    invented from an empty optional slot. PROPOSED status and historical events are
+    retained.
+  evidence_ids:
+  - record
+  - policy
+  - root28-sources-go
+  - root28-sources-lamb1999-meta
+  - root28-sources-schmidt2006-meta
+  - root28-sources-mittelmeier2011-meta
+  - root28-sources-awasthi2016-meta
+  - root28-sources-ueki2016-meta
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Source identity is not proof of experimental membership. Taxonomic labels do not
+  silently assign study strains, and qualitative COMMON does not encode a prevalence
+  survey. Historical authorship, prior searches and previous dispositions are not
+  independently recertified.
+- 'Lamb1999 is complete-abstract only: PMC HTML provides an abstract and PDF link,
+  the PDF request returned a challenge page and the Europe PMC render returned403.
+  Neither is treated as a readable full article. The Schmidt publisher response is
+  not used as primary body evidence; genuine PMC1533972 is used.'
+- Original primary body scope is exactly the named sections/paragraphs and tables
+  in each evidence row. Only Ueki Fig5/6 pixels were independently viewed; other figures
+  were read through captions. Ueki embedded SI assay/microscopy/carotenoid methods
+  were read, but movies, other SI and the complete datasets were not audited.
+- Schmidt COP4 detection supports enriched-fraction association, with explicitly acknowledged
+  possible contamination. Direct localization is demonstrated for ChR1 in the examined
+  studies. Q8RUT8 is unreviewed and its automated membrane annotation alone is not
+  eyespot proof. Individual carotenoid chemistry and full apparatus composition remain
+  unresolved.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes review bundles for every uncovered record, including
+  honest no-finding reviews. Scientific records are not edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

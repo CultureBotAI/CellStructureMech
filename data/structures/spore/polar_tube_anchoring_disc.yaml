@@ -26,6 +26,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Connected isolated causal node(s) with 1 source-backed edge(s).
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked enp1 component into anchoring_disc_positions_polar_tube causal graph
+    with source-backed anterior anchoring-disc localization edge.
+  llm_assisted: true
 synonyms:
 - synonym_text: polar tube anchoring disk
   synonym_type: RELATED_SYNONYM
@@ -127,6 +133,10 @@ causal_graphs:
   - node_id: anterior_spore_end
     label: anterior spore end
     node_type: STRUCTURE
+  - node_id: enp1
+    label: EnP1
+    node_type: GENE_OR_PROTEIN
+    component_ref: enp1
   edges:
   - subject: anchoring_disc
     predicate: resides at
@@ -166,6 +176,15 @@ causal_graphs:
     - reference: GO:0160202
       notes: GO:0160202 defines the polar tube anchoring disc as attaching the polar
         tube to the spore wall.
+  - subject: enp1
+    predicate: localizes to
+    object: anchoring_disc
+    description: Spore-wall adherence protein EnP1 localizes to the polar sac/anchoring
+      disk region at the anterior pole of Encephalitozoon spores.
+    evidence:
+    - reference: DOI:10.1128/EC.00113-07
+      notes: Southern et al. 2007 localized EnP1 to the endospore, exospore, and polar
+        sac/anchoring disk region of Encephalitozoon spores.
 discussions:
 - discussion_id: ground_anchoring_disc_components
   prompt: Resolve exact source-neutral component groundings for the polar tube anchoring
