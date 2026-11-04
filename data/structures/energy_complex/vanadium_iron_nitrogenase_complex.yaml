@@ -1,0 +1,320 @@
+identifier: GO:0016613
+label: vanadium-iron nitrogenase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An alternative nitrogenase enzyme complex containing a vanadium-iron active-site
+  cluster (FeV-cofactor) expressed under molybdenum depletion in species such as Azotobacter
+  vinelandii. Although the GO:0016613 ontology definition retains older generic alpha2-beta2
+  tetramer wording, structural resolution of the A. vinelandii VFe protein (PDB:5N6Y)
+  shows a heterohexameric alpha2beta2delta2 catalytic dinitrogenase component (VnfD2K2G2)
+  partnered with a homodimeric iron-protein nitrogenase reductase (VnfH2).
+definition_source: DOI:10.1038/nchembio.2428
+mapping_status: PROPOSED
+parent_structures:
+- GO:0016610
+components:
+- component_id: vnfd_alpha_subunit
+  label: Nitrogenase vanadium-iron protein alpha chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR010142
+  gene_symbols:
+  - vnfD
+  stoichiometry: 2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Catalytic alpha subunit of the vanadium-iron dinitrogenase (VFe protein) that
+    coordinates the active-site FeV-cofactor and forms the VnfG-binding contact surface.
+  evidence:
+  - reference: PMID:28692069
+    notes: Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved the
+      1.35-Angstrom structure of Azotobacter vinelandii VnfD2K2G2 vanadium nitrogenase,
+      showing VnfD housing the FeV-cofactor and binding VnfG.
+  - reference: PMID:2345152
+    notes: Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) characterized
+      the Azotobacter vinelandii vnfDGK operon encoding the vanadium-dependent nitrogenase
+      subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16855
+    protein_label: Nitrogenase vanadium-iron protein alpha chain
+    gene_symbol: vnfD
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii VnfD alpha chain of the vanadium-iron nitrogenase
+      complex resolved in PDB:5N6Y.
+    evidence:
+    - reference: UniProtKB:P16855
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron
+        protein alpha chain (vnfD).
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfD in the
+        VnfD2K2G2 catalytic component.
+- component_id: vnfk_beta_subunit
+  label: Nitrogenase vanadium-iron protein beta chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014281
+  gene_symbols:
+  - vnfK
+  stoichiometry: 2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Beta subunit of the vanadium-iron dinitrogenase (VFe protein) that forms the
+    alpha2beta2 core with VnfD and coordinates the interfacial P-cluster.
+  evidence:
+  - reference: PMID:28692069
+    notes: Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved VnfK
+      in the A. vinelandii VnfD2K2G2 heterohexamer.
+  - reference: PMID:2345152
+    notes: Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) sequenced vnfK
+      in the A. vinelandii vnfDGK gene cluster.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16856
+    protein_label: Nitrogenase vanadium-iron protein beta chain
+    gene_symbol: vnfK
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii VnfK beta chain of the vanadium-iron nitrogenase
+      complex resolved in PDB:5N6Y.
+    evidence:
+    - reference: UniProtKB:P16856
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron
+        protein beta chain (vnfK).
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfK in the
+        VnfD2K2G2 catalytic component.
+- component_id: vnfg_delta_subunit
+  label: Nitrogenase vanadium-iron protein delta chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014279
+  gene_symbols:
+  - vnfG
+  stoichiometry: 2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Four-helix-bundle delta subunit (VnfG) bound exclusively to the VnfD alpha
+    subunit on the periphery of the VnfD2K2G2 catalytic component and required for
+    diazotrophic growth with vanadium.
+  evidence:
+  - reference: PMID:28692069
+    notes: Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved two
+      four-helix VnfG subunits bound to VnfD in the A. vinelandii VnfD2K2G2 heterohexamer,
+      refuting older generic tetramer assumptions.
+  - reference: PMID:2345152
+    notes: Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) demonstrated
+      that vnfG lies between vnfD and vnfK and is required for vanadium-dependent
+      diazotrophic growth.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16857
+    protein_label: Nitrogenase vanadium-iron protein delta chain
+    gene_symbol: vnfG
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii VnfG delta chain of the vanadium-iron nitrogenase
+      complex resolved in PDB:5N6Y.
+    evidence:
+    - reference: UniProtKB:P16857
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron
+        protein delta chain (vnfG).
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfG bound to
+        VnfD.
+- component_id: vnfh_reductase_subunit
+  label: Nitrogenase iron protein 2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005977
+  gene_symbols:
+  - vnfH
+  stoichiometry: 2 copies per VnfH2 reductase homodimer
+  essentiality: ESSENTIAL
+  role: ATP-dependent iron-protein 2 reductase subunit (VnfH) that forms a [4Fe-4S]-bridged
+    homodimer delivering electrons to the VnfD2K2G2 catalytic component during vanadium-dependent
+    nitrogen fixation.
+  evidence:
+  - reference: GO:0016613
+    notes: GO:0016613 defines the vanadium-iron nitrogenase complex as containing
+      a homodimeric nitrogenase reductase paired with the vanadium-iron dinitrogenase.
+  - reference: PMID:3226421
+    notes: Raina et al. 1988 (DOI:10.1007/bf00340189) cloned and sequenced the Azotobacter
+      vinelandii vnfH gene encoding the iron-protein reductase of the vanadium nitrogenase
+      system.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15335
+    protein_label: Nitrogenase iron protein 2
+    gene_symbol: vnfH
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii VnfH iron-protein 2 reductase subunit of
+      the vanadium-iron nitrogenase complex.
+    evidence:
+    - reference: UniProtKB:P15335
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron
+        protein 2 (vnfH).
+    - reference: PMID:3226421
+      notes: Raina et al. 1988 characterized the A. vinelandii vnfH gene encoding
+        nitrogenase iron protein 2.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  presence: COMMON
+  note: Diazotrophic bacterium that expresses the VnfD2K2G2-VnfH2 vanadium-iron nitrogenase
+    under molybdenum deprivation in the presence of vanadium.
+  reference: PMID:28692069
+canonical_examples:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: Source organism for the 1.35-Angstrom crystal structure of the heterohexameric
+    VnfD2K2G2 vanadium-iron nitrogenase catalytic component (PDB:5N6Y) and characterized
+    VnfH2 reductase.
+  reference: PDB:5N6Y
+functions:
+- function_id: vanadium_iron_nitrogenase_activity
+  label: nitrogenase activity
+  grounding: GO:0016163
+  description: Catalyzes ATP-dependent reduction of dinitrogen to ammonium and dihydrogen
+    at the vanadium-containing FeV-cofactor under molybdenum-limiting conditions.
+  evidence:
+  - reference: GO:0016163
+    notes: GO:0016163 defines nitrogenase activity.
+  - reference: PMID:28692069
+    notes: Sippel and Einsle 2017 resolved the FeV-cofactor active site of A. vinelandii
+      vanadium nitrogenase that catalyzes dinitrogen and carbon monoxide reduction.
+evidence:
+- reference: GO:0016613
+  notes: Gene Ontology cellular-component term for the vanadium-iron nitrogenase complex;
+    note that GO:0016613 retains older tetramer wording superseded for A. vinelandii
+    by PDB:5N6Y.
+- reference: GO:0016610
+  notes: Parent Gene Ontology cellular-component term for the generic nitrogenase
+    complex.
+- reference: PMID:28692069
+  notes: Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428), crystal structure of
+    the Azotobacter vinelandii vanadium nitrogenase VnfD2K2G2 catalytic component
+    at 1.35-Angstrom resolution (PDB:5N6Y).
+- reference: PMID:2345152
+  notes: Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990), sequence and mutational
+    analysis of the Azotobacter vinelandii vnfDGK operon.
+- reference: PMID:3226421
+  notes: Raina et al. 1988 (DOI:10.1007/bf00340189), nucleotide sequence of the Azotobacter
+    vinelandii vnfH gene.
+- reference: PDB:5N6Y
+  notes: RCSB PDB entry for the Azotobacter vinelandii VnfD2K2G2 vanadium-iron nitrogenase
+    structure.
+causal_graphs:
+- graph_id: vanadium_iron_nitrogenase_assembly_and_catalysis
+  title: VnfD2K2G2 and VnfH2 assembly and catalysis in the vanadium-iron nitrogenase
+    complex
+  description: In Azotobacter vinelandii, VnfD alpha, VnfK beta, and VnfG delta subunits
+    assemble the heterohexameric VFe catalytic component that partners with the homodimeric
+    VnfH reductase to form the vanadium-iron nitrogenase complex and catalyze dinitrogen
+    reduction.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Represents the A. vinelandii VnfD2K2G2-VnfH2 subunit architecture (PDB:5N6Y)
+    and GO:0016163 nitrogenase activity without modeling VnfEN-mediated FeV-cofactor
+    maturation.
+  nodes:
+  - node_id: vnfd_alpha_subunit
+    label: Nitrogenase vanadium-iron protein alpha chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: vnfd_alpha_subunit
+    grounding: InterPro:IPR010142
+    xrefs:
+    - UniProtKB:P16855
+    description: VnfD alpha subunit housing the FeV-cofactor.
+  - node_id: vnfk_beta_subunit
+    label: Nitrogenase vanadium-iron protein beta chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: vnfk_beta_subunit
+    grounding: InterPro:IPR014281
+    xrefs:
+    - UniProtKB:P16856
+    description: VnfK beta subunit partnering with VnfD in the catalytic core.
+  - node_id: vnfg_delta_subunit
+    label: Nitrogenase vanadium-iron protein delta chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: vnfg_delta_subunit
+    grounding: InterPro:IPR014279
+    xrefs:
+    - UniProtKB:P16857
+    description: Four-helix VnfG delta subunit bound to VnfD.
+  - node_id: vnfh_reductase_subunit
+    label: Nitrogenase iron protein 2
+    node_type: GENE_OR_PROTEIN
+    component_ref: vnfh_reductase_subunit
+    grounding: InterPro:IPR005977
+    xrefs:
+    - UniProtKB:P15335
+    description: Homodimeric VnfH iron-protein reductase subunit.
+  - node_id: vfe_nitrogenase_complex_node
+    label: vanadium-iron nitrogenase complex
+    node_type: STRUCTURE
+    grounding: GO:0016613
+    description: Assembled VnfD2K2G2-VnfH2 vanadium-iron nitrogenase complex.
+  - node_id: nitrogenase_activity_node
+    label: nitrogenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016163
+    description: ATP-dependent dinitrogen reduction to ammonium and dihydrogen.
+  edges:
+  - subject: vnfd_alpha_subunit
+    predicate: RO:0002436
+    object: vfe_nitrogenase_complex_node
+    description: Two VnfD alpha chains assemble with VnfK and VnfG to form the FeV-cofactor-containing
+      VFe catalytic component.
+    evidence:
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 (PDB:5N6Y) resolved VnfD within the A. vinelandii
+        VnfD2K2G2 heterohexamer.
+  - subject: vnfk_beta_subunit
+    predicate: RO:0002436
+    object: vfe_nitrogenase_complex_node
+    description: Two VnfK beta chains pair with VnfD to form the alpha2beta2 core
+      and coordinate the P-cluster of the vanadium-iron nitrogenase complex.
+    evidence:
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 (PDB:5N6Y) resolved VnfK in the VnfD2K2G2 catalytic
+        component.
+  - subject: vnfg_delta_subunit
+    predicate: RO:0002436
+    object: vfe_nitrogenase_complex_node
+    description: Two VnfG delta chains bind specifically to VnfD on the alpha2beta2
+      core to complete the VnfD2K2G2 catalytic hexamer.
+    evidence:
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 showed that VnfG contacts VnfD exclusively in
+        the VnfD2K2G2 hexamer.
+  - subject: vnfh_reductase_subunit
+    predicate: RO:0002436
+    object: vfe_nitrogenase_complex_node
+    description: Homodimeric VnfH reductase partners with the VnfD2K2G2 catalytic
+      component to supply ATP-coupled electrons.
+    evidence:
+    - reference: GO:0016613
+      notes: GO:0016613 and PMID:3226421 establish VnfH2 as the reductase component
+        of vanadium-iron nitrogenase.
+  - subject: vfe_nitrogenase_complex_node
+    predicate: RO:0002327
+    object: nitrogenase_activity_node
+    description: The assembled vanadium-iron nitrogenase complex enables ATP-dependent
+      dinitrogen reduction to ammonium.
+    evidence:
+    - reference: PMID:28692069
+      notes: Sippel and Einsle 2017 characterized dinitrogen reduction by the A. vinelandii
+        vanadium-iron nitrogenase.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0016613 (vanadium-iron nitrogenase complex)
+    with verified GO identity, source-backed components, reviewed UniProtKB protein
+    examples, taxonomic distribution, canonical examples, functions, and mechanistic
+    causal graph.
+  llm_assisted: true

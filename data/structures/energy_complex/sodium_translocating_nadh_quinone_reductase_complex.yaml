@@ -42,6 +42,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added InterPro-grounded component_ref causal nodes and source-backed constituent
+    edges for NqrA-NqrF to nqr_complex.
+  llm_assisted: true
 synonyms:
 - synonym_text: Na+-NQR complex
   synonym_type: EXACT_SYNONYM
@@ -342,6 +348,36 @@ causal_graphs:
   - node_id: sodium_pumping_nadh_quinone_activity
     label: sodium-pumping NADH:quinone oxidoreductase activity
     node_type: MOLECULAR_FUNCTION
+  - node_id: nqrA_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit A
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrA_subunit
+    grounding: InterPro:IPR008703
+  - node_id: nqrB_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit B
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrB_subunit
+    grounding: InterPro:IPR010966
+  - node_id: nqrC_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit C
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrC_subunit
+    grounding: InterPro:IPR010204
+  - node_id: nqrD_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit D
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrD_subunit
+    grounding: InterPro:IPR011292
+  - node_id: nqrE_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit E
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrE_subunit
+    grounding: InterPro:IPR010967
+  - node_id: nqrF_subunit
+    label: Na(+)-translocating NADH-quinone reductase subunit F
+    node_type: GENE_OR_PROTEIN
+    component_ref: nqrF_subunit
+    grounding: InterPro:IPR010205
   edges:
   - subject: nqr_complex
     predicate: enables
@@ -392,3 +428,76 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-022-31718-1
       notes: Kishikawa et al. 2022 describe Na+-NQR as generating an electrochemical
         Na+ gradient through coupled Na+ pumping.
+  - subject: nqrA_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: NqrA constituent of the six-subunit sodium-pumping NADH:quinone oxidoreductase.
+    evidence:
+    - reference: InterPro:IPR008703
+      notes: InterPro IPR008703 is a family entry named Na(+)-translocating NADH-quinone
+        reductase subunit A.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 1 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit A, UniProtKB:A5F5X1.
+  - subject: nqrB_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: Hydrophobic, FMN-binding NqrB constituent of the six-subunit sodium-pumping
+      complex.
+    evidence:
+    - reference: InterPro:IPR010966
+      notes: InterPro IPR010966 is a family entry named Na(+)-translocating NADH-quinone
+        reductase subunit B.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 2 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit B, UniProtKB:A5F5X0.
+  - subject: nqrC_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: FMN-binding NqrC constituent of the six-subunit sodium-pumping complex.
+    evidence:
+    - reference: InterPro:IPR010204
+      notes: InterPro IPR010204 is a family entry named Na(+)-translocating NADH-quinone
+        reductase subunit C.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 3 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit C, UniProtKB:A5F5Y7.
+  - subject: nqrD_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: Membrane NqrD constituent of the six-subunit sodium-pumping complex.
+    evidence:
+    - reference: InterPro:IPR011292
+      notes: InterPro IPR011292 is a family entry named Na(+)-translocating NADH-quinone
+        reductase subunit D.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 4 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit D, UniProtKB:A5F5Y6.
+  - subject: nqrE_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: Membrane NqrE constituent of the six-subunit sodium-pumping complex.
+    evidence:
+    - reference: InterPro:IPR010967
+      notes: InterPro IPR010967 is a family entry named Na(+)-translocating NADH-quinone
+        reductase subunit E.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 5 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit E, UniProtKB:A5F5Y5.
+  - subject: nqrF_subunit
+    predicate: contributes to
+    object: nqr_complex
+    description: NqrF constituent of the complex that carries FAD and an iron-sulfur
+      center.
+    evidence:
+    - reference: InterPro:IPR010205
+      notes: InterPro IPR010205 identifies the NqrF family and includes 2 iron, 2
+        sulfur cluster binding among its GO annotations; its inspected GO list does
+        not include FAD binding.
+    - reference: PDB:7XK3
+      notes: RCSB maps PDB:7XK3 polymer entity 6 to Vibrio cholerae O395 Na(+)-translocating
+        NADH-quinone reductase subunit F, UniProtKB:A5F5Y4.
+    - reference: DOI:10.1038/s41467-022-31718-1
+      notes: Kishikawa et al. 2022 identify FAD and the 2Fe-2S center in the NqrF
+        structure (Results, NqrA/NqrF arrangement); this primary structure supports
+        the FAD cofactor role.

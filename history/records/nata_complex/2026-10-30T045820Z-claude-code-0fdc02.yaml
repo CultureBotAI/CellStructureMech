@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nata_complex.yaml
+  slug: nata_complex
+session:
+  id: 2026-10-30T045820Z-claude-code-0fdc02
+  timestamp: '2026-10-30T04:58:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added component_ref causal nodes and constituent edges for Nat1 and Nat5 subunits
+  details: Connected the Nat1 auxiliary and Nat5 subunits to nata_complex via component_ref
+    GENE_OR_PROTEIN nodes and directed contributes to edges backed by Gautschi et al. 2003
+    (DOI:10.1128/MCB.23.20.7403-7414.2003). Validated via write_validated_structure.

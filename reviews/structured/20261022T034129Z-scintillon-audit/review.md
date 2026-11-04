@@ -1,0 +1,1116 @@
+# Scintillon scientific review
+
+- Review: 20261022T034129Z-scintillon-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:25:20Z
+- Finished UTC: 2026-10-22T03:41:29Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Scintillon identity, constituents, taxon and bounded mechanistic model are supported. One minor finding corrects the claimed source of the LBP gene-symbol identity.
+
+## Scope And Provenance
+
+Exactly one entire maintained target; native source identity, claim scope, graph/component joins and evidence placement reviewed.
+
+Selection: Target 10 of batch40, next uncovered strict-path-order target at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0036007 | data/structures/membrane_organelle/scintillon.yaml | maintained | scintillon |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0036007 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0036007 | Focused validator passed. |
+| Focused graph protein-reference check | passed | True | GO:0036007 | Native report verified; syntactic coverage does not establish biological gene-symbol provenance. |
+| Expression-module applicability | not_applicable | False | GO:0036007 | No expression-module regulatory claim is maintained. |
+| Claim-level scientific review | passed | True | GO:0036007 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Native protein example verification | passed | True | GO:0036007 | Native two-example verification passed; exact symbol attribution was separately checked against the full source fields. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0036007 | 13 of 13 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0036007 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0036007 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0036007 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0036007 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0036007 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact scintillon and taxon boundary
+
+identity: supported. Targets: GO:0036007.
+
+GO defines the acidification-responsive oxygen-dependent cytoplasmic light body. Primary anatomy supports a membrane-bounded scintillon; it is distinct from the individual soluble proteins or the whole central vacuole. Native taxon identity reconciles the current and experimental organism names.
+
+### Four bounded constituents
+
+grounding: supported. Targets: GO:0036007.
+
+Luciferase, LBP, luciferin and a proton channel are supported at the maintained model-organism scope. Whole family IPR031846 and CHEBI61702 match their respective objects. LCF/LBP label-only grounding correctly avoids substituting shared domains, and Q39912 is correctly excluded as an LBP accession.
+
+### Accession/taxon/status versus gene-symbol attribution
+
+grounding: concern. Targets: GO:0036007.
+
+O77206 and Q39913 are valid reviewed/unreviewed protein examples with matching taxon. However, the Q39913 evidence note says UniProt establishes gene identity for lbp although its native genes field is absent; linked ENA likewise has no gene qualifier. This narrow provenance problem does not invalidate the LBP accession or independent localization evidence.
+
+### Function is not formation necessity
+
+evidence: unknown. Targets: GO:0036007.
+
+All four UNKNOWN labels are appropriate. Localization, biochemical catalytic activity, channel inhibition and a hypothetical acidification mechanism do not test whether each molecule is necessary to form the structure.
+
+### Eight-edge bounded mechanistic model
+
+graph: unknown. Targets: GO:0036007.
+
+The graph correctly separates heterologous depolarization gating from proposed native proton influx, and retains acidification, LBP release, luciferase activity and substrate-to-flash roles. Its scope notes exclude upstream mechanosensing and tonoplast propagation. Exact LBP pH8.0-versus6.3 wording and Schultz figure1 could not be independently checked from the unavailable body; broad pH regulation is supported by Rodriguez Introduction and the Schultz abstract.
+
+### Studied bioluminescent dinoflagellate
+
+scope: supported. Targets: GO:0036007.
+
+Rodriguez Methods identify CCMP1932 and distinguish native scintillon isolation from HEK293 electrophysiology. The maintained example claims localization and flash assays, not an unperformed native patch-clamp experiment or a universal dinoflagellate phenotype.
+
+### Acidification and luciferin recharge
+
+evidence: supported. Targets: GO:0036007.
+
+Fogel complete abstract directly supports the isolated-particle acidification and restored-flash note. Oxygen-dependent catalysis is also described in Rodriguez Introduction and Schultz abstract.
+
+### Full record with declared source limits
+
+completeness: supported. Targets: GO:0036007.
+
+All maintained fields, three-protein graph joins, history and discussions were read. Optional exact Hv1 accession enrichment is not treated as a missing mandatory inventory. Historical domain/protonation repairs remain sound.
+
+## Findings
+
+### F1: Separate verified LBP accession identity from unsupported native gene-symbol attribution
+
+minor / open / confirmed; issue key: scintillon-lbp-symbol-source-attribution.
+
+The Q39913 evidence note attributes gene lbp identity to UniProt while the same example acknowledges that UniProt supplies no gene symbol. Current native UniProt and linked ENA L06908 verify protein, taxon and accession, but neither carries a gene-name annotation. Retain the correct LBP example and source-backed scintillon membership; cite an independently verified source for the exact symbol or explicitly treat lbp as a curator label rather than a UniProt assertion.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, correct the source attribution for lbp, verify an independent symbol source if retaining it as a native gene assertion, and preserve Q39913/taxon/status plus the experimental localization evidence.
+
+- The note no longer claims UniProt supplies a gene annotation absent from its record.
+- Any retained exact gene-symbol assertion has an inspected source; accession and structural membership are kept distinct.
+- Native schema, strict, protein/graph and history gates pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/scintillon.yaml; Entire maintained target, including all history, graph edges, evidence and discussions | context_only | Every maintained field was read; historical events are not treated as independent experimental evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component type, grounding, essentiality and graph/evidence contracts | context_only | Whole anatomical identity differs from chemical material; function and localization do not establish necessity for structure formation. |
+| root40-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0055038,GO:0010008,GO:0055037,GO:0034777,GO:0036007,GO:0110165,GO:0005737,GO:0008218; Complete eight id/name/definition/obsolete/synonym fields and applicable typed children; large generic cytoplasm/anatomy child lists not read exhaustively. | supports | Eight active native entries support exact recycling membrane/lumen/whole identities, endosome-membrane parentage, scintillon definition, bioluminescence and generic anatomy. Typed0055037 children include membrane0055038 and lumen0034777 part_of;0010008 has0055038 is_a. |
+| root40-sources-tax160621 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/160621; Complete taxonomy response including authority, synonyms and merged IDs | supports | ENA160621 identifies Lingulaulax polyedra and preserves Lingulodinium polyedrum and Gonyaulax polyedra synonyms. The current name and historical experimental labels refer to the same taxon. |
+| root40-sources-tax2864 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864; Complete native taxonomy response | supports | ENA2864 identifies Dinophyceae at class rank. |
+| root40-sources-scintillon-taxon-constraints | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036007/constraints; Complete applicable only_in_taxon row; unrelated blacklist list not read exhaustively | supports | The native constraint row for GO0036007 states only_in_taxon NCBITaxon2864. This is an allowed-taxonomic-scope constraint rather than evidence that every member possesses scintillons. |
+| root40-sources-chebi61702 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/61702/; Complete native response including identity, chemistry and relations | supports | Released three-star CHEBI61702 is neutral dinoflagellate luciferin, formulaC33H40N4O6 charge0, with luciferin role and conjugate-base61796 relation. The maintained record explicitly leaves in situ protonation unspecified. |
+| root40-sources-protein-O77206 | https://rest.uniprot.org/uniprotkb/O77206.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The request resolves to reviewed O77206 dinoflagellate luciferase, taxon160621, with Q39912 as a secondary accession and no native gene-name field. |
+| root40-sources-protein-Q39909 | https://rest.uniprot.org/uniprotkb/Q39909.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The native unreviewed entry identifies luciferin-binding protein from taxon160621, with no native genes field. Shared domain annotations do not establish an exact whole-protein family. |
+| root40-sources-protein-Q39910 | https://rest.uniprot.org/uniprotkb/Q39910.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The native unreviewed entry identifies luciferin-binding protein from taxon160621, with no native genes field. Shared domain annotations do not establish an exact whole-protein family. |
+| root40-sources-protein-Q39911 | https://rest.uniprot.org/uniprotkb/Q39911.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The native unreviewed entry identifies luciferin-binding protein from taxon160621, with no native genes field. Shared domain annotations do not establish an exact whole-protein family. |
+| root40-sources-protein-Q39912 | https://rest.uniprot.org/uniprotkb/Q39912.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The request resolves to reviewed O77206 dinoflagellate luciferase, taxon160621, with Q39912 as a secondary accession and no native gene-name field. |
+| root40-sources-protein-Q39913 | https://rest.uniprot.org/uniprotkb/Q39913.json; Native primary/secondary accession, entryType, proteinDescription, genes, organism, complete comments and crossreferences; sequence and bibliography not independently reanalyzed. | supports | The native unreviewed entry identifies luciferin-binding protein from taxon160621, with no native genes field. Shared domain annotations do not establish an exact whole-protein family. |
+| root40-sources-IPR031846 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031846/; Complete native entry type/name, description, member databases and source citations | supports | IPR031846 is the voltage-gated hydrogen-channel1 family; it is a whole-protein family identity. |
+| root40-sources-IPR007959 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007959/; Complete native entry type/name, description, member databases and source citations | supports | Native IPR007959 is the shared N-terminal luciferase/luciferin-binding-protein domain, not an exact whole-LBP family. |
+| root40-sources-IPR018804 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018804/; Complete native entry type/name, description, member databases and source citations | supports | Native IPR018804 is the dinoflagellate luciferase catalytic barrel domain, not a whole-protein family. |
+| root40-sources-IPR018475 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018475/; Complete native entry type/name, description, member databases and source citations | supports | Native IPR018475 is the dinoflagellate luciferase helical-bundle domain, not a whole-protein family. |
+| root40-sources-lbp-ena-L06908 | https://www.ebi.ac.uk/ena/browser/api/embl/L06908; Complete ENA flatfile identity, reference and feature table; sequence not independently analyzed | supports | The linked genomic sequence L06908 identifies luciferin-binding protein CDS166..2172, proteinAAA29166.1, UniProtQ39913 and taxon160621, strainGP70. The complete feature table has no /gene qualifier; it therefore supports protein/accession identity but not an asserted native gene-symbol annotation. |
+| root40-sources-rodriguez2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pone.0171594&amp;format=json&amp;resultType=core; Complete native bibliographic identity and primary abstract | supports | Unique MED28178296/PMC5298346/DOI10.1371/journal.pone.0171594 identifies the primary LpHV1 study. |
+| root40-sources-schultz2005-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.0409335102&amp;format=json&amp;resultType=core; Complete native bibliographic identity and primary abstract | supports | Unique MED15665092/PMC547824/DOI10.1073/pnas.0409335102 identifies Schultz2005. Complete abstract describes the third luciferase domain D3 crystal at pH8 and a molecular-dynamics mechanism proposal, not the whole native enzyme at acidic pH. |
+| root40-sources-fogel1972-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.69.3.690&amp;format=json&amp;resultType=core; Complete native bibliographic identity and primary abstract | supports | Unique MED4501583/PMC426536/DOI10.1073/pnas.69.3.690 identifies Fogel/Hastings1972. Complete abstract describes isolated Gonyaulax scintillon flashes on pH8→5.7 and restored flash capacity following luciferin incubation; membrane-bound organization is presented as a model. |
+| root40-sources-rodriguez2017-jats-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5298346/fullTextXML; Genuine JATS: complete Introduction sec001, Results sec002 with subsections003–011 and captions, Discussion sec012 with013–015, Methods sec016 with017–026, and CC-BY4.0 licence. No supplementary tables, raw MS, raw electrophysiology or other figure pixels reanalyzed. | supports | Primary CCMP1932 scintillon preparations show LBP/LCF/LpHV1 localization by Western blotting, immunostaining and peptide detection. Heterologous HEK293 expression establishes gating/selectivity; the native influx/action-potential link is a supported proposal with gradients and membrane context differing from the expression system. Zinc inhibits expressed-channel current and isolated scintillon flashes. Known chloroplast contamination and nonexclusive cellular localization are acknowledged. Introduction summarizes pH-dependent LBP release and oxygen-dependent luciferase activity from earlier work. |
+| root40-sources-rodriguez2017-fig7 | https://journals.plos.org/plosone/article/figure/image?size=large&amp;id=10.1371/journal.pone.0171594.g007; Complete1584x1157 native publisher PNG, panelsA/B/C, scale-bar/legend interpreted with JATS caption; CC-BY4.0. No pixel quantification or image modification. | supports | Directly inspected figure7 pixels: panelA scintillon Western signal around30kDa; panelB specific LBP/LCF/LpHV1 blots with recombinant controls; panelC luciferin/LCF/LBP and luciferin/LCF/LpHV1 microscopy overlays with control quantification. This supports localization without identifying an exact gene symbol, proving purity or formation necessity. |
+| root40-sources-schultz2005-jats-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC547824/fullTextXML; Exact native response status and retained body; not readable article text | context_only | This exact native XML response is HTTP500 and contains no readable article body. The complete primary abstract is captured separately. |
+| root40-sources-schultz2005-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC547824/; Exact native response status and retained body; not readable article text | context_only | This exact legacy PMC response is HTTP200 browser-challenge HTML, not the article body. Its successful HTTP status is not treated as full-text access. |
+| root40-sources-schultz2005-epmc-pdf | https://europepmc.org/articles/PMC547824?pdf=render; Exact native response status and retained body; not readable article text | context_only | This exact EuropePMC PDF response is HTTP403 HTML, not a readable PDF. The complete primary abstract is captured separately. |
+| root40-sources-fogel1972-jats-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC426536/fullTextXML; Exact native response status and retained body; not readable article text | context_only | This exact native XML response is HTTP500 and contains no readable article body. The complete primary abstract is captured separately. |
+| root40-sources-fogel1972-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC426536/; Exact native response status and retained body; not readable article text | context_only | This exact legacy PMC response is HTTP200 browser-challenge HTML, not the article body. Its successful HTTP status is not treated as full-text access. |
+| root40-sources-fogel1972-epmc-pdf | https://europepmc.org/articles/PMC426536?pdf=render; Exact native response status and retained body; not readable article text | context_only | This exact EuropePMC PDF response is HTTP403 HTML, not a readable PDF. The complete primary abstract is captured separately. |
+| schema-result | just validate data/structures/membrane_organelle/scintillon.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/scintillon.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/scintillon.yaml --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/scintillon.yaml --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv |
+| native-scintillon-causal | /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/scintillon.yaml; Complete native graph protein-reference report | supports | <br>data/structures/membrane_organelle/scintillon.yaml  (GO:0036007)<br>  scintillon_flash	proton_channel	NO_GENE_SYMBOLS	-&gt;proton_channel (PROTEIN: Voltage-gated hydrogen channel 1)<br>  scintillon_flash	luciferin_binding_protein	COVERED	-&gt;luciferin_binding_protein (UniProtKB:Q39913)<br>  scintillon_flash	luciferase	COVERED	-&gt;luciferase (UniProtKB:O77206)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes<br> |
+| native-scintillon-protein-verify | /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/scintillon.yaml; Complete native protein accession/status/taxon verification report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok<br> |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/scintillon.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 13 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Taxon presence values are qualitative; no complete species census, universal molecular inventory or measured occurrence frequency is inferred.
+- Schultz2005 and Fogel1972 were read as complete native metadata and primary abstracts only. XML500, PMC browser challenges and PDF403 are retained. Schultz figure1 and the exact pH8.0/6.3 LBP sentence could not be independently inspected; no full-body, model-coordinate or figure claim is made.
+- Rodriguez2017 main text, Methods, captions and figure7 pixels were read. Other figure pixels, supplements, raw MS data and electrophysiology were not reanalyzed. Expression-system and native gradients differ; proposed native influx is not direct in situ gating measurement.
+- Current UniProt identity, genes, comments and crossreferences were read; sequences and full bibliographies were not reanalyzed. The absence finding is restricted to complete native fields and complete ENA feature table, not a claim that the symbol is absent from all literature.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User explicitly requests all uncovered reviews, including honest zero-finding observations.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T034129Z-scintillon-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scintillon scientific review
+started_at: '2026-10-22T03:25:20Z'
+finished_at: '2026-10-22T03:41:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Scintillon identity, constituents, taxon and bounded mechanistic model are
+  supported. One minor finding corrects the claimed source of the LBP gene-symbol
+  identity.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/scintillon.yaml
+    sha256: 8cfd68f89a4f0691f9a53b7f48522247fb02bb3a82fd83db033c64f19c5131df
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0036007
+  path: data/structures/membrane_organelle/scintillon.yaml
+  label: scintillon
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/scintillon.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire maintained target; native source identity, claim
+    scope, graph/component joins and evidence placement reviewed.
+  selection: Target 10 of batch40, next uncovered strict-path-order target at fresh
+    origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0036007
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just validate data/structures/membrane_organelle/scintillon.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just validate-strict data/structures/membrane_organelle/scintillon.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-scintillon-causal
+  name: Focused graph protein-reference check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/scintillon.yaml
+  exit_code: 0
+  summary: Native report verified; syntactic coverage does not establish biological
+    gene-symbol provenance.
+  evidence_ids:
+  - native-scintillon-causal
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0036007
+  summary: No expression-module regulatory claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - root40-sources-go
+  - root40-sources-tax160621
+  - root40-sources-tax2864
+  - root40-sources-scintillon-taxon-constraints
+  - root40-sources-chebi61702
+  - root40-sources-protein-O77206
+  - root40-sources-protein-Q39909
+  - root40-sources-protein-Q39910
+  - root40-sources-protein-Q39911
+  - root40-sources-protein-Q39912
+  - root40-sources-protein-Q39913
+  - root40-sources-IPR031846
+  - root40-sources-IPR007959
+  - root40-sources-IPR018804
+  - root40-sources-IPR018475
+  - root40-sources-lbp-ena-L06908
+  - root40-sources-rodriguez2017-meta
+  - root40-sources-schultz2005-meta
+  - root40-sources-fogel1972-meta
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+  - root40-sources-schultz2005-jats-xml
+  - root40-sources-schultz2005-legacy
+  - root40-sources-schultz2005-epmc-pdf
+  - root40-sources-fogel1972-jats-xml
+  - root40-sources-fogel1972-legacy
+  - root40-sources-fogel1972-epmc-pdf
+- check_id: native-scintillon-protein-verify
+  name: Native protein example verification
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/scintillon.yaml
+  exit_code: 0
+  summary: Native two-example verification passed; exact symbol attribution was separately
+    checked against the full source fields.
+  evidence_ids:
+  - native-scintillon-protein-verify
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  summary: 13 of 13 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036007
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/scintillon.yaml
+  locator: Entire maintained target, including all history, graph edges, evidence
+    and discussions
+  accessed_at: '2026-10-22T03:34:06Z'
+  support: context_only
+  summary: Every maintained field was read; historical events are not treated as independent
+    experimental evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component type, grounding, essentiality and graph/evidence contracts
+  accessed_at: '2026-10-22T03:34:06Z'
+  support: context_only
+  summary: Whole anatomical identity differs from chemical material; function and
+    localization do not establish necessity for structure formation.
+- evidence_id: root40-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0055038,GO:0010008,GO:0055037,GO:0034777,GO:0036007,GO:0110165,GO:0005737,GO:0008218
+  locator: Complete eight id/name/definition/obsolete/synonym fields and applicable
+    typed children; large generic cytoplasm/anatomy child lists not read exhaustively.
+  accessed_at: '2026-10-22T03:25:30.380686Z'
+  support: supports
+  summary: Eight active native entries support exact recycling membrane/lumen/whole
+    identities, endosome-membrane parentage, scintillon definition, bioluminescence
+    and generic anatomy. Typed0055037 children include membrane0055038 and lumen0034777
+    part_of;0010008 has0055038 is_a.
+  snapshot_sha256: 28aadf5adf9f417e6728df757ba86e0e67db2fe8f5908323fcac875a983deb53
+- evidence_id: root40-sources-tax160621
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/160621
+  locator: Complete taxonomy response including authority, synonyms and merged IDs
+  accessed_at: '2026-10-22T03:25:31.113331Z'
+  support: supports
+  summary: ENA160621 identifies Lingulaulax polyedra and preserves Lingulodinium polyedrum
+    and Gonyaulax polyedra synonyms. The current name and historical experimental
+    labels refer to the same taxon.
+  snapshot_sha256: 60c00bb007015ed770dc7a1721f639a4f13a5ae39315c583d1a75b6213d20de3
+- evidence_id: root40-sources-tax2864
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T03:25:31.047001Z'
+  support: supports
+  summary: ENA2864 identifies Dinophyceae at class rank.
+  snapshot_sha256: da7d6dfa6d6784e4eb22bc3f3e05878f3aae5a281a4996ee25a2012d580f27d4
+- evidence_id: root40-sources-scintillon-taxon-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036007/constraints
+  locator: Complete applicable only_in_taxon row; unrelated blacklist list not read
+    exhaustively
+  accessed_at: '2026-10-22T03:25:30.381163Z'
+  support: supports
+  summary: The native constraint row for GO0036007 states only_in_taxon NCBITaxon2864.
+    This is an allowed-taxonomic-scope constraint rather than evidence that every
+    member possesses scintillons.
+  snapshot_sha256: 83848a9c8a65e4c670d64380343ff3bba73aeeb974a3a191e41648e605520925
+- evidence_id: root40-sources-chebi61702
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/61702/
+  locator: Complete native response including identity, chemistry and relations
+  accessed_at: '2026-10-22T03:25:30.381533Z'
+  support: supports
+  summary: Released three-star CHEBI61702 is neutral dinoflagellate luciferin, formulaC33H40N4O6
+    charge0, with luciferin role and conjugate-base61796 relation. The maintained
+    record explicitly leaves in situ protonation unspecified.
+  snapshot_sha256: 4f00bb13cdcaf7bce2b52cc95bad27e190092be9cc68a8879560f4cd0a702d19
+- evidence_id: root40-sources-protein-O77206
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O77206.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.143754Z'
+  support: supports
+  summary: The request resolves to reviewed O77206 dinoflagellate luciferase, taxon160621,
+    with Q39912 as a secondary accession and no native gene-name field.
+  snapshot_sha256: 0979f8fae3f2cd53cc4dcc99a877170ae9ff141ab5c5d21e00ee2dbc5a09ecde
+- evidence_id: root40-sources-protein-Q39909
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39909.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.405041Z'
+  support: supports
+  summary: The native unreviewed entry identifies luciferin-binding protein from taxon160621,
+    with no native genes field. Shared domain annotations do not establish an exact
+    whole-protein family.
+  snapshot_sha256: 5df15468ec1abbf7902c0c3b762474182280d2c42f6921743fac5b5bcb73e828
+- evidence_id: root40-sources-protein-Q39910
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39910.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.642760Z'
+  support: supports
+  summary: The native unreviewed entry identifies luciferin-binding protein from taxon160621,
+    with no native genes field. Shared domain annotations do not establish an exact
+    whole-protein family.
+  snapshot_sha256: a9bfdd09befa6c56315921d5ced39e5438ccde4a6b5f2b4af062ae773e4f2464
+- evidence_id: root40-sources-protein-Q39911
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39911.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.720868Z'
+  support: supports
+  summary: The native unreviewed entry identifies luciferin-binding protein from taxon160621,
+    with no native genes field. Shared domain annotations do not establish an exact
+    whole-protein family.
+  snapshot_sha256: b37aeef14196337aedb6686bb1c2b7faa428ce81dd1ffa3e4a4d1fbc4a3b011e
+- evidence_id: root40-sources-protein-Q39912
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39912.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.721757Z'
+  support: supports
+  summary: The request resolves to reviewed O77206 dinoflagellate luciferase, taxon160621,
+    with Q39912 as a secondary accession and no native gene-name field.
+  snapshot_sha256: 0979f8fae3f2cd53cc4dcc99a877170ae9ff141ab5c5d21e00ee2dbc5a09ecde
+- evidence_id: root40-sources-protein-Q39913
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39913.json
+  locator: Native primary/secondary accession, entryType, proteinDescription, genes,
+    organism, complete comments and crossreferences; sequence and bibliography not
+    independently reanalyzed.
+  accessed_at: '2026-10-22T03:25:31.858771Z'
+  support: supports
+  summary: The native unreviewed entry identifies luciferin-binding protein from taxon160621,
+    with no native genes field. Shared domain annotations do not establish an exact
+    whole-protein family.
+  snapshot_sha256: 3cd3afa173de142a9f8d4e163999a831974636cdff8b6f475fb0873926aaeb8f
+- evidence_id: root40-sources-IPR031846
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031846/
+  locator: Complete native entry type/name, description, member databases and source
+    citations
+  accessed_at: '2026-10-22T03:25:32.021804Z'
+  support: supports
+  summary: IPR031846 is the voltage-gated hydrogen-channel1 family; it is a whole-protein
+    family identity.
+  snapshot_sha256: afd509795c99f2de98797f53aae15f06dff662a33d4a3a79e5842952df4de828
+- evidence_id: root40-sources-IPR007959
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007959/
+  locator: Complete native entry type/name, description, member databases and source
+    citations
+  accessed_at: '2026-10-22T03:25:32.254126Z'
+  support: supports
+  summary: Native IPR007959 is the shared N-terminal luciferase/luciferin-binding-protein
+    domain, not an exact whole-LBP family.
+  snapshot_sha256: 53d3ff5002ab5f451c981875235cc23eb4770c9014a51b02d8d0cae6d89027b8
+- evidence_id: root40-sources-IPR018804
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018804/
+  locator: Complete native entry type/name, description, member databases and source
+    citations
+  accessed_at: '2026-10-22T03:25:32.308985Z'
+  support: supports
+  summary: Native IPR018804 is the dinoflagellate luciferase catalytic barrel domain,
+    not a whole-protein family.
+  snapshot_sha256: 3570c64d685eeb9d55ae7cd0b6671937ad6fff9504c7633e9a728221aa6d43e3
+- evidence_id: root40-sources-IPR018475
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018475/
+  locator: Complete native entry type/name, description, member databases and source
+    citations
+  accessed_at: '2026-10-22T03:25:32.662758Z'
+  support: supports
+  summary: Native IPR018475 is the dinoflagellate luciferase helical-bundle domain,
+    not a whole-protein family.
+  snapshot_sha256: 0b1567d8e08a0c91f4711c7d558ec75259799061c39b64446744869e7984a543
+- evidence_id: root40-sources-lbp-ena-L06908
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/L06908
+  locator: Complete ENA flatfile identity, reference and feature table; sequence not
+    independently analyzed
+  accessed_at: '2026-10-22T03:26:02.896448Z'
+  support: supports
+  summary: The linked genomic sequence L06908 identifies luciferin-binding protein
+    CDS166..2172, proteinAAA29166.1, UniProtQ39913 and taxon160621, strainGP70. The
+    complete feature table has no /gene qualifier; it therefore supports protein/accession
+    identity but not an asserted native gene-symbol annotation.
+  snapshot_sha256: e9d3cdb589742f52aa6a6174e40423b87f30528d0757d105a8bebcbf8385091b
+- evidence_id: root40-sources-rodriguez2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pone.0171594&format=json&resultType=core
+  locator: Complete native bibliographic identity and primary abstract
+  accessed_at: '2026-10-22T03:25:32.902188Z'
+  support: supports
+  summary: Unique MED28178296/PMC5298346/DOI10.1371/journal.pone.0171594 identifies
+    the primary LpHV1 study.
+  snapshot_sha256: 2038b0ba6d8ecde3c2205b5c86c55686557fc15fe2dfe365122b3c0a9446da02
+- evidence_id: root40-sources-schultz2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.0409335102&format=json&resultType=core
+  locator: Complete native bibliographic identity and primary abstract
+  accessed_at: '2026-10-22T03:25:32.914895Z'
+  support: supports
+  summary: Unique MED15665092/PMC547824/DOI10.1073/pnas.0409335102 identifies Schultz2005.
+    Complete abstract describes the third luciferase domain D3 crystal at pH8 and
+    a molecular-dynamics mechanism proposal, not the whole native enzyme at acidic
+    pH.
+  snapshot_sha256: 899a7161a0238d34cd24ada228dd95b0cd0f09b7cd8dd36f466e81c346b26396
+- evidence_id: root40-sources-fogel1972-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.69.3.690&format=json&resultType=core
+  locator: Complete native bibliographic identity and primary abstract
+  accessed_at: '2026-10-22T03:25:32.923910Z'
+  support: supports
+  summary: Unique MED4501583/PMC426536/DOI10.1073/pnas.69.3.690 identifies Fogel/Hastings1972.
+    Complete abstract describes isolated Gonyaulax scintillon flashes on pH8→5.7 and
+    restored flash capacity following luciferin incubation; membrane-bound organization
+    is presented as a model.
+  snapshot_sha256: fdf3e9a5ccc8c8beb15f883dd2a7df27f8894c2893079943ee1d4ae22c4982f3
+- evidence_id: root40-sources-rodriguez2017-jats-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5298346/fullTextXML
+  locator: 'Genuine JATS: complete Introduction sec001, Results sec002 with subsections003–011
+    and captions, Discussion sec012 with013–015, Methods sec016 with017–026, and CC-BY4.0
+    licence. No supplementary tables, raw MS, raw electrophysiology or other figure
+    pixels reanalyzed.'
+  accessed_at: '2026-10-22T03:26:02.895752Z'
+  support: supports
+  summary: Primary CCMP1932 scintillon preparations show LBP/LCF/LpHV1 localization
+    by Western blotting, immunostaining and peptide detection. Heterologous HEK293
+    expression establishes gating/selectivity; the native influx/action-potential
+    link is a supported proposal with gradients and membrane context differing from
+    the expression system. Zinc inhibits expressed-channel current and isolated scintillon
+    flashes. Known chloroplast contamination and nonexclusive cellular localization
+    are acknowledged. Introduction summarizes pH-dependent LBP release and oxygen-dependent
+    luciferase activity from earlier work.
+  snapshot_sha256: 85bb9467b96c5c85ca632d6d006a8f20c42165f3c0fd23efe68ba3231797ee09
+- evidence_id: root40-sources-rodriguez2017-fig7
+  kind: primary_source
+  reference: https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0171594.g007
+  locator: Complete1584x1157 native publisher PNG, panelsA/B/C, scale-bar/legend interpreted
+    with JATS caption; CC-BY4.0. No pixel quantification or image modification.
+  accessed_at: '2026-10-22T03:29:41.323200Z'
+  support: supports
+  summary: 'Directly inspected figure7 pixels: panelA scintillon Western signal around30kDa;
+    panelB specific LBP/LCF/LpHV1 blots with recombinant controls; panelC luciferin/LCF/LBP
+    and luciferin/LCF/LpHV1 microscopy overlays with control quantification. This
+    supports localization without identifying an exact gene symbol, proving purity
+    or formation necessity.'
+  snapshot_sha256: 67494348c11465856405554d4bf5effe6c3469d4a086b211af60c53f2bef366e
+- evidence_id: root40-sources-schultz2005-jats-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC547824/fullTextXML
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:26:02.896213Z'
+  support: context_only
+  summary: This exact native XML response is HTTP500 and contains no readable article
+    body. The complete primary abstract is captured separately.
+  snapshot_sha256: 4433f9a975c318ffb713267c31f00f14de01d06bb624e593c425c2904313fa79
+- evidence_id: root40-sources-schultz2005-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC547824/
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:29:41.322665Z'
+  support: context_only
+  summary: This exact legacy PMC response is HTTP200 browser-challenge HTML, not the
+    article body. Its successful HTTP status is not treated as full-text access.
+  snapshot_sha256: 96880c64787fd26b63c626dfb1c58ab1a1838342b1e9a93f0ff27c99984f53c4
+- evidence_id: root40-sources-schultz2005-epmc-pdf
+  kind: primary_source
+  reference: https://europepmc.org/articles/PMC547824?pdf=render
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:32:14.522237Z'
+  support: context_only
+  summary: This exact EuropePMC PDF response is HTTP403 HTML, not a readable PDF.
+    The complete primary abstract is captured separately.
+  snapshot_sha256: c05fe8b2d66094374ef0579fa386f2c81fc4984a1d05392c882ba0a6410e05ed
+- evidence_id: root40-sources-fogel1972-jats-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC426536/fullTextXML
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:26:02.896316Z'
+  support: context_only
+  summary: This exact native XML response is HTTP500 and contains no readable article
+    body. The complete primary abstract is captured separately.
+  snapshot_sha256: 9152b06cc9985d7885b6f542a695198b44c9f215a621a1c72e1f714173f0a41c
+- evidence_id: root40-sources-fogel1972-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC426536/
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:29:41.323082Z'
+  support: context_only
+  summary: This exact legacy PMC response is HTTP200 browser-challenge HTML, not the
+    article body. Its successful HTTP status is not treated as full-text access.
+  snapshot_sha256: 530c37b333d91dfaaae271e4c2a663249fe520749c0ea678ddeaae0adcf40f36
+- evidence_id: root40-sources-fogel1972-epmc-pdf
+  kind: primary_source
+  reference: https://europepmc.org/articles/PMC426536?pdf=render
+  locator: Exact native response status and retained body; not readable article text
+  accessed_at: '2026-10-22T03:32:14.522540Z'
+  support: context_only
+  summary: This exact EuropePMC PDF response is HTTP403 HTML, not a readable PDF.
+    The complete primary abstract is captured separately.
+  snapshot_sha256: 901f09517e1d2e01faa0dab87e10fda556e87c0df562ddc338d1123f4c53219f
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/scintillon.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:22Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/scintillon.yaml'
+  snapshot_sha256: 4dec0d5f9f5ca6cb5a7aba14ad8b5234483262f930c62bcb0e5244536eb317f8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/scintillon.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:23Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/scintillon.yaml\
+    \ --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch40-20261022-pllys1sh/scintillon-strict.tsv"
+  snapshot_sha256: bfc287f7ac2bb5cdfe125b3a6c82221f44243f297b27204a58b373f282c2dd90
+- evidence_id: native-scintillon-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/scintillon.yaml
+  locator: Complete native graph protein-reference report
+  accessed_at: '2026-10-22T03:31:55.336559Z'
+  support: supports
+  summary: "\ndata/structures/membrane_organelle/scintillon.yaml  (GO:0036007)\n \
+    \ scintillon_flash\tproton_channel\tNO_GENE_SYMBOLS\t->proton_channel (PROTEIN:\
+    \ Voltage-gated hydrogen channel 1)\n  scintillon_flash\tluciferin_binding_protein\t\
+    COVERED\t->luciferin_binding_protein (UniProtKB:Q39913)\n  scintillon_flash\t\
+    luciferase\tCOVERED\t->luciferase (UniProtKB:O77206)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     2  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     1  NO_GENE_SYMBOLS    \
+    \       component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes\n"
+  snapshot_sha256: 38bed2b345aa56e1185a63289697b5b4faf7346643a3f5df87da39315a2eda7e
+- evidence_id: native-scintillon-protein-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/scintillon.yaml
+  locator: Complete native protein accession/status/taxon verification report
+  accessed_at: '2026-10-22T03:34:33.063125Z'
+  support: supports
+  summary: 'all UniProtKB protein_examples and causal_graphs xrefs verified ok
+
+    '
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/scintillon.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 13 of 13 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact scintillon and taxon boundary
+  outcome: supported
+  target_ids:
+  - GO:0036007
+  summary: GO defines the acidification-responsive oxygen-dependent cytoplasmic light
+    body. Primary anatomy supports a membrane-bounded scintillon; it is distinct from
+    the individual soluble proteins or the whole central vacuole. Native taxon identity
+    reconciles the current and experimental organism names.
+  evidence_ids:
+  - record
+  - root40-sources-go
+  - root40-sources-tax160621
+  - root40-sources-tax2864
+  - root40-sources-scintillon-taxon-constraints
+  - root40-sources-rodriguez2017-jats-xml
+- assessment_id: composition
+  area: grounding
+  topic: Four bounded constituents
+  outcome: supported
+  target_ids:
+  - GO:0036007
+  summary: Luciferase, LBP, luciferin and a proton channel are supported at the maintained
+    model-organism scope. Whole family IPR031846 and CHEBI61702 match their respective
+    objects. LCF/LBP label-only grounding correctly avoids substituting shared domains,
+    and Q39912 is correctly excluded as an LBP accession.
+  evidence_ids:
+  - record
+  - root40-sources-chebi61702
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+  - root40-sources-protein-O77206
+  - root40-sources-protein-Q39909
+  - root40-sources-protein-Q39910
+  - root40-sources-protein-Q39911
+  - root40-sources-protein-Q39912
+  - root40-sources-protein-Q39913
+  - root40-sources-IPR031846
+  - root40-sources-IPR007959
+  - root40-sources-IPR018804
+  - root40-sources-IPR018475
+- assessment_id: proteins
+  area: grounding
+  topic: Accession/taxon/status versus gene-symbol attribution
+  outcome: concern
+  target_ids:
+  - GO:0036007
+  summary: O77206 and Q39913 are valid reviewed/unreviewed protein examples with matching
+    taxon. However, the Q39913 evidence note says UniProt establishes gene identity
+    for lbp although its native genes field is absent; linked ENA likewise has no
+    gene qualifier. This narrow provenance problem does not invalidate the LBP accession
+    or independent localization evidence.
+  evidence_ids:
+  - record
+  - root40-sources-protein-Q39913
+  - root40-sources-lbp-ena-L06908
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+- assessment_id: formation
+  area: evidence
+  topic: Function is not formation necessity
+  outcome: unknown
+  target_ids:
+  - GO:0036007
+  summary: All four UNKNOWN labels are appropriate. Localization, biochemical catalytic
+    activity, channel inhibition and a hypothetical acidification mechanism do not
+    test whether each molecule is necessary to form the structure.
+  evidence_ids:
+  - record
+  - schema
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-meta
+  - root40-sources-schultz2005-meta
+  - root40-sources-fogel1972-meta
+- assessment_id: graph
+  area: graph
+  topic: Eight-edge bounded mechanistic model
+  outcome: unknown
+  target_ids:
+  - GO:0036007
+  summary: The graph correctly separates heterologous depolarization gating from proposed
+    native proton influx, and retains acidification, LBP release, luciferase activity
+    and substrate-to-flash roles. Its scope notes exclude upstream mechanosensing
+    and tonoplast propagation. Exact LBP pH8.0-versus6.3 wording and Schultz figure1
+    could not be independently checked from the unavailable body; broad pH regulation
+    is supported by Rodriguez Introduction and the Schultz abstract.
+  evidence_ids:
+  - record
+  - root40-sources-go
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-meta
+  - root40-sources-schultz2005-meta
+  - root40-sources-fogel1972-meta
+- assessment_id: example
+  area: scope
+  topic: Studied bioluminescent dinoflagellate
+  outcome: supported
+  target_ids:
+  - GO:0036007
+  summary: Rodriguez Methods identify CCMP1932 and distinguish native scintillon isolation
+    from HEK293 electrophysiology. The maintained example claims localization and
+    flash assays, not an unperformed native patch-clamp experiment or a universal
+    dinoflagellate phenotype.
+  evidence_ids:
+  - record
+  - root40-sources-tax160621
+  - root40-sources-tax2864
+  - root40-sources-scintillon-taxon-constraints
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+- assessment_id: function
+  area: evidence
+  topic: Acidification and luciferin recharge
+  outcome: supported
+  target_ids:
+  - GO:0036007
+  summary: Fogel complete abstract directly supports the isolated-particle acidification
+    and restored-flash note. Oxygen-dependent catalysis is also described in Rodriguez
+    Introduction and Schultz abstract.
+  evidence_ids:
+  - record
+  - root40-sources-go
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-meta
+  - root40-sources-schultz2005-meta
+  - root40-sources-fogel1972-meta
+- assessment_id: coverage
+  area: completeness
+  topic: Full record with declared source limits
+  outcome: supported
+  target_ids:
+  - GO:0036007
+  summary: All maintained fields, three-protein graph joins, history and discussions
+    were read. Optional exact Hv1 accession enrichment is not treated as a missing
+    mandatory inventory. Historical domain/protonation repairs remain sound.
+  evidence_ids:
+  - record
+  - schema
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+  - root40-sources-protein-O77206
+  - root40-sources-protein-Q39909
+  - root40-sources-protein-Q39910
+  - root40-sources-protein-Q39911
+  - root40-sources-protein-Q39912
+  - root40-sources-protein-Q39913
+  - root40-sources-IPR031846
+  - root40-sources-IPR007959
+  - root40-sources-IPR018804
+  - root40-sources-IPR018475
+findings:
+- finding_id: F1
+  issue_key: scintillon-lbp-symbol-source-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate verified LBP accession identity from unsupported native gene-symbol
+    attribution
+  description: The Q39913 evidence note attributes gene lbp identity to UniProt while
+    the same example acknowledges that UniProt supplies no gene symbol. Current native
+    UniProt and linked ENA L06908 verify protein, taxon and accession, but neither
+    carries a gene-name annotation. Retain the correct LBP example and source-backed
+    scintillon membership; cite an independently verified source for the exact symbol
+    or explicitly treat lbp as a curator label rather than a UniProt assertion.
+  target_ids:
+  - GO:0036007
+  field_paths:
+  - components[1].protein_examples[0].evidence[0].notes
+  - components[1].protein_examples[0].gene_symbol
+  - components[1].gene_symbols
+  evidence_ids:
+  - record
+  - root40-sources-protein-Q39913
+  - root40-sources-lbp-ena-L06908
+  - root40-sources-rodriguez2017-jats-xml
+  - root40-sources-rodriguez2017-fig7
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/scintillon.yaml
+    role: maintained scientific record
+  rule_id: Evidence attribution must match the exact source content
+  native_severity: minor
+  normalization_reason: The exact protein identity and localization remain supported;
+    the correction concerns narrow gene-symbol provenance rather than a changed constituent
+    identity.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0036007
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/scintillon.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, correct the source attribution for
+    lbp, verify an independent symbol source if retaining it as a native gene assertion,
+    and preserve Q39913/taxon/status plus the experimental localization evidence.
+  acceptance_checks:
+  - The note no longer claims UniProt supplies a gene annotation absent from its record.
+  - Any retained exact gene-symbol assertion has an inspected source; accession and
+    structural membership are kept distinct.
+  - Native schema, strict, protein/graph and history gates pass.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Taxon presence values are qualitative; no complete species census, universal molecular
+  inventory or measured occurrence frequency is inferred.
+- Schultz2005 and Fogel1972 were read as complete native metadata and primary abstracts
+  only. XML500, PMC browser challenges and PDF403 are retained. Schultz figure1 and
+  the exact pH8.0/6.3 LBP sentence could not be independently inspected; no full-body,
+  model-coordinate or figure claim is made.
+- Rodriguez2017 main text, Methods, captions and figure7 pixels were read. Other figure
+  pixels, supplements, raw MS data and electrophysiology were not reanalyzed. Expression-system
+  and native gradients differ; proposed native influx is not direct in situ gating
+  measurement.
+- Current UniProt identity, genes, comments and crossreferences were read; sequences
+  and full bibliographies were not reanalyzed. The absence finding is restricted to
+  complete native fields and complete ENA feature table, not a claim that the symbol
+  is absent from all literature.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User explicitly requests all uncovered reviews, including honest zero-finding observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
