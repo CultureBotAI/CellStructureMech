@@ -1,0 +1,987 @@
+# Source-grounded review of Mic60-Mic19 complex
+
+- Review: 20261022T084806Z-mic60-mic19-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T08:17:19Z
+- Finished UTC: 2026-10-22T08:48:06Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Qualified pass: the Mic60-Mic19 subcomplex, direct biochemical relationships and contextual Figure4 are supported. Mic19 family boundary and native in situ architecture remain explicitly unresolved.
+
+## Scope And Provenance
+
+Exactly one complete target, with source tiers and experimental limits stated separately.
+
+Selection: One complete record in strict-path batch60 of the explicit all-unreviewed-record goal.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:mic60_mic19_complex | data/structures/other/mic60_mic19_complex.yaml | maintained | Mic60-Mic19 complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:mic60_mic19_complex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:mic60_mic19_complex | Focused validator passed. |
+| Native focused causal-graphs | passed | True | cellstructuremech:mic60_mic19_complex | Focused native check passed; scientific claims assessed separately. |
+| Native focused verify | passed | True | cellstructuremech:mic60_mic19_complex | Focused native check passed; scientific claims assessed separately. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:mic60_mic19_complex | No expression-module claim is assessed; native authorities and primary structure experiments address the target. |
+| Claim-level scientific review | passed | True | cellstructuremech:mic60_mic19_complex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:mic60_mic19_complex | 11 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095: Global analysis of protein localization in budding yeast. (2003); DOI10.1038/nature02026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:19528297: UNREACHABLE; Native Europe PMC uniquely identifies MED19528297: Formation of cristae and crista junctions in mitochondria depends on antagonism between Fcj1 and Su e/g. (2009); DOI10.1083/jcb.200811099. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. This is identifier transport verification; full-body scientific reading is separately scoped.; cellstructuremech:mic60_mic19_complex: SKIPPED; Exact local identifier uniquely resolves to this maintained target in the complete data/structures YAML traversal, including ignored files. This verifies local reference identity, not external ontology resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:mic60_mic19_complex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:mic60_mic19_complex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:mic60_mic19_complex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:mic60_mic19_complex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:mic60_mic19_complex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Two-protein MICOS module
+
+identity: supported. Targets: cellstructuremech:mic60_mic19_complex.
+
+Definition, broader is-a parent and MICOS parthood distinguish the subcomplex from full MICOS/MIB and bacterial expression hosts.
+
+### Verified Mic60 family and bounded Mic19 label
+
+grounding: supported. Targets: cellstructuremech:mic60_mic19_complex.
+
+The Mic60 family and paired S288C identities are exact. DUF1690 membership does not establish a universal Mic19 family boundary; its explicit reviewed-label-only treatment is justified. No guessed CHCH domain mapping is required.
+
+### Direct purified binding with explicit model-membrane scope
+
+graph: supported. Targets: cellstructuremech:mic60_mic19_complex.
+
+Each biochemical edge is supported by ITC/deletions, liposome cosedimentation, oligomer assays and TEM within the declared constructs. Fungal domain structures, engineered fusions and yeast substitutions are not equated with a resolved complete native complex or demonstrated diffusion barrier.
+
+### Correct contextual Figure4 and license
+
+evidence: supported. Targets: cellstructuremech:mic60_mic19_complex.
+
+The maintained image depicts perturbation of mitochondrial architecture, not an isolated Mic60-Mic19 complex. Panel methods, scale and yeast background agree with caption and inspected source.
+
+### Species examples and experimental constructs
+
+scope: unknown. Targets: cellstructuremech:mic60_mic19_complex.
+
+The species-level canonical example is S. cerevisiae. W303 and YPH499 experimental backgrounds, S288C reference proteins and purified thermophilic-fungal constructs remain distinct where applicable. The cited work supplies qualitative biological context, not a strain-frequency survey.
+
+### Complete maintained target with source limits
+
+completeness: supported. Targets: cellstructuremech:mic60_mic19_complex.
+
+Every target field, discussion, graph edge, example and history entry was inspected. Optional empty fields and unresolved native architecture alone do not generate findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/mic60_mic19_complex.yaml; Entire maintained YAML, history and discussions | context_only | The entire target was read after native inspection. This maintained YAML owns any scientific correction. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and graph scope | context_only | COMMON means majority occurrence with possible exceptions, not simply detection in one experiment. Physical formation necessity differs from activity and viability; omitted optional fields alone are not defects. |
+| curation | docs/CURATION.md; Exact component identity and evidence placement | context_only | Source-established constituent classes can be represented without guessed accessions. Exact families and taxon-paired protein exemplars remain distinct from assembly evidence. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor, direction and source scope | context_only | Genetic dependence, co-isolation, purified binary binding and mechanistic proposals are distinct evidence tiers. A declared nonmechanistic graph need not encode all molecular intermediates. |
+| root60-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005743,GO:0007007,GO:0042407,GO:0044284,GO:0061617,GO:0098800; All six exact identities, definitions, synonyms, aspects and typed children | supports | Six active GO term identities distinguish the whole MICOS complex, broader inner-membrane protein complexes, the inner membrane, crista junction, crista formation and inner-membrane organization. The two local modules are parts of MICOS, not exact identities of its GO term. |
+| root60-sources-GO0061617-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061617/ancestors?relations=is_a; Complete exact response | supports | MICOS has the broader inner mitochondrial membrane protein-complex ancestor; ancestry is kept distinct from physical parthood. |
+| root60-sources-GO0098800-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0098800/ancestors?relations=is_a; Complete exact response including typed immediate children | supports | The parent response explicitly includes MICOS as an is_a child. |
+| root60-sources-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxonomy response | supports | Native taxonomy identifies Saccharomyces cerevisiae, taxon4932, rank species. |
+| root60-sources-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete taxonomy response | supports | Native taxonomy identifies Saccharomyces cerevisiae S288C, taxon559292, rank strain. |
+| root60-sources-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED14562095: Global analysis of protein localization in budding yeast. (2003); DOI10.1038/nature02026. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-pmid-19528297 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19528297+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED19528297: Formation of cristae and crista junctions in mitochondria depends on antagonism between Fcj1 and Su e/g. (2009); DOI10.1083/jcb.200811099. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-pmid-21944719 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21944719+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-pmid-21987634 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21987634+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-doi-10.1038_ncomms15258 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fncomms15258%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique DOI-to-MED identity and complete abstractText | supports | Unique DOI identifies MED28561061: Regulated membrane remodeling by Mic60 controls formation of mitochondrial crista junctions. (2017). Full native abstract/bibliography read; no unlisted primary-body access implied. |
+| root60-sources-doi-10.1126_sciadv.abo4946 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fsciadv.abo4946%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique DOI-to-MED identity and complete abstractText | supports | Unique DOI identifies MED36044574: Structural insights into crista junction formation by the Mic60-Mic19 complex. (2022). Full native abstract/bibliography read; no unlisted primary-body access implied. |
+| root60-sources-protein-P36112 | https://rest.uniprot.org/uniprotkb/P36112.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed P36112 identifies MIC60 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC60 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC60%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC60 query in taxon559292 returns only P36112. |
+| root60-sources-protein-P43594 | https://rest.uniprot.org/uniprotkb/P43594.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed P43594 identifies MIC19 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC19 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC19%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC19 query in taxon559292 returns only P43594. |
+| root60-sources-ipr-IPR019133 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019133/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR019133: MICOS complex subunit MIC60, type family. The family identity agrees with the named constituent. |
+| root60-sources-ipr-IPR012471 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012471/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR012471: Protein of unknown function DUF1690, type family. DUF1690 remains an uncharacterized fungal family and does not independently establish an exact taxon-neutral Mic19 boundary. |
+| root60-sources-PMC5460017-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5460017/fullTextXML; Genuine JATS sec2-5 and sec7-16 fully read including embedded captions; Figure4 pixels separately viewed. Sec17 onward and supplementary tables/files not read. Full permissions read. | supports | Hessenberger2017 directly measures fungal Mic60-Mic19 binding, lipid recruitment and membrane remodeling with purified C. thermophilum constructs, then tests corresponding Mic60 variants in YPH499 yeast. Full Mic19 enhances tubulation and leakage; isolated CHCH effects differ. Model-membrane leakage is not a physiological mitochondrial claim. |
+| root60-sources-PMC9432830-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9432830/fullTextXML; Genuine JATS all four Results subsections, Discussion, Cloning and plasmids, S. cerevisiae strains and plasmids, Isolation of S. cerevisiae mitochondria; embedded Figures2-5 captions. Figure1 caption, other Methods, supplements and pixels not read. | supports | Bock-Bierbaum2022 resolves L. thermotolerans Mic60 coiled-coil and C. thermophilum engineered domain-fusion interfaces, with oligomerization/binding assays and YPH499 cellular mutants. Mic19 promotes higher assembly. The identity of junction-spanning tomographic densities and native universal4:4 counts remain unproven. |
+| root60-sources-hessenberger2017-fig4 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5460017.1/ncomms15258-f4.jpg; Entire panels a-i visually inspected; SHA2564a86dfab5f2d4d49925989b9566c18ffac1d087292f5ece4cd0dedcf9cf36954 and MD5f8147014f6181e8845a5993737ef0bbf. Direct source bytes, not fresh package metadata. | supports | All Figure4 pixels agree with the maintained contextual caption: affinity purification, growth, cryosection TEM, junction counts and respiratory activity. Direct JPEG matches maintained SHA256/MD5; native JATS permissions establish CC BY4.0. |
+| image | data/images/other/mic60_mic19_complex/pmc5460017_f4.jpg; Entire tracked image and captured inspection hash | context_only | Unmodified contextual multipanel Figure4 visually inspected and source bytes matched. |
+| schema-result | just validate data/structures/other/mic60_mic19_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/mic60_mic19_complex.yaml |
+| strict-result | just validate-strict data/structures/other/mic60_mic19_complex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/mic60_mic19_complex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml --causal-graphs; Complete focused native report | supports | data/structures/other/mic60_mic19_complex.yaml  (cellstructuremech:mic60_mic19_complex)<br>  mic60_mic19_membrane_remodeling	mic60	COVERED	-&gt;mic60 (UniProtKB:P36112)<br>  mic60_mic19_membrane_remodeling	mic19	COVERED	-&gt;mic19 (UniProtKB:P43594)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml --verify; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/mic60_mic19_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE; Native Europe PMC uniquely identifies MED14562095: Global analysis of protein localization in budding yeast. (2003); DOI10.1038/nature02026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:19528297: UNREACHABLE; Native Europe PMC uniquely identifies MED19528297: Formation of cristae and crista junctions in mitochondria depends on antagonism between Fcj1 and Su e/g. (2009); DOI10.1083/jcb.200811099. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. This is identifier transport verification; full-body scientific reading is separately scoped.; cellstructuremech:mic60_mic19_complex: SKIPPED; Exact local identifier uniquely resolves to this maintained target in the complete data/structures YAML traversal, including ignored files. This verifies local reference identity, not external ontology resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated with every manifested input hash verified.
+- Only listed primary sections and Figure4 pixels were read; no supplement, remaining Methods, raw structural data or density map was reanalysed.
+- Localization PMID sources were read at native bibliography/abstract tier; annotation attribution is distinct from direct inspection of every source experiment.
+- The proposed native strut/barrier, universal4:4 stoichiometry, and exact taxon-neutral Mic19 family remain unresolved. COMMON retains majority occurrence with exceptions; no strain-frequency census is inferred.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- Explicit all-record goal authorizes issue-bearing and qualified clean observations.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T084806Z-mic60-mic19-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of Mic60-Mic19 complex
+started_at: '2026-10-22T08:17:19Z'
+finished_at: '2026-10-22T08:48:06Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Qualified pass: the Mic60-Mic19 subcomplex, direct biochemical relationships
+  and contextual Figure4 are supported. Mic19 family boundary and native in situ architecture
+  remain explicitly unresolved.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/other/mic60_mic19_complex/pmc5460017_f4.jpg
+    sha256: 4a86dfab5f2d4d49925989b9566c18ffac1d087292f5ece4cd0dedcf9cf36954
+    role: context
+  - path: data/structures/other/mic60_mic19_complex.yaml
+    sha256: f69ade5a57e4946d6bb529c33ab623059348fd9a4c43609cea0b33b50d591cb7
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:mic60_mic19_complex
+  path: data/structures/other/mic60_mic19_complex.yaml
+  label: Mic60-Mic19 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mic60_mic19_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target, with source tiers and experimental limits
+    stated separately.
+  selection: One complete record in strict-path batch60 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:mic60_mic19_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just validate data/structures/other/mic60_mic19_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just validate-strict data/structures/other/mic60_mic19_complex.yaml --out
+    /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: No expression-module claim is assessed; native authorities and primary
+    structure experiments address the target.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-tax-4932
+  - root60-sources-tax-559292
+  - root60-sources-pmid-14562095
+  - root60-sources-pmid-19528297
+  - root60-sources-pmid-21944719
+  - root60-sources-pmid-21987634
+  - root60-sources-doi-10.1038_ncomms15258
+  - root60-sources-doi-10.1126_sciadv.abo4946
+  - root60-sources-protein-P36112
+  - root60-sources-gene-MIC60
+  - root60-sources-protein-P43594
+  - root60-sources-gene-MIC19
+  - root60-sources-ipr-IPR019133
+  - root60-sources-ipr-IPR012471
+  - root60-sources-PMC5460017-xml
+  - root60-sources-PMC9432830-xml
+  - root60-sources-hessenberger2017-fig4
+  - image
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: '11 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED14562095: Global analysis of protein
+    localization in budding yeast. (2003); DOI10.1038/nature02026. This is identifier
+    transport verification; full-body scientific reading is separately scoped.; PMID:19528297:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED19528297: Formation of cristae
+    and crista junctions in mitochondria depends on antagonism between Fcj1 and Su
+    e/g. (2009); DOI10.1083/jcb.200811099. This is identifier transport verification;
+    full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial
+    membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634:
+    A mitochondrial-focused genetic interaction map reveals a scaffold-like complex
+    required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; cellstructuremech:mic60_mic19_complex: SKIPPED; Exact local identifier
+    uniquely resolves to this maintained target in the complete data/structures YAML
+    traversal, including ignored files. This verifies local reference identity, not
+    external ontology resolution. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root60-sources-pmid-14562095
+  - root60-sources-pmid-19528297
+  - root60-sources-pmid-21944719
+  - root60-sources-pmid-21987634
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mic60_mic19_complex.yaml
+  locator: Entire maintained YAML, history and discussions
+  accessed_at: '2026-10-22T08:21:51Z'
+  support: context_only
+  summary: The entire target was read after native inspection. This maintained YAML
+    owns any scientific correction.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and graph scope
+  accessed_at: '2026-10-22T08:21:51Z'
+  support: context_only
+  summary: COMMON means majority occurrence with possible exceptions, not simply detection
+    in one experiment. Physical formation necessity differs from activity and viability;
+    omitted optional fields alone are not defects.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component identity and evidence placement
+  accessed_at: '2026-10-22T08:21:51Z'
+  support: context_only
+  summary: Source-established constituent classes can be represented without guessed
+    accessions. Exact families and taxon-paired protein exemplars remain distinct
+    from assembly evidence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor, direction and source scope
+  accessed_at: '2026-10-22T08:21:51Z'
+  support: context_only
+  summary: Genetic dependence, co-isolation, purified binary binding and mechanistic
+    proposals are distinct evidence tiers. A declared nonmechanistic graph need not
+    encode all molecular intermediates.
+- evidence_id: root60-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005743,GO:0007007,GO:0042407,GO:0044284,GO:0061617,GO:0098800
+  locator: All six exact identities, definitions, synonyms, aspects and typed children
+  accessed_at: '2026-10-22T08:06:40.389926Z'
+  support: supports
+  summary: Six active GO term identities distinguish the whole MICOS complex, broader
+    inner-membrane protein complexes, the inner membrane, crista junction, crista
+    formation and inner-membrane organization. The two local modules are parts of
+    MICOS, not exact identities of its GO term.
+  snapshot_sha256: 7feda646ceb37901f4677dca468967f261a101f7ec889d8b1e55bfdeb6d4d1d1
+- evidence_id: root60-sources-GO0061617-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061617/ancestors?relations=is_a
+  locator: Complete exact response
+  accessed_at: '2026-10-22T08:08:10.141113Z'
+  support: supports
+  summary: MICOS has the broader inner mitochondrial membrane protein-complex ancestor;
+    ancestry is kept distinct from physical parthood.
+  snapshot_sha256: e6f9a39da7ac6ffd1bfca81307ca76b14809ce311be653cda42c59d532de915f
+- evidence_id: root60-sources-GO0098800-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0098800/ancestors?relations=is_a
+  locator: Complete exact response including typed immediate children
+  accessed_at: '2026-10-22T08:08:11.164585Z'
+  support: supports
+  summary: The parent response explicitly includes MICOS as an is_a child.
+  snapshot_sha256: f7a208c3ea7d1d4089346bf9061280714675a9f6a09b7b5c4c906374b32e0a87
+- evidence_id: root60-sources-tax-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:06:40.390429Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae, taxon4932, rank species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root60-sources-tax-559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:06:40.999871Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae S288C, taxon559292,
+    rank strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root60-sources-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:43.091667Z'
+  support: supports
+  summary: 'Unique MED14562095: Global analysis of protein localization in budding
+    yeast. (2003); DOI10.1038/nature02026. Full available abstract and bibliography
+    read. Bodies are read only where separately specified; these entries do not certify
+    every localization assay.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: root60-sources-pmid-19528297
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19528297+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:43.687826Z'
+  support: supports
+  summary: 'Unique MED19528297: Formation of cristae and crista junctions in mitochondria
+    depends on antagonism between Fcj1 and Su e/g. (2009); DOI10.1083/jcb.200811099.
+    Full available abstract and bibliography read. Bodies are read only where separately
+    specified; these entries do not certify every localization assay.'
+  snapshot_sha256: 5dcfcfff256636d0c4175a15c966b84303a450b2b0a99030ea07357e50794583
+- evidence_id: root60-sources-pmid-21944719
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21944719+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:44.199735Z'
+  support: supports
+  summary: 'Unique MED21944719: Dual role of mitofilin in mitochondrial membrane organization
+    and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. Full available
+    abstract and bibliography read. Bodies are read only where separately specified;
+    these entries do not certify every localization assay.'
+  snapshot_sha256: da66d5ae3d28e86cc4f6c6300696d5d04f4d9133891c5904f6d9823af3103115
+- evidence_id: root60-sources-pmid-21987634
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21987634+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:44.698763Z'
+  support: supports
+  summary: 'Unique MED21987634: A mitochondrial-focused genetic interaction map reveals
+    a scaffold-like complex required for inner membrane organization in mitochondria.
+    (2011); DOI10.1083/jcb.201107053. Full available abstract and bibliography read.
+    Bodies are read only where separately specified; these entries do not certify
+    every localization assay.'
+  snapshot_sha256: cd7bbb5ebe9dea65e7c2ef079e2f9d2653c275a29630feb2de4a6fe787bdf76d
+- evidence_id: root60-sources-doi-10.1038_ncomms15258
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fncomms15258%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:45.963127Z'
+  support: supports
+  summary: 'Unique DOI identifies MED28561061: Regulated membrane remodeling by Mic60
+    controls formation of mitochondrial crista junctions. (2017). Full native abstract/bibliography
+    read; no unlisted primary-body access implied.'
+  snapshot_sha256: 9209d5a78b30177dc26e8226373b03e1e1092e5ca673bde1cd44b982c82077dd
+- evidence_id: root60-sources-doi-10.1126_sciadv.abo4946
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fsciadv.abo4946%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:47.260459Z'
+  support: supports
+  summary: 'Unique DOI identifies MED36044574: Structural insights into crista junction
+    formation by the Mic60-Mic19 complex. (2022). Full native abstract/bibliography
+    read; no unlisted primary-body access implied.'
+  snapshot_sha256: 14dd35aea060be03334b363b828c8bccf46af4b47b18af8872e885776a464b24
+- evidence_id: root60-sources-protein-P36112
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P36112.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:41.000004Z'
+  support: supports
+  summary: Reviewed P36112 identifies MIC60 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: af85f86cc85b531190411594cc45d9566c6f54a174d135030fbd445f07c7c803
+- evidence_id: root60-sources-gene-MIC60
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC60%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:51.548431Z'
+  support: supports
+  summary: Exact reviewed MIC60 query in taxon559292 returns only P36112.
+  snapshot_sha256: fe0169be2771f710b304cfbb4a13610493a11a14cb37e01396a514f758bbf373
+- evidence_id: root60-sources-protein-P43594
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P43594.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:41.725450Z'
+  support: supports
+  summary: Reviewed P43594 identifies MIC19 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: afc0e29bf55e0d4fe94889333a704fce74b3a246df51f25e89995844d4444cfe
+- evidence_id: root60-sources-gene-MIC19
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC19%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:50.647468Z'
+  support: supports
+  summary: Exact reviewed MIC19 query in taxon559292 returns only P43594.
+  snapshot_sha256: da37561aa6a6752da23ad6ffcbb56f10cea03a0ab6f65c88cfd88ac9a59cac95
+- evidence_id: root60-sources-ipr-IPR019133
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019133/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:48.502720Z'
+  support: supports
+  summary: 'Native IPR019133: MICOS complex subunit MIC60, type family. The family
+    identity agrees with the named constituent.'
+  snapshot_sha256: bf189fb5296d703e434561bc0d826555c4776d259e10cf8a6244b9fcf173f704
+- evidence_id: root60-sources-ipr-IPR012471
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012471/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:48.055698Z'
+  support: supports
+  summary: 'Native IPR012471: Protein of unknown function DUF1690, type family. DUF1690
+    remains an uncharacterized fungal family and does not independently establish
+    an exact taxon-neutral Mic19 boundary.'
+  snapshot_sha256: 5e4f68a1a0a6fc4efd55783af5cdb597dd4ff682aa609b318903706dea6097c4
+- evidence_id: root60-sources-PMC5460017-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5460017/fullTextXML
+  locator: Genuine JATS sec2-5 and sec7-16 fully read including embedded captions;
+    Figure4 pixels separately viewed. Sec17 onward and supplementary tables/files
+    not read. Full permissions read.
+  accessed_at: '2026-10-22T08:06:53.754684Z'
+  support: supports
+  summary: Hessenberger2017 directly measures fungal Mic60-Mic19 binding, lipid recruitment
+    and membrane remodeling with purified C. thermophilum constructs, then tests corresponding
+    Mic60 variants in YPH499 yeast. Full Mic19 enhances tubulation and leakage; isolated
+    CHCH effects differ. Model-membrane leakage is not a physiological mitochondrial
+    claim.
+  snapshot_sha256: 30a187816aa0ad2b321e89afd391b4c9f0df63acbd1da0024390f7e260e47ce1
+- evidence_id: root60-sources-PMC9432830-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9432830/fullTextXML
+  locator: Genuine JATS all four Results subsections, Discussion, Cloning and plasmids,
+    S. cerevisiae strains and plasmids, Isolation of S. cerevisiae mitochondria; embedded
+    Figures2-5 captions. Figure1 caption, other Methods, supplements and pixels not
+    read.
+  accessed_at: '2026-10-22T08:06:53.854807Z'
+  support: supports
+  summary: Bock-Bierbaum2022 resolves L. thermotolerans Mic60 coiled-coil and C. thermophilum
+    engineered domain-fusion interfaces, with oligomerization/binding assays and YPH499
+    cellular mutants. Mic19 promotes higher assembly. The identity of junction-spanning
+    tomographic densities and native universal4:4 counts remain unproven.
+  snapshot_sha256: 8cd3eab61038447c9ff60ce64613cf4ffdae76a4af4a48588214f08e2d0b5b90
+- evidence_id: root60-sources-hessenberger2017-fig4
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5460017.1/ncomms15258-f4.jpg
+  locator: Entire panels a-i visually inspected; SHA2564a86dfab5f2d4d49925989b9566c18ffac1d087292f5ece4cd0dedcf9cf36954
+    and MD5f8147014f6181e8845a5993737ef0bbf. Direct source bytes, not fresh package
+    metadata.
+  accessed_at: '2026-10-22T08:08:06.029001Z'
+  support: supports
+  summary: 'All Figure4 pixels agree with the maintained contextual caption: affinity
+    purification, growth, cryosection TEM, junction counts and respiratory activity.
+    Direct JPEG matches maintained SHA256/MD5; native JATS permissions establish CC
+    BY4.0.'
+  snapshot_sha256: 4a86dfab5f2d4d49925989b9566c18ffac1d087292f5ece4cd0dedcf9cf36954
+- evidence_id: image
+  kind: record_content
+  reference: data/images/other/mic60_mic19_complex/pmc5460017_f4.jpg
+  locator: Entire tracked image and captured inspection hash
+  accessed_at: '2026-10-22T08:21:51Z'
+  support: context_only
+  summary: Unmodified contextual multipanel Figure4 visually inspected and source
+    bytes matched.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mic60_mic19_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:20Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mic60_mic19_complex.yaml'
+  snapshot_sha256: 957e3046fd787e0e5d09b5516ef3fe7c722951ca35a6fc40fbf808b7768f13fa
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mic60_mic19_complex.yaml --out
+    /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:21Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mic60_mic19_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic60_mic19_complex-strict.tsv"
+  snapshot_sha256: 25de2fe4cf0fe3a05c204268c5130eb3c9b31d8628251bd9b6379400cfd74032
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml
+    --causal-graphs
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:18:45.926433Z'
+  support: supports
+  summary: "data/structures/other/mic60_mic19_complex.yaml  (cellstructuremech:mic60_mic19_complex)\n\
+    \  mic60_mic19_membrane_remodeling\tmic60\tCOVERED\t->mic60 (UniProtKB:P36112)\n\
+    \  mic60_mic19_membrane_remodeling\tmic19\tCOVERED\t->mic19 (UniProtKB:P43594)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     2  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 22d7a0d901ab4f94314139e8db344060d6646aebc95400a3456ce381afa664b4
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic60_mic19_complex.yaml
+    --verify
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:18:47.026195Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mic60_mic19_complex.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED14562095: Global analysis of protein
+    localization in budding yeast. (2003); DOI10.1038/nature02026. This is identifier
+    transport verification; full-body scientific reading is separately scoped.; PMID:19528297:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED19528297: Formation of cristae
+    and crista junctions in mitochondria depends on antagonism between Fcj1 and Su
+    e/g. (2009); DOI10.1083/jcb.200811099. This is identifier transport verification;
+    full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial
+    membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634:
+    A mitochondrial-focused genetic interaction map reveals a scaffold-like complex
+    required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; cellstructuremech:mic60_mic19_complex: SKIPPED; Exact local identifier
+    uniquely resolves to this maintained target in the complete data/structures YAML
+    traversal, including ignored files. This verifies local reference identity, not
+    external ontology resolution. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Two-protein MICOS module
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: Definition, broader is-a parent and MICOS parthood distinguish the subcomplex
+    from full MICOS/MIB and bacterial expression hosts.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC5460017-xml
+  - root60-sources-PMC9432830-xml
+- assessment_id: composition
+  area: grounding
+  topic: Verified Mic60 family and bounded Mic19 label
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: The Mic60 family and paired S288C identities are exact. DUF1690 membership
+    does not establish a universal Mic19 family boundary; its explicit reviewed-label-only
+    treatment is justified. No guessed CHCH domain mapping is required.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-ipr-IPR019133
+  - root60-sources-ipr-IPR012471
+  - root60-sources-protein-P36112
+  - root60-sources-gene-MIC60
+  - root60-sources-protein-P43594
+  - root60-sources-gene-MIC19
+- assessment_id: graph
+  area: graph
+  topic: Direct purified binding with explicit model-membrane scope
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: Each biochemical edge is supported by ITC/deletions, liposome cosedimentation,
+    oligomer assays and TEM within the declared constructs. Fungal domain structures,
+    engineered fusions and yeast substitutions are not equated with a resolved complete
+    native complex or demonstrated diffusion barrier.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC5460017-xml
+  - root60-sources-PMC9432830-xml
+- assessment_id: image
+  area: evidence
+  topic: Correct contextual Figure4 and license
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: The maintained image depicts perturbation of mitochondrial architecture,
+    not an isolated Mic60-Mic19 complex. Panel methods, scale and yeast background
+    agree with caption and inspected source.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC5460017-xml
+  - root60-sources-hessenberger2017-fig4
+  - image
+- assessment_id: scope
+  area: scope
+  topic: Species examples and experimental constructs
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: The species-level canonical example is S. cerevisiae. W303 and YPH499 experimental
+    backgrounds, S288C reference proteins and purified thermophilic-fungal constructs
+    remain distinct where applicable. The cited work supplies qualitative biological
+    context, not a strain-frequency survey.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-tax-4932
+  - root60-sources-tax-559292
+  - root60-sources-PMC5460017-xml
+  - root60-sources-PMC9432830-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Complete maintained target with source limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic60_mic19_complex
+  summary: Every target field, discussion, graph edge, example and history entry was
+    inspected. Optional empty fields and unresolved native architecture alone do not
+    generate findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+findings: []
+actions: []
+limitations:
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated
+  with every manifested input hash verified.
+- Only listed primary sections and Figure4 pixels were read; no supplement, remaining
+  Methods, raw structural data or density map was reanalysed.
+- Localization PMID sources were read at native bibliography/abstract tier; annotation
+  attribution is distinct from direct inspection of every source experiment.
+- The proposed native strut/barrier, universal4:4 stoichiometry, and exact taxon-neutral
+  Mic19 family remain unresolved. COMMON retains majority occurrence with exceptions;
+  no strain-frequency census is inferred.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Explicit all-record goal authorizes issue-bearing and qualified clean observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

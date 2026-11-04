@@ -1,0 +1,1074 @@
+# Source-grounded review of MIC10 subcomplex
+
+- Review: 20261022T084805Z-mic10-subcomplex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T08:17:16Z
+- Finished UTC: 2026-10-22T08:48:05Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Qualified pass: the four-protein MIC10 module, family groundings, experimentally bounded assembly edges and exact Figure3 provenance are supported. Native architecture, direct lipid binding and population prevalence remain limited.
+
+## Scope And Provenance
+
+Exactly one complete target, with source tiers and experimental limits stated separately.
+
+Selection: One complete record in strict-path batch60 of the explicit all-unreviewed-record goal.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:mic10_subcomplex | data/structures/other/mic10_subcomplex.yaml | maintained | MIC10 subcomplex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:mic10_subcomplex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:mic10_subcomplex | Focused validator passed. |
+| Native focused causal-graphs | passed | True | cellstructuremech:mic10_subcomplex | Focused native check passed; scientific claims assessed separately. |
+| Native focused verify | passed | True | cellstructuremech:mic10_subcomplex | Focused native check passed; scientific claims assessed separately. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:mic10_subcomplex | No expression-module claim is assessed; native authorities and primary structure experiments address the target. |
+| Claim-level scientific review | passed | True | cellstructuremech:mic10_subcomplex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:mic10_subcomplex | 17 of 21 collected target identifiers returned OK. PMID:16823961: UNREACHABLE; Native Europe PMC uniquely identifies MED16823961: Toward the complete yeast mitochondrial proteome: multidimensional separation techniques for mitochondrial proteomics. (2006); DOI10.1021/pr050477f. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. This is identifier transport verification; full-body scientific reading is separately scoped.; cellstructuremech:mic10_subcomplex: SKIPPED; Exact local identifier uniquely resolves to this maintained target in the complete data/structures YAML traversal, including ignored files. This verifies local reference identity, not external ontology resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:mic10_subcomplex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:mic10_subcomplex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:mic10_subcomplex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:mic10_subcomplex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:mic10_subcomplex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Four-member module versus conditional focal core
+
+identity: supported. Targets: cellstructuremech:mic10_subcomplex.
+
+The local four-protein module is well bounded as part of MICOS. Conditional three-protein foci in deletion strains do not negate Mic26 membership in the normal module. The broader GO parent and MICOS parthood are appropriate.
+
+### Exact family classes and reference examples
+
+grounding: supported. Targets: cellstructuremech:mic10_subcomplex.
+
+All four groundings have the claimed family types and scoped protein identities. Mic26 and Mic27 yeast/fungal class limits are explicit; no mammalian paralog or universal copy count is imposed.
+
+### Assay-specific oligomer and focal-assembly dependencies
+
+graph: supported. Targets: cellstructuremech:mic10_subcomplex.
+
+Five edges agree with the inspected experiments. Native-gel ladder shifts/crosslinking and fluorescence reconstitution are separate experiments, with species, strain and deletion background retained. Lipid/contact-site effects are correctly excluded from fixed constituent identity.
+
+### Source-verified conditional-assembly figure
+
+evidence: supported. Targets: cellstructuremech:mic10_subcomplex.
+
+The caption accurately identifies all panel classes, yeast context, assay limits, exact image and CC BY4.0 permission. It does not portray the figure as a purified native complex.
+
+### Species examples and experimental constructs
+
+scope: unknown. Targets: cellstructuremech:mic10_subcomplex.
+
+The species-level canonical example is S. cerevisiae. W303 and YPH499 experimental backgrounds, S288C reference proteins and purified thermophilic-fungal constructs remain distinct where applicable. The cited work supplies qualitative biological context, not a strain-frequency survey.
+
+### Complete maintained target with source limits
+
+completeness: supported. Targets: cellstructuremech:mic10_subcomplex.
+
+Every target field, discussion, graph edge, example and history entry was inspected. Optional empty fields and unresolved native architecture alone do not generate findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/mic10_subcomplex.yaml; Entire maintained YAML, history and discussions | context_only | The entire target was read after native inspection. This maintained YAML owns any scientific correction. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and graph scope | context_only | COMMON means majority occurrence with possible exceptions, not simply detection in one experiment. Physical formation necessity differs from activity and viability; omitted optional fields alone are not defects. |
+| curation | docs/CURATION.md; Exact component identity and evidence placement | context_only | Source-established constituent classes can be represented without guessed accessions. Exact families and taxon-paired protein exemplars remain distinct from assembly evidence. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor, direction and source scope | context_only | Genetic dependence, co-isolation, purified binary binding and mechanistic proposals are distinct evidence tiers. A declared nonmechanistic graph need not encode all molecular intermediates. |
+| root60-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005743,GO:0007007,GO:0042407,GO:0044284,GO:0061617,GO:0098800; All six exact identities, definitions, synonyms, aspects and typed children | supports | Six active GO term identities distinguish the whole MICOS complex, broader inner-membrane protein complexes, the inner membrane, crista junction, crista formation and inner-membrane organization. The two local modules are parts of MICOS, not exact identities of its GO term. |
+| root60-sources-GO0061617-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061617/ancestors?relations=is_a; Complete exact response | supports | MICOS has the broader inner mitochondrial membrane protein-complex ancestor; ancestry is kept distinct from physical parthood. |
+| root60-sources-GO0098800-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0098800/ancestors?relations=is_a; Complete exact response including typed immediate children | supports | The parent response explicitly includes MICOS as an is_a child. |
+| root60-sources-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxonomy response | supports | Native taxonomy identifies Saccharomyces cerevisiae, taxon4932, rank species. |
+| root60-sources-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete taxonomy response | supports | Native taxonomy identifies Saccharomyces cerevisiae S288C, taxon559292, rank strain. |
+| root60-sources-pmid-16823961 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16823961+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED16823961: Toward the complete yeast mitochondrial proteome: multidimensional separation techniques for mitochondrial proteomics. (2006); DOI10.1021/pr050477f. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-pmid-21944719 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21944719+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-pmid-21987634 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21987634+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText | supports | Unique MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. Full available abstract and bibliography read. Bodies are read only where separately specified; these entries do not certify every localization assay. |
+| root60-sources-doi-10.1016_j.jmb.2018.04.037 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jmb.2018.04.037%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique DOI-to-MED identity and complete abstractText | supports | Unique DOI identifies MED29733859: Assembly of the Mitochondrial Cristae Organizer Mic10 Is Regulated by Mic26-Mic27 Antagonism and Cardiolipin. (2018). Full native abstract/bibliography read; no unlisted primary-body access implied. |
+| root60-sources-doi-10.7554_elife.07739 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.7554%2Felife.07739%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique DOI-to-MED identity and complete abstractText | supports | Unique DOI identifies MED25918844: MICOS coordinates with respiratory complexes and lipids to establish mitochondrial inner membrane architecture. (2015). Full native abstract/bibliography read; no unlisted primary-body access implied. |
+| root60-sources-doi-10.1083_jcb.202003024 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.202003024%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique DOI-to-MED identity and complete abstractText | supports | Unique DOI identifies MED33053165: MICOS subcomplexes assemble independently on the mitochondrial inner membrane in proximity to ER contact sites. (2020). Full native abstract/bibliography read; no unlisted primary-body access implied. |
+| root60-sources-protein-Q96VH5 | https://rest.uniprot.org/uniprotkb/Q96VH5.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed Q96VH5 identifies MIC10 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC10 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC10%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC10 query in taxon559292 returns only Q96VH5. |
+| root60-sources-protein-P38341 | https://rest.uniprot.org/uniprotkb/P38341.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed P38341 identifies MIC12 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC12 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC12%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC12 query in taxon559292 returns only P38341. |
+| root60-sources-protein-P50087 | https://rest.uniprot.org/uniprotkb/P50087.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed P50087 identifies MIC26 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC26 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC26%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC26 query in taxon559292 returns only P50087. |
+| root60-sources-protein-P50945 | https://rest.uniprot.org/uniprotkb/P50945.json; Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references | supports | Reviewed P50945 identifies MIC27 in S. cerevisiae S288C. Native function, subunit and location annotations and all family crossreferences were read. These reference proteins are not assertions that S288C supplied the W303/YPH499 cultures. |
+| root60-sources-gene-MIC27 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC27%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and original exact query URL | supports | Exact reviewed MIC27 query in taxon559292 returns only P50945. |
+| root60-sources-ipr-IPR007512 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007512/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR007512: MICOS complex subunit Mic10, type family. The family identity agrees with the named constituent. |
+| root60-sources-ipr-IPR031463 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031463/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR031463: MICOS complex subunit Mic12, type family. The family identity agrees with the named constituent. |
+| root60-sources-ipr-IPR033181 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033181/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR033181 is the fungal MICOS subunit Mic26 family; its scope is retained as fungal rather than generalized to all animal paralogs. |
+| root60-sources-ipr-IPR061953 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR061953/; Complete metadata name/type/descriptions/signatures/hierarchy and description quality flags | supports | Native IPR061953 is the MICOS subunit Mic27 family with Saccharomycetaceae scope; this narrower scope is retained rather than generalized to all animal paralogs. |
+| root60-sources-PMC4434539-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4434539/fullTextXML; Genuine JATS s2-2,s2-3,s2-7,s4-1,s4-3,s4-6 fully read, including nested main/supplement captions. Figure3 pixels separately viewed; other sections, supplement files and other pixels not read. | supports | Friedman2015 distinguishes Mic60-independent Mic10/Mic12/Mic27 focal assembly and conditional cardiolipin dependence from normal whole-MICOS composition. Mic10 plus Mic12 enhances Mic27 foci; Mic12 is not an absolute requirement in every tested background. W303 derivatives and DSP-crosslinked coIP/MS are explicit. |
+| root60-sources-rampelt2018-pdf | https://pure.rug.nl/ws/portalfiles/portal/61925901/1_s2.0_S0022283618303498_main_1_.pdf; Genuine institutional publisher PDF: all main text printed1883-1888, all Figures1-4 captions and embedded methods. No PDF figure pixels or remaining reference pages1889-1890. | supports | Rampelt2018 explicitly defines the Mic10/Mic12/Mic26/Mic27 module. In YPH499-derived mitochondria, Mic26 and Mic27 oppositely affect higher Mic10 assemblies. Cardiolipin loss changes native migration but does not abolish oligomer formation or grossly dissociate MICOS. Proposed direct lipid binding remains distinct from a resolved interface. |
+| root60-sources-PMC7545361-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7545361/fullTextXML; Genuine JATS s3,s4,s11 fully read, including embedded Figures2/S1/S2 and Videos1-4 captions. No videos, pixels or other sections. | supports | Tirrell2020 shows spatial association near ERMES and disruption of Mic27-core assembly on ERMES loss, with Vps13 bypass rescue. These results do not make ERMES an obligatory physical constituent or template. W303 and separate BY4741/42 bypass strains are distinguished. |
+| root60-sources-friedman2015-fig3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC4434539.1/elife07739f003.jpg; All Figure3 panels visually inspected; direct-source and maintained SHA256 af23bf8f6f0e98c05adf50c869b1a63705423d54278c9af60657b308361189c8 and MD5d4823f0053a49ca78ae2cf5517f11fe5; no fresh package metadata claim | supports | The complete source Figure3 pixels match the maintained figure byte-for-byte. Panels distinguish fluorescence/deletion/reconstitution, focus counts and coIP mass spectrometry; not an isolated intact four-protein image. Article JATS permissions establish CC BY4.0. |
+| image | data/images/other/mic10_subcomplex/pmc4434539_fig3.jpg; Entire tracked figure and captured inspection hash | context_only | Visually inspected unmodified multipanel figure; exact source bytes verified independently. |
+| schema-result | just validate data/structures/other/mic10_subcomplex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/mic10_subcomplex.yaml |
+| strict-result | just validate-strict data/structures/other/mic10_subcomplex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/mic10_subcomplex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml --causal-graphs; Complete focused native report | supports | data/structures/other/mic10_subcomplex.yaml  (cellstructuremech:mic10_subcomplex)<br>  yeast_mic10_subcomplex_assembly	mic10	COVERED	-&gt;mic10 (UniProtKB:Q96VH5)<br>  yeast_mic10_subcomplex_assembly	mic12	COVERED	-&gt;mic12 (UniProtKB:P38341)<br>  yeast_mic10_subcomplex_assembly	mic26	COVERED	-&gt;mic26 (UniProtKB:P50087)<br>  yeast_mic10_subcomplex_assembly	mic27	COVERED	-&gt;mic27 (UniProtKB:P50945)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     4  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     4  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml --verify; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/mic10_subcomplex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 17 of 21 collected target identifiers returned OK. PMID:16823961: UNREACHABLE; Native Europe PMC uniquely identifies MED16823961: Toward the complete yeast mitochondrial proteome: multidimensional separation techniques for mitochondrial proteomics. (2006); DOI10.1021/pr050477f. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. This is identifier transport verification; full-body scientific reading is separately scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634: A mitochondrial-focused genetic interaction map reveals a scaffold-like complex required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053. This is identifier transport verification; full-body scientific reading is separately scoped.; cellstructuremech:mic10_subcomplex: SKIPPED; Exact local identifier uniquely resolves to this maintained target in the complete data/structures YAML traversal, including ignored files. This verifies local reference identity, not external ontology resolution. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated with every manifested input hash verified.
+- Only the exact source sections/pages listed in evidence were read. Rampelt figure pixels and unlisted supplementary files were not inspected; no raw microscopy or mass-spectrometry reanalysis was performed.
+- Protein-localization PMID sources are complete-abstract/native-annotation tier unless separately listed as primary text. Reference S288C proteins remain distinct from W303 and YPH499 cultures.
+- COMMON remains majority occurrence with exceptions; the cited laboratory studies are not an independent survey of strain prevalence. No universal subunit necessity or fixed copy count is inferred.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- Explicit all-record goal authorizes issue-bearing and qualified clean observations.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T084805Z-mic10-subcomplex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of MIC10 subcomplex
+started_at: '2026-10-22T08:17:16Z'
+finished_at: '2026-10-22T08:48:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Qualified pass: the four-protein MIC10 module, family groundings, experimentally
+  bounded assembly edges and exact Figure3 provenance are supported. Native architecture,
+  direct lipid binding and population prevalence remain limited.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/other/mic10_subcomplex/pmc4434539_fig3.jpg
+    sha256: af23bf8f6f0e98c05adf50c869b1a63705423d54278c9af60657b308361189c8
+    role: context
+  - path: data/structures/other/mic10_subcomplex.yaml
+    sha256: 9d98461e5b91bf4eb28fffe1797678d45d3f6aa51391b289282b7b6155a22601
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:mic10_subcomplex
+  path: data/structures/other/mic10_subcomplex.yaml
+  label: MIC10 subcomplex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mic10_subcomplex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target, with source tiers and experimental limits
+    stated separately.
+  selection: One complete record in strict-path batch60 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:mic10_subcomplex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just validate data/structures/other/mic10_subcomplex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just validate-strict data/structures/other/mic10_subcomplex.yaml --out
+    /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: No expression-module claim is assessed; native authorities and primary
+    structure experiments address the target.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-tax-4932
+  - root60-sources-tax-559292
+  - root60-sources-pmid-16823961
+  - root60-sources-pmid-21944719
+  - root60-sources-pmid-21987634
+  - root60-sources-doi-10.1016_j.jmb.2018.04.037
+  - root60-sources-doi-10.7554_elife.07739
+  - root60-sources-doi-10.1083_jcb.202003024
+  - root60-sources-protein-Q96VH5
+  - root60-sources-gene-MIC10
+  - root60-sources-protein-P38341
+  - root60-sources-gene-MIC12
+  - root60-sources-protein-P50087
+  - root60-sources-gene-MIC26
+  - root60-sources-protein-P50945
+  - root60-sources-gene-MIC27
+  - root60-sources-ipr-IPR007512
+  - root60-sources-ipr-IPR031463
+  - root60-sources-ipr-IPR033181
+  - root60-sources-ipr-IPR061953
+  - root60-sources-PMC4434539-xml
+  - root60-sources-rampelt2018-pdf
+  - root60-sources-PMC7545361-xml
+  - root60-sources-friedman2015-fig3
+  - image
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: '17 of 21 collected target identifiers returned OK. PMID:16823961: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED16823961: Toward the complete yeast mitochondrial
+    proteome: multidimensional separation techniques for mitochondrial proteomics.
+    (2006); DOI10.1021/pr050477f. This is identifier transport verification; full-body
+    scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane
+    organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634:
+    A mitochondrial-focused genetic interaction map reveals a scaffold-like complex
+    required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; cellstructuremech:mic10_subcomplex: SKIPPED; Exact local identifier uniquely
+    resolves to this maintained target in the complete data/structures YAML traversal,
+    including ignored files. This verifies local reference identity, not external
+    ontology resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root60-sources-pmid-16823961
+  - root60-sources-pmid-21944719
+  - root60-sources-pmid-21987634
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mic10_subcomplex.yaml
+  locator: Entire maintained YAML, history and discussions
+  accessed_at: '2026-10-22T08:21:32Z'
+  support: context_only
+  summary: The entire target was read after native inspection. This maintained YAML
+    owns any scientific correction.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and graph scope
+  accessed_at: '2026-10-22T08:21:32Z'
+  support: context_only
+  summary: COMMON means majority occurrence with possible exceptions, not simply detection
+    in one experiment. Physical formation necessity differs from activity and viability;
+    omitted optional fields alone are not defects.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component identity and evidence placement
+  accessed_at: '2026-10-22T08:21:32Z'
+  support: context_only
+  summary: Source-established constituent classes can be represented without guessed
+    accessions. Exact families and taxon-paired protein exemplars remain distinct
+    from assembly evidence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor, direction and source scope
+  accessed_at: '2026-10-22T08:21:32Z'
+  support: context_only
+  summary: Genetic dependence, co-isolation, purified binary binding and mechanistic
+    proposals are distinct evidence tiers. A declared nonmechanistic graph need not
+    encode all molecular intermediates.
+- evidence_id: root60-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005743,GO:0007007,GO:0042407,GO:0044284,GO:0061617,GO:0098800
+  locator: All six exact identities, definitions, synonyms, aspects and typed children
+  accessed_at: '2026-10-22T08:06:40.389926Z'
+  support: supports
+  summary: Six active GO term identities distinguish the whole MICOS complex, broader
+    inner-membrane protein complexes, the inner membrane, crista junction, crista
+    formation and inner-membrane organization. The two local modules are parts of
+    MICOS, not exact identities of its GO term.
+  snapshot_sha256: 7feda646ceb37901f4677dca468967f261a101f7ec889d8b1e55bfdeb6d4d1d1
+- evidence_id: root60-sources-GO0061617-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061617/ancestors?relations=is_a
+  locator: Complete exact response
+  accessed_at: '2026-10-22T08:08:10.141113Z'
+  support: supports
+  summary: MICOS has the broader inner mitochondrial membrane protein-complex ancestor;
+    ancestry is kept distinct from physical parthood.
+  snapshot_sha256: e6f9a39da7ac6ffd1bfca81307ca76b14809ce311be653cda42c59d532de915f
+- evidence_id: root60-sources-GO0098800-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0098800/ancestors?relations=is_a
+  locator: Complete exact response including typed immediate children
+  accessed_at: '2026-10-22T08:08:11.164585Z'
+  support: supports
+  summary: The parent response explicitly includes MICOS as an is_a child.
+  snapshot_sha256: f7a208c3ea7d1d4089346bf9061280714675a9f6a09b7b5c4c906374b32e0a87
+- evidence_id: root60-sources-tax-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:06:40.390429Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae, taxon4932, rank species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root60-sources-tax-559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:06:40.999871Z'
+  support: supports
+  summary: Native taxonomy identifies Saccharomyces cerevisiae S288C, taxon559292,
+    rank strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root60-sources-pmid-16823961
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16823961+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:43.589215Z'
+  support: supports
+  summary: 'Unique MED16823961: Toward the complete yeast mitochondrial proteome:
+    multidimensional separation techniques for mitochondrial proteomics. (2006); DOI10.1021/pr050477f.
+    Full available abstract and bibliography read. Bodies are read only where separately
+    specified; these entries do not certify every localization assay.'
+  snapshot_sha256: 3bf1b445a72f17dc1031d52f55e3abb1aa781e84be2b5dc68ec77c9da1170905
+- evidence_id: root60-sources-pmid-21944719
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21944719+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:44.199735Z'
+  support: supports
+  summary: 'Unique MED21944719: Dual role of mitofilin in mitochondrial membrane organization
+    and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026. Full available
+    abstract and bibliography read. Bodies are read only where separately specified;
+    these entries do not certify every localization assay.'
+  snapshot_sha256: da66d5ae3d28e86cc4f6c6300696d5d04f4d9133891c5904f6d9823af3103115
+- evidence_id: root60-sources-pmid-21987634
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21987634+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:44.698763Z'
+  support: supports
+  summary: 'Unique MED21987634: A mitochondrial-focused genetic interaction map reveals
+    a scaffold-like complex required for inner membrane organization in mitochondria.
+    (2011); DOI10.1083/jcb.201107053. Full available abstract and bibliography read.
+    Bodies are read only where separately specified; these entries do not certify
+    every localization assay.'
+  snapshot_sha256: cd7bbb5ebe9dea65e7c2ef079e2f9d2653c275a29630feb2de4a6fe787bdf76d
+- evidence_id: root60-sources-doi-10.1016_j.jmb.2018.04.037
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jmb.2018.04.037%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:45.335856Z'
+  support: supports
+  summary: 'Unique DOI identifies MED29733859: Assembly of the Mitochondrial Cristae
+    Organizer Mic10 Is Regulated by Mic26-Mic27 Antagonism and Cardiolipin. (2018).
+    Full native abstract/bibliography read; no unlisted primary-body access implied.'
+  snapshot_sha256: ce691ef7e48a7ba90f9e97f9c19bc1303fdd42f867a338ce29ea9d48070d2a70
+- evidence_id: root60-sources-doi-10.7554_elife.07739
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.7554%2Felife.07739%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:47.407303Z'
+  support: supports
+  summary: 'Unique DOI identifies MED25918844: MICOS coordinates with respiratory
+    complexes and lipids to establish mitochondrial inner membrane architecture. (2015).
+    Full native abstract/bibliography read; no unlisted primary-body access implied.'
+  snapshot_sha256: 6b80402aa705a4a6b52df2002df5ca42356d5ca4a78d7b0c75e25f09d8126708
+- evidence_id: root60-sources-doi-10.1083_jcb.202003024
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.202003024%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:06:46.774293Z'
+  support: supports
+  summary: 'Unique DOI identifies MED33053165: MICOS subcomplexes assemble independently
+    on the mitochondrial inner membrane in proximity to ER contact sites. (2020).
+    Full native abstract/bibliography read; no unlisted primary-body access implied.'
+  snapshot_sha256: a8225c938ca6b1ff860dde20e2e7c4452f7c3eb92f254a7421eea7faf19ea129
+- evidence_id: root60-sources-protein-Q96VH5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q96VH5.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:42.952236Z'
+  support: supports
+  summary: Reviewed Q96VH5 identifies MIC10 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: ab18ac0fd0ba73fc37bb4f250e9e3890174a929b8f702030d484b324272bc318
+- evidence_id: root60-sources-gene-MIC10
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC10%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:49.861372Z'
+  support: supports
+  summary: Exact reviewed MIC10 query in taxon559292 returns only Q96VH5.
+  snapshot_sha256: 5436b82b340b489d5e87c87f2e3bc49ec7f6ada1c52a0b73314d15259ee8a7ca
+- evidence_id: root60-sources-protein-P38341
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38341.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:41.585468Z'
+  support: supports
+  summary: Reviewed P38341 identifies MIC12 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: abd732c2f19530ea9381442489e1d0e89bfd128590fcaddfe4e63e20d7cac989
+- evidence_id: root60-sources-gene-MIC12
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC12%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:49.865854Z'
+  support: supports
+  summary: Exact reviewed MIC12 query in taxon559292 returns only P38341.
+  snapshot_sha256: 2aafe1670c918b4077d4818213b94d3b1cbcb1d346975834f665f447461a4665
+- evidence_id: root60-sources-protein-P50087
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P50087.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:42.311378Z'
+  support: supports
+  summary: Reviewed P50087 identifies MIC26 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: f5191ccfc5173c82bbcd7d5644f20a8e0e678297a3cf7aacdb1107f636554065
+- evidence_id: root60-sources-gene-MIC26
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC26%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:50.834895Z'
+  support: supports
+  summary: Exact reviewed MIC26 query in taxon559292 returns only P50087.
+  snapshot_sha256: 3e36974f38e096c819e6cfdf21fb874b26f6033e37ab66f8614f01693f27662f
+- evidence_id: root60-sources-protein-P50945
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P50945.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/PANTHER references
+  accessed_at: '2026-10-22T08:06:42.380595Z'
+  support: supports
+  summary: Reviewed P50945 identifies MIC27 in S. cerevisiae S288C. Native function,
+    subunit and location annotations and all family crossreferences were read. These
+    reference proteins are not assertions that S288C supplied the W303/YPH499 cultures.
+  snapshot_sha256: c730671a45dd9357854ea1aad2b976afe06a8d3763bfb7199a1c463bec538e3a
+- evidence_id: root60-sources-gene-MIC27
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC27%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:06:51.476492Z'
+  support: supports
+  summary: Exact reviewed MIC27 query in taxon559292 returns only P50945.
+  snapshot_sha256: f91f2ec0520b6fc0f5d17664f4f677bdd10ada51f393b21e0a6ab3456ce49d09
+- evidence_id: root60-sources-ipr-IPR007512
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007512/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:47.896293Z'
+  support: supports
+  summary: 'Native IPR007512: MICOS complex subunit Mic10, type family. The family
+    identity agrees with the named constituent.'
+  snapshot_sha256: ab29d06d5609772f1f3e50501fff0100ee0aa7b9e928c9478eb2c1d47a1b6a7c
+- evidence_id: root60-sources-ipr-IPR031463
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR031463/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:48.663400Z'
+  support: supports
+  summary: 'Native IPR031463: MICOS complex subunit Mic12, type family. The family
+    identity agrees with the named constituent.'
+  snapshot_sha256: 42330e9a7b9b096f72c5d9f57c49451bb537c680955090510772535a9b4d2a2a
+- evidence_id: root60-sources-ipr-IPR033181
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033181/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:49.254258Z'
+  support: supports
+  summary: Native IPR033181 is the fungal MICOS subunit Mic26 family; its scope is
+    retained as fungal rather than generalized to all animal paralogs.
+  snapshot_sha256: 2f775ac76a18b7528dabd08c88fb488eb8fc79607b8aeadfc6f70520ad23456a
+- evidence_id: root60-sources-ipr-IPR061953
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR061953/
+  locator: Complete metadata name/type/descriptions/signatures/hierarchy and description
+    quality flags
+  accessed_at: '2026-10-22T08:06:49.257658Z'
+  support: supports
+  summary: Native IPR061953 is the MICOS subunit Mic27 family with Saccharomycetaceae
+    scope; this narrower scope is retained rather than generalized to all animal paralogs.
+  snapshot_sha256: ae494915a8e34830ed37899163aebe9ca500fa4058bd6b54f997b4d981bc6f12
+- evidence_id: root60-sources-PMC4434539-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4434539/fullTextXML
+  locator: Genuine JATS s2-2,s2-3,s2-7,s4-1,s4-3,s4-6 fully read, including nested
+    main/supplement captions. Figure3 pixels separately viewed; other sections, supplement
+    files and other pixels not read.
+  accessed_at: '2026-10-22T08:06:52.284017Z'
+  support: supports
+  summary: Friedman2015 distinguishes Mic60-independent Mic10/Mic12/Mic27 focal assembly
+    and conditional cardiolipin dependence from normal whole-MICOS composition. Mic10
+    plus Mic12 enhances Mic27 foci; Mic12 is not an absolute requirement in every
+    tested background. W303 derivatives and DSP-crosslinked coIP/MS are explicit.
+  snapshot_sha256: 5d1d219173a0e2a03bf5f0f89148a92101e2caa9a0b9416cf6105cfd0fe8aea7
+- evidence_id: root60-sources-rampelt2018-pdf
+  kind: primary_source
+  reference: https://pure.rug.nl/ws/portalfiles/portal/61925901/1_s2.0_S0022283618303498_main_1_.pdf
+  locator: 'Genuine institutional publisher PDF: all main text printed1883-1888, all
+    Figures1-4 captions and embedded methods. No PDF figure pixels or remaining reference
+    pages1889-1890.'
+  accessed_at: '2026-10-22T08:08:05.389330Z'
+  support: supports
+  summary: Rampelt2018 explicitly defines the Mic10/Mic12/Mic26/Mic27 module. In YPH499-derived
+    mitochondria, Mic26 and Mic27 oppositely affect higher Mic10 assemblies. Cardiolipin
+    loss changes native migration but does not abolish oligomer formation or grossly
+    dissociate MICOS. Proposed direct lipid binding remains distinct from a resolved
+    interface.
+  snapshot_sha256: 74931e0415d6cf0f8b5209d8cc08db9205c59ff4ba39c60817af28af00b96a1c
+- evidence_id: root60-sources-PMC7545361-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7545361/fullTextXML
+  locator: Genuine JATS s3,s4,s11 fully read, including embedded Figures2/S1/S2 and
+    Videos1-4 captions. No videos, pixels or other sections.
+  accessed_at: '2026-10-22T08:06:52.348790Z'
+  support: supports
+  summary: Tirrell2020 shows spatial association near ERMES and disruption of Mic27-core
+    assembly on ERMES loss, with Vps13 bypass rescue. These results do not make ERMES
+    an obligatory physical constituent or template. W303 and separate BY4741/42 bypass
+    strains are distinguished.
+  snapshot_sha256: fe5165d6fd0a8af6fc754ab3185519b413be73ed7c37a4ffbc9aee317d4bee90
+- evidence_id: root60-sources-friedman2015-fig3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4434539.1/elife07739f003.jpg
+  locator: All Figure3 panels visually inspected; direct-source and maintained SHA256
+    af23bf8f6f0e98c05adf50c869b1a63705423d54278c9af60657b308361189c8 and MD5d4823f0053a49ca78ae2cf5517f11fe5;
+    no fresh package metadata claim
+  accessed_at: '2026-10-22T08:08:05.389780Z'
+  support: supports
+  summary: The complete source Figure3 pixels match the maintained figure byte-for-byte.
+    Panels distinguish fluorescence/deletion/reconstitution, focus counts and coIP
+    mass spectrometry; not an isolated intact four-protein image. Article JATS permissions
+    establish CC BY4.0.
+  snapshot_sha256: af23bf8f6f0e98c05adf50c869b1a63705423d54278c9af60657b308361189c8
+- evidence_id: image
+  kind: record_content
+  reference: data/images/other/mic10_subcomplex/pmc4434539_fig3.jpg
+  locator: Entire tracked figure and captured inspection hash
+  accessed_at: '2026-10-22T08:21:32Z'
+  support: context_only
+  summary: Visually inspected unmodified multipanel figure; exact source bytes verified
+    independently.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mic10_subcomplex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:18Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mic10_subcomplex.yaml'
+  snapshot_sha256: 04c5f9a76551fe29089242bcfeb305dc485e4d2b484fc61de8b9480e67125866
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mic10_subcomplex.yaml --out
+    /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:19Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mic10_subcomplex.yaml\
+    \ --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mic10_subcomplex-strict.tsv"
+  snapshot_sha256: e9bdce879dc0e2efa0bb80801b35d6b347ac2a368db0c7712791d1efd5db1bfc
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml
+    --causal-graphs
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:18:44.206685Z'
+  support: supports
+  summary: "data/structures/other/mic10_subcomplex.yaml  (cellstructuremech:mic10_subcomplex)\n\
+    \  yeast_mic10_subcomplex_assembly\tmic10\tCOVERED\t->mic10 (UniProtKB:Q96VH5)\n\
+    \  yeast_mic10_subcomplex_assembly\tmic12\tCOVERED\t->mic12 (UniProtKB:P38341)\n\
+    \  yeast_mic10_subcomplex_assembly\tmic26\tCOVERED\t->mic26 (UniProtKB:P50087)\n\
+    \  yeast_mic10_subcomplex_assembly\tmic27\tCOVERED\t->mic27 (UniProtKB:P50945)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     4  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     4\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 6c1d97f2cb25045ddae5e20a9aa6562b9fa6be6961f961243b68c041557dc83c
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mic10_subcomplex.yaml
+    --verify
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:18:45.506550Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mic10_subcomplex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '17 of 21 collected target identifiers returned OK. PMID:16823961: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED16823961: Toward the complete yeast mitochondrial
+    proteome: multidimensional separation techniques for mitochondrial proteomics.
+    (2006); DOI10.1021/pr050477f. This is identifier transport verification; full-body
+    scientific reading is separately scoped.; PMID:21944719: UNREACHABLE; Native Europe
+    PMC uniquely identifies MED21944719: Dual role of mitofilin in mitochondrial membrane
+    organization and protein biogenesis. (2011); DOI10.1016/j.devcel.2011.08.026.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; PMID:21987634: UNREACHABLE; Native Europe PMC uniquely identifies MED21987634:
+    A mitochondrial-focused genetic interaction map reveals a scaffold-like complex
+    required for inner membrane organization in mitochondria. (2011); DOI10.1083/jcb.201107053.
+    This is identifier transport verification; full-body scientific reading is separately
+    scoped.; cellstructuremech:mic10_subcomplex: SKIPPED; Exact local identifier uniquely
+    resolves to this maintained target in the complete data/structures YAML traversal,
+    including ignored files. This verifies local reference identity, not external
+    ontology resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Four-member module versus conditional focal core
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: The local four-protein module is well bounded as part of MICOS. Conditional
+    three-protein foci in deletion strains do not negate Mic26 membership in the normal
+    module. The broader GO parent and MICOS parthood are appropriate.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC4434539-xml
+  - root60-sources-rampelt2018-pdf
+- assessment_id: composition
+  area: grounding
+  topic: Exact family classes and reference examples
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: All four groundings have the claimed family types and scoped protein identities.
+    Mic26 and Mic27 yeast/fungal class limits are explicit; no mammalian paralog or
+    universal copy count is imposed.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-ipr-IPR007512
+  - root60-sources-ipr-IPR031463
+  - root60-sources-ipr-IPR033181
+  - root60-sources-ipr-IPR061953
+  - root60-sources-protein-Q96VH5
+  - root60-sources-gene-MIC10
+  - root60-sources-protein-P38341
+  - root60-sources-gene-MIC12
+  - root60-sources-protein-P50087
+  - root60-sources-gene-MIC26
+  - root60-sources-protein-P50945
+  - root60-sources-gene-MIC27
+- assessment_id: graph
+  area: graph
+  topic: Assay-specific oligomer and focal-assembly dependencies
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: Five edges agree with the inspected experiments. Native-gel ladder shifts/crosslinking
+    and fluorescence reconstitution are separate experiments, with species, strain
+    and deletion background retained. Lipid/contact-site effects are correctly excluded
+    from fixed constituent identity.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC4434539-xml
+  - root60-sources-rampelt2018-pdf
+  - root60-sources-PMC7545361-xml
+- assessment_id: image
+  area: evidence
+  topic: Source-verified conditional-assembly figure
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: The caption accurately identifies all panel classes, yeast context, assay
+    limits, exact image and CC BY4.0 permission. It does not portray the figure as
+    a purified native complex.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-PMC4434539-xml
+  - root60-sources-friedman2015-fig3
+  - image
+- assessment_id: scope
+  area: scope
+  topic: Species examples and experimental constructs
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: The species-level canonical example is S. cerevisiae. W303 and YPH499 experimental
+    backgrounds, S288C reference proteins and purified thermophilic-fungal constructs
+    remain distinct where applicable. The cited work supplies qualitative biological
+    context, not a strain-frequency survey.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+  - root60-sources-tax-4932
+  - root60-sources-tax-559292
+  - root60-sources-PMC4434539-xml
+  - root60-sources-rampelt2018-pdf
+  - root60-sources-PMC7545361-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Complete maintained target with source limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mic10_subcomplex
+  summary: Every target field, discussion, graph edge, example and history entry was
+    inspected. Optional empty fields and unresolved native architecture alone do not
+    generate findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root60-sources-go
+  - root60-sources-GO0061617-ancestors
+  - root60-sources-GO0098800-ancestors
+findings: []
+actions: []
+limitations:
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated
+  with every manifested input hash verified.
+- Only the exact source sections/pages listed in evidence were read. Rampelt figure
+  pixels and unlisted supplementary files were not inspected; no raw microscopy or
+  mass-spectrometry reanalysis was performed.
+- Protein-localization PMID sources are complete-abstract/native-annotation tier unless
+  separately listed as primary text. Reference S288C proteins remain distinct from
+  W303 and YPH499 cultures.
+- COMMON remains majority occurrence with exceptions; the cited laboratory studies
+  are not an independent survey of strain prevalence. No universal subunit necessity
+  or fixed copy count is inferred.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Explicit all-record goal authorizes issue-bearing and qualified clean observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
