@@ -1,0 +1,10852 @@
+# PR 2392: current-input review of ten records and adversarial follow-up
+
+- Review: 20261104T095611Z-pr2392-current-record-followup
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-11-04T09:33:00.810778Z
+- Finished UTC: 2026-11-04T09:56:11Z
+- Reviewer: Codex root synthesis with three independent read-only adversarial reviewers (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Independent current-source review of all ten records retains eleven inherited minor curation findings across eight records, with qualified passes for RecBCD and FMN reductase. The exocyst membership expansion and RecBCD graph-family propagation are substantively refreshed against current inputs. This immutable successor corrects seven unsupported formal structured-source exclusions, supplies three missing formal applicability assessments while preserving their valid expression-versus-physical-membership caveat, and reclassifies twelve historical failed-access evidence occurrences without changing their dates or hashes. Original review artifacts and all records remain unchanged. Exact family mappings and condition-scoped physical-association or core-stability findings remain open for separate record curation; no universal formation necessity or complete optional inventory is imposed.
+
+## Scope And Provenance
+
+Exact ten-record PR cohort reassessed against current main 3dc6e3fc1655fa475699c78895558f427be4e67b. Changed inputs are substantively reassessed. Scientific records remain unchanged.
+
+Selection: Complete cohort of ten maintained records reviewed in original PR head 358aa3f1ed88449ff5240075447e90578a9e66f7.
+Coverage: full; 10 reviewed / 10 in the declared population.
+Source: working_tree at Git base 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000145 | data/structures/other/exocyst.yaml | maintained | exocyst |
+| GO:0009338 | data/structures/other/exodeoxyribonuclease_v_complex.yaml | maintained | exodeoxyribonuclease V complex |
+| GO:0034044 | data/structures/other/exomer_complex.yaml | maintained | exomer complex |
+| GO:0035101 | data/structures/other/fact_complex.yaml | maintained | FACT complex |
+| GO:1990202 | data/structures/other/fmn_reductase_complex.yaml | maintained | FMN reductase complex |
+| GO:0005760 | data/structures/other/gamma_dna_polymerase_complex.yaml | maintained | gamma DNA polymerase complex |
+| GO:0000938 | data/structures/other/garp_complex.yaml | maintained | GARP complex |
+| GO:1990130 | data/structures/other/gator1_complex.yaml | maintained | GATOR1 complex |
+| GO:0061700 | data/structures/other/gator2_complex.yaml | maintained | GATOR2 complex |
+| GO:0097504 | data/structures/other/gemini_of_cajal_bodies.yaml | maintained | Gemini of Cajal bodies |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full native QC | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| Native label correspondence | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| TraitMech references | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Native TraitMech link check passed. |
+| Pinned governed files | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Pinned governed files match; native vendored check passed. |
+| Native identifier resolver | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| validate GO:0000145 | passed | True | GO:0000145 | Documented focused command passed. |
+| validate-strict GO:0000145 | passed | True | GO:0000145 | Documented focused command passed. |
+| validate GO:0009338 | passed | True | GO:0009338 | Documented focused command passed. |
+| validate-strict GO:0009338 | passed | True | GO:0009338 | Documented focused command passed. |
+| validate GO:0034044 | passed | True | GO:0034044 | Documented focused command passed. |
+| validate-strict GO:0034044 | passed | True | GO:0034044 | Documented focused command passed. |
+| validate GO:0035101 | passed | True | GO:0035101 | Documented focused command passed. |
+| validate-strict GO:0035101 | passed | True | GO:0035101 | Documented focused command passed. |
+| validate GO:1990202 | passed | True | GO:1990202 | Documented focused command passed. |
+| validate-strict GO:1990202 | passed | True | GO:1990202 | Documented focused command passed. |
+| validate GO:0005760 | passed | True | GO:0005760 | Documented focused command passed. |
+| validate-strict GO:0005760 | passed | True | GO:0005760 | Documented focused command passed. |
+| validate GO:0000938 | passed | True | GO:0000938 | Documented focused command passed. |
+| validate-strict GO:0000938 | passed | True | GO:0000938 | Documented focused command passed. |
+| validate GO:1990130 | passed | True | GO:1990130 | Documented focused command passed. |
+| validate-strict GO:1990130 | passed | True | GO:1990130 | Documented focused command passed. |
+| validate GO:0061700 | passed | True | GO:0061700 | Documented focused command passed. |
+| validate-strict GO:0061700 | passed | True | GO:0061700 | Documented focused command passed. |
+| validate GO:0097504 | passed | True | GO:0097504 | Documented focused command passed. |
+| validate-strict GO:0097504 | passed | True | GO:0097504 | Documented focused command passed. |
+| Supplemental bounded PMID authority checks | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | 909 PMIDs all OK in bounded native requests; full-command limitations remain separate. |
+| Official structured-source applicability and covered-dataset cross-checks | passed | False | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | All ten positive molecular or pathway records received actual whole-record applicability assessment. The fresh official catalogue contains twenty organisms and twenty-eight organism/dataset pairs, with no matching yeast or human biological host. For E.coli precise1k, native metadata identifies 4257 genes, 201 modules, 1035 samples, 518 conditions and BW25113, DGF-298, GMOS, MG1655 and W3110 strains. Exact recB/b2820, recC/b2822 and recD/b2819 joins each have zero thresholded memberships across all 201 rows; those nonhits imply neither absent expression nor absence from RecBCD. SsuE/b0937/P80644 has two supplied-threshold memberships: module56 Sulfate and module82 SSWSNPs, with both native module metadata and complete member tables inspected. These are expression context, not physical assembly or direct regulation proof; V330 recombinant assays are separate. The actual historical Nov3 runner PermissionError remains separately dated, with no fresh invocation claimed; current public-source fallback is separately evidenced. |
+| Independent claim-level source review | passed | True | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Three read-only reviewers covered the complete ten-record cohort, including changed inputs, with explicit scientific findings and source-access limits. Final artifact/head acceptance occurs after saving. |
+| Retained historical adapter runner availability | unavailable | False | GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504 | Historical00:49Z invocation unavailable due to OS access restriction. Official catalogue fallback was inspected separately; no fresh invocation is claimed. Actual historical exit1 is retained in the evidence receipt; the native unavailable-check model has no execution exit-code field. |
+| Native exocyst UniProt verify check | passed | True | GO:0000145 | 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native exocyst UniProt causal check | passed | True | GO:0000145 | 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native exodeoxyribonuclease V complex UniProt verify check | passed | True | GO:0009338 | 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native exodeoxyribonuclease V complex UniProt causal check | passed | True | GO:0009338 | 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native exomer complex UniProt verify check | passed | True | GO:0034044 | 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native exomer complex UniProt causal check | passed | True | GO:0034044 | 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native FACT complex UniProt verify check | passed | True | GO:0035101 | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native FACT complex UniProt causal check | passed | True | GO:0035101 | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native FMN reductase complex UniProt verify check | passed | True | GO:1990202 | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native FMN reductase complex UniProt causal check | passed | True | GO:1990202 | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native gamma DNA polymerase complex UniProt verify check | passed | True | GO:0005760 | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native gamma DNA polymerase complex UniProt causal check | passed | True | GO:0005760 | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GARP complex UniProt verify check | passed | True | GO:0000938 | 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GARP complex UniProt causal check | passed | True | GO:0000938 | 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GATOR1 complex UniProt verify check | passed | True | GO:1990130 | 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GATOR1 complex UniProt causal check | passed | True | GO:1990130 | 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GATOR2 complex UniProt verify check | passed | True | GO:0061700 | 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native GATOR2 complex UniProt causal check | passed | True | GO:0061700 | 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native Gemini of Cajal bodies UniProt verify check | passed | True | GO:0097504 | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+| Native Gemini of Cajal bodies UniProt causal check | passed | True | GO:0097504 | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Native command returned zero. |
+
+## Scientific And Domain Assessments
+
+### Exact exocyst identity, definition and boundary
+
+identity: supported. Targets: GO:0000145.
+
+Current GO0000145 identity and broad conserved tethering definition agree with authority. Yeast species example is appropriate; Sec4 is a regulatory partner outside the defined stable Sec/Exo assembly. No separate subunit record or forced Sec4 component is required.
+
+### Historical identification and eighth constituent
+
+evidence: supported. Targets: GO:0000145.
+
+TerBush1996 complete abstract supports seven named constituents; Guo Exo841999 complete abstract supplies the eighth. The record correctly distinguishes these papers. Fresh TerBush1995 body supports the earlier Sec6/8/15 assembly without projecting all later identities into that experiment.
+
+### Eight reference identities, primary genes and current bounded queries
+
+grounding: supported. Targets: GO:0000145.
+
+Eight reviewed S288C accession/gene pairs and external Sec4 are valid. Present exact-gene/taxon queries each return the intended reference; this is current confirmation, not reconstruction of historical retrieval. UniProt localization annotations and original PMID14562095 abstract do not certify unread Huh supplementary rows.
+
+### Six resolvable current family classes
+
+grounding: concern. Targets: GO:0000145.
+
+Six native whole-protein families match the explicitly unresolved Sec5/Sec6/Sec8/Sec15/Exo70/Exo84 classes and reference xrefs. Complete reviewed-member sets corroborate homologous class scope, including paralogs and proteins with other functions; they do not imply exclusive complex membership. Current label-only task can be narrowed for these six.
+
+### Sec3 domains and broader Sec10-like class
+
+grounding: supported. Targets: GO:0000145.
+
+Retain current uncertainty for Sec3 and Sec10. Sec3 domain/superfamily xrefs do not independently identify its full-protein class; Sec10-like includes additional related proteins. No universal absence of a better family is claimed from this bounded authority inspection.
+
+### Sec4 targeting and localization relations
+
+graph: supported. Targets: GO:0000145.
+
+Sec4–Sec15 and coarse targeted-exocytosis relations agree with the complete Guo1999 abstract/native annotation; Finger1998 is complete abstract tier. Boyd primary EM text/captions distinguish Sec3 peripheral localization from vesicle-associated other subunits. No atomistic fusion mechanism, exact universal localization or image pixel reanalysis claimed.
+
+### Substantive current constituent expansion
+
+graph: supported. Targets: GO:0000145.
+
+Six added component-ref nodes identify existing maintained constituents and seven new contributes-to edges connect them, including Sec3, to the exocyst. Their cited seven-subunit and Exo84 primary abstracts support membership at their stated tiers. These are valid coarse contributions, not newly demonstrated necessity or the conditional mutant-integrity observation.
+
+### Tested mutant-associated recovery result
+
+completeness: concern. Targets: GO:0000145.
+
+Fresh TerBush1995 body pp307–308/Fig6 directly supports altered Sec8-tag coassociation in sec3-2/sec5-24/sec10-2 backgrounds at25C, with wild-type allele rescue described as data not shown. This conditional physical-composition observation remains absent from generic roles and the refreshed membership graph. No complete intracellular depletion, universal assembly failure or forced ESSENTIAL follows.
+
+### Current source tiers and historical access failures
+
+evidence: unknown. Targets: GO:0000145.
+
+TerBush1995 and Boyd2004 genuine bodies were read at declared extents. TerBush1996, Finger1998, GuoSec41999 and GuoExo841999 remain complete indexed abstracts after blocked/stub routes; Huh2003/Zhang2005/Baek2010 are abstract/native-annotation context. No body conclusions are borrowed from challenged HTML or silently upgraded old receipts.
+
+### Exact enzyme complex and hierarchy
+
+identity: supported. Targets: GO:0009338.
+
+GO0009338 identifies the RecB/RecC/RecD enzyme class; GO0140535/GO1902494 are genuine is_a ancestors. Coarse ATP-dependent cleavage function GO0008854 and product wording are supported. No conflation of molecular function with structural identity.
+
+### Species source, reference strain and recombinant preparation
+
+scope: supported. Targets: GO:0009338.
+
+PDB species source562 is appropriate. Three reviewed proteins are K-12 reference annotations, while Singleton Methods coexpress full-length proteins in V330 delta-recBCD with pPB520/pPB800 and pMS421. Current canonical note says bacterial source, not an in-vivo K-12 assay; no strain mismatch is established.
+
+### RecB/RecC/RecD families and stale graph propagation
+
+grounding: supported. Targets: GO:0009338.
+
+IPR004586,IPR006697,IPR006344 identify the matching RecB/C/D families and occur in P08394/P07648/P04993 native xrefs. Added graph groundings match existing component_ref classes and do not alter type or biological function. Historical #2432 is not resolved as a whole by this local check.
+
+### Three primary names/loci and current queries
+
+grounding: supported. Targets: GO:0009338.
+
+Reviewed recB/P08394/b2820, recC/P07648/b2822 and recD/P04993/b2819 K-12 references are verified. Each present exact-gene query returns the intended record. Protein name and family association are not an experiment proving all mechanism or universal formation necessity.
+
+### Protein heterotrimer and DNA substrate
+
+evidence: supported. Targets: GO:0009338.
+
+Fresh native PDB entities and genuine Singleton body identify three protein chains and the43-nt synthetic hairpin. Assembly entity count4 includes DNA. RecB/RecD opposite motor polarities, RecC routing/Chi recognition and proposed structural regulation are distinguished from direct measured activities.
+
+### Coarse activity and substrate-product relations
+
+graph: supported. Targets: GO:0009338.
+
+The seven maintained graph relations stay at complex enables activity, subunits contribute, complex binds DNA and cleavage produces phosphooligonucleotides. Authority plus primary architecture/reconstitution abstract support this level; the graph does not assert every proposed Chi-switch mechanism as an observed causal event.
+
+### No optional necessity mandate
+
+scope: supported. Targets: GO:0009338.
+
+No essentiality field is required for these three constituents. Masterson complete abstract supports reconstitution, including weaker RecBC activity under altered conditions; this does not require a new experiment, uniform ESSENTIAL classification or claim that RecD is dispensable for every defined activity.
+
+### Genuine body improvement versus retained historical diagnostics
+
+evidence: supported. Targets: GO:0009338.
+
+Singleton2004 publisher now exposes a genuine complete scientific main text and Methods, independently read; the old challenge receipt remains historical. Masterson1992 remains complete indexed abstract after PDF403. No old access result is rewritten or full-body claim made for Masterson.
+
+### Selective cargo-adaptor identity and hierarchy
+
+identity: supported. Targets: GO:0034044.
+
+Active GO0034044 definition and protein-complex parent agree. Current class names the stable Chs5/ChAP cargo adaptor without asserting a universal five-subunit stoichiometry. Species-level S.cerevisiae canonical/presence context is supported qualitatively, not as a quantitative prevalence survey.
+
+### Five class rows and external Arf1 boundary
+
+scope: supported. Targets: GO:0034044.
+
+Native yeast purification and recombinant experiments support Chs5 plus the four named ChAP classes, while heterogeneous ratios/subcomplexes remain possible. Purified core can be isolated separately from recruiting Arf1; external Arf1 graph representation is defensible despite broader database subunit prose. Individual family rows do not require every member in every particle.
+
+### Reference proteins and current primary-name queries
+
+grounding: supported. Targets: GO:0034044.
+
+Five reviewed S288C reference examples CHS5/Q12114,CHS6/P40955,BCH1/Q05029,BUD7/Q08754,BCH2/P36122 and external ARF1/P11076 are verified. Exact current queries are bounded present checks, not reconstructions of dated selections. DDY1810, SEY6210/CWY and Sf9 experimental systems are separately identified.
+
+### Resolvable Chs5 family task
+
+grounding: concern. Targets: GO:0034044.
+
+Native IPR052827 family name/type/signature, Q12114 xref and complete three-member reviewed set support the homologous Chs5 class. The current explicit task remains label-only for this resolvable class. LLM-flagged unchecked description is excluded as independent primary biology.
+
+### Shared ChAP versus individual paralog boundaries
+
+grounding: supported. Targets: GO:0034044.
+
+IPR015374 represents a shared ChAP family and is not silently applied as if it resolved each separate Chs6/Bch1/Bud7/Bch2 class. Preserve current uncertainty and specific protein examples; no universal absence of a more precise authority is asserted.
+
+### Cargo selection and parallel ChAP functions
+
+evidence: supported. Targets: GO:0034044.
+
+Sanchatjate sec11 distinguishes the Chs6 cargo-binding effect from Bch1/Bud7 redundancy and the less pronounced Bch2 contribution. Cargo recovery/Calcofluor/transport phenotypes are not automatically physical assembly necessity. The current roles remain appropriately coarse.
+
+### Membrane recruitment and association scope
+
+graph: supported. Targets: GO:0034044.
+
+Current Arf1 recruitment, Chs5-ChAP assembly, TGN localization and coarse export relations agree with genuine Wang/Huranova texts. Lipid-formulation dependence, incomplete membrane deformation and dynamic mixtures remain explicit; no universal Arf1 requirement or exomer-only vesicle budding is inferred.
+
+### Bounded Chs5-dependent coassociation and retention
+
+completeness: concern. Targets: GO:0034044.
+
+Sanchatjate sec12/Fig5 reports loss of efficient Chs6-TAP recovery of Bch1/Bud7/Bch2 in chs5 deletion extracts; individual ChAP deletions can retain remaining complex association. Huranova separately tests Chs5-dependent stable TGN retention. Generic scaffold/assembles-with prose omits these specific dependencies; UNKNOWN can remain and no universal complex absence follows.
+
+### Distinct body, abstract and experimental scopes
+
+evidence: supported. Targets: GO:0034044.
+
+Sanchatjate, Wang and Huranova genuine bodies were read at declared Methods/Results/caption extents. Trautwein remains complete indexed abstract after challenge routes; Huranova Appendix strains and all supplemental datasets/pixels remain unread. S288C native annotations do not silently replace DDY1810/SEY6210 or recombinant Sf9 preparations.
+
+### Whole-record structured-source applicability
+
+evidence: concern. Targets: GO:0000145.
+
+Original formal N/A rationale based on lack of an iModulon-specific claim is insufficient for this positive molecular record. Fresh complete catalogue has no Saccharomyces match; no unrelated bacterial proxy or downstream query was invented. Historical runner unavailability is separately dated.
+
+### Append-only history and exact lineage
+
+scope: supported. Targets: GO:0000145.
+
+Two inherited minors remain with exact predecessor identity; current new membership edges do not resolve conditional integrity or family tasks. Preserve rationale, posed_date and dated curation events; no record edits.
+
+### Actual native protein and original review checks
+
+schema: supported. Targets: GO:0000145.
+
+8 reviewed examples; 9 typed nodes, 8 COVERED and 1 UNANCHORED_WITH_UNIPROT. Six actual current commands and six original validate/render commands pass with declared limits; no future successor/CI certification.
+
+### Images and physical measurements
+
+scope: not_applicable. Targets: GO:0000145.
+
+No maintained image or quantitative physical-property field requires pixel inspection. Source text captions are only read at declared extents; no figure pixels, supplements, movies or atomic data were inspected. Optional imaging is not imposed.
+
+### Whole-record structured-source applicability
+
+evidence: concern. Targets: GO:0009338.
+
+Original formal N/A rationale based on lack of an iModulon-specific claim is insufficient for this positive molecular record. Actual E.coli precise1k native gene joins and all201 memberships per RecB/C/D locus were inspected; all three have zero thresholded hits, not biological absence or a direct assembly result. Five-strain context excludes any assumption that V330 was measured. Historical runner unavailability is separately dated.
+
+### Append-only history and exact lineage
+
+scope: supported. Targets: GO:0009338.
+
+Original qualified pass remains supported after substantive grounding refresh. Historical grouped propagation issue does not dispose unrelated findings. Preserve rationale, posed_date and dated curation events; no record edits.
+
+### Actual native protein and original review checks
+
+schema: supported. Targets: GO:0009338.
+
+3 reviewed examples; 3 typed nodes, 3 COVERED and 0 UNANCHORED_WITH_UNIPROT. Six actual current commands and six original validate/render commands pass with declared limits; no future successor/CI certification.
+
+### Images and physical measurements
+
+scope: not_applicable. Targets: GO:0009338.
+
+No maintained image or quantitative physical-property field requires pixel inspection. Source text captions are only read at declared extents; no figure pixels, supplements, movies or atomic data were inspected. Optional imaging is not imposed.
+
+### Whole-record structured-source applicability
+
+evidence: concern. Targets: GO:0034044.
+
+Original formal N/A rationale based on lack of an iModulon-specific claim is insufficient for this positive molecular record. Fresh complete catalogue has no Saccharomyces match; no unrelated bacterial proxy or downstream query was invented. Historical runner unavailability is separately dated.
+
+### Append-only history and exact lineage
+
+scope: supported. Targets: GO:0034044.
+
+Two inherited minors remain; actions narrow only the current explicit grounding task or add source-scoped evidence. Preserve rationale, posed_date and dated curation events; no record edits.
+
+### Actual native protein and original review checks
+
+schema: supported. Targets: GO:0034044.
+
+5 reviewed examples; 6 typed nodes, 5 COVERED and 1 UNANCHORED_WITH_UNIPROT. Six actual current commands and six original validate/render commands pass with declared limits; no future successor/CI certification.
+
+### Images and physical measurements
+
+scope: not_applicable. Targets: GO:0034044.
+
+No maintained image or quantitative physical-property field requires pixel inspection. Source text captions are only read at declared extents; no figure pixels, supplements, movies or atomic data were inspected. Optional imaging is not imposed.
+
+### identity-and-definition
+
+identity: supported. Targets: GO:0035101.
+
+FACT denotes the histone-chaperone complex, with yeast Spt16/Pob3 core and the broad nucleosome disassembly/reassembly function. The yeast and generic FACT activities are supported without assigning all later assay details to one paper.
+
+### hierarchy-and-topology
+
+scope: supported. Targets: GO:0035101.
+
+Current GO names and typed relations support the maintained parents and functions. No extra parthood is inferred from ancestor data.
+
+### components-and-family-grounding
+
+grounding: concern. Targets: GO:0035101.
+
+The explicit open task can adopt exact full Spt16 IPR040258 and SSRP1/POB3 IPR000969, supported by native protein joins. Broader RTT106/SSRP1 and optional Nhp6 inclusion are excluded.
+
+### protein-identity-and-native-coverage
+
+grounding: supported. Targets: GO:0035101.
+
+Two reviewed S288C protein_examples and two COVERED typed protein nodes. Exact current accessions, primary names/aliases, loci, taxon and review status are independently verified. Native command success does not certify biological assembly or necessity.
+
+### taxon-and-experimental-scope
+
+scope: supported. Targets: GO:0035101.
+
+S288C protein examples are reference-strain identities. Formosa uses explicit A364a/W303/S288C derivatives and reconstituted heterologous nucleosomes; Mason uses specified W303.1A/FY56/L577 strains. Recombinant E.coli is an expression host, not yeast FACT distribution evidence.
+
+### function-and-primary-support
+
+evidence: supported. Targets: GO:0035101.
+
+Formosa measures cofactor-dependent nucleosome binding/accessibility and genetic effects; Belot abstract supports chaperone/PolII function; Mason ChIP supports active-gene association. Broad FACT function is not a claim that every paper directly demonstrates complete disassembly/reassembly.
+
+### localisation-and-source-tiers
+
+provenance: supported. Targets: GO:0035101.
+
+Formosa and Mason genuine current bodies are read only at listed sections/text-caption tiers; no pixels. Wittmeyer and Belot are current primary abstracts. Historical browser-body scope is not re-certified by current failed publisher routes.
+
+### graph-and-formation-boundaries
+
+graph: supported. Targets: GO:0035101.
+
+The NONMECHANISTIC graph separates two memberships from broad nucleosome/transcription functions. Nhp6 cofactor-dependent binding does not make Nhp6 an obligatory stable core subunit.
+
+### necessity-and-discussion-history
+
+evidence: unknown. Targets: GO:0035101.
+
+UNKNOWN formation necessity remains permitted. Nhp6 genetic interactions/remodeling assays and some explicitly unpublished observations do not establish universal FACT core-formation necessity. Preserve the resolved core/cofactor boundary and append-only rationale.
+
+### structured-source-applicability
+
+evidence: supported. Targets: GO:0035101.
+
+Positive protein/pathway assertions require an actual native applicability assessment. The original notes[1] correctly says expression membership is not proof of physical membership, but no formal assessment or actual catalogue scope is supplied. Current full catalogue lacks the natural yeast/human host for this target; no foreign-host proxy or invented downstream query is used. Historical runner unavailability remains historical; no fresh runner invocation is claimed.
+
+### schema-history-and-verdict
+
+schema: concern. Targets: GO:0035101.
+
+All47 current frozen inputs,39 historical input occurrences,3 original native validate/render pairs and3 unchanged target hashes pass. Needs_curation retained for one independently reconfirmed inherited minor exact-family finding. Original historical rationale stays intact. 1 historical access-kind occurrence(s) require classification repair; their context_only disclosures were honest. No future CI/queue or unrelated issue closure is certified.
+
+### identity-and-definition
+
+identity: supported. Targets: GO:1990202.
+
+GO1990202 is the generic FMN-reductase complex. The SsuE synonym, homodimer and copy count are expressly E.coli-scoped; they do not exclude other FMN-reducing complexes or substrates.
+
+### hierarchy-and-topology
+
+scope: supported. Targets: GO:1990202.
+
+Current GO names and typed relations support the maintained parents and functions. No extra parthood is inferred from ancestor data.
+
+### components-and-family-grounding
+
+grounding: supported. Targets: GO:1990202.
+
+IPR020048 is the exact SsuE family. Purified SsuE and SsuD are distinct complexes; one represented SsuE class with E.coli copies2 is supported.
+
+### protein-identity-and-native-coverage
+
+grounding: supported. Targets: GO:1990202.
+
+One reviewed E.coli K12 protein_example and one COVERED typed protein node. Exact current accessions, primary names/aliases, loci, taxon and review status are independently verified. Native command success does not certify biological assembly or necessity.
+
+### taxon-and-experimental-scope
+
+scope: supported. Targets: GO:1990202.
+
+E.coli species562 and K12 reference83333 remain distinct. The source abstract reports purified tagged E.coli SsuE; experimental strain detail absent from the currently read abstract is not invented. precise1k spans five named strains and is only transcriptomic context.
+
+### function-and-primary-support
+
+evidence: supported. Targets: GO:1990202.
+
+Eichhorn complete primary abstract directly supports NAD(P)H-dependent FMN reduction, additional flavin substrates and native homodimer assignment. Reversible ontology reaction display does not contradict the maintained reduction direction. Module membership is not a catalytic assay.
+
+### localisation-and-source-tiers
+
+provenance: supported. Targets: GO:1990202.
+
+Current Eichhorn evidence is its complete primary abstract plus native curated identity. The failed JBC PDF response remains validation/context; historical browser Methods are not claimed as freshly reread.
+
+### graph-and-formation-boundaries
+
+graph: supported. Targets: GO:1990202.
+
+The coarse MECHANISTIC graph links SsuE homodimerization to its complex and catalytic reduction. The native dimer assignment supports that coarse assembly relation, without measured association kinetics, interface detail or deletion necessity.
+
+### necessity-and-discussion-history
+
+evidence: unknown. Targets: GO:1990202.
+
+UNKNOWN formation necessity remains permitted. Purified enzymatic activity, homodimer size and transcriptomic co-membership do not independently establish necessity under all conditions. No optional extra example or assay is mandated.
+
+### structured-source-applicability
+
+evidence: supported. Targets: GO:1990202.
+
+Positive protein/pathway assertions require an actual native applicability assessment. The original notes[1] correctly says expression membership is not proof of physical membership, but no formal assessment or actual catalogue scope is supplied. E.coli precise1k is matched as bounded five-strain context. Exact b0937/P80644 has two true memberships among201: Sulfate56 and SSW SNPs82; both full member tables and metadata are inspected. SsuD co-expression does not establish a physical SsuE-SsuD complex. Generated summaries are excluded. Historical runner unavailability remains historical; no fresh runner invocation is claimed.
+
+### schema-history-and-verdict
+
+schema: supported. Targets: GO:1990202.
+
+All47 current frozen inputs,39 historical input occurrences,3 original native validate/render pairs and3 unchanged target hashes pass. Qualified pass retained with explicit abstract/assay limits. Original historical rationale stays intact. 1 historical access-kind occurrence(s) require classification repair; their context_only disclosures were honest. No future CI/queue or unrelated issue closure is certified.
+
+### identity-and-definition
+
+identity: supported. Targets: GO:0005760.
+
+GO0005760 denotes mitochondrial polymerase gamma with catalytic and accessory classes. Class count is not physical copy count; the maintained wording does not require a universal two-polypeptide mammalian assembly.
+
+### hierarchy-and-topology
+
+scope: supported. Targets: GO:0005760.
+
+Current GO names and typed relations support the maintained parents and functions. GO0005759 typed child relation independently supports matrix parthood; GO0005760 taxon restriction is Eukaryota.
+
+### components-and-family-grounding
+
+grounding: concern. Targets: GO:0005760.
+
+The explicit catalytic task can adopt exact IPR002297. POLG2 alternatives are broader, domain-only, deleted or empty; no unverified accessory family is forced.
+
+### protein-identity-and-native-coverage
+
+grounding: supported. Targets: GO:0005760.
+
+Two reviewed human protein_examples and two COVERED typed protein nodes. Exact current accessions, primary names/aliases, loci, taxon and review status are independently verified. Native command success does not certify biological assembly or necessity.
+
+### taxon-and-experimental-scope
+
+scope: supported. Targets: GO:0005760.
+
+Human reference proteins and canonical reconstitution are supported. Carrodeguas uses a mouse accessory crystal and human deletion construct; those assay scopes are explicit. Eukaryota restriction does not establish universal stoichiometry or quantitative COMMON prevalence.
+
+### function-and-primary-support
+
+evidence: supported. Targets: GO:0005760.
+
+Lim supports accessory enhancement of catalytic binding/processivity; Carrodeguas separates accessory dimerization/stimulation from retained catalytic binding. Native mitochondrial/nucleoid annotation and primary abstracts support mtDNA context without adding interface or repair details to the coarse graph.
+
+### localisation-and-source-tiers
+
+provenance: supported. Targets: GO:0005760.
+
+Current Lim/Carrodeguas/Spelbrink/Bogenhagen are complete primary abstracts, Hubscher secondary abstract context. Native POLG experimental citations and inferred POLG2 matrix annotation remain distinct; no individual microscopy is freshly certified.
+
+### graph-and-formation-boundaries
+
+graph: supported. Targets: GO:0005760.
+
+The NONMECHANISTIC graph encodes two class memberships and mtDNA replication. It does not overstate the historic Lim1:1 interpretation or add universal copy counts; later accessory homodimer context remains acknowledged.
+
+### necessity-and-discussion-history
+
+evidence: unknown. Targets: GO:0005760.
+
+UNKNOWN formation necessity remains permitted. Accessory deletion loses dimerization/stimulation yet retains catalytic interaction; activity and assembly must remain separate. Preserve the resolved accessory-copy-number discussion and historical1:1 study interpretation without treating two component classes as two physical molecules.
+
+### structured-source-applicability
+
+evidence: supported. Targets: GO:0005760.
+
+Positive protein/pathway assertions require an actual native applicability assessment. The original notes[1] correctly says expression membership is not proof of physical membership, but no formal assessment or actual catalogue scope is supplied. Current full catalogue lacks the natural yeast/human host for this target; no foreign-host proxy or invented downstream query is used. Historical runner unavailability remains historical; no fresh runner invocation is claimed.
+
+### schema-history-and-verdict
+
+schema: concern. Targets: GO:0005760.
+
+All47 current frozen inputs,39 historical input occurrences,3 original native validate/render pairs and3 unchanged target hashes pass. Needs_curation retained for one independently reconfirmed inherited minor exact-family finding. Original historical rationale stays intact. 3 historical access-kind occurrence(s) require classification repair; their context_only disclosures were honest. No future CI/queue or unrelated issue closure is certified.
+
+### Exact identity, hierarchy and whole-record boundary
+
+identity: supported. Targets: GO:0000938.
+
+GO0000938 exact four-member GARP/VFT tethering complex; parent vesicle-tethering complex, not the Tlg1 SNARE.
+
+### Exact classes and bounded wider-family candidates
+
+grounding: concern. Targets: GO:0000938.
+
+Three native full-family/protein joins resolve Vps52IPR007258,Vps53IPR039766,Vps54IPR039745. PF08700 shared N-terminal repeat cannot resolve complete Vps51 class.
+
+### Reviewed identity, aliases, locus and reference taxon
+
+grounding: supported. Targets: GO:0000938.
+
+All 4 current reviewed examples and exact gene/taxon queries match native accession identities. VPS51/52/53/54 match S288C reference genes; external TLG1 is context.
+
+### Actual source tiers and experimental scope
+
+evidence: supported. Targets: GO:0000938.
+
+Fresh Conibear2000/2003 genuine bodies support four-member identity, core stability, TGN/cargo and Tlg1 interaction. Siniossoglou/Pelham2002 is complete-primary-abstract only. Direct binding is distinguished from proposed SNARE opening; GARP figure captions were read, not pixels.
+
+### Constituent membership versus other biological pools
+
+grounding: supported. Targets: GO:0000938.
+
+Four-member GARP identity is supported by native authorities and direct co-purification; older three-core work is read in temporal context.
+
+### Direct assembly-maintenance evidence versus functional necessity
+
+grounding: concern. Targets: GO:0000938.
+
+Conibear2000 directly measured reciprocal Vps52/53/54 degradation/steady-state instability under the tested yeast deletions, while Conibear2003 retains the three-member core without Vps51. This bounded result merits role/evidence curation, but does not compel all-four ESSENTIAL flags, universal viability, or complete assembly abolition.
+
+### Complete causal-graph assertions and mechanism level
+
+graph: supported. Targets: GO:0000938.
+
+FUNCTION/NONMECHANISTIC graph retains four constituents, TGN localization, endosome-to-Golgi transport and Vps51-Tlg1 interaction. It does not claim a complete experimentally solved SNARE-opening or membrane-fusion cycle.
+
+### Species, reference strain, cell-state and experimental host
+
+scope: supported. Targets: GO:0000938.
+
+Canonical yeast4932 and reviewed S288C559292 references are correct; Conibear SNY/LCY yeast strains and BL21 expression have distinct experimental roles. COMMON is qualitative, not a measured frequency census.
+
+### Whole-record structured-source applicability
+
+evidence: supported. Targets: GO:0000938.
+
+Positive named-protein, signaling, transport or RNA-biogenesis claims trigger host assessment. Complete fresh official catalogue has no matching yeast/human biological host, so no downstream module query is applicable. Historical runner unavailability and current public-catalogue fallback are separately evidenced; no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+
+### Original native rendering, frozen inputs and actual protein checks
+
+schema: supported. Targets: GO:0000938.
+
+All four original native validate/render pairs exit0 and exact Markdown matches;52 historical input occurrences match source Git objects. This current target is unchanged. Four reviewed examples/four COVERED constituent nodes; one separate Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent. Root global and future final-head gates remain separate.
+
+### Append-only rationale and exact inherited finding lineage
+
+provenance: supported. Targets: GO:0000938.
+
+All dated history and rationale stay immutable. Separately authorized curation may update current notes/status or append a dated clarification; exact predecessor repository/review/finding IDs are retained. Historical batch26 execution-origin wording is not mislabeled as a current cohort error.
+
+### Complete maintained-record audit and bounded external coverage
+
+completeness: supported. Targets: GO:0000938.
+
+All current fields, evidence citations, examples, functions, graph nodes/edges and discussions read. No maintained images. Primary-body extents and figure-caption limits remain explicit; no uninspected supplemental experiment or coordinate analysis claimed. No optional inventory/stoichiometry or universal formation requirement invented.
+
+### Current independently confirmed disposition
+
+consistency: concern. Targets: GO:0000938.
+
+Needs curation for two inherited minor findings: three exact families and a concrete source-tested reciprocal core-stability result. Remaining identity and coarse graph supported.
+
+### Exact identity, hierarchy and whole-record boundary
+
+identity: supported. Targets: GO:1990130.
+
+GO1990130 exact three-member GATOR1/SEACIT; protein complex parent and SEA part_of kept distinct, Rag substrates outside constituents.
+
+### Exact classes and bounded wider-family candidates
+
+grounding: concern. Targets: GO:1990130.
+
+Native Iml1/DEPDC5IPR027244,Npr2/NPRL2IPR009348,Npr3/NPRL3IPR005365 resolve the three maintained class deferrals.
+
+### Reviewed identity, aliases, locus and reference taxon
+
+grounding: supported. Targets: GO:1990130.
+
+All 3 current reviewed examples and exact gene/taxon queries match native accession identities. IML1/NPR2/NPR3 match S288C; external GTR1 is the regulator target.
+
+### Actual source tiers and experimental scope
+
+evidence: supported. Targets: GO:1990130.
+
+Fresh Dokudovskaya/CellCycle bodies, the genuine ScienceSignaling author PDF and Bar-Peled numeric PMC body support exact three-member boundary and condition-scoped negative signaling. CellCycle includes primary epistasis. Huh atlas is complete-abstract/native-annotation scope only; Npr3 fluorescence below detection and multi-reference annotation caveats remain explicit.
+
+### Constituent membership versus other biological pools
+
+grounding: supported. Targets: GO:1990130.
+
+Three-member GATOR1/SEACIT and GAP target are supported. Full SEA composition, Npr3 imaging limits and human comparative assays do not expand its member list.
+
+### Direct assembly-maintenance evidence versus functional necessity
+
+grounding: unknown. Targets: GO:1990130.
+
+UNKNOWN formation flags are not contradicted by GAP activity, leucine-response epistasis or transient interaction. Arg943 and truncated-domain assays test activity in stated systems, not universal individual formation necessity.
+
+### Complete causal-graph assertions and mechanism level
+
+graph: supported. Targets: GO:1990130.
+
+REGULATION/NONMECHANISTIC graph retains Iml1/Npr2/Npr3, external Gtr1, vacuolar association and negative TORC1 output. Transient Iml1-Gtr1 interaction after leucine withdrawal is not interpreted as new wholesale membrane recruitment; source localization is already present before starvation.
+
+### Species, reference strain, cell-state and experimental host
+
+scope: supported. Targets: GO:1990130.
+
+Yeast4932 and S288C references are supported; Panchaud defined-medium/leucine conditions, purified proteins and human/fly comparisons remain separate. Supplementary exact strain tables not independently read.
+
+### Whole-record structured-source applicability
+
+evidence: supported. Targets: GO:1990130.
+
+Positive named-protein, signaling, transport or RNA-biogenesis claims trigger host assessment. Complete fresh official catalogue has no matching yeast/human biological host, so no downstream module query is applicable. Historical runner unavailability and current public-catalogue fallback are separately evidenced; no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+
+### Original native rendering, frozen inputs and actual protein checks
+
+schema: supported. Targets: GO:1990130.
+
+All four original native validate/render pairs exit0 and exact Markdown matches;52 historical input occurrences match source Git objects. This current target is unchanged. Three reviewed examples/three COVERED constituent nodes; separate Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Root global and future final-head gates remain separate.
+
+### Append-only rationale and exact inherited finding lineage
+
+provenance: supported. Targets: GO:1990130.
+
+All dated history and rationale stay immutable. Separately authorized curation may update current notes/status or append a dated clarification; exact predecessor repository/review/finding IDs are retained. Historical batch26 execution-origin wording is not mislabeled as a current cohort error.
+
+### Complete maintained-record audit and bounded external coverage
+
+completeness: supported. Targets: GO:1990130.
+
+All current fields, evidence citations, examples, functions, graph nodes/edges and discussions read. No maintained images. Primary-body extents and figure-caption limits remain explicit; no uninspected supplemental experiment or coordinate analysis claimed. No optional inventory/stoichiometry or universal formation requirement invented.
+
+### Current independently confirmed disposition
+
+consistency: concern. Targets: GO:1990130.
+
+Needs curation for one grouped minor exact-family finding; existing three-member boundary and negative signaling retained.
+
+### Exact identity, hierarchy and whole-record boundary
+
+identity: supported. Targets: GO:0061700.
+
+GO0061700 exact five-member GATOR2/SEACAT; SEA part_of distinct from is_a; other Sec13/Seh1 pools are not this complex.
+
+### Exact classes and bounded wider-family candidates
+
+grounding: concern. Targets: GO:0061700.
+
+Native WDR24/Sea2IPR037590,WDR59/Sea3IPR049567,MIOS/Sea4IPR037593 resolve three rows. Wider IPR037363 is not uniquely each Sec13 and Seh1 class.
+
+### Reviewed identity, aliases, locus and reference taxon
+
+grounding: supported. Targets: GO:0061700.
+
+All 5 current reviewed examples and exact gene/taxon queries match native accession identities. SEA2 maps primary RTC1 and SEA3 maps primary MTC5; SEA4/SEH1/SEC13 match S288C.
+
+### Actual source tiers and experimental scope
+
+evidence: supported. Targets: GO:0061700.
+
+Five-member branch identity and opposing signaling direction are supported by current GO and separately scoped yeast epistasis/human-fly body evidence. SEC13 functional depletion was deliberately excluded from Bar-Peled because of other complexes. Huh/Rout are full-primary-abstract and native annotation scope, not independent reanalysis of atlas/NPC data.
+
+### Constituent membership versus other biological pools
+
+grounding: supported. Targets: GO:0061700.
+
+Five-member SEACAT branch is supported; total SEA eight-member purifications and later branch regulation are distinguished. Constituent classes do not imply a universal one-copy oligomer count.
+
+### Direct assembly-maintenance evidence versus functional necessity
+
+grounding: unknown. Targets: GO:0061700.
+
+UNKNOWN formation flags remain qualified. Co-purification and pathway knockdown/epistasis establish membership and signaling, not every constituent being universally necessary for every assembly; shared NPC/COPII pools are distinct.
+
+### Complete causal-graph assertions and mechanism level
+
+graph: supported. Targets: GO:0061700.
+
+REGULATION/NONMECHANISTIC graph retains the five constituents, SEA parthood and positive TORC1 regulation/antagonistic branch model. No individual reaction-state cycle or direct catalytic activity for every GATOR2 subunit is asserted.
+
+### Species, reference strain, cell-state and experimental host
+
+scope: supported. Targets: GO:0061700.
+
+Yeast4932, S288C proteins and BY4741/BY4742-derived CellCycle strains are supported; human/fly GATOR results are comparative, not yeast strain experiments.
+
+### Limits of VARIABLE lineage/strain qualifier
+
+scope: unknown. Targets: GO:0061700.
+
+The inspected model-system studies do not independently establish the full lineage/strain-distribution qualifier. Distinct NPC/COPII constituent pools do not constitute a species-prevalence census. This sampling limitation does not demonstrate the opposite distribution or create a speculative curation finding.
+
+### Whole-record structured-source applicability
+
+evidence: supported. Targets: GO:0061700.
+
+Positive named-protein, signaling, transport or RNA-biogenesis claims trigger host assessment. Complete fresh official catalogue has no matching yeast/human biological host, so no downstream module query is applicable. Historical runner unavailability and current public-catalogue fallback are separately evidenced; no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+
+### Original native rendering, frozen inputs and actual protein checks
+
+schema: supported. Targets: GO:0061700.
+
+All four original native validate/render pairs exit0 and exact Markdown matches;52 historical input occurrences match source Git objects. This current target is unchanged. Five reviewed examples and five COVERED constituent nodes. Root global and future final-head gates remain separate.
+
+### Append-only rationale and exact inherited finding lineage
+
+provenance: supported. Targets: GO:0061700.
+
+All dated history and rationale stay immutable. Separately authorized curation may update current notes/status or append a dated clarification; exact predecessor repository/review/finding IDs are retained. Historical batch26 execution-origin wording is not mislabeled as a current cohort error.
+
+### Complete maintained-record audit and bounded external coverage
+
+completeness: supported. Targets: GO:0061700.
+
+All current fields, evidence citations, examples, functions, graph nodes/edges and discussions read. No maintained images. Primary-body extents and figure-caption limits remain explicit; no uninspected supplemental experiment or coordinate analysis claimed. No optional inventory/stoichiometry or universal formation requirement invented.
+
+### Current independently confirmed disposition
+
+consistency: concern. Targets: GO:0061700.
+
+Needs curation for one grouped minor three-family finding; supported five-member boundary and positive signaling retained with Sec13/Seh1 boundary and prevalence limits.
+
+### Exact identity, hierarchy and whole-record boundary
+
+identity: supported. Targets: GO:0097504.
+
+GO0097504 exact gems; nuclear-body parent and nuclear-lumen parthood, nearby Cajal bodies are a different identity.
+
+### Exact classes and bounded wider-family candidates
+
+grounding: concern. Targets: GO:0097504.
+
+IPR040424 resolves the generic SMN protein class independently of human paralog, Gemin-complex and gem-versus-Cajal localization questions.
+
+### Reviewed identity, aliases, locus and reference taxon
+
+grounding: supported. Targets: GO:0097504.
+
+All 1 current reviewed examples and exact gene/taxon queries match native accession identities. SMN1 exact query returns Q16637, whose native entry also includes SMN2; primary-name identity is not exclusive paralog localization.
+
+### Actual source tiers and experimental scope
+
+evidence: supported. Targets: GO:0097504.
+
+Liu1996 genuine scanned pages3555/3556/3559-3564 were visually read; missing pages3557/3558/3565 preclude a complete-paper claim. Matera/Frey is secondary metadata only without native abstract; Gall is a secondary abstract. Gangwani and Mahmoudi are complete-primary-abstract/native-annotation scope. No inferred full-body or unseen-image evidence.
+
+### Constituent membership versus other biological pools
+
+grounding: supported. Targets: GO:0097504.
+
+Generic SMN is a supported marker/resident, not an exhaustive Gemin inventory. No optional complete proteome requirement is imposed.
+
+### Direct assembly-maintenance evidence versus functional necessity
+
+grounding: unknown. Targets: GO:0097504.
+
+SMN marker/localization and associations with snRNP biogenesis do not establish universal gem formation necessity. Q16637 combines SMN1/SMN2 identity; no exclusive paralog occupancy or whole-SMN-complex equivalence inferred.
+
+### Complete causal-graph assertions and mechanism level
+
+graph: supported. Targets: GO:0097504.
+
+FUNCTION/NONMECHANISTIC graph expresses SMN association, nearby Cajal bodies and cautious snRNP-biogenesis context. Gem and Cajal identity remain distinct, with historical immunodetection scope instead of universal protein-exclusion inference.
+
+### Species, reference strain, cell-state and experimental host
+
+scope: supported. Targets: GO:0097504.
+
+Human9606/HeLa scope is supported. Liu also compares mouse3T3 and primary fibroblasts; source-specific temperature/cell-state effects are not organism-wide prevalence measurements.
+
+### Limits of VARIABLE lineage/strain qualifier
+
+scope: unknown. Targets: GO:0097504.
+
+The inspected model-system studies do not independently establish the full lineage/strain-distribution qualifier. Observed cell-type/temperature differences support restricted cell-state variability, not a population-level census. This sampling limitation does not demonstrate the opposite distribution or create a speculative curation finding.
+
+### Whole-record structured-source applicability
+
+evidence: supported. Targets: GO:0097504.
+
+Positive named-protein, signaling, transport or RNA-biogenesis claims trigger host assessment. Complete fresh official catalogue has no matching yeast/human biological host, so no downstream module query is applicable. Historical runner unavailability and current public-catalogue fallback are separately evidenced; no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+
+### Original native rendering, frozen inputs and actual protein checks
+
+schema: supported. Targets: GO:0097504.
+
+All four original native validate/render pairs exit0 and exact Markdown matches;52 historical input occurrences match source Git objects. This current target is unchanged. One reviewed example and one COVERED constituent node; correct native SMN1 query does not establish SMN1-only gem occupancy. Root global and future final-head gates remain separate.
+
+### Append-only rationale and exact inherited finding lineage
+
+provenance: supported. Targets: GO:0097504.
+
+All dated history and rationale stay immutable. Separately authorized curation may update current notes/status or append a dated clarification; exact predecessor repository/review/finding IDs are retained. Historical batch26 execution-origin wording is not mislabeled as a current cohort error.
+
+### Complete maintained-record audit and bounded external coverage
+
+completeness: supported. Targets: GO:0097504.
+
+All current fields, evidence citations, examples, functions, graph nodes/edges and discussions read. No maintained images. Only gems has actually inspected external scan pixels; other source figures were read as captions, not pixels. No optional inventory/stoichiometry or universal formation requirement invented.
+
+### Current independently confirmed disposition
+
+consistency: concern. Targets: GO:0097504.
+
+Needs curation for one minor generic SMN-family finding; marker, identity, human example and cautious association graph supported within declared source limitations.
+
+### Complete frozen-input comparison and bounded refresh
+
+provenance: supported. Targets: GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504.
+
+2 of ten original target hashes differ from current main. The changed content is substantively reassessed in the target-specific assessments; original observations remain historical and unchanged. All current target and used context bytes are frozen.
+
+## Findings
+
+### micro-F1: Resolve six verified exocyst family mappings
+
+minor / open / confirmed; issue key: exocyst-six-exact-subunit-families.
+
+Six native whole-protein families corresponding to Sec5/Sec6/Sec8/Sec15/Exo70/Exo84 remain label-only under the explicit current mapping task. Current type/name/signatures, native reference xrefs and complete reviewed-member sets corroborate homologous class mappings. This is not an exclusive exocyst-membership assertion for every related paralog; Sec3 domains and broader Sec10-like remain separately unresolved.
+
+### micro-F2: Record the reported mutant-dependent complex-integrity result
+
+minor / open / confirmed; issue key: exocyst-bounded-mutant-complex-integrity.
+
+The already cited TerBush1995 primary body pp307–308/Fig6 reports altered recovered Sec8-tag-associated composition in sec3-2, sec5-24 and sec10-2 backgrounds. The current new constituent edges and generic roles do not preserve this conditional physical-association observation. This is not proof of complete intracellular complex loss or universal formation necessity.
+
+### micro-F3: Resolve the verified Chs5 family mapping
+
+minor / open / confirmed; issue key: exomer-chs5-exact-family-grounding.
+
+The Chs5 scaffold remains label-only under an open exact-family task, although native IPR052827 names its whole-protein family and Q12114 plus the complete reviewed member set corroborate the homologous class.
+
+### micro-F4: Record the experimentally tested Chs5 scaffold dependence
+
+minor / open / confirmed; issue key: exomer-chs5-bounded-complex-integrity.
+
+Sanchatjate sec12 and Figure5 report that Chs6-TAP association with Bch1,Bud7 and Bch2 depends on Chs5 in the tested extracts. Huranova adds a distinct Chs5-dependent stable TGN retention result. The current generic scaffold role/assembles-with graph does not preserve these tested conditional relationships.
+
+### plaque-t3-F1: Resolve the two verified FACT subunit families
+
+minor / open / confirmed; issue key: fact-exact-subunit-family-groundings.
+
+The two existing subunits are REVIEWED_LABEL_ONLY under an open exact-family task. Native IPR040258 identifies Spt16 and IPR000969 identifies SSRP1/POB3, corroborated by the respective native protein cross-references.
+
+### plaque-t5-F1: Resolve the verified catalytic polymerase-gamma family
+
+minor / open / confirmed; issue key: pol-gamma-catalytic-exact-family-grounding.
+
+The existing POLG class is REVIEWED_LABEL_ONLY with an open exact-family task. Native IPR002297 identifies mitochondrial DNA polymerase family A and P54098 corroborates membership. The accessory alternatives checked here are broader, domain-only, deleted or empty and are deliberately excluded.
+
+### septin-garp_complex-F1: Ground three exact GARP constituent families
+
+minor / open / confirmed; issue key: garp-exact-subunit-families.
+
+The current label-only notes defer exact family review, but native full-family metadata and independent protein membership now resolve Vps52, Vps53 and Vps54. Current native full-family type/signature and independent protein cross-reference joins reconfirm the exact bounded mapping. Preserve historical rationale; update current notes/status or append a dated clarification during separately authorized curation.
+
+### septin-garp_complex-F2: Record the directly tested reciprocal GARP-core stability
+
+minor / open / confirmed; issue key: garp-tested-core-stability.
+
+The maintained Vps52/Vps53/Vps54 roles omit the directly tested reciprocal core-stability result in Conibear2000 section17/Figure6: loss of another core member reduces Vps52 steady-state abundance to14% and accelerates tagged-core turnover during the stated pulse-chase assays. Conibear2003 section11 retains the three-member core without Vps51. Curate this bounded role/evidence result; current UNKNOWN values alone are not a requirement to assign essentiality, and reduced stability does not demonstrate complete assembly abolition or universal viability necessity.
+
+### septin-gator1_complex-F1: Ground all three exact GATOR1/SEACIT classes
+
+minor / open / confirmed; issue key: gator1-exact-families.
+
+Exact Iml1/DEPDC5, Npr2/NPRL2 and Npr3/NPRL3 families are now verified, resolving the maintained label-only deferral. Current native full-family type/signature and independent protein cross-reference joins reconfirm the exact bounded mapping. Preserve historical rationale; update current notes/status or append a dated clarification during separately authorized curation.
+
+### septin-gator2_complex-F1: Ground the Sea2, Sea3 and Sea4 constituent classes
+
+minor / open / confirmed; issue key: gator2-three-exact-families.
+
+Exact WDR24/Sea2, WDR59/Sea3 and MIOS/Sea4 families resolve three current label-only rows without forcing the wider Sec13/Seh1 group into two specific classes. Current native full-family type/signature and independent protein cross-reference joins reconfirm the exact bounded mapping. Preserve historical rationale; update current notes/status or append a dated clarification during separately authorized curation.
+
+### septin-gemini_of_cajal_bodies-F1: Ground the generic SMN marker family
+
+minor / open / confirmed; issue key: gems-smn-exact-family.
+
+The row is explicitly generic SMN protein, yet its label-only rationale defers grounding together with unresolved paralogs/Gemin-complex boundaries. Exact IPR040424 resolves that generic protein class independently of those still-open localization and complex questions. Current native full-family type/signature and independent protein cross-reference joins reconfirm the exact bounded mapping. Preserve historical rationale; update current notes/status or append a dated clarification during separately authorized curation.
+
+## Recommended Actions And Acceptance Checks
+
+### micro-A1
+
+In separately authorized record curation, add the verified six family mappings and narrow the task to unresolved Sec3 and Sec10; preserve accessions as taxon-paired examples.
+
+- Use IPR029175, IPR010326, IPR039682, IPR007225, IPR004140 and IPR033961 for the respective classes.
+- Do not replace a whole Sec3 class by a domain or force the broader Sec10-like family.
+- Pass applicable native schema, strict, identifier and graph checks after separately authorized curation.
+- State homologous family scope and retain valid paralogs/other biological roles; do not claim all family members are exclusive exocyst constituents.
+- Preserve dated discussions.rationale, posed_date and curation events; narrow only the current prompt/notes as justified.
+- No record edits occur in this review PR.
+
+### micro-A2
+
+In separately authorized record curation, add a narrowly attributed integrity/association statement for those tested mutant backgrounds. Preserve UNKNOWN unless separately inspected assembly evidence justifies a condition-specific necessity annotation.
+
+- Use the current genuine TerBush1995 body Results pp307–308/Fig6: tagged native yeast mutant preparations labeled2h at25C; distinguish the separate sec6-4/sec15-1 temperature experiment.
+- State recovered association/composition and the reported wild-type allele rescue with its data-not-shown limitation; do not infer intracellular depletion of unrecovered partners.
+- The original review had complete abstract access only; retain that immutable historical tier. Current body access is a separate later observation.
+- Global UNKNOWN may remain. Do not require universal ESSENTIAL, complete complex absence, viability claims or a new experiment.
+- Run applicable native schema, strict, identifier and graph checks after separately authorized curation.
+- Preserve dated discussions.rationale, posed_date and curation events; narrow only the current prompt/notes as justified.
+- No record edits occur in this review PR.
+
+### micro-A3
+
+In separately authorized record curation, ground Chs5 with IPR052827 and narrow the open task to individual ChAP mappings; keep the four paralog-specific rows distinct.
+
+- Do not derive exact identity solely from the generated unchecked InterPro description.
+- Do not apply shared IPR015374 to all four rows as if it distinguished their paralog classes.
+- Pass applicable native schema, strict, identifier and graph checks after separately authorized curation.
+- Use native family metadata and reference/member identity independently of generated unchecked description; homologous fungal class need not be exclusively exomer-associated.
+- Preserve dated discussions.rationale, posed_date and curation events; narrow only the current prompt/notes as justified.
+- No record edits occur in this review PR.
+
+### micro-A4
+
+In separately authorized record curation, add the specifically assayed Chs5-dependent physical association result and, if represented, distinguish stable membrane retention from complex coassociation. Retain assay and strain context; do not turn every cargo phenotype into physical essentiality.
+
+- Anchor association to Chs6-TAP purification in the reported wild-type/deletion backgrounds.
+- Preserve the observation that loss of individual ChAPs can leave the remaining complex associated.
+- Keep UNKNOWN for unestablished universal formation necessity; any scoped inference must state its scope.
+- Pass applicable native schema, strict, identifier and graph checks after separately authorized curation.
+- Separate DDY1810-derived Chs6-TAP mutant-extract association from Huranova30C TGN retention and Wang recombinant Sf9 complexes.
+- Do not infer a universal fixed five-subunit particle; recombinant ChAP association and remaining-complex controls bound the claim.
+- No universal ESSENTIAL, complete intracellular absence or new experiment is required.
+- Preserve dated discussions.rationale, posed_date and curation events; narrow only the current prompt/notes as justified.
+- No record edits occur in this review PR.
+
+### plaque-t3-A1
+
+Add InterPro:IPR040258 and InterPro:IPR000969 to the existing Spt16 and Pob3 classes, with source-specific evidence, and update the current grounding state/task. Do not substitute the broader RTT106/SSRP1 family or add Nhp6 as an obligatory core row.
+
+- Each adopted identifier denotes the exact whole-protein class rather than a species example, shared domain or broader mixed family.
+- Preserve supported component labels, protein examples and UNKNOWN formation necessity.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+- Preserve dated discussion rationale and curation history; append current evidence or update the active task only in separately authorized record curation.
+
+### plaque-t5-A1
+
+Add InterPro:IPR002297 to the existing catalytic class with exact family evidence and update that portion of the grounding task. Retain the accessory class as reviewed label-only until a current exact family is independently verified. Do not copy the family entry incidental erroneous5-prime extension prose.
+
+- Each adopted identifier denotes the exact whole-protein class rather than a species example, shared domain or broader mixed family.
+- Preserve supported component labels, protein examples and UNKNOWN formation necessity.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+- Preserve dated discussion rationale and curation history; append current evidence or update the active task only in separately authorized record curation.
+
+### septin-garp_complex-A1
+
+Use IPR007258, IPR039766 and IPR039745 for Vps52, Vps53 and Vps54; narrow the remaining TODO to unresolved Vps51. Preserve dated rationale/history; update current notes or append clarification. This review PR edits no record.
+
+- Do not use PF08700 as an exact Vps51 class.
+- Preserve supported identities and source scope; pass applicable native gates.
+- Do not rewrite historical rationale, force unresolved repeat/paralog mappings, or infer universal formation necessity from membership or function.
+
+### septin-garp_complex-A2
+
+Add source-scoped reciprocal Vps52/Vps53/Vps54 stability roles/evidence for the tested yeast deletions; resolve or explicitly qualify formation fields only to the extent those assays justify. Retain the stable core without Vps51. Preserve dated rationale/history; update current notes or append clarification. This review PR edits no record.
+
+- Name the deletion/pulse-chase conditions and distinguish reduced stability from complete assembly abolition.
+- Do not infer universal viability requirements or assign all four ESSENTIAL.
+- Preserve supported identities and source scope; pass applicable native gates.
+- Do not rewrite historical rationale, force unresolved repeat/paralog mappings, or infer universal formation necessity from membership or function.
+
+### septin-gator1_complex-A1
+
+Use IPR027244, IPR009348 and IPR005365 respectively, with the existing yeast roles and human counterpart scope intact. Preserve dated rationale/history; update current notes or append clarification. This review PR edits no record.
+
+- Keep Rag GTPases and SEACAT outside the three-member constituent boundary.
+- Preserve supported identities and source scope; pass applicable native gates.
+- Do not rewrite historical rationale, force unresolved repeat/paralog mappings, or infer universal formation necessity from membership or function.
+
+### septin-gator2_complex-A1
+
+Use IPR037590, IPR049567 and IPR037593 for Sea2, Sea3 and Sea4; preserve correct RTC1/MTC5 aliases and narrow the remaining family TODO. Preserve dated rationale/history; update current notes or append clarification. This review PR edits no record.
+
+- Do not equate IPR037363 with each distinct Sec13 and Seh1 class.
+- Preserve supported identities and source scope; pass applicable native gates.
+- Do not rewrite historical rationale, force unresolved repeat/paralog mappings, or infer universal formation necessity from membership or function.
+
+### septin-gemini_of_cajal_bodies-A1
+
+Use IPR040424 for the generic SMN protein; retain the open human-paralog, Gemin and gem-versus-Cajal-body questions. Preserve dated rationale/history; update current notes or append clarification. This review PR edits no record.
+
+- Do not equate the family or Q16637 entry with the whole SMN complex.
+- Do not infer exclusive SMN1 occupancy from an entry that also lists SMN2.
+- Preserve supported identities and source scope; pass applicable native gates.
+- Do not rewrite historical rationale, force unresolved repeat/paralog mappings, or infer universal formation necessity from membership or function.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| current-record-0 | data/structures/other/exocyst.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 d0c83fa57e3a98fce43e21969454f1a3f3624dcc53ec2c90055d98f006a5a269; current SHA256 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb. Changed record reassessed against current sources. |
+| original-review-0 | reviews/structured/20261022T065207Z-exocyst-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-1 | data/structures/other/exodeoxyribonuclease_v_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 520153b05eb0538317626522c15f966a14e2d050155952c04e0ec46dcd7ee028; current SHA256 f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11. Changed record reassessed against current sources. |
+| original-review-1 | reviews/structured/20261022T065208Z-recbcd-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-2 | data/structures/other/exomer_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a; current SHA256 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a. Record bytes unchanged since the original review. |
+| original-review-2 | reviews/structured/20261022T065209Z-exomer-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-3 | data/structures/other/fact_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a; current SHA256 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a. Record bytes unchanged since the original review. |
+| original-review-3 | reviews/structured/20261022T065209Z-fact-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-4 | data/structures/other/fmn_reductase_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453; current SHA256 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453. Record bytes unchanged since the original review. |
+| original-review-4 | reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-5 | data/structures/other/gamma_dna_polymerase_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff; current SHA256 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff. Record bytes unchanged since the original review. |
+| original-review-5 | reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-6 | data/structures/other/garp_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b; current SHA256 cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b. Record bytes unchanged since the original review. |
+| original-review-6 | reviews/structured/20261022T065211Z-garp-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-7 | data/structures/other/gator1_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6; current SHA256 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6. Record bytes unchanged since the original review. |
+| original-review-7 | reviews/structured/20261022T065212Z-gator1-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-8 | data/structures/other/gator2_complex.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f; current SHA256 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f. Record bytes unchanged since the original review. |
+| original-review-8 | reviews/structured/20261022T065213Z-gator2-complex-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| current-record-9 | data/structures/other/gemini_of_cajal_bodies.yaml; Whole current maintained record; exact bytes frozen by native inspect | context_only | Original frozen SHA256 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3; current SHA256 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3. Record bytes unchanged since the original review. |
+| original-review-9 | reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.yaml; Original immutable observation: sources, checks, scientific verdict, findings, actions and limitations | context_only | Historical review retained without rewriting its evidence or promoting old checks to current execution. |
+| micro-record-0 | data/structures/other/exocyst.yaml; Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf | supports | Complete identity, hierarchy, components/examples, roles, functions, taxa, graph, source notes, discussions and history inspected. No maintained image or quantitative physical-property field. Seven constituent edges, six added component-ref nodes and history are current. |
+| micro-prior-0 | reviews/structured/20261022T065207Z-exocyst-audit/review.yaml; Complete original YAML and deterministic Markdown | supports | Original historical inputs, checks, source tiers, verdict, findings and actions independently reviewed. Original observation retained; historical access/checks are not newly executed or upgraded retrospectively. |
+| micro-delta-0 | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/0-stale.diff; Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b | supports | Exocyst membership expansion is reassessed against actual constituent sources; it does not encode the tested mutant coassociation result. |
+| micro-record-1 | data/structures/other/exodeoxyribonuclease_v_complex.yaml; Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf | supports | Complete identity, hierarchy, components/examples, roles, functions, taxa, graph, source notes, discussions and history inspected. No maintained image or quantitative physical-property field. Three existing protein nodes receive matching family groundings plus history. |
+| micro-prior-1 | reviews/structured/20261022T065208Z-recbcd-audit/review.yaml; Complete original YAML and deterministic Markdown | supports | Original historical inputs, checks, source tiers, verdict, findings and actions independently reviewed. Original observation retained; historical access/checks are not newly executed or upgraded retrospectively. |
+| micro-delta-1 | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/1-stale.diff; Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b | supports | RecBCD source-neutral groundings are reassessed against native family identity and reference accessions; no broader historical issue resolution. |
+| micro-record-2 | data/structures/other/exomer_complex.yaml; Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf | supports | Complete identity, hierarchy, components/examples, roles, functions, taxa, graph, source notes, discussions and history inspected. No maintained image or quantitative physical-property field. Current target equals original frozen bytes. |
+| micro-prior-2 | reviews/structured/20261022T065209Z-exomer-audit/review.yaml; Complete original YAML and deterministic Markdown | supports | Original historical inputs, checks, source tiers, verdict, findings and actions independently reviewed. Original observation retained; historical access/checks are not newly executed or upgraded retrospectively. |
+| micro-delta-2 | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/2-stale.diff; Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b | supports | Empty original-to-current diff. |
+| micro-policy | docs/CURATION.md; Components, identifiers and Discussions clauses | supports | Homologous family classes and reviewed-label-only representation are valid. Explicit current grounding tasks are assessed without rewriting dated rationale, posed_date or history. Condition-scoped physical stability is distinct from function, viability and universal formation necessity. |
+| micro-schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, essentiality, grounding and causal-graph definitions | supports | UNKNOWN is permitted; taxon-neutral family classes and external contextual GENE_OR_PROTEIN actors are valid. Optional examples and mechanisms are not mandatory. |
+| micro-native-policy | .claude/skills/review-yaml-record/SKILL.md; Scientific review and Structured Source Cross-Checks | supports | Positive named molecular/pathway assertions trigger applicability assessment regardless of expression wording. Actual matched-host dataset context does not substitute for assembly experiments. |
+| micro-profile | docs/record-review-profile.md; Native observation persistence and concrete finding rules | supports | Preserve immutable source observations and exact finding lineage. Unavailable access alone and optional empty fields are not record defects; honest failed-access receipts require the appropriate validation kind. |
+| micro-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Evidence scope, constituent relations and function/assembly distinction | supports | Membership and coarse function can be supported without a complete mechanism. Source-backed conditional association observations may be represented without forcing universal ESSENTIAL or inventing an experiment. |
+| micro-original-audit | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/original-audit.json; Six actual original native validate/render commands; 42 historical input occurrences; six original artifacts | supports | All three original YAMLs validate and render exactly their original Markdown. Historical recorded input hashes and original PR-head artifacts match. |
+| micro-protein-P04993 | https://rest.uniprot.org/uniprotkb/P04993.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P04993.raw | supports | P04993: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecD; primary genes ['recD']; loci ['b2819', 'JW2787']; taxon 83333; InterPro ['IPR003593', 'IPR050534', 'IPR027417', 'IPR006344', 'IPR049550', 'IPR041851', 'IPR027785']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P07560 | https://rest.uniprot.org/uniprotkb/P07560.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P07560.raw | supports | P07560: UniProtKB reviewed (Swiss-Prot); Ras-related protein SEC4; primary genes ['SEC4']; loci ['YFL005W']; taxon 559292; InterPro ['IPR027417', 'IPR005225', 'IPR001806', 'IPR050305']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P07648 | https://rest.uniprot.org/uniprotkb/P07648.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P07648.raw | supports | P07648: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecC; primary genes ['recC']; loci ['b2822', 'JW2790']; taxon 83333; InterPro ['IPR013986', 'IPR027417', 'IPR006697', 'IPR060282', 'IPR041500', 'IPR061297', 'IPR011335']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P08394 | https://rest.uniprot.org/uniprotkb/P08394.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P08394.raw | supports | P08394: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecB; primary genes ['recB']; loci ['b2820', 'JW2788']; taxon 83333; InterPro ['IPR027417', 'IPR011604', 'IPR038726', 'IPR004586', 'IPR011335', 'IPR000212', 'IPR014016', 'IPR014017']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P11076 | https://rest.uniprot.org/uniprotkb/P11076.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P11076.raw | supports | P11076: UniProtKB reviewed (Swiss-Prot); ADP-ribosylation factor 1; primary genes ['ARF1']; loci ['YDL192W', 'D1244']; taxon 559292; InterPro ['IPR045872', 'IPR027417', 'IPR005225', 'IPR024156', 'IPR006689']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P19658 | https://rest.uniprot.org/uniprotkb/P19658.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P19658.raw | supports | P19658: UniProtKB reviewed (Swiss-Prot); Exocyst complex component EXO70; primary genes ['EXO70']; loci ['YJL085W', 'J0932']; taxon 559292; InterPro ['IPR016159', 'IPR004140', 'IPR046364']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P22224 | https://rest.uniprot.org/uniprotkb/P22224.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P22224.raw | supports | P22224: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC15; primary genes ['SEC15']; loci ['YGL233W']; taxon 559292; InterPro ['IPR007225', 'IPR046361', 'IPR042045', 'IPR048359', 'IPR042044']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P32844 | https://rest.uniprot.org/uniprotkb/P32844.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P32844.raw | supports | P32844: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC6; primary genes ['SEC6']; loci ['YIL068C']; taxon 559292; InterPro ['IPR010326', 'IPR042532']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P32855 | https://rest.uniprot.org/uniprotkb/P32855.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P32855.raw | supports | P32855: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC8; primary genes ['SEC8']; loci ['YPR055W', 'YP9499.11']; taxon 559292; InterPro ['IPR039682', 'IPR007191', 'IPR048630']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P33332 | https://rest.uniprot.org/uniprotkb/P33332.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P33332.raw | supports | P33332: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC3; primary genes ['SEC3']; loci ['YER008C']; taxon 559292; InterPro ['IPR028258', 'IPR048628', 'IPR019160']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P36122 | https://rest.uniprot.org/uniprotkb/P36122.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P36122.raw | supports | P36122: UniProtKB reviewed (Swiss-Prot); Protein BCH2; primary genes ['BCH2']; loci ['YKR027W']; taxon 559292; InterPro ['IPR015374', 'IPR011990']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P38261 | https://rest.uniprot.org/uniprotkb/P38261.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P38261.raw | supports | P38261: UniProtKB reviewed (Swiss-Prot); Exocyst complex component EXO84; primary genes ['EXO84']; loci ['YBR102C', 'YBR0831']; taxon 559292; InterPro ['IPR016159', 'IPR033961', 'IPR032403', 'IPR042561', 'IPR042560', 'IPR011993']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P40955 | https://rest.uniprot.org/uniprotkb/P40955.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P40955.raw | supports | P40955: UniProtKB reviewed (Swiss-Prot); Chitin biosynthesis protein CHS6; primary genes ['CHS6']; loci ['YJL099W', 'J0838']; taxon 559292; InterPro ['IPR015374', 'IPR011990']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-P89102 | https://rest.uniprot.org/uniprotkb/P89102.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P89102.raw | supports | P89102: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC5; primary genes ['SEC5']; loci ['YDR166C', 'YD8358.20C', 'YD9489.01C']; taxon 559292; InterPro ['IPR029175', 'IPR039481']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-Q05029 | https://rest.uniprot.org/uniprotkb/Q05029.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q05029.raw | supports | Q05029: UniProtKB reviewed (Swiss-Prot); Protein BCH1; primary genes ['BCH1']; loci ['YMR237W', 'YM9959.19']; taxon 559292; InterPro ['IPR015374', 'IPR011990']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-Q06245 | https://rest.uniprot.org/uniprotkb/Q06245.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q06245.raw | supports | Q06245: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC10; primary genes ['SEC10']; loci ['YLR166C', 'L9362.12']; taxon 559292; InterPro ['IPR009976', 'IPR048627', 'IPR048625']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-Q08754 | https://rest.uniprot.org/uniprotkb/Q08754.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q08754.raw | supports | Q08754: UniProtKB reviewed (Swiss-Prot); Bud site selection protein 7; primary genes ['BUD7']; loci ['YOR299W']; taxon 559292; InterPro ['IPR015374', 'IPR011990']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-protein-Q12114 | https://rest.uniprot.org/uniprotkb/Q12114.json; Native identity/status/name, complete gene aliases/loci/taxon, family xrefs and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q12114.raw | supports | Q12114: UniProtKB reviewed (Swiss-Prot); Chitin biosynthesis protein CHS5; primary genes ['CHS5']; loci ['YLR330W', 'L8543.18']; taxon 559292; InterPro ['IPR001357', 'IPR036420', 'IPR031673', 'IPR052827', 'IPR031669', 'IPR003961', 'IPR036116', 'IPR013783']. Reference annotation is distinguished from actual experimental strain and family membership from exclusive complex membership. |
+| micro-query-BCH1-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BCH1-559292.raw | supports | Current query returns ['Q05029']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-BCH2-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BCH2-559292.raw | supports | Current query returns ['P36122']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-BUD7-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABUD7%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BUD7-559292.raw | supports | Current query returns ['Q08754']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-CHS5-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-CHS5-559292.raw | supports | Current query returns ['Q12114']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-CHS6-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-CHS6-559292.raw | supports | Current query returns ['P40955']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-EXO70-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO70%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-EXO70-559292.raw | supports | Current query returns ['P19658']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-EXO84-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO84%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-EXO84-559292.raw | supports | Current query returns ['P38261']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC10-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC10%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC10-559292.raw | supports | Current query returns ['Q06245']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC15-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC15%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC15-559292.raw | supports | Current query returns ['P22224']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC3-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC3%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC3-559292.raw | supports | Current query returns ['P33332']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC5-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC5-559292.raw | supports | Current query returns ['P89102']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC6-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC6-559292.raw | supports | Current query returns ['P32844']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-SEC8-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC8%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC8-559292.raw | supports | Current query returns ['P32855']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-recB-83333 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recB-83333.raw | supports | Current query returns ['P08394']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-recC-83333 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recC-83333.raw | supports | Current query returns ['P07648']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-query-recD-83333 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recD-83333.raw | supports | Current query returns ['P04993']; primary name and alias fields separately checked. No assertion that a dated historical selection query was reproduced. |
+| micro-tax-4932 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=4932; NCBI taxonomy XML scientific name, rank, lineage and strain context; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-4932.raw | supports | Saccharomyces cerevisiae species verified; experimental preparations remain separately scoped. |
+| micro-tax-559292 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=559292; NCBI taxonomy XML scientific name, rank, lineage and strain context; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-559292.raw | supports | Saccharomyces cerevisiae S288C reference strain verified; experimental preparations remain separately scoped. |
+| micro-tax-83333 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=83333; NCBI taxonomy XML scientific name, rank, lineage and strain context; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-83333.raw | supports | Escherichia coli K-12 reference taxon verified; experimental preparations remain separately scoped. |
+| micro-tax-562-retry | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete ENA taxonomy authority response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-562-retry.raw | supports | Taxon562 is Escherichia coli species; exact V330 recombinant assay is distinct from the K-12 accession reference and mixed-strain expression dataset. |
+| micro-go-0000145 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0000145; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0000145.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0005802 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0005802; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0005802.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0006887 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0006887; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0006887.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0006893 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0006893; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0006893.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0008854 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0008854; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0008854.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0009338 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0009338; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0009338.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0032991 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0032991; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0032991.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0034044 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0034044; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0034044.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-0140535 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0140535; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0140535.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-go-1902494 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_1902494; Native OLS exact term label, definition, obsolete state and identifiers; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-1902494.raw | supports | Current exact GO identity/definition checked against maintained identifier, function or hierarchy; no guessed CURIE or broader identity substitution. |
+| micro-ancestors-0000145 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000145/ancestors?relations=is_a; Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0000145.raw | supports | GO:0000145 exocyst; active=True; is_a ancestors ['GO:0032991', 'GO:0005575', 'GO:0099023', 'GO:0000145']. Parthood and molecular function are not inferred from this hierarchy. |
+| micro-ancestors-0009338 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009338/ancestors?relations=is_a; Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0009338.raw | supports | GO:0009338 exodeoxyribonuclease V complex; active=True; is_a ancestors ['GO:1902494', 'GO:0140535', 'GO:0032991', 'GO:0005575', 'GO:0009338']. Parthood and molecular function are not inferred from this hierarchy. |
+| micro-ancestors-0034044 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034044/ancestors?relations=is_a; Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0034044.raw | supports | GO:0034044 exomer complex; active=True; is_a ancestors ['GO:0034044', 'GO:0032991', 'GO:0005575']. Parthood and molecular function are not inferred from this hierarchy. |
+| micro-family-IPR004140 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004140/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR004140.raw | supports | IPR004140: Exocyst complex component Exo70; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR004586 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004586/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR004586.raw | supports | IPR004586: RecBCD enzyme subunit RecB; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR006344 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006344/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR006344.raw | supports | IPR006344: RecBCD enzyme subunit RecD; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR006697 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006697/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR006697.raw | supports | IPR006697: RecBCD enzyme subunit RecC; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR007225 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007225/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR007225.raw | supports | IPR007225: Exocyst complex component EXOC6/Sec15; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR010326 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010326/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR010326.raw | supports | IPR010326: Exocyst complex component EXOC3/Sec6; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR019160 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019160/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR019160.raw | supports | IPR019160: Exocyst complex component Sec3, coiled-coil; type domain. Sec3-related domain/superfamily identity is not silently promoted to a whole-protein family. |
+| micro-family-IPR028258 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028258/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR028258.raw | supports | IPR028258: Exocyst complex component Sec3, PIP2-binding N-terminal domain; type domain. Sec3-related domain/superfamily identity is not silently promoted to a whole-protein family. |
+| micro-family-IPR029175 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029175/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR029175.raw | supports | IPR029175: Exocyst complex component EXOC2/Sec5; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR033961 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033961/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR033961.raw | supports | IPR033961: Exocyst complex component Exo84; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR039682 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039682/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR039682.raw | supports | IPR039682: Exocyst complex component Sec8/EXOC4; type family. Homologous family/class and representative membership are checked independently of exclusive complex function or universal orthology. |
+| micro-family-IPR048628 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR048628/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR048628.raw | supports | IPR048628: Exocyst complex component Sec3, C-terminal; type domain. Sec3-related domain/superfamily identity is not silently promoted to a whole-protein family. |
+| micro-family-IPR052827 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052827/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR052827.raw | supports | IPR052827: Exomer complex component Chs5; type family. Native identity/signatures and Q12114/member mapping support Chs5; LLM-flagged unchecked description is not used as primary biology. |
+| micro-family-IPR009976-retry | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009976/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR009976-retry.raw | supports | IPR009976: Exocyst complex component Sec10-like; type family. Sec10-like includes broader related proteins; not forced as an exact narrowed Sec10 mapping. |
+| micro-family-IPR015374-retry | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015374/; Complete metadata, native type/name, description flags and integrated signatures; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR015374-retry.raw | supports | IPR015374: Chs5p-Arf1p binding; type family. Shared ChAP family does not distinguish the four individual paralog classes. |
+| micro-members-IPR029175 | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR029175/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR029175.raw | supports | All 17 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR010326-retry | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR010326/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR010326-retry.raw | supports | All 19 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR039682-retry | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR039682/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR039682-retry.raw | supports | All 10 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR007225-retry | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR007225/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR007225-retry.raw | supports | All 13 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR004140-retry | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR004140/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR004140-retry.raw | supports | All 26 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR033961 | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR033961/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR033961.raw | supports | All 23 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-members-IPR052827 | https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR052827/?page_size=200; Complete reviewed-member identity/name/gene/taxon page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR052827.raw | supports | All 3 returned reviewed members checked; reference accession mapping corroborated. Homologous paralogs and proteins with other functions can occur; this does not assert exclusive complex membership or universal one-to-one orthology. |
+| micro-doi-0 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fj.1460-2075.1996.tb01039.x%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-0.raw | supports | PMID 8978675; DOI 10.1002/j.1460-2075.1996.tb01039.x; The Exocyst is a multiprotein complex required for exocytosis in Saccharomyces cerevisiae.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-1 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2800%2980948-4%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-1.raw | supports | PMID 9491896; DOI 10.1016/s0092-8674(00)80948-4; Sec3p is a spatial landmark for polarized secretion in budding yeast.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-2 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature02988%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-2.raw | supports | PMID 15538360; DOI 10.1038/nature02988; Crystal structure of RecBCD enzyme reveals a machine for processing DNA breaks.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-3 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fsj.emboj.7601007%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-3.raw | supports | PMID 16498409; DOI 10.1038/sj.emboj.7601007; Arf1p, Chs5p and the ChAPs are required for export of specialized cargo from the Golgi.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-4 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.274.33.23558%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-4.raw | supports | PMID 10438536; DOI 10.1074/jbc.274.33.23558; Exo84p is an exocyst protein essential for secretion.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-5 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.130.2.299%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-5.raw | supports | PMID 7615633; DOI 10.1083/jcb.130.2.299; Sec6, Sec8, and Sec15 are components of a multisubunit complex which localizes to small bud tips in Saccharomyces cerevisiae.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200605106%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-6.raw | supports | PMID 17000877; DOI 10.1083/jcb.200605106; Exomer: A coat complex for transport of select membrane proteins from the trans-Golgi network to the plasma membrane in yeast.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-7 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e06-03-0210%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-7.raw | supports | PMID 16855022; DOI 10.1091/mbc.e06-03-0210; Chs5/6 complex: a multiprotein complex that interacts with and conveys chitin synthase III from the trans-Golgi network to the cell surface.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-8 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Femboj%2F18.4.1071%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-8.raw | supports | PMID 10022848; DOI 10.1093/emboj/18.4.1071; The exocyst is an effector for Sec4p, targeting secretory vesicles to sites of exocytosis.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-doi-9 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.15252%2Fembr.201540795%22&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-9.raw | supports | PMID 26742961; DOI 10.15252/embr.201540795; Dynamic assembly of the exomer secretory vesicle cargo adaptor subunits.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-14562095.raw | supports | PMID 14562095; DOI 10.1038/nature02026; Global analysis of protein localization in budding yeast.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-15538360 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15538360+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15538360.raw | supports | PMID 15538360; DOI 10.1038/nature02988; Crystal structure of RecBCD enzyme reveals a machine for processing DNA breaks.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-15583031 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15583031+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15583031.raw | supports | PMID 15583031; DOI 10.1083/jcb.200408124; Vesicles carry most exocyst subunits to exocytic sites marked by the remaining two subunits, Sec3p and Exo70p.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-15788396 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15788396+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15788396.raw | supports | PMID 15788396; DOI 10.1074/jbc.m500511200; The critical role of Exo84p in the organization and polarized localization of the exocyst complex.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-1618858 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1618858+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-1618858.raw | supports | PMID 1618858; DOI 10.1016/s0021-9258(18)42249-1; Reconstitution of the activities of the RecBCD holoenzyme of Escherichia coli from the purified subunits.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-16498409 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16498409+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-16498409.raw | supports | PMID 16498409; DOI 10.1038/sj.emboj.7601007; Arf1p, Chs5p and the ChAPs are required for export of specialized cargo from the Golgi.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-17000877 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17000877+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-17000877.raw | supports | PMID 17000877; DOI 10.1083/jcb.200605106; Exomer: A coat complex for transport of select membrane proteins from the trans-Golgi network to the plasma membrane in yeast.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-pmid-20139078 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20139078+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=25; Exact identifier metadata and complete indexed primary abstract; not a full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-20139078.raw | supports | PMID 20139078; DOI 10.1074/jbc.m109.096966; Structure-function study of the N-terminal domain of exocyst subunit Sec3.. Complete indexed abstract inspected; separately named genuine body reads retain their own scope. |
+| micro-PMC2199927-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2199927.1/PMC2199927.1.xml; Genuine S3 JATS containing pmc-pdf-text; Methods strain/tag construction pp300–301; Results pp307–308/Fig6 and Discussion beginning p309; normalized text offsets9904–16000,48000–63000,64652–67700; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2199927-jats.raw | supports | TerBush1995 sec3-2/sec5-24/sec10-2 backgrounds alter recovered Sec8-tag-associated composition after labeling at25C. Wild-type gene rescue is described as data not shown; 30min37C did not substantially change this pattern for those three. This is conditional association/stability, not intracellular depletion or universal complex absence; separate sec6-4/sec15-1 temperature experiments are not conflated. |
+| micro-PMC2172445-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2172445.1/PMC2172445.1.xml; Boyd2004 Results EM section4/Fig4–5 text captions, Methods strain construction section9/TableII and EM section12; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2172445-jats.raw | supports | Native tagged yeast exocyst localization and vesicle association support the role context. Sec3 differs from the other subunits; immunogold proximity thresholds and NY-series strains are retained. No actual pixels or quantitative reanalysis certified. |
+| micro-PMC2064389-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2064389.1/PMC2064389.1.xml; Wang2006 Results sections4–7 and Fig3–7 text captions; Methods sections10,11,13; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2064389-jats.raw | supports | Sf9 recombinant Chs5/ChAP complexes, Arf1-dependent recruitment under selected liposome formulations and coated surfaces are supported. Ratios vary with expression; some lipids recruit without Arf1. No buds/vesicles were evident from exomer alone. Purified stable core and external recruiting Arf1 boundary remain defensible; no universal fixed-five-subunit particle or membrane-deformation assertion. |
+| micro-PMC1635352-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC1635352/; Sanchatjate2006 Methods sec3/Table1 and sec4; Results sec8,sec9,sec11,sec12 with embedded captions/tables including Fig5 text; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC1635352-legacy.raw | supports | DDY1810-derived Chs6-TAP purification in chs5 deletion loses efficient Bch1/Bud7/Bch2 recovery; slightly reduced steady-state Bud7/Bch2 and remaining-protein controls are distinguished. ChAP deletions can leave remaining partners associated. Cargo binding/transport, purified association and global formation necessity are different claims. |
+| micro-PMC5290816-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC5290816/; Huranova2016 Results sec0005 and sec0007/Fig2–3/EV2 text captions; Methods sec0017 growth and sec0019 fractionation; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC5290816-legacy.raw | supports | Chs5-dependent stable TGN retention is a separate localization/dynamics result. Mixed ChAP complexes, recruitment timing and membrane retention are condition-dependent; 30C growth stated, Appendix strain table not read. No universal necessity or fixed five-subunit complex inferred. |
+| micro-single-nature | https://www.nature.com/articles/nature02988; Singleton2004 genuine Nature main text sections3–11, including all named RecB/RecC/RecD, complex/mechanism sections, Methods and embedded text captions; UTF8 extraction retained; text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/single-nature.raw | supports | E.coli RecBCD heterotrimer bound to43-nt hairpin supports composition, opposite motor polarities and nuclease coupling. Full-length proteins were coexpressed from pPB520/pPB800 in V330 delta-recBCD with pMS421; this is not an in-vivo K-12 experiment. Structural proposals and older cited activity results retain their distinct experimental/model tiers; no pixel or coordinate reanalysis. |
+| micro-pdb-1W36 | https://data.rcsb.org/rest/v1/core/entry/1W36; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-pdb-1W36-assembly1 | https://data.rcsb.org/rest/v1/core/assembly/1W36/1; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-assembly1.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-pdb-1W36-entity1 | https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/1; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity1.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-pdb-1W36-entity2 | https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/2; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity2.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-pdb-1W36-entity3 | https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/3; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity3.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-pdb-1W36-entity4 | https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/4; Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity4.raw | supports | PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA hairpin. Biological assembly entity count4 includes DNA and does not mean four protein subunits. E.coli source annotation and K-12 accession references are distinct from the stated recombinant V330 Methods preparation. |
+| micro-access-PMC452473-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC452473.1/PMC452473.1.xml; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC452473-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC452473/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC452473-numeric | https://pmc.ncbi.nlm.nih.gov/articles/452473/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1171198-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC1171198.1/PMC1171198.1.xml; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1171198-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC1171198/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1171198-numeric | https://pmc.ncbi.nlm.nih.gov/articles/1171198/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1409733-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC1409733.1/PMC1409733.1.xml; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1409733-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC1409733/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-PMC1409733-numeric | https://pmc.ncbi.nlm.nih.gov/articles/1409733/; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-masterson-pdf | https://www.jbc.org/article/S0021-9258(18)42249-1/pdf; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 403; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-exo84-pdf | https://www.jbc.org/article/S0021-9258(19)65316-0/pdf; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 403; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-finger-doi | https://doi.org/10.1016/S0092-8674(00)80948-4; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-adapter-precise1k-genes | https://imodulondb.org/api/datasets/e_coli/precise1k/genes; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-access-tax-562 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=562; Actual response and adjacent receipt; content inspected for access state | context_only | HTTP 429; blocked, challenge, redirect/stub, error or wrong-endpoint SPA response. No scientific body read or absence conclusion is inferred. Genuine successful body/authority retries are named separately. |
+| micro-historical-0-access-PMC452473-pdf | https://pmc.ncbi.nlm.nih.gov/articles/PMC452473/pdf/emboj00023-0125.pdf; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge, not a PDF or readable paper body. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-0-access-PMC2199927-pdf | https://pmc.ncbi.nlm.nih.gov/articles/PMC2199927/pdf/jc1302299.pdf; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge, not a PDF or readable paper body. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-0-access-PMC1171198-pdf | https://pmc.ncbi.nlm.nih.gov/articles/PMC1171198/pdf/001071.pdf; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge, not a PDF or readable paper body. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-0-access-exo84-pdf | https://www.jbc.org/article/S0021-9258(19)65316-0/pdf; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP403 challenge response; no publisher paper body was read from this response. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-0-access-exo84-publisher | https://www.sciencedirect.com/science/article/pii/S0021925819653160; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP403 challenge response; no publisher paper body was read from this response. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-1-access-singleton-publisher | https://www.nature.com/articles/nature02988; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP200 returned a client challenge, not the readable Nature paper body. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-historical-1-access-masterson-pdf | https://www.jbc.org/article/S0021-9258(18)42249-1/pdf; Retrieved response status/content type and diagnostic body only | context_only | Historical original access diagnostic, retained at its actual original timestamp/hash. HTTP403 challenge response, not a readable PDF. Current correction is kind-only; original already disclosed failed access. No new body access is retrospectively attributed. |
+| micro-adapter-catalogue | https://imodulondb.org/api/organisms; Complete official organism/dataset catalogue; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-catalogue.raw | context_only | All20 organism rows/28 organism-dataset pairs inspected; E.coli precise1k is covered and Saccharomyces has no matching entry in this response. No foreign-host proxy for either yeast complex. |
+| micro-adapter-precise1k-meta | https://imodulondb.org/api/datasets/e_coli/precise1k/meta; Complete native selected-dataset metadata; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-meta.raw | context_only | E.coli precise1k includes BW25113,DGF-298,GMOS,MG1655,W3110;4257 genes,201 modules,1035 samples,518 conditions. It does not identify Singleton V330 as a covered experimental strain. |
+| micro-adapter-precise1k-imodulons | https://imodulondb.org/api/datasets/e_coli/precise1k/imodulons; Complete201-row module identifier inventory; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-imodulons.raw | context_only | Complete returned module population bounds the three gene membership checks. No AI-generated summary, activity vector, inferred direct regulation or assembly assertion used. |
+| micro-adapter-genes | https://imodulondb.org/api/genes?organism=e_coli&amp;dataset=precise1k&amp;limit=5000; Complete4257-row native gene table and exact recB/recC/recD locus/accession joins; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-genes.raw | context_only | recB b2820=P08394, recC b2822=P07648, recD b2819=P04993 agree with current native K-12 references. |
+| micro-adapter-b2820 | https://imodulondb.org/api/genes/b2820/imodulons?organism=e_coli&amp;dataset=precise1k; Complete201 thresholded module-membership rows for exact native locus; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2820.raw | context_only | recB/b2820 has zero in_imodulon=true rows among201. This is bounded selected-dataset threshold context, not absent gene expression, absent protein, nonmembership in RecBCD or biological dispensability. |
+| micro-adapter-b2822 | https://imodulondb.org/api/genes/b2822/imodulons?organism=e_coli&amp;dataset=precise1k; Complete201 thresholded module-membership rows for exact native locus; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2822.raw | context_only | recC/b2822 has zero in_imodulon=true rows among201. This is bounded selected-dataset threshold context, not absent gene expression, absent protein, nonmembership in RecBCD or biological dispensability. |
+| micro-adapter-b2819 | https://imodulondb.org/api/genes/b2819/imodulons?organism=e_coli&amp;dataset=precise1k; Complete201 thresholded module-membership rows for exact native locus; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2819.raw | context_only | recD/b2819 has zero in_imodulon=true rows among201. This is bounded selected-dataset threshold context, not absent gene expression, absent protein, nonmembership in RecBCD or biological dispensability. |
+| micro-historical-runner | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Retained actual runner receipt, not newly executed | context_only | Actual 2026-11-03T00:49:00.848907Z–00:49:00.863225Z exit1 PermissionError reading runner pyvenv.cfg. Current source-catalogue fallback is separately dated; no claim of successful/new runner invocation. |
+| micro-native-exocyst-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exocyst.yaml', '--verify']; receipt SHA256 16db1b4e0f0c6b2bc08d1e08fd9a1ae477d2ad8bb4b1a5ebdd6a043623ab8612; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify.log | supports | Actual exit0; 8 maintained reviewed examples, 9 typed nodes: 8 COVERED and 1 UNANCHORED_WITH_UNIPROT. External Sec4 is contextual, not a missing constituent. Native identity checks do not prove assembly/source completeness. |
+| micro-native-exocyst-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exocyst.yaml', '--causal-graphs']; receipt SHA256 b07926ea125b2548c88bd5b022dc19d0ca18cc2880a7776763a95940d4a6b64d; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal.log | supports | Actual exit0; 8 maintained reviewed examples, 9 typed nodes: 8 COVERED and 1 UNANCHORED_WITH_UNIPROT. External Sec4 is contextual, not a missing constituent. Native identity checks do not prove assembly/source completeness. |
+| micro-native-exodeoxyribonuclease_v_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exodeoxyribonuclease_v_complex.yaml', '--verify']; receipt SHA256 261fc35c8b8b4e00c85c2d91cdff9e69f47df616d3e2c68ada6628b457acd6a2; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify.log | supports | Actual exit0; 3 maintained reviewed examples, 3 typed nodes: 3 COVERED and 0 UNANCHORED_WITH_UNIPROT. All three declared component-ref nodes covered. Native identity checks do not prove assembly/source completeness. |
+| micro-native-exodeoxyribonuclease_v_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exodeoxyribonuclease_v_complex.yaml', '--causal-graphs']; receipt SHA256 7c5fbec8c471adf1c98be37a40f264c48477f6cd0fc70d26da9777b2b523775a; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal.log | supports | Actual exit0; 3 maintained reviewed examples, 3 typed nodes: 3 COVERED and 0 UNANCHORED_WITH_UNIPROT. All three declared component-ref nodes covered. Native identity checks do not prove assembly/source completeness. |
+| micro-native-exomer_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exomer_complex.yaml', '--verify']; receipt SHA256 392bf3b87d3cd7e8c91f634086b97ef7e9221d75ebec1b323ca6477f7df74336; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify.log | supports | Actual exit0; 5 maintained reviewed examples, 6 typed nodes: 5 COVERED and 1 UNANCHORED_WITH_UNIPROT. External Arf1 is contextual, not a missing constituent. Native identity checks do not prove assembly/source completeness. |
+| micro-native-exomer_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal-receipt.json; Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record', 'data/structures/other/exomer_complex.yaml', '--causal-graphs']; receipt SHA256 399655e5fc840c3156ab9b9c020890e7d6a373e945775450e57e01cd663a69fc; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal.log | supports | Actual exit0; 5 maintained reviewed examples, 6 typed nodes: 5 COVERED and 1 UNANCHORED_WITH_UNIPROT. External Arf1 is contextual, not a missing constituent. Native identity checks do not prove assembly/source completeness. |
+| micro-exocyst-independent-challenge | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/exocyst-complex-integrity-challenge.json; Independent bounded peer reading and hash-bound source scope | context_only | Separate peer review of the condition-scoped exocyst mutant association finding; no new whole-record disposition or universal necessity inferred. |
+| plaque-curation | docs/CURATION.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-field-guide | docs/SCHEMA.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-review-skill | .claude/skills/review-yaml-record/SKILL.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-protein-skill | .claude/skills/uniprot-protein-examples/SKILL.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-graph-skill | .claude/skills/curate-causal-graphs/SKILL.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-review-profile | docs/record-review-profile.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-review-contract | docs/record-reviews.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-review-schema | schema/record_review.yaml; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-structure-schema | src/cellstructuremech/schema/cellstructuremech.yaml; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-agents | AGENTS.md; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-review-config | conf/record_review.yaml; Frozen native policy/schema, including component-class identity, source applicability, formation versus function and append-only rationale | context_only | Apply current native contract without inventing mandatory examples, universal formation assays or a prohibition on broad protein groups. Preserve dated rationale; assess current claims separately. |
+| plaque-record-3 | data/structures/other/fact_complex.yaml; Complete current definition, components, taxa, examples, functions, graphs, discussions and history | supports | All maintained assertions read; current target bytes equal the original frozen target. No scientific record was changed. |
+| plaque-original-3-yaml | reviews/structured/20261022T065209Z-fact-complex-audit/review.yaml; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-original-3-md | reviews/structured/20261022T065209Z-fact-complex-audit/review.md; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-record-4 | data/structures/other/fmn_reductase_complex.yaml; Complete current definition, components, taxa, examples, functions, graphs, discussions and history | supports | All maintained assertions read; current target bytes equal the original frozen target. No scientific record was changed. |
+| plaque-original-4-yaml | reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.yaml; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-original-4-md | reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.md; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-record-5 | data/structures/other/gamma_dna_polymerase_complex.yaml; Complete current definition, components, taxa, examples, functions, graphs, discussions and history | supports | All maintained assertions read; current target bytes equal the original frozen target. No scientific record was changed. |
+| plaque-original-5-yaml | reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.yaml; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-original-5-md | reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.md; Complete immutable original, historical inputs/checks/evidence/findings/actions and exact rendered Markdown | context_only | Original scope and timestamp are historical. Source findings are independently reassessed at the present source head. |
+| plaque-input-original-proof | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/input-original-proof.json; Actual explicit-commit proof;47 current source/worktree inputs,39 historical input occurrences and3 native original validate/render pairs | supports | All hashes match; own3 target hashes are nonstale. All3 original YAML files natively validate and exactly reproduce saved Markdown. Other cohort inputs are checked for provenance only. |
+| plaque-native-fact_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify.log; stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Two reviewed S288C protein_examples and two COVERED typed protein nodes. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-native-fact_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal.log; stdout SHA256 564343089c790c3976a2096f605a72df5ebe0ad67af0969f3f6d41a88005eb8a | supports | Exit0. Two reviewed S288C protein_examples and two COVERED typed protein nodes. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-native-fmn_reductase_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify.log; stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. One reviewed E.coli K12 protein_example and one COVERED typed protein node. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-native-fmn_reductase_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal.log; stdout SHA256 ff0b115d5574011d1a8f0573dce8a722f08305763ff4d2bde3716bb4c4710a38 | supports | Exit0. One reviewed E.coli K12 protein_example and one COVERED typed protein node. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-native-gamma_dna_polymerase_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify.log; stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Two reviewed human protein_examples and two COVERED typed protein nodes. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-native-gamma_dna_polymerase_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal-receipt.json; Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal.log; stdout SHA256 0314a6b14e8b8067e2bba90a07d49cf0bec7624457ae2ea726e5edbc6cf48157 | supports | Exit0. Two reviewed human protein_examples and two COVERED typed protein nodes. Identifier and node-coverage checks do not independently establish biological assembly, localization or necessity. |
+| plaque-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101,GO:0008023,GO:0034728,GO:0006354,GO:1990202,GO:1990204,GO:0052873,GO:0005760,GO:0042575,GO:0098798,GO:0005759,GO:0006264; Complete12-term response; exact names/definitions/synonyms and selected typed children for maintained identity, hierarchy, localization and function terms; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go.raw | supports | Current target identities and definitions are consistent with FACT, generic FMN reductase and mitochondrial polymerase gamma. Typed parent-child relations support the maintained hierarchy and POLG matrix parthood; is_a ancestry is not substituted for direct parthood. Generic identities remain distinct from the scoped yeast, E.coli and human examples. |
+| plaque-go-0035101-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101/ancestors?relations=is_a; All returned ancestors for GO:0035101 with relations=is_a; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-0035101-ancestors.raw | supports | Complete is_a-only ancestors support this hierarchy, without independently asserting any direct parthood. |
+| plaque-go-1990202-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990202/ancestors?relations=is_a; All returned ancestors for GO:1990202 with relations=is_a; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-1990202-ancestors.raw | supports | Complete is_a-only ancestors support this hierarchy, without independently asserting any direct parthood. |
+| plaque-go-0005760-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/ancestors?relations=is_a; All returned ancestors for GO:0005760 with relations=is_a; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-0005760-ancestors.raw | supports | Complete is_a-only ancestors support this hierarchy, without independently asserting any direct parthood. |
+| plaque-polg-constraints | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/constraints; Complete target constraints array; exact ancestorId GO0005760, relationship only_in_taxon, taxId2759; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/polg-constraints.raw | supports | Native GO0005760 constraint explicitly states only_in_taxon Eukaryota2759. This is a taxonomic restriction, not evidence that every eukaryotic lineage has the same subunit count or a quantitative prevalence census. |
+| plaque-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-4932.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-559292.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-tax-562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-562.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-tax-83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-83333.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-tax-2759 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-2759.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-tax-9606 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9606; Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-9606.raw | supports | Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain or higher-taxon identity. Experimental strains and recombinant hosts remain separately scoped. |
+| plaque-pmid-10413469 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10413469+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:10413469 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10413469.raw | supports | Wittmeyer1999 primary abstract supports the yeast Spt16/Pob3 association and functional context. It does not certify fresh figure inspection or complete localization Methods. |
+| plaque-pmid-11432837 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11432837+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:11432837 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-11432837.raw | supports | Formosa2001 primary abstract supports yeast Spt16/Pob3 with Nhp6-mediated nucleosome remodeling; the selected genuine full body supplies separately scoped experiments. |
+| plaque-pmid-12934006 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12934006+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:12934006 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-12934006.raw | supports | Belotserkovskaya2003 primary abstract supports FACT histone-chaperone and PolII/nucleosome activity. No currently retrieved full body or experimental-species detail absent from this abstract is certified. |
+| plaque-pmid-14585989 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14585989+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:14585989 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-14585989.raw | supports | Mason2003 primary abstract supports yeast FACT association with transcribed regions; the selected full-body ChIP sections separately establish actual assay/strain limits. |
+| plaque-pmid-10480865 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10480865+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:10480865 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10480865.raw | supports | Eichhorn1999 complete primary abstract reports purified N-terminal-His-tagged E.coli SsuE as a homodimer of native Mr58400, NAD(P)H-dependent FMN reduction, also FAD/riboflavin reduction, and a separate SsuD tetramer. It supports the scoped dimer/catalysis claims, not universal FMN-reductase stoichiometry or a stable SsuE-SsuD complex. |
+| plaque-pmid-10608893 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10608893+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:10608893 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10608893.raw | supports | Lim1999 complete primary abstract describes reconstituted human POLG accessory p55 expressed in E.coli plus catalytic p140, enhanced affinity/processivity and salt-stable association. Its historical190kDa/1:1 interpretation is not promoted to the modern exhaustive mammalian copy number. |
+| plaque-pmid-11172710 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11172710+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:11172710 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-11172710.raw | supports | Carrodeguas2001 complete primary abstract distinguishes mouse accessory-subunit crystal structure from a human four-helix-bundle deletion mutant: loss of accessory dimerization and stimulation while catalytic-subunit interaction on primer-template remains. Activity, dimerization and association are distinct. |
+| plaque-pmid-10827171 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10827171+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:10827171 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10827171.raw | supports | Spelbrink2000 complete primary abstract concerns human cultured-cell POLG fusion expression, mitochondrial distribution and mtDNA maintenance; no fresh image pixels or complete Methods are certified. |
+| plaque-pmid-18063578 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18063578+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:18063578 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-18063578.raw | supports | Bogenhagen2008 complete primary abstract describes cross-linking/proteomic mitochondrial nucleoid organization, not a universal complete polymerase stoichiometry or formation table. |
+| plaque-pmid-12045093 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12045093+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=1; Europe PMC exact EXT_ID:12045093 AND SRC:MED, pageSize1/resultType core; complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-12045093.raw | supports | Hubscher2002 is secondary review abstract context for eukaryotic DNA polymerases. No primary experiment or full-review-body inspection is assigned to this response. |
+| plaque-formosa-legacy-query | https://pmc.ncbi.nlm.nih.gov/articles/125512/?report=xml; NCBI numeric PMC HTML via ?report=xml; Results sec6–10, embedded Figs4–6 text captions, Discussion sec13–14, Methods sec16/TableIII and sec19. A364a/W303/S288C variants, yeast proteins, chicken histones/sea-urchin5S DNA and recombinant E.coli Nhp6 host distinguished. No figure pixels/supplements/raw data inspected.; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-legacy-query.raw | supports | Selected genuine primary body supports purified yeast Spt16/Pob3 recruitment to nucleosomes with Nhp6, nuclease-accessibility changes and genetic interactions. The stable two-subunit core is distinguished from weak/cofactor Nhp6 association; some sec6/Discussion observations are expressly unpublished and are not recast as direct figure results. The paper proposes broader transcription/remodeling models beyond each measured assay. |
+| plaque-mason-legacy-query | https://pmc.ncbi.nlm.nih.gov/articles/262413/?report=xml; Genuine numeric PMC HTML via ?report=xml; Methods sec2–3, Results sec6–7 and embedded Figs1/2 text captions. W303.1A/FY56/L577 and specified derivatives read; no figure pixels or unlisted Results certified.; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-legacy-query.raw | supports | Selected yeast ChIP Results support FACT association along active PolII coding regions and temporal correspondence with transcription. The results do not distinguish one FACT molecule traveling with polymerase from dynamic exchange. Myc-Spt16 complemented its deletion; tagged-Pob3 had a modest growth effect, which bounds assay interpretation. |
+| plaque-up-P32558 | https://rest.uniprot.org/uniprotkb/P32558.json; Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P32558.raw | supports | Reviewed native P32558,taxon559292, SPT16; CDC68/SSF1; YGL207W;1035aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact protein mapping. Native annotation provenance is distinct from fresh experiments; POLG2 inferred matrix annotation is not promoted to direct microscopy. |
+| plaque-gene-SPT16 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPT16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete unique result; no selection by search rank; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-SPT16.raw | supports | The single reviewed exact-gene/taxon result is P32558; primary names, aliases and locus are consistent. |
+| plaque-up-Q04636 | https://rest.uniprot.org/uniprotkb/Q04636.json; Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-Q04636.raw | supports | Reviewed native Q04636,taxon559292, POB3;YML069W;552aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact protein mapping. Native annotation provenance is distinct from fresh experiments; POLG2 inferred matrix annotation is not promoted to direct microscopy. |
+| plaque-gene-POB3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOB3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete unique result; no selection by search rank; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POB3.raw | supports | The single reviewed exact-gene/taxon result is Q04636; primary names, aliases and locus are consistent. |
+| plaque-up-P80644 | https://rest.uniprot.org/uniprotkb/P80644.json; Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P80644.raw | supports | Reviewed native P80644,taxon83333, ssuE/ycbP;b0937/JW0920;191aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact protein mapping. Native annotation provenance is distinct from fresh experiments; POLG2 inferred matrix annotation is not promoted to direct microscopy. |
+| plaque-gene-ssuE | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AssuE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete unique result; no selection by search rank; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-ssuE.raw | supports | The single reviewed exact-gene/taxon result is P80644; primary names, aliases and locus are consistent. |
+| plaque-up-P54098 | https://rest.uniprot.org/uniprotkb/P54098.json; Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P54098.raw | supports | Reviewed native P54098,taxon9606, POLG/POLG1/POLGA/MDP1;1239aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact protein mapping. Native annotation provenance is distinct from fresh experiments; POLG2 inferred matrix annotation is not promoted to direct microscopy. |
+| plaque-gene-POLG | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete unique result; no selection by search rank; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POLG.raw | supports | The single reviewed exact-gene/taxon result is P54098; primary names, aliases and locus are consistent. |
+| plaque-up-Q9UHN1 | https://rest.uniprot.org/uniprotkb/Q9UHN1.json; Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-Q9UHN1.raw | supports | Reviewed native Q9UHN1,taxon9606, POLG2/MTPOLB;485aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact protein mapping. Native annotation provenance is distinct from fresh experiments; POLG2 inferred matrix annotation is not promoted to direct microscopy. |
+| plaque-gene-POLG2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG2%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete unique result; no selection by search rank; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POLG2.raw | supports | The single reviewed exact-gene/taxon result is Q9UHN1; primary names, aliases and locus are consistent. |
+| plaque-ipr-IPR040258 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040258/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR040258.raw | supports | Whole Spt16 family with PTHR13980, corroborated by P32558. This supports the existing explicit exact-family task. |
+| plaque-ipr-IPR000969 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000969/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR000969.raw | supports | Whole SSRP1/POB3 family including PR00887, corroborated by Q04636. Human SSRP1 versus yeast Pob3 architectural differences do not invalidate this verified homologous class. |
+| plaque-ipr-IPR050454 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050454/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR050454.raw | context_only | Broader RTT106/SSRP1 family with PTHR45849 is not substituted for exact POB3. Unchecked generated narrative is excluded. |
+| plaque-ipr-IPR020048 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020048/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR020048.raw | supports | Whole SsuE FMN-reductase family with TIGR03567 matches P80644; the native curated biochemical entry supports E.coli homodimer context without universalizing it. |
+| plaque-ipr-IPR002297 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002297/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR002297.raw | supports | Whole mitochondrial DNA-polymerase family A with PTHR10267/PIRSF000797/PR00867 and P54098 match supports the explicit catalytic-class task. Incidental erroneous5-prime-extension prose is not copied. |
+| plaque-ipr-IPR027031 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027031/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR027031.raw | context_only | Broad glycine-tRNA-synthetase/POLG2 entry does not exactly isolate the named accessory class. |
+| plaque-ipr-IPR042064 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR042064/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR042064.raw | context_only | POLG2 C-terminal domain is not a whole-protein accessory family. |
+| plaque-ipr-IPR027030 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027030/; Complete native accession/type/name, signatures, hierarchy, description flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR027030.raw | context_only | Actual HTTP410 response contains genuine deletion metadata dated2022-11-25. This is authority content, not a generic access failure, but the historical entry is not an active exact grounding. |
+| plaque-panther-PTHR10745-SF8 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10745:SF8/; Actual HTTP204 receipt and empty-byte SHA only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/panther-PTHR10745-SF8.raw | context_only | The current candidate PANTHER endpoint returns204 with zero bytes. It establishes neither a valid exact family nor its biological absence. |
+| plaque-belot-publisher | https://doi.org/10.1126/science.1085703; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/belot-publisher.raw | context_only | Current attempted route returned status403 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-eichhorn-publisher | https://doi.org/10.1074/jbc.274.38.26639; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/eichhorn-publisher.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-lim-publisher | https://doi.org/10.1074/jbc.274.53.38197; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/lim-publisher.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-carrodeguas-publisher | https://doi.org/10.1016/S1097-2765(01)00153-8; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/carrodeguas-publisher.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-formosa-body | https://pmc.ncbi.nlm.nih.gov/articles/PMC125512/?pdf=render; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-body.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-mason-legacy | https://pmc.ncbi.nlm.nih.gov/articles/262413/; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-legacy.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-formosa-bioc | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC125512/unicode; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-bioc.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-mason-bioc | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC262413/unicode; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-bioc.raw | context_only | Current attempted route returned status200 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-formosa-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC125512.1/PMC125512.1.xml; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-jats.raw | context_only | Current attempted route returned status404 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-mason-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC262413.1/PMC262413.1.xml; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-jats.raw | context_only | Current attempted route returned status404 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-formosa-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC125512/fullTextXML; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-epmc.raw | context_only | Current attempted route returned status500 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-mason-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC262413/fullTextXML; Actual transport/content diagnostic only; no biological inference or article-body certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-epmc.raw | context_only | Current attempted route returned status500 and did not supply a readable article body. Tiny redirects, challenge pages, No-result BioC responses and transport errors are not counted as paper access; separately successful genuine body/abstract responses retain their own timestamps. |
+| plaque-adapter-catalogue | https://imodulondb.org/api/organisms; All20 organism rows/28 organism-dataset pairs independently reread from same-PR micro snapshot, actual original fetch timestamp retained; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-catalogue.raw | context_only | Full fresh catalogue contains E.coli datasets but no yeast or human natural-host dataset. FACT and POLG therefore have bounded natural-host noncoverage; recombinant E.coli expression is not used as their proxy. Catalogue noncoverage is not biological absence. |
+| plaque-adapter-precise1k-meta | https://imodulondb.org/api/datasets/e_coli/precise1k/meta; Complete official dataset metadata fields; five strain names read; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-meta.raw | context_only | The selected E.coli precise1k dataset has201modules and4257genes,1035samples/518conditions; metadata lists BW25113,DGF-298,GMOS,MG1655,W3110. It is not one purified-protein assay strain and expression correlations do not establish complex formation. |
+| plaque-adapter-gene-b0937 | https://imodulondb.org/api/genes/e_coli/precise1k/b0937; Complete exact native gene response and organism/dataset IDs; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/adapter-gene-b0937.raw | context_only | Exact b0937/ssuE entry joins P80644 and the K12 locus. No similarly named or foreign-strain gene was substituted. |
+| plaque-adapter-membership-b0937 | https://imodulondb.org/api/genes/e_coli/precise1k/b0937/imodulons; Complete201 membership rows; both true entries independently checked; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/adapter-membership-b0937.raw | context_only | All201 returned rows contain two true SsuE memberships:56 Sulfate(weight0.258176278,threshold0.068099301) and82 SSW SNPs(weight0.036000402,threshold0.034619822). The other flags are dataset thresholds, not biological absence. |
+| plaque-module-56 | https://imodulondb.org/api/imodulons/e_coli/precise1k/56; Exact module identity/name/threshold/member count and non-generated metadata; all ai_summary content excluded; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-56.raw | context_only | Sulfate metadata annotates Cbl/CysB and17members; it is expression-context annotation, not direct regulator-binding or physical SsuE-SsuD assembly evidence. |
+| plaque-module-56-genes | https://imodulondb.org/api/imodulons/e_coli/precise1k/56/genes; Full returned gene-ID/name/member table and exact SsuE join; no generated summaries or full activity-matrix analysis; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-56-genes.raw | context_only | Complete17-member table confirms b0937/ssuE/P80644, with its exact threshold-passing weight. SsuD is separately represented as b0935/P80645; shared expression membership does not merge the proteins into one physical complex. |
+| plaque-module-82 | https://imodulondb.org/api/imodulons/e_coli/precise1k/82; Exact module identity/name/threshold/member count and non-generated metadata; all ai_summary content excluded; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-82.raw | context_only | SSW SNPs metadata lists89members, null regulator and Unknown function. No specific mechanistic interpretation is invented. |
+| plaque-module-82-genes | https://imodulondb.org/api/imodulons/e_coli/precise1k/82/genes; Full returned gene-ID/name/member table and exact SsuE join; no generated summaries or full activity-matrix analysis; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-82-genes.raw | context_only | Complete89-member table confirms b0937/ssuE/P80644, with its exact threshold-passing weight. The broad returned membership is retained as context only. |
+| plaque-historical-3-micro55-belot2003 | https://www.science.org/doi/10.1126/science.1085703; Original native request/403 response. Historical identity 20261022T065209Z-fact-complex-audit/micro55-belot2003; exact old date/hash retained from immutable YAML, historical raw transport bytes not reconstructed. | context_only | The direct Science route returned HTTP403 HTML, not the article body. Genuine primary reading is separately retained through browser-extracted blocks. |
+| plaque-historical-4-micro55-eichhorn1999-pdf | https://www.jbc.org/article/S0021925819550724/pdf; Original URL and native403 response. Historical identity 20261022T065210Z-fmn-reductase-complex-audit/micro55-eichhorn1999-pdf; exact old date/hash retained from immutable YAML, historical raw transport bytes not reconstructed. | context_only | The native JBC PDF route returned HTTP403 HTML. It is not counted as a retrieved PDF; the independent genuine browser primary passages supply the stated body scope. |
+| plaque-historical-5-micro55-panther-PTHR10745-SF8 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10745:SF8/; Original204 receipt and empty raw SHA; no positive body. Historical identity 20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-panther-PTHR10745-SF8; exact old date/hash retained from immutable YAML, historical raw transport bytes not reconstructed. | context_only | The candidate PANTHER subfamily endpoint returned HTTP204 with zero response bytes. No current exact family identity or membership is inferred from this empty response. |
+| plaque-historical-5-micro55-lim1999 | https://doi.org/10.1074/jbc.274.53.38197; Exact original request and retained TLS diagnostic. Historical identity 20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-lim1999; exact old date/hash retained from immutable YAML, historical raw transport bytes not reconstructed. | context_only | Lim1999 native DOI request failed TLS certificate verification (status0). The raw error is not an article body. Lim browser text and the Carrodeguas complete native abstract are separately scoped. |
+| plaque-historical-5-micro55-carrodeguas2001 | https://doi.org/10.1016/S1097-2765(01)00153-8; Exact original request and retained TLS diagnostic. Historical identity 20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-carrodeguas2001; exact old date/hash retained from immutable YAML, historical raw transport bytes not reconstructed. | context_only | Carrodeguas2001 native DOI request failed TLS certificate verification (status0). The raw error is not an article body. Lim browser text and the Carrodeguas complete native abstract are separately scoped. |
+| septin-review-policy | .claude/skills/review-yaml-record/SKILL.md; Complete review and structured-source policy | supports | Positive molecular and pathway assertions trigger actual host coverage assessment; absence of expression-module claims is insufficient. |
+| septin-curation-policy | docs/CURATION.md; Exact family/class grounding and append-only discussions | supports | Exact whole-component identities differ from domains or broad paralog groups; label-only is valid while the specific class is unresolved. Preserve dated rationale and history. |
+| septin-schema-policy | src/cellstructuremech/schema/cellstructuremech.yaml; Component, essentiality, taxonomic and graph types | supports | Functional requirement, localization, membership and formation necessity are distinct. Optional fields and valid family/class components are not automatic defects. |
+| septin-protein-policy | .claude/skills/uniprot-protein-examples/SKILL.md; Primary names, synonyms, exact taxon and identity checks | supports | Accessions, reference strains and gene aliases require native authority joins; they do not establish an experimental assembly mechanism. |
+| septin-graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Graph scope and evidence rules | supports | Coarse function graphs are valid when explicitly nonmechanistic; source-specific genetic and biochemical experiments do not imply a complete universal assembly mechanism. |
+| septin-literature-policy | .claude/skills/literature-evidence/SKILL.md; Source accessibility and precise read extent | supports | Native metadata, complete primary abstracts, genuine primary bodies and secondary syntheses are different evidence tiers; captions are not image pixels. |
+| septin-review-schema | schema/record_review.yaml; Evidence, findings and lineage contract | supports | Keep inherited stable keys with exact repository/review/finding identity and actual current evidence; a supported qualified assessment remains scope limited. |
+| septin-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000329,GO:0000938,GO:0005802,GO:0015030,GO:0016604,GO:0031981,GO:0032991,GO:0035859,GO:0038202,GO:0042147,GO:0061700,GO:0097504,GO:0099023,GO:1904262,GO:1904263,GO:1990130; All16 requested current GO term names, definitions, synonyms, obsolete flags and relevant typed relationships | supports | GARP, GATOR1, GATOR2 and gems identities are exact; is_a and part_of remain distinct. GATOR roles and cell-compartment/process labels match. Gem snRNP language is authority definition plus historical immunodetection scope, not a new universal proteomic claim. |
+| septin-GO0000938-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000938/ancestors?relations=is_a; Complete is_a-only ancestor closure for the assigned identity | supports | Current exact parent class is present; this closure alone does not establish a part_of edge. |
+| septin-protein-P36116 | https://rest.uniprot.org/uniprotkb/P36116.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P36116; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'VPS51'}, 'synonyms': [{'value': 'API3'}, {'value': 'VPS67'}, {'value': 'WHI6'}], 'orderedLocusNames': [{'value': 'YKR020W'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-P39904 | https://rest.uniprot.org/uniprotkb/P39904.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P39904; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'VPS52'}, 'synonyms': [{'value': 'SAC2'}], 'orderedLocusNames': [{'value': 'YDR484W'}], 'orfNames': [{'value': 'D8035.27'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-P47061 | https://rest.uniprot.org/uniprotkb/P47061.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P47061; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'VPS53'}, 'orderedLocusNames': [{'value': 'YJL029C'}], 'orfNames': [{'value': 'J1258'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q03322 | https://rest.uniprot.org/uniprotkb/Q03322.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q03322; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'TLG1'}, 'orderedLocusNames': [{'value': 'YDR468C'}], 'orfNames': [{'value': 'D8035.11'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q12071 | https://rest.uniprot.org/uniprotkb/Q12071.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q12071; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'VPS54'}, 'synonyms': [{'value': 'CGP1'}, {'value': 'LUV1'}, {'value': 'RKI1'}, {'value': 'TCS3'}], 'orderedLocusNames': [{'value': 'YDR027C'}], 'orfNames': [{'value': 'PZF889'}, {'value': 'YD9813.05C'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-gene-VPS51-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS51%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P36116; native gene records [{'geneName': {'value': 'VPS51'}, 'synonyms': [{'value': 'API3'}, {'value': 'VPS67'}, {'value': 'WHI6'}], 'orderedLocusNames': [{'value': 'YKR020W'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-VPS52-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS52%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P39904; native gene records [{'geneName': {'value': 'VPS52'}, 'synonyms': [{'value': 'SAC2'}], 'orderedLocusNames': [{'value': 'YDR484W'}], 'orfNames': [{'value': 'D8035.27'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-VPS53-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS53%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P47061; native gene records [{'geneName': {'value': 'VPS53'}, 'orderedLocusNames': [{'value': 'YJL029C'}], 'orfNames': [{'value': 'J1258'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-VPS54-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS54%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result Q12071; native gene records [{'geneName': {'value': 'VPS54'}, 'synonyms': [{'value': 'CGP1'}, {'value': 'LUV1'}, {'value': 'RKI1'}, {'value': 'TCS3'}], 'orderedLocusNames': [{'value': 'YDR027C'}], 'orfNames': [{'value': 'PZF889'}, {'value': 'YD9813.05C'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-primary-PMC14776 | https://pmc.ncbi.nlm.nih.gov/articles/PMC14776/; Conibear2000 abstract; Results sections17-19 including Figures6-10 captions; Discussion21; selected methods and strain-table scope | supports | Reciprocal core-subunit deletion decreases Vps52 abundance to14% and destabilizes Vps52/Vps53/Vps54 in the reported pulse-chase assays; this is direct physical stability evidence. TGN/endosomal trafficking and co-immunoprecipitation support the named core. Reduced stability is not complete assembly abolition or universal viability necessity. No figure pixels or supplemental experiment reanalysis. |
+| septin-primary-PMC153126 | https://pmc.ncbi.nlm.nih.gov/articles/PMC153126/; Conibear2003 Methods sections3-6 and Table1; Results10-15/Figures3-9 captions; Discussion18/Figure10 caption | supports | Vps51 is the fourth GARP constituent; the Vps52/53/54 core persists at essentially unchanged levels without Vps51. Yeast deletion/cargo/localization and GST-Tlg1 binding experiments support the coarse function graph. SNY/LCY assay strains and bacterial BL21 expression are distinct from S288C reference annotation. Direct binding and proposed SNARE-opening models remain separate. |
+| septin-ipr-IPR007258 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007258/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Vps52 full family joined independently to P39904. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR039766 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039766/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Vps53 full family joined independently to P47061. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR039745 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039745/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Vps54 full family joined independently to Q12071. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-pfam-PF08700 | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08700/; Native Pfam repeat metadata and description | supports | PF08700 is a shared Vps51/Exo84/Cog1 N-terminal repeat rather than an exact complete Vps51 protein-family identity. It does not resolve the remaining Vps51 grounding. |
+| septin-GO1990130-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990130/ancestors?relations=is_a; Complete is_a-only ancestor closure for the assigned identity | supports | Current exact parent class is present; this closure alone does not establish a part_of edge. |
+| septin-protein-P38742 | https://rest.uniprot.org/uniprotkb/P38742.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P38742; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'NPR3'}, 'synonyms': [{'value': 'RMD11'}], 'orderedLocusNames': [{'value': 'YHL023C'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-P39923 | https://rest.uniprot.org/uniprotkb/P39923.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P39923; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'NPR2'}, 'orderedLocusNames': [{'value': 'YEL062W'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-P47170 | https://rest.uniprot.org/uniprotkb/P47170.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P47170; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'IML1'}, 'synonyms': [{'value': 'SEA1'}], 'orderedLocusNames': [{'value': 'YJR138W'}], 'orfNames': [{'value': 'J2129'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q00582 | https://rest.uniprot.org/uniprotkb/Q00582.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q00582; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'GTR1'}, 'orderedLocusNames': [{'value': 'YML121W'}], 'orfNames': [{'value': 'YM7056.05'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-gene-IML1-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIML1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P47170; native gene records [{'geneName': {'value': 'IML1'}, 'synonyms': [{'value': 'SEA1'}], 'orderedLocusNames': [{'value': 'YJR138W'}], 'orfNames': [{'value': 'J2129'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-NPR2-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANPR2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P39923; native gene records [{'geneName': {'value': 'NPR2'}, 'orderedLocusNames': [{'value': 'YEL062W'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-NPR3-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANPR3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P38742; native gene records [{'geneName': {'value': 'NPR3'}, 'synonyms': [{'value': 'RMD11'}], 'orderedLocusNames': [{'value': 'YHL023C'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-primary-PMC3108837 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3108837/; Dokudovskaya2011 Methods4-6,9; Results17,20 and Figures1,3,5 captions | supports | Reciprocal affinity purifications and carbonate extraction support the eight-member peripheral-membrane SEA context. Npr3 fluorescence is below detection; earlier Sea2 atlas localization differs. Current UniProt multi-reference localization annotation is not proof that each paper independently imaged every constituent. Supplemental strain table/MS data and pixels were not analyzed. |
+| septin-primary-PMC3875668 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3875668/; Panchaud CellCycle2013 Introduction1, Results/Discussion2, Methods4-5 and Figures1-3 captions | supports | Contains primary yeast epistasis experiments, not merely a secondary review. BY4741/BY4742-derived prototrophic strains, sec13-1 at25C and seh1 deletion at30C support opposing SEACIT/SEACAT regulation through Sch9 phosphorylation and iml1 epistasis. NPC/secretory coupling remains proposed rather than demonstrated for every condition. |
+| septin-primary-PMC3728654 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3728654/; Actual HTTP200 browser proof-of-work response | context_only | Canonical PMC route returned a challenge page, not the scientific body. Separate numeric PMC retrieval genuinely succeeded; this failure is access context, not negative biological evidence. |
+| septin-ipr-IPR027244 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027244/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Iml1/DEPDC5 full family joined to P47170. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR009348 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009348/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Npr2/NPRL2 full family joined to P39923. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR005365 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005365/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Npr3/NPRL3 full family joined to P38742. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-GO0061700-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061700/ancestors?relations=is_a; Complete is_a-only ancestor closure for the assigned identity | supports | Current exact parent class is present; this closure alone does not establish a part_of edge. |
+| septin-protein-P38164 | https://rest.uniprot.org/uniprotkb/P38164.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P38164; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'SEA4'}, 'orderedLocusNames': [{'value': 'YBL104C'}], 'orfNames': [{'value': 'YBL0808'}, {'value': 'YBL103C-A'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-P53011 | https://rest.uniprot.org/uniprotkb/P53011.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | P53011; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'SEH1'}, 'orderedLocusNames': [{'value': 'YGL100W'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q03897 | https://rest.uniprot.org/uniprotkb/Q03897.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q03897; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'MTC5'}, 'synonyms': [{'value': 'SEA3'}], 'orderedLocusNames': [{'value': 'YDR128W'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q04491 | https://rest.uniprot.org/uniprotkb/Q04491.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q04491; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'SEC13'}, 'synonyms': [{'value': 'ANU3'}], 'orderedLocusNames': [{'value': 'YLR208W'}], 'orfNames': [{'value': 'L8167.4'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-protein-Q08281 | https://rest.uniprot.org/uniprotkb/Q08281.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q08281; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'RTC1'}, 'synonyms': [{'value': 'SEA2'}], 'orderedLocusNames': [{'value': 'YOL138C'}]}]; taxon559292. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-gene-SEA2-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result Q08281; native gene records [{'geneName': {'value': 'RTC1'}, 'synonyms': [{'value': 'SEA2'}], 'orderedLocusNames': [{'value': 'YOL138C'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-SEA3-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result Q03897; native gene records [{'geneName': {'value': 'MTC5'}, 'synonyms': [{'value': 'SEA3'}], 'orderedLocusNames': [{'value': 'YDR128W'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-SEA4-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P38164; native gene records [{'geneName': {'value': 'SEA4'}, 'orderedLocusNames': [{'value': 'YBL104C'}], 'orfNames': [{'value': 'YBL0808'}, {'value': 'YBL103C-A'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-SEH1-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEH1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result P53011; native gene records [{'geneName': {'value': 'SEH1'}, 'orderedLocusNames': [{'value': 'YGL100W'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-gene-SEC13-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result Q04491; native gene records [{'geneName': {'value': 'SEC13'}, 'synonyms': [{'value': 'ANU3'}], 'orderedLocusNames': [{'value': 'YLR208W'}], 'orfNames': [{'value': 'L8167.4'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-ipr-IPR037590 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037590/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | WDR24/Sea2 full family joined to Q08281/RTC1. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR049567 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR049567/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | WDR59-like/Sea3 full family joined to Q03897/MTC5. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR037593 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037593/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | MIOS/Sea4 full family joined to P38164. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-ipr-IPR037363 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037363/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | The broader Sec13/Seh1 family does not uniquely identify each of the two distinct constituent classes; its GATOR1 wording is not adopted as a biological reassignment. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-GO0097504-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097504/ancestors?relations=is_a; Complete is_a-only ancestor closure for the assigned identity | supports | Current exact parent class is present; this closure alone does not establish a part_of edge. |
+| septin-protein-Q16637 | https://rest.uniprot.org/uniprotkb/Q16637.json; Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY annotations and InterPro xrefs | supports | Q16637; UniProtKB reviewed (Swiss-Prot); native genes [{'geneName': {'value': 'SMN1'}, 'synonyms': [{'value': 'SMN'}, {'value': 'SMNT'}]}, {'geneName': {'value': 'SMN2'}, 'synonyms': [{'value': 'SMNC'}]}]; taxon9606. Identity, native annotation provenance and independent family cross-reference joins inspected. Annotation placement does not make every cited paper an independent test of every localization; protein identity alone does not establish whole-structure necessity. |
+| septin-gene-SMN1-9606 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASMN1%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete current reviewed exact-gene/taxon search result and primary/alias names | supports | Exactly one current result Q16637; native gene records [{'geneName': {'value': 'SMN1'}, 'synonyms': [{'value': 'SMN'}, {'value': 'SMNT'}]}, {'geneName': {'value': 'SMN2'}, 'synonyms': [{'value': 'SMNC'}]}]. Current identity verification does not reconstruct or certify a historical query execution. |
+| septin-ipr-IPR040424 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040424/; Native family name/type, complete descriptions and curation flags, member signatures/hierarchy/overlap; independent UniProt member join | supports | Smn1 full family joined to Q16637, suitable for a generic SMN protein class but neither the whole SMN complex nor exclusive human SMN1 occupancy. Unchecked AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family absence. |
+| septin-liu1996-page-3555 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/6c4e0dd80f3c/emboj00014-0071.png; Liu/Dreyfuss1996 scanned published page3555; actual pixels independently viewed at original resolution | supports | Title, abstract and introduction; HeLa2-6 foci and0.1-1micrometer size scope, RNA-metabolism role tentative. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3556 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/e795871a58ec/emboj00014-0072.png; Liu/Dreyfuss1996 scanned published page3556; actual pixels independently viewed at original resolution | supports | Figure1 and associated antibody/two-hybrid text; yeast two-hybrid interaction is not automatically an in-vivo human whole-complex mechanism. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3559 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/2891aadd5660/emboj00014-0075.png; Liu/Dreyfuss1996 scanned published page3559; actual pixels independently viewed at original resolution | supports | Figure4 and associated text: SMN compared with coilin/fibrillarin and actinomycin-D response. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3560 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/b388cc323157/emboj00014-0076.png; Liu/Dreyfuss1996 scanned published page3560; actual pixels independently viewed at original resolution | supports | Figure5 and associated text: temperature/actinomycin-D comparisons and Y12 detection boundary. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3561 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/3064158e03de/emboj00014-0077.png; Liu/Dreyfuss1996 scanned published page3561; actual pixels independently viewed at original resolution | supports | Figure6 and associated text: no Y12-detectable snRNPs in the assayed gems; cell-type differences, not a universal proteomic absence claim. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3562 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/4390d31d580c/emboj00014-0078.png; Liu/Dreyfuss1996 scanned published page3562; actual pixels independently viewed at original resolution | supports | Figure7/mouse3T3 and discussion: SMN then the known marker, RNA-function hypothesis and cell-state limits. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3563 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/a349beaf8b2a/emboj00014-0079.png; Liu/Dreyfuss1996 scanned published page3563; actual pixels independently viewed at original resolution | supports | Discussion and Methods: HeLa/NIH3T3 conditions,32C24h and actinomycin-D5micrograms/ml3h, antibody approaches; not paralog-specific occupancy. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-liu1996-page-3564 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/b5a1f726fc86/emboj00014-0080.png; Liu/Dreyfuss1996 scanned published page3564; actual pixels independently viewed at original resolution | supports | Microscopy methods and references; LeicaTCS4D acquisition, no independent intensity or colocalization quantitation. Scan quality/monochrome reproduction limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565 were not inspected. |
+| septin-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA taxonomic response | supports | Saccharomyces cerevisiae, rank species. Biological species and S288C reference strain are separate from exact assay strains and recombinant expression hosts. |
+| septin-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA taxonomic response | supports | Saccharomyces cerevisiae S288C, rank strain. Biological species and S288C reference strain are separate from exact assay strains and recombinant expression hosts. |
+| septin-tax-9606 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9606; Complete ENA taxonomic response | supports | Homo sapiens, rank species. Biological species and S288C reference strain are separate from exact assay strains and recombinant expression hosts. |
+| septin-pmid-12377769 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12377769+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Vps51p links the VFT complex to the SNARE Tlg1p. Authors: Siniossoglou S, Pelham HR.. DOI:10.1074/jbc.m209428200. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-mbc_11_1_305 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.11.1.305%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Vps52p, Vps53p, and Vps54p form a novel multisubunit complex required for protein sorting at the yeast late Golgi. Authors: Conibear E, Stevens TH.. DOI:10.1091/mbc.11.1.305. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-mbc_e02-10-0654 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e02-10-0654%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Vps51p mediates the association of the GARP (Vps52/53/54) complex with the late Golgi t-SNARE Tlg1p. Authors: Conibear E, Cleck JN, Stevens TH.. DOI:10.1091/mbc.e02-10-0654. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Global analysis of protein localization in budding yeast. Authors: Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK.. DOI:10.1038/nature02026. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-21454883 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21454883+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | A conserved coatomer-related complex containing Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae. Authors: Dokudovskaya S, Waharte F, Schlessinger A, Pieper U, Devos DP, Cristea IM, Williams R, Salamero J, Chait BT, Sali A, Field MC, Rout MP, Dargemont C.. DOI:10.1074/mcp.m110.006478. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-science_1232044 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1232044%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | A Tumor suppressor complex with GAP activity for the Rag GTPases that signal amino acid sufficiency to mTORC1. Authors: Bar-Peled L, Chantranupong L, Cherniack AD, Chen WW, Ottina KA, Grabiner BC, Spear ED, Carter SL, Meyerson M, Sabatini DM.. DOI:10.1126/science.1232044. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-scisignal_2004112 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscisignal.2004112%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Amino acid deprivation inhibits TORC1 through a GTPase-activating protein complex for the Rag family GTPase Gtr1. Authors: Panchaud N, Péli-Gulli MP, De Virgilio C.. DOI:10.1126/scisignal.2004112. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-10684247 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | The yeast nuclear pore complex: composition, architecture, and transport mechanism. Authors: Rout MP, Aitchison JD, Suprapto A, Hjertaas K, Zhao Y, Chait BT.. DOI:10.1083/jcb.148.4.635. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-cc_26000 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.4161%2Fcc.26000%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | SEACing the GAP that nEGOCiates TORC1 activation: evolutionary conservation of Rag GTPase regulation. Authors: Panchaud N, Péli-Gulli MP, De Virgilio C.. DOI:10.4161/cc.26000. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-11283611 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11283611+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Spinal muscular atrophy disrupts the interaction of ZPR1 with the SMN protein. Authors: Gangwani L, Mikrut M, Theroux S, Sharma M, Davis RJ.. DOI:10.1038/35070059. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-21072240 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21072240+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | WRAP53 is essential for Cajal body formation and for targeting the survival of motor neuron complex to Cajal bodies. Authors: Mahmoudi S, Henriksson S, Weibrecht I, Smith S, Söderberg O, Strömblad S, Wiman KG, Farnebo M.. DOI:10.1371/journal.pbio.1000521. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-pmid-8670859 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8670859+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | A novel nuclear structure containing the survival of motor neurons protein. Authors: Liu Q, Dreyfuss G.. DOI:10.1002/j.1460-2075.1996.tb00725.x. Scope: primary paper, complete native abstract only in this evidence row. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-301992 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1086%2F301992%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Coiled bodies and gems: Janus or gemini? Authors: Matera AG, Frey MR.. DOI:10.1086/301992. Scope: secondary review, metadata only (no native abstract). This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-doi-annurev_cellbio_16_1_273 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1146%2Fannurev.cellbio.16.1.273%22&amp;format=json&amp;resultType=core&amp;pageSize=10; Complete native EuropePMC CORE citation and available abstractText | supports | Cajal bodies: the first 100 years. Authors: Gall JG.. DOI:10.1146/annurev.cellbio.16.1.273. Scope: secondary review, complete native abstract only. This metadata evidence does not imply full-body access; successful separately inspected bodies have independent evidence rows. |
+| septin-panchaud2013-pdf | https://www.unifr.ch/bio/en/assets/public/Research/Claudio-De-Virgilio/Panchaud%20et%20al.%20-%202013.pdf; Panchaud ScienceSignaling2013 genuine author PDF, main published pages1-6: Results, Methods, Figures1-4 captions; supplementary index and captionsS1-S4 encountered, but no supplemental experiments/pixels or TablesS1/S2 independently analyzed | supports | Direct Iml1-Gtr1 interaction and purified-protein GAP assays support negative TORC1 regulation. Transient interaction changes after leucine withdrawal differ from wholesale loss of pre-existing vacuolar localization. Arg943 mutants, GAP fragments and full-length protein tests retain their conditions. Recombinant bacterial expression and yeast assays are distinct; precise supplementary strain-table identities were not independently read. |
+| septin-barpeled2013-numeric | https://pmc.ncbi.nlm.nih.gov/articles/3728654/; Bar-Peled2013 genuine numeric PMC main body, Figures1-5 captions, HEK-293T and Drosophila S2 experimental descriptions; supplementary methods/data not read | supports | Human GATOR1/2 constituent boundaries, amino-acid-dependent S6K phosphorylation, genetic epistasis and Rag GAP activity support comparative roles. Sec13 was excluded from functional depletion because of other complexes. Human/fly functional evidence is not a native yeast assembly experiment; the original paper discussion predates later yeast SEACIT/SEACAT framing. |
+| septin-catalogue | https://imodulondb.org/api/organisms; Complete official unpaginated catalogue; all20 organism entries and28 organism/dataset pairs independently read | supports | No Saccharomyces cerevisiae, S288C or Homo sapiens biological host is listed. Downstream host-matched module queries are not applicable; bacterial recombinant expression hosts are not substitutes. Catalogue noncoverage does not prove biological absence. |
+| septin-adapter-runner-historical | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Actual historical Nov3 00:49Z command receipt | context_only | Actual previous exit1 PermissionError reading runner pyvenv.cfg. No current invocation claimed. Current official public-catalogue fallback is separately retrieved and assessed. |
+| septin-original-native-checks | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-septin/original-checks.json; Four actual native validate/render pairs and52 historical source-input occurrences | supports | All four original YAML documents validate0 and render0 to exact original Markdown; all52 historical input occurrences match their frozen Git revisions. All four current target hashes are unchanged. |
+| septin-record-garp_complex | data/structures/other/garp_complex.yaml; Entire current maintained record including history, discussions, examples, functions and every graph node/edge | context_only | Current target independently read in full, unchanged from original frozen input. Historical rationale remains provenance rather than new experimental evidence. |
+| septin-original-garp_complex | reviews/structured/20261022T065211Z-garp-complex-audit/review.yaml; Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations | context_only | Exact inherited identities, scopes and formal expression-only applicability exclusion inspected. No own historical failed-access evidence-kind defect found: existing limitations do not imply falsely retained body evidence. Old batch26 global execution provenance remains historical, not a current execution claim. |
+| septin-native-garp_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-verify-receipt.json; Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Four reviewed examples/four COVERED constituent nodes; one separate Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-native-garp_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-causal-receipt.json; Actual command receipt and independently read log; logSHA256 670ea06510e5e96ca0c5707c009c1fa8932c907c82b49462685e055a6afa2737 | supports | Exit0. Four reviewed examples/four COVERED constituent nodes; one separate Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-record-gator1_complex | data/structures/other/gator1_complex.yaml; Entire current maintained record including history, discussions, examples, functions and every graph node/edge | context_only | Current target independently read in full, unchanged from original frozen input. Historical rationale remains provenance rather than new experimental evidence. |
+| septin-original-gator1_complex | reviews/structured/20261022T065212Z-gator1-complex-audit/review.yaml; Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations | context_only | Exact inherited identities, scopes and formal expression-only applicability exclusion inspected. No own historical failed-access evidence-kind defect found: existing limitations do not imply falsely retained body evidence. Old batch26 global execution provenance remains historical, not a current execution claim. |
+| septin-native-gator1_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-verify-receipt.json; Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Three reviewed examples/three COVERED constituent nodes; separate Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-native-gator1_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-causal-receipt.json; Actual command receipt and independently read log; logSHA256 12ced6f0f34184e7513c99561c2913631f30e4d14b6ef7d56da9f4cdd5233532 | supports | Exit0. Three reviewed examples/three COVERED constituent nodes; separate Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-record-gator2_complex | data/structures/other/gator2_complex.yaml; Entire current maintained record including history, discussions, examples, functions and every graph node/edge | context_only | Current target independently read in full, unchanged from original frozen input. Historical rationale remains provenance rather than new experimental evidence. |
+| septin-original-gator2_complex | reviews/structured/20261022T065213Z-gator2-complex-audit/review.yaml; Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations | context_only | Exact inherited identities, scopes and formal expression-only applicability exclusion inspected. No own historical failed-access evidence-kind defect found: existing limitations do not imply falsely retained body evidence. Old batch26 global execution provenance remains historical, not a current execution claim. |
+| septin-native-gator2_complex-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-verify-receipt.json; Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. Five reviewed examples and five COVERED constituent nodes. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-native-gator2_complex-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-causal-receipt.json; Actual command receipt and independently read log; logSHA256 db35303745367e8ad8256402bed7b218634934c51f4875551c7ed46370649dd7 | supports | Exit0. Five reviewed examples and five COVERED constituent nodes. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-record-gemini_of_cajal_bodies | data/structures/other/gemini_of_cajal_bodies.yaml; Entire current maintained record including history, discussions, examples, functions and every graph node/edge | context_only | Current target independently read in full, unchanged from original frozen input. Historical rationale remains provenance rather than new experimental evidence. |
+| septin-original-gemini_of_cajal_bodies | reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.yaml; Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations | context_only | Exact inherited identities, scopes and formal expression-only applicability exclusion inspected. No own historical failed-access evidence-kind defect found: existing limitations do not imply falsely retained body evidence. Old batch26 global execution provenance remains historical, not a current execution claim. |
+| septin-native-gemini_of_cajal_bodies-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-verify-receipt.json; Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289 | supports | Exit0. One reviewed example and one COVERED constituent node; correct native SMN1 query does not establish SMN1-only gem occupancy. Native identity/coverage is not independent biological membership or necessity proof. |
+| septin-native-gemini_of_cajal_bodies-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-causal-receipt.json; Actual command receipt and independently read log; logSHA256 3f290c9f5bb43373260209b189f780482f1797642a96c26da338aaa3535f7628 | supports | Exit0. One reviewed example and one COVERED constituent node; correct native SMN1 query does not establish SMN1-only gem occupancy. Native identity/coverage is not independent biological membership or necessity proof. |
+| check-qc | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/qc.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history, generated products and corpus gates passed. |
+| check-labels | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/labels.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER pairs remain unverified by an authority adapter. |
+| check-trait-links | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/trait-links.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Native TraitMech link check passed. |
+| check-vendored | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/vendored.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Pinned governed files match; native vendored check passed. |
+| check-curies | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/curies.log; Actual command stdout/stderr; receipt contains exact head/base and start/finish | supports | Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED. Existing #2514 tracks batching/reporting. Supplemental bounded requests verified the 909 PMIDs separately; skipped identifiers are not claimed resolved. |
+| focused | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/focused-results.json; All twenty actual target schema/strict command outputs | supports | Ten schema and ten strict commands returned exit zero. |
+| supplemental-pmid | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/pmid-chunks-receipt.json; Complete native-report PMID set checked with unchanged resolver in batches of at most fifty | supports | 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers remain unverified. |
+| historical-adapter-runner-availability | /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json; Historical runner invocation receipt; exact retained SHA256 reverified during PR2391 synthesis | context_only | Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS PermissionError reading the configured runner pyvenv.cfg. This is retained historical availability evidence, not a fresh attempt or a scientific validation failure. Native policy permits inspected source-catalogue fallback. |
+| root-native-exocyst-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-exocyst-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-exodeoxyribonuclease_v_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-exodeoxyribonuclease_v_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-exomer_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-exomer_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-fact_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-fact_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-fmn_reductase_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-fmn_reductase_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gamma_dna_polymerase_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gamma_dna_polymerase_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-garp_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-garp_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gator1_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gator1_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gator2_complex-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gator2_complex-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gemini_of_cajal_bodies-uniprot-verify | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-verify.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+| root-native-gemini_of_cajal_bodies-uniprot-causal | /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-causal.log; Actual native command output; associated receipt binds command, source head, base and UTC interval | context_only | 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native coverage classifications are retained in the command output. Actual exit0; inventory is distinct from biological claim and source-scope assessment. |
+
+## Limits And Additional Notes
+
+- Exocyst, RecBCD and exomer independent review: Own scope is three complete current records: exocyst, RecBCD and exomer. Twenty-six actually used maintained inputs were frozen before use and match source; all47 frozen hashes are audited. No extra maintained neighbor or other PR record was read. Original six assigned artifacts remain immutable.
+- Exocyst, RecBCD and exomer independent review: Exocyst current complete indexed abstracts: TerBush1996, Finger1998, GuoSec41999, GuoExo841999 and Huh2003/Zhang2005/Baek2010 metadata. Genuine TerBush1995 PDF-text and Boyd2004 JATS were independently read at named Methods/Results/Discussion/caption extents. Blocked/stub routes do not establish body access; no supplements, figure pixels or coordinate reanalysis.
+- Exocyst, RecBCD and exomer independent review: Exocyst condition-specific co-IP recovery is not intracellular protein depletion, universal complex absence or global ESSENTIAL. The sec3-2/sec5-24/sec10-2 comparison at25C is distinguished from separate sec6-4/sec15-1 temperature experiments. Original abstract-only review remains unchanged; new body observation has its own actual receipt.
+- Exocyst, RecBCD and exomer independent review: Six exocyst family mappings use native family identity/signatures and reviewed reference/member sets; homologous paralogs and other functions are not excluded. Sec3 domain/superfamily and broader Sec10-like do not settle exact remaining classes. No sequence alignment or exhaustive alternative-family absence claim.
+- Exocyst, RecBCD and exomer independent review: RecBCD Singleton2004 genuine Nature main text/Methods/captions now read; Masterson1992 remains complete indexed abstract after PDF403. RCSB entry/entities are authority, not new primary experiments. Protein heterotrimer and synthetic DNA entity are distinguished. V330 recombinant expression is distinct from species562 source, K-12 reference annotations and precise1k mixed-strain expression context.
+- Exocyst, RecBCD and exomer independent review: Exomer Sanchatjate/Wang/Huranova genuine bodies were independently read at stated extents; Trautwein remains complete indexed abstract after failed body routes. DDY1810 mutant extracts, SEY6210/CWY contexts, recombinant Sf9 and Huranova30C dynamics are not conflated. Huranova supplementary strain table, all pixels/movies/supplements and atomic data remain unread.
+- Exocyst, RecBCD and exomer independent review: Exomer association, stable TGN retention, cargo function and universal formation are distinct. Current broad class does not require a fixed five-subunit particle or external Arf1 as a stable constituent. Chs5 family mapping excludes LLM-generated unchecked prose as primary evidence; shared ChAP family does not resolve four individual paralog classes.
+- Exocyst, RecBCD and exomer independent review: Official catalogue response covers20 organism rows/28 organism-dataset pairs, with no Saccharomyces match. E.coli precise1k includes BW25113,DGF-298,GMOS,MG1655,W3110. Complete4257-gene table joins recB/b2820/P08394,recC/b2822/P07648,recD/b2819/P04993; each has zero true memberships among201 supplied threshold rows. Nonhits are not absence of gene expression/protein, nonmembership in RecBCD or causal/formation evidence; no AI summaries or activities were used.
+- Exocyst, RecBCD and exomer independent review: Historical runner unavailability is the actual Nov3 00:49Z PermissionError receipt, not a new invocation. Seven original access-only rows are corrected only in successor evidence kind while retaining old hashes/times. Current challenge/rate-limit/wrong-endpoint responses are validation diagnostics only; retries are separately recorded.
+- Exocyst, RecBCD and exomer independent review: Six actual source-head native protein commands pass:16 maintained reviewed examples and18 typed nodes,16 COVERED plus external Sec4 and Arf1 UNANCHORED_WITH_UNIPROT. Six original native validate/render commands and42 historical input occurrences pass. No future successor/post-save/CI/queue gate is certified.
+- Exocyst, RecBCD and exomer independent review: Four inherited minor findings remain open with exact repository/review/finding references and four bounded future-curation actions. RecBCD stays pass_with_limitations. No new scientific finding, terminal broader category/group resolution, record edit, mandatory optional field, universal essentiality or new experiment is imposed.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Formosa2001 and Mason2003 genuine primary HTML bodies were read only at the explicitly listed Results/Methods/Discussion and text-caption sections. No image pixels, supplements or raw experiments were reanalysed; Formosa explicitly unpublished observations are not promoted to direct figure evidence.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Belot2003, Wittmeyer1999, Eichhorn1999, Lim1999, Carrodeguas2001, Spelbrink2000 and Bogenhagen2008 are current complete primary abstract/metadata evidence. Failed or redirect publisher routes do not certify body access. Historical successful browser passages are not claimed freshly reread. Hubscher2002 is secondary abstract context.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Eichhorn native-Mr/homodimer and catalytic claims are supported at abstract tier; current experimental strain/calibration/Methods details are not available from that tier. The generic FMN-reductase record does not become universally an E.coli SsuE dimer.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Reference protein strain, experimental yeast backgrounds, mouse structure versus human deletion constructs, and recombinant expression hosts are kept separate. COMMON and GO taxon restrictions are not population censuses or universal stoichiometry claims.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Exact family adoption is limited to Spt16 IPR040258, SSRP1/POB3 IPR000969 and catalytic POLG IPR002297 under existing open tasks. Broad RTT106/SSRP1, glycyl-tRNA-synthetase/POLG2, domain-only, deleted and empty alternatives are not forced; generated unchecked or incidental erroneous prose is excluded.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Current official catalogue and precise1k gene/module evidence are source fallback, not a new runner invocation. The historical runner unavailable observation remains2026-11-03 00:49Z. FACT/POLG lack a matching natural host; E.coli precise1k spans five strains and cannot certify the purified-protein experiment strain.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Only exact SsuE b0937 and its201 returned memberships, selected Sulfate56(17members) and SSW SNPs82(89members) metadata/member tables were inspected. No full activity-matrix/regulatory-causality analysis, generated module summary or threshold-based biological absence is claimed.
+- FACT, FMN reductase and gamma DNA polymerase independent review: Five historical access-kind corrections preserve exact prior dates, references, hashes and context_only scopes from original YAML; historical raw transport bytes were not reconstructed. Genuine InterPro410 deletion metadata remains authority content.
+- FACT, FMN reductase and gamma DNA polymerase independent review: No maintained images occur in these three records, no optional missing-example requirement or universal formation assay is invented, and no scientific record/Git/GitHub mutation is made. Parent-owned corpus gates, CI, queue and merge are outside this source certification.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Four unchanged targets fully reviewed; five inherited minor findings remain open, with exact predecessor identities. Four formal expression-only applicability exclusions require successor correction; zero own historical failed-access evidence-kind defects established after all original evidence rows were inspected.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Fresh Conibear2000/2003, Dokudovskaya2011, Panchaud CellCycle2013 bodies and ScienceSignaling author PDF, and genuine Bar-Peled numeric PMC body were read at declared extents. No GARP/SEA/GATOR figure pixels, atomic coordinates or supplementary experiments independently analyzed. ScienceSignaling supplemental index and initial captions were encountered but exact strain TablesS1/S2 were not independently inspected. Canonical Bar-Peled HTTP200 challenge is access-only, separate from its genuine alternate body.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Liu1996 scanned primary pages3555/3556/3559-3564 were actually viewed, including figure pixels and captions; degraded/monochrome reproduction and no quantitative reanalysis limit image interpretation. Pages3557/3558/3565 were not inspected, so no complete-paper claim. Matera/Frey1998 is secondary metadata-only with no native abstract; Gall2000 secondary complete-abstract only. Gangwani2001, Mahmoudi2010, Huh2003, Rout2000 and Siniossoglou/Pelham2002 are complete primary abstracts/native annotation joins, not full-body evidence.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Current reviewed primary names and aliases are independently verified, including RTC1/SEA2, MTC5/SEA3 and Q16637 listing both SMN1/SMN2. Annotation-source placement does not imply every cited paper independently tested every localization; Npr3 below-detection fluorescence and earlier Sea2 atlas differences are retained. Exact protein identity does not certify experimental strain or universal formation necessity.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: GARP core stability is direct, assay-scoped physical evidence. Vps51 is different: core levels remain stable without it. Neither all-four ESSENTIAL flags, universal viability, nor complete assembly abolition follows. GATOR biochemical activity, starvation epistasis and transient interactions remain distinct from whole-assembly formation. Smn1 family is not the whole SMN complex or exclusive human SMN1 localization.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: GATOR2 and gems VARIABLE lineage/strain qualifiers are not independently established by the inspected model-system sampling. Cell-state differences and qualitative canonical hosts are not prevalence censuses; no opposite-distribution assertion or speculative curation finding is made.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Three GARP, three GATOR1, three GATOR2 and one generic SMN full-family identities are verified at the stated class scope. The bounded candidate search does not prove absence of any finer family elsewhere. PF08700 shared repeat and IPR037363 wider paralog family do not uniquely resolve Vps51 or each Sec13/Seh1 class. Their unresolved boundaries remain explicit.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Complete current official catalogue lacks matching yeast/human biological hosts. No downstream unrelated-host proxy is queried. Historical runner unavailable receipt is actual Nov3 00:49Z; no fresh invocation claimed. Current catalogue is an independently inspected fresh Nov4 response, not a biological absence result.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Actual eight root native commands exit0 with13 reviewed examples,13 COVERED constituent nodes and2 UNANCHORED_WITH_UNIPROT context nodes(Tlg1,Gtr1). These validate identity/coverage, not biological membership or necessity. Original native validate/render0 and52 frozen historical inputs verified; root global QC, successor persistence, final-head CI and queue are separate and not certified here.
+- GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Only29 explicitly listed maintained inputs informed this report; all matched current frozen source/worktree hashes. No repository, record, original bundle, Git or GitHub mutation. Actual bounded issuing-authority queries do not constitute exhaustive literature-absence searches. Existing historical batch26 global execution scopes remain historical provenance.
+- Historical observations remain immutable; their old checks are not represented as current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure. Catalogue-based coverage is assessed directly; fresh and reused responses retain actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include 909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head CI and merge-group CI occur after saving this immutable observation and are not represented here as already completed.
+- Two changed targets, exocyst and RecBCD, are substantively reassessed; eight other current target hashes match original frozen inputs. All used maintained context is frozen before synthesis.
+- Twenty current native protein commands passed across 34 represented protein examples and 38 typed protein nodes: 34 COVERED and four external context nodes (Sec4, Arf1, Tlg1 and Gtr1) UNANCHORED_WITH_UNIPROT. These external interactors are not missing complex constituents; identity and coverage are not experimental membership or necessity evidence.
+- An initial protein-check invocation lacked permitted network access and failed DNS before content verification. Its diagnostic is preserved separately; all twenty actual commands subsequently passed with authorized network access.
+- Original observations and dated rationale remain immutable. Current source bodies, primary abstracts, database entries and failed-access diagnostics retain exact scopes and dates.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261104T095611Z-pr2392-current-record-followup
+kind: batch
+repository: CultureBotAI/CellStructureMech
+title: 'PR 2392: current-input review of ten records and adversarial follow-up'
+started_at: '2026-11-04T09:33:00.810778Z'
+finished_at: '2026-11-04T09:56:11Z'
+reviewer:
+  identity: Codex root synthesis with three independent read-only adversarial reviewers
+  kind: agent
+  independence: self_review
+  independence_basis: Root authors this synthesis of three separate read-only reviews.
+    Independent reviewers inspected original bundles, current record bytes and primary/authority
+    sources, and did not author or modify repository files. They independently re-review
+    the final saved head before merge-queue admission. This is not human scientific
+    sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md; explicit batch route in docs/record-review-profile.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Independent current-source review of all ten records retains eleven inherited
+  minor curation findings across eight records, with qualified passes for RecBCD and
+  FMN reductase. The exocyst membership expansion and RecBCD graph-family propagation
+  are substantively refreshed against current inputs. This immutable successor corrects
+  seven unsupported formal structured-source exclusions, supplies three missing formal
+  applicability assessments while preserving their valid expression-versus-physical-membership
+  caveat, and reclassifies twelve historical failed-access evidence occurrences without
+  changing their dates or hashes. Original review artifacts and all records remain
+  unchanged. Exact family mappings and condition-scoped physical-association or core-stability
+  findings remain open for separate record curation; no universal formation necessity
+  or complete optional inventory is imposed.
+source:
+  git_revision: 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-cell-structure/SKILL.md
+    sha256: eee04ee51d2c82c05df98570674084bdce9001e5aa67d6230ac1ed50064a3175
+    role: context
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/exocyst.yaml
+    sha256: 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb
+    role: target
+  - path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+    role: target
+  - path: data/structures/other/exomer_complex.yaml
+    sha256: 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a
+    role: target
+  - path: data/structures/other/fact_complex.yaml
+    sha256: 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a
+    role: target
+  - path: data/structures/other/fmn_reductase_complex.yaml
+    sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+    role: target
+  - path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+    role: target
+  - path: data/structures/other/garp_complex.yaml
+    sha256: cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b
+    role: target
+  - path: data/structures/other/gator1_complex.yaml
+    sha256: 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6
+    role: target
+  - path: data/structures/other/gator2_complex.yaml
+    sha256: 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f
+    role: target
+  - path: data/structures/other/gemini_of_cajal_bodies.yaml
+    sha256: 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261022T065207Z-exocyst-audit/review.md
+    sha256: 0b387e3eb3671da08d6d3b43d384ecb1e382664c2d3d99d185b27c96e8c67d36
+    role: context
+  - path: reviews/structured/20261022T065207Z-exocyst-audit/review.yaml
+    sha256: 017c4ca49b1d0654f7a9927316e942f09a22695c70c79d3785b3d8995bb84fed
+    role: context
+  - path: reviews/structured/20261022T065208Z-recbcd-audit/review.md
+    sha256: 324175a627213c66ee8b25ab2a0eefecf3f15828b7d87261de1716695ab2053f
+    role: context
+  - path: reviews/structured/20261022T065208Z-recbcd-audit/review.yaml
+    sha256: 9b592b520f89f258223efffeeaa7a60480a3b560f96fc4adfa8fc15540636bfc
+    role: context
+  - path: reviews/structured/20261022T065209Z-exomer-audit/review.md
+    sha256: b06acb398e1d2ca901f29a2905c73be95ea184adf49b74d8a60dbf34d5f26391
+    role: context
+  - path: reviews/structured/20261022T065209Z-exomer-audit/review.yaml
+    sha256: 93e8059b23a7ed33d9de7001c15a7c5ab7371ce2b49a7ae9d5ff0790ca08c65d
+    role: context
+  - path: reviews/structured/20261022T065209Z-fact-complex-audit/review.md
+    sha256: 2240fdcd61b06fa103bf62f5fee91ab9d707bf907a11be9a0125bec2145e21f5
+    role: context
+  - path: reviews/structured/20261022T065209Z-fact-complex-audit/review.yaml
+    sha256: ecd1ed0f07572d5b54163db9ef02f490390ddd69f26512665f7748fa09b3b201
+    role: context
+  - path: reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.md
+    sha256: 47c5dc1d917ccfdce28a72607669e2a029cc2adce390c9c7e984c4707bd222d5
+    role: context
+  - path: reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.yaml
+    sha256: 2aafb005c1d8d90881e18bd522ecfe5951741e9bd553235cdb9bc2569b607293
+    role: context
+  - path: reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.md
+    sha256: 070fb226586151a84e0acab6f6912e34006d75cbb1bd8900dcb34319723c0f9b
+    role: context
+  - path: reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.yaml
+    sha256: 1946331f3dd1cfc7dceaf6210c59c68ca0de221c35f8e5837a97fd80765e5eaa
+    role: context
+  - path: reviews/structured/20261022T065211Z-garp-complex-audit/review.md
+    sha256: cd541e1beff51e3c4932bf102beb44a74ee48b7ebb572f0ab6eabc16ff6ba5f4
+    role: context
+  - path: reviews/structured/20261022T065211Z-garp-complex-audit/review.yaml
+    sha256: 165d6c3ba3cb8fc2213d94017967e656da05b90c6d588e85859189994947e211
+    role: context
+  - path: reviews/structured/20261022T065212Z-gator1-complex-audit/review.md
+    sha256: 5807d53ef0a0df67f92e528d01c75c708eeb38c7189ae602e80fbdb7b1c55202
+    role: context
+  - path: reviews/structured/20261022T065212Z-gator1-complex-audit/review.yaml
+    sha256: 646e7287b959db5775121eb39f87f6bec0a04672a28059213bb5dab430b88f57
+    role: context
+  - path: reviews/structured/20261022T065213Z-gator2-complex-audit/review.md
+    sha256: cb98274aa407086bc4b5435773d8b6db5128170cb6d50739e2ca647862626b96
+    role: context
+  - path: reviews/structured/20261022T065213Z-gator2-complex-audit/review.yaml
+    sha256: cb6835252515a3b7c4177209b74bda221c35031db6ec598d1859a6d784013c03
+    role: context
+  - path: reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.md
+    sha256: 6cbfb8686f297204e0923810c05de3b8af9820e939e4112f3dade66681807926
+    role: context
+  - path: reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.yaml
+    sha256: 40620e81c66f67eb4c249845e408091971178beffdafd548a85b64ac61b829a5
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000145
+  path: data/structures/other/exocyst.yaml
+  label: exocyst
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained scientific record
+- target_id: GO:0009338
+  path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  label: exodeoxyribonuclease V complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0034044
+  path: data/structures/other/exomer_complex.yaml
+  label: exomer complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0035101
+  path: data/structures/other/fact_complex.yaml
+  label: FACT complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fact_complex.yaml
+    role: maintained scientific record
+- target_id: GO:1990202
+  path: data/structures/other/fmn_reductase_complex.yaml
+  label: FMN reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fmn_reductase_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0005760
+  path: data/structures/other/gamma_dna_polymerase_complex.yaml
+  label: gamma DNA polymerase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0000938
+  path: data/structures/other/garp_complex.yaml
+  label: GARP complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained scientific record
+- target_id: GO:1990130
+  path: data/structures/other/gator1_complex.yaml
+  label: GATOR1 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator1_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0061700
+  path: data/structures/other/gator2_complex.yaml
+  label: GATOR2 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator2_complex.yaml
+    role: maintained scientific record
+- target_id: GO:0097504
+  path: data/structures/other/gemini_of_cajal_bodies.yaml
+  label: Gemini of Cajal bodies
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gemini_of_cajal_bodies.yaml
+    role: maintained scientific record
+scope:
+  description: Exact ten-record PR cohort reassessed against current main 3dc6e3fc1655fa475699c78895558f427be4e67b.
+    Changed inputs are substantively reassessed. Scientific records remain unchanged.
+  selection: Complete cohort of ten maintained records reviewed in original PR head
+    358aa3f1ed88449ff5240075447e90578a9e66f7.
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+checks:
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: just qc
+  exit_code: 0
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  scope_note: Actual local execution at main-merge head 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-qc
+- check_id: labels
+  name: Native label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: just validate-products
+  exit_code: 0
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  scope_note: Actual local execution at main-merge head 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-labels
+- check_id: trait-links
+  name: TraitMech references
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Native TraitMech link check passed.
+  scope_note: Actual local execution at main-merge head 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-trait-links
+- check_id: vendored
+  name: Pinned governed files
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: just vendored-check
+  exit_code: 0
+  summary: Pinned governed files match; native vendored check passed.
+  scope_note: Actual local execution at main-merge head 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-vendored
+- check_id: curies
+  name: Native identifier resolver
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  scope_note: Actual local execution at main-merge head 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf.
+    Final post-save checks and CI are separate later gates.
+  evidence_ids:
+  - check-curies
+- check_id: focused-0
+  name: validate GO:0000145
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  command: just validate data/structures/other/exocyst.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-1
+  name: validate-strict GO:0000145
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  command: just validate-strict data/structures/other/exocyst.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-2
+  name: validate GO:0009338
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009338
+  command: just validate data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-3
+  name: validate-strict GO:0009338
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009338
+  command: just validate-strict data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-4
+  name: validate GO:0034044
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034044
+  command: just validate data/structures/other/exomer_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-5
+  name: validate-strict GO:0034044
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034044
+  command: just validate-strict data/structures/other/exomer_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-6
+  name: validate GO:0035101
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035101
+  command: just validate data/structures/other/fact_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-7
+  name: validate-strict GO:0035101
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035101
+  command: just validate-strict data/structures/other/fact_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-8
+  name: validate GO:1990202
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate data/structures/other/fmn_reductase_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-9
+  name: validate-strict GO:1990202
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate-strict data/structures/other/fmn_reductase_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-10
+  name: validate GO:0005760
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate data/structures/other/gamma_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-11
+  name: validate-strict GO:0005760
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate-strict data/structures/other/gamma_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-12
+  name: validate GO:0000938
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000938
+  command: just validate data/structures/other/garp_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-13
+  name: validate-strict GO:0000938
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000938
+  command: just validate-strict data/structures/other/garp_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-14
+  name: validate GO:1990130
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990130
+  command: just validate data/structures/other/gator1_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-15
+  name: validate-strict GO:1990130
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990130
+  command: just validate-strict data/structures/other/gator1_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-16
+  name: validate GO:0061700
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061700
+  command: just validate data/structures/other/gator2_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-17
+  name: validate-strict GO:0061700
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061700
+  command: just validate-strict data/structures/other/gator2_complex.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-18
+  name: validate GO:0097504
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097504
+  command: just validate data/structures/other/gemini_of_cajal_bodies.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: focused-19
+  name: validate-strict GO:0097504
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097504
+  command: just validate-strict data/structures/other/gemini_of_cajal_bodies.yaml
+  exit_code: 0
+  summary: Documented focused command passed.
+  evidence_ids:
+  - focused
+- check_id: supplemental-pmid
+  name: Supplemental bounded PMID authority checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: .venv/bin/python /private/tmp/cellstructure-batches-2346-2397-20261103/check_pmid_chunks.py
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392
+  exit_code: 0
+  summary: 909 PMIDs all OK in bounded native requests; full-command limitations remain
+    separate.
+  evidence_ids:
+  - supplemental-pmid
+- check_id: structured-source-applicability
+  name: Official structured-source applicability and covered-dataset cross-checks
+  status: passed
+  required: false
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  summary: 'All ten positive molecular or pathway records received actual whole-record
+    applicability assessment. The fresh official catalogue contains twenty organisms
+    and twenty-eight organism/dataset pairs, with no matching yeast or human biological
+    host. For E.coli precise1k, native metadata identifies 4257 genes, 201 modules,
+    1035 samples, 518 conditions and BW25113, DGF-298, GMOS, MG1655 and W3110 strains.
+    Exact recB/b2820, recC/b2822 and recD/b2819 joins each have zero thresholded memberships
+    across all 201 rows; those nonhits imply neither absent expression nor absence
+    from RecBCD. SsuE/b0937/P80644 has two supplied-threshold memberships: module56
+    Sulfate and module82 SSWSNPs, with both native module metadata and complete member
+    tables inspected. These are expression context, not physical assembly or direct
+    regulation proof; V330 recombinant assays are separate. The actual historical
+    Nov3 runner PermissionError remains separately dated, with no fresh invocation
+    claimed; current public-source fallback is separately evidenced.'
+  evidence_ids:
+  - micro-access-adapter-precise1k-genes
+  - micro-adapter-catalogue
+  - micro-adapter-precise1k-meta
+  - micro-adapter-precise1k-imodulons
+  - micro-adapter-genes
+  - micro-adapter-b2820
+  - micro-adapter-b2822
+  - micro-adapter-b2819
+  - plaque-adapter-catalogue
+  - plaque-adapter-precise1k-meta
+  - plaque-adapter-gene-b0937
+  - plaque-adapter-membership-b0937
+  - plaque-module-56
+  - plaque-module-56-genes
+  - plaque-module-82
+  - plaque-module-82-genes
+  - septin-catalogue
+- check_id: independent-scientific-review
+  name: Independent claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  summary: Three read-only reviewers covered the complete ten-record cohort, including
+    changed inputs, with explicit scientific findings and source-access limits. Final
+    artifact/head acceptance occurs after saving.
+  evidence_ids:
+  - micro-policy
+  - micro-schema
+  - micro-native-policy
+  - micro-profile
+  - micro-graph-policy
+  - micro-protein-P04993
+  - micro-protein-P07560
+  - micro-protein-P07648
+  - micro-protein-P08394
+  - micro-protein-P11076
+  - micro-protein-P19658
+  - micro-protein-P22224
+  - micro-protein-P32844
+  - micro-protein-P32855
+  - micro-protein-P33332
+  - micro-protein-P36122
+  - micro-protein-P38261
+  - micro-protein-P40955
+  - micro-protein-P89102
+  - micro-protein-Q05029
+  - micro-protein-Q06245
+  - micro-protein-Q08754
+  - micro-protein-Q12114
+  - micro-tax-4932
+  - micro-tax-559292
+  - micro-tax-83333
+  - micro-tax-562-retry
+  - micro-go-0000145
+  - micro-go-0005802
+  - micro-go-0006887
+  - micro-go-0006893
+  - micro-go-0008854
+  - micro-go-0009338
+  - micro-go-0032991
+  - micro-go-0034044
+  - micro-go-0140535
+  - micro-go-1902494
+  - micro-ancestors-0000145
+  - micro-ancestors-0009338
+  - micro-ancestors-0034044
+  - micro-family-IPR004140
+  - micro-family-IPR004586
+  - micro-family-IPR006344
+  - micro-family-IPR006697
+  - micro-family-IPR007225
+  - micro-family-IPR010326
+  - micro-family-IPR019160
+  - micro-family-IPR028258
+  - micro-family-IPR029175
+  - micro-family-IPR033961
+  - micro-family-IPR039682
+  - micro-family-IPR048628
+  - micro-family-IPR052827
+  - micro-family-IPR009976-retry
+  - micro-family-IPR015374-retry
+  - micro-doi-0
+  - micro-doi-1
+  - micro-doi-2
+  - micro-doi-3
+  - micro-doi-4
+  - micro-doi-5
+  - micro-doi-6
+  - micro-doi-7
+  - micro-doi-8
+  - micro-doi-9
+  - micro-pmid-14562095
+  - micro-pmid-15538360
+  - micro-pmid-15583031
+  - micro-pmid-15788396
+  - micro-pmid-1618858
+  - micro-pmid-16498409
+  - micro-pmid-17000877
+  - micro-pmid-20139078
+  - micro-PMC2199927-jats
+  - micro-PMC2172445-jats
+  - micro-PMC2064389-jats
+  - micro-PMC1635352-legacy
+  - micro-PMC5290816-legacy
+  - micro-single-nature
+  - micro-pdb-1W36
+  - micro-pdb-1W36-assembly1
+  - micro-pdb-1W36-entity1
+  - micro-pdb-1W36-entity2
+  - micro-pdb-1W36-entity3
+  - micro-pdb-1W36-entity4
+  - micro-adapter-precise1k-meta
+  - micro-adapter-precise1k-imodulons
+  - plaque-curation
+  - plaque-field-guide
+  - plaque-rubric
+  - plaque-review-skill
+  - plaque-protein-skill
+  - plaque-graph-skill
+  - plaque-review-profile
+  - plaque-review-contract
+  - plaque-review-schema
+  - plaque-structure-schema
+  - plaque-agents
+  - plaque-review-config
+  - plaque-go
+  - plaque-go-0035101-ancestors
+  - plaque-go-1990202-ancestors
+  - plaque-go-0005760-ancestors
+  - plaque-polg-constraints
+  - plaque-tax-4932
+  - plaque-tax-559292
+  - plaque-tax-562
+  - plaque-tax-83333
+  - plaque-tax-2759
+  - plaque-tax-9606
+  - plaque-pmid-10413469
+  - plaque-pmid-11432837
+  - plaque-pmid-12934006
+  - plaque-pmid-14585989
+  - plaque-pmid-10480865
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+  - plaque-pmid-10827171
+  - plaque-pmid-18063578
+  - plaque-pmid-12045093
+  - plaque-formosa-legacy-query
+  - plaque-mason-legacy-query
+  - plaque-up-P32558
+  - plaque-up-Q04636
+  - plaque-up-P80644
+  - plaque-up-P54098
+  - plaque-up-Q9UHN1
+  - plaque-ipr-IPR040258
+  - plaque-ipr-IPR000969
+  - plaque-ipr-IPR050454
+  - plaque-ipr-IPR020048
+  - plaque-ipr-IPR002297
+  - plaque-ipr-IPR027031
+  - plaque-ipr-IPR042064
+  - plaque-ipr-IPR027030
+  - plaque-adapter-catalogue
+  - plaque-adapter-precise1k-meta
+  - plaque-adapter-gene-b0937
+  - plaque-module-56
+  - plaque-module-56-genes
+  - plaque-module-82
+  - plaque-module-82-genes
+  - septin-review-policy
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-protein-policy
+  - septin-graph-policy
+  - septin-literature-policy
+  - septin-review-schema
+  - septin-go
+  - septin-GO0000938-ancestors
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q03322
+  - septin-protein-Q12071
+  - septin-gene-VPS51-559292
+  - septin-gene-VPS52-559292
+  - septin-gene-VPS53-559292
+  - septin-gene-VPS54-559292
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-ipr-IPR007258
+  - septin-ipr-IPR039766
+  - septin-ipr-IPR039745
+  - septin-pfam-PF08700
+  - septin-GO1990130-ancestors
+  - septin-protein-P38742
+  - septin-protein-P39923
+  - septin-protein-P47170
+  - septin-protein-Q00582
+  - septin-gene-IML1-559292
+  - septin-gene-NPR2-559292
+  - septin-gene-NPR3-559292
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-ipr-IPR027244
+  - septin-ipr-IPR009348
+  - septin-ipr-IPR005365
+  - septin-GO0061700-ancestors
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q03897
+  - septin-protein-Q04491
+  - septin-protein-Q08281
+  - septin-gene-SEA2-559292
+  - septin-gene-SEA3-559292
+  - septin-gene-SEA4-559292
+  - septin-gene-SEH1-559292
+  - septin-gene-SEC13-559292
+  - septin-ipr-IPR037590
+  - septin-ipr-IPR049567
+  - septin-ipr-IPR037593
+  - septin-ipr-IPR037363
+  - septin-GO0097504-ancestors
+  - septin-protein-Q16637
+  - septin-gene-SMN1-9606
+  - septin-ipr-IPR040424
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-tax-4932
+  - septin-tax-559292
+  - septin-tax-9606
+  - septin-pmid-12377769
+  - septin-doi-mbc_11_1_305
+  - septin-doi-mbc_e02-10-0654
+  - septin-pmid-14562095
+  - septin-pmid-21454883
+  - septin-doi-science_1232044
+  - septin-doi-scisignal_2004112
+  - septin-pmid-10684247
+  - septin-doi-cc_26000
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-pmid-8670859
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-catalogue
+- check_id: historical-adapter-runner
+  name: Retained historical adapter runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  summary: Historical00:49Z invocation unavailable due to OS access restriction. Official
+    catalogue fallback was inspected separately; no fresh invocation is claimed. Actual
+    historical exit1 is retained in the evidence receipt; the native unavailable-check
+    model has no execution exit-code field.
+  scope_note: Historical canary receipt reread and hash-verified. Native policy permits
+    source-page fallback.
+  evidence_ids:
+  - historical-adapter-runner-availability
+- check_id: exocyst-uniprot-verify
+  name: Native exocyst UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exocyst.yaml
+    --verify
+  exit_code: 0
+  summary: 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exocyst-uniprot-verify
+- check_id: exocyst-uniprot-causal
+  name: Native exocyst UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000145
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exocyst.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exocyst-uniprot-causal
+- check_id: exodeoxyribonuclease_v_complex-uniprot-verify
+  name: Native exodeoxyribonuclease V complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009338
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exodeoxyribonuclease_v_complex-uniprot-verify
+- check_id: exodeoxyribonuclease_v_complex-uniprot-causal
+  name: Native exodeoxyribonuclease V complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009338
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exodeoxyribonuclease_v_complex-uniprot-causal
+- check_id: exomer_complex-uniprot-verify
+  name: Native exomer complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034044
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exomer_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exomer_complex-uniprot-verify
+- check_id: exomer_complex-uniprot-causal
+  name: Native exomer complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034044
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/exomer_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-exomer_complex-uniprot-causal
+- check_id: fact_complex-uniprot-verify
+  name: Native FACT complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035101
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/fact_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-fact_complex-uniprot-verify
+- check_id: fact_complex-uniprot-causal
+  name: Native FACT complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035101
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/fact_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-fact_complex-uniprot-causal
+- check_id: fmn_reductase_complex-uniprot-verify
+  name: Native FMN reductase complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-fmn_reductase_complex-uniprot-verify
+- check_id: fmn_reductase_complex-uniprot-causal
+  name: Native FMN reductase complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-fmn_reductase_complex-uniprot-causal
+- check_id: gamma_dna_polymerase_complex-uniprot-verify
+  name: Native gamma DNA polymerase complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gamma_dna_polymerase_complex-uniprot-verify
+- check_id: gamma_dna_polymerase_complex-uniprot-causal
+  name: Native gamma DNA polymerase complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gamma_dna_polymerase_complex-uniprot-causal
+- check_id: garp_complex-uniprot-verify
+  name: Native GARP complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000938
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/garp_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-garp_complex-uniprot-verify
+- check_id: garp_complex-uniprot-causal
+  name: Native GARP complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000938
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/garp_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-garp_complex-uniprot-causal
+- check_id: gator1_complex-uniprot-verify
+  name: Native GATOR1 complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990130
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gator1_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gator1_complex-uniprot-verify
+- check_id: gator1_complex-uniprot-causal
+  name: Native GATOR1 complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990130
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gator1_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gator1_complex-uniprot-causal
+- check_id: gator2_complex-uniprot-verify
+  name: Native GATOR2 complex UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061700
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gator2_complex.yaml
+    --verify
+  exit_code: 0
+  summary: 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gator2_complex-uniprot-verify
+- check_id: gator2_complex-uniprot-causal
+  name: Native GATOR2 complex UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061700
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gator2_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gator2_complex-uniprot-causal
+- check_id: gemini_of_cajal_bodies-uniprot-verify
+  name: Native Gemini of Cajal bodies UniProt verify check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097504
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gemini_of_cajal_bodies.yaml
+    --verify
+  exit_code: 0
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gemini_of_cajal_bodies-uniprot-verify
+- check_id: gemini_of_cajal_bodies-uniprot-causal
+  name: Native Gemini of Cajal bodies UniProt causal check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097504
+  command: .venv/bin/python scripts/uniprot_genes.py --record data/structures/other/gemini_of_cajal_bodies.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Native command returned
+    zero.
+  scope_note: Actual current source-head execution. Broad protein groups and missing
+    optional examples are not automatically scientific defects.
+  evidence_ids:
+  - root-native-gemini_of_cajal_bodies-uniprot-causal
+evidence:
+- evidence_id: current-record-0
+  kind: record_content
+  reference: data/structures/other/exocyst.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 d0c83fa57e3a98fce43e21969454f1a3f3624dcc53ec2c90055d98f006a5a269;
+    current SHA256 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb.
+    Changed record reassessed against current sources.
+  snapshot_sha256: 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb
+- evidence_id: original-review-0
+  kind: prior_review
+  reference: reviews/structured/20261022T065207Z-exocyst-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 017c4ca49b1d0654f7a9927316e942f09a22695c70c79d3785b3d8995bb84fed
+- evidence_id: current-record-1
+  kind: record_content
+  reference: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 520153b05eb0538317626522c15f966a14e2d050155952c04e0ec46dcd7ee028;
+    current SHA256 f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11.
+    Changed record reassessed against current sources.
+  snapshot_sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+- evidence_id: original-review-1
+  kind: prior_review
+  reference: reviews/structured/20261022T065208Z-recbcd-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 9b592b520f89f258223efffeeaa7a60480a3b560f96fc4adfa8fc15540636bfc
+- evidence_id: current-record-2
+  kind: record_content
+  reference: data/structures/other/exomer_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a;
+    current SHA256 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a
+- evidence_id: original-review-2
+  kind: prior_review
+  reference: reviews/structured/20261022T065209Z-exomer-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 93e8059b23a7ed33d9de7001c15a7c5ab7371ce2b49a7ae9d5ff0790ca08c65d
+- evidence_id: current-record-3
+  kind: record_content
+  reference: data/structures/other/fact_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a;
+    current SHA256 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a
+- evidence_id: original-review-3
+  kind: prior_review
+  reference: reviews/structured/20261022T065209Z-fact-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: ecd1ed0f07572d5b54163db9ef02f490390ddd69f26512665f7748fa09b3b201
+- evidence_id: current-record-4
+  kind: record_content
+  reference: data/structures/other/fmn_reductase_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453;
+    current SHA256 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+- evidence_id: original-review-4
+  kind: prior_review
+  reference: reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 2aafb005c1d8d90881e18bd522ecfe5951741e9bd553235cdb9bc2569b607293
+- evidence_id: current-record-5
+  kind: record_content
+  reference: data/structures/other/gamma_dna_polymerase_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff;
+    current SHA256 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+- evidence_id: original-review-5
+  kind: prior_review
+  reference: reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 1946331f3dd1cfc7dceaf6210c59c68ca0de221c35f8e5837a97fd80765e5eaa
+- evidence_id: current-record-6
+  kind: record_content
+  reference: data/structures/other/garp_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b;
+    current SHA256 cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b
+- evidence_id: original-review-6
+  kind: prior_review
+  reference: reviews/structured/20261022T065211Z-garp-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 165d6c3ba3cb8fc2213d94017967e656da05b90c6d588e85859189994947e211
+- evidence_id: current-record-7
+  kind: record_content
+  reference: data/structures/other/gator1_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6;
+    current SHA256 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6
+- evidence_id: original-review-7
+  kind: prior_review
+  reference: reviews/structured/20261022T065212Z-gator1-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 646e7287b959db5775121eb39f87f6bec0a04672a28059213bb5dab430b88f57
+- evidence_id: current-record-8
+  kind: record_content
+  reference: data/structures/other/gator2_complex.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f;
+    current SHA256 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f
+- evidence_id: original-review-8
+  kind: prior_review
+  reference: reviews/structured/20261022T065213Z-gator2-complex-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: cb6835252515a3b7c4177209b74bda221c35031db6ec598d1859a6d784013c03
+- evidence_id: current-record-9
+  kind: record_content
+  reference: data/structures/other/gemini_of_cajal_bodies.yaml
+  locator: Whole current maintained record; exact bytes frozen by native inspect
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Original frozen SHA256 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3;
+    current SHA256 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3.
+    Record bytes unchanged since the original review.
+  snapshot_sha256: 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3
+- evidence_id: original-review-9
+  kind: prior_review
+  reference: reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.yaml
+  locator: 'Original immutable observation: sources, checks, scientific verdict, findings,
+    actions and limitations'
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: context_only
+  summary: Historical review retained without rewriting its evidence or promoting
+    old checks to current execution.
+  snapshot_sha256: 40620e81c66f67eb4c249845e408091971178beffdafd548a85b64ac61b829a5
+- evidence_id: micro-record-0
+  kind: record_content
+  reference: data/structures/other/exocyst.yaml
+  locator: Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf
+  accessed_at: '2026-11-04T09:49:29.391884Z'
+  support: supports
+  summary: Complete identity, hierarchy, components/examples, roles, functions, taxa,
+    graph, source notes, discussions and history inspected. No maintained image or
+    quantitative physical-property field. Seven constituent edges, six added component-ref
+    nodes and history are current.
+  snapshot_sha256: 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb
+- evidence_id: micro-prior-0
+  kind: prior_review
+  reference: reviews/structured/20261022T065207Z-exocyst-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown
+  accessed_at: '2026-11-04T09:49:29.391967Z'
+  support: supports
+  summary: Original historical inputs, checks, source tiers, verdict, findings and
+    actions independently reviewed. Original observation retained; historical access/checks
+    are not newly executed or upgraded retrospectively.
+  snapshot_sha256: 017c4ca49b1d0654f7a9927316e942f09a22695c70c79d3785b3d8995bb84fed
+- evidence_id: micro-delta-0
+  kind: record_content
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/0-stale.diff
+  locator: Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b
+  accessed_at: '2026-11-04T09:49:29.392009Z'
+  support: supports
+  summary: Exocyst membership expansion is reassessed against actual constituent sources;
+    it does not encode the tested mutant coassociation result.
+  snapshot_sha256: 685b65e4000463132a9feb86b9a6d17b8381e4402debec801371d768e10a5cfb
+- evidence_id: micro-record-1
+  kind: record_content
+  reference: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  locator: Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf
+  accessed_at: '2026-11-04T09:49:29.392037Z'
+  support: supports
+  summary: Complete identity, hierarchy, components/examples, roles, functions, taxa,
+    graph, source notes, discussions and history inspected. No maintained image or
+    quantitative physical-property field. Three existing protein nodes receive matching
+    family groundings plus history.
+  snapshot_sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+- evidence_id: micro-prior-1
+  kind: prior_review
+  reference: reviews/structured/20261022T065208Z-recbcd-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown
+  accessed_at: '2026-11-04T09:49:29.392058Z'
+  support: supports
+  summary: Original historical inputs, checks, source tiers, verdict, findings and
+    actions independently reviewed. Original observation retained; historical access/checks
+    are not newly executed or upgraded retrospectively.
+  snapshot_sha256: 9b592b520f89f258223efffeeaa7a60480a3b560f96fc4adfa8fc15540636bfc
+- evidence_id: micro-delta-1
+  kind: record_content
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/1-stale.diff
+  locator: Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b
+  accessed_at: '2026-11-04T09:49:29.392091Z'
+  support: supports
+  summary: RecBCD source-neutral groundings are reassessed against native family identity
+    and reference accessions; no broader historical issue resolution.
+  snapshot_sha256: 880b439a5e7285147d76a7ecac746b048606adfa618cbb580d1b96472a4e7b06
+- evidence_id: micro-record-2
+  kind: record_content
+  reference: data/structures/other/exomer_complex.yaml
+  locator: Complete maintained YAML at 8de0b0631a7a0a4f5956f8fe865032abf9c19fdf
+  accessed_at: '2026-11-04T09:49:29.392120Z'
+  support: supports
+  summary: Complete identity, hierarchy, components/examples, roles, functions, taxa,
+    graph, source notes, discussions and history inspected. No maintained image or
+    quantitative physical-property field. Current target equals original frozen bytes.
+  snapshot_sha256: 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a
+- evidence_id: micro-prior-2
+  kind: prior_review
+  reference: reviews/structured/20261022T065209Z-exomer-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown
+  accessed_at: '2026-11-04T09:49:29.392145Z'
+  support: supports
+  summary: Original historical inputs, checks, source tiers, verdict, findings and
+    actions independently reviewed. Original observation retained; historical access/checks
+    are not newly executed or upgraded retrospectively.
+  snapshot_sha256: 93e8059b23a7ed33d9de7001c15a7c5ab7371ce2b49a7ae9d5ff0790ca08c65d
+- evidence_id: micro-delta-2
+  kind: record_content
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/2-stale.diff
+  locator: Original frozen target versus current main 3dc6e3fc1655fa475699c78895558f427be4e67b
+  accessed_at: '2026-11-04T09:49:29.392180Z'
+  support: supports
+  summary: Empty original-to-current diff.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: micro-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Components, identifiers and Discussions clauses
+  accessed_at: '2026-11-04T09:49:29.392201Z'
+  support: supports
+  summary: Homologous family classes and reviewed-label-only representation are valid.
+    Explicit current grounding tasks are assessed without rewriting dated rationale,
+    posed_date or history. Condition-scoped physical stability is distinct from function,
+    viability and universal formation necessity.
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: micro-schema
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, essentiality, grounding and causal-graph definitions
+  accessed_at: '2026-11-04T09:49:29.392224Z'
+  support: supports
+  summary: UNKNOWN is permitted; taxon-neutral family classes and external contextual
+    GENE_OR_PROTEIN actors are valid. Optional examples and mechanisms are not mandatory.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: micro-native-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Scientific review and Structured Source Cross-Checks
+  accessed_at: '2026-11-04T09:49:29.392255Z'
+  support: supports
+  summary: Positive named molecular/pathway assertions trigger applicability assessment
+    regardless of expression wording. Actual matched-host dataset context does not
+    substitute for assembly experiments.
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: micro-profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Native observation persistence and concrete finding rules
+  accessed_at: '2026-11-04T09:49:29.392275Z'
+  support: supports
+  summary: Preserve immutable source observations and exact finding lineage. Unavailable
+    access alone and optional empty fields are not record defects; honest failed-access
+    receipts require the appropriate validation kind.
+  snapshot_sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+- evidence_id: micro-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Evidence scope, constituent relations and function/assembly distinction
+  accessed_at: '2026-11-04T09:49:29.392293Z'
+  support: supports
+  summary: Membership and coarse function can be supported without a complete mechanism.
+    Source-backed conditional association observations may be represented without
+    forcing universal ESSENTIAL or inventing an experiment.
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: micro-original-audit
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/original-audit.json
+  locator: Six actual original native validate/render commands; 42 historical input
+    occurrences; six original artifacts
+  accessed_at: '2026-11-04T09:35:34.153411Z'
+  support: supports
+  summary: All three original YAMLs validate and render exactly their original Markdown.
+    Historical recorded input hashes and original PR-head artifacts match.
+  snapshot_sha256: d372f7f3da03d8a160ce9dc9c23bd1c47f84f2bbb690b284b8c2906633c90674
+- evidence_id: micro-protein-P04993
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P04993.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P04993.raw
+  accessed_at: '2026-11-04T09:34:56.290178Z'
+  support: supports
+  summary: 'P04993: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecD; primary
+    genes [''recD'']; loci [''b2819'', ''JW2787'']; taxon 83333; InterPro [''IPR003593'',
+    ''IPR050534'', ''IPR027417'', ''IPR006344'', ''IPR049550'', ''IPR041851'', ''IPR027785''].
+    Reference annotation is distinguished from actual experimental strain and family
+    membership from exclusive complex membership.'
+  snapshot_sha256: 058c9f19f6606a0afe3e5c66ed3ad97e1c8bef8dcaac1cecd69d910321621ee8
+- evidence_id: micro-protein-P07560
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P07560.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P07560.raw
+  accessed_at: '2026-11-04T09:34:59.223921Z'
+  support: supports
+  summary: 'P07560: UniProtKB reviewed (Swiss-Prot); Ras-related protein SEC4; primary
+    genes [''SEC4'']; loci [''YFL005W'']; taxon 559292; InterPro [''IPR027417'', ''IPR005225'',
+    ''IPR001806'', ''IPR050305'']. Reference annotation is distinguished from actual
+    experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: f24b697ccabe750dc996cda3644fc965e063297bb9491f09dd96d5cf4c9ee649
+- evidence_id: micro-protein-P07648
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P07648.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P07648.raw
+  accessed_at: '2026-11-04T09:35:01.566880Z'
+  support: supports
+  summary: 'P07648: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecC; primary
+    genes [''recC'']; loci [''b2822'', ''JW2790'']; taxon 83333; InterPro [''IPR013986'',
+    ''IPR027417'', ''IPR006697'', ''IPR060282'', ''IPR041500'', ''IPR061297'', ''IPR011335''].
+    Reference annotation is distinguished from actual experimental strain and family
+    membership from exclusive complex membership.'
+  snapshot_sha256: ef459887c8427389501da1e7d14d1096c0bb41e177fdfa9a120e0195ceb51066
+- evidence_id: micro-protein-P08394
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P08394.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P08394.raw
+  accessed_at: '2026-11-04T09:34:57.341305Z'
+  support: supports
+  summary: 'P08394: UniProtKB reviewed (Swiss-Prot); RecBCD enzyme subunit RecB; primary
+    genes [''recB'']; loci [''b2820'', ''JW2788'']; taxon 83333; InterPro [''IPR027417'',
+    ''IPR011604'', ''IPR038726'', ''IPR004586'', ''IPR011335'', ''IPR000212'', ''IPR014016'',
+    ''IPR014017'']. Reference annotation is distinguished from actual experimental
+    strain and family membership from exclusive complex membership.'
+  snapshot_sha256: 48feb52c54e9c20fb181b97e20fa55fdae3b6abd38bbf1ce66b07d78bcd89c5c
+- evidence_id: micro-protein-P11076
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P11076.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P11076.raw
+  accessed_at: '2026-11-04T09:34:59.815644Z'
+  support: supports
+  summary: 'P11076: UniProtKB reviewed (Swiss-Prot); ADP-ribosylation factor 1; primary
+    genes [''ARF1'']; loci [''YDL192W'', ''D1244'']; taxon 559292; InterPro [''IPR045872'',
+    ''IPR027417'', ''IPR005225'', ''IPR024156'', ''IPR006689'']. Reference annotation
+    is distinguished from actual experimental strain and family membership from exclusive
+    complex membership.'
+  snapshot_sha256: fb2ce21f92da7c817647884a2805ab45d84f49b279093b1a68cd4908bbbfb7b4
+- evidence_id: micro-protein-P19658
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P19658.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P19658.raw
+  accessed_at: '2026-11-04T09:34:57.424750Z'
+  support: supports
+  summary: 'P19658: UniProtKB reviewed (Swiss-Prot); Exocyst complex component EXO70;
+    primary genes [''EXO70'']; loci [''YJL085W'', ''J0932'']; taxon 559292; InterPro
+    [''IPR016159'', ''IPR004140'', ''IPR046364'']. Reference annotation is distinguished
+    from actual experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: 36f699e02d992a2957b1bb5ccf4e80f8955bf38beaa89b731563763c3957bafd
+- evidence_id: micro-protein-P22224
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P22224.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P22224.raw
+  accessed_at: '2026-11-04T09:34:58.155201Z'
+  support: supports
+  summary: 'P22224: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC15;
+    primary genes [''SEC15'']; loci [''YGL233W'']; taxon 559292; InterPro [''IPR007225'',
+    ''IPR046361'', ''IPR042045'', ''IPR048359'', ''IPR042044'']. Reference annotation
+    is distinguished from actual experimental strain and family membership from exclusive
+    complex membership.'
+  snapshot_sha256: 4a11828b7b879aa21a5e699602553f60756c94e19082d26b26ed0a8ade44ff0b
+- evidence_id: micro-protein-P32844
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P32844.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P32844.raw
+  accessed_at: '2026-11-04T09:34:58.191657Z'
+  support: supports
+  summary: 'P32844: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC6;
+    primary genes [''SEC6'']; loci [''YIL068C'']; taxon 559292; InterPro [''IPR010326'',
+    ''IPR042532'']. Reference annotation is distinguished from actual experimental
+    strain and family membership from exclusive complex membership.'
+  snapshot_sha256: b8e2f2854989c951ce924c1627a8b56395ab51508469e84a67426ae20f4a38e5
+- evidence_id: micro-protein-P32855
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P32855.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P32855.raw
+  accessed_at: '2026-11-04T09:34:56.254068Z'
+  support: supports
+  summary: 'P32855: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC8;
+    primary genes [''SEC8'']; loci [''YPR055W'', ''YP9499.11'']; taxon 559292; InterPro
+    [''IPR039682'', ''IPR007191'', ''IPR048630'']. Reference annotation is distinguished
+    from actual experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: e5032f0271f9e4ac7cc0a44cc5e48a6d56134d75094e97a60f7ba7a4e6ad71a1
+- evidence_id: micro-protein-P33332
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P33332.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P33332.raw
+  accessed_at: '2026-11-04T09:35:00.191959Z'
+  support: supports
+  summary: 'P33332: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC3;
+    primary genes [''SEC3'']; loci [''YER008C'']; taxon 559292; InterPro [''IPR028258'',
+    ''IPR048628'', ''IPR019160'']. Reference annotation is distinguished from actual
+    experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: dca6c5878b966ec922e7c90245524c9609eae73e5aadb766d9f93e589a63bc11
+- evidence_id: micro-protein-P36122
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P36122.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P36122.raw
+  accessed_at: '2026-11-04T09:35:02.925018Z'
+  support: supports
+  summary: 'P36122: UniProtKB reviewed (Swiss-Prot); Protein BCH2; primary genes [''BCH2''];
+    loci [''YKR027W'']; taxon 559292; InterPro [''IPR015374'', ''IPR011990'']. Reference
+    annotation is distinguished from actual experimental strain and family membership
+    from exclusive complex membership.'
+  snapshot_sha256: efad3cc50163c8ad08f980bde82154c5318eac26fe0dd64120d289ab1eb3cb54
+- evidence_id: micro-protein-P38261
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P38261.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P38261.raw
+  accessed_at: '2026-11-04T09:35:03.161824Z'
+  support: supports
+  summary: 'P38261: UniProtKB reviewed (Swiss-Prot); Exocyst complex component EXO84;
+    primary genes [''EXO84'']; loci [''YBR102C'', ''YBR0831'']; taxon 559292; InterPro
+    [''IPR016159'', ''IPR033961'', ''IPR032403'', ''IPR042561'', ''IPR042560'', ''IPR011993''].
+    Reference annotation is distinguished from actual experimental strain and family
+    membership from exclusive complex membership.'
+  snapshot_sha256: e984b77644fc3dadfa097c6e49001f3a504605f9837e9d7ec9bf002d8fffff23
+- evidence_id: micro-protein-P40955
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P40955.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P40955.raw
+  accessed_at: '2026-11-04T09:35:09.350141Z'
+  support: supports
+  summary: 'P40955: UniProtKB reviewed (Swiss-Prot); Chitin biosynthesis protein CHS6;
+    primary genes [''CHS6'']; loci [''YJL099W'', ''J0838'']; taxon 559292; InterPro
+    [''IPR015374'', ''IPR011990'']. Reference annotation is distinguished from actual
+    experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: ae6429fb82e3654f0569eeb8b8858a6e7d84b037dc108738e3bd9b99c066188d
+- evidence_id: micro-protein-P89102
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P89102.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-P89102.raw
+  accessed_at: '2026-11-04T09:35:08.358459Z'
+  support: supports
+  summary: 'P89102: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC5;
+    primary genes [''SEC5'']; loci [''YDR166C'', ''YD8358.20C'', ''YD9489.01C''];
+    taxon 559292; InterPro [''IPR029175'', ''IPR039481'']. Reference annotation is
+    distinguished from actual experimental strain and family membership from exclusive
+    complex membership.'
+  snapshot_sha256: 39da7cc800f1c0a6111778f89fe311fdf82496a7e1177f1f2095fda3c1d748cb
+- evidence_id: micro-protein-Q05029
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q05029.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q05029.raw
+  accessed_at: '2026-11-04T09:35:00.164904Z'
+  support: supports
+  summary: 'Q05029: UniProtKB reviewed (Swiss-Prot); Protein BCH1; primary genes [''BCH1''];
+    loci [''YMR237W'', ''YM9959.19'']; taxon 559292; InterPro [''IPR015374'', ''IPR011990''].
+    Reference annotation is distinguished from actual experimental strain and family
+    membership from exclusive complex membership.'
+  snapshot_sha256: d17191d047f9fec6c714f013782fe0186220e0a527669bffcb89e9bf88ae2b9c
+- evidence_id: micro-protein-Q06245
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q06245.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q06245.raw
+  accessed_at: '2026-11-04T09:35:08.355235Z'
+  support: supports
+  summary: 'Q06245: UniProtKB reviewed (Swiss-Prot); Exocyst complex component SEC10;
+    primary genes [''SEC10'']; loci [''YLR166C'', ''L9362.12'']; taxon 559292; InterPro
+    [''IPR009976'', ''IPR048627'', ''IPR048625'']. Reference annotation is distinguished
+    from actual experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: 7383610d4db25ba5e16698382dbefcea675b4befdf6360b088c275e9b8e6d58e
+- evidence_id: micro-protein-Q08754
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q08754.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q08754.raw
+  accessed_at: '2026-11-04T09:35:04.167172Z'
+  support: supports
+  summary: 'Q08754: UniProtKB reviewed (Swiss-Prot); Bud site selection protein 7;
+    primary genes [''BUD7'']; loci [''YOR299W'']; taxon 559292; InterPro [''IPR015374'',
+    ''IPR011990'']. Reference annotation is distinguished from actual experimental
+    strain and family membership from exclusive complex membership.'
+  snapshot_sha256: 0dbee13e6d94db7f2447961626247d3fac764133c2cd5987534aae9be9a0c12d
+- evidence_id: micro-protein-Q12114
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q12114.json
+  locator: Native identity/status/name, complete gene aliases/loci/taxon, family xrefs
+    and relevant FUNCTION/SUBUNIT/LOCATION annotations; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/protein-Q12114.raw
+  accessed_at: '2026-11-04T09:35:01.262402Z'
+  support: supports
+  summary: 'Q12114: UniProtKB reviewed (Swiss-Prot); Chitin biosynthesis protein CHS5;
+    primary genes [''CHS5'']; loci [''YLR330W'', ''L8543.18'']; taxon 559292; InterPro
+    [''IPR001357'', ''IPR036420'', ''IPR031673'', ''IPR052827'', ''IPR031669'', ''IPR003961'',
+    ''IPR036116'', ''IPR013783'']. Reference annotation is distinguished from actual
+    experimental strain and family membership from exclusive complex membership.'
+  snapshot_sha256: a740f8af6c04889e490013d17dec246df13ca056b27a8d156c74a64b3922d5ee
+- evidence_id: micro-query-BCH1-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BCH1-559292.raw
+  accessed_at: '2026-11-04T09:35:15.377317Z'
+  support: supports
+  summary: Current query returns ['Q05029']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 760e6563452a65374044fa42a3d1589596f7249df5b9e0a6ad630d516cb4ccaf
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:15.377317Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-BCH2-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BCH2-559292.raw
+  accessed_at: '2026-11-04T09:35:14.345345Z'
+  support: supports
+  summary: Current query returns ['P36122']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 66dc0163ecff265204089fab78a45fd54c7e158df493a1203fe6ac7abd56c9e2
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABCH2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:14.345345Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-BUD7-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABUD7%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-BUD7-559292.raw
+  accessed_at: '2026-11-04T09:35:16.255235Z'
+  support: supports
+  summary: Current query returns ['Q08754']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: b3fb7535b282c28609be8b866b73fa1eac54ec7ca1a2d02c04e01daed4da2975
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ABUD7%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:16.255235Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-CHS5-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-CHS5-559292.raw
+  accessed_at: '2026-11-04T09:35:11.397757Z'
+  support: supports
+  summary: Current query returns ['Q12114']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 8e66d8206c2693bf1118d63e720907f09080154c166c4ccedab208b854bb7e43
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:11.397757Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-CHS6-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-CHS6-559292.raw
+  accessed_at: '2026-11-04T09:35:13.437364Z'
+  support: supports
+  summary: Current query returns ['P40955']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: d561094242058fc190c78342b3fe103c090fb173e0dd0fb6f01d1b60237157bb
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHS6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:13.437364Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-EXO70-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO70%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-EXO70-559292.raw
+  accessed_at: '2026-11-04T09:35:19.195143Z'
+  support: supports
+  summary: Current query returns ['P19658']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: d8c2a3c5fd2165045d8c3f7f89247a066379ac1b3ba349e2caf0e7beda455232
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO70%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:19.195143Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-EXO84-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO84%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-EXO84-559292.raw
+  accessed_at: '2026-11-04T09:35:20.295928Z'
+  support: supports
+  summary: Current query returns ['P38261']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: aa90d569901d0eeabfe3613d82e09109a9197fd565cb1566fd515d648ff7aabc
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AEXO84%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:20.295928Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC10-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC10%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC10-559292.raw
+  accessed_at: '2026-11-04T09:35:14.236877Z'
+  support: supports
+  summary: Current query returns ['Q06245']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 654cf73d0df5bd19227e13122eb10ad1d45721f71ddffdb61b7070afbdba3af6
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC10%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:14.236877Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC15-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC15%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC15-559292.raw
+  accessed_at: '2026-11-04T09:35:15.439216Z'
+  support: supports
+  summary: Current query returns ['P22224']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: e8cb70d192169f91bc6ffb80b8a7bf0b7e28cded789d2cc97c13c12f7655bdf6
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC15%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:15.439216Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC3-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC3%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC3-559292.raw
+  accessed_at: '2026-11-04T09:35:12.564195Z'
+  support: supports
+  summary: Current query returns ['P33332']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: f64a35afbf9836816602dfb97ec51d54338b3a8d507bada9c0087a0af5875b72
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC3%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:12.564195Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC5-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC5-559292.raw
+  accessed_at: '2026-11-04T09:35:08.380117Z'
+  support: supports
+  summary: Current query returns ['P89102']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 6839711ec43152d8480e22772083b087929a89920c31303ddd88f1aa1c3ded55
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:08.380117Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC6-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC6-559292.raw
+  accessed_at: '2026-11-04T09:35:05.406448Z'
+  support: supports
+  summary: Current query returns ['P32844']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 3e16b39586709294f4da540e470904e22f9e5b302425acde8f80fb8d169f36ab
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:05.406448Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-SEC8-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC8%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-SEC8-559292.raw
+  accessed_at: '2026-11-04T09:35:16.682728Z'
+  support: supports
+  summary: Current query returns ['P32855']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 755ccf9335674def6d8af49b5b23d322810c9bc9ba294a77d69da13d61155f4f
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC8%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:16.682728Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-recB-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recB-83333.raw
+  accessed_at: '2026-11-04T09:35:12.291873Z'
+  support: supports
+  summary: Current query returns ['P08394']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 083c95092ecef09c67bbb2e96090bc2ec2b038a909e81b4fe7e22a3d0009eb02
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecB%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:12.291873Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-recC-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recC-83333.raw
+  accessed_at: '2026-11-04T09:35:17.507702Z'
+  support: supports
+  summary: Current query returns ['P07648']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 9c848f22d60a233d03e755b6dd2c67aeb48fbac9f716955ba1dd0ea07d5ab1b5
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:17.507702Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-query-recD-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned exact-gene/taxon reviewed page; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/query-recD-83333.raw
+  accessed_at: '2026-11-04T09:35:10.676718Z'
+  support: supports
+  summary: Current query returns ['P04993']; primary name and alias fields separately
+    checked. No assertion that a dated historical selection query was reproduced.
+  snapshot_sha256: 047e212e64933b340088a8787a2973aea09a8ab68cbf88d60302c4d4b5362131
+  search_scope: UniProtKB literal https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArecD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500;
+    accessed 2026-11-04T09:35:10.676718Z; reviewed:true, stated gene_exact and taxonomy_id,
+    size500, complete returned page. Bound to these present query results, not historical
+    uniqueness or all aliases.
+- evidence_id: micro-tax-4932
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=4932
+  locator: NCBI taxonomy XML scientific name, rank, lineage and strain context; exact
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-4932.raw
+  accessed_at: '2026-11-04T09:35:16.877348Z'
+  support: supports
+  summary: Saccharomyces cerevisiae species verified; experimental preparations remain
+    separately scoped.
+  snapshot_sha256: da089959ea98b54a0b26b43b88037705e7aed37e969e5c789267f92803002124
+- evidence_id: micro-tax-559292
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=559292
+  locator: NCBI taxonomy XML scientific name, rank, lineage and strain context; exact
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-559292.raw
+  accessed_at: '2026-11-04T09:35:17.419442Z'
+  support: supports
+  summary: Saccharomyces cerevisiae S288C reference strain verified; experimental
+    preparations remain separately scoped.
+  snapshot_sha256: d2e69347155763f3cf845cdcd4b1a8372ee76000f6d559602b60a0beb238a62b
+- evidence_id: micro-tax-83333
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=83333
+  locator: NCBI taxonomy XML scientific name, rank, lineage and strain context; exact
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-83333.raw
+  accessed_at: '2026-11-04T09:35:17.098642Z'
+  support: supports
+  summary: Escherichia coli K-12 reference taxon verified; experimental preparations
+    remain separately scoped.
+  snapshot_sha256: c89efeb1937878f8c453d0ae0986a1bfa5835f01dc7980b65f42b12002324f67
+- evidence_id: micro-tax-562-retry
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete ENA taxonomy authority response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/tax-562-retry.raw
+  accessed_at: '2026-11-04T09:43:09.061435Z'
+  support: supports
+  summary: Taxon562 is Escherichia coli species; exact V330 recombinant assay is distinct
+    from the K-12 accession reference and mixed-strain expression dataset.
+  snapshot_sha256: 66d5c5c74569e24b72fd7b011961dc221b58d841db7db3023337fb534733e200
+- evidence_id: micro-go-0000145
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0000145
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0000145.raw
+  accessed_at: '2026-11-04T09:35:16.045095Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: db501b5ecf15acf078074eb2b80c91cd96c129f1dfa0aa694d7c9b76e8a19382
+- evidence_id: micro-go-0005802
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0005802
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0005802.raw
+  accessed_at: '2026-11-04T09:35:16.207133Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 4da7edef3923baf709f96dd45dc8825c16aafb68fc07d65086d739d3aa8cf0f4
+- evidence_id: micro-go-0006887
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0006887
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0006887.raw
+  accessed_at: '2026-11-04T09:35:16.537454Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 604b01173bdcc2866272dd31d597ab0c36c2752ff0dbf58170e137cee1cef581
+- evidence_id: micro-go-0006893
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0006893
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0006893.raw
+  accessed_at: '2026-11-04T09:35:16.574687Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: fe7fcd9f9fabccbe5de2df79d62a9ab586511cdb7a19e4bf3c6a6f0a05041128
+- evidence_id: micro-go-0008854
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0008854
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0008854.raw
+  accessed_at: '2026-11-04T09:35:16.629591Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 727478224dd95720e8c7ad0bd5a6c633ae43eb66783db720bf54a9ec2dd88fd6
+- evidence_id: micro-go-0009338
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0009338
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0009338.raw
+  accessed_at: '2026-11-04T09:35:16.669837Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: df8cdba2691bb207859f6ba08f9dd07baec4d32f9d03a7e3f12bf28b53d24f9c
+- evidence_id: micro-go-0032991
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0032991
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0032991.raw
+  accessed_at: '2026-11-04T09:35:16.802464Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: d783a4f2b2b8338253479527be4cc7189d3918d3796a257cfbccd0e44a75e016
+- evidence_id: micro-go-0034044
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0034044
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0034044.raw
+  accessed_at: '2026-11-04T09:35:16.860882Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 10f3e70621bde93470a076bda2576ca99de29abab7f63c4c784a8ce527fba44c
+- evidence_id: micro-go-0140535
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0140535
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-0140535.raw
+  accessed_at: '2026-11-04T09:35:17.142232Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 4f0d8af213e6acf60227d1c3ca8665ee945c1e5354d7cc9a9248d34a4aa674ae
+- evidence_id: micro-go-1902494
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_1902494
+  locator: Native OLS exact term label, definition, obsolete state and identifiers;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/go-1902494.raw
+  accessed_at: '2026-11-04T09:35:17.174346Z'
+  support: supports
+  summary: Current exact GO identity/definition checked against maintained identifier,
+    function or hierarchy; no guessed CURIE or broader identity substitution.
+  snapshot_sha256: 9fd8d30d9f329856fa19fabc28c1d68bd1ab788b4af664062c31cb06356f5dad
+- evidence_id: micro-ancestors-0000145
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000145/ancestors?relations=is_a
+  locator: Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0000145.raw
+  accessed_at: '2026-11-04T09:36:19.126263Z'
+  support: supports
+  summary: GO:0000145 exocyst; active=True; is_a ancestors ['GO:0032991', 'GO:0005575',
+    'GO:0099023', 'GO:0000145']. Parthood and molecular function are not inferred
+    from this hierarchy.
+  snapshot_sha256: e1237d674515eaea89ff872a97ee44698040cd53f78490a5f1a65427131241a7
+- evidence_id: micro-ancestors-0009338
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009338/ancestors?relations=is_a
+  locator: Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0009338.raw
+  accessed_at: '2026-11-04T09:36:19.129659Z'
+  support: supports
+  summary: GO:0009338 exodeoxyribonuclease V complex; active=True; is_a ancestors
+    ['GO:1902494', 'GO:0140535', 'GO:0032991', 'GO:0005575', 'GO:0009338']. Parthood
+    and molecular function are not inferred from this hierarchy.
+  snapshot_sha256: 2f50c01c68b8a9540c5d050f4a2708b01d032e0a7c4dd28658eb093d42c84700
+- evidence_id: micro-ancestors-0034044
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0034044/ancestors?relations=is_a
+  locator: Complete exact is_a ancestor response; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/ancestors-0034044.raw
+  accessed_at: '2026-11-04T09:36:19.299991Z'
+  support: supports
+  summary: GO:0034044 exomer complex; active=True; is_a ancestors ['GO:0034044', 'GO:0032991',
+    'GO:0005575']. Parthood and molecular function are not inferred from this hierarchy.
+  snapshot_sha256: 08e4636623c9a8c4164aa5636026c3a6fbb78aa5f5f5bbda9bc5106fc3049601
+- evidence_id: micro-family-IPR004140
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004140/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR004140.raw
+  accessed_at: '2026-11-04T09:35:14.079518Z'
+  support: supports
+  summary: 'IPR004140: Exocyst complex component Exo70; type family. Homologous family/class
+    and representative membership are checked independently of exclusive complex function
+    or universal orthology.'
+  snapshot_sha256: 68f29ba30396f21b49755001edba4b33b5f33cfc2677c4c6d532b544ff9f9430
+- evidence_id: micro-family-IPR004586
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004586/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR004586.raw
+  accessed_at: '2026-11-04T09:35:14.713877Z'
+  support: supports
+  summary: 'IPR004586: RecBCD enzyme subunit RecB; type family. Homologous family/class
+    and representative membership are checked independently of exclusive complex function
+    or universal orthology.'
+  snapshot_sha256: 76c0f6811a39fa2770765d92a7244b85b3eeed92fa2f3c896ed62f903805e5e7
+- evidence_id: micro-family-IPR006344
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006344/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR006344.raw
+  accessed_at: '2026-11-04T09:35:14.851470Z'
+  support: supports
+  summary: 'IPR006344: RecBCD enzyme subunit RecD; type family. Homologous family/class
+    and representative membership are checked independently of exclusive complex function
+    or universal orthology.'
+  snapshot_sha256: 5778c1fe08d27cd183cfe177721b700b6ce93346bd594756993ab55b0685c1da
+- evidence_id: micro-family-IPR006697
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006697/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR006697.raw
+  accessed_at: '2026-11-04T09:35:14.969452Z'
+  support: supports
+  summary: 'IPR006697: RecBCD enzyme subunit RecC; type family. Homologous family/class
+    and representative membership are checked independently of exclusive complex function
+    or universal orthology.'
+  snapshot_sha256: 6cbb6d7418ddd10ca600a5f61b4b4e33d51cbc2addbbdc2d61e425286ccc3e4d
+- evidence_id: micro-family-IPR007225
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007225/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR007225.raw
+  accessed_at: '2026-11-04T09:35:15.309012Z'
+  support: supports
+  summary: 'IPR007225: Exocyst complex component EXOC6/Sec15; type family. Homologous
+    family/class and representative membership are checked independently of exclusive
+    complex function or universal orthology.'
+  snapshot_sha256: b9130f82d607c353f35b8f3699df73ea93dc104a632bd59f8c323f6ffee525ec
+- evidence_id: micro-family-IPR010326
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010326/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR010326.raw
+  accessed_at: '2026-11-04T09:35:15.457785Z'
+  support: supports
+  summary: 'IPR010326: Exocyst complex component EXOC3/Sec6; type family. Homologous
+    family/class and representative membership are checked independently of exclusive
+    complex function or universal orthology.'
+  snapshot_sha256: 999f63e4127768647b31c7d8afba8c7a12744059740ff5b51ea47a55a66400d3
+- evidence_id: micro-family-IPR019160
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019160/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR019160.raw
+  accessed_at: '2026-11-04T09:36:18.347657Z'
+  support: supports
+  summary: 'IPR019160: Exocyst complex component Sec3, coiled-coil; type domain. Sec3-related
+    domain/superfamily identity is not silently promoted to a whole-protein family.'
+  snapshot_sha256: a47d393e3f8b0ad0162268fe88623cbaac49ecd53fb495d39cf4177b741c2a17
+- evidence_id: micro-family-IPR028258
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028258/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR028258.raw
+  accessed_at: '2026-11-04T09:36:18.347851Z'
+  support: supports
+  summary: 'IPR028258: Exocyst complex component Sec3, PIP2-binding N-terminal domain;
+    type domain. Sec3-related domain/superfamily identity is not silently promoted
+    to a whole-protein family.'
+  snapshot_sha256: 1819fa0cd07136a443d109c831a7b24ec56cf708d4c55575b623f07fad77f90a
+- evidence_id: micro-family-IPR029175
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029175/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR029175.raw
+  accessed_at: '2026-11-04T09:35:15.592069Z'
+  support: supports
+  summary: 'IPR029175: Exocyst complex component EXOC2/Sec5; type family. Homologous
+    family/class and representative membership are checked independently of exclusive
+    complex function or universal orthology.'
+  snapshot_sha256: d5db694a12f1e45a08d5a0d8bf7649f1477591046302cded3e25d952a1790241
+- evidence_id: micro-family-IPR033961
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033961/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR033961.raw
+  accessed_at: '2026-11-04T09:35:15.926063Z'
+  support: supports
+  summary: 'IPR033961: Exocyst complex component Exo84; type family. Homologous family/class
+    and representative membership are checked independently of exclusive complex function
+    or universal orthology.'
+  snapshot_sha256: fafb8ed2ed24c0264243707dfb5a8f156f30a7cbc912645c9a2358747c87a773
+- evidence_id: micro-family-IPR039682
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039682/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR039682.raw
+  accessed_at: '2026-11-04T09:35:15.982058Z'
+  support: supports
+  summary: 'IPR039682: Exocyst complex component Sec8/EXOC4; type family. Homologous
+    family/class and representative membership are checked independently of exclusive
+    complex function or universal orthology.'
+  snapshot_sha256: 59f09d8dd929a76c5feff752a2fd4d7172f1961bc40917cccf72fe7f74a7c75e
+- evidence_id: micro-family-IPR048628
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR048628/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR048628.raw
+  accessed_at: '2026-11-04T09:36:18.347480Z'
+  support: supports
+  summary: 'IPR048628: Exocyst complex component Sec3, C-terminal; type domain. Sec3-related
+    domain/superfamily identity is not silently promoted to a whole-protein family.'
+  snapshot_sha256: db5317b5cbf983f7fbd1db00e6a7f487210e284d571a35c700ca096e7e01345b
+- evidence_id: micro-family-IPR052827
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052827/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR052827.raw
+  accessed_at: '2026-11-04T09:35:16.032864Z'
+  support: supports
+  summary: 'IPR052827: Exomer complex component Chs5; type family. Native identity/signatures
+    and Q12114/member mapping support Chs5; LLM-flagged unchecked description is not
+    used as primary biology.'
+  snapshot_sha256: 39a587e7e196266171b59f2d67219b4fdba37040750dbe312059e93b16f2c2e1
+- evidence_id: micro-family-IPR009976-retry
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009976/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR009976-retry.raw
+  accessed_at: '2026-11-04T09:37:24.895098Z'
+  support: supports
+  summary: 'IPR009976: Exocyst complex component Sec10-like; type family. Sec10-like
+    includes broader related proteins; not forced as an exact narrowed Sec10 mapping.'
+  snapshot_sha256: 15956007169bf31e2d710d09fa1ee25c277dac9eca02b2140b710180c7f45c3c
+- evidence_id: micro-family-IPR015374-retry
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR015374/
+  locator: Complete metadata, native type/name, description flags and integrated signatures;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/family-IPR015374-retry.raw
+  accessed_at: '2026-11-04T09:37:24.924465Z'
+  support: supports
+  summary: 'IPR015374: Chs5p-Arf1p binding; type family. Shared ChAP family does not
+    distinguish the four individual paralog classes.'
+  snapshot_sha256: 47d154e810d46c8e7fe30092e77fbfce9d4671ac314aa62b442cda38e49e95b2
+- evidence_id: micro-members-IPR029175
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR029175/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR029175.raw
+  accessed_at: '2026-11-04T09:36:21.480766Z'
+  support: supports
+  summary: All 17 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: 0ff0cccafe762c0f70b459133e2d3f7a67541ceaf528272bf75fc94484fc6dd0
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR029175/?page_size=200;
+    accessed 2026-11-04T09:36:21.480766Z; exact family reviewed-protein endpoint,
+    page_size200, count17, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR010326-retry
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR010326/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR010326-retry.raw
+  accessed_at: '2026-11-04T09:37:26.650540Z'
+  support: supports
+  summary: All 19 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: db4b8858145e56ddfd09533579a628d27b0e5c470282b738dc814bebfe8f8211
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR010326/?page_size=200;
+    accessed 2026-11-04T09:37:26.650540Z; exact family reviewed-protein endpoint,
+    page_size200, count19, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR039682-retry
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR039682/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR039682-retry.raw
+  accessed_at: '2026-11-04T09:37:26.371919Z'
+  support: supports
+  summary: All 10 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: ed95e74a15de359847c934802139e3790cf0943806883b401e9b62be732b435e
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR039682/?page_size=200;
+    accessed 2026-11-04T09:37:26.371919Z; exact family reviewed-protein endpoint,
+    page_size200, count10, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR007225-retry
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR007225/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR007225-retry.raw
+  accessed_at: '2026-11-04T09:37:26.298646Z'
+  support: supports
+  summary: All 13 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: 1b8e9451336bfb199cc8eb73ca1b41b1d7728bf0138ffeb03f8dcec6487dc158
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR007225/?page_size=200;
+    accessed 2026-11-04T09:37:26.298646Z; exact family reviewed-protein endpoint,
+    page_size200, count13, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR004140-retry
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR004140/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR004140-retry.raw
+  accessed_at: '2026-11-04T09:37:26.962496Z'
+  support: supports
+  summary: All 26 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: f42f75febfea9fdadf971318e34989c6d57c85751433b7ad59d08fd0da676350
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR004140/?page_size=200;
+    accessed 2026-11-04T09:37:26.962496Z; exact family reviewed-protein endpoint,
+    page_size200, count26, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR033961
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR033961/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR033961.raw
+  accessed_at: '2026-11-04T09:36:21.157445Z'
+  support: supports
+  summary: All 23 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: e68fb3d018bca2c79b0aa720cf1de1262654e77749752cf75d4e039ee0f3af87
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR033961/?page_size=200;
+    accessed 2026-11-04T09:36:21.157445Z; exact family reviewed-protein endpoint,
+    page_size200, count23, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-members-IPR052827
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR052827/?page_size=200
+  locator: Complete reviewed-member identity/name/gene/taxon page; exact response
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/members-IPR052827.raw
+  accessed_at: '2026-11-04T09:36:19.992951Z'
+  support: supports
+  summary: All 3 returned reviewed members checked; reference accession mapping corroborated.
+    Homologous paralogs and proteins with other functions can occur; this does not
+    assert exclusive complex membership or universal one-to-one orthology.
+  snapshot_sha256: 31bcaef0ce6abe89a756c948e5d0034a6ed14eb20805cb958f30316ac4eff091
+  search_scope: InterPro literal https://www.ebi.ac.uk/interpro/api/protein/reviewed/entry/interpro/IPR052827/?page_size=200;
+    accessed 2026-11-04T09:36:19.992951Z; exact family reviewed-protein endpoint,
+    page_size200, count3, next=null; no exhaustive sequence alignment or unreviewed-protein
+    census.
+- evidence_id: micro-doi-0
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fj.1460-2075.1996.tb01039.x%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-0.raw
+  accessed_at: '2026-11-04T09:35:17.539846Z'
+  support: supports
+  summary: PMID 8978675; DOI 10.1002/j.1460-2075.1996.tb01039.x; The Exocyst is a
+    multiprotein complex required for exocytosis in Saccharomyces cerevisiae.. Complete
+    indexed abstract inspected; separately named genuine body reads retain their own
+    scope.
+  snapshot_sha256: dd6ff8a9d68bb5a316327e7df27389d52c82d3943c374c521d9d4fd6cd9d8086
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fj.1460-2075.1996.tb01039.x%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.539846Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-1
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2800%2980948-4%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-1.raw
+  accessed_at: '2026-11-04T09:35:17.525560Z'
+  support: supports
+  summary: PMID 9491896; DOI 10.1016/s0092-8674(00)80948-4; Sec3p is a spatial landmark
+    for polarized secretion in budding yeast.. Complete indexed abstract inspected;
+    separately named genuine body reads retain their own scope.
+  snapshot_sha256: 20b875b3ff04b061ec6af5d6e6a56d95c1438aeefb9f9e63d8b1ed77cd0c6c1b
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2800%2980948-4%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.525560Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature02988%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-2.raw
+  accessed_at: '2026-11-04T09:35:17.587457Z'
+  support: supports
+  summary: PMID 15538360; DOI 10.1038/nature02988; Crystal structure of RecBCD enzyme
+    reveals a machine for processing DNA breaks.. Complete indexed abstract inspected;
+    separately named genuine body reads retain their own scope.
+  snapshot_sha256: 985a9324da0537a1ce7cd9879a2708859134b757b2c4b0984a02d315c486285a
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature02988%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.587457Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fsj.emboj.7601007%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-3.raw
+  accessed_at: '2026-11-04T09:35:17.723928Z'
+  support: supports
+  summary: PMID 16498409; DOI 10.1038/sj.emboj.7601007; Arf1p, Chs5p and the ChAPs
+    are required for export of specialized cargo from the Golgi.. Complete indexed
+    abstract inspected; separately named genuine body reads retain their own scope.
+  snapshot_sha256: 9a876e37cf0edb723ff0a9dbc25e3c4dd639b71b3707d6c301db4aebe5e2e358
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fsj.emboj.7601007%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.723928Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-4
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.274.33.23558%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-4.raw
+  accessed_at: '2026-11-04T09:35:17.778778Z'
+  support: supports
+  summary: PMID 10438536; DOI 10.1074/jbc.274.33.23558; Exo84p is an exocyst protein
+    essential for secretion.. Complete indexed abstract inspected; separately named
+    genuine body reads retain their own scope.
+  snapshot_sha256: 03be726fb2c2ddcf9a63314542438e82d4580f6a0ffacfdb4bbf6aeeb62e279f
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.274.33.23558%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.778778Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-5
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.130.2.299%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-5.raw
+  accessed_at: '2026-11-04T09:35:17.844428Z'
+  support: supports
+  summary: PMID 7615633; DOI 10.1083/jcb.130.2.299; Sec6, Sec8, and Sec15 are components
+    of a multisubunit complex which localizes to small bud tips in Saccharomyces cerevisiae..
+    Complete indexed abstract inspected; separately named genuine body reads retain
+    their own scope.
+  snapshot_sha256: 318f5c337905b7b57da72006b83d12005379c9c0babd83b23c2fc39fde2c612d
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.130.2.299%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:17.844428Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200605106%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-6.raw
+  accessed_at: '2026-11-04T09:35:18.050093Z'
+  support: supports
+  summary: 'PMID 17000877; DOI 10.1083/jcb.200605106; Exomer: A coat complex for transport
+    of select membrane proteins from the trans-Golgi network to the plasma membrane
+    in yeast.. Complete indexed abstract inspected; separately named genuine body
+    reads retain their own scope.'
+  snapshot_sha256: 8ef326b8c0f520cb9d18532d31cde4c751e589f5e574912bc1def410720722a4
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200605106%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.050093Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-7
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e06-03-0210%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-7.raw
+  accessed_at: '2026-11-04T09:35:18.145049Z'
+  support: supports
+  summary: 'PMID 16855022; DOI 10.1091/mbc.e06-03-0210; Chs5/6 complex: a multiprotein
+    complex that interacts with and conveys chitin synthase III from the trans-Golgi
+    network to the cell surface.. Complete indexed abstract inspected; separately
+    named genuine body reads retain their own scope.'
+  snapshot_sha256: 764a3a271fb1722b766155f9e496a94b62b3aff9ac331b67e77a129e853f049a
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e06-03-0210%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.145049Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-8
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Femboj%2F18.4.1071%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-8.raw
+  accessed_at: '2026-11-04T09:35:18.159444Z'
+  support: supports
+  summary: PMID 10022848; DOI 10.1093/emboj/18.4.1071; The exocyst is an effector
+    for Sec4p, targeting secretory vesicles to sites of exocytosis.. Complete indexed
+    abstract inspected; separately named genuine body reads retain their own scope.
+  snapshot_sha256: 39a3eb860946276891315a339e19fc770f197229b62d8f4a6a31e92c59a64b3f
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Femboj%2F18.4.1071%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.159444Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-doi-9
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.15252%2Fembr.201540795%22&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/doi-9.raw
+  accessed_at: '2026-11-04T09:35:18.178294Z'
+  support: supports
+  summary: PMID 26742961; DOI 10.15252/embr.201540795; Dynamic assembly of the exomer
+    secretory vesicle cargo adaptor subunits.. Complete indexed abstract inspected;
+    separately named genuine body reads retain their own scope.
+  snapshot_sha256: c7a4bfdf55f8049e5102af0ad4cd398dba95a7e70b83925d2181eed6a07216e4
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.15252%2Fembr.201540795%22&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.178294Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-14562095.raw
+  accessed_at: '2026-11-04T09:35:18.233313Z'
+  support: supports
+  summary: PMID 14562095; DOI 10.1038/nature02026; Global analysis of protein localization
+    in budding yeast.. Complete indexed abstract inspected; separately named genuine
+    body reads retain their own scope.
+  snapshot_sha256: 8bbeed3381c96852db4221aac079da00e1bf5c50630629c24d4d9136e1645c21
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.233313Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-15538360
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15538360+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15538360.raw
+  accessed_at: '2026-11-04T09:35:18.355617Z'
+  support: supports
+  summary: PMID 15538360; DOI 10.1038/nature02988; Crystal structure of RecBCD enzyme
+    reveals a machine for processing DNA breaks.. Complete indexed abstract inspected;
+    separately named genuine body reads retain their own scope.
+  snapshot_sha256: 5515e6ec304b3af8f8bdbe0e23e00582648a5b8c0cbdfc657eeb6b203ded14eb
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15538360+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.355617Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-15583031
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15583031+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15583031.raw
+  accessed_at: '2026-11-04T09:35:18.391141Z'
+  support: supports
+  summary: PMID 15583031; DOI 10.1083/jcb.200408124; Vesicles carry most exocyst subunits
+    to exocytic sites marked by the remaining two subunits, Sec3p and Exo70p.. Complete
+    indexed abstract inspected; separately named genuine body reads retain their own
+    scope.
+  snapshot_sha256: 4d5e581e4920d6631bcccd77415bd83ed484e1943df25da93d27eb7f87d7c384
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15583031+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.391141Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-15788396
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15788396+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-15788396.raw
+  accessed_at: '2026-11-04T09:35:18.506709Z'
+  support: supports
+  summary: PMID 15788396; DOI 10.1074/jbc.m500511200; The critical role of Exo84p
+    in the organization and polarized localization of the exocyst complex.. Complete
+    indexed abstract inspected; separately named genuine body reads retain their own
+    scope.
+  snapshot_sha256: b1385b342158d0ebbb5c24a1b71569fb5a58769c57dad614a6dcf2b026f27bc0
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15788396+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.506709Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-1618858
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1618858+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-1618858.raw
+  accessed_at: '2026-11-04T09:35:18.670986Z'
+  support: supports
+  summary: PMID 1618858; DOI 10.1016/s0021-9258(18)42249-1; Reconstitution of the
+    activities of the RecBCD holoenzyme of Escherichia coli from the purified subunits..
+    Complete indexed abstract inspected; separately named genuine body reads retain
+    their own scope.
+  snapshot_sha256: 90aabe26446fc93a9e2ee933915a9fe7d0f350927c3c7476202995bf106886bb
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1618858+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.670986Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-16498409
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16498409+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-16498409.raw
+  accessed_at: '2026-11-04T09:35:18.749538Z'
+  support: supports
+  summary: PMID 16498409; DOI 10.1038/sj.emboj.7601007; Arf1p, Chs5p and the ChAPs
+    are required for export of specialized cargo from the Golgi.. Complete indexed
+    abstract inspected; separately named genuine body reads retain their own scope.
+  snapshot_sha256: 50b78e87f17adbe03906f52bdfbde7abb8b47a6c31a9c55cce7211fb73099b69
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16498409+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.749538Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-17000877
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17000877+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-17000877.raw
+  accessed_at: '2026-11-04T09:35:18.950239Z'
+  support: supports
+  summary: 'PMID 17000877; DOI 10.1083/jcb.200605106; Exomer: A coat complex for transport
+    of select membrane proteins from the trans-Golgi network to the plasma membrane
+    in yeast.. Complete indexed abstract inspected; separately named genuine body
+    reads retain their own scope.'
+  snapshot_sha256: 895e393158fbe4d8ded7a89c3c1b92a956db00221858d234fbfe4b9c3a602592
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17000877+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:18.950239Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-pmid-20139078
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20139078+AND+SRC%3AMED&format=json&resultType=core&pageSize=25
+  locator: Exact identifier metadata and complete indexed primary abstract; not a
+    full article read; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pmid-20139078.raw
+  accessed_at: '2026-11-04T09:35:19.010083Z'
+  support: supports
+  summary: PMID 20139078; DOI 10.1074/jbc.m109.096966; Structure-function study of
+    the N-terminal domain of exocyst subunit Sec3.. Complete indexed abstract inspected;
+    separately named genuine body reads retain their own scope.
+  snapshot_sha256: a93249e107752b6eff0a1e84c8f9c86791c134c24925155f8d7771125236e1fa
+  search_scope: Europe PMC exact identifier query https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20139078+AND+SRC%3AMED&format=json&resultType=core&pageSize=25;
+    accessed 2026-11-04T09:35:19.010083Z; pageSize25,resultTypecore, actual one matching
+    record, no broad literature-absence inference.
+- evidence_id: micro-PMC2199927-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2199927.1/PMC2199927.1.xml
+  locator: Genuine S3 JATS containing pmc-pdf-text; Methods strain/tag construction
+    pp300–301; Results pp307–308/Fig6 and Discussion beginning p309; normalized text
+    offsets9904–16000,48000–63000,64652–67700; text/captions only, no supplements,
+    pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2199927-jats.raw
+  accessed_at: '2026-11-04T09:36:16.450430Z'
+  support: supports
+  summary: TerBush1995 sec3-2/sec5-24/sec10-2 backgrounds alter recovered Sec8-tag-associated
+    composition after labeling at25C. Wild-type gene rescue is described as data not
+    shown; 30min37C did not substantially change this pattern for those three. This
+    is conditional association/stability, not intracellular depletion or universal
+    complex absence; separate sec6-4/sec15-1 temperature experiments are not conflated.
+  snapshot_sha256: 35ee44577583114c8c5022c78316f4f3147d9058060a9f1ec628652aaf166887
+- evidence_id: micro-PMC2172445-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2172445.1/PMC2172445.1.xml
+  locator: Boyd2004 Results EM section4/Fig4–5 text captions, Methods strain construction
+    section9/TableII and EM section12; text/captions only, no supplements, pixels,
+    movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2172445-jats.raw
+  accessed_at: '2026-11-04T09:36:16.977845Z'
+  support: supports
+  summary: Native tagged yeast exocyst localization and vesicle association support
+    the role context. Sec3 differs from the other subunits; immunogold proximity thresholds
+    and NY-series strains are retained. No actual pixels or quantitative reanalysis
+    certified.
+  snapshot_sha256: 19f488d7fe26cc93e0a994f0d20054c177079eabed6177137f434654422a711d
+- evidence_id: micro-PMC2064389-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2064389.1/PMC2064389.1.xml
+  locator: Wang2006 Results sections4–7 and Fig3–7 text captions; Methods sections10,11,13;
+    text/captions only, no supplements, pixels, movies or coordinate reanalysis; exact
+    response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC2064389-jats.raw
+  accessed_at: '2026-11-04T09:36:16.347184Z'
+  support: supports
+  summary: Sf9 recombinant Chs5/ChAP complexes, Arf1-dependent recruitment under selected
+    liposome formulations and coated surfaces are supported. Ratios vary with expression;
+    some lipids recruit without Arf1. No buds/vesicles were evident from exomer alone.
+    Purified stable core and external recruiting Arf1 boundary remain defensible;
+    no universal fixed-five-subunit particle or membrane-deformation assertion.
+  snapshot_sha256: 8d397af83f00eb509dad28344821a8b076035374211c9112dfdca8af2e57085b
+- evidence_id: micro-PMC1635352-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1635352/
+  locator: Sanchatjate2006 Methods sec3/Table1 and sec4; Results sec8,sec9,sec11,sec12
+    with embedded captions/tables including Fig5 text; text/captions only, no supplements,
+    pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC1635352-legacy.raw
+  accessed_at: '2026-11-04T09:36:16.848792Z'
+  support: supports
+  summary: DDY1810-derived Chs6-TAP purification in chs5 deletion loses efficient
+    Bch1/Bud7/Bch2 recovery; slightly reduced steady-state Bud7/Bch2 and remaining-protein
+    controls are distinguished. ChAP deletions can leave remaining partners associated.
+    Cargo binding/transport, purified association and global formation necessity are
+    different claims.
+  snapshot_sha256: ef0d5e221987765ad4c79ac394b5d7b316ccefb1820daf4153b1f3dbdd03b1f0
+- evidence_id: micro-PMC5290816-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5290816/
+  locator: Huranova2016 Results sec0005 and sec0007/Fig2–3/EV2 text captions; Methods
+    sec0017 growth and sec0019 fractionation; text/captions only, no supplements,
+    pixels, movies or coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/PMC5290816-legacy.raw
+  accessed_at: '2026-11-04T09:36:16.979813Z'
+  support: supports
+  summary: Chs5-dependent stable TGN retention is a separate localization/dynamics
+    result. Mixed ChAP complexes, recruitment timing and membrane retention are condition-dependent;
+    30C growth stated, Appendix strain table not read. No universal necessity or fixed
+    five-subunit complex inferred.
+  snapshot_sha256: 11dd12fd56ccbe7f587d54594a2354bcfe4a91f349facab0f294ebadcfb75d17
+- evidence_id: micro-single-nature
+  kind: primary_source
+  reference: https://www.nature.com/articles/nature02988
+  locator: Singleton2004 genuine Nature main text sections3–11, including all named
+    RecB/RecC/RecD, complex/mechanism sections, Methods and embedded text captions;
+    UTF8 extraction retained; text/captions only, no supplements, pixels, movies or
+    coordinate reanalysis; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/single-nature.raw
+  accessed_at: '2026-11-04T09:36:20.043056Z'
+  support: supports
+  summary: E.coli RecBCD heterotrimer bound to43-nt hairpin supports composition,
+    opposite motor polarities and nuclease coupling. Full-length proteins were coexpressed
+    from pPB520/pPB800 in V330 delta-recBCD with pMS421; this is not an in-vivo K-12
+    experiment. Structural proposals and older cited activity results retain their
+    distinct experimental/model tiers; no pixel or coordinate reanalysis.
+  snapshot_sha256: 738616e66b74e2e1f6e544b12afc67b772640460492f4838a8dabfa972069208
+- evidence_id: micro-pdb-1W36
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/entry/1W36
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36.raw
+  accessed_at: '2026-11-04T09:35:18.644240Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: 325138f4f8b2139f551e78bad21a361e103a9dc12e7e1fd9eab9852054220c1c
+- evidence_id: micro-pdb-1W36-assembly1
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/assembly/1W36/1
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-assembly1.raw
+  accessed_at: '2026-11-04T09:35:18.666933Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: 9ba07b7638e6c5b6549165f00e34e3ecfcdf97333e9ddf36d220d3b8bc8695c7
+- evidence_id: micro-pdb-1W36-entity1
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/1
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity1.raw
+  accessed_at: '2026-11-04T09:35:18.539968Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: bb1332aa3df59eea5d59522a8aec7e6339e59538e16bf7478c38f6dae9c8d2a4
+- evidence_id: micro-pdb-1W36-entity2
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/2
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity2.raw
+  accessed_at: '2026-11-04T09:35:18.539932Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: f429be116d1e188097ab405e91792531aee16ffdfb362b622b3d92601e2e6afb
+- evidence_id: micro-pdb-1W36-entity3
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/3
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity3.raw
+  accessed_at: '2026-11-04T09:35:18.587499Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: ddc3b4c0c97fe652242916fc6096dbe10e9c1bbd43e9649a15a9bc35ffa6d82f
+- evidence_id: micro-pdb-1W36-entity4
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1W36/4
+  locator: Complete RCSB native entry/assembly or polymer entity fields, citation/source/sequence/reference
+    mapping; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/pdb-1W36-entity4.raw
+  accessed_at: '2026-11-04T09:35:18.641815Z'
+  support: supports
+  summary: PDB1W36 contains RecB/RecC/RecD protein chains and a synthetic43-nt DNA
+    hairpin. Biological assembly entity count4 includes DNA and does not mean four
+    protein subunits. E.coli source annotation and K-12 accession references are distinct
+    from the stated recombinant V330 Methods preparation.
+  snapshot_sha256: ad1cee0eec0c5f399f712545ecc0156dfd2eed4c893c6b13915bf0a7b39d399d
+- evidence_id: micro-access-PMC452473-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC452473.1/PMC452473.1.xml
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.982821Z'
+  support: context_only
+  summary: HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 3bae22eb02cc6a24203e08084017c15f005daed1598ae21c4ea940d98251f964
+- evidence_id: micro-access-PMC452473-legacy
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC452473/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.857651Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 5047678a99b6d7764ce379ec2f7777d07159689ae2481cca7ab70200d7eb0299
+- evidence_id: micro-access-PMC452473-numeric
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/452473/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:37:24.375874Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 8788a0037039601c4ec031ee027f20733b093ba62977a6b6466c904687fd73b8
+- evidence_id: micro-access-PMC1171198-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC1171198.1/PMC1171198.1.xml
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.982425Z'
+  support: context_only
+  summary: HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 2d080c3eeffc8aa6e170b19406f98e2cb7a00ecb784aeb75064e0514ca5cc1bd
+- evidence_id: micro-access-PMC1171198-legacy
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1171198/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.857590Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 28aa1944cc56f1a13c117f92ab8cb1cac5c535fa117bfd21b3180e60826cb823
+- evidence_id: micro-access-PMC1171198-numeric
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1171198/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:37:24.508175Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 9afdb39f39c7be1275ccffac60096a488c48f16bf061b4fa185d25536549c94a
+- evidence_id: micro-access-PMC1409733-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC1409733.1/PMC1409733.1.xml
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.982773Z'
+  support: context_only
+  summary: HTTP 404; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 37467fad2e8ef24fc3bdfb92ce9b6212ffcce0670f27ad252d018b1ad7db8448
+- evidence_id: micro-access-PMC1409733-legacy
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1409733/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:15.857524Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 533d38c6204e5a79fb8353cd783f3a481012e0556428bdf283f93807c4b0611c
+- evidence_id: micro-access-PMC1409733-numeric
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1409733/
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:37:24.515544Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 8ec399c0c8bf07813c4b89287e10c20eb8f23849f37857f2bf44bab04ad52fdb
+- evidence_id: micro-access-masterson-pdf
+  kind: validation
+  reference: https://www.jbc.org/article/S0021-9258(18)42249-1/pdf
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:18.712251Z'
+  support: context_only
+  summary: HTTP 403; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 76788be5346a80f93263e51b58f4a233596aabe7bd766b4c6f1db8a307dd6114
+- evidence_id: micro-access-exo84-pdf
+  kind: validation
+  reference: https://www.jbc.org/article/S0021-9258(19)65316-0/pdf
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:18.712208Z'
+  support: context_only
+  summary: HTTP 403; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 72ca958eb2446be19bfcc867bc24062bb4701462fd5d9a798c8dc8f8178d8232
+- evidence_id: micro-access-finger-doi
+  kind: validation
+  reference: https://doi.org/10.1016/S0092-8674(00)80948-4
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:36:19.050864Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: d3ae10e9db6f708bc2f242223dc0290b87b2761d211e2b8f59f40a7b6f24e50e
+- evidence_id: micro-access-adapter-precise1k-genes
+  kind: validation
+  reference: https://imodulondb.org/api/datasets/e_coli/precise1k/genes
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:35:18.441787Z'
+  support: context_only
+  summary: HTTP 200; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 372db3e7392f2779f2d46aef5c4f7786399705355520de485f6c37ee92bf0478
+- evidence_id: micro-access-tax-562
+  kind: validation
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=562
+  locator: Actual response and adjacent receipt; content inspected for access state
+  accessed_at: '2026-11-04T09:35:16.977210Z'
+  support: context_only
+  summary: HTTP 429; blocked, challenge, redirect/stub, error or wrong-endpoint SPA
+    response. No scientific body read or absence conclusion is inferred. Genuine successful
+    body/authority retries are named separately.
+  snapshot_sha256: 01ec4cdfa0073304c3db8986e458b8be2ba034ee6b4bdb07218fd6f2e2a7fa8c
+- evidence_id: micro-historical-0-access-PMC452473-pdf
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC452473/pdf/emboj00023-0125.pdf
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:42:27.155032Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge,
+    not a PDF or readable paper body. Current correction is kind-only; original already
+    disclosed failed access. No new body access is retrospectively attributed.
+  snapshot_sha256: ecd0b4ee1b9ec5a52a8cf97c35a46e03bc49459fc39872b3158b7473b1c682b9
+- evidence_id: micro-historical-0-access-PMC2199927-pdf
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2199927/pdf/jc1302299.pdf
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:42:27.155375Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge,
+    not a PDF or readable paper body. Current correction is kind-only; original already
+    disclosed failed access. No new body access is retrospectively attributed.
+  snapshot_sha256: a7b0216c958162b1ffac021098cd97e5063621d8e57439bf4ab9aafcf0ff28fd
+- evidence_id: micro-historical-0-access-PMC1171198-pdf
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1171198/pdf/001071.pdf
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:42:27.340443Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP200 returned a Preparing-to-download JavaScript challenge,
+    not a PDF or readable paper body. Current correction is kind-only; original already
+    disclosed failed access. No new body access is retrospectively attributed.
+  snapshot_sha256: 8f3519109b8997e9a9c8c99a0e58f9df28c08dccfe53d28985b6755ae2f7f4ae
+- evidence_id: micro-historical-0-access-exo84-pdf
+  kind: validation
+  reference: https://www.jbc.org/article/S0021-9258(19)65316-0/pdf
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:41:00.204531Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP403 challenge response; no publisher paper body was read from
+    this response. Current correction is kind-only; original already disclosed failed
+    access. No new body access is retrospectively attributed.
+  snapshot_sha256: b00cc6f86df464e4bbe5d33462bb90f5690ca00163de255c6b3e7986841e3d38
+- evidence_id: micro-historical-0-access-exo84-publisher
+  kind: validation
+  reference: https://www.sciencedirect.com/science/article/pii/S0021925819653160
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:41:00.205036Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP403 challenge response; no publisher paper body was read from
+    this response. Current correction is kind-only; original already disclosed failed
+    access. No new body access is retrospectively attributed.
+  snapshot_sha256: a87306c19381d82e7d5c4d257dfdf92a31dd6725ffdcb8498a1c8ec99523c078
+- evidence_id: micro-historical-1-access-singleton-publisher
+  kind: validation
+  reference: https://www.nature.com/articles/nature02988
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:40:05.980218Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP200 returned a client challenge, not the readable Nature paper
+    body. Current correction is kind-only; original already disclosed failed access.
+    No new body access is retrospectively attributed.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: micro-historical-1-access-masterson-pdf
+  kind: validation
+  reference: https://www.jbc.org/article/S0021-9258(18)42249-1/pdf
+  locator: Retrieved response status/content type and diagnostic body only
+  accessed_at: '2026-10-22T06:40:06.086205Z'
+  support: context_only
+  summary: Historical original access diagnostic, retained at its actual original
+    timestamp/hash. HTTP403 challenge response, not a readable PDF. Current correction
+    is kind-only; original already disclosed failed access. No new body access is
+    retrospectively attributed.
+  snapshot_sha256: d2d5961e616dc5dfdd9ba818de5874556e0c3c29a98ac2cb85adb638bbc1ed25
+- evidence_id: micro-adapter-catalogue
+  kind: search
+  reference: https://imodulondb.org/api/organisms
+  locator: Complete official organism/dataset catalogue; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-catalogue.raw
+  accessed_at: '2026-11-04T09:35:18.387085Z'
+  support: context_only
+  summary: All20 organism rows/28 organism-dataset pairs inspected; E.coli precise1k
+    is covered and Saccharomyces has no matching entry in this response. No foreign-host
+    proxy for either yeast complex.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  search_scope: Official iModulonDB GET /api/organisms at 2026-11-04T09:35:18.387085Z;
+    complete20-organism/28-pair response, exact host matching; not a universal biological
+    absence or future catalogue claim.
+- evidence_id: micro-adapter-precise1k-meta
+  kind: database
+  reference: https://imodulondb.org/api/datasets/e_coli/precise1k/meta
+  locator: Complete native selected-dataset metadata; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-meta.raw
+  accessed_at: '2026-11-04T09:35:19.008187Z'
+  support: context_only
+  summary: E.coli precise1k includes BW25113,DGF-298,GMOS,MG1655,W3110;4257 genes,201
+    modules,1035 samples,518 conditions. It does not identify Singleton V330 as a
+    covered experimental strain.
+  snapshot_sha256: 6cd60b3e363a11c95c2b5b1d160fe360687c0a680a5b95c18c6c76e7c5d99865
+- evidence_id: micro-adapter-precise1k-imodulons
+  kind: database
+  reference: https://imodulondb.org/api/datasets/e_coli/precise1k/imodulons
+  locator: Complete201-row module identifier inventory; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-imodulons.raw
+  accessed_at: '2026-11-04T09:35:18.454355Z'
+  support: context_only
+  summary: Complete returned module population bounds the three gene membership checks.
+    No AI-generated summary, activity vector, inferred direct regulation or assembly
+    assertion used.
+  snapshot_sha256: c9f7564cc9fa212686b00f75d35b5438d9d8660066eada141b263e580634e26d
+- evidence_id: micro-adapter-genes
+  kind: search
+  reference: https://imodulondb.org/api/genes?organism=e_coli&dataset=precise1k&limit=5000
+  locator: Complete4257-row native gene table and exact recB/recC/recD locus/accession
+    joins; exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-genes.raw
+  accessed_at: '2026-11-04T09:37:24.266076Z'
+  support: context_only
+  summary: recB b2820=P08394, recC b2822=P07648, recD b2819=P04993 agree with current
+    native K-12 references.
+  snapshot_sha256: db4db81a724c8bee753c68fa5fefdd34f3d89e2cd101ae52311088f7cb094d27
+  search_scope: Official iModulonDB literal https://imodulondb.org/api/genes?organism=e_coli&dataset=precise1k&limit=5000;
+    actual 2026-11-04T09:37:24.266076Z; limit5000,4257returned rows; exact three-locus/name/accession
+    comparisons, not all-protein absence.
+- evidence_id: micro-adapter-b2820
+  kind: search
+  reference: https://imodulondb.org/api/genes/b2820/imodulons?organism=e_coli&dataset=precise1k
+  locator: Complete201 thresholded module-membership rows for exact native locus;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2820.raw
+  accessed_at: '2026-11-04T09:37:24.190998Z'
+  support: context_only
+  summary: recB/b2820 has zero in_imodulon=true rows among201. This is bounded selected-dataset
+    threshold context, not absent gene expression, absent protein, nonmembership in
+    RecBCD or biological dispensability.
+  snapshot_sha256: 3a11165a72692a858a6223c592b5fec2d42470d1bc176d085b7e1aec41777518
+  search_scope: Official iModulonDB literal https://imodulondb.org/api/genes/b2820/imodulons?organism=e_coli&dataset=precise1k;
+    actual 2026-11-04T09:37:24.190998Z; e_coli/precise1k exact locus, all201 returned
+    modules, no pagination; zero true memberships at supplied thresholds; no unmatched
+    proxy or universal negative.
+- evidence_id: micro-adapter-b2822
+  kind: search
+  reference: https://imodulondb.org/api/genes/b2822/imodulons?organism=e_coli&dataset=precise1k
+  locator: Complete201 thresholded module-membership rows for exact native locus;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2822.raw
+  accessed_at: '2026-11-04T09:37:24.170381Z'
+  support: context_only
+  summary: recC/b2822 has zero in_imodulon=true rows among201. This is bounded selected-dataset
+    threshold context, not absent gene expression, absent protein, nonmembership in
+    RecBCD or biological dispensability.
+  snapshot_sha256: baf3a9296b461dbb29b08b56d31b2a285bfd278d53eca717aff6416b4fd692a5
+  search_scope: Official iModulonDB literal https://imodulondb.org/api/genes/b2822/imodulons?organism=e_coli&dataset=precise1k;
+    actual 2026-11-04T09:37:24.170381Z; e_coli/precise1k exact locus, all201 returned
+    modules, no pagination; zero true memberships at supplied thresholds; no unmatched
+    proxy or universal negative.
+- evidence_id: micro-adapter-b2819
+  kind: search
+  reference: https://imodulondb.org/api/genes/b2819/imodulons?organism=e_coli&dataset=precise1k
+  locator: Complete201 thresholded module-membership rows for exact native locus;
+    exact response /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-b2819.raw
+  accessed_at: '2026-11-04T09:37:24.191049Z'
+  support: context_only
+  summary: recD/b2819 has zero in_imodulon=true rows among201. This is bounded selected-dataset
+    threshold context, not absent gene expression, absent protein, nonmembership in
+    RecBCD or biological dispensability.
+  snapshot_sha256: 21d7a29caeed27f10d46738fb4feb0338783e6ad68c951504605424dfa3d1577
+  search_scope: Official iModulonDB literal https://imodulondb.org/api/genes/b2819/imodulons?organism=e_coli&dataset=precise1k;
+    actual 2026-11-04T09:37:24.191049Z; e_coli/precise1k exact locus, all201 returned
+    modules, no pagination; zero true memberships at supplied thresholds; no unmatched
+    proxy or universal negative.
+- evidence_id: micro-historical-runner
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Retained actual runner receipt, not newly executed
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  summary: Actual 2026-11-03T00:49:00.848907Z–00:49:00.863225Z exit1 PermissionError
+    reading runner pyvenv.cfg. Current source-catalogue fallback is separately dated;
+    no claim of successful/new runner invocation.
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: micro-native-exocyst-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exocyst.yaml', '--verify']; receipt SHA256 16db1b4e0f0c6b2bc08d1e08fd9a1ae477d2ad8bb4b1a5ebdd6a043623ab8612;
+    stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify.log
+  accessed_at: '2026-11-04T09:35:46.209259Z'
+  support: supports
+  summary: 'Actual exit0; 8 maintained reviewed examples, 9 typed nodes: 8 COVERED
+    and 1 UNANCHORED_WITH_UNIPROT. External Sec4 is contextual, not a missing constituent.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: micro-native-exocyst-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exocyst.yaml', '--causal-graphs']; receipt SHA256 b07926ea125b2548c88bd5b022dc19d0ca18cc2880a7776763a95940d4a6b64d;
+    stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal.log
+  accessed_at: '2026-11-04T09:35:46.631000Z'
+  support: supports
+  summary: 'Actual exit0; 8 maintained reviewed examples, 9 typed nodes: 8 COVERED
+    and 1 UNANCHORED_WITH_UNIPROT. External Sec4 is contextual, not a missing constituent.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: 56bd7f61e4a9cd26f012e694eb60bcbf7aaf260d44cbf5b4da4548f2da5890bf
+- evidence_id: micro-native-exodeoxyribonuclease_v_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exodeoxyribonuclease_v_complex.yaml', '--verify']; receipt
+    SHA256 261fc35c8b8b4e00c85c2d91cdff9e69f47df616d3e2c68ada6628b457acd6a2; stdout
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify.log
+  accessed_at: '2026-11-04T09:35:47.881787Z'
+  support: supports
+  summary: 'Actual exit0; 3 maintained reviewed examples, 3 typed nodes: 3 COVERED
+    and 0 UNANCHORED_WITH_UNIPROT. All three declared component-ref nodes covered.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: micro-native-exodeoxyribonuclease_v_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exodeoxyribonuclease_v_complex.yaml', '--causal-graphs'];
+    receipt SHA256 7c5fbec8c471adf1c98be37a40f264c48477f6cd0fc70d26da9777b2b523775a;
+    stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal.log
+  accessed_at: '2026-11-04T09:35:48.291994Z'
+  support: supports
+  summary: 'Actual exit0; 3 maintained reviewed examples, 3 typed nodes: 3 COVERED
+    and 0 UNANCHORED_WITH_UNIPROT. All three declared component-ref nodes covered.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: 01a53a3123ac3dc4609a368f0b79b9a22d6c7c3430ac66e5cdfa2162bfe008d9
+- evidence_id: micro-native-exomer_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exomer_complex.yaml', '--verify']; receipt SHA256 392bf3b87d3cd7e8c91f634086b97ef7e9221d75ebec1b323ca6477f7df74336;
+    stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify.log
+  accessed_at: '2026-11-04T09:35:49.723035Z'
+  support: supports
+  summary: 'Actual exit0; 5 maintained reviewed examples, 6 typed nodes: 5 COVERED
+    and 1 UNANCHORED_WITH_UNIPROT. External Arf1 is contextual, not a missing constituent.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: micro-native-exomer_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal-receipt.json
+  locator: Actual command ['.venv/bin/python', 'scripts/uniprot_genes.py', '--record',
+    'data/structures/other/exomer_complex.yaml', '--causal-graphs']; receipt SHA256
+    399655e5fc840c3156ab9b9c020890e7d6a373e945775450e57e01cd663a69fc; stdout /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal.log
+  accessed_at: '2026-11-04T09:35:50.137002Z'
+  support: supports
+  summary: 'Actual exit0; 5 maintained reviewed examples, 6 typed nodes: 5 COVERED
+    and 1 UNANCHORED_WITH_UNIPROT. External Arf1 is contextual, not a missing constituent.
+    Native identity checks do not prove assembly/source completeness.'
+  snapshot_sha256: a26f9e5dbf195446fdf539e5dd1ff8e21f683e5aed3fa0e2aa030cf0d115dd8b
+- evidence_id: micro-exocyst-independent-challenge
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/exocyst-complex-integrity-challenge.json
+  locator: Independent bounded peer reading and hash-bound source scope
+  accessed_at: '2026-11-04T09:47:24.472139Z'
+  support: context_only
+  summary: Separate peer review of the condition-scoped exocyst mutant association
+    finding; no new whole-record disposition or universal necessity inferred.
+  snapshot_sha256: f6097aae22f162d522e03f4344285813836ec47d6147a64729baf257bf1cb761
+- evidence_id: plaque-curation
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: plaque-field-guide
+  kind: authority
+  reference: docs/SCHEMA.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+- evidence_id: plaque-rubric
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+- evidence_id: plaque-review-skill
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: plaque-protein-skill
+  kind: authority
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+- evidence_id: plaque-graph-skill
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: plaque-review-profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+- evidence_id: plaque-review-contract
+  kind: authority
+  reference: docs/record-reviews.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+- evidence_id: plaque-review-schema
+  kind: authority
+  reference: schema/record_review.yaml
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+- evidence_id: plaque-structure-schema
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: plaque-agents
+  kind: authority
+  reference: AGENTS.md
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+- evidence_id: plaque-review-config
+  kind: authority
+  reference: conf/record_review.yaml
+  locator: Frozen native policy/schema, including component-class identity, source
+    applicability, formation versus function and append-only rationale
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Apply current native contract without inventing mandatory examples, universal
+    formation assays or a prohibition on broad protein groups. Preserve dated rationale;
+    assess current claims separately.
+  snapshot_sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+- evidence_id: plaque-record-3
+  kind: record_content
+  reference: data/structures/other/fact_complex.yaml
+  locator: Complete current definition, components, taxa, examples, functions, graphs,
+    discussions and history
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: supports
+  summary: All maintained assertions read; current target bytes equal the original
+    frozen target. No scientific record was changed.
+  snapshot_sha256: 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a
+- evidence_id: plaque-original-3-yaml
+  kind: prior_review
+  reference: reviews/structured/20261022T065209Z-fact-complex-audit/review.yaml
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: ecd1ed0f07572d5b54163db9ef02f490390ddd69f26512665f7748fa09b3b201
+- evidence_id: plaque-original-3-md
+  kind: prior_review
+  reference: reviews/structured/20261022T065209Z-fact-complex-audit/review.md
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: 2240fdcd61b06fa103bf62f5fee91ab9d707bf907a11be9a0125bec2145e21f5
+- evidence_id: plaque-record-4
+  kind: record_content
+  reference: data/structures/other/fmn_reductase_complex.yaml
+  locator: Complete current definition, components, taxa, examples, functions, graphs,
+    discussions and history
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: supports
+  summary: All maintained assertions read; current target bytes equal the original
+    frozen target. No scientific record was changed.
+  snapshot_sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+- evidence_id: plaque-original-4-yaml
+  kind: prior_review
+  reference: reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.yaml
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: 2aafb005c1d8d90881e18bd522ecfe5951741e9bd553235cdb9bc2569b607293
+- evidence_id: plaque-original-4-md
+  kind: prior_review
+  reference: reviews/structured/20261022T065210Z-fmn-reductase-complex-audit/review.md
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: 47c5dc1d917ccfdce28a72607669e2a029cc2adce390c9c7e984c4707bd222d5
+- evidence_id: plaque-record-5
+  kind: record_content
+  reference: data/structures/other/gamma_dna_polymerase_complex.yaml
+  locator: Complete current definition, components, taxa, examples, functions, graphs,
+    discussions and history
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: supports
+  summary: All maintained assertions read; current target bytes equal the original
+    frozen target. No scientific record was changed.
+  snapshot_sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+- evidence_id: plaque-original-5-yaml
+  kind: prior_review
+  reference: reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.yaml
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: 1946331f3dd1cfc7dceaf6210c59c68ca0de221c35f8e5837a97fd80765e5eaa
+- evidence_id: plaque-original-5-md
+  kind: prior_review
+  reference: reviews/structured/20261022T065211Z-gamma-dna-polymerase-complex-audit/review.md
+  locator: Complete immutable original, historical inputs/checks/evidence/findings/actions
+    and exact rendered Markdown
+  accessed_at: '2026-11-04T09:46:17.171385Z'
+  support: context_only
+  summary: Original scope and timestamp are historical. Source findings are independently
+    reassessed at the present source head.
+  snapshot_sha256: 070fb226586151a84e0acab6f6912e34006d75cbb1bd8900dcb34319723c0f9b
+- evidence_id: plaque-input-original-proof
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/input-original-proof.json
+  locator: Actual explicit-commit proof;47 current source/worktree inputs,39 historical
+    input occurrences and3 native original validate/render pairs
+  accessed_at: '2026-11-04T09:38:43.263786Z'
+  support: supports
+  summary: All hashes match; own3 target hashes are nonstale. All3 original YAML files
+    natively validate and exactly reproduce saved Markdown. Other cohort inputs are
+    checked for provenance only.
+  snapshot_sha256: 68f9eb2b30dc46e7bd4e6334dae5ee9322bd640fd0558757ffc64fbc93e9a2c9
+- evidence_id: plaque-native-fact_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify.log;
+    stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-04T09:35:51.320646Z'
+  support: supports
+  summary: Exit0. Two reviewed S288C protein_examples and two COVERED typed protein
+    nodes. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: 096586b9926cbd253a16e5eb54c64c6aec3a6a45ce868e76b4838a8f8261f126
+- evidence_id: plaque-native-fact_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal.log;
+    stdout SHA256 564343089c790c3976a2096f605a72df5ebe0ad67af0969f3f6d41a88005eb8a
+  accessed_at: '2026-11-04T09:35:51.730489Z'
+  support: supports
+  summary: Exit0. Two reviewed S288C protein_examples and two COVERED typed protein
+    nodes. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: 41fb338449c4a0d72f511c722030be3b8dbfcc736b91fa8209c06721dfe6a2ea
+- evidence_id: plaque-native-fmn_reductase_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify.log;
+    stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-04T09:35:52.982901Z'
+  support: supports
+  summary: Exit0. One reviewed E.coli K12 protein_example and one COVERED typed protein
+    node. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: 49a5b8f00eb7760c49864b7a24b8b50faf38c720148c5a8f5bcf66088f314ef2
+- evidence_id: plaque-native-fmn_reductase_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal.log;
+    stdout SHA256 ff0b115d5574011d1a8f0573dce8a722f08305763ff4d2bde3716bb4c4710a38
+  accessed_at: '2026-11-04T09:35:53.394637Z'
+  support: supports
+  summary: Exit0. One reviewed E.coli K12 protein_example and one COVERED typed protein
+    node. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: f8ed7311e5db3a35249480f740f803e59e0784603a4766da62e582d6ccbea1b7
+- evidence_id: plaque-native-gamma_dna_polymerase_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify.log;
+    stdout SHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  accessed_at: '2026-11-04T09:35:54.537478Z'
+  support: supports
+  summary: Exit0. Two reviewed human protein_examples and two COVERED typed protein
+    nodes. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: 3896a28872effe174c5b331430312fbdb88798c14f73e92a1381cf78d487d89b
+- evidence_id: plaque-native-gamma_dna_polymerase_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt; complete log /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal.log;
+    stdout SHA256 0314a6b14e8b8067e2bba90a07d49cf0bec7624457ae2ea726e5edbc6cf48157
+  accessed_at: '2026-11-04T09:35:54.952221Z'
+  support: supports
+  summary: Exit0. Two reviewed human protein_examples and two COVERED typed protein
+    nodes. Identifier and node-coverage checks do not independently establish biological
+    assembly, localization or necessity.
+  snapshot_sha256: c94916923db2bd45e4b19340d6ea06327e1b4b16abd6f93333491a17a7edaf7a
+- evidence_id: plaque-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101,GO:0008023,GO:0034728,GO:0006354,GO:1990202,GO:1990204,GO:0052873,GO:0005760,GO:0042575,GO:0098798,GO:0005759,GO:0006264
+  locator: Complete12-term response; exact names/definitions/synonyms and selected
+    typed children for maintained identity, hierarchy, localization and function terms;
+    retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go.raw
+  accessed_at: '2026-11-04T09:34:59.707886Z'
+  support: supports
+  summary: Current target identities and definitions are consistent with FACT, generic
+    FMN reductase and mitochondrial polymerase gamma. Typed parent-child relations
+    support the maintained hierarchy and POLG matrix parthood; is_a ancestry is not
+    substituted for direct parthood. Generic identities remain distinct from the scoped
+    yeast, E.coli and human examples.
+  snapshot_sha256: 4afb3b0b05daaeda1d6ce52f48b9cae548f1c81ce9b5c4b1e12c97a343bb1f7d
+- evidence_id: plaque-go-0035101-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101/ancestors?relations=is_a
+  locator: All returned ancestors for GO:0035101 with relations=is_a; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-0035101-ancestors.raw
+  accessed_at: '2026-11-04T09:34:59.708186Z'
+  support: supports
+  summary: Complete is_a-only ancestors support this hierarchy, without independently
+    asserting any direct parthood.
+  snapshot_sha256: 603e938fd38ce4bb6c606abdacaf30e04a5c5f3c89b74dd376efed2a0e531cc0
+- evidence_id: plaque-go-1990202-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990202/ancestors?relations=is_a
+  locator: All returned ancestors for GO:1990202 with relations=is_a; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-1990202-ancestors.raw
+  accessed_at: '2026-11-04T09:34:59.708299Z'
+  support: supports
+  summary: Complete is_a-only ancestors support this hierarchy, without independently
+    asserting any direct parthood.
+  snapshot_sha256: 257cc77c4b709aaf4bc674277ecb45e01945d1aa19d15437d36de0965528291f
+- evidence_id: plaque-go-0005760-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/ancestors?relations=is_a
+  locator: All returned ancestors for GO:0005760 with relations=is_a; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/go-0005760-ancestors.raw
+  accessed_at: '2026-11-04T09:34:59.708345Z'
+  support: supports
+  summary: Complete is_a-only ancestors support this hierarchy, without independently
+    asserting any direct parthood.
+  snapshot_sha256: f26246702a8ee2658dcc963a86fd552f34f9a46ba14ce3f3425e3e5610498434
+- evidence_id: plaque-polg-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/constraints
+  locator: Complete target constraints array; exact ancestorId GO0005760, relationship
+    only_in_taxon, taxId2759; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/polg-constraints.raw
+  accessed_at: '2026-11-04T09:34:59.708384Z'
+  support: supports
+  summary: Native GO0005760 constraint explicitly states only_in_taxon Eukaryota2759.
+    This is a taxonomic restriction, not evidence that every eukaryotic lineage has
+    the same subunit count or a quantitative prevalence census.
+  snapshot_sha256: 92e891aa7f5e3b444a1c2436b4fb8593522e2b15db03ca19c8f9ec8e160d67d5
+- evidence_id: plaque-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-4932.raw
+  accessed_at: '2026-11-04T09:34:59.708417Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: 38f43dd1593a1d47416228ae385464f30aeb8302c3aadb45b3588d03744bc814
+- evidence_id: plaque-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-559292.raw
+  accessed_at: '2026-11-04T09:34:59.708452Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: plaque-tax-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-562.raw
+  accessed_at: '2026-11-04T09:34:59.708482Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: 66d5c5c74569e24b72fd7b011961dc221b58d841db7db3023337fb534733e200
+- evidence_id: plaque-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-83333.raw
+  accessed_at: '2026-11-04T09:34:59.708544Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: plaque-tax-2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-2759.raw
+  accessed_at: '2026-11-04T09:34:59.708617Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: 61a68c76c70762c97e0b218568ab037d9a30c0207847247e9e055b5764a61634
+- evidence_id: plaque-tax-9606
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9606
+  locator: Complete ENA native taxon response; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/tax-9606.raw
+  accessed_at: '2026-11-04T09:35:00.563812Z'
+  support: supports
+  summary: Native taxon ID/name/rank/lineage verifies the maintained species, reference-strain
+    or higher-taxon identity. Experimental strains and recombinant hosts remain separately
+    scoped.
+  snapshot_sha256: 43da11bd5ae67c7de16256e9a9f3d3f90f4d70315de700d16c290352aa7b94ba
+- evidence_id: plaque-pmid-10413469
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10413469+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:10413469 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10413469.raw
+  accessed_at: '2026-11-04T09:35:00.565912Z'
+  support: supports
+  summary: Wittmeyer1999 primary abstract supports the yeast Spt16/Pob3 association
+    and functional context. It does not certify fresh figure inspection or complete
+    localization Methods.
+  snapshot_sha256: a9f60fc80c3056c9f38012dcdd97aca93df5aa712341e4f83b9c90a3c869b9b9
+- evidence_id: plaque-pmid-11432837
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11432837+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:11432837 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-11432837.raw
+  accessed_at: '2026-11-04T09:35:00.565997Z'
+  support: supports
+  summary: Formosa2001 primary abstract supports yeast Spt16/Pob3 with Nhp6-mediated
+    nucleosome remodeling; the selected genuine full body supplies separately scoped
+    experiments.
+  snapshot_sha256: 78b9dc5e0427a8d298eb11b124b093f4518588d7c66f0a52745278824f8acd9d
+- evidence_id: plaque-pmid-12934006
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12934006+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:12934006 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-12934006.raw
+  accessed_at: '2026-11-04T09:35:00.566084Z'
+  support: supports
+  summary: Belotserkovskaya2003 primary abstract supports FACT histone-chaperone and
+    PolII/nucleosome activity. No currently retrieved full body or experimental-species
+    detail absent from this abstract is certified.
+  snapshot_sha256: 6853041b8e8ae1558b6035a458caf5dd45eebc4d8194da8e9b386e928adae145
+- evidence_id: plaque-pmid-14585989
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14585989+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:14585989 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-14585989.raw
+  accessed_at: '2026-11-04T09:35:00.571016Z'
+  support: supports
+  summary: Mason2003 primary abstract supports yeast FACT association with transcribed
+    regions; the selected full-body ChIP sections separately establish actual assay/strain
+    limits.
+  snapshot_sha256: 11990e88b7d67162167f74637cd45a10b2a2de15b9ec9976b950b6d63a0d9b2c
+- evidence_id: plaque-pmid-10480865
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10480865+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:10480865 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10480865.raw
+  accessed_at: '2026-11-04T09:35:00.583346Z'
+  support: supports
+  summary: Eichhorn1999 complete primary abstract reports purified N-terminal-His-tagged
+    E.coli SsuE as a homodimer of native Mr58400, NAD(P)H-dependent FMN reduction,
+    also FAD/riboflavin reduction, and a separate SsuD tetramer. It supports the scoped
+    dimer/catalysis claims, not universal FMN-reductase stoichiometry or a stable
+    SsuE-SsuD complex.
+  snapshot_sha256: 8d0e38c630335ff2dbf000173277ffaf5576c4b08737c13c8391d2198fd187b8
+- evidence_id: plaque-pmid-10608893
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10608893+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:10608893 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10608893.raw
+  accessed_at: '2026-11-04T09:35:00.588898Z'
+  support: supports
+  summary: Lim1999 complete primary abstract describes reconstituted human POLG accessory
+    p55 expressed in E.coli plus catalytic p140, enhanced affinity/processivity and
+    salt-stable association. Its historical190kDa/1:1 interpretation is not promoted
+    to the modern exhaustive mammalian copy number.
+  snapshot_sha256: 188c93d5cf4d0b5998a7b5800a352f4c80b90cbf1a35f06cb196335080648cff
+- evidence_id: plaque-pmid-11172710
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11172710+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:11172710 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-11172710.raw
+  accessed_at: '2026-11-04T09:35:00.618137Z'
+  support: supports
+  summary: 'Carrodeguas2001 complete primary abstract distinguishes mouse accessory-subunit
+    crystal structure from a human four-helix-bundle deletion mutant: loss of accessory
+    dimerization and stimulation while catalytic-subunit interaction on primer-template
+    remains. Activity, dimerization and association are distinct.'
+  snapshot_sha256: 90f88772a3941712786946b29be259e42a12284f5e44af5d86601db6a90eb98d
+- evidence_id: plaque-pmid-10827171
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10827171+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:10827171 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-10827171.raw
+  accessed_at: '2026-11-04T09:35:00.618283Z'
+  support: supports
+  summary: Spelbrink2000 complete primary abstract concerns human cultured-cell POLG
+    fusion expression, mitochondrial distribution and mtDNA maintenance; no fresh
+    image pixels or complete Methods are certified.
+  snapshot_sha256: f964c26ba87e2d24f2545278adbeb58fbde1fa9ece73020f790bada9176748df
+- evidence_id: plaque-pmid-18063578
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18063578+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:18063578 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-18063578.raw
+  accessed_at: '2026-11-04T09:35:00.847845Z'
+  support: supports
+  summary: Bogenhagen2008 complete primary abstract describes cross-linking/proteomic
+    mitochondrial nucleoid organization, not a universal complete polymerase stoichiometry
+    or formation table.
+  snapshot_sha256: cc3e063877a73601d6efa313acd8944af9fa45f730b7d9eaf12abbd80b5fdc16
+- evidence_id: plaque-pmid-12045093
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12045093+AND+SRC%3AMED&format=json&resultType=core&pageSize=1
+  locator: Europe PMC exact EXT_ID:12045093 AND SRC:MED, pageSize1/resultType core;
+    complete unique bibliography and abstract only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/pmid-12045093.raw
+  accessed_at: '2026-11-04T09:35:01.189497Z'
+  support: supports
+  summary: Hubscher2002 is secondary review abstract context for eukaryotic DNA polymerases.
+    No primary experiment or full-review-body inspection is assigned to this response.
+  snapshot_sha256: 02e2cbf401b8d4936fae77983341300a6bf4a7159e18a9ded7ab9fa56fddb444
+- evidence_id: plaque-formosa-legacy-query
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/125512/?report=xml
+  locator: NCBI numeric PMC HTML via ?report=xml; Results sec6–10, embedded Figs4–6
+    text captions, Discussion sec13–14, Methods sec16/TableIII and sec19. A364a/W303/S288C
+    variants, yeast proteins, chicken histones/sea-urchin5S DNA and recombinant E.coli
+    Nhp6 host distinguished. No figure pixels/supplements/raw data inspected.; retained
+    snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-legacy-query.raw
+  accessed_at: '2026-11-04T09:37:21.136326Z'
+  support: supports
+  summary: Selected genuine primary body supports purified yeast Spt16/Pob3 recruitment
+    to nucleosomes with Nhp6, nuclease-accessibility changes and genetic interactions.
+    The stable two-subunit core is distinguished from weak/cofactor Nhp6 association;
+    some sec6/Discussion observations are expressly unpublished and are not recast
+    as direct figure results. The paper proposes broader transcription/remodeling
+    models beyond each measured assay.
+  snapshot_sha256: c1b2d2ac34dd21dba1287335fbe62fd13edf8a35b1082faf9fe7c231667b9a75
+- evidence_id: plaque-mason-legacy-query
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/262413/?report=xml
+  locator: Genuine numeric PMC HTML via ?report=xml; Methods sec2–3, Results sec6–7
+    and embedded Figs1/2 text captions. W303.1A/FY56/L577 and specified derivatives
+    read; no figure pixels or unlisted Results certified.; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-legacy-query.raw
+  accessed_at: '2026-11-04T09:37:21.136384Z'
+  support: supports
+  summary: Selected yeast ChIP Results support FACT association along active PolII
+    coding regions and temporal correspondence with transcription. The results do
+    not distinguish one FACT molecule traveling with polymerase from dynamic exchange.
+    Myc-Spt16 complemented its deletion; tagged-Pob3 had a modest growth effect, which
+    bounds assay interpretation.
+  snapshot_sha256: f228ab91026e5363aa62be17581b63326fbd4e120dfe34aecc2bca11323357b5
+- evidence_id: plaque-up-P32558
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P32558.json
+  locator: Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO
+    citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P32558.raw
+  accessed_at: '2026-11-04T09:35:01.193910Z'
+  support: supports
+  summary: Reviewed native P32558,taxon559292, SPT16; CDC68/SSF1; YGL207W;1035aa.
+    Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references
+    support the exact protein mapping. Native annotation provenance is distinct from
+    fresh experiments; POLG2 inferred matrix annotation is not promoted to direct
+    microscopy.
+  snapshot_sha256: 6be6279235f17c1133cf413181adc45f03b40bf54098fcdb890668ee37ff77f9
+- evidence_id: plaque-gene-SPT16
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPT16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete unique result; no selection by search rank; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-SPT16.raw
+  accessed_at: '2026-11-04T09:35:01.243263Z'
+  support: supports
+  summary: The single reviewed exact-gene/taxon result is P32558; primary names, aliases
+    and locus are consistent.
+  snapshot_sha256: 0b55541eacab9ac6e6c83e868168a9eb19ffb7b552ac12709b53a0ba79a0c13b
+  search_scope: UniProt REST query=(gene_exact:SPT16) AND (organism_id:559292) AND
+    (reviewed:true); size500; actual date 2026-11-04T09:35:01.243263Z; all returned
+    identities read; no descendant-taxon or unreviewed expansion and no global absence
+    claim.
+- evidence_id: plaque-up-Q04636
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q04636.json
+  locator: Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO
+    citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-Q04636.raw
+  accessed_at: '2026-11-04T09:35:01.194992Z'
+  support: supports
+  summary: Reviewed native Q04636,taxon559292, POB3;YML069W;552aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY
+    and family cross-references support the exact protein mapping. Native annotation
+    provenance is distinct from fresh experiments; POLG2 inferred matrix annotation
+    is not promoted to direct microscopy.
+  snapshot_sha256: bf60940520544903bb37811c5f85994536055e02f61a0d273cc7c0032df4c083
+- evidence_id: plaque-gene-POB3
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOB3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete unique result; no selection by search rank; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POB3.raw
+  accessed_at: '2026-11-04T09:35:01.245642Z'
+  support: supports
+  summary: The single reviewed exact-gene/taxon result is Q04636; primary names, aliases
+    and locus are consistent.
+  snapshot_sha256: 2aa3b82e77034e93b459d06d94f789c29b711dfea49de3409ee0f70ba6f0db89
+  search_scope: UniProt REST query=(gene_exact:POB3) AND (organism_id:559292) AND
+    (reviewed:true); size500; actual date 2026-11-04T09:35:01.245642Z; all returned
+    identities read; no descendant-taxon or unreviewed expansion and no global absence
+    claim.
+- evidence_id: plaque-up-P80644
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P80644.json
+  locator: Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO
+    citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P80644.raw
+  accessed_at: '2026-11-04T09:35:01.204066Z'
+  support: supports
+  summary: Reviewed native P80644,taxon83333, ssuE/ycbP;b0937/JW0920;191aa. Full relevant
+    FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact
+    protein mapping. Native annotation provenance is distinct from fresh experiments;
+    POLG2 inferred matrix annotation is not promoted to direct microscopy.
+  snapshot_sha256: 56f363a3aac0e1cb52b89fd691df34d5360245dc353167a4df8b4a3a72ef7eec
+- evidence_id: plaque-gene-ssuE
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AssuE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete unique result; no selection by search rank; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-ssuE.raw
+  accessed_at: '2026-11-04T09:35:01.248383Z'
+  support: supports
+  summary: The single reviewed exact-gene/taxon result is P80644; primary names, aliases
+    and locus are consistent.
+  snapshot_sha256: 62e7c5589be5667dbeb2d4d00431ef30cd4a369b24c283480acb13d381802cb7
+  search_scope: UniProt REST query=(gene_exact:ssuE) AND (organism_id:83333) AND (reviewed:true);
+    size500; actual date 2026-11-04T09:35:01.248383Z; all returned identities read;
+    no descendant-taxon or unreviewed expansion and no global absence claim.
+- evidence_id: plaque-up-P54098
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P54098.json
+  locator: Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO
+    citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-P54098.raw
+  accessed_at: '2026-11-04T09:35:01.204177Z'
+  support: supports
+  summary: Reviewed native P54098,taxon9606, POLG/POLG1/POLGA/MDP1;1239aa. Full relevant
+    FUNCTION/SUBUNIT/LOCATION/SIMILARITY and family cross-references support the exact
+    protein mapping. Native annotation provenance is distinct from fresh experiments;
+    POLG2 inferred matrix annotation is not promoted to direct microscopy.
+  snapshot_sha256: 99ed2ecd2ed5e2d995927222c6e764468579569bb1d2ee1833ce2069f184eb97
+- evidence_id: plaque-gene-POLG
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete unique result; no selection by search rank; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POLG.raw
+  accessed_at: '2026-11-04T09:35:01.467542Z'
+  support: supports
+  summary: The single reviewed exact-gene/taxon result is P54098; primary names, aliases
+    and locus are consistent.
+  snapshot_sha256: b36d0206bed6f6f509ce0ac5b566bca54c51b4b4bb2057de08514d0f033c0cc7
+  search_scope: UniProt REST query=(gene_exact:POLG) AND (organism_id:9606) AND (reviewed:true);
+    size500; actual date 2026-11-04T09:35:01.467542Z; all returned identities read;
+    no descendant-taxon or unreviewed expansion and no global absence claim.
+- evidence_id: plaque-up-Q9UHN1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9UHN1.json
+  locator: Native primaryAccession/entryType/genes/taxon/length, relevant comments/ECO
+    citations and complete family cross-reference set; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/up-Q9UHN1.raw
+  accessed_at: '2026-11-04T09:35:01.204249Z'
+  support: supports
+  summary: Reviewed native Q9UHN1,taxon9606, POLG2/MTPOLB;485aa. Full relevant FUNCTION/SUBUNIT/LOCATION/SIMILARITY
+    and family cross-references support the exact protein mapping. Native annotation
+    provenance is distinct from fresh experiments; POLG2 inferred matrix annotation
+    is not promoted to direct microscopy.
+  snapshot_sha256: 3535a8ff9e5ab5cbacc0f6b2474786418cc92436f11d0fa230bb2df50d1cc828
+- evidence_id: plaque-gene-POLG2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG2%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete unique result; no selection by search rank; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/gene-POLG2.raw
+  accessed_at: '2026-11-04T09:35:01.801883Z'
+  support: supports
+  summary: The single reviewed exact-gene/taxon result is Q9UHN1; primary names, aliases
+    and locus are consistent.
+  snapshot_sha256: 01a7f1163df0bbf9f2fa4b76a400315655059aaa23e9ae4db24b34aea1f446d8
+  search_scope: UniProt REST query=(gene_exact:POLG2) AND (organism_id:9606) AND (reviewed:true);
+    size500; actual date 2026-11-04T09:35:01.801883Z; all returned identities read;
+    no descendant-taxon or unreviewed expansion and no global absence claim.
+- evidence_id: plaque-ipr-IPR040258
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040258/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR040258.raw
+  accessed_at: '2026-11-04T09:35:02.519739Z'
+  support: supports
+  summary: Whole Spt16 family with PTHR13980, corroborated by P32558. This supports
+    the existing explicit exact-family task.
+  snapshot_sha256: 7dc6199ad8368691287b783fdc043236ad42eb24a80acba50d6931312c15e9fe
+- evidence_id: plaque-ipr-IPR000969
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000969/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR000969.raw
+  accessed_at: '2026-11-04T09:35:03.135748Z'
+  support: supports
+  summary: Whole SSRP1/POB3 family including PR00887, corroborated by Q04636. Human
+    SSRP1 versus yeast Pob3 architectural differences do not invalidate this verified
+    homologous class.
+  snapshot_sha256: 19451ae953fb0532e9b74127d4206ae49e564fe95bf2a8e63f319403b1832535
+- evidence_id: plaque-ipr-IPR050454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050454/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR050454.raw
+  accessed_at: '2026-11-04T09:35:03.647232Z'
+  support: context_only
+  summary: Broader RTT106/SSRP1 family with PTHR45849 is not substituted for exact
+    POB3. Unchecked generated narrative is excluded.
+  snapshot_sha256: f114d77c71dfe613c240c4c7cf8f2e16ca87d6cdf2b48f2505fbdc4d170a5bb7
+- evidence_id: plaque-ipr-IPR020048
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020048/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR020048.raw
+  accessed_at: '2026-11-04T09:35:03.896087Z'
+  support: supports
+  summary: Whole SsuE FMN-reductase family with TIGR03567 matches P80644; the native
+    curated biochemical entry supports E.coli homodimer context without universalizing
+    it.
+  snapshot_sha256: d607b745db371b09e707102526b201b3299641f0993f43f2d4b14d5320cda210
+- evidence_id: plaque-ipr-IPR002297
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002297/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR002297.raw
+  accessed_at: '2026-11-04T09:35:04.209014Z'
+  support: supports
+  summary: Whole mitochondrial DNA-polymerase family A with PTHR10267/PIRSF000797/PR00867
+    and P54098 match supports the explicit catalytic-class task. Incidental erroneous5-prime-extension
+    prose is not copied.
+  snapshot_sha256: 2007363cd3c16e8ea0644ed58c7b9b7a9eaffb7e7f1e90b15d85d34b36482d45
+- evidence_id: plaque-ipr-IPR027031
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027031/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR027031.raw
+  accessed_at: '2026-11-04T09:35:04.261057Z'
+  support: context_only
+  summary: Broad glycine-tRNA-synthetase/POLG2 entry does not exactly isolate the
+    named accessory class.
+  snapshot_sha256: 197cc482994edbe0d958f35820c291bd183ad0c5e05669eb7cca7a9a9d30f515
+- evidence_id: plaque-ipr-IPR042064
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR042064/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR042064.raw
+  accessed_at: '2026-11-04T09:35:04.485791Z'
+  support: context_only
+  summary: POLG2 C-terminal domain is not a whole-protein accessory family.
+  snapshot_sha256: 81ddfde7308450719c6931303f3f38a2de37f03756aadeb3728e1300a5bf21e2
+- evidence_id: plaque-ipr-IPR027030
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027030/
+  locator: Complete native accession/type/name, signatures, hierarchy, description
+    flags and deletion metadata where present; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/ipr-IPR027030.raw
+  accessed_at: '2026-11-04T09:35:04.866376Z'
+  support: context_only
+  summary: Actual HTTP410 response contains genuine deletion metadata dated2022-11-25.
+    This is authority content, not a generic access failure, but the historical entry
+    is not an active exact grounding.
+  snapshot_sha256: 55b5c9ff347bb7abd2326fffcf527557c8ba5879ff997615029917e27d99eed1
+- evidence_id: plaque-panther-PTHR10745-SF8
+  kind: validation
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10745:SF8/
+  locator: Actual HTTP204 receipt and empty-byte SHA only; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/panther-PTHR10745-SF8.raw
+  accessed_at: '2026-11-04T09:35:04.891807Z'
+  support: context_only
+  summary: The current candidate PANTHER endpoint returns204 with zero bytes. It establishes
+    neither a valid exact family nor its biological absence.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: plaque-belot-publisher
+  kind: validation
+  reference: https://doi.org/10.1126/science.1085703
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/belot-publisher.raw
+  accessed_at: '2026-11-04T09:35:05.494482Z'
+  support: context_only
+  summary: Current attempted route returned status403 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 6404a3737e51d8a25c299072d9e4a5c39687c97128ff26fc01534c55b85d547e
+- evidence_id: plaque-eichhorn-publisher
+  kind: validation
+  reference: https://doi.org/10.1074/jbc.274.38.26639
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/eichhorn-publisher.raw
+  accessed_at: '2026-11-04T09:35:05.563797Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 4c9ea8fa3b0d5df125a83a980f214a457a1082ea29befa2421731ae916d27127
+- evidence_id: plaque-lim-publisher
+  kind: validation
+  reference: https://doi.org/10.1074/jbc.274.53.38197
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/lim-publisher.raw
+  accessed_at: '2026-11-04T09:35:05.564057Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: a6c42231201cd71e480a0f8432a821a1034b6373f1a57c0e3200944a4120e686
+- evidence_id: plaque-carrodeguas-publisher
+  kind: validation
+  reference: https://doi.org/10.1016/S1097-2765(01)00153-8
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/carrodeguas-publisher.raw
+  accessed_at: '2026-11-04T09:35:05.764161Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: ede970fbadbfc652a787a619fa71c56ac4094ad05acef3a44396f717085cca7a
+- evidence_id: plaque-formosa-body
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC125512/?pdf=render
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-body.raw
+  accessed_at: '2026-11-04T09:35:05.114967Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 4a51291088c874640db4f587e2e2987097892a6cde15c0301f2aeb40d52c85c6
+- evidence_id: plaque-mason-legacy
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/262413/
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-legacy.raw
+  accessed_at: '2026-11-04T09:35:59.993446Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: cb85c28c65260256a62bfb8171864008a127f81c5ea76c1ab5b80407b5f6f2c9
+- evidence_id: plaque-formosa-bioc
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC125512/unicode
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-bioc.raw
+  accessed_at: '2026-11-04T09:35:59.993535Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 478f38e0765ee9c406831bb2fc27e8019ac5227c20c6b28ca0de582d8449354a
+- evidence_id: plaque-mason-bioc
+  kind: validation
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC262413/unicode
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-bioc.raw
+  accessed_at: '2026-11-04T09:35:59.993607Z'
+  support: context_only
+  summary: Current attempted route returned status200 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 478f38e0765ee9c406831bb2fc27e8019ac5227c20c6b28ca0de582d8449354a
+- evidence_id: plaque-formosa-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC125512.1/PMC125512.1.xml
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-jats.raw
+  accessed_at: '2026-11-04T09:36:39.524928Z'
+  support: context_only
+  summary: Current attempted route returned status404 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 9328b41a78812a2ec7c624917efa8f02a39708576ce8844310d99ec11a1bc211
+- evidence_id: plaque-mason-jats
+  kind: validation
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC262413.1/PMC262413.1.xml
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-jats.raw
+  accessed_at: '2026-11-04T09:36:39.525182Z'
+  support: context_only
+  summary: Current attempted route returned status404 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: c244dd07b807b41d85f0eee628fbc7714e4dd9fda2c8394510163da3ce93c28f
+- evidence_id: plaque-formosa-epmc
+  kind: validation
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC125512/fullTextXML
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/formosa-epmc.raw
+  accessed_at: '2026-11-04T09:36:39.525268Z'
+  support: context_only
+  summary: Current attempted route returned status500 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: 381b2ed5a3f58bac91b19c8db1720c284f909aa54c785f52484b9ef203229567
+- evidence_id: plaque-mason-epmc
+  kind: validation
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC262413/fullTextXML
+  locator: Actual transport/content diagnostic only; no biological inference or article-body
+    certification; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/mason-epmc.raw
+  accessed_at: '2026-11-04T09:36:39.525347Z'
+  support: context_only
+  summary: Current attempted route returned status500 and did not supply a readable
+    article body. Tiny redirects, challenge pages, No-result BioC responses and transport
+    errors are not counted as paper access; separately successful genuine body/abstract
+    responses retain their own timestamps.
+  snapshot_sha256: b35f810bfc83f8985b061b659a55bb3aa6a775a42beac30701c29bca49e8e913
+- evidence_id: plaque-adapter-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/organisms
+  locator: All20 organism rows/28 organism-dataset pairs independently reread from
+    same-PR micro snapshot, actual original fetch timestamp retained; retained snapshot
+    /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-catalogue.raw
+  accessed_at: '2026-11-04T09:35:18.387085Z'
+  support: context_only
+  summary: Full fresh catalogue contains E.coli datasets but no yeast or human natural-host
+    dataset. FACT and POLG therefore have bounded natural-host noncoverage; recombinant
+    E.coli expression is not used as their proxy. Catalogue noncoverage is not biological
+    absence.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: plaque-adapter-precise1k-meta
+  kind: database
+  reference: https://imodulondb.org/api/datasets/e_coli/precise1k/meta
+  locator: Complete official dataset metadata fields; five strain names read; retained
+    snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-microtubule/adapter-precise1k-meta.raw
+  accessed_at: '2026-11-04T09:35:19.008187Z'
+  support: context_only
+  summary: The selected E.coli precise1k dataset has201modules and4257genes,1035samples/518conditions;
+    metadata lists BW25113,DGF-298,GMOS,MG1655,W3110. It is not one purified-protein
+    assay strain and expression correlations do not establish complex formation.
+  snapshot_sha256: 6cd60b3e363a11c95c2b5b1d160fe360687c0a680a5b95c18c6c76e7c5d99865
+- evidence_id: plaque-adapter-gene-b0937
+  kind: database
+  reference: https://imodulondb.org/api/genes/e_coli/precise1k/b0937
+  locator: Complete exact native gene response and organism/dataset IDs; retained
+    snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/adapter-gene-b0937.raw
+  accessed_at: '2026-11-04T09:36:39.525414Z'
+  support: context_only
+  summary: Exact b0937/ssuE entry joins P80644 and the K12 locus. No similarly named
+    or foreign-strain gene was substituted.
+  snapshot_sha256: 78da26b5c1e6c17c8cb7a181644bb431b4793d5a3b654d53b000826c0cd6b3cc
+- evidence_id: plaque-adapter-membership-b0937
+  kind: search
+  reference: https://imodulondb.org/api/genes/e_coli/precise1k/b0937/imodulons
+  locator: Complete201 membership rows; both true entries independently checked; retained
+    snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/adapter-membership-b0937.raw
+  accessed_at: '2026-11-04T09:36:39.525456Z'
+  support: context_only
+  summary: All201 returned rows contain two true SsuE memberships:56 Sulfate(weight0.258176278,threshold0.068099301)
+    and82 SSW SNPs(weight0.036000402,threshold0.034619822). The other flags are dataset
+    thresholds, not biological absence.
+  snapshot_sha256: ae4979de91eb0df9e98dad626ad6a245b22e9d34fe9ebb179db9c2e62813f1d0
+  search_scope: Official iModulonDB GET /api/genes/e_coli/precise1k/b0937/imodulons;
+    exact b0937 only; actual date 2026-11-04T09:36:39.525456Z; all201 returned rows
+    inspected with no pagination; two true flags selected for module metadata/member
+    follow-up. No experiment or causal-regulatory inference.
+- evidence_id: plaque-module-56
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise1k/56
+  locator: Exact module identity/name/threshold/member count and non-generated metadata;
+    all ai_summary content excluded; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-56.raw
+  accessed_at: '2026-11-04T09:37:21.135976Z'
+  support: context_only
+  summary: Sulfate metadata annotates Cbl/CysB and17members; it is expression-context
+    annotation, not direct regulator-binding or physical SsuE-SsuD assembly evidence.
+  snapshot_sha256: 84828940f4450b1f8414bf5f48e779d23ab761876ae3d2e86370856a2e5934d4
+- evidence_id: plaque-module-56-genes
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise1k/56/genes
+  locator: Full returned gene-ID/name/member table and exact SsuE join; no generated
+    summaries or full activity-matrix analysis; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-56-genes.raw
+  accessed_at: '2026-11-04T09:37:21.136241Z'
+  support: context_only
+  summary: Complete17-member table confirms b0937/ssuE/P80644, with its exact threshold-passing
+    weight. SsuD is separately represented as b0935/P80645; shared expression membership
+    does not merge the proteins into one physical complex.
+  snapshot_sha256: 3d67ab59c242bd9c4719d9a9de5d8bf4ac30560b64907a87886dcc1f315c3f10
+- evidence_id: plaque-module-82
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise1k/82
+  locator: Exact module identity/name/threshold/member count and non-generated metadata;
+    all ai_summary content excluded; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-82.raw
+  accessed_at: '2026-11-04T09:43:08.364051Z'
+  support: context_only
+  summary: SSW SNPs metadata lists89members, null regulator and Unknown function.
+    No specific mechanistic interpretation is invented.
+  snapshot_sha256: 34791ac7823c2d3a8ed44512865ccb0fc1c11f01289e5e962d049c47fa0a8cd3
+- evidence_id: plaque-module-82-genes
+  kind: database
+  reference: https://imodulondb.org/api/imodulons/e_coli/precise1k/82/genes
+  locator: Full returned gene-ID/name/member table and exact SsuE join; no generated
+    summaries or full activity-matrix analysis; retained snapshot /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-plaque/module-82-genes.raw
+  accessed_at: '2026-11-04T09:43:08.364338Z'
+  support: context_only
+  summary: Complete89-member table confirms b0937/ssuE/P80644, with its exact threshold-passing
+    weight. The broad returned membership is retained as context only.
+  snapshot_sha256: d8b26544914ade60e2dff5bcff9fceed03039247c3c4940d121c4ee6d2d45a25
+- evidence_id: plaque-historical-3-micro55-belot2003
+  kind: validation
+  reference: https://www.science.org/doi/10.1126/science.1085703
+  locator: Original native request/403 response. Historical identity 20261022T065209Z-fact-complex-audit/micro55-belot2003;
+    exact old date/hash retained from immutable YAML, historical raw transport bytes
+    not reconstructed.
+  accessed_at: '2026-10-22T06:37:00.475582Z'
+  support: context_only
+  summary: The direct Science route returned HTTP403 HTML, not the article body. Genuine
+    primary reading is separately retained through browser-extracted blocks.
+  snapshot_sha256: 33150b9a2eef5c3835c0f442cdf25762edb935325aec5cc32072bafc73acf016
+- evidence_id: plaque-historical-4-micro55-eichhorn1999-pdf
+  kind: validation
+  reference: https://www.jbc.org/article/S0021925819550724/pdf
+  locator: Original URL and native403 response. Historical identity 20261022T065210Z-fmn-reductase-complex-audit/micro55-eichhorn1999-pdf;
+    exact old date/hash retained from immutable YAML, historical raw transport bytes
+    not reconstructed.
+  accessed_at: '2026-10-22T06:36:59.904343Z'
+  support: context_only
+  summary: The native JBC PDF route returned HTTP403 HTML. It is not counted as a
+    retrieved PDF; the independent genuine browser primary passages supply the stated
+    body scope.
+  snapshot_sha256: 6d380acfc6910bb83baadf7daf3da1a30d3dc27521d15d79e2fba8b5268d35c8
+- evidence_id: plaque-historical-5-micro55-panther-PTHR10745-SF8
+  kind: validation
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10745:SF8/
+  locator: Original204 receipt and empty raw SHA; no positive body. Historical identity
+    20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-panther-PTHR10745-SF8;
+    exact old date/hash retained from immutable YAML, historical raw transport bytes
+    not reconstructed.
+  accessed_at: '2026-10-22T06:41:54.419094Z'
+  support: context_only
+  summary: The candidate PANTHER subfamily endpoint returned HTTP204 with zero response
+    bytes. No current exact family identity or membership is inferred from this empty
+    response.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: plaque-historical-5-micro55-lim1999
+  kind: validation
+  reference: https://doi.org/10.1074/jbc.274.53.38197
+  locator: Exact original request and retained TLS diagnostic. Historical identity
+    20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-lim1999; exact old
+    date/hash retained from immutable YAML, historical raw transport bytes not reconstructed.
+  accessed_at: '2026-10-22T06:36:59.941413Z'
+  support: context_only
+  summary: Lim1999 native DOI request failed TLS certificate verification (status0).
+    The raw error is not an article body. Lim browser text and the Carrodeguas complete
+    native abstract are separately scoped.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: plaque-historical-5-micro55-carrodeguas2001
+  kind: validation
+  reference: https://doi.org/10.1016/S1097-2765(01)00153-8
+  locator: Exact original request and retained TLS diagnostic. Historical identity
+    20261022T065211Z-gamma-dna-polymerase-complex-audit/micro55-carrodeguas2001; exact
+    old date/hash retained from immutable YAML, historical raw transport bytes not
+    reconstructed.
+  accessed_at: '2026-10-22T06:37:00.192333Z'
+  support: context_only
+  summary: Carrodeguas2001 native DOI request failed TLS certificate verification
+    (status0). The raw error is not an article body. Lim browser text and the Carrodeguas
+    complete native abstract are separately scoped.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: septin-review-policy
+  kind: authority
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Complete review and structured-source policy
+  summary: Positive molecular and pathway assertions trigger actual host coverage
+    assessment; absence of expression-module claims is insufficient.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+- evidence_id: septin-curation-policy
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Exact family/class grounding and append-only discussions
+  summary: Exact whole-component identities differ from domains or broad paralog groups;
+    label-only is valid while the specific class is unresolved. Preserve dated rationale
+    and history.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: septin-schema-policy
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, essentiality, taxonomic and graph types
+  summary: Functional requirement, localization, membership and formation necessity
+    are distinct. Optional fields and valid family/class components are not automatic
+    defects.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: septin-protein-policy
+  kind: authority
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Primary names, synonyms, exact taxon and identity checks
+  summary: Accessions, reference strains and gene aliases require native authority
+    joins; they do not establish an experimental assembly mechanism.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+- evidence_id: septin-graph-policy
+  kind: authority
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph scope and evidence rules
+  summary: Coarse function graphs are valid when explicitly nonmechanistic; source-specific
+    genetic and biochemical experiments do not imply a complete universal assembly
+    mechanism.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+- evidence_id: septin-literature-policy
+  kind: authority
+  reference: .claude/skills/literature-evidence/SKILL.md
+  locator: Source accessibility and precise read extent
+  summary: Native metadata, complete primary abstracts, genuine primary bodies and
+    secondary syntheses are different evidence tiers; captions are not image pixels.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+- evidence_id: septin-review-schema
+  kind: authority
+  reference: schema/record_review.yaml
+  locator: Evidence, findings and lineage contract
+  summary: Keep inherited stable keys with exact repository/review/finding identity
+    and actual current evidence; a supported qualified assessment remains scope limited.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+- evidence_id: septin-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000329,GO:0000938,GO:0005802,GO:0015030,GO:0016604,GO:0031981,GO:0032991,GO:0035859,GO:0038202,GO:0042147,GO:0061700,GO:0097504,GO:0099023,GO:1904262,GO:1904263,GO:1990130
+  locator: All16 requested current GO term names, definitions, synonyms, obsolete
+    flags and relevant typed relationships
+  summary: GARP, GATOR1, GATOR2 and gems identities are exact; is_a and part_of remain
+    distinct. GATOR roles and cell-compartment/process labels match. Gem snRNP language
+    is authority definition plus historical immunodetection scope, not a new universal
+    proteomic claim.
+  accessed_at: '2026-11-04T09:37:46.800041Z'
+  support: supports
+  snapshot_sha256: e0100a96ac860dcc76d15e08ab106834853c60e10df6b0165c53a6068133006f
+- evidence_id: septin-GO0000938-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000938/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor closure for the assigned identity
+  summary: Current exact parent class is present; this closure alone does not establish
+    a part_of edge.
+  accessed_at: '2026-11-04T09:37:46.686258Z'
+  support: supports
+  snapshot_sha256: 5c546cd64d6421db4458a975ae56f53331cee3dc9b9999e272e2bd0ec905a987
+- evidence_id: septin-protein-P36116
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P36116.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P36116; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''VPS51''}, ''synonyms'': [{''value'': ''API3''}, {''value'': ''VPS67''},
+    {''value'': ''WHI6''}], ''orderedLocusNames'': [{''value'': ''YKR020W''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:49.697006Z'
+  support: supports
+  snapshot_sha256: 07e6949555ba4b7b6dc9051f9cedd10bf938ccef686bf7f38a65ca09d833f4db
+- evidence_id: septin-protein-P39904
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39904.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P39904; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''VPS52''}, ''synonyms'': [{''value'': ''SAC2''}], ''orderedLocusNames'':
+    [{''value'': ''YDR484W''}], ''orfNames'': [{''value'': ''D8035.27''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:46.774497Z'
+  support: supports
+  snapshot_sha256: b3252aa60cf2c36f94202ec3dce5828f9ca954100fc300a939e62638e857dda0
+- evidence_id: septin-protein-P47061
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P47061.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P47061; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''VPS53''}, ''orderedLocusNames'': [{''value'': ''YJL029C''}], ''orfNames'':
+    [{''value'': ''J1258''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:52.225526Z'
+  support: supports
+  snapshot_sha256: 14581bb9025212d1de52c7be938a6ac6f0c54a6128e7c2e26b6d5f1e4a909cbf
+- evidence_id: septin-protein-Q03322
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q03322.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q03322; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''TLG1''}, ''orderedLocusNames'': [{''value'': ''YDR468C''}], ''orfNames'':
+    [{''value'': ''D8035.11''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:47.402817Z'
+  support: supports
+  snapshot_sha256: 70b59c7b5e2bc1dc171b5c7ee1e4f93669d1f7c24552e491fb9872922a6c9cdb
+- evidence_id: septin-protein-Q12071
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q12071.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q12071; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''VPS54''}, ''synonyms'': [{''value'': ''CGP1''}, {''value'': ''LUV1''},
+    {''value'': ''RKI1''}, {''value'': ''TCS3''}], ''orderedLocusNames'': [{''value'':
+    ''YDR027C''}], ''orfNames'': [{''value'': ''PZF889''}, {''value'': ''YD9813.05C''}]}];
+    taxon559292. Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:48.379935Z'
+  support: supports
+  snapshot_sha256: f94e4952bf958b379c00b81e9326177e317f86198a5db6272c668803090f1d0a
+- evidence_id: septin-gene-VPS51-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS51%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P36116; native gene records [{''geneName'':
+    {''value'': ''VPS51''}, ''synonyms'': [{''value'': ''API3''}, {''value'': ''VPS67''},
+    {''value'': ''WHI6''}], ''orderedLocusNames'': [{''value'': ''YKR020W''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:47.565954Z'
+  support: supports
+  snapshot_sha256: a2a4692c51ccd973805d15f8ae6c0fe9b8bcb05eb6eefe56e7c39b7c1101b8f6
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:47.565954Z.
+- evidence_id: septin-gene-VPS52-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS52%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P39904; native gene records [{''geneName'':
+    {''value'': ''VPS52''}, ''synonyms'': [{''value'': ''SAC2''}], ''orderedLocusNames'':
+    [{''value'': ''YDR484W''}], ''orfNames'': [{''value'': ''D8035.27''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:46.774516Z'
+  support: supports
+  snapshot_sha256: f44f0a2012076682eca3457b3518a166d1feb432d7cce0d6f4d7595b7ae2718c
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:46.774516Z.
+- evidence_id: septin-gene-VPS53-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS53%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P47061; native gene records [{''geneName'':
+    {''value'': ''VPS53''}, ''orderedLocusNames'': [{''value'': ''YJL029C''}], ''orfNames'':
+    [{''value'': ''J1258''}]}]. Current identity verification does not reconstruct
+    or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:50.313900Z'
+  support: supports
+  snapshot_sha256: 2e7ec9b96c78759fed03088aa654e9b9527b6deb4392c84c80d96bdc74122e39
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:50.313900Z.
+- evidence_id: septin-gene-VPS54-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS54%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result Q12071; native gene records [{''geneName'':
+    {''value'': ''VPS54''}, ''synonyms'': [{''value'': ''CGP1''}, {''value'': ''LUV1''},
+    {''value'': ''RKI1''}, {''value'': ''TCS3''}], ''orderedLocusNames'': [{''value'':
+    ''YDR027C''}], ''orfNames'': [{''value'': ''PZF889''}, {''value'': ''YD9813.05C''}]}].
+    Current identity verification does not reconstruct or certify a historical query
+    execution.'
+  accessed_at: '2026-11-04T09:37:48.477255Z'
+  support: supports
+  snapshot_sha256: b89a4b57766f21bdcefda497a4f9ecc0898a569edba533e2d28c0d91ae089b4c
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:48.477255Z.
+- evidence_id: septin-primary-PMC14776
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC14776/
+  locator: Conibear2000 abstract; Results sections17-19 including Figures6-10 captions;
+    Discussion21; selected methods and strain-table scope
+  summary: Reciprocal core-subunit deletion decreases Vps52 abundance to14% and destabilizes
+    Vps52/Vps53/Vps54 in the reported pulse-chase assays; this is direct physical
+    stability evidence. TGN/endosomal trafficking and co-immunoprecipitation support
+    the named core. Reduced stability is not complete assembly abolition or universal
+    viability necessity. No figure pixels or supplemental experiment reanalysis.
+  accessed_at: '2026-11-04T09:37:46.450624Z'
+  support: supports
+  snapshot_sha256: ef500b18d04a96b6b9549047dc65778bcd1777a5ad754131fe4a6a8f3dd00db3
+- evidence_id: septin-primary-PMC153126
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC153126/
+  locator: Conibear2003 Methods sections3-6 and Table1; Results10-15/Figures3-9 captions;
+    Discussion18/Figure10 caption
+  summary: Vps51 is the fourth GARP constituent; the Vps52/53/54 core persists at
+    essentially unchanged levels without Vps51. Yeast deletion/cargo/localization
+    and GST-Tlg1 binding experiments support the coarse function graph. SNY/LCY assay
+    strains and bacterial BL21 expression are distinct from S288C reference annotation.
+    Direct binding and proposed SNARE-opening models remain separate.
+  accessed_at: '2026-11-04T09:37:46.856579Z'
+  support: supports
+  snapshot_sha256: 37615c3e8229123e943264aad7b2282a1a67adc6a3c839ff3a2b106ddc2b9e65
+- evidence_id: septin-ipr-IPR007258
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007258/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Vps52 full family joined independently to P39904. Unchecked AI prose is
+    not used as evidence. Candidate search is bounded; no exhaustive assertion of
+    finer-family absence.
+  accessed_at: '2026-11-04T09:37:47.329337Z'
+  support: supports
+  snapshot_sha256: 38468ff3d81cc80e206e55d66f8e7ecfac079881e62162cd8215d3cca9067304
+- evidence_id: septin-ipr-IPR039766
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039766/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Vps53 full family joined independently to P47061. Unchecked AI prose is
+    not used as evidence. Candidate search is bounded; no exhaustive assertion of
+    finer-family absence.
+  accessed_at: '2026-11-04T09:37:47.391947Z'
+  support: supports
+  snapshot_sha256: a289284fd59682e30a974f45f99debd01d363f58160d49bdc6149df64810d8a3
+- evidence_id: septin-ipr-IPR039745
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039745/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Vps54 full family joined independently to Q12071. Unchecked AI prose is
+    not used as evidence. Candidate search is bounded; no exhaustive assertion of
+    finer-family absence.
+  accessed_at: '2026-11-04T09:37:47.409527Z'
+  support: supports
+  snapshot_sha256: 563f184db3b29dc941c9619c023d639bc22559818ee086f44ea17eb93718fd70
+- evidence_id: septin-pfam-PF08700
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08700/
+  locator: Native Pfam repeat metadata and description
+  summary: PF08700 is a shared Vps51/Exo84/Cog1 N-terminal repeat rather than an exact
+    complete Vps51 protein-family identity. It does not resolve the remaining Vps51
+    grounding.
+  accessed_at: '2026-11-04T09:37:47.409638Z'
+  support: supports
+  snapshot_sha256: 6ff006b1c1bba37308ae37aa5b21c9ccad71bf34cd9aaa7949761107920f80ee
+- evidence_id: septin-GO1990130-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990130/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor closure for the assigned identity
+  summary: Current exact parent class is present; this closure alone does not establish
+    a part_of edge.
+  accessed_at: '2026-11-04T09:37:47.471579Z'
+  support: supports
+  snapshot_sha256: 2eac7009d11defad2d5d642b903eaa9534b2761dbac83b9640a23066ee2e680f
+- evidence_id: septin-protein-P38742
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P38742.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P38742; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''NPR3''}, ''synonyms'': [{''value'': ''RMD11''}], ''orderedLocusNames'':
+    [{''value'': ''YHL023C''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:51.464777Z'
+  support: supports
+  snapshot_sha256: 94e7edc60bbaac3305b1d96e8ccadde4a512ed3df75b3d54a15ec738ad4bab1d
+- evidence_id: septin-protein-P39923
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39923.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P39923; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''NPR2''}, ''orderedLocusNames'': [{''value'': ''YEL062W''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:54.155407Z'
+  support: supports
+  snapshot_sha256: bdd2b1275f0312eb864f8f3a33824e0becc559f41a1e6f8f9a0df125a8460724
+- evidence_id: septin-protein-P47170
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P47170.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P47170; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''IML1''}, ''synonyms'': [{''value'': ''SEA1''}], ''orderedLocusNames'':
+    [{''value'': ''YJR138W''}], ''orfNames'': [{''value'': ''J2129''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:56.169232Z'
+  support: supports
+  snapshot_sha256: affaf52daae5d96320a6cfd7e176efd159a2ee1114b8febdeb5906e9c7444729
+- evidence_id: septin-protein-Q00582
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q00582.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q00582; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''GTR1''}, ''orderedLocusNames'': [{''value'': ''YML121W''}], ''orfNames'':
+    [{''value'': ''YM7056.05''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:49.590315Z'
+  support: supports
+  snapshot_sha256: 2dfdb52d191bd77dfc08f5c9669d6bc5f1fe2f34c38bad326255dec0adab5063
+- evidence_id: septin-gene-IML1-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIML1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P47170; native gene records [{''geneName'':
+    {''value'': ''IML1''}, ''synonyms'': [{''value'': ''SEA1''}], ''orderedLocusNames'':
+    [{''value'': ''YJR138W''}], ''orfNames'': [{''value'': ''J2129''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:56.626799Z'
+  support: supports
+  snapshot_sha256: da7cd1c0322ef014be7e254bf64b2075156767b12787e578d2535c04f2c23d86
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:56.626799Z.
+- evidence_id: septin-gene-NPR2-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANPR2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P39923; native gene records [{''geneName'':
+    {''value'': ''NPR2''}, ''orderedLocusNames'': [{''value'': ''YEL062W''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:59.975476Z'
+  support: supports
+  snapshot_sha256: 595bfdc12681df7d1c5058b546d58ed88933ebe69f473cafdab11794fde01945
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:59.975476Z.
+- evidence_id: septin-gene-NPR3-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANPR3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P38742; native gene records [{''geneName'':
+    {''value'': ''NPR3''}, ''synonyms'': [{''value'': ''RMD11''}], ''orderedLocusNames'':
+    [{''value'': ''YHL023C''}]}]. Current identity verification does not reconstruct
+    or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:50.711149Z'
+  support: supports
+  snapshot_sha256: 2ca11825c682f5250eb9ea9e1a83e0a8012a272cf2f6a4cd1e44c9a68d120981
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:50.711149Z.
+- evidence_id: septin-primary-PMC3108837
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3108837/
+  locator: Dokudovskaya2011 Methods4-6,9; Results17,20 and Figures1,3,5 captions
+  summary: Reciprocal affinity purifications and carbonate extraction support the
+    eight-member peripheral-membrane SEA context. Npr3 fluorescence is below detection;
+    earlier Sea2 atlas localization differs. Current UniProt multi-reference localization
+    annotation is not proof that each paper independently imaged every constituent.
+    Supplemental strain table/MS data and pixels were not analyzed.
+  accessed_at: '2026-11-04T09:37:48.839368Z'
+  support: supports
+  snapshot_sha256: 1aa8dfd67561d3c4eefc5901885f6fbe706c271002cfba7678370e5c0360df3f
+- evidence_id: septin-primary-PMC3875668
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3875668/
+  locator: Panchaud CellCycle2013 Introduction1, Results/Discussion2, Methods4-5 and
+    Figures1-3 captions
+  summary: Contains primary yeast epistasis experiments, not merely a secondary review.
+    BY4741/BY4742-derived prototrophic strains, sec13-1 at25C and seh1 deletion at30C
+    support opposing SEACIT/SEACAT regulation through Sch9 phosphorylation and iml1
+    epistasis. NPC/secretory coupling remains proposed rather than demonstrated for
+    every condition.
+  accessed_at: '2026-11-04T09:37:48.827355Z'
+  support: supports
+  snapshot_sha256: 9fb1d3fd31e0d17dff1cdb2096c4d190de7c845dca01758ffab62e434171ecfa
+- evidence_id: septin-primary-PMC3728654
+  kind: validation
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3728654/
+  locator: Actual HTTP200 browser proof-of-work response
+  summary: Canonical PMC route returned a challenge page, not the scientific body.
+    Separate numeric PMC retrieval genuinely succeeded; this failure is access context,
+    not negative biological evidence.
+  accessed_at: '2026-11-04T09:37:49.009687Z'
+  support: context_only
+  snapshot_sha256: cc610f61a64e84aa7519bc41d412ceb11bdb663648269bcaaf2b8ab16e3f3bfc
+- evidence_id: septin-ipr-IPR027244
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027244/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Iml1/DEPDC5 full family joined to P47170. Unchecked AI prose is not used
+    as evidence. Candidate search is bounded; no exhaustive assertion of finer-family
+    absence.
+  accessed_at: '2026-11-04T09:37:49.473379Z'
+  support: supports
+  snapshot_sha256: 01022dac269a0446cf5db8387c61cc00d5b13518c730228f9f45d326c43e4915
+- evidence_id: septin-ipr-IPR009348
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009348/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Npr2/NPRL2 full family joined to P39923. Unchecked AI prose is not used
+    as evidence. Candidate search is bounded; no exhaustive assertion of finer-family
+    absence.
+  accessed_at: '2026-11-04T09:37:49.807924Z'
+  support: supports
+  snapshot_sha256: 6f3fbab2e6a6228a6ae8b8c095d941a359a5da9b4a970afe9c2b17065203ed7c
+- evidence_id: septin-ipr-IPR005365
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005365/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Npr3/NPRL3 full family joined to P38742. Unchecked AI prose is not used
+    as evidence. Candidate search is bounded; no exhaustive assertion of finer-family
+    absence.
+  accessed_at: '2026-11-04T09:37:50.069290Z'
+  support: supports
+  snapshot_sha256: 7c0fc176e47b3038571175711c4fc0701a94d237f1daf6ee8bcc8ebe73e27e94
+- evidence_id: septin-GO0061700-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0061700/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor closure for the assigned identity
+  summary: Current exact parent class is present; this closure alone does not establish
+    a part_of edge.
+  accessed_at: '2026-11-04T09:37:50.175362Z'
+  support: supports
+  snapshot_sha256: c2c179aad5a5d72253c2b097933555c189c59e09b2ab1020f7f2d6f8583d6dff
+- evidence_id: septin-protein-P38164
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P38164.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P38164; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''SEA4''}, ''orderedLocusNames'': [{''value'': ''YBL104C''}], ''orfNames'':
+    [{''value'': ''YBL0808''}, {''value'': ''YBL103C-A''}]}]; taxon559292. Identity,
+    native annotation provenance and independent family cross-reference joins inspected.
+    Annotation placement does not make every cited paper an independent test of every
+    localization; protein identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:58.513455Z'
+  support: supports
+  snapshot_sha256: c6a2b4f82bca3bf9a6e97509724ec74500e4f346443dc7bcd61977f0974a2120
+- evidence_id: septin-protein-P53011
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P53011.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'P53011; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''SEH1''}, ''orderedLocusNames'': [{''value'': ''YGL100W''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:52.371337Z'
+  support: supports
+  snapshot_sha256: 35ef24fc4403d262e26dce09ca3df31c0ca581dd03ee5aec359a29f083be89ba
+- evidence_id: septin-protein-Q03897
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q03897.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q03897; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''MTC5''}, ''synonyms'': [{''value'': ''SEA3''}], ''orderedLocusNames'':
+    [{''value'': ''YDR128W''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:51.368806Z'
+  support: supports
+  snapshot_sha256: 07eba8d4c94ced4b372fcb9a21fc49509bff301bf690b910125c5accee772121
+- evidence_id: septin-protein-Q04491
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q04491.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q04491; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''SEC13''}, ''synonyms'': [{''value'': ''ANU3''}], ''orderedLocusNames'':
+    [{''value'': ''YLR208W''}], ''orfNames'': [{''value'': ''L8167.4''}]}]; taxon559292.
+    Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:37:55.474298Z'
+  support: supports
+  snapshot_sha256: 5ea1f9385e1989653cc9b1251babdb2a1e325e72d3b3617590028f3fca38207c
+- evidence_id: septin-protein-Q08281
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q08281.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q08281; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''RTC1''}, ''synonyms'': [{''value'': ''SEA2''}], ''orderedLocusNames'':
+    [{''value'': ''YOL138C''}]}]; taxon559292. Identity, native annotation provenance
+    and independent family cross-reference joins inspected. Annotation placement does
+    not make every cited paper an independent test of every localization; protein
+    identity alone does not establish whole-structure necessity.'
+  accessed_at: '2026-11-04T09:37:54.458526Z'
+  support: supports
+  snapshot_sha256: 9368c4334b0d13374d7359c494dc53d967c4d1c5d2ac6c77a29473ddb8000a5b
+- evidence_id: septin-gene-SEA2-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result Q08281; native gene records [{''geneName'':
+    {''value'': ''RTC1''}, ''synonyms'': [{''value'': ''SEA2''}], ''orderedLocusNames'':
+    [{''value'': ''YOL138C''}]}]. Current identity verification does not reconstruct
+    or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:38:03.099568Z'
+  support: supports
+  snapshot_sha256: e475f0037b7b78fcca3e868fe117ebb2cd01a4b0f4ed2153dfe6ad64959d706a
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:38:03.099568Z.
+- evidence_id: septin-gene-SEA3-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result Q03897; native gene records [{''geneName'':
+    {''value'': ''MTC5''}, ''synonyms'': [{''value'': ''SEA3''}], ''orderedLocusNames'':
+    [{''value'': ''YDR128W''}]}]. Current identity verification does not reconstruct
+    or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:55.858139Z'
+  support: supports
+  snapshot_sha256: a3cfef0704e04f3337683d3335fcb154dabe91608c988e01cb07b6dcf934b61e
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:55.858139Z.
+- evidence_id: septin-gene-SEA4-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEA4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P38164; native gene records [{''geneName'':
+    {''value'': ''SEA4''}, ''orderedLocusNames'': [{''value'': ''YBL104C''}], ''orfNames'':
+    [{''value'': ''YBL0808''}, {''value'': ''YBL103C-A''}]}]. Current identity verification
+    does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:57.535396Z'
+  support: supports
+  snapshot_sha256: 11b5e24e1144e94ad39dbc19c244556d78b8bcad2b84c1ed4ad3e71fa936bc81
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:57.535396Z.
+- evidence_id: septin-gene-SEH1-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEH1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result P53011; native gene records [{''geneName'':
+    {''value'': ''SEH1''}, ''orderedLocusNames'': [{''value'': ''YGL100W''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:59.612144Z'
+  support: supports
+  snapshot_sha256: 26ff0ea319ad5227fa8a264045b0f5935f47b9a8634a374b4c53bd9b9a9c5278
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:59.612144Z.
+- evidence_id: septin-gene-SEC13-559292
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result Q04491; native gene records [{''geneName'':
+    {''value'': ''SEC13''}, ''synonyms'': [{''value'': ''ANU3''}], ''orderedLocusNames'':
+    [{''value'': ''YLR208W''}], ''orfNames'': [{''value'': ''L8167.4''}]}]. Current
+    identity verification does not reconstruct or certify a historical query execution.'
+  accessed_at: '2026-11-04T09:37:53.509569Z'
+  support: supports
+  snapshot_sha256: 8967ba9e2ec39d6cb3ef7e6da9e8cd5ceb82f150094d58f932574e30155b6cba
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:53.509569Z.
+- evidence_id: septin-ipr-IPR037590
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037590/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: WDR24/Sea2 full family joined to Q08281/RTC1. Unchecked AI prose is not
+    used as evidence. Candidate search is bounded; no exhaustive assertion of finer-family
+    absence.
+  accessed_at: '2026-11-04T09:37:54.316041Z'
+  support: supports
+  snapshot_sha256: 84f64e7a2a4f54ea7162c19d0f2fe8c1ead6c12f95fffb9942a71481799f2650
+- evidence_id: septin-ipr-IPR049567
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR049567/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: WDR59-like/Sea3 full family joined to Q03897/MTC5. Unchecked AI prose is
+    not used as evidence. Candidate search is bounded; no exhaustive assertion of
+    finer-family absence.
+  accessed_at: '2026-11-04T09:37:54.814455Z'
+  support: supports
+  snapshot_sha256: 9df0350b3b4fa3bf41f38a9732745add041feb6d0fe59d6d5a5e3d3e18d67c7f
+- evidence_id: septin-ipr-IPR037593
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037593/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: MIOS/Sea4 full family joined to P38164. Unchecked AI prose is not used
+    as evidence. Candidate search is bounded; no exhaustive assertion of finer-family
+    absence.
+  accessed_at: '2026-11-04T09:37:54.937709Z'
+  support: supports
+  snapshot_sha256: 3cfac223a2bf6b8afd4545f1f1419d459a6e03b155d6efda52399ebae497f6b1
+- evidence_id: septin-ipr-IPR037363
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037363/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: The broader Sec13/Seh1 family does not uniquely identify each of the two
+    distinct constituent classes; its GATOR1 wording is not adopted as a biological
+    reassignment. Unchecked AI prose is not used as evidence. Candidate search is
+    bounded; no exhaustive assertion of finer-family absence.
+  accessed_at: '2026-11-04T09:37:55.271732Z'
+  support: supports
+  snapshot_sha256: 56226988fb5e1207346c5a72c10353602cfc00b2617edd105c2c7966f5765e13
+- evidence_id: septin-GO0097504-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097504/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor closure for the assigned identity
+  summary: Current exact parent class is present; this closure alone does not establish
+    a part_of edge.
+  accessed_at: '2026-11-04T09:37:55.401490Z'
+  support: supports
+  snapshot_sha256: d1cb8f86a0e26fca5d07bb8eb7b7d9d5955db4b4fe19e7729f78c3130c359ece
+- evidence_id: septin-protein-Q16637
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q16637.json
+  locator: Complete native accession, reviewed status, names/aliases/loci/taxon, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY annotations and InterPro xrefs
+  summary: 'Q16637; UniProtKB reviewed (Swiss-Prot); native genes [{''geneName'':
+    {''value'': ''SMN1''}, ''synonyms'': [{''value'': ''SMN''}, {''value'': ''SMNT''}]},
+    {''geneName'': {''value'': ''SMN2''}, ''synonyms'': [{''value'': ''SMNC''}]}];
+    taxon9606. Identity, native annotation provenance and independent family cross-reference
+    joins inspected. Annotation placement does not make every cited paper an independent
+    test of every localization; protein identity alone does not establish whole-structure
+    necessity.'
+  accessed_at: '2026-11-04T09:38:00.679527Z'
+  support: supports
+  snapshot_sha256: 6c74f5e85e685c7bc9a73dd2a2293b6973a6ac57e8990cc64ce93cc72a65127d
+- evidence_id: septin-gene-SMN1-9606
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASMN1%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete current reviewed exact-gene/taxon search result and primary/alias
+    names
+  summary: 'Exactly one current result Q16637; native gene records [{''geneName'':
+    {''value'': ''SMN1''}, ''synonyms'': [{''value'': ''SMN''}, {''value'': ''SMNT''}]},
+    {''geneName'': {''value'': ''SMN2''}, ''synonyms'': [{''value'': ''SMNC''}]}].
+    Current identity verification does not reconstruct or certify a historical query
+    execution.'
+  accessed_at: '2026-11-04T09:37:57.425941Z'
+  support: supports
+  snapshot_sha256: 04e57224e62cbab86e91d443ac43ee5cbd76ed2a7cca6ec50bfeb3edafd4d7db
+  search_scope: UniProtKB exact query encoded in URL; reviewed=true and exact taxon559292
+    or9606; size500/no date filter; complete returned result list inspected at 2026-11-04T09:37:57.425941Z.
+- evidence_id: septin-ipr-IPR040424
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040424/
+  locator: Native family name/type, complete descriptions and curation flags, member
+    signatures/hierarchy/overlap; independent UniProt member join
+  summary: Smn1 full family joined to Q16637, suitable for a generic SMN protein class
+    but neither the whole SMN complex nor exclusive human SMN1 occupancy. Unchecked
+    AI prose is not used as evidence. Candidate search is bounded; no exhaustive assertion
+    of finer-family absence.
+  accessed_at: '2026-11-04T09:37:56.020874Z'
+  support: supports
+  snapshot_sha256: 6733c6c3bc61d4d1f29cc0d9de746a4d1a8b7d773492bd3311c0cc1e36ec38d2
+- evidence_id: septin-liu1996-page-3555
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/6c4e0dd80f3c/emboj00014-0071.png
+  locator: Liu/Dreyfuss1996 scanned published page3555; actual pixels independently
+    viewed at original resolution
+  summary: Title, abstract and introduction; HeLa2-6 foci and0.1-1micrometer size
+    scope, RNA-metabolism role tentative. Scan quality/monochrome reproduction limits
+    image interpretation; no independent quantitative image analysis. Pages3557,3558,3565
+    were not inspected.
+  accessed_at: '2026-11-04T09:37:55.782349Z'
+  support: supports
+  snapshot_sha256: 7144ef6fadbd7d7178635ee8c69da669e7e38d3c57db3b773f8f47b8e98fa84f
+- evidence_id: septin-liu1996-page-3556
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/e795871a58ec/emboj00014-0072.png
+  locator: Liu/Dreyfuss1996 scanned published page3556; actual pixels independently
+    viewed at original resolution
+  summary: Figure1 and associated antibody/two-hybrid text; yeast two-hybrid interaction
+    is not automatically an in-vivo human whole-complex mechanism. Scan quality/monochrome
+    reproduction limits image interpretation; no independent quantitative image analysis.
+    Pages3557,3558,3565 were not inspected.
+  accessed_at: '2026-11-04T09:37:56.024425Z'
+  support: supports
+  snapshot_sha256: 4f3e3184133381b74757f526c3fa5769264d5b484e7b97ff4160b99961ba75f2
+- evidence_id: septin-liu1996-page-3559
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/2891aadd5660/emboj00014-0075.png
+  locator: Liu/Dreyfuss1996 scanned published page3559; actual pixels independently
+    viewed at original resolution
+  summary: 'Figure4 and associated text: SMN compared with coilin/fibrillarin and
+    actinomycin-D response. Scan quality/monochrome reproduction limits image interpretation;
+    no independent quantitative image analysis. Pages3557,3558,3565 were not inspected.'
+  accessed_at: '2026-11-04T09:37:56.054863Z'
+  support: supports
+  snapshot_sha256: fd916f4bbae047d1a2d8da17720b626b704366d05489a13699693565e40c2a3b
+- evidence_id: septin-liu1996-page-3560
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/b388cc323157/emboj00014-0076.png
+  locator: Liu/Dreyfuss1996 scanned published page3560; actual pixels independently
+    viewed at original resolution
+  summary: 'Figure5 and associated text: temperature/actinomycin-D comparisons and
+    Y12 detection boundary. Scan quality/monochrome reproduction limits image interpretation;
+    no independent quantitative image analysis. Pages3557,3558,3565 were not inspected.'
+  accessed_at: '2026-11-04T09:37:56.223314Z'
+  support: supports
+  snapshot_sha256: 22bdb00a67f99058f2e94e47414ec012f42898775ddc080942f14e85d2889460
+- evidence_id: septin-liu1996-page-3561
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/3064158e03de/emboj00014-0077.png
+  locator: Liu/Dreyfuss1996 scanned published page3561; actual pixels independently
+    viewed at original resolution
+  summary: 'Figure6 and associated text: no Y12-detectable snRNPs in the assayed gems;
+    cell-type differences, not a universal proteomic absence claim. Scan quality/monochrome
+    reproduction limits image interpretation; no independent quantitative image analysis.
+    Pages3557,3558,3565 were not inspected.'
+  accessed_at: '2026-11-04T09:37:56.305239Z'
+  support: supports
+  snapshot_sha256: bc675e666f3ebada9e0eae7033736151882f67f01cc65959c8d781a3bc4db114
+- evidence_id: septin-liu1996-page-3562
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/4390d31d580c/emboj00014-0078.png
+  locator: Liu/Dreyfuss1996 scanned published page3562; actual pixels independently
+    viewed at original resolution
+  summary: 'Figure7/mouse3T3 and discussion: SMN then the known marker, RNA-function
+    hypothesis and cell-state limits. Scan quality/monochrome reproduction limits
+    image interpretation; no independent quantitative image analysis. Pages3557,3558,3565
+    were not inspected.'
+  accessed_at: '2026-11-04T09:37:56.277598Z'
+  support: supports
+  snapshot_sha256: c992415554ef8e869b7e6e3edab16c87a9cef2c536c7625a1686c9fdea8d0c48
+- evidence_id: septin-liu1996-page-3563
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/a349beaf8b2a/emboj00014-0079.png
+  locator: Liu/Dreyfuss1996 scanned published page3563; actual pixels independently
+    viewed at original resolution
+  summary: 'Discussion and Methods: HeLa/NIH3T3 conditions,32C24h and actinomycin-D5micrograms/ml3h,
+    antibody approaches; not paralog-specific occupancy. Scan quality/monochrome reproduction
+    limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565
+    were not inspected.'
+  accessed_at: '2026-11-04T09:37:56.462787Z'
+  support: supports
+  snapshot_sha256: cbcc6882d2d6b8e86c42eff56c4fb45b11496a08e6de40ae8e4c8a2ddbed5cad
+- evidence_id: septin-liu1996-page-3564
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4b62/451956/b5a1f726fc86/emboj00014-0080.png
+  locator: Liu/Dreyfuss1996 scanned published page3564; actual pixels independently
+    viewed at original resolution
+  summary: Microscopy methods and references; LeicaTCS4D acquisition, no independent
+    intensity or colocalization quantitation. Scan quality/monochrome reproduction
+    limits image interpretation; no independent quantitative image analysis. Pages3557,3558,3565
+    were not inspected.
+  accessed_at: '2026-11-04T09:37:56.519186Z'
+  support: supports
+  snapshot_sha256: 77443814e838732585f0527b94df7e338012a9d2242004f311ef317bd14a4e86
+- evidence_id: septin-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA taxonomic response
+  summary: Saccharomyces cerevisiae, rank species. Biological species and S288C reference
+    strain are separate from exact assay strains and recombinant expression hosts.
+  accessed_at: '2026-11-04T09:37:56.898940Z'
+  support: supports
+  snapshot_sha256: 38f43dd1593a1d47416228ae385464f30aeb8302c3aadb45b3588d03744bc814
+- evidence_id: septin-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA taxonomic response
+  summary: Saccharomyces cerevisiae S288C, rank strain. Biological species and S288C
+    reference strain are separate from exact assay strains and recombinant expression
+    hosts.
+  accessed_at: '2026-11-04T09:37:56.898908Z'
+  support: supports
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: septin-tax-9606
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9606
+  locator: Complete ENA taxonomic response
+  summary: Homo sapiens, rank species. Biological species and S288C reference strain
+    are separate from exact assay strains and recombinant expression hosts.
+  accessed_at: '2026-11-04T09:37:57.043414Z'
+  support: supports
+  snapshot_sha256: ae6861231eabbe5c76a3e6240a9109a3163b77f2061b644c22bbdd1b01b15840
+- evidence_id: septin-pmid-12377769
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12377769+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Vps51p links the VFT complex to the SNARE Tlg1p. Authors: Siniossoglou
+    S, Pelham HR.. DOI:10.1074/jbc.m209428200. Scope: primary paper, complete native
+    abstract only in this evidence row. This metadata evidence does not imply full-body
+    access; successful separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.567087Z'
+  support: supports
+  snapshot_sha256: 804578cd84054446b3cbb081172b7b3f61fb32b976406b501c0cedd0144a1c8e
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.567087Z.
+- evidence_id: septin-doi-mbc_11_1_305
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.11.1.305%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Vps52p, Vps53p, and Vps54p form a novel multisubunit complex required
+    for protein sorting at the yeast late Golgi. Authors: Conibear E, Stevens TH..
+    DOI:10.1091/mbc.11.1.305. Scope: primary paper, complete native abstract only
+    in this evidence row. This metadata evidence does not imply full-body access;
+    successful separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.625460Z'
+  support: supports
+  snapshot_sha256: 828eed1d3ebe47e0ba40be3135ee376b2530648ef063536d63c34601585569c7
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.625460Z.
+- evidence_id: septin-doi-mbc_e02-10-0654
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e02-10-0654%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Vps51p mediates the association of the GARP (Vps52/53/54) complex with
+    the late Golgi t-SNARE Tlg1p. Authors: Conibear E, Cleck JN, Stevens TH.. DOI:10.1091/mbc.e02-10-0654.
+    Scope: primary paper, complete native abstract only in this evidence row. This
+    metadata evidence does not imply full-body access; successful separately inspected
+    bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.981033Z'
+  support: supports
+  snapshot_sha256: 7af1726489935f837e79e637e0df39826d8adc7f788c66445ca81c023e8a99f6
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.981033Z.
+- evidence_id: septin-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Global analysis of protein localization in budding yeast. Authors: Huh
+    WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea EK.. DOI:10.1038/nature02026.
+    Scope: primary paper, complete native abstract only in this evidence row. This
+    metadata evidence does not imply full-body access; successful separately inspected
+    bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.612822Z'
+  support: supports
+  snapshot_sha256: 22cb10c77fae30f93c6690dedcb90031ab7d7b93d5fa08626a202a6ceb9d7ba1
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.612822Z.
+- evidence_id: septin-pmid-21454883
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21454883+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'A conserved coatomer-related complex containing Sec13 and Seh1 dynamically
+    associates with the vacuole in Saccharomyces cerevisiae. Authors: Dokudovskaya
+    S, Waharte F, Schlessinger A, Pieper U, Devos DP, Cristea IM, Williams R, Salamero
+    J, Chait BT, Sali A, Field MC, Rout MP, Dargemont C.. DOI:10.1074/mcp.m110.006478.
+    Scope: primary paper, complete native abstract only in this evidence row. This
+    metadata evidence does not imply full-body access; successful separately inspected
+    bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.619176Z'
+  support: supports
+  snapshot_sha256: f8171f614ace6f7a4e100c69c0f4d8d9019826d91e3ff336a9680191563310f5
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.619176Z.
+- evidence_id: septin-doi-science_1232044
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1232044%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'A Tumor suppressor complex with GAP activity for the Rag GTPases that
+    signal amino acid sufficiency to mTORC1. Authors: Bar-Peled L, Chantranupong L,
+    Cherniack AD, Chen WW, Ottina KA, Grabiner BC, Spear ED, Carter SL, Meyerson M,
+    Sabatini DM.. DOI:10.1126/science.1232044. Scope: primary paper, complete native
+    abstract only in this evidence row. This metadata evidence does not imply full-body
+    access; successful separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.636654Z'
+  support: supports
+  snapshot_sha256: b5c18b8a0baaedbaf3b99d4420573b4d6b4846c4bba3389662a3c40644726f9c
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.636654Z.
+- evidence_id: septin-doi-scisignal_2004112
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscisignal.2004112%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Amino acid deprivation inhibits TORC1 through a GTPase-activating protein
+    complex for the Rag family GTPase Gtr1. Authors: Panchaud N, Péli-Gulli MP, De
+    Virgilio C.. DOI:10.1126/scisignal.2004112. Scope: primary paper, complete native
+    abstract only in this evidence row. This metadata evidence does not imply full-body
+    access; successful separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.622307Z'
+  support: supports
+  snapshot_sha256: bdaff8c5c365194d30744df1c851fcfddfb78caffd0f4fb15a0efcda8728ef6d
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.622307Z.
+- evidence_id: septin-pmid-10684247
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'The yeast nuclear pore complex: composition, architecture, and transport
+    mechanism. Authors: Rout MP, Aitchison JD, Suprapto A, Hjertaas K, Zhao Y, Chait
+    BT.. DOI:10.1083/jcb.148.4.635. Scope: primary paper, complete native abstract
+    only in this evidence row. This metadata evidence does not imply full-body access;
+    successful separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.592753Z'
+  support: supports
+  snapshot_sha256: 79c468820ecfc09cc0dea0cbdd6ca081c92e086f19790183f322c81826fcf2c7
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.592753Z.
+- evidence_id: septin-doi-cc_26000
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.4161%2Fcc.26000%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'SEACing the GAP that nEGOCiates TORC1 activation: evolutionary conservation
+    of Rag GTPase regulation. Authors: Panchaud N, Péli-Gulli MP, De Virgilio C..
+    DOI:10.4161/cc.26000. Scope: primary paper, complete native abstract only in this
+    evidence row. This metadata evidence does not imply full-body access; successful
+    separately inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.636683Z'
+  support: supports
+  snapshot_sha256: 34a2b2d1c20c342f15786ff6ec2b26ccc44c5f6a4e93a2521049284f2f567c9f
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.636683Z.
+- evidence_id: septin-pmid-11283611
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11283611+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Spinal muscular atrophy disrupts the interaction of ZPR1 with the SMN
+    protein. Authors: Gangwani L, Mikrut M, Theroux S, Sharma M, Davis RJ.. DOI:10.1038/35070059.
+    Scope: primary paper, complete native abstract only in this evidence row. This
+    metadata evidence does not imply full-body access; successful separately inspected
+    bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:06.014563Z'
+  support: supports
+  snapshot_sha256: e8f6e92e2d2642db0bb8016339fb7e622469b97fe6ecadefb1d6619f9947ca1c
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:06.014563Z.
+- evidence_id: septin-pmid-21072240
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21072240+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'WRAP53 is essential for Cajal body formation and for targeting the survival
+    of motor neuron complex to Cajal bodies. Authors: Mahmoudi S, Henriksson S, Weibrecht
+    I, Smith S, Söderberg O, Strömblad S, Wiman KG, Farnebo M.. DOI:10.1371/journal.pbio.1000521.
+    Scope: primary paper, complete native abstract only in this evidence row. This
+    metadata evidence does not imply full-body access; successful separately inspected
+    bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.599398Z'
+  support: supports
+  snapshot_sha256: bb8b31562726bd6e6f44d9feb3819562150729e4ad5078175032e56c4f7211e6
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.599398Z.
+- evidence_id: septin-pmid-8670859
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8670859+AND+SRC%3AMED&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'A novel nuclear structure containing the survival of motor neurons protein.
+    Authors: Liu Q, Dreyfuss G.. DOI:10.1002/j.1460-2075.1996.tb00725.x. Scope: primary
+    paper, complete native abstract only in this evidence row. This metadata evidence
+    does not imply full-body access; successful separately inspected bodies have independent
+    evidence rows.'
+  accessed_at: '2026-11-04T09:38:05.586920Z'
+  support: supports
+  snapshot_sha256: 85f6a971fab1d9636d844332d7fc7df71bd6d6d298be472ab9c677f6cb08e9b3
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:05.586920Z.
+- evidence_id: septin-doi-301992
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1086%2F301992%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Coiled bodies and gems: Janus or gemini? Authors: Matera AG, Frey MR..
+    DOI:10.1086/301992. Scope: secondary review, metadata only (no native abstract).
+    This metadata evidence does not imply full-body access; successful separately
+    inspected bodies have independent evidence rows.'
+  accessed_at: '2026-11-04T09:38:06.236741Z'
+  support: supports
+  snapshot_sha256: 0a0e1e4f67d7dac81afc5e19b424cd7e39ae4703919519a4e99280c0ee4cc996
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:06.236741Z.
+- evidence_id: septin-doi-annurev_cellbio_16_1_273
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1146%2Fannurev.cellbio.16.1.273%22&format=json&resultType=core&pageSize=10
+  locator: Complete native EuropePMC CORE citation and available abstractText
+  summary: 'Cajal bodies: the first 100 years. Authors: Gall JG.. DOI:10.1146/annurev.cellbio.16.1.273.
+    Scope: secondary review, complete native abstract only. This metadata evidence
+    does not imply full-body access; successful separately inspected bodies have independent
+    evidence rows.'
+  accessed_at: '2026-11-04T09:38:06.436760Z'
+  support: supports
+  snapshot_sha256: 6f09286aa33668b5ae19a119255d1824b2ee463f0e4b6e2fe8df2ece2ce166a4
+  search_scope: EuropePMC exact DOI or PMID query encoded in URL, CORE format,pageSize10,no
+    date filter; one returned result inspected at 2026-11-04T09:38:06.436760Z.
+- evidence_id: septin-panchaud2013-pdf
+  kind: primary_source
+  reference: https://www.unifr.ch/bio/en/assets/public/Research/Claudio-De-Virgilio/Panchaud%20et%20al.%20-%202013.pdf
+  locator: 'Panchaud ScienceSignaling2013 genuine author PDF, main published pages1-6:
+    Results, Methods, Figures1-4 captions; supplementary index and captionsS1-S4 encountered,
+    but no supplemental experiments/pixels or TablesS1/S2 independently analyzed'
+  summary: Direct Iml1-Gtr1 interaction and purified-protein GAP assays support negative
+    TORC1 regulation. Transient interaction changes after leucine withdrawal differ
+    from wholesale loss of pre-existing vacuolar localization. Arg943 mutants, GAP
+    fragments and full-length protein tests retain their conditions. Recombinant bacterial
+    expression and yeast assays are distinct; precise supplementary strain-table identities
+    were not independently read.
+  accessed_at: '2026-11-04T09:39:59.334930Z'
+  support: supports
+  snapshot_sha256: dece5f78e1cb8efaf4b5e532cc6a7193e6387523d780d68d076ce527ead8d4c7
+- evidence_id: septin-barpeled2013-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/3728654/
+  locator: Bar-Peled2013 genuine numeric PMC main body, Figures1-5 captions, HEK-293T
+    and Drosophila S2 experimental descriptions; supplementary methods/data not read
+  summary: Human GATOR1/2 constituent boundaries, amino-acid-dependent S6K phosphorylation,
+    genetic epistasis and Rag GAP activity support comparative roles. Sec13 was excluded
+    from functional depletion because of other complexes. Human/fly functional evidence
+    is not a native yeast assembly experiment; the original paper discussion predates
+    later yeast SEACIT/SEACAT framing.
+  accessed_at: '2026-11-04T09:39:57.775331Z'
+  support: supports
+  snapshot_sha256: 4a573fa396757b39aa401829e6c0caa31266121777cf80b7ce0f2b1ded5d0e7f
+- evidence_id: septin-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/organisms
+  locator: Complete official unpaginated catalogue; all20 organism entries and28 organism/dataset
+    pairs independently read
+  summary: No Saccharomyces cerevisiae, S288C or Homo sapiens biological host is listed.
+    Downstream host-matched module queries are not applicable; bacterial recombinant
+    expression hosts are not substitutes. Catalogue noncoverage does not prove biological
+    absence.
+  accessed_at: '2026-11-04T09:35:18.387085Z'
+  support: supports
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+  search_scope: Official /api/organisms, complete returned20 rows/28 organism-dataset
+    pairs; inspected for Saccharomyces cerevisiae/S288C/BY4741/BY4742 and Homo sapiens
+    at 2026-11-04T09:35:18.387085Z; no date filter, no additional host inferred.
+- evidence_id: septin-adapter-runner-historical
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Actual historical Nov3 00:49Z command receipt
+  summary: Actual previous exit1 PermissionError reading runner pyvenv.cfg. No current
+    invocation claimed. Current official public-catalogue fallback is separately retrieved
+    and assessed.
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+- evidence_id: septin-original-native-checks
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/adversary-septin/original-checks.json
+  locator: Four actual native validate/render pairs and52 historical source-input
+    occurrences
+  summary: All four original YAML documents validate0 and render0 to exact original
+    Markdown; all52 historical input occurrences match their frozen Git revisions.
+    All four current target hashes are unchanged.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: supports
+  snapshot_sha256: 820a669ea4711a39f58890993a2f740eb5c3954db0456bbdae5ef295a3c1ebb8
+- evidence_id: septin-record-garp_complex
+  kind: record_content
+  reference: data/structures/other/garp_complex.yaml
+  locator: Entire current maintained record including history, discussions, examples,
+    functions and every graph node/edge
+  summary: Current target independently read in full, unchanged from original frozen
+    input. Historical rationale remains provenance rather than new experimental evidence.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b
+- evidence_id: septin-original-garp_complex
+  kind: prior_review
+  reference: reviews/structured/20261022T065211Z-garp-complex-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations
+  summary: 'Exact inherited identities, scopes and formal expression-only applicability
+    exclusion inspected. No own historical failed-access evidence-kind defect found:
+    existing limitations do not imply falsely retained body evidence. Old batch26
+    global execution provenance remains historical, not a current execution claim.'
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 165d6c3ba3cb8fc2213d94017967e656da05b90c6d588e85859189994947e211
+- evidence_id: septin-native-garp_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Four reviewed examples/four COVERED constituent nodes; one separate
+    Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent. Native
+    identity/coverage is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:35:57.051821Z'
+  support: supports
+  snapshot_sha256: fb38ffdd4ac04b6f2c87e5e1ca117dbb62ed893d44f98cd7eb6b02e63bea63ca
+- evidence_id: septin-native-garp_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 670ea06510e5e96ca0c5707c009c1fa8932c907c82b49462685e055a6afa2737
+  summary: Exit0. Four reviewed examples/four COVERED constituent nodes; one separate
+    Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent. Native
+    identity/coverage is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:35:57.465122Z'
+  support: supports
+  snapshot_sha256: 66dc609cd5f91a52fec0483de38da98bd0a2733fc8185654bcdce8286f7aefaf
+- evidence_id: septin-record-gator1_complex
+  kind: record_content
+  reference: data/structures/other/gator1_complex.yaml
+  locator: Entire current maintained record including history, discussions, examples,
+    functions and every graph node/edge
+  summary: Current target independently read in full, unchanged from original frozen
+    input. Historical rationale remains provenance rather than new experimental evidence.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6
+- evidence_id: septin-original-gator1_complex
+  kind: prior_review
+  reference: reviews/structured/20261022T065212Z-gator1-complex-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations
+  summary: 'Exact inherited identities, scopes and formal expression-only applicability
+    exclusion inspected. No own historical failed-access evidence-kind defect found:
+    existing limitations do not imply falsely retained body evidence. Old batch26
+    global execution provenance remains historical, not a current execution claim.'
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 646e7287b959db5775121eb39f87f6bec0a04672a28059213bb5dab430b88f57
+- evidence_id: septin-native-gator1_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Three reviewed examples/three COVERED constituent nodes; separate
+    Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Native identity/coverage
+    is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:35:59.101897Z'
+  support: supports
+  snapshot_sha256: 581bb3490f74cc361c98331028c9bbee85d72d6d0087aa34ecbb10ad580e7d02
+- evidence_id: septin-native-gator1_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 12ced6f0f34184e7513c99561c2913631f30e4d14b6ef7d56da9f4cdd5233532
+  summary: Exit0. Three reviewed examples/three COVERED constituent nodes; separate
+    Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Native identity/coverage
+    is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:35:59.514680Z'
+  support: supports
+  snapshot_sha256: 75f9f7c07f9a4be6dbe7c4bde64d1f64f37208335df02beaa3a8a5283b27a08d
+- evidence_id: septin-record-gator2_complex
+  kind: record_content
+  reference: data/structures/other/gator2_complex.yaml
+  locator: Entire current maintained record including history, discussions, examples,
+    functions and every graph node/edge
+  summary: Current target independently read in full, unchanged from original frozen
+    input. Historical rationale remains provenance rather than new experimental evidence.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f
+- evidence_id: septin-original-gator2_complex
+  kind: prior_review
+  reference: reviews/structured/20261022T065213Z-gator2-complex-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations
+  summary: 'Exact inherited identities, scopes and formal expression-only applicability
+    exclusion inspected. No own historical failed-access evidence-kind defect found:
+    existing limitations do not imply falsely retained body evidence. Old batch26
+    global execution provenance remains historical, not a current execution claim.'
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: cb6835252515a3b7c4177209b74bda221c35031db6ec598d1859a6d784013c03
+- evidence_id: septin-native-gator2_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-verify-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. Five reviewed examples and five COVERED constituent nodes. Native
+    identity/coverage is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:36:01.147531Z'
+  support: supports
+  snapshot_sha256: f5ba8354b430a580b44115fdf5c6c4b6b69988571182742c7ce46c4e91b678fb
+- evidence_id: septin-native-gator2_complex-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-causal-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 db35303745367e8ad8256402bed7b218634934c51f4875551c7ed46370649dd7
+  summary: Exit0. Five reviewed examples and five COVERED constituent nodes. Native
+    identity/coverage is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:36:01.567668Z'
+  support: supports
+  snapshot_sha256: c3907af30d6680daf8b2dcf7651f7b4220279d3fc987275b931dfb5555f3f560
+- evidence_id: septin-record-gemini_of_cajal_bodies
+  kind: record_content
+  reference: data/structures/other/gemini_of_cajal_bodies.yaml
+  locator: Entire current maintained record including history, discussions, examples,
+    functions and every graph node/edge
+  summary: Current target independently read in full, unchanged from original frozen
+    input. Historical rationale remains provenance rather than new experimental evidence.
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3
+- evidence_id: septin-original-gemini_of_cajal_bodies
+  kind: prior_review
+  reference: reviews/structured/20261022T065213Z-gemini-of-cajal-bodies-audit/review.yaml
+  locator: Complete original YAML and deterministic Markdown, all evidence/checks/findings/actions/limitations
+  summary: 'Exact inherited identities, scopes and formal expression-only applicability
+    exclusion inspected. No own historical failed-access evidence-kind defect found:
+    existing limitations do not imply falsely retained body evidence. Old batch26
+    global execution provenance remains historical, not a current execution claim.'
+  accessed_at: '2026-11-04T09:47:35.067840Z'
+  support: context_only
+  snapshot_sha256: 40620e81c66f67eb4c249845e408091971178beffdafd548a85b64ac61b829a5
+- evidence_id: septin-native-gemini_of_cajal_bodies-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-verify-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: Exit0. One reviewed example and one COVERED constituent node; correct native
+    SMN1 query does not establish SMN1-only gem occupancy. Native identity/coverage
+    is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:36:03.153172Z'
+  support: supports
+  snapshot_sha256: c1b4d3927cb5383ef1ec782b270876d1bf23b721a3cde31df3a65df92610cd53
+- evidence_id: septin-native-gemini_of_cajal_bodies-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-causal-receipt.json
+  locator: Actual command receipt and independently read log; logSHA256 3f290c9f5bb43373260209b189f780482f1797642a96c26da338aaa3535f7628
+  summary: Exit0. One reviewed example and one COVERED constituent node; correct native
+    SMN1 query does not establish SMN1-only gem occupancy. Native identity/coverage
+    is not independent biological membership or necessity proof.
+  accessed_at: '2026-11-04T09:36:03.564975Z'
+  support: supports
+  snapshot_sha256: a2fa973b13f92b538aba62cea9df02cd07c821d4439ca75e195d525212aba1ef
+- evidence_id: check-qc
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/qc.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-04T09:39:57.229795Z'
+  support: supports
+  summary: 'Full native QC passed: 1054 tests passed, 3 skipped; schema, strict, history,
+    generated products and corpus gates passed.'
+  snapshot_sha256: 1f2d4f191245bafc53d424d234b5ff50f06a3430b1af7a652a41246585935bcb
+- evidence_id: check-labels
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/labels.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-04T09:34:36.763259Z'
+  support: supports
+  summary: 4234 canonical, 50 synonym and 9 exception matches; 923 SKIPPED_NO_ADAPTER
+    pairs remain unverified by an authority adapter.
+  snapshot_sha256: 6cdfb05df9a27194f05a5fd7f851783f817ac1523ca0bbfa54fe0e0d18775905
+- evidence_id: check-trait-links
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/trait-links.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-04T09:34:15.345091Z'
+  support: supports
+  summary: Native TraitMech link check passed.
+  snapshot_sha256: 8b336cdefbbd3daf6da8787990efdbe346c95e2c8361d50b7eb68a18f2d5a44a
+- evidence_id: check-vendored
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/vendored.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-04T09:34:09.720239Z'
+  support: supports
+  summary: Pinned governed files match; native vendored check passed.
+  snapshot_sha256: b1f169d103aaefa930745468bcca171e5867b9cc49e4e74311e458097e3252a6
+- evidence_id: check-curies
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/curies.log
+  locator: Actual command stdout/stderr; receipt contains exact head/base and start/finish
+  accessed_at: '2026-11-04T09:34:35.584179Z'
+  support: supports
+  summary: 'Exit zero: 5264 OK, 909 UNREACHABLE PMIDs due to HTTP414, 254 SKIPPED.
+    Existing #2514 tracks batching/reporting. Supplemental bounded requests verified
+    the 909 PMIDs separately; skipped identifiers are not claimed resolved.'
+  snapshot_sha256: fb3be251020aac118f6df680372ae7aaa32c2a1dd3366648cde95494f19d9dd2
+- evidence_id: focused
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/focused-results.json
+  locator: All twenty actual target schema/strict command outputs
+  accessed_at: '2026-11-04T09:56:11Z'
+  support: supports
+  summary: Ten schema and ten strict commands returned exit zero.
+  snapshot_sha256: ff90271047dec76bba04a044f4b3a6bee9b209ede95989f45e0b28a22d026825
+- evidence_id: supplemental-pmid
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/pmid-chunks-receipt.json
+  locator: Complete native-report PMID set checked with unchanged resolver in batches
+    of at most fifty
+  accessed_at: '2026-11-04T09:36:07.740525Z'
+  support: supports
+  summary: 909 PMIDs returned OK. Original report/cache unchanged; skipped identifiers
+    remain unverified.
+  snapshot_sha256: 56ca36c7ebbae549927d89b0466bffb3afaa35058d19406aa65041789b6feaa8
+- evidence_id: historical-adapter-runner-availability
+  kind: validation
+  reference: /private/tmp/cellstructure-pr2344-20261102-agy3x2dx/adversary-septin/adapter-datasets-receipt.json
+  locator: Historical runner invocation receipt; exact retained SHA256 reverified
+    during PR2391 synthesis
+  accessed_at: '2026-11-03T00:49:00.863225Z'
+  support: context_only
+  snapshot_sha256: c3305faf20767e2af8e5a4dd03945d40f8491c872990b7ac28b87bd93c2e177d
+  summary: Actual runner invocation at 2026-11-03T00:49:00Z returned exit1 with OS
+    PermissionError reading the configured runner pyvenv.cfg. This is retained historical
+    availability evidence, not a fresh attempt or a scientific validation failure.
+    Native policy permits inspected source-catalogue fallback.
+- evidence_id: root-native-exocyst-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:46.209259Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-exocyst-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exocyst-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:46.631000Z'
+  support: context_only
+  snapshot_sha256: 56bd7f61e4a9cd26f012e694eb60bcbf7aaf260d44cbf5b4da4548f2da5890bf
+  summary: 8 represented protein examples; 9 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-exodeoxyribonuclease_v_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:47.881787Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-exodeoxyribonuclease_v_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exodeoxyribonuclease_v_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:48.291994Z'
+  support: context_only
+  snapshot_sha256: 01a53a3123ac3dc4609a368f0b79b9a22d6c7c3430ac66e5cdfa2162bfe008d9
+  summary: 3 represented protein examples; 3 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-exomer_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:49.723035Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-exomer_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/exomer_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:50.137002Z'
+  support: context_only
+  snapshot_sha256: a26f9e5dbf195446fdf539e5dd1ff8e21f683e5aed3fa0e2aa030cf0d115dd8b
+  summary: 5 represented protein examples; 6 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-fact_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:51.320646Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-fact_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fact_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:51.730489Z'
+  support: context_only
+  snapshot_sha256: 564343089c790c3976a2096f605a72df5ebe0ad67af0969f3f6d41a88005eb8a
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-fmn_reductase_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:52.982901Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-fmn_reductase_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/fmn_reductase_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:53.394637Z'
+  support: context_only
+  snapshot_sha256: ff0b115d5574011d1a8f0573dce8a722f08305763ff4d2bde3716bb4c4710a38
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gamma_dna_polymerase_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:54.537478Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gamma_dna_polymerase_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gamma_dna_polymerase_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:54.952221Z'
+  support: context_only
+  snapshot_sha256: 0314a6b14e8b8067e2bba90a07d49cf0bec7624457ae2ea726e5edbc6cf48157
+  summary: 2 represented protein examples; 2 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-garp_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:57.051821Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-garp_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/garp_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:57.465122Z'
+  support: context_only
+  snapshot_sha256: 670ea06510e5e96ca0c5707c009c1fa8932c907c82b49462685e055a6afa2737
+  summary: 4 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gator1_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:59.101897Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gator1_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator1_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:35:59.514680Z'
+  support: context_only
+  snapshot_sha256: 12ced6f0f34184e7513c99561c2913631f30e4d14b6ef7d56da9f4cdd5233532
+  summary: 3 represented protein examples; 4 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gator2_complex-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:36:01.147531Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gator2_complex-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gator2_complex-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:36:01.567668Z'
+  support: context_only
+  snapshot_sha256: db35303745367e8ad8256402bed7b218634934c51f4875551c7ed46370649dd7
+  summary: 5 represented protein examples; 5 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gemini_of_cajal_bodies-uniprot-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-verify.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:36:03.153172Z'
+  support: context_only
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+- evidence_id: root-native-gemini_of_cajal_bodies-uniprot-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batches-2346-2397-20261103/pr2392/gemini_of_cajal_bodies-uniprot-causal.log
+  locator: Actual native command output; associated receipt binds command, source
+    head, base and UTC interval
+  accessed_at: '2026-11-04T09:36:03.564975Z'
+  support: context_only
+  snapshot_sha256: 3f290c9f5bb43373260209b189f780482f1797642a96c26da338aaa3535f7628
+  summary: 1 represented protein examples; 1 typed GENE_OR_PROTEIN nodes. Full native
+    coverage classifications are retained in the command output. Actual exit0; inventory
+    is distinct from biological claim and source-scope assessment.
+assessments:
+- assessment_id: micro-exocyst-identity
+  area: identity
+  topic: Exact exocyst identity, definition and boundary
+  outcome: supported
+  summary: Current GO0000145 identity and broad conserved tethering definition agree
+    with authority. Yeast species example is appropriate; Sec4 is a regulatory partner
+    outside the defined stable Sec/Exo assembly. No separate subunit record or forced
+    Sec4 component is required.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-go-0000145
+  - micro-ancestors-0000145
+  - micro-tax-4932
+  - micro-doi-0
+  - micro-doi-8
+  - micro-protein-P07560
+- assessment_id: micro-exocyst-composition
+  area: evidence
+  topic: Historical identification and eighth constituent
+  outcome: supported
+  summary: TerBush1996 complete abstract supports seven named constituents; Guo Exo841999
+    complete abstract supplies the eighth. The record correctly distinguishes these
+    papers. Fresh TerBush1995 body supports the earlier Sec6/8/15 assembly without
+    projecting all later identities into that experiment.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-doi-0
+  - micro-doi-4
+  - micro-PMC2199927-jats
+- assessment_id: micro-exocyst-proteins
+  area: grounding
+  topic: Eight reference identities, primary genes and current bounded queries
+  outcome: supported
+  summary: Eight reviewed S288C accession/gene pairs and external Sec4 are valid.
+    Present exact-gene/taxon queries each return the intended reference; this is current
+    confirmation, not reconstruction of historical retrieval. UniProt localization
+    annotations and original PMID14562095 abstract do not certify unread Huh supplementary
+    rows.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-tax-559292
+  - micro-pmid-14562095
+  - micro-protein-P33332
+  - micro-protein-P89102
+  - micro-protein-P32844
+  - micro-protein-P32855
+  - micro-protein-Q06245
+  - micro-protein-P22224
+  - micro-protein-P19658
+  - micro-protein-P38261
+  - micro-protein-P07560
+  - micro-query-SEC3-559292
+  - micro-query-SEC5-559292
+  - micro-query-SEC6-559292
+  - micro-query-SEC8-559292
+  - micro-query-SEC10-559292
+  - micro-query-SEC15-559292
+  - micro-query-EXO70-559292
+  - micro-query-EXO84-559292
+- assessment_id: micro-exocyst-families
+  area: grounding
+  topic: Six resolvable current family classes
+  outcome: concern
+  summary: Six native whole-protein families match the explicitly unresolved Sec5/Sec6/Sec8/Sec15/Exo70/Exo84
+    classes and reference xrefs. Complete reviewed-member sets corroborate homologous
+    class scope, including paralogs and proteins with other functions; they do not
+    imply exclusive complex membership. Current label-only task can be narrowed for
+    these six.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-prior-0
+  - micro-policy
+  - micro-family-IPR029175
+  - micro-family-IPR010326
+  - micro-family-IPR039682
+  - micro-family-IPR007225
+  - micro-family-IPR004140
+  - micro-family-IPR033961
+  - micro-members-IPR029175
+  - micro-members-IPR010326-retry
+  - micro-members-IPR039682-retry
+  - micro-members-IPR007225-retry
+  - micro-members-IPR004140-retry
+  - micro-members-IPR033961
+- assessment_id: micro-exocyst-unresolved-boundaries
+  area: grounding
+  topic: Sec3 domains and broader Sec10-like class
+  outcome: supported
+  summary: Retain current uncertainty for Sec3 and Sec10. Sec3 domain/superfamily
+    xrefs do not independently identify its full-protein class; Sec10-like includes
+    additional related proteins. No universal absence of a better family is claimed
+    from this bounded authority inspection.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-family-IPR028258
+  - micro-family-IPR019160
+  - micro-family-IPR048628
+  - micro-family-IPR009976-retry
+  - micro-protein-P33332
+  - micro-protein-Q06245
+- assessment_id: micro-exocyst-targeting
+  area: graph
+  topic: Sec4 targeting and localization relations
+  outcome: supported
+  summary: Sec4–Sec15 and coarse targeted-exocytosis relations agree with the complete
+    Guo1999 abstract/native annotation; Finger1998 is complete abstract tier. Boyd
+    primary EM text/captions distinguish Sec3 peripheral localization from vesicle-associated
+    other subunits. No atomistic fusion mechanism, exact universal localization or
+    image pixel reanalysis claimed.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-doi-1
+  - micro-doi-8
+  - micro-PMC2172445-jats
+  - micro-go-0006887
+- assessment_id: micro-exocyst-stale-refresh
+  area: graph
+  topic: Substantive current constituent expansion
+  outcome: supported
+  summary: Six added component-ref nodes identify existing maintained constituents
+    and seven new contributes-to edges connect them, including Sec3, to the exocyst.
+    Their cited seven-subunit and Exo84 primary abstracts support membership at their
+    stated tiers. These are valid coarse contributions, not newly demonstrated necessity
+    or the conditional mutant-integrity observation.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-delta-0
+  - micro-doi-0
+  - micro-doi-1
+  - micro-doi-4
+  - micro-PMC2199927-jats
+  - micro-graph-policy
+- assessment_id: micro-exocyst-conditional-integrity
+  area: completeness
+  topic: Tested mutant-associated recovery result
+  outcome: concern
+  summary: Fresh TerBush1995 body pp307–308/Fig6 directly supports altered Sec8-tag
+    coassociation in sec3-2/sec5-24/sec10-2 backgrounds at25C, with wild-type allele
+    rescue described as data not shown. This conditional physical-composition observation
+    remains absent from generic roles and the refreshed membership graph. No complete
+    intracellular depletion, universal assembly failure or forced ESSENTIAL follows.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-prior-0
+  - micro-delta-0
+  - micro-PMC2199927-jats
+  - micro-schema
+  - micro-graph-policy
+  - micro-exocyst-independent-challenge
+- assessment_id: micro-exocyst-access
+  area: evidence
+  topic: Current source tiers and historical access failures
+  outcome: unknown
+  summary: TerBush1995 and Boyd2004 genuine bodies were read at declared extents.
+    TerBush1996, Finger1998, GuoSec41999 and GuoExo841999 remain complete indexed
+    abstracts after blocked/stub routes; Huh2003/Zhang2005/Baek2010 are abstract/native-annotation
+    context. No body conclusions are borrowed from challenged HTML or silently upgraded
+    old receipts.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-doi-0
+  - micro-doi-1
+  - micro-doi-4
+  - micro-doi-8
+  - micro-pmid-14562095
+  - micro-pmid-15788396
+  - micro-pmid-20139078
+  - micro-PMC2199927-jats
+  - micro-PMC2172445-jats
+  - micro-access-PMC452473-numeric
+  - micro-access-exo84-pdf
+- assessment_id: micro-recbcd-identity
+  area: identity
+  topic: Exact enzyme complex and hierarchy
+  outcome: supported
+  summary: GO0009338 identifies the RecB/RecC/RecD enzyme class; GO0140535/GO1902494
+    are genuine is_a ancestors. Coarse ATP-dependent cleavage function GO0008854 and
+    product wording are supported. No conflation of molecular function with structural
+    identity.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-go-0009338
+  - micro-ancestors-0009338
+  - micro-go-0140535
+  - micro-go-1902494
+  - micro-go-0008854
+- assessment_id: micro-recbcd-taxon
+  area: scope
+  topic: Species source, reference strain and recombinant preparation
+  outcome: supported
+  summary: PDB species source562 is appropriate. Three reviewed proteins are K-12
+    reference annotations, while Singleton Methods coexpress full-length proteins
+    in V330 delta-recBCD with pPB520/pPB800 and pMS421. Current canonical note says
+    bacterial source, not an in-vivo K-12 assay; no strain mismatch is established.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-tax-562-retry
+  - micro-tax-83333
+  - micro-single-nature
+  - micro-pdb-1W36-entity1
+  - micro-pdb-1W36-entity2
+  - micro-pdb-1W36-entity3
+- assessment_id: micro-recbcd-groundings
+  area: grounding
+  topic: RecB/RecC/RecD families and stale graph propagation
+  outcome: supported
+  summary: 'IPR004586,IPR006697,IPR006344 identify the matching RecB/C/D families
+    and occur in P08394/P07648/P04993 native xrefs. Added graph groundings match existing
+    component_ref classes and do not alter type or biological function. Historical
+    #2432 is not resolved as a whole by this local check.'
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-delta-1
+  - micro-family-IPR004586
+  - micro-family-IPR006697
+  - micro-family-IPR006344
+  - micro-protein-P08394
+  - micro-protein-P07648
+  - micro-protein-P04993
+- assessment_id: micro-recbcd-proteins
+  area: grounding
+  topic: Three primary names/loci and current queries
+  outcome: supported
+  summary: Reviewed recB/P08394/b2820, recC/P07648/b2822 and recD/P04993/b2819 K-12
+    references are verified. Each present exact-gene query returns the intended record.
+    Protein name and family association are not an experiment proving all mechanism
+    or universal formation necessity.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-query-recB-83333
+  - micro-query-recC-83333
+  - micro-query-recD-83333
+  - micro-protein-P08394
+  - micro-protein-P07648
+  - micro-protein-P04993
+- assessment_id: micro-recbcd-architecture
+  area: evidence
+  topic: Protein heterotrimer and DNA substrate
+  outcome: supported
+  summary: Fresh native PDB entities and genuine Singleton body identify three protein
+    chains and the43-nt synthetic hairpin. Assembly entity count4 includes DNA. RecB/RecD
+    opposite motor polarities, RecC routing/Chi recognition and proposed structural
+    regulation are distinguished from direct measured activities.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-single-nature
+  - micro-pdb-1W36
+  - micro-pdb-1W36-assembly1
+  - micro-pdb-1W36-entity4
+- assessment_id: micro-recbcd-graph
+  area: graph
+  topic: Coarse activity and substrate-product relations
+  outcome: supported
+  summary: The seven maintained graph relations stay at complex enables activity,
+    subunits contribute, complex binds DNA and cleavage produces phosphooligonucleotides.
+    Authority plus primary architecture/reconstitution abstract support this level;
+    the graph does not assert every proposed Chi-switch mechanism as an observed causal
+    event.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-single-nature
+  - micro-pmid-1618858
+  - micro-go-0008854
+  - micro-graph-policy
+- assessment_id: micro-recbcd-necessity
+  area: scope
+  topic: No optional necessity mandate
+  outcome: supported
+  summary: No essentiality field is required for these three constituents. Masterson
+    complete abstract supports reconstitution, including weaker RecBC activity under
+    altered conditions; this does not require a new experiment, uniform ESSENTIAL
+    classification or claim that RecD is dispensable for every defined activity.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-pmid-1618858
+  - micro-schema
+  - micro-policy
+- assessment_id: micro-recbcd-access
+  area: evidence
+  topic: Genuine body improvement versus retained historical diagnostics
+  outcome: supported
+  summary: Singleton2004 publisher now exposes a genuine complete scientific main
+    text and Methods, independently read; the old challenge receipt remains historical.
+    Masterson1992 remains complete indexed abstract after PDF403. No old access result
+    is rewritten or full-body claim made for Masterson.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-single-nature
+  - micro-pmid-1618858
+  - micro-access-masterson-pdf
+  - micro-historical-1-access-singleton-publisher
+- assessment_id: micro-exomer-identity
+  area: identity
+  topic: Selective cargo-adaptor identity and hierarchy
+  outcome: supported
+  summary: Active GO0034044 definition and protein-complex parent agree. Current class
+    names the stable Chs5/ChAP cargo adaptor without asserting a universal five-subunit
+    stoichiometry. Species-level S.cerevisiae canonical/presence context is supported
+    qualitatively, not as a quantitative prevalence survey.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-go-0034044
+  - micro-ancestors-0034044
+  - micro-tax-4932
+  - micro-PMC1635352-legacy
+  - micro-PMC2064389-jats
+- assessment_id: micro-exomer-components
+  area: scope
+  topic: Five class rows and external Arf1 boundary
+  outcome: supported
+  summary: Native yeast purification and recombinant experiments support Chs5 plus
+    the four named ChAP classes, while heterogeneous ratios/subcomplexes remain possible.
+    Purified core can be isolated separately from recruiting Arf1; external Arf1 graph
+    representation is defensible despite broader database subunit prose. Individual
+    family rows do not require every member in every particle.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-PMC1635352-legacy
+  - micro-PMC2064389-jats
+  - micro-PMC5290816-legacy
+  - micro-protein-P11076
+  - micro-policy
+- assessment_id: micro-exomer-proteins
+  area: grounding
+  topic: Reference proteins and current primary-name queries
+  outcome: supported
+  summary: Five reviewed S288C reference examples CHS5/Q12114,CHS6/P40955,BCH1/Q05029,BUD7/Q08754,BCH2/P36122
+    and external ARF1/P11076 are verified. Exact current queries are bounded present
+    checks, not reconstructions of dated selections. DDY1810, SEY6210/CWY and Sf9
+    experimental systems are separately identified.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-tax-559292
+  - micro-protein-Q12114
+  - micro-protein-P40955
+  - micro-protein-Q05029
+  - micro-protein-Q08754
+  - micro-protein-P36122
+  - micro-protein-P11076
+  - micro-query-CHS5-559292
+  - micro-query-CHS6-559292
+  - micro-query-BCH1-559292
+  - micro-query-BUD7-559292
+  - micro-query-BCH2-559292
+- assessment_id: micro-exomer-chs5-family
+  area: grounding
+  topic: Resolvable Chs5 family task
+  outcome: concern
+  summary: Native IPR052827 family name/type/signature, Q12114 xref and complete three-member
+    reviewed set support the homologous Chs5 class. The current explicit task remains
+    label-only for this resolvable class. LLM-flagged unchecked description is excluded
+    as independent primary biology.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-prior-2
+  - micro-family-IPR052827
+  - micro-members-IPR052827
+  - micro-protein-Q12114
+  - micro-policy
+- assessment_id: micro-exomer-chap-family
+  area: grounding
+  topic: Shared ChAP versus individual paralog boundaries
+  outcome: supported
+  summary: IPR015374 represents a shared ChAP family and is not silently applied as
+    if it resolved each separate Chs6/Bch1/Bud7/Bch2 class. Preserve current uncertainty
+    and specific protein examples; no universal absence of a more precise authority
+    is asserted.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-family-IPR015374-retry
+  - micro-protein-P40955
+  - micro-protein-Q05029
+  - micro-protein-Q08754
+  - micro-protein-P36122
+- assessment_id: micro-exomer-cargo
+  area: evidence
+  topic: Cargo selection and parallel ChAP functions
+  outcome: supported
+  summary: Sanchatjate sec11 distinguishes the Chs6 cargo-binding effect from Bch1/Bud7
+    redundancy and the less pronounced Bch2 contribution. Cargo recovery/Calcofluor/transport
+    phenotypes are not automatically physical assembly necessity. The current roles
+    remain appropriately coarse.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-PMC1635352-legacy
+  - micro-go-0006893
+- assessment_id: micro-exomer-graph
+  area: graph
+  topic: Membrane recruitment and association scope
+  outcome: supported
+  summary: Current Arf1 recruitment, Chs5-ChAP assembly, TGN localization and coarse
+    export relations agree with genuine Wang/Huranova texts. Lipid-formulation dependence,
+    incomplete membrane deformation and dynamic mixtures remain explicit; no universal
+    Arf1 requirement or exomer-only vesicle budding is inferred.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-PMC2064389-jats
+  - micro-PMC5290816-legacy
+  - micro-go-0005802
+  - micro-go-0006893
+  - micro-graph-policy
+- assessment_id: micro-exomer-integrity
+  area: completeness
+  topic: Bounded Chs5-dependent coassociation and retention
+  outcome: concern
+  summary: Sanchatjate sec12/Fig5 reports loss of efficient Chs6-TAP recovery of Bch1/Bud7/Bch2
+    in chs5 deletion extracts; individual ChAP deletions can retain remaining complex
+    association. Huranova separately tests Chs5-dependent stable TGN retention. Generic
+    scaffold/assembles-with prose omits these specific dependencies; UNKNOWN can remain
+    and no universal complex absence follows.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-prior-2
+  - micro-PMC1635352-legacy
+  - micro-PMC5290816-legacy
+  - micro-PMC2064389-jats
+  - micro-schema
+  - micro-graph-policy
+- assessment_id: micro-exomer-access
+  area: evidence
+  topic: Distinct body, abstract and experimental scopes
+  outcome: supported
+  summary: Sanchatjate, Wang and Huranova genuine bodies were read at declared Methods/Results/caption
+    extents. Trautwein remains complete indexed abstract after challenge routes; Huranova
+    Appendix strains and all supplemental datasets/pixels remain unread. S288C native
+    annotations do not silently replace DDY1810/SEY6210 or recombinant Sf9 preparations.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-PMC1635352-legacy
+  - micro-PMC2064389-jats
+  - micro-PMC5290816-legacy
+  - micro-doi-3
+  - micro-access-PMC1409733-numeric
+- assessment_id: micro-applicability-0
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: concern
+  summary: Original formal N/A rationale based on lack of an iModulon-specific claim
+    is insufficient for this positive molecular record. Fresh complete catalogue has
+    no Saccharomyces match; no unrelated bacterial proxy or downstream query was invented.
+    Historical runner unavailability is separately dated.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-prior-0
+  - micro-native-policy
+  - micro-adapter-catalogue
+  - micro-historical-runner
+- assessment_id: micro-history-0
+  area: scope
+  topic: Append-only history and exact lineage
+  outcome: supported
+  summary: Two inherited minors remain with exact predecessor identity; current new
+    membership edges do not resolve conditional integrity or family tasks. Preserve
+    rationale, posed_date and dated curation events; no record edits.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-prior-0
+  - micro-delta-0
+  - micro-policy
+  - micro-original-audit
+- assessment_id: micro-native-0
+  area: schema
+  topic: Actual native protein and original review checks
+  outcome: supported
+  summary: 8 reviewed examples; 9 typed nodes, 8 COVERED and 1 UNANCHORED_WITH_UNIPROT.
+    Six actual current commands and six original validate/render commands pass with
+    declared limits; no future successor/CI certification.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-native-exocyst-verify
+  - micro-native-exocyst-causal
+  - micro-original-audit
+- assessment_id: micro-physical-0
+  area: scope
+  topic: Images and physical measurements
+  outcome: not_applicable
+  summary: No maintained image or quantitative physical-property field requires pixel
+    inspection. Source text captions are only read at declared extents; no figure
+    pixels, supplements, movies or atomic data were inspected. Optional imaging is
+    not imposed.
+  target_ids:
+  - GO:0000145
+  evidence_ids:
+  - micro-record-0
+  - micro-policy
+- assessment_id: micro-applicability-1
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: concern
+  summary: Original formal N/A rationale based on lack of an iModulon-specific claim
+    is insufficient for this positive molecular record. Actual E.coli precise1k native
+    gene joins and all201 memberships per RecB/C/D locus were inspected; all three
+    have zero thresholded hits, not biological absence or a direct assembly result.
+    Five-strain context excludes any assumption that V330 was measured. Historical
+    runner unavailability is separately dated.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-prior-1
+  - micro-native-policy
+  - micro-adapter-catalogue
+  - micro-historical-runner
+  - micro-adapter-precise1k-meta
+  - micro-adapter-genes
+  - micro-adapter-b2820
+  - micro-adapter-b2822
+  - micro-adapter-b2819
+- assessment_id: micro-history-1
+  area: scope
+  topic: Append-only history and exact lineage
+  outcome: supported
+  summary: Original qualified pass remains supported after substantive grounding refresh.
+    Historical grouped propagation issue does not dispose unrelated findings. Preserve
+    rationale, posed_date and dated curation events; no record edits.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-prior-1
+  - micro-delta-1
+  - micro-policy
+  - micro-original-audit
+- assessment_id: micro-native-1
+  area: schema
+  topic: Actual native protein and original review checks
+  outcome: supported
+  summary: 3 reviewed examples; 3 typed nodes, 3 COVERED and 0 UNANCHORED_WITH_UNIPROT.
+    Six actual current commands and six original validate/render commands pass with
+    declared limits; no future successor/CI certification.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-native-exodeoxyribonuclease_v_complex-verify
+  - micro-native-exodeoxyribonuclease_v_complex-causal
+  - micro-original-audit
+- assessment_id: micro-physical-1
+  area: scope
+  topic: Images and physical measurements
+  outcome: not_applicable
+  summary: No maintained image or quantitative physical-property field requires pixel
+    inspection. Source text captions are only read at declared extents; no figure
+    pixels, supplements, movies or atomic data were inspected. Optional imaging is
+    not imposed.
+  target_ids:
+  - GO:0009338
+  evidence_ids:
+  - micro-record-1
+  - micro-policy
+- assessment_id: micro-applicability-2
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: concern
+  summary: Original formal N/A rationale based on lack of an iModulon-specific claim
+    is insufficient for this positive molecular record. Fresh complete catalogue has
+    no Saccharomyces match; no unrelated bacterial proxy or downstream query was invented.
+    Historical runner unavailability is separately dated.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-prior-2
+  - micro-native-policy
+  - micro-adapter-catalogue
+  - micro-historical-runner
+- assessment_id: micro-history-2
+  area: scope
+  topic: Append-only history and exact lineage
+  outcome: supported
+  summary: Two inherited minors remain; actions narrow only the current explicit grounding
+    task or add source-scoped evidence. Preserve rationale, posed_date and dated curation
+    events; no record edits.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-prior-2
+  - micro-delta-2
+  - micro-policy
+  - micro-original-audit
+- assessment_id: micro-native-2
+  area: schema
+  topic: Actual native protein and original review checks
+  outcome: supported
+  summary: 5 reviewed examples; 6 typed nodes, 5 COVERED and 1 UNANCHORED_WITH_UNIPROT.
+    Six actual current commands and six original validate/render commands pass with
+    declared limits; no future successor/CI certification.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-native-exomer_complex-verify
+  - micro-native-exomer_complex-causal
+  - micro-original-audit
+- assessment_id: micro-physical-2
+  area: scope
+  topic: Images and physical measurements
+  outcome: not_applicable
+  summary: No maintained image or quantitative physical-property field requires pixel
+    inspection. Source text captions are only read at declared extents; no figure
+    pixels, supplements, movies or atomic data were inspected. Optional imaging is
+    not imposed.
+  target_ids:
+  - GO:0034044
+  evidence_ids:
+  - micro-record-2
+  - micro-policy
+- assessment_id: plaque-t3-identity-and-definition
+  area: identity
+  topic: identity-and-definition
+  outcome: supported
+  summary: FACT denotes the histone-chaperone complex, with yeast Spt16/Pob3 core
+    and the broad nucleosome disassembly/reassembly function. The yeast and generic
+    FACT activities are supported without assigning all later assay details to one
+    paper.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-go
+  - plaque-formosa-legacy-query
+  - plaque-pmid-12934006
+- assessment_id: plaque-t3-hierarchy-and-topology
+  area: scope
+  topic: hierarchy-and-topology
+  outcome: supported
+  summary: Current GO names and typed relations support the maintained parents and
+    functions. No extra parthood is inferred from ancestor data.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-go
+  - plaque-go-0035101-ancestors
+- assessment_id: plaque-t3-components-and-family-grounding
+  area: grounding
+  topic: components-and-family-grounding
+  outcome: concern
+  summary: The explicit open task can adopt exact full Spt16 IPR040258 and SSRP1/POB3
+    IPR000969, supported by native protein joins. Broader RTT106/SSRP1 and optional
+    Nhp6 inclusion are excluded.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-curation
+  - plaque-up-P32558
+  - plaque-gene-SPT16
+  - plaque-up-Q04636
+  - plaque-gene-POB3
+  - plaque-ipr-IPR040258
+  - plaque-ipr-IPR000969
+  - plaque-ipr-IPR050454
+- assessment_id: plaque-t3-protein-identity-and-native-coverage
+  area: grounding
+  topic: protein-identity-and-native-coverage
+  outcome: supported
+  summary: Two reviewed S288C protein_examples and two COVERED typed protein nodes.
+    Exact current accessions, primary names/aliases, loci, taxon and review status
+    are independently verified. Native command success does not certify biological
+    assembly or necessity.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-up-P32558
+  - plaque-gene-SPT16
+  - plaque-up-Q04636
+  - plaque-gene-POB3
+  - plaque-native-fact_complex-verify
+  - plaque-native-fact_complex-causal
+- assessment_id: plaque-t3-taxon-and-experimental-scope
+  area: scope
+  topic: taxon-and-experimental-scope
+  outcome: supported
+  summary: S288C protein examples are reference-strain identities. Formosa uses explicit
+    A364a/W303/S288C derivatives and reconstituted heterologous nucleosomes; Mason
+    uses specified W303.1A/FY56/L577 strains. Recombinant E.coli is an expression
+    host, not yeast FACT distribution evidence.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-structure-schema
+  - plaque-tax-4932
+  - plaque-tax-559292
+  - plaque-formosa-legacy-query
+  - plaque-mason-legacy-query
+- assessment_id: plaque-t3-function-and-primary-support
+  area: evidence
+  topic: function-and-primary-support
+  outcome: supported
+  summary: Formosa measures cofactor-dependent nucleosome binding/accessibility and
+    genetic effects; Belot abstract supports chaperone/PolII function; Mason ChIP
+    supports active-gene association. Broad FACT function is not a claim that every
+    paper directly demonstrates complete disassembly/reassembly.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-go
+  - plaque-formosa-legacy-query
+  - plaque-mason-legacy-query
+  - plaque-pmid-12934006
+- assessment_id: plaque-t3-localisation-and-source-tiers
+  area: provenance
+  topic: localisation-and-source-tiers
+  outcome: supported
+  summary: Formosa and Mason genuine current bodies are read only at listed sections/text-caption
+    tiers; no pixels. Wittmeyer and Belot are current primary abstracts. Historical
+    browser-body scope is not re-certified by current failed publisher routes.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-up-P32558
+  - plaque-gene-SPT16
+  - plaque-up-Q04636
+  - plaque-gene-POB3
+  - plaque-formosa-legacy-query
+  - plaque-mason-legacy-query
+  - plaque-pmid-10413469
+  - plaque-pmid-12934006
+  - plaque-belot-publisher
+- assessment_id: plaque-t3-graph-and-formation-boundaries
+  area: graph
+  topic: graph-and-formation-boundaries
+  outcome: supported
+  summary: The NONMECHANISTIC graph separates two memberships from broad nucleosome/transcription
+    functions. Nhp6 cofactor-dependent binding does not make Nhp6 an obligatory stable
+    core subunit.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-graph-skill
+  - plaque-structure-schema
+  - plaque-native-fact_complex-verify
+  - plaque-native-fact_complex-causal
+  - plaque-formosa-legacy-query
+- assessment_id: plaque-t3-necessity-and-discussion-history
+  area: evidence
+  topic: necessity-and-discussion-history
+  outcome: unknown
+  summary: UNKNOWN formation necessity remains permitted. Nhp6 genetic interactions/remodeling
+    assays and some explicitly unpublished observations do not establish universal
+    FACT core-formation necessity. Preserve the resolved core/cofactor boundary and
+    append-only rationale.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-curation
+  - plaque-structure-schema
+  - plaque-formosa-legacy-query
+- assessment_id: plaque-t3-structured-source-applicability
+  area: evidence
+  topic: structured-source-applicability
+  outcome: supported
+  summary: Positive protein/pathway assertions require an actual native applicability
+    assessment. The original notes[1] correctly says expression membership is not
+    proof of physical membership, but no formal assessment or actual catalogue scope
+    is supplied. Current full catalogue lacks the natural yeast/human host for this
+    target; no foreign-host proxy or invented downstream query is used. Historical
+    runner unavailability remains historical; no fresh runner invocation is claimed.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-review-skill
+  - plaque-rubric
+  - plaque-adapter-catalogue
+- assessment_id: plaque-t3-schema-history-and-verdict
+  area: schema
+  topic: schema-history-and-verdict
+  outcome: concern
+  summary: All47 current frozen inputs,39 historical input occurrences,3 original
+    native validate/render pairs and3 unchanged target hashes pass. Needs_curation
+    retained for one independently reconfirmed inherited minor exact-family finding.
+    Original historical rationale stays intact. 1 historical access-kind occurrence(s)
+    require classification repair; their context_only disclosures were honest. No
+    future CI/queue or unrelated issue closure is certified.
+  target_ids:
+  - GO:0035101
+  evidence_ids:
+  - plaque-record-3
+  - plaque-input-original-proof
+  - plaque-review-schema
+  - plaque-review-contract
+  - plaque-curation
+  - plaque-original-3-yaml
+  - plaque-native-fact_complex-verify
+  - plaque-native-fact_complex-causal
+- assessment_id: plaque-t4-identity-and-definition
+  area: identity
+  topic: identity-and-definition
+  outcome: supported
+  summary: GO1990202 is the generic FMN-reductase complex. The SsuE synonym, homodimer
+    and copy count are expressly E.coli-scoped; they do not exclude other FMN-reducing
+    complexes or substrates.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-go
+  - plaque-pmid-10480865
+- assessment_id: plaque-t4-hierarchy-and-topology
+  area: scope
+  topic: hierarchy-and-topology
+  outcome: supported
+  summary: Current GO names and typed relations support the maintained parents and
+    functions. No extra parthood is inferred from ancestor data.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-go
+  - plaque-go-1990202-ancestors
+- assessment_id: plaque-t4-components-and-family-grounding
+  area: grounding
+  topic: components-and-family-grounding
+  outcome: supported
+  summary: IPR020048 is the exact SsuE family. Purified SsuE and SsuD are distinct
+    complexes; one represented SsuE class with E.coli copies2 is supported.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-curation
+  - plaque-up-P80644
+  - plaque-gene-ssuE
+  - plaque-ipr-IPR020048
+  - plaque-pmid-10480865
+- assessment_id: plaque-t4-protein-identity-and-native-coverage
+  area: grounding
+  topic: protein-identity-and-native-coverage
+  outcome: supported
+  summary: One reviewed E.coli K12 protein_example and one COVERED typed protein node.
+    Exact current accessions, primary names/aliases, loci, taxon and review status
+    are independently verified. Native command success does not certify biological
+    assembly or necessity.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-up-P80644
+  - plaque-gene-ssuE
+  - plaque-native-fmn_reductase_complex-verify
+  - plaque-native-fmn_reductase_complex-causal
+- assessment_id: plaque-t4-taxon-and-experimental-scope
+  area: scope
+  topic: taxon-and-experimental-scope
+  outcome: supported
+  summary: E.coli species562 and K12 reference83333 remain distinct. The source abstract
+    reports purified tagged E.coli SsuE; experimental strain detail absent from the
+    currently read abstract is not invented. precise1k spans five named strains and
+    is only transcriptomic context.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-structure-schema
+  - plaque-tax-562
+  - plaque-tax-83333
+  - plaque-pmid-10480865
+  - plaque-adapter-precise1k-meta
+- assessment_id: plaque-t4-function-and-primary-support
+  area: evidence
+  topic: function-and-primary-support
+  outcome: supported
+  summary: Eichhorn complete primary abstract directly supports NAD(P)H-dependent
+    FMN reduction, additional flavin substrates and native homodimer assignment. Reversible
+    ontology reaction display does not contradict the maintained reduction direction.
+    Module membership is not a catalytic assay.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-go
+  - plaque-pmid-10480865
+  - plaque-up-P80644
+- assessment_id: plaque-t4-localisation-and-source-tiers
+  area: provenance
+  topic: localisation-and-source-tiers
+  outcome: supported
+  summary: Current Eichhorn evidence is its complete primary abstract plus native
+    curated identity. The failed JBC PDF response remains validation/context; historical
+    browser Methods are not claimed as freshly reread.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-up-P80644
+  - plaque-gene-ssuE
+  - plaque-pmid-10480865
+  - plaque-eichhorn-publisher
+- assessment_id: plaque-t4-graph-and-formation-boundaries
+  area: graph
+  topic: graph-and-formation-boundaries
+  outcome: supported
+  summary: The coarse MECHANISTIC graph links SsuE homodimerization to its complex
+    and catalytic reduction. The native dimer assignment supports that coarse assembly
+    relation, without measured association kinetics, interface detail or deletion
+    necessity.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-graph-skill
+  - plaque-structure-schema
+  - plaque-native-fmn_reductase_complex-verify
+  - plaque-native-fmn_reductase_complex-causal
+  - plaque-pmid-10480865
+- assessment_id: plaque-t4-necessity-and-discussion-history
+  area: evidence
+  topic: necessity-and-discussion-history
+  outcome: unknown
+  summary: UNKNOWN formation necessity remains permitted. Purified enzymatic activity,
+    homodimer size and transcriptomic co-membership do not independently establish
+    necessity under all conditions. No optional extra example or assay is mandated.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-curation
+  - plaque-structure-schema
+  - plaque-pmid-10480865
+  - plaque-adapter-membership-b0937
+- assessment_id: plaque-t4-structured-source-applicability
+  area: evidence
+  topic: structured-source-applicability
+  outcome: supported
+  summary: 'Positive protein/pathway assertions require an actual native applicability
+    assessment. The original notes[1] correctly says expression membership is not
+    proof of physical membership, but no formal assessment or actual catalogue scope
+    is supplied. E.coli precise1k is matched as bounded five-strain context. Exact
+    b0937/P80644 has two true memberships among201: Sulfate56 and SSW SNPs82; both
+    full member tables and metadata are inspected. SsuD co-expression does not establish
+    a physical SsuE-SsuD complex. Generated summaries are excluded. Historical runner
+    unavailability remains historical; no fresh runner invocation is claimed.'
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-review-skill
+  - plaque-rubric
+  - plaque-adapter-catalogue
+  - plaque-adapter-precise1k-meta
+  - plaque-adapter-gene-b0937
+  - plaque-adapter-membership-b0937
+  - plaque-module-56
+  - plaque-module-56-genes
+  - plaque-module-82
+  - plaque-module-82-genes
+- assessment_id: plaque-t4-schema-history-and-verdict
+  area: schema
+  topic: schema-history-and-verdict
+  outcome: supported
+  summary: All47 current frozen inputs,39 historical input occurrences,3 original
+    native validate/render pairs and3 unchanged target hashes pass. Qualified pass
+    retained with explicit abstract/assay limits. Original historical rationale stays
+    intact. 1 historical access-kind occurrence(s) require classification repair;
+    their context_only disclosures were honest. No future CI/queue or unrelated issue
+    closure is certified.
+  target_ids:
+  - GO:1990202
+  evidence_ids:
+  - plaque-record-4
+  - plaque-input-original-proof
+  - plaque-review-schema
+  - plaque-review-contract
+  - plaque-curation
+  - plaque-original-4-yaml
+  - plaque-native-fmn_reductase_complex-verify
+  - plaque-native-fmn_reductase_complex-causal
+- assessment_id: plaque-t5-identity-and-definition
+  area: identity
+  topic: identity-and-definition
+  outcome: supported
+  summary: GO0005760 denotes mitochondrial polymerase gamma with catalytic and accessory
+    classes. Class count is not physical copy count; the maintained wording does not
+    require a universal two-polypeptide mammalian assembly.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-go
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+- assessment_id: plaque-t5-hierarchy-and-topology
+  area: scope
+  topic: hierarchy-and-topology
+  outcome: supported
+  summary: Current GO names and typed relations support the maintained parents and
+    functions. GO0005759 typed child relation independently supports matrix parthood;
+    GO0005760 taxon restriction is Eukaryota.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-go
+  - plaque-go-0005760-ancestors
+  - plaque-polg-constraints
+- assessment_id: plaque-t5-components-and-family-grounding
+  area: grounding
+  topic: components-and-family-grounding
+  outcome: concern
+  summary: The explicit catalytic task can adopt exact IPR002297. POLG2 alternatives
+    are broader, domain-only, deleted or empty; no unverified accessory family is
+    forced.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-curation
+  - plaque-up-P54098
+  - plaque-gene-POLG
+  - plaque-up-Q9UHN1
+  - plaque-gene-POLG2
+  - plaque-ipr-IPR002297
+  - plaque-ipr-IPR027031
+  - plaque-ipr-IPR042064
+  - plaque-ipr-IPR027030
+  - plaque-panther-PTHR10745-SF8
+- assessment_id: plaque-t5-protein-identity-and-native-coverage
+  area: grounding
+  topic: protein-identity-and-native-coverage
+  outcome: supported
+  summary: Two reviewed human protein_examples and two COVERED typed protein nodes.
+    Exact current accessions, primary names/aliases, loci, taxon and review status
+    are independently verified. Native command success does not certify biological
+    assembly or necessity.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-up-P54098
+  - plaque-gene-POLG
+  - plaque-up-Q9UHN1
+  - plaque-gene-POLG2
+  - plaque-native-gamma_dna_polymerase_complex-verify
+  - plaque-native-gamma_dna_polymerase_complex-causal
+- assessment_id: plaque-t5-taxon-and-experimental-scope
+  area: scope
+  topic: taxon-and-experimental-scope
+  outcome: supported
+  summary: Human reference proteins and canonical reconstitution are supported. Carrodeguas
+    uses a mouse accessory crystal and human deletion construct; those assay scopes
+    are explicit. Eukaryota restriction does not establish universal stoichiometry
+    or quantitative COMMON prevalence.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-structure-schema
+  - plaque-tax-2759
+  - plaque-tax-9606
+  - plaque-polg-constraints
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+- assessment_id: plaque-t5-function-and-primary-support
+  area: evidence
+  topic: function-and-primary-support
+  outcome: supported
+  summary: Lim supports accessory enhancement of catalytic binding/processivity; Carrodeguas
+    separates accessory dimerization/stimulation from retained catalytic binding.
+    Native mitochondrial/nucleoid annotation and primary abstracts support mtDNA context
+    without adding interface or repair details to the coarse graph.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-go
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+  - plaque-pmid-10827171
+  - plaque-pmid-18063578
+  - plaque-up-P54098
+- assessment_id: plaque-t5-localisation-and-source-tiers
+  area: provenance
+  topic: localisation-and-source-tiers
+  outcome: supported
+  summary: Current Lim/Carrodeguas/Spelbrink/Bogenhagen are complete primary abstracts,
+    Hubscher secondary abstract context. Native POLG experimental citations and inferred
+    POLG2 matrix annotation remain distinct; no individual microscopy is freshly certified.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-up-P54098
+  - plaque-gene-POLG
+  - plaque-up-Q9UHN1
+  - plaque-gene-POLG2
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+  - plaque-pmid-10827171
+  - plaque-pmid-18063578
+  - plaque-pmid-12045093
+  - plaque-lim-publisher
+  - plaque-carrodeguas-publisher
+- assessment_id: plaque-t5-graph-and-formation-boundaries
+  area: graph
+  topic: graph-and-formation-boundaries
+  outcome: supported
+  summary: The NONMECHANISTIC graph encodes two class memberships and mtDNA replication.
+    It does not overstate the historic Lim1:1 interpretation or add universal copy
+    counts; later accessory homodimer context remains acknowledged.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-graph-skill
+  - plaque-structure-schema
+  - plaque-native-gamma_dna_polymerase_complex-verify
+  - plaque-native-gamma_dna_polymerase_complex-causal
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+- assessment_id: plaque-t5-necessity-and-discussion-history
+  area: evidence
+  topic: necessity-and-discussion-history
+  outcome: unknown
+  summary: UNKNOWN formation necessity remains permitted. Accessory deletion loses
+    dimerization/stimulation yet retains catalytic interaction; activity and assembly
+    must remain separate. Preserve the resolved accessory-copy-number discussion and
+    historical1:1 study interpretation without treating two component classes as two
+    physical molecules.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-curation
+  - plaque-structure-schema
+  - plaque-pmid-10608893
+  - plaque-pmid-11172710
+- assessment_id: plaque-t5-structured-source-applicability
+  area: evidence
+  topic: structured-source-applicability
+  outcome: supported
+  summary: Positive protein/pathway assertions require an actual native applicability
+    assessment. The original notes[1] correctly says expression membership is not
+    proof of physical membership, but no formal assessment or actual catalogue scope
+    is supplied. Current full catalogue lacks the natural yeast/human host for this
+    target; no foreign-host proxy or invented downstream query is used. Historical
+    runner unavailability remains historical; no fresh runner invocation is claimed.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-review-skill
+  - plaque-rubric
+  - plaque-adapter-catalogue
+- assessment_id: plaque-t5-schema-history-and-verdict
+  area: schema
+  topic: schema-history-and-verdict
+  outcome: concern
+  summary: All47 current frozen inputs,39 historical input occurrences,3 original
+    native validate/render pairs and3 unchanged target hashes pass. Needs_curation
+    retained for one independently reconfirmed inherited minor exact-family finding.
+    Original historical rationale stays intact. 3 historical access-kind occurrence(s)
+    require classification repair; their context_only disclosures were honest. No
+    future CI/queue or unrelated issue closure is certified.
+  target_ids:
+  - GO:0005760
+  evidence_ids:
+  - plaque-record-5
+  - plaque-input-original-proof
+  - plaque-review-schema
+  - plaque-review-contract
+  - plaque-curation
+  - plaque-original-5-yaml
+  - plaque-native-gamma_dna_polymerase_complex-verify
+  - plaque-native-gamma_dna_polymerase_complex-causal
+- assessment_id: septin-garp_complex-identity
+  area: identity
+  topic: Exact identity, hierarchy and whole-record boundary
+  outcome: supported
+  summary: GO0000938 exact four-member GARP/VFT tethering complex; parent vesicle-tethering
+    complex, not the Tlg1 SNARE.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-GO0000938-ancestors
+- assessment_id: septin-garp_complex-family
+  area: grounding
+  topic: Exact classes and bounded wider-family candidates
+  outcome: concern
+  summary: Three native full-family/protein joins resolve Vps52IPR007258,Vps53IPR039766,Vps54IPR039745.
+    PF08700 shared N-terminal repeat cannot resolve complete Vps51 class.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-ipr-IPR007258
+  - septin-ipr-IPR039766
+  - septin-ipr-IPR039745
+  - septin-pfam-PF08700
+  - septin-curation-policy
+- assessment_id: septin-garp_complex-protein-identity
+  area: grounding
+  topic: Reviewed identity, aliases, locus and reference taxon
+  outcome: supported
+  summary: All 4 current reviewed examples and exact gene/taxon queries match native
+    accession identities. VPS51/52/53/54 match S288C reference genes; external TLG1
+    is context.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-gene-VPS51-559292
+  - septin-gene-VPS52-559292
+  - septin-gene-VPS53-559292
+  - septin-gene-VPS54-559292
+  - septin-protein-policy
+- assessment_id: septin-garp_complex-sources
+  area: evidence
+  topic: Actual source tiers and experimental scope
+  outcome: supported
+  summary: Fresh Conibear2000/2003 genuine bodies support four-member identity, core
+    stability, TGN/cargo and Tlg1 interaction. Siniossoglou/Pelham2002 is complete-primary-abstract
+    only. Direct binding is distinguished from proposed SNARE opening; GARP figure
+    captions were read, not pixels.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-literature-policy
+- assessment_id: septin-garp_complex-membership
+  area: grounding
+  topic: Constituent membership versus other biological pools
+  outcome: supported
+  summary: Four-member GARP identity is supported by native authorities and direct
+    co-purification; older three-core work is read in temporal context.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+- assessment_id: septin-garp_complex-formation
+  area: grounding
+  topic: Direct assembly-maintenance evidence versus functional necessity
+  outcome: concern
+  summary: Conibear2000 directly measured reciprocal Vps52/53/54 degradation/steady-state
+    instability under the tested yeast deletions, while Conibear2003 retains the three-member
+    core without Vps51. This bounded result merits role/evidence curation, but does
+    not compel all-four ESSENTIAL flags, universal viability, or complete assembly
+    abolition.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-schema-policy
+- assessment_id: septin-garp_complex-graph
+  area: graph
+  topic: Complete causal-graph assertions and mechanism level
+  outcome: supported
+  summary: FUNCTION/NONMECHANISTIC graph retains four constituents, TGN localization,
+    endosome-to-Golgi transport and Vps51-Tlg1 interaction. It does not claim a complete
+    experimentally solved SNARE-opening or membrane-fusion cycle.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-graph-policy
+- assessment_id: septin-garp_complex-taxa
+  area: scope
+  topic: Species, reference strain, cell-state and experimental host
+  outcome: supported
+  summary: Canonical yeast4932 and reviewed S288C559292 references are correct; Conibear
+    SNY/LCY yeast strains and BL21 expression have distinct experimental roles. COMMON
+    is qualitative, not a measured frequency census.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-tax-4932
+  - septin-tax-559292
+- assessment_id: septin-garp_complex-applicability
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: supported
+  summary: Positive named-protein, signaling, transport or RNA-biogenesis claims trigger
+    host assessment. Complete fresh official catalogue has no matching yeast/human
+    biological host, so no downstream module query is applicable. Historical runner
+    unavailability and current public-catalogue fallback are separately evidenced;
+    no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-garp_complex-schema
+  area: schema
+  topic: Original native rendering, frozen inputs and actual protein checks
+  outcome: supported
+  summary: All four original native validate/render pairs exit0 and exact Markdown
+    matches;52 historical input occurrences match source Git objects. This current
+    target is unchanged. Four reviewed examples/four COVERED constituent nodes; one
+    separate Tlg1 UNANCHORED_WITH_UNIPROT context node, not a missing GARP constituent.
+    Root global and future final-head gates remain separate.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-original-native-checks
+  - septin-native-garp_complex-verify
+  - septin-native-garp_complex-causal
+- assessment_id: septin-garp_complex-history
+  area: provenance
+  topic: Append-only rationale and exact inherited finding lineage
+  outcome: supported
+  summary: All dated history and rationale stay immutable. Separately authorized curation
+    may update current notes/status or append a dated clarification; exact predecessor
+    repository/review/finding IDs are retained. Historical batch26 execution-origin
+    wording is not mislabeled as a current cohort error.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-curation-policy
+- assessment_id: septin-garp_complex-coverage
+  area: completeness
+  topic: Complete maintained-record audit and bounded external coverage
+  outcome: supported
+  summary: All current fields, evidence citations, examples, functions, graph nodes/edges
+    and discussions read. No maintained images. Primary-body extents and figure-caption
+    limits remain explicit; no uninspected supplemental experiment or coordinate analysis
+    claimed. No optional inventory/stoichiometry or universal formation requirement
+    invented.
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-literature-policy
+- assessment_id: septin-garp_complex-verdict
+  area: consistency
+  topic: Current independently confirmed disposition
+  outcome: concern
+  summary: 'Needs curation for two inherited minor findings: three exact families
+    and a concrete source-tested reciprocal core-stability result. Remaining identity
+    and coarse graph supported.'
+  target_ids:
+  - GO:0000938
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-go
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  - septin-ipr-IPR007258
+  - septin-ipr-IPR039766
+  - septin-ipr-IPR039745
+  - septin-pfam-PF08700
+- assessment_id: septin-gator1_complex-identity
+  area: identity
+  topic: Exact identity, hierarchy and whole-record boundary
+  outcome: supported
+  summary: GO1990130 exact three-member GATOR1/SEACIT; protein complex parent and
+    SEA part_of kept distinct, Rag substrates outside constituents.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-GO1990130-ancestors
+- assessment_id: septin-gator1_complex-family
+  area: grounding
+  topic: Exact classes and bounded wider-family candidates
+  outcome: concern
+  summary: Native Iml1/DEPDC5IPR027244,Npr2/NPRL2IPR009348,Npr3/NPRL3IPR005365 resolve
+    the three maintained class deferrals.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-ipr-IPR027244
+  - septin-ipr-IPR009348
+  - septin-ipr-IPR005365
+  - septin-curation-policy
+- assessment_id: septin-gator1_complex-protein-identity
+  area: grounding
+  topic: Reviewed identity, aliases, locus and reference taxon
+  outcome: supported
+  summary: All 3 current reviewed examples and exact gene/taxon queries match native
+    accession identities. IML1/NPR2/NPR3 match S288C; external GTR1 is the regulator
+    target.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-gene-IML1-559292
+  - septin-gene-NPR2-559292
+  - septin-gene-NPR3-559292
+  - septin-protein-policy
+- assessment_id: septin-gator1_complex-sources
+  area: evidence
+  topic: Actual source tiers and experimental scope
+  outcome: supported
+  summary: Fresh Dokudovskaya/CellCycle bodies, the genuine ScienceSignaling author
+    PDF and Bar-Peled numeric PMC body support exact three-member boundary and condition-scoped
+    negative signaling. CellCycle includes primary epistasis. Huh atlas is complete-abstract/native-annotation
+    scope only; Npr3 fluorescence below detection and multi-reference annotation caveats
+    remain explicit.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-literature-policy
+- assessment_id: septin-gator1_complex-membership
+  area: grounding
+  topic: Constituent membership versus other biological pools
+  outcome: supported
+  summary: Three-member GATOR1/SEACIT and GAP target are supported. Full SEA composition,
+    Npr3 imaging limits and human comparative assays do not expand its member list.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+- assessment_id: septin-gator1_complex-formation
+  area: grounding
+  topic: Direct assembly-maintenance evidence versus functional necessity
+  outcome: unknown
+  summary: UNKNOWN formation flags are not contradicted by GAP activity, leucine-response
+    epistasis or transient interaction. Arg943 and truncated-domain assays test activity
+    in stated systems, not universal individual formation necessity.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-schema-policy
+- assessment_id: septin-gator1_complex-graph
+  area: graph
+  topic: Complete causal-graph assertions and mechanism level
+  outcome: supported
+  summary: REGULATION/NONMECHANISTIC graph retains Iml1/Npr2/Npr3, external Gtr1,
+    vacuolar association and negative TORC1 output. Transient Iml1-Gtr1 interaction
+    after leucine withdrawal is not interpreted as new wholesale membrane recruitment;
+    source localization is already present before starvation.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-graph-policy
+- assessment_id: septin-gator1_complex-taxa
+  area: scope
+  topic: Species, reference strain, cell-state and experimental host
+  outcome: supported
+  summary: Yeast4932 and S288C references are supported; Panchaud defined-medium/leucine
+    conditions, purified proteins and human/fly comparisons remain separate. Supplementary
+    exact strain tables not independently read.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-tax-4932
+  - septin-tax-559292
+- assessment_id: septin-gator1_complex-applicability
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: supported
+  summary: Positive named-protein, signaling, transport or RNA-biogenesis claims trigger
+    host assessment. Complete fresh official catalogue has no matching yeast/human
+    biological host, so no downstream module query is applicable. Historical runner
+    unavailability and current public-catalogue fallback are separately evidenced;
+    no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-gator1_complex-schema
+  area: schema
+  topic: Original native rendering, frozen inputs and actual protein checks
+  outcome: supported
+  summary: All four original native validate/render pairs exit0 and exact Markdown
+    matches;52 historical input occurrences match source Git objects. This current
+    target is unchanged. Three reviewed examples/three COVERED constituent nodes;
+    separate Gtr1 UNANCHORED_WITH_UNIPROT context node, not a GATOR1 member. Root
+    global and future final-head gates remain separate.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-original-native-checks
+  - septin-native-gator1_complex-verify
+  - septin-native-gator1_complex-causal
+- assessment_id: septin-gator1_complex-history
+  area: provenance
+  topic: Append-only rationale and exact inherited finding lineage
+  outcome: supported
+  summary: All dated history and rationale stay immutable. Separately authorized curation
+    may update current notes/status or append a dated clarification; exact predecessor
+    repository/review/finding IDs are retained. Historical batch26 execution-origin
+    wording is not mislabeled as a current cohort error.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-curation-policy
+- assessment_id: septin-gator1_complex-coverage
+  area: completeness
+  topic: Complete maintained-record audit and bounded external coverage
+  outcome: supported
+  summary: All current fields, evidence citations, examples, functions, graph nodes/edges
+    and discussions read. No maintained images. Primary-body extents and figure-caption
+    limits remain explicit; no uninspected supplemental experiment or coordinate analysis
+    claimed. No optional inventory/stoichiometry or universal formation requirement
+    invented.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-literature-policy
+- assessment_id: septin-gator1_complex-verdict
+  area: consistency
+  topic: Current independently confirmed disposition
+  outcome: concern
+  summary: Needs curation for one grouped minor exact-family finding; existing three-member
+    boundary and negative signaling retained.
+  target_ids:
+  - GO:1990130
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-panchaud2013-pdf
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  - septin-ipr-IPR027244
+  - septin-ipr-IPR009348
+  - septin-ipr-IPR005365
+- assessment_id: septin-gator2_complex-identity
+  area: identity
+  topic: Exact identity, hierarchy and whole-record boundary
+  outcome: supported
+  summary: GO0061700 exact five-member GATOR2/SEACAT; SEA part_of distinct from is_a;
+    other Sec13/Seh1 pools are not this complex.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-GO0061700-ancestors
+- assessment_id: septin-gator2_complex-family
+  area: grounding
+  topic: Exact classes and bounded wider-family candidates
+  outcome: concern
+  summary: Native WDR24/Sea2IPR037590,WDR59/Sea3IPR049567,MIOS/Sea4IPR037593 resolve
+    three rows. Wider IPR037363 is not uniquely each Sec13 and Seh1 class.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-ipr-IPR037590
+  - septin-ipr-IPR049567
+  - septin-ipr-IPR037593
+  - septin-ipr-IPR037363
+  - septin-curation-policy
+- assessment_id: septin-gator2_complex-protein-identity
+  area: grounding
+  topic: Reviewed identity, aliases, locus and reference taxon
+  outcome: supported
+  summary: All 5 current reviewed examples and exact gene/taxon queries match native
+    accession identities. SEA2 maps primary RTC1 and SEA3 maps primary MTC5; SEA4/SEH1/SEC13
+    match S288C.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-gene-SEA2-559292
+  - septin-gene-SEA3-559292
+  - septin-gene-SEA4-559292
+  - septin-gene-SEH1-559292
+  - septin-gene-SEC13-559292
+  - septin-protein-policy
+- assessment_id: septin-gator2_complex-sources
+  area: evidence
+  topic: Actual source tiers and experimental scope
+  outcome: supported
+  summary: Five-member branch identity and opposing signaling direction are supported
+    by current GO and separately scoped yeast epistasis/human-fly body evidence. SEC13
+    functional depletion was deliberately excluded from Bar-Peled because of other
+    complexes. Huh/Rout are full-primary-abstract and native annotation scope, not
+    independent reanalysis of atlas/NPC data.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-literature-policy
+- assessment_id: septin-gator2_complex-membership
+  area: grounding
+  topic: Constituent membership versus other biological pools
+  outcome: supported
+  summary: Five-member SEACAT branch is supported; total SEA eight-member purifications
+    and later branch regulation are distinguished. Constituent classes do not imply
+    a universal one-copy oligomer count.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+- assessment_id: septin-gator2_complex-formation
+  area: grounding
+  topic: Direct assembly-maintenance evidence versus functional necessity
+  outcome: unknown
+  summary: UNKNOWN formation flags remain qualified. Co-purification and pathway knockdown/epistasis
+    establish membership and signaling, not every constituent being universally necessary
+    for every assembly; shared NPC/COPII pools are distinct.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-schema-policy
+- assessment_id: septin-gator2_complex-graph
+  area: graph
+  topic: Complete causal-graph assertions and mechanism level
+  outcome: supported
+  summary: REGULATION/NONMECHANISTIC graph retains the five constituents, SEA parthood
+    and positive TORC1 regulation/antagonistic branch model. No individual reaction-state
+    cycle or direct catalytic activity for every GATOR2 subunit is asserted.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-graph-policy
+- assessment_id: septin-gator2_complex-taxa
+  area: scope
+  topic: Species, reference strain, cell-state and experimental host
+  outcome: supported
+  summary: Yeast4932, S288C proteins and BY4741/BY4742-derived CellCycle strains are
+    supported; human/fly GATOR results are comparative, not yeast strain experiments.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-tax-4932
+  - septin-tax-559292
+- assessment_id: septin-gator2_complex-frequency
+  area: scope
+  topic: Limits of VARIABLE lineage/strain qualifier
+  outcome: unknown
+  summary: The inspected model-system studies do not independently establish the full
+    lineage/strain-distribution qualifier. Distinct NPC/COPII constituent pools do
+    not constitute a species-prevalence census. This sampling limitation does not
+    demonstrate the opposite distribution or create a speculative curation finding.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+- assessment_id: septin-gator2_complex-applicability
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: supported
+  summary: Positive named-protein, signaling, transport or RNA-biogenesis claims trigger
+    host assessment. Complete fresh official catalogue has no matching yeast/human
+    biological host, so no downstream module query is applicable. Historical runner
+    unavailability and current public-catalogue fallback are separately evidenced;
+    no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-gator2_complex-schema
+  area: schema
+  topic: Original native rendering, frozen inputs and actual protein checks
+  outcome: supported
+  summary: All four original native validate/render pairs exit0 and exact Markdown
+    matches;52 historical input occurrences match source Git objects. This current
+    target is unchanged. Five reviewed examples and five COVERED constituent nodes.
+    Root global and future final-head gates remain separate.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-original-native-checks
+  - septin-native-gator2_complex-verify
+  - septin-native-gator2_complex-causal
+- assessment_id: septin-gator2_complex-history
+  area: provenance
+  topic: Append-only rationale and exact inherited finding lineage
+  outcome: supported
+  summary: All dated history and rationale stay immutable. Separately authorized curation
+    may update current notes/status or append a dated clarification; exact predecessor
+    repository/review/finding IDs are retained. Historical batch26 execution-origin
+    wording is not mislabeled as a current cohort error.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-curation-policy
+- assessment_id: septin-gator2_complex-coverage
+  area: completeness
+  topic: Complete maintained-record audit and bounded external coverage
+  outcome: supported
+  summary: All current fields, evidence citations, examples, functions, graph nodes/edges
+    and discussions read. No maintained images. Primary-body extents and figure-caption
+    limits remain explicit; no uninspected supplemental experiment or coordinate analysis
+    claimed. No optional inventory/stoichiometry or universal formation requirement
+    invented.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-literature-policy
+- assessment_id: septin-gator2_complex-verdict
+  area: consistency
+  topic: Current independently confirmed disposition
+  outcome: concern
+  summary: Needs curation for one grouped minor three-family finding; supported five-member
+    boundary and positive signaling retained with Sec13/Seh1 boundary and prevalence
+    limits.
+  target_ids:
+  - GO:0061700
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-go
+  - septin-primary-PMC3108837
+  - septin-primary-PMC3875668
+  - septin-barpeled2013-numeric
+  - septin-pmid-14562095
+  - septin-pmid-10684247
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  - septin-ipr-IPR037590
+  - septin-ipr-IPR049567
+  - septin-ipr-IPR037593
+  - septin-ipr-IPR037363
+- assessment_id: septin-gemini_of_cajal_bodies-identity
+  area: identity
+  topic: Exact identity, hierarchy and whole-record boundary
+  outcome: supported
+  summary: GO0097504 exact gems; nuclear-body parent and nuclear-lumen parthood, nearby
+    Cajal bodies are a different identity.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-GO0097504-ancestors
+- assessment_id: septin-gemini_of_cajal_bodies-family
+  area: grounding
+  topic: Exact classes and bounded wider-family candidates
+  outcome: concern
+  summary: IPR040424 resolves the generic SMN protein class independently of human
+    paralog, Gemin-complex and gem-versus-Cajal localization questions.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-ipr-IPR040424
+  - septin-curation-policy
+- assessment_id: septin-gemini_of_cajal_bodies-protein-identity
+  area: grounding
+  topic: Reviewed identity, aliases, locus and reference taxon
+  outcome: supported
+  summary: All 1 current reviewed examples and exact gene/taxon queries match native
+    accession identities. SMN1 exact query returns Q16637, whose native entry also
+    includes SMN2; primary-name identity is not exclusive paralog localization.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-gene-SMN1-9606
+  - septin-protein-policy
+- assessment_id: septin-gemini_of_cajal_bodies-sources
+  area: evidence
+  topic: Actual source tiers and experimental scope
+  outcome: supported
+  summary: Liu1996 genuine scanned pages3555/3556/3559-3564 were visually read; missing
+    pages3557/3558/3565 preclude a complete-paper claim. Matera/Frey is secondary
+    metadata only without native abstract; Gall is a secondary abstract. Gangwani
+    and Mahmoudi are complete-primary-abstract/native-annotation scope. No inferred
+    full-body or unseen-image evidence.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-literature-policy
+- assessment_id: septin-gemini_of_cajal_bodies-membership
+  area: grounding
+  topic: Constituent membership versus other biological pools
+  outcome: supported
+  summary: Generic SMN is a supported marker/resident, not an exhaustive Gemin inventory.
+    No optional complete proteome requirement is imposed.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+- assessment_id: septin-gemini_of_cajal_bodies-formation
+  area: grounding
+  topic: Direct assembly-maintenance evidence versus functional necessity
+  outcome: unknown
+  summary: SMN marker/localization and associations with snRNP biogenesis do not establish
+    universal gem formation necessity. Q16637 combines SMN1/SMN2 identity; no exclusive
+    paralog occupancy or whole-SMN-complex equivalence inferred.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-schema-policy
+- assessment_id: septin-gemini_of_cajal_bodies-graph
+  area: graph
+  topic: Complete causal-graph assertions and mechanism level
+  outcome: supported
+  summary: FUNCTION/NONMECHANISTIC graph expresses SMN association, nearby Cajal bodies
+    and cautious snRNP-biogenesis context. Gem and Cajal identity remain distinct,
+    with historical immunodetection scope instead of universal protein-exclusion inference.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-graph-policy
+- assessment_id: septin-gemini_of_cajal_bodies-taxa
+  area: scope
+  topic: Species, reference strain, cell-state and experimental host
+  outcome: supported
+  summary: Human9606/HeLa scope is supported. Liu also compares mouse3T3 and primary
+    fibroblasts; source-specific temperature/cell-state effects are not organism-wide
+    prevalence measurements.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-tax-9606
+- assessment_id: septin-gemini_of_cajal_bodies-frequency
+  area: scope
+  topic: Limits of VARIABLE lineage/strain qualifier
+  outcome: unknown
+  summary: The inspected model-system studies do not independently establish the full
+    lineage/strain-distribution qualifier. Observed cell-type/temperature differences
+    support restricted cell-state variability, not a population-level census. This
+    sampling limitation does not demonstrate the opposite distribution or create a
+    speculative curation finding.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+- assessment_id: septin-gemini_of_cajal_bodies-applicability
+  area: evidence
+  topic: Whole-record structured-source applicability
+  outcome: supported
+  summary: Positive named-protein, signaling, transport or RNA-biogenesis claims trigger
+    host assessment. Complete fresh official catalogue has no matching yeast/human
+    biological host, so no downstream module query is applicable. Historical runner
+    unavailability and current public-catalogue fallback are separately evidenced;
+    no unrelated bacterial expression-host proxy or coexpression-to-assembly inference.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-review-policy
+  - septin-catalogue
+  - septin-adapter-runner-historical
+- assessment_id: septin-gemini_of_cajal_bodies-schema
+  area: schema
+  topic: Original native rendering, frozen inputs and actual protein checks
+  outcome: supported
+  summary: All four original native validate/render pairs exit0 and exact Markdown
+    matches;52 historical input occurrences match source Git objects. This current
+    target is unchanged. One reviewed example and one COVERED constituent node; correct
+    native SMN1 query does not establish SMN1-only gem occupancy. Root global and
+    future final-head gates remain separate.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-original-native-checks
+  - septin-native-gemini_of_cajal_bodies-verify
+  - septin-native-gemini_of_cajal_bodies-causal
+- assessment_id: septin-gemini_of_cajal_bodies-history
+  area: provenance
+  topic: Append-only rationale and exact inherited finding lineage
+  outcome: supported
+  summary: All dated history and rationale stay immutable. Separately authorized curation
+    may update current notes/status or append a dated clarification; exact predecessor
+    repository/review/finding IDs are retained. Historical batch26 execution-origin
+    wording is not mislabeled as a current cohort error.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-curation-policy
+- assessment_id: septin-gemini_of_cajal_bodies-coverage
+  area: completeness
+  topic: Complete maintained-record audit and bounded external coverage
+  outcome: supported
+  summary: All current fields, evidence citations, examples, functions, graph nodes/edges
+    and discussions read. No maintained images. Only gems has actually inspected external
+    scan pixels; other source figures were read as captions, not pixels. No optional
+    inventory/stoichiometry or universal formation requirement invented.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-literature-policy
+- assessment_id: septin-gemini_of_cajal_bodies-verdict
+  area: consistency
+  topic: Current independently confirmed disposition
+  outcome: concern
+  summary: Needs curation for one minor generic SMN-family finding; marker, identity,
+    human example and cautious association graph supported within declared source
+    limitations.
+  target_ids:
+  - GO:0097504
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-go
+  - septin-liu1996-page-3555
+  - septin-liu1996-page-3556
+  - septin-liu1996-page-3559
+  - septin-liu1996-page-3560
+  - septin-liu1996-page-3561
+  - septin-liu1996-page-3562
+  - septin-liu1996-page-3563
+  - septin-liu1996-page-3564
+  - septin-pmid-11283611
+  - septin-pmid-21072240
+  - septin-doi-301992
+  - septin-doi-annurev_cellbio_16_1_273
+  - septin-protein-Q16637
+  - septin-ipr-IPR040424
+- assessment_id: current-input-comparison
+  area: provenance
+  topic: Complete frozen-input comparison and bounded refresh
+  outcome: supported
+  summary: 2 of ten original target hashes differ from current main. The changed content
+    is substantively reassessed in the target-specific assessments; original observations
+    remain historical and unchanged. All current target and used context bytes are
+    frozen.
+  target_ids:
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  evidence_ids:
+  - current-record-0
+  - original-review-0
+  - current-record-1
+  - original-review-1
+  - current-record-2
+  - original-review-2
+  - current-record-3
+  - original-review-3
+  - current-record-4
+  - original-review-4
+  - current-record-5
+  - original-review-5
+  - current-record-6
+  - original-review-6
+  - current-record-7
+  - original-review-7
+  - current-record-8
+  - original-review-8
+  - current-record-9
+  - original-review-9
+findings:
+- finding_id: micro-F1
+  issue_key: exocyst-six-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve six verified exocyst family mappings
+  description: Six native whole-protein families corresponding to Sec5/Sec6/Sec8/Sec15/Exo70/Exo84
+    remain label-only under the explicit current mapping task. Current type/name/signatures,
+    native reference xrefs and complete reviewed-member sets corroborate homologous
+    class mappings. This is not an exclusive exocyst-membership assertion for every
+    related paralog; Sec3 domains and broader Sec10-like remain separately unresolved.
+  target_ids:
+  - GO:0000145
+  field_paths:
+  - components[1].grounding_status
+  - components[2].grounding_status
+  - components[3].grounding_status
+  - components[5].grounding_status
+  - components[6].grounding_status
+  - components[7].grounding_status
+  - discussions[0]
+  evidence_ids:
+  - micro-record-0
+  - micro-prior-0
+  - micro-policy
+  - micro-family-IPR029175
+  - micro-family-IPR010326
+  - micro-family-IPR039682
+  - micro-family-IPR007225
+  - micro-family-IPR004140
+  - micro-family-IPR033961
+  - micro-members-IPR029175
+  - micro-members-IPR010326-retry
+  - micro-members-IPR039682-retry
+  - micro-members-IPR007225-retry
+  - micro-members-IPR004140-retry
+  - micro-members-IPR033961
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained scientific record
+  rule_id: Exact constituent-class grounding
+  native_severity: minor
+  normalization_reason: A bounded actionable class mapping under the existing explicit
+    task; the complex identity and named protein examples remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065207Z-exocyst-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2986
+- finding_id: micro-F2
+  issue_key: exocyst-bounded-mutant-complex-integrity
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the reported mutant-dependent complex-integrity result
+  description: The already cited TerBush1995 primary body pp307–308/Fig6 reports altered
+    recovered Sec8-tag-associated composition in sec3-2, sec5-24 and sec10-2 backgrounds.
+    The current new constituent edges and generic roles do not preserve this conditional
+    physical-association observation. This is not proof of complete intracellular
+    complex loss or universal formation necessity.
+  target_ids:
+  - GO:0000145
+  field_paths:
+  - components[0].role
+  - components[1].role
+  - components[4].role
+  - causal_graphs[0]
+  evidence_ids:
+  - micro-record-0
+  - micro-prior-0
+  - micro-delta-0
+  - micro-PMC2199927-jats
+  - micro-schema
+  - micro-graph-policy
+  - micro-exocyst-independent-challenge
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained scientific record
+  rule_id: Resolvable source-backed complex-integrity dependence
+  native_severity: minor
+  normalization_reason: A bounded missing physical-composition observation in an otherwise
+    correct structure; it does not invalidate the eight-subunit class or demand a
+    complete mechanism.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065207Z-exocyst-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2987
+- finding_id: micro-F3
+  issue_key: exomer-chs5-exact-family-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the verified Chs5 family mapping
+  description: The Chs5 scaffold remains label-only under an open exact-family task,
+    although native IPR052827 names its whole-protein family and Q12114 plus the complete
+    reviewed member set corroborate the homologous class.
+  target_ids:
+  - GO:0034044
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - micro-record-2
+  - micro-prior-2
+  - micro-policy
+  - micro-family-IPR052827
+  - micro-members-IPR052827
+  - micro-protein-Q12114
+  - micro-family-IPR015374-retry
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact constituent-class grounding
+  native_severity: minor
+  normalization_reason: A bounded actionable class mapping under the existing explicit
+    task; the complex identity and named protein examples remain supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065209Z-exomer-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2988
+- finding_id: micro-F4
+  issue_key: exomer-chs5-bounded-complex-integrity
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the experimentally tested Chs5 scaffold dependence
+  description: Sanchatjate sec12 and Figure5 report that Chs6-TAP association with
+    Bch1,Bud7 and Bch2 depends on Chs5 in the tested extracts. Huranova adds a distinct
+    Chs5-dependent stable TGN retention result. The current generic scaffold role/assembles-with
+    graph does not preserve these tested conditional relationships.
+  target_ids:
+  - GO:0034044
+  field_paths:
+  - components[0].role
+  - causal_graphs[0]
+  evidence_ids:
+  - micro-record-2
+  - micro-prior-2
+  - micro-PMC1635352-legacy
+  - micro-PMC5290816-legacy
+  - micro-PMC2064389-jats
+  - micro-schema
+  - micro-graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained scientific record
+  rule_id: Resolvable source-backed scaffold dependence
+  native_severity: minor
+  normalization_reason: A bounded omission of direct physical-complex evidence in
+    an otherwise correct scaffold representation; optional complete mechanisms are
+    not required.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065209Z-exomer-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2989
+- finding_id: plaque-t3-F1
+  issue_key: fact-exact-subunit-family-groundings
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the two verified FACT subunit families
+  description: The two existing subunits are REVIEWED_LABEL_ONLY under an open exact-family
+    task. Native IPR040258 identifies Spt16 and IPR000969 identifies SSRP1/POB3, corroborated
+    by the respective native protein cross-references.
+  target_ids:
+  - GO:0035101
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - components[1].grounding_status
+  - components[1].grounding_notes
+  - discussions[1]
+  evidence_ids:
+  - plaque-record-3
+  - plaque-original-3-yaml
+  - plaque-curation
+  - plaque-ipr-IPR040258
+  - plaque-ipr-IPR000969
+  - plaque-ipr-IPR050454
+  - plaque-up-P32558
+  - plaque-up-Q04636
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fact_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component-class grounding under the explicit current task
+  native_severity: minor
+  normalization_reason: This is a bounded actionable grounding gap in an otherwise
+    supported two-subunit core. It does not invalidate the correct labels, examples,
+    Nhp6 boundary or coarse functions.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065209Z-fact-complex-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2984
+- finding_id: plaque-t5-F1
+  issue_key: pol-gamma-catalytic-exact-family-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the verified catalytic polymerase-gamma family
+  description: The existing POLG class is REVIEWED_LABEL_ONLY with an open exact-family
+    task. Native IPR002297 identifies mitochondrial DNA polymerase family A and P54098
+    corroborates membership. The accessory alternatives checked here are broader,
+    domain-only, deleted or empty and are deliberately excluded.
+  target_ids:
+  - GO:0005760
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - plaque-record-5
+  - plaque-original-5-yaml
+  - plaque-curation
+  - plaque-ipr-IPR002297
+  - plaque-ipr-IPR027031
+  - plaque-ipr-IPR042064
+  - plaque-ipr-IPR027030
+  - plaque-panther-PTHR10745-SF8
+  - plaque-up-P54098
+  - plaque-up-Q9UHN1
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component-class grounding under the explicit current task
+  native_severity: minor
+  normalization_reason: This is one bounded actionable class-grounding gap. The catalytic/accessory
+    identities, human examples and resolved accessory-copy-number boundary remain
+    supported; the review does not force an unverified accessory family.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065211Z-gamma-dna-polymerase-complex-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2985
+- finding_id: septin-garp_complex-F1
+  issue_key: garp-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground three exact GARP constituent families
+  description: The current label-only notes defer exact family review, but native
+    full-family metadata and independent protein membership now resolve Vps52, Vps53
+    and Vps54. Current native full-family type/signature and independent protein cross-reference
+    joins reconfirm the exact bounded mapping. Preserve historical rationale; update
+    current notes/status or append a dated clarification during separately authorized
+    curation.
+  target_ids:
+  - GO:0000938
+  field_paths:
+  - components#vps52_garp_subunit.grounding_status
+  - components#vps53_garp_subunit.grounding_status
+  - components#vps54_garp_subunit.grounding_status
+  - discussions#resolve_garp_component_family_groundings
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-ipr-IPR007258
+  - septin-ipr-IPR039766
+  - septin-ipr-IPR039745
+  - septin-pfam-PF08700
+  - septin-protein-P36116
+  - septin-protein-P39904
+  - septin-protein-P47061
+  - septin-protein-Q12071
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: Structure identity, membership and biological direction remain
+    correct; this resolves a bounded existing grounding deferral without changing
+    the scientific class.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065211Z-garp-complex-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2990
+- finding_id: septin-garp_complex-F2
+  issue_key: garp-tested-core-stability
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the directly tested reciprocal GARP-core stability
+  description: 'The maintained Vps52/Vps53/Vps54 roles omit the directly tested reciprocal
+    core-stability result in Conibear2000 section17/Figure6: loss of another core
+    member reduces Vps52 steady-state abundance to14% and accelerates tagged-core
+    turnover during the stated pulse-chase assays. Conibear2003 section11 retains
+    the three-member core without Vps51. Curate this bounded role/evidence result;
+    current UNKNOWN values alone are not a requirement to assign essentiality, and
+    reduced stability does not demonstrate complete assembly abolition or universal
+    viability necessity.'
+  target_ids:
+  - GO:0000938
+  field_paths:
+  - components#vps52_garp_subunit.role
+  - components#vps53_garp_subunit.role
+  - components#vps54_garp_subunit.role
+  - components[*].essentiality
+  evidence_ids:
+  - septin-record-garp_complex
+  - septin-original-garp_complex
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-primary-PMC14776
+  - septin-primary-PMC153126
+  - septin-pmid-12377769
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: A localized cited physical-stability result is missing from
+    otherwise correct membership/function claims; this is not an incorrect complex
+    identity or a blanket necessity contradiction.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065211Z-garp-complex-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2991
+- finding_id: septin-gator1_complex-F1
+  issue_key: gator1-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground all three exact GATOR1/SEACIT classes
+  description: Exact Iml1/DEPDC5, Npr2/NPRL2 and Npr3/NPRL3 families are now verified,
+    resolving the maintained label-only deferral. Current native full-family type/signature
+    and independent protein cross-reference joins reconfirm the exact bounded mapping.
+    Preserve historical rationale; update current notes/status or append a dated clarification
+    during separately authorized curation.
+  target_ids:
+  - GO:1990130
+  field_paths:
+  - components[*].grounding_status
+  - discussions#resolve_gator1_subunit_family_groundings
+  evidence_ids:
+  - septin-record-gator1_complex
+  - septin-original-gator1_complex
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-ipr-IPR027244
+  - septin-ipr-IPR009348
+  - septin-ipr-IPR005365
+  - septin-protein-P47170
+  - septin-protein-P39923
+  - septin-protein-P38742
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator1_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: Structure identity, membership and biological direction remain
+    correct; this resolves a bounded existing grounding deferral without changing
+    the scientific class.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065212Z-gator1-complex-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2992
+- finding_id: septin-gator2_complex-F1
+  issue_key: gator2-three-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the Sea2, Sea3 and Sea4 constituent classes
+  description: Exact WDR24/Sea2, WDR59/Sea3 and MIOS/Sea4 families resolve three current
+    label-only rows without forcing the wider Sec13/Seh1 group into two specific classes.
+    Current native full-family type/signature and independent protein cross-reference
+    joins reconfirm the exact bounded mapping. Preserve historical rationale; update
+    current notes/status or append a dated clarification during separately authorized
+    curation.
+  target_ids:
+  - GO:0061700
+  field_paths:
+  - components#sea2_gator2_subunit.grounding_status
+  - components#sea3_gator2_subunit.grounding_status
+  - components#sea4_gator2_subunit.grounding_status
+  - discussions#resolve_gator2_subunit_family_groundings
+  evidence_ids:
+  - septin-record-gator2_complex
+  - septin-original-gator2_complex
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-ipr-IPR037590
+  - septin-ipr-IPR049567
+  - septin-ipr-IPR037593
+  - septin-ipr-IPR037363
+  - septin-protein-Q08281
+  - septin-protein-Q03897
+  - septin-protein-P38164
+  - septin-protein-P53011
+  - septin-protein-Q04491
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator2_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: Structure identity, membership and biological direction remain
+    correct; this resolves a bounded existing grounding deferral without changing
+    the scientific class.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065213Z-gator2-complex-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2993
+- finding_id: septin-gemini_of_cajal_bodies-F1
+  issue_key: gems-smn-exact-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the generic SMN marker family
+  description: The row is explicitly generic SMN protein, yet its label-only rationale
+    defers grounding together with unresolved paralogs/Gemin-complex boundaries. Exact
+    IPR040424 resolves that generic protein class independently of those still-open
+    localization and complex questions. Current native full-family type/signature
+    and independent protein cross-reference joins reconfirm the exact bounded mapping.
+    Preserve historical rationale; update current notes/status or append a dated clarification
+    during separately authorized curation.
+  target_ids:
+  - GO:0097504
+  field_paths:
+  - components#smn_protein.grounding_status
+  - components#smn_protein.grounding_notes
+  - discussions#resolve_gem_smn_boundaries
+  evidence_ids:
+  - septin-record-gemini_of_cajal_bodies
+  - septin-original-gemini_of_cajal_bodies
+  - septin-curation-policy
+  - septin-schema-policy
+  - septin-ipr-IPR040424
+  - septin-protein-Q16637
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gemini_of_cajal_bodies.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: Structure identity, membership and biological direction remain
+    correct; this resolves a bounded existing grounding deferral without changing
+    the scientific class.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261022T065213Z-gemini-of-cajal-bodies-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2994
+actions:
+- action_id: micro-A1
+  finding_ids:
+  - micro-F1
+  target_ids:
+  - GO:0000145
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained scientific record
+  description: In separately authorized record curation, add the verified six family
+    mappings and narrow the task to unresolved Sec3 and Sec10; preserve accessions
+    as taxon-paired examples.
+  acceptance_checks:
+  - Use IPR029175, IPR010326, IPR039682, IPR007225, IPR004140 and IPR033961 for the
+    respective classes.
+  - Do not replace a whole Sec3 class by a domain or force the broader Sec10-like
+    family.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+  - State homologous family scope and retain valid paralogs/other biological roles;
+    do not claim all family members are exclusive exocyst constituents.
+  - Preserve dated discussions.rationale, posed_date and curation events; narrow only
+    the current prompt/notes as justified.
+  - No record edits occur in this review PR.
+- action_id: micro-A2
+  finding_ids:
+  - micro-F2
+  target_ids:
+  - GO:0000145
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained scientific record
+  description: In separately authorized record curation, add a narrowly attributed
+    integrity/association statement for those tested mutant backgrounds. Preserve
+    UNKNOWN unless separately inspected assembly evidence justifies a condition-specific
+    necessity annotation.
+  acceptance_checks:
+  - 'Use the current genuine TerBush1995 body Results pp307–308/Fig6: tagged native
+    yeast mutant preparations labeled2h at25C; distinguish the separate sec6-4/sec15-1
+    temperature experiment.'
+  - State recovered association/composition and the reported wild-type allele rescue
+    with its data-not-shown limitation; do not infer intracellular depletion of unrecovered
+    partners.
+  - The original review had complete abstract access only; retain that immutable historical
+    tier. Current body access is a separate later observation.
+  - Global UNKNOWN may remain. Do not require universal ESSENTIAL, complete complex
+    absence, viability claims or a new experiment.
+  - Run applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+  - Preserve dated discussions.rationale, posed_date and curation events; narrow only
+    the current prompt/notes as justified.
+  - No record edits occur in this review PR.
+- action_id: micro-A3
+  finding_ids:
+  - micro-F3
+  target_ids:
+  - GO:0034044
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained scientific record
+  description: In separately authorized record curation, ground Chs5 with IPR052827
+    and narrow the open task to individual ChAP mappings; keep the four paralog-specific
+    rows distinct.
+  acceptance_checks:
+  - Do not derive exact identity solely from the generated unchecked InterPro description.
+  - Do not apply shared IPR015374 to all four rows as if it distinguished their paralog
+    classes.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+  - Use native family metadata and reference/member identity independently of generated
+    unchecked description; homologous fungal class need not be exclusively exomer-associated.
+  - Preserve dated discussions.rationale, posed_date and curation events; narrow only
+    the current prompt/notes as justified.
+  - No record edits occur in this review PR.
+- action_id: micro-A4
+  finding_ids:
+  - micro-F4
+  target_ids:
+  - GO:0034044
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained scientific record
+  description: In separately authorized record curation, add the specifically assayed
+    Chs5-dependent physical association result and, if represented, distinguish stable
+    membrane retention from complex coassociation. Retain assay and strain context;
+    do not turn every cargo phenotype into physical essentiality.
+  acceptance_checks:
+  - Anchor association to Chs6-TAP purification in the reported wild-type/deletion
+    backgrounds.
+  - Preserve the observation that loss of individual ChAPs can leave the remaining
+    complex associated.
+  - Keep UNKNOWN for unestablished universal formation necessity; any scoped inference
+    must state its scope.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+  - Separate DDY1810-derived Chs6-TAP mutant-extract association from Huranova30C
+    TGN retention and Wang recombinant Sf9 complexes.
+  - Do not infer a universal fixed five-subunit particle; recombinant ChAP association
+    and remaining-complex controls bound the claim.
+  - No universal ESSENTIAL, complete intracellular absence or new experiment is required.
+  - Preserve dated discussions.rationale, posed_date and curation events; narrow only
+    the current prompt/notes as justified.
+  - No record edits occur in this review PR.
+- action_id: plaque-t3-A1
+  finding_ids:
+  - plaque-t3-F1
+  target_ids:
+  - GO:0035101
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fact_complex.yaml
+    role: maintained scientific record
+  description: Add InterPro:IPR040258 and InterPro:IPR000969 to the existing Spt16
+    and Pob3 classes, with source-specific evidence, and update the current grounding
+    state/task. Do not substitute the broader RTT106/SSRP1 family or add Nhp6 as an
+    obligatory core row.
+  acceptance_checks:
+  - Each adopted identifier denotes the exact whole-protein class rather than a species
+    example, shared domain or broader mixed family.
+  - Preserve supported component labels, protein examples and UNKNOWN formation necessity.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+  - Preserve dated discussion rationale and curation history; append current evidence
+    or update the active task only in separately authorized record curation.
+- action_id: plaque-t5-A1
+  finding_ids:
+  - plaque-t5-F1
+  target_ids:
+  - GO:0005760
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  description: Add InterPro:IPR002297 to the existing catalytic class with exact family
+    evidence and update that portion of the grounding task. Retain the accessory class
+    as reviewed label-only until a current exact family is independently verified.
+    Do not copy the family entry incidental erroneous5-prime extension prose.
+  acceptance_checks:
+  - Each adopted identifier denotes the exact whole-protein class rather than a species
+    example, shared domain or broader mixed family.
+  - Preserve supported component labels, protein examples and UNKNOWN formation necessity.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+  - Preserve dated discussion rationale and curation history; append current evidence
+    or update the active task only in separately authorized record curation.
+- action_id: septin-garp_complex-A1
+  finding_ids:
+  - septin-garp_complex-F1
+  target_ids:
+  - GO:0000938
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained scientific record
+  description: Use IPR007258, IPR039766 and IPR039745 for Vps52, Vps53 and Vps54;
+    narrow the remaining TODO to unresolved Vps51. Preserve dated rationale/history;
+    update current notes or append clarification. This review PR edits no record.
+  acceptance_checks:
+  - Do not use PF08700 as an exact Vps51 class.
+  - Preserve supported identities and source scope; pass applicable native gates.
+  - Do not rewrite historical rationale, force unresolved repeat/paralog mappings,
+    or infer universal formation necessity from membership or function.
+- action_id: septin-garp_complex-A2
+  finding_ids:
+  - septin-garp_complex-F2
+  target_ids:
+  - GO:0000938
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained scientific record
+  description: Add source-scoped reciprocal Vps52/Vps53/Vps54 stability roles/evidence
+    for the tested yeast deletions; resolve or explicitly qualify formation fields
+    only to the extent those assays justify. Retain the stable core without Vps51.
+    Preserve dated rationale/history; update current notes or append clarification.
+    This review PR edits no record.
+  acceptance_checks:
+  - Name the deletion/pulse-chase conditions and distinguish reduced stability from
+    complete assembly abolition.
+  - Do not infer universal viability requirements or assign all four ESSENTIAL.
+  - Preserve supported identities and source scope; pass applicable native gates.
+  - Do not rewrite historical rationale, force unresolved repeat/paralog mappings,
+    or infer universal formation necessity from membership or function.
+- action_id: septin-gator1_complex-A1
+  finding_ids:
+  - septin-gator1_complex-F1
+  target_ids:
+  - GO:1990130
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator1_complex.yaml
+    role: maintained scientific record
+  description: Use IPR027244, IPR009348 and IPR005365 respectively, with the existing
+    yeast roles and human counterpart scope intact. Preserve dated rationale/history;
+    update current notes or append clarification. This review PR edits no record.
+  acceptance_checks:
+  - Keep Rag GTPases and SEACAT outside the three-member constituent boundary.
+  - Preserve supported identities and source scope; pass applicable native gates.
+  - Do not rewrite historical rationale, force unresolved repeat/paralog mappings,
+    or infer universal formation necessity from membership or function.
+- action_id: septin-gator2_complex-A1
+  finding_ids:
+  - septin-gator2_complex-F1
+  target_ids:
+  - GO:0061700
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator2_complex.yaml
+    role: maintained scientific record
+  description: Use IPR037590, IPR049567 and IPR037593 for Sea2, Sea3 and Sea4; preserve
+    correct RTC1/MTC5 aliases and narrow the remaining family TODO. Preserve dated
+    rationale/history; update current notes or append clarification. This review PR
+    edits no record.
+  acceptance_checks:
+  - Do not equate IPR037363 with each distinct Sec13 and Seh1 class.
+  - Preserve supported identities and source scope; pass applicable native gates.
+  - Do not rewrite historical rationale, force unresolved repeat/paralog mappings,
+    or infer universal formation necessity from membership or function.
+- action_id: septin-gemini_of_cajal_bodies-A1
+  finding_ids:
+  - septin-gemini_of_cajal_bodies-F1
+  target_ids:
+  - GO:0097504
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gemini_of_cajal_bodies.yaml
+    role: maintained scientific record
+  description: Use IPR040424 for the generic SMN protein; retain the open human-paralog,
+    Gemin and gem-versus-Cajal-body questions. Preserve dated rationale/history; update
+    current notes or append clarification. This review PR edits no record.
+  acceptance_checks:
+  - Do not equate the family or Q16637 entry with the whole SMN complex.
+  - Do not infer exclusive SMN1 occupancy from an entry that also lists SMN2.
+  - Preserve supported identities and source scope; pass applicable native gates.
+  - Do not rewrite historical rationale, force unresolved repeat/paralog mappings,
+    or infer universal formation necessity from membership or function.
+limitations:
+- 'Exocyst, RecBCD and exomer independent review: Own scope is three complete current
+  records: exocyst, RecBCD and exomer. Twenty-six actually used maintained inputs
+  were frozen before use and match source; all47 frozen hashes are audited. No extra
+  maintained neighbor or other PR record was read. Original six assigned artifacts
+  remain immutable.'
+- 'Exocyst, RecBCD and exomer independent review: Exocyst current complete indexed
+  abstracts: TerBush1996, Finger1998, GuoSec41999, GuoExo841999 and Huh2003/Zhang2005/Baek2010
+  metadata. Genuine TerBush1995 PDF-text and Boyd2004 JATS were independently read
+  at named Methods/Results/Discussion/caption extents. Blocked/stub routes do not
+  establish body access; no supplements, figure pixels or coordinate reanalysis.'
+- 'Exocyst, RecBCD and exomer independent review: Exocyst condition-specific co-IP
+  recovery is not intracellular protein depletion, universal complex absence or global
+  ESSENTIAL. The sec3-2/sec5-24/sec10-2 comparison at25C is distinguished from separate
+  sec6-4/sec15-1 temperature experiments. Original abstract-only review remains unchanged;
+  new body observation has its own actual receipt.'
+- 'Exocyst, RecBCD and exomer independent review: Six exocyst family mappings use
+  native family identity/signatures and reviewed reference/member sets; homologous
+  paralogs and other functions are not excluded. Sec3 domain/superfamily and broader
+  Sec10-like do not settle exact remaining classes. No sequence alignment or exhaustive
+  alternative-family absence claim.'
+- 'Exocyst, RecBCD and exomer independent review: RecBCD Singleton2004 genuine Nature
+  main text/Methods/captions now read; Masterson1992 remains complete indexed abstract
+  after PDF403. RCSB entry/entities are authority, not new primary experiments. Protein
+  heterotrimer and synthetic DNA entity are distinguished. V330 recombinant expression
+  is distinct from species562 source, K-12 reference annotations and precise1k mixed-strain
+  expression context.'
+- 'Exocyst, RecBCD and exomer independent review: Exomer Sanchatjate/Wang/Huranova
+  genuine bodies were independently read at stated extents; Trautwein remains complete
+  indexed abstract after failed body routes. DDY1810 mutant extracts, SEY6210/CWY
+  contexts, recombinant Sf9 and Huranova30C dynamics are not conflated. Huranova supplementary
+  strain table, all pixels/movies/supplements and atomic data remain unread.'
+- 'Exocyst, RecBCD and exomer independent review: Exomer association, stable TGN retention,
+  cargo function and universal formation are distinct. Current broad class does not
+  require a fixed five-subunit particle or external Arf1 as a stable constituent.
+  Chs5 family mapping excludes LLM-generated unchecked prose as primary evidence;
+  shared ChAP family does not resolve four individual paralog classes.'
+- 'Exocyst, RecBCD and exomer independent review: Official catalogue response covers20
+  organism rows/28 organism-dataset pairs, with no Saccharomyces match. E.coli precise1k
+  includes BW25113,DGF-298,GMOS,MG1655,W3110. Complete4257-gene table joins recB/b2820/P08394,recC/b2822/P07648,recD/b2819/P04993;
+  each has zero true memberships among201 supplied threshold rows. Nonhits are not
+  absence of gene expression/protein, nonmembership in RecBCD or causal/formation
+  evidence; no AI summaries or activities were used.'
+- 'Exocyst, RecBCD and exomer independent review: Historical runner unavailability
+  is the actual Nov3 00:49Z PermissionError receipt, not a new invocation. Seven original
+  access-only rows are corrected only in successor evidence kind while retaining old
+  hashes/times. Current challenge/rate-limit/wrong-endpoint responses are validation
+  diagnostics only; retries are separately recorded.'
+- 'Exocyst, RecBCD and exomer independent review: Six actual source-head native protein
+  commands pass:16 maintained reviewed examples and18 typed nodes,16 COVERED plus
+  external Sec4 and Arf1 UNANCHORED_WITH_UNIPROT. Six original native validate/render
+  commands and42 historical input occurrences pass. No future successor/post-save/CI/queue
+  gate is certified.'
+- 'Exocyst, RecBCD and exomer independent review: Four inherited minor findings remain
+  open with exact repository/review/finding references and four bounded future-curation
+  actions. RecBCD stays pass_with_limitations. No new scientific finding, terminal
+  broader category/group resolution, record edit, mandatory optional field, universal
+  essentiality or new experiment is imposed.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Formosa2001 and
+  Mason2003 genuine primary HTML bodies were read only at the explicitly listed Results/Methods/Discussion
+  and text-caption sections. No image pixels, supplements or raw experiments were
+  reanalysed; Formosa explicitly unpublished observations are not promoted to direct
+  figure evidence.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Belot2003, Wittmeyer1999,
+  Eichhorn1999, Lim1999, Carrodeguas2001, Spelbrink2000 and Bogenhagen2008 are current
+  complete primary abstract/metadata evidence. Failed or redirect publisher routes
+  do not certify body access. Historical successful browser passages are not claimed
+  freshly reread. Hubscher2002 is secondary abstract context.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Eichhorn native-Mr/homodimer
+  and catalytic claims are supported at abstract tier; current experimental strain/calibration/Methods
+  details are not available from that tier. The generic FMN-reductase record does
+  not become universally an E.coli SsuE dimer.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Reference protein
+  strain, experimental yeast backgrounds, mouse structure versus human deletion constructs,
+  and recombinant expression hosts are kept separate. COMMON and GO taxon restrictions
+  are not population censuses or universal stoichiometry claims.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Exact family adoption
+  is limited to Spt16 IPR040258, SSRP1/POB3 IPR000969 and catalytic POLG IPR002297
+  under existing open tasks. Broad RTT106/SSRP1, glycyl-tRNA-synthetase/POLG2, domain-only,
+  deleted and empty alternatives are not forced; generated unchecked or incidental
+  erroneous prose is excluded.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Current official
+  catalogue and precise1k gene/module evidence are source fallback, not a new runner
+  invocation. The historical runner unavailable observation remains2026-11-03 00:49Z.
+  FACT/POLG lack a matching natural host; E.coli precise1k spans five strains and
+  cannot certify the purified-protein experiment strain.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Only exact SsuE
+  b0937 and its201 returned memberships, selected Sulfate56(17members) and SSW SNPs82(89members)
+  metadata/member tables were inspected. No full activity-matrix/regulatory-causality
+  analysis, generated module summary or threshold-based biological absence is claimed.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: Five historical
+  access-kind corrections preserve exact prior dates, references, hashes and context_only
+  scopes from original YAML; historical raw transport bytes were not reconstructed.
+  Genuine InterPro410 deletion metadata remains authority content.'
+- 'FACT, FMN reductase and gamma DNA polymerase independent review: No maintained
+  images occur in these three records, no optional missing-example requirement or
+  universal formation assay is invented, and no scientific record/Git/GitHub mutation
+  is made. Parent-owned corpus gates, CI, queue and merge are outside this source
+  certification.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Four unchanged
+  targets fully reviewed; five inherited minor findings remain open, with exact predecessor
+  identities. Four formal expression-only applicability exclusions require successor
+  correction; zero own historical failed-access evidence-kind defects established
+  after all original evidence rows were inspected.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Fresh Conibear2000/2003,
+  Dokudovskaya2011, Panchaud CellCycle2013 bodies and ScienceSignaling author PDF,
+  and genuine Bar-Peled numeric PMC body were read at declared extents. No GARP/SEA/GATOR
+  figure pixels, atomic coordinates or supplementary experiments independently analyzed.
+  ScienceSignaling supplemental index and initial captions were encountered but exact
+  strain TablesS1/S2 were not independently inspected. Canonical Bar-Peled HTTP200
+  challenge is access-only, separate from its genuine alternate body.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Liu1996 scanned
+  primary pages3555/3556/3559-3564 were actually viewed, including figure pixels and
+  captions; degraded/monochrome reproduction and no quantitative reanalysis limit
+  image interpretation. Pages3557/3558/3565 were not inspected, so no complete-paper
+  claim. Matera/Frey1998 is secondary metadata-only with no native abstract; Gall2000
+  secondary complete-abstract only. Gangwani2001, Mahmoudi2010, Huh2003, Rout2000
+  and Siniossoglou/Pelham2002 are complete primary abstracts/native annotation joins,
+  not full-body evidence.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Current reviewed
+  primary names and aliases are independently verified, including RTC1/SEA2, MTC5/SEA3
+  and Q16637 listing both SMN1/SMN2. Annotation-source placement does not imply every
+  cited paper independently tested every localization; Npr3 below-detection fluorescence
+  and earlier Sea2 atlas differences are retained. Exact protein identity does not
+  certify experimental strain or universal formation necessity.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: GARP core stability
+  is direct, assay-scoped physical evidence. Vps51 is different: core levels remain
+  stable without it. Neither all-four ESSENTIAL flags, universal viability, nor complete
+  assembly abolition follows. GATOR biochemical activity, starvation epistasis and
+  transient interactions remain distinct from whole-assembly formation. Smn1 family
+  is not the whole SMN complex or exclusive human SMN1 localization.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: GATOR2 and
+  gems VARIABLE lineage/strain qualifiers are not independently established by the
+  inspected model-system sampling. Cell-state differences and qualitative canonical
+  hosts are not prevalence censuses; no opposite-distribution assertion or speculative
+  curation finding is made.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Three GARP,
+  three GATOR1, three GATOR2 and one generic SMN full-family identities are verified
+  at the stated class scope. The bounded candidate search does not prove absence of
+  any finer family elsewhere. PF08700 shared repeat and IPR037363 wider paralog family
+  do not uniquely resolve Vps51 or each Sec13/Seh1 class. Their unresolved boundaries
+  remain explicit.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Complete current
+  official catalogue lacks matching yeast/human biological hosts. No downstream unrelated-host
+  proxy is queried. Historical runner unavailable receipt is actual Nov3 00:49Z; no
+  fresh invocation claimed. Current catalogue is an independently inspected fresh
+  Nov4 response, not a biological absence result.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Actual eight
+  root native commands exit0 with13 reviewed examples,13 COVERED constituent nodes
+  and2 UNANCHORED_WITH_UNIPROT context nodes(Tlg1,Gtr1). These validate identity/coverage,
+  not biological membership or necessity. Original native validate/render0 and52 frozen
+  historical inputs verified; root global QC, successor persistence, final-head CI
+  and queue are separate and not certified here.'
+- 'GARP, GATOR1, GATOR2 and Gemini of Cajal bodies independent review: Only29 explicitly
+  listed maintained inputs informed this report; all matched current frozen source/worktree
+  hashes. No repository, record, original bundle, Git or GitHub mutation. Actual bounded
+  issuing-authority queries do not constitute exhaustive literature-absence searches.
+  Existing historical batch26 global execution scopes remain historical provenance.'
+- Historical observations remain immutable; their old checks are not represented as
+  current-head execution.
+- The adapter runner was not rerun after the canary established OS access failure.
+  Catalogue-based coverage is assessed directly; fresh and reused responses retain
+  actual access timestamps.
+- Native label checks include 923 no-adapter skips. Native identifier checks include
+  909 PMID transport failures and 254 skipped identifiers; bounded supplemental checks
+  independently resolve the 909 PMIDs.
+- Scientific record-curation findings stay in separate issues; no record is edited
+  by this review PR.
+- Final trusted-base post-save review-check, exact-head independent acceptance, final-head
+  CI and merge-group CI occur after saving this immutable observation and are not
+  represented here as already completed.
+notes:
+- Two changed targets, exocyst and RecBCD, are substantively reassessed; eight other
+  current target hashes match original frozen inputs. All used maintained context
+  is frozen before synthesis.
+- 'Twenty current native protein commands passed across 34 represented protein examples
+  and 38 typed protein nodes: 34 COVERED and four external context nodes (Sec4, Arf1,
+  Tlg1 and Gtr1) UNANCHORED_WITH_UNIPROT. These external interactors are not missing
+  complex constituents; identity and coverage are not experimental membership or necessity
+  evidence.'
+- An initial protein-check invocation lacked permitted network access and failed DNS
+  before content verification. Its diagnostic is preserved separately; all twenty
+  actual commands subsequently passed with authorized network access.
+- Original observations and dated rationale remain immutable. Current source bodies,
+  primary abstracts, database entries and failed-access diagnostics retain exact scopes
+  and dates.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065207Z-exocyst-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065208Z-recbcd-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065209Z-exomer-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065209Z-fact-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065210Z-fmn-reductase-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065211Z-gamma-dna-polymerase-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065211Z-garp-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065212Z-gator1-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065213Z-gator2-complex-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261022T065213Z-gemini-of-cajal-bodies-audit
+  relationship: Current-input follow-up retaining the original immutable observation
+    and exact finding lineage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2392
+- https://github.com/CultureBotAI/CellStructureMech/issues/2514
+- https://github.com/CultureBotAI/CellStructureMech/issues/2981
+- https://github.com/CultureBotAI/CellStructureMech/issues/2982
+- https://github.com/CultureBotAI/CellStructureMech/issues/2983
+- https://github.com/CultureBotAI/CellStructureMech/issues/2984
+- https://github.com/CultureBotAI/CellStructureMech/issues/2985
+- https://github.com/CultureBotAI/CellStructureMech/issues/2986
+- https://github.com/CultureBotAI/CellStructureMech/issues/2987
+- https://github.com/CultureBotAI/CellStructureMech/issues/2988
+- https://github.com/CultureBotAI/CellStructureMech/issues/2989
+- https://github.com/CultureBotAI/CellStructureMech/issues/2990
+- https://github.com/CultureBotAI/CellStructureMech/issues/2991
+- https://github.com/CultureBotAI/CellStructureMech/issues/2992
+- https://github.com/CultureBotAI/CellStructureMech/issues/2993
+- https://github.com/CultureBotAI/CellStructureMech/issues/2994
+```

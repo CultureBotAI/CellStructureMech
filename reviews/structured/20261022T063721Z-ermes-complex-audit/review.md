@@ -1,0 +1,867 @@
+# Source-backed review of ermes complex
+
+- Review: 20261022T063721Z-ermes-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:16:12Z
+- Finished UTC: 2026-10-22T06:37:21Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One minor explicit family-prerequisite deferral of the established four-subunit core. ERMES identity, tethering and the carefully scoped in-vitro Mmm1–Mdm12 lipid-transfer account are supported.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen governing/schema/protein/graph guidance. Native identity and directly read literature tiers are distinguished; no neighboring maintained record is an unstated scientific premise.
+
+Selection: Batch54 strict ordered selection, index 4; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0032865 | data/structures/other/ermes_complex.yaml | maintained | ERMES complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0032865 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0032865 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0032865 | Focused check passed; scientific scope independently assessed. |
+| Focused native verify | passed | True | GO:0032865 | Focused check passed; scientific scope independently assessed. |
+| Claim-level scientific review | passed | True | GO:0032865 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0032865 | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0032865 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0032865 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0032865 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0032865 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0032865 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact ERMES identity and membrane boundary
+
+identity: supported. Targets: GO:0032865.
+
+Definition, four synonyms, outer-mitochondrial-complex parent and outer-membrane parthood agree with native GO. The ER-linked tether is not equated with an entirely mitochondrial set of proteins: Mmm1 is ER resident in the primary experiment.
+
+### Established core inventory versus unresolved family IDs
+
+completeness: concern. Targets: GO:0032865.
+
+Both cited papers identify the four core subunits. The explicit current TODO postpones every component row until exact family groundings are resolved, although label-only rows can preserve those known identities. This is a bounded representation gap, not a demand to add every peripheral factor or arbitrary optional inventory.
+
+### Tethering and carefully limited lipid transfer
+
+evidence: supported. Targets: GO:0032865.
+
+The synthetic-tether screen and localization support the canonical tethering example. The graph correctly restricts direct lipid transfer to the Mmm1–Mdm12 in-vitro module and retains uncertainty about the complete in-vivo ERMES mechanism. No separate broad lipid-exchange function has been reintroduced.
+
+### Species, constructs and COMMON semantics
+
+scope: supported. Targets: GO:0032865.
+
+S.cerevisiae is the directly supported canonical system. COMMON retains its meaning present in most members with exceptional losses; the reviewed work provides qualitative yeast-system evidence, not a census. K.lactis recombinant constructs, E.coli expression and mutant yeast heavy-membrane fractions are kept distinct.
+
+### Three descriptive relationships with experimental limits
+
+graph: supported. Targets: GO:0032865.
+
+The graph is explicitly NONMECHANISTIC. Its membrane parthood, ER link and contains-lipid-transfer-module edge match the declared sources, while the process node is a scoped descriptive endpoint rather than a claimed independent whole ERMES assembly.
+
+### Condition-specific disassembly does not impose uncurated necessity labels
+
+evidence: unknown. Targets: GO:0032865.
+
+No component essentiality labels are asserted. Kornmann directly reports loss of ERMES puncta after single-core deletions, but any later formation labels should preserve that experimental scope rather than substitute respiratory viability, lipid activity or all-organism necessity.
+
+### Whole target with bounded source and unresolved scope
+
+completeness: supported. Targets: GO:0032865.
+
+All current scientific fields, source placements, graph edges, discussions and history were reviewed. Historical first-pass wording is not treated as false merely because present access differs. The stated findings isolate concrete current changes; optional unverified detail remains a limitation.
+
+## Findings
+
+### F1: Record the established ERMES core before exact family resolution
+
+minor / open / confirmed; issue key: ermes-known-core-inventory-deferral.
+
+The current ermes_subunit_boundaries prompt explicitly requires exact family CURIEs before adding any Mmm1/Mdm10/Mdm12/Mdm34 rows. Kornmann main paragraphs12/15–19 and Kawano Introduction directly identify this core. The schema supports named, source-backed label-only constituents, so the family prerequisite unnecessarily withholds established composition.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add source-backed named core rows with honest unresolved family grounding and formation necessity where appropriate; revise the TODO to concern exact mappings rather than block known membership. Do not infer peripheral-factor inventory, copy counts or universal ESSENTIAL labels from this review.
+
+- All four core identities and their roles cite the appropriate primary passages.
+- Species examples, if added later, remain distinct from class-level grounding.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/ermes_complex.yaml; Complete current YAML: every scientific field, citation, component/example, graph edge, discussion and history | context_only | The entire target was read. No neighboring maintained record supplies an unstated scientific premise. |
+| curation | docs/CURATION.md; Component-class grounding, label-only representation and formation necessity | context_only | Known named constituents can be recorded with reviewed label-only grounding when exact families remain unresolved. Protein examples are not family identities; formation necessity is distinct from activity or viability. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent; ComponentGroundingStatusEnum; EssentialityEnum; PresenceEnum | context_only | COMMON means present in most taxon members, with exceptional losses; UNKNOWN does not claim demonstrated formation necessity. An exact source-neutral class is distinct from a species accession or a shared domain. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Graph scope, typed nodes and source-specific edges | context_only | Descriptive composition/function graphs may remain NONMECHANISTIC. Experimental system and actor scope must match each edge. |
+| micro54-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Native taxId/scientificName/rank and lineage fields. | supports | ENA taxId4932 identifies Saccharomyces cerevisiae, rank species. This identity does not establish a quantitative within-species prevalence census. |
+| micro54-go-ermes-network | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032865,GO:0098799,GO:0005741,GO:0005783; Four exact entries: identity, definition, synonyms and relevant typed children; unrelated children are not used. | supports | Active GO0032865 matches the qualified ERMES definition and all four exact synonyms. GO0098799 has the ERMES is_a child; GO0005741 has GO0098799 as a part_of child. GO0005783 is the ER boundary. These are typed native relations, not an untyped ancestor inference. |
+| micro54-GO0032865-ancestors-network | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032865/ancestors?relations=is_a; Complete ancestors array from relations=is_a request. | supports | The exact is_a-only array includes GO0098799 outer mitochondrial membrane protein complex and protein-containing-complex ancestry. It does not itself encode an ER-to-mitochondria transport mechanism. |
+| micro54-kornmann2009-meta-network | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1175088%22&amp;format=json&amp;resultType=core; Unique MED entry; exact identifiers, authors, year and complete abstractText. | supports | PMID19556461: An ER-mitochondria tethering complex revealed by a synthetic biology screen. Kornmann B, Currie E, Collins SR, Schuldiner M, Nunnari J, Weissman JS, Walter P. (2009), DOI10.1126/science.1175088. Exact identity and complete native abstract read; actual main-text scope is separate. |
+| micro54-kawano2018-meta-network | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.201704119%22&amp;format=json&amp;resultType=core; Unique MED entry; exact identifiers, authors, year and complete abstractText. | supports | PMID29279306: Structure-function insights into direct lipid transfer between membranes by Mmm1-Mdm12 of ERMES. Kawano S, Tamura Y, Kojima R, Bala S, Asai E, Michel AH, Kornmann B, Riezman I, Riezman H, Sakae Y, Okamoto Y, Endo T. (2018), DOI10.1083/jcb.201704119. Exact identity and complete native abstract read; actual main-text scope is separate. |
+| micro54-kornmann2009-legacy | https://pmc.ncbi.nlm.nih.gov/articles/2933203/; Genuine PMC2933203 HTML, article paragraph indices4–29: complete scientific main text and Figure1–4 captions. Supplementary Methods/data and figure pixels were not independently inspected. | supports | Kornmann identifies Mmm1/Mdm10/Mdm12/Mdm34 as the ER-mitochondria tether. Synthetic tether rescue, GFP localization and Mmm1 glycosylation support the compartmental bridge. Component deletion disperses the punctate complex under the tested yeast conditions; phospholipid flux and calcium-related genetic associations are not a complete direct transport mechanism. |
+| micro54-kawano2018-legacy | https://pmc.ncbi.nlm.nih.gov/articles/5839780/; Genuine PMC5839780 HTML: Introduction s01, Results s06/s07, Discussion s08, Methods s11/s12/s18 and embedded Figure4–7 captions. No pixels, supplementary assays or independent structural reanalysis. | supports | Kawano directly demonstrates enhanced lipid transfer by purified Mmm1s–Mdm12 between model liposomes, with K.lactis and S.cerevisiae constructs distinguished. Heavy-membrane-fraction experiments use mutant S.cerevisiae with Vps13-D716H support. Carrier versus continuous-conduit models remain speculative. |
+| schema-result | just validate data/structures/other/ermes_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/ermes_complex.yaml |
+| strict-result | just validate-strict data/structures/other/ermes_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/ermes_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml --causal-graphs; Complete focused native read-only report | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml --verify; Complete focused native read-only report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/ermes_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Kornmann complete scientific main text/captions was read, but supplementary Methods and all primary figure pixels were not. Kawano reading is restricted to the exact sections/captions listed; no full crystallographic reanalysis or supplementary data inspection is claimed.
+- The direct transfer evidence involves purified modules/model membranes and isolated yeast membrane fractions. Full native lipid-transfer mechanism, calcium transfer and organism-wide formation necessity remain unresolved.
+- No exact family IDs or species protein examples are proposed for ERMES core subunits in this review. Their unverified mappings do not prevent source-backed label-only inventory.
+- Original raw bytes, URL, UTC and SHA256 are retained for reused sources. Failed initial DNS fetches are diagnostic receipts, not scientific source bodies.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The user requests a review for every unreviewed record, including qualified clean records.
+- Native ontology and protein/family databases directly address these claims. No expression-module dataset is established as evidence of physical complex membership.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T063721Z-ermes-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of ermes complex
+started_at: '2026-10-22T06:16:12Z'
+finished_at: '2026-10-22T06:37:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One minor explicit family-prerequisite deferral of the established four-subunit
+  core. ERMES identity, tethering and the carefully scoped in-vitro Mmm1–Mdm12 lipid-transfer
+  account are supported.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/ermes_complex.yaml
+    sha256: 461d942cf1aedc1f89e6ed617555ce0e3377d103e971b63c8902bcccc66e31f9
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0032865
+  path: data/structures/other/ermes_complex.yaml
+  label: ERMES complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ermes_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen governing/schema/protein/graph
+    guidance. Native identity and directly read literature tiers are distinguished;
+    no neighboring maintained record is an unstated scientific premise.
+  selection: Batch54 strict ordered selection, index 4; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032865
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just validate data/structures/other/ermes_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just validate-strict data/structures/other/ermes_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-meta-network
+  - micro54-kawano2018-meta-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032865
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/ermes_complex.yaml
+  locator: 'Complete current YAML: every scientific field, citation, component/example,
+    graph edge, discussion and history'
+  accessed_at: '2026-10-22T06:30:15Z'
+  support: context_only
+  summary: The entire target was read. No neighboring maintained record supplies an
+    unstated scientific premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component-class grounding, label-only representation and formation necessity
+  accessed_at: '2026-10-22T06:30:15Z'
+  support: context_only
+  summary: Known named constituents can be recorded with reviewed label-only grounding
+    when exact families remain unresolved. Protein examples are not family identities;
+    formation necessity is distinct from activity or viability.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentGroundingStatusEnum; EssentialityEnum; PresenceEnum
+  accessed_at: '2026-10-22T06:30:15Z'
+  support: context_only
+  summary: COMMON means present in most taxon members, with exceptional losses; UNKNOWN
+    does not claim demonstrated formation necessity. An exact source-neutral class
+    is distinct from a species accession or a shared domain.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph scope, typed nodes and source-specific edges
+  accessed_at: '2026-10-22T06:30:15Z'
+  support: context_only
+  summary: Descriptive composition/function graphs may remain NONMECHANISTIC. Experimental
+    system and actor scope must match each edge.
+- evidence_id: micro54-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Native taxId/scientificName/rank and lineage fields.
+  accessed_at: '2026-10-22T06:20:02.063372Z'
+  support: supports
+  summary: ENA taxId4932 identifies Saccharomyces cerevisiae, rank species. This identity
+    does not establish a quantitative within-species prevalence census.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro54-go-ermes-network
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032865,GO:0098799,GO:0005741,GO:0005783
+  locator: 'Four exact entries: identity, definition, synonyms and relevant typed
+    children; unrelated children are not used.'
+  accessed_at: '2026-10-22T06:23:15.901801Z'
+  support: supports
+  summary: Active GO0032865 matches the qualified ERMES definition and all four exact
+    synonyms. GO0098799 has the ERMES is_a child; GO0005741 has GO0098799 as a part_of
+    child. GO0005783 is the ER boundary. These are typed native relations, not an
+    untyped ancestor inference.
+  snapshot_sha256: 4da04b12e32f410facbfabbcdd9e328e4f82fc7833a2dd74fb92cbd9271841a2
+- evidence_id: micro54-GO0032865-ancestors-network
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032865/ancestors?relations=is_a
+  locator: Complete ancestors array from relations=is_a request.
+  accessed_at: '2026-10-22T06:23:17.704355Z'
+  support: supports
+  summary: The exact is_a-only array includes GO0098799 outer mitochondrial membrane
+    protein complex and protein-containing-complex ancestry. It does not itself encode
+    an ER-to-mitochondria transport mechanism.
+  snapshot_sha256: 85706fcf397d605c37b4da7182400c7a12a0a14747c9741efff69ca3407ddee7
+- evidence_id: micro54-kornmann2009-meta-network
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1175088%22&format=json&resultType=core
+  locator: Unique MED entry; exact identifiers, authors, year and complete abstractText.
+  accessed_at: '2026-10-22T06:23:15.902264Z'
+  support: supports
+  summary: 'PMID19556461: An ER-mitochondria tethering complex revealed by a synthetic
+    biology screen. Kornmann B, Currie E, Collins SR, Schuldiner M, Nunnari J, Weissman
+    JS, Walter P. (2009), DOI10.1126/science.1175088. Exact identity and complete
+    native abstract read; actual main-text scope is separate.'
+  snapshot_sha256: 8d017d3be7d1ba89743d70b04ef624a4bc24f7909e6ab90c5048635fdeacc5e6
+- evidence_id: micro54-kawano2018-meta-network
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.201704119%22&format=json&resultType=core
+  locator: Unique MED entry; exact identifiers, authors, year and complete abstractText.
+  accessed_at: '2026-10-22T06:23:15.902376Z'
+  support: supports
+  summary: 'PMID29279306: Structure-function insights into direct lipid transfer between
+    membranes by Mmm1-Mdm12 of ERMES. Kawano S, Tamura Y, Kojima R, Bala S, Asai E,
+    Michel AH, Kornmann B, Riezman I, Riezman H, Sakae Y, Okamoto Y, Endo T. (2018),
+    DOI10.1083/jcb.201704119. Exact identity and complete native abstract read; actual
+    main-text scope is separate.'
+  snapshot_sha256: b85276470125e9184b405db61032b8baa17ea2a963fcb2563eb22d3efb5844e7
+- evidence_id: micro54-kornmann2009-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2933203/
+  locator: 'Genuine PMC2933203 HTML, article paragraph indices4–29: complete scientific
+    main text and Figure1–4 captions. Supplementary Methods/data and figure pixels
+    were not independently inspected.'
+  accessed_at: '2026-10-22T06:23:59.006895Z'
+  support: supports
+  summary: Kornmann identifies Mmm1/Mdm10/Mdm12/Mdm34 as the ER-mitochondria tether.
+    Synthetic tether rescue, GFP localization and Mmm1 glycosylation support the compartmental
+    bridge. Component deletion disperses the punctate complex under the tested yeast
+    conditions; phospholipid flux and calcium-related genetic associations are not
+    a complete direct transport mechanism.
+  snapshot_sha256: a86247c29099e0df33ef6ccf08ba273b77d7faf1eb86d92a534e802765014b14
+- evidence_id: micro54-kawano2018-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/5839780/
+  locator: 'Genuine PMC5839780 HTML: Introduction s01, Results s06/s07, Discussion
+    s08, Methods s11/s12/s18 and embedded Figure4–7 captions. No pixels, supplementary
+    assays or independent structural reanalysis.'
+  accessed_at: '2026-10-22T06:23:59.007322Z'
+  support: supports
+  summary: Kawano directly demonstrates enhanced lipid transfer by purified Mmm1s–Mdm12
+    between model liposomes, with K.lactis and S.cerevisiae constructs distinguished.
+    Heavy-membrane-fraction experiments use mutant S.cerevisiae with Vps13-D716H support.
+    Carrier versus continuous-conduit models remain speculative.
+  snapshot_sha256: 2e4696fe08eef5b89472dc31c1999a1c850574c6d0cff65fb840a07ca2e48ab1
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/ermes_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:13Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/ermes_complex.yaml'
+  snapshot_sha256: 621331800b0b6dea419a2fa03d3316b95e55df403d22e017c49bf57f7d01ee7a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/ermes_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:14Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/ermes_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/ermes_complex-strict.tsv"
+  snapshot_sha256: faa3abbfe64fb357ecb104a86321654a8918021ad98bf8adf7cb874ad19aecc6
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml
+    --causal-graphs
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:23:18.340157Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ermes_complex.yaml
+    --verify
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:23:18.811960Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/ermes_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ERMES identity and membrane boundary
+  outcome: supported
+  target_ids:
+  - GO:0032865
+  summary: 'Definition, four synonyms, outer-mitochondrial-complex parent and outer-membrane
+    parthood agree with native GO. The ER-linked tether is not equated with an entirely
+    mitochondrial set of proteins: Mmm1 is ER resident in the primary experiment.'
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+- assessment_id: composition
+  area: completeness
+  topic: Established core inventory versus unresolved family IDs
+  outcome: concern
+  target_ids:
+  - GO:0032865
+  summary: Both cited papers identify the four core subunits. The explicit current
+    TODO postpones every component row until exact family groundings are resolved,
+    although label-only rows can preserve those known identities. This is a bounded
+    representation gap, not a demand to add every peripheral factor or arbitrary optional
+    inventory.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+- assessment_id: function
+  area: evidence
+  topic: Tethering and carefully limited lipid transfer
+  outcome: supported
+  target_ids:
+  - GO:0032865
+  summary: The synthetic-tether screen and localization support the canonical tethering
+    example. The graph correctly restricts direct lipid transfer to the Mmm1–Mdm12
+    in-vitro module and retains uncertainty about the complete in-vivo ERMES mechanism.
+    No separate broad lipid-exchange function has been reintroduced.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+  - micro54-kornmann2009-meta-network
+  - micro54-kawano2018-meta-network
+- assessment_id: scope
+  area: scope
+  topic: Species, constructs and COMMON semantics
+  outcome: supported
+  target_ids:
+  - GO:0032865
+  summary: S.cerevisiae is the directly supported canonical system. COMMON retains
+    its meaning present in most members with exceptional losses; the reviewed work
+    provides qualitative yeast-system evidence, not a census. K.lactis recombinant
+    constructs, E.coli expression and mutant yeast heavy-membrane fractions are kept
+    distinct.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+  - micro54-kornmann2009-meta-network
+  - micro54-kawano2018-meta-network
+- assessment_id: graph
+  area: graph
+  topic: Three descriptive relationships with experimental limits
+  outcome: supported
+  target_ids:
+  - GO:0032865
+  summary: The graph is explicitly NONMECHANISTIC. Its membrane parthood, ER link
+    and contains-lipid-transfer-module edge match the declared sources, while the
+    process node is a scoped descriptive endpoint rather than a claimed independent
+    whole ERMES assembly.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - graphs
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+- assessment_id: formation
+  area: evidence
+  topic: Condition-specific disassembly does not impose uncurated necessity labels
+  outcome: unknown
+  target_ids:
+  - GO:0032865
+  summary: No component essentiality labels are asserted. Kornmann directly reports
+    loss of ERMES puncta after single-core deletions, but any later formation labels
+    should preserve that experimental scope rather than substitute respiratory viability,
+    lipid activity or all-organism necessity.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole target with bounded source and unresolved scope
+  outcome: supported
+  target_ids:
+  - GO:0032865
+  summary: All current scientific fields, source placements, graph edges, discussions
+    and history were reviewed. Historical first-pass wording is not treated as false
+    merely because present access differs. The stated findings isolate concrete current
+    changes; optional unverified detail remains a limitation.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+  - micro54-kornmann2009-meta-network
+  - micro54-kawano2018-meta-network
+findings:
+- finding_id: F1
+  issue_key: ermes-known-core-inventory-deferral
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the established ERMES core before exact family resolution
+  description: The current ermes_subunit_boundaries prompt explicitly requires exact
+    family CURIEs before adding any Mmm1/Mdm10/Mdm12/Mdm34 rows. Kornmann main paragraphs12/15–19
+    and Kawano Introduction directly identify this core. The schema supports named,
+    source-backed label-only constituents, so the family prerequisite unnecessarily
+    withholds established composition.
+  target_ids:
+  - GO:0032865
+  field_paths:
+  - components
+  - discussions[0].prompt
+  - discussions[0].rationale
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro54-tax4932
+  - micro54-go-ermes-network
+  - micro54-GO0032865-ancestors-network
+  - micro54-kornmann2009-legacy
+  - micro54-kawano2018-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ermes_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and component representation
+  native_severity: minor
+  normalization_reason: The correct whole-complex identity and science are retained.
+    This is a bounded known-inventory deferral under an explicit prerequisite, not
+    a major identity error or an automatic empty-optional-slot finding.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032865
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ermes_complex.yaml
+    role: maintained scientific record
+  description: Add source-backed named core rows with honest unresolved family grounding
+    and formation necessity where appropriate; revise the TODO to concern exact mappings
+    rather than block known membership. Do not infer peripheral-factor inventory,
+    copy counts or universal ESSENTIAL labels from this review.
+  acceptance_checks:
+  - All four core identities and their roles cite the appropriate primary passages.
+  - Species examples, if added later, remain distinct from class-level grounding.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Kornmann complete scientific main text/captions was read, but supplementary Methods
+  and all primary figure pixels were not. Kawano reading is restricted to the exact
+  sections/captions listed; no full crystallographic reanalysis or supplementary data
+  inspection is claimed.
+- The direct transfer evidence involves purified modules/model membranes and isolated
+  yeast membrane fractions. Full native lipid-transfer mechanism, calcium transfer
+  and organism-wide formation necessity remain unresolved.
+- No exact family IDs or species protein examples are proposed for ERMES core subunits
+  in this review. Their unverified mappings do not prevent source-backed label-only
+  inventory.
+- Original raw bytes, URL, UTC and SHA256 are retained for reused sources. Failed
+  initial DNS fetches are diagnostic receipts, not scientific source bodies.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user requests a review for every unreviewed record, including qualified clean
+  records.
+- Native ontology and protein/family databases directly address these claims. No expression-module
+  dataset is established as evidence of physical complex membership.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

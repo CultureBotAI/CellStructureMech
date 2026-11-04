@@ -1,0 +1,991 @@
+# Esterosome identity, constituent and source-scope review
+
+- Review: 20261022T013717Z-esterosome-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T01:18:38Z
+- Finished UTC: 2026-10-22T01:37:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete curation issue observed. Exact compartment identity, observed Dictyostelium context, cargo/boundary descriptions and explicitly nonmechanistic graphs are supported within the recorded experimental and access limits.
+
+## Scope And Provenance
+
+Complete single maintained target: identity, hierarchy/parthood, composition, formation necessity, taxonomic context, functions, all graph nodes/edges, source placement, discussions and history. Neighboring record prose is not used to supply scientific support.
+
+Selection: Batch28 index5; strict selected path order, single maintained record at fresh base f97b1abe.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033117 | data/structures/membrane_organelle/esterosome.yaml | maintained | esterosome |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native focused causal-graphs | passed | True | GO:0033117 | Read-only native check passed; scientific scope reviewed separately. |
+| Native focused verify | passed | True | GO:0033117 | Read-only native check passed; scientific scope reviewed separately. |
+| Expression-module applicability | not_applicable | False | GO:0033117 | Eukaryotic organelle/localization review supplies no matching bacterial expression-module dataset. Expression-module membership would not prove crystal localization or assembly. |
+| Focused native schema | passed | True | GO:0033117 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0033117 | Focused validator passed. |
+| Claim-level scientific review | passed | True | GO:0033117 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0033117 | 11 of 11 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0033117 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0033117 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0033117 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0033117 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0033117 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Whole organelle versus lumen and membrane
+
+identity: supported. Targets: GO:0033117.
+
+The exact GO identity, structure kind and primary definition are consistent. Native GO and SL distinguish vesicle, enclosed volume and surrounding membrane, with supported parent/parthood relations; the whole record does not treat either part as an independent organelle. Synonyms where present match native SL. The lumen broader-parent claim is supported through native is_a ancestry, not asserted as an immediate edge.
+
+### Aggregation-stage Dictyostelium occurrence
+
+scope: supported. Targets: GO:0033117.
+
+The record explicitly confines the empirical note to aggregation-stage D. discoideum. Bomblies uses AX2-214 for the microscopy and most experiments and AX3 for specified sequence/cAMP analyses. Distributed crystals and protein accumulation support the model occurrence and canonical example. COMMON is read within that stated developmental context; the study is not a strain-frequency survey and does not establish a numeric prevalence, every life stage or other taxa.
+
+### Major crystal constituents and bounding membrane
+
+completeness: supported. Targets: GO:0033117.
+
+Both named proteins are supported by crystal-fraction enrichment and specific immuno-EM labeling. The description is of major constituents, not an exhaustive stoichiometric lattice inventory; the paper detects minor bands without establishing further named core members. The membrane is the defining boundary. No omitted optional constituent is made a finding.
+
+### Verified protein instances and bounded family withholding
+
+grounding: supported. Targets: GO:0033117.
+
+Both accessions, reviewed status, labels, gene tokens and paired taxon are correct. Native broad domain signatures support the family prose but do not exactly name the esterosome-localized combined protein cohort. REVIEWED_LABEL_ONLY is therefore retained; no exact family match is invented or broad domain substituted for a localization-defined set. The database membrane location is not transferred to the cargo component.
+
+### Individual protein assembly necessity remains unknown
+
+evidence: unknown. Targets: GO:0033117.
+
+The sources establish crystal association and developmental regulation, not a depletion/reconstitution test proving either protein is individually required for esterosome formation. UNKNOWN on the protein cohort is appropriate; developmental phenotype discussion is not a formation assay. The collective enclosing membrane is constitutional to the membrane-bounded class.
+
+### Containment and storage scope
+
+evidence: supported. Targets: GO:0033117.
+
+The membrane-boundary function and lumen crystal-storage description, where present, state observed containment. They do not assert an established catalytic role, a specific release route or demonstrated transport physiology. The whole target supplies no unsupported physiological function.
+
+### Explicitly nonmechanistic mature topology
+
+graph: supported. Targets: GO:0033117.
+
+Every node and edge resolves to the corresponding compartment or anchored cargo component. NONMECHANISTIC scope accurately describes mature parthood/enclosure and crystal-associated cargo. The whole graph crystallize-in edge is read with its explicit co-fractionation/immunolabeling description; it is not evidence of purified co-crystallization, fixed stoichiometry, or a temporal ER-budding mechanism. Those uncertainties remain explicit in this assessment.
+
+### Exact lattice composition and esterosome biogenesis
+
+evidence: unknown. Targets: GO:0033117.
+
+The paper explicitly leaves exact protein ratios/co-crystallization, sorting from RER and eventual release/fate unresolved. No certainty about those mechanisms is imported from the descriptive graphs, sequence similarity, or RER-like boundary.
+
+### Discussions, source placement and historical notes
+
+consistency: supported. Targets: GO:0033117.
+
+The current discussions agree with their targets: protein cohort exact-family uncertainty, lumen membrane-boundary interpretation, or generic lipid material grounding. Native source identities and literature citation match. Historical issue-resolution notes are preserved as history; this review does not adjudicate uninspected prior review bundles or historical database states.
+
+### Full target and bounded evidence coverage
+
+completeness: supported. Targets: GO:0033117.
+
+All target fields and claim-bearing evidence were read, including both existing protein examples and their gene/taxon pairing. The target asserts no maintained image asset, numerical physical property, verbatim quotation or external gene actor beyond its anchored cargo proteins. Direct paper prose and native identifiers support the bounded record; optional empty fields are not treated as defects.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/esterosome.yaml; Entire maintained YAML, all evidence placements, protein examples where present, graph nodes/edges, discussions and curation history | context_only | Full target bytes read. Native inspection identifies the exact reviewed content; neighboring record prose is not evidence for this verdict. |
+| rubric | docs/CURATION.md; Component material versus whole-structure grounding, assembly essentiality and source scope | context_only | Formation necessity is distinct from catalytic or developmental function. A collective boundary and a particular protein require different necessity assessments. |
+| graph-rubric | .claude/skills/curate-causal-graphs/SKILL.md; Mechanistic scope, participant identity and edge evidence | context_only | NONMECHANISTIC graphs may describe supported mature topology and membership without asserting biogenesis or trafficking mechanisms. |
+| esterosome-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033117,GO:0034467,GO:0033118,GO:0031410,GO:0043233,GO:0030659; results GO0033117/0033118/0034467/0031410/0030659/0043233: id,name,isObsolete,definition,children | supports | All six inspected GO terms are active cellular components. GO0033117 defines a crystalline-protein vesicle and has membrane/lumen part_of children; GO0033118 defines its RER-characteristic lipid boundary; GO0034467 defines the enclosed volume. GO0031410 and GO0030659 expose the respective whole/membrane is_a children. GO0043233 defines the broader organelle lumen, without an immediate esterosome-lumen child in this reply. |
+| esterosome-agent-SL-0109 | https://rest.uniprot.org/locations/SL-0109.json; name/id/definition/geneOntologies/synonyms/isA/partOf | supports | SL0109 identifies the esterosome, directly maps GO0033117 and has cytoplasmic-vesicle isA ancestry. Its definition describes crystalline protein cargo and an RER-like enclosing membrane. |
+| esterosome-agent-SL-0108 | https://rest.uniprot.org/locations/SL-0108.json; name/id/definition/geneOntologies/synonyms/isA/partOf | supports | SL0108 directly maps GO0033118, supplies the esterosomal-membrane synonym, cytoplasmic-vesicle-membrane isA and esterosome partOf. Nested ancestor mappings are not treated as exact target mappings. |
+| esterosome-agent-SL-0328 | https://rest.uniprot.org/locations/SL-0328.json; name/id/definition/geneOntologies/synonyms/isA/partOf | supports | SL0328 directly maps GO0034467, supplies the esterosomal-lumen synonym and esterosome partOf, and has cytoplasmic-vesicle-lumen isA ancestry. |
+| esterosome-agent-tax44689 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44689; taxId,scientificName,rank,lineage | supports | ENA native taxonomy identifies 44689 as Dictyostelium discoideum, rank species. The original batch27 source bytes and receipt timestamp are retained unchanged. Identity does not itself measure prevalence. |
+| esterosome-agent-bomblies1990-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1083%2Fjcb.110.3.669; resultList.result[0]: exact bibliographic identifiers and complete abstractText | supports | Verified Bomblies et al. 1990, J Cell Biol110:669–679, PMID2307702, PMC2116030 and DOI10.1083/jcb.110.3.669. Complete abstract reports membrane-enclosed crystals, purified major69/56kDa proteins, D2 identification and immuno-EM localization; it distinguishes sequence similarity from a demonstrated physiological enzyme role. |
+| esterosome-agent-bomblies1990-browser | https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases; Printed pp669–672; browser lines72–681: Introduction, Methods incl cultivation/antibodies/EM/purification/sequence analysis, Fig1–3 captions and start of Results | supports | Browser-extracted published-paper prose, not native HTTP200 or inspected image pixels. Introduction and Methods establish AX2-214/AX3, predominantly AX2 experiments, six-hour starvation for aggregation competence, crystal purification, specific antibodies and immuno-EM preparation. Figure2 caption identifies ribosome-coated enclosing membranes. Early Results report crystal enrichment and two predominant proteins. |
+| esterosome-agent-bomblies1990-browser2 | https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases; Printed pp671–675; browser lines534–952: complete Results prose, Fig2–7 captions and sequence-analysis text; sequence-alignment pixels not inspected | supports | Published Results identify the56kDa D2 product by mAb418; specific crystal-protein antibodies and serial/double-gold labeling place both proteins at the same intracellular crystals. Sequence analysis supports a cleaved leader for crystal protein and esterase similarity. The prose explicitly describes lumenal proteins rather than membrane association. Developmental expression differs between AX2 and the AX3 cAMP-pulse experiment. These observations support cargo membership, not an exact lattice ratio or purified co-crystallization assay. |
+| esterosome-agent-bomblies1990-browser4 | https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases; Printed pp676–678; browser lines1416–1824: Fig9–11 captions, TableI text and complete Discussion, including open co-crystallization question and Questions about the Origin and Fate of Esterosomes | supports | Complete Discussion separates observed co-localization from the open question of co-crystallization and variable protein ratios; recrystallization was proposed to resolve exact composition. Alternative RER sorting and cargo-release routes remain hypotheses. Storage is descriptive sequestration; the eventual physiological function and release compartment are unresolved. The text cites fraction-level hydrolysis from a thesis, not a purified-protein physiological assay performed here. |
+| esterosome-agent-P21837 | https://rest.uniprot.org/uniprotkb/P21837.json; primaryAccession,entryType,proteinDescription,genes,organism; SUBCELLULAR LOCATION/SIMILARITY; source citation PMID2307702; InterPro/Pfam cross-references | supports | P21837 is the primary reviewed entry for cryS, with recommended name Crystal protein and taxon44689. SIMILARITY states type-B carboxylesterase/lipase membership. Its own location field says esterosome membrane while the note says membrane-enclosed crystals; the primary paper, not that broad database location, establishes lumenal crystal membership. |
+| esterosome-agent-P18142 | https://rest.uniprot.org/uniprotkb/P18142.json; primaryAccession,entryType,proteinDescription,genes,organism; SUBCELLULAR LOCATION/SIMILARITY; source citation PMID2307702; InterPro/Pfam cross-references | supports | P18142 is the primary reviewed entry for D2, with recommended name cAMP-regulated D2 protein and taxon44689. SIMILARITY states type-B carboxylesterase/lipase membership. Its own location field says esterosome membrane while the note says membrane-enclosed crystals; the primary paper, not that broad database location, establishes lumenal crystal membership. |
+| esterosome-agent-reviewed-genes | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3AcryS%20OR%20gene_exact%3AD2%29%20AND%20organism_id%3A44689%20AND%20reviewed%3Atrue; Query (gene_exact:cryS OR gene_exact:D2) AND organism_id:44689 AND reviewed:true; complete results list and each genes/organism object | supports | The bounded exact-gene query returns two reviewed entries, P21837/cryS and P18142/D2, each at exact taxon44689. The returned primary gene tokens were checked, giving one retained entry per queried gene. This proves accession selection, not localization. |
+| esterosome-agent-IPR002018 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002018/; metadata accession/type/name/description/member_databases/hierarchy; no inference from counters | supports | IPR002018 is the type-B carboxylesterase domain, integrating PF00135. Its description covers a broad group of evolutionarily related esterases; it does not define the two esterosome-localized proteins as a closed structural cohort. |
+| esterosome-agent-PF00135 | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00135/; metadata accession/type/name/integrated/set_info | supports | PF00135 is the carboxylesterase domain model, integrated into IPR002018. Native type/name/integration establish broad signature scope. Embedded Wikipedia prose is not used as primary experimental evidence. |
+| esterosome-causal-graphs-result | /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml --causal-graphs; Captured native read-only focused checker output | supports | data/structures/membrane_organelle/esterosome.yaml  (GO:0033117)<br>  crystal_protein_enclosure	esterosome_crystal_proteins	COVERED	-&gt;esterosome_crystal_proteins (UniProtKB:P21837, UniProtKB:P18142)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| esterosome-verify-result | /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml --verify; Captured native read-only focused checker output | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| schema-result | just validate data/structures/membrane_organelle/esterosome.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/esterosome.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/esterosome.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/esterosome.yaml --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/esterosome.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 11 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Bomblies main-paper prose and captions were read as browser-extracted published text. Original PDF/page pixels were not recovered or visually audited. Sequence alignment OCR, raw microscopy, gel quantification and unpublished thesis data were not reanalyzed.
+- PMC numeric HTML provides a genuine complete abstract and PDF locator only; native PDF routes returned preparation HTML or403/404, and EuropePMC XML returned406. These responses are retained and not treated as article bodies.
+- The paper supports AX2 aggregation-stage localization and specified AX3 analyses, not a quantitative strain-prevalence survey. No uniform presence at all developmental stages or other taxa is inferred.
+- Exact lattice ratios, purified co-crystallization, individual molecular formation necessity, RER sorting and eventual release remain unresolved. Descriptive topology and cargo membership are not mechanistic proof.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User explicitly authorized a review for every uncovered record, including clean records; that instruction governs over the local issue-only persistence guideline. No save or finalization is performed here.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T013717Z-esterosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Esterosome identity, constituent and source-scope review
+started_at: '2026-10-22T01:18:38Z'
+finished_at: '2026-10-22T01:37:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation issue observed. Exact compartment identity, observed
+  Dictyostelium context, cargo/boundary descriptions and explicitly nonmechanistic
+  graphs are supported within the recorded experimental and access limits.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/esterosome.yaml
+    sha256: c5779634687c3e16478f4782e24897bc8df7939f14eddfd26ec4715c6de3c95a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/score_causal_graphs.py
+    sha256: 5ffe450c5b37c3dc3b0e62672caf0d99b358c8249fcc98a8c4fc7d78e8cd0d2f
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0033117
+  path: data/structures/membrane_organelle/esterosome.yaml
+  label: esterosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/esterosome.yaml
+    role: maintained scientific record
+scope:
+  description: 'Complete single maintained target: identity, hierarchy/parthood, composition,
+    formation necessity, taxonomic context, functions, all graph nodes/edges, source
+    placement, discussions and history. Neighboring record prose is not used to supply
+    scientific support.'
+  selection: Batch28 index5; strict selected path order, single maintained record
+    at fresh base f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033117
+checks:
+- check_id: esterosome-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native check passed; scientific scope reviewed separately.
+  evidence_ids:
+  - esterosome-causal-graphs-result
+- check_id: esterosome-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native check passed; scientific scope reviewed separately.
+  evidence_ids:
+  - esterosome-verify-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0033117
+  summary: Eukaryotic organelle/localization review supplies no matching bacterial
+    expression-module dataset. Expression-module membership would not prove crystal
+    localization or assembly.
+  evidence_ids:
+  - record
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just validate data/structures/membrane_organelle/esterosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just validate-strict data/structures/membrane_organelle/esterosome.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - rubric
+  - graph-rubric
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-tax44689
+  - esterosome-agent-bomblies1990-meta
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+  - esterosome-agent-P21837
+  - esterosome-agent-P18142
+  - esterosome-agent-reviewed-genes
+  - esterosome-agent-IPR002018
+  - esterosome-agent-PF00135
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033117
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/esterosome.yaml
+  locator: Entire maintained YAML, all evidence placements, protein examples where
+    present, graph nodes/edges, discussions and curation history
+  accessed_at: '2026-10-22T01:26:51Z'
+  support: context_only
+  summary: Full target bytes read. Native inspection identifies the exact reviewed
+    content; neighboring record prose is not evidence for this verdict.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component material versus whole-structure grounding, assembly essentiality
+    and source scope
+  accessed_at: '2026-10-22T01:26:51Z'
+  support: context_only
+  summary: Formation necessity is distinct from catalytic or developmental function.
+    A collective boundary and a particular protein require different necessity assessments.
+- evidence_id: graph-rubric
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Mechanistic scope, participant identity and edge evidence
+  accessed_at: '2026-10-22T01:26:51Z'
+  support: context_only
+  summary: NONMECHANISTIC graphs may describe supported mature topology and membership
+    without asserting biogenesis or trafficking mechanisms.
+- evidence_id: esterosome-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033117,GO:0034467,GO:0033118,GO:0031410,GO:0043233,GO:0030659
+  locator: 'results GO0033117/0033118/0034467/0031410/0030659/0043233: id,name,isObsolete,definition,children'
+  accessed_at: '2026-10-22T01:23:16.521617Z'
+  support: supports
+  summary: All six inspected GO terms are active cellular components. GO0033117 defines
+    a crystalline-protein vesicle and has membrane/lumen part_of children; GO0033118
+    defines its RER-characteristic lipid boundary; GO0034467 defines the enclosed
+    volume. GO0031410 and GO0030659 expose the respective whole/membrane is_a children.
+    GO0043233 defines the broader organelle lumen, without an immediate esterosome-lumen
+    child in this reply.
+  snapshot_sha256: c7679deb34905d09810c944be7b32f26d6deb3f52620e0790df9a4077ecd6021
+- evidence_id: esterosome-agent-SL-0109
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0109.json
+  locator: name/id/definition/geneOntologies/synonyms/isA/partOf
+  accessed_at: '2026-10-22T01:23:16.521892Z'
+  support: supports
+  summary: SL0109 identifies the esterosome, directly maps GO0033117 and has cytoplasmic-vesicle
+    isA ancestry. Its definition describes crystalline protein cargo and an RER-like
+    enclosing membrane.
+  snapshot_sha256: 07e7e4afc37ebf1072119d97a830dd493ebe66aae619320a676ba90e01d73431
+- evidence_id: esterosome-agent-SL-0108
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0108.json
+  locator: name/id/definition/geneOntologies/synonyms/isA/partOf
+  accessed_at: '2026-10-22T01:23:16.522028Z'
+  support: supports
+  summary: SL0108 directly maps GO0033118, supplies the esterosomal-membrane synonym,
+    cytoplasmic-vesicle-membrane isA and esterosome partOf. Nested ancestor mappings
+    are not treated as exact target mappings.
+  snapshot_sha256: d09af7d2ae5dee175d331abbe865ca6f1c20cd5caceb6d3a85c9a4cd9a7e3c74
+- evidence_id: esterosome-agent-SL-0328
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0328.json
+  locator: name/id/definition/geneOntologies/synonyms/isA/partOf
+  accessed_at: '2026-10-22T01:23:17.952802Z'
+  support: supports
+  summary: SL0328 directly maps GO0034467, supplies the esterosomal-lumen synonym
+    and esterosome partOf, and has cytoplasmic-vesicle-lumen isA ancestry.
+  snapshot_sha256: da3ece8e78de178ff95a2aae89c72a0902b753ad05909f42f48612e0a6ea3373
+- evidence_id: esterosome-agent-tax44689
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44689
+  locator: taxId,scientificName,rank,lineage
+  accessed_at: '2026-10-22T01:10:30.747029Z'
+  support: supports
+  summary: ENA native taxonomy identifies 44689 as Dictyostelium discoideum, rank
+    species. The original batch27 source bytes and receipt timestamp are retained
+    unchanged. Identity does not itself measure prevalence.
+  snapshot_sha256: 6f53a1ddbf831afbc0544e18351c92d099e28c4e8258ef29d0f841829af7c37f
+- evidence_id: esterosome-agent-bomblies1990-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083%2Fjcb.110.3.669
+  locator: 'resultList.result[0]: exact bibliographic identifiers and complete abstractText'
+  accessed_at: '2026-10-22T01:23:16.521113Z'
+  support: supports
+  summary: Verified Bomblies et al. 1990, J Cell Biol110:669–679, PMID2307702, PMC2116030
+    and DOI10.1083/jcb.110.3.669. Complete abstract reports membrane-enclosed crystals,
+    purified major69/56kDa proteins, D2 identification and immuno-EM localization;
+    it distinguishes sequence similarity from a demonstrated physiological enzyme
+    role.
+  snapshot_sha256: b2fc53778c64bf4803cf116f663dfa64b1029e20e1398d22c5f04f862b8f11d7
+- evidence_id: esterosome-agent-bomblies1990-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases
+  locator: 'Printed pp669–672; browser lines72–681: Introduction, Methods incl cultivation/antibodies/EM/purification/sequence
+    analysis, Fig1–3 captions and start of Results'
+  accessed_at: '2026-10-22T01:24:55.505545Z'
+  support: supports
+  summary: Browser-extracted published-paper prose, not native HTTP200 or inspected
+    image pixels. Introduction and Methods establish AX2-214/AX3, predominantly AX2
+    experiments, six-hour starvation for aggregation competence, crystal purification,
+    specific antibodies and immuno-EM preparation. Figure2 caption identifies ribosome-coated
+    enclosing membranes. Early Results report crystal enrichment and two predominant
+    proteins.
+  snapshot_sha256: b49dd2a4c948f5ed764cdcf6fbde4ae9fde76828a2fb2661583749f69e6d2bd9
+- evidence_id: esterosome-agent-bomblies1990-browser2
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases
+  locator: 'Printed pp671–675; browser lines534–952: complete Results prose, Fig2–7
+    captions and sequence-analysis text; sequence-alignment pixels not inspected'
+  accessed_at: '2026-10-22T01:24:55.505209Z'
+  support: supports
+  summary: Published Results identify the56kDa D2 product by mAb418; specific crystal-protein
+    antibodies and serial/double-gold labeling place both proteins at the same intracellular
+    crystals. Sequence analysis supports a cleaved leader for crystal protein and
+    esterase similarity. The prose explicitly describes lumenal proteins rather than
+    membrane association. Developmental expression differs between AX2 and the AX3
+    cAMP-pulse experiment. These observations support cargo membership, not an exact
+    lattice ratio or purified co-crystallization assay.
+  snapshot_sha256: bbf7422c9c3f8e7774a8fde28b4440bc919b6ace9c165278a66d323d2c03c87a
+- evidence_id: esterosome-agent-bomblies1990-browser4
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/20847788_Membrane-enclosed_crystals_in_Dictyostelium_discoideum_cells_consisting_of_developmentally_regulated_proteins_with_sequence_similarities_to_known_esterases
+  locator: 'Printed pp676–678; browser lines1416–1824: Fig9–11 captions, TableI text
+    and complete Discussion, including open co-crystallization question and Questions
+    about the Origin and Fate of Esterosomes'
+  accessed_at: '2026-10-22T01:24:55.506170Z'
+  support: supports
+  summary: Complete Discussion separates observed co-localization from the open question
+    of co-crystallization and variable protein ratios; recrystallization was proposed
+    to resolve exact composition. Alternative RER sorting and cargo-release routes
+    remain hypotheses. Storage is descriptive sequestration; the eventual physiological
+    function and release compartment are unresolved. The text cites fraction-level
+    hydrolysis from a thesis, not a purified-protein physiological assay performed
+    here.
+  snapshot_sha256: 9ebb85e4c988a40ded11391b26826c17977a9d549851ed9c8acc4b7cff9053e6
+- evidence_id: esterosome-agent-P21837
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P21837.json
+  locator: primaryAccession,entryType,proteinDescription,genes,organism; SUBCELLULAR
+    LOCATION/SIMILARITY; source citation PMID2307702; InterPro/Pfam cross-references
+  accessed_at: '2026-10-22T01:23:17.975581Z'
+  support: supports
+  summary: P21837 is the primary reviewed entry for cryS, with recommended name Crystal
+    protein and taxon44689. SIMILARITY states type-B carboxylesterase/lipase membership.
+    Its own location field says esterosome membrane while the note says membrane-enclosed
+    crystals; the primary paper, not that broad database location, establishes lumenal
+    crystal membership.
+  snapshot_sha256: 6257114009b0abe20bee2d48f9242b16a8bc57316a58f8745bbe8c617f32c45b
+- evidence_id: esterosome-agent-P18142
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P18142.json
+  locator: primaryAccession,entryType,proteinDescription,genes,organism; SUBCELLULAR
+    LOCATION/SIMILARITY; source citation PMID2307702; InterPro/Pfam cross-references
+  accessed_at: '2026-10-22T01:23:17.995720Z'
+  support: supports
+  summary: P18142 is the primary reviewed entry for D2, with recommended name cAMP-regulated
+    D2 protein and taxon44689. SIMILARITY states type-B carboxylesterase/lipase membership.
+    Its own location field says esterosome membrane while the note says membrane-enclosed
+    crystals; the primary paper, not that broad database location, establishes lumenal
+    crystal membership.
+  snapshot_sha256: ff367a9f99e92972c09afa1c92d0972bf3d7cbb77c51460d370a1599b21763bb
+- evidence_id: esterosome-agent-reviewed-genes
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AcryS%20OR%20gene_exact%3AD2%29%20AND%20organism_id%3A44689%20AND%20reviewed%3Atrue
+  locator: Query (gene_exact:cryS OR gene_exact:D2) AND organism_id:44689 AND reviewed:true;
+    complete results list and each genes/organism object
+  accessed_at: '2026-10-22T01:23:18.024595Z'
+  support: supports
+  summary: The bounded exact-gene query returns two reviewed entries, P21837/cryS
+    and P18142/D2, each at exact taxon44689. The returned primary gene tokens were
+    checked, giving one retained entry per queried gene. This proves accession selection,
+    not localization.
+  snapshot_sha256: 29aa331512da2508330d67acf886d9e5f7504ad94a601088ee5db490450b07c6
+  search_scope: Remote UniProt query restricted to the two exact gene names, organism_id44689
+    and reviewed entries; returned complete two-entry result examined. Ignored-file
+    inclusion is not applicable to this remote query; no local absence claim is made.
+- evidence_id: esterosome-agent-IPR002018
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002018/
+  locator: metadata accession/type/name/description/member_databases/hierarchy; no
+    inference from counters
+  accessed_at: '2026-10-22T01:23:35.574131Z'
+  support: supports
+  summary: IPR002018 is the type-B carboxylesterase domain, integrating PF00135. Its
+    description covers a broad group of evolutionarily related esterases; it does
+    not define the two esterosome-localized proteins as a closed structural cohort.
+  snapshot_sha256: 0aecf4ed435f5a315de1c7911e57df5756d2ba643e3614779cb14f9f951ac5d4
+- evidence_id: esterosome-agent-PF00135
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00135/
+  locator: metadata accession/type/name/integrated/set_info
+  accessed_at: '2026-10-22T01:23:35.574409Z'
+  support: supports
+  summary: PF00135 is the carboxylesterase domain model, integrated into IPR002018.
+    Native type/name/integration establish broad signature scope. Embedded Wikipedia
+    prose is not used as primary experimental evidence.
+  snapshot_sha256: 0d5bb4cea750d4a397d13f0ea04ba3fac347e1de514cdb1c913e45a5f1c058bc
+- evidence_id: esterosome-causal-graphs-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml
+    --causal-graphs
+  locator: Captured native read-only focused checker output
+  accessed_at: '2026-10-22T01:25:34.622944Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/esterosome.yaml  (GO:0033117)\n  crystal_protein_enclosure\t\
+    esterosome_crystal_proteins\tCOVERED\t->esterosome_crystal_proteins (UniProtKB:P21837,\
+    \ UniProtKB:P18142)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: a2fa10e4d6e777070c2900e1e34454754e58ed4d9eb6e509512e5604077fe6c5
+- evidence_id: esterosome-verify-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/membrane_organelle/esterosome.yaml
+    --verify
+  locator: Captured native read-only focused checker output
+  accessed_at: '2026-10-22T01:25:25.018628Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/esterosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:39Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/esterosome.yaml'
+  snapshot_sha256: 9f62e604e440c85d7764327b3508d41c1372703e8731be951a44de5d79a99e96
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/esterosome.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:40Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/esterosome.yaml\
+    \ --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/esterosome-strict.tsv"
+  snapshot_sha256: 9ffaed597e689634d6f46f55905d0e3b5a94bf72dd7b8184e23c8410979e9c44
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/esterosome.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole organelle versus lumen and membrane
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: The exact GO identity, structure kind and primary definition are consistent.
+    Native GO and SL distinguish vesicle, enclosed volume and surrounding membrane,
+    with supported parent/parthood relations; the whole record does not treat either
+    part as an independent organelle. Synonyms where present match native SL. The
+    lumen broader-parent claim is supported through native is_a ancestry, not asserted
+    as an immediate edge.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+- assessment_id: taxon
+  area: scope
+  topic: Aggregation-stage Dictyostelium occurrence
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: The record explicitly confines the empirical note to aggregation-stage
+    D. discoideum. Bomblies uses AX2-214 for the microscopy and most experiments and
+    AX3 for specified sequence/cAMP analyses. Distributed crystals and protein accumulation
+    support the model occurrence and canonical example. COMMON is read within that
+    stated developmental context; the study is not a strain-frequency survey and does
+    not establish a numeric prevalence, every life stage or other taxa.
+  evidence_ids:
+  - record
+  - esterosome-agent-tax44689
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+- assessment_id: composition
+  area: completeness
+  topic: Major crystal constituents and bounding membrane
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: Both named proteins are supported by crystal-fraction enrichment and specific
+    immuno-EM labeling. The description is of major constituents, not an exhaustive
+    stoichiometric lattice inventory; the paper detects minor bands without establishing
+    further named core members. The membrane is the defining boundary. No omitted
+    optional constituent is made a finding.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+  - esterosome-agent-P21837
+  - esterosome-agent-P18142
+- assessment_id: protein-grounding
+  area: grounding
+  topic: Verified protein instances and bounded family withholding
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: Both accessions, reviewed status, labels, gene tokens and paired taxon
+    are correct. Native broad domain signatures support the family prose but do not
+    exactly name the esterosome-localized combined protein cohort. REVIEWED_LABEL_ONLY
+    is therefore retained; no exact family match is invented or broad domain substituted
+    for a localization-defined set. The database membrane location is not transferred
+    to the cargo component.
+  evidence_ids:
+  - esterosome-agent-P21837
+  - esterosome-agent-P18142
+  - esterosome-agent-reviewed-genes
+  - esterosome-agent-IPR002018
+  - esterosome-agent-PF00135
+  - esterosome-agent-bomblies1990-browser2
+- assessment_id: necessity
+  area: evidence
+  topic: Individual protein assembly necessity remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:0033117
+  summary: The sources establish crystal association and developmental regulation,
+    not a depletion/reconstitution test proving either protein is individually required
+    for esterosome formation. UNKNOWN on the protein cohort is appropriate; developmental
+    phenotype discussion is not a formation assay. The collective enclosing membrane
+    is constitutional to the membrane-bounded class.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+  - esterosome-agent-P21837
+  - esterosome-agent-P18142
+- assessment_id: functions
+  area: evidence
+  topic: Containment and storage scope
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: The membrane-boundary function and lumen crystal-storage description, where
+    present, state observed containment. They do not assert an established catalytic
+    role, a specific release route or demonstrated transport physiology. The whole
+    target supplies no unsupported physiological function.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+- assessment_id: graph
+  area: graph
+  topic: Explicitly nonmechanistic mature topology
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: Every node and edge resolves to the corresponding compartment or anchored
+    cargo component. NONMECHANISTIC scope accurately describes mature parthood/enclosure
+    and crystal-associated cargo. The whole graph crystallize-in edge is read with
+    its explicit co-fractionation/immunolabeling description; it is not evidence of
+    purified co-crystallization, fixed stoichiometry, or a temporal ER-budding mechanism.
+    Those uncertainties remain explicit in this assessment.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+  - graph-rubric
+- assessment_id: unresolved-mechanism
+  area: evidence
+  topic: Exact lattice composition and esterosome biogenesis
+  outcome: unknown
+  target_ids:
+  - GO:0033117
+  summary: The paper explicitly leaves exact protein ratios/co-crystallization, sorting
+    from RER and eventual release/fate unresolved. No certainty about those mechanisms
+    is imported from the descriptive graphs, sequence similarity, or RER-like boundary.
+  evidence_ids:
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+- assessment_id: consistency
+  area: consistency
+  topic: Discussions, source placement and historical notes
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: 'The current discussions agree with their targets: protein cohort exact-family
+    uncertainty, lumen membrane-boundary interpretation, or generic lipid material
+    grounding. Native source identities and literature citation match. Historical
+    issue-resolution notes are preserved as history; this review does not adjudicate
+    uninspected prior review bundles or historical database states.'
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+  - esterosome-agent-bomblies1990-meta
+- assessment_id: coverage
+  area: completeness
+  topic: Full target and bounded evidence coverage
+  outcome: supported
+  target_ids:
+  - GO:0033117
+  summary: All target fields and claim-bearing evidence were read, including both
+    existing protein examples and their gene/taxon pairing. The target asserts no
+    maintained image asset, numerical physical property, verbatim quotation or external
+    gene actor beyond its anchored cargo proteins. Direct paper prose and native identifiers
+    support the bounded record; optional empty fields are not treated as defects.
+  evidence_ids:
+  - record
+  - esterosome-agent-go
+  - esterosome-agent-SL-0109
+  - esterosome-agent-SL-0108
+  - esterosome-agent-SL-0328
+  - esterosome-agent-bomblies1990-browser
+  - esterosome-agent-bomblies1990-browser2
+  - esterosome-agent-bomblies1990-browser4
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Bomblies main-paper prose and captions were read as browser-extracted published
+  text. Original PDF/page pixels were not recovered or visually audited. Sequence
+  alignment OCR, raw microscopy, gel quantification and unpublished thesis data were
+  not reanalyzed.
+- PMC numeric HTML provides a genuine complete abstract and PDF locator only; native
+  PDF routes returned preparation HTML or403/404, and EuropePMC XML returned406. These
+  responses are retained and not treated as article bodies.
+- The paper supports AX2 aggregation-stage localization and specified AX3 analyses,
+  not a quantitative strain-prevalence survey. No uniform presence at all developmental
+  stages or other taxa is inferred.
+- Exact lattice ratios, purified co-crystallization, individual molecular formation
+  necessity, RER sorting and eventual release remain unresolved. Descriptive topology
+  and cargo membership are not mechanistic proof.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User explicitly authorized a review for every uncovered record, including clean
+  records; that instruction governs over the local issue-only persistence guideline.
+  No save or finalization is performed here.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
