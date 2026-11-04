@@ -1,0 +1,961 @@
+# Escrt iv complex scientific review
+
+- Review: 20261022T063726Z-escrt-iv-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:16:24Z
+- Finished UTC: 2026-10-22T06:37:26Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+ESCRT-IV identity, yeast interface example, correct proteins and bounded recycling graph are supported. One minor resolves exact Vta1 family grounding while retaining Vps4 specificity and speculative assembly limits.
+
+## Scope And Provenance
+
+Exactly one whole maintained target plus frozen guidance and protein-example skill. Source-specific actual read extents are enumerated per evidence row; no maintained neighboring record supplies scientific evidence.
+
+Selection: Target 10 of batch54, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990621 | data/structures/other/escrt_iv_complex.yaml | maintained | ESCRT IV complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990621 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990621 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:1990621 | Native focused check passed; scientific claims assessed separately. |
+| Native verify | passed | True | GO:1990621 | Native focused check passed; scientific claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:1990621 | No expression-module inference is used for these structure and pathway claims. |
+| Claim-level scientific review | passed | True | GO:1990621 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:1990621 | 11 of 14 collected target identifiers returned OK. PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14701806: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:20696398: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:1990621 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990621 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990621 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990621 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:1990621 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact Vps4/Vta1 complex and interface example
+
+identity: supported. Targets: GO:1990621.
+
+GO1990621, scoped synonyms, class/parthood and the yeast Vps4/Vta1 boundary agree. The canonical example accurately calls Yang a structural model/interface study rather than a complete native assembly reconstruction.
+
+### Exact Vta1 family with unresolved Vps4 class
+
+grounding: concern. Targets: GO:1990621.
+
+Correct reviewed accessions and unique exact-gene results are preserved. IPR044538 resolves Vta1; IPR045253 is only a domain and IPR050304 a broader ATPase class, so neither is forced into the exact Vps4 slot.
+
+### Yeast interface versus recombinant expression and native annotations
+
+scope: supported. Targets: GO:1990621.
+
+Species and S288C protein-reference identities are correct. The yeast-derived interface fragments were expressed in bacteria, while cargo sorting was tested in yeast deletions. Shiflett/Huh localization notes match the native UniProt annotation sources; no whole Huh atlas analysis is claimed.
+
+### ATP-driven recycling with explicitly proposed higher assembly
+
+graph: supported. Targets: GO:1990621.
+
+The NONMECHANISTIC graph distinguishes membership, Vta1-associated stabilization and coarse ATP-driven ESCRT-III recycling. Its evidence explicitly describes Yang higher-order arrays as proposed. Lata supplies direct polymer-disassembly evidence in a distinct engineered human system; neither source establishes a universal fixed Vps4 oligomer geometry or a fully observed scission cycle.
+
+### Binding-interface and cargo tests do not establish all formation requirements
+
+grounding: unknown. Targets: GO:1990621.
+
+Yang interface mutants abolish/reduce fragment binding and impair cargo sorting, but those experiments do not establish that each entire protein is universally required for every Vps4 oligomeric state. UNKNOWN formation fields are retained rather than inferred from intact composition or ATPase function.
+
+### Complete maintained target with bounded source inspection
+
+completeness: supported. Targets: GO:1990621.
+
+All maintained fields, evidence notes, graph statements and discussions were checked at the declared source extents. Optional inventories, exact stoichiometry and unresolved formation experiments are not fabricated from validation success.
+
+## Findings
+
+### F1: Ground the Vta1 cofactor to its verified family
+
+minor / open / confirmed; issue key: escrt-iv-vta1-exact-family.
+
+The Vta1 row remains reviewed label-only despite exact full-family IPR044538 and an independent Q06263 membership join. The Vps4 candidate limitations do not justify deferring this separately resolved constituent.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use IPR044538 for Vta1 and narrow the current family TODO to genuinely unresolved Vps4 boundaries.
+
+- Preserve the Vps4 label-only row until an exact full-class mapping is established.
+- Do not promote the speculative lattice model or inferred oligomeric count to fixed whole-complex anatomy.
+- Preserve supported identities and biological scope; pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/escrt_iv_complex.yaml; Entire maintained record including all history, discussions, evidence, components, examples and causal graph | context_only | The entire target was read; dated curation history is not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, essentiality, taxonomic presence and graph scope | context_only | Essentiality concerns formation, not function or viability. COMMON means present in most members, losses the exception; qualitative synthesis does not imply a measured prevalence census. |
+| curation | docs/CURATION.md; Component grounding and REVIEWED_LABEL_ONLY contract, including159–160 | context_only | Exact full-protein families are distinct from shared domains or paralog supergroups. A reviewed label-only status is not merely a placeholder for an exact mapping that was not curated this pass. |
+| escrt54-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000813,GO:0000814,GO:0000815,GO:0005768,GO:0010008,GO:0016887,GO:0032991,GO:0033565,GO:0036452,GO:0070676,GO:0071985,GO:0090148,GO:1990621; Complete target-relevant definitions/synonym scopes and typed child relationships within combined response; unrelated terms not attributed to this record | supports | GO1990621 defines the Vps4/Vta1 yeast complex, ATP-driven disassembly and recycling. Synonym scopes distinguish exact ESCRT-IV from narrower Vps4-Vta1 and related Vps4 complex. GO0036452/GO0010008 show class/parthood, GO0016887/GO0070676 define ATP hydrolysis and intralumenal-vesicle formation. |
+| escrt54-agent-GO1990621-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990621/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only ancestor closure independently contains the ESCRT complex and protein-containing-complex classes. It is not a part_of query. |
+| escrt54-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA taxonomy response | supports | Taxon4932 is Saccharomyces cerevisiae, rankspecies; its native names and lineage identify this exact node. |
+| escrt54-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA taxonomy response | supports | Taxon559292 is Saccharomyces cerevisiae S288C, rankstrain; its native names and lineage identify this exact node. |
+| escrt54-agent-protein-P52917 | https://rest.uniprot.org/uniprotkb/P52917.json; Accession/status/name/all gene tokens/organism; complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family xrefs | supports | Reviewed P52917: Vacuolar protein sorting-associated protein 4; primary genes VPS4, synonyms CSC1, DID6, END13, GRD13, VPL4, VPT10, taxon559292. Native comments retain their own experimental/inferred evidence scope. The protein response separately supplies its family xrefs; a family-entry response is not treated as this protein-membership proof. |
+| escrt54-agent-protein-Q06263 | https://rest.uniprot.org/uniprotkb/Q06263.json; Accession/status/name/all gene tokens/organism; complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family xrefs | supports | Reviewed Q06263: Vacuolar protein sorting-associated protein VTA1; primary genes VTA1, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence scope. The protein response separately supplies its family xrefs; a family-entry response is not treated as this protein-membership proof. |
+| escrt54-agent-gene-VPS4-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/genes/organism fields | supports | Exact reviewed-organism query returns 1 entry: P52917. Returned gene tokens/aliases identify the maintained protein without confusing its primary name with the queried synonym. |
+| escrt54-agent-gene-VTA1-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVTA1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/genes/organism fields | supports | Exact reviewed-organism query returns 1 entry: Q06263. Returned gene tokens/aliases identify the maintained protein without confusing its primary name with the queried synonym. |
+| escrt54-agent-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and abstract | supports | MED14562095: Global analysis of protein localization in budding yeast. Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK. (2003), DOI10.1038/nature02026. Exact metadata and complete abstract read; this is not full-body attestation. |
+| escrt54-agent-pmid-14701806 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14701806+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and abstract | supports | MED14701806: Characterization of Vta1p, a class E Vps protein in Saccharomyces cerevisiae. Shiflett SL, Ward DM, Huynh D, Vaughn MB, Simmons JC, Kaplan J. (2004), DOI10.1074/jbc.m312669200. Exact metadata and complete abstract read; this is not full-body attestation. |
+| escrt54-agent-pmid-20696398 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20696398+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and abstract | supports | MED20696398: Structural role of the Vps4-Vta1 interface in ESCRT-III recycling. Yang D, Hurley JH. (2010), DOI10.1016/j.str.2010.04.014. Exact metadata and complete abstract read; this is not full-body attestation. |
+| escrt54-agent-doi-j_devcel_2011_05_015 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.devcel.2011.05.015%22&amp;format=json&amp;resultType=core; Complete native bibliographic identity and abstract | supports | Exact DOI/MED identity: The ESCRT pathway. Henne WM, Buchkovich NJ, Emr SD. (2011), PMID21763610. Complete native abstract read. This is a secondary review, not a new primary experiment. |
+| escrt54-agent-primary-PMC3124813 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3124813/; All Results S3–S6 and Discussion S7, including Tables1/2 and Fig1–7 captions; Methods S9/S12/S13. No pixels, coordinates or independent reading of crystallographic Methods S10/S11. | supports | Yang/Hurley2010 directly determines and mutates a yeast Vta1-VSL/Vps4-SAB fragment interface, measures binding by SPR and tests Cps1 sorting. Vta1-mediated planar Vps4 arrays are explicitly speculative modeling, not a solved complete lattice. Recombinant proteins use BL21/Rosetta2; yeast deletion strains are from Open Biosystems without a specific reference-strain identity established here. |
+| escrt54-agent-primary-PMC2758909 | https://pmc.ncbi.nlm.nih.gov/articles/PMC2758909/; Complete main scientific text S1 and Fig1–4 captions; supplementary Methods/data and pixels not independently read. | supports | Lata2008 directly observes ATP/Mg-dependent VPS4B disassembly of engineered CHMP2A/CHMP3 tubes. This supports the disassembly principle while retaining human-protein/truncation context and a proposed rather than directly observed final scission model. |
+| escrt54-agent-ipr-IPR044538 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044538/; Native name/type, complete descriptions and curation flags, member signatures and hierarchy; exact protein membership independently evidenced | supports | IPR044538 is the Vta1-like full protein family, explicitly including yeast Vta1 and animal/plant homologs. PTHR46009 identifies the constituent class rather than only its VSL or MIT domain. |
+| escrt54-agent-ipr-IPR045253 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045253/; Native name/type, complete descriptions and curation flags, member signatures and hierarchy; exact protein membership independently evidenced | supports | IPR045253 is only the Vps4 MIT domain; it does not identify the complete ATPase constituent. |
+| escrt54-agent-ipr-IPR050304 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050304/; Native name/type, complete descriptions and curation flags, member signatures and hierarchy; exact protein membership independently evidenced | supports | IPR050304 is the broader microtubule-severing AAA ATPase family with PTHR23074. Its LLM-generated unchecked prose is not primary functional evidence and does not establish exact Vps4 specificity. |
+| schema-result | just validate data/structures/other/escrt_iv_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/escrt_iv_complex.yaml |
+| strict-result | just validate-strict data/structures/other/escrt_iv_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/escrt_iv_complex.yaml --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/escrt_iv_complex.yaml  (GO:1990621)<br>  yeast_escrt_iv_vps4_recycling	vps4_aaa_atpase	COVERED	-&gt;vps4_aaa_atpase (UniProtKB:P52917)<br>  yeast_escrt_iv_vps4_recycling	vta1_vps4_cofactor	COVERED	-&gt;vta1_vps4_cofactor (UniProtKB:Q06263)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/escrt_iv_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 14 collected target identifiers returned OK. PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14701806: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:20696398: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Five completed same-base batch26 global gates await guarded parent manifest/hash integration.
+- No source figure pixels, supplemental experiments or atomic coordinates were independently analyzed. Embedded captions are text evidence only.
+- Reference proteins at S288C559292 do not identify every experimental yeast strain. COMMON keeps its majority-occurrence/losses-exception meaning; qualitative source synthesis supports it without measuring population prevalence.
+- Henne2011 is review-abstract-only after publisher403; Shiflett2004/Huh2003 were read at complete native abstract scope with exact UniProt annotation joins.
+- No new current consensus on Vps4 oligomer number is asserted; the target avoids a fixed number, and Yang2010 explicitly distinguishes its speculative lattice from directly tested fragments.
+- Did2/Ist1/Vps60/Doa4 auxiliary roles are not claimed absent; their exclusion is the maintained initial constituent boundary, not a comprehensive interaction census.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T063726Z-escrt-iv-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Escrt iv complex scientific review
+started_at: '2026-10-22T06:16:24Z'
+finished_at: '2026-10-22T06:37:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: ESCRT-IV identity, yeast interface example, correct proteins and bounded
+  recycling graph are supported. One minor resolves exact Vta1 family grounding while
+  retaining Vps4 specificity and speculative assembly limits.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/escrt_iv_complex.yaml
+    sha256: 54158602625f36ee41851b9d01628d95d5147bc2f27bf4b23bc47f5f2a1f41e2
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990621
+  path: data/structures/other/escrt_iv_complex.yaml
+  label: ESCRT IV complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_iv_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one whole maintained target plus frozen guidance and protein-example
+    skill. Source-specific actual read extents are enumerated per evidence row; no
+    maintained neighboring record supplies scientific evidence.
+  selection: Target 10 of batch54, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990621
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just validate data/structures/other/escrt_iv_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just validate-strict data/structures/other/escrt_iv_complex.yaml --out
+    /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990621
+  summary: No expression-module inference is used for these structure and pathway
+    claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - escrt54-agent-go
+  - escrt54-agent-GO1990621-ancestors
+  - escrt54-agent-tax4932
+  - escrt54-agent-tax559292
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+  - escrt54-agent-gene-VPS4-559292
+  - escrt54-agent-gene-VTA1-559292
+  - escrt54-agent-pmid-14562095
+  - escrt54-agent-pmid-14701806
+  - escrt54-agent-pmid-20696398
+  - escrt54-agent-doi-j_devcel_2011_05_015
+  - escrt54-agent-primary-PMC3124813
+  - escrt54-agent-primary-PMC2758909
+  - escrt54-agent-ipr-IPR044538
+  - escrt54-agent-ipr-IPR045253
+  - escrt54-agent-ipr-IPR050304
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  summary: '11 of 14 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14701806: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:20696398: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - escrt54-agent-pmid-14562095
+  - escrt54-agent-pmid-14701806
+  - escrt54-agent-pmid-20696398
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990621
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch54 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/escrt_iv_complex.yaml
+  locator: Entire maintained record including all history, discussions, evidence,
+    components, examples and causal graph
+  accessed_at: '2026-10-22T06:28:37Z'
+  support: context_only
+  summary: The entire target was read; dated curation history is not independent biological
+    evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, essentiality, taxonomic presence and
+    graph scope
+  accessed_at: '2026-10-22T06:28:37Z'
+  support: context_only
+  summary: Essentiality concerns formation, not function or viability. COMMON means
+    present in most members, losses the exception; qualitative synthesis does not
+    imply a measured prevalence census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding and REVIEWED_LABEL_ONLY contract, including159–160
+  accessed_at: '2026-10-22T06:28:37Z'
+  support: context_only
+  summary: Exact full-protein families are distinct from shared domains or paralog
+    supergroups. A reviewed label-only status is not merely a placeholder for an exact
+    mapping that was not curated this pass.
+- evidence_id: escrt54-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000813,GO:0000814,GO:0000815,GO:0005768,GO:0010008,GO:0016887,GO:0032991,GO:0033565,GO:0036452,GO:0070676,GO:0071985,GO:0090148,GO:1990621
+  locator: Complete target-relevant definitions/synonym scopes and typed child relationships
+    within combined response; unrelated terms not attributed to this record
+  accessed_at: '2026-10-22T06:20:02.063646Z'
+  support: supports
+  summary: GO1990621 defines the Vps4/Vta1 yeast complex, ATP-driven disassembly and
+    recycling. Synonym scopes distinguish exact ESCRT-IV from narrower Vps4-Vta1 and
+    related Vps4 complex. GO0036452/GO0010008 show class/parthood, GO0016887/GO0070676
+    define ATP hydrolysis and intralumenal-vesicle formation.
+  snapshot_sha256: 563ffa6dea1c58c1c92024214051980b0b5f3eefd7984f1ef56cb02432f9999b
+- evidence_id: escrt54-agent-GO1990621-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990621/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T06:20:11.409570Z'
+  support: supports
+  summary: The is_a-only ancestor closure independently contains the ESCRT complex
+    and protein-containing-complex classes. It is not a part_of query.
+  snapshot_sha256: 3a8d70c9919ca9dfd744f4e21be9ae573b2122eb69f5c527cf164f1e43cfb153
+- evidence_id: escrt54-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA taxonomy response
+  accessed_at: '2026-10-22T06:20:02.063372Z'
+  support: supports
+  summary: Taxon4932 is Saccharomyces cerevisiae, rankspecies; its native names and
+    lineage identify this exact node.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: escrt54-agent-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA taxonomy response
+  accessed_at: '2026-10-22T06:20:02.063749Z'
+  support: supports
+  summary: Taxon559292 is Saccharomyces cerevisiae S288C, rankstrain; its native names
+    and lineage identify this exact node.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: escrt54-agent-protein-P52917
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P52917.json
+  locator: Accession/status/name/all gene tokens/organism; complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family xrefs
+  accessed_at: '2026-10-22T06:20:03.049999Z'
+  support: supports
+  summary: 'Reviewed P52917: Vacuolar protein sorting-associated protein 4; primary
+    genes VPS4, synonyms CSC1, DID6, END13, GRD13, VPL4, VPT10, taxon559292. Native
+    comments retain their own experimental/inferred evidence scope. The protein response
+    separately supplies its family xrefs; a family-entry response is not treated as
+    this protein-membership proof.'
+  snapshot_sha256: 3f3963995e5a9c1e2e6169f19791378a430a63fa5c1011f38504b560012cdeee
+- evidence_id: escrt54-agent-protein-Q06263
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06263.json
+  locator: Accession/status/name/all gene tokens/organism; complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family xrefs
+  accessed_at: '2026-10-22T06:20:03.802881Z'
+  support: supports
+  summary: 'Reviewed Q06263: Vacuolar protein sorting-associated protein VTA1; primary
+    genes VTA1, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence scope. The protein response separately supplies its family xrefs; a family-entry
+    response is not treated as this protein-membership proof.'
+  snapshot_sha256: e59e17eca16f6cfd1e1ceb622fdfc15ac2c4c20a468595bea57a3b9fc7fe3a1f
+- evidence_id: escrt54-agent-gene-VPS4-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVPS4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/genes/organism fields
+  accessed_at: '2026-10-22T06:20:07.784473Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P52917. Returned gene tokens/aliases
+    identify the maintained protein without confusing its primary name with the queried
+    synonym.'
+  snapshot_sha256: 0e9925d47367129e7a66a1019a4246c7c7df2f02c6bb4d7de54b8dc04b8f2dc1
+  search_scope: UniProt gene_exact:VPS4, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: escrt54-agent-gene-VTA1-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVTA1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/genes/organism fields
+  accessed_at: '2026-10-22T06:20:07.912123Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: Q06263. Returned gene tokens/aliases
+    identify the maintained protein without confusing its primary name with the queried
+    synonym.'
+  snapshot_sha256: 23490571e507dd4e4b53e1bab21a2bea3c1b34b9f9e66a2aac8b791a88eb5fce
+  search_scope: UniProt gene_exact:VTA1, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: escrt54-agent-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and abstract
+  accessed_at: '2026-10-22T06:20:08.791688Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea EK. (2003),
+    DOI10.1038/nature02026. Exact metadata and complete abstract read; this is not
+    full-body attestation.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: escrt54-agent-pmid-14701806
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14701806+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and abstract
+  accessed_at: '2026-10-22T06:20:08.906953Z'
+  support: supports
+  summary: 'MED14701806: Characterization of Vta1p, a class E Vps protein in Saccharomyces
+    cerevisiae. Shiflett SL, Ward DM, Huynh D, Vaughn MB, Simmons JC, Kaplan J. (2004),
+    DOI10.1074/jbc.m312669200. Exact metadata and complete abstract read; this is
+    not full-body attestation.'
+  snapshot_sha256: 575f6c4c6d9ea13c86cd1af342bcaf91948288b015946ebd6ba63496de03d85e
+- evidence_id: escrt54-agent-pmid-20696398
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20696398+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and abstract
+  accessed_at: '2026-10-22T06:20:08.934166Z'
+  support: supports
+  summary: 'MED20696398: Structural role of the Vps4-Vta1 interface in ESCRT-III recycling.
+    Yang D, Hurley JH. (2010), DOI10.1016/j.str.2010.04.014. Exact metadata and complete
+    abstract read; this is not full-body attestation.'
+  snapshot_sha256: 67998b61966da788949e0569e87dd0b119aa53fa1f997fe0d8d5d29db045594f
+- evidence_id: escrt54-agent-doi-j_devcel_2011_05_015
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.devcel.2011.05.015%22&format=json&resultType=core
+  locator: Complete native bibliographic identity and abstract
+  accessed_at: '2026-10-22T06:20:10.119810Z'
+  support: supports
+  summary: 'Exact DOI/MED identity: The ESCRT pathway. Henne WM, Buchkovich NJ, Emr
+    SD. (2011), PMID21763610. Complete native abstract read. This is a secondary review,
+    not a new primary experiment.'
+  snapshot_sha256: c1eb20e3ee3b89412437434900f82d42282d787ea5e51ef2d765091fa59227b0
+- evidence_id: escrt54-agent-primary-PMC3124813
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3124813/
+  locator: All Results S3–S6 and Discussion S7, including Tables1/2 and Fig1–7 captions;
+    Methods S9/S12/S13. No pixels, coordinates or independent reading of crystallographic
+    Methods S10/S11.
+  accessed_at: '2026-10-22T06:20:44.715950Z'
+  support: supports
+  summary: Yang/Hurley2010 directly determines and mutates a yeast Vta1-VSL/Vps4-SAB
+    fragment interface, measures binding by SPR and tests Cps1 sorting. Vta1-mediated
+    planar Vps4 arrays are explicitly speculative modeling, not a solved complete
+    lattice. Recombinant proteins use BL21/Rosetta2; yeast deletion strains are from
+    Open Biosystems without a specific reference-strain identity established here.
+  snapshot_sha256: 9aa00599d38af2c6f3acdd5f5b94a4b0bed2d9caef69bedbdb8b84fbc7c0a17b
+- evidence_id: escrt54-agent-primary-PMC2758909
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2758909/
+  locator: Complete main scientific text S1 and Fig1–4 captions; supplementary Methods/data
+    and pixels not independently read.
+  accessed_at: '2026-10-22T06:20:44.567859Z'
+  support: supports
+  summary: Lata2008 directly observes ATP/Mg-dependent VPS4B disassembly of engineered
+    CHMP2A/CHMP3 tubes. This supports the disassembly principle while retaining human-protein/truncation
+    context and a proposed rather than directly observed final scission model.
+  snapshot_sha256: 90c9bb721fe03ae1386569cd8146ce39d0ca1ebb4eb62ed67a4fc580b8cacc20
+- evidence_id: escrt54-agent-ipr-IPR044538
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044538/
+  locator: Native name/type, complete descriptions and curation flags, member signatures
+    and hierarchy; exact protein membership independently evidenced
+  accessed_at: '2026-10-22T06:20:43.230927Z'
+  support: supports
+  summary: IPR044538 is the Vta1-like full protein family, explicitly including yeast
+    Vta1 and animal/plant homologs. PTHR46009 identifies the constituent class rather
+    than only its VSL or MIT domain.
+  snapshot_sha256: 0a315ff90ca36720a6769f7b8107881376332f329f19744b74aa553f581c2541
+- evidence_id: escrt54-agent-ipr-IPR045253
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045253/
+  locator: Native name/type, complete descriptions and curation flags, member signatures
+    and hierarchy; exact protein membership independently evidenced
+  accessed_at: '2026-10-22T06:20:43.823115Z'
+  support: supports
+  summary: IPR045253 is only the Vps4 MIT domain; it does not identify the complete
+    ATPase constituent.
+  snapshot_sha256: fabe7935f45abf376ea681ab9172cdcd866abd4221cce5cadd4e3d7330bfc535
+- evidence_id: escrt54-agent-ipr-IPR050304
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050304/
+  locator: Native name/type, complete descriptions and curation flags, member signatures
+    and hierarchy; exact protein membership independently evidenced
+  accessed_at: '2026-10-22T06:20:43.231099Z'
+  support: supports
+  summary: IPR050304 is the broader microtubule-severing AAA ATPase family with PTHR23074.
+    Its LLM-generated unchecked prose is not primary functional evidence and does
+    not establish exact Vps4 specificity.
+  snapshot_sha256: edc71f6a3c68bcf69adf8c7e78aa9025600bc070e41c6c8917ee6071ef19cef3
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/escrt_iv_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:26Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/escrt_iv_complex.yaml'
+  snapshot_sha256: 29484d094809b72e945df2070e56064265e1947365679279a058addf7afde590
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/escrt_iv_complex.yaml --out
+    /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:16:27Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/escrt_iv_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch54-20261022-hapbq96w/escrt_iv_complex-strict.tsv"
+  snapshot_sha256: 082021f8d3357fc03b3c311de91be700a5b6d858cae5ef7bed9c1b04f6362344
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:25:22.332368Z'
+  support: supports
+  summary: "data/structures/other/escrt_iv_complex.yaml  (GO:1990621)\n  yeast_escrt_iv_vps4_recycling\t\
+    vps4_aaa_atpase\tCOVERED\t->vps4_aaa_atpase (UniProtKB:P52917)\n  yeast_escrt_iv_vps4_recycling\t\
+    vta1_vps4_cofactor\tCOVERED\t->vta1_vps4_cofactor (UniProtKB:Q06263)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     2  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     2  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 121863bc029421c26ea38ac4139dfb14ac6c34250ad3ac307708f29e157ff2e4
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch54-20261022-hapbq96w/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/escrt_iv_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:25:23.440790Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/escrt_iv_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 14 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14701806: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:20696398: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Vps4/Vta1 complex and interface example
+  outcome: supported
+  target_ids:
+  - GO:1990621
+  summary: GO1990621, scoped synonyms, class/parthood and the yeast Vps4/Vta1 boundary
+    agree. The canonical example accurately calls Yang a structural model/interface
+    study rather than a complete native assembly reconstruction.
+  evidence_ids:
+  - record
+  - escrt54-agent-go
+  - escrt54-agent-GO1990621-ancestors
+  - escrt54-agent-primary-PMC3124813
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+- assessment_id: grounding
+  area: grounding
+  topic: Exact Vta1 family with unresolved Vps4 class
+  outcome: concern
+  target_ids:
+  - GO:1990621
+  summary: Correct reviewed accessions and unique exact-gene results are preserved.
+    IPR044538 resolves Vta1; IPR045253 is only a domain and IPR050304 a broader ATPase
+    class, so neither is forced into the exact Vps4 slot.
+  evidence_ids:
+  - record
+  - curation
+  - escrt54-agent-ipr-IPR044538
+  - escrt54-agent-ipr-IPR045253
+  - escrt54-agent-ipr-IPR050304
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+  - escrt54-agent-gene-VPS4-559292
+  - escrt54-agent-gene-VTA1-559292
+- assessment_id: scope
+  area: scope
+  topic: Yeast interface versus recombinant expression and native annotations
+  outcome: supported
+  target_ids:
+  - GO:1990621
+  summary: Species and S288C protein-reference identities are correct. The yeast-derived
+    interface fragments were expressed in bacteria, while cargo sorting was tested
+    in yeast deletions. Shiflett/Huh localization notes match the native UniProt annotation
+    sources; no whole Huh atlas analysis is claimed.
+  evidence_ids:
+  - record
+  - schema
+  - escrt54-agent-primary-PMC3124813
+  - escrt54-agent-pmid-14701806
+  - escrt54-agent-pmid-14562095
+  - escrt54-agent-tax4932
+  - escrt54-agent-tax559292
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+- assessment_id: graph
+  area: graph
+  topic: ATP-driven recycling with explicitly proposed higher assembly
+  outcome: supported
+  target_ids:
+  - GO:1990621
+  summary: The NONMECHANISTIC graph distinguishes membership, Vta1-associated stabilization
+    and coarse ATP-driven ESCRT-III recycling. Its evidence explicitly describes Yang
+    higher-order arrays as proposed. Lata supplies direct polymer-disassembly evidence
+    in a distinct engineered human system; neither source establishes a universal
+    fixed Vps4 oligomer geometry or a fully observed scission cycle.
+  evidence_ids:
+  - record
+  - escrt54-agent-go
+  - escrt54-agent-primary-PMC3124813
+  - escrt54-agent-primary-PMC2758909
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+- assessment_id: formation
+  area: grounding
+  topic: Binding-interface and cargo tests do not establish all formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:1990621
+  summary: Yang interface mutants abolish/reduce fragment binding and impair cargo
+    sorting, but those experiments do not establish that each entire protein is universally
+    required for every Vps4 oligomeric state. UNKNOWN formation fields are retained
+    rather than inferred from intact composition or ATPase function.
+  evidence_ids:
+  - record
+  - schema
+  - escrt54-agent-primary-PMC3124813
+- assessment_id: coverage
+  area: completeness
+  topic: Complete maintained target with bounded source inspection
+  outcome: supported
+  target_ids:
+  - GO:1990621
+  summary: All maintained fields, evidence notes, graph statements and discussions
+    were checked at the declared source extents. Optional inventories, exact stoichiometry
+    and unresolved formation experiments are not fabricated from validation success.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - escrt54-agent-go
+findings:
+- finding_id: F1
+  issue_key: escrt-iv-vta1-exact-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the Vta1 cofactor to its verified family
+  description: The Vta1 row remains reviewed label-only despite exact full-family
+    IPR044538 and an independent Q06263 membership join. The Vps4 candidate limitations
+    do not justify deferring this separately resolved constituent.
+  target_ids:
+  - GO:1990621
+  field_paths:
+  - components#vta1_vps4_cofactor.grounding_status
+  - discussions#resolve_escrt_iv_family_groundings
+  evidence_ids:
+  - record
+  - curation
+  - escrt54-agent-ipr-IPR044538
+  - escrt54-agent-protein-P52917
+  - escrt54-agent-protein-Q06263
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_iv_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact full-component grounding
+  native_severity: minor
+  normalization_reason: The correct structure and protein identities remain intact.
+    The available exact family mappings resolve a bounded existing label-only deferral
+    without changing complex membership or mechanism.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990621
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_iv_complex.yaml
+    role: maintained scientific record
+  description: Use IPR044538 for Vta1 and narrow the current family TODO to genuinely
+    unresolved Vps4 boundaries.
+  acceptance_checks:
+  - Preserve the Vps4 label-only row until an exact full-class mapping is established.
+  - Do not promote the speculative lattice model or inferred oligomeric count to fixed
+    whole-complex anatomy.
+  - Preserve supported identities and biological scope; pass applicable native gates.
+limitations:
+- Five completed same-base batch26 global gates await guarded parent manifest/hash
+  integration.
+- No source figure pixels, supplemental experiments or atomic coordinates were independently
+  analyzed. Embedded captions are text evidence only.
+- Reference proteins at S288C559292 do not identify every experimental yeast strain.
+  COMMON keeps its majority-occurrence/losses-exception meaning; qualitative source
+  synthesis supports it without measuring population prevalence.
+- Henne2011 is review-abstract-only after publisher403; Shiflett2004/Huh2003 were
+  read at complete native abstract scope with exact UniProt annotation joins.
+- No new current consensus on Vps4 oligomer number is asserted; the target avoids
+  a fixed number, and Yang2010 explicitly distinguishes its speculative lattice from
+  directly tested fragments.
+- Did2/Ist1/Vps60/Doa4 auxiliary roles are not claimed absent; their exclusion is
+  the maintained initial constituent boundary, not a comprehensive interaction census.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
