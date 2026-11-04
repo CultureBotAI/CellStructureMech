@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ubc13_mms2_complex.yaml
+  slug: ubc13_mms2_complex
+session:
+  id: 2026-10-31T223046Z-antigravity-6e8e8b
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - synonyms
+  - parent_structures
+  - part_of
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add UBC13-MMS2 complex (GO:0031372) record
+  details: Added CellStructureRecord for UBC13-MMS2 complex (GO:0031372) in Saccharomyces
+    cerevisiae S288C with ubiquitin-conjugating enzyme Ubc13 (UniProtKB:P52490) and ubiquitin-conjugating
+    enzyme variant Mms2 (UniProtKB:P53152), verbatim PubMed abstract evidence (PMID:10089880,
+    PMID:32265276, PMID:34995738), ComplexPortal xref (CPX-1137), canonical examples, functions,
+    and a mechanistic FUNCTION causal graph.

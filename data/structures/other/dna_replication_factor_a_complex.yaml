@@ -20,6 +20,21 @@ curation_history:
     DNA-binding function evidence, GO/PubMed evidence, a nonmechanistic function graph,
     and an RPA subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-30T20:30:04Z'
+  curator: antigravity
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example
+    and budding-yeast gene symbols RFA1, RFA2, and RFA3 backed by Wold 1997 (PMID:9242902),
+    resolving 3 reviewed Swiss-Prot protein_examples (UniProtKB:P22336, UniProtKB:P26754,
+    and UniProtKB:P26755) across all three RPA subunit components.
+  llm_assisted: true
+- timestamp: '2026-10-30T21:27:55Z'
+  curator: antigravity
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #2470: added Wold 1997 (PMID:9242902) literature evidence to
+    rpa_70_kda_subunit, rpa_30_kda_subunit, and rpa_14_kda_subunit component and causal-graph
+    edge evidence lists and expanded top-level PMID:9242902 note.'
+  llm_assisted: true
 synonyms:
 - synonym_text: replication protein A
   synonym_type: EXACT_SYNONYM
@@ -45,6 +60,29 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1,
+      70 kDa) subunit.
+  gene_symbols:
+  - RFA1
+  protein_examples:
+  - uniprot_id: UniProtKB:P22336
+    protein_label: Replication factor A protein 1
+    gene_symbol: RFA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: The single reviewed UniProtKB entry for gene RFA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22336
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22336, the single reviewed entry
+        for gene RFA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rpa_30_kda_subunit
   label: RPA 30 kDa subunit
   component_type: PROTEIN
@@ -60,6 +98,29 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2,
+      30 kDa) subunit.
+  gene_symbols:
+  - RFA2
+  protein_examples:
+  - uniprot_id: UniProtKB:P26754
+    protein_label: Replication factor A protein 2
+    gene_symbol: RFA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: The single reviewed UniProtKB entry for gene RFA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26754
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26754, the single reviewed entry
+        for gene RFA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rpa_14_kda_subunit
   label: RPA 14 kDa subunit
   component_type: PROTEIN
@@ -75,6 +136,29 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3,
+      14 kDa) subunit.
+  gene_symbols:
+  - RFA3
+  protein_examples:
+  - uniprot_id: UniProtKB:P26755
+    protein_label: Replication factor A protein 3
+    gene_symbol: RFA3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: The single reviewed UniProtKB entry for gene RFA3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26755
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26755, the single reviewed entry
+        for gene RFA3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -104,7 +188,9 @@ evidence:
 - reference: GO:0003697
   notes: Gene Ontology molecular-function term for single-stranded DNA binding.
 - reference: PMID:9242902
-  notes: PubMed identifier listed by GO:0005662 as its definition cross-reference.
+  notes: 'Wold MS 1997, ''Replication protein A: a heterotrimeric, single-stranded
+    DNA-binding protein required for eukaryotic DNA metabolism'', Annual Review of
+    Biochemistry 66:61-92, listed by GO:0005662 as its definition cross-reference.'
 causal_graphs:
 - graph_id: rpa_single_stranded_dna_binding
   title: RPA binds single-stranded DNA
@@ -146,6 +232,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1,
+        70 kDa) subunit.
   - subject: rpa_30_kda_subunit
     predicate: contributes to
     object: dna_replication_factor_a_complex
@@ -155,6 +245,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2,
+        30 kDa) subunit.
   - subject: rpa_14_kda_subunit
     predicate: contributes to
     object: dna_replication_factor_a_complex
@@ -164,6 +258,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3,
+        14 kDa) subunit.
   - subject: dna_replication_factor_a_complex
     predicate: supports
     object: single_stranded_dna_binding
@@ -195,3 +293,9 @@ discussions:
       complex composed of approximately 70, 30 and 14 kDa subunits.
   posed_by: codex
   posed_date: '2026-09-27'
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Model budding yeast in which heterotrimeric Replication Factor A (Rfa1p-Rfa2p-Rfa3p)
+    single-stranded DNA binding and DNA replication functions were characterized.
+  reference: PMID:9242902

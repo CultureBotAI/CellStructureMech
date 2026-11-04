@@ -1,0 +1,1087 @@
+# Source-backed review of holdfast
+
+- Review: 20261022T074158Z-holdfast-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:12:41Z
+- Finished UTC: 2026-10-22T07:41:58Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major canonical strain/source mismatch and one minor paper-title error. Polar adhesive identity, polymer composition, Hfa anchoring dispensability for matrix synthesis and coarse HfsK regulation are supported; UNIVERSAL prevalence remains explicitly unverified.
+
+## Scope And Provenance
+
+Exactly one complete target and fourteen frozen target/guidance/schema inputs. Actual primary bodies, native identities and precise access scopes were independently read; no neighboring record is an unstated premise.
+
+Selection: Batch57 strict ordered selection index 4; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:holdfast | data/structures/other/holdfast.yaml | maintained | holdfast |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:holdfast | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:holdfast | Focused validator passed. |
+| Focused native causal-graphs | passed | True | cellstructuremech:holdfast | Native check passed; scientific support independently assessed. |
+| Focused native verify | passed | True | cellstructuremech:holdfast | Native check passed; scientific support independently assessed. |
+| Claim-level scientific review | passed | True | cellstructuremech:holdfast | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:holdfast | 11 of 12 collected target identifiers returned OK. cellstructuremech:holdfast: SKIPPED; Local structure identifier verified directly in the complete maintained target. It has no external issuing authority. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:holdfast | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:holdfast | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:holdfast | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:holdfast | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:holdfast | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Distinct local holdfast and broader matrix identity
+
+identity: supported. Targets: cellstructuremech:holdfast.
+
+The named polar adhesive structure and broad extracellular-matrix parent are supported. The local identifier remains appropriate pending any exact authority decision; the bounded zero-hit GO search is not an exhaustive absence claim.
+
+### Supported polymer and anchoring-machinery boundaries
+
+grounding: supported. Targets: cellstructuremech:holdfast.
+
+The carbohydrate pool is supported without equating its individual sugars to an exact whole polymer. HfaA/B/D are a combined anchoring complex, so a single subunit family would not replace that complex identity. Their reviewed CB15 examples are correct.
+
+### Anchoring dispensability is distinguished from holdfast synthesis
+
+evidence: supported. Targets: cellstructuremech:holdfast.
+
+Sulkowski directly reports that anchor mutants still synthesize and shed holdfast. DISPENSABLE for formation of the holdfast matrix is therefore compatible with the essential anchoring role; it is not read as dispensable for cell attachment.
+
+### Canonical strain and source disagree
+
+scope: concern. Targets: cellstructuremech:holdfast.
+
+The cited anchor study uses CB15 and its derivatives. The current canonical row names unqualified NA1000 as the standard anchoring/composition/adhesion model. Sprecher separately treats NA1000 as a nonadherent comparison; the NA1000 HfsK reference accession does not repair that experimental-model mismatch.
+
+### UNIVERSAL prevalence remains unverified
+
+scope: unknown. Targets: cellstructuremech:holdfast.
+
+UNIVERSAL retains its essentially-every-member meaning. The inspected developmental and strain experiments do not measure the whole-species distribution. The NA1000 comparison is not generalized into biological absence across the species; broader prevalence remains unknown rather than a forced separate finding.
+
+### Coarse cohesion, anchoring and adhesion claims are supported
+
+graph: supported. Targets: cellstructuremech:holdfast.
+
+HfsK modulation of cohesion, polymer participation, Hfa-mediated anchoring and polar surface adhesion follow the directly read studies. The graph does not restore the historically removed synthesis/export claim or assert a proven chemical HfsK substrate. Protein-reference strain and experimental strain remain separate.
+
+### Whole-target review with explicit bounds
+
+completeness: supported. Targets: cellstructuremech:holdfast.
+
+All maintained scientific fields, citations, examples, causal graphs, discussions and history were read. Existing protein examples were checked directly. Findings concern current source/identity or verified family gaps rather than empty optional slots; historical statements remain historical.
+
+## Findings
+
+### F1: Correct the canonical holdfast model strain
+
+major / open / confirmed; issue key: holdfast-canonical-strain-source.
+
+The canonical example names NA1000 tax565050 and attributes its anchoring/composition/c-di-GMP model role to Sulkowski2019. That study specifies CB15 and CB15-derived strains; the separately cited Sprecher study explicitly uses NA1000 as a nonadherent comparison. The current unqualified canonical strain/source pairing is materially misleading.
+
+### F2: Correct the Sulkowski paper title
+
+minor / open / confirmed; issue key: holdfast-sulkowski-title.
+
+The DOI bibliography substitutes Old Cell Pole for Outer Membrane in the title. Native MED and the genuine primary title agree on A Multiprotein Complex Anchors Adhesive Holdfast at the Outer Membrane of Caulobacter crescentus.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use the source-supported CB15 tax190650 canonical example, or provide directly read evidence for a specified restored/modified NA1000 genotype and restrict its claim accordingly. Keep CB15 experiments separate from the NA1000 HfsK reference sequence.
+
+- Canonical taxon, genotype, note and cited experiment agree.
+- Do not imply unmodified NA1000 supplies the reported adhesive model merely because its reference genome contains hfsK.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+### A2
+
+Replace the title with the verified native title while retaining the correct DOI and scientific claims.
+
+- Title text matches the native bibliographic record and article header.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/holdfast.yaml; Entire current YAML, including all scientific fields, graphs, discussions and history | context_only | All target bytes were read. No neighboring maintained record is an unstated premise. |
+| curation | docs/CURATION.md; Source-neutral component classes and reviewed-label-only contract | context_only | A species protein example does not replace exact component-class grounding; a protein family need not be exclusive to one complex. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields | context_only | Formation necessity is distinct from activity or localization. COMMON means present in most members with exceptional losses; UNIVERSAL means essentially every member, rather than merely a well-studied example. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity, directed relations and edge-level evidence | context_only | Coarse physical or biochemical mechanisms can be represented without inventing every intermediate. Membership, catalytic activity and assembly necessity remain distinct. |
+| micro57-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887; Only exact GO0031012 definition/synonyms and relevant typed links in the combined nine-term response. | supports | GO0031012 identifies extracellular matrix, consistent with the broader parent. The local holdfast identifier is not claimed to be this broad GO class. |
+| micro57-go-search-holdfast | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=holdfast&amp;limit=100; Complete retained zero-hit response, query and limit100 in original URL. | context_only | The bounded QuickGO search for holdfast returned zero results. This does not establish absence from every ontology, synonym query or other authority. |
+| micro57-tax155892 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/155892; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA taxId155892 is Caulobacter vibrioides, species, with Caulobacter crescentus as an equivalent name. |
+| micro57-tax190650 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/190650; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA taxId190650 identifies the CB15 strain. |
+| micro57-tax565050 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/565050; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA taxId565050 identifies the distinct NA1000 strain. |
+| micro57-doi-10.1128_JB.00112-19 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FJB.00112-19%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID31061167: A Multiprotein Complex Anchors Adhesive Holdfast at the Outer Membrane of Caulobacter crescentus. Sulkowski NI, Hardy GG, Brun YV, Bharat TAM. (2019), DOI10.1128/jb.00112-19. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-doi-10.1128_JB.00276-19 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FJB.00276-19%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID31209074: Composition of the Holdfast Polysaccharide from &lt;i&gt;Caulobacter crescentus&lt;/i&gt;. Hershey DM, Porfírio S, Black I, Jaehrig B, Heiss C, Azadi P, Fiebig A, Crosson S. (2019), DOI10.1128/jb.00276-19. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-doi-10.1128_mBio.00294-17 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FmBio.00294-17%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID28325767: Cohesive Properties of the &lt;i&gt;Caulobacter crescentus&lt;/i&gt; Holdfast Adhesin Are Regulated by a Novel c-di-GMP Effector Protein. Sprecher KS, Hug I, Nesper J, Potthoff E, Mahi MA, Sangermani M, Kaever V, Schwede T, Vorholt J, Jenal U. (2017), DOI10.1128/mbio.00294-17. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-sulkowski2019-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC6707917/; Genuine journal HTML: title; complete Introduction s1; Results s2.1–s2.3 including Table1 and Fig2–5 captions; complete Discussion s3; growth Methods s4.1. Other Methods, supplements and pixels were not inspected. | supports | The primary study analyzes CB15 and CB15-derived deletion strains, as specified in Table1 and growth Methods. HfaA/HfaB/HfaD form anchoring machinery; mutants synthesize holdfast but shed it. hfsG deletion removes holdfast while retaining anchoring density. The exact paper title says Outer Membrane, not Old Cell Pole. Direct sugar-binding details remain unresolved. |
+| micro57-hershey2019-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC6689307/; Genuine journal HTML: complete Results s2.1–s2.3, Tables2–4 and Fig2–5 captions; Methods s4.1 including Table5. Introduction, Discussion, other Methods and pixels not read. | supports | CB15-derived strains and engineered extraction controls support glucose,3-O-methylglucose,mannose,xylose and GlcNAc in extracted holdfast material. Medium controls and low-yield/composition limitations are explicit; this is not an exact complete-polymer chemical identifier. |
+| micro57-sprecher2017-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC5362036/; Genuine journal HTML: Introduction s0; Results s1.1–s1.5 and s1.7 with embedded captions; Discussion s2; Methods s3.1. Results s1.6, other Methods, actual supplementary files and all pixels not read. | supports | CB15 experiments support HfsK regulation of holdfast cohesion, c-di-GMP binding and membrane association. Chemical acylation remains proposed rather than demonstrated. Results s1.2 FigS2A caption explicitly uses NA1000 as a nonadherent comparison. No species-wide quantitative prevalence is established. |
+| micro57-protein-P27342 | https://rest.uniprot.org/uniprotkb/P27342.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed CB15 entry P27342 identifies hfaA; native gene/taxon and names match the maintained example. |
+| micro57-gene-hfaA | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaA%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P27342; primary name or declared synonym matches hfaA. |
+| micro57-protein-P27343 | https://rest.uniprot.org/uniprotkb/P27343.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed CB15 entry P27343 identifies hfaB; native gene/taxon and names match the maintained example. Native HfaB putative transcription-activator wording is retained as an identity label, not a newly demonstrated activity. |
+| micro57-gene-hfaB | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaB%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P27343; primary name or declared synonym matches hfaB. |
+| micro57-protein-Q45977 | https://rest.uniprot.org/uniprotkb/Q45977.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed CB15 entry Q45977 identifies hfaD; native gene/taxon and names match the maintained example. |
+| micro57-gene-hfaD | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaD%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, Q45977; primary name or declared synonym matches hfaD. |
+| micro57-protein-A0A0H3CE47 | https://rest.uniprot.org/uniprotkb/A0A0H3CE47.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | A0A0H3CE47 is an unreviewed NA1000 HfsK/GNAT-family reference entry, gene hfsK/CCNA_03803. It is not evidence that the CB15 experiments used NA1000; no native FUNCTION claim is supplied. |
+| schema-result | just validate data/structures/other/holdfast.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/holdfast.yaml |
+| strict-result | just validate-strict data/structures/other/holdfast.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/holdfast.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --causal-graphs; Complete focused read-only native report | supports | data/structures/other/holdfast.yaml  (cellstructuremech:holdfast)<br>  holdfast_synthesis_anchoring_adhesion	hfsk_c_di_gmp_effector	UNANCHORED_WITH_UNIPROT	HfsK c-di-GMP effector (UniProtKB:A0A0H3CE47)<br>  holdfast_synthesis_anchoring_adhesion	hfa_holdfast_anchor	COVERED	-&gt;hfa_holdfast_anchor (UniProtKB:P27342, UniProtKB:P27343, UniProtKB:Q45977)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --verify; Complete focused read-only native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/holdfast.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 12 collected target identifiers returned OK. cellstructuremech:holdfast: SKIPPED; Local structure identifier verified directly in the complete maintained target. It has no external issuing authority. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Primary reading is limited to the exact sections recorded for each source. Holdfast figure captions and embedded supplement captions were read, but no microscopy pixels or actual supplementary files were inspected.
+- The complete polymer and combined Hfa anchor remain legitimately label-only; individual sugar or subunit identities do not replace whole-class grounding. Historical search and curation notes are not treated as new absence claims.
+- NA1000 reference-protein identity is distinct from CB15 experimental context. Species-wide UNIVERSAL prevalence is not established by the inspected strain experiments.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests one review for every unreviewed record, including qualified clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T074158Z-holdfast-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of holdfast
+started_at: '2026-10-22T07:12:41Z'
+finished_at: '2026-10-22T07:41:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major canonical strain/source mismatch and one minor paper-title error.
+  Polar adhesive identity, polymer composition, Hfa anchoring dispensability for matrix
+  synthesis and coarse HfsK regulation are supported; UNIVERSAL prevalence remains
+  explicitly unverified.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/holdfast.yaml
+    sha256: 3875b459c05e557e38d7b4ec9b227a1cc2ddcdbcbb55296f2926deaf9cacc862
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:holdfast
+  path: data/structures/other/holdfast.yaml
+  label: holdfast
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target and fourteen frozen target/guidance/schema
+    inputs. Actual primary bodies, native identities and precise access scopes were
+    independently read; no neighboring record is an unstated premise.
+  selection: Batch57 strict ordered selection index 4; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:holdfast
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just validate data/structures/other/holdfast.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just validate-strict data/structures/other/holdfast.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --causal-graphs
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --verify
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-go-search-holdfast
+  - micro57-tax155892
+  - micro57-tax190650
+  - micro57-tax565050
+  - micro57-doi-10.1128_JB.00112-19
+  - micro57-doi-10.1128_JB.00276-19
+  - micro57-doi-10.1128_mBio.00294-17
+  - micro57-sulkowski2019-pmc
+  - micro57-hershey2019-pmc
+  - micro57-sprecher2017-pmc
+  - micro57-protein-P27342
+  - micro57-gene-hfaA
+  - micro57-protein-P27343
+  - micro57-gene-hfaB
+  - micro57-protein-Q45977
+  - micro57-gene-hfaD
+  - micro57-protein-A0A0H3CE47
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: '11 of 12 collected target identifiers returned OK. cellstructuremech:holdfast:
+    SKIPPED; Local structure identifier verified directly in the complete maintained
+    target. It has no external issuing authority. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:holdfast
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/holdfast.yaml
+  locator: Entire current YAML, including all scientific fields, graphs, discussions
+    and history
+  accessed_at: '2026-10-22T07:30:29Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Source-neutral component classes and reviewed-label-only contract
+  accessed_at: '2026-10-22T07:30:29Z'
+  support: context_only
+  summary: A species protein example does not replace exact component-class grounding;
+    a protein family need not be exclusive to one complex.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields
+  accessed_at: '2026-10-22T07:30:29Z'
+  support: context_only
+  summary: Formation necessity is distinct from activity or localization. COMMON means
+    present in most members with exceptional losses; UNIVERSAL means essentially every
+    member, rather than merely a well-studied example.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity, directed relations and edge-level evidence
+  accessed_at: '2026-10-22T07:30:29Z'
+  support: context_only
+  summary: Coarse physical or biochemical mechanisms can be represented without inventing
+    every intermediate. Membership, catalytic activity and assembly necessity remain
+    distinct.
+- evidence_id: micro57-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887
+  locator: Only exact GO0031012 definition/synonyms and relevant typed links in the
+    combined nine-term response.
+  accessed_at: '2026-10-22T07:18:56.250395Z'
+  support: supports
+  summary: GO0031012 identifies extracellular matrix, consistent with the broader
+    parent. The local holdfast identifier is not claimed to be this broad GO class.
+  snapshot_sha256: 90ba34735100f633c06aadb1b833873e8935dd557fcefaba8dfd7e3273689b38
+- evidence_id: micro57-go-search-holdfast
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=holdfast&limit=100
+  locator: Complete retained zero-hit response, query and limit100 in original URL.
+  accessed_at: '2026-10-22T07:22:42.783998Z'
+  support: context_only
+  summary: The bounded QuickGO search for holdfast returned zero results. This does
+    not establish absence from every ontology, synonym query or other authority.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  search_scope: Remote QuickGO GO ontology search only; exact query holdfast, limit100,
+    complete zero-hit response. Ignored files are not applicable to this remote query;
+    no local or all-authority absence claim.
+- evidence_id: micro57-tax155892
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/155892
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.252597Z'
+  support: supports
+  summary: ENA taxId155892 is Caulobacter vibrioides, species, with Caulobacter crescentus
+    as an equivalent name.
+  snapshot_sha256: 5e0fd272e1c0461a6f0dc3a10151587eb27de65a6ebebe95bf9adb62d57e215e
+- evidence_id: micro57-tax190650
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/190650
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.252781Z'
+  support: supports
+  summary: ENA taxId190650 identifies the CB15 strain.
+  snapshot_sha256: 14745eddd4d6743f96c51f2d33fff74ff3846dc33a9f127537438ee3bd608b1c
+- evidence_id: micro57-tax565050
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/565050
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.910753Z'
+  support: supports
+  summary: ENA taxId565050 identifies the distinct NA1000 strain.
+  snapshot_sha256: d3c932efaddd17db870d54241a8c2441cc71fa808cad435ef9bfd60976641685
+- evidence_id: micro57-doi-10.1128_JB.00112-19
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FJB.00112-19%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:00.332826Z'
+  support: supports
+  summary: 'PMID31061167: A Multiprotein Complex Anchors Adhesive Holdfast at the
+    Outer Membrane of Caulobacter crescentus. Sulkowski NI, Hardy GG, Brun YV, Bharat
+    TAM. (2019), DOI10.1128/jb.00112-19. The complete native abstract was read; no
+    unlisted body scope is implied.'
+  snapshot_sha256: 886e2826ed1e7cf62b61d3e8f058a0ba021507868009f55ac7ab78d2ae08cb1b
+- evidence_id: micro57-doi-10.1128_JB.00276-19
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FJB.00276-19%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:00.977208Z'
+  support: supports
+  summary: 'PMID31209074: Composition of the Holdfast Polysaccharide from <i>Caulobacter
+    crescentus</i>. Hershey DM, Porfírio S, Black I, Jaehrig B, Heiss C, Azadi P,
+    Fiebig A, Crosson S. (2019), DOI10.1128/jb.00276-19. The complete native abstract
+    was read; no unlisted body scope is implied.'
+  snapshot_sha256: 598aed7f7d4aba774eed6882f9e5c148e4dadffeab1431a63ca3bb5378d8886e
+- evidence_id: micro57-doi-10.1128_mBio.00294-17
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FmBio.00294-17%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:01.379192Z'
+  support: supports
+  summary: 'PMID28325767: Cohesive Properties of the <i>Caulobacter crescentus</i>
+    Holdfast Adhesin Are Regulated by a Novel c-di-GMP Effector Protein. Sprecher
+    KS, Hug I, Nesper J, Potthoff E, Mahi MA, Sangermani M, Kaever V, Schwede T, Vorholt
+    J, Jenal U. (2017), DOI10.1128/mbio.00294-17. The complete native abstract was
+    read; no unlisted body scope is implied.'
+  snapshot_sha256: 20a1d1c16e3dbef5c4f4e73b3eadded5cf770882af05ab747a20f719ca9efa19
+- evidence_id: micro57-sulkowski2019-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6707917/
+  locator: 'Genuine journal HTML: title; complete Introduction s1; Results s2.1–s2.3
+    including Table1 and Fig2–5 captions; complete Discussion s3; growth Methods s4.1.
+    Other Methods, supplements and pixels were not inspected.'
+  accessed_at: '2026-10-22T07:20:28.171568Z'
+  support: supports
+  summary: The primary study analyzes CB15 and CB15-derived deletion strains, as specified
+    in Table1 and growth Methods. HfaA/HfaB/HfaD form anchoring machinery; mutants
+    synthesize holdfast but shed it. hfsG deletion removes holdfast while retaining
+    anchoring density. The exact paper title says Outer Membrane, not Old Cell Pole.
+    Direct sugar-binding details remain unresolved.
+  snapshot_sha256: c604c95c8fce567f209d926627854f7f7b82e0a0b0c2ec0110284dc58f815904
+- evidence_id: micro57-hershey2019-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6689307/
+  locator: 'Genuine journal HTML: complete Results s2.1–s2.3, Tables2–4 and Fig2–5
+    captions; Methods s4.1 including Table5. Introduction, Discussion, other Methods
+    and pixels not read.'
+  accessed_at: '2026-10-22T07:20:28.174662Z'
+  support: supports
+  summary: CB15-derived strains and engineered extraction controls support glucose,3-O-methylglucose,mannose,xylose
+    and GlcNAc in extracted holdfast material. Medium controls and low-yield/composition
+    limitations are explicit; this is not an exact complete-polymer chemical identifier.
+  snapshot_sha256: 0d42d2963877d3a21aea40cf9bf43f0acded8f00ed2493460723073befda5ed3
+- evidence_id: micro57-sprecher2017-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5362036/
+  locator: 'Genuine journal HTML: Introduction s0; Results s1.1–s1.5 and s1.7 with
+    embedded captions; Discussion s2; Methods s3.1. Results s1.6, other Methods, actual
+    supplementary files and all pixels not read.'
+  accessed_at: '2026-10-22T07:20:28.174563Z'
+  support: supports
+  summary: CB15 experiments support HfsK regulation of holdfast cohesion, c-di-GMP
+    binding and membrane association. Chemical acylation remains proposed rather than
+    demonstrated. Results s1.2 FigS2A caption explicitly uses NA1000 as a nonadherent
+    comparison. No species-wide quantitative prevalence is established.
+  snapshot_sha256: b3006b913faabe97b64e65705dec62a050bc8fcb14ec904afaf2a10071603158
+- evidence_id: micro57-protein-P27342
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27342.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:57.001426Z'
+  support: supports
+  summary: Reviewed CB15 entry P27342 identifies hfaA; native gene/taxon and names
+    match the maintained example.
+  snapshot_sha256: 3e869d55ef8bcb269dd2d3e6718b55ae13f61ef44aaf46fed9bf972bbd90ff63
+- evidence_id: micro57-gene-hfaA
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaA%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:18:58.246176Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P27342; primary name or
+    declared synonym matches hfaA.
+  snapshot_sha256: 186416d4b0a4d2ec138e7b241435d944052ebf2cc90bc02c415b6097d0dc3919
+- evidence_id: micro57-protein-P27343
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27343.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:57.524882Z'
+  support: supports
+  summary: Reviewed CB15 entry P27343 identifies hfaB; native gene/taxon and names
+    match the maintained example. Native HfaB putative transcription-activator wording
+    is retained as an identity label, not a newly demonstrated activity.
+  snapshot_sha256: c572745c1197f92991aa58abd291585e6fc2ab13110e5bb0955aab610c62ba16
+- evidence_id: micro57-gene-hfaB
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaB%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:18:59.165089Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P27343; primary name or
+    declared synonym matches hfaB.
+  snapshot_sha256: 0cfe4ee0669864e87fb24b2474d09d14b382965e6fac5f5da2c67c93a73b4578
+- evidence_id: micro57-protein-Q45977
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q45977.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:57.534862Z'
+  support: supports
+  summary: Reviewed CB15 entry Q45977 identifies hfaD; native gene/taxon and names
+    match the maintained example.
+  snapshot_sha256: 43c1b75c2f33c69c722641de197e5a387a688e755db48719ef7aac2856abadaa
+- evidence_id: micro57-gene-hfaD
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AhfaD%29+AND+%28organism_id%3A190650%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:18:59.215738Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, Q45977; primary name or
+    declared synonym matches hfaD.
+  snapshot_sha256: 309b260df306f6d68384d5000101be4a886756c541418486c33087626b7096e5
+- evidence_id: micro57-protein-A0A0H3CE47
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A0A0H3CE47.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:57.552115Z'
+  support: supports
+  summary: A0A0H3CE47 is an unreviewed NA1000 HfsK/GNAT-family reference entry, gene
+    hfsK/CCNA_03803. It is not evidence that the CB15 experiments used NA1000; no
+    native FUNCTION claim is supplied.
+  snapshot_sha256: 4de14fa035f2d0bd60b45960442c882075a4b8c3222f678ddabc40cda67a5aac
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/holdfast.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:42Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/holdfast.yaml'
+  snapshot_sha256: a4946982cb6635b212d116884b7d8212a110d3bbb4daed5bc338848d422208c9
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/holdfast.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:43Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/holdfast.yaml\
+    \ --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/holdfast-strict.tsv"
+  snapshot_sha256: ed6b8daa9310594d0412d3b355ce976b4e8571643d2381b8dc48df98d703bd75
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --causal-graphs
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:49.730187Z'
+  support: supports
+  summary: "data/structures/other/holdfast.yaml  (cellstructuremech:holdfast)\n  holdfast_synthesis_anchoring_adhesion\t\
+    hfsk_c_di_gmp_effector\tUNANCHORED_WITH_UNIPROT\tHfsK c-di-GMP effector (UniProtKB:A0A0H3CE47)\n\
+    \  holdfast_synthesis_anchoring_adhesion\thfa_holdfast_anchor\tCOVERED\t->hfa_holdfast_anchor\
+    \ (UniProtKB:P27342, UniProtKB:P27343, UniProtKB:Q45977)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     1  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ PARTIAL_EXAMPLES          component_ref target holds protein_examples but has\
+    \ unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target\
+    \ declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_NO_UNIPROT     no component_ref\
+    \ and no UniProtKB grounding or xref on the node\n     2  total GENE_OR_PROTEIN\
+    \ causal nodes"
+  snapshot_sha256: 8cc632f432bb3112dab58b3fe1f3ab70db859089a87909be8af240e24661819c
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/holdfast.yaml --verify
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:51.356552Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/holdfast.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 12 collected target identifiers returned OK. cellstructuremech:holdfast:
+    SKIPPED; Local structure identifier verified directly in the complete maintained
+    target. It has no external issuing authority. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Distinct local holdfast and broader matrix identity
+  outcome: supported
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: The named polar adhesive structure and broad extracellular-matrix parent
+    are supported. The local identifier remains appropriate pending any exact authority
+    decision; the bounded zero-hit GO search is not an exhaustive absence claim.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-go-search-holdfast
+  - micro57-sulkowski2019-pmc
+  - micro57-hershey2019-pmc
+- assessment_id: composition
+  area: grounding
+  topic: Supported polymer and anchoring-machinery boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: The carbohydrate pool is supported without equating its individual sugars
+    to an exact whole polymer. HfaA/B/D are a combined anchoring complex, so a single
+    subunit family would not replace that complex identity. Their reviewed CB15 examples
+    are correct.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-sulkowski2019-pmc
+  - micro57-hershey2019-pmc
+  - micro57-protein-P27342
+  - micro57-gene-hfaA
+  - micro57-protein-P27343
+  - micro57-gene-hfaB
+  - micro57-protein-Q45977
+  - micro57-gene-hfaD
+- assessment_id: formation
+  area: evidence
+  topic: Anchoring dispensability is distinguished from holdfast synthesis
+  outcome: supported
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: Sulkowski directly reports that anchor mutants still synthesize and shed
+    holdfast. DISPENSABLE for formation of the holdfast matrix is therefore compatible
+    with the essential anchoring role; it is not read as dispensable for cell attachment.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-sulkowski2019-pmc
+- assessment_id: scope
+  area: scope
+  topic: Canonical strain and source disagree
+  outcome: concern
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: The cited anchor study uses CB15 and its derivatives. The current canonical
+    row names unqualified NA1000 as the standard anchoring/composition/adhesion model.
+    Sprecher separately treats NA1000 as a nonadherent comparison; the NA1000 HfsK
+    reference accession does not repair that experimental-model mismatch.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-tax155892
+  - micro57-tax190650
+  - micro57-tax565050
+  - micro57-sulkowski2019-pmc
+  - micro57-sprecher2017-pmc
+  - micro57-protein-A0A0H3CE47
+- assessment_id: prevalence
+  area: scope
+  topic: UNIVERSAL prevalence remains unverified
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: UNIVERSAL retains its essentially-every-member meaning. The inspected developmental
+    and strain experiments do not measure the whole-species distribution. The NA1000
+    comparison is not generalized into biological absence across the species; broader
+    prevalence remains unknown rather than a forced separate finding.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-tax155892
+  - micro57-tax190650
+  - micro57-tax565050
+  - micro57-sulkowski2019-pmc
+  - micro57-sprecher2017-pmc
+- assessment_id: function-graph
+  area: graph
+  topic: Coarse cohesion, anchoring and adhesion claims are supported
+  outcome: supported
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: HfsK modulation of cohesion, polymer participation, Hfa-mediated anchoring
+    and polar surface adhesion follow the directly read studies. The graph does not
+    restore the historically removed synthesis/export claim or assert a proven chemical
+    HfsK substrate. Protein-reference strain and experimental strain remain separate.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-sulkowski2019-pmc
+  - micro57-hershey2019-pmc
+  - micro57-sprecher2017-pmc
+  - micro57-protein-A0A0H3CE47
+  - micro57-protein-P27342
+  - micro57-gene-hfaA
+  - micro57-protein-P27343
+  - micro57-gene-hfaB
+  - micro57-protein-Q45977
+  - micro57-gene-hfaD
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-target review with explicit bounds
+  outcome: supported
+  target_ids:
+  - cellstructuremech:holdfast
+  summary: All maintained scientific fields, citations, examples, causal graphs, discussions
+    and history were read. Existing protein examples were checked directly. Findings
+    concern current source/identity or verified family gaps rather than empty optional
+    slots; historical statements remain historical.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-tax155892
+  - micro57-tax190650
+  - micro57-tax565050
+  - micro57-doi-10.1128_JB.00112-19
+  - micro57-doi-10.1128_JB.00276-19
+  - micro57-doi-10.1128_mBio.00294-17
+  - micro57-sulkowski2019-pmc
+  - micro57-hershey2019-pmc
+  - micro57-sprecher2017-pmc
+  - micro57-protein-A0A0H3CE47
+  - micro57-go-search-holdfast
+  - micro57-protein-P27342
+  - micro57-gene-hfaA
+  - micro57-protein-P27343
+  - micro57-gene-hfaB
+  - micro57-protein-Q45977
+  - micro57-gene-hfaD
+findings:
+- finding_id: F1
+  issue_key: holdfast-canonical-strain-source
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the canonical holdfast model strain
+  description: The canonical example names NA1000 tax565050 and attributes its anchoring/composition/c-di-GMP
+    model role to Sulkowski2019. That study specifies CB15 and CB15-derived strains;
+    the separately cited Sprecher study explicitly uses NA1000 as a nonadherent comparison.
+    The current unqualified canonical strain/source pairing is materially misleading.
+  target_ids:
+  - cellstructuremech:holdfast
+  field_paths:
+  - canonical_examples[0]
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-tax155892
+  - micro57-tax190650
+  - micro57-tax565050
+  - micro57-sulkowski2019-pmc
+  - micro57-sprecher2017-pmc
+  - micro57-protein-A0A0H3CE47
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: major
+  normalization_reason: 'Major experimental-model identity mismatch: a named canonical
+    strain is assigned work performed in a different strain, with a cited nonadherent
+    comparison reinforcing the biological consequence. This does not reject the holdfast
+    identity or the independently correct reference-protein accessions.'
+- finding_id: F2
+  issue_key: holdfast-sulkowski-title
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the Sulkowski paper title
+  description: The DOI bibliography substitutes Old Cell Pole for Outer Membrane in
+    the title. Native MED and the genuine primary title agree on A Multiprotein Complex
+    Anchors Adhesive Holdfast at the Outer Membrane of Caulobacter crescentus.
+  target_ids:
+  - cellstructuremech:holdfast
+  field_paths:
+  - evidence[0].notes
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-doi-10.1128_JB.00112-19
+  - micro57-sulkowski2019-pmc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: minor
+  normalization_reason: Localized bibliographic precision; the DOI resolves to the
+    correct scientific study and the anchoring biology remains supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:holdfast
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained scientific record
+  description: Use the source-supported CB15 tax190650 canonical example, or provide
+    directly read evidence for a specified restored/modified NA1000 genotype and restrict
+    its claim accordingly. Keep CB15 experiments separate from the NA1000 HfsK reference
+    sequence.
+  acceptance_checks:
+  - Canonical taxon, genotype, note and cited experiment agree.
+  - Do not imply unmodified NA1000 supplies the reported adhesive model merely because
+    its reference genome contains hfsK.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - cellstructuremech:holdfast
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained scientific record
+  description: Replace the title with the verified native title while retaining the
+    correct DOI and scientific claims.
+  acceptance_checks:
+  - Title text matches the native bibliographic record and article header.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Primary reading is limited to the exact sections recorded for each source. Holdfast
+  figure captions and embedded supplement captions were read, but no microscopy pixels
+  or actual supplementary files were inspected.
+- The complete polymer and combined Hfa anchor remain legitimately label-only; individual
+  sugar or subunit identities do not replace whole-class grounding. Historical search
+  and curation notes are not treated as new absence claims.
+- NA1000 reference-protein identity is distinct from CB15 experimental context. Species-wide
+  UNIVERSAL prevalence is not established by the inspected strain experiments.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established
+  from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests one review for every unreviewed record, including qualified
+  clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

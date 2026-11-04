@@ -1,0 +1,966 @@
+# Source-backed review of hsp78 chaperone complex
+
+- Review: 20261022T074159Z-hsp78-chaperone-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:12:45Z
+- Finished UTC: 2026-10-22T07:41:59Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Qualified pass: exact local identity, reference protein, bounded oligomer/ATPase/disaggregation claims, experimental-context distinctions and native dataset/image provenance are supported. Broad family matches, formation necessity and primary-source inconsistencies remain explicitly qualified.
+
+## Scope And Provenance
+
+Exactly one complete target and fourteen frozen target/guidance/schema inputs. Actual primary bodies, native identities and precise access scopes were independently read; no neighboring record is an unstated premise.
+
+Selection: Batch57 strict ordered selection index 6; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:hsp78_chaperone_complex | data/structures/other/hsp78_chaperone_complex.yaml | maintained | Hsp78 chaperone complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:hsp78_chaperone_complex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:hsp78_chaperone_complex | Focused validator passed. |
+| Focused native causal-graphs | passed | True | cellstructuremech:hsp78_chaperone_complex | Native check passed; scientific support independently assessed. |
+| Focused native verify | passed | True | cellstructuremech:hsp78_chaperone_complex | Native check passed; scientific support independently assessed. |
+| Claim-level scientific review | passed | True | cellstructuremech:hsp78_chaperone_complex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:hsp78_chaperone_complex | 8 of 9 collected target identifiers returned OK. cellstructuremech:hsp78_chaperone_complex: SKIPPED; Local structure identifier verified directly in the complete maintained target. It has no external issuing authority. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:hsp78_chaperone_complex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:hsp78_chaperone_complex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:hsp78_chaperone_complex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:hsp78_chaperone_complex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:hsp78_chaperone_complex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact local oligomer with correct broad parent and compartment
+
+identity: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+The named Hsp78 assembly, broad chaperone-complex parent and matrix parthood are distinct and supported. The bounded native GO query does not establish exhaustive term absence.
+
+### Supported Hsp78 class without forced broad-family mapping
+
+grounding: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+One named Hsp78 subunit class and reviewed reference protein are appropriate. The nine native integrated matches contain broad families/domains/sites rather than an exact Hsp78 family. Null copy number avoids treating every preparation as one invariant hexamer.
+
+### Formation necessity and oligomer pathway are not overclaimed
+
+evidence: unknown. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+The record does not assert an ESSENTIAL label or a complete assembly sequence. Native oligomers and purified size-exclusion states support physical association but do not prove a time-resolved path or universal copy number. These limits remain explicit.
+
+### Native yeast and purified-protein contexts remain separate
+
+scope: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+The experimental Y03617-ES/Y13617-ES backgrounds, reviewed S288C sequence and bacterial recombinant host are not conflated. The trap construct is partly ATPase-impaired rather than null, and source discrepancies in mutation numbering, salt and Fig2D protocol are already preserved.
+
+### Coarse disaggregation and ATPase graph is supported
+
+graph: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+The graph separates purified ATPase/oligomer observations from yeast reporter resolubilization and growth rescue. It does not promote resolubilization to independently measured refolding, glycerol growth to respiratory flux, or enrichment to fixed subunit membership. Coarse substrate-processing claims are appropriately bounded.
+
+### Native datasets and actual figure bytes agree
+
+provenance: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+Both PRIDE project identities and paper linkage agree, with CC0 for deposited data. Figures1/2 match maintained MD5 values and were visually read. The article copyright block states CC BY-NC-ND4.0; this is preserved as the linked OTHER license rather than silently converted to unrestricted reuse.
+
+### Historical XML and current HTML are different snapshots
+
+provenance: unknown. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+The older recorded XML checksum is a historical source-inspection claim. Current retained HTML has a different format and hash; that difference alone does not invalidate the old receipt. The present review relies on its own genuine HTML/figure bytes and exact access scopes.
+
+### Whole-target review with explicit bounds
+
+completeness: supported. Targets: cellstructuremech:hsp78_chaperone_complex.
+
+All maintained scientific fields, citations, examples, causal graphs, discussions and history were read. Existing protein examples were checked directly. Findings concern current source/identity or verified family gaps rather than empty optional slots; historical statements remain historical.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/hsp78_chaperone_complex.yaml; Entire current YAML, including all scientific fields, graphs, discussions and history | context_only | All target bytes were read. No neighboring maintained record is an unstated premise. |
+| curation | docs/CURATION.md; Source-neutral component classes and reviewed-label-only contract | context_only | A species protein example does not replace exact component-class grounding; a protein family need not be exclusive to one complex. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields | context_only | Formation necessity is distinct from activity or localization. COMMON means present in most members with exceptional losses; UNIVERSAL means essentially every member, rather than merely a well-studied example. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity, directed relations and edge-level evidence | context_only | Coarse physical or biochemical mechanisms can be represented without inventing every intermediate. Membership, catalytic activity and assembly necessity remain distinct. |
+| micro57-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887; Only these four exact entries and relevant definitions/synonyms/typed links in the combined response. | supports | GO0101031 is the broader protein-folding chaperone complex, GO0005759 mitochondrial matrix, GO0140545 ATP-dependent protein-disaggregase activity and GO0016887 ATP-hydrolysis activity. No broad parent is substituted for the exact local Hsp78 oligomer identity. |
+| micro57-go-search-Hsp78 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Hsp78&amp;limit=100; Complete retained zero-hit response, query and limit100 in original URL. | context_only | The bounded QuickGO search for Hsp78 returned zero results. This does not establish absence from every ontology, synonym query or other authority. |
+| micro57-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA4932 identifies Saccharomyces cerevisiae species. |
+| micro57-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA559292 identifies the S288C reference strain, distinct from the paper experimental backgrounds. |
+| micro57-doi-10.1016_j.jbc.2022.102494 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jbc.2022.102494%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText. | supports | PMID36115461: Elucidation of the interaction proteome of mitochondrial chaperone Hsp78 highlights its role in protein aggregation during heat stress. Jaworek W, Sylvester M, Cenini G, Voos W. (2022), DOI10.1016/j.jbc.2022.102494. The complete native abstract was read; no unlisted body scope is implied. |
+| micro57-jaworek2022-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC9574514/; Genuine journal HTML: complete Results sec1.1–sec1.4 with all main Fig1–7 captions; complete Discussion sec2; complete Methods sec3.1–sec3.14; Data availability sec4; abstract and copyright block. Introduction outside these containers and supplemental files were not read. | supports | Primary results distinguish multiple Hsp78-containing oligomers, condition-dependent purified SEC behavior, about70percent reduced ATPase activity of the trap construct, reporter resolubilization and growth complementation. Resolubilization is not an independent reporter-refolding assay; glycerol growth is not direct respiratory-flux measurement. Interaction/aggregation proteomics are not fixed complex membership. Main text and Methods contain the mutation, salt and Fig2D protocol inconsistencies already disclosed by the record. |
+| micro57-protein-P33416 | https://rest.uniprot.org/uniprotkb/P33416.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references. No unlisted cited primary paper is certified as read. | supports | Reviewed P33416 is mitochondrial HSP78/YDR258C/YD9320A.08C from S288C. Native matrix location and chaperone/oligomer annotation are supported identity context; its homohexamer wording is not imposed as an invariant count over every primary preparation. |
+| micro57-gene-HSP78 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHSP78%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete results identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed gene query returns one entry, P33416; primary name or declared synonym matches HSP78. |
+| micro57-ipr-P33416 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200; Complete result set, each accession/type/name and pagination fields. | context_only | The complete combined response has nine integrated matches and next:null: two broad ClpA/B families, four domains, two conserved sites and one homologous superfamily. None of these is an exact Hsp78-only family. |
+| micro57-IPR001270 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/; Complete native family type/name/description and member signatures. | context_only | IPR001270 is a broad ClpA/B family including several disaggregase/protease-associated classes; its complete description does not restrict it to Hsp78. |
+| micro57-IPR050130 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/; Complete native metadata including description quality flags and signatures. | context_only | IPR050130/PTHR11638 is a broad ClpA/B-family grouping. Its generated description is marked llm:true and checked:false; it is not used as primary mechanistic evidence or an exact Hsp78 identity. |
+| micro57-jaworek2022-fig1 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/261a/9574514/d9e29f8d8572/gr1.jpg; Complete native publisher figure image, visually inspected; original URL/UTC/SHA and independently computed MD5. | supports | Figure1 actual pixels: construct E614Q label, ATPase curves, glucose/glycerol growth, trimer/hexamer/substrate-bound-question-mark native bands and salt-dependent purified SEC. These are distinct preparation/assay contexts. Downloaded MD5 exactly matches the maintained image checksum. No quantitative image reanalysis. |
+| micro57-jaworek2022-fig2 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/261a/9574514/9c7316c59aa0/gr2.jpg; Complete native publisher figure image, visually inspected; original URL/UTC/SHA and independently computed MD5. | supports | Figure2 actual pixels: reporter fractionation/resolubilization and the separate aggregate-binding panel; printed panelD protocol differs from the Methods, as the maintained record already notes. Downloaded MD5 exactly matches the maintained image checksum. No quantitative image reanalysis. |
+| micro57-pride-PXD030405 | https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD030405; Native project accession/title/species/publication/license/instrument/quantification/otherOmicsLinks; read extent specified in summary. | supports | PartA interaction project: native title, organism4932, exact paper DOI, CC0 license and reciprocal link verified; full project/sample/data-processing text read. Candidate interactors remain condition-specific associations. |
+| micro57-pride-PXD030436 | https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD030436; Native project accession/title/species/publication/license/instrument/quantification/otherOmicsLinks; read extent specified in summary. | supports | PartB aggregate project: native identity/title, organism4932, paper DOI, CC0 license, instrument/SILAC and reciprocal link verified. Full long processing prose and underlying files were not independently reanalyzed. |
+| micro57-jaworek2022-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9574514/fullTextXML; Original native406 receipt and raw bytes. | context_only | The EuropePMC XML request returned406 with a short error body, not a scientific source. Positive reading rests on the separately retained genuine PMC HTML and actual figure files. |
+| schema-result | just validate data/structures/other/hsp78_chaperone_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/hsp78_chaperone_complex.yaml |
+| strict-result | just validate-strict data/structures/other/hsp78_chaperone_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/hsp78_chaperone_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml --causal-graphs; Complete focused read-only native report | supports | data/structures/other/hsp78_chaperone_complex.yaml  (cellstructuremech:hsp78_chaperone_complex)<br>  yeast_hsp78_assayed_function	hsp78	COVERED	-&gt;hsp78 (UniProtKB:P33416)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml --verify; Complete focused read-only native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/hsp78_chaperone_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 9 collected target identifiers returned OK. cellstructuremech:hsp78_chaperone_complex: SKIPPED; Local structure identifier verified directly in the complete maintained target. It has no external issuing authority. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Read scopes are complete Results/Discussion/Methods/Data availability and main captions in the genuine HTML, plus actual Figure1/2 pixels. Introduction, supplementary files and raw proteomic data were not independently read or reanalyzed.
+- The paper contains mutation-numbering, salt and protocol inconsistencies already acknowledged in the maintained record. No external resolution or silent harmonization is claimed.
+- Native broad family matches and bounded zero-hit GO search do not establish all-authority absence. Historical XML checksum was not reconstructed from the new HTML format.
+- CC0 project metadata and the article CC BY-NC-ND4.0 notice are separate licenses; no figure redistribution permission beyond that notice is inferred.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests one review for every unreviewed record, including qualified clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T074159Z-hsp78-chaperone-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of hsp78 chaperone complex
+started_at: '2026-10-22T07:12:45Z'
+finished_at: '2026-10-22T07:41:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Qualified pass: exact local identity, reference protein, bounded oligomer/ATPase/disaggregation
+  claims, experimental-context distinctions and native dataset/image provenance are
+  supported. Broad family matches, formation necessity and primary-source inconsistencies
+  remain explicitly qualified.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/hsp78_chaperone_complex.yaml
+    sha256: ce4cf652d09ceed2af98370e674ca290bb9c878039fc2db47b2b982c3f0e7262
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:hsp78_chaperone_complex
+  path: data/structures/other/hsp78_chaperone_complex.yaml
+  label: Hsp78 chaperone complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hsp78_chaperone_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target and fourteen frozen target/guidance/schema
+    inputs. Actual primary bodies, native identities and precise access scopes were
+    independently read; no neighboring record is an unstated premise.
+  selection: Batch57 strict ordered selection index 6; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just validate data/structures/other/hsp78_chaperone_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just validate-strict data/structures/other/hsp78_chaperone_complex.yaml
+    --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-go-search-Hsp78
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-doi-10.1016_j.jbc.2022.102494
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-gene-HSP78
+  - micro57-ipr-P33416
+  - micro57-IPR001270
+  - micro57-IPR050130
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+  - micro57-pride-PXD030405
+  - micro57-pride-PXD030436
+  - micro57-jaworek2022-xml
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: '8 of 9 collected target identifiers returned OK. cellstructuremech:hsp78_chaperone_complex:
+    SKIPPED; Local structure identifier verified directly in the complete maintained
+    target. It has no external issuing authority. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/hsp78_chaperone_complex.yaml
+  locator: Entire current YAML, including all scientific fields, graphs, discussions
+    and history
+  accessed_at: '2026-10-22T07:30:58Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Source-neutral component classes and reviewed-label-only contract
+  accessed_at: '2026-10-22T07:30:58Z'
+  support: context_only
+  summary: A species protein example does not replace exact component-class grounding;
+    a protein family need not be exclusive to one complex.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and causal graph fields
+  accessed_at: '2026-10-22T07:30:58Z'
+  support: context_only
+  summary: Formation necessity is distinct from activity or localization. COMMON means
+    present in most members with exceptional losses; UNIVERSAL means essentially every
+    member, rather than merely a well-studied example.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity, directed relations and edge-level evidence
+  accessed_at: '2026-10-22T07:30:58Z'
+  support: context_only
+  summary: Coarse physical or biochemical mechanisms can be represented without inventing
+    every intermediate. Membership, catalytic activity and assembly necessity remain
+    distinct.
+- evidence_id: micro57-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031012,GO:0030897,GO:0098796,GO:0042144,GO:0000329,GO:0101031,GO:0005759,GO:0140545,GO:0016887
+  locator: Only these four exact entries and relevant definitions/synonyms/typed links
+    in the combined response.
+  accessed_at: '2026-10-22T07:18:56.250395Z'
+  support: supports
+  summary: GO0101031 is the broader protein-folding chaperone complex, GO0005759 mitochondrial
+    matrix, GO0140545 ATP-dependent protein-disaggregase activity and GO0016887 ATP-hydrolysis
+    activity. No broad parent is substituted for the exact local Hsp78 oligomer identity.
+  snapshot_sha256: 90ba34735100f633c06aadb1b833873e8935dd557fcefaba8dfd7e3273689b38
+- evidence_id: micro57-go-search-Hsp78
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Hsp78&limit=100
+  locator: Complete retained zero-hit response, query and limit100 in original URL.
+  accessed_at: '2026-10-22T07:22:42.435083Z'
+  support: context_only
+  summary: The bounded QuickGO search for Hsp78 returned zero results. This does not
+    establish absence from every ontology, synonym query or other authority.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  search_scope: Remote QuickGO GO ontology search only; exact query Hsp78, limit100,
+    complete zero-hit response. Ignored files are not applicable to this remote query;
+    no local or all-authority absence claim.
+- evidence_id: micro57-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.917463Z'
+  support: supports
+  summary: ENA4932 identifies Saccharomyces cerevisiae species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro57-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:18:56.930018Z'
+  support: supports
+  summary: ENA559292 identifies the S288C reference strain, distinct from the paper
+    experimental backgrounds.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro57-doi-10.1016_j.jbc.2022.102494
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jbc.2022.102494%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText.'
+  accessed_at: '2026-10-22T07:19:01.623956Z'
+  support: supports
+  summary: 'PMID36115461: Elucidation of the interaction proteome of mitochondrial
+    chaperone Hsp78 highlights its role in protein aggregation during heat stress.
+    Jaworek W, Sylvester M, Cenini G, Voos W. (2022), DOI10.1016/j.jbc.2022.102494.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 2c7b2b9147f89c2cd8030b5d7d621661175fcc8b5aa85a74f303b1711c56040f
+- evidence_id: micro57-jaworek2022-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9574514/
+  locator: 'Genuine journal HTML: complete Results sec1.1–sec1.4 with all main Fig1–7
+    captions; complete Discussion sec2; complete Methods sec3.1–sec3.14; Data availability
+    sec4; abstract and copyright block. Introduction outside these containers and
+    supplemental files were not read.'
+  accessed_at: '2026-10-22T07:20:28.672699Z'
+  support: supports
+  summary: Primary results distinguish multiple Hsp78-containing oligomers, condition-dependent
+    purified SEC behavior, about70percent reduced ATPase activity of the trap construct,
+    reporter resolubilization and growth complementation. Resolubilization is not
+    an independent reporter-refolding assay; glycerol growth is not direct respiratory-flux
+    measurement. Interaction/aggregation proteomics are not fixed complex membership.
+    Main text and Methods contain the mutation, salt and Fig2D protocol inconsistencies
+    already disclosed by the record.
+  snapshot_sha256: 821bfe73ebf0f38f24518479fc2ebcc1b37731e510e442598818785e30101121
+- evidence_id: micro57-protein-P33416
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P33416.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments plus relevant InterPro cross-references.
+    No unlisted cited primary paper is certified as read.
+  accessed_at: '2026-10-22T07:18:58.133179Z'
+  support: supports
+  summary: Reviewed P33416 is mitochondrial HSP78/YDR258C/YD9320A.08C from S288C.
+    Native matrix location and chaperone/oligomer annotation are supported identity
+    context; its homohexamer wording is not imposed as an invariant count over every
+    primary preparation.
+  snapshot_sha256: bf59e546b5cce1e31ae58140fdd5adcae71159693e3d628ddb5b5dbec385da19
+- evidence_id: micro57-gene-HSP78
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHSP78%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:19:00.320342Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P33416; primary name or
+    declared synonym matches HSP78.
+  snapshot_sha256: 5f600ea2da28eef7b5db8631eb6c73fdc3cd5326e7a522e3b5b936b72fe596ee
+- evidence_id: micro57-ipr-P33416
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+  locator: Complete result set, each accession/type/name and pagination fields.
+  accessed_at: '2026-10-22T07:19:02.013227Z'
+  support: context_only
+  summary: 'The complete combined response has nine integrated matches and next:null:
+    two broad ClpA/B families, four domains, two conserved sites and one homologous
+    superfamily. None of these is an exact Hsp78-only family.'
+  snapshot_sha256: 371cfdd22ff27bb840a73ea823bc75a849ff53f83a8637c7f386a923149e309f
+- evidence_id: micro57-IPR001270
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001270/
+  locator: Complete native family type/name/description and member signatures.
+  accessed_at: '2026-10-22T07:22:42.168577Z'
+  support: context_only
+  summary: IPR001270 is a broad ClpA/B family including several disaggregase/protease-associated
+    classes; its complete description does not restrict it to Hsp78.
+  snapshot_sha256: ed0a09c17fa611e58cd0d00b904d4dce2757228cd7e411301eddcfb9b391e0dd
+- evidence_id: micro57-IPR050130
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+  locator: Complete native metadata including description quality flags and signatures.
+  accessed_at: '2026-10-22T07:22:42.186236Z'
+  support: context_only
+  summary: IPR050130/PTHR11638 is a broad ClpA/B-family grouping. Its generated description
+    is marked llm:true and checked:false; it is not used as primary mechanistic evidence
+    or an exact Hsp78 identity.
+  snapshot_sha256: e654bc8d2d359d203a225be0690247071616a63341156fcd507f197717f78701
+- evidence_id: micro57-jaworek2022-fig1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/261a/9574514/d9e29f8d8572/gr1.jpg
+  locator: Complete native publisher figure image, visually inspected; original URL/UTC/SHA
+    and independently computed MD5.
+  accessed_at: '2026-10-22T07:22:41.781258Z'
+  support: supports
+  summary: 'Figure1 actual pixels: construct E614Q label, ATPase curves, glucose/glycerol
+    growth, trimer/hexamer/substrate-bound-question-mark native bands and salt-dependent
+    purified SEC. These are distinct preparation/assay contexts. Downloaded MD5 exactly
+    matches the maintained image checksum. No quantitative image reanalysis.'
+  snapshot_sha256: 7590543842b8be3b938e1684bf8c79d23c01da0095c046ca63df6d6720b5dfc0
+- evidence_id: micro57-jaworek2022-fig2
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/261a/9574514/9c7316c59aa0/gr2.jpg
+  locator: Complete native publisher figure image, visually inspected; original URL/UTC/SHA
+    and independently computed MD5.
+  accessed_at: '2026-10-22T07:22:41.782674Z'
+  support: supports
+  summary: 'Figure2 actual pixels: reporter fractionation/resolubilization and the
+    separate aggregate-binding panel; printed panelD protocol differs from the Methods,
+    as the maintained record already notes. Downloaded MD5 exactly matches the maintained
+    image checksum. No quantitative image reanalysis.'
+  snapshot_sha256: 848a047eeedaa2816d558bb791c0ebf0253a0496f4d79a2fe83709ad4b6e8c12
+- evidence_id: micro57-pride-PXD030405
+  kind: database
+  reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD030405
+  locator: Native project accession/title/species/publication/license/instrument/quantification/otherOmicsLinks;
+    read extent specified in summary.
+  accessed_at: '2026-10-22T07:19:02.026128Z'
+  support: supports
+  summary: 'PartA interaction project: native title, organism4932, exact paper DOI,
+    CC0 license and reciprocal link verified; full project/sample/data-processing
+    text read. Candidate interactors remain condition-specific associations.'
+  snapshot_sha256: e18c73a22e41bc420aa0c82536a734074664aef93445518a0ba4e4cd79ade5ef
+- evidence_id: micro57-pride-PXD030436
+  kind: database
+  reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD030436
+  locator: Native project accession/title/species/publication/license/instrument/quantification/otherOmicsLinks;
+    read extent specified in summary.
+  accessed_at: '2026-10-22T07:19:02.114601Z'
+  support: supports
+  summary: 'PartB aggregate project: native identity/title, organism4932, paper DOI,
+    CC0 license, instrument/SILAC and reciprocal link verified. Full long processing
+    prose and underlying files were not independently reanalyzed.'
+  snapshot_sha256: c0bffbac5be7d67695c6ab81b69d9a76b8ddce9ae22dcb78d3bc66e7f019b961
+- evidence_id: micro57-jaworek2022-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9574514/fullTextXML
+  locator: Original native406 receipt and raw bytes.
+  accessed_at: '2026-10-22T07:22:41.782724Z'
+  support: context_only
+  summary: The EuropePMC XML request returned406 with a short error body, not a scientific
+    source. Positive reading rests on the separately retained genuine PMC HTML and
+    actual figure files.
+  snapshot_sha256: 33c7a5f865d318ca682a953c2a50ac925ff838f077d1166040a1f5bea0f42369
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/hsp78_chaperone_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:46Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/hsp78_chaperone_complex.yaml'
+  snapshot_sha256: a0e97712030771e3c91061cbcc04bb0032489a8709a3ec2c88d2d77f9abfed21
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/hsp78_chaperone_complex.yaml
+    --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:47Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/hsp78_chaperone_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/hsp78_chaperone_complex-strict.tsv"
+  snapshot_sha256: a2142f5685a16450e6e8227e88a941c0c3e3cec4563d747ed85897a9de7e3be7
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml
+    --causal-graphs
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:53.953317Z'
+  support: supports
+  summary: "data/structures/other/hsp78_chaperone_complex.yaml  (cellstructuremech:hsp78_chaperone_complex)\n\
+    \  yeast_hsp78_assayed_function\thsp78\tCOVERED\t->hsp78 (UniProtKB:P33416)\n\n\
+    causal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED                 \
+    \  component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 5867d4085f1c7acff7bbc6c93531493cbeea3c2e94aabd23878aab54d7ebe9d8
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/hsp78_chaperone_complex.yaml
+    --verify
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:20:55.234848Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/hsp78_chaperone_complex.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 9 collected target identifiers returned OK. cellstructuremech:hsp78_chaperone_complex:
+    SKIPPED; Local structure identifier verified directly in the complete maintained
+    target. It has no external issuing authority. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact local oligomer with correct broad parent and compartment
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: The named Hsp78 assembly, broad chaperone-complex parent and matrix parthood
+    are distinct and supported. The bounded native GO query does not establish exhaustive
+    term absence.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-go-search-Hsp78
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+- assessment_id: composition
+  area: grounding
+  topic: Supported Hsp78 class without forced broad-family mapping
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: One named Hsp78 subunit class and reviewed reference protein are appropriate.
+    The nine native integrated matches contain broad families/domains/sites rather
+    than an exact Hsp78 family. Null copy number avoids treating every preparation
+    as one invariant hexamer.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-gene-HSP78
+  - micro57-ipr-P33416
+  - micro57-IPR001270
+  - micro57-IPR050130
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+- assessment_id: formation
+  area: evidence
+  topic: Formation necessity and oligomer pathway are not overclaimed
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: The record does not assert an ESSENTIAL label or a complete assembly sequence.
+    Native oligomers and purified size-exclusion states support physical association
+    but do not prove a time-resolved path or universal copy number. These limits remain
+    explicit.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+- assessment_id: scope
+  area: scope
+  topic: Native yeast and purified-protein contexts remain separate
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: The experimental Y03617-ES/Y13617-ES backgrounds, reviewed S288C sequence
+    and bacterial recombinant host are not conflated. The trap construct is partly
+    ATPase-impaired rather than null, and source discrepancies in mutation numbering,
+    salt and Fig2D protocol are already preserved.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+- assessment_id: function-graph
+  area: graph
+  topic: Coarse disaggregation and ATPase graph is supported
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: The graph separates purified ATPase/oligomer observations from yeast reporter
+    resolubilization and growth rescue. It does not promote resolubilization to independently
+    measured refolding, glycerol growth to respiratory flux, or enrichment to fixed
+    subunit membership. Coarse substrate-processing claims are appropriately bounded.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+  - micro57-pride-PXD030405
+  - micro57-pride-PXD030436
+- assessment_id: datasets-images
+  area: provenance
+  topic: Native datasets and actual figure bytes agree
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: Both PRIDE project identities and paper linkage agree, with CC0 for deposited
+    data. Figures1/2 match maintained MD5 values and were visually read. The article
+    copyright block states CC BY-NC-ND4.0; this is preserved as the linked OTHER license
+    rather than silently converted to unrestricted reuse.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-jaworek2022-pmc
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+  - micro57-pride-PXD030405
+  - micro57-pride-PXD030436
+- assessment_id: historical-receipts
+  area: provenance
+  topic: Historical XML and current HTML are different snapshots
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: The older recorded XML checksum is a historical source-inspection claim.
+    Current retained HTML has a different format and hash; that difference alone does
+    not invalidate the old receipt. The present review relies on its own genuine HTML/figure
+    bytes and exact access scopes.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-jaworek2022-pmc
+  - micro57-jaworek2022-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-target review with explicit bounds
+  outcome: supported
+  target_ids:
+  - cellstructuremech:hsp78_chaperone_complex
+  summary: All maintained scientific fields, citations, examples, causal graphs, discussions
+    and history were read. Existing protein examples were checked directly. Findings
+    concern current source/identity or verified family gaps rather than empty optional
+    slots; historical statements remain historical.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro57-go
+  - micro57-go-search-Hsp78
+  - micro57-doi-10.1016_j.jbc.2022.102494
+  - micro57-jaworek2022-pmc
+  - micro57-protein-P33416
+  - micro57-gene-HSP78
+  - micro57-ipr-P33416
+  - micro57-jaworek2022-xml
+  - micro57-tax4932
+  - micro57-tax559292
+  - micro57-IPR001270
+  - micro57-IPR050130
+  - micro57-jaworek2022-fig1
+  - micro57-jaworek2022-fig2
+  - micro57-pride-PXD030405
+  - micro57-pride-PXD030436
+findings: []
+actions: []
+limitations:
+- Read scopes are complete Results/Discussion/Methods/Data availability and main captions
+  in the genuine HTML, plus actual Figure1/2 pixels. Introduction, supplementary files
+  and raw proteomic data were not independently read or reanalyzed.
+- The paper contains mutation-numbering, salt and protocol inconsistencies already
+  acknowledged in the maintained record. No external resolution or silent harmonization
+  is claimed.
+- Native broad family matches and bounded zero-hit GO search do not establish all-authority
+  absence. Historical XML checksum was not reconstructed from the new HTML format.
+- CC0 project metadata and the article CC BY-NC-ND4.0 notice are separate licenses;
+  no figure redistribution permission beyond that notice is inferred.
+- All reused raw/meta retain original URL, UTC and SHA256. Readability is established
+  from actual source content, not status200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests one review for every unreviewed record, including qualified
+  clean cases.
+- No scientific record, historical review or native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

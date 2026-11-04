@@ -47,6 +47,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:36Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added cydx_small_subunit and ynhf_like_cydh_subunit causal graph nodes
+    with component_ref and connected all four bd-I subunits to bd_i_oxidase.
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome bd-I oxidase
   synonym_type: EXACT_SYNONYM
@@ -258,9 +264,10 @@ causal_graphs:
     energy conservation.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the terminal oxidase reaction and the two large
-    CydAB subunits without resolving heme b558, heme b595, heme d, or quinone-channel
-    chemistry.
+  scope_notes: The graph captures the terminal oxidase reaction, the two large CydAB
+    subunits, and the CydX and YnhF-like/CydH small single-transmembrane subunits
+    of the intact bd-I complex without resolving heme b558, heme b595, heme d, or
+    quinone-channel chemistry.
   nodes:
   - node_id: bd_i_oxidase
     label: cytochrome bd-I ubiquinol oxidase complex
@@ -294,6 +301,20 @@ causal_graphs:
   - node_id: bd_i_terminal_oxidase_activity
     label: ubiquinol:oxygen terminal oxidase activity
     node_type: MOLECULAR_FUNCTION
+  - node_id: cydx_small_subunit
+    label: cytochrome bd-I ubiquinol oxidase CydX small subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011724
+    component_ref: cydx_small_subunit
+    description: Single-transmembrane accessory polypeptide that packs against CydA
+      and stabilizes the active cytochrome bd-I oxidase complex.
+  - node_id: ynhf_like_cydh_subunit
+    label: YnhF-like cytochrome bd-I small subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR047743
+    component_ref: ynhf_like_cydh_subunit
+    description: Single-transmembrane accessory subunit (CydH/CydY) bound at the heme
+      b595 surface of Escherichia coli cytochrome bd-I.
   edges:
   - subject: bd_i_oxidase
     predicate: enables
@@ -362,6 +383,65 @@ causal_graphs:
     - reference: PDB:6RKO
       notes: RCSB annotates the PDB:6RKO CydA, CydB, and CydX entities with EC 7.1.1.7,
         quinol oxidase (electrogenic, proton-motive force generating).
+  - subject: cydA
+    predicate: contributes to
+    object: bd_i_oxidase
+    description: The CydA subunit forms the large catalytic and quinol-binding transmembrane
+      core of the cytochrome bd-I oxidase complex.
+    evidence:
+    - reference: PDB:6RKO
+      notes: Cryo-EM structure PDB:6RKO resolves CydA, CydB, CydX, and CydH in the
+        intact E. coli cytochrome bd-I oxidase complex.
+    - reference: PMID:31604309
+      notes: Safarian et al. 2019 determined the four-subunit E. coli cytochrome bd-I
+        oxidase structure.
+    - reference: InterPro:IPR002585
+      notes: InterPro family for cytochrome bd ubiquinol oxidase subunit I.
+  - subject: cydB
+    predicate: contributes to
+    object: bd_i_oxidase
+    description: The CydB subunit forms the second large transmembrane core subunit
+      of the cytochrome bd-I oxidase heterodimer.
+    evidence:
+    - reference: PDB:6RKO
+      notes: Cryo-EM structure PDB:6RKO resolves CydA, CydB, CydX, and CydH in the
+        intact E. coli cytochrome bd-I oxidase complex.
+    - reference: PMID:31604309
+      notes: Safarian et al. 2019 determined the four-subunit E. coli cytochrome bd-I
+        oxidase structure.
+    - reference: InterPro:IPR003317
+      notes: InterPro family for cytochrome bd ubiquinol oxidase subunit II.
+  - subject: cydx_small_subunit
+    predicate: contributes to
+    object: bd_i_oxidase
+    description: The CydX single-transmembrane small subunit packs against CydA and
+      stabilizes the assembled cytochrome bd-I oxidase complex.
+    evidence:
+    - reference: PDB:6RKO
+      notes: Cryo-EM structure PDB:6RKO resolves CydA, CydB, CydX, and CydH in the
+        intact E. coli cytochrome bd-I oxidase complex.
+    - reference: PMID:31604309
+      notes: Safarian et al. 2019 determined the four-subunit E. coli cytochrome bd-I
+        oxidase structure.
+    - reference: InterPro:IPR011724
+      notes: InterPro family for the CydX small single-transmembrane subunit of cytochrome
+        bd-I ubiquinol oxidase.
+  - subject: ynhf_like_cydh_subunit
+    predicate: contributes to
+    object: bd_i_oxidase
+    description: The YnhF-like CydH single-transmembrane subunit associates with CydA
+      at the heme b595 surface in the four-subunit E. coli cytochrome bd-I oxidase
+      complex.
+    evidence:
+    - reference: PDB:6RKO
+      notes: Cryo-EM structure PDB:6RKO resolves CydA, CydB, CydX, and CydH in the
+        intact E. coli cytochrome bd-I oxidase complex.
+    - reference: PMID:31604309
+      notes: Safarian et al. 2019 determined the four-subunit E. coli cytochrome bd-I
+        oxidase structure.
+    - reference: InterPro:IPR047743
+      notes: InterPro family for the YnhF-like CydH small subunit of cytochrome bd-I
+        oxidase.
 discussions:
 - discussion_id: bd_i_small_subunit_scope
   prompt: Resolve how CydX/YbgT and YnhF-like small subunits should be split across

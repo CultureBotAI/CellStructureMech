@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rent_complex.yaml
+  slug: rent_complex
+session:
+  id: 2026-10-30T152500Z-claude-opus-4-6-c5s104
+  timestamp: '2026-10-30T15:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for RENT complex (GO:0030869) in other.
+  details: Authored data/structures/other/rent_complex.yaml for RENT complex (GO:0030869)
+    with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

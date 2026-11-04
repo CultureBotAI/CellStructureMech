@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_i.yaml
+  slug: respiratory_chain_complex_i
+session:
+  id: 2026-10-30T182416Z-claude-code-d35873
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect peripheral_arm to nadh_ubiquinone_activity in complex I causal graph
+  details: Added peripheral_arm contributes to nadh_ubiquinone_activity backed by PMID:23417064
+    and GO:0045271 so the hydrophilic electron-transfer arm and membrane proton-pumping arm
+    form a connected mechanism graph.

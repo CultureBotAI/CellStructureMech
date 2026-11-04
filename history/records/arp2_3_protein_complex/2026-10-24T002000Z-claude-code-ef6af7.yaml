@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+  slug: arp2_3_protein_complex
+session:
+  id: 2026-10-24T002000Z-claude-code-ef6af7
+  timestamp: '2026-10-24T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2420
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2420: Updated components#arc35_arc19_clamp_subunits, components#arc40_arc18_arc15_peripheral_subunits
+    from component_type PROTEIN to PROTEIN_COMPLEX.'
+  details: 'Original finding F1 (cytoskeleton-subcomplex-component-types) saved before
+    mutation in reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml.
+    Addresses #2420.'
