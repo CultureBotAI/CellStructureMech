@@ -1,0 +1,1174 @@
+schema_version: 1.0.0
+review_id: 20261022T055923Z-dna-replication-preinitiation-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of dna replication preinitiation complex
+started_at: '2026-10-22T05:37:29Z'
+finished_at: '2026-10-22T05:59:23Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major mechanism/source-support expansion and three bounded minors concerning
+  exact protein families, formation-necessity labels and graph scope/edge evidence.
+  Correct pre-IC identity and directly demonstrated GINS/recruitment biology are preserved.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    sha256: 1948bbd3828f9736b6dcf1151e9621969b9e0214863e42b559d21e7fff67c2ba
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031261
+  path: data/structures/other/dna_replication_preinitiation_complex.yaml
+  label: DNA replication preinitiation complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target and the frozen governing/schema/protein/graph
+    guidance; no scientific conclusion depends on a neighboring maintained record.
+    All scientific fields and source claims are assessed at the explicitly inspected
+    tiers.
+  selection: Batch51 fixed strict path order, index 6; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031261
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just validate data/structures/other/dna_replication_preinitiation_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just validate-strict data/structures/other/dna_replication_preinitiation_complex.yaml
+    --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dna_replication_preinitiation_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused check passed; biological scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: failed
+  required: false
+  target_ids:
+  - GO:0031261
+  command: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --verify
+  exit_code: 1
+  summary: Executed sandbox request failed because UniProt DNS was unavailable; preserved
+    as an optional historical attempt and superseded by the separately retained successful
+    network retry.
+  evidence_ids:
+  - native-verify
+- check_id: native-verify-network
+  name: Focused native verify network retry
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused check passed; biological scope assessed independently.
+  evidence_ids:
+  - native-verify-network
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-pmid-12730134-network
+  - micro51-ipr-IPR008591
+  - micro51-ipr-IPR005339
+  - micro51-ipr-IPR007257
+  - micro51-ipr-IPR010492
+  - micro51-ipr-IPR003874
+  - micro51-takayama2003-legacy
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  summary: '15 of 16 collected target identifiers returned OK. PMID:12730134: UNREACHABLE;
+    Exact native EuropePMC MED identifier, title and DOI independently inspected after
+    the bulk eutils414 transport failure. Identifier resolution does not certify all
+    biological claims; declared primary-body and abstract reading limits remain in
+    force. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro51-pmid-12730134-network
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031261
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/dna_replication_preinitiation_complex.yaml
+  locator: Entire maintained target, all component/protein evidence, graph nodes/edges,
+    discussion and history
+  accessed_at: '2026-10-22T05:51:09Z'
+  support: context_only
+  summary: All current claims were read in full; no neighboring record judgment is
+    imported.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Components: class grounding, REVIEWED_LABEL_ONLY and formation necessity'
+  accessed_at: '2026-10-22T05:51:09Z'
+  support: context_only
+  summary: An exact family grounds a protein class, whereas a species accession is
+    an example. REVIEWED_LABEL_ONLY means no exact term exists after review. Essentiality
+    concerns formation of the structure, not viability or catalytic function.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and graph scope
+  accessed_at: '2026-10-22T05:51:09Z'
+  support: context_only
+  summary: COMMON means present in most taxon members with exceptional losses; it
+    is not merely an occurrence label. UNKNOWN preserves unestablished formation necessity.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Topology versus mechanism and edge-level evidence
+  accessed_at: '2026-10-22T05:51:09Z'
+  support: context_only
+  summary: Membership, compartment placement and generic process membership do not
+    themselves encode an experimentally supported assembly mechanism.
+- evidence_id: micro51-go-network
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005662,GO:0005663,GO:0031261,GO:0140513,GO:0032991,GO:0032993,GO:0005654,GO:0005657,GO:0003689,GO:0003697,GO:0006260,GO:0042555,GO:0000811
+  locator: 'Thirteen-term response: exact target definition/xrefs/status/synonyms,
+    relevant parent/compartment typed children and declared function/component terms.
+    Unrelated child inventory is not treated as biological evidence.'
+  accessed_at: '2026-10-22T05:41:53.028093Z'
+  support: supports
+  summary: Active GO0031261 supplies the target’s initial protein-DNA complex definition
+    and pre-IC synonym, but not its added double-hexamer, kinase-target or CMG narrative.
+    GO0032993/0140513 parentage and GO0005654 part_of placement are supported by relevant
+    typed links. GO0042555 defines the hexameric MCM complex and GO0000811 the GINS
+    heterotetramer; neither alone verifies the detailed modern assembly claims. GO0006260
+    defines DNA replication, not a specific pre-IC mechanism.
+  snapshot_sha256: aa2de8390a1ee6ed65c370de3a77e03161506b64eace1416883667eb013d002e
+- evidence_id: micro51-GO0031261-ancestors-network
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031261/ancestors?relations=is_a
+  locator: Exact target query with relations=is_a; complete ancestor IDs inspected.
+    No part_of relation is inferred from this ancestry list.
+  accessed_at: '2026-10-22T05:41:50.544094Z'
+  support: supports
+  summary: The is_a-only native ancestor response confirms the target’s nuclear protein-containing-complex
+    hierarchy and protein-DNA-complex classification.
+  snapshot_sha256: c3c9f5dfd06ac61177b67dde56487197bf7f38d705aed90331b833b2ee67e274
+- evidence_id: micro51-GO0031261-constraints-network
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031261/constraints
+  locator: Exact taxonConstraints array only; inherited annotation blacklist is not
+    used for occurrence or composition.
+  accessed_at: '2026-10-22T05:41:51.299021Z'
+  support: supports
+  summary: The exact constraint is only_in_taxon Eukaryota2759. Taxon restrictions
+    do not establish a prevalence census.
+  snapshot_sha256: 1833ee1eb4e282fb7393c3e28ee00c29aab41b5b9192d393b43429399c799a00
+- evidence_id: micro51-tax4932-network
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId/scientificName/rank/lineage/otherNames native response.
+  accessed_at: '2026-10-22T05:41:56.285243Z'
+  support: supports
+  summary: ENA taxId4932 is Saccharomyces cerevisiae, rank species.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro51-tax559292-network
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxId/scientificName/rank/lineage/otherNames native response.
+  accessed_at: '2026-10-22T05:41:56.502600Z'
+  support: supports
+  summary: ENA taxId559292 is S. cerevisiae S288C, rank strain; reference protein
+    identity is distinct from the strains used in the cited experiments.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro51-pmid-12730134-network
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12730134%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED record: full title/authors/year/PMID/DOI and complete abstractText.
+    Main-body evidence, where actually read, is recorded separately.'
+  accessed_at: '2026-10-22T05:41:53.779098Z'
+  support: supports
+  summary: Takayama et al.2003, GINS, a novel multiprotein complex required for chromosomal
+    DNA replication in budding yeast, DOI10.1101/gad.1065903. Complete abstract identifies
+    Sld5/Psf1/Psf2/Psf3 and origin/fork association with dependency on Sld3/Dpb11.
+  snapshot_sha256: e384d195dea6f83623f4873a66ab86cf53162534e8813c2f3ad1b00128f9608a
+- evidence_id: micro51-ipr-IPR008591
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR008591/
+  locator: Complete native metadata name/type/accession/descriptions and member_databases.
+    Background prose is not promoted to new mechanistic evidence.
+  accessed_at: '2026-10-22T05:42:48.959466Z'
+  support: supports
+  summary: Native IPR008591 identifies the whole-protein GINS Sld5 class. Family with
+    PIRSF007764/PTHR21206 signatures. This entry supplies family identity/type/signature
+    evidence; individual protein membership is verified in separate UniProt responses.
+  snapshot_sha256: 85e8cd86a991862236bac423a4b78a8657b441ab90bfc81b4db9fe4962302caf
+- evidence_id: micro51-ipr-IPR005339
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005339/
+  locator: Complete native metadata name/type/accession/descriptions and member_databases.
+    Background prose is not promoted to new mechanistic evidence.
+  accessed_at: '2026-10-22T05:42:50.028794Z'
+  support: supports
+  summary: Native IPR005339 identifies the whole-protein GINS Psf1 class. Family with
+    PTHR12914 and cd11710 integrated signatures. This entry supplies family identity/type/signature
+    evidence; individual protein membership is verified in separate UniProt responses.
+  snapshot_sha256: 121f89ec73f3f03cd822ae44de3d8f88b8d0c03e2d0cace8bdbec8dc8a758196
+- evidence_id: micro51-ipr-IPR007257
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007257/
+  locator: Complete native metadata name/type/accession/descriptions and member_databases.
+    Background prose is not promoted to new mechanistic evidence.
+  accessed_at: '2026-10-22T05:42:48.815048Z'
+  support: supports
+  summary: Native IPR007257 identifies the whole-protein GINS Psf2 class. Family with
+    PIRSF028998/PTHR12772 signatures. This entry supplies family identity/type/signature
+    evidence; individual protein membership is verified in separate UniProt responses.
+  snapshot_sha256: da6e464787aa773567fa1b673d8d7428ffc4637302a642144f0fd11d389636a4
+- evidence_id: micro51-ipr-IPR010492
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010492/
+  locator: Complete native metadata name/type/accession/descriptions and member_databases.
+    Background prose is not promoted to new mechanistic evidence.
+  accessed_at: '2026-10-22T05:42:49.150925Z'
+  support: supports
+  summary: Native IPR010492 identifies the whole-protein GINS Psf3 class. Family with
+    PTHR22768 signature. This entry supplies family identity/type/signature evidence;
+    individual protein membership is verified in separate UniProt responses.
+  snapshot_sha256: fc7bab38aac1ebe05715d0a7a9ff819d2de8abb1c981d9f1813c8064229268eb
+- evidence_id: micro51-ipr-IPR003874
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003874/
+  locator: Complete native metadata name/type/accession/descriptions and member_databases.
+    Background prose is not promoted to new mechanistic evidence.
+  accessed_at: '2026-10-22T05:44:01.503054Z'
+  support: supports
+  summary: Native IPR003874 identifies the whole-protein Cdc45 class. Family with
+    PF02724/PTHR10507 signatures. This entry supplies family identity/type/signature
+    evidence; individual protein membership is verified in separate UniProt responses.
+  snapshot_sha256: 580caef553ebf001a0fece61778bae151bde22735cc960091381b8c90b4a4646
+- evidence_id: micro51-takayama2003-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC196052/
+  locator: 'Entire scientific body: Introduction; Resultssec2–9 and Fig1–7 captions;
+    complete Discussion subsections and Methodssec15–22, including W303 derivation/mutant
+    conditions, purification and ChIP. No figure pixels, raw data or supplements inspected.'
+  accessed_at: '2026-10-22T05:42:47.956791Z'
+  support: supports
+  summary: The primary paper identifies the GINS heterotetramer by co-purification,
+    tagging and mass fingerprints. In sld5-12, GINS recovery is reduced under specified
+    conditions, with protein-level changes and PSF2 suppression; it is not a universal
+    no-assembly experiment. ChIP/mutant analyses support origin/fork association and
+    conditional dependencies among GINS, Cdc45, Sld3 and Dpb11; Discussion proposes
+    interdependent recruitment. The paper does not establish loaded MCM double-hexamer
+    geometry, DDK/S-CDK target allocation or the Cdc45 Mcm2–Mcm5 bridge asserted in
+    the target.
+  snapshot_sha256: e9a32599ad633a828895638fb8c65b555aed20b08c99b8f790a9c206cb5af1cb
+- evidence_id: micro51-protein-Q03406-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03406.json
+  locator: Complete identity/status/gene/taxon/name, all InterPro xrefs and full FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments, including experimental PubMed link.
+  accessed_at: '2026-10-22T05:41:55.723990Z'
+  support: supports
+  summary: Native reviewed Q03406 is SLD5 in S288C559292, with the matching exact
+    GINS-family InterPro xref. Full FUNCTION/SUBUNIT/location comments were inspected;
+    nucleus location explicitly cites ECO0000269/PMID12730134, as recorded. Identity/localization
+    is not treated as direct proof of every detailed pre-IC mechanism.
+  snapshot_sha256: 0f0ab1e1af41bb24cee36f864ebc31dd7545b0bb29a248a5cc47c3d3e1af1494
+- evidence_id: micro51-gene-SLD5-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASLD5%29%20AND%20%28taxonomy_id%3A559292%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact reviewed gene/taxon query URL.
+  accessed_at: '2026-10-22T05:41:52.872178Z'
+  support: supports
+  summary: The exact reviewed S288C gene query returns one entry Q03406, corroborating
+    the maintained SLD5 uniqueness statement.
+  snapshot_sha256: 7368ce9776d8376e6b65508a94e4db0a020b1e79807eee71b6f045dddcbd3721
+- evidence_id: micro51-protein-Q12488-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12488.json
+  locator: Complete identity/status/gene/taxon/name, all InterPro xrefs and full FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments, including experimental PubMed link.
+  accessed_at: '2026-10-22T05:41:55.960191Z'
+  support: supports
+  summary: Native reviewed Q12488 is PSF1 in S288C559292, with the matching exact
+    GINS-family InterPro xref. Full FUNCTION/SUBUNIT/location comments were inspected;
+    nucleus location explicitly cites ECO0000269/PMID12730134, as recorded. Identity/localization
+    is not treated as direct proof of every detailed pre-IC mechanism.
+  snapshot_sha256: d2bc83c4f49cb856f2fbf59ea40455ddc5180c1d30345c829f945ba34ea5cf42
+- evidence_id: micro51-gene-PSF1-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APSF1%29%20AND%20%28taxonomy_id%3A559292%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact reviewed gene/taxon query URL.
+  accessed_at: '2026-10-22T05:41:51.303458Z'
+  support: supports
+  summary: The exact reviewed S288C gene query returns one entry Q12488, corroborating
+    the maintained PSF1 uniqueness statement.
+  snapshot_sha256: e80a00344596c83719b3207a5bdf34a416aa42fef76201dfe48cd6f4943922cc
+- evidence_id: micro51-protein-P40359-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40359.json
+  locator: Complete identity/status/gene/taxon/name, all InterPro xrefs and full FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments, including experimental PubMed link.
+  accessed_at: '2026-10-22T05:41:55.437400Z'
+  support: supports
+  summary: Native reviewed P40359 is PSF2 in S288C559292, with the matching exact
+    GINS-family InterPro xref. Full FUNCTION/SUBUNIT/location comments were inspected;
+    nucleus location explicitly cites ECO0000269/PMID12730134, as recorded. Identity/localization
+    is not treated as direct proof of every detailed pre-IC mechanism.
+  snapshot_sha256: a0372e9adda4d46ee4b088e3bac6455b0dcfa50df134106ee25d61c0a2c82689
+- evidence_id: micro51-gene-PSF2-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APSF2%29%20AND%20%28taxonomy_id%3A559292%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact reviewed gene/taxon query URL.
+  accessed_at: '2026-10-22T05:41:51.301265Z'
+  support: supports
+  summary: The exact reviewed S288C gene query returns one entry P40359, corroborating
+    the maintained PSF2 uniqueness statement.
+  snapshot_sha256: f623cb2d7331785b5dc3c72117083190c48927b7e740098a750f9d4f52698512
+- evidence_id: micro51-protein-Q12146-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12146.json
+  locator: Complete identity/status/gene/taxon/name, all InterPro xrefs and full FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments, including experimental PubMed link.
+  accessed_at: '2026-10-22T05:41:55.810884Z'
+  support: supports
+  summary: Native reviewed Q12146 is PSF3 in S288C559292, with the matching exact
+    GINS-family InterPro xref. Full FUNCTION/SUBUNIT/location comments were inspected;
+    nucleus location explicitly cites ECO0000269/PMID12730134, as recorded. Identity/localization
+    is not treated as direct proof of every detailed pre-IC mechanism.
+  snapshot_sha256: 72fc7e1d00fc0c8dee9b0e065a7683decb0c78a9cba00cf8252da2fe27c3bf3c
+- evidence_id: micro51-gene-PSF3-network
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APSF3%29%20AND%20%28taxonomy_id%3A559292%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact reviewed gene/taxon query URL.
+  accessed_at: '2026-10-22T05:41:51.306026Z'
+  support: supports
+  summary: The exact reviewed S288C gene query returns one entry Q12146, corroborating
+    the maintained PSF3 uniqueness statement.
+  snapshot_sha256: d7cd7f8989fc603bab14abc9c2d052cb1bd46a9090022b39abba5a11cdaf1887
+- evidence_id: micro51-gene-CDC45
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC45%29%20AND%20%28taxonomy_id%3A559292%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity/gene/taxon, InterPro xrefs and FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments.
+  accessed_at: '2026-10-22T05:43:09.445245Z'
+  support: supports
+  summary: The exact reviewed S288C CDC45 query returns Q08032 with native IPR003874
+    xref. FUNCTION supports replication initiation; SUBUNIT supports a complex with
+    Mcm5 and interaction with Mcm10. These comments do not establish the target’s
+    precise DDK-phosphorylated-ring/Mcm2–Mcm5-bridge narrative.
+  snapshot_sha256: efc064cfd5d81f5633b581bb83454b905eccdc8d46a8cb5d0430872c3bee9dc7
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/dna_replication_preinitiation_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:37:31Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/dna_replication_preinitiation_complex.yaml'
+  snapshot_sha256: 01e9727c9326dfb24b3d3057c6f09b38b86137c7321446b65c7a98f78454070f
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/dna_replication_preinitiation_complex.yaml
+    --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dna_replication_preinitiation_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:37:33Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/dna_replication_preinitiation_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dna_replication_preinitiation_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch51-20261022-jny4s18h/dna_replication_preinitiation_complex-strict.tsv"
+  snapshot_sha256: 850389ebce37bf098a134fd2ef1f6f8b5b8454414ea27fc8b7a14117b83bf0d4
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --causal-graphs
+  locator: Complete focused read-only native causal-graphs report
+  accessed_at: '2026-10-22T05:43:17.342768Z'
+  support: supports
+  summary: "data/structures/other/dna_replication_preinitiation_complex.yaml  (GO:0031261)\n\
+    \  dna_replication_preinitiation_complex_mechanism\tcdc45_initiation_factor\t\
+    HAS_SYMBOLS_NO_EXAMPLES\t->cdc45_initiation_factor (PROTEIN: CDC45)\n  dna_replication_preinitiation_complex_mechanism\t\
+    sld5_subunit\tCOVERED\t->sld5_subunit (UniProtKB:Q03406)\n  dna_replication_preinitiation_complex_mechanism\t\
+    psf1_subunit\tCOVERED\t->psf1_subunit (UniProtKB:Q12488)\n  dna_replication_preinitiation_complex_mechanism\t\
+    psf2_subunit\tCOVERED\t->psf2_subunit (UniProtKB:P40359)\n  dna_replication_preinitiation_complex_mechanism\t\
+    psf3_subunit\tCOVERED\t->psf3_subunit (UniProtKB:Q12146)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     4  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     1  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     5  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 3848074a262129db56b785df76ac75f5c417a9668c867e3ca50aa6bed5de8760
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --verify
+  locator: Complete focused read-only native verify report
+  accessed_at: '2026-10-22T05:43:29.842334Z'
+  support: context_only
+  summary: "Traceback (most recent call last):\n  File \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 922, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n\
+    \  File \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 876, in main\n    return cmd_verify(records)\n  File \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 727, in cmd_verify\n    issues = verify_records(records)\n  File \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 616, in verify_records\n    entries = fetch_entries_by_accession(all_accs)\
+    \ if all_accs else {}\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File\
+    \ \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 169, in fetch_entries_by_accession\n    for entry in json.loads(_get(url)).get(\"\
+    results\", []):\n                            ~~~~^^^^^\n  File \"/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/scripts/uniprot_genes.py\"\
+    , line 134, in _get\n    raise RuntimeError(f\"UniProt unreachable after {RETRIES}\
+    \ attempts: {last}\")\nRuntimeError: UniProt unreachable after 3 attempts: <urlopen\
+    \ error [Errno 8] nodename nor servname provided, or not known>"
+  snapshot_sha256: 638316eb6d04c49acacf1717010fa10a01d9d9954e01afa43caa919455bb88b3
+- evidence_id: native-verify-network
+  kind: validation
+  reference: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_replication_preinitiation_complex.yaml
+    --verify
+  locator: Complete focused read-only native verify report
+  accessed_at: '2026-10-22T05:43:50.272314Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/dna_replication_preinitiation_complex.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '15 of 16 collected target identifiers returned OK. PMID:12730134: UNREACHABLE;
+    Exact native EuropePMC MED identifier, title and DOI independently inspected after
+    the bulk eutils414 transport failure. Identifier resolution does not certify all
+    biological claims; declared primary-body and abstract reading limits remain in
+    force. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact preinitiation class with supported partial GINS context
+  outcome: supported
+  target_ids:
+  - GO:0031261
+  summary: The exact pre-IC class, protein-DNA/nuclear parentage and nucleoplasm context
+    agree with native GO. Takayama supports the four named GINS constituents, their
+    yeast context and origin/fork-related replication role. The component list is
+    a partial representation, not an asserted exhaustive modern initiation inventory.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - micro51-pmid-12730134-network
+- assessment_id: mechanism
+  area: evidence
+  topic: Detailed mechanism exceeds the actually cited evidence
+  outcome: concern
+  target_ids:
+  - GO:0031261
+  summary: The definition expands beyond its named GO source, while MCM/Cdc45 roles
+    and repeated graph prose attribute a modern double-hexamer/kinase/CMG/bridge mechanism
+    to Takayama2003. The inspected paper instead establishes GINS identification and
+    conditional recruitment relationships and discusses models. Preserve those supported
+    observations while separately sourcing or qualifying the expanded mechanism; modern
+    biology is not being declared false.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+- assessment_id: proteins
+  area: grounding
+  topic: Verified GINS instances and five actionable protein classes
+  outcome: concern
+  target_ids:
+  - GO:0031261
+  summary: All four reviewed GINS accessions, genes, S288C taxa, exact query uniqueness
+    and nucleus ECO/PMID annotations agree with native entries. Exact whole-protein
+    families exist for Sld5/Psf1/Psf2/Psf3 and Cdc45, independently corroborated by
+    UniProt xrefs. The four REVIEWED_LABEL_ONLY rows and ungrounded Cdc45 class can
+    be resolved without inventing additional optional protein examples.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-ipr-IPR008591
+  - micro51-ipr-IPR005339
+  - micro51-ipr-IPR007257
+  - micro51-ipr-IPR010492
+  - micro51-ipr-IPR003874
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+- assessment_id: formation
+  area: grounding
+  topic: MCM/Cdc45 formation necessity remains unestablished at the cited tier
+  outcome: unknown
+  target_ids:
+  - GO:0031261
+  summary: The universal ESSENTIAL claims for MCM and Cdc45 require support about
+    pre-IC formation, not merely replication initiation or GINS recruitment. Takayama’s
+    conditional mutants, reduced GINS recovery and ChIP dependencies do not directly
+    establish both asserted universal component-absence formation statements. GINS
+    UNKNOWN labels remain appropriate; the uncertainty does not deny constituent membership
+    or the demonstrated dependencies.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+- assessment_id: topology
+  area: graph
+  topic: Mechanistic label exceeds the eight displayed relations
+  outcome: concern
+  target_ids:
+  - GO:0031261
+  summary: Six part-membership edges, one nucleoplasm placement and one generic replication
+    edge describe composition/context/function. They do not encode the paper’s conditional
+    recruitment dependencies. The final edge cites only GO0006260, which defines the
+    process and cannot establish a pre-IC-specific causal mechanism. Correct scope/edge
+    attribution while retaining supported topology.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - graphs
+- assessment_id: taxonomic-scope
+  area: scope
+  topic: Taxon identity, majority semantics and experimental boundaries
+  outcome: supported
+  target_ids:
+  - GO:0031261
+  summary: The named yeast taxon and canonical system agree with the primary studies;
+    S288C entries are reference examples, not claims that every experiment used that
+    strain. COMMON retains its schema meaning present in most members with exceptional
+    losses. The sources provide qualitative conservation/system support rather than
+    a measured prevalence census; no artificial census requirement is imposed.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - micro51-pmid-12730134-network
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-target coverage with bounded unresolved enrichment
+  outcome: supported
+  target_ids:
+  - GO:0031261
+  summary: The complete maintained target, each source claim, graph edge, component
+    state, protein example, discussion and history was assessed. Exact actionable
+    class mappings are distinguished from unresolved broader/domain candidates and
+    optional enrichment. Existing historical access/curation notes are not judged
+    false merely because this review recovered additional sources.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - micro51-ipr-IPR008591
+  - micro51-ipr-IPR005339
+  - micro51-ipr-IPR007257
+  - micro51-ipr-IPR010492
+  - micro51-ipr-IPR003874
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+findings:
+- finding_id: F1
+  issue_key: dna-preinitiation-modern-mechanism-source-overstatement
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Source or qualify the added modern preinitiation mechanism
+  description: The definition names GO0031261 but appends loaded MCM double-hexamer/kinase-target/CMG
+    details outside that definition. MCM/Cdc45 roles and repeated graph prose attribute
+    these details, including a Mcm2–Mcm5 bridge, to Takayama2003. The inspected source
+    identifies GINS and conditional origin-recruitment dependencies; it does not demonstrate
+    that detailed physical and phosphorylation mechanism. The supported partial observations
+    should remain distinct from later mechanistic knowledge.
+  target_ids:
+  - GO:0031261
+  field_paths:
+  - definition
+  - definition_source
+  - components[0].role
+  - components[0].evidence[0].notes
+  - components[1].role
+  - components[1].evidence[0].notes
+  - causal_graphs[0].nodes[1].description
+  - causal_graphs[0].nodes[2].description
+  - causal_graphs[0].edges[0]
+  - causal_graphs[0].edges[1]
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  rule_id: Claim-level evidence, exact class grounding and local formation/graph contracts
+  native_severity: major
+  normalization_reason: This is a substantive source-support expansion in the defining
+    mechanism and component roles, not merely a bibliographic typo. Exact pre-IC identity
+    and the paper’s observed recruitment biology remain supported.
+- finding_id: F2
+  issue_key: dna-preinitiation-exact-five-protein-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve exact GINS and Cdc45 protein-family classes
+  description: Exact whole-protein families are available for Sld5 IPR008591, Psf1
+    IPR005339, Psf2 IPR007257, Psf3 IPR010492 and Cdc45 IPR003874. Separate native
+    family metadata and reviewed UniProt xrefs corroborate them. The four label-only
+    GINS rows and ungrounded named Cdc45 class can be resolved; this does not require
+    extra optional protein examples.
+  target_ids:
+  - GO:0031261
+  field_paths:
+  - components[1]
+  - components[2].grounding_status
+  - components[3].grounding_status
+  - components[4].grounding_status
+  - components[5].grounding_status
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-ipr-IPR008591
+  - micro51-ipr-IPR005339
+  - micro51-ipr-IPR007257
+  - micro51-ipr-IPR010492
+  - micro51-ipr-IPR003874
+  - micro51-protein-Q03406-network
+  - micro51-gene-SLD5-network
+  - micro51-protein-Q12488-network
+  - micro51-gene-PSF1-network
+  - micro51-protein-P40359-network
+  - micro51-gene-PSF2-network
+  - micro51-protein-Q12146-network
+  - micro51-gene-PSF3-network
+  - micro51-gene-CDC45
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  rule_id: Claim-level evidence, exact class grounding and local formation/graph contracts
+  native_severity: minor
+  normalization_reason: These are correctly named protein classes with an actionable
+    identifier gap; neither whole-complex identity nor the verified GINS examples
+    are wrong.
+- finding_id: F3
+  issue_key: dna-preinitiation-formation-essentiality-source-gap
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Do not substitute initiation function for formation necessity
+  description: MCM and Cdc45 are marked ESSENTIAL, which locally means the structure
+    does not form without the component. The sole cited Takayama study establishes
+    conditional GINS/recruitment and replication effects, not both universal pre-IC
+    formation assertions. Its reduced GINS recovery and replication defects must not
+    be converted into unqualified physical-assembly requirements.
+  target_ids:
+  - GO:0031261
+  field_paths:
+  - components[0].essentiality
+  - components[1].essentiality
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  rule_id: Claim-level evidence, exact class grounding and local formation/graph contracts
+  native_severity: minor
+  normalization_reason: The correct constituent identities and broad initiation biology
+    remain intact; the unsupported categorical formation labels are a localized model/evidence
+    precision defect.
+- finding_id: F4
+  issue_key: dna-preinitiation-descriptive-graph-mechanistic-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Calibrate the descriptive graph and final process citation
+  description: The eight edges represent six part-membership relations, nucleoplasm
+    placement and a generic replication relation. MECHANISTIC and the assembly/function
+    title overstate what is encoded. GO0006260 on the final edge identifies DNA replication
+    but does not establish the pre-IC-specific causal assertion.
+  target_ids:
+  - GO:0031261
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[7].evidence
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - micro51-go-network
+  - micro51-GO0031261-ancestors-network
+  - micro51-GO0031261-constraints-network
+  - micro51-tax4932-network
+  - micro51-tax559292-network
+  - micro51-takayama2003-legacy
+  - graphs
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  rule_id: Claim-level evidence, exact class grounding and local formation/graph contracts
+  native_severity: minor
+  normalization_reason: Supported composition and location remain valid. The correction
+    concerns graph scope and narrow edge evidence, separate from the detailed mechanistic
+    prose finding.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031261
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  description: Separate the native GO definition and directly demonstrated2003 observations
+    from later mechanistic claims. Either inspect and attach appropriate modern primary
+    sources at each claim or qualify/remove the unsupported detail; preserve conditional
+    recruitment and strain context.
+  acceptance_checks:
+  - Every double-hexamer, kinase-target, CMG and bridge assertion has a directly inspected
+    source at the actual field.
+  - Takayama2003 is not presented as demonstrating mechanisms beyond its experiments.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0031261
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  description: Add the exact five class groundings with source-specific evidence and
+    appropriate grounding states. Keep the MCM GO complex separate and retain existing
+    correctly taxon-paired examples.
+  acceptance_checks:
+  - Each family is checked against the same named whole-protein class and the native
+    reviewed-protein cross-reference.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0031261
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  description: Provide direct, appropriately scoped formation support for each ESSENTIAL
+    assertion, or use UNKNOWN while preserving the directly demonstrated functional/recruitment
+    roles.
+  acceptance_checks:
+  - Formation necessity is assessed separately from viability, replication activity,
+    protein abundance and conditional recruitment.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+- action_id: A4
+  finding_ids:
+  - F4
+  target_ids:
+  - GO:0031261
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained scientific record
+  description: Mark the present topology/function graph NONMECHANISTIC with an honest
+    scope note and claim-appropriate final-edge evidence, or build separately sourced
+    causal recruitment edges preserving experimental conditions.
+  acceptance_checks:
+  - The graph label matches the relations actually encoded.
+  - The final biological edge cites a source supporting the structure-specific assertion,
+    not only a process identifier.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Takayama2003 entire scientific body and Fig1–7 captions were read, but no figure
+  pixels, supplements or raw experiments were inspected. Experimental W303-derived
+  systems and temperature/construct conditions remain distinct from S288C reference
+  protein identities.
+- The review does not dispute modern CMG biology. It identifies the mismatch between
+  the record’s detailed claims and its actual GO/2003 source support. Additional modern
+  primary sources would require independent inspection before supporting these details.
+- GINS recovery in sld5-12 is reduced and condition-dependent, with abundance/suppression
+  complications; this is not promoted to universal absence of GINS or pre-IC formation.
+  No additional component or protein-example inventory is required merely to fill
+  an optional slot.
+- Native initial DNS failures and successful network retries are retained separately.
+  An HTTP200 redirect, download challenge or abstract landing page is never treated
+  as full scientific text.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user requests one review for every unreviewed record, including qualified clean
+  records.
+- Native UniProt/ontology/family adapters directly address these eukaryotic complex
+  claims. No matched iModulonDB organism/dataset is established or used; expression-module
+  evidence would not prove physical assembly.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.

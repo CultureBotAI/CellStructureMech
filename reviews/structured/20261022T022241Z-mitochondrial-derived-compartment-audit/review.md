@@ -1,0 +1,1222 @@
+# Scientific review of mitochondrial-derived compartment
+
+- Review: 20261022T022241Z-mitochondrial-derived-compartment-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:03:18Z
+- Finished UTC: 2026-10-22T02:22:41Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+MDC identity, composition, topology and conditional functions are supported; one minor graph-source correction concerns a ConcA experiment described as rapamycin-induced.
+
+## Scope And Provenance
+
+One complete yeast-scoped MDC record; exact native identities, primary experimental contexts, measurements, figure and explicit follow-up limitations.
+
+Selection: Batch32 fixed strict path-order selection, one target only.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:mitochondrial_derived_compartment | data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml | maintained | mitochondrial-derived compartment |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:mitochondrial_derived_compartment | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:mitochondrial_derived_compartment | Focused validator passed. |
+| Native focused verify | passed | True | cellstructuremech:mitochondrial_derived_compartment | Focused native command completed successfully; scientific scope is assessed separately. |
+| Native focused causal | passed | True | cellstructuremech:mitochondrial_derived_compartment | Focused native command completed successfully; scientific scope is assessed separately. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:mitochondrial_derived_compartment | No expression-module or transcriptomic-regulon claim; structural microscopy and perturbations do not require an expression-module lookup. |
+| Claim-level scientific review | passed | True | cellstructuremech:mitochondrial_derived_compartment | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:mitochondrial_derived_compartment | 16 of 17 collected target identifiers returned OK. cellstructuremech:mitochondrial_derived_compartment: SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained mitochondrial-derived compartment record at data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml. An anchored hidden/ignored-inclusive corpus search and exact input hash confirm reference identity, not all biological assertions. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:mitochondrial_derived_compartment | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:mitochondrial_derived_compartment | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:mitochondrial_derived_compartment | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:mitochondrial_derived_compartment | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:mitochondrial_derived_compartment | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact proposed identity and scope
+
+identity: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The yeast-scoped multilamellar OMM-derived compartment, broader GO parent and local proposed identifier are consistent. Native MDV identity remains distinct. Historical bounded ontology/duplicate searches are not recast as exhaustive current absence claims.
+
+### Species and strain boundaries
+
+scope: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The two taxon labels and three reviewed reference proteins resolve correctly. S288C-derived experimental strains are supported; no broad fungal prevalence, uniform stress response or single unmodified experimental genotype is claimed.
+
+### Constituents and release machinery
+
+grounding: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The lipid row denotes heterogeneous bilayer material, not a whole-structure GO term disguised as a chemical. Tom70/Tom71 are selected cargo; Dnm1 is associated fission machinery. Cytosolic material is variable cargo rather than a GFP reporter being made a native subunit. Upstream contact-site regulators are not automatically constituents.
+
+### Formation necessity versus conditional dependencies
+
+grounding: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+Tom70/Tom71 UNKNOWN does not claim invariant requirements across all MDC conditions. Dnm1 DISPENSABLE is explicitly limited to initial formation in the tested ConcA assay and is supported by the deletion experiment; release remains dependent. Individual lipid-enzyme and contact-site perturbations do not become universal necessity labels.
+
+### Exact molecular and protein grounding
+
+grounding: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The three UniProt identity/taxon pairs and Tom70 family are verified. Returned Tom71 repeat/superfamily and broad Dynamin matches do not establish exact class matches; retaining reviewed label-only classes is justified within the checked authority scope.
+
+### Selective cargo and conditional fate
+
+scope: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The revised2024 cargo interpretation is respected: functional inner-membrane carriers are not routinely removed, and TOM-core proteins are not uniformly enriched. Partial protection and ConcA-dependent vacuolar routing are distinguished from universal isolation or fate.
+
+### Nine bounded intervention and capability edges
+
+graph: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+Mechanistic classification is appropriate for experimental perturbation effects and demonstrated compartment capabilities, without a claimed universal linear pathway. MMM1/GEM1, DNM1, PSD1 and CRD1 edge directions preserve conditionality; one Tom70/Tom71 edge misattributes its assay inducer.
+
+### Tom70/Tom71 assay condition
+
+evidence: concern. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The cited Hughes2016 Fig7C measures Cox7-GFP-containing MDCs after2h ConcA in fission-deficient dnm1Δ strains. The edge description instead says rapamycin-induced. The underlying dependency is supported, but this exact experimental-condition attribution needs correction.
+
+### Spherical MDC measurements and link-only figure
+
+evidence: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The0.41µm mean(n104,200nM Rap2h) and0.36µm mean(n49,500nM ConcA2h) are correctly limited to sampled spherical MDCs. Figure1/FigS1 pixels, native media hashes and captions agree. Figure1 license/attribution and panel scale bars are correct; no invariant diameter or all-shape distribution is inferred.
+
+### Study-specific lipid results
+
+evidence: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+The2020 and2024 perturbation results differ and the record explicitly leaves reconciliation open. Partial bypass depends on genotype/inducer, including mmm1Δ VPS13(D716H) and limited gem1Δ rescue. No isolated-MDC lipid composition or universal enzyme requirement is inferred.
+
+### Bounded2026 follow-up models
+
+evidence: unknown. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+Exact preprint identities and official reviewed-preprintv1 status are verified. The first PMC artifact lacks a full body; the second selected Discussion/Methods do not isolate an MDC-specific buffering fitness benefit. Newly accessible publisher prose does not make historical access notes false, and these follow-ups remain outside canonical composition and graph claims.
+
+### Complete target and consequential gaps
+
+completeness: supported. Targets: cellstructuremech:mitochondrial_derived_compartment.
+
+All five components, two functions, nine edges, both measurements, link-only image and discussions were assessed. Additional reported cargo remains optional enrichment; the record does not claim exhaustive inventory, fixed stoichiometry, membrane count or complete closure. No exact protein-family identity is fabricated from a domain match.
+
+## Findings
+
+### F1: Restore the cited Tom70/Tom71 experiment condition
+
+minor / open / confirmed; issue key: mitochondrial-derived-compartment-1.
+
+The Tom70/Tom71 double-deletion edge description calls the experiment rapamycin-induced, while its only cited source Hughes2016 Fig7C uses concanamycin A for2h in a dnm1Δ background. This conflicts with the graph scope promise that edges retain individual assay conditions. The source supports the dependency under ConcA, so this is a bounded attribution error rather than evidence that the dependency itself is false.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Replace the rapamycin attribution with the actual ConcA/fission-deficient assay context, or cite and accurately delimit a direct rapamycin experiment. Preserve the conditional dependency and formation-versus-release distinction.
+
+- Preserve the supported biological scope and source experimental conditions.
+- Run focused native schema, strict and applicable graph/protein checks after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; Entire maintained YAML, including all9 graph edges, five components, measurements, image and historical discussions | context_only | Complete target read; the locally minted proposed identity is verified from the maintained identifier itself. No other record is used as scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum and graph semantics | context_only | Molecular material, associated machinery, experimental dependency and formation necessity are distinct. |
+| mdc-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0099073; Both complete returned terms: identifiers, names, definitions and relations | supports | GO0043231 is active intracellular membrane-bounded organelle, a broader parent. GO0099073 is a distinct mitochondrion-derived vesicle class; neither native response establishes exact MDC equivalence. |
+| mdc-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName and rank | supports | Native identity is Saccharomyces cerevisiae at species rank. |
+| mdc-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; taxId, scientificName and rank | supports | Native identity is Saccharomyces cerevisiae S288C at strain rank; reference accession taxonomy does not make every experiment an unmodified reference strain. |
+| mdc-agent-hughes2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.7554/eLife.13943&amp;format=json&amp;resultType=core; Complete resultList.result[0], including abstractText | supports | Complete native bibliographic identity and abstract inspected; title, DOI, PMID, PMC and authors identify the cited study. This metadata does not substitute for its separately inspected primary body. |
+| mdc-agent-wilson2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202307035&amp;format=json&amp;resultType=core; Complete resultList.result[0], including abstractText | supports | Complete native bibliographic identity and abstract inspected; title, DOI, PMID, PMC and authors identify the cited study. This metadata does not substitute for its separately inspected primary body. |
+| mdc-agent-cargo2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202307036&amp;format=json&amp;resultType=core; Complete resultList.result[0], including abstractText | supports | Complete native bibliographic identity and abstract inspected; title, DOI, PMID, PMC and authors identify the cited study. This metadata does not substitute for its separately inspected primary body. |
+| mdc-agent-english2020-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202002144&amp;format=json&amp;resultType=core; Complete resultList.result[0], including abstractText | supports | Complete native bibliographic identity and abstract inspected; title, DOI, PMID, PMC and authors identify the cited study. This metadata does not substitute for its separately inspected primary body. |
+| mdc-agent-lipid2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202302069&amp;format=json&amp;resultType=core; Complete resultList.result[0], including abstractText | supports | Complete native bibliographic identity and abstract inspected; title, DOI, PMID, PMC and authors identify the cited study. This metadata does not substitute for its separately inspected primary body. |
+| mdc-agent-hughes2016-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC4889329.1/PMC4889329.1.xml; Results s2-4 through s2-7, full Discussion s3; Methods s4-1 strains, s4-3 culture and s4-4 MDC assays; Table1, Fig4/Fig7 and embedded supplement captions. Early aging Results and figure pixels not inspected. | supports | 2016 yeast experiments distinguish initial formation from Dnm1-dependent release and downstream Atg5-dependent delivery. Table1 includes Tom71 cargo. Figure7C uses ConcA for2h in dnm1Δ strains; combined Tom70/Tom71 loss blocks the measured formation. The original tagged-carrier interpretation is not adopted uncritically. |
+| mdc-agent-wilson2024-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/PMC11320809.1.xml; All main Results s3-s9, full Discussion s10; Methods s12 strains, s13 culture, s14 assays, s16 TEM/tomography and s18 auxin; Fig1/FigS1 captions and article license. Actual Fig1/FigS1 pixels inspected separately; raw movies/tomography and supplemental datasets not reanalyzed. | supports | Primary fluorescence, TEM/tomography and degron experiments support OMM-derived multilamellar domains, selected cargo and cytosolic enclosure in a subset. Closure, fixed membrane counts and permanent isolation are not established for every structure. Mean diameters apply only to sampled spherical MDCs under the specified drug conditions. |
+| mdc-agent-cargo2024-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC11320589.1/PMC11320589.1.xml; Results s3 carrier-tag orientation, s6 compartment targeting, s7 TOM assembly; full Discussion s9 and associated captions. Other Results and Methods not certified read. | supports | Functional N-terminal GFP-Oac1 is excluded, whereas nonfunctional C-terminal reporter mislocalizes to OMM and enters MDCs. OMM localization and assembly state affect cargo enrichment; assembled TOM-core proteins are not uniformly enriched. Selection mechanisms remain hypotheses. |
+| mdc-agent-english2020-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC7588143.1/PMC7588143.1.xml; Complete combined Results/Discussion s3-s8, including embedded captions; Methods s10 strain/culture and s12 MDC assays. Figure pixels and supplementary datasets not inspected. | supports | ERMES/Gem1 genetic dependencies and ER-contact localization are supported in the tested yeast assays; restoring morphology does not necessarily restore MDC formation. This paper reports the tested phospholipid-biosynthesis deletions as not impairing formation, distinct from the2024 study. |
+| mdc-agent-lipid2024-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC10949074.1/PMC10949074.1.xml; Results s4-s6, s7 main prose/Fig5 caption, s12-s13; full Discussion s14; Methods s18 culture and s22 assays; captions embedded in s4-s6. Other Results, raw lipidomics, supplement tables and figure pixels not independently inspected. | supports | CL-pathway disruption reduces formation frequency and PE-pathway perturbation promotes constitutive formation in subsets. PSD1 loss can partially bypass particular ERMES/Gem1 contexts, with condition-specific differences. Whole-cell or mitochondrial-enriched lipidomics is not isolated-MDC composition; OMM protein-load mechanisms remain proposals. |
+| mdc-agent-P07213 | https://rest.uniprot.org/uniprotkb/P07213.json; entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR LOCATION/SUBUNIT comments | supports | Reviewed TOM70 identity, gene and S288C taxon verified. Native localization/function comments support the protein identity and general mitochondrial role; MDC membership and release phenotypes come from the primary experiments. |
+| mdc-agent-ipr-P07213 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P07213/?page_size=200; Complete results and pagination: 3 returned entries; next=null | supports | Complete integrated matches and next=null inspected. Exact Tom70 family IPR005687 is present, alongside broader TPR matches. |
+| mdc-agent-P38825 | https://rest.uniprot.org/uniprotkb/P38825.json; entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR LOCATION/SUBUNIT comments | supports | Reviewed TOM71 identity, gene and S288C taxon verified. Native localization/function comments support the protein identity and general mitochondrial role; MDC membership and release phenotypes come from the primary experiments. |
+| mdc-agent-ipr-P38825 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38825/?page_size=200; Complete results and pagination: 2 returned entries; next=null | supports | Complete integrated matches and next=null inspected. Only TPR repeat/superfamily matches are returned, not an exact integrated Tom71 family. |
+| mdc-agent-P54861 | https://rest.uniprot.org/uniprotkb/P54861.json; entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR LOCATION/SUBUNIT comments | supports | Reviewed DNM1 identity, gene and S288C taxon verified. Native localization/function comments support the protein identity and general mitochondrial role; MDC membership and release phenotypes come from the primary experiments. |
+| mdc-agent-ipr-P54861 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P54861/?page_size=200; Complete results and pagination: 9 returned entries; next=null | supports | Complete integrated matches and next=null inspected. IPR022812 is broad Dynamin; other matches are domains, sites or superfamilies, not exact mitochondrial Dnm1-class identity. |
+| mdc-agent-IPR005687 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005687/; metadata accession, name, type and description | supports | Native family metadata identifies mitochondrial outer membrane translocase complex subunit Tom70; this class grounding is distinct from source-specific MDC localization. |
+| mdc-agent-IPR022812 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022812/; metadata accession, name, type and description | supports | Native Dynamin family is broader than the mitochondrial Dnm1-type class, supporting the explicitly bounded label-only choice. |
+| mdc-agent-UO0000017 | https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUO_0000017; Exact returned OLS term label, definition and obsolescence | supports | Active micrometer unit corresponds to10^-6 meter; measurement contexts retain spherical shape, sample sizes and treatment. |
+| mdc-agent-wilson2024-fig1 | https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/JCB_202307035_Fig1.jpg; Complete multipanel figure; panel C diameter axis/labels and microscopy scale bars inspected | supports | Actual figure pixels inspected. Spherical-MDC diameter plots use micrometers; captions and panels agree with condition-specific measurements. Native media MD5 bf54de482c22108855cf3cc0f37eeb8d verified. Link-only source figure, no maintained image copied. |
+| mdc-agent-wilson2024-figS1 | https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/JCB_202307035_FigS1.jpg; Complete multipanel figure; panel C diameter axis/labels and microscopy scale bars inspected | supports | Actual figure pixels inspected. Spherical-MDC diameter plots use micrometers; captions and panels agree with condition-specific measurements. Native media MD5 5b329e0ccfd3de22c02265e8439eda9f verified. Link-only source figure, no maintained image copied. |
+| mdc-agent-PMID42798366 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42798366%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Complete resultList.result[0] identity, publication types and abstractText | supports | Exact MED identifier, DOI, title, authors, year and complete abstract inspected. Publication type explicitly includes Preprint; no version-of-record status inferred. |
+| mdc-agent-PMID42327138 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42327138%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Complete resultList.result[0] identity, publication types and abstractText | supports | Exact MED identifier, DOI, title, authors, year and complete abstract inspected. Publication type explicitly includes Preprint; no version-of-record status inferred. |
+| mdc-agent-preprint1-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC13605720.1/PMC13605720.1.xml; Full Text Availability section; not a full primary article | supports | This PMC XML is only a Full Text Availability notice. It says license terms prevent archiving this version; no scientific Results body was available in this artifact. |
+| mdc-agent-preprint2-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC13278180.1/PMC13278180.1.xml; Discussion S9, Methods S11 strains and S14 MDC assays, S28 data availability; Results not read. Additional S25 proteomics-analysis paragraph encountered but not used to certify raw data. | supports | The Discussion proposes adaptive OMM protein-load buffering while explicitly leaving direct fitness contribution and specific buffering function difficult to isolate. Strain/assay Methods and data-on-request wording are consistent with the record; no new invariant components or causal graph edges are inferred. |
+| mdc-agent-elife-111713 | https://elifesciences.org/reviewed-preprints/111713v1; citation metadata and visible reviewed-preprint version banner only | supports | Official page identifies Reviewed Preprint v1, Not revised, with version DOI 10.7554/eLife.111713.1. Title/author/date/abstract metadata checked; no assertion that this is a version of record or a separately inspected Results body. |
+| mdc-agent-elife-112436 | https://elifesciences.org/reviewed-preprints/112436v1; citation metadata and visible reviewed-preprint version banner only | supports | Official page identifies Reviewed Preprint v1, Not revised, with version DOI 10.7554/eLife.112436.1. Title/author/date/abstract metadata checked; no assertion that this is a version of record or a separately inspected Results body. |
+| schema-result | just validate data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv |
+| focused-verify | /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mdc-agent/mitochondrial_derived_compartment-verify.log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| focused-causal | /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mdc-agent/mitochondrial_derived_compartment-causal.log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 16 of 17 collected target identifiers returned OK. cellstructuremech:mitochondrial_derived_compartment: SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained mitochondrial-derived compartment record at data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml. An anchored hidden/ignored-inclusive corpus search and exact input hash confirm reference identity, not all biological assertions. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- All source extents are recorded individually. Only Wilson2024 Fig1/FigS1 actual pixels were inspected; raw microscopy/tomography, movies and lipidomics were not reanalyzed.
+- Historical access/search notes are evaluated as historical scope, not asserted current exhaustive absence. The2026 first PMC XML is a full-text-unavailability stub; publisher version metadata does not certify unread Results.
+- The2020/2024 lipid-perturbation discrepancy remains unresolved. Conditional dependencies, partial rescue, cargo enrichment and formation necessity remain distinct.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T022241Z-mitochondrial-derived-compartment-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scientific review of mitochondrial-derived compartment
+started_at: '2026-10-22T02:03:18Z'
+finished_at: '2026-10-22T02:22:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: MDC identity, composition, topology and conditional functions are supported;
+  one minor graph-source correction concerns a ConcA experiment described as rapamycin-induced.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    sha256: c7a83f3db0bb05a7016b5c3991e79bd21c9a6ec4f723335fc3a1d14864d1c5c8
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:mitochondrial_derived_compartment
+  path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  label: mitochondrial-derived compartment
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    role: maintained scientific record
+scope:
+  description: One complete yeast-scoped MDC record; exact native identities, primary
+    experimental contexts, measurements, figure and explicit follow-up limitations.
+  selection: Batch32 fixed strict path-order selection, one target only.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just validate data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just validate-strict data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: focused-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  exit_code: 0
+  summary: Focused native command completed successfully; scientific scope is assessed
+    separately.
+  evidence_ids:
+  - focused-verify
+- check_id: focused-causal
+  name: Native focused causal
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  exit_code: 0
+  summary: Focused native command completed successfully; scientific scope is assessed
+    separately.
+  evidence_ids:
+  - focused-causal
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: No expression-module or transcriptomic-regulon claim; structural microscopy
+    and perturbations do not require an expression-module lookup.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - mdc-agent-go
+  - mdc-agent-tax4932
+  - mdc-agent-tax559292
+  - mdc-agent-hughes2016-meta
+  - mdc-agent-wilson2024-meta
+  - mdc-agent-cargo2024-meta
+  - mdc-agent-english2020-meta
+  - mdc-agent-lipid2024-meta
+  - mdc-agent-hughes2016-jats
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-cargo2024-jats
+  - mdc-agent-english2020-jats
+  - mdc-agent-lipid2024-jats
+  - mdc-agent-P07213
+  - mdc-agent-ipr-P07213
+  - mdc-agent-P38825
+  - mdc-agent-ipr-P38825
+  - mdc-agent-P54861
+  - mdc-agent-ipr-P54861
+  - mdc-agent-IPR005687
+  - mdc-agent-IPR022812
+  - mdc-agent-UO0000017
+  - mdc-agent-wilson2024-fig1
+  - mdc-agent-wilson2024-figS1
+  - mdc-agent-PMID42798366
+  - mdc-agent-PMID42327138
+  - mdc-agent-preprint1-jats
+  - mdc-agent-preprint2-jats
+  - mdc-agent-elife-111713
+  - mdc-agent-elife-112436
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: '16 of 17 collected target identifiers returned OK. cellstructuremech:mitochondrial_derived_compartment:
+    SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained
+    mitochondrial-derived compartment record at data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml.
+    An anchored hidden/ignored-inclusive corpus search and exact input hash confirm
+    reference identity, not all biological assertions. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  locator: Entire maintained YAML, including all9 graph edges, five components, measurements,
+    image and historical discussions
+  accessed_at: '2026-10-22T02:18:10Z'
+  support: context_only
+  summary: Complete target read; the locally minted proposed identity is verified
+    from the maintained identifier itself. No other record is used as scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum and graph semantics
+  accessed_at: '2026-10-22T02:18:10Z'
+  support: context_only
+  summary: Molecular material, associated machinery, experimental dependency and formation
+    necessity are distinct.
+- evidence_id: mdc-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0099073
+  locator: 'Both complete returned terms: identifiers, names, definitions and relations'
+  accessed_at: '2026-10-22T02:10:27.098744Z'
+  support: supports
+  summary: GO0043231 is active intracellular membrane-bounded organelle, a broader
+    parent. GO0099073 is a distinct mitochondrion-derived vesicle class; neither native
+    response establishes exact MDC equivalence.
+  snapshot_sha256: 9eff6dc68c7e3bbba984daf1fcadc859a87b8b1497b9cdeb46b827bbbb5a0c72
+- evidence_id: mdc-agent-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-10-22T02:10:27.519064Z'
+  support: supports
+  summary: Native identity is Saccharomyces cerevisiae at species rank.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: mdc-agent-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-10-22T02:10:27.674448Z'
+  support: supports
+  summary: Native identity is Saccharomyces cerevisiae S288C at strain rank; reference
+    accession taxonomy does not make every experiment an unmodified reference strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: mdc-agent-hughes2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.7554/eLife.13943&format=json&resultType=core
+  locator: Complete resultList.result[0], including abstractText
+  accessed_at: '2026-10-22T02:10:24.454681Z'
+  support: supports
+  summary: Complete native bibliographic identity and abstract inspected; title, DOI,
+    PMID, PMC and authors identify the cited study. This metadata does not substitute
+    for its separately inspected primary body.
+  snapshot_sha256: b91f10b1d63daf1362155c53323410b208d7c8302b78fe767249579d57735a6f
+- evidence_id: mdc-agent-wilson2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202307035&format=json&resultType=core
+  locator: Complete resultList.result[0], including abstractText
+  accessed_at: '2026-10-22T02:10:24.454973Z'
+  support: supports
+  summary: Complete native bibliographic identity and abstract inspected; title, DOI,
+    PMID, PMC and authors identify the cited study. This metadata does not substitute
+    for its separately inspected primary body.
+  snapshot_sha256: 76b5bd5d1790d2805a9cf9b6dfcf30e4045b4fbcb669ebe9136faa38f42b6831
+- evidence_id: mdc-agent-cargo2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202307036&format=json&resultType=core
+  locator: Complete resultList.result[0], including abstractText
+  accessed_at: '2026-10-22T02:10:26.340428Z'
+  support: supports
+  summary: Complete native bibliographic identity and abstract inspected; title, DOI,
+    PMID, PMC and authors identify the cited study. This metadata does not substitute
+    for its separately inspected primary body.
+  snapshot_sha256: 820c7b6ce71e7aa82f540d19026098387ff13411ac1ba052eb905872a0c67ed7
+- evidence_id: mdc-agent-english2020-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202002144&format=json&resultType=core
+  locator: Complete resultList.result[0], including abstractText
+  accessed_at: '2026-10-22T02:10:26.340862Z'
+  support: supports
+  summary: Complete native bibliographic identity and abstract inspected; title, DOI,
+    PMID, PMC and authors identify the cited study. This metadata does not substitute
+    for its separately inspected primary body.
+  snapshot_sha256: 8bb5cb20db74c295d7d616a9cc1b15d5a7555f3fdf9ecfc8133a819e184cefc6
+- evidence_id: mdc-agent-lipid2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1083/jcb.202302069&format=json&resultType=core
+  locator: Complete resultList.result[0], including abstractText
+  accessed_at: '2026-10-22T02:10:26.343604Z'
+  support: supports
+  summary: Complete native bibliographic identity and abstract inspected; title, DOI,
+    PMID, PMC and authors identify the cited study. This metadata does not substitute
+    for its separately inspected primary body.
+  snapshot_sha256: 8b28848918accef6bda5ab4a412cf6e937527f6e69ac7d21b2a450cb2e646917
+- evidence_id: mdc-agent-hughes2016-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4889329.1/PMC4889329.1.xml
+  locator: Results s2-4 through s2-7, full Discussion s3; Methods s4-1 strains, s4-3
+    culture and s4-4 MDC assays; Table1, Fig4/Fig7 and embedded supplement captions.
+    Early aging Results and figure pixels not inspected.
+  accessed_at: '2026-10-22T02:10:24.454802Z'
+  support: supports
+  summary: 2016 yeast experiments distinguish initial formation from Dnm1-dependent
+    release and downstream Atg5-dependent delivery. Table1 includes Tom71 cargo. Figure7C
+    uses ConcA for2h in dnm1Δ strains; combined Tom70/Tom71 loss blocks the measured
+    formation. The original tagged-carrier interpretation is not adopted uncritically.
+  snapshot_sha256: a80c297ed4982138db01f4ff62db026596d1041b5afb3a1cc170caac7007f8b3
+- evidence_id: mdc-agent-wilson2024-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/PMC11320809.1.xml
+  locator: All main Results s3-s9, full Discussion s10; Methods s12 strains, s13 culture,
+    s14 assays, s16 TEM/tomography and s18 auxin; Fig1/FigS1 captions and article
+    license. Actual Fig1/FigS1 pixels inspected separately; raw movies/tomography
+    and supplemental datasets not reanalyzed.
+  accessed_at: '2026-10-22T02:10:24.456294Z'
+  support: supports
+  summary: Primary fluorescence, TEM/tomography and degron experiments support OMM-derived
+    multilamellar domains, selected cargo and cytosolic enclosure in a subset. Closure,
+    fixed membrane counts and permanent isolation are not established for every structure.
+    Mean diameters apply only to sampled spherical MDCs under the specified drug conditions.
+  snapshot_sha256: 063fc310463613feaca3f38a5c38a0a00e597de6d457212dde67bc5f6310d777
+- evidence_id: mdc-agent-cargo2024-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11320589.1/PMC11320589.1.xml
+  locator: Results s3 carrier-tag orientation, s6 compartment targeting, s7 TOM assembly;
+    full Discussion s9 and associated captions. Other Results and Methods not certified
+    read.
+  accessed_at: '2026-10-22T02:10:26.340663Z'
+  support: supports
+  summary: Functional N-terminal GFP-Oac1 is excluded, whereas nonfunctional C-terminal
+    reporter mislocalizes to OMM and enters MDCs. OMM localization and assembly state
+    affect cargo enrichment; assembled TOM-core proteins are not uniformly enriched.
+    Selection mechanisms remain hypotheses.
+  snapshot_sha256: e5dc61eb50c8064532641e980c9b966270c83777d400bef0abc0359b8a1bfad0
+- evidence_id: mdc-agent-english2020-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7588143.1/PMC7588143.1.xml
+  locator: Complete combined Results/Discussion s3-s8, including embedded captions;
+    Methods s10 strain/culture and s12 MDC assays. Figure pixels and supplementary
+    datasets not inspected.
+  accessed_at: '2026-10-22T02:10:26.343136Z'
+  support: supports
+  summary: ERMES/Gem1 genetic dependencies and ER-contact localization are supported
+    in the tested yeast assays; restoring morphology does not necessarily restore
+    MDC formation. This paper reports the tested phospholipid-biosynthesis deletions
+    as not impairing formation, distinct from the2024 study.
+  snapshot_sha256: dab0ceb58ce1f9e9d04a616487ee7265b064fb4ea1d8dbf52a704194f99e4adb
+- evidence_id: mdc-agent-lipid2024-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10949074.1/PMC10949074.1.xml
+  locator: Results s4-s6, s7 main prose/Fig5 caption, s12-s13; full Discussion s14;
+    Methods s18 culture and s22 assays; captions embedded in s4-s6. Other Results,
+    raw lipidomics, supplement tables and figure pixels not independently inspected.
+  accessed_at: '2026-10-22T02:10:26.343531Z'
+  support: supports
+  summary: CL-pathway disruption reduces formation frequency and PE-pathway perturbation
+    promotes constitutive formation in subsets. PSD1 loss can partially bypass particular
+    ERMES/Gem1 contexts, with condition-specific differences. Whole-cell or mitochondrial-enriched
+    lipidomics is not isolated-MDC composition; OMM protein-load mechanisms remain
+    proposals.
+  snapshot_sha256: 4799bece666b89423ccccf0064ad0325ec557ab6d8f9cc990551bb6e9c25bf3d
+- evidence_id: mdc-agent-P07213
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P07213.json
+  locator: entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR
+    LOCATION/SUBUNIT comments
+  accessed_at: '2026-10-22T02:10:28.569469Z'
+  support: supports
+  summary: Reviewed TOM70 identity, gene and S288C taxon verified. Native localization/function
+    comments support the protein identity and general mitochondrial role; MDC membership
+    and release phenotypes come from the primary experiments.
+  snapshot_sha256: 8721213a38f896df35cbe59b2f14264e4b27b5b72786790d15fd33a408ec73d9
+- evidence_id: mdc-agent-ipr-P07213
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P07213/?page_size=200
+  locator: 'Complete results and pagination: 3 returned entries; next=null'
+  accessed_at: '2026-10-22T02:10:29.092849Z'
+  support: supports
+  summary: Complete integrated matches and next=null inspected. Exact Tom70 family
+    IPR005687 is present, alongside broader TPR matches.
+  snapshot_sha256: ac9e5dfbbc1974b2b31bb8b979b195c62928b23f45b55ae6f7c76633ae1523b8
+- evidence_id: mdc-agent-P38825
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38825.json
+  locator: entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR
+    LOCATION/SUBUNIT comments
+  accessed_at: '2026-10-22T02:10:28.569529Z'
+  support: supports
+  summary: Reviewed TOM71 identity, gene and S288C taxon verified. Native localization/function
+    comments support the protein identity and general mitochondrial role; MDC membership
+    and release phenotypes come from the primary experiments.
+  snapshot_sha256: a32a6bd2fc3c07c52c11b4a29307231c62789f41f99925174f9b00d5cb515437
+- evidence_id: mdc-agent-ipr-P38825
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38825/?page_size=200
+  locator: 'Complete results and pagination: 2 returned entries; next=null'
+  accessed_at: '2026-10-22T02:10:29.616795Z'
+  support: supports
+  summary: Complete integrated matches and next=null inspected. Only TPR repeat/superfamily
+    matches are returned, not an exact integrated Tom71 family.
+  snapshot_sha256: cb9720ddd1465404bc5b436b526b08ab6e2225310f5aad58d2e938b255bf27e8
+- evidence_id: mdc-agent-P54861
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P54861.json
+  locator: entryType, proteinDescription, genes, organism and FUNCTION/SUBCELLULAR
+    LOCATION/SUBUNIT comments
+  accessed_at: '2026-10-22T02:10:28.725510Z'
+  support: supports
+  summary: Reviewed DNM1 identity, gene and S288C taxon verified. Native localization/function
+    comments support the protein identity and general mitochondrial role; MDC membership
+    and release phenotypes come from the primary experiments.
+  snapshot_sha256: 05d16021893445d2fc7837966b6ebafb2f57a5355805e14bf5f99b1f08505458
+- evidence_id: mdc-agent-ipr-P54861
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P54861/?page_size=200
+  locator: 'Complete results and pagination: 9 returned entries; next=null'
+  accessed_at: '2026-10-22T02:10:29.763726Z'
+  support: supports
+  summary: Complete integrated matches and next=null inspected. IPR022812 is broad
+    Dynamin; other matches are domains, sites or superfamilies, not exact mitochondrial
+    Dnm1-class identity.
+  snapshot_sha256: 881f99048b849559d3401734ab92238d7b62df2d1004a3d8c531d9d1eeef53d3
+- evidence_id: mdc-agent-IPR005687
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005687/
+  locator: metadata accession, name, type and description
+  accessed_at: '2026-10-22T02:10:29.775244Z'
+  support: supports
+  summary: Native family metadata identifies mitochondrial outer membrane translocase
+    complex subunit Tom70; this class grounding is distinct from source-specific MDC
+    localization.
+  snapshot_sha256: 61d5ce706787a28482fe55aa414e5103b36e8cabe5456cccfbdaf047703a2821
+- evidence_id: mdc-agent-IPR022812
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR022812/
+  locator: metadata accession, name, type and description
+  accessed_at: '2026-10-22T02:10:30.144316Z'
+  support: supports
+  summary: Native Dynamin family is broader than the mitochondrial Dnm1-type class,
+    supporting the explicitly bounded label-only choice.
+  snapshot_sha256: 467ff8e6d094e6334eddd9aed8611af71881874a13187bf02c2841fcbba6b0c0
+- evidence_id: mdc-agent-UO0000017
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUO_0000017
+  locator: Exact returned OLS term label, definition and obsolescence
+  accessed_at: '2026-10-22T02:10:30.663914Z'
+  support: supports
+  summary: Active micrometer unit corresponds to10^-6 meter; measurement contexts
+    retain spherical shape, sample sizes and treatment.
+  snapshot_sha256: 786ed7f6d5b07e4ec6f0a105ced79a4e4b5f025329b403c7ffc7e1d0566e2951
+- evidence_id: mdc-agent-wilson2024-fig1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/JCB_202307035_Fig1.jpg
+  locator: Complete multipanel figure; panel C diameter axis/labels and microscopy
+    scale bars inspected
+  accessed_at: '2026-10-22T02:10:56.239066Z'
+  support: supports
+  summary: Actual figure pixels inspected. Spherical-MDC diameter plots use micrometers;
+    captions and panels agree with condition-specific measurements. Native media MD5
+    bf54de482c22108855cf3cc0f37eeb8d verified. Link-only source figure, no maintained
+    image copied.
+  snapshot_sha256: c1a528b26d0bfa3faf0cea25471e8d110d39469a934c1d71face8966a27d05e5
+- evidence_id: mdc-agent-wilson2024-figS1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11320809.1/JCB_202307035_FigS1.jpg
+  locator: Complete multipanel figure; panel C diameter axis/labels and microscopy
+    scale bars inspected
+  accessed_at: '2026-10-22T02:11:43.022423Z'
+  support: supports
+  summary: Actual figure pixels inspected. Spherical-MDC diameter plots use micrometers;
+    captions and panels agree with condition-specific measurements. Native media MD5
+    5b329e0ccfd3de22c02265e8439eda9f verified. Link-only source figure, no maintained
+    image copied.
+  snapshot_sha256: ec906e21b72bfb18ccc52794ada8f75a37ab4a4091b8535bdc88f42936b0bc0f
+- evidence_id: mdc-agent-PMID42798366
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42798366%20AND%20SRC:MED&format=json&resultType=core
+  locator: Complete resultList.result[0] identity, publication types and abstractText
+  accessed_at: '2026-10-22T02:10:55.342297Z'
+  support: supports
+  summary: Exact MED identifier, DOI, title, authors, year and complete abstract inspected.
+    Publication type explicitly includes Preprint; no version-of-record status inferred.
+  snapshot_sha256: 7156866fb154f1c63efa82251ab2ff7e85e8a6d4dddc21880c02af3f12ac6f58
+- evidence_id: mdc-agent-PMID42327138
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42327138%20AND%20SRC:MED&format=json&resultType=core
+  locator: Complete resultList.result[0] identity, publication types and abstractText
+  accessed_at: '2026-10-22T02:10:55.342239Z'
+  support: supports
+  summary: Exact MED identifier, DOI, title, authors, year and complete abstract inspected.
+    Publication type explicitly includes Preprint; no version-of-record status inferred.
+  snapshot_sha256: 5e5c7e972c50ee6405ddf34b5604ece0be4f4cdc2a65b0f11e4c01865fa85cc6
+- evidence_id: mdc-agent-preprint1-jats
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13605720.1/PMC13605720.1.xml
+  locator: Full Text Availability section; not a full primary article
+  accessed_at: '2026-10-22T02:10:26.419233Z'
+  support: supports
+  summary: This PMC XML is only a Full Text Availability notice. It says license terms
+    prevent archiving this version; no scientific Results body was available in this
+    artifact.
+  snapshot_sha256: 3d489b473c531068a9d583e9bd01e0fa6ca41c6d0eaa168b4bec2269f59b689f
+- evidence_id: mdc-agent-preprint2-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13278180.1/PMC13278180.1.xml
+  locator: Discussion S9, Methods S11 strains and S14 MDC assays, S28 data availability;
+    Results not read. Additional S25 proteomics-analysis paragraph encountered but
+    not used to certify raw data.
+  accessed_at: '2026-10-22T02:10:26.947052Z'
+  support: supports
+  summary: The Discussion proposes adaptive OMM protein-load buffering while explicitly
+    leaving direct fitness contribution and specific buffering function difficult
+    to isolate. Strain/assay Methods and data-on-request wording are consistent with
+    the record; no new invariant components or causal graph edges are inferred.
+  snapshot_sha256: 749730eaa9957e55873552f3da7d4bddcc2c4b1df15785055dc2d60752a952a9
+- evidence_id: mdc-agent-elife-111713
+  kind: authority
+  reference: https://elifesciences.org/reviewed-preprints/111713v1
+  locator: citation metadata and visible reviewed-preprint version banner only
+  accessed_at: '2026-10-22T02:10:55.905662Z'
+  support: supports
+  summary: Official page identifies Reviewed Preprint v1, Not revised, with version
+    DOI 10.7554/eLife.111713.1. Title/author/date/abstract metadata checked; no assertion
+    that this is a version of record or a separately inspected Results body.
+  snapshot_sha256: 3f559a7216ea3a405fa91f1d35d1388f2a6e9e4cb481ef0040abe6fb5e0196fa
+- evidence_id: mdc-agent-elife-112436
+  kind: authority
+  reference: https://elifesciences.org/reviewed-preprints/112436v1
+  locator: citation metadata and visible reviewed-preprint version banner only
+  accessed_at: '2026-10-22T02:10:55.917804Z'
+  support: supports
+  summary: Official page identifies Reviewed Preprint v1, Not revised, with version
+    DOI 10.7554/eLife.112436.1. Title/author/date/abstract metadata checked; no assertion
+    that this is a version of record or a separately inspected Results body.
+  snapshot_sha256: b1a81edbba733d062bfaf60475bfddbeff19d65d6eec3590df4dedb5259e2950
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:03:20Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml'
+  snapshot_sha256: 577b97cd93e48cc98fc886607ff2a107c903bf7a25c72c132f0090923fcd1750
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:03:21Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml\
+    \ --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mitochondrial_derived_compartment-strict.tsv"
+  snapshot_sha256: 21e96ce1656fc29c68168ff217559f496664d23f1e0cb2e019ef105158f18534
+- evidence_id: focused-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  locator: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mdc-agent/mitochondrial_derived_compartment-verify.log
+  accessed_at: '2026-10-22T02:11:43.019523Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: focused-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  locator: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/mdc-agent/mitochondrial_derived_compartment-causal.log
+  accessed_at: '2026-10-22T02:11:43.509440Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '16 of 17 collected target identifiers returned OK. cellstructuremech:mitochondrial_derived_compartment:
+    SKIPPED; The repository-minted identifier uniquely resolves to the frozen maintained
+    mitochondrial-derived compartment record at data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml.
+    An anchored hidden/ignored-inclusive corpus search and exact input hash confirm
+    reference identity, not all biological assertions. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact proposed identity and scope
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The yeast-scoped multilamellar OMM-derived compartment, broader GO parent
+    and local proposed identifier are consistent. Native MDV identity remains distinct.
+    Historical bounded ontology/duplicate searches are not recast as exhaustive current
+    absence claims.
+  evidence_ids:
+  - mdc-agent-go
+  - mdc-agent-wilson2024-jats
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Species and strain boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The two taxon labels and three reviewed reference proteins resolve correctly.
+    S288C-derived experimental strains are supported; no broad fungal prevalence,
+    uniform stress response or single unmodified experimental genotype is claimed.
+  evidence_ids:
+  - mdc-agent-tax4932
+  - mdc-agent-tax559292
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-hughes2016-jats
+- assessment_id: materials
+  area: grounding
+  topic: Constituents and release machinery
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The lipid row denotes heterogeneous bilayer material, not a whole-structure
+    GO term disguised as a chemical. Tom70/Tom71 are selected cargo; Dnm1 is associated
+    fission machinery. Cytosolic material is variable cargo rather than a GFP reporter
+    being made a native subunit. Upstream contact-site regulators are not automatically
+    constituents.
+  evidence_ids:
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-hughes2016-jats
+  - mdc-agent-cargo2024-jats
+  - mdc-agent-english2020-jats
+  - schema
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity versus conditional dependencies
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: Tom70/Tom71 UNKNOWN does not claim invariant requirements across all MDC
+    conditions. Dnm1 DISPENSABLE is explicitly limited to initial formation in the
+    tested ConcA assay and is supported by the deletion experiment; release remains
+    dependent. Individual lipid-enzyme and contact-site perturbations do not become
+    universal necessity labels.
+  evidence_ids:
+  - mdc-agent-hughes2016-jats
+  - mdc-agent-lipid2024-jats
+  - schema
+- assessment_id: families
+  area: grounding
+  topic: Exact molecular and protein grounding
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The three UniProt identity/taxon pairs and Tom70 family are verified. Returned
+    Tom71 repeat/superfamily and broad Dynamin matches do not establish exact class
+    matches; retaining reviewed label-only classes is justified within the checked
+    authority scope.
+  evidence_ids:
+  - mdc-agent-P07213
+  - mdc-agent-P38825
+  - mdc-agent-P54861
+  - mdc-agent-ipr-P07213
+  - mdc-agent-ipr-P38825
+  - mdc-agent-ipr-P54861
+  - mdc-agent-IPR005687
+  - mdc-agent-IPR022812
+- assessment_id: function
+  area: scope
+  topic: Selective cargo and conditional fate
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: 'The revised2024 cargo interpretation is respected: functional inner-membrane
+    carriers are not routinely removed, and TOM-core proteins are not uniformly enriched.
+    Partial protection and ConcA-dependent vacuolar routing are distinguished from
+    universal isolation or fate.'
+  evidence_ids:
+  - mdc-agent-cargo2024-jats
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-hughes2016-jats
+- assessment_id: graph
+  area: graph
+  topic: Nine bounded intervention and capability edges
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: Mechanistic classification is appropriate for experimental perturbation
+    effects and demonstrated compartment capabilities, without a claimed universal
+    linear pathway. MMM1/GEM1, DNM1, PSD1 and CRD1 edge directions preserve conditionality;
+    one Tom70/Tom71 edge misattributes its assay inducer.
+  evidence_ids:
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-cargo2024-jats
+  - mdc-agent-english2020-jats
+  - mdc-agent-lipid2024-jats
+  - mdc-agent-hughes2016-jats
+- assessment_id: condition
+  area: evidence
+  topic: Tom70/Tom71 assay condition
+  outcome: concern
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The cited Hughes2016 Fig7C measures Cox7-GFP-containing MDCs after2h ConcA
+    in fission-deficient dnm1Δ strains. The edge description instead says rapamycin-induced.
+    The underlying dependency is supported, but this exact experimental-condition
+    attribution needs correction.
+  evidence_ids:
+  - mdc-agent-hughes2016-jats
+  - record
+- assessment_id: measurements
+  area: evidence
+  topic: Spherical MDC measurements and link-only figure
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The0.41µm mean(n104,200nM Rap2h) and0.36µm mean(n49,500nM ConcA2h) are
+    correctly limited to sampled spherical MDCs. Figure1/FigS1 pixels, native media
+    hashes and captions agree. Figure1 license/attribution and panel scale bars are
+    correct; no invariant diameter or all-shape distribution is inferred.
+  evidence_ids:
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-UO0000017
+  - mdc-agent-wilson2024-fig1
+  - mdc-agent-wilson2024-figS1
+- assessment_id: lipids
+  area: evidence
+  topic: Study-specific lipid results
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: The2020 and2024 perturbation results differ and the record explicitly leaves
+    reconciliation open. Partial bypass depends on genotype/inducer, including mmm1Δ
+    VPS13(D716H) and limited gem1Δ rescue. No isolated-MDC lipid composition or universal
+    enzyme requirement is inferred.
+  evidence_ids:
+  - mdc-agent-english2020-jats
+  - mdc-agent-lipid2024-jats
+- assessment_id: followup
+  area: evidence
+  topic: Bounded2026 follow-up models
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: Exact preprint identities and official reviewed-preprintv1 status are verified.
+    The first PMC artifact lacks a full body; the second selected Discussion/Methods
+    do not isolate an MDC-specific buffering fitness benefit. Newly accessible publisher
+    prose does not make historical access notes false, and these follow-ups remain
+    outside canonical composition and graph claims.
+  evidence_ids:
+  - mdc-agent-PMID42798366
+  - mdc-agent-PMID42327138
+  - mdc-agent-preprint1-jats
+  - mdc-agent-preprint2-jats
+  - mdc-agent-elife-111713
+  - mdc-agent-elife-112436
+- assessment_id: completeness
+  area: completeness
+  topic: Complete target and consequential gaps
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  summary: All five components, two functions, nine edges, both measurements, link-only
+    image and discussions were assessed. Additional reported cargo remains optional
+    enrichment; the record does not claim exhaustive inventory, fixed stoichiometry,
+    membrane count or complete closure. No exact protein-family identity is fabricated
+    from a domain match.
+  evidence_ids:
+  - mdc-agent-go
+  - mdc-agent-tax4932
+  - mdc-agent-tax559292
+  - mdc-agent-hughes2016-meta
+  - mdc-agent-wilson2024-meta
+  - mdc-agent-cargo2024-meta
+  - mdc-agent-english2020-meta
+  - mdc-agent-lipid2024-meta
+  - mdc-agent-hughes2016-jats
+  - mdc-agent-wilson2024-jats
+  - mdc-agent-cargo2024-jats
+  - mdc-agent-english2020-jats
+  - mdc-agent-lipid2024-jats
+  - mdc-agent-P07213
+  - mdc-agent-ipr-P07213
+  - mdc-agent-P38825
+  - mdc-agent-ipr-P38825
+  - mdc-agent-P54861
+  - mdc-agent-ipr-P54861
+  - mdc-agent-IPR005687
+  - mdc-agent-IPR022812
+  - mdc-agent-UO0000017
+  - mdc-agent-wilson2024-fig1
+  - mdc-agent-wilson2024-figS1
+  - mdc-agent-PMID42798366
+  - mdc-agent-PMID42327138
+  - mdc-agent-preprint1-jats
+  - mdc-agent-preprint2-jats
+  - mdc-agent-elife-111713
+  - mdc-agent-elife-112436
+findings:
+- finding_id: F1
+  issue_key: mitochondrial-derived-compartment-1
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restore the cited Tom70/Tom71 experiment condition
+  description: The Tom70/Tom71 double-deletion edge description calls the experiment
+    rapamycin-induced, while its only cited source Hughes2016 Fig7C uses concanamycin
+    A for2h in a dnm1Δ background. This conflicts with the graph scope promise that
+    edges retain individual assay conditions. The source supports the dependency under
+    ConcA, so this is a bounded attribution error rather than evidence that the dependency
+    itself is false.
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  field_paths:
+  - causal_graphs[0].edges[3].description
+  evidence_ids:
+  - mdc-agent-hughes2016-jats
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:exact identity and claim-level
+    support
+  native_severity: minor
+  normalization_reason: Minor experimental-condition/source-attribution error; the
+    supported direction and yeast-specific biological relationship remain intact.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:mitochondrial_derived_compartment
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    role: maintained scientific record
+  description: Replace the rapamycin attribution with the actual ConcA/fission-deficient
+    assay context, or cite and accurately delimit a direct rapamycin experiment. Preserve
+    the conditional dependency and formation-versus-release distinction.
+  acceptance_checks:
+  - Preserve the supported biological scope and source experimental conditions.
+  - Run focused native schema, strict and applicable graph/protein checks after separately
+    authorized curation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- All source extents are recorded individually. Only Wilson2024 Fig1/FigS1 actual
+  pixels were inspected; raw microscopy/tomography, movies and lipidomics were not
+  reanalyzed.
+- Historical access/search notes are evaluated as historical scope, not asserted current
+  exhaustive absence. The2026 first PMC XML is a full-text-unavailability stub; publisher
+  version metadata does not certify unread Results.
+- The2020/2024 lipid-perturbation discrepancy remains unresolved. Conditional dependencies,
+  partial rescue, cargo enrichment and formation necessity remain distinct.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

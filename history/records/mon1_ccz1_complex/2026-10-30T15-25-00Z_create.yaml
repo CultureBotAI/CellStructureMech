@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mon1_ccz1_complex.yaml
+  slug: mon1_ccz1_complex
+session:
+  id: 2026-10-30T152500Z-claude-opus-4-6-c5s106
+  timestamp: '2026-10-30T15:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for Mon1-Ccz1 complex (GO:0035658) in other.
+  details: Authored data/structures/other/mon1_ccz1_complex.yaml for Mon1-Ccz1 complex
+    (GO:0035658) with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

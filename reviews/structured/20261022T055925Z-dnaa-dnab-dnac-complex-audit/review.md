@@ -1,0 +1,1002 @@
+# Dnaa dnab dnac complex scientific review
+
+- Review: 20261022T055925Z-dnaa-dnab-dnac-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:37:42Z
+- Finished UTC: 2026-10-22T05:59:25Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The scoped prepriming complex and correct DnaA example are supported. Two minors resolve exact DnaA/oriC groundings and the directly tested, condition-scoped origin-DNA formation requirement.
+
+## Scope And Provenance
+
+Exactly one complete maintained record, native frozen guidance and actual source passages identified per evidence locator; no other maintained scientific record used as evidence.
+
+Selection: Target 9 of batch51, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990157 | data/structures/other/dnaa_dnab_dnac_complex.yaml | maintained | DnaA-DnaB-DnaC complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990157 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990157 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:1990157 | Native focused check passed; scientific support separately assessed. |
+| Native verify | passed | True | GO:1990157 | Native focused check passed; scientific support separately assessed. |
+| Expression-module applicability | not_applicable | False | GO:1990157 | No expression-module claim requires this resource. |
+| Claim-level scientific review | passed | True | GO:1990157 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:1990157 | 8 of 12 collected target identifiers returned OK. PMID:20129058: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:22574163: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:28166228: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:9478970: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:1990157 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990157 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990157 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990157 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:1990157 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Primase-free DnaA-DnaB-DnaC prepriming complex
+
+identity: supported. Targets: GO:1990157.
+
+The exact nucleoprotein class, pre-primosome parent, DnaB-DnaC part and source-defined primase-free boundary are supported. Primase is added in the experiment to drive a subsequent transition, not a missing constituent of the scoped intermediate.
+
+### Correct subcomplex and exact remaining mappings
+
+grounding: concern. Targets: GO:1990157.
+
+GO1990100 is the appropriate intact loading subcomplex, and P03004 correctly exemplifies DnaA. IPR001957 and SO0000953 precisely resolve the remaining label-only DnaA and bacterial-origin rows; no broader generic DNA or AAAATPase class is needed.
+
+### Direct origin-dependent assembly control
+
+grounding: concern. Targets: GO:1990157.
+
+The current UNKNOWN origin-DNA row omits a directly inspected formation control: replacing the oriC plasmid with the corresponding empty vector eliminates retained DnaB in the isolated prepriming-complex assay. This supports a requirement under those defined reconstitution conditions, distinct from catalytic activity or organism viability.
+
+### Remaining formation scope unresolved
+
+grounding: unknown. Targets: GO:1990157.
+
+The source also omits DnaC and tests loading-competent, replication-defective mutants, but no blanket necessity is assigned here to every whole subcomplex or every native cellular condition. DnaA and all loading-subcomplex interface requirements remain bounded by the actual experiments rather than defining membership alone.
+
+### Coarse loading/initiation graph
+
+graph: supported. Targets: GO:1990157.
+
+The NONMECHANISTIC graph records the intermediate and initiation function without claiming resolved DnaB ring opening, ATP hydrolysis, DnaC release or DnaG recruitment. The primary specifically distinguishes an assembled but inactive mutant intermediate, so its functional-essential language is not used as proof of every formation enum.
+
+### Species prevalence and experimental context
+
+scope: supported. Targets: GO:1990157.
+
+Species562 and reference strain83333 are correct. COMMON retains the schema meaning present in most members, losses the exception; the source-supported E.coli system provides qualitative biological context, not a measured strain-prevalence census. Specific mutant/recombinant preparations do not redefine the native taxon. Localization-paper abstracts and native annotations only verify their stated provenance; no whole-complex localization experiment is inferred.
+
+### Full record and maintained boundaries
+
+completeness: supported. Targets: GO:1990157.
+
+All target fields, evidence, discussions and historical entries were read, including adjacent-complex exclusions. Historical reviewer conclusions are not biological evidence. No optional inventory or uninspected detailed mechanism is forced.
+
+## Findings
+
+### F1: Ground DnaA and chromosomal origin DNA
+
+minor / open / confirmed; issue key: dnaa-dnab-dnac-exact-groundings.
+
+IPR001957 and SO0000953 exactly match the two label-only DnaA and chromosomal-origin rows, whose current notes defer curation rather than identify a genuine unmatched class.
+
+### F2: Record the tested origin-DNA formation requirement
+
+minor / open / confirmed; issue key: dnaa-dnab-dnac-origin-formation.
+
+The origin-DNA component remains blanket UNKNOWN even though the cited primary S8 directly tests the assembly endpoint: replacing oriC plasmid with empty vector prevents retained DnaB in the isolated prepriming-complex preparation. This is measured origin-dependent formation, not merely a replication-function defect.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Apply the exact DnaA family and oriC sequence-feature class and update current grounding notes/TODO.
+
+- Keep the existing GO1990100 whole-subcomplex grounding.
+- Preserve P03004 and the primase-free intermediate boundary.
+- Preserve supported identifiers, examples and biological scope; pass applicable native validation.
+
+### A2
+
+Replace blanket UNKNOWN with a source-backed, explicitly condition-scoped formation requirement for oriC DNA in this E.coli reconstitution; choose the appropriate enum with the assay qualification in evidence/notes.
+
+- Cite S8 empty-vector control and the S20 preparation.
+- Do not infer organism viability, universal in-vivo necessity or all-subunit requirements.
+- Retain the distinction between DnaC mutants that assemble and their defective later function.
+- Preserve supported identifiers, examples and biological scope; pass applicable native validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/dnaa_dnab_dnac_complex.yaml; Entire target, including all components/examples, graph, evidence, discussions and history | context_only | The full maintained record was read. Historical curation notes are not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, EssentialityEnum and NONMECHANISTIC graph scope | context_only | Family identity is separate from a taxon-specific example. Assembly necessity differs from composition, catalytic requirement and viability. |
+| curation | docs/CURATION.md; Exact family mapping and REVIEWED_LABEL_ONLY contract, especially159–160 | context_only | Reviewed label-only status requires an unresolved exact mapping, rather than simply deferring a verified available family. |
+| replication51-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0003918,GO:0006270,GO:0009330,GO:0009340,GO:0032297,GO:0032991,GO:1990077,GO:1990078,GO:1990083,GO:1990084,GO:1990085,GO:1990099,GO:1990100,GO:1990101,GO:1990102,GO:1990125,GO:1990157; Complete relevant definitions, synonyms, active status and typed child links within the17-term response; unrelated children are not promoted | supports | GO1990157 defines DnaB-DnaC associated with DNA-bound DnaA; GO1990099 explicitly lists it as an is-a child and defines pre-primosomes as lacking primase. GO1990100 identifies the included loading subcomplex; GO0006270 is initiation. |
+| replication51-agent-tax562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete native taxon response | supports | ENA taxon562 is Escherichia coli, rank species; native names and lineage distinguish species from reference strain. |
+| replication51-agent-tax83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete native taxon response | supports | ENA taxon83333 is Escherichia coli K-12, rank strain; native names and lineage distinguish species from reference strain. |
+| replication51-agent-protein-P03004 | https://rest.uniprot.org/uniprotkb/P03004.json; Accession/status/name/genes/organism; complete relevant comments, localization evidence references and InterPro xrefs | supports | Reviewed P03004 is the declared dnaA protein in E.coli K12 taxon83333. Native identity, gene names, function/subunit/similarity annotations and family xrefs were read. DnaA localization citations are annotation provenance, not independent evidence for every complex. |
+| replication51-agent-gene-dnaA-exact-organism83333 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AdnaA%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identities, organism and gene aliases | supports | Exact reviewed gene dnaA in the stated K12 organism83333 returns one entry, P03004; the current single-entry note is supported where asserted. |
+| replication51-agent-pmid-20129058 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20129058+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and entire native abstract | supports | Native MED20129058: Primase directs the release of DnaC from DnaB. Authors Makowska-Grzyska M, Kaguni JM.; DOI 10.1016/j.molcel.2009.12.031. Complete abstract read at primary-study abstract tier; metadata is not a claim of full-body access. |
+| replication51-agent-pmid-22574163 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22574163+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and entire native abstract | supports | Native MED22574163: Association of the chromosome replication initiator DnaA with the Escherichia coli inner membrane in vivo: quantity and mode of binding. Authors Regev T, Myers N, Zarivach R, Fishov I.; DOI 10.1371/journal.pone.0036441. Complete abstract read at primary-study abstract tier; metadata is not a claim of full-body access. |
+| replication51-agent-pmid-28166228 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28166228+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and entire native abstract | supports | Native MED28166228: Rapid turnover of DnaA at replication origin regions contributes to initiation control of DNA replication. Authors Schenk K, Hervás AB, Rösch TC, Eisemann M, Schmitt BA, Dahlke S, Kleine-Borgmann L, Murray SM, Graumann PL.; DOI 10.1371/journal.pgen.1006561. Complete abstract read at primary-study abstract tier; metadata is not a claim of full-body access. |
+| replication51-agent-pmid-9478970 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9478970+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact title/authors/year/DOI/PMID and entire native abstract | supports | Native MED9478970: Membrane-mediated release of nucleotide from an initiator of chromosomal replication, Escherichia coli DnaA, occurs with insertion of a distinct region of the protein into the lipid bilayer. Authors Garner J, Durrer P, Kitchen J, Brunner J, Crooke E.; DOI 10.1074/jbc.273.9.5167. Complete abstract read at primary-study abstract tier; metadata is not a claim of full-body access. |
+| replication51-agent-ipr-IPR001957 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001957/; Native name/type, complete description, hierarchy/signatures and curation flags | supports | IPR001957 is the full DnaA replication-initiation protein family, supported by DnaA-specific HAMAPMF00377/NCBIfamTIGR00362 and distinguished from the broader DnaA/Hda hierarchy. This source row establishes family metadata; example membership is separately evidenced by native UniProt. |
+| replication51-agent-SO-0000953 | https://www.ebi.ac.uk/ols4/api/ontologies/so/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0000953; Complete OLS native label/definition/exact synonym/active status | supports | Active SO0000953 oriC is specifically an origin of bacterial chromosome replication, matching the maintained origin-DNA sequence-feature class; it is not a gene or an accession for one strain. |
+| replication51-agent-SO-0000296 | https://www.ebi.ac.uk/ols4/api/ontologies/so/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0000296; Complete native definition/synonyms and active status | context_only | SO0000296 origin_of_replication is the broader replication-origin feature. The narrower exact bacterial-chromosomal oriC term is available separately. |
+| replication51-agent-makowska2010-legacy | https://pmc.ncbi.nlm.nih.gov/articles/instance/2819048/; Genuine PMC2819048 Introduction S1; Results S8–S10/Fig5–6 captions; Discussion S14–S16/Fig7 model caption; Methods S18/S20/S21. No other Results, supplements or pixels certified. | supports | Primary prepriming reconstitution distinguishes assembly from subsequent replication: mutant DnaC can load DnaB despite impaired downstream function. In S8, DnaC omission and substitution of the oriC plasmid with empty vector prevent DnaB retention. Quantitative DnaC stoichiometry is a condition-scoped inference, not universal fixed occupancy. |
+| schema-result | just validate data/structures/other/dnaa_dnab_dnac_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/dnaa_dnab_dnac_complex.yaml |
+| strict-result | just validate-strict data/structures/other/dnaa_dnab_dnac_complex.yaml --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/dnaa_dnab_dnac_complex.yaml --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/dnaa_dnab_dnac_complex.yaml  (GO:1990157)<br>  dnaa_dnab_dnac_initiation	dnaa_initiator	COVERED	-&gt;dnaa_initiator (UniProtKB:P03004)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/dnaa_dnab_dnac_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 12 collected target identifiers returned OK. PMID:20129058: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:22574163: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:28166228: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force.; PMID:9478970: UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently inspected after the bulk eutils414 transport failure. Identifier resolution does not certify all biological claims; declared primary-body and abstract reading limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, supplementary experimental data, sequence alignment or deposited coordinate geometry was independently reanalyzed. Actual text/caption and native-response scopes are specified per evidence row.
+- The primary experiment uses an oriC plasmid and purified components, not a direct count of native chromosome-bound intermediates. Its suggested threeDnaC per DnaBhexamer is not imposed as invariant stoichiometry.
+- The source body was read only at enumerated sections; detailed strain table/supplements and every ATPase experiment were not independently audited.
+- Exact organism83333 reviewed-gene queries support the stated single-entry notes where present. Broader taxonomy83333 queries also return descendantK12 strains and cannot be interpreted as multiple entries for the identical organism.
+- COMMON is a majority-occurrence assertion under the schema; no population census was measured in the inspected studies. Generic E.coli scope is retained as qualitative synthesis, not converted to mere occurrence.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes qualified clean reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T055925Z-dnaa-dnab-dnac-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Dnaa dnab dnac complex scientific review
+started_at: '2026-10-22T05:37:42Z'
+finished_at: '2026-10-22T05:59:25Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The scoped prepriming complex and correct DnaA example are supported. Two
+  minors resolve exact DnaA/oriC groundings and the directly tested, condition-scoped
+  origin-DNA formation requirement.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    sha256: a49c1990539aacfc5c45ca3e85ad447d25d1de1e4608396c5233d16bf5ec4e56
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990157
+  path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+  label: DnaA-DnaB-DnaC complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained record, native frozen guidance and
+    actual source passages identified per evidence locator; no other maintained scientific
+    record used as evidence.
+  selection: Target 9 of batch51, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990157
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just validate data/structures/other/dnaa_dnab_dnac_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just validate-strict data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific support separately assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific support separately assessed.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990157
+  summary: No expression-module claim requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - replication51-agent-go
+  - replication51-agent-tax562
+  - replication51-agent-tax83333
+  - replication51-agent-protein-P03004
+  - replication51-agent-gene-dnaA-exact-organism83333
+  - replication51-agent-pmid-20129058
+  - replication51-agent-pmid-22574163
+  - replication51-agent-pmid-28166228
+  - replication51-agent-pmid-9478970
+  - replication51-agent-ipr-IPR001957
+  - replication51-agent-SO-0000953
+  - replication51-agent-SO-0000296
+  - replication51-agent-makowska2010-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  summary: '8 of 12 collected target identifiers returned OK. PMID:20129058: UNREACHABLE;
+    Exact native EuropePMC MED identifier, title and DOI independently inspected after
+    the bulk eutils414 transport failure. Identifier resolution does not certify all
+    biological claims; declared primary-body and abstract reading limits remain in
+    force.; PMID:22574163: UNREACHABLE; Exact native EuropePMC MED identifier, title
+    and DOI independently inspected after the bulk eutils414 transport failure. Identifier
+    resolution does not certify all biological claims; declared primary-body and abstract
+    reading limits remain in force.; PMID:28166228: UNREACHABLE; Exact native EuropePMC
+    MED identifier, title and DOI independently inspected after the bulk eutils414
+    transport failure. Identifier resolution does not certify all biological claims;
+    declared primary-body and abstract reading limits remain in force.; PMID:9478970:
+    UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently
+    inspected after the bulk eutils414 transport failure. Identifier resolution does
+    not certify all biological claims; declared primary-body and abstract reading
+    limits remain in force. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - replication51-agent-pmid-20129058
+  - replication51-agent-pmid-22574163
+  - replication51-agent-pmid-28166228
+  - replication51-agent-pmid-9478970
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990157
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch51 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/dnaa_dnab_dnac_complex.yaml
+  locator: Entire target, including all components/examples, graph, evidence, discussions
+    and history
+  accessed_at: '2026-10-22T05:49:52Z'
+  support: context_only
+  summary: The full maintained record was read. Historical curation notes are not
+    independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, EssentialityEnum and NONMECHANISTIC
+    graph scope
+  accessed_at: '2026-10-22T05:49:52Z'
+  support: context_only
+  summary: Family identity is separate from a taxon-specific example. Assembly necessity
+    differs from composition, catalytic requirement and viability.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact family mapping and REVIEWED_LABEL_ONLY contract, especially159–160
+  accessed_at: '2026-10-22T05:49:52Z'
+  support: context_only
+  summary: Reviewed label-only status requires an unresolved exact mapping, rather
+    than simply deferring a verified available family.
+- evidence_id: replication51-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0003918,GO:0006270,GO:0009330,GO:0009340,GO:0032297,GO:0032991,GO:1990077,GO:1990078,GO:1990083,GO:1990084,GO:1990085,GO:1990099,GO:1990100,GO:1990101,GO:1990102,GO:1990125,GO:1990157
+  locator: Complete relevant definitions, synonyms, active status and typed child
+    links within the17-term response; unrelated children are not promoted
+  accessed_at: '2026-10-22T05:42:45.973692Z'
+  support: supports
+  summary: GO1990157 defines DnaB-DnaC associated with DNA-bound DnaA; GO1990099 explicitly
+    lists it as an is-a child and defines pre-primosomes as lacking primase. GO1990100
+    identifies the included loading subcomplex; GO0006270 is initiation.
+  snapshot_sha256: 20acc6fb4f33b15254c0883eb10baca7a549febfef3948d31b5eafda0771038b
+- evidence_id: replication51-agent-tax562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T05:42:45.974189Z'
+  support: supports
+  summary: ENA taxon562 is Escherichia coli, rank species; native names and lineage
+    distinguish species from reference strain.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: replication51-agent-tax83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T05:42:45.974327Z'
+  support: supports
+  summary: ENA taxon83333 is Escherichia coli K-12, rank strain; native names and
+    lineage distinguish species from reference strain.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: replication51-agent-protein-P03004
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P03004.json
+  locator: Accession/status/name/genes/organism; complete relevant comments, localization
+    evidence references and InterPro xrefs
+  accessed_at: '2026-10-22T05:42:45.974560Z'
+  support: supports
+  summary: Reviewed P03004 is the declared dnaA protein in E.coli K12 taxon83333.
+    Native identity, gene names, function/subunit/similarity annotations and family
+    xrefs were read. DnaA localization citations are annotation provenance, not independent
+    evidence for every complex.
+  snapshot_sha256: 20b9ed0385942a0aebc3645f0f499a77e9aab0741218e2327ee80b6ae7590dca
+- evidence_id: replication51-agent-gene-dnaA-exact-organism83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AdnaA%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identities, organism and gene aliases
+  accessed_at: '2026-10-22T05:43:54.622927Z'
+  support: supports
+  summary: Exact reviewed gene dnaA in the stated K12 organism83333 returns one entry,
+    P03004; the current single-entry note is supported where asserted.
+  snapshot_sha256: 3db63cf0e2bda46f5e0d2292b32f98621aa2da23fba568a428d8ad2f1fb148a0
+  search_scope: UniProt gene_exact:dnaA, reviewed:true, organism_id:83333; size500;
+    complete returned identities read. Descendant-strain search results are not used
+    to falsify an exact-organism claim.
+- evidence_id: replication51-agent-pmid-20129058
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20129058+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:42:48.788792Z'
+  support: supports
+  summary: 'Native MED20129058: Primase directs the release of DnaC from DnaB. Authors
+    Makowska-Grzyska M, Kaguni JM.; DOI 10.1016/j.molcel.2009.12.031. Complete abstract
+    read at primary-study abstract tier; metadata is not a claim of full-body access.'
+  snapshot_sha256: 18745cf1f2d5ecef959d74f070a2db408991ae1dfabc6c0f90412dae32f3d9c9
+- evidence_id: replication51-agent-pmid-22574163
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22574163+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:42:48.808029Z'
+  support: supports
+  summary: 'Native MED22574163: Association of the chromosome replication initiator
+    DnaA with the Escherichia coli inner membrane in vivo: quantity and mode of binding.
+    Authors Regev T, Myers N, Zarivach R, Fishov I.; DOI 10.1371/journal.pone.0036441.
+    Complete abstract read at primary-study abstract tier; metadata is not a claim
+    of full-body access.'
+  snapshot_sha256: 606182e9806d23b9bf7730d38e83960a8b1336283390495aabe7d55367902d79
+- evidence_id: replication51-agent-pmid-28166228
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28166228+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:42:49.183588Z'
+  support: supports
+  summary: 'Native MED28166228: Rapid turnover of DnaA at replication origin regions
+    contributes to initiation control of DNA replication. Authors Schenk K, Hervás
+    AB, Rösch TC, Eisemann M, Schmitt BA, Dahlke S, Kleine-Borgmann L, Murray SM,
+    Graumann PL.; DOI 10.1371/journal.pgen.1006561. Complete abstract read at primary-study
+    abstract tier; metadata is not a claim of full-body access.'
+  snapshot_sha256: 62b379003572dabe10f78cc8b7642794dc900df5ca5799cd0f29217cbf4c1bc3
+- evidence_id: replication51-agent-pmid-9478970
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9478970+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:42:49.417893Z'
+  support: supports
+  summary: 'Native MED9478970: Membrane-mediated release of nucleotide from an initiator
+    of chromosomal replication, Escherichia coli DnaA, occurs with insertion of a
+    distinct region of the protein into the lipid bilayer. Authors Garner J, Durrer
+    P, Kitchen J, Brunner J, Crooke E.; DOI 10.1074/jbc.273.9.5167. Complete abstract
+    read at primary-study abstract tier; metadata is not a claim of full-body access.'
+  snapshot_sha256: 46d168668e549dce45c86e1638c9d1bed0b4ae65a45b00090e1150e5de2a19bf
+- evidence_id: replication51-agent-ipr-IPR001957
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001957/
+  locator: Native name/type, complete description, hierarchy/signatures and curation
+    flags
+  accessed_at: '2026-10-22T05:42:51.162827Z'
+  support: supports
+  summary: IPR001957 is the full DnaA replication-initiation protein family, supported
+    by DnaA-specific HAMAPMF00377/NCBIfamTIGR00362 and distinguished from the broader
+    DnaA/Hda hierarchy. This source row establishes family metadata; example membership
+    is separately evidenced by native UniProt.
+  snapshot_sha256: 364ea5ab4304d290b099574c7f9527e5577eefec2872f8fc2adde34de7eb2fc2
+- evidence_id: replication51-agent-SO-0000953
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/so/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0000953
+  locator: Complete OLS native label/definition/exact synonym/active status
+  accessed_at: '2026-10-22T05:47:34.728655Z'
+  support: supports
+  summary: Active SO0000953 oriC is specifically an origin of bacterial chromosome
+    replication, matching the maintained origin-DNA sequence-feature class; it is
+    not a gene or an accession for one strain.
+  snapshot_sha256: d64a9c22b7c52cef08f25cfbe676d3c88458ac7ec7f09850d25f3ebc82051030
+- evidence_id: replication51-agent-SO-0000296
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/so/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0000296
+  locator: Complete native definition/synonyms and active status
+  accessed_at: '2026-10-22T05:42:55.403558Z'
+  support: context_only
+  summary: SO0000296 origin_of_replication is the broader replication-origin feature.
+    The narrower exact bacterial-chromosomal oriC term is available separately.
+  snapshot_sha256: fb5b6895044de42e83d2ba54ac8bf70150ea05d0043b077b54fadbd1bafb4fa4
+- evidence_id: replication51-agent-makowska2010-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/instance/2819048/
+  locator: Genuine PMC2819048 Introduction S1; Results S8–S10/Fig5–6 captions; Discussion
+    S14–S16/Fig7 model caption; Methods S18/S20/S21. No other Results, supplements
+    or pixels certified.
+  accessed_at: '2026-10-22T05:43:16.588547Z'
+  support: supports
+  summary: 'Primary prepriming reconstitution distinguishes assembly from subsequent
+    replication: mutant DnaC can load DnaB despite impaired downstream function. In
+    S8, DnaC omission and substitution of the oriC plasmid with empty vector prevent
+    DnaB retention. Quantitative DnaC stoichiometry is a condition-scoped inference,
+    not universal fixed occupancy.'
+  snapshot_sha256: 1f0bb42eee117378fcdfa5208abde24c8f46935f32d1957ff781e22c3991e586
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/dnaa_dnab_dnac_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:37:44Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/dnaa_dnab_dnac_complex.yaml'
+  snapshot_sha256: b94528013729ac1cd207c32301344321c7e28c9810d8c8e8c0129db503161a25
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:37:46Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/dnaa_dnab_dnac_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch51-20261022-jny4s18h/dnaa_dnab_dnac_complex-strict.tsv"
+  snapshot_sha256: 47f3a18e5907833e72a0d0c838011f9030119f5ea14d879183383d3c00564815
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:42:54.795025Z'
+  support: supports
+  summary: "data/structures/other/dnaa_dnab_dnac_complex.yaml  (GO:1990157)\n  dnaa_dnab_dnac_initiation\t\
+    dnaa_initiator\tCOVERED\t->dnaa_initiator (UniProtKB:P03004)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     1  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 51ed8c963a301a182bcea61e6cb3eab637e3b35581509eeff3f634caf21404ae
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch51-20261022-jny4s18h/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dnaa_dnab_dnac_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:42:56.075694Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/dnaa_dnab_dnac_complex.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 12 collected target identifiers returned OK. PMID:20129058: UNREACHABLE;
+    Exact native EuropePMC MED identifier, title and DOI independently inspected after
+    the bulk eutils414 transport failure. Identifier resolution does not certify all
+    biological claims; declared primary-body and abstract reading limits remain in
+    force.; PMID:22574163: UNREACHABLE; Exact native EuropePMC MED identifier, title
+    and DOI independently inspected after the bulk eutils414 transport failure. Identifier
+    resolution does not certify all biological claims; declared primary-body and abstract
+    reading limits remain in force.; PMID:28166228: UNREACHABLE; Exact native EuropePMC
+    MED identifier, title and DOI independently inspected after the bulk eutils414
+    transport failure. Identifier resolution does not certify all biological claims;
+    declared primary-body and abstract reading limits remain in force.; PMID:9478970:
+    UNREACHABLE; Exact native EuropePMC MED identifier, title and DOI independently
+    inspected after the bulk eutils414 transport failure. Identifier resolution does
+    not certify all biological claims; declared primary-body and abstract reading
+    limits remain in force. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Primase-free DnaA-DnaB-DnaC prepriming complex
+  outcome: supported
+  target_ids:
+  - GO:1990157
+  summary: The exact nucleoprotein class, pre-primosome parent, DnaB-DnaC part and
+    source-defined primase-free boundary are supported. Primase is added in the experiment
+    to drive a subsequent transition, not a missing constituent of the scoped intermediate.
+  evidence_ids:
+  - record
+  - replication51-agent-go
+  - replication51-agent-makowska2010-legacy
+- assessment_id: grounding
+  area: grounding
+  topic: Correct subcomplex and exact remaining mappings
+  outcome: concern
+  target_ids:
+  - GO:1990157
+  summary: GO1990100 is the appropriate intact loading subcomplex, and P03004 correctly
+    exemplifies DnaA. IPR001957 and SO0000953 precisely resolve the remaining label-only
+    DnaA and bacterial-origin rows; no broader generic DNA or AAAATPase class is needed.
+  evidence_ids:
+  - record
+  - curation
+  - replication51-agent-go
+  - replication51-agent-ipr-IPR001957
+  - replication51-agent-SO-0000953
+  - replication51-agent-SO-0000296
+  - replication51-agent-protein-P03004
+  - replication51-agent-gene-dnaA-exact-organism83333
+- assessment_id: formation-tested
+  area: grounding
+  topic: Direct origin-dependent assembly control
+  outcome: concern
+  target_ids:
+  - GO:1990157
+  summary: 'The current UNKNOWN origin-DNA row omits a directly inspected formation
+    control: replacing the oriC plasmid with the corresponding empty vector eliminates
+    retained DnaB in the isolated prepriming-complex assay. This supports a requirement
+    under those defined reconstitution conditions, distinct from catalytic activity
+    or organism viability.'
+  evidence_ids:
+  - record
+  - schema
+  - replication51-agent-makowska2010-legacy
+- assessment_id: formation-remaining
+  area: grounding
+  topic: Remaining formation scope unresolved
+  outcome: unknown
+  target_ids:
+  - GO:1990157
+  summary: The source also omits DnaC and tests loading-competent, replication-defective
+    mutants, but no blanket necessity is assigned here to every whole subcomplex or
+    every native cellular condition. DnaA and all loading-subcomplex interface requirements
+    remain bounded by the actual experiments rather than defining membership alone.
+  evidence_ids:
+  - record
+  - schema
+  - replication51-agent-makowska2010-legacy
+- assessment_id: graph
+  area: graph
+  topic: Coarse loading/initiation graph
+  outcome: supported
+  target_ids:
+  - GO:1990157
+  summary: The NONMECHANISTIC graph records the intermediate and initiation function
+    without claiming resolved DnaB ring opening, ATP hydrolysis, DnaC release or DnaG
+    recruitment. The primary specifically distinguishes an assembled but inactive
+    mutant intermediate, so its functional-essential language is not used as proof
+    of every formation enum.
+  evidence_ids:
+  - record
+  - schema
+  - replication51-agent-go
+  - replication51-agent-makowska2010-legacy
+- assessment_id: scope
+  area: scope
+  topic: Species prevalence and experimental context
+  outcome: supported
+  target_ids:
+  - GO:1990157
+  summary: Species562 and reference strain83333 are correct. COMMON retains the schema
+    meaning present in most members, losses the exception; the source-supported E.coli
+    system provides qualitative biological context, not a measured strain-prevalence
+    census. Specific mutant/recombinant preparations do not redefine the native taxon.
+    Localization-paper abstracts and native annotations only verify their stated provenance;
+    no whole-complex localization experiment is inferred.
+  evidence_ids:
+  - record
+  - schema
+  - replication51-agent-makowska2010-legacy
+  - replication51-agent-go
+  - replication51-agent-tax562
+  - replication51-agent-tax83333
+  - replication51-agent-protein-P03004
+  - replication51-agent-pmid-20129058
+  - replication51-agent-pmid-22574163
+  - replication51-agent-pmid-28166228
+  - replication51-agent-pmid-9478970
+- assessment_id: coverage
+  area: completeness
+  topic: Full record and maintained boundaries
+  outcome: supported
+  target_ids:
+  - GO:1990157
+  summary: All target fields, evidence, discussions and historical entries were read,
+    including adjacent-complex exclusions. Historical reviewer conclusions are not
+    biological evidence. No optional inventory or uninspected detailed mechanism is
+    forced.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - replication51-agent-go
+findings:
+- finding_id: F1
+  issue_key: dnaa-dnab-dnac-exact-groundings
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground DnaA and chromosomal origin DNA
+  description: IPR001957 and SO0000953 exactly match the two label-only DnaA and chromosomal-origin
+    rows, whose current notes defer curation rather than identify a genuine unmatched
+    class.
+  target_ids:
+  - GO:1990157
+  field_paths:
+  - components#dnaa_initiator.grounding_status
+  - components#chromosomal_origin_dna.grounding_status
+  - discussions#resolve_dnaa_origin_component_groundings
+  evidence_ids:
+  - record
+  - curation
+  - replication51-agent-ipr-IPR001957
+  - replication51-agent-SO-0000953
+  - replication51-agent-protein-P03004
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific identity, scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The maintained complex identity, correct protein examples
+    and supported coarse function remain intact; the defect is localized source precision
+    or exact family grounding.
+- finding_id: F2
+  issue_key: dnaa-dnab-dnac-origin-formation
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the tested origin-DNA formation requirement
+  description: 'The origin-DNA component remains blanket UNKNOWN even though the cited
+    primary S8 directly tests the assembly endpoint: replacing oriC plasmid with empty
+    vector prevents retained DnaB in the isolated prepriming-complex preparation.
+    This is measured origin-dependent formation, not merely a replication-function
+    defect.'
+  target_ids:
+  - GO:1990157
+  field_paths:
+  - components#chromosomal_origin_dna.essentiality
+  - components#chromosomal_origin_dna.evidence
+  evidence_ids:
+  - record
+  - schema
+  - replication51-agent-makowska2010-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific identity, scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The maintained complex identity, correct protein examples
+    and supported coarse function remain intact; the defect is localized source precision
+    or exact family grounding.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990157
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained scientific record
+  description: Apply the exact DnaA family and oriC sequence-feature class and update
+    current grounding notes/TODO.
+  acceptance_checks:
+  - Keep the existing GO1990100 whole-subcomplex grounding.
+  - Preserve P03004 and the primase-free intermediate boundary.
+  - Preserve supported identifiers, examples and biological scope; pass applicable
+    native validation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:1990157
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained scientific record
+  description: Replace blanket UNKNOWN with a source-backed, explicitly condition-scoped
+    formation requirement for oriC DNA in this E.coli reconstitution; choose the appropriate
+    enum with the assay qualification in evidence/notes.
+  acceptance_checks:
+  - Cite S8 empty-vector control and the S20 preparation.
+  - Do not infer organism viability, universal in-vivo necessity or all-subunit requirements.
+  - Retain the distinction between DnaC mutants that assemble and their defective
+    later function.
+  - Preserve supported identifiers, examples and biological scope; pass applicable
+    native validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, supplementary experimental data, sequence alignment or deposited
+  coordinate geometry was independently reanalyzed. Actual text/caption and native-response
+  scopes are specified per evidence row.
+- The primary experiment uses an oriC plasmid and purified components, not a direct
+  count of native chromosome-bound intermediates. Its suggested threeDnaC per DnaBhexamer
+  is not imposed as invariant stoichiometry.
+- The source body was read only at enumerated sections; detailed strain table/supplements
+  and every ATPase experiment were not independently audited.
+- Exact organism83333 reviewed-gene queries support the stated single-entry notes
+  where present. Broader taxonomy83333 queries also return descendantK12 strains and
+  cannot be interpreted as multiple entries for the identical organism.
+- COMMON is a majority-occurrence assertion under the schema; no population census
+  was measured in the inspected studies. Generic E.coli scope is retained as qualitative
+  synthesis, not converted to mere occurrence.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes qualified clean reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

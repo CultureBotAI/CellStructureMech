@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rna_polymerase_i_complex.yaml
+  slug: rna_polymerase_i_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-e1a7b4
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Added source-backed Pol I core and stalk/dimer subunit gene_symbols and seeded
+    13 reviewed Saccharomyces cerevisiae S288C protein_examples
+  details: Added source-backed gene_symbols RPA190, RPA135, RPC40, RPC19, RPB5, RPB6, RPB8,
+    RPB10, RPB12 to rpa190_rpa135_catalytic_core and RPA43, RPA14, RPA49, RPA34 to rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
+    (citing DOI:10.1038/nature12712 and PMID:24153184) and resolved all 13 subunits to reviewed
+    Saccharomyces cerevisiae S288C (NCBITaxon:559292) UniProtKB entries (P10964, P22138, P07703,
+    P28000, P20434, P20435, P20436, P22139, P40422, P46669, P50106, Q01080, P47006).

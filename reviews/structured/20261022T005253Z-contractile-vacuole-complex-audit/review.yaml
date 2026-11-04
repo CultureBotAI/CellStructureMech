@@ -1,0 +1,651 @@
+schema_version: 1.0.0
+review_id: 20261022T005253Z-contractile-vacuole-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Contractile vacuole complex identity, child boundaries and evidence review
+started_at: '2026-10-21T11:11:08Z'
+finished_at: '2026-10-22T00:52:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: CVC identity, GO parentage, bladder/spongiome organization, model examples
+  and organelle-level water-expulsion graph are supported. No concrete curation defect
+  was established.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml
+    sha256: a73ad7ccfc67c7c39a41d555109a229de1c469dec8eff0d808a3cddaa0aa383c
+    role: context
+  - path: data/structures/membrane_organelle/contractile_vacuole.yaml
+    sha256: d1057e9c19ff100f054c73da52b597742dadde491f2a007cd7b648b8a7b626bb
+    role: context
+  - path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    sha256: 5d37be1aa899c1bfd20611faeafefb842a96e8a21144dea9e010b2c89d4b7a1c
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuole_lumen.yaml
+    sha256: 9c85ec352245d16e963b9d86d4d1cf0b41d499b956b0b2d05611dca3a4341622
+    role: context
+  - path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+    sha256: e6b016675a36c215388bfd9053da4af4b1ec407c47c197f8a2217f9ba66cc294
+    role: context
+  - path: data/structures/membrane_organelle/spongiome.yaml
+    sha256: 4bdc11a86d247b6a45549a41c9aac3b25946b046f3b54d269fab634ca9d44019
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0062159
+  path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  label: contractile vacuole complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire target reviewed: definition, synonyms, parent/child relations,
+    taxonomic scope, model examples, function, all graph edges, sources, discussions
+    and history.'
+  selection: User-authorized all-record pass; batch24 indices1–4 are four distinct
+    maintained contractile-vacuole records, each reviewed in full.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0062159
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: /private/tmp/cellstructure-batch24-20261021-qayobm82/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native command returned zero. Coverage warnings are interpreted separately
+    from accession verification.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: /private/tmp/cellstructure-batch24-20261021-qayobm82/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command returned zero. Coverage warnings are interpreted separately
+    from accession verification.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just validate data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just validate-strict data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --out /private/tmp/cellstructure-batch24-20261021-qayobm82/contractile_vacuole_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  summary: 10 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - contractile-agent-nolta1994-meta
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - neighbors
+  - contractile-agent-go
+  - contractile-agent-more2024-meta
+  - contractile-agent-tax-2759
+  - access-more2024-publisher
+  - contractile-agent-ancestors-0062159
+  - contractile-agent-nolta1994-meta
+  - contractile-agent-gronlien2002-meta
+  - contractile-agent-docampo2013-s3
+  - contractile-agent-tax-44689
+  - contractile-agent-tax-44030
+  - access-nolta1994-publisher
+  - access-nolta1994-api
+  - access-gronlien2002-publisher
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062159
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  locator: Entire YAML, every current field including all evidence, discussions and
+    history
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: context_only
+  summary: Full maintained target read. No source/generated row replaces this YAML
+    as owner. Other three assigned targets and pore neighbor read fully; spongiome
+    identity, hierarchy, components and discussion fields read for boundary context,
+    not audited as a seventh target.
+- evidence_id: neighbors
+  kind: record_content
+  reference: data/structures/membrane_organelle
+  locator: The six native-captured contractile-vacuole/spongiome records
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: context_only
+  summary: Ignored-inclusive rg -l --no-ignore --hidden search under data/structures
+    for GO:0000331, GO:0031164, GO:0062159, GO:0062160 and the local contractile-vacuole-lumen
+    ID found these six distinct paths. Exact target and all five neighbors are captured
+    by native inspect. No whole-corpus uniqueness beyond this identity neighborhood
+    is claimed.
+- evidence_id: contractile-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031164,GO:0005774,GO:0000331,GO:0062159,GO:0062160,GO:0043232,GO:0005775,GO:0031913,GO:0098797,GO:0005856
+  locator: 'Exact ten-term response: names, definitions, synonyms and relevant children/relation
+    edges'
+  accessed_at: '2026-10-21T11:12:36.483337Z'
+  support: supports
+  summary: Current nonobsolete GO identities distinguish the vacuole, its lipid bilayer,
+    the CVC and spongiome, and the broader vacuolar lumen. GO explicitly gives CVC
+    the intracellular membraneless-organelle parent and lists vacuole and spongiome
+    as parts; membrane components remain lipid-bounded despite this assembly-level
+    ontology classification.
+  snapshot_sha256: 3001e9aa0de9d2828e1a1a727af2c84d192398885fe3080a1f75b13f34bad99a
+- evidence_id: contractile-agent-more2024-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016%2Fj.ejop.2024.126078
+  locator: PMID38688044; exact DOI/title and full abstract only
+  accessed_at: '2026-10-21T11:12:38.019911Z'
+  support: supports
+  summary: More et al.2024 metadata and complete abstract describe CVs as common osmoregulatory
+    devices of freshwater/soil protists with variable architecture and machinery,
+    and discuss presence and absence across eukaryotes. This supports patchy distribution,
+    not a measured fraction of all Eukaryota.
+  snapshot_sha256: b6c0fbe9809f35dec2f0151eb3a8e6e212d4ce1fb60f1cd001785fdff3bf3e0b
+- evidence_id: contractile-agent-tax-2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: taxId, scientificName, rank
+  accessed_at: '2026-10-21T11:12:36.484828Z'
+  support: supports
+  summary: NCBI-derived ENA taxonomy confirms2759 Eukaryota, current rank domain.
+    It verifies identity, not CV prevalence.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: access-more2024-publisher
+  kind: search
+  reference: https://doi.org/10.1016/j.ejop.2024.126078
+  locator: Original HTTP response; final URL https://linkinghub.elsevier.com/retrieve/pii/S0932473924000282
+  accessed_at: '2026-10-21T11:13:13.494252Z'
+  support: context_only
+  summary: HTTP 200. The DOI route returned a LinkingHub HTML redirect/locator, not
+    review body text. The complete abstract above, not this response, supplies the
+    assessed content.
+  snapshot_sha256: 39c152a279323c8fddcea53c5aed455c7f3a0f3d51945c4e1b1c8f4f76ed25bb
+  search_scope: One public source-access request to the exact recorded URL, following
+    HTTP redirects; inspect response body for full text rather than infer access from
+    HTTP status.
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch24-20261021-qayobm82/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --verify
+  locator: Actual command output for this exact target
+  accessed_at: '2026-10-21T11:13:07.824895Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch24-20261021-qayobm82/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --causal-graphs
+  locator: Actual command output for this exact target
+  accessed_at: '2026-10-21T11:13:08.364131Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: contractile-agent-ancestors-0062159
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0062159/ancestors?relations=is_a,part_of
+  locator: Current term definition, related CVC synonym, children and mixed ancestry
+  accessed_at: '2026-10-21T11:12:36.484123Z'
+  support: supports
+  summary: CVC has current GO intracellular membraneless-organelle ancestry; this
+    is the ontology classification of the assembled complex and does not erase its
+    membrane-bounded bladder/tubular parts.
+  snapshot_sha256: 514c75dccbc6096ad72c1c6fc2465500b2f0984d83e0cbf436287dd88f890191
+- evidence_id: contractile-agent-nolta1994-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A8294479%20AND%20SRC%3AMED
+  locator: PMID8294479 exact metadata and complete abstract
+  accessed_at: '2026-10-21T11:12:38.119215Z'
+  support: supports
+  summary: Nolta and Steck1994 isolated Dictyostelium CVC membrane fractions and distinguished
+    bladder and spongiome, with active V-ATPase concentrated in spongiome and bladder
+    membranes comparatively pump-poor. This supports bipartite organization and the
+    canonical note.
+  snapshot_sha256: d29beee964bad19b97cb72a6acb0084f79ae625b8c3bd042920b60002bd868a9
+- evidence_id: contractile-agent-gronlien2002-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1242%2Fjeb.205.20.3261
+  locator: Exact citation metadata and complete abstract; body unavailable through
+    tested public routes
+  accessed_at: '2026-10-21T11:12:38.043509Z'
+  support: supports
+  summary: Gronlien et al.2002 inserted CV/cytosol microelectrodes in Paramecium multimicronucleatum
+    and linked changes in radial-arm attachment and V-ATPase-rich decorated spongiome
+    to CV potential/fluid segregation. This supports the bounded model note without
+    importing exact numerical electrophysiology into this record.
+  snapshot_sha256: ed91c2bbcf0e9848dc377c9dfce281d36a5e7b2a45713b068b748fafcb61638f
+- evidence_id: contractile-agent-docampo2013-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3818246.1/PMC3818246.1.xml
+  locator: Genuine PMC3818246 JATS; introduction and section3 history, structure/composition,
+    biogenesis and osmoregulation text read; no figure-pixel or cited-paper audit
+    inferred
+  accessed_at: '2026-10-21T11:13:14.669515Z'
+  support: supports
+  summary: Docampo et al.2013 review distinguishes bladder and spongiome, summarizes
+    taxon-specific CV components and proposed pump-driven water accumulation, and
+    describes osmoregulatory collection and discharge. Section3.4 distinguishes stable
+    Paramecium pores from changing Dictyostelium CV contacts. Membrane, lumen and
+    whole complex are not interchangeable; a lumen is not chemically pure water.
+  snapshot_sha256: 86c6b8220f007a31f585e81365fafb50db47b5610b3cc968f244acdd164d3741
+- evidence_id: contractile-agent-tax-44689
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44689
+  locator: Taxon ID, scientificName, rank and lineage
+  accessed_at: '2026-10-21T11:12:37.270270Z'
+  support: supports
+  summary: NCBI-derived authority verifies 44689 Dictyostelium discoideum and eukaryotic
+    species identity.
+  snapshot_sha256: f7bfea542a721125d862d08a5f8dd0986c1c19034b45f1fb92adf8c8d045efca
+- evidence_id: contractile-agent-tax-44030
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44030
+  locator: Taxon ID, scientificName, rank and lineage
+  accessed_at: '2026-10-21T11:12:37.285255Z'
+  support: supports
+  summary: NCBI-derived authority verifies 44030 Paramecium multimicronucleatum and
+    eukaryotic species identity.
+  snapshot_sha256: 4be4e352120325ebd0564f246f7c6af841f2f1a81fbf3b2f6db5c11d7c0393d7
+- evidence_id: access-nolta1994-publisher
+  kind: search
+  reference: https://doi.org/10.1016/S0021-9258(17)42157-0
+  locator: Original HTTP response; final URL https://linkinghub.elsevier.com/retrieve/pii/S0021925817421570
+  accessed_at: '2026-10-21T11:13:14.202328Z'
+  support: context_only
+  summary: HTTP 200. DOI route returned LinkingHub HTML locator/redirect, not paper
+    body.
+  snapshot_sha256: 218705489b21b6453990df4f4c0c025d4a2dd5b4f425cd8f3fd9325a8c1fcd2b
+  search_scope: One public source-access request to the exact recorded URL, following
+    HTTP redirects; inspect response body for full text rather than infer access from
+    HTTP status.
+- evidence_id: access-nolta1994-api
+  kind: search
+  reference: https://api.elsevier.com/content/article/pii/S0021925817421570?httpAccept=text/xml
+  locator: Original HTTP response; final URL https://api.elsevier.com/content/article/pii/S0021925817421570?httpAccept=text/xml
+  accessed_at: '2026-10-21T11:16:09.257147Z'
+  support: context_only
+  summary: HTTP 200. Elsevier API supplied coredata metadata, not article body.
+  snapshot_sha256: 81644ef0f59c3d3241768229f71b9404c78e333e50cff98db6c3b675fea20ae0
+  search_scope: One public source-access request to the exact recorded URL, following
+    HTTP redirects; inspect response body for full text rather than infer access from
+    HTTP status.
+- evidence_id: access-gronlien2002-publisher
+  kind: search
+  reference: https://doi.org/10.1242/jeb.205.20.3261
+  locator: Original HTTP response; final URL https://journals.biologists.com/jeb/article/205/20/3261/9066/Relationship-between-the-membrane-potential-of-the
+  accessed_at: '2026-10-21T11:13:13.950081Z'
+  support: context_only
+  summary: HTTP 403. Publisher access-denial HTML; no paper body obtained.
+  snapshot_sha256: eb623dd977d6f7bc6c78992f85d6d48776068c277460cfd9f8c35b8f47b84c85
+  search_scope: One public source-access request to the exact recorded URL, following
+    HTTP redirects; inspect response body for full text rather than infer access from
+    HTTP status.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T11:11:09Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/contractile_vacuole_complex.yaml'
+  snapshot_sha256: 8a656a7955ae5c0231d82f157ae6a415c0ddb31b38a81a5621fd3f1461440561
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    --out /private/tmp/cellstructure-batch24-20261021-qayobm82/contractile_vacuole_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T11:11:11Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/contractile_vacuole_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch24-20261021-qayobm82/contractile_vacuole_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch24-20261021-qayobm82/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch24-20261021-qayobm82/contractile_vacuole_complex-strict.tsv"
+  snapshot_sha256: 0b199223bf61feebfb4f31f1e2d4e4bcd3b8d8dbd130b406434c8602419070ad
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/contractile_vacuole_complex.yaml; exact
+    collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: supports
+  summary: '10 of11 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: PMID:8294479: UNREACHABLE; resolved by evidence contractile-agent-nolta1994-meta.
+    Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: scope
+  area: scope
+  topic: Taxonomic distribution and model scope
+  outcome: supported
+  target_ids:
+  - GO:0062159
+  summary: RARE is bounded by the note to patchy occurrence across Eukaryota; it is
+    not interpreted as a quantitative prevalence estimate or universality within freshwater
+    protists. Canonical examples establish particular models, not a conserved molecular
+    inventory.
+  evidence_ids:
+  - contractile-agent-tax-2759
+  - contractile-agent-more2024-meta
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained input and neighboring boundaries
+  outcome: supported
+  target_ids:
+  - GO:0062159
+  summary: This maintained YAML owns future scientific corrections. Source-native
+    identities and captured neighbors keep CVC, central vacuole, spongiome, membrane,
+    pore and lumen separate. History entries are provenance, not independent experimental
+    evidence. No maintained input was edited.
+  evidence_ids:
+  - record
+  - neighbors
+  - contractile-agent-go
+- assessment_id: identity
+  area: identity
+  topic: Exact assembly-level GO identity and parentage
+  outcome: supported
+  target_ids:
+  - GO:0062159
+  summary: The definition, related synonym and membraneless-organelle parent faithfully
+    match GO:0062159. This represents the larger CVC assembly, not a claim that its
+    vacuole/spongiome membranes lack bilayers. GO explicitly distinguishes its two
+    named parts.
+  evidence_ids:
+  - contractile-agent-go
+  - contractile-agent-ancestors-0062159
+  - contractile-agent-docampo2013-s3
+  - neighbors
+- assessment_id: organization
+  area: representation
+  topic: Child records versus molecular duplication
+  outcome: supported
+  target_ids:
+  - GO:0062159
+  summary: The vacuole and spongiome has_part links and NONMECHANISTIC topology graph
+    are independently supported by GO and bipartite fractionation. Delegating pump/channel
+    details to child records is explicit and does not require an invented duplicate
+    molecular inventory on the parent.
+  evidence_ids:
+  - contractile-agent-go
+  - contractile-agent-nolta1994-meta
+  - contractile-agent-docampo2013-s3
+  - record
+- assessment_id: examples-function
+  area: evidence
+  topic: Canonical organisms and osmoregulatory graph
+  outcome: supported
+  target_ids:
+  - GO:0062159
+  summary: Both canonical taxon identities and their exact study roles are supported.
+    The three graph edges assert child parthood and system-level water expulsion,
+    not conserved stoichiometry or a fully established systolic force mechanism.
+  evidence_ids:
+  - contractile-agent-tax-44689
+  - contractile-agent-tax-44030
+  - contractile-agent-nolta1994-meta
+  - contractile-agent-gronlien2002-meta
+  - contractile-agent-docampo2013-s3
+  - contractile-agent-go
+findings: []
+actions: []
+limitations:
+- This is full coverage of one maintained record, not a full systematic review of
+  all species or all CV-associated proteins. RARE is qualitative and model examples
+  do not establish all-eukaryote molecular conservation.
+- Several cited papers were readable only as complete indexed abstracts through the
+  tested routes. HTTP200 redirects, API metadata stubs and reCAPTCHA pages were not
+  treated as full text. Actual successful primary-body reads are separately located.
+- No maintained snippet, image, numerical physical property or trait link is present
+  in these four targets to validate. No new quotation, molecular inventory, scientific
+  status or history event was introduced.
+- Focused native checks and exact current-base resolver slices are reported here.
+  Root owns batch-wide final gates and immutable saving; this author does not finalize
+  or publish.
+- Nolta1994 and Gronlien2002 were read as complete indexed abstracts. Docampo2013
+  section3 provides accessible review-body context, not a claim of having read every
+  primary study it cites.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.

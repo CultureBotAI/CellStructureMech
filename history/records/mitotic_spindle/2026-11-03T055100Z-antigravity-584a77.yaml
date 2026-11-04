@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mitotic_spindle.yaml
+  slug: mitotic_spindle
+session:
+  id: 2026-11-03T055100Z-antigravity-584a77
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked alpha_beta_tubulins component into budding_yeast_spindle_microtubule_architecture
+    causal graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''budding_yeast_spindle_microtubule_architecture''
+    in data/structures/cytoskeleton/mitotic_spindle.yaml. Added node(s) [alpha_beta_tubulins]
+    and source-backed edge(s) [alpha_beta_tubulins polymerize into spindle_microtubule]. Validated
+    with write_validated_structure.'

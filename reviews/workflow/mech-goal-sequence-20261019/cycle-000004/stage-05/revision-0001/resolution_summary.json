@@ -1,0 +1,60 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 4,
+  "stage": 5,
+  "revision": 1,
+  "source_revision": "31fd33d9556ea5627b36d50ab608ccb9464f9353",
+  "stage4_source_revision": "5c642e4080ef3a0f026845843c559d3b46de8871",
+  "stage4_evidence_sha256": "898a10c8ecaef3546e1c415c2f64dbb2a33cc62161793db073d6866f7f1ca5aa",
+  "remediated_record_count": 19,
+  "findings_consumed": 13,
+  "findings_resolved": 13,
+  "findings_carried_forward": 0,
+  "verification_review_bundle": "reviews/structured/20261030T122500Z-c4-stage5-remediation-verification/review.yaml",
+  "verification_review_sha256": "92b533c9903987b0e70e1d7ebbe188fe7880d52cfa63b4379c7310a8cb29aa4f",
+  "issues": [
+    {
+      "number": 2461,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2461",
+      "action": "created",
+      "state": "closed",
+      "group_id": "hierarchy-parthood-and-subcomplex-has-part",
+      "finding_ids": [
+        "ftsqbl-complex-parent-partof-duplication",
+        "mis12-mind-outer-kinetochore-parthood",
+        "other-cytostome-plasma-membrane-parthood",
+        "ribonucleoprotein-supraspliceosomal-parent-constituent-conflation",
+        "secretion-system-sec-complex-has-part-secyeg"
+      ],
+      "resolution_commit_sha": "31fd33d9556ea5627b36d50ab608ccb9464f9353"
+    },
+    {
+      "number": 2462,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2462",
+      "action": "created",
+      "state": "closed",
+      "group_id": "subcomplex-component-types-has-part-and-evidence-notes",
+      "finding_ids": [
+        "cytoskeleton-eisosome-filament-bar-core-component-type",
+        "division-machinery-elongasome-mrec-mred-component-type",
+        "energy-complex-phycobilisome-core-type-and-has-part",
+        "membrane-organelle-subcomplex-types-and-anammoxosome-has-part",
+        "other-pas-eisosome-component-types-and-micos-has-part",
+        "ribonucleoprotein-box-cd-snornp-type-and-evidence-notes"
+      ],
+      "resolution_commit_sha": "31fd33d9556ea5627b36d50ab608ccb9464f9353"
+    },
+    {
+      "number": 2463,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2463",
+      "action": "created",
+      "state": "closed",
+      "group_id": "causal-graph-structure-node-component-ref-alignment",
+      "finding_ids": [
+        "appendage-flagellum-filament-node-and-archaeal-has-part",
+        "microcompartment-carboxysome-shell-node-component-ref"
+      ],
+      "resolution_commit_sha": "31fd33d9556ea5627b36d50ab608ccb9464f9353"
+    }
+  ]
+}

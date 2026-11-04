@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+  slug: cellular_bud_neck_split_septin_rings
+session:
+  id: 2026-11-03T055100Z-antigravity-daac65
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked septin_proteins component into bud_neck_split_septin_rings_topology causal
+    graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''bud_neck_split_septin_rings_topology''
+    in data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml. Added node(s)
+    [septin_proteins] and source-backed edge(s) [septin_proteins assemble into cellular_bud_neck_split_septin_rings].
+    Validated with write_validated_structure.'
