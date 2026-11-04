@@ -1,0 +1,1267 @@
+# Photosystem cofactor allocation and graph scope review
+
+- Review: 20261021T100138Z-photosystem-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:43:46Z
+- Finished UTC: 2026-10-21T10:01:38Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Generic identity, four protein examples and scoped function are supported. One major cofactor-allocation error and one minor graph-scope issue require curation.
+
+## Scope And Provenance
+
+Entire exact photosystem record, six native GO terms, four protein examples, three taxon identities, four cited PMID identities, all component/function assertions and every graph node/edge.
+
+Selection: Exact index3 of frozen batch17 selected-paths.json at fresh base9c0446c4c0dd4b458787c43a499e4ceab5e179a6; no old-base resolver reuse.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009521 | data/structures/energy_complex/photosystem.yaml | maintained | photosystem |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0009521 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0009521 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0009521 | 12 identifiers OK; 4 transport/skipped residuals independently resolved. |
+| Native verify | passed | True | GO:0009521 | Focused native read-only diagnostic passed; coverage is not independent membership or mechanism evidence. |
+| Native causal-graphs | passed | True | GO:0009521 | Focused native read-only diagnostic passed; coverage is not independent membership or mechanism evidence. |
+| Expression-module applicability | not_applicable | False | GO:0009521 | This record asserts structural/cofactor/photoelectron-transfer claims, not a transcriptomic module or dataset. No expression-module inference is needed. |
+| Claim-level scientific review | passed | True | GO:0009521 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0009521 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0009521 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0009521 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0009521 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0009521 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Generic photosystem and exact hierarchy
+
+identity: supported. Targets: GO:0009521.
+
+GO0009521 is an exact generic structure class with correct is-a, parthood and narrow synonym scopes. The appended oxygenic/anoxygenic language should remain broader than the two cyanobacterial exemplars. No single PSI/PSII structure is substituted for the generic identity.
+
+### Cofactor allocation within oxygenic PSI
+
+evidence: concern. Targets: GO:0009521.
+
+PsaA/PsaB are valid oxygenic type-I constituents, but their stated binding of FX,FA,FB is wrong at the declared heterodimer scope. Jordan directly places only FX between PsaA/PsaB and assigns FA/FB to PsaC. Whole-PSI electron flow through all three centers does not make all three PsaA/PsaB-bound cofactors.
+
+### Oxygenic type-II exemplar
+
+evidence: supported. Targets: GO:0009521.
+
+Umena supports the named D1/D2 reaction-center class and its P680-associated chlorophylls, pheophytins and quinones; D1 contributes most Mn4CaO5 ligands, with a direct CP43 ligand too. These named oxygenic components are examples, not a universal L/M description of all anoxygenic type-II centers. The broad generic class remains valid.
+
+### Antenna inventory and mechanistic inference
+
+evidence: supported. Targets: GO:0009521.
+
+The primary PSI structure directly resolves chlorophyll and carotenoid architecture. Its excitation-transfer and triplet-quenching discussion combines structural distances with cited functional work and qualified inference. Bacteriochlorophyll is a generic anoxygenic class possibility, not a chemical observed in Jordan's chlorophyll-a preparation.
+
+### Assembly necessity remains independent
+
+evidence: unknown. Targets: GO:0009521.
+
+Alternative photosystem types explain membership scope, but do not establish CONDITIONAL assembly necessity. Exact component-removal assembly endpoints were not established by these intact crystal structures. Likewise, ESSENTIAL for the grouped antenna-pigment class remains unverified as a class-wide formation requirement. Catalytic necessity, photoprotection, resolved membership and stable assembly are not interchangeable; no finding is made solely for an untested removal assay.
+
+### Four reviewed accessions and bounded uniqueness
+
+grounding: supported. Targets: GO:0009521.
+
+All four gene/name/status/taxon pairs are correct and the native queries support the declared single reviewed exact-node examples. The target correctly calls the accessions identity evidence. D0VWR8 is a reviewed fragment and the two PSI entries have homology-level protein-existence annotation; neither fact contradicts their bounded examples. PDB SIFTS entity mappings differ from the record PSI accessions, so the review does not promote gene-only exemplars into exact crystal-chain identity.
+
+### Primary versus annotation and abstract tiers
+
+evidence: supported. Targets: GO:0009521.
+
+Jordan2001 and Umena2011 are genuine full primary PDF sources at the recorded passages. Kamiya2003 and Kawakami2009 remain abstract/metadata here; the target's narrow assertion that UniProt attributes thylakoid location to those PMIDs is verified in each native entry. No unread-body structural detail is credited to them.
+
+### Cyanobacterial distribution and canonical preparations
+
+scope: supported. Targets: GO:0009521.
+
+The named taxa and historical vulcanus synonyms agree with native taxonomy. COMMON Cyanobacteriota is compatible with the native PSI definition and the oxygenic sources, without claiming universality or a measured prevalence. Jordan's source and PDB metadata use S.elongatus; Umena uses the native synonym T.vulcanus. Exact cultured stock equivalence is not independently reconstructed.
+
+### Scoped electron transport
+
+scope: supported. Targets: GO:0009521.
+
+The function already restricts the P700/ferredoxin path to oxygenic/cyanobacterial PSI and explicitly excludes a universal bacterial type-I interpretation. This is supported. Coupling to ATP/reductant production belongs to the photosynthetic electron-transport system; neither PSI alone nor PSII alone is claimed as a complete ATP-synthesis enzyme.
+
+### Membership and output versus causal path
+
+graph: concern. Targets: GO:0009521.
+
+All six nodes and five edges were inspected; two gene/protein nodes correctly inherit all four accessions. The graph contains three constituent edges, a membrane parthood edge and a whole-structure output. Correcting the PsaC cofactor allocation does not turn these relationships into a represented charge-separation/transfer causal path. MECHANISTIC therefore overstates its current explanatory detail.
+
+### Bounded corrections
+
+completeness: supported. Targets: GO:0009521.
+
+The PsaC issue is an affirmative wrong binding allocation, not an automatic demand for an optional missing component row. No full accessory inventory, extra family identifier, image or measured-property field is required merely because it is absent. The whole maintained target and all declared stable identifiers/source identities were checked.
+
+## Findings
+
+### F1: Assign FA and FB to PsaC rather than the PsaA/PsaB heterodimer
+
+major / open / confirmed; issue key: photosystem-psaa-psab-terminal-cluster-allocation.
+
+The type-I core role and duplicated graph descriptions say the PsaA/PsaB heterodimer binds FX,FA,FB. Jordan2001 pp911 and913 explicitly place FA/FB in the separate stromal PsaC subunit, while FX is jointly ligated by PsaA/PsaB. The full PSI electron-transfer sequence is correct but has been conflated with the binding inventory of one component.
+
+### F2: Align graph scope with the represented relationships
+
+minor / open / confirmed; issue key: photosystem-membership-output-graph-scope.
+
+The FUNCTION graph is marked MECHANISTIC but consists of constituent/compartment parthood and photosystem-to-electron-transport output. The process description names P700 excitation and electron transfer, but the graph does not represent a directed causal transition among those events. Preserve the supported summary as NONMECHANISTIC or encode a bounded source-supported transfer path.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Narrow the PsaA/PsaB binding description to P700 and its actual acceptors, including shared FX; identify FA/FB as PsaC-bound when describing the complete PSI electron path. A new component row is optional, but the existing assignment must be corrected.
+
+- Check the correction against Jordan Polypeptide subunits p911 and Electron transfer chain p913.
+- Keep full-complex electron-transfer order separate from protein-specific coordination and reconcile all duplicated role text.
+- Apply only through separately authorized curation with guarded writing/history and native focused validation.
+
+### A2
+
+Retain supported membership and the existing oxygenic-PSI function restriction, and either narrow the scope label or represent the relevant charge-separation/transfer steps with correct subunit/cofactor actors.
+
+- Do not turn every generic photosystem into the same oxygenic PSI mechanism.
+- A source-supported causal transition is sufficient; no atomistic simulation is required.
+- Apply only through separately authorized curation with guarded writing/history and native focused validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/energy_complex/photosystem.yaml; Entire maintained YAML, all definition/component/example/taxon/function/evidence/graph/history fields | context_only | The complete target was personally read. It is the generic photosystem class, not a single PSI or PSII preparation. No image, measured-property table, dataset, verbatim snippet or neighboring maintained record informs this review. |
+| policy | docs/CURATION.md; Native evidence/identity rules and schema EssentialityEnum; frozen review checklist | context_only | Membership, exact molecular binding, class variation, assembly necessity and catalytic activity are separate questions. No optional-empty field is automatically a defect. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Source-supported directed paths and graph scope | context_only | A membership/compartment/output summary does not independently resolve a causal transition; atomistic detail is not required. |
+| photosystem-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009521,GO:0098796,GO:0034357,GO:0009522,GO:0009523,GO:0009767; All six results id/name/isObsolete/definition/synonyms; relevant children relation values, preserving their direction. | supports | Six active native terms verify exact generic GO0009521, its two narrow reaction-center synonyms, is_a GO0098796 and part_of GO0034357 via the actual inverse children relations. PSI and PSII are is_a children. PSI/PSII definitions explicitly distinguish oxygenic and anoxygenic contexts; GO0009767 denotes the light-driven electron-transport process. The native generic definition itself includes the historical archaeal example wording; no new archaeal experiment is inferred. |
+| photosystem-agent-jordan2001-pdf | https://dosequis.colorado.edu/Courses/InsaneMembrane/papers/PS1-PSII-LHC%27s/photosystem1.pdf; Printed pp909–916: title/abstract, Introduction and Structure determination; Overall architecture; Polypeptide subunits p911 and Fig2caption; Electron transfer chain p913 and Fig4caption; Core antenna/Carotenoids pp913–915; comparison/concluding prose p916. Detailed supplement and raw coordinates/pixels were not reanalyzed. | refutes | Genuine Jordan et al.2001 publisher PDF hosted by the University of Colorado. The primary cyanobacterial trimer structure resolves PsaA/PsaB, pigments and electron-transfer cofactors. Polypeptide subunits explicitly assigns FA/FB to PsaC; Electron transfer chain assigns FX jointly to PsaA/PsaB. The 90 antenna chlorophylls and22 carotenoids are structural observations; transfer/quenching interpretations incorporate prior functional literature and qualified structural inference. This is not a class-wide assembly-depletion experiment. |
+| photosystem-agent-umena2011-pdf | https://chemie.uni-muenchen.de/ac/kluefers/homepage/L/bac/oec_2011.pdf; Printed pp55–56 Overall structure and Structure of Mn4CaO5 cluster; pp58–59 Chlorophylls/beta-carotenes, Plastoquinones and Fig5caption; Methods Summary p59 and online Methods (PDFpage7), Purification/crystallization, Data collection and cofactor modeling. | supports | Genuine Umena et al.2011 publisher PDF hosted by LMU, reused byte-for-byte with its original access time. Purified/recrystallized T.vulcanus PSII supports D1/D2, reaction-center chlorophylls, pheophytins, QA/QB and the Mn4CaO5 center. D1 supplies most metal-cluster ligands; CP43-Glu354 is also a direct ligand. This structure and active preparation do not by themselves establish assembly necessity for every pigment class. |
+| photosystem-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=EXT_ID%3A11418848%20OR%20EXT_ID%3A21499260%20OR%20EXT_ID%3A12518057%20OR%20EXT_ID%3A19433803; All four resultList.result exact id/DOI/title/author fields and full abstractText. | supports | Exact PMID11418848/21499260/12518057/19433803 return the expected Jordan2001, Umena2011, Kamiya/Shen2003 and Kawakami2009 identities and abstracts. The older PSII papers are credited only at this abstract/bibliographic tier here; their detailed methods or all body claims are not reconstructed from metadata. |
+| photosystem-agent-jordan2001-publisher | https://www.nature.com/articles/35082000; Article heading, bibliographic metadata, abstract and access section; no full-body attestation. | context_only | Native publisher HTML is readable for Jordan2001 identity and abstract but presents subscription access rather than the inspected full scientific body. The independent university-hosted PDF supplies the full-body evidence under its own hash. |
+| photosystem-agent-P0A406 | https://rest.uniprot.org/uniprotkb/P0A406.json; primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence; FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence references. | supports | Native primary reviewed Swiss-Prot entry P0A406 verifies psaA, label Photosystem I P700 chlorophyll a apoprotein A1, and own organism32046. Native FUNCTION distinguishes PsaA/PsaB binding of P700,A0,A1,FX from the full PSI transfer sequence through FA/FB. Protein existence is inferred from homology; the entry is identity evidence, not an independently tested crystal chain. |
+| photosystem-agent-P0A408 | https://rest.uniprot.org/uniprotkb/P0A408.json; primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence; FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence references. | supports | Native primary reviewed Swiss-Prot entry P0A408 verifies psaB, label Photosystem I P700 chlorophyll a apoprotein A2, and own organism32046. Native FUNCTION similarly separates direct PsaA/PsaB acceptors from the complete PSI electron path. Protein existence is inferred from homology; the accession is an identity exemplar. |
+| photosystem-agent-P51765 | https://rest.uniprot.org/uniprotkb/P51765.json; primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence; FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence references. | supports | Native primary reviewed Swiss-Prot entry P51765 verifies psbA, label Photosystem II protein D1, and own organism32053. SUBCELLULAR LOCATION contains ECO0000269 links to the three PMIDs copied by the target. Cofactor annotation says D1 provides most Mn4CaO5 ligands. This entry is marked Precursor. |
+| photosystem-agent-D0VWR8 | https://rest.uniprot.org/uniprotkb/D0VWR8.json; primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence; FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence references. | supports | Native primary reviewed Swiss-Prot entry D0VWR8 verifies psbD, label Photosystem II D2 protein, and own organism32053. SUBCELLULAR LOCATION contains the three experimental PMID attributions copied by the target. The reviewed entry is marked Fragment, which does not contradict the identity-only example or imply a complete experimental polypeptide sequence. |
+| photosystem-agent-tax-1117 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117; Own taxId/scientificName/rank/otherNames/lineage values. | supports | Native phylum1117 is Cyanobacteriota, with cyanobacteria/Oxygenic photosynthetic bacteria naming. Taxonomy identity is not a measured prevalence estimate. |
+| photosystem-agent-tax-32046 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32046; Own taxId/scientificName/rank/otherNames/lineage values. | supports | Native species32046 is Synechococcus elongatus. This verifies the declared species label; no modern strain identity beyond the primary/deposit evidence is inferred. |
+| photosystem-agent-tax-32053 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32053; Own taxId/scientificName/rank/otherNames/lineage values. | supports | Native species32053 is Thermostichus vulcanus and explicitly includes Thermosynechococcus vulcanus and Synechococcus vulcanus as synonyms. The historical paper name is not a taxon-label error. |
+| photosystem-agent-psi-unique | https://rest.uniprot.org/uniprotkb/search?query=%28reviewed%3Atrue%29%20AND%20%28organism_id%3A32046%29%20AND%20%28gene_exact%3ApsaA%20OR%20gene_exact%3ApsaB%29&amp;format=json&amp;size=500; All returned results own primary accession/gene/taxon/status; native query and result count. | supports | The exact-species reviewed query returns two entries: P0A406 with primary gene psaA and P0A408 with primary gene psaB. It supports one reviewed exact-node entry per declared symbol. |
+| photosystem-agent-uniprot-unique | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20taxonomy_id%3A32053%20AND%20%28gene_exact%3ApsbA%20OR%20gene_exact%3ApsbD%29&amp;format=json&amp;size=100; All returned results own primary accession/gene/taxon/status; native query and result count. | supports | The reviewed PSII query returns P51765/psbA and D0VWR8/psbD, each at tax32053. Their own gene/taxon tokens agree, supporting the target uniqueness rationale at this bounded scope. |
+| photosystem-agent-pdb-1jb0 | https://data.rcsb.org/rest/v1/core/entry/1JB0; rcsb_primary_citation; struct title; experimental method and rcsb_entry_info.resolution_combined. | supports | Native PDB entry1JB0 links the exact Jordan2001 primary PMID/DOI and reports the2.5-A diffraction structure. This verifies deposited source identity, without an independent coordinate or assembly reanalysis. |
+| photosystem-agent-pdb-1jb0-1 | https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/1; rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers. | supports | Native deposited entity1 identifies PsaA/A1; chainA; deposited source tax32046; SIFTS cross-reference P0A405. Deposit/source mappings are reported as database metadata, not proof that the record gene-only exemplar is the exact crystallized stock. |
+| photosystem-agent-pdb-1jb0-2 | https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/2; rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers. | supports | Native deposited entity2 identifies PsaB/A2; chainB; deposited source tax32046; SIFTS cross-reference P0A407. Deposit/source mappings are reported as database metadata, not proof that the record gene-only exemplar is the exact crystallized stock. |
+| photosystem-agent-pdb-1jb0-3 | https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/3; rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers. | supports | Native deposited entity3 identifies PsaC iron-sulfur-center protein; chainC; deposited source tax32046; SIFTS cross-reference P0A415. Deposit/source mappings are reported as database metadata, not proof that the record gene-only exemplar is the exact crystallized stock. |
+| access-kamiya2003-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC140893/fullTextXML; Exact retained native response status/body | context_only | HTTP500 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kamiya2003-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC140893/; Exact retained native response status/body | context_only | HTTP200 returned a recaptcha challenge, not paper prose. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kamiya2003-render | https://europepmc.org/articles/PMC140893?pdf=render; Exact retained native response status/body | context_only | HTTP403 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kamiya2003-s3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC140893.1/PMC140893.1.xml; Exact retained native response status/body | context_only | HTTP404 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kawakami2009-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2688974/fullTextXML; Exact retained native response status/body | context_only | HTTP500 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kawakami2009-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC2688974/; Exact retained native response status/body | context_only | HTTP200 returned a recaptcha challenge, not paper prose. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kawakami2009-render | https://europepmc.org/articles/PMC2688974?pdf=render; Exact retained native response status/body | context_only | HTTP403 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| access-kawakami2009-s3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC2688974.1/PMC2688974.1.xml; Exact retained native response status/body | context_only | HTTP404 returned no readable primary body on this route. This is a route-specific accessibility limit, not global absence or a biological finding. |
+| schema-result | just validate data/structures/energy_complex/photosystem.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/energy_complex/photosystem.yaml |
+| strict-result | just validate-strict data/structures/energy_complex/photosystem.yaml --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/energy_complex/photosystem.yaml --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/energy_complex/photosystem.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 12 of16 collected target identifiers returned OK in this fresh base resolver run. Residuals: PMID:11418848: UNREACHABLE; resolved by evidence photosystem-agent-epmc; PMID:12518057: UNREACHABLE; resolved by evidence photosystem-agent-epmc; PMID:19433803: UNREACHABLE; resolved by evidence photosystem-agent-epmc; PMID:21499260: UNREACHABLE; resolved by evidence photosystem-agent-epmc. Source-native identity checked separately. |
+| native-verify | /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml --verify; Timestamped native command receipt and captured focused log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml --causal-graphs; Timestamped native command receipt and captured focused log | supports | data/structures/energy_complex/photosystem.yaml  (GO:0009521)<br>  photosystem_mechanism	type_i_reaction_center_core	COVERED	-&gt;type_i_reaction_center_core (UniProtKB:P0A406, UniProtKB:P0A408)<br>  photosystem_mechanism	type_ii_reaction_center_core	COVERED	-&gt;type_ii_reaction_center_core (UniProtKB:P51765, UniProtKB:D0VWR8)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The fresh expanded-main resolver slice contains16 target identifiers:12 OK and four PMID HTTP414 transport failures. Each exact PMID/title/DOI is independently verified in the retained native EuropePMC core response; identifier identity does not establish full-body support.
+- Jordan2001 was read as genuine full PDF main-text/caption evidence at pp909–916; detailed supplementary methods and raw diffraction/coordinates were not reanalyzed. Umena2011 was read at the specified main-body/caption and online-Methods sections; no supplemental data or image pixels were independently reanalyzed.
+- Kamiya2003 and Kawakami2009 are limited to native exact metadata/abstracts and the directly verified UniProt location citation attribution. Retained routes returned EuropePMC500, PMC challenge200 and rendered-PDF403; new native S3 attempts returned404. These route failures do not establish global unreadability or a scientific defect.
+- Species-specific oxygenic crystal preparations do not establish every anoxygenic or archaeal photosystem architecture, every family accessory member, or exact class-wide assembly necessity. The broad native definition and narrow exemplars are kept distinct.
+- All14 local source.inputs were frozen by native inspect before assessment and rechecked. No neighboring maintained record, generated page or prior review verdict was used as scientific evidence. Reused external raw/meta files preserve their original UTCZ and bytes.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Unsaved draft only; root owns persistence, finalization, final shared gates and shared indexes.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100138Z-photosystem-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Photosystem cofactor allocation and graph scope review
+started_at: '2026-10-21T09:43:46Z'
+finished_at: '2026-10-21T10:01:38Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Generic identity, four protein examples and scoped function are supported.
+  One major cofactor-allocation error and one minor graph-scope issue require curation.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/photosystem.yaml
+    sha256: ae1b5fe34147a0a1464e24943d5d8e1aca5cdd14e737af3ab0564fecabe65d35
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009521
+  path: data/structures/energy_complex/photosystem.yaml
+  label: photosystem
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained scientific record
+scope:
+  description: Entire exact photosystem record, six native GO terms, four protein
+    examples, three taxon identities, four cited PMID identities, all component/function
+    assertions and every graph node/edge.
+  selection: Exact index3 of frozen batch17 selected-paths.json at fresh base9c0446c4c0dd4b458787c43a499e4ceab5e179a6;
+    no old-base resolver reuse.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009521
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just validate data/structures/energy_complex/photosystem.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just validate-strict data/structures/energy_complex/photosystem.yaml --out
+    /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  summary: 12 identifiers OK; 4 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - photosystem-agent-epmc
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native read-only diagnostic passed; coverage is not independent
+    membership or mechanism evidence.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native read-only diagnostic passed; coverage is not independent
+    membership or mechanism evidence.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0009521
+  summary: This record asserts structural/cofactor/photoelectron-transfer claims,
+    not a transcriptomic module or dataset. No expression-module inference is needed.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - photosystem-agent-epmc
+  - photosystem-agent-jordan2001-publisher
+  - photosystem-agent-P0A406
+  - photosystem-agent-P0A408
+  - photosystem-agent-P51765
+  - photosystem-agent-D0VWR8
+  - photosystem-agent-tax-1117
+  - photosystem-agent-tax-32046
+  - photosystem-agent-tax-32053
+  - photosystem-agent-psi-unique
+  - photosystem-agent-uniprot-unique
+  - photosystem-agent-pdb-1jb0
+  - photosystem-agent-pdb-1jb0-1
+  - photosystem-agent-pdb-1jb0-2
+  - photosystem-agent-pdb-1jb0-3
+  - access-kamiya2003-jats
+  - access-kamiya2003-pmc
+  - access-kamiya2003-render
+  - access-kamiya2003-s3
+  - access-kawakami2009-jats
+  - access-kawakami2009-pmc
+  - access-kawakami2009-render
+  - access-kawakami2009-s3
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009521
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/photosystem.yaml
+  locator: Entire maintained YAML, all definition/component/example/taxon/function/evidence/graph/history
+    fields
+  accessed_at: '2026-10-21T09:52:01Z'
+  support: context_only
+  summary: The complete target was personally read. It is the generic photosystem
+    class, not a single PSI or PSII preparation. No image, measured-property table,
+    dataset, verbatim snippet or neighboring maintained record informs this review.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Native evidence/identity rules and schema EssentialityEnum; frozen review
+    checklist
+  accessed_at: '2026-10-21T09:52:01Z'
+  support: context_only
+  summary: Membership, exact molecular binding, class variation, assembly necessity
+    and catalytic activity are separate questions. No optional-empty field is automatically
+    a defect.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Source-supported directed paths and graph scope
+  accessed_at: '2026-10-21T09:52:01Z'
+  support: context_only
+  summary: A membership/compartment/output summary does not independently resolve
+    a causal transition; atomistic detail is not required.
+- evidence_id: photosystem-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009521,GO:0098796,GO:0034357,GO:0009522,GO:0009523,GO:0009767
+  locator: All six results id/name/isObsolete/definition/synonyms; relevant children
+    relation values, preserving their direction.
+  accessed_at: '2026-10-21T09:45:40.324844Z'
+  support: supports
+  summary: Six active native terms verify exact generic GO0009521, its two narrow
+    reaction-center synonyms, is_a GO0098796 and part_of GO0034357 via the actual
+    inverse children relations. PSI and PSII are is_a children. PSI/PSII definitions
+    explicitly distinguish oxygenic and anoxygenic contexts; GO0009767 denotes the
+    light-driven electron-transport process. The native generic definition itself
+    includes the historical archaeal example wording; no new archaeal experiment is
+    inferred.
+  snapshot_sha256: ea7b23d65e53a895f8687c3945434aa4533be485a3a0af42b41f8649eb5f8a36
+- evidence_id: photosystem-agent-jordan2001-pdf
+  kind: primary_source
+  reference: https://dosequis.colorado.edu/Courses/InsaneMembrane/papers/PS1-PSII-LHC%27s/photosystem1.pdf
+  locator: 'Printed pp909–916: title/abstract, Introduction and Structure determination;
+    Overall architecture; Polypeptide subunits p911 and Fig2caption; Electron transfer
+    chain p913 and Fig4caption; Core antenna/Carotenoids pp913–915; comparison/concluding
+    prose p916. Detailed supplement and raw coordinates/pixels were not reanalyzed.'
+  accessed_at: '2026-10-21T09:45:41.000857Z'
+  support: refutes
+  summary: Genuine Jordan et al.2001 publisher PDF hosted by the University of Colorado.
+    The primary cyanobacterial trimer structure resolves PsaA/PsaB, pigments and electron-transfer
+    cofactors. Polypeptide subunits explicitly assigns FA/FB to PsaC; Electron transfer
+    chain assigns FX jointly to PsaA/PsaB. The 90 antenna chlorophylls and22 carotenoids
+    are structural observations; transfer/quenching interpretations incorporate prior
+    functional literature and qualified structural inference. This is not a class-wide
+    assembly-depletion experiment.
+  snapshot_sha256: 9c4721ce9a022343cb7ec78458b73961c0858c73b82bf981f1b45fcc5447149a
+- evidence_id: photosystem-agent-umena2011-pdf
+  kind: primary_source
+  reference: https://chemie.uni-muenchen.de/ac/kluefers/homepage/L/bac/oec_2011.pdf
+  locator: Printed pp55–56 Overall structure and Structure of Mn4CaO5 cluster; pp58–59
+    Chlorophylls/beta-carotenes, Plastoquinones and Fig5caption; Methods Summary p59
+    and online Methods (PDFpage7), Purification/crystallization, Data collection and
+    cofactor modeling.
+  accessed_at: '2026-10-21T08:52:47.347624Z'
+  support: supports
+  summary: Genuine Umena et al.2011 publisher PDF hosted by LMU, reused byte-for-byte
+    with its original access time. Purified/recrystallized T.vulcanus PSII supports
+    D1/D2, reaction-center chlorophylls, pheophytins, QA/QB and the Mn4CaO5 center.
+    D1 supplies most metal-cluster ligands; CP43-Glu354 is also a direct ligand. This
+    structure and active preparation do not by themselves establish assembly necessity
+    for every pigment class.
+  snapshot_sha256: 29e5d7be00bc7ccf1acf26fe3276d2176b6fe92fe5736280637602b52623f693
+- evidence_id: photosystem-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=EXT_ID%3A11418848%20OR%20EXT_ID%3A21499260%20OR%20EXT_ID%3A12518057%20OR%20EXT_ID%3A19433803
+  locator: All four resultList.result exact id/DOI/title/author fields and full abstractText.
+  accessed_at: '2026-10-21T09:45:40.326757Z'
+  support: supports
+  summary: Exact PMID11418848/21499260/12518057/19433803 return the expected Jordan2001,
+    Umena2011, Kamiya/Shen2003 and Kawakami2009 identities and abstracts. The older
+    PSII papers are credited only at this abstract/bibliographic tier here; their
+    detailed methods or all body claims are not reconstructed from metadata.
+  snapshot_sha256: eb70ed97704262ed7c2637d4a22d233516f454481c6c9462ba1dcbd5c8573136
+- evidence_id: photosystem-agent-jordan2001-publisher
+  kind: database
+  reference: https://www.nature.com/articles/35082000
+  locator: Article heading, bibliographic metadata, abstract and access section; no
+    full-body attestation.
+  accessed_at: '2026-10-21T09:45:40.992529Z'
+  support: context_only
+  summary: Native publisher HTML is readable for Jordan2001 identity and abstract
+    but presents subscription access rather than the inspected full scientific body.
+    The independent university-hosted PDF supplies the full-body evidence under its
+    own hash.
+  snapshot_sha256: 1df89a24ee6d4adf02a78b96b379eb692ef5736ef3af2ebba581e302685bfefb
+- evidence_id: photosystem-agent-P0A406
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A406.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence;
+    FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence
+    references.
+  accessed_at: '2026-10-21T09:45:40.325680Z'
+  support: supports
+  summary: Native primary reviewed Swiss-Prot entry P0A406 verifies psaA, label Photosystem
+    I P700 chlorophyll a apoprotein A1, and own organism32046. Native FUNCTION distinguishes
+    PsaA/PsaB binding of P700,A0,A1,FX from the full PSI transfer sequence through
+    FA/FB. Protein existence is inferred from homology; the entry is identity evidence,
+    not an independently tested crystal chain.
+  snapshot_sha256: 9cd0860c569373f26d108ec33b53494f110ea9ab2c065d255bae891fc91355fb
+- evidence_id: photosystem-agent-P0A408
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A408.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence;
+    FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence
+    references.
+  accessed_at: '2026-10-21T09:45:40.326056Z'
+  support: supports
+  summary: Native primary reviewed Swiss-Prot entry P0A408 verifies psaB, label Photosystem
+    I P700 chlorophyll a apoprotein A2, and own organism32046. Native FUNCTION similarly
+    separates direct PsaA/PsaB acceptors from the complete PSI electron path. Protein
+    existence is inferred from homology; the accession is an identity exemplar.
+  snapshot_sha256: b3cd834e3b314a930603c5902dd69136ae1330b299dfb997a5c7a585969ac366
+- evidence_id: photosystem-agent-P51765
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P51765.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence;
+    FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence
+    references.
+  accessed_at: '2026-10-21T08:51:24.953174Z'
+  support: supports
+  summary: Native primary reviewed Swiss-Prot entry P51765 verifies psbA, label Photosystem
+    II protein D1, and own organism32053. SUBCELLULAR LOCATION contains ECO0000269
+    links to the three PMIDs copied by the target. Cofactor annotation says D1 provides
+    most Mn4CaO5 ligands. This entry is marked Precursor.
+  snapshot_sha256: 04887fcce267947732efc1a8148837c6691f19aedf33874357ac93e63338b2f7
+- evidence_id: photosystem-agent-D0VWR8
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/D0VWR8.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism/proteinExistence;
+    FUNCTION/COFACTOR/SUBUNIT/SUBCELLULAR LOCATION comments and their own evidence
+    references.
+  accessed_at: '2026-10-21T08:51:24.958291Z'
+  support: supports
+  summary: Native primary reviewed Swiss-Prot entry D0VWR8 verifies psbD, label Photosystem
+    II D2 protein, and own organism32053. SUBCELLULAR LOCATION contains the three
+    experimental PMID attributions copied by the target. The reviewed entry is marked
+    Fragment, which does not contradict the identity-only example or imply a complete
+    experimental polypeptide sequence.
+  snapshot_sha256: 3b383aa42a19d3fd926532422025ccb924def2c56cf45f212de3d50786155663
+- evidence_id: photosystem-agent-tax-1117
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117
+  locator: Own taxId/scientificName/rank/otherNames/lineage values.
+  accessed_at: '2026-10-21T08:51:23.722750Z'
+  support: supports
+  summary: Native phylum1117 is Cyanobacteriota, with cyanobacteria/Oxygenic photosynthetic
+    bacteria naming. Taxonomy identity is not a measured prevalence estimate.
+  snapshot_sha256: 0462d61ee879faf0de43deb3472da6e0fe29fdf63cc068591b0ca652eb921c4d
+- evidence_id: photosystem-agent-tax-32046
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32046
+  locator: Own taxId/scientificName/rank/otherNames/lineage values.
+  accessed_at: '2026-10-21T09:45:40.325535Z'
+  support: supports
+  summary: Native species32046 is Synechococcus elongatus. This verifies the declared
+    species label; no modern strain identity beyond the primary/deposit evidence is
+    inferred.
+  snapshot_sha256: b7aac872a40661f808e3fa17a661bb4b29ea7c857fe30e1b636be882fed66e01
+- evidence_id: photosystem-agent-tax-32053
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32053
+  locator: Own taxId/scientificName/rank/otherNames/lineage values.
+  accessed_at: '2026-10-21T08:51:23.686814Z'
+  support: supports
+  summary: Native species32053 is Thermostichus vulcanus and explicitly includes Thermosynechococcus
+    vulcanus and Synechococcus vulcanus as synonyms. The historical paper name is
+    not a taxon-label error.
+  snapshot_sha256: fc530968cc8ae8239a8d2d36338d08aa9d41b347fa96df0ad41db960f4a7fbb9
+- evidence_id: photosystem-agent-psi-unique
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28reviewed%3Atrue%29%20AND%20%28organism_id%3A32046%29%20AND%20%28gene_exact%3ApsaA%20OR%20gene_exact%3ApsaB%29&format=json&size=500
+  locator: All returned results own primary accession/gene/taxon/status; native query
+    and result count.
+  accessed_at: '2026-10-21T09:45:41.340142Z'
+  support: supports
+  summary: 'The exact-species reviewed query returns two entries: P0A406 with primary
+    gene psaA and P0A408 with primary gene psaB. It supports one reviewed exact-node
+    entry per declared symbol.'
+  snapshot_sha256: 79044f1656731c11740051a53e31bc3f626d9044be97abfe11f7a21bf0a240b9
+  search_scope: Remote UniProt reviewed:true AND organism_id:32046 AND (gene_exact:psaA
+    OR gene_exact:psaB), size500; two results at the exact species node. No exhaustive
+    all-strain or all-photosystem inventory claim; ignored local files are not applicable.
+- evidence_id: photosystem-agent-uniprot-unique
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20taxonomy_id%3A32053%20AND%20%28gene_exact%3ApsbA%20OR%20gene_exact%3ApsbD%29&format=json&size=100
+  locator: All returned results own primary accession/gene/taxon/status; native query
+    and result count.
+  accessed_at: '2026-10-21T08:52:48.817599Z'
+  support: supports
+  summary: The reviewed PSII query returns P51765/psbA and D0VWR8/psbD, each at tax32053.
+    Their own gene/taxon tokens agree, supporting the target uniqueness rationale
+    at this bounded scope.
+  snapshot_sha256: e384401ab283e369cbd5420ec28f61a00684b2868f42cb5b9b7a7bffb1dea974
+  search_scope: Remote UniProt reviewed:true AND taxonomy_id:32053 AND (gene_exact:psbA
+    OR gene_exact:psbD), size100; total_results2 with no pagination link, both own
+    taxon32053. Original batch14 receipt retained; ignored local files are not applicable.
+- evidence_id: photosystem-agent-pdb-1jb0
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/1JB0
+  locator: rcsb_primary_citation; struct title; experimental method and rcsb_entry_info.resolution_combined.
+  accessed_at: '2026-10-21T09:45:41.168849Z'
+  support: supports
+  summary: Native PDB entry1JB0 links the exact Jordan2001 primary PMID/DOI and reports
+    the2.5-A diffraction structure. This verifies deposited source identity, without
+    an independent coordinate or assembly reanalysis.
+  snapshot_sha256: 0607776f9e475c0c64d3ebbc906824cb850d0a5c61028e73d48995c2b4419cf2
+- evidence_id: photosystem-agent-pdb-1jb0-1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/1
+  locator: rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers.
+  accessed_at: '2026-10-21T09:45:41.174962Z'
+  support: supports
+  summary: Native deposited entity1 identifies PsaA/A1; chainA; deposited source tax32046;
+    SIFTS cross-reference P0A405. Deposit/source mappings are reported as database
+    metadata, not proof that the record gene-only exemplar is the exact crystallized
+    stock.
+  snapshot_sha256: 9a10a5c9b737e7fc8dfd8242e90dc461aefe82846ce1df8eedae5bbba7270ab4
+- evidence_id: photosystem-agent-pdb-1jb0-2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/2
+  locator: rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers.
+  accessed_at: '2026-10-21T09:45:41.254436Z'
+  support: supports
+  summary: Native deposited entity2 identifies PsaB/A2; chainB; deposited source tax32046;
+    SIFTS cross-reference P0A407. Deposit/source mappings are reported as database
+    metadata, not proof that the record gene-only exemplar is the exact crystallized
+    stock.
+  snapshot_sha256: cd340e49666df999802b0ef3018d9dff60161b6de1fed613050ce2d3523be0cd
+- evidence_id: photosystem-agent-pdb-1jb0-3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1JB0/3
+  locator: rcsb_polymer_entity.pdbx_description; rcsb_entity_source_organism; rcsb_polymer_entity_container_identifiers.
+  accessed_at: '2026-10-21T09:45:41.260886Z'
+  support: supports
+  summary: Native deposited entity3 identifies PsaC iron-sulfur-center protein; chainC;
+    deposited source tax32046; SIFTS cross-reference P0A415. Deposit/source mappings
+    are reported as database metadata, not proof that the record gene-only exemplar
+    is the exact crystallized stock.
+  snapshot_sha256: 03799ab2ba71f778bf07f594acff169c490d4ee70507869fc1ff01044807ceb6
+- evidence_id: access-kamiya2003-jats
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC140893/fullTextXML
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:52:47.348353Z'
+  support: context_only
+  summary: HTTP500 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: 4ef2bf528c21616cb9489c3e5241fe0116b7d440879d01e60e5ce44f5c4d5527
+- evidence_id: access-kamiya2003-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC140893/
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:56:47.112835Z'
+  support: context_only
+  summary: HTTP200 returned a recaptcha challenge, not paper prose. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: d3ac823f97e3da92325df67af31414c258c180f4b753e99a8c1799ad890c5e2a
+- evidence_id: access-kamiya2003-render
+  kind: authority
+  reference: https://europepmc.org/articles/PMC140893?pdf=render
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:58:56.272155Z'
+  support: context_only
+  summary: HTTP403 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: 2635156a17e9af9120b4786e9eddd8b62e7f4113970eb5fed2604732dc64cdda
+- evidence_id: access-kamiya2003-s3
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC140893.1/PMC140893.1.xml
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T09:46:54.243078Z'
+  support: context_only
+  summary: HTTP404 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: 695e4581229d0bf9ca73844f2f9921df97147960429c331f6dc73e1db1c89355
+- evidence_id: access-kawakami2009-jats
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2688974/fullTextXML
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:52:47.348261Z'
+  support: context_only
+  summary: HTTP500 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: ec24667680f9cd5fdaad50ad404d43c9d425e04095104accbd1f08f0d014f30b
+- evidence_id: access-kawakami2009-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2688974/
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:56:47.113496Z'
+  support: context_only
+  summary: HTTP200 returned a recaptcha challenge, not paper prose. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: 0994fb543f66de308a1222915d898ae2098134864c45f4a4dfd62fdaa4f9b97e
+- evidence_id: access-kawakami2009-render
+  kind: authority
+  reference: https://europepmc.org/articles/PMC2688974?pdf=render
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T08:58:56.272867Z'
+  support: context_only
+  summary: HTTP403 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: 31537bb1b919487be3ff40b0e44307c10acb3c9f692d54094f4663df9987c3ca
+- evidence_id: access-kawakami2009-s3
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2688974.1/PMC2688974.1.xml
+  locator: Exact retained native response status/body
+  accessed_at: '2026-10-21T09:46:54.243858Z'
+  support: context_only
+  summary: HTTP404 returned no readable primary body on this route. This is a route-specific
+    accessibility limit, not global absence or a biological finding.
+  snapshot_sha256: adc5f1f741b693c8421c5d1f7e9e5febe72f2590f28f17d615d2d0d23a55368c
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/photosystem.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:43:48Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/photosystem.yaml'
+  snapshot_sha256: 46bedae3e16c0a208ff0406f4fe5be985d4498ea040fabe8efb069a17cf4d87b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/photosystem.yaml
+    --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:43:50Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/photosystem.yaml\
+    \ --out /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch17-20261021-vub_b2nx/photosystem-strict.tsv"
+  snapshot_sha256: 67e24316982a7c31dc38bb16b75f36b874c61c3bd0c9f0c7453f3c1feb864a29
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/photosystem.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T09:52:01Z'
+  support: supports
+  summary: '12 of16 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: PMID:11418848: UNREACHABLE; resolved by evidence photosystem-agent-epmc;
+    PMID:12518057: UNREACHABLE; resolved by evidence photosystem-agent-epmc; PMID:19433803:
+    UNREACHABLE; resolved by evidence photosystem-agent-epmc; PMID:21499260: UNREACHABLE;
+    resolved by evidence photosystem-agent-epmc. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml
+    --verify
+  locator: Timestamped native command receipt and captured focused log
+  accessed_at: '2026-10-21T09:46:57.989397Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch17-20261021-vub_b2nx/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/photosystem.yaml
+    --causal-graphs
+  locator: Timestamped native command receipt and captured focused log
+  accessed_at: '2026-10-21T09:47:01.264188Z'
+  support: supports
+  summary: "data/structures/energy_complex/photosystem.yaml  (GO:0009521)\n  photosystem_mechanism\t\
+    type_i_reaction_center_core\tCOVERED\t->type_i_reaction_center_core (UniProtKB:P0A406,\
+    \ UniProtKB:P0A408)\n  photosystem_mechanism\ttype_ii_reaction_center_core\tCOVERED\t\
+    ->type_ii_reaction_center_core (UniProtKB:P51765, UniProtKB:D0VWR8)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     2  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     2  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 53824867a2aae786f4735345cb9c129de0b95944ab99f592d60014a87fcd2a37
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic photosystem and exact hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: GO0009521 is an exact generic structure class with correct is-a, parthood
+    and narrow synonym scopes. The appended oxygenic/anoxygenic language should remain
+    broader than the two cyanobacterial exemplars. No single PSI/PSII structure is
+    substituted for the generic identity.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Cofactor allocation within oxygenic PSI
+  outcome: concern
+  target_ids:
+  - GO:0009521
+  summary: PsaA/PsaB are valid oxygenic type-I constituents, but their stated binding
+    of FX,FA,FB is wrong at the declared heterodimer scope. Jordan directly places
+    only FX between PsaA/PsaB and assigns FA/FB to PsaC. Whole-PSI electron flow through
+    all three centers does not make all three PsaA/PsaB-bound cofactors.
+  evidence_ids:
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-P0A406
+  - photosystem-agent-P0A408
+  - photosystem-agent-pdb-1jb0-3
+  - record
+- assessment_id: psii
+  area: evidence
+  topic: Oxygenic type-II exemplar
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: Umena supports the named D1/D2 reaction-center class and its P680-associated
+    chlorophylls, pheophytins and quinones; D1 contributes most Mn4CaO5 ligands, with
+    a direct CP43 ligand too. These named oxygenic components are examples, not a
+    universal L/M description of all anoxygenic type-II centers. The broad generic
+    class remains valid.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-umena2011-pdf
+  - photosystem-agent-P51765
+  - photosystem-agent-D0VWR8
+  - record
+- assessment_id: pigments
+  area: evidence
+  topic: Antenna inventory and mechanistic inference
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: The primary PSI structure directly resolves chlorophyll and carotenoid
+    architecture. Its excitation-transfer and triplet-quenching discussion combines
+    structural distances with cited functional work and qualified inference. Bacteriochlorophyll
+    is a generic anoxygenic class possibility, not a chemical observed in Jordan's
+    chlorophyll-a preparation.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - record
+- assessment_id: necessity
+  area: evidence
+  topic: Assembly necessity remains independent
+  outcome: unknown
+  target_ids:
+  - GO:0009521
+  summary: Alternative photosystem types explain membership scope, but do not establish
+    CONDITIONAL assembly necessity. Exact component-removal assembly endpoints were
+    not established by these intact crystal structures. Likewise, ESSENTIAL for the
+    grouped antenna-pigment class remains unverified as a class-wide formation requirement.
+    Catalytic necessity, photoprotection, resolved membership and stable assembly
+    are not interchangeable; no finding is made solely for an untested removal assay.
+  evidence_ids:
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - policy
+  - record
+- assessment_id: examples
+  area: grounding
+  topic: Four reviewed accessions and bounded uniqueness
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: All four gene/name/status/taxon pairs are correct and the native queries
+    support the declared single reviewed exact-node examples. The target correctly
+    calls the accessions identity evidence. D0VWR8 is a reviewed fragment and the
+    two PSI entries have homology-level protein-existence annotation; neither fact
+    contradicts their bounded examples. PDB SIFTS entity mappings differ from the
+    record PSI accessions, so the review does not promote gene-only exemplars into
+    exact crystal-chain identity.
+  evidence_ids:
+  - photosystem-agent-P0A406
+  - photosystem-agent-P0A408
+  - photosystem-agent-P51765
+  - photosystem-agent-D0VWR8
+  - photosystem-agent-tax-1117
+  - photosystem-agent-tax-32046
+  - photosystem-agent-tax-32053
+  - photosystem-agent-psi-unique
+  - photosystem-agent-uniprot-unique
+  - photosystem-agent-pdb-1jb0
+  - photosystem-agent-pdb-1jb0-1
+  - photosystem-agent-pdb-1jb0-2
+  - photosystem-agent-pdb-1jb0-3
+  - record
+- assessment_id: literature
+  area: evidence
+  topic: Primary versus annotation and abstract tiers
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: Jordan2001 and Umena2011 are genuine full primary PDF sources at the recorded
+    passages. Kamiya2003 and Kawakami2009 remain abstract/metadata here; the target's
+    narrow assertion that UniProt attributes thylakoid location to those PMIDs is
+    verified in each native entry. No unread-body structural detail is credited to
+    them.
+  evidence_ids:
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - photosystem-agent-epmc
+  - photosystem-agent-P51765
+  - photosystem-agent-D0VWR8
+  - photosystem-agent-jordan2001-publisher
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Cyanobacterial distribution and canonical preparations
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: The named taxa and historical vulcanus synonyms agree with native taxonomy.
+    COMMON Cyanobacteriota is compatible with the native PSI definition and the oxygenic
+    sources, without claiming universality or a measured prevalence. Jordan's source
+    and PDB metadata use S.elongatus; Umena uses the native synonym T.vulcanus. Exact
+    cultured stock equivalence is not independently reconstructed.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - photosystem-agent-pdb-1jb0
+  - photosystem-agent-tax-1117
+  - photosystem-agent-tax-32046
+  - photosystem-agent-tax-32053
+  - record
+- assessment_id: function
+  area: scope
+  topic: Scoped electron transport
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: The function already restricts the P700/ferredoxin path to oxygenic/cyanobacterial
+    PSI and explicitly excludes a universal bacterial type-I interpretation. This
+    is supported. Coupling to ATP/reductant production belongs to the photosynthetic
+    electron-transport system; neither PSI alone nor PSII alone is claimed as a complete
+    ATP-synthesis enzyme.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Membership and output versus causal path
+  outcome: concern
+  target_ids:
+  - GO:0009521
+  summary: All six nodes and five edges were inspected; two gene/protein nodes correctly
+    inherit all four accessions. The graph contains three constituent edges, a membrane
+    parthood edge and a whole-structure output. Correcting the PsaC cofactor allocation
+    does not turn these relationships into a represented charge-separation/transfer
+    causal path. MECHANISTIC therefore overstates its current explanatory detail.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - record
+  - graph-policy
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded corrections
+  outcome: supported
+  target_ids:
+  - GO:0009521
+  summary: The PsaC issue is an affirmative wrong binding allocation, not an automatic
+    demand for an optional missing component row. No full accessory inventory, extra
+    family identifier, image or measured-property field is required merely because
+    it is absent. The whole maintained target and all declared stable identifiers/source
+    identities were checked.
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-umena2011-pdf
+  - photosystem-agent-epmc
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: photosystem-psaa-psab-terminal-cluster-allocation
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Assign FA and FB to PsaC rather than the PsaA/PsaB heterodimer
+  description: The type-I core role and duplicated graph descriptions say the PsaA/PsaB
+    heterodimer binds FX,FA,FB. Jordan2001 pp911 and913 explicitly place FA/FB in
+    the separate stromal PsaC subunit, while FX is jointly ligated by PsaA/PsaB. The
+    full PSI electron-transfer sequence is correct but has been conflated with the
+    binding inventory of one component.
+  target_ids:
+  - GO:0009521
+  field_paths:
+  - components[component_id=type_i_reaction_center_core].role
+  - causal_graphs[graph_id=photosystem_mechanism].nodes[node_id=type_i_reaction_center_core].description
+  - causal_graphs[graph_id=photosystem_mechanism].edges[subject=type_i_reaction_center_core].description
+  evidence_ids:
+  - photosystem-agent-jordan2001-pdf
+  - photosystem-agent-P0A406
+  - photosystem-agent-P0A408
+  - photosystem-agent-pdb-1jb0-3
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained scientific record
+  rule_id: 'review-checklist: component roles, exact source support and causal graph
+    scope'
+  native_severity: major
+  normalization_reason: The declared molecular actor is assigned cofactors that the
+    cited primary structure allocates to a separate subunit.
+- finding_id: F2
+  issue_key: photosystem-membership-output-graph-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Align graph scope with the represented relationships
+  description: The FUNCTION graph is marked MECHANISTIC but consists of constituent/compartment
+    parthood and photosystem-to-electron-transport output. The process description
+    names P700 excitation and electron transfer, but the graph does not represent
+    a directed causal transition among those events. Preserve the supported summary
+    as NONMECHANISTIC or encode a bounded source-supported transfer path.
+  target_ids:
+  - GO:0009521
+  field_paths:
+  - causal_graphs[graph_id=photosystem_mechanism].scope_status
+  - causal_graphs[graph_id=photosystem_mechanism].nodes
+  - causal_graphs[graph_id=photosystem_mechanism].edges
+  evidence_ids:
+  - photosystem-agent-go
+  - photosystem-agent-jordan2001-pdf
+  - record
+  - graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained scientific record
+  rule_id: 'review-checklist: component roles, exact source support and causal graph
+    scope'
+  native_severity: minor
+  normalization_reason: The supported physical membership/output relationships remain
+    valid; the represented graph scope needs a bounded correction.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009521
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained scientific record
+  description: Narrow the PsaA/PsaB binding description to P700 and its actual acceptors,
+    including shared FX; identify FA/FB as PsaC-bound when describing the complete
+    PSI electron path. A new component row is optional, but the existing assignment
+    must be corrected.
+  acceptance_checks:
+  - Check the correction against Jordan Polypeptide subunits p911 and Electron transfer
+    chain p913.
+  - Keep full-complex electron-transfer order separate from protein-specific coordination
+    and reconcile all duplicated role text.
+  - Apply only through separately authorized curation with guarded writing/history
+    and native focused validation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009521
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained scientific record
+  description: Retain supported membership and the existing oxygenic-PSI function
+    restriction, and either narrow the scope label or represent the relevant charge-separation/transfer
+    steps with correct subunit/cofactor actors.
+  acceptance_checks:
+  - Do not turn every generic photosystem into the same oxygenic PSI mechanism.
+  - A source-supported causal transition is sufficient; no atomistic simulation is
+    required.
+  - Apply only through separately authorized curation with guarded writing/history
+    and native focused validation.
+limitations:
+- The fresh expanded-main resolver slice contains16 target identifiers:12 OK and four
+  PMID HTTP414 transport failures. Each exact PMID/title/DOI is independently verified
+  in the retained native EuropePMC core response; identifier identity does not establish
+  full-body support.
+- Jordan2001 was read as genuine full PDF main-text/caption evidence at pp909–916;
+  detailed supplementary methods and raw diffraction/coordinates were not reanalyzed.
+  Umena2011 was read at the specified main-body/caption and online-Methods sections;
+  no supplemental data or image pixels were independently reanalyzed.
+- Kamiya2003 and Kawakami2009 are limited to native exact metadata/abstracts and the
+  directly verified UniProt location citation attribution. Retained routes returned
+  EuropePMC500, PMC challenge200 and rendered-PDF403; new native S3 attempts returned404.
+  These route failures do not establish global unreadability or a scientific defect.
+- Species-specific oxygenic crystal preparations do not establish every anoxygenic
+  or archaeal photosystem architecture, every family accessory member, or exact class-wide
+  assembly necessity. The broad native definition and narrow exemplars are kept distinct.
+- All14 local source.inputs were frozen by native inspect before assessment and rechecked.
+  No neighboring maintained record, generated page or prior review verdict was used
+  as scientific evidence. Reused external raw/meta files preserve their original UTCZ
+  and bytes.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Unsaved draft only; root owns persistence, finalization, final shared gates and
+  shared indexes.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

@@ -1,0 +1,883 @@
+schema_version: 1.0.0
+review_id: 20261022T042552Z-1-3-beta-d-glucan-synthase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of 1 3 beta d glucan synthase complex
+started_at: '2026-10-22T03:58:46Z'
+finished_at: '2026-10-22T04:25:52Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The bounded yeast Fks/Rho1 model is supported with no confirmed curation
+  finding; detailed primary protocols and assembly necessity remain unverified.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    sha256: 3dedbfa89047d1949a9d4691dcb873546c76dcd836c17494c43160462b9626bc
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000148
+  path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  label: 1,3-beta-D-glucan synthase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target; no neighboring scientific-record verdict
+    is imported. Exact authority, all current component/function/graph/source placements,
+    taxonomic scope, formation semantics, history and discussions were reviewed.
+  selection: Batch43 fixed strict path order, index 7; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000148
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just validate data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just validate-strict data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/1_3_beta_d_glucan_synthase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-proteins
+  name: Focused native proteins
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-proteins
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - micro43-go
+  - micro43-doi-6
+  - micro43-doi-7
+  - micro43-doi-8
+  - micro43-doi-15
+  - micro43-pmid7565718
+  - micro43-pmid7983071
+  - micro43-pmid11856368
+  - micro43-pmid12185837
+  - micro43-pmid14576278
+  - micro43-tax4932
+  - micro43-tax559292
+  - micro43-up-P38631
+  - micro43-up-P40989
+  - micro43-up-P06780
+  - micro43-ipr-IPR003440
+  - micro43-ipr-IPR003578
+  - micro43-glucan-unique
+  - micro43-legacy-PMC45549
+  - micro43-legacy-PMC230817
+  - micro43-qadota-publisher
+  - micro43-mazur1996-publisher
+  - micro43-mol1994-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  summary: '13 of 18 collected target identifiers returned OK. PMID:11856368: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were reviewed after the
+    bulk eutils414 transport failure. Biological support remains bounded by the separately
+    recorded abstract or primary-body sections; identity resolution alone is not confirmation
+    of every attached claim.; PMID:12185837: UNREACHABLE; Exact native Europe PMC
+    MED identifier, title and DOI were reviewed after the bulk eutils414 transport
+    failure. Biological support remains bounded by the separately recorded abstract
+    or primary-body sections; identity resolution alone is not confirmation of every
+    attached claim.; PMID:14576278: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were reviewed after the bulk eutils414 transport failure. Biological
+    support remains bounded by the separately recorded abstract or primary-body sections;
+    identity resolution alone is not confirmation of every attached claim.; PMID:7565718:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were reviewed
+    after the bulk eutils414 transport failure. Biological support remains bounded
+    by the separately recorded abstract or primary-body sections; identity resolution
+    alone is not confirmation of every attached claim.; PMID:7983071: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were reviewed after the
+    bulk eutils414 transport failure. Biological support remains bounded by the separately
+    recorded abstract or primary-body sections; identity resolution alone is not confirmation
+    of every attached claim. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro43-pmid11856368
+  - micro43-pmid12185837
+  - micro43-pmid14576278
+  - micro43-pmid7565718
+  - micro43-pmid7983071
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000148
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T04:17:26Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T04:17:26Z'
+  support: context_only
+  summary: Protein-family identity is distinct from an assembled complex. ESSENTIAL
+    concerns failure of structure formation, not merely loss of catalytic or transport
+    function.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T04:17:26Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: micro43-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000148,GO:0003843,GO:0009277,GO:0031469,GO:0031472,GO:0042910,GO:0050215,GO:0051144,GO:0071970,GO:1990281
+  locator: Exact entries GO0000148/0003843/0071970/0009277; complete names/definitions/synonyms/active
+    status.
+  accessed_at: '2026-10-22T04:09:03.496578Z'
+  support: supports
+  summary: GO0000148 and its retained exact synonyms identify the glucan-synthase
+    complex. GO0003843 denotes its catalytic activity and GO0071970 the fungal-wall
+    glucan biosynthetic process; GO0009277 is the product-containing fungal wall,
+    not a complex component.
+  snapshot_sha256: d40f3f203eaad9efb2ceba4c52209731a537cf62d0528a69af69d7b7d9c252f6
+- evidence_id: micro43-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1073%2Fpnas.91.26.12907&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:04.342919Z'
+  support: supports
+  summary: 'Unique MED7528927: The Saccharomyces cerevisiae FKS1 (ETG1) gene encodes
+    an integral membrane protein which is a subunit of 1,3-beta-D-glucan synthase.
+    Authors/year/DOI and the complete native abstract were inspected. This row establishes
+    bibliographic identity and abstract-level content only; detailed experiments require
+    separately specified body evidence.'
+  snapshot_sha256: 7fa1fc4d002c41f68b3ad79b1d9762daf03b01c9b12afc6fc75ca08f9ed06a05
+- evidence_id: micro43-doi-7
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1074%2Fjbc.271.24.14604&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:04.359843Z'
+  support: supports
+  summary: 'Unique MED8662910: In vitro activity of 1,3-beta-D-glucan synthase requires
+    the GTP-binding protein Rho1. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 925fbb616f866c17c4ce051cfd07453b4f6b2906cefcf491fce84eb983c35d7d
+- evidence_id: micro43-doi-8
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.272.5259.279&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:04.364478Z'
+  support: supports
+  summary: 'Unique MED8602515: Identification of yeast Rho1p GTPase as a regulatory
+    subunit of 1,3-beta-glucan synthase. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: e3cfedc35fac487d4e8dcb23ee46edd8da7dcd88aa76066e522b96611cc9c56c
+- evidence_id: micro43-doi-15
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1128%2FMCB.15.10.5671&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:05.684968Z'
+  support: supports
+  summary: 'Unique MED7565718: Differential expression and function of two homologous
+    subunits of yeast 1,3-beta-D-glucan synthase. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: a4f50e8ac84e953fdae3fec4b28338e94e5954610cc1c30542828f05ae29beb2
+- evidence_id: micro43-pmid7565718
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7565718+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:07.673338Z'
+  support: supports
+  summary: 'Unique MED7565718: Differential expression and function of two homologous
+    subunits of yeast 1,3-beta-D-glucan synthase. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: 501dd90a083be4b3f72e847f0105f5f6173119154fb1559414b2589b370fbfb7
+- evidence_id: micro43-pmid7983071
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7983071+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:07.772860Z'
+  support: supports
+  summary: 'Unique MED7983071: A GTP-binding protein regulates the activity of (1-->3)-beta-glucan
+    synthase, an enzyme directly involved in yeast cell wall morphogenesis. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: e35b4f65b3e54f386fe431d92cb6b128af7c6ba5ceaaf2eb2d465c8f940b919d
+- evidence_id: micro43-pmid11856368
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11856368+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:06.516073Z'
+  support: supports
+  summary: 'Unique MED11856368: Movement of yeast 1,3-beta-glucan synthase is essential
+    for uniform cell wall synthesis. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 4aa162c36be1e5475fee23719351fe2a14557452a94ad10c3d8d018795dbc3ba
+- evidence_id: micro43-pmid12185837
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12185837+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:06.659484Z'
+  support: supports
+  summary: 'Unique MED12185837: Mutations in Fks1p affect the cell wall content of
+    beta-1,3- and beta-1,6-glucan in Saccharomyces cerevisiae. Authors/year/DOI and
+    the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 130db461b921b2588e52bea7bbb6a2e04456fa4d25eb3fe0cf5f9543b399e05e
+- evidence_id: micro43-pmid14576278
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14576278+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:09:07.043477Z'
+  support: supports
+  summary: 'Unique MED14576278: The proteome of Saccharomyces cerevisiae mitochondria.
+    Authors/year/DOI and the complete native abstract were inspected. This row establishes
+    bibliographic identity and abstract-level content only; detailed experiments require
+    separately specified body evidence.'
+  snapshot_sha256: 8faa1e69418835a4f1b889939f732b6a186bbe461fdc328d850317c6426a3e2d
+- evidence_id: micro43-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:09:05.835749Z'
+  support: supports
+  summary: ENA taxId 4932 identifies Saccharomyces cerevisiae at rank species; aliases
+    and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: micro43-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:09:05.850370Z'
+  support: supports
+  summary: ENA taxId 559292 identifies Saccharomyces cerevisiae S288C at rank strain;
+    aliases and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro43-up-P38631
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38631.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T04:09:09.666788Z'
+  support: supports
+  summary: P38631 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['FKS1'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 7c39236f9feb71057ef9def7792aa07b86eca0508e9d1a85422f54537e73473c
+- evidence_id: micro43-up-P40989
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40989.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T04:09:09.799696Z'
+  support: supports
+  summary: P40989 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['GSC2'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 7028d3b8a2e4910e99772ff19805e062c077a08c8cae0f602c6ef1de9729c06b
+- evidence_id: micro43-up-P06780
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P06780.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T04:09:08.398126Z'
+  support: supports
+  summary: P06780 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['RHO1'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 38a9436c03b9abbb11b6ff40c5fa3a5fa7b0204d630adb3e437da6211d009047
+- evidence_id: micro43-ipr-IPR003440
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003440/
+  locator: Complete metadata identity/type/description/member databases/hierarchy;
+    domain breadth distinguished from pair identity.
+  accessed_at: '2026-10-22T04:09:49.573985Z'
+  support: supports
+  summary: IPR003440 is a glycosyltransferase-48 domain, spanning yeast Gls proteins
+    and broader enzymes. It does not exactly identify the curated Saccharomyces Fks1/Fks2
+    paralogue pair.
+  snapshot_sha256: 2ec93b9fecde227aa097f079b5d15e70e572435283f09de7c6c33e6e9f4a4ff9
+- evidence_id: micro43-ipr-IPR003578
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003578/
+  locator: Complete metadata identity/type/description/hierarchy and named family
+    examples.
+  accessed_at: '2026-10-22T04:09:49.543601Z'
+  support: supports
+  summary: The Rho-family entry includes multiple Rho-related GTPases and is broader
+    than the named Saccharomyces Rho1 regulatory subunit. Its availability does not
+    alone require replacing a deliberately narrow component with a broader family.
+  snapshot_sha256: 446700f6da68021d90d57bbab566c1a135016325e960f2c8a1ec8d39ebca8902
+- evidence_id: micro43-glucan-unique
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+organism_id%3A559292+AND+%28gene_exact%3AFKS1+OR+gene_exact%3AFKS2+OR+gene_exact%3ARHO1%29&format=json&size=100&fields=accession%2Cid%2Cgene_names%2Corganism_id%2Cprotein_name
+  locator: Complete public UniProt results; exact reviewed/taxon/gene query retained
+    in source URL; result count below page size 100.
+  accessed_at: '2026-10-22T04:14:24.713829Z'
+  support: supports
+  summary: The bounded reviewed S288C query returns exactly P38631/FKS1, P40989/GSC2
+    with FKS2 alias, and P06780/RHO1. Symbol aliasing is verified rather than treated
+    as a mismatch.
+  snapshot_sha256: 96bdbab6f09535ad211c2340478eb1336d8f4f62901d063e7e6d1aea0178dd98
+  search_scope: reviewed:true AND organism_id:559292 AND gene_exact:FKS1/FKS2/RHO1;
+    all three results inspected. Remote native query only; gitignored-file inclusion
+    is not applicable, and this is not a local absence search.
+- evidence_id: micro43-legacy-PMC45549
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC45549/
+  locator: Exact retained response bytes; access/readability evidence only, not primary
+    article results.
+  accessed_at: '2026-10-22T04:10:08.346001Z'
+  support: context_only
+  summary: 'HTTP 200: challenge HTML; Douglas1994 main body not available in this
+    retained response.'
+  snapshot_sha256: 96c99a035283c3834b89fcc469a3e10205a3909af01d2532c5b92322d9d98dd1
+- evidence_id: micro43-legacy-PMC230817
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC230817/
+  locator: Exact retained response bytes; access/readability evidence only, not primary
+    article results.
+  accessed_at: '2026-10-22T04:10:07.166351Z'
+  support: context_only
+  summary: 'HTTP 200: genuine legacy article page with complete abstract and links
+    to scans; scanned article pages were not read.'
+  snapshot_sha256: 7cf9d95673d1c49dd9fdc2111b3e3d79f5a14815d2daca1ad3578aa11e6ffd00
+- evidence_id: micro43-qadota-publisher
+  kind: authority
+  reference: https://www.science.org/doi/10.1126/science.272.5259.279
+  locator: Exact retained response bytes; access/readability evidence only, not primary
+    article results.
+  accessed_at: '2026-10-22T04:09:50.128679Z'
+  support: context_only
+  summary: 'HTTP 403: publisher access denial; native MED abstract available.'
+  snapshot_sha256: 216d4069fffe20deed572cac3d8cad9e60272e2c80bc1a452fdcfbf4aa507817
+- evidence_id: micro43-mazur1996-publisher
+  kind: authority
+  reference: https://doi.org/10.1074/jbc.271.24.14604
+  locator: Exact retained response bytes; access/readability evidence only, not primary
+    article results.
+  accessed_at: '2026-10-22T04:09:50.166543Z'
+  support: context_only
+  summary: 'HTTP 200: LinkingHub redirect/locator HTML rather than a full article
+    body.'
+  snapshot_sha256: ff281cfcea4f824e4424bb64c3aef5333e198e1c19402b6c79825df216add19a
+- evidence_id: micro43-mol1994-publisher
+  kind: authority
+  reference: https://doi.org/10.1016/S0021-9258(18)47418-2
+  locator: Exact retained response bytes; access/readability evidence only, not primary
+    article results.
+  accessed_at: '2026-10-22T04:09:50.181579Z'
+  support: context_only
+  summary: 'HTTP 200: LinkingHub redirect/locator HTML rather than a full article
+    body.'
+  snapshot_sha256: d14e331ddc066f3d14735c7c419b966894390448c6f81955fb0b9f49bb29a374
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:58:47Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml'
+  snapshot_sha256: 28631ab7aa7e98f877b9d71c1f6f0d019d12a211bbc7d0f4dec2bc91d30a1619
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/1_3_beta_d_glucan_synthase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:58:48Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/1_3_beta_d_glucan_synthase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch43-20261022-u_vlughs/1_3_beta_d_glucan_synthase_complex-strict.tsv"
+  snapshot_sha256: 37114d6b711f757c6000f4683828efd391d603474f4d95993bc92ac59a7a1846
+- evidence_id: native-proteins
+  kind: validation
+  reference: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  locator: Complete read-only focused native proteins log
+  accessed_at: '2026-10-22T04:09:29.283859Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T04:09:29.711106Z'
+  support: supports
+  summary: "data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml  (GO:0000148)\n\
+    \  rho1_fks_glucan_synthase_function\tfks_catalytic_subunits\tCOVERED\t->fks_catalytic_subunits\
+    \ (UniProtKB:P38631, UniProtKB:P40989)\n  rho1_fks_glucan_synthase_function\t\
+    rho1_gtpase_regulatory_subunit\tCOVERED\t->rho1_gtpase_regulatory_subunit (UniProtKB:P06780)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     2  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: e5e246afc40662210eb530ad32b4b670cccbcf512c0f14cb2d7c4689b7445665
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 18 collected target identifiers returned OK. PMID:11856368: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were reviewed after the
+    bulk eutils414 transport failure. Biological support remains bounded by the separately
+    recorded abstract or primary-body sections; identity resolution alone is not confirmation
+    of every attached claim.; PMID:12185837: UNREACHABLE; Exact native Europe PMC
+    MED identifier, title and DOI were reviewed after the bulk eutils414 transport
+    failure. Biological support remains bounded by the separately recorded abstract
+    or primary-body sections; identity resolution alone is not confirmation of every
+    attached claim.; PMID:14576278: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were reviewed after the bulk eutils414 transport failure. Biological
+    support remains bounded by the separately recorded abstract or primary-body sections;
+    identity resolution alone is not confirmation of every attached claim.; PMID:7565718:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were reviewed
+    after the bulk eutils414 transport failure. Biological support remains bounded
+    by the separately recorded abstract or primary-body sections; identity resolution
+    alone is not confirmation of every attached claim.; PMID:7983071: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were reviewed after the
+    bulk eutils414 transport failure. Biological support remains bounded by the separately
+    recorded abstract or primary-body sections; identity resolution alone is not confirmation
+    of every attached claim. Native source checks are separately scoped; skipped or
+    unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact complex and bounded yeast model
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: GO identity and synonyms are correct. The current components and examples
+    explicitly concern the budding-yeast Fks/Rho1 model, while broader fungal inventory
+    remains unasserted.
+  evidence_ids:
+  - record
+  - micro43-go
+  - micro43-tax4932
+  - micro43-tax559292
+- assessment_id: composition
+  area: grounding
+  topic: Catalytic paralogues and regulatory constituent
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: The complete Douglas/Mazur/Qadota abstracts support integral-membrane Fks
+    subunits, alternative Fks1/Fks2 contributions and Rho1 association/regulation.
+    The paralogue cohort is not read as a requirement that Fks1 and Fks2 occupy one
+    simultaneous heteromer. Label-only exact pair/Rho1 boundaries are justified against
+    broader candidate domains.
+  evidence_ids:
+  - record
+  - micro43-doi-6
+  - micro43-doi-15
+  - micro43-doi-8
+  - micro43-doi-7
+  - micro43-ipr-IPR003440
+  - micro43-ipr-IPR003578
+- assessment_id: necessity
+  area: grounding
+  topic: Assembly requirement remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:0000148
+  summary: Both components already use UNKNOWN essentiality. Catalytic dependence
+    on Rho1, gene-deletion phenotypes and co-purification do not alone establish formation
+    failure for the defined assembled complex.
+  evidence_ids:
+  - record
+  - schema
+  - micro43-doi-7
+  - micro43-doi-8
+  - micro43-doi-15
+- assessment_id: proteins
+  area: grounding
+  topic: Accession identity and annotation-source placement
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: All three reviewed S288C accessions and aliases are correct. The FKS1 example’s
+    mitochondrial citation notes describe actual current UniProt SUBCELLULAR LOCATION
+    annotation joins; they are not used here to assign the synthase mechanism to mitochondria.
+    Utsugi/Dijkgraaf/Sickmann abstracts have differing localization, wall and proteomics
+    scopes.
+  evidence_ids:
+  - record
+  - micro43-glucan-unique
+  - micro43-up-P38631
+  - micro43-up-P40989
+  - micro43-up-P06780
+  - micro43-pmid11856368
+  - micro43-pmid12185837
+  - micro43-pmid14576278
+- assessment_id: function
+  area: evidence
+  topic: Glucan synthesis and Rho1 regulation
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: Native GO definitions and complete primary abstracts support UDP-glucose
+    polymerization, fungal-wall glucan contribution and GTPase-dependent stimulation.
+    Recombinant Rho1 restoration, biochemical association and regulation are abstract-level
+    evidence; their uninspected detailed protocols are not certified.
+  evidence_ids:
+  - record
+  - micro43-go
+  - micro43-doi-8
+  - micro43-doi-7
+  - micro43-pmid7983071
+  - micro43-doi-6
+- assessment_id: graph
+  area: graph
+  topic: Bounded regulatory function graph
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: The directed Rho1/Fks regulatory relation and product contribution match
+    the retained primary abstracts. Upstream exchange factors and cell-integrity proteins
+    remain correctly outside this complex’s constituent boundary. The graph does not
+    assert direct wall incorporation by a wall node or a detailed assembly mechanism.
+  evidence_ids:
+  - record
+  - micro43-go
+  - micro43-doi-8
+  - micro43-doi-7
+  - micro43-pmid7983071
+- assessment_id: scope
+  area: scope
+  topic: Species-level example and protein reference strain
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: Saccharomyces cerevisiae scope is supported by the primary abstracts. S288C
+    protein references resolve the species-level examples; those exact accessions
+    do not prove every experiment used S288C. COMMON retains the schema meaning of
+    presence in most members, with losses as the exception. The cited yeast-system
+    evidence supports this qualitative synthesis; no strain-prevalence census was
+    measured.
+  evidence_ids:
+  - record
+  - micro43-doi-8
+  - micro43-doi-15
+  - micro43-tax4932
+  - micro43-tax559292
+- assessment_id: coverage
+  area: completeness
+  topic: Current discussion and historical boundaries
+  outcome: supported
+  target_ids:
+  - GO:0000148
+  summary: All current fields, protein notes, graph, open and resolved discussions
+    and history were read. No images or verbatim excerpts occur. The exact family
+    candidates inspected do not resolve the narrower pair or associated Rho1 identity;
+    no optional-inventory or historical-TODO finding is forced.
+  evidence_ids:
+  - record
+  - micro43-go
+  - micro43-ipr-IPR003440
+  - micro43-ipr-IPR003578
+findings: []
+actions: []
+limitations:
+- Primary scientific reading is limited to complete native abstracts for Douglas1994,
+  Mazur1995, Qadota1996, Mazur/Baginsky1996 and Mol1994 plus the three annotation-citation
+  abstracts. Publisher redirects/challenges and scanned-page links were not misclassified
+  as readable full bodies.
+- No figure pixels, scanned pages or supplements were inspected. Direct association
+  and regulatory conclusions are accepted only at the explicit abstract level.
+- UNKNOWN assembly necessity is retained; enzymatic requirement is not redefined as
+  structure-formation necessity. The Fks1/Fks2 cohort does not establish simultaneous
+  stoichiometry.
+- UniProt’s FKS1 mitochondrial evidence joins were verified as annotation provenance,
+  not independently confirmed mitochondrial localization by this review. Broader Rho/GT48
+  entries do not identify the exact curated pair/regulatory boundary.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these complex identity, protein family, assembly
+  and enzyme or transport claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.

@@ -51,6 +51,14 @@ curation_history:
   action: EDIT
   changes: added 5 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T11:08:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2404 (Stage 4 finding cytoskeleton-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX causal-graph nodes radial_spoke_head (GO:0001535),
+    radial_spoke_neck (GO:0120343), and radial_spoke_stalk (GO:0001536) from GENE_OR_PROTEIN
+    to STRUCTURE.'
+  llm_assisted: true
 part_of:
 - GO:0005930
 components:
@@ -341,17 +349,17 @@ causal_graphs:
   nodes:
   - node_id: radial_spoke_head
     label: radial spoke head
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0001535
     component_ref: radial_spoke_head
   - node_id: radial_spoke_neck
     label: radial spoke neck
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0120343
     component_ref: radial_spoke_neck
   - node_id: radial_spoke_stalk
     label: radial spoke stalk
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0001536
     component_ref: radial_spoke_stalk
   - node_id: radial_spoke

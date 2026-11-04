@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/sid2_mob1_complex.yaml
+  slug: sid2_mob1_complex
+session:
+  id: 2026-10-31T150259Z-antigravity-d8cadf
+  timestamp: '2026-10-31T15:02:59Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2489
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - curation_history
+  summary: Align definition with GO:0034973 and add PMID:29813053/PMID:35011608 to top-level
+    evidence
+  details: Replaced custom S. pombe summary in definition with the official GO:0034973 definition
+    verified via OAK sqlite:obo:go, and mirrored causal-graph edge citations PMID:29813053
+    and PMID:35011608 into top-level evidence (#2489).

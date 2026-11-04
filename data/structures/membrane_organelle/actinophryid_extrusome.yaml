@@ -19,6 +19,12 @@ curation_history:
     and membrane-supply functions, a physical fusion mechanism, and explicit grounding
     and pharmacology limits.
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked gp40_adhesive_glycoprotein component and prey_adhesion process into
+    extrusome_membrane_donation causal graph.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 components:
@@ -84,8 +90,9 @@ causal_graphs:
   description: Ultrastructural membrane-donation mechanism in Actinophrys sol.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
-  scope_notes: Restricted to observed membrane fusion and enclosure; molecular fusion
-    machinery and upstream calcium signaling are not specified.
+  scope_notes: Restricted to observed membrane fusion, enclosure, and GP40-mediated
+    prey adhesion; molecular fusion machinery and upstream calcium signaling are not
+    specified.
   nodes:
   - node_id: extrusome_membrane
     label: extrusome membrane
@@ -107,6 +114,13 @@ causal_graphs:
     node_type: STRUCTURE
   - node_id: prey_enclosure
     label: prey enclosure
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: gp40_adhesive_glycoprotein
+    label: GP40-type adhesive glycoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: gp40_adhesive_glycoprotein
+  - node_id: prey_adhesion
+    label: prey adhesion
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: extrusome_membrane
@@ -139,6 +153,23 @@ causal_graphs:
     description: A funnel-shaped pseudopodium extends over prey to enclose it.
     evidence:
     - reference: DOI:10.1002/cm.970020103
+  - subject: gp40_adhesive_glycoprotein
+    predicate: resides in
+    object: extrusome
+    description: Extrusomes store the adhesive glycoprotein GP40 prior to prey capture.
+    evidence:
+    - reference: DOI:10.1078/1434-4610-00041
+      notes: The abstract identifies extrusome-stored GP40 and reports prey adhesion
+        to GP40-coated beads.
+  - subject: gp40_adhesive_glycoprotein
+    predicate: mediates
+    object: prey_adhesion
+    description: GP40 adhesive glycoprotein supports prey attachment and ingestion
+      during actinophryid feeding.
+    evidence:
+    - reference: DOI:10.1078/1434-4610-00041
+      notes: Purified GP40 supported bead adhesion and induced ingestion of coated
+        beads.
 evidence:
 - reference: DOI:10.1016/j.ejop.2007.11.001
   notes: 'Kakuta and Suzaki (2008): accepted manuscript read via Kobe University;

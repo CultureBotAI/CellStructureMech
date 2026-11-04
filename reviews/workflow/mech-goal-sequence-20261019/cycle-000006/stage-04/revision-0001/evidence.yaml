@@ -1,0 +1,113 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 6
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 1,015 eligible CellStructureRecord YAML files across all 13 category folders at
+  frozen git revision 9634411be0aeec8d8f4b9cb9158e3165db87c150 (100% full coverage). Saved 6 native structured
+  RecordReview bundles under reviews/structured/ (3 single-record reviews and 3 category reviews; 326
+  total valid bundles) and recorded 10 unique open findings (2 major, 8 minor across 12 unique records)
+  in carry_forward_ids for Stage 5 grouped remediation, plus infrastructure task cellstructuremech-infra-0009
+  (#2486) in INFRA_TASKS.md.
+source_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
+  sha256: 4e7ffd3acfd2ac6af3a267d9b08461c792a034d26f4b43c5ff9b67978b7f5f7b
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/review_report.md
+  sha256: fb1227dd4202023547ebf633073d928475e0c7af30c6a970bf5044b99a2348ab
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/review_findings.md
+  sha256: a6d714e11f71d4ee35a78e6679ae5f668bc0ecf729a62c631e2135ec4ce5e201
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/validation.md
+  sha256: 6ea13086b94c716ef8bf55d9fc142bb1e99139a6acba6f1f813d81e5ed0eb31c
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/coverage_inventory.json
+  sha256: 90d425ddcabeadbdc95af47f4673bf41c9aa9223deae3a5f43c1633d9f889f07
+  kind: supporting
+findings:
+- finding_id: sid2-mob1-complex-definition-source-attribution
+  status: open
+  summary: 'sid2_mob1_complex.yaml (GO:0034973) sets definition_source: GO:0034973 while providing a custom
+    elaborated definition (lines 5-9) instead of the official GO:0034973 definition (''A protein complex
+    that contains the protein kinase Sid2 and the regulatory subunit Mob1 in Schizosaccharomyces.'') (native
+    review: 20261031T123501Z-sid2-mob1-complex-review F1, severity minor).'
+- finding_id: sid2-mob1-complex-missing-top-level-pmid-evidence
+  status: open
+  summary: 'sid2_mob1_complex.yaml (GO:0034973) cites PMID:29813053 in components[0].evidence[2] (sid2_dbf2_kinase_subunit)
+    and PMID:35011608 in components[1].protein_examples[1].evidence[1] (mob1_activator_subunit), but omits
+    both from top-level evidence (lines 206-224) (native review: 20261031T123501Z-sid2-mob1-complex-review
+    F2, severity minor).'
+- finding_id: potassium-atpase-complex-definition-source-attribution
+  status: open
+  summary: 'potassium_ion_transporting_atpase_complex.yaml (GO:0031004) sets definition_source: GO:0031004
+    while providing a custom structural definition (lines 5-9) instead of the official GO:0031004 definition
+    (''A complex that carries out the transfer of potassium ions from one side of a membrane to the other,
+    driven by the hydrolysis of ATP.'') (native review: 20261031T123502Z-potassium-ion-transporting-atpase-complex-review
+    F1, severity minor).'
+- finding_id: potassium-atpase-complex-missing-top-level-pmid-evidence
+  status: open
+  summary: 'potassium_ion_transporting_atpase_complex.yaml (GO:0031004) cites PMID:41384914 in taxonomic_distribution[0].reference,
+    functions[1].evidence[1].reference, and causal_graphs[0].edges[5].evidence[0].reference, but omits
+    PMID:41384914 from top-level evidence (lines 296-314) (native review: 20261031T123502Z-potassium-ion-transporting-atpase-complex-review
+    F2, severity minor).'
+- finding_id: prostheca-missing-stalk-crossband-has-part
+  status: open
+  summary: 'prostheca.yaml (cellstructuremech:prostheca) lists has_part: [GO:0005886, GO:0009274, GO:0009279]
+    (lines 61-64) and omits cellstructuremech:stalk_crossband even though stalk_crossband.yaml (cellstructuremech:stalk_crossband)
+    declares part_of: [cellstructuremech:prostheca] and prostheca.yaml models StpABCD crossbands in components[0]
+    (stp_crossband_complex) and causal_graphs[0].nodes[5] (stp_crossbands, grounded to cellstructuremech:stalk_crossband)
+    (native review: 20261031T123503Z-prostheca-missing-stalk-crossband-has-part F1, severity minor).'
+- finding_id: cytoskeleton-non-reciprocal-substructure-has-part
+  status: open
+  summary: 'basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel) omits has_part: [cellstructuremech:basal_body_cartwheel_inner_density,
+    cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density]
+    and infraciliary_lattice.yaml (cellstructuremech:infraciliary_lattice) omits has_part: [cellstructuremech:cytostomal_cord]
+    despite reciprocal part_of links on those four curated substructures in data/structures/cytoskeleton/
+    (native review: 20261031T123504Z-cytoskeleton-category-review F1, severity minor).'
+- finding_id: reservosome-missing-subcompartment-has-part-and-membrane-grounding
+  status: open
+  summary: 'reservosome.yaml (cellstructuremech:reservosome) omits has_part: [GO:0106124, GO:0106125,
+    GO:0106126] despite reciprocal part_of: [cellstructuremech:reservosome] on reservosome_lumen.yaml
+    (GO:0106124), reservosome_matrix.yaml (GO:0106125), and reservosome_membrane.yaml (GO:0106126), and
+    leaves components[0] (reservosome_membrane, lines 49-59) ungrounded instead of grounding: GO:0106126
+    (native review: 20261031T123505Z-membrane-organelle-category-review F1, severity major).'
+- finding_id: reservosome-membrane-definition-note-and-graph-scope
+  status: open
+  summary: 'reservosome_membrane.yaml (GO:0106126) appends two elaborated sentences to the official GO:0106126
+    definition (''The lipid bilayer surrounding a reservosome.'') while setting definition_source: GO:0106126,
+    carries a copy-pasted ''Reservosome lumens occur in reservosomes of T. cruzi epimastigotes...'' note
+    in taxonomic_distribution[0].note, and marks its 2-node 1-edge structural parthood graph (reservosome_membrane
+    -> is part of -> reservosome, lines 55-83) as graph_kind: ASSEMBLY / scope_status: MECHANISTIC instead
+    of graph_kind: FUNCTION / scope_status: NONMECHANISTIC with scope_notes (native review: 20261031T123505Z-membrane-organelle-category-review
+    F2, severity major).'
+- finding_id: other-cycle6-stage1-definition-source-attribution
+  status: open
+  summary: 'atg12_atg5_atg16_complex.yaml (GO:0034274), cobalamin_transport_complex.yaml (GO:1990191),
+    ekc_keops_complex.yaml (GO:0000408), hsluv_protease_complex.yaml (GO:0009376), and maltose_transport_complex.yaml
+    (GO:1990060) set definition_source to their GO CURIE while providing a custom elaborated definition
+    instead of the official GO definition (native review: 20261031T123506Z-other-category-review F1, severity
+    minor).'
+- finding_id: other-cycle6-stage1-missing-top-level-pmid-evidence
+  status: open
+  summary: 'atg12_atg5_atg16_complex.yaml (GO:0034274) omits PMID:41457424 (cited across components[0],
+    components[2], taxonomic_distribution[0], functions[0], and causal_graphs[0].edges[0..1]) and cobalamin_transport_complex.yaml
+    (GO:1990191) omits PMID:27457716 (taxonomic_distribution[0]) and PMID:29084999 (causal_graphs[0].edges[1])
+    from top-level evidence (native review: 20261031T123506Z-other-category-review F2, severity minor).'
+groups: []
+carry_forward_ids:
+- sid2-mob1-complex-definition-source-attribution
+- sid2-mob1-complex-missing-top-level-pmid-evidence
+- potassium-atpase-complex-definition-source-attribution
+- potassium-atpase-complex-missing-top-level-pmid-evidence
+- prostheca-missing-stalk-crossband-has-part
+- cytoskeleton-non-reciprocal-substructure-has-part
+- reservosome-missing-subcompartment-has-part-and-membrane-grounding
+- reservosome-membrane-definition-note-and-graph-scope
+- other-cycle6-stage1-definition-source-attribution
+- other-cycle6-stage1-missing-top-level-pmid-evidence
+infra_tasks: []

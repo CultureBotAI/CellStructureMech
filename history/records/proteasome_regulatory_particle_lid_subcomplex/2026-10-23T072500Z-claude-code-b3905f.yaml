@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_regulatory_particle_lid_subcomplex.yaml
+  slug: proteasome_regulatory_particle_lid_subcomplex
+session:
+  id: 2026-10-23T072500Z-claude-code-b3905f
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Added source-backed RPN11/RPN8 and RPN3/5/6/7/9/12/SEM1 subunit gene_symbols and
+    seeded 9 reviewed protein_examples
+  details: Added source-backed gene_symbols RPN11, RPN8 to rpn11_rpn8_deubiquitinase_dimer
+    and RPN3, RPN5, RPN6, RPN7, RPN9, RPN12, SEM1 to lid_pci_horseshoe_scaffold (citing DOI:10.1038/nature10774
+    and PMID:9707434) and resolved all 9 subunits to reviewed UniProtKB entries (P43588, Q08723,
+    P40016, Q12250, Q12377, Q06103, Q04062, P32496, O94742).
