@@ -1,0 +1,644 @@
+schema_version: 1.0.0
+review_id: 20261021T064247Z-ciliary-rootlet-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Ciliary-rootlet evidence and lineage-scope review
+started_at: '2026-10-21T06:40:11Z'
+finished_at: '2026-10-21T06:42:47Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Rootlet identity, SFA membership, example accession and scoped Chlamydomonas
+  assembly effect are supported. One major finding requires lineage qualification
+  of the broad definition’s direction and dimensions.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    sha256: a4ce875de28c94730588bfb1549dd6dc38b28658e3f3d66b8cb6fe66859433b3
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0035253
+  path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+  label: ciliary rootlet
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target; native GO, UniProt, taxonomy and family entries;1991/1993
+    PDF-derived text,2019 full text,2002 primary abstract,2003 discussion-source abstract
+    and original GO-source context.
+  selection: Ninth remaining unreviewed path in batch5, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0035253
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just validate data/structures/cytoskeleton/ciliary_rootlet.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just validate-strict data/structures/cytoskeleton/ciliary_rootlet.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/ciliary_rootlet-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  summary: 10 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0035253
+  summary: The claims concern algal/ciliate localization and structural perturbation,
+    not a matched expression-module dataset; absence of module evidence is not negative
+    evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - rootlet-go
+  - rootlet-protein
+  - rootlet-taxon
+  - rootlet-epmc
+  - rootlet-1991
+  - rootlet-1993
+  - rootlet-agent-paper
+  - rootlet-agent-epmc
+  - rootlet-agent-rhizoplast-publisher
+  - rootlet-yang
+  - rootlet-IPR008374
+  - rootlet-PF06705
+  - record
+  - identity-search
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035253
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: rootlet-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035253,GO:0036064
+  locator: Native definitions and synonyms
+  accessed_at: '2026-10-21T06:40:33.236154Z'
+  support: supports
+  summary: GO0035253 and0036064 are active with exact labels/synonyms. The rootlet
+    definition contains the nucleus-directed80–100nm/55–70nm wording and cites PMID12427867.
+  snapshot_sha256: 526dec58e221dd69b306217a7496958890be0cc9394de0b0143ee8c6c84e1ba3
+- evidence_id: rootlet-protein
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/B2XYH3.json
+  locator: Native protein description, fragment flag, gene, organism/status and family
+    cross-references
+  accessed_at: '2026-10-21T06:40:33.277039Z'
+  support: supports
+  summary: B2XYH3 is an unreviewed TrEMBL fragment named Striated fiber assemblin,
+    gene sfa, taxon3055. The record accurately limits it to identifier/gene evidence,
+    not structural localization.
+  snapshot_sha256: 417c2f47d2e53790bbf56721583fc562a8fb519468ce77fa86f0f39fdff0146d
+- evidence_id: rootlet-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055,5888
+  locator: Both taxon records
+  accessed_at: '2026-10-21T06:40:32.897941Z'
+  support: supports
+  summary: Native taxonomy identifies3055 as Chlamydomonas reinhardtii and5888 as
+    Paramecium tetraurelia.
+  snapshot_sha256: 54ceb26c1caea3abc5923d5e67bebb068299f3213f86d1dd973472cc1b7e6986
+- evidence_id: rootlet-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.115.3.705%20OR%20DOI:10.1083/jcb.121.4.837%20OR%20DOI:10.1242/jcs.115.7.1511&format=json&resultType=core
+  locator: Three native metadata records and abstracts
+  accessed_at: '2026-10-21T06:40:33.397305Z'
+  support: supports
+  summary: The1991,1993 and2002 DOI/title pairs resolve correctly. The2002 abstract
+    directly reports SFA-GFP polymerization and reduced-SFA flagellar-assembly defects.
+  snapshot_sha256: 6215a744bfde5dc285d7c078203243eb2cd815079c7187e4d097cad949ace2b7
+- evidence_id: rootlet-1991
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2289178.1/PMC2289178.1.xml
+  locator: 'PMC PDF-derived full text: abstract and Discussion biochemical/localization
+    paragraphs'
+  accessed_at: '2026-10-21T06:40:50.398972Z'
+  support: supports
+  summary: Spermatozopsis similis fibers and reassembled paracrystals comprise fine2nm
+    filaments with28nm periodicity; antibody localization supports assemblin membership.
+    Cross-reactive green-algal observations are distinguished from direct Spermatozopsis
+    experiments.
+  snapshot_sha256: 5b2ff53d4582d441d9e2c6c92e62ebfd489e32afc18aa5ac381530937b12d964
+- evidence_id: rootlet-1993
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2119799.1/PMC2119799.1.xml
+  locator: 'PMC PDF-derived full text: abstract, sequence/assembly Results and Discussion'
+  accessed_at: '2026-10-21T06:40:50.411466Z'
+  support: supports
+  summary: The Spermatozopsis protein sequence and CD/assembly analysis support a
+    segmented coiled coil and fine-filament polymer. Its28nm repeat and related beta-giardin
+    architecture do not establish identical geometry for every microbial rootlet.
+  snapshot_sha256: ae0577429724dce210d25f2cd1360cacdbebf7a96abb8355938d4b8ad5c602bc
+- evidence_id: rootlet-agent-paper
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6819543/fullTextXML
+  locator: Sec3,17,21,23/Figure12 and24
+  accessed_at: '2026-10-21T06:40:56.137400Z'
+  support: supports
+  summary: P. tetraurelia stock51s was studied. Tagged representatives support SFA
+    membership; the SR extends anteriorly and control TEM striations repeat at24–36nm.
+    The study distinguishes rootletin-based mammalian rootlets and treats its molecular
+    assembly model as speculative.
+  snapshot_sha256: cd7e8440eff17c9f30d0bdf8a80ed9034b50748e216408494a647577997f45cc
+- evidence_id: rootlet-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:31673332%20OR%20EXT_ID:14513307&format=json&resultType=core
+  locator: Exact bibliographic records
+  accessed_at: '2026-10-21T06:40:37.080925Z'
+  support: supports
+  summary: Nabi2019 and Brugerolle/Mignot2003 DOI/title identities match PMID31673332
+    and14513307 respectively.
+  snapshot_sha256: bfaf32b345dcc1a382413a6cbf0175314cad5db38c6878679870b5660298aa12
+- evidence_id: rootlet-agent-rhizoplast-publisher
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1007/s00709-003-0016-4
+  locator: Publisher abstract and access status
+  accessed_at: '2026-10-21T06:40:37.546346Z'
+  support: supports
+  summary: The inspected publisher abstract supports the discussion-only basal-body-to-nucleus
+    chrysomonad connector claim. Full text requires subscription and was not inspected.
+  snapshot_sha256: 3982fcc1b641c5535583b7faeb0a681524be4451d3787d7b9ebb028a44018db9
+- evidence_id: rootlet-yang
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2173070.1/PMC2173070.1.xml
+  locator: Introduction, vertebrate context and rootletin characterization
+  accessed_at: '2026-10-21T06:42:04.455877Z'
+  support: supports
+  summary: The original GO source describes vertebrate/rootletin-oriented rootlets
+    and contains the exact dimensional/directional wording copied into GO. It explicitly
+    distinguishes algal rootlet constituents.
+  snapshot_sha256: 2403a70ca07fa9eadad929e62fccc529fb323b984a526f03cbcd2fc2e9a38a35
+- evidence_id: rootlet-IPR008374
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR008374/
+  locator: Native family name/type and scope
+  accessed_at: '2026-10-21T06:40:50.556864Z'
+  support: supports
+  summary: The native family includes SF-assemblin and related beta-giardin proteins.
+    It is not demonstrated here to delimit precisely the cross-lineage rootlet constituent
+    cohort.
+  snapshot_sha256: 0d9ac5ff8dc1886c6b48d47528177aed2ce34400e0393f1129495cc68046fceb
+- evidence_id: rootlet-PF06705
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06705/
+  locator: Native family name/type and scope
+  accessed_at: '2026-10-21T06:40:50.673904Z'
+  support: supports
+  summary: The native family includes SF-assemblin and related beta-giardin proteins.
+    It is not demonstrated here to delimit precisely the cross-lineage rootlet constituent
+    cohort.
+  snapshot_sha256: ff810d44cdf739fb2e1866f57bbdb9b5e7d0f2124f9fa8b128b58d5761ac42fb
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ciliary_rootlet.yaml
+  locator: Entire maintained YAML
+  accessed_at: '2026-10-21T06:42:47Z'
+  support: context_only
+  summary: Read broad GO definition, microbial examples, SFA component and sequence
+    example, three graph edges and two unresolved subtype/family discussions. Measurements
+    occur in prose rather than dedicated property fields.
+- evidence_id: identity-search
+  kind: record_content
+  reference: data/structures/cytoskeleton/ciliary_rootlet.yaml
+  locator: Ignored-inclusive identifier search across data/structures
+  accessed_at: '2026-10-21T06:42:47Z'
+  support: context_only
+  summary: Only this record declares GO0035253.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/ciliary_rootlet.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:40:17Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/ciliary_rootlet.yaml'
+  snapshot_sha256: 846c35fa958c76b6dff08b166bc6be989be3ae0a968df715065fa940ab8d6392
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/ciliary_rootlet.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/ciliary_rootlet-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:40:22Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/ciliary_rootlet.yaml\
+    \ --out /private/tmp/cellstructure-batch5-20261020-aEelh1/ciliary_rootlet-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch5-20261020-aEelh1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch5-20261020-aEelh1/ciliary_rootlet-strict.tsv"
+  snapshot_sha256: 3743e2148a1ca8a7a7e408f13c8e48e1dbcd95f76a72bdc1ede5ba04a4426b6f
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/ciliary_rootlet.yaml; exact collect() scope
+  accessed_at: '2026-10-21T06:42:47Z'
+  support: supports
+  summary: '10 of10 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Broad rootlet class and microbial variants
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: The exact GO identifier and basal-body origin are supported. The unresolved
+    subtype boundary does not by itself make the ID wrong, but its definition imports
+    properties that fail for a named canonical example.
+  evidence_ids:
+  - rootlet-go
+  - rootlet-agent-paper
+  - rootlet-yang
+  - record
+- assessment_id: definition-scope
+  area: scope
+  topic: Lineage-specific direction and periodicity
+  outcome: concern
+  target_ids:
+  - GO:0035253
+  summary: The unqualified nucleus-directed definition and55–70nm typical striations
+    conflict with the explicitly included Paramecium anterior SR and24–36nm control
+    repeats. The cited algal model also has28nm periodicity. Source-specific geometry
+    must be separated from broad class identity.
+  evidence_ids:
+  - rootlet-agent-paper
+  - rootlet-1991
+  - rootlet-1993
+  - rootlet-yang
+  - rootlet-go
+  - record
+- assessment_id: component
+  area: evidence
+  topic: SFA membership and polymer interpretation
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: 1991/1993 directly establish algal fine-filament composition;2019 directly
+    localizes Paramecium SFA representatives. A uniform2nm Paramecium filament diameter
+    was not measured in that paper and should not be inferred from its membership
+    evidence.
+  evidence_ids:
+  - rootlet-1991
+  - rootlet-1993
+  - rootlet-agent-paper
+  - record
+- assessment_id: sequence
+  area: provenance
+  topic: Unreviewed reference identifier
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: Accession, name, gene and taxon match native UniProt. The fragment flag
+    limits sequence completeness; the record does not claim a full-length experimental
+    localization reagent.
+  evidence_ids:
+  - rootlet-protein
+  - rootlet-taxon
+  - record
+- assessment_id: family
+  area: grounding
+  topic: Homolog-family boundary remains open
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: Inspected entries include beta-giardin as well as SF-assemblin. Further
+    scope reconciliation is needed before choosing an exact family for all microbial
+    rootlet homologs; no unsupported CURIE has been assigned.
+  evidence_ids:
+  - rootlet-IPR008374
+  - rootlet-PF06705
+  - rootlet-protein
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Two supported microbial examples
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: Native taxonomy and primary sources support the named species. COMMON is
+    ordinary occurrence in studied cells, not a quantified prevalence or uniform rootlet
+    geometry.
+  evidence_ids:
+  - rootlet-taxon
+  - rootlet-epmc
+  - rootlet-agent-paper
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Membership, basal-body origin and Chlamydomonas assembly effect
+  outcome: supported
+  target_ids:
+  - GO:0035253
+  summary: The first two relationships have ontology/structural support. The flagellar-assembly
+    effect is explicitly restricted to Chlamydomonas and stated in the2002 primary
+    abstract. NONMECHANISTIC does not establish an exhaustive pathway or Paramecium
+    ciliogenesis requirement.
+  evidence_ids:
+  - rootlet-go
+  - rootlet-epmc
+  - rootlet-1991
+  - rootlet-1993
+  - rootlet-agent-paper
+  - record
+- assessment_id: discussions
+  area: completeness
+  topic: Subtype follow-up does not qualify current definition
+  outcome: concern
+  target_ids:
+  - GO:0035253
+  summary: The discussions are relevant, including the abstract-supported chrysomonad
+    comparator. The existing open subtype TODO does not resolve the affirmative geometry
+    mismatch in the definition.
+  evidence_ids:
+  - rootlet-agent-paper
+  - rootlet-agent-rhizoplast-publisher
+  - record
+findings:
+- finding_id: F1
+  issue_key: ciliary-rootlet-definition-lineage-property-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Definition generalizes lineage-specific rootlet geometry to microbial examples
+  description: The broad record includes Paramecium striated rootlets yet defines
+    a nucleus-directed rootlet with typical55–70nm cross-striae. Its cited Nabi2019
+    source explicitly places the Paramecium SR anteriorly along the cortex and reports24–36nm
+    control striations; cited algal work reports28nm. The GO wording is faithfully
+    copied but derives from vertebrate/rootletin context. The subtype TODO acknowledges
+    diversity without qualifying these affirmative properties.
+  target_ids:
+  - GO:0035253
+  field_paths:
+  - definition
+  - discussions[discussion_id=split_rootlet_subtypes]
+  evidence_ids:
+  - rootlet-go
+  - rootlet-agent-paper
+  - rootlet-yang
+  - rootlet-1991
+  - rootlet-1993
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity,Properties/images,Taxonomic distribution
+  native_severity: major
+  normalization_reason: This is material property/scope inflation across the explicitly
+    represented taxa, rather than an identifier typo or a missing optional field.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0035253
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, retain the broad rootlet identity
+    but qualify or remove universal directional/dimensional wording. Put source-specific
+    geometry in scoped prose/properties or evidenced subtype records. Preserve the
+    distinct SFA and rootletin boundaries and avoid extrapolating algal2nm filament
+    measurements to unmeasured ciliate filaments.
+  acceptance_checks:
+  - The definition accommodates the named Paramecium anterior SR as well as nucleus-directed
+    rootlets.
+  - Each retained size/periodicity has an explicit taxon, structure and evidence context.
+  - Algal and ciliate observations are not silently combined into a universal rootlet
+    geometry.
+  - Run native schema, strict, labels, history and generated-page checks after curation.
+  generator: Maintained YAML; just render derives pages.
+limitations:
+- The2002 publisher returned403 and ResearchGate offers requests only; its inspected
+  abstract supports the coarse assembly/perturbation claims but detailed experimental
+  controls were not re-audited.
+- The2003 rhizoplast paper was inspected at abstract level, sufficient for the limited
+  discussion claim.
+- Old1991/1993 full text is PDF-derived OCR; numerical claims were cross-checked against
+  structured abstracts.
+- B2XYH3 is an unreviewed fragment; it is an identity example rather than independent
+  localization or complete-sequence evidence.
+- Exact cross-lineage family boundaries and subtype composition remain open.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.

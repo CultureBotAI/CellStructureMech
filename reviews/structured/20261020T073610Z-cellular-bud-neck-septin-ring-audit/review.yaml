@@ -1,0 +1,579 @@
+schema_version: 1.0.0
+review_id: 20261020T073610Z-cellular-bud-neck-septin-ring-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Initial bud-neck septin-ring evidence and family-grounding review
+started_at: '2026-10-20T07:34:56Z'
+finished_at: '2026-10-20T07:36:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Initial septin-ring identity, scaffold function, topology and five sequence
+  examples are supported. One minor finding identifies the unnecessarily localized
+  criterion used to withhold Septin family grounding.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    sha256: 6ef4f3536140aa328f20854cf2ef1db86b5508676f475e9a3282f932819546d1
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000144
+  path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  label: cellular bud neck septin ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Entire initial-ring record; native GO, UniProt, InterPro and taxonomy;
+    cited metadata/abstracts and the relevant full-text2005 author-review sections.
+  selection: Fourth remaining unreviewed path in batch5, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000144
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just validate data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just validate-strict data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_septin_ring-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  summary: 14 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - collar-epmc
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000144
+  summary: No expression-module assertion is made; native annotations and localization/scaffold
+    literature address the reviewed claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - septin-ring-go
+  - collar-proteins
+  - collar-IPR016491
+  - collar-epmc
+  - ring-taxon
+  - review-text
+  - record
+  - policy
+  - identity-search
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000144
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch5 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: septin-ring-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005940,GO:0000144,GO:0005935,GO:0032174,GO:0032177
+  locator: Five term definitions and child relations
+  accessed_at: '2026-10-20T07:35:12.091983Z'
+  support: supports
+  summary: The active GO0000144 definition matches the target dynamic initial ring.
+    GO0005940 lists it as is_a and GO0005935 lists it as part_of. Collar and split-ring
+    terms identify different states.
+  snapshot_sha256: 6578c332b71d05f196606b857beb377771307f93b639b9598ef2a7a83bc2a6b4
+- evidence_id: collar-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:CDC3%20OR%20gene_exact:CDC10%20OR%20gene_exact:CDC11%20OR%20gene_exact:CDC12%20OR%20gene_exact:SHS1)%20AND%20organism_id:559292%20AND%20reviewed:true&format=json
+  locator: 'Complete five-result native query: genes, names, status, organism, localization
+    evidence and InterPro annotations'
+  accessed_at: '2026-10-20T07:32:27.037283Z'
+  support: supports
+  summary: The exact-gene reviewed S288C query contains exactly P32457 CDC3, P25342
+    CDC10, P32458 CDC11, P32468 CDC12 and Q07657 SHS1 with matching labels/status/taxon.
+    All five carry IPR016491. All protein-example objects in this target match the
+    independently inspected collar examples, including every native PMID/ECO localization
+    note.
+  snapshot_sha256: a2792effab2d1d29b11914248246793a98fedeab1da079da62df7b5e92e9f3f9
+- evidence_id: collar-IPR016491
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: Native family name/type and scope
+  accessed_at: '2026-10-20T07:32:51.027110Z'
+  support: supports
+  summary: The native Septin family spans organisms and includes the five named budding-yeast
+    proteins. It provides family identity independently of their localized structural
+    role.
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+- evidence_id: collar-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1091/mbc.E04-09-0764%20OR%20DOI:10.1016/j.tcb.2005.06.007%20OR%20EXT_ID:14562095%20OR%20EXT_ID:25971666%20OR%20EXT_ID:9790978&format=json&resultType=core
+  locator: Five metadata records and inspected abstracts
+  accessed_at: '2026-10-20T07:32:23.432420Z'
+  support: supports
+  summary: Exact metadata verifies both cited DOIs and all three example PMIDs. The
+    Kozubowski abstract directly describes a future-site septin ring and its rearrangement
+    into the collar. Other abstracts establish the localization-survey and Cdc11/Shs1
+    context without proving every native protein annotation directly.
+  snapshot_sha256: 8f308f8deb9cf1326ab1410e941fce7985ebe790a74920d8960622672963eec5
+- evidence_id: ring-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=4932,559292
+  locator: Native taxonomy and parent relation
+  accessed_at: '2026-10-20T07:26:49.146723Z'
+  support: supports
+  summary: 4932 is Saccharomyces cerevisiae;559292 is its S288C strain.
+  snapshot_sha256: a0110fd4b27dc6aa4f9c3ae5db622f12e6d58f6309580788781290225ca768bb
+- evidence_id: review-text
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1761124/
+  locator: 'Versele/Thorner2005: Septin functions and Figure3 caption'
+  accessed_at: '2026-10-20T07:36:10Z'
+  support: supports
+  summary: The inspected author review distinguishes initial septin recruitment, collar
+    formation and cytokinetic splitting, and names the five mitotic septins. This
+    is review-level context, not a new experiment.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  locator: Entire maintained target
+  accessed_at: '2026-10-20T07:36:10Z'
+  support: context_only
+  summary: Read the initial-ring identity, one component with five examples, scaffold
+    function, three topology edges, resolved state boundary and record-scoped component
+    TODO. No image, physical measurement or trait linkage is asserted.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Components: class identity and REVIEWED_LABEL_ONLY'
+  accessed_at: '2026-10-20T07:36:10Z'
+  support: context_only
+  summary: Components are taxon-agnostic families/classes. REVIEWED_LABEL_ONLY denotes
+    absence of an exact term, not absence of a localization-specific family.
+- evidence_id: identity-search
+  kind: record_content
+  reference: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  locator: Ignored-inclusive identifier search across data/structures
+  accessed_at: '2026-10-20T07:36:10Z'
+  support: context_only
+  summary: Only this record declares GO0000144.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:34:58Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml'
+  snapshot_sha256: f01763e7fafb4c6cc1f4295fdd95b534ce244f2d943433a650955edac1ae8dbc
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_septin_ring-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:35:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml\
+    \ --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_septin_ring-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch5-20261020-aEelh1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_septin_ring-strict.tsv"
+  snapshot_sha256: 3840c4d966c40556c03f9235a4b485e3b0db5592533f493fbd26170ed3ec941b
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml; exact
+    collect() scope
+  accessed_at: '2026-10-20T07:36:10Z'
+  support: supports
+  summary: '14 of17 collected target identifiers returned OK at the unchanged base.
+    Residuals: PMID:14562095: UNREACHABLE; resolved by evidence collar-epmc; PMID:25971666:
+    UNREACHABLE; resolved by evidence collar-epmc; PMID:9790978: UNREACHABLE; resolved
+    by evidence collar-epmc. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Initial exchangeable septin ring
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: Exact GO identity and coarse timing agree. The target does not collapse
+    the subsequent collar or split rings into this state.
+  evidence_ids:
+  - septin-ring-go
+  - record
+  - review-text
+- assessment_id: hierarchy
+  area: grounding
+  topic: Septin-ring subtype and bud-neck parthood
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: Native child relations support both different relationship types.
+  evidence_ids:
+  - septin-ring-go
+- assessment_id: constituents
+  area: evidence
+  topic: Septin class and example identities
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: The class-level constituent and its structural necessity are supported.
+    All five reference sequences and their cited native localization provenance match;
+    membership is not inferred from sequence identity alone.
+  evidence_ids:
+  - septin-ring-go
+  - collar-proteins
+  - review-text
+  - collar-epmc
+  - record
+- assessment_id: family
+  area: grounding
+  topic: Family identity versus localized cohort
+  outcome: concern
+  target_ids:
+  - GO:0000144
+  summary: Verified IPR016491 matches the taxon-agnostic septin class. Requiring an
+    exact localized cohort term incorrectly blocks family grounding.
+  evidence_ids:
+  - collar-IPR016491
+  - collar-proteins
+  - policy
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Ordinary budding-yeast cell-cycle structure
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: The primary abstract supports the species and future-site state; COMMON
+    is not treated as measured prevalence. S288C examples are reference identifiers,
+    not universal strain evidence.
+  evidence_ids:
+  - collar-epmc
+  - ring-taxon
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Future-bud-site scaffold
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: The primary abstract describes the ring scaffold before collar rearrangement;
+    GO supplies the exchangeable state. No detailed molecular mechanism is claimed.
+  evidence_ids:
+  - septin-ring-go
+  - collar-epmc
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Three coarse topology edges
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: Septin assembly into the ring, ring-to-collar rearrangement and neck placement
+    are supported at the NONMECHANISTIC scope.
+  evidence_ids:
+  - septin-ring-go
+  - collar-epmc
+  - record
+- assessment_id: accessories
+  area: completeness
+  topic: Explicit associated-protein boundary
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: The record-scoped TODO acknowledges GO-defined septin-associated proteins
+    while withholding unsupported constituent assignments. This is an explicit scope
+    limit; the verified family portion of the TODO can be resolved separately.
+  evidence_ids:
+  - septin-ring-go
+  - record
+  - collar-IPR016491
+- assessment_id: status
+  area: completeness
+  topic: Maintained proposed record
+  outcome: supported
+  target_ids:
+  - GO:0000144
+  summary: The source/history remain PROPOSED and the biological state boundary is
+    explicit. The concrete follow-up is the family grounding and its explanation.
+  evidence_ids:
+  - record
+  - septin-ring-go
+  - collar-IPR016491
+findings:
+- finding_id: F1
+  issue_key: cellular-bud-neck-septin-ring-family-grounding-scope
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized cohort criterion unnecessarily blocks Septin family grounding
+  description: The septin proteins component retains REVIEWED_LABEL_ONLY because no
+    exact term delimits its complete localized cohort. IPR016491 is the verified Septin
+    family and annotates all five examples. The repository models components as taxon-agnostic
+    families; localization is carried by the role and source evidence. Update this
+    resolvable mapping while preserving the separate associated-protein boundary question.
+  target_ids:
+  - GO:0000144
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions[discussion_id=resolve_bud_neck_ring_components]
+  evidence_ids:
+  - collar-IPR016491
+  - collar-proteins
+  - policy
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: The structure, sequence examples and membership are supported;
+    the defect is a bounded missing family mapping and rationale.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000144
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, assign verified IPR016491 to
+    the septin class and reconcile its status/notes. Resolve only the family-grounding
+    portion of the TODO, retaining the distinct associated-protein review.
+  acceptance_checks:
+  - The family label/accession match native InterPro and all five example annotations.
+  - The role retains the localized initial-ring scope.
+  - The associated-protein boundary remains explicitly unresolved unless separately
+    evidenced.
+  - Run native schema, strict, product-label, history and generated-page checks after
+    curation.
+  generator: Maintained YAML; just render derives pages.
+limitations:
+- The Kozubowski and Finnigan full-text routes returned Europe PMC500, archive404
+  or browser challenges. Inspected abstracts support the coarse claims; detailed experiments
+  were not re-audited.
+- Protein-specific Huh/Mino provenance was verified in native UniProt; those papers
+  were inspected at abstract level.
+- The associated-protein constituent boundary remains open and this is not a complete
+  proteome census.
+- COMMON is ordinary cell-cycle occurrence, not a measured prevalence.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
