@@ -88,11 +88,18 @@ Verify counts, statuses and identifiers with a live command (`just report`,
   human decision.
 - **Edit templates, not `pages/`.** Change `src/cellstructuremech/templates/`,
   run `just render`, commit the result. `pages/` is checked byte-for-byte.
-- **Do not edit claw-governed vendored files here** — `mech_shared.yaml`,
-  `history.yaml`, `scripts/check_vendored_sync.*`,
-  `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, the
-  vendored `tests/test_*` and `prompts/backlog-loop-goal.md`. They are synced from
-  culturebotai-claw at the commit in `scripts/.vendored_canon_ref` and checked
+- **Do not edit claw-governed vendored files here.** They are every artifact
+  that claw's `src/kg_microbe_governance/vendored_artifacts.json`, at the commit
+  in `scripts/.vendored_canon_ref`, lists for `cellstructuremech`. That set
+  grows as claw governs more files, so it is not copied here; print it with:
+
+  ```bash
+  gh api "repos/CultureBotAI/culturebotai-claw/contents/src/kg_microbe_governance/vendored_artifacts.json?ref=$(cat scripts/.vendored_canon_ref)" \
+    -H "Accept: application/vnd.github.raw+json" \
+    --jq '.artifacts[] | select(.consumers == "all" or any(.consumers[]?; . == "cellstructuremech")) | .target'
+  ```
+
+  `{package_path}` in a target is `src/cellstructuremech`. They are checked
   byte-for-byte in CI (`just vendored-check`). Change them in claw and re-sync.
 - **Every curation change also gets a repository-level history record**:
   `just new-history --kind record --slug <slug> --target-root data/structures/<category> ...`
