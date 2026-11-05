@@ -1,0 +1,695 @@
+# Axonemal nexin link structure and source review
+
+- Review: 20261020T040019Z-axonemal-nexin-link-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T03:58:32Z
+- Finished UTC: 2026-10-20T04:00:19Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The exact complex boundary, Chlamydomonas scope, three reviewed protein exemplars and three descriptive graph edges are supported. No observed defect; the complete molecular inventory remains openly unresolved.
+
+## Scope And Provenance
+
+Entire record, all stable identifiers and seven cited primary publications at claim-relevant passages.
+
+Selection: Ninth unreviewed path of batch3.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005931 | data/structures/cytoskeleton/axonemal_nexin_link.yaml | maintained | axonemal nexin link |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0005931 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0005931 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0005931 | 9 identifiers OK; 5 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0005931 | No expression dataset is invoked. Structure, localization and mutant studies supply the relevant evidence. |
+| Claim-level scientific review | passed | True | GO:0005931 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0005931 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0005931 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0005931 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0005931 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0005931 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Nexin link and N-DRC boundary
+
+identity: supported. Targets: GO:0005931.
+
+The exact GO identity, synonyms and axoneme parthood are supported. Primary tomography and biochemical separation support a distinct multiprotein complex.
+
+### Scaffold exemplars within a larger cohort
+
+evidence: supported. Targets: GO:0005931.
+
+DRC1/2/4 membership is established; the declared group and open discussion avoid implying these are all subunits. Exact family groundings and stoichiometry are acknowledged gaps, not false completeness.
+
+### Three reviewed identifiers and provenance
+
+grounding: supported. Targets: GO:0005931.
+
+All accession tuples, uniqueness statements and selected localization citations match current native sources. The basal-body annotation is faithfully attributed and is not used alone to prove nexin membership.
+
+### Chlamydomonas normal anatomy
+
+scope: supported. Targets: GO:0005931.
+
+The wild-type and mutant structural studies support the species example and ordinary axonemal occurrence. Human disease observations do not expand the record’s distribution claim.
+
+### Regulation of ciliary movement
+
+evidence: supported. Targets: GO:0005931.
+
+Structural connections and mutant phenotypes support the broad regulatory role. The record does not claim a resolved signaling mechanism, universal absolute essentiality or proof that nexin alone maintains the entire axoneme.
+
+### Three coarse edges
+
+graph: supported. Targets: GO:0005931.
+
+Subunit membership, interdoublet linkage and participation in movement regulation have nearest-source support. The process edge avoids regulating a regulation process.
+
+### Declared limits and native status
+
+provenance: supported. Targets: GO:0005931.
+
+PROPOSED status, label-only cohort and open eleven-or-more-member grounding discussion are appropriate. No image, trait or physical-value assertions require additional validation.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| nexin-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005931,GO:0005930,GO:0003352; Definitions, synonyms and child relations | supports | Three active terms match identity, axoneme parthood and movement regulation; the interdoublet-link synonym is exact. |
+| nexin-proteins | https://rest.uniprot.org/uniprotkb/search?query=accession:P0DL09%20OR%20accession:A8JB22%20OR%20accession:Q7XJ96&amp;format=json; Complete entries and SUBCELLULAR LOCATION evidence | supports | All three reviewed accession/name/gene/taxon tuples match. Every PMID/ECO0000269 localization attribution in the record matches the current UniProt subcellular-location annotation. |
+| nexin-query | https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:DRC1%20OR%20gene_exact:DRC2%20OR%20gene_exact:DRC4)%20AND%20organism_id:3055%20AND%20reviewed:true&amp;format=json; Complete three-result response | supports | The reviewed exact-gene query for DRC1/2/4 in species3055 returns exactly the three declared accessions, one for each symbol. |
+| sheath-taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=3055; Exact species entry | supports | NCBITaxon3055 identifies Chlamydomonas reinhardtii. |
+| nexin-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.200908067%20OR%20DOI:10.1073/pnas.1910960116%20OR%20EXT_ID:23354437%20OR%20EXT_ID:23427265%20OR%20EXT_ID:25411337%20OR%20EXT_ID:29167384%20OR%20EXT_ID:12847082&amp;format=json&amp;resultType=core; Seven exact article identities and complete abstracts | supports | All two DOIs and five PMIDs match the recorded publications. Abstracts support the structural and localization context at the level used here. |
+| nexin-20008568 | https://pmc-oa-opendata.s3.amazonaws.com/PMC2806320.1/PMC2806320.1.xml; Results; Figures2-5; Discussion of nexin identity and regulatory connections | supports | Wild-type/mutant tomography identifies DRC as the nexin link, connects adjacent doublets and supports a regulatory role. The Discussion distinguishes interdoublet linkage from an obligatory requirement for overall axoneme integrity. |
+| nexin-29167384 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5909927.1/PMC5909927.1.xml; Tagged-DRC2 localization Results and Figure2 | supports | Tagged DRC2 occurs along flagella and in the basal-body region; rescued strains recover motility. This directly supports the provenance note associated with the DRC2 identity exemplar. |
+| nexin-25411337 | https://pmc-oa-opendata.s3.amazonaws.com/PMC4294676.1/PMC4294676.1.xml; Figure1 and abstract | supports | Structural labeling localizes DRC1/2/4 within the nexin-dynein regulatory complex. The figure explicitly retains ambiguity in exact terminal positions, which the record does not claim to resolve. |
+| nexin-23427265 | https://pmc-oa-opendata.s3.amazonaws.com/PMC3623635.1/PMC3623635.1.xml; Results on discrete complex and subunit association | supports | Biochemical fractionation separates a DRC4-containing complex from radial spokes and associated structures, supporting a distinct N-DRC boundary. |
+| nexin-12847082 | https://pmc-oa-opendata.s3.amazonaws.com/PMC2172716.1/PMC2172716.1.xml; Localization Results and Figure5 | supports | Tagged PF2/DRC4 is distributed along the axoneme and basal-body region; mutant rescue supports its DRC role. |
+| nexin-23354437 | https://pmc-oa-opendata.s3.amazonaws.com/PMC3818796.1/PMC3818796.1.xml; Abstract and introduction/Results on pf3 | supports | The primary study identifies DRC1 and relates Chlamydomonas pf3 to N-DRC assembly defects; human observations are separate. |
+| paper2019 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6859327/; Gui2019 Results on tagged subunits, Table1, Figure8 and scaffold Discussion | supports | The full article supports DRC1/2/4 as scaffold proteins, identifies eleven or more total subunits and retains unresolved regions. The record’s coarse cohort and open grounding discussion accurately reflect that level of knowledge. |
+| record | data/structures/cytoskeleton/axonemal_nexin_link.yaml; Entire record, synonyms, component cohort, three examples, three edges and discussion | context_only | The record gives three scaffold gene symbols without asserting a three-member complete complex. Its discussion explicitly covers eleven or more subunits; the graph is NONMECHANISTIC. |
+| schema-result | just validate data/structures/cytoskeleton/axonemal_nexin_link.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_nexin_link.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/axonemal_nexin_link.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_nexin_link.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/axonemal_nexin_link.yaml; exact collect() scope | supports | 9 of14 collected target identifiers returned OK at the unchanged base. Residuals: PMID:12847082: UNREACHABLE; resolved by evidence nexin-epmc; PMID:23354437: UNREACHABLE; resolved by evidence nexin-epmc; PMID:23427265: UNREACHABLE; resolved by evidence nexin-epmc; PMID:25411337: UNREACHABLE; resolved by evidence nexin-epmc; PMID:29167384: UNREACHABLE; resolved by evidence nexin-epmc. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The cohort is intentionally coarse; this is not a complete atomistic or stoichiometric reconstruction.
+- Primary-source inspection was bounded to identity, localization, complex boundary and the stated structural/functional claims; unrelated clinical and experimental-method details were not assessed.
+- The2019 full article was readable through PMC in the browser after archive404 and XML-service errors; these transport failures did not prevent the required source assessment.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user explicitly authorizes saving clean reviews.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T040019Z-axonemal-nexin-link-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Axonemal nexin link structure and source review
+started_at: '2026-10-20T03:58:32Z'
+finished_at: '2026-10-20T04:00:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact complex boundary, Chlamydomonas scope, three reviewed protein exemplars
+  and three descriptive graph edges are supported. No observed defect; the complete
+  molecular inventory remains openly unresolved.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    sha256: d55ca69b76b3b435e76e88185ee89256f4133ce7a0da1e819c5f3a18e5264188
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005931
+  path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  label: axonemal nexin link
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    role: maintained scientific record
+scope:
+  description: Entire record, all stable identifiers and seven cited primary publications
+    at claim-relevant passages.
+  selection: Ninth unreviewed path of batch3.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005931
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just validate data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just validate-strict data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  summary: 9 identifiers OK; 5 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - nexin-epmc
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005931
+  summary: No expression dataset is invoked. Structure, localization and mutant studies
+    supply the relevant evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - nexin-go
+  - nexin-proteins
+  - nexin-query
+  - sheath-taxon
+  - nexin-epmc
+  - nexin-20008568
+  - nexin-29167384
+  - nexin-25411337
+  - nexin-23427265
+  - nexin-12847082
+  - nexin-23354437
+  - paper2019
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005931
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: nexin-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005931,GO:0005930,GO:0003352
+  locator: Definitions, synonyms and child relations
+  accessed_at: '2026-10-20T03:58:43.506960Z'
+  support: supports
+  summary: Three active terms match identity, axoneme parthood and movement regulation;
+    the interdoublet-link synonym is exact.
+  snapshot_sha256: dd25a2055ebd622cf4dbd9b61aa436e7afd81606b609b4fad5f6079751fd1bff
+- evidence_id: nexin-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=accession:P0DL09%20OR%20accession:A8JB22%20OR%20accession:Q7XJ96&format=json
+  locator: Complete entries and SUBCELLULAR LOCATION evidence
+  accessed_at: '2026-10-20T03:58:43.633875Z'
+  support: supports
+  summary: All three reviewed accession/name/gene/taxon tuples match. Every PMID/ECO0000269
+    localization attribution in the record matches the current UniProt subcellular-location
+    annotation.
+  snapshot_sha256: 407c8f675f6c5c223d8e1165807fa46c0adcaaf8a5d952f61fd769150cc05023
+- evidence_id: nexin-query
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:DRC1%20OR%20gene_exact:DRC2%20OR%20gene_exact:DRC4)%20AND%20organism_id:3055%20AND%20reviewed:true&format=json
+  locator: Complete three-result response
+  accessed_at: '2026-10-20T03:58:43.628444Z'
+  support: supports
+  summary: The reviewed exact-gene query for DRC1/2/4 in species3055 returns exactly
+    the three declared accessions, one for each symbol.
+  snapshot_sha256: 407c8f675f6c5c223d8e1165807fa46c0adcaaf8a5d952f61fd769150cc05023
+- evidence_id: sheath-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Exact species entry
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: NCBITaxon3055 identifies Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: nexin-epmc
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.200908067%20OR%20DOI:10.1073/pnas.1910960116%20OR%20EXT_ID:23354437%20OR%20EXT_ID:23427265%20OR%20EXT_ID:25411337%20OR%20EXT_ID:29167384%20OR%20EXT_ID:12847082&format=json&resultType=core
+  locator: Seven exact article identities and complete abstracts
+  accessed_at: '2026-10-20T03:58:43.825156Z'
+  support: supports
+  summary: All two DOIs and five PMIDs match the recorded publications. Abstracts
+    support the structural and localization context at the level used here.
+  snapshot_sha256: 9a7c46d2a617b1032a3e0ae0c19f00f9978540865a5bd4fdf25888c97e902118
+- evidence_id: nexin-20008568
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2806320.1/PMC2806320.1.xml
+  locator: Results; Figures2-5; Discussion of nexin identity and regulatory connections
+  accessed_at: '2026-10-20T03:58:56.334167Z'
+  support: supports
+  summary: Wild-type/mutant tomography identifies DRC as the nexin link, connects
+    adjacent doublets and supports a regulatory role. The Discussion distinguishes
+    interdoublet linkage from an obligatory requirement for overall axoneme integrity.
+  snapshot_sha256: e41de2be54f3fee0414fee83c5bbd0ee8937efdf5345fce80fa4dcedb98cccc7
+- evidence_id: nexin-29167384
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5909927.1/PMC5909927.1.xml
+  locator: Tagged-DRC2 localization Results and Figure2
+  accessed_at: '2026-10-20T03:58:56.401669Z'
+  support: supports
+  summary: Tagged DRC2 occurs along flagella and in the basal-body region; rescued
+    strains recover motility. This directly supports the provenance note associated
+    with the DRC2 identity exemplar.
+  snapshot_sha256: 17827e30734414d39de72a4cdd13b67199c6f9c37b9b0bdcaa7e4edb574b95b3
+- evidence_id: nexin-25411337
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4294676.1/PMC4294676.1.xml
+  locator: Figure1 and abstract
+  accessed_at: '2026-10-20T03:58:56.356272Z'
+  support: supports
+  summary: Structural labeling localizes DRC1/2/4 within the nexin-dynein regulatory
+    complex. The figure explicitly retains ambiguity in exact terminal positions,
+    which the record does not claim to resolve.
+  snapshot_sha256: 84dbd6366d904377a9ff281b07579909fafe5d4cd57d541d6d3aefcc3cc6cc2b
+- evidence_id: nexin-23427265
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3623635.1/PMC3623635.1.xml
+  locator: Results on discrete complex and subunit association
+  accessed_at: '2026-10-20T03:58:56.663189Z'
+  support: supports
+  summary: Biochemical fractionation separates a DRC4-containing complex from radial
+    spokes and associated structures, supporting a distinct N-DRC boundary.
+  snapshot_sha256: 495ff29ff5c52bcff8beb0ff7d69b8f7f989ed2e0c12a80dac4cc352740c61a3
+- evidence_id: nexin-12847082
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2172716.1/PMC2172716.1.xml
+  locator: Localization Results and Figure5
+  accessed_at: '2026-10-20T03:58:56.828868Z'
+  support: supports
+  summary: Tagged PF2/DRC4 is distributed along the axoneme and basal-body region;
+    mutant rescue supports its DRC role.
+  snapshot_sha256: 1eff767be00b302796e1b103253d39ec8f9d56b1b7ebf6321ba70d46036bfa98
+- evidence_id: nexin-23354437
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3818796.1/PMC3818796.1.xml
+  locator: Abstract and introduction/Results on pf3
+  accessed_at: '2026-10-20T03:58:56.783443Z'
+  support: supports
+  summary: The primary study identifies DRC1 and relates Chlamydomonas pf3 to N-DRC
+    assembly defects; human observations are separate.
+  snapshot_sha256: 806268c349154eabd265e1cb33f729cba3e189bb6d1ab0cccacedd70cbcecd11
+- evidence_id: paper2019
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6859327/
+  locator: Gui2019 Results on tagged subunits, Table1, Figure8 and scaffold Discussion
+  accessed_at: '2026-10-20T04:00:19Z'
+  support: supports
+  summary: The full article supports DRC1/2/4 as scaffold proteins, identifies eleven
+    or more total subunits and retains unresolved regions. The record’s coarse cohort
+    and open grounding discussion accurately reflect that level of knowledge.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  locator: Entire record, synonyms, component cohort, three examples, three edges
+    and discussion
+  accessed_at: '2026-10-20T04:00:19Z'
+  support: context_only
+  summary: The record gives three scaffold gene symbols without asserting a three-member
+    complete complex. Its discussion explicitly covers eleven or more subunits; the
+    graph is NONMECHANISTIC.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:58:33Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_nexin_link.yaml'
+  snapshot_sha256: daeada15826f40aa32e498238e4135b9c5a291b3a3953a223e2569281f6fc7e7
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:58:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_nexin_link.yaml\
+    \ --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_nexin_link-strict.tsv"
+  snapshot_sha256: cb59a02532149b7c5e52b2adcffa0dbb149469517500c7127c58617a0d471a8d
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/axonemal_nexin_link.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-20T04:00:19Z'
+  support: supports
+  summary: '9 of14 collected target identifiers returned OK at the unchanged base.
+    Residuals: PMID:12847082: UNREACHABLE; resolved by evidence nexin-epmc; PMID:23354437:
+    UNREACHABLE; resolved by evidence nexin-epmc; PMID:23427265: UNREACHABLE; resolved
+    by evidence nexin-epmc; PMID:25411337: UNREACHABLE; resolved by evidence nexin-epmc;
+    PMID:29167384: UNREACHABLE; resolved by evidence nexin-epmc. Source-native identity
+    checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Nexin link and N-DRC boundary
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: The exact GO identity, synonyms and axoneme parthood are supported. Primary
+    tomography and biochemical separation support a distinct multiprotein complex.
+  evidence_ids:
+  - nexin-go
+  - nexin-20008568
+  - nexin-23427265
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Scaffold exemplars within a larger cohort
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: DRC1/2/4 membership is established; the declared group and open discussion
+    avoid implying these are all subunits. Exact family groundings and stoichiometry
+    are acknowledged gaps, not false completeness.
+  evidence_ids:
+  - nexin-25411337
+  - paper2019
+  - record
+- assessment_id: examples
+  area: grounding
+  topic: Three reviewed identifiers and provenance
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: All accession tuples, uniqueness statements and selected localization citations
+    match current native sources. The basal-body annotation is faithfully attributed
+    and is not used alone to prove nexin membership.
+  evidence_ids:
+  - nexin-proteins
+  - nexin-query
+  - nexin-29167384
+  - nexin-25411337
+  - nexin-12847082
+  - nexin-23354437
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Chlamydomonas normal anatomy
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: The wild-type and mutant structural studies support the species example
+    and ordinary axonemal occurrence. Human disease observations do not expand the
+    record’s distribution claim.
+  evidence_ids:
+  - sheath-taxon
+  - nexin-20008568
+  - paper2019
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Regulation of ciliary movement
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: Structural connections and mutant phenotypes support the broad regulatory
+    role. The record does not claim a resolved signaling mechanism, universal absolute
+    essentiality or proof that nexin alone maintains the entire axoneme.
+  evidence_ids:
+  - nexin-go
+  - nexin-20008568
+  - paper2019
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Three coarse edges
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: Subunit membership, interdoublet linkage and participation in movement
+    regulation have nearest-source support. The process edge avoids regulating a regulation
+    process.
+  evidence_ids:
+  - nexin-go
+  - nexin-20008568
+  - paper2019
+  - record
+- assessment_id: status
+  area: provenance
+  topic: Declared limits and native status
+  outcome: supported
+  target_ids:
+  - GO:0005931
+  summary: PROPOSED status, label-only cohort and open eleven-or-more-member grounding
+    discussion are appropriate. No image, trait or physical-value assertions require
+    additional validation.
+  evidence_ids:
+  - nexin-20008568
+  - paper2019
+  - record
+findings: []
+actions: []
+limitations:
+- The cohort is intentionally coarse; this is not a complete atomistic or stoichiometric
+  reconstruction.
+- Primary-source inspection was bounded to identity, localization, complex boundary
+  and the stated structural/functional claims; unrelated clinical and experimental-method
+  details were not assessed.
+- The2019 full article was readable through PMC in the browser after archive404 and
+  XML-service errors; these transport failures did not prevent the required source
+  assessment.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user explicitly authorizes saving clean reviews.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```

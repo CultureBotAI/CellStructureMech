@@ -1,0 +1,724 @@
+# Axonemal central bridge boundary and HY3 membership
+
+- Review: 20261020T034350Z-axonemal-central-bridge-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T03:41:42Z
+- Finished UTC: 2026-10-20T03:43:50Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact bridge identity, topology, PF20 example and coarse structural role are supported. One major finding: HY3/Hydin projection-localization evidence does not support its unqualified bridge-constituent placement.
+
+## Scope And Provenance
+
+Entire target, component/example, all four graph edges and cited sources; focused Hydin primary-source follow-up.
+
+Selection: Second unreviewed path of batch3.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990717 | data/structures/cytoskeleton/axonemal_central_bridge.yaml | maintained | axonemal central bridge |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990717 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990717 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:1990717 | All7 target identifiers OK; scientific membership assessed separately. |
+| Claim-level scientific audit | passed | True | GO:1990717 | Required source inspections completed; one major unsupported membership finding observed. |
+| Expression-module applicability | not_applicable | False | GO:1990717 | No expression-module claim is made. The Chlamydomonas localization question requires structural primary evidence; expression co-membership would not establish bridge membership. |
+| Full corpus QC | passed | True | GO:1990717 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990717 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990717 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990717 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:1990717 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Bridge network versus central apparatus and projections
+
+identity: supported. Targets: GO:1990717.
+
+Exact GO identity and apparatus parthood are supported. The2013 description refines the older two-bridge model without changing the structural target.
+
+### PF20 supported; HY3 belongs to a different source-defined region
+
+evidence: concern. Targets: GO:1990717.
+
+The cited source supports PF20 and describes PF16 as tentative. HY3/Hydin evidence concerns C2b; the unqualified bridge symbol is unsupported. A connection between projections does not identify a constituent of the direct bridge network.
+
+### PF20 representative and gene uniqueness
+
+grounding: supported. Targets: GO:1990717.
+
+Current reviewed accession, protein name, gene and species match. The exact reviewed search is unique. Generic label-only component grounding remains explicit; no family accession is invented.
+
+### Chlamydomonas normal anatomy and structural periodicity
+
+scope: supported. Targets: GO:1990717.
+
+The source supports normal central-apparatus organization, a species-matched model and the16nm repeat. COMMON is qualitative normal anatomy, not a numerical prevalence survey. Comparative sea-urchin observations are confined to the source description.
+
+### C1-C2 linkage
+
+evidence: supported. Targets: GO:1990717.
+
+Physical linkage is a legitimate structural role supported by GO and observed bridge topology. No untested biochemical signaling role is asserted.
+
+### Four coarse edges
+
+graph: supported. Targets: GO:1990717.
+
+The descriptive network formation, C1 attachment, C2 attachment and apparatus-parthood edges are supported at group level. The component-ref inherits the HY3 membership problem; the graph does not independently prove every named constituent.
+
+### Scoped composition TODO and status
+
+completeness: supported. Targets: GO:1990717.
+
+Additional families and counts remain actionable open work; tentative PF16 is not promoted to a confirmed constituent. PROPOSED status, history and lack of optional images/properties/traits are appropriate.
+
+## Findings
+
+### F1: HY3 is listed as a bridge constituent without bridge-localization support
+
+major / open / confirmed; issue key: axonemal-central-bridge-hy3-membership.
+
+HY3 encodes Hydin. The cited2013 bridge study and the primary Hydin paper place it in the C2b projection; they distinguish this from the direct C1-C2 bridge network. Listing HY3 alongside PF20 on the bridge constituent silently broadens membership. This is an unsupported placement, not proof that all possible bridge interactions are absent.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Remove the unsupported HY3 bridge membership or supply direct bridge-localization evidence and explicitly qualify its scope. Preserve PF20 and the separate unresolved composition discussion.
+
+- Every gene symbol on the bridge constituent has direct source support for this specific structural boundary.
+- Hydin C2b evidence is not treated as proof of central-bridge membership; any candidate association is explicitly qualified.
+- After separately authorized curation, run focused schema/strict checks, native history gates and generated-page validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990717,GO:1990716,GO:1990719,GO:1990720; Term names, definitions and relationships | supports | Four active exact terms identify bridge, apparatus and C1/C2 tubules; apparatus lists the bridge as a part_of child. The two-bridge definition and newer network description refer to the same structure. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=3055; Exact TaxId/ScientificName | supports | NCBITaxon3055 is Chlamydomonas reinhardtii. |
+| doi | https://api.crossref.org/works/10.1002/cm.21094; Crossref message DOI/title/author | supports | Exact DOI/title/authors agree with the cited2013 Cytoskeleton article. |
+| epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/cm.21094&amp;format=json&amp;resultType=core; Exact result and identifiers | supports | PMID23281266 and PMC3914236 resolve to the cited DOI and title. |
+| paper-meta | https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.json; Article identifiers and version | supports | The official archive identifies PMC3914236 version1 and its author-manuscript status. |
+| paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.xml; Bridge Results and Discussion; Hydin/projection section; Figure5 caption | context_only | Results support a16nm bridge network between C1/C2; composition discussion distinguishes localized PF20 from tentative PF16. Hydin is assigned to projection2b, separately from the central bridge. |
+| hydin-paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC2063982.1/PMC2063982.1.xml; DOI10.1083/jcb.200611115; Results gene identity; Discussion C2b model | refutes | The primary study identifies HY3 as the Hydin gene and places Hydin in the C2b projection, with an indirect connection toward C1 through C1b. This does not establish membership in the direct central-bridge network. |
+| uniprot | https://rest.uniprot.org/uniprotkb/P93107.json; entryType, genes, proteinDescription, organism and SUBUNIT | supports | P93107 is reviewed Chlamydomonas PF20 with the recorded protein label and taxon. Its subunit annotation refers to inter-microtubule bridges. |
+| query | https://rest.uniprot.org/uniprotkb/search?query=gene_exact:PF20%20AND%20organism_id:3055%20AND%20reviewed:true&amp;format=json; Complete query results | supports | The exact reviewed PF20/taxon3055 search returns only P93107; current selection-provenance wording is supported. |
+| hy3 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact:HY3%20AND%20organism_id:3055&amp;format=json; Complete query results | context_only | Exact HY3/taxon3055 search returns no entries. This is only a query result, not evidence that HY3 does not exist; the primary paper supplies its identity. |
+| local-search | rg -l -uu HY3 data history curation scripts research; data, history, curation, scripts and research; hidden and ignored files included | context_only | The bounded local HY3 search returned only the target YAML. No additional HY3 provenance was found within these searched trees; this is not an all-repository or external-literature absence claim. |
+| record | data/structures/cytoskeleton/axonemal_central_bridge.yaml; Entire file, all components/examples, four edges, discussion and curation history | context_only | HY3 appears as an unqualified symbol on the bridge constituent alongside PF20. The remainder of the record is explicitly coarse and preserves uncertain PF16 placement. |
+| schema-result | just validate data/structures/cytoskeleton/axonemal_central_bridge.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_central_bridge.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/axonemal_central_bridge.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_central_bridge.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/axonemal_central_bridge.yaml; exact native collect() slice | supports | All7 collected target identifiers returned OK. HY3 is an ungrounded symbol, so this resolver success does not validate its component membership. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The review does not exclude all possible Hydin interactions with the bridge; it establishes that the cited evidence does not support this asserted membership.
+- The record intentionally leaves a complete composition and copy-number model unresolved.
+- COMMON is qualitative normal anatomy, not a measured prevalence estimate.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Source-native identifiers and primary structural localization were inspected. No scientific record, status, history or page was edited.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T034350Z-axonemal-central-bridge-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Axonemal central bridge boundary and HY3 membership
+started_at: '2026-10-20T03:41:42Z'
+finished_at: '2026-10-20T03:43:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independence from historical
+    agent authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Exact bridge identity, topology, PF20 example and coarse structural role
+  are supported. One major finding: HY3/Hydin projection-localization evidence does
+  not support its unqualified bridge-constituent placement.'
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    sha256: 488bf49e662fd058a77ae30e822399a25c8079ea423dc663a8523f364de07e71
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990717
+  path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  label: axonemal central bridge
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target, component/example, all four graph edges and cited sources;
+    focused Hydin primary-source follow-up.
+  selection: Second unreviewed path of batch3.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990717
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just validate data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just validate-strict data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  summary: All7 target identifiers OK; scientific membership assessed separately.
+  evidence_ids:
+  - target-curies
+  - go
+  - taxon
+  - doi
+  - uniprot
+- check_id: source-review
+  name: Claim-level scientific audit
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  summary: Required source inspections completed; one major unsupported membership
+    finding observed.
+  evidence_ids:
+  - paper
+  - hydin-paper
+  - go
+  - uniprot
+  - query
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990717
+  summary: No expression-module claim is made. The Chlamydomonas localization question
+    requires structural primary evidence; expression co-membership would not establish
+    bridge membership.
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990717
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990717,GO:1990716,GO:1990719,GO:1990720
+  locator: Term names, definitions and relationships
+  accessed_at: '2026-10-20T03:41:58.120358Z'
+  support: supports
+  summary: Four active exact terms identify bridge, apparatus and C1/C2 tubules; apparatus
+    lists the bridge as a part_of child. The two-bridge definition and newer network
+    description refer to the same structure.
+  snapshot_sha256: 5ec76809a013397dad1064cb2dbfdcf983659bd8096af3c66003f01b7bec092f
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Exact TaxId/ScientificName
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: NCBITaxon3055 is Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: doi
+  kind: database
+  reference: https://api.crossref.org/works/10.1002/cm.21094
+  locator: Crossref message DOI/title/author
+  accessed_at: '2026-10-20T03:41:58.394317Z'
+  support: supports
+  summary: Exact DOI/title/authors agree with the cited2013 Cytoskeleton article.
+  snapshot_sha256: 702d09d0f5a5caa853a9c926637db2260447908ab1e6fdfa12ff48c69b370248
+- evidence_id: epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/cm.21094&format=json&resultType=core
+  locator: Exact result and identifiers
+  accessed_at: '2026-10-20T03:41:58.165073Z'
+  support: supports
+  summary: PMID23281266 and PMC3914236 resolve to the cited DOI and title.
+  snapshot_sha256: 99899baa950adcfa150e85483fd760d4addfbe5ff43e56e0aa5eb30f428dafd1
+- evidence_id: paper-meta
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.json
+  locator: Article identifiers and version
+  accessed_at: '2026-10-20T03:42:14.429433Z'
+  support: supports
+  summary: The official archive identifies PMC3914236 version1 and its author-manuscript
+    status.
+  snapshot_sha256: 31013663149ccbd102b6055f11a960095c1f80f8991f327d2ff817cddce3bde6
+- evidence_id: paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.xml
+  locator: Bridge Results and Discussion; Hydin/projection section; Figure5 caption
+  accessed_at: '2026-10-20T03:42:14.888078Z'
+  support: context_only
+  summary: Results support a16nm bridge network between C1/C2; composition discussion
+    distinguishes localized PF20 from tentative PF16. Hydin is assigned to projection2b,
+    separately from the central bridge.
+  snapshot_sha256: 8ea6c2f20d7cecc7a071669f91afd2d6b2d2aa8681eefb5b001ef22c6b82a7d0
+- evidence_id: hydin-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2063982.1/PMC2063982.1.xml
+  locator: DOI10.1083/jcb.200611115; Results gene identity; Discussion C2b model
+  accessed_at: '2026-10-20T03:42:43.982502Z'
+  support: refutes
+  summary: The primary study identifies HY3 as the Hydin gene and places Hydin in
+    the C2b projection, with an indirect connection toward C1 through C1b. This does
+    not establish membership in the direct central-bridge network.
+  snapshot_sha256: c7bb85c73975377b7a3306b609723059de86c1848b4acdc32a970067f540d94d
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P93107.json
+  locator: entryType, genes, proteinDescription, organism and SUBUNIT
+  accessed_at: '2026-10-20T03:41:58.123739Z'
+  support: supports
+  summary: P93107 is reviewed Chlamydomonas PF20 with the recorded protein label and
+    taxon. Its subunit annotation refers to inter-microtubule bridges.
+  snapshot_sha256: b5b668258ebbfb385c310c9786b692c63633bef18a9f222e94cb1e5d73461b33
+- evidence_id: query
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact:PF20%20AND%20organism_id:3055%20AND%20reviewed:true&format=json
+  locator: Complete query results
+  accessed_at: '2026-10-20T03:41:58.194050Z'
+  support: supports
+  summary: The exact reviewed PF20/taxon3055 search returns only P93107; current selection-provenance
+    wording is supported.
+  snapshot_sha256: f2e211278387b76aecafa2174a5e402de4da6509bb17fd1b031dd2b0d02fb658
+- evidence_id: hy3
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact:HY3%20AND%20organism_id:3055&format=json
+  locator: Complete query results
+  accessed_at: '2026-10-20T03:42:14.698514Z'
+  support: context_only
+  summary: Exact HY3/taxon3055 search returns no entries. This is only a query result,
+    not evidence that HY3 does not exist; the primary paper supplies its identity.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: local-search
+  kind: record_content
+  reference: rg -l -uu HY3 data history curation scripts research
+  locator: data, history, curation, scripts and research; hidden and ignored files
+    included
+  accessed_at: '2026-10-20T03:42:59.976900Z'
+  support: context_only
+  summary: The bounded local HY3 search returned only the target YAML. No additional
+    HY3 provenance was found within these searched trees; this is not an all-repository
+    or external-literature absence claim.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  locator: Entire file, all components/examples, four edges, discussion and curation
+    history
+  accessed_at: '2026-10-20T03:43:50Z'
+  support: context_only
+  summary: HY3 appears as an unqualified symbol on the bridge constituent alongside
+    PF20. The remainder of the record is explicitly coarse and preserves uncertain
+    PF16 placement.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:41:44Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_central_bridge.yaml'
+  snapshot_sha256: 3d8cfb16c5c8d73ccb0950b798d34185c534225adcc295b1b609953d9c8bac00
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:41:45Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_central_bridge.yaml\
+    \ --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_bridge-strict.tsv"
+  snapshot_sha256: 1d3a110d06d4ed6335cad74f464e3acdb0dc2aca553eb4e82457c50993e60b46
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/axonemal_central_bridge.yaml; exact native
+    collect() slice
+  accessed_at: '2026-10-20T03:43:50Z'
+  support: supports
+  summary: All7 collected target identifiers returned OK. HY3 is an ungrounded symbol,
+    so this resolver success does not validate its component membership.
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Bridge network versus central apparatus and projections
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: Exact GO identity and apparatus parthood are supported. The2013 description
+    refines the older two-bridge model without changing the structural target.
+  evidence_ids:
+  - go
+  - paper
+  - record
+- assessment_id: component
+  area: evidence
+  topic: PF20 supported; HY3 belongs to a different source-defined region
+  outcome: concern
+  target_ids:
+  - GO:1990717
+  summary: The cited source supports PF20 and describes PF16 as tentative. HY3/Hydin
+    evidence concerns C2b; the unqualified bridge symbol is unsupported. A connection
+    between projections does not identify a constituent of the direct bridge network.
+  evidence_ids:
+  - paper
+  - hydin-paper
+  - record
+- assessment_id: protein
+  area: grounding
+  topic: PF20 representative and gene uniqueness
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: Current reviewed accession, protein name, gene and species match. The exact
+    reviewed search is unique. Generic label-only component grounding remains explicit;
+    no family accession is invented.
+  evidence_ids:
+  - uniprot
+  - query
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Chlamydomonas normal anatomy and structural periodicity
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: The source supports normal central-apparatus organization, a species-matched
+    model and the16nm repeat. COMMON is qualitative normal anatomy, not a numerical
+    prevalence survey. Comparative sea-urchin observations are confined to the source
+    description.
+  evidence_ids:
+  - taxon
+  - go
+  - paper
+  - record
+- assessment_id: function
+  area: evidence
+  topic: C1-C2 linkage
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: Physical linkage is a legitimate structural role supported by GO and observed
+    bridge topology. No untested biochemical signaling role is asserted.
+  evidence_ids:
+  - go
+  - paper
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four coarse edges
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: The descriptive network formation, C1 attachment, C2 attachment and apparatus-parthood
+    edges are supported at group level. The component-ref inherits the HY3 membership
+    problem; the graph does not independently prove every named constituent.
+  evidence_ids:
+  - go
+  - paper
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Scoped composition TODO and status
+  outcome: supported
+  target_ids:
+  - GO:1990717
+  summary: Additional families and counts remain actionable open work; tentative PF16
+    is not promoted to a confirmed constituent. PROPOSED status, history and lack
+    of optional images/properties/traits are appropriate.
+  evidence_ids:
+  - paper
+  - record
+findings:
+- finding_id: F1
+  issue_key: axonemal-central-bridge-hy3-membership
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: HY3 is listed as a bridge constituent without bridge-localization support
+  description: HY3 encodes Hydin. The cited2013 bridge study and the primary Hydin
+    paper place it in the C2b projection; they distinguish this from the direct C1-C2
+    bridge network. Listing HY3 alongside PF20 on the bridge constituent silently
+    broadens membership. This is an unsupported placement, not proof that all possible
+    bridge interactions are absent.
+  target_ids:
+  - GO:1990717
+  field_paths:
+  - components[component_id=central_bridge_proteins].gene_symbols
+  - causal_graphs[graph_id=chlamydomonas_central_bridge_c1_c2_linkage].nodes[node_id=central_bridge_proteins].component_ref
+  evidence_ids:
+  - record
+  - paper
+  - hydin-paper
+  - local-search
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Components and Evidence standard
+  native_severity: major
+  normalization_reason: Unsupported named structural membership crosses the source-defined
+    bridge/projection boundary and propagates through the component reference.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990717
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    role: maintained scientific record
+  description: Remove the unsupported HY3 bridge membership or supply direct bridge-localization
+    evidence and explicitly qualify its scope. Preserve PF20 and the separate unresolved
+    composition discussion.
+  acceptance_checks:
+  - Every gene symbol on the bridge constituent has direct source support for this
+    specific structural boundary.
+  - Hydin C2b evidence is not treated as proof of central-bridge membership; any candidate
+    association is explicitly qualified.
+  - After separately authorized curation, run focused schema/strict checks, native
+    history gates and generated-page validation.
+  generator: Maintained YAML owns changes; just render derives pages.
+limitations:
+- The review does not exclude all possible Hydin interactions with the bridge; it
+  establishes that the cited evidence does not support this asserted membership.
+- The record intentionally leaves a complete composition and copy-number model unresolved.
+- COMMON is qualitative normal anatomy, not a measured prevalence estimate.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Source-native identifiers and primary structural localization were inspected. No
+  scientific record, status, history or page was edited.
+```

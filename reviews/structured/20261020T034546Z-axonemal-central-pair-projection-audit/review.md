@@ -1,0 +1,734 @@
+# Axonemal central pair projection evidence and function representation
+
+- Review: 20261020T034546Z-axonemal-central-pair-projection-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T03:44:00Z
+- Finished UTC: 2026-10-20T03:45:46Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact projection identity, architecture and accession tuples are supported. Two minor issues remain: missing direct PF16 role evidence and a geometric statement occupying the function field.
+
+## Scope And Provenance
+
+Complete target; all component symbols/examples, four graph edges and discussion; primary follow-up for PF16.
+
+Selection: Third unreviewed path of batch3.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990718 | data/structures/cytoskeleton/axonemal_central_pair_projection.yaml | maintained | axonemal central pair projection |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990718 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990718 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:1990718 | All8 collected target identifiers OK. |
+| Claim-level source review | passed | True | GO:1990718 | Complete target, nearest sources and later PF16 corroboration inspected; two minor findings observed. |
+| Expression-module applicability | not_applicable | False | GO:1990718 | No transcriptomic assertion is made. Structural localization is resolved by the cited primary studies; coexpression would not establish it. |
+| Full corpus QC | passed | True | GO:1990718 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990718 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990718 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990718 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:1990718 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Projection class and boundaries
+
+identity: supported. Targets: GO:1990718.
+
+Exact GO identity and apparatus parthood match the broad C1/C2 projection class. Central singlets, projections and radial spokes remain distinct.
+
+### PF16, PF6 and CPC1 membership
+
+evidence: concern. Targets: GO:1990718.
+
+PF6/CPC1 have source support in the cited paper; later structural evidence supports PF16 at projection foundations. PF16 needs its actual nearest citation and a role distinguishing basal scaffolding from distal projection components.
+
+### Two unreviewed exemplars
+
+grounding: supported. Targets: GO:1990718.
+
+Both accession/name/gene/taxon/status tuples match. They do not claim reviewed status or independent localization proof. A missing optional PF6 accession is not itself a defect.
+
+### Species-level anatomy and broad class
+
+scope: supported. Targets: GO:1990718.
+
+The paper supports normal Chlamydomonas projection architecture; COMMON is qualitative anatomy, not a population estimate. No individual named subcomplex is claimed to share every component or repeat.
+
+### Geometry in the function slot
+
+representation: concern. Targets: GO:1990718.
+
+The source supports outward extension, but the field describes location and shape rather than a process or activity. This can be moved to structural prose or replaced with a narrowly sourced functional statement.
+
+### Four nonmechanistic architecture edges
+
+graph: supported. Targets: GO:1990718.
+
+Group formation, origin at the central pair, outward orientation and apparatus parthood are source-backed descriptive relations. The graph expressly defers mechanistic and named-subcomplex detail.
+
+### Named-projection TODO, history and optional fields
+
+completeness: supported. Targets: GO:1990718.
+
+The open C1a–f/C2a–e boundary/composition work is explicit and relevant. No completeness, universal occupancy, image, property or trait claim is invented. Native status stays PROPOSED.
+
+## Findings
+
+### F1: PF16 lacks the source that establishes its projection-foundation role
+
+minor / open / confirmed; issue key: axonemal-central-pair-projection-pf16-source-placement.
+
+The current membership citation describes tentative bridge placement. The UniProt example explicitly proves identity only. The2022 structural paper supplies direct support for PF16 at projection foundations; attach it to the component and clarify that basal role.
+
+### F2: The function row describes projection geometry
+
+minor / open / confirmed; issue key: axonemal-central-pair-projection-function-is-geometry.
+
+The function states that projections extend from C1/C2 toward the surrounding ring. This is supported anatomy, but no process or activity is described. Retain it as structural prose or replace the function with an appropriately bounded, sourced activity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Attach direct PF16 structural evidence and distinguish its basal scaffold role; relocate the geometric function description or replace it with a sourced process/activity.
+
+- Each declared constituent has nearest evidence appropriate to its specific role.
+- The function field describes an activity or process; geometry remains accurately preserved elsewhere.
+- After separately authorized curation, run focused schema/strict checks and native history/generated-page gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990718,GO:1990716,GO:0097540,GO:0001534; Exact names, definitions and children | supports | All four terms are active and match projection, apparatus, central pair and radial spoke. Apparatus directly lists projection as part_of. The record correctly describes central singlets despite the central-pair GO definition containing a doublets wording error. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=3055; Exact TaxId/ScientificName | supports | Taxon3055 identifies Chlamydomonas reinhardtii. |
+| doi | https://api.crossref.org/works/10.1002/cm.21094; Crossref DOI/title/author | supports | The2013 DOI and bibliographic fields match the cited Cytoskeleton paper. |
+| epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/cm.21094&amp;format=json&amp;resultType=core; Exact result identifiers | supports | The cited2013 DOI, PMID23281266 and PMC3914236 agree. |
+| paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.xml; Projection and bridge Results/Discussion; Figures3–7 | supports | The cited source supports projection topology, PF6/Cpc1 composition and the broad named-projection inventory. It describes PF16 as potentially bridge-localized rather than directly assigning projection foundations. |
+| paper2022 | https://pmc-oa-opendata.s3.amazonaws.com/PMC9930914.1/PMC9930914.1.xml; DOI10.1038/s41594-022-00770-2; establishing-asymmetry Results, Figures3–6 | supports | The later structural source directly places PF16 homodimers at projection foundations and identifies PF6/CPC1 in defined projections. This corroborates the broad component membership but is not currently cited beside PF16. |
+| pf16 | https://rest.uniprot.org/uniprotkb/Q39587.json; entryType, proteinDescription, genes and organism | supports | Q39587 is an unreviewed PF16 entry for taxon3055, matching every recorded field. |
+| cpc1 | https://rest.uniprot.org/uniprotkb/Q6J4H1.json; entryType, proteinDescription, genes and organism | supports | Q6J4H1 is an unreviewed Central pair complex1/CPC1 entry for taxon3055, matching the record. |
+| record | data/structures/cytoskeleton/axonemal_central_pair_projection.yaml; Entire file including three symbols, two accessions, four edges and discussion | context_only | PF16 is asserted on the component, but its accession evidence expressly establishes identity only. The function description says projections extend toward surrounding structures. All internal component/graph/discussion references resolve. |
+| function-rule | src/cellstructuremech/schema/cellstructuremech.yaml; CellStructureRecord.functions and StructureFunction descriptions | context_only | Functions describe processes or activities carried out by the structure; static outward geometry belongs in structural description. |
+| schema-result | just validate data/structures/cytoskeleton/axonemal_central_pair_projection.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_central_pair_projection.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/axonemal_central_pair_projection.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_central_pair_projection.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/axonemal_central_pair_projection.yaml; exact collect() scope | supports | All8 collected target identifiers returned OK at the unchanged base. Source-native identity checks were performed separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The record models a broad projection class, not a complete set of named subcomplexes or stoichiometries.
+- COMMON is qualitative anatomy, not measured prevalence.
+- The2022 paper is used to support PF16 and specific component roles; it is not automatically adopted as a complete replacement model for the record.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the immutable review bundle is saved; maintained science, status, history and pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T034546Z-axonemal-central-pair-projection-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Axonemal central pair projection evidence and function representation
+started_at: '2026-10-20T03:44:00Z'
+finished_at: '2026-10-20T03:45:46Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source inspection does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Exact projection identity, architecture and accession tuples are supported.
+  Two minor issues remain: missing direct PF16 role evidence and a geometric statement
+  occupying the function field.'
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    sha256: 3474d5bb5742dd4f8064e544f426f6fc79c552c808f444d536ca258d2479581a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990718
+  path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  label: axonemal central pair projection
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    role: maintained scientific record
+scope:
+  description: Complete target; all component symbols/examples, four graph edges and
+    discussion; primary follow-up for PF16.
+  selection: Third unreviewed path of batch3.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990718
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just validate data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just validate-strict data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  summary: All8 collected target identifiers OK.
+  evidence_ids:
+  - target-curies
+  - go
+  - pf16
+  - cpc1
+  - doi
+  - taxon
+- check_id: scientific-review
+  name: Claim-level source review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  summary: Complete target, nearest sources and later PF16 corroboration inspected;
+    two minor findings observed.
+  evidence_ids:
+  - paper
+  - paper2022
+  - go
+  - record
+  - function-rule
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990718
+  summary: No transcriptomic assertion is made. Structural localization is resolved
+    by the cited primary studies; coexpression would not establish it.
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990718
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990718,GO:1990716,GO:0097540,GO:0001534
+  locator: Exact names, definitions and children
+  accessed_at: '2026-10-20T03:44:23.112584Z'
+  support: supports
+  summary: All four terms are active and match projection, apparatus, central pair
+    and radial spoke. Apparatus directly lists projection as part_of. The record correctly
+    describes central singlets despite the central-pair GO definition containing a
+    doublets wording error.
+  snapshot_sha256: 403eaadf7689f622a638dd87adcc735e2bcac0a9cd56edb79fb7214a0e27c011
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Exact TaxId/ScientificName
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: Taxon3055 identifies Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: doi
+  kind: database
+  reference: https://api.crossref.org/works/10.1002/cm.21094
+  locator: Crossref DOI/title/author
+  accessed_at: '2026-10-20T03:41:58.394317Z'
+  support: supports
+  summary: The2013 DOI and bibliographic fields match the cited Cytoskeleton paper.
+  snapshot_sha256: 702d09d0f5a5caa853a9c926637db2260447908ab1e6fdfa12ff48c69b370248
+- evidence_id: epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/cm.21094&format=json&resultType=core
+  locator: Exact result identifiers
+  accessed_at: '2026-10-20T03:41:58.165073Z'
+  support: supports
+  summary: The cited2013 DOI, PMID23281266 and PMC3914236 agree.
+  snapshot_sha256: 99899baa950adcfa150e85483fd760d4addfbe5ff43e56e0aa5eb30f428dafd1
+- evidence_id: paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.xml
+  locator: Projection and bridge Results/Discussion; Figures3–7
+  accessed_at: '2026-10-20T03:42:14.888078Z'
+  support: supports
+  summary: The cited source supports projection topology, PF6/Cpc1 composition and
+    the broad named-projection inventory. It describes PF16 as potentially bridge-localized
+    rather than directly assigning projection foundations.
+  snapshot_sha256: 8ea6c2f20d7cecc7a071669f91afd2d6b2d2aa8681eefb5b001ef22c6b82a7d0
+- evidence_id: paper2022
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC9930914.1/PMC9930914.1.xml
+  locator: DOI10.1038/s41594-022-00770-2; establishing-asymmetry Results, Figures3–6
+  accessed_at: '2026-10-20T03:44:22.926671Z'
+  support: supports
+  summary: The later structural source directly places PF16 homodimers at projection
+    foundations and identifies PF6/CPC1 in defined projections. This corroborates
+    the broad component membership but is not currently cited beside PF16.
+  snapshot_sha256: c8b00f9a77280f5b55a335ae8ebe15d3e21ea1567bf66d2a6baffcfa64f4a24d
+- evidence_id: pf16
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q39587.json
+  locator: entryType, proteinDescription, genes and organism
+  accessed_at: '2026-10-20T03:44:22.990291Z'
+  support: supports
+  summary: Q39587 is an unreviewed PF16 entry for taxon3055, matching every recorded
+    field.
+  snapshot_sha256: 5302a6afe3221f1e4a3db0cf4b679335f7e05e7eee98adcc18977a0a69684013
+- evidence_id: cpc1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q6J4H1.json
+  locator: entryType, proteinDescription, genes and organism
+  accessed_at: '2026-10-20T03:44:22.998019Z'
+  support: supports
+  summary: Q6J4H1 is an unreviewed Central pair complex1/CPC1 entry for taxon3055,
+    matching the record.
+  snapshot_sha256: c47398429558a9c1c3c4855c5eaf18181bf23c565da656dc11138f8877196b87
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  locator: Entire file including three symbols, two accessions, four edges and discussion
+  accessed_at: '2026-10-20T03:45:46Z'
+  support: context_only
+  summary: PF16 is asserted on the component, but its accession evidence expressly
+    establishes identity only. The function description says projections extend toward
+    surrounding structures. All internal component/graph/discussion references resolve.
+- evidence_id: function-rule
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CellStructureRecord.functions and StructureFunction descriptions
+  accessed_at: '2026-10-20T03:45:46Z'
+  support: context_only
+  summary: Functions describe processes or activities carried out by the structure;
+    static outward geometry belongs in structural description.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:44:01Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_central_pair_projection.yaml'
+  snapshot_sha256: 5074f22d108cd4615dc4c7144fe7688c95e5f1e61e99f4aa1ef26cf1d631abd5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:44:03Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_central_pair_projection.yaml\
+    \ --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_central_pair_projection-strict.tsv"
+  snapshot_sha256: cdbf7dccf49b41a9251a0c6a3950e32f023e2efce0a62780645469a16d274333
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml; exact
+    collect() scope
+  accessed_at: '2026-10-20T03:45:46Z'
+  support: supports
+  summary: All8 collected target identifiers returned OK at the unchanged base. Source-native
+    identity checks were performed separately.
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Projection class and boundaries
+  outcome: supported
+  target_ids:
+  - GO:1990718
+  summary: Exact GO identity and apparatus parthood match the broad C1/C2 projection
+    class. Central singlets, projections and radial spokes remain distinct.
+  evidence_ids:
+  - go
+  - paper
+  - record
+- assessment_id: components
+  area: evidence
+  topic: PF16, PF6 and CPC1 membership
+  outcome: concern
+  target_ids:
+  - GO:1990718
+  summary: PF6/CPC1 have source support in the cited paper; later structural evidence
+    supports PF16 at projection foundations. PF16 needs its actual nearest citation
+    and a role distinguishing basal scaffolding from distal projection components.
+  evidence_ids:
+  - paper
+  - paper2022
+  - record
+- assessment_id: accessions
+  area: grounding
+  topic: Two unreviewed exemplars
+  outcome: supported
+  target_ids:
+  - GO:1990718
+  summary: Both accession/name/gene/taxon/status tuples match. They do not claim reviewed
+    status or independent localization proof. A missing optional PF6 accession is
+    not itself a defect.
+  evidence_ids:
+  - pf16
+  - cpc1
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species-level anatomy and broad class
+  outcome: supported
+  target_ids:
+  - GO:1990718
+  summary: The paper supports normal Chlamydomonas projection architecture; COMMON
+    is qualitative anatomy, not a population estimate. No individual named subcomplex
+    is claimed to share every component or repeat.
+  evidence_ids:
+  - paper
+  - taxon
+  - record
+- assessment_id: function
+  area: representation
+  topic: Geometry in the function slot
+  outcome: concern
+  target_ids:
+  - GO:1990718
+  summary: The source supports outward extension, but the field describes location
+    and shape rather than a process or activity. This can be moved to structural prose
+    or replaced with a narrowly sourced functional statement.
+  evidence_ids:
+  - record
+  - function-rule
+  - go
+  - paper
+- assessment_id: graph
+  area: graph
+  topic: Four nonmechanistic architecture edges
+  outcome: supported
+  target_ids:
+  - GO:1990718
+  summary: Group formation, origin at the central pair, outward orientation and apparatus
+    parthood are source-backed descriptive relations. The graph expressly defers mechanistic
+    and named-subcomplex detail.
+  evidence_ids:
+  - go
+  - paper
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Named-projection TODO, history and optional fields
+  outcome: supported
+  target_ids:
+  - GO:1990718
+  summary: The open C1a–f/C2a–e boundary/composition work is explicit and relevant.
+    No completeness, universal occupancy, image, property or trait claim is invented.
+    Native status stays PROPOSED.
+  evidence_ids:
+  - paper
+  - record
+findings:
+- finding_id: F1
+  issue_key: axonemal-central-pair-projection-pf16-source-placement
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: PF16 lacks the source that establishes its projection-foundation role
+  description: The current membership citation describes tentative bridge placement.
+    The UniProt example explicitly proves identity only. The2022 structural paper
+    supplies direct support for PF16 at projection foundations; attach it to the component
+    and clarify that basal role.
+  target_ids:
+  - GO:1990718
+  field_paths:
+  - components[component_id=central_pair_projection_proteins].evidence
+  - components[component_id=central_pair_projection_proteins].role
+  evidence_ids:
+  - paper
+  - paper2022
+  - pf16
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Evidence standard and Components
+  native_severity: minor
+  normalization_reason: Nonblocking evidence-placement or field-semantics issue; the
+    structure identity and source-supported scientific content remain sound.
+- finding_id: F2
+  issue_key: axonemal-central-pair-projection-function-is-geometry
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The function row describes projection geometry
+  description: The function states that projections extend from C1/C2 toward the surrounding
+    ring. This is supported anatomy, but no process or activity is described. Retain
+    it as structural prose or replace the function with an appropriately bounded,
+    sourced activity.
+  target_ids:
+  - GO:1990718
+  field_paths:
+  - functions[function_id=central_pair_microtubule_projection]
+  evidence_ids:
+  - record
+  - function-rule
+  - paper
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    role: maintained scientific record
+  rule_id: schema:StructureFunction
+  native_severity: minor
+  normalization_reason: Nonblocking evidence-placement or field-semantics issue; the
+    structure identity and source-supported scientific content remain sound.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - GO:1990718
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    role: maintained scientific record
+  description: Attach direct PF16 structural evidence and distinguish its basal scaffold
+    role; relocate the geometric function description or replace it with a sourced
+    process/activity.
+  acceptance_checks:
+  - Each declared constituent has nearest evidence appropriate to its specific role.
+  - The function field describes an activity or process; geometry remains accurately
+    preserved elsewhere.
+  - After separately authorized curation, run focused schema/strict checks and native
+    history/generated-page gates.
+  generator: Maintained YAML owns changes; just render derives pages.
+limitations:
+- The record models a broad projection class, not a complete set of named subcomplexes
+  or stoichiometries.
+- COMMON is qualitative anatomy, not measured prevalence.
+- The2022 paper is used to support PF16 and specific component roles; it is not automatically
+  adopted as a complete replacement model for the record.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the immutable review bundle is saved; maintained science, status, history and
+  pages remain unchanged.
+```
