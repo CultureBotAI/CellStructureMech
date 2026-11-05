@@ -1,0 +1,683 @@
+# Eisosome filament identity, family and scaffold review
+
+- Review: 20261021T070021Z-eisosome-filament-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T06:57:21Z
+- Finished UTC: 2026-10-21T07:00:21Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eisosome-filament identity, exact Pil1/Lsp1 family mapping, taxon-paired proteins and the physical scaffold graph are supported. No concrete curation defect was established.
+
+## Scope And Provenance
+
+Complete target review, native ontology/family/protein/taxon and citation metadata, two cited primary full texts, the GO-definition primary and scoped review abstract.
+
+Selection: Sixth distinct unreviewed path in batch six, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0036286 | data/structures/cytoskeleton/eisosome_filament.yaml | maintained | eisosome filament |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0036286 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0036286 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0036286 | 13 identifiers OK; 3 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0036286 | No expression-module or transcription-regulatory assertion is present. Direct assembly experiments and native protein records address the named gene claims. |
+| Claim-level scientific review | passed | True | GO:0036286 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0036286 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0036286 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0036286 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0036286 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0036286 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Cortical filament within a broader eisosome
+
+identity: supported. Targets: GO:0036286.
+
+Exact GO identity and hierarchy are supported. The definition’s S. pombe context does not exclude homologous budding-yeast structures, which primary sources establish.
+
+### Whole Pil1/Lsp1 family and taxon-paired proteins
+
+grounding: supported. Targets: GO:0036286.
+
+The exact family mapping is supported. Both reviewed protein examples match their native identities, while primary experiments supply structural membership. No aggregate assembly-essentiality or generic BAR-fold equivalence is asserted.
+
+### Fungal variability and yeast example
+
+scope: supported. Targets: GO:0036286.
+
+The review abstract supports variable fungal occurrence and the primary studies substantiate the S. cerevisiae example and contrasting S. pombe organization. This is not a claim of universal identical composition across fungi.
+
+### Assembly and membrane-scaffold mechanism
+
+graph: supported. Targets: GO:0036286.
+
+The two graph edges are supported by reconstitution and perturbation evidence: protein assembly into filaments and scaffolding of membrane domains. The record does not claim precise contacts, exact native geometry or that Pil1/Lsp1 alone reconstruct every MCC constituent.
+
+### Seeded localization versus membership
+
+provenance: supported. Targets: GO:0036286.
+
+Huh/Walther identity and native UniProt evidence mappings agree with the notes. The unexpected lipid-droplet annotation is accurately attributed as source provenance and is not used as proof of filament localization.
+
+### Bounded physical scaffold model
+
+completeness: supported. Targets: GO:0036286.
+
+Core family, examples, hierarchy and two causal edges cover the stated scaffold model. Taxon-dependent accessories, membrane components and unresolved mixing/contact details are not silently promoted into universal filament constituents.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| eisosome-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0036286,GO%3A0032991,GO%3A0032126,GO%3A0030863,GO%3A0090512; GO:0036286, GO:0032991, GO:0032126, GO:0030863 and GO:0090512 definitions and relations | supports | Active GO definitions verify the exact filament identity, protein-containing-complex parent and eisosome/cortical-cytoskeleton parthood. MCC is a separate membrane-domain part of the whole eisosome. |
+| eisosome-agent-family | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028245/; InterPro family name/type and scope | supports | IPR028245 is the whole Eisosome component PIL1/LSP1 family, not merely a BAR domain. This fits the component class and both protein examples. |
+| eisosome-agent-karotki | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3257569/fullTextXML; Karotki2011 full XML Results sections3/5/7/9/11, Discussion and yeast-strain Methods | supports | Purified Pil1 and Lsp1 self-assemble and form membrane-associated scaffolds. The source connects that assembly to native cytoplasmic furrows, while distinguishing in-vitro tubes from in-vivo half-cylinders and leaving detailed protein contacts unresolved. |
+| eisosome-agent-olivera | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3128537/fullTextXML; Olivera-Couto2011 full XML relevant Results, Discussion and Methods | supports | Primary experiments establish BAR-domain proteins, membrane binding/tubulation and Pil1 mutant effects on eisosome/MCC organization. They support a scaffold, not sufficiency for reconstructing every component of an MCC domain. |
+| eisosome-agent-kabeche | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3204068/fullTextXML; Kabeche2011 full XML Results: Pil1/Pil2 localization, reciprocal heterologous Pil1 localization and Fhn1 dependence | supports | The GO-definition primary supports S. pombe cortical Pil1 filaments and their homology with budding-yeast structures. Pil2 spore localization and lineage-dependent accessory associations show why organism context matters. |
+| eisosome-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1091/mbc.e10-12-1021%20OR%20DOI:10.1083/jcb.201104040%20OR%20EXT_ID:25002088%20OR%20EXT_ID:14562095%20OR%20EXT_ID:16496001&amp;format=json&amp;resultType=core; Europe PMC exact identifier records and Douglas/Konopka complete abstract | supports | Native citation records verify the two2011 primary papers, Douglas/Konopka2014 PMID25002088, Huh2003 PMID14562095 and Walther2006 PMID16496001. Douglas complete abstract supports fungal MCC/eisosomes, cytoplasmic filaments and furrow scaffolding. |
+| eisosome-agent-pil1 | https://rest.uniprot.org/uniprotkb/P53252.json; UniProt entry status, organism, genes, subcellular location evidence and literature references | supports | Reviewed S288C protein has the asserted accession, recommended name, gene and taxon. Native localization evidence links match the seeded notes, including PIL1 lipid-droplet annotation and LSP1 cell-cortex annotations. These provenance notes do not establish filament membership. |
+| eisosome-agent-lsp1 | https://rest.uniprot.org/uniprotkb/Q12230.json; UniProt entry status, organism, genes, subcellular location evidence and literature references | supports | Reviewed S288C protein has the asserted accession, recommended name, gene and taxon. Native localization evidence links match the seeded notes, including PIL1 lipid-droplet annotation and LSP1 cell-cortex annotations. These provenance notes do not establish filament membership. |
+| eisosome-agent-taxon-4751 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751; ENA taxonomy scientificName, taxId and rank | supports | Native taxonomy confirms the asserted fungal taxon name and rank; the S288C example remains strain-specific. |
+| eisosome-agent-taxon-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; ENA taxonomy scientificName, taxId and rank | supports | Native taxonomy confirms the asserted fungal taxon name and rank; the S288C example remains strain-specific. |
+| eisosome-agent-taxon-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; ENA taxonomy scientificName, taxId and rank | supports | Native taxonomy confirms the asserted fungal taxon name and rank; the S288C example remains strain-specific. |
+| record | data/structures/cytoskeleton/eisosome_filament.yaml; Entire target YAML | context_only | The record remains PROPOSED, separates filament from MCC/whole eisosome and omits aggregate ESSENTIAL. Protein-example localization evidence is expressly distinguished from structural membership evidence. |
+| schema-result | just validate data/structures/cytoskeleton/eisosome_filament.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/eisosome_filament.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/eisosome_filament.yaml --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/eisosome_filament.yaml --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch6-20261021-hj8mnf9r/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/eisosome_filament.yaml; exact collect() scope | supports | 13 of16 collected target identifiers returned OK at the unchanged base. Residuals: PMID:14562095: UNREACHABLE; resolved by evidence eisosome-agent-epmc; PMID:16496001: UNREACHABLE; resolved by evidence eisosome-agent-epmc; PMID:25002088: UNREACHABLE; resolved by evidence eisosome-agent-epmc. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Douglas/Konopka2014 was checked at complete abstract level. Huh2003 and Walther2006 full texts were not inspected; their roles here are verified UniProt localization-evidence provenance, not independent proof of structural membership.
+- In-vitro closed tubes are not asserted to duplicate native half-cylinder geometry. Protein mixing, exact contacts and complete MCC composition remain outside this bounded graph.
+- The aggregate Pil1/Lsp1 class does not establish equal assembly necessity for each paralogue or universal accessory composition across fungi.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- User instruction requires saving clean target reviews; no finding was invented.
+- Read-only collaborator inspected the primary bodies and native entries; root integrated those results after complete target read and native inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T070021Z-eisosome-filament-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Eisosome filament identity, family and scaffold review
+started_at: '2026-10-21T06:57:21Z'
+finished_at: '2026-10-21T07:00:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Eisosome-filament identity, exact Pil1/Lsp1 family mapping, taxon-paired
+  proteins and the physical scaffold graph are supported. No concrete curation defect
+  was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/eisosome_filament.yaml
+    sha256: dba11b89f8cc8d874eae359238715f5fdb0d8a3da2ff551cc43b58b8aacd156b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0036286
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  label: eisosome filament
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/eisosome_filament.yaml
+    role: maintained scientific record
+scope:
+  description: Complete target review, native ontology/family/protein/taxon and citation
+    metadata, two cited primary full texts, the GO-definition primary and scoped review
+    abstract.
+  selection: Sixth distinct unreviewed path in batch six, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0036286
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just validate data/structures/cytoskeleton/eisosome_filament.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just validate-strict data/structures/cytoskeleton/eisosome_filament.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  summary: 13 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - eisosome-agent-epmc
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0036286
+  summary: No expression-module or transcription-regulatory assertion is present.
+    Direct assembly experiments and native protein records address the named gene
+    claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - eisosome-agent-go
+  - eisosome-agent-family
+  - eisosome-agent-karotki
+  - eisosome-agent-olivera
+  - eisosome-agent-kabeche
+  - eisosome-agent-epmc
+  - eisosome-agent-pil1
+  - eisosome-agent-lsp1
+  - eisosome-agent-taxon-4751
+  - eisosome-agent-taxon-4932
+  - eisosome-agent-taxon-559292
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036286
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: eisosome-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0036286,GO%3A0032991,GO%3A0032126,GO%3A0030863,GO%3A0090512
+  locator: GO:0036286, GO:0032991, GO:0032126, GO:0030863 and GO:0090512 definitions
+    and relations
+  accessed_at: '2026-10-21T06:55:50.930826Z'
+  support: supports
+  summary: Active GO definitions verify the exact filament identity, protein-containing-complex
+    parent and eisosome/cortical-cytoskeleton parthood. MCC is a separate membrane-domain
+    part of the whole eisosome.
+  snapshot_sha256: 8263c66e936bf956e0baac6655a4ac70fd6f1738fb5c6bae10605f4781126ef5
+- evidence_id: eisosome-agent-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028245/
+  locator: InterPro family name/type and scope
+  accessed_at: '2026-10-21T06:55:50.933061Z'
+  support: supports
+  summary: IPR028245 is the whole Eisosome component PIL1/LSP1 family, not merely
+    a BAR domain. This fits the component class and both protein examples.
+  snapshot_sha256: 48661066f7cb3d1fbe562bed3579aa2c4fcefca32c88c4af18443694274cfdf2
+- evidence_id: eisosome-agent-karotki
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3257569/fullTextXML
+  locator: Karotki2011 full XML Results sections3/5/7/9/11, Discussion and yeast-strain
+    Methods
+  accessed_at: '2026-10-21T06:56:07.011936Z'
+  support: supports
+  summary: Purified Pil1 and Lsp1 self-assemble and form membrane-associated scaffolds.
+    The source connects that assembly to native cytoplasmic furrows, while distinguishing
+    in-vitro tubes from in-vivo half-cylinders and leaving detailed protein contacts
+    unresolved.
+  snapshot_sha256: 403bb366f2d751bb16d953995b5800338820e4ee1a7f0c79b0c7f1b2d5a67152
+- evidence_id: eisosome-agent-olivera
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3128537/fullTextXML
+  locator: Olivera-Couto2011 full XML relevant Results, Discussion and Methods
+  accessed_at: '2026-10-21T06:56:16.469332Z'
+  support: supports
+  summary: Primary experiments establish BAR-domain proteins, membrane binding/tubulation
+    and Pil1 mutant effects on eisosome/MCC organization. They support a scaffold,
+    not sufficiency for reconstructing every component of an MCC domain.
+  snapshot_sha256: 245fad2b621f92fbd7f527eccc817cc29381c983e30a6a17e7493cdbd532e7ac
+- evidence_id: eisosome-agent-kabeche
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3204068/fullTextXML
+  locator: 'Kabeche2011 full XML Results: Pil1/Pil2 localization, reciprocal heterologous
+    Pil1 localization and Fhn1 dependence'
+  accessed_at: '2026-10-21T06:57:12.099184Z'
+  support: supports
+  summary: The GO-definition primary supports S. pombe cortical Pil1 filaments and
+    their homology with budding-yeast structures. Pil2 spore localization and lineage-dependent
+    accessory associations show why organism context matters.
+  snapshot_sha256: c6201b795df0b924e500a921d649ffc4ea5bbe63213bb58f01ec704106668509
+- evidence_id: eisosome-agent-epmc
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1091/mbc.e10-12-1021%20OR%20DOI:10.1083/jcb.201104040%20OR%20EXT_ID:25002088%20OR%20EXT_ID:14562095%20OR%20EXT_ID:16496001&format=json&resultType=core
+  locator: Europe PMC exact identifier records and Douglas/Konopka complete abstract
+  accessed_at: '2026-10-21T06:55:51.494021Z'
+  support: supports
+  summary: Native citation records verify the two2011 primary papers, Douglas/Konopka2014
+    PMID25002088, Huh2003 PMID14562095 and Walther2006 PMID16496001. Douglas complete
+    abstract supports fungal MCC/eisosomes, cytoplasmic filaments and furrow scaffolding.
+  snapshot_sha256: 1f4f8540659ab982353b9066c8b3552b0d173ecbfa19668ddae4d1b919901887
+- evidence_id: eisosome-agent-pil1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P53252.json
+  locator: UniProt entry status, organism, genes, subcellular location evidence and
+    literature references
+  accessed_at: '2026-10-21T06:55:50.901867Z'
+  support: supports
+  summary: Reviewed S288C protein has the asserted accession, recommended name, gene
+    and taxon. Native localization evidence links match the seeded notes, including
+    PIL1 lipid-droplet annotation and LSP1 cell-cortex annotations. These provenance
+    notes do not establish filament membership.
+  snapshot_sha256: f4f742a1eab8a34224819b63169967aac3323244aa49ccfb6fb6f258bd78e2de
+- evidence_id: eisosome-agent-lsp1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q12230.json
+  locator: UniProt entry status, organism, genes, subcellular location evidence and
+    literature references
+  accessed_at: '2026-10-21T06:55:51.000962Z'
+  support: supports
+  summary: Reviewed S288C protein has the asserted accession, recommended name, gene
+    and taxon. Native localization evidence links match the seeded notes, including
+    PIL1 lipid-droplet annotation and LSP1 cell-cortex annotations. These provenance
+    notes do not establish filament membership.
+  snapshot_sha256: 5f0c82d657897c50f60bfe700506437ddc2cb428bb6772074e9196aaef8f68ce
+- evidence_id: eisosome-agent-taxon-4751
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751
+  locator: ENA taxonomy scientificName, taxId and rank
+  accessed_at: '2026-10-21T06:58:39.228942Z'
+  support: supports
+  summary: Native taxonomy confirms the asserted fungal taxon name and rank; the S288C
+    example remains strain-specific.
+  snapshot_sha256: a7bab59bce650c0d29732327d4e7e342f1b648747f7f9635958f923b4a6089e6
+- evidence_id: eisosome-agent-taxon-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: ENA taxonomy scientificName, taxId and rank
+  accessed_at: '2026-10-21T06:58:39.225484Z'
+  support: supports
+  summary: Native taxonomy confirms the asserted fungal taxon name and rank; the S288C
+    example remains strain-specific.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: eisosome-agent-taxon-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: ENA taxonomy scientificName, taxId and rank
+  accessed_at: '2026-10-21T06:58:39.217412Z'
+  support: supports
+  summary: Native taxonomy confirms the asserted fungal taxon name and rank; the S288C
+    example remains strain-specific.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/eisosome_filament.yaml
+  locator: Entire target YAML
+  accessed_at: '2026-10-21T07:00:21Z'
+  support: context_only
+  summary: The record remains PROPOSED, separates filament from MCC/whole eisosome
+    and omits aggregate ESSENTIAL. Protein-example localization evidence is expressly
+    distinguished from structural membership evidence.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/eisosome_filament.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:57:26Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/eisosome_filament.yaml'
+  snapshot_sha256: dbb9466b8e07bf1a14a76c53f1309199968dcec1cef87c9f8450e75ccda5a57d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/eisosome_filament.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:57:29Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/eisosome_filament.yaml\
+    \ --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch6-20261021-hj8mnf9r/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/eisosome_filament-strict.tsv"
+  snapshot_sha256: f3e33073a1b1e30bb3ba6d4f46bc10207d4a249b270a4138a68821cd8379b48c
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/eisosome_filament.yaml; exact collect() scope
+  accessed_at: '2026-10-21T07:00:21Z'
+  support: supports
+  summary: '13 of16 collected target identifiers returned OK at the unchanged base.
+    Residuals: PMID:14562095: UNREACHABLE; resolved by evidence eisosome-agent-epmc;
+    PMID:16496001: UNREACHABLE; resolved by evidence eisosome-agent-epmc; PMID:25002088:
+    UNREACHABLE; resolved by evidence eisosome-agent-epmc. Source-native identity
+    checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Cortical filament within a broader eisosome
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: Exact GO identity and hierarchy are supported. The definition’s S. pombe
+    context does not exclude homologous budding-yeast structures, which primary sources
+    establish.
+  evidence_ids:
+  - eisosome-agent-go
+  - eisosome-agent-kabeche
+  - eisosome-agent-karotki
+  - record
+- assessment_id: component
+  area: grounding
+  topic: Whole Pil1/Lsp1 family and taxon-paired proteins
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: The exact family mapping is supported. Both reviewed protein examples match
+    their native identities, while primary experiments supply structural membership.
+    No aggregate assembly-essentiality or generic BAR-fold equivalence is asserted.
+  evidence_ids:
+  - eisosome-agent-family
+  - eisosome-agent-olivera
+  - eisosome-agent-karotki
+  - eisosome-agent-pil1
+  - eisosome-agent-lsp1
+- assessment_id: taxa
+  area: scope
+  topic: Fungal variability and yeast example
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: The review abstract supports variable fungal occurrence and the primary
+    studies substantiate the S. cerevisiae example and contrasting S. pombe organization.
+    This is not a claim of universal identical composition across fungi.
+  evidence_ids:
+  - eisosome-agent-epmc
+  - eisosome-agent-olivera
+  - eisosome-agent-karotki
+  - eisosome-agent-kabeche
+  - eisosome-agent-taxon-4751
+  - eisosome-agent-taxon-4932
+  - eisosome-agent-taxon-559292
+- assessment_id: graph
+  area: graph
+  topic: Assembly and membrane-scaffold mechanism
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: 'The two graph edges are supported by reconstitution and perturbation evidence:
+    protein assembly into filaments and scaffolding of membrane domains. The record
+    does not claim precise contacts, exact native geometry or that Pil1/Lsp1 alone
+    reconstruct every MCC constituent.'
+  evidence_ids:
+  - eisosome-agent-olivera
+  - eisosome-agent-karotki
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Seeded localization versus membership
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: Huh/Walther identity and native UniProt evidence mappings agree with the
+    notes. The unexpected lipid-droplet annotation is accurately attributed as source
+    provenance and is not used as proof of filament localization.
+  evidence_ids:
+  - eisosome-agent-epmc
+  - eisosome-agent-pil1
+  - eisosome-agent-lsp1
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded physical scaffold model
+  outcome: supported
+  target_ids:
+  - GO:0036286
+  summary: Core family, examples, hierarchy and two causal edges cover the stated
+    scaffold model. Taxon-dependent accessories, membrane components and unresolved
+    mixing/contact details are not silently promoted into universal filament constituents.
+  evidence_ids:
+  - eisosome-agent-go
+  - eisosome-agent-olivera
+  - eisosome-agent-karotki
+  - eisosome-agent-kabeche
+  - record
+findings: []
+actions: []
+limitations:
+- Douglas/Konopka2014 was checked at complete abstract level. Huh2003 and Walther2006
+  full texts were not inspected; their roles here are verified UniProt localization-evidence
+  provenance, not independent proof of structural membership.
+- In-vitro closed tubes are not asserted to duplicate native half-cylinder geometry.
+  Protein mixing, exact contacts and complete MCC composition remain outside this
+  bounded graph.
+- The aggregate Pil1/Lsp1 class does not establish equal assembly necessity for each
+  paralogue or universal accessory composition across fungi.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- User instruction requires saving clean target reviews; no finding was invented.
+- Read-only collaborator inspected the primary bodies and native entries; root integrated
+  those results after complete target read and native inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```

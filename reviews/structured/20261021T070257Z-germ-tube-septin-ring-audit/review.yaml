@@ -1,0 +1,505 @@
+schema_version: 1.0.0
+review_id: 20261021T070257Z-germ-tube-septin-ring-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Germ-tube septin ring identity and family-grounding review
+started_at: '2026-10-21T07:00:40Z'
+finished_at: '2026-10-21T07:02:57Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact germ-tube septin ring identity and topology are supported. One minor
+  finding concerns withholding the verified Septin family mapping on a localized-cohort
+  criterion.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    sha256: f1420625e020c7842cf281f96450b246edd350c32060c3d3186130d45ec012a0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0032172
+  path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  label: germ tube septin ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Complete one-record review, all cited GO boundaries, native Septin
+    family and scoped published localization context.
+  selection: Ninth distinct unreviewed path in batch six, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032172
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just validate data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just validate-strict data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/germ_tube_septin_ring-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  summary: 4 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0032172
+  summary: No named gene/regulator or expression-module assertion is present. Native
+    ontology/family identity and localization context address the stated claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - germ-ring-agent-go
+  - germ-ring-agent-family
+  - germ-ring-agent-primary-metadata
+  - douglas-body
+  - record
+  - policy
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032172
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: germ-ring-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0032172,GO%3A0005940,GO%3A0032168,GO%3A0032170,GO%3A0032179
+  locator: Complete native definitions and child relations for target and all cited
+    boundary GO terms
+  accessed_at: '2026-10-21T07:00:25.768315Z'
+  support: supports
+  summary: Native GO definitions and relations verify the exact localized ring identity,
+    broader parent and hyphal-ring and pseudohyphal-ring boundaries, with germ-tube
+    parthood also available. All cited terms are active.
+  snapshot_sha256: f67b450da651273ad72ee2f687f7cc5239d27e68ad6fe0f98d295edef12334e9
+- evidence_id: germ-ring-agent-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: InterPro family name/type and scope
+  accessed_at: '2026-10-21T07:00:25.790089Z'
+  support: supports
+  summary: IPR016491 is the full Septin family, an exact taxon-agnostic component
+    class. Its identity need not delimit one localized cap or ring cohort.
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+- evidence_id: germ-ring-agent-primary-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:12181342%20OR%20EXT_ID:11454197%20OR%20EXT_ID:16151244&format=json&resultType=core
+  locator: Europe PMC primary identities and complete abstracts; PMID11454197 and
+    associated septin studies
+  accessed_at: '2026-10-21T07:00:28.650980Z'
+  support: supports
+  summary: Native article metadata and abstracts resolve the primary context. Sudbery2001
+    distinguishes the internal future-septation ring from early mother/germ-tube neck
+    signal and the pseudohyphal neck ring. No primary full-text methods are assumed.
+  snapshot_sha256: efa1ae7231dfa2613728b03e1932a6f89bda20083e457cc5258200aa1a5476c5
+- evidence_id: douglas-body
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/7611364_Septin_Function_in_Yeast_Model_Systems_and_Pathogenic_Fungi
+  locator: Douglas et al.2005, Septins in C. albicans, pp.1508–1509; browser-readable
+    full body inspected by read-only source collaborator; re-inspected during pre-save
+    audit at the recorded access time
+  accessed_at: '2026-10-21T07:02:31Z'
+  support: supports
+  summary: The inspected review distinguishes the faint apical cap, diffuse basal
+    band and later tight internal septation ring. Ergosterol enrichment spatially
+    coincides with the apical cap; this does not prove recruitment or causal lipid-domain
+    organization. Used as scoped published context, not primary perturbation evidence.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  locator: Entire maintained target
+  accessed_at: '2026-10-21T07:01:51Z'
+  support: context_only
+  summary: The target is PROPOSED, curates a generic septin constituent class and
+    a NONMECHANISTIC topology graph, and has no organism-specific protein accession,
+    measured dimension, image or universal fungal distribution assertion.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Components: taxon-agnostic family or class'
+  accessed_at: '2026-10-21T07:01:51Z'
+  support: context_only
+  summary: Family identity is separate from localized experimental role. A family
+    term need not encode the complete localized cohort; exact family mappings should
+    not be withheld solely for that reason.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:00:42Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/germ_tube_septin_ring.yaml'
+  snapshot_sha256: b932a9297e9f1cbc0440feda0ed92610eb3325143a733151d1e18662e562f028
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/germ_tube_septin_ring-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:00:44Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/germ_tube_septin_ring.yaml\
+    \ --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/germ_tube_septin_ring-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch6-20261021-hj8mnf9r/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/germ_tube_septin_ring-strict.tsv"
+  snapshot_sha256: d79c45e7a33b267494b32852f13a989fc1203b848969d670fbec23e6b25397ce
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/germ_tube_septin_ring.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-21T07:01:51Z'
+  support: supports
+  summary: '4 of4 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Distinct morphogenetic location and state
+  outcome: supported
+  target_ids:
+  - GO:0032172
+  summary: Exact native identity and broader parent are supported. The ring lies within
+    the germ tube at future septation sites, distinct from the hyphal sibling and
+    mother-cell/pseudohyphal junction ring.
+  evidence_ids:
+  - germ-ring-agent-go
+  - germ-ring-agent-primary-metadata
+  - douglas-body
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Generic septin constituent class
+  outcome: supported
+  target_ids:
+  - GO:0032172
+  summary: GO supports the septin class as a structural constituent. Collective ESSENTIAL
+    denotes class-level necessity, not indispensability of every paralogue or a complete
+    associated-protein inventory.
+  evidence_ids:
+  - germ-ring-agent-go
+  - record
+- assessment_id: family
+  area: grounding
+  topic: Localization-specific cohort criterion
+  outcome: concern
+  target_ids:
+  - GO:0032172
+  summary: The reviewed-label-only rationale seeks a family that exactly delimits
+    the complete localized cohort. Verified IPR016491 denotes the generic Septin component
+    class; the role/evidence already carry localization scope.
+  evidence_ids:
+  - germ-ring-agent-family
+  - policy
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic ring topology
+  outcome: supported
+  target_ids:
+  - GO:0032172
+  summary: 'Both edges are supported: septin constituents and localization at future
+    internal septation sites. No ordered recruitment, selective necessity or full
+    accessory composition is asserted.'
+  evidence_ids:
+  - germ-ring-agent-go
+  - germ-ring-agent-primary-metadata
+  - douglas-body
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded topology with resolvable family gap
+  outcome: supported
+  target_ids:
+  - GO:0032172
+  summary: The family portion of the TODO is resolvable while associated-protein boundaries
+    remain open. Native GO also supports germ-tube parthood, already expressed by
+    definition/location; an unpopulated optional relation alone is not a required-field
+    defect.
+  evidence_ids:
+  - germ-ring-agent-go
+  - germ-ring-agent-family
+  - record
+findings:
+- finding_id: F1
+  issue_key: germ-tube-septin-ring-family-grounding-scope
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion blocks verified Septin family grounding
+  description: The generic septin proteins component remains REVIEWED_LABEL_ONLY because
+    its rationale requires a family delimiting the complete germ-tube ring cohort.
+    IPR016491 is the verified Septin family. Component family identity need not encode
+    localization; retain that experimental scope in role/evidence and reconcile the
+    missing mapping, rationale and family TODO.
+  target_ids:
+  - GO:0032172
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions[discussion_id=resolve_germ_tube_septin_ring_components]
+  evidence_ids:
+  - germ-ring-agent-family
+  - policy
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: The assembly identity and topology are supported; this is
+    a bounded resolvable family-mapping gap rather than a wrong assigned identifier.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032172
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, assign InterPro:IPR016491 to
+    the generic septin class and reconcile grounding status, notes and family TODO.
+    Retain localization evidence and the unresolved associated-protein boundary.
+  acceptance_checks:
+  - Native family name/type match the generic Septin component class.
+  - No unverified paralogue, whole-cohort inventory or universal fungal distribution
+    is introduced.
+  - Run native schema, strict, controlled-label, history and generated-page checks
+    after curation.
+  generator: Maintained structure YAML; just render derives pages.
+limitations:
+- The cited/source-linked2005 review body was inspected through a public author-uploaded
+  browser display. Primary full-text routes returned API500, PMC challenge pages or
+  failed alternative PDFs; primary methods and figures were not verified.
+- Source C. albicans observations are context, not a universal fungal prevalence claim
+  or proof of necessity for every septin paralogue.
+- The topology graph establishes composition and location only; molecular recruitment
+  order, accessory inventory and selective functional necessity remain outside its
+  scope.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- A read-only collaborator inspected the native terms, family and published context;
+  root read the complete target after native inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.

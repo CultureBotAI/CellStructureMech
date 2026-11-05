@@ -1,0 +1,604 @@
+schema_version: 1.0.0
+review_id: 20261021T070021Z-distal-connecting-fiber-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Distal connecting fiber identity, contraction and mutant-evidence review
+started_at: '2026-10-21T06:57:12Z'
+finished_at: '2026-10-21T07:00:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Distinct distal-bridge identity, centrin evidence, species/culture provenance,
+  extracted-apparatus contraction graph and link-only figure are supported. Mutant
+  and synchronization limitations are appropriately scoped. No concrete curation defect
+  was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    sha256: 3fbecc2d7d51c4e4ea53cdbc4d6e49251a300430f23fc0d76d00a3412a2a8d79
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:distal_connecting_fiber
+  path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  label: distal connecting fiber
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    role: maintained scientific record
+scope:
+  description: Complete one-record review; native identifiers and full1987/1992/1984
+    sources, newly recovered2016 full paper,1998 abstract and source Figure9.
+  selection: Fifth distinct unreviewed path in batch six, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:distal_connecting_fiber
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just validate data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just validate-strict data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/distal_connecting_fiber-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: 13 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: No expression-module or transcription-regulatory assertion is present;
+    protein identity and direct physical experiments address the target.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1987
+  - distal-agent-1992
+  - distal-agent-1984
+  - distal-agent-2016-pdf
+  - distal-agent-epmc
+  - distal-agent-go
+  - distal-agent-IPR050145
+  - distal-agent-IPR050230
+  - distal-agent-protein
+  - distal-agent-taxon-3055
+  - distal-agent-taxon-3192
+  - distal-agent-sag
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: distal-agent-1987-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114749.1/PMC2114749.1.pdf
+  locator: McFadden et al.1987 Methods, Results Figures3–5 and9, Discussion; Figure9
+    visually inspected by source collaborator
+  accessed_at: '2026-10-21T06:55:56.997225Z'
+  support: supports
+  summary: The primary study supports an unstriated distal bridge in Spermatozopsis
+    SAG1.85, anti-20-kDa-protein localization and calcium-triggered reorientation
+    of extracted basal-body apparatuses. Reorientation persists with beating inhibited
+    or axonemes amputated, but reducing calcium does not restore the original basal-body
+    configuration.
+  snapshot_sha256: 994a99d2f5c9185f3e2fb1c217ee8bcd59e81d9298c79d1a5ae58487e3631f0c
+- evidence_id: distal-agent-1987
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114749.1/PMC2114749.1.xml
+  locator: PMC2114749.1 article licence and Figure9 legend; corroborated against inspected
+    PDF page8
+  accessed_at: '2026-10-21T06:55:56.560021Z'
+  support: supports
+  summary: Official PMC version1 JATS identifies Figure9 and explicitly declares CC
+    BY-NC-SA4.0. Panels B–E show distal fibers, F the separate nucleus connector and
+    G a preimmune control; scale bars are300nm.
+  snapshot_sha256: 09b44400707774a6e48e8ab7fe508ceb527020fd3b89ab36b3cb5089aad88f67
+- evidence_id: distal-agent-1992
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2289752.1/PMC2289752.1.xml
+  locator: Taillon et al.1992 Methods, mutant/revertant Results, TableII and final
+    Discussion
+  accessed_at: '2026-10-21T06:56:22.935569Z'
+  support: supports
+  summary: Centrin E101K and position101 revertants distinguish distal-fiber assembly
+    from NBBC and transition-region phenotypes. Class2 revertants retain abnormal
+    distal fibers with normal other centrin structures and normal basal-body cycles,
+    limiting segregation claims.
+  snapshot_sha256: c90d59123403bad402653eb6fef86df1892a65d2a7d08989006b707ac7571b0e
+- evidence_id: distal-agent-1984
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2113127.1/PMC2113127.1.xml
+  locator: Hoops et al.1984 Results and Discussion
+  accessed_at: '2026-10-21T06:56:22.659448Z'
+  support: supports
+  summary: The vfl3 study reports its condition-specific waveform/frequency/synchrony
+    results and cannot separate striated-fiber defects from microtubular-rootlet defects.
+    It does not establish universal absence of a distal-fiber coordination role.
+  snapshot_sha256: c8ee88b2d54234e94ba5853583114f92f52b70a6b3b5043faadaa4fa83828ab1
+- evidence_id: distal-agent-2016-pdf
+  kind: primary_source
+  reference: https://www.damtp.cam.ac.uk/user/gold/pdfs/coupling_online.pdf
+  locator: Wan and Goldstein2016 Results, Discussion and relevant Methods
+  accessed_at: '2026-10-21T06:56:43.596409Z'
+  support: supports
+  summary: Recovered author-hosted PNAS Early Edition full paper compares vfl3 CC1686
+    with WT CC125 and uses disconnected-cell micromanipulation to support internal
+    basal coupling. The study does not isolate a universal distal-fiber-specific necessity.
+    This improves current access beyond the record’s historical abstract-only note.
+  snapshot_sha256: 6017156e4c39fc8dc652c8b2e4c073a88c77bbf7659315218ea5d42003c2d866
+- evidence_id: distal-agent-epmc
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.105.2.903%22+OR+DOI%3A%2210.1083%2Fjcb.119.6.1613%22+OR+DOI%3A%2210.1083%2Fjcb.98.3.818%22+OR+DOI%3A%2210.1002%2F%28SICI%291097-0169%281998%2941%3A1%3C49%3A%3AAID-CM4%3E3.0.CO%3B2-A%22+OR+DOI%3A%2210.1073%2Fpnas.1518527113%22&format=json&resultType=core&pageSize=20
+  locator: Exact five DOI records, especially complete1998 abstract
+  accessed_at: '2026-10-21T06:55:56.208185Z'
+  support: supports
+  summary: Native DOI records identify all five cited papers. The complete1998 primary
+    abstract reports smaller reversible calcium-dependent angle changes in Chlamydomonas
+    pf18/pf18fa1 preparations and lack of the response in pf18vfl2; it does not isolate
+    the distal fiber genetically.
+  snapshot_sha256: 64e41ce6f4c1bd2406d878c82790182fb24090a4288fe4d86f07795396453aa8
+- evidence_id: distal-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043232,GO:0005856,GO:0035253,GO:0120118,GO:0032053
+  locator: GO:0043232, GO:0005856, GO:0035253, GO:0120118 and GO:0032053 definitions
+  accessed_at: '2026-10-21T06:55:55.416828Z'
+  support: supports
+  summary: Native terms confirm broad intracellular membraneless organelle and cytoskeleton
+    scope. Nucleus-directed rootlet and interflagellar membrane-junction definitions
+    are distinct. Basal-body organization is broader/different from the measured angular
+    response.
+  snapshot_sha256: c19ce7f311bf6f75a7f685dd09ea1a335921e16cbd9f9bd3babae797055b8c2c
+- evidence_id: distal-agent-IPR050145
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050145/
+  locator: Native InterPro family name/type and description
+  accessed_at: '2026-10-21T06:55:56.026261Z'
+  support: supports
+  summary: The family includes broader calcium-binding protein classes; it does not
+    establish exact distal-fiber centrin identity. A domain/fold is not promoted to
+    an exact component mapping.
+  snapshot_sha256: 386371fb67a7de41d9f9a6ded2bbb77530d9a27411b46349d2ac050d45832910
+- evidence_id: distal-agent-IPR050230
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050230/
+  locator: Native InterPro family name/type and description
+  accessed_at: '2026-10-21T06:55:56.053577Z'
+  support: supports
+  summary: The family includes broader calcium-binding protein classes; it does not
+    establish exact distal-fiber centrin identity. A domain/fold is not promoted to
+    an exact component mapping.
+  snapshot_sha256: 71caaab83a460a49f29a4c4bf6932354c77b07e1c9455f9c7521355e22c60bc0
+- evidence_id: distal-agent-protein
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P05434.json
+  locator: UniProt recommendedName, entryType, organism, sequence references and absent
+    genes field
+  accessed_at: '2026-10-21T06:55:55.434574Z'
+  support: supports
+  summary: P05434 is reviewed Caltractin in Chlamydomonas reinhardtii3055. The native
+    entry has no genes field; the record correctly avoids a fabricated primary symbol.
+    Sequence-source provenance is compatible with the1992 centrin/caltractin comparison.
+  snapshot_sha256: dbc691271995563a38fd19896c92adfb1902cb79dde0e8d777c45effc2a05c79
+- evidence_id: distal-agent-taxon-3055
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: ENA taxon scientificName and rank
+  accessed_at: '2026-10-21T06:55:55.436845Z'
+  support: supports
+  summary: Native taxonomy confirms the species identifier and canonical name.
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+- evidence_id: distal-agent-taxon-3192
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3192
+  locator: ENA taxon scientificName and rank
+  accessed_at: '2026-10-21T06:55:55.421884Z'
+  support: supports
+  summary: Native taxonomy confirms the species identifier and canonical name.
+  snapshot_sha256: a4a0ba510059ca136c43e8c2d1bc99b8e3e92102e5ad9deadbaaf1454b56e64b
+- evidence_id: distal-agent-sag
+  kind: authority
+  reference: https://sagdb.uni-goettingen.de/detailedList.php?str_number=1.85
+  locator: SAG strain1.85 source record
+  accessed_at: '2026-10-21T06:55:56.334866Z'
+  support: supports
+  summary: The culture authority identifies SAG1.85 as Spermatozopsis similis, matching1987
+    Methods.
+  snapshot_sha256: 917c9376c21f51f4c5f9fddd81df2456311452dfe38e4b89aab4df25d6c10cc8
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  locator: Entire maintained YAML
+  accessed_at: '2026-10-21T07:00:21Z'
+  support: context_only
+  summary: The local identifier denotes the distal interbasal bridge, not one protein,
+    proximal fibers or nucleus-directed rootlets. The only image is link-only with
+    no local file. Record remains PROPOSED, component essentiality UNKNOWN and distribution
+    unquantified.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:57:14Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/distal_connecting_fiber.yaml'
+  snapshot_sha256: 79e66cb5f82df263fc5f954bec140c609cfb2337cb6f62f8ec4695277bf067d5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/distal_connecting_fiber-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:57:15Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/distal_connecting_fiber.yaml\
+    \ --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/distal_connecting_fiber-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch6-20261021-hj8mnf9r/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/distal_connecting_fiber-strict.tsv"
+  snapshot_sha256: 93d1433639eaad956e24dcbce6179ffd6fa5ed0cad9034878e217e88b58a8670
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/distal_connecting_fiber.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-21T07:00:21Z'
+  support: supports
+  summary: '13 of14 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:distal_connecting_fiber: SKIPPED; resolved by evidence
+    record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Interbasal bridge with variable striation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: 'Primary anatomy supports the structure boundary and related/narrow synonym
+    distinctions: Spermatozopsis is unstriated while Chlamydomonas distal striated
+    fibers are a narrower example. Broad parent and cytoskeleton parthood do not replace
+    the local identity.'
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1992
+  - distal-agent-go
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Centrin class and one verified sequence
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: Antigen localization and mutant/sequence evidence support centrin membership,
+    with one correct species-level Caltractin example. Broader family entries do not
+    resolve the precise component class. Whole-apparatus protein abundance is not
+    fiber stoichiometry.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1992
+  - distal-agent-protein
+  - distal-agent-IPR050145
+  - distal-agent-IPR050230
+- assessment_id: examples
+  area: scope
+  topic: Two experimentally characterized species
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: Species authorities and SAG provenance match the experiments. Mutant names
+    are not treated as collection accessions, and two examples do not establish clade
+    prevalence.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1992
+  - distal-agent-sag
+  - distal-agent-taxon-3055
+  - distal-agent-taxon-3192
+- assessment_id: graph
+  area: graph
+  topic: Extracted-apparatus physical mechanism
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: 'All five edges are supported within Spermatozopsis extracted preparations:
+    constituent localization, calcium-associated fiber condensation, induced contraction,
+    basal-body reorientation and attached-axoneme geometry. Omission of ATP from reactivation
+    is not a complete ATP-independent contraction/reextension cycle; no molecular
+    force-generating reaction is claimed.'
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - record
+- assessment_id: functions
+  area: evidence
+  topic: Linkage and species-dependent reorientation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: Interbasal linkage and calcium-dependent response are supported. The1998
+    Chlamydomonas abstract supplies a separate reversible response, explicitly not
+    transferred to Spermatozopsis.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1992
+  - distal-agent-epmc
+- assessment_id: mutants
+  area: consistency
+  topic: Synchronization and segregation boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: The1984 and2016 findings remain condition- and perturbation-specific. Recovered2016
+    full text reinforces internal coupling without resolving a selective distal-fiber
+    mechanism. The1992 revertants support withholding required segregation function.
+  evidence_ids:
+  - distal-agent-1984
+  - distal-agent-2016-pdf
+  - distal-agent-1992
+  - record
+- assessment_id: image
+  area: provenance
+  topic: Licensed link-only Figure9
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: Source figure panels, taxon and licence agree with the record. The reference
+    links the original PDF without a hosted copy or adaptation; the nucleus-connector
+    panel is correctly excluded from distal-fiber identity.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1987
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded mechanics and unresolved molecular cycle
+  outcome: supported
+  target_ids:
+  - cellstructuremech:distal_connecting_fiber
+  summary: Open discussions retain exact grounding, full inventory, reextension and
+    selective coupling uncertainties. New source accessibility is a useful follow-up
+    opportunity, not a contradiction of a dated account of prior access.
+  evidence_ids:
+  - distal-agent-1987-pdf
+  - distal-agent-1992
+  - distal-agent-1984
+  - distal-agent-2016-pdf
+  - distal-agent-epmc
+  - record
+findings: []
+actions: []
+limitations:
+- The1998 Wiley full paper remains inaccessible (HTTP403); only its complete primary
+  abstract supports the explicitly limited Chlamydomonas response.
+- The recovered2016 source is an author-hosted PNAS Early Edition PDF. The record’s
+  old abstract-only access note documents the earlier curation pass, not current permanent
+  unavailability.
+- The experiments do not reconstruct a complete molecular contraction/reextension
+  cycle or establish universal ATP independence, clade prevalence or distal-fiber-specific
+  synchronization necessity.
+- The component inventory is incomplete and no Spermatozopsis sequence, native stoichiometry
+  or fiber-size measurement is inferred from antibody labeling or whole-apparatus
+  gels.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- User instruction requires saving clean reviews; no finding was invented.
+- Read-only collaborator inspected primary Results/Methods and Figure9; root additionally
+  read the1987 experimental context and the entire target after native inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
