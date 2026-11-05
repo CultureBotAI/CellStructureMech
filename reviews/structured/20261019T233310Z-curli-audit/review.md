@@ -1,0 +1,921 @@
+# Curli identity, composition and assembly evidence review
+
+- Review: 20261019T233310Z-curli-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T07:36:33Z
+- Finished UTC: 2026-10-19T23:33:10Z
+- Reviewer: Codex scientific review agent (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The entire curli record was assessed. Stable identifiers, fiber identity, constituent-versus-secretion machinery boundary, genomic distribution qualifier, canonical model, and all six assembly edges are supported at their stated scale. No concrete curation defect was observed. Source access was mixed: four cited works were inspected as full text and three at abstract or abstract-plus-figure-caption tier.
+
+## Scope And Provenance
+
+Full single-record review of identity, definition, two synonyms, pilus parent, both constituents and protein examples, broad distribution, canonical example, two functions, seven unique paper citations, four UniProt identifiers, all graph nodes and six edges, resolved boundary discussion, and available provenance.
+
+Selection: Fifth previously unreviewed record in the coordinating reviewer's path-ordered corpus inventory: data/structures/appendage/curli.yaml.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0098774 | data/structures/appendage/curli.yaml | maintained | curli |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema validation | passed | True | GO:0098774 | Focused LinkML validation reported No issues found. |
+| strict validation | passed | True | GO:0098774 | Focused strict validation scanned one file with zero ERROR rows. |
+| Claim-level source and stable-identifier inspection | passed | True | GO:0098774 | All identifiers and material claims were assessed against actual source text or source-native databases; mixed source access tiers and one lexical-verification limit are explicit. |
+| Verbatim-snippet audit applicability | not_applicable | False | GO:0098774 | The entire target contains no snippet fields. No quotation was added. |
+| Expression-module evidence applicability | not_applicable | False | GO:0098774 | The record makes no expression-module, regulator-membership or transcriptomic dataset assertion. Exact protein and taxon identities were checked directly in structured UniProt and NCBI records; expression-module membership cannot establish fiber composition. |
+| Target identifier coverage including resolver residuals | passed | True | GO:0098774 | All CURIE-shaped target values have issuing-authority or appropriate local/source-specific existence verification. Generic PMID HTTP414 failures and skipped namespaces were resolved by scoped receipts; biological mapping correctness is assessed separately. |
+| Full corpus QC | passed | True | GO:0098774 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0098774 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0098774 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0098774 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0098774 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Curli identity and GO grounding
+
+identity: supported. Targets: GO:0098774.
+
+The record denotes extracellular amyloid fibers, with exact GO identity and a supported pilus parent. APPENDAGE category and kind are appropriate.
+
+### Synonym scopes
+
+nomenclature: supported. Targets: GO:0098774.
+
+Amyloid fibers is appropriately RELATED, avoiding identity with all bacterial amyloid systems. The curli-fimbriae phrasing is consistent with pilus/fimbria nomenclature, subject to the stated source-lexical access limit.
+
+### Fiber components and essentiality
+
+completeness: supported. Targets: GO:0098774.
+
+CsgA and CsgB are appropriate structural constituents. ESSENTIAL is interpreted in the record's normal cell-surface assembly context; no fixed copy count is invented.
+
+The in-vitro CsgA self-assembly result and engineered bypass variants are not silently converted into a contradiction of normal nucleator-dependent curli biogenesis.
+
+### Taxon-paired protein examples and graph xrefs
+
+grounding: supported. Targets: GO:0098774.
+
+The four accessions match their genes, labels and K-12 taxon. Both protein-example notes correctly distinguish identifier verification from membership evidence; reviewed-entry uniqueness is confirmed by bounded queries.
+
+### Genomic distribution and canonical model
+
+scope: supported. Targets: GO:0098774.
+
+The broad distribution claim is explicitly genomic and VARIABLE. The species-level canonical example correctly names the K-12 experimental lineage.
+
+### Assembly process and matrix adhesion
+
+evidence: supported. Targets: GO:0098774.
+
+GO process grounding and assembly description agree. The adhesive matrix function remains limited to enterobacterial biofilm context and does not claim exclusivity.
+
+### Every mechanistic assembly edge
+
+graph: supported. Targets: GO:0098774.
+
+All six edges have appropriate local evidence: CsgG export, CsgF positioning, extracellular arrival, CsgB nucleation, polymerization, and process membership. Node references and predicates preserve the proposed assembly sequence.
+
+The graph is a bounded assembly account, not an exhaustive expression or secretion-regulation network. Its current edges do not assert a speculative energy source or universally fixed stoichiometry.
+
+### Secretion machinery versus amyloid appendage
+
+representation: supported. Targets: GO:0098774.
+
+The secretion apparatus is represented as assembly machinery and has a separate maintained owner. The resolved discussion does not settle the sibling complex's detailed membership boundary.
+
+### Measurements, images and datasets
+
+completeness: not_applicable. Targets: GO:0098774.
+
+The complete record asserts no numerical dimensions, image licence, dataset or fixed stoichiometry. These optional omissions are not defects.
+
+### Status, history and narrow evidence placement
+
+provenance: supported. Targets: GO:0098774.
+
+The record retains PROPOSED status, available provenance and claim-level citations. No human sign-off is implied by the current review or by reviewed UniProt examples.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/curli.yaml; Entire YAML, including both components, all six graph edges and resolved discussion | context_only | The maintained APPENDAGE record remains PROPOSED. CsgA and CsgB are constituents; CsgG and CsgF occur in the assembly graph. Protein examples explicitly separate identifier identity from membership evidence. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0098774%2CGO%3A0009289%2CGO%3A0098775%2CGO%3A0062155; results id/name/aspect/isObsolete/definition; GO:0009289 children | supports | All four terms are current. GO:0098774 is curli and a direct is-a child of pilus; GO:0098775 is curli assembly. GO:0062155 denotes the secretion complex. Definitions retain enteric context and distinguish the extracellular fiber from its secretion channel. |
+| taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=2,562,83333; TaxaSet/Taxon: TaxId, ScientificName, Rank | supports | Bacteria 2, Escherichia coli 562 and Escherichia coli K-12 83333 resolve with matching labels and nested taxonomic scope. |
+| uniprot-a | https://rest.uniprot.org/uniprotkb/P28307.json; primaryAccession; entryType; proteinDescription; genes; organism; entryAudit | supports | P28307 is reviewed Major curlin subunit, gene csgA, E. coli K-12 taxon 83333; entry version 154, sequence version 3, annotation updated 2026-09-02. These are identifier checks, not independent proof of fiber membership. |
+| uniprot-b | https://rest.uniprot.org/uniprotkb/P0ABK7.json; primaryAccession; entryType; proteinDescription; genes; organism; entryAudit | supports | P0ABK7 is reviewed Minor curlin subunit, gene csgB, E. coli K-12 taxon 83333; entry version 113, sequence version 1, annotation updated 2026-09-02. These are identifier checks, not independent proof of fiber membership. |
+| uniprot-g | https://rest.uniprot.org/uniprotkb/P0AEA2.json; primaryAccession; entryType; proteinDescription; genes; organism; entryAudit | supports | P0AEA2 is reviewed Curli production assembly/transport component CsgG, gene csgG, taxon 83333; entry version 119, sequence version 1, annotation updated 2026-06-10. These are identifier checks, not independent proof of fiber membership. |
+| uniprot-f | https://rest.uniprot.org/uniprotkb/P0AE98.json; primaryAccession; entryType; proteinDescription; genes; organism; entryAudit | supports | P0AE98 is reviewed Curli production assembly/transport component CsgF, gene csgF, taxon 83333; entry version 107, sequence version 1, annotation updated 2026-06-10. These are identifier checks, not independent proof of fiber membership. |
+| unique-csgA | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcsgA%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29&amp;format=json; Exact gene, organism 83333 and reviewed:true query; results primaryAccession | supports | The bounded query returns exactly one reviewed entry: P28307. This confirms the protein-example note at the inspection date. |
+| unique-csgB | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcsgB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29&amp;format=json; Exact gene, organism 83333 and reviewed:true query; results primaryAccession | supports | The bounded query returns exactly one reviewed entry: P0ABK7. This confirms the protein-example note at the inspection date. |
+| paper-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search; Seven DOI queries listed in the retained access.json; core results DOI/title/authorString/pubYear/PMID/PMCID | supports | All seven DOI references resolve to the named works with matching authors and publication years. Their PMIDs are 16704339, 30892177, 11823641, 23251478, 31932609, 16420357 and 19131513, respectively. Metadata resolution is separate from the following source-text assessments. |
+| barnhart | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.micro.60.080805.142106&amp;format=json&amp;resultType=core; DOI:10.1146/annurev.micro.60.080805.142106; source abstract, also read in NCBI PMC efetch stub | supports | Barnhart and Chapman 2006 describes enterobacterial curli as an extracellular amyloid matrix component involved in surface adhesion, aggregation and biofilms. This supports the biofilm-matrix function and enteric definition context. The exact synonym wording was not checked in a full body. |
+| bhoite | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC6428212/unicode; DOI:10.1128/ecosalplus.ESP-0037-2018; BioC passages offsets 1715, 2588, 5735, 9041, 10466; Figure 2 caption | supports | Full text treats CsgA and CsgB as structural subunits, separates accessory secretion factors, and explains extracellular nucleation and fiber formation through the type VIII pathway. It explicitly uses E. coli as the representative system. Natural cell-surface nucleation is distinguished from isolated-protein polymerization and engineered variants. |
+| chapman | https://www.researchgate.net/publication/11535923_Role_of_Escherichia_coli_Curli_Operons_in_Directing_Amyloid_Fiber_Formation; DOI:10.1126/science.1067484; author-uploaded NIH manuscript pp.1-4; Figures 1-4; methods notes 7, 8 and 19 | supports | Full manuscript reports MC4100 curli isolation, extracellular assembly, CsgA polymerization and csg-mutant complementation. Biophysical assays establish amyloid character. Purified CsgA can polymerize without CsgB in vitro, while normal efficient cell-surface assembly uses nucleation machinery. The record describes the latter biological structure. |
+| mc4100 | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1403831; Current name and lineage | supports | The experimental strain MC4100 is an E. coli K-12 substrain, supporting the canonical example's K-12 context without changing its species-level identifier. |
+| dueholm | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3521004/fullTextXML; DOI:10.1371/journal.pone.0051274; Results Curli Genes are Phylogenetically Widespread; Figure 1; Methods | supports | Full text reports iterative HMM and genomic-neighborhood identification of homologous curli systems across at least four bacterial phyla, unevenly represented among families. Figure 1 cautions that sampled strain counts do not measure prevalence. The target correctly limits its distribution note to genomes and marks presence VARIABLE. |
+| yan | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6957492/fullTextXML; DOI:10.1038/s41467-019-14145-7; Introduction; CsgG-CsgF-curli connection and Figure 3; substrate recognition Figures 4-5; Discussion | supports | Full structural and biochemical study characterizes CsgFG, substrate recognition, and the association between secretion channel, CsgF, nucleator and fiber. The Discussion places CsgA extracellularly before nucleation. These observations support the transport edge and the resolved distinction between the channel complex and amyloid appendage; they do not require an exact CsgE/F/G ontology boundary. |
+| robinson | https://pubmed.ncbi.nlm.nih.gov/16420357/; DOI:10.1111/j.1365-2958.2005.04997.x; Abstract and figure captions 1, 2, 4 and 5 | supports | Abstract and captions report CsgG-dependent CsgA secretion, outer-membrane localization, oligomeric pore observations and interaction with assembly factors. Figure 1 directly tests secretion; Figure 4 links localization to activity. This is sufficient for the bounded CsgG exports CsgA edge; full-body access failed. |
+| nenninger | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1073/pnas.0812143106&amp;format=json&amp;resultType=core; DOI:10.1073/pnas.0812143106; source abstract | supports | The abstract reports that surface-secreted CsgF controls CsgB cell association and protease resistance; loss of CsgF causes inefficient, mislocalized fibers. It directly supports the cautiously phrased edge that CsgF promotes efficient surface placement of the nucleator. |
+| boundary-history | data/structures/secretion_system/curli_secretion_complex.yaml; Entire sibling record, target discussion, and three curli history documents listed in source.inputs | context_only | The standalone secretion-complex record exists. History shows the earlier rationale was narrowed to avoid making an exact CsgE/F/G boundary decision. The resolved target discussion concerns the existence and separate identity of that record, while detailed secretion-complex boundaries remain open in its owner. |
+| access-routes | https://pmc.ncbi.nlm.nih.gov/; Attempted source routes retained in fulltext-access.json, epmc-access.json, ncbi-access.json, alt-access.json, pdf-access.json, extra-access.json and bioc-final-access.json | context_only | PMC HTML/PDF returned browser checks; most non-open-license fullTextXML routes failed or returned abstract stubs. BioC supplied Bhoite full text, while remaining attempts included unavailable-result and rate-limit responses. No blocked response or search snippet was treated as inspected full text. |
+| schema-result | UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache just validate data/structures/appendage/curli.yaml; External diagnostic log; actual exit code 0 | supports | Focused LinkML validation reported No issues found. |
+| strict-result | UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache just validate-strict data/structures/appendage/curli.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/curli/strict.tsv; External diagnostic log; actual exit code 0 | supports | Focused strict validation scanned one file with zero ERROR rows. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/curli.yaml; exact scripts/check_curies.py collect() scope; reports/curie_check.tsv | supports | This target contains 18 distinct CURIE-shaped scalar values: 18 OK, 0 transport-unreachable and 0 skipped in the global report. The attached scoped receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect(); their content was inspected separately. Existence is not proof of correct biological mapping. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Barnhart 2006 and Nenninger 2009 were inspected through their source abstracts; Robinson 2006 through its abstract and PubMed figure captions. Their full bodies were inaccessible through attempted free PMC, publisher, Europe PMC and BioC routes. Assertions assigned to these papers are stated in the accessible source text and independently agree with the full-text assembly reviews/studies.
+- Chapman 2002 full text was inspected in an author-uploaded NIH manuscript on ResearchGate after official PMC body routes failed; DOI, authors, journal and year were independently matched to Europe PMC metadata.
+- The exact wording curli fimbriae was not directly located in the accessible Barnhart abstract. Ontological pilus/fimbria usage and the biological identity are consistent; this limited lexical verification is not evidence of an incorrect synonym.
+- The review does not establish expression in every genome carrying homologs, universally fixed stoichiometry, or an exhaustive assembly-regulation network. No such claims are made in the target.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user explicitly requested saving every reviewed record, including clean observations; this overrides the local issue-only persistence gate.
+- No maintained record, generated page, curation history or external content was changed. This temporary draft is for the coordinating reviewer to validate and persist.
+- Global native check results are integrated by the coordinating reviewer. No global success is asserted in this draft.
+- No verbatim source quotations are reproduced.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233310Z-curli-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Curli identity, composition and assembly evidence review
+started_at: '2026-10-19T07:36:33Z'
+finished_at: '2026-10-19T23:33:10Z'
+reviewer:
+  identity: Codex scientific review agent
+  kind: agent
+  independence: unknown
+  independence_basis: Separate agent conducted the read-only review in this session.
+    Historical record provenance names Codex and Claude, so independence from earlier
+    authorship is not asserted.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'The entire curli record was assessed. Stable identifiers, fiber identity,
+  constituent-versus-secretion machinery boundary, genomic distribution qualifier,
+  canonical model, and all six assembly edges are supported at their stated scale.
+  No concrete curation defect was observed. Source access was mixed: four cited works
+  were inspected as full text and three at abstract or abstract-plus-figure-caption
+  tier.'
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/curli.yaml
+    sha256: f56302567bb49a248870fd099b953279ffda5d02405317e12962ac46e16f7964
+    role: target
+  - path: data/structures/secretion_system/curli_secretion_complex.yaml
+    sha256: 0a0e0ec596146bd7c74bf065593dd4b922a5b6d863be94edcfdd9143ffa342c2
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/curli/2026-09-06T071750Z-claude-e3793d.yaml
+    sha256: bb9ae2a38f4e758051e17cab703a0114921bd757587d9978a811ee177931130f
+    role: context
+  - path: history/records/curli/2026-09-29T053041Z-codex-4070ac.yaml
+    sha256: d9cf0d917b4df9284d91ac79e4adc2f3f58f85ea5b82f1f28a27b01e7df5521a
+    role: context
+  - path: history/records/curli/2026-09-29T054509Z-codex-556980.yaml
+    sha256: 1a4fd3d33942e36e428fce3053438efb99de55cddf4eec3ff3817c324cfa0fe1
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0098774
+  path: data/structures/appendage/curli.yaml
+  label: curli
+  record_class: CellStructureRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/curli.yaml
+    role: maintained scientific record
+scope:
+  description: Full single-record review of identity, definition, two synonyms, pilus
+    parent, both constituents and protein examples, broad distribution, canonical
+    example, two functions, seven unique paper citations, four UniProt identifiers,
+    all graph nodes and six edges, resolved boundary discussion, and available provenance.
+  selection: 'Fifth previously unreviewed record in the coordinating reviewer''s path-ordered
+    corpus inventory: data/structures/appendage/curli.yaml.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0098774
+checks:
+- check_id: schema
+  name: schema validation
+  status: passed
+  required: true
+  summary: Focused LinkML validation reported No issues found.
+  target_ids:
+  - GO:0098774
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate data/structures/appendage/curli.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - schema-result
+  scope_note: Selected maintained record only.
+- check_id: strict
+  name: strict validation
+  status: passed
+  required: true
+  summary: Focused strict validation scanned one file with zero ERROR rows.
+  target_ids:
+  - GO:0098774
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate-strict data/structures/appendage/curli.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/curli/strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - strict-result
+  scope_note: Selected maintained record only.
+- check_id: scientific-sources
+  name: Claim-level source and stable-identifier inspection
+  status: passed
+  required: true
+  summary: All identifiers and material claims were assessed against actual source
+    text or source-native databases; mixed source access tiers and one lexical-verification
+    limit are explicit.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - go
+  - taxa
+  - uniprot-a
+  - uniprot-b
+  - uniprot-f
+  - uniprot-g
+  - barnhart
+  - bhoite
+  - chapman
+  - dueholm
+  - yan
+  - robinson
+  - nenninger
+- check_id: snippets
+  name: Verbatim-snippet audit applicability
+  status: not_applicable
+  required: false
+  summary: The entire target contains no snippet fields. No quotation was added.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+- check_id: expression-adapter
+  name: Expression-module evidence applicability
+  status: not_applicable
+  required: false
+  summary: The record makes no expression-module, regulator-membership or transcriptomic
+    dataset assertion. Exact protein and taxon identities were checked directly in
+    structured UniProt and NCBI records; expression-module membership cannot establish
+    fiber composition.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+  - uniprot-a
+  - uniprot-b
+- check_id: target-identifier-coverage
+  name: Target identifier coverage including resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  summary: All CURIE-shaped target values have issuing-authority or appropriate local/source-specific
+    existence verification. Generic PMID HTTP414 failures and skipped namespaces were
+    resolved by scoped receipts; biological mapping correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0098774
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/curli.yaml
+  locator: Entire YAML, including both components, all six graph edges and resolved
+    discussion
+  accessed_at: '2026-10-19T07:36:33Z'
+  support: context_only
+  summary: The maintained APPENDAGE record remains PROPOSED. CsgA and CsgB are constituents;
+    CsgG and CsgF occur in the assembly graph. Protein examples explicitly separate
+    identifier identity from membership evidence.
+  snapshot_sha256: f56302567bb49a248870fd099b953279ffda5d02405317e12962ac46e16f7964
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0098774%2CGO%3A0009289%2CGO%3A0098775%2CGO%3A0062155
+  locator: results id/name/aspect/isObsolete/definition; GO:0009289 children
+  accessed_at: '2026-10-19T07:37:10.382396Z'
+  support: supports
+  summary: All four terms are current. GO:0098774 is curli and a direct is-a child
+    of pilus; GO:0098775 is curli assembly. GO:0062155 denotes the secretion complex.
+    Definitions retain enteric context and distinguish the extracellular fiber from
+    its secretion channel.
+  snapshot_sha256: 54ec184462665df93c3864eb85f7a83aa4b7183f89263a5fe80cac22b48b612a
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=2,562,83333
+  locator: 'TaxaSet/Taxon: TaxId, ScientificName, Rank'
+  accessed_at: '2026-10-19T07:37:09.980008Z'
+  support: supports
+  summary: Bacteria 2, Escherichia coli 562 and Escherichia coli K-12 83333 resolve
+    with matching labels and nested taxonomic scope.
+  snapshot_sha256: a4e20dcf1880f3dddb6442c9bc745d79c886d01df2399585ca75756fa537843a
+- evidence_id: uniprot-a
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P28307.json
+  locator: primaryAccession; entryType; proteinDescription; genes; organism; entryAudit
+  accessed_at: '2026-10-19T07:37:10.286447Z'
+  support: supports
+  summary: P28307 is reviewed Major curlin subunit, gene csgA, E. coli K-12 taxon
+    83333; entry version 154, sequence version 3, annotation updated 2026-09-02. These
+    are identifier checks, not independent proof of fiber membership.
+  snapshot_sha256: 7cbb6b1c8ce9ed98378d338609a33ba29885f3f2553bc5b53b6f9381d592762e
+- evidence_id: uniprot-b
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ABK7.json
+  locator: primaryAccession; entryType; proteinDescription; genes; organism; entryAudit
+  accessed_at: '2026-10-19T07:37:10.282856Z'
+  support: supports
+  summary: P0ABK7 is reviewed Minor curlin subunit, gene csgB, E. coli K-12 taxon
+    83333; entry version 113, sequence version 1, annotation updated 2026-09-02. These
+    are identifier checks, not independent proof of fiber membership.
+  snapshot_sha256: 3c234567c810c1292af8a34653a809521b84dc41d1fc52f029d99a646044edbf
+- evidence_id: uniprot-g
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AEA2.json
+  locator: primaryAccession; entryType; proteinDescription; genes; organism; entryAudit
+  accessed_at: '2026-10-19T07:37:10.416589Z'
+  support: supports
+  summary: P0AEA2 is reviewed Curli production assembly/transport component CsgG,
+    gene csgG, taxon 83333; entry version 119, sequence version 1, annotation updated
+    2026-06-10. These are identifier checks, not independent proof of fiber membership.
+  snapshot_sha256: 3df35ab18150c6ed22a63361b807971e006b689d42721ce9093162840fa805b2
+- evidence_id: uniprot-f
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AE98.json
+  locator: primaryAccession; entryType; proteinDescription; genes; organism; entryAudit
+  accessed_at: '2026-10-19T07:37:10.299923Z'
+  support: supports
+  summary: P0AE98 is reviewed Curli production assembly/transport component CsgF,
+    gene csgF, taxon 83333; entry version 107, sequence version 1, annotation updated
+    2026-06-10. These are identifier checks, not independent proof of fiber membership.
+  snapshot_sha256: e7be38ba64b0c2b48796e215164c6a31d884daa48a7a2a6813b6fdde4e3f0d66
+- evidence_id: unique-csgA
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcsgA%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29&format=json
+  locator: Exact gene, organism 83333 and reviewed:true query; results primaryAccession
+  accessed_at: '2026-10-19T07:40:53Z'
+  support: supports
+  summary: 'The bounded query returns exactly one reviewed entry: P28307. This confirms
+    the protein-example note at the inspection date.'
+  snapshot_sha256: b5ed99e33aa4507c0541af9321c9cb8bdc156176e1d344f3b3e4cb859e937b96
+- evidence_id: unique-csgB
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AcsgB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29&format=json
+  locator: Exact gene, organism 83333 and reviewed:true query; results primaryAccession
+  accessed_at: '2026-10-19T07:40:53Z'
+  support: supports
+  summary: 'The bounded query returns exactly one reviewed entry: P0ABK7. This confirms
+    the protein-example note at the inspection date.'
+  snapshot_sha256: 680272386116e11964b0cb857e2ad42559db7f48be7295a89a3b90184ed45964
+- evidence_id: paper-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: Seven DOI queries listed in the retained access.json; core results DOI/title/authorString/pubYear/PMID/PMCID
+  accessed_at: '2026-10-19T07:37:11.266716Z'
+  support: supports
+  summary: All seven DOI references resolve to the named works with matching authors
+    and publication years. Their PMIDs are 16704339, 30892177, 11823641, 23251478,
+    31932609, 16420357 and 19131513, respectively. Metadata resolution is separate
+    from the following source-text assessments.
+  snapshot_sha256: e7f819ccff9d490299b82061bd0ac710a304dc25830e925d8343b70b0b4cd4c0
+- evidence_id: barnhart
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.micro.60.080805.142106&format=json&resultType=core
+  locator: DOI:10.1146/annurev.micro.60.080805.142106; source abstract, also read
+    in NCBI PMC efetch stub
+  accessed_at: '2026-10-19T07:37:10.622293Z'
+  support: supports
+  summary: Barnhart and Chapman 2006 describes enterobacterial curli as an extracellular
+    amyloid matrix component involved in surface adhesion, aggregation and biofilms.
+    This supports the biofilm-matrix function and enteric definition context. The
+    exact synonym wording was not checked in a full body.
+  snapshot_sha256: fa3928cd9881718780dd3ccaa714c1d6af90baf47e0cd077188b9f39d92f9805
+- evidence_id: bhoite
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC6428212/unicode
+  locator: DOI:10.1128/ecosalplus.ESP-0037-2018; BioC passages offsets 1715, 2588,
+    5735, 9041, 10466; Figure 2 caption
+  accessed_at: '2026-10-19T07:40:53Z'
+  support: supports
+  summary: Full text treats CsgA and CsgB as structural subunits, separates accessory
+    secretion factors, and explains extracellular nucleation and fiber formation through
+    the type VIII pathway. It explicitly uses E. coli as the representative system.
+    Natural cell-surface nucleation is distinguished from isolated-protein polymerization
+    and engineered variants.
+  snapshot_sha256: 7adcefaf2197992ac56f8773b814478eb29ab09cf4f0fc29487439581a65a704
+- evidence_id: chapman
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/11535923_Role_of_Escherichia_coli_Curli_Operons_in_Directing_Amyloid_Fiber_Formation
+  locator: DOI:10.1126/science.1067484; author-uploaded NIH manuscript pp.1-4; Figures
+    1-4; methods notes 7, 8 and 19
+  accessed_at: '2026-10-19T07:43:30Z'
+  support: supports
+  summary: Full manuscript reports MC4100 curli isolation, extracellular assembly,
+    CsgA polymerization and csg-mutant complementation. Biophysical assays establish
+    amyloid character. Purified CsgA can polymerize without CsgB in vitro, while normal
+    efficient cell-surface assembly uses nucleation machinery. The record describes
+    the latter biological structure.
+- evidence_id: mc4100
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1403831
+  locator: Current name and lineage
+  accessed_at: '2026-10-19T07:41:52Z'
+  support: supports
+  summary: The experimental strain MC4100 is an E. coli K-12 substrain, supporting
+    the canonical example's K-12 context without changing its species-level identifier.
+- evidence_id: dueholm
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3521004/fullTextXML
+  locator: DOI:10.1371/journal.pone.0051274; Results Curli Genes are Phylogenetically
+    Widespread; Figure 1; Methods
+  accessed_at: '2026-10-19T07:38:43Z'
+  support: supports
+  summary: Full text reports iterative HMM and genomic-neighborhood identification
+    of homologous curli systems across at least four bacterial phyla, unevenly represented
+    among families. Figure 1 cautions that sampled strain counts do not measure prevalence.
+    The target correctly limits its distribution note to genomes and marks presence
+    VARIABLE.
+  snapshot_sha256: dac08f375243a7e0befe51f7a1bd00db9d28d462eb2e0e1f665419e5b2c0ebff
+- evidence_id: yan
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6957492/fullTextXML
+  locator: DOI:10.1038/s41467-019-14145-7; Introduction; CsgG-CsgF-curli connection
+    and Figure 3; substrate recognition Figures 4-5; Discussion
+  accessed_at: '2026-10-19T07:38:43Z'
+  support: supports
+  summary: Full structural and biochemical study characterizes CsgFG, substrate recognition,
+    and the association between secretion channel, CsgF, nucleator and fiber. The
+    Discussion places CsgA extracellularly before nucleation. These observations support
+    the transport edge and the resolved distinction between the channel complex and
+    amyloid appendage; they do not require an exact CsgE/F/G ontology boundary.
+  snapshot_sha256: 99c9f5104adf4fdba8c492f8bb1660f68bb1803e9c5410c8d3d857df92d39c85
+- evidence_id: robinson
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/16420357/
+  locator: DOI:10.1111/j.1365-2958.2005.04997.x; Abstract and figure captions 1, 2,
+    4 and 5
+  accessed_at: '2026-10-19T07:43:30Z'
+  support: supports
+  summary: Abstract and captions report CsgG-dependent CsgA secretion, outer-membrane
+    localization, oligomeric pore observations and interaction with assembly factors.
+    Figure 1 directly tests secretion; Figure 4 links localization to activity. This
+    is sufficient for the bounded CsgG exports CsgA edge; full-body access failed.
+- evidence_id: nenninger
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1073/pnas.0812143106&format=json&resultType=core
+  locator: DOI:10.1073/pnas.0812143106; source abstract
+  accessed_at: '2026-10-19T07:37:11.266716Z'
+  support: supports
+  summary: The abstract reports that surface-secreted CsgF controls CsgB cell association
+    and protease resistance; loss of CsgF causes inefficient, mislocalized fibers.
+    It directly supports the cautiously phrased edge that CsgF promotes efficient
+    surface placement of the nucleator.
+  snapshot_sha256: fc8a0dbcd6d5621b6fbcd2b5f94f5d1b75744a8679df6336717615b982d81ecc
+- evidence_id: boundary-history
+  kind: record_content
+  reference: data/structures/secretion_system/curli_secretion_complex.yaml
+  locator: Entire sibling record, target discussion, and three curli history documents
+    listed in source.inputs
+  accessed_at: '2026-10-19T07:43:30Z'
+  support: context_only
+  summary: The standalone secretion-complex record exists. History shows the earlier
+    rationale was narrowed to avoid making an exact CsgE/F/G boundary decision. The
+    resolved target discussion concerns the existence and separate identity of that
+    record, while detailed secretion-complex boundaries remain open in its owner.
+- evidence_id: access-routes
+  kind: database
+  reference: https://pmc.ncbi.nlm.nih.gov/
+  locator: Attempted source routes retained in fulltext-access.json, epmc-access.json,
+    ncbi-access.json, alt-access.json, pdf-access.json, extra-access.json and bioc-final-access.json
+  accessed_at: '2026-10-19T07:41:17Z'
+  support: context_only
+  summary: PMC HTML/PDF returned browser checks; most non-open-license fullTextXML
+    routes failed or returned abstract stubs. BioC supplied Bhoite full text, while
+    remaining attempts included unavailable-result and rate-limit responses. No blocked
+    response or search snippet was treated as inspected full text.
+- evidence_id: schema-result
+  kind: validation
+  reference: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate data/structures/appendage/curli.yaml
+  locator: External diagnostic log; actual exit code 0
+  accessed_at: '2026-10-19T07:43:30Z'
+  support: supports
+  summary: Focused LinkML validation reported No issues found.
+  snapshot_sha256: 67ae7e2c36a1530c727f9c276685f7bd5f5da9a269fff65502df8868c725eef2
+- evidence_id: strict-result
+  kind: validation
+  reference: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate-strict data/structures/appendage/curli.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/curli/strict.tsv
+  locator: External diagnostic log; actual exit code 0
+  accessed_at: '2026-10-19T07:43:30Z'
+  support: supports
+  summary: Focused strict validation scanned one file with zero ERROR rows.
+  snapshot_sha256: f474213f1cfc7a80f38bc50f915d9b9b3cf9eeeecc246e555cc1b3a5875ffee0
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/curli.yaml; exact scripts/check_curies.py collect()
+    scope; reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:32:25.400320Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'This target contains 18 distinct CURIE-shaped scalar values: 18 OK, 0
+    transport-unreachable and 0 skipped in the global report. The attached scoped
+    receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect();
+    their content was inspected separately. Existence is not proof of correct biological
+    mapping.'
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Curli identity and GO grounding
+  outcome: supported
+  summary: The record denotes extracellular amyloid fibers, with exact GO identity
+    and a supported pilus parent. APPENDAGE category and kind are appropriate.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+  - go
+  - chapman
+- assessment_id: names
+  area: nomenclature
+  topic: Synonym scopes
+  outcome: supported
+  summary: Amyloid fibers is appropriately RELATED, avoiding identity with all bacterial
+    amyloid systems. The curli-fimbriae phrasing is consistent with pilus/fimbria
+    nomenclature, subject to the stated source-lexical access limit.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - go
+  - bhoite
+  - barnhart
+- assessment_id: composition
+  area: completeness
+  topic: Fiber components and essentiality
+  outcome: supported
+  summary: CsgA and CsgB are appropriate structural constituents. ESSENTIAL is interpreted
+    in the record's normal cell-surface assembly context; no fixed copy count is invented.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - bhoite
+  - chapman
+  - uniprot-a
+  - uniprot-b
+  details: The in-vitro CsgA self-assembly result and engineered bypass variants are
+    not silently converted into a contradiction of normal nucleator-dependent curli
+    biogenesis.
+- assessment_id: protein-identifiers
+  area: grounding
+  topic: Taxon-paired protein examples and graph xrefs
+  outcome: supported
+  summary: The four accessions match their genes, labels and K-12 taxon. Both protein-example
+    notes correctly distinguish identifier verification from membership evidence;
+    reviewed-entry uniqueness is confirmed by bounded queries.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - uniprot-a
+  - uniprot-b
+  - uniprot-g
+  - uniprot-f
+  - unique-csgA
+  - unique-csgB
+- assessment_id: scope
+  area: scope
+  topic: Genomic distribution and canonical model
+  outcome: supported
+  summary: The broad distribution claim is explicitly genomic and VARIABLE. The species-level
+    canonical example correctly names the K-12 experimental lineage.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - dueholm
+  - chapman
+  - taxa
+  - mc4100
+  dimensions:
+  - name: distribution_evidence
+    value: Genome homology and local gene-neighborhood analysis
+    definition: Evidence type behind the broad bacterial scope, not a direct estimate
+      of fiber expression.
+    evidence_ids:
+    - dueholm
+  - name: assembly_experimental_context
+    value: Enterobacterial model systems; Chapman MC4100 and csg mutants
+    definition: Scope of experimentally supported normal cell-surface assembly.
+    evidence_ids:
+    - chapman
+    - bhoite
+- assessment_id: functions
+  area: evidence
+  topic: Assembly process and matrix adhesion
+  outcome: supported
+  summary: GO process grounding and assembly description agree. The adhesive matrix
+    function remains limited to enterobacterial biofilm context and does not claim
+    exclusivity.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - go
+  - bhoite
+  - barnhart
+- assessment_id: graph
+  area: graph
+  topic: Every mechanistic assembly edge
+  outcome: supported
+  summary: 'All six edges have appropriate local evidence: CsgG export, CsgF positioning,
+    extracellular arrival, CsgB nucleation, polymerization, and process membership.
+    Node references and predicates preserve the proposed assembly sequence.'
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+  - robinson
+  - nenninger
+  - yan
+  - bhoite
+  - chapman
+  details: The graph is a bounded assembly account, not an exhaustive expression or
+    secretion-regulation network. Its current edges do not assert a speculative energy
+    source or universally fixed stoichiometry.
+- assessment_id: boundary
+  area: representation
+  topic: Secretion machinery versus amyloid appendage
+  outcome: supported
+  summary: The secretion apparatus is represented as assembly machinery and has a
+    separate maintained owner. The resolved discussion does not settle the sibling
+    complex's detailed membership boundary.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - go
+  - yan
+  - boundary-history
+- assessment_id: optional-properties
+  area: completeness
+  topic: Measurements, images and datasets
+  outcome: not_applicable
+  summary: The complete record asserts no numerical dimensions, image licence, dataset
+    or fixed stoichiometry. These optional omissions are not defects.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Status, history and narrow evidence placement
+  outcome: supported
+  summary: The record retains PROPOSED status, available provenance and claim-level
+    citations. No human sign-off is implied by the current review or by reviewed UniProt
+    examples.
+  target_ids:
+  - GO:0098774
+  evidence_ids:
+  - record
+  - boundary-history
+  - paper-metadata
+findings: []
+actions: []
+limitations:
+- Barnhart 2006 and Nenninger 2009 were inspected through their source abstracts;
+  Robinson 2006 through its abstract and PubMed figure captions. Their full bodies
+  were inaccessible through attempted free PMC, publisher, Europe PMC and BioC routes.
+  Assertions assigned to these papers are stated in the accessible source text and
+  independently agree with the full-text assembly reviews/studies.
+- Chapman 2002 full text was inspected in an author-uploaded NIH manuscript on ResearchGate
+  after official PMC body routes failed; DOI, authors, journal and year were independently
+  matched to Europe PMC metadata.
+- The exact wording curli fimbriae was not directly located in the accessible Barnhart
+  abstract. Ontological pilus/fimbria usage and the biological identity are consistent;
+  this limited lexical verification is not evidence of an incorrect synonym.
+- The review does not establish expression in every genome carrying homologs, universally
+  fixed stoichiometry, or an exhaustive assembly-regulation network. No such claims
+  are made in the target.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user explicitly requested saving every reviewed record, including clean observations;
+  this overrides the local issue-only persistence gate.
+- No maintained record, generated page, curation history or external content was changed.
+  This temporary draft is for the coordinating reviewer to validate and persist.
+- Global native check results are integrated by the coordinating reviewer. No global
+  success is asserted in this draft.
+- No verbatim source quotations are reproduced.
+```
