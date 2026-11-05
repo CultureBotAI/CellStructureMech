@@ -1,0 +1,664 @@
+schema_version: 1.0.0
+review_id: 20261020T070514Z-basal-body-d2-rod-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Basal-body D2-rod boundary and radial-position review
+started_at: '2026-10-20T07:03:09Z'
+finished_at: '2026-10-20T07:05:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: D2-rod identity, native examples, radial measurement, structural function
+  and image are supported. No concrete curation issue was found.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/cytoskeleton/basal_body_d2_rod/pmc5376648_f1.jpg
+    sha256: 50a63f5c43b225e40950c425b3c32b6c8e728c051a543a2d0277d898ee5712da
+    role: context
+  - path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+    sha256: ad4e6fcf7639e0fffc00b553b0ab2e0e2a8eac5981b87ae9da1ee783ba942957
+    role: context
+  - path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    sha256: acd457cb1d0121248e5d11bdebc1d70a815a42f240f31e02eaa556bc54e7bc27
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:basal_body_d2_rod
+  path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  label: basal body D2-rod
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    role: maintained scientific record
+scope:
+  description: Entire record and image, cartwheel parent,2017/2020 primary structural
+    sources, the2024 human CPAP proposal and native ontology/taxon/deposit metadata.
+  selection: Fifth unreviewed path of batch4.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:basal_body_d2_rod
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just validate data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just validate-strict data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_d2_rod-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: 10 identifiers OK; 2 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - local-id
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: No expression-based membership claim or matching microbial dataset is asserted.
+    Structural sources establish the reviewed evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - tusk-paper
+  - cartwheel-guichard
+  - d2-human
+  - d2-human-meta
+  - cartwheel-go
+  - cid-go
+  - cartwheel-cartwheel-search
+  - sheath-taxon
+  - tusk-taxon
+  - tusk-uo
+  - cartwheel-epmc
+  - tusk-epmc
+  - cartwheel-guichard-fig1
+  - d2-guichard-meta
+  - d2-ev3
+  - tusk-emdb10726
+  - tusk-emdb10727
+  - tusk-emdb10728
+  - tusk-emdb10729
+  - record
+  - local-id
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: tusk-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667884.1/PMC7667884.1.xml
+  locator: Proximal-extension/cartwheel Results, EV3/Figure3 captions, cartwheel averaging
+    Methods and Discussion
+  accessed_at: '2026-10-20T04:07:36.772127Z'
+  support: supports
+  summary: The proximal-extension Results explicitly name the vertical spoke-end connection
+    D2-rod, visible without pinhead in the protruding segment. Figure3 distinguishes
+    D1 merging from D2. Results report8tomograms/235boxes while Methods report7tomograms
+    and232retained subvolumes; the record preserves this discrepancy.
+  snapshot_sha256: 5116fa9428a3a69c7a3baca7e80ad82dc6d050ed8db9d88b37982136407d6184
+- evidence_id: cartwheel-guichard
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5376648.1/PMC5376648.1.xml
+  locator: Native/reconstitution Results, Figure1 caption, strain/isolation and measurement
+    Methods
+  accessed_at: '2026-10-20T06:55:12.312759Z'
+  support: supports
+  summary: The native core preparation distinguishes D1/D2 and lacks pinhead/microtubules
+    proximally. Figure1 gives45.6±0.8nm hub-margin-to-D2 distance,13measurements across5tomograms,
+    with no named error statistic. Methods use CW-15 and select spokes with visible
+    peripheral densities. Reconstitution supports broader assembly sufficiency, not
+    native D2-specific composition.
+  snapshot_sha256: 34c181266963f3a0f4a7a5839a5fefe950e2213b324b1dcb058340d17d46f8a9
+- evidence_id: d2-human
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11060037.1/PMC11060037.1.xml
+  locator: Procentriole elongation Results preceding Figure4
+  accessed_at: '2026-10-20T07:03:56.497491Z'
+  support: supports
+  summary: The2024 human U-ExM source proposes CPAP as part of D2 from proximal localization
+    and prior elongated-fibril observations. This does not establish a microbial constituent.
+  snapshot_sha256: f92a94c211ca80ca3af8df3e715fca8c2094f35fdfa9d53269a3edc7b9e107b0
+- evidence_id: d2-human-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1016/j.cell.2024.03.025&format=json&resultType=core
+  locator: Publication metadata
+  accessed_at: '2026-10-20T07:03:30.084020Z'
+  support: supports
+  summary: The DOI identifies Time-series reconstruction of the molecular architecture
+    of human centriole assembly, PMID38604175/PMC11060037.
+  snapshot_sha256: 4e0dcde9ab1ee2dfb65361c4f559ec954cc2205786c46e107b63a1eec3cfbc7d
+- evidence_id: cartwheel-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032991,GO:0036064,GO:0120280,GO:0032053
+  locator: Native GO definitions
+  accessed_at: '2026-10-20T06:55:12.197440Z'
+  support: supports
+  summary: The basal-body and pro-basal-body parthood and basal-body organization
+    function terms are active and appropriately scoped.
+  snapshot_sha256: 3b763f8154d823f7eb174cd748438843c3ed9723272033a93957a481877a3316
+- evidence_id: cid-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005575
+  locator: Native term definition
+  accessed_at: '2026-10-20T07:00:43.353985Z'
+  support: supports
+  summary: GO0005575 is the broad active cellular-component root.
+  snapshot_sha256: 1047bad7665847911ae7ac0bd68fdabf3a0a28092c4a356d61e1151fead8c935
+- evidence_id: cartwheel-cartwheel-search
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=cartwheel&limit=100
+  locator: Native ontology search
+  accessed_at: '2026-10-20T06:55:16.021017Z'
+  support: supports
+  summary: A current bounded cartwheel query returns no match; historical query hit
+    counts are not reproduced as current counts.
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+- evidence_id: sheath-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Native species identity
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: NCBITaxon3055 identifies Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: tusk-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=5888
+  locator: Native species identity
+  accessed_at: '2026-10-20T04:07:36.781682Z'
+  support: supports
+  summary: NCBITaxon5888 identifies Paramecium tetraurelia.
+  snapshot_sha256: 596cc922f484502eb5c3608ed45943d1486fb9b2e620d7805a76f2984ec0ad6b
+- evidence_id: tusk-uo
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?obo_id=UO:0000018
+  locator: Native unit definition
+  accessed_at: '2026-10-20T04:07:37.417486Z'
+  support: supports
+  summary: UO0000018 denotes nanometer.
+  snapshot_sha256: 4c7db9c8cb664724cfeb7ded951492cac50dd7c8bdc275363486b3e34df94bf8
+- evidence_id: cartwheel-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/ncomms14813%20OR%20DOI:10.1083/jcb.200402022%20OR%20DOI:10.1073/pnas.2612170123&format=json&resultType=core
+  locator: Exact source metadata
+  accessed_at: '2026-10-20T06:55:11.189899Z'
+  support: supports
+  summary: The Guichard2017 DOI/PMID identify the inspected primary study.
+  snapshot_sha256: d5fbeff1379410a18b63a9c2fe024b585b812f25a57681288616fa5f13656dd9
+- evidence_id: tusk-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.15252/embj.2020106246&format=json&resultType=core
+  locator: Exact source metadata
+  accessed_at: '2026-10-20T04:07:37.473964Z'
+  support: supports
+  summary: The Klena2020 DOI/PMID identify the inspected primary study.
+  snapshot_sha256: fc5be273d2b5b8a6a8e0508133e82627d15be3c057345cafce1b51fd4fb1c685
+- evidence_id: cartwheel-guichard-fig1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5376648.1/ncomms14813-f1.jpg
+  locator: Complete Figure1 and byte comparison
+  accessed_at: '2026-10-20T06:56:05.021744Z'
+  support: supports
+  summary: Visual inspection confirms the native symmetrized cross sections, schematic,
+    D1/D2 distinction and position plot. Source bytes equal the maintained image with
+    SHA25650a63f5c43b225e40950c425b3c32b6c8e728c051a543a2d0277d898ee5712da.
+  snapshot_sha256: 50a63f5c43b225e40950c425b3c32b6c8e728c051a543a2d0277d898ee5712da
+- evidence_id: d2-guichard-meta
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5376648.1/PMC5376648.1.json
+  locator: Article/media checksum and licence provenance
+  accessed_at: '2026-10-20T07:03:28.652106Z'
+  support: supports
+  summary: Official PMC metadata MD5 matches both inspected JATS and hosted figure;
+    JATS explicitly identifies CCBY4.0.
+  snapshot_sha256: 8e52341707ea2b7caba043d31e39137b1b0134c3c733f732120ac799ce27df82
+- evidence_id: d2-ev3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667884.1/EMBJ-39-e106246-g007.jpg
+  locator: Complete EV3 graphic
+  accessed_at: '2026-10-20T07:03:59.585379Z'
+  support: supports
+  summary: Visual inspection distinguishes orange D2-rod and purple pinhead in Paramecium
+    and mature/pro-basal Chlamydomonas, including the protruding segment. This mixed-species
+    figure is inspected, not hosted by the record.
+  snapshot_sha256: ad025a277b0886b62eb084042f67928ef81680050785d55b7a6ab1fe4b8f4efa
+- evidence_id: tusk-emdb10726
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-10726
+  locator: Released title, source and publication
+  accessed_at: '2026-10-20T04:07:37.620588Z'
+  support: supports
+  summary: Native titles identify linker or microtubule-triplet reconstructions, not
+    isolated D2-rod maps; the bounded exclusion is appropriate.
+  snapshot_sha256: 58cebaeacbb0aa96022d51cc2e575167dbc7b53c9d1f1473a8cc5fe2ebac19d4
+- evidence_id: tusk-emdb10727
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-10727
+  locator: Released title, source and publication
+  accessed_at: '2026-10-20T04:07:38.078163Z'
+  support: supports
+  summary: Native titles identify linker or microtubule-triplet reconstructions, not
+    isolated D2-rod maps; the bounded exclusion is appropriate.
+  snapshot_sha256: 6fb33d249a0bed05c662904d275357c2352d338887a56427b11bb166c7bffab9
+- evidence_id: tusk-emdb10728
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-10728
+  locator: Released title, source and publication
+  accessed_at: '2026-10-20T04:07:38.108046Z'
+  support: supports
+  summary: Native titles identify linker or microtubule-triplet reconstructions, not
+    isolated D2-rod maps; the bounded exclusion is appropriate.
+  snapshot_sha256: 720aaa30a6a1551795a4bc2c314ae33df53be46e29e411a3b441d9b097cb5dc3
+- evidence_id: tusk-emdb10729
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-10729
+  locator: Released title, source and publication
+  accessed_at: '2026-10-20T04:07:38.169902Z'
+  support: supports
+  summary: Native titles identify linker or microtubule-triplet reconstructions, not
+    isolated D2-rod maps; the bounded exclusion is appropriate.
+  snapshot_sha256: 29cd3ebac1c41715ca0bfa7254842b6ce3b5e591e1dd9b9c165607eba2a8032d
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  locator: Entire record, cartwheel parent and hosted image
+  accessed_at: '2026-10-20T07:05:13Z'
+  support: context_only
+  summary: OTHER and the broad parent preserve uncertain composition; two canonical
+    examples, one measurement and one structural function remain source-scoped.
+- evidence_id: local-id
+  kind: record_content
+  reference: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  locator: Exact identifier search across data/structures including hidden and ignored
+    files
+  accessed_at: '2026-10-20T07:05:13Z'
+  support: context_only
+  summary: The target uniquely declares this exact D2-rod identifier. Its local cartwheel
+    parent was separately inspected.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:03:10Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/basal_body_d2_rod.yaml'
+  snapshot_sha256: 272e054c6471726071a03461d1b5ae1098ca7e2c8b9f8162640512a3567eafff
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_d2_rod-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:03:12Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/basal_body_d2_rod.yaml\
+    \ --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_d2_rod-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch4-20261019-QtBQNE/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_d2_rod-strict.tsv"
+  snapshot_sha256: cc016a62b71b373f87d28a4c09150ba0909da8146c41ebde1a4de17c09976b43
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/basal_body_d2_rod.yaml; exact collect() scope
+  accessed_at: '2026-10-20T07:05:13Z'
+  support: supports
+  summary: '10 of12 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:basal_body_cartwheel: SKIPPED; resolved by evidence
+    local-id; cellstructuremech:basal_body_d2_rod: SKIPPED; resolved by evidence local-id.
+    Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Longitudinal peripheral connection
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: Named D2-rod identity is distinct from D1, pinhead, hub and the entire
+    cartwheel. Cross-sectional D2 density is appropriately a related synonym. Parthood
+    and unresolved molecular class are supported.
+  evidence_ids:
+  - tusk-paper
+  - cartwheel-guichard
+  - cartwheel-go
+  - cid-go
+  - cartwheel-cartwheel-search
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: No unsupported protein transfer
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: Native morphology and broader reconstitution do not identify a complete
+    D2 composition. The human CPAP proposal is correctly attributed and excluded from
+    microbial components.
+  evidence_ids:
+  - cartwheel-guichard
+  - d2-human
+  - d2-human-meta
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Two native microbial preparations
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: CW-15 isolated pro-basal bodies and Paramecium cortical preparations support
+    the canonical examples;2020 in-situ Chlamydomonas supplies complementary longitudinal
+    context. Taxa and processing qualifiers are correct.
+  evidence_ids:
+  - cartwheel-guichard
+  - tusk-paper
+  - sheath-taxon
+  - tusk-taxon
+  - record
+- assessment_id: measurement
+  area: evidence
+  topic: Radial hub-margin distance
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: The45.6±0.8nm value andn13from5tomograms match Figure1. The record preserves
+    uncertainty type as unspecified and the selection of visible D1/D2 spokes; it
+    does not infer longitudinal dimensions or stoichiometry.
+  evidence_ids:
+  - cartwheel-guichard
+  - tusk-uo
+  - cartwheel-guichard-fig1
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Observed structural connection
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: Vertical spoke-end connection is directly supported. No modulus, growth
+    rate, selective essentiality, causal chronology or motility trait is claimed.
+  evidence_ids:
+  - tusk-paper
+  - d2-ev3
+  - cartwheel-go
+  - record
+- assessment_id: processing
+  area: evidence
+  topic: Counts and reconstructed symmetry
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: The source’s235/232and8/7difference is explicitly preserved. The25nm D1
+    spacing is not converted into a D2 repeat, and rotational copies are not treated
+    as molecules.
+  evidence_ids:
+  - tusk-paper
+  - cartwheel-guichard
+  - record
+- assessment_id: deposits
+  area: provenance
+  topic: Bounded map exclusions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: The four neighboring released deposits are not exact D2-specific datasets;
+    this does not assert the absence of all possible relevant deposits.
+  evidence_ids:
+  - tusk-emdb10726
+  - tusk-emdb10727
+  - tusk-emdb10728
+  - tusk-emdb10729
+  - record
+- assessment_id: image
+  area: evidence
+  topic: Hosted native cross section
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: Source image bytes, CCBY4.0 licence, taxon,50nm scale bars and panel captions
+    match. Longitudinal extent is supplied by the separately inspected mixed-species
+    EV3, not claimed for this cross section.
+  evidence_ids:
+  - cartwheel-guichard-fig1
+  - d2-guichard-meta
+  - cartwheel-guichard
+  - d2-ev3
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Open molecular questions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_d2_rod
+  summary: PROPOSED status, unknown components and lack of a causal graph appropriately
+    reflect the inspected evidence. No concrete missing required assertion is established.
+  evidence_ids:
+  - tusk-paper
+  - cartwheel-guichard
+  - d2-human
+  - record
+findings: []
+actions: []
+limitations:
+- Native microbial D2 molecular composition and D2-specific causal mechanisms remain
+  unresolved.
+- Map volumes were not reprocessed, and historical ontology search hit counts were
+  not reproduced.
+- The source averaging-count discrepancy is retained without adjudicating which processing
+  stage each count describes.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
