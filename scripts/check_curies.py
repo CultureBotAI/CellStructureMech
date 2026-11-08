@@ -50,8 +50,7 @@ except ImportError:
     from scripts.corpus import REPO_ROOT, load_records
 
 CACHE_PATH = REPO_ROOT / "build" / "curie_cache.json"
-UA = {"User-Agent": "CellStructureMech/0.1 (mailto:noreply@anthropic.com; "
-                    "https://github.com/CultureBotAI/CellStructureMech)"}
+UA = {"User-Agent": "CellStructureMech/0.1 (https://github.com/CultureBotAI/CellStructureMech)"}
 CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:\S+$")
 HTTP_TIMEOUT_SECONDS = float(os.environ.get("CELLSTRUCTUREMECH_CURIE_TIMEOUT", "30"))
 

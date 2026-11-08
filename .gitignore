@@ -29,6 +29,7 @@ src/cellstructuremech/schema/cellstructuremech_dataclasses.py
 .env.*
 CLAUDE.local.md
 local/
+.temp/
 
 # .claude/ holds both local noise and committed project assets (skills,
 # commands). Ignore the directory, un-ignore the assets.

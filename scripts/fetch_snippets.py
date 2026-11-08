@@ -57,8 +57,7 @@ try:
 except ImportError:
     from scripts.corpus import REPO_ROOT, load_records
 
-UA = {"User-Agent": "CellStructureMech/0.1 (mailto:noreply@anthropic.com; "
-                    "https://github.com/CultureBotAI/CellStructureMech)"}
+UA = {"User-Agent": "CellStructureMech/0.1 (https://github.com/CultureBotAI/CellStructureMech)"}
 CACHE_DIR = REPO_ROOT / "build" / "literature"
 IDMAP_PATH = CACHE_DIR / "idmap.json"
 
