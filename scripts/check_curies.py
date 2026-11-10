@@ -285,15 +285,54 @@ def resolve_uniprot_location(curies: list[str]) -> dict[str, tuple[str, str]]:
             for c in curies}
 
 
-def resolve_obo_purl(curies: list[str]) -> dict[str, tuple[str, str]]:
-    """Relation prefixes resolve at the OBO PURL, not through the OLS term index.
+def _is_ols_property_redirect(url: str, iri: str) -> bool:
+    """Recognize the exact property browser route delegated by the OBO PURL."""
+    target = urllib.parse.urlsplit(url)
+    return (target.scheme == "https" and target.netloc == "www.ebi.ac.uk"
+            and target.path in {"/ols/ontologies/ro/properties", "/ols4/ontologies/ro/properties"}
+            and urllib.parse.parse_qs(target.query) == {"iri": [iri]})
 
-    BFO and RO relations are indexed by OLS as *properties* of `ro`, so
-    `ontologies/bfo/terms?obo_id=` 404s for every one of them, and the global
-    search finds a BFO relation only when some other ontology happens to import
-    it — `BFO:0000050` (part of) is not found at all, while `BFO:0000066` is
-    found three times over with the label `BFO_0000066` (#84). The PURL is the
-    identifier's canonical location and answers 404 for a fabricated one.
+
+def _resolve_ols_property(iri: str) -> tuple[str, str]:
+    """Query the typed property API; a failed browser route cannot prove absence.
+
+    BFO:0000050's PURL delegates to RO's property browser, whose old and new
+    routes both returned 404 for HEAD *and* GET (#3071). The corresponding API
+    returns the exact property IRI. Its obo_id can be merely "RO:", so neither
+    that field nor a fuzzy term search establishes the requested identity.
+    """
+    url = "https://www.ebi.ac.uk/ols4/api/ontologies/ro/properties?" + urllib.parse.urlencode({"iri": iri})
+    status, body = _get(url)
+    if status != 200:
+        return "UNREACHABLE", f"OLS property API returned {status}"
+    try:
+        payload = json.loads(body)
+        page = payload["page"]
+        properties = payload.get("_embedded", {}).get("properties", [])
+        total = page["totalElements"]
+        if type(total) is not int or not isinstance(properties, list):
+            raise ValueError("invalid property result shape")
+        if total == 0 and properties == []:
+            return "NOT_FOUND", "no such OLS property IRI"
+        if total != 1 or len(properties) != 1:
+            raise ValueError("ambiguous property result")
+        hit = properties[0]
+        if (hit["iri"] != iri or hit["ontology_name"] != "ro"
+                or type(hit["is_obsolete"]) is not bool
+                or not isinstance(hit["label"], str) or not hit["label"].strip()):
+            raise ValueError("property identity or metadata mismatch")
+        return ("OBSOLETE" if hit["is_obsolete"] else "OK"), hit["label"][:90]
+    except (KeyError, TypeError, ValueError, AttributeError):
+        return "UNREACHABLE", "OLS property API returned invalid or mismatched data"
+
+
+def resolve_obo_purl(curies: list[str]) -> dict[str, tuple[str, str]]:
+    """Resolve BFO at its PURL, with an exact-IRI API fallback for RO properties.
+
+    BFO relations are properties in RO, not entries in OLS's BFO term index.
+    A 404 at the PURL itself proves absence; a redirected browser route's 404
+    only says that route failed. Use the typed API solely for the recognized
+    property route and requested IRI, preserving other outages as UNREACHABLE.
     """
     out = {}
     for curie in curies:
@@ -305,12 +344,15 @@ def resolve_obo_purl(curies: list[str]) -> dict[str, tuple[str, str]]:
                 out[curie] = ("OK", response.geturl()[:90]) if response.status == 200 \
                     else ("UNREACHABLE", f"PURL returned {response.status}")
         except urllib.error.HTTPError as exc:
-            out[curie] = ("NOT_FOUND", "no such OBO term") if exc.code == 404 \
-                else ("UNREACHABLE", f"PURL returned {exc.code}")
+            if exc.code == 404 and exc.geturl() == url:
+                out[curie] = ("NOT_FOUND", "no such OBO term")
+            elif exc.code == 404 and _is_ols_property_redirect(exc.geturl(), url):
+                out[curie] = _resolve_ols_property(url)
+            else:
+                out[curie] = ("UNREACHABLE", f"PURL or redirected authority returned {exc.code}")
         except Exception as exc:  # noqa: BLE001
             out[curie] = ("UNREACHABLE", f"{type(exc).__name__}: {exc}")
     return out
-
 
 RESOLVERS = {
     "DOI": resolve_doi,
@@ -420,6 +462,10 @@ def self_test() -> tuple[list[str], list[str]]:
 
 # ------------------------------------------------------------------ cache
 
+# Old BFO PURL verdicts can contain redirected false 404s (#3071, #3072).
+# Refresh only this resolver's entries; preserve other prefixes' useful cache.
+RESOLVER_CACHE_VERSIONS = {"BFO": "obo-property-v1"}
+
 
 def load_cache() -> dict:
     if CACHE_PATH.exists():
@@ -435,7 +481,9 @@ def save_cache(cache: dict) -> None:
     CACHE_PATH.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n")
 
 
-def fresh(entry: dict, max_age_days: int) -> bool:
+def fresh(entry: dict, max_age_days: int, resolver_version: str | None = None) -> bool:
+    if resolver_version is not None and entry.get("resolver_version") != resolver_version:
+        return False
     try:
         checked = datetime.fromisoformat(entry["checked_on"]).date()
     except (KeyError, ValueError):
@@ -510,7 +558,8 @@ def main() -> int:
         for curie in sorted(curies):
             if prefix in NO_RESOLVER:
                 verdicts[curie] = ("SKIPPED", NO_RESOLVER[prefix])
-            elif (entry := cache.get(curie)) and fresh(entry, args.max_age):
+            elif (entry := cache.get(curie)) and fresh(
+                    entry, args.max_age, RESOLVER_CACHE_VERSIONS.get(prefix)):
                 verdicts[curie] = (entry["verdict"], entry.get("detail", ""))
             elif prefix in RESOLVERS or prefix in OLS_ONTOLOGY:
                 to_fetch[prefix].append(curie)
@@ -520,7 +569,7 @@ def main() -> int:
     if args.offline:
         for curies in to_fetch.values():
             for curie in curies:
-                verdicts[curie] = ("SKIPPED", "not cached and --offline")
+                verdicts[curie] = ("SKIPPED", "no compatible fresh cache and --offline")
     else:
         for prefix, curies in sorted(to_fetch.items()):
             print(f"resolving {len(curies)} {prefix} identifier(s)...", file=sys.stderr)
@@ -529,6 +578,8 @@ def main() -> int:
             verdicts.update(got)
             for curie, (verdict, detail) in got.items():
                 cache[curie] = {"verdict": verdict, "detail": detail, "checked_on": date.today().isoformat()}
+                if prefix in RESOLVER_CACHE_VERSIONS:
+                    cache[curie]["resolver_version"] = RESOLVER_CACHE_VERSIONS[prefix]
         save_cache(cache)
 
     by_verdict: dict[str, int] = defaultdict(int)

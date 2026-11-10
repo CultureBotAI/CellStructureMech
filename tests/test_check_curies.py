@@ -253,3 +253,144 @@ def test_an_unreachable_control_is_retried_before_being_given_up_on(monkeypatch)
     prefix, (g, b) = sorted(cc.CONTROLS.items())[0]
     verdicts = cc._control_verdicts(flaky, g, b)
     assert "UNREACHABLE" not in {v[0] for v in verdicts.values()}
+
+
+def _property_payload(**changes):
+    hit = {"iri": "http://purl.obolibrary.org/obo/BFO_0000050", "ontology_name": "ro",
+           "label": "part of", "is_obsolete": False, "obo_id": "RO:"}
+    hit.update(changes)
+    return {"_embedded": {"properties": [hit]}, "page": {"totalElements": 1}}
+
+
+def _broken_property_browser(monkeypatch, final_url=None):
+    iri = "http://purl.obolibrary.org/obo/BFO_0000050"
+    final_url = final_url or "https://www.ebi.ac.uk/ols4/ontologies/ro/properties?iri=" + iri
+
+    def fake(request, timeout):
+        assert request.full_url == iri
+        assert request.get_method() == "HEAD"
+        assert timeout == cc.HTTP_TIMEOUT_SECONDS
+        raise cc.urllib.error.HTTPError(final_url, 404, "Not Found", {}, None)
+
+    monkeypatch.setattr(cc.urllib.request, "urlopen", fake)
+
+
+@pytest.mark.parametrize("browser", ["ols", "ols4"])
+def test_bfo_redirected_browser_404_uses_exact_property_api(monkeypatch, browser):
+    """The observed browser 404 is not absence; GET to that browser also 404s."""
+    iri = "http://purl.obolibrary.org/obo/BFO_0000050"
+    _broken_property_browser(monkeypatch, f"https://www.ebi.ac.uk/{browser}/ontologies/ro/properties?iri={iri}")
+    calls = []
+
+    def get(url):
+        calls.append(url)
+        assert url == "https://www.ebi.ac.uk/ols4/api/ontologies/ro/properties?" + cc.urllib.parse.urlencode(
+            {"iri": iri})
+        return 200, json.dumps(_property_payload()).encode()
+
+    monkeypatch.setattr(cc, "_get", get)
+    assert cc.RESOLVERS["BFO"](["BFO:0000050"]) == {"BFO:0000050": ("OK", "part of")}
+    assert len(calls) == 1
+
+
+@pytest.mark.parametrize("final_url", [
+    "https://unavailable.example/BFO_0000050",
+    "https://www.ebi.ac.uk/ols4/ontologies/ro/properties?iri=http://purl.obolibrary.org/obo/BFO_9999999",
+    "https://www.ebi.ac.uk/ols4/ontologies/bfo/terms?iri=http://purl.obolibrary.org/obo/BFO_0000050",
+])
+def test_bfo_other_redirected_404_is_unavailable_not_absent(monkeypatch, final_url):
+    _broken_property_browser(monkeypatch, final_url)
+    monkeypatch.setattr(cc, "_get", lambda *_: pytest.fail("unexpected property API call"))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"][0] == "UNREACHABLE"
+
+
+@pytest.mark.parametrize("status", [0, 404, 429, 500])
+def test_bfo_property_api_failure_is_unavailable_not_absent(monkeypatch, status):
+    _broken_property_browser(monkeypatch)
+    monkeypatch.setattr(cc, "_get", lambda *_: (status, b""))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"][0] == "UNREACHABLE"
+
+
+@pytest.mark.parametrize("payload", [
+    {}, [], {"page": {"totalElements": False}},
+    {"page": {"totalElements": 1}},
+    {"page": {"totalElements": 0}, "_embedded": {"properties": [{}]}},
+    _property_payload(iri="http://purl.obolibrary.org/obo/BFO_9999999"),
+    _property_payload(ontology_name="other"), _property_payload(is_obsolete="false"),
+    _property_payload(label=""),
+    {"_embedded": {"properties": _property_payload()["_embedded"]["properties"] * 2},
+     "page": {"totalElements": 2}},
+])
+def test_bfo_property_api_requires_unambiguous_exact_identity(monkeypatch, payload):
+    _broken_property_browser(monkeypatch)
+    monkeypatch.setattr(cc, "_get", lambda *_: (200, json.dumps(payload).encode()))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"][0] == "UNREACHABLE"
+
+
+def test_bfo_property_api_invalid_json_is_unavailable(monkeypatch):
+    _broken_property_browser(monkeypatch)
+    monkeypatch.setattr(cc, "_get", lambda *_: (200, b"not JSON"))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"][0] == "UNREACHABLE"
+
+
+def test_bfo_property_api_empty_authoritative_result_is_absent(monkeypatch):
+    _broken_property_browser(monkeypatch)
+    monkeypatch.setattr(cc, "_get", lambda *_: (200, b'{"page":{"totalElements":0}}'))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"][0] == "NOT_FOUND"
+
+
+def test_bfo_property_api_preserves_obsolete_verdict(monkeypatch):
+    _broken_property_browser(monkeypatch)
+    payload = json.dumps(_property_payload(is_obsolete=True)).encode()
+    monkeypatch.setattr(cc, "_get", lambda *_: (200, payload))
+    assert cc.resolve_obo_purl(["BFO:0000050"])["BFO:0000050"] == ("OBSOLETE", "part of")
+
+
+@pytest.mark.parametrize("offline", [False, True])
+def test_legacy_bfo_cache_needs_refresh_without_discarding_other_prefixes(tmp_path, monkeypatch, offline):
+    """A successful control cannot make an old false corpus verdict trustworthy."""
+    old_bfo = {"verdict": "NOT_FOUND", "detail": "no such OBO term", "checked_on": date.today().isoformat()}
+    other = {"verdict": "OK", "detail": "ribosome", "checked_on": date.today().isoformat()}
+    cache_path = tmp_path / "cache.json"
+    cache_path.write_text(json.dumps({"BFO:0000050": old_bfo, "GO:0005840": other}))
+    original_bytes = cache_path.read_bytes()
+    monkeypatch.setattr(cc, "CACHE_PATH", cache_path)
+    monkeypatch.setattr(cc, "load_records", lambda: [(None, {"part_of": "BFO:0000050",
+                                                            "parent": "GO:0005840"})])
+    monkeypatch.setattr(cc, "self_test", lambda: ([], []))
+    calls = []
+
+    def resolver(curies):
+        calls.append(curies)
+        return {"BFO:0000050": ("OK", "part of")}
+
+    monkeypatch.setitem(cc.RESOLVERS, "BFO", resolver)
+    monkeypatch.setattr(cc, "resolve_ols", lambda *_: pytest.fail("unrelated cached GO must not be fetched"))
+    report = tmp_path / "report.tsv"
+    argv = ["check_curies.py", "--check", "--records-only", "--report", str(report)]
+    monkeypatch.setattr(cc.sys, "argv", argv + (["--offline"] if offline else []))
+    assert cc.main() == 0
+    cache = json.loads(cache_path.read_text())
+    assert cache["GO:0005840"] == other
+    if offline:
+        assert calls == []
+        assert cache_path.read_bytes() == original_bytes
+        assert "BFO:0000050\tBFO\tSKIPPED\t" in report.read_text()
+        assert "GO:0005840\tGO\tOK\t" in report.read_text()
+    else:
+        assert calls == [["BFO:0000050"]]
+        assert cache["BFO:0000050"]["verdict"] == "OK"
+        assert cache["BFO:0000050"]["resolver_version"] == cc.RESOLVER_CACHE_VERSIONS["BFO"]
+        calls.clear()
+        assert cc.main() == 0
+        assert calls == [], "new compatible BFO cache must remain useful"
+
+
+@pytest.mark.parametrize("version", [None, "older-version", "future-version"])
+def test_bfo_cache_version_must_match_current_resolver(version):
+    entry = {"verdict": "OK", "checked_on": date.today().isoformat()}
+    if version is not None:
+        entry["resolver_version"] = version
+    assert not cc.fresh(entry, 30, cc.RESOLVER_CACHE_VERSIONS["BFO"])
+    entry["resolver_version"] = cc.RESOLVER_CACHE_VERSIONS["BFO"]
+    assert cc.fresh(entry, 30, cc.RESOLVER_CACHE_VERSIONS["BFO"])
