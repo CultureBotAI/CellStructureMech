@@ -1,0 +1,869 @@
+# Mating projection: scoped scientific review
+
+- Review: 20261019T233310Z-mating-projection-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T07:42:09Z
+- Finished UTC: 2026-10-19T23:33:10Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+All present record fields and material claims were assessed. Exact ontology identity, structural relations, conditional yeast occurrence, polarized-growth function and nonmechanistic topology are supported. Four cited papers were accessible through full-text routes. No concrete issue observed.
+
+## Scope And Provenance
+
+One complete maintained mating projection record, including every present native section and cited identifier.
+
+Selection: Exact queued path data/structures/appendage/mating_projection.yaml in the unreviewed corpus path order; one record per bundle.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005937 | data/structures/appendage/mating_projection.yaml | maintained | mating projection |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Open LinkML target validation | passed | True | GO:0005937 | Exit 0; No issues found. |
+| Closed LinkML target validation | passed | True | GO:0005937 | Exit 0; one file scanned, zero ERROR rows. |
+| Authority and claim-level source review | passed | True | GO:0005937 | Nine GO terms, the taxon and four DOI/PMID identities verified individually. Relevant full-text sections of all four papers support the bounded claims; initial blocked XML/publisher routes were recovered through public PDFs. |
+| Verbatim snippet verification | not_applicable | False | GO:0005937 | No snippet fields are present; source-backed notes were assessed directly. |
+| Target identifier coverage including resolver residuals | passed | True | GO:0005937 | All CURIE-shaped target values have issuing-authority or appropriate local/source-specific existence verification. Generic PMID HTTP414 failures and skipped namespaces were resolved by scoped receipts; biological mapping correctness is assessed separately. |
+| Full corpus QC | passed | True | GO:0005937 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0005937 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0005937 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0005937 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0005937 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Structure identity, definition, category and synonym scope
+
+identity: supported. Targets: GO:0005937.
+
+The record represents the whole pheromone-induced fungal projection, a membrane-bounded cellular appendage rather than a protein or phenotype. Definition, GO identity and the NARROW status of shmoo/conjugation tube agree with the authority. APPENDAGE is consistent with this physical projection.
+
+### Parent, parts and sibling boundaries
+
+grounding: supported. Targets: GO:0005937.
+
+The is_a parent and all five direct has_part links are correct ontology relations. The graph adds the tip membrane and tip polarisome at their appropriate nested locations. Related local records resolve these IDs and support the whole-structure/substructure boundary.
+
+### Conditional taxonomic occurrence and canonical example
+
+scope: supported. Targets: GO:0005937.
+
+NCBITaxon:4932 names S. cerevisiae. VARIABLE presence is explicitly conditioned on haploid pheromone exposure, matching Read et al.; it does not assert a constitutive structure or an exhaustive fungal distribution. The Spa2-positive tip example is directly supported by the paper.
+
+### Projection-level composition and localized complexes
+
+representation: supported. Targets: GO:0005937.
+
+The record links localized substructures and deliberately leaves their molecular subunits to their own records. No projection-level fixed stoichiometry, direct protein inventory or unverified accession is asserted. The resolved discussion is consistent with this boundary, and the named Spa2/Pea2/Bni1 context is supported.
+
+### Polarized-growth function and local evidence
+
+evidence: supported. Targets: GO:0005937.
+
+Read et al. support localized projection growth and Spa2 tip localization; Bidlingmaier and Snyder support polarisome involvement in growth initiation/termination. The single function is appropriately stated at the whole-projection level, with evidence attached to it.
+
+### Eight nodes and seven nonmechanistic topology edges
+
+graph: supported. Targets: GO:0005937.
+
+All eight groundings resolve. The membrane surrounds relation follows its definition; tip membrane, tip, base, septin ring and septin band relations match ontology anatomy; tip-polarisome localization matches GO and the cited study. FUNCTION/NONMECHANISTIC is explicit. Douglas distinguishes a diffuse shmoo-neck arrangement from tight budding rings; the target claims possible neck structures without imposing co-occurrence, a transition order or a diffusion-barrier mechanism.
+
+### All identifiers, article identities and evidence placement
+
+evidence: supported. Targets: GO:0005937.
+
+All nine GO terms, the taxon and four DOI identities were individually verified. PMID mappings corroborate the exact articles. Claim-specific citations support their local statements; the Valtz and Herskowitz reference is valid contextual bibliography. No verbatim snippet fields require quotation matching.
+
+### Quantities, images, traits, datasets and protein examples
+
+completeness: not_applicable. Targets: GO:0005937.
+
+No physical measurements, images, traits, expression datasets, protein_examples or stoichiometric claims are present. None is mandatory for the current bounded anatomical and functional claims; absence alone is not a curation finding. A comprehensive pheromone-response pathway is expressly outside the graph scope.
+
+### PROPOSED status, history and scientific ownership
+
+provenance: supported. Targets: GO:0005937.
+
+PROPOSED status appropriately remains unchanged for the agent-authored record. Curation events and both local history files describe creation, expansion and the addition of the tip membrane topology. The maintained YAML owns future scientific changes. This review does not independently close a GitHub issue or dispose of the separate septin-band review lineage.
+
+### Focused schema validation
+
+schema: supported. Targets: GO:0005937.
+
+The documented open and closed target validators both pass; strict output has no error rows. Initial inspected local-input hashes were rechecked on resume and remain unchanged.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/mating_projection.yaml | supports | Entire maintained record read, including identity, classification, synonyms, five has_part links, one taxon occurrence, canonical example, function, thirteen bibliography entries, eight graph nodes/seven edges, resolved discussion and three curation events. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005937,GO:0120025,GO:0070250,GO:0043332,GO:0001400,GO:0032175,GO:0032162,GO:0031563,GO:0070867; Nine term results: definitions, synonyms, children, aspect and obsolete status | supports | Nine nonobsolete cellular-component terms match the labels. GO:0005937 definition and both narrow synonyms match exactly. GO:0120025 has GO:0005937 as an is_a child; the five has_part terms are its direct part_of children. GO:0070867 is part of GO:0043332 and GO:0070250; GO:0031563 is part of GO:0043332. Term definitions support membrane surroundings, apex/base regions and neck-localized septins. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=4932&amp;retmode=xml; Taxon/TaxId, ScientificName and Rank | supports | NCBI Taxonomy identifies taxon 4932 as Saccharomyces cerevisiae, rank species. This verifies the taxon identifier, not universal presence across strains or growth states. |
+| pubmed | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1498363,14734532,16151244,8909546&amp;retmode=xml; Each PubmedArticle/MedlineCitation and PubmedData/ArticleIdList | supports | The four target DOI identities map to PMID 1498363 (Read 1992), 14734532 (Bidlingmaier and Snyder 2004), 16151244 (Douglas et al. 2005) and 8909546 (Valtz and Herskowitz 1996); titles, authors and publication years agree. |
+| doi-read | https://api.crossref.org/works/10.1091/mbc.3.4.429; Crossref message DOI, title, author and published fields | supports | Read, Okamura and Drubin, 1992, Actin- and tubulin-dependent functions during Saccharomyces cerevisiae mating projection formation, DOI 10.1091/mbc.3.4.429. |
+| doi-bidling | https://api.crossref.org/works/10.1083/jcb.200307065; Crossref message DOI, title, author and published fields | supports | Bidlingmaier and Snyder, 2004, Regulation of polarized growth initiation and termination cycles by the polarisome and Cdc42 regulators, DOI 10.1083/jcb.200307065. |
+| doi-douglas | https://api.crossref.org/works/10.1128/EC.4.9.1503-1512.2005; Crossref message DOI, title, author and published fields | supports | Douglas, Alvarez, McCreary and Konopka, 2005, Septin function in yeast model systems and pathogenic fungi, DOI 10.1128/EC.4.9.1503-1512.2005; capitalization differences in DOI metadata are immaterial. |
+| doi-valtz | https://api.crossref.org/works/10.1083/jcb.135.3.725; Crossref message DOI, title, author and published fields | supports | Valtz and Herskowitz, 1996, Pea2 protein of yeast is localized to sites of polarized growth and is required for efficient mating and bipolar budding, DOI 10.1083/jcb.135.3.725. |
+| read1992 | https://europepmc.org/articles/PMC275593?pdf=render; Full article PDF; introduction pp.429–430; actin-mutant/Spa2 results and Figure 7 around p.436; discussion | supports | Read et al. describe pheromone-induced projections in haploid S. cerevisiae and test actin and beta-tubulin mutants. Relevant body sections and Figure 7/results support Spa2 localization at projection tips and the role of polarized growth. Wild-type Spa2 tip localization was observed under the stated pheromone treatment; it is not an unconditional species phenotype. |
+| bidling2004 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2172334/fullTextXML; Full JATS body: Introduction; Results on polarisome components and projection growth; Discussion | supports | Full JATS article supports Spa2, Pea2 and Bni1 as polarisome components involved in projection initiation/termination and polarized growth. Introduction and results explain tip-localized polarity machinery; the source studies pheromone-treated S. cerevisiae and does not establish a universal fungal molecular inventory. |
+| douglas2005 | https://europepmc.org/articles/PMC1214204?pdf=render; Full review PDF; Septin function during mating, pp.1506–1507 | supports | The review describes septins at shmoo necks and a diffuse ring of longitudinal bars, distinguished from a tight budding-cell ring. It supports the target wording that septin structures can occur at the projection neck. It does not establish two obligatory simultaneous architectures or a transition order; the record makes neither claim. |
+| valtz1996 | https://europepmc.org/articles/PMC2121064?pdf=render; Full article PDF; abstract/introduction p.725 and Pea2/Spa2 localization results | supports | Full article identity and relevant abstract/results support Pea2 localization to polarized-growth sites and its relationship to Spa2 during yeast mating and budding. The target uses this reference as contextual bibliography and does not attach a more specific unsupported mechanism to it. |
+| gene-context | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPA2+OR+gene_exact%3APEA2+OR+gene_exact%3ABNI1%29+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&amp;format=json&amp;fields=accession%2Cgene_names%2Corganism_id%2Cprotein_name%2Creviewed; Taxonomy-inclusive reviewed exact-gene query; gene names, accession, ordered locus and organism taxon | context_only | Reviewed UniProt entries confirm SPA2/P23201/YLL021W, PEA2/P40091/YER149C and BNI1/P41832/YNL271C at taxon 559292, a descendant selected by the taxonomy_id:4932 query. This corroborates named gene context only; these accessions are not target protein_examples and no strain-specific projection claim is inferred. |
+| repository-context | history/records/mating_projection/ | supports | Ignored-inclusive bounded search locates the two creation/edit history records, eleven related maintained structure records and two prior septin-band review YAML files. The direct membrane, tip, base, septin ring and septin band records reciprocally link to the projection; tip membrane and polarisome resolve to their own records. Git history identifies a3348f345e6ca1d6215be47555ade91437434b4b (2026-09-28) as the target addition. The later history event records addition of the tip membrane graph node/edge. |
+| prior-reviews | reviews/structured/20261011T142654Z-mating_projection_septin_band-audit/review.yaml; targets and findings in both hashed review YAML inputs | context_only | This prior audit and its 20261011T144243Z-mating_projection_septin_band-disposition successor target GO:0032162. They document correction of the band is_a parent and do not constitute a review or unresolved finding against the present GO:0005937 target. No lineage closure is claimed here. |
+| schema | justfile; validate and validate-strict recipes; external strict.tsv | supports | Both focused commands completed with exit 0: open validation reported No issues found; strict validation scanned one file with zero ERROR rows. The persisted strict TSV contains only its header. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/mating_projection.yaml; exact scripts/check_curies.py collect() scope; reports/curie_check.tsv | supports | This target contains 14 distinct CURIE-shaped scalar values: 14 OK, 0 transport-unreachable and 0 skipped in the global report. The attached scoped receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect(); their content was inspected separately. Existence is not proof of correct biological mapping. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The supported scope is whole-projection anatomy, conditional occurrence in the cited yeast experiments and a topology graph. This review does not establish a universal molecular inventory, fixed stoichiometry or complete pheromone-response mechanism.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user expressly requested a validated saved review for every unreviewed target, including clean records, overriding the local issue-only persistence gate. No finding was invented to justify output.
+- No target, generated page, curation event or repository history file was changed. No remote communication or paid provider was used.
+- Source fetches occurred at the recorded 07:42–07:44 UTC times. Review drafting resumed after interruption later on the same UTC date; initial input hashes were verified unchanged before completion.
+- Read and Douglas fullTextXML requests failed and direct PMC/publisher routes returned challenges or forbidden responses; their public EuropePMC PDF render routes succeeded. Valtz JATS contained only an abstract, but its full PDF was recovered. No unresolved cited-paper access gap remains for the reviewed claims.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233310Z-mating-projection-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Mating projection: scoped scientific review'
+started_at: '2026-10-19T07:42:09Z'
+finished_at: '2026-10-19T23:33:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Delegated Codex agent reviewed an existing agent-authored target
+    in the coordinating reviewer isolated clone. Reviewer did not author or edit the
+    target during this task; no independent human approval is claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: All present record fields and material claims were assessed. Exact ontology
+  identity, structural relations, conditional yeast occurrence, polarized-growth function
+  and nonmechanistic topology are supported. Four cited papers were accessible through
+  full-text routes. No concrete issue observed.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/mating_projection.yaml
+    sha256: bab39726b1ad7003dbf3f66e8d48d088365fac303dcbfeef0aae4009b26cc1b0
+    role: target
+  - path: data/structures/appendage/mating_projection_base.yaml
+    sha256: eddb868bc0a45a7cef478d5e4b0ea468fcb1ab65582b40b29863d41d36506d9d
+    role: context
+  - path: data/structures/appendage/mating_projection_membrane.yaml
+    sha256: d1ed93a7c920c648dbb7ae5967579738c66ac620fa3f16513d465d18d75fd473
+    role: context
+  - path: data/structures/appendage/mating_projection_tip_membrane.yaml
+    sha256: 1159bcac347712f9a6a55778fe897892dfb90edb6affc5dc44cffbb348352286
+    role: context
+  - path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    sha256: e0b5696c74beabb751e5334fd04492a057d4b3fceeedf87f7b1c59978e172b1e
+    role: context
+  - path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    sha256: e68377ea65b5be456416810adb14479747220176a957b97f6d3ce3f5e731354d
+    role: context
+  - path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+    sha256: 1829e9907009f5d72966b7b14936288c5bb5d141ea0fb043058a6e1939a078b6
+    role: context
+  - path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+    sha256: 9286b6cd14a1d4ee846f71768e3e2c167d3254af72efc0e9437738dd16caddb6
+    role: context
+  - path: data/structures/cytoskeleton/septin_band.yaml
+    sha256: 41d269f0b9bd3a3814d8fd2bb5e3e26e933763e1b06c42a30e8b13e20f2865da
+    role: context
+  - path: data/structures/other/mating_projection_tip.yaml
+    sha256: ec2a7085e4d50080981c50bd9b523d8ffabf4de5739bbe1b696c382fddb7e1ad
+    role: context
+  - path: data/structures/other/mating_projection_tip_polarisome.yaml
+    sha256: 5502f8d8c35e2a2c4f05054f1b8560ecf19c88374581927f3107e46512996afe
+    role: context
+  - path: data/structures/other/polarisome.yaml
+    sha256: 9b62b423b4edbb40c6e0a6fd974d1ad18ac0fa36763679593eb9982404b79772
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/mating_projection/2026-09-28T132720Z-claude-code-ae785b.yaml
+    sha256: ada2bd560f7a6785c15333053e2a13f48e9978099c386d6b3a844aed6f58d1e8
+    role: context
+  - path: history/records/mating_projection/2026-09-28T134247Z-claude-code-f89de4.yaml
+    sha256: 966dcea19ad31a20b6b01e07c7debb2471813e89d8655714371de2c7cb816a0f
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T142654Z-mating_projection_septin_band-audit/review.yaml
+    sha256: 9984c53b4f9ceb77a3cd00334ba92a7a9e53b9a7c3611a75117cdf306be518e9
+    role: context
+  - path: reviews/structured/20261011T144243Z-mating_projection_septin_band-disposition/review.yaml
+    sha256: ead25855ed491f18f5b78d2157b27f4e1462934b2a35e0ef3c66c23b593e6fff
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0005937
+  path: data/structures/appendage/mating_projection.yaml
+  label: mating projection
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mating_projection.yaml
+    role: maintained scientific record
+scope:
+  description: One complete maintained mating projection record, including every present
+    native section and cited identifier.
+  selection: Exact queued path data/structures/appendage/mating_projection.yaml in
+    the unreviewed corpus path order; one record per bundle.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005937
+checks:
+- check_id: open-schema
+  name: Open LinkML target validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - GO:0005937
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate data/structures/appendage/mating_projection.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - schema
+- check_id: strict-schema
+  name: Closed LinkML target validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned, zero ERROR rows.
+  target_ids:
+  - GO:0005937
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate-strict data/structures/appendage/mating_projection.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/mating-review/strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - schema
+- check_id: source-identifier-audit
+  name: Authority and claim-level source review
+  status: passed
+  required: true
+  summary: Nine GO terms, the taxon and four DOI/PMID identities verified individually.
+    Relevant full-text sections of all four papers support the bounded claims; initial
+    blocked XML/publisher routes were recovered through public PDFs.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - go
+  - taxon
+  - pubmed
+  - doi-read
+  - doi-bidling
+  - doi-douglas
+  - doi-valtz
+  - read1992
+  - bidling2004
+  - douglas2005
+  - valtz1996
+  - gene-context
+- check_id: snippet-verification
+  name: Verbatim snippet verification
+  status: not_applicable
+  required: false
+  summary: No snippet fields are present; source-backed notes were assessed directly.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+- check_id: target-identifier-coverage
+  name: Target identifier coverage including resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  summary: All CURIE-shaped target values have issuing-authority or appropriate local/source-specific
+    existence verification. Generic PMID HTTP414 failures and skipped namespaces were
+    resolved by scoped receipts; biological mapping correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005937
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/mating_projection.yaml
+  accessed_at: '2026-10-19T23:30:40Z'
+  support: supports
+  summary: Entire maintained record read, including identity, classification, synonyms,
+    five has_part links, one taxon occurrence, canonical example, function, thirteen
+    bibliography entries, eight graph nodes/seven edges, resolved discussion and three
+    curation events.
+  snapshot_sha256: bab39726b1ad7003dbf3f66e8d48d088365fac303dcbfeef0aae4009b26cc1b0
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005937,GO:0120025,GO:0070250,GO:0043332,GO:0001400,GO:0032175,GO:0032162,GO:0031563,GO:0070867
+  accessed_at: '2026-10-19T07:42:51Z'
+  support: supports
+  summary: Nine nonobsolete cellular-component terms match the labels. GO:0005937
+    definition and both narrow synonyms match exactly. GO:0120025 has GO:0005937 as
+    an is_a child; the five has_part terms are its direct part_of children. GO:0070867
+    is part of GO:0043332 and GO:0070250; GO:0031563 is part of GO:0043332. Term definitions
+    support membrane surroundings, apex/base regions and neck-localized septins.
+  locator: 'Nine term results: definitions, synonyms, children, aspect and obsolete
+    status'
+  snapshot_sha256: fae5a00c82ddfb3b085d020e6798f712d0587f2dab994d2f4c908f6be2c0d6c8
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=4932&retmode=xml
+  accessed_at: '2026-10-19T07:42:50Z'
+  support: supports
+  summary: NCBI Taxonomy identifies taxon 4932 as Saccharomyces cerevisiae, rank species.
+    This verifies the taxon identifier, not universal presence across strains or growth
+    states.
+  locator: Taxon/TaxId, ScientificName and Rank
+  snapshot_sha256: da089959ea98b54a0b26b43b88037705e7aed37e969e5c789267f92803002124
+- evidence_id: pubmed
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1498363,14734532,16151244,8909546&retmode=xml
+  accessed_at: '2026-10-19T07:43:37Z'
+  support: supports
+  summary: The four target DOI identities map to PMID 1498363 (Read 1992), 14734532
+    (Bidlingmaier and Snyder 2004), 16151244 (Douglas et al. 2005) and 8909546 (Valtz
+    and Herskowitz 1996); titles, authors and publication years agree.
+  locator: Each PubmedArticle/MedlineCitation and PubmedData/ArticleIdList
+  snapshot_sha256: 00b78806f74b571ca568b83a908f68dcb0bfccd0e7a7ac5b9a4b68cd1731a898
+- evidence_id: doi-read
+  kind: database
+  reference: https://api.crossref.org/works/10.1091/mbc.3.4.429
+  accessed_at: '2026-10-19T07:42:51Z'
+  support: supports
+  summary: Read, Okamura and Drubin, 1992, Actin- and tubulin-dependent functions
+    during Saccharomyces cerevisiae mating projection formation, DOI 10.1091/mbc.3.4.429.
+  locator: Crossref message DOI, title, author and published fields
+  snapshot_sha256: 644f4bea67897a932a32a12c47d18fe46c5164029ab6cc7baf10139c134eb341
+- evidence_id: doi-bidling
+  kind: database
+  reference: https://api.crossref.org/works/10.1083/jcb.200307065
+  accessed_at: '2026-10-19T07:42:51Z'
+  support: supports
+  summary: Bidlingmaier and Snyder, 2004, Regulation of polarized growth initiation
+    and termination cycles by the polarisome and Cdc42 regulators, DOI 10.1083/jcb.200307065.
+  locator: Crossref message DOI, title, author and published fields
+  snapshot_sha256: 5a3d8c694a8dc7e7f3460e778969b57cb4a4f6a0d8403711b8b62e97627962f4
+- evidence_id: doi-douglas
+  kind: database
+  reference: https://api.crossref.org/works/10.1128/EC.4.9.1503-1512.2005
+  accessed_at: '2026-10-19T07:42:51Z'
+  support: supports
+  summary: Douglas, Alvarez, McCreary and Konopka, 2005, Septin function in yeast
+    model systems and pathogenic fungi, DOI 10.1128/EC.4.9.1503-1512.2005; capitalization
+    differences in DOI metadata are immaterial.
+  locator: Crossref message DOI, title, author and published fields
+  snapshot_sha256: 760b41ca13230eae11948f5cf65caa300081e11eb7d7dba2fc46b13cb9bdd18b
+- evidence_id: doi-valtz
+  kind: database
+  reference: https://api.crossref.org/works/10.1083/jcb.135.3.725
+  accessed_at: '2026-10-19T07:42:51Z'
+  support: supports
+  summary: Valtz and Herskowitz, 1996, Pea2 protein of yeast is localized to sites
+    of polarized growth and is required for efficient mating and bipolar budding,
+    DOI 10.1083/jcb.135.3.725.
+  locator: Crossref message DOI, title, author and published fields
+  snapshot_sha256: 48e720d697782320eca0133cfb6ec619f236b0dab625a8eeb4461502d7552620
+- evidence_id: read1992
+  kind: primary_source
+  reference: https://europepmc.org/articles/PMC275593?pdf=render
+  accessed_at: '2026-10-19T07:44:14Z'
+  support: supports
+  summary: Read et al. describe pheromone-induced projections in haploid S. cerevisiae
+    and test actin and beta-tubulin mutants. Relevant body sections and Figure 7/results
+    support Spa2 localization at projection tips and the role of polarized growth.
+    Wild-type Spa2 tip localization was observed under the stated pheromone treatment;
+    it is not an unconditional species phenotype.
+  locator: Full article PDF; introduction pp.429–430; actin-mutant/Spa2 results and
+    Figure 7 around p.436; discussion
+  snapshot_sha256: 63d19679ef508f4c22b3a6a6428f2d78e1eefa32016310daac96f7753dc60377
+- evidence_id: bidling2004
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2172334/fullTextXML
+  accessed_at: '2026-10-19T07:43:20Z'
+  support: supports
+  summary: Full JATS article supports Spa2, Pea2 and Bni1 as polarisome components
+    involved in projection initiation/termination and polarized growth. Introduction
+    and results explain tip-localized polarity machinery; the source studies pheromone-treated
+    S. cerevisiae and does not establish a universal fungal molecular inventory.
+  locator: 'Full JATS body: Introduction; Results on polarisome components and projection
+    growth; Discussion'
+  snapshot_sha256: 6df7c78398153531ba15d7369408ad0be25d9dea1bd8e44e6a66a4d99da8063c
+- evidence_id: douglas2005
+  kind: primary_source
+  reference: https://europepmc.org/articles/PMC1214204?pdf=render
+  accessed_at: '2026-10-19T07:44:08Z'
+  support: supports
+  summary: The review describes septins at shmoo necks and a diffuse ring of longitudinal
+    bars, distinguished from a tight budding-cell ring. It supports the target wording
+    that septin structures can occur at the projection neck. It does not establish
+    two obligatory simultaneous architectures or a transition order; the record makes
+    neither claim.
+  locator: Full review PDF; Septin function during mating, pp.1506–1507
+  snapshot_sha256: bbc16d6657d70180097fd76d94917d86cd6704a3bda0dd137d0b19ba09df0cb6
+- evidence_id: valtz1996
+  kind: primary_source
+  reference: https://europepmc.org/articles/PMC2121064?pdf=render
+  accessed_at: '2026-10-19T07:44:12Z'
+  support: supports
+  summary: Full article identity and relevant abstract/results support Pea2 localization
+    to polarized-growth sites and its relationship to Spa2 during yeast mating and
+    budding. The target uses this reference as contextual bibliography and does not
+    attach a more specific unsupported mechanism to it.
+  locator: Full article PDF; abstract/introduction p.725 and Pea2/Spa2 localization
+    results
+  snapshot_sha256: 26caa2ada69887356d6c2741e73d813b5e68465384c4dce4e4e88d1621f00fc5
+- evidence_id: gene-context
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASPA2+OR+gene_exact%3APEA2+OR+gene_exact%3ABNI1%29+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&fields=accession%2Cgene_names%2Corganism_id%2Cprotein_name%2Creviewed
+  accessed_at: '2026-10-19T07:43:17Z'
+  support: context_only
+  summary: Reviewed UniProt entries confirm SPA2/P23201/YLL021W, PEA2/P40091/YER149C
+    and BNI1/P41832/YNL271C at taxon 559292, a descendant selected by the taxonomy_id:4932
+    query. This corroborates named gene context only; these accessions are not target
+    protein_examples and no strain-specific projection claim is inferred.
+  locator: Taxonomy-inclusive reviewed exact-gene query; gene names, accession, ordered
+    locus and organism taxon
+  snapshot_sha256: dcd7c7271f53cad1ecdaa5fcd6c4a805fc0b6ebff5476a1dbd01ba613e10798e
+- evidence_id: repository-context
+  kind: search
+  reference: history/records/mating_projection/
+  accessed_at: '2026-10-19T23:30:40Z'
+  support: supports
+  summary: Ignored-inclusive bounded search locates the two creation/edit history
+    records, eleven related maintained structure records and two prior septin-band
+    review YAML files. The direct membrane, tip, base, septin ring and septin band
+    records reciprocally link to the projection; tip membrane and polarisome resolve
+    to their own records. Git history identifies a3348f345e6ca1d6215be47555ade91437434b4b
+    (2026-09-28) as the target addition. The later history event records addition
+    of the tip membrane graph node/edge.
+  search_scope: rg --no-ignore --hidden -l --glob '!.git/**' --glob '!.venv/**' --glob
+    '!review.md' 'mating_projection|mating projection' history/records/mating_projection
+    data/structures reviews/structured; git log --format='%H %cI %s' -- data/structures/appendage/mating_projection.yaml.
+    Bounded to those local roots; ignored files included. Relevant listed files were
+    inspected and are hashed inputs.
+- evidence_id: prior-reviews
+  kind: prior_review
+  reference: reviews/structured/20261011T142654Z-mating_projection_septin_band-audit/review.yaml
+  accessed_at: '2026-10-19T23:30:40Z'
+  support: context_only
+  summary: This prior audit and its 20261011T144243Z-mating_projection_septin_band-disposition
+    successor target GO:0032162. They document correction of the band is_a parent
+    and do not constitute a review or unresolved finding against the present GO:0005937
+    target. No lineage closure is claimed here.
+  locator: targets and findings in both hashed review YAML inputs
+- evidence_id: schema
+  kind: validation
+  reference: justfile
+  accessed_at: '2026-10-19T23:30:40Z'
+  support: supports
+  summary: 'Both focused commands completed with exit 0: open validation reported
+    No issues found; strict validation scanned one file with zero ERROR rows. The
+    persisted strict TSV contains only its header.'
+  locator: validate and validate-strict recipes; external strict.tsv
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/mating_projection.yaml; exact scripts/check_curies.py
+    collect() scope; reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:32:25.400320Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'This target contains 14 distinct CURIE-shaped scalar values: 14 OK, 0
+    transport-unreachable and 0 skipped in the global report. The attached scoped
+    receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect();
+    their content was inspected separately. Existence is not proof of correct biological
+    mapping.'
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure identity, definition, category and synonym scope
+  outcome: supported
+  summary: The record represents the whole pheromone-induced fungal projection, a
+    membrane-bounded cellular appendage rather than a protein or phenotype. Definition,
+    GO identity and the NARROW status of shmoo/conjugation tube agree with the authority.
+    APPENDAGE is consistent with this physical projection.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - go
+- assessment_id: hierarchy
+  area: grounding
+  topic: Parent, parts and sibling boundaries
+  outcome: supported
+  summary: The is_a parent and all five direct has_part links are correct ontology
+    relations. The graph adds the tip membrane and tip polarisome at their appropriate
+    nested locations. Related local records resolve these IDs and support the whole-structure/substructure
+    boundary.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - go
+  - repository-context
+- assessment_id: taxonomic-scope
+  area: scope
+  topic: Conditional taxonomic occurrence and canonical example
+  outcome: supported
+  summary: NCBITaxon:4932 names S. cerevisiae. VARIABLE presence is explicitly conditioned
+    on haploid pheromone exposure, matching Read et al.; it does not assert a constitutive
+    structure or an exhaustive fungal distribution. The Spa2-positive tip example
+    is directly supported by the paper.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - taxon
+  - read1992
+  dimensions:
+  - name: experimental-context
+    value: Pheromone-treated haploid S. cerevisiae; wild type and actin/beta-tubulin
+      mutant comparisons
+    definition: The source context supporting the occurrence and canonical-example
+      statements.
+    evidence_ids:
+    - read1992
+- assessment_id: composition
+  area: representation
+  topic: Projection-level composition and localized complexes
+  outcome: supported
+  summary: The record links localized substructures and deliberately leaves their
+    molecular subunits to their own records. No projection-level fixed stoichiometry,
+    direct protein inventory or unverified accession is asserted. The resolved discussion
+    is consistent with this boundary, and the named Spa2/Pea2/Bni1 context is supported.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - go
+  - bidling2004
+  - gene-context
+  - repository-context
+- assessment_id: function
+  area: evidence
+  topic: Polarized-growth function and local evidence
+  outcome: supported
+  summary: Read et al. support localized projection growth and Spa2 tip localization;
+    Bidlingmaier and Snyder support polarisome involvement in growth initiation/termination.
+    The single function is appropriately stated at the whole-projection level, with
+    evidence attached to it.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - read1992
+  - bidling2004
+  - go
+- assessment_id: graph
+  area: graph
+  topic: Eight nodes and seven nonmechanistic topology edges
+  outcome: supported
+  summary: All eight groundings resolve. The membrane surrounds relation follows its
+    definition; tip membrane, tip, base, septin ring and septin band relations match
+    ontology anatomy; tip-polarisome localization matches GO and the cited study.
+    FUNCTION/NONMECHANISTIC is explicit. Douglas distinguishes a diffuse shmoo-neck
+    arrangement from tight budding rings; the target claims possible neck structures
+    without imposing co-occurrence, a transition order or a diffusion-barrier mechanism.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - go
+  - douglas2005
+  - bidling2004
+  dimensions:
+  - name: graph-evidence-tier
+    value: Ontology-backed anatomy/localization with bounded literature support; NONMECHANISTIC
+    definition: The graph represents anatomical and localization relations rather
+      than a complete causal signaling pathway.
+    evidence_ids:
+    - record
+    - go
+    - douglas2005
+    - bidling2004
+- assessment_id: bibliography
+  area: evidence
+  topic: All identifiers, article identities and evidence placement
+  outcome: supported
+  summary: All nine GO terms, the taxon and four DOI identities were individually
+    verified. PMID mappings corroborate the exact articles. Claim-specific citations
+    support their local statements; the Valtz and Herskowitz reference is valid contextual
+    bibliography. No verbatim snippet fields require quotation matching.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - go
+  - taxon
+  - pubmed
+  - doi-read
+  - doi-bidling
+  - doi-douglas
+  - doi-valtz
+  - read1992
+  - bidling2004
+  - douglas2005
+  - valtz1996
+- assessment_id: optional-surfaces
+  area: completeness
+  topic: Quantities, images, traits, datasets and protein examples
+  outcome: not_applicable
+  summary: No physical measurements, images, traits, expression datasets, protein_examples
+    or stoichiometric claims are present. None is mandatory for the current bounded
+    anatomical and functional claims; absence alone is not a curation finding. A comprehensive
+    pheromone-response pathway is expressly outside the graph scope.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+- assessment_id: status-history
+  area: provenance
+  topic: PROPOSED status, history and scientific ownership
+  outcome: supported
+  summary: PROPOSED status appropriately remains unchanged for the agent-authored
+    record. Curation events and both local history files describe creation, expansion
+    and the addition of the tip membrane topology. The maintained YAML owns future
+    scientific changes. This review does not independently close a GitHub issue or
+    dispose of the separate septin-band review lineage.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - record
+  - repository-context
+  - prior-reviews
+- assessment_id: validation
+  area: schema
+  topic: Focused schema validation
+  outcome: supported
+  summary: The documented open and closed target validators both pass; strict output
+    has no error rows. Initial inspected local-input hashes were rechecked on resume
+    and remain unchanged.
+  target_ids:
+  - GO:0005937
+  evidence_ids:
+  - schema
+  - record
+findings: []
+actions: []
+limitations:
+- The supported scope is whole-projection anatomy, conditional occurrence in the cited
+  yeast experiments and a topology graph. This review does not establish a universal
+  molecular inventory, fixed stoichiometry or complete pheromone-response mechanism.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user expressly requested a validated saved review for every unreviewed target,
+  including clean records, overriding the local issue-only persistence gate. No finding
+  was invented to justify output.
+- No target, generated page, curation event or repository history file was changed.
+  No remote communication or paid provider was used.
+- Source fetches occurred at the recorded 07:42–07:44 UTC times. Review drafting resumed
+  after interruption later on the same UTC date; initial input hashes were verified
+  unchanged before completion.
+- Read and Douglas fullTextXML requests failed and direct PMC/publisher routes returned
+  challenges or forbidden responses; their public EuropePMC PDF render routes succeeded.
+  Valtz JATS contained only an abstract, but its full PDF was recovered. No unresolved
+  cited-paper access gap remains for the reviewed claims.
+```
