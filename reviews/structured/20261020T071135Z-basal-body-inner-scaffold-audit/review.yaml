@@ -1,0 +1,816 @@
+schema_version: 1.0.0
+review_id: 20261020T071135Z-basal-body-inner-scaffold-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Basal-body inner-scaffold composition and contact-graph review
+started_at: '2026-10-20T07:07:44Z'
+finished_at: '2026-10-20T07:11:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Scaffold identity, two constituent assignments, five scoped graph edges,
+  three deposits and hosted image are supported. One minor provenance issue affects
+  both protein-example role descriptions.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/cytoskeleton/basal_body_inner_scaffold/emd_42777.png
+    sha256: a5176dd2788438b2806536518b065bebf2bf18825d5f5290e7ce6afe26294d6d
+    role: context
+  - path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    sha256: 28c91fa779092932111144e3795bf46d9c7804739d01be17b97b748ebad9529d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:basal_body_inner_scaffold
+  path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  label: basal body inner scaffold
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained record and image; primary core-region Results/Discussion/Methods,
+    figure inspections and native sequence/family/ontology/taxon/deposit records.
+  selection: Seventh unreviewed path of batch4.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just validate data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just validate-strict data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_inner_scaffold-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: 7 identifiers OK; 6 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - scaffold-emdb42782
+  - bc-epmc
+  - bc-emdb42777
+  - local-id
+  - bc-emdb42784
+  - basal-epmc
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: No matched expression dataset or expression-derived component membership
+    is asserted. Native sequences and structural/localization studies supply evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-proteins
+  - basal-poc1-paper
+  - bc-epmc
+  - basal-epmc
+  - basal-go
+  - scaffold-go
+  - scaffold-go-search
+  - scaffold-go-search2
+  - basal-IPR050505
+  - basal-IPR020472
+  - basal-IPR056551
+  - scaffold-IPR019579
+  - scaffold-IPR051655
+  - scaffold-family-members
+  - outer-junction-taxa
+  - bc-emdb42777
+  - scaffold-emdb42782
+  - bc-emdb42784
+  - scaffold-image
+  - basal-policy
+  - scaffold-fig5
+  - scaffold-fig6
+  - scaffold-figs5
+  - bc-ruehle-s4
+  - record
+  - local-id
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: bc-ruehle
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11094743.1/PMC11094743.1.xml
+  locator: Results sections on scaffold attachment/stability/mechanics, core Discussion,
+    BLAST and fluorescence normalization Methods, Figures5/6 captions
+  accessed_at: '2026-10-20T04:10:07.463296Z'
+  support: supports
+  summary: Core-region Results support the intertriplet meshwork, stacked rings, Poc1
+    A01/B10 attachment and unidentified stem. Fam161A localization is partial, with
+    a distal pool. Mutant comparisons support reduced scaffold/Fam161A without isolating
+    assembly from maintenance or direct Fam161A binding. Methods explicitly identify
+    TTHERM_00052590 as the Fam161A homolog and give B2086/SB1969 backgrounds.
+  snapshot_sha256: 85209722ca994d8f3d4a5d61e5ba1cb45c4a7953c6f265a0dd19be83ec75926d
+- evidence_id: scaffold-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=accession:Q229Z6%20OR%20accession:Q23CT1&format=json
+  locator: Names, taxon, status, genes and InterPro cross-references
+  accessed_at: '2026-10-20T07:09:30.801857Z'
+  support: context_only
+  summary: Q229Z6 is reviewed POC1 homolog and Q23CT1 unreviewed EF-hand domain-containing
+    protein, both SB210312017. Their TTHERM identifiers occur in genes.orfNames, with
+    no primary geneName. The accessions and source-specific homolog mapping are supported,
+    but both role texts misname the field.
+  snapshot_sha256: b376f3cf6f210e5fcc421a37d93f27783875bb77a968cb15574beb16d42ca418
+- evidence_id: basal-poc1-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2806327.1/PMC2806327.1.xml
+  locator: GFP-Poc1 localization Results
+  accessed_at: '2026-10-20T04:03:32.503253Z'
+  support: supports
+  summary: The original Poc1 localization study supports basal-body localization as
+    cited by UniProt; scaffold placement is supplied separately by Ruehle.
+  snapshot_sha256: f4c5df75072c24ca64f8b73b93f84cb7b3bead5b31ef02eedaf3f320f0c0ad0a
+- evidence_id: bc-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.202311104%20OR%20DOI:10.7554/eLife.43434&format=json&resultType=core
+  locator: Exact publication identity
+  accessed_at: '2026-10-20T04:10:07.568353Z'
+  support: supports
+  summary: The Ruehle DOI and PMID38743010 identify the exact structural paper.
+  snapshot_sha256: f0ab2357cbfb307cd5527ea3ff914c1ac8eac0a9699276c5e493b36d57f28b05
+- evidence_id: basal-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s44318-025-00392-6%20OR%20DOI:10.1126/sciadv.ady3689%20OR%20EXT_ID:20008567&format=json&resultType=core
+  locator: Exact publication identity
+  accessed_at: '2026-10-20T04:01:03.594222Z'
+  support: supports
+  summary: PMID20008567 identifies the original Poc1 localization study.
+  snapshot_sha256: 20208f5249e6f4ec1ec9f51c8e8ee7844c4b2541d27c7492dd7ea833b8afba11
+- evidence_id: basal-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140535,GO:0036064,GO:0160113
+  locator: Native term definitions
+  accessed_at: '2026-10-20T04:01:03.550318Z'
+  support: supports
+  summary: GO0140535 is the broad intracellular protein-containing complex and GO0036064
+    is basal body.
+  snapshot_sha256: ff1bf3e7d1d0d44fa46e41651fb0d225bf35375d06cbce944ec49e86868ba509
+- evidence_id: scaffold-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140180
+  locator: Native aspect and definition
+  accessed_at: '2026-10-20T07:09:31.018120Z'
+  support: supports
+  summary: GO0140180 is molecular_function centriole scaffold activity, not the structural
+    identity.
+  snapshot_sha256: 75be5d33d39741e72c2621b778307589d72f822445bb6efce82c1a16136baceb
+- evidence_id: scaffold-go-search
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=inner%20scaffold&limit=100
+  locator: Native query page
+  accessed_at: '2026-10-20T07:09:32.720233Z'
+  support: supports
+  summary: The complete two-page inner scaffold query returns128 terms, with no exact
+    inner-scaffold cellular-component identity. This bounded search does not establish
+    absence under every possible name.
+  snapshot_sha256: 3da59c266cb1d9b8284d49bde4a6b1431257ceac117f717db3b8efc9b7f23b32
+- evidence_id: scaffold-go-search2
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=inner%20scaffold&limit=100&page=2
+  locator: Native query page
+  accessed_at: '2026-10-20T07:10:28.211452Z'
+  support: supports
+  summary: The complete two-page inner scaffold query returns128 terms, with no exact
+    inner-scaffold cellular-component identity. This bounded search does not establish
+    absence under every possible name.
+  snapshot_sha256: c2b2badb3e915928b1db48ceb552856d121ae22e2a142128da6f7a57c3f555fc
+- evidence_id: basal-IPR050505
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050505
+  locator: Native entry name/type
+  accessed_at: '2026-10-20T04:01:05.136709Z'
+  support: supports
+  summary: The inspected POC1-related family is broader, while WD40 and the new N-terminal
+    annotation are repeat/domain entries rather than an exact POC1 family.
+  snapshot_sha256: a441faeaa7da8487b8e14015dcc322403b37d7620dc71a539ed189b411dac195
+- evidence_id: basal-IPR020472
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020472
+  locator: Native entry name/type
+  accessed_at: '2026-10-20T04:01:05.207719Z'
+  support: supports
+  summary: The inspected POC1-related family is broader, while WD40 and the new N-terminal
+    annotation are repeat/domain entries rather than an exact POC1 family.
+  snapshot_sha256: f5ceeddc437713cad39c49c699d92bf1b9a5bb9ef18d46e036338a736f24f673
+- evidence_id: basal-IPR056551
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR056551
+  locator: Native entry name/type
+  accessed_at: '2026-10-20T04:01:47.989671Z'
+  support: supports
+  summary: The inspected POC1-related family is broader, while WD40 and the new N-terminal
+    annotation are repeat/domain entries rather than an exact POC1 family.
+  snapshot_sha256: 0d4fad01d608cfc20b180d46f26792250befd95a1930d7615e3a832db3169936
+- evidence_id: scaffold-IPR019579
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019579
+  locator: Native name/type; unchecked generated description not used
+  accessed_at: '2026-10-20T07:09:28.946301Z'
+  support: supports
+  summary: The native entry names and types identify FAM161A/B or FAM161 families.
+    Broader membership is verified independently through reviewed sequence records.
+  snapshot_sha256: aafc0de0eabfbb736a8a08698f148001147cc2cfb2983bac590c3949b3bcfaff
+- evidence_id: scaffold-IPR051655
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051655
+  locator: Native name/type; unchecked generated description not used
+  accessed_at: '2026-10-20T07:09:28.849167Z'
+  support: supports
+  summary: The native entry names and types identify FAM161A/B or FAM161 families.
+    Broader membership is verified independently through reviewed sequence records.
+  snapshot_sha256: 871e0b9a2cf192e21ee596b0ac65d0dabec445ca86bfcab281b0a616653d99f3
+- evidence_id: scaffold-family-members
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:FAM161A%20OR%20gene_exact:FAM161B)%20AND%20organism_id:9606%20AND%20reviewed:true&format=json
+  locator: Both gene names and InterPro cross-references
+  accessed_at: '2026-10-20T07:10:29.231898Z'
+  support: supports
+  summary: Reviewed human FAM161A Q3B820 and FAM161B Q96MY7 both cross-reference IPR019579
+    and IPR051655, confirming that neither is an exact FAM161A-only identity.
+  snapshot_sha256: e5e923e494f72e11a64fac23201edca8ecdda181a3b7a753e5e29696a64de9bb
+- evidence_id: outer-junction-taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=5911,312017
+  locator: Native taxonomy records
+  accessed_at: '2026-10-20T03:52:55.154591Z'
+  support: supports
+  summary: Tetrahymena species5911 and reference strain312017 match the recorded labels.
+    Experimental backgrounds remain distinct from SB210 sequences.
+  snapshot_sha256: fda62743792eecc892116e6d58703350304a02ea34bd536d666e735750142c2a
+- evidence_id: bc-emdb42777
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-42777
+  locator: Title, status, natural source and citation
+  accessed_at: '2026-10-20T04:10:08.302928Z'
+  support: supports
+  summary: Released native metadata confirms the stated core region, genotype, Tetrahymena
+    source and exact primary citation. Focused attachment maps are not whole-scaffold
+    models.
+  snapshot_sha256: b36e20e7da7684fcfa2488cf6c2f7d9ec95ef267ee3c56360b17711fe5d8ef73
+- evidence_id: scaffold-emdb42782
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-42782
+  locator: Title, status, natural source and citation
+  accessed_at: '2026-10-20T07:09:28.959048Z'
+  support: supports
+  summary: Released native metadata confirms the stated core region, genotype, Tetrahymena
+    source and exact primary citation. Focused attachment maps are not whole-scaffold
+    models.
+  snapshot_sha256: 4882fc13fca80968711ac67d7351f164ebfdd73de12104aba52ccc488e3e7835
+- evidence_id: bc-emdb42784
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-42784
+  locator: Title, status, natural source and citation
+  accessed_at: '2026-10-20T04:10:08.365667Z'
+  support: supports
+  summary: Released native metadata confirms the stated core region, genotype, Tetrahymena
+    source and exact primary citation. Focused attachment maps are not whole-scaffold
+    models.
+  snapshot_sha256: 12fcfa6e95cbdd54fa8d6a9ee96b9e694efca702ad58b1c021326ca595f897f4
+- evidence_id: scaffold-image
+  kind: authority
+  reference: https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-42777/images/emd_42777.png
+  locator: Complete PNG and byte comparison
+  accessed_at: '2026-10-20T07:09:28.114049Z'
+  support: supports
+  summary: Source bytes equal the maintained image SHA256a5176dd2788438b2806536518b065bebf2bf18825d5f5290e7ce6afe26294d6d.
+    Visual inspection confirms a density rendering without labels or scale bar.
+  snapshot_sha256: a5176dd2788438b2806536518b065bebf2bf18825d5f5290e7ce6afe26294d6d
+- evidence_id: basal-policy
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/policies.html
+  locator: Section3.1.2
+  accessed_at: '2026-10-20T04:01:05.425069Z'
+  support: supports
+  summary: EMDB policy3.1.2 requires representative figures without copyright restrictions,
+    supporting the repository’s explicit licence convention.
+  snapshot_sha256: 20723befa3d18968826e22b70ae9c6679c4b41cdf6bb08b6001f0b412c281a00
+- evidence_id: scaffold-fig5
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11094743.1/JCB_202311104_Fig5.jpg
+  locator: Complete primary figure
+  accessed_at: '2026-10-20T07:09:48.360635Z'
+  support: supports
+  summary: Visual inspection confirms fitted contact sites, mutant comparisons, Fam161A
+    pools and plotted statistics. Figure6A reports0.0079 for genotype comparison at30C
+    and0.0560 for wild-type temperature comparison.
+  snapshot_sha256: b9d13e55ef0e817da5faac057f9a479ed5460dc5a59b8c2de1cdfe31de93d496
+- evidence_id: scaffold-fig6
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11094743.1/JCB_202311104_Fig6.jpg
+  locator: Complete primary figure
+  accessed_at: '2026-10-20T07:09:33.731954Z'
+  support: supports
+  summary: Visual inspection confirms fitted contact sites, mutant comparisons, Fam161A
+    pools and plotted statistics. Figure6A reports0.0079 for genotype comparison at30C
+    and0.0560 for wild-type temperature comparison.
+  snapshot_sha256: 6e885b5bea2e9993755899ebb3e547dbea7319a4701711e4fbbe7410ab19076f
+- evidence_id: scaffold-figs5
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11094743.1/JCB_202311104_FigS5.jpg
+  locator: Complete primary figure
+  accessed_at: '2026-10-20T07:09:29.630616Z'
+  support: supports
+  summary: Visual inspection confirms fitted contact sites, mutant comparisons, Fam161A
+    pools and plotted statistics. Figure6A reports0.0079 for genotype comparison at30C
+    and0.0560 for wild-type temperature comparison.
+  snapshot_sha256: e3679bb98be1e7576a955d3e504a08084e4cc4c82bcddd229347da209ea95072
+- evidence_id: bc-ruehle-s4
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11094743.1/JCB_202311104_FigS4.jpg
+  locator: FigureS4
+  accessed_at: '2026-10-20T06:53:03.130453Z'
+  support: supports
+  summary: The previously inspected figure distinguishes the preserved core B-C bridge
+    from the lost scaffold attachment and shows backfitted rings.
+  snapshot_sha256: 42e976b5b9736701455fc99fe5527786ba95b7cee16c53523242ef0c3dea7714
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  locator: Entire maintained record, five graph edges, datasets and image
+  accessed_at: '2026-10-20T07:11:35Z'
+  support: context_only
+  summary: Two components and representative sequences are scoped to distinct evidence
+    types. Both example role texts incorrectly call ORF names primary gene names.
+- evidence_id: local-id
+  kind: record_content
+  reference: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  locator: Exact identifier search across data/structures including hidden and ignored
+    files
+  accessed_at: '2026-10-20T07:11:35Z'
+  support: context_only
+  summary: Only the target declares this exact local scaffold identity.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:07:46Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/basal_body_inner_scaffold.yaml'
+  snapshot_sha256: 9b3698481ede715c5a71a9819c989e54e33e54502819d67b6158305cb02a38b3
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_inner_scaffold-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:07:48Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/basal_body_inner_scaffold.yaml\
+    \ --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_inner_scaffold-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch4-20261019-QtBQNE/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch4-20261019-QtBQNE/basal_body_inner_scaffold-strict.tsv"
+  snapshot_sha256: 52ab94445502aa7b4cf4aa2fb98fd355527ce687fbdf49e1cb15145d79aa3bc5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-20T07:11:35Z'
+  support: supports
+  summary: '7 of13 collected target identifiers returned OK at the unchanged base.
+    Residuals: EMDB:EMD-42777: SKIPPED; resolved by evidence bc-emdb42777; EMDB:EMD-42782:
+    SKIPPED; resolved by evidence scaffold-emdb42782; EMDB:EMD-42784: SKIPPED; resolved
+    by evidence bc-emdb42784; PMID:20008567: UNREACHABLE; resolved by evidence basal-epmc;
+    PMID:38743010: UNREACHABLE; resolved by evidence bc-epmc; cellstructuremech:basal_body_inner_scaffold:
+    SKIPPED; resolved by evidence local-id. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Luminal intertriplet meshwork
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: The scaffold is a physical complex, distinct from basal body and adjacent
+    linker/cartwheel/junction identities. Broader is-a and basal-body parthood are
+    appropriate.
+  evidence_ids:
+  - bc-ruehle
+  - basal-go
+  - scaffold-go
+  - scaffold-go-search
+  - scaffold-go-search2
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Poc1 attachment and Fam161A association
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: Poc1 density fit plus mutant loss and Fam161A tagging support differently
+    scoped constituents. Unknown stem, A03/B-C partners and precise Fam161A position
+    are not invented.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-fig5
+  - scaffold-fig6
+  - scaffold-figs5
+  - record
+- assessment_id: proteins
+  area: provenance
+  topic: Correct sequences, inaccurate field wording
+  outcome: concern
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: Both accession/taxon/status pairs match native entries. Ruehle’s model/BLAST
+    statements supply the gene mappings, while UniProt provides ORF identifiers rather
+    than the claimed primary names.
+  evidence_ids:
+  - scaffold-proteins
+  - bc-ruehle
+  - basal-poc1-paper
+  - record
+- assessment_id: families
+  area: grounding
+  topic: Combined families excluded
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: Reviewed human members demonstrate both FAM161 annotations span A/B proteins;
+    POC1 annotations do not supply an exact replacement class. Label-only grounding
+    is justified.
+  evidence_ids:
+  - basal-IPR050505
+  - basal-IPR020472
+  - basal-IPR056551
+  - scaffold-IPR019579
+  - scaffold-IPR051655
+  - scaffold-family-members
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species and reference backgrounds
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: The species example covers the reported B2086/SB1969 experiments without
+    asserting SB210 localization data. The partial and distal Fam161A pool remains
+    explicit.
+  evidence_ids:
+  - bc-ruehle
+  - outer-junction-taxa
+  - scaffold-proteins
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four structural edges and one fluorescence dependency
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: A01/B10 Poc1 contact, unknown stem, scaffold connection and intertriplet
+    contacts match fitted structures. The fifth edge accurately describes reduced
+    total-cell-normalized basal-body Fam161A signal at30C, not direct binding or exclusive
+    scaffold occupancy.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-fig5
+  - scaffold-fig6
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Cohesion and geometry
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: Intertriplet connection and stacked rings are supported in the studied
+    material. Pleiotropic knockout and preparation deformation do not establish a
+    scaffold-only force threshold or universal helix.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-fig5
+  - scaffold-fig6
+  - bc-ruehle-s4
+  - record
+- assessment_id: statistics
+  area: evidence
+  topic: Bounded perturbation interpretation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: The plotted0.0079and0.0560values match the record. A nonsignificant wild-type
+    temperature comparison is not described as a demonstrated decrease; assembly versus
+    maintenance stays unresolved.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-fig6
+  - record
+- assessment_id: datasets
+  area: provenance
+  topic: Three contextual reconstructions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: All three released entries match regions, genotypes and citation. No focused
+    attachment map is promoted to complete scaffold identity.
+  evidence_ids:
+  - bc-emdb42777
+  - scaffold-emdb42782
+  - bc-emdb42784
+  - record
+- assessment_id: image
+  area: evidence
+  topic: Native representative rendering
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: The byte-identical image, attribution, licence convention and caption match
+    native evidence. Article figures were inspected without being copied into the
+    corpus.
+  evidence_ids:
+  - scaffold-image
+  - basal-policy
+  - bc-emdb42777
+  - record
+- assessment_id: status
+  area: completeness
+  topic: Appropriate open composition
+  outcome: supported
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  summary: Unknown identities and essentiality remain explicit, with PROPOSED status.
+    The identified provenance wording defect requires a bounded correction.
+  evidence_ids:
+  - bc-ruehle
+  - scaffold-proteins
+  - record
+findings:
+- finding_id: F1
+  issue_key: basal-body-inner-scaffold-protein-example-gene-fields
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Both examples call UniProt ORF identifiers primary gene names
+  description: Q229Z6 and Q23CT1 provide the TTHERM identifiers in genes.orfNames,
+    not primary geneName. Ruehle independently supports the Poc1 and Fam161A homolog
+    assignments. Correct the field wording and attribute the mappings to the primary
+    structural/BLAST source, preserving the reference-strain distinction.
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  field_paths:
+  - components[component_id=poc1].protein_examples[0].role
+  - components[component_id=fam161a].protein_examples[0].role
+  - components[component_id=fam161a].protein_examples[0].evidence
+  evidence_ids:
+  - scaffold-proteins
+  - bc-ruehle
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Evidence standard and Components
+  native_severity: minor
+  normalization_reason: Both underlying accession assignments are supported; the defect
+    is bounded source-field wording and attribution.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:basal_body_inner_scaffold
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    role: maintained scientific record
+  description: Describe both TTHERM identifiers as ORF/locus names and cite Ruehle’s
+    explicit Poc1 model/Fam161A homolog mapping where the gene-symbol assignments
+    are asserted.
+  acceptance_checks:
+  - Native gene field names are accurately described.
+  - Both accession-to-homolog mappings remain traceable to the primary study.
+  - The SB210 reference remains distinct from experimental backgrounds.
+  - After separately authorized curation, pass native record/history and generated-page
+    checks.
+  generator: Maintained YAML; just render derives pages.
+limitations:
+- Exact stem and other attachment identities and Fam161A molecular placement remain
+  unknown.
+- Map volumes were not reprocessed; structural contacts are fitted-density interpretations.
+- Poc1 loss is pleiotropic and does not isolate scaffold-specific mechanics or assembly
+  chronology.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
