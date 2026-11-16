@@ -87,7 +87,82 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-acrab_tolc_xenobiotic_efflux">AcrAB-TolC exports xenobiotics across the cell envelope <small>(FUNCTION)</small></h3>
-<p>AcrB, AcrA, and TolC form an envelope-spanning efflux pump that exports xenobiotic substrates from E. coli.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: AcrAB-TolC exports xenobiotics across the cell envelope">
+<p>AcrB, AcrA, and TolC form an envelope-spanning efflux pump that exports xenobiotic substrates from E. coli.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-c90523e8c3173e76-scale"/><label for="graph-c90523e8c3173e76-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-c90523e8c3173e76-scale:checked ~ div svg {width:1560px;height:282px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-c90523e8c3173e76-title graph-c90523e8c3173e76-desc" width="1560" height="282" viewBox="40 50 1560 282" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-c90523e8c3173e76-title">AcrAB-TolC exports xenobiotics across the cell envelope</title>
+<desc id="graph-c90523e8c3173e76-desc">7 nodes and 8 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-c90523e8c3173e76-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrB — couples to → Multidrug efflux pump subunit AcrA; Evidence: ComplexPortal:CPX-4263" data-subject="acrb" data-object="acra">
+<title>Multidrug efflux pump subunit AcrB — couples to → Multidrug efflux pump subunit AcrA; Evidence: ComplexPortal:CPX-4263</title><path d="M296,108.0 C386.0,108.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrA — couples to → Outer membrane channel protein TolC; Evidence: ComplexPortal:CPX-4263" data-subject="acra" data-object="tolc">
+<title>Multidrug efflux pump subunit AcrA — couples to → Outer membrane channel protein TolC; Evidence: ComplexPortal:CPX-4263</title><path d="M712,274.0 C802.0,274.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="AcrAB-TolC multidrug efflux transport complex — enables → xenobiotic transmembrane transporter activity; Evidence: ComplexPortal:CPX-4263" data-subject="acrab_tolc" data-object="xenobiotic_transport">
+<title>AcrAB-TolC multidrug efflux transport complex — enables → xenobiotic transmembrane transporter activity; Evidence: ComplexPortal:CPX-4263</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity — transports → xenobiotic substrate; Evidence: PMID:28355133" data-subject="xenobiotic_transport" data-object="xenobiotic">
+<title>xenobiotic transmembrane transporter activity — transports → xenobiotic substrate; Evidence: PMID:28355133</title><path d="M1128,274.0 C1218.0,274.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="1218.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">transports</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity — targets → cell exterior; Evidence: PDB:5V5S" data-subject="xenobiotic_transport" data-object="cell_exterior">
+<title>xenobiotic transmembrane transporter activity — targets → cell exterior; Evidence: PDB:5V5S</title><path d="M1128,274.0 C1218.0,274.0 1218.0,274.0 1308,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="1218.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">targets</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrB — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S" data-subject="acrb" data-object="acrab_tolc">
+<title>Multidrug efflux pump subunit AcrB — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrA — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S" data-subject="acra" data-object="acrab_tolc">
+<title>Multidrug efflux pump subunit AcrA — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S</title><path d="M712,274.0 C777,274.0 777,108.0 712,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="777" y="191.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S" data-subject="tolc" data-object="acrab_tolc">
+<title>Outer membrane channel protein TolC — contributes to → AcrAB-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-4263; PDB:5V5S</title><path d="M1010.0,146 C1010.0,256 594.0,256 594.0,146" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c90523e8c3173e76-arrow)"/>
+<text x="802.0" y="251" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="AcrAB-TolC multidrug efflux transport complex (STRUCTURE); acrab_tolc; cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex" data-node-id="acrab_tolc"><title>AcrAB-TolC multidrug efflux transport complex (STRUCTURE); acrab_tolc; cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">AcrAB-TolC multidrug efflux</text>
+<text x="488" y="126" fill="#172033">transport complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrA (GENE_OR_PROTEIN); acra" data-node-id="acra"><title>Multidrug efflux pump subunit AcrA (GENE_OR_PROTEIN); acra</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="275" fill="#172033">Multidrug efflux pump subunit</text>
+<text x="488" y="292" fill="#172033">AcrA</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Multidrug efflux pump subunit AcrB (GENE_OR_PROTEIN); acrb" data-node-id="acrb"><title>Multidrug efflux pump subunit AcrB (GENE_OR_PROTEIN); acrb</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Multidrug efflux pump subunit</text>
+<text x="72" y="126" fill="#172033">AcrB</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc; InterPro:IPR058622" data-node-id="tolc"><title>Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc; InterPro:IPR058622</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="904" y="109" fill="#172033">Outer membrane channel</text>
+<text x="904" y="126" fill="#172033">protein TolC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity (MOLECULAR_FUNCTION); xenobiotic_transport; GO:0042910" data-node-id="xenobiotic_transport"><title>xenobiotic transmembrane transporter activity (MOLECULAR_FUNCTION); xenobiotic_transport; GO:0042910</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="904" y="275" fill="#172033">xenobiotic transmembrane</text>
+<text x="904" y="292" fill="#172033">transporter activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="xenobiotic substrate (CHEMICAL); xenobiotic" data-node-id="xenobiotic"><title>xenobiotic substrate (CHEMICAL); xenobiotic</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">CHEMICAL</text>
+<text x="1320" y="109" fill="#172033">xenobiotic substrate</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cell exterior (CELLULAR_LOCALIZATION); cell_exterior" data-node-id="cell_exterior"><title>cell exterior (CELLULAR_LOCALIZATION); cell_exterior</title>
+<rect x="1308" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="255" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="1320" y="275" fill="#172033">cell exterior</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: AcrAB-TolC exports xenobiotics across the cell envelope">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Multidrug efflux pump subunit AcrB</td><td>couples to</td><td>Multidrug efflux pump subunit AcrA</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4263"><code>ComplexPortal:CPX-4263</code></a> <small>CPX-4263 curates AcrB and AcrA as participants in the E. coli AcrAB-TolC pump.</small></li></ul></td></tr>
 <tr><td>Multidrug efflux pump subunit AcrA</td><td>couples to</td><td>Outer membrane channel protein TolC <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058622"><code>InterPro:IPR058622</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4263"><code>ComplexPortal:CPX-4263</code></a> <small>CPX-4263 curates AcrA and TolC as participants in the E. coli AcrAB-TolC pump.</small></li></ul></td></tr>

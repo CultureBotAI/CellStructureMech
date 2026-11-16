@@ -70,7 +70,82 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-cytoplasmic_deposition">Conditional assembly and sorting of cytoplasmic reporter deposits <small>(ASSEMBLY)</small></h3>
-<p>Heat-induced misfolding, Q-body congregation and sorting perturbations are distinct experimental readouts.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Conditional assembly and sorting of cytoplasmic reporter deposits">
+<p>Heat-induced misfolding, Q-body congregation and sorting perturbations are distinct experimental readouts.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-0878603fc596b851-scale"/><label for="graph-0878603fc596b851-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-0878603fc596b851-scale:checked ~ div svg {width:1664px;height:614px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-0878603fc596b851-title graph-0878603fc596b851-desc" width="1664" height="614" viewBox="40 50 1664 614" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-0878603fc596b851-title">Conditional assembly and sorting of cytoplasmic reporter deposits</title>
+<desc id="graph-0878603fc596b851-desc">8 nodes and 7 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-0878603fc596b851-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Heat shift to 37 C — induces → Temperature-sensitive misfolded reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="heat" data-object="misfolded_cargo">
+<title>Heat shift to 37 C — induces → Temperature-sensitive misfolded reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">induces</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Temperature-sensitive misfolded reporter cargo — accumulates in → Cytoplasmic Q-body deposits; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="misfolded_cargo" data-object="q_bodies">
+<title>Temperature-sensitive misfolded reporter cargo — accumulates in → Cytoplasmic Q-body deposits; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">accumulates in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Cytoplasmic Q-body deposits — congregate into → juxtanuclear quality control compartment; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="q_bodies" data-object="junq">
+<title>Cytoplasmic Q-body deposits — congregate into → juxtanuclear quality control compartment; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">congregate into</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Temperature-sensitive misfolded reporter cargo — can accumulate in → Peripheral reporter foci; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="misfolded_cargo" data-object="peripheral_foci">
+<title>Temperature-sensitive misfolded reporter cargo — can accumulate in → Peripheral reporter foci; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">can accumulate in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Combined SSA1 and SSA2 deletion — impairs → juxtanuclear quality control compartment; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="ssa1_ssa2_loss" data-object="junq">
+<title>Combined SSA1 and SSA2 deletion — impairs → juxtanuclear quality control compartment; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M296,274.0 C802.0,274.0 802.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="BTN2 deletion — impairs → juxtanuclear quality control compartment; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="btn2_loss" data-object="junq">
+<title>BTN2 deletion — impairs → juxtanuclear quality control compartment; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M296,440.0 C802.0,440.0 802.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="802.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="HSP42 deletion — reduces → Peripheral reporter foci; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="hsp42_loss" data-object="peripheral_foci">
+<title>HSP42 deletion — reduces → Peripheral reporter foci; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M296,606.0 C594.0,606.0 594.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-0878603fc596b851-arrow)"/>
+<text x="594.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">reduces</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Heat shift to 37 C (EXPERIMENTAL_FACTOR); heat" data-node-id="heat"><title>Heat shift to 37 C (EXPERIMENTAL_FACTOR); heat</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="109" fill="#172033">Heat shift to 37 C</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Temperature-sensitive misfolded reporter cargo (STATE); misfolded_cargo" data-node-id="misfolded_cargo"><title>Temperature-sensitive misfolded reporter cargo (STATE); misfolded_cargo</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STATE</text>
+<text x="488" y="109" fill="#172033">Temperature-sensitive</text>
+<text x="488" y="126" fill="#172033">misfolded reporter cargo</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Cytoplasmic Q-body deposits (STRUCTURE); q_bodies" data-node-id="q_bodies"><title>Cytoplasmic Q-body deposits (STRUCTURE); q_bodies</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">Cytoplasmic Q-body deposits</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment" data-node-id="junq"><title>juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="1320" y="109" fill="#172033">juxtanuclear quality control</text>
+<text x="1320" y="126" fill="#172033">compartment</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Combined SSA1 and SSA2 deletion (EXPERIMENTAL_FACTOR); ssa1_ssa2_loss" data-node-id="ssa1_ssa2_loss"><title>Combined SSA1 and SSA2 deletion (EXPERIMENTAL_FACTOR); ssa1_ssa2_loss</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="275" fill="#172033">Combined SSA1 and SSA2</text>
+<text x="72" y="292" fill="#172033">deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="BTN2 deletion (EXPERIMENTAL_FACTOR); btn2_loss" data-node-id="btn2_loss"><title>BTN2 deletion (EXPERIMENTAL_FACTOR); btn2_loss</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="441" fill="#172033">BTN2 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="HSP42 deletion (EXPERIMENTAL_FACTOR); hsp42_loss" data-node-id="hsp42_loss"><title>HSP42 deletion (EXPERIMENTAL_FACTOR); hsp42_loss</title>
+<rect x="60" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="587" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="607" fill="#172033">HSP42 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Peripheral reporter foci (STATE); peripheral_foci" data-node-id="peripheral_foci"><title>Peripheral reporter foci (STATE); peripheral_foci</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">STATE</text>
+<text x="904" y="275" fill="#172033">Peripheral reporter foci</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Conditional assembly and sorting of cytoplasmic reporter deposits">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Heat shift to 37 C</td><td>induces</td><td>Temperature-sensitive misfolded reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S1 and Figure 1.</small></li></ul></td></tr>
 <tr><td>Temperature-sensitive misfolded reporter cargo</td><td>accumulates in</td><td>Cytoplasmic Q-body deposits</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S5 and Figure 4d-f.</small></li></ul></td></tr>
@@ -82,7 +157,80 @@ family; these are the specific entries behind it.</small></p>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-perinuclear_positioning">Conditional positioning and INQ/JUNQ convergence <small>(FUNCTION)</small></h3>
-<p>Coexpressed inclusions remain separated by the nuclear envelope while converging spatially.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Conditional positioning and INQ/JUNQ convergence">
+<p>Coexpressed inclusions remain separated by the nuclear envelope while converging spatially.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-2c136157f4bd86e8-scale"/><label for="graph-2c136157f4bd86e8-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-2c136157f4bd86e8-scale:checked ~ div svg {width:832px;height:946px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-2c136157f4bd86e8-title graph-2c136157f4bd86e8-desc" width="832" height="946" viewBox="40 50 832 946" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-2c136157f4bd86e8-title">Conditional positioning and INQ/JUNQ convergence</title>
+<desc id="graph-2c136157f4bd86e8-desc">8 nodes and 6 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-2c136157f4bd86e8-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="juxtanuclear quality control compartment — participates in → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="junq" data-object="convergence">
+<title>juxtanuclear quality control compartment — participates in → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">participates in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="CHM7 deletion — impairs → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="chm7_loss" data-object="convergence">
+<title>CHM7 deletion — impairs → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="VPS23 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vps23_loss" data-object="convergence">
+<title>VPS23 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,440.0 C386.0,440.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">disrupts</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="VPS34 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vps34_loss" data-object="convergence">
+<title>VPS34 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,606.0 C386.0,606.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">disrupts</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="VPS15 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vps15_loss" data-object="convergence">
+<title>VPS15 deletion — disrupts → Spatial INQ/JUNQ convergence across the nuclear envelope; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,772.0 C386.0,772.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">disrupts</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="NUP120 deletion with clustered nuclear pores — biases → JUNQ adjacency to clustered nuclear pores; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="nup120_loss" data-object="pore_adjacency">
+<title>NUP120 deletion with clustered nuclear pores — biases → JUNQ adjacency to clustered nuclear pores; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,938.0 C386.0,938.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2c136157f4bd86e8-arrow)"/>
+<text x="386.0" y="596.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">biases</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment" data-node-id="junq"><title>juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">juxtanuclear quality control</text>
+<text x="72" y="126" fill="#172033">compartment</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Spatial INQ/JUNQ convergence across the nuclear envelope (BIOLOGICAL_PROCESS); convergence" data-node-id="convergence"><title>Spatial INQ/JUNQ convergence across the nuclear envelope (BIOLOGICAL_PROCESS); convergence</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="488" y="109" fill="#172033">Spatial INQ/JUNQ convergence</text>
+<text x="488" y="126" fill="#172033">across the nuclear envelope</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="CHM7 deletion (EXPERIMENTAL_FACTOR); chm7_loss" data-node-id="chm7_loss"><title>CHM7 deletion (EXPERIMENTAL_FACTOR); chm7_loss</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="275" fill="#172033">CHM7 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="VPS23 deletion (EXPERIMENTAL_FACTOR); vps23_loss" data-node-id="vps23_loss"><title>VPS23 deletion (EXPERIMENTAL_FACTOR); vps23_loss</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="441" fill="#172033">VPS23 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="VPS34 deletion (EXPERIMENTAL_FACTOR); vps34_loss" data-node-id="vps34_loss"><title>VPS34 deletion (EXPERIMENTAL_FACTOR); vps34_loss</title>
+<rect x="60" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="587" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="607" fill="#172033">VPS34 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="VPS15 deletion (EXPERIMENTAL_FACTOR); vps15_loss" data-node-id="vps15_loss"><title>VPS15 deletion (EXPERIMENTAL_FACTOR); vps15_loss</title>
+<rect x="60" y="734" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="753" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="773" fill="#172033">VPS15 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="NUP120 deletion with clustered nuclear pores (EXPERIMENTAL_FACTOR); nup120_loss" data-node-id="nup120_loss"><title>NUP120 deletion with clustered nuclear pores (EXPERIMENTAL_FACTOR); nup120_loss</title>
+<rect x="60" y="900" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="919" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="939" fill="#172033">NUP120 deletion with</text>
+<text x="72" y="956" fill="#172033">clustered nuclear pores</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="JUNQ adjacency to clustered nuclear pores (STATE); pore_adjacency" data-node-id="pore_adjacency"><title>JUNQ adjacency to clustered nuclear pores (STATE); pore_adjacency</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">STATE</text>
+<text x="488" y="275" fill="#172033">JUNQ adjacency to clustered</text>
+<text x="488" y="292" fill="#172033">nuclear pores</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Conditional positioning and INQ/JUNQ convergence">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td>participates in</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S3 and Figure 3a-c.</small></li></ul></td></tr>
 <tr><td>CHM7 deletion</td><td>impairs</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S7 and Figure 6b.</small></li></ul></td></tr>
@@ -93,7 +241,82 @@ family; these are the specific entries behind it.</small></p>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-conditional_turnover">Perturbations of JUNQ-associated cargo clearance <small>(DISASSEMBLY)</small></h3>
-<p>Separate reporter assays support conditional vacuolar clearance and persistence phenotypes.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Perturbations of JUNQ-associated cargo clearance">
+<p>Separate reporter assays support conditional vacuolar clearance and persistence phenotypes.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-776fa538d2e3c6b7-scale"/><label for="graph-776fa538d2e3c6b7-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-776fa538d2e3c6b7-scale:checked ~ div svg {width:832px;height:1112px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-776fa538d2e3c6b7-title graph-776fa538d2e3c6b7-desc" width="832" height="1112" viewBox="40 50 832 1112" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-776fa538d2e3c6b7-title">Perturbations of JUNQ-associated cargo clearance</title>
+<desc id="graph-776fa538d2e3c6b7-desc">8 nodes and 7 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-776fa538d2e3c6b7-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="juxtanuclear quality control compartment — can undergo → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="junq" data-object="clearance">
+<title>juxtanuclear quality control compartment — can undergo → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">can undergo</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="NVJ1 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="nvj1_loss" data-object="clearance">
+<title>NVJ1 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="VAC8 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vac8_loss" data-object="clearance">
+<title>VAC8 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,440.0 C386.0,440.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="VPS4 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vps4_loss" data-object="clearance">
+<title>VPS4 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,606.0 C386.0,606.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ATG1 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="atg1_loss" data-object="clearance">
+<title>ATG1 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M296,772.0 C386.0,772.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ATG8 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.3389/fmolb.2024.1427542" data-subject="atg8_loss" data-object="clearance">
+<title>ATG8 deletion — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.3389/fmolb.2024.1427542</title><path d="M296,938.0 C386.0,938.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="513.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="PEP4 deletion with PMSF vacuolar-protease inhibition — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6" data-subject="vacuolar_protease_block" data-object="clearance">
+<title>PEP4 deletion with PMSF vacuolar-protease inhibition — impairs → Clearance of JUNQ-associated reporter cargo; Evidence: DOI:10.1038/s41556-023-01128-6</title><path d="M296,1104.0 C386.0,1104.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-776fa538d2e3c6b7-arrow)"/>
+<text x="386.0" y="596.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">impairs</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment" data-node-id="junq"><title>juxtanuclear quality control compartment (STRUCTURE); junq; cellstructuremech:juxtanuclear_quality_control_compartment</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">juxtanuclear quality control</text>
+<text x="72" y="126" fill="#172033">compartment</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Clearance of JUNQ-associated reporter cargo (BIOLOGICAL_PROCESS); clearance" data-node-id="clearance"><title>Clearance of JUNQ-associated reporter cargo (BIOLOGICAL_PROCESS); clearance</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="488" y="109" fill="#172033">Clearance of JUNQ-associated</text>
+<text x="488" y="126" fill="#172033">reporter cargo</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="NVJ1 deletion (EXPERIMENTAL_FACTOR); nvj1_loss" data-node-id="nvj1_loss"><title>NVJ1 deletion (EXPERIMENTAL_FACTOR); nvj1_loss</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="275" fill="#172033">NVJ1 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="VAC8 deletion (EXPERIMENTAL_FACTOR); vac8_loss" data-node-id="vac8_loss"><title>VAC8 deletion (EXPERIMENTAL_FACTOR); vac8_loss</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="441" fill="#172033">VAC8 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="VPS4 deletion (EXPERIMENTAL_FACTOR); vps4_loss" data-node-id="vps4_loss"><title>VPS4 deletion (EXPERIMENTAL_FACTOR); vps4_loss</title>
+<rect x="60" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="587" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="607" fill="#172033">VPS4 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ATG1 deletion (EXPERIMENTAL_FACTOR); atg1_loss" data-node-id="atg1_loss"><title>ATG1 deletion (EXPERIMENTAL_FACTOR); atg1_loss</title>
+<rect x="60" y="734" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="753" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="773" fill="#172033">ATG1 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ATG8 deletion (EXPERIMENTAL_FACTOR); atg8_loss" data-node-id="atg8_loss"><title>ATG8 deletion (EXPERIMENTAL_FACTOR); atg8_loss</title>
+<rect x="60" y="900" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="919" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="939" fill="#172033">ATG8 deletion</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="PEP4 deletion with PMSF vacuolar-protease inhibition (EXPERIMENTAL_FACTOR); vacuolar_protease_block" data-node-id="vacuolar_protease_block"><title>PEP4 deletion with PMSF vacuolar-protease inhibition (EXPERIMENTAL_FACTOR); vacuolar_protease_block</title>
+<rect x="60" y="1066" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="1085" fill="#075985" font-size="10">EXPERIMENTAL_FACTOR</text>
+<text x="72" y="1105" fill="#172033">PEP4 deletion with PMSF</text>
+<text x="72" y="1122" fill="#172033">vacuolar-protease inhibition</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Perturbations of JUNQ-associated cargo clearance">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td>can undergo</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S8 and Figure 7d,f-g. NES-Keima imaging samples different fields because of photobleaching; the panel-d caption contains an NLS/NES inconsistency.</small></li></ul></td></tr>
 <tr><td>NVJ1 deletion</td><td>impairs</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S6 and Figure 5h, right-hand NES-LuciTs quantification.</small></li></ul></td></tr>

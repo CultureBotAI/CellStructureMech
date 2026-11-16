@@ -82,7 +82,75 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-btucdf_cobalamin_import_mechanism">BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import <small>(FUNCTION)</small></h3>
-<p>Following TonB-dependent outer-membrane passage via BtuB, periplasmic BtuF captures cyanocobalamin and docks onto the BtuC2-BtuD2 inner-membrane ABC complex to drive ATP-dependent cytoplasmic import.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import">
+<p>Following TonB-dependent outer-membrane passage via BtuB, periplasmic BtuF captures cyanocobalamin and docks onto the BtuC2-BtuD2 inner-membrane ABC complex to drive ATP-dependent cytoplasmic import.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-22dc8549ab4a2218-scale"/><label for="graph-22dc8549ab4a2218-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-22dc8549ab4a2218-scale:checked ~ div svg {width:2379px;height:282px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-22dc8549ab4a2218-title graph-22dc8549ab4a2218-desc" width="2379" height="282" viewBox="40 50 2379 282" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-22dc8549ab4a2218-title">BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import</title>
+<desc id="graph-22dc8549ab4a2218-desc">7 nodes and 6 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-22dc8549ab4a2218-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Vitamin B12 transporter BtuB — delivers periplasmic cyanocobalamin to → Vitamin B12-binding protein BtuF; Evidence: PMID:11790740" data-subject="btub_outer_membrane_transporter" data-object="btuf_periplasmic_binding_protein">
+<title>Vitamin B12 transporter BtuB — delivers periplasmic cyanocobalamin to → Vitamin B12-binding protein BtuF; Evidence: PMID:11790740</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">delivers periplasmic cyanocobalamin to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Vitamin B12-binding protein BtuF — docks with substrate onto → Vitamin B12 import system permease protein BtuC; Evidence: PMID:29084999" data-subject="btuf_periplasmic_binding_protein" data-object="btuc_permease_subunit">
+<title>Vitamin B12-binding protein BtuF — docks with substrate onto → Vitamin B12 import system permease protein BtuC; Evidence: PMID:29084999</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">docks with substrate onto</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Vitamin B12 import system permease protein BtuC — assembles with BtuD and BtuF into → cobalamin transport complex; Evidence: PMID:11790740" data-subject="btuc_permease_subunit" data-object="cobalamin_transport_complex">
+<title>Vitamin B12 import system permease protein BtuC — assembles with BtuD and BtuF into → cobalamin transport complex; Evidence: PMID:11790740</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">assembles with BtuD and BtuF into</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Vitamin B12 import ATP-binding protein BtuD — powers ATP hydrolysis in → cobalamin transport complex; Evidence: PMID:28128319" data-subject="btud_atp_binding_subunit" data-object="cobalamin_transport_complex">
+<title>Vitamin B12 import ATP-binding protein BtuD — powers ATP hydrolysis in → cobalamin transport complex; Evidence: PMID:28128319</title><path d="M296,274.0 C802.0,274.0 802.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">powers ATP hydrolysis in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="cobalamin transport complex — enables → ABC-type vitamin B12 transporter activity; Evidence: PMID:28128319" data-subject="cobalamin_transport_complex" data-object="abc_vitamin_b12_transporter_activity">
+<title>cobalamin transport complex — enables → ABC-type vitamin B12 transporter activity; Evidence: PMID:28128319</title><path d="M1544,108.0 C1634.0,108.0 1634.0,108.0 1724,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="1634.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ABC-type vitamin B12 transporter activity — drives → cobalamin transport; Evidence: PMID:11790740" data-subject="abc_vitamin_b12_transporter_activity" data-object="cobalamin_transport">
+<title>ABC-type vitamin B12 transporter activity — drives → cobalamin transport; Evidence: PMID:11790740</title><path d="M1960,108.0 C2050.0,108.0 2050.0,108.0 2140,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-22dc8549ab4a2218-arrow)"/>
+<text x="2050.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">drives</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Vitamin B12 transporter BtuB (GENE_OR_PROTEIN); btub_outer_membrane_transporter; InterPro:IPR010101" data-node-id="btub_outer_membrane_transporter"><title>Vitamin B12 transporter BtuB (GENE_OR_PROTEIN); btub_outer_membrane_transporter; InterPro:IPR010101</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Vitamin B12 transporter BtuB</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Vitamin B12-binding protein BtuF (GENE_OR_PROTEIN); btuf_periplasmic_binding_protein; InterPro:IPR002491" data-node-id="btuf_periplasmic_binding_protein"><title>Vitamin B12-binding protein BtuF (GENE_OR_PROTEIN); btuf_periplasmic_binding_protein; InterPro:IPR002491</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="109" fill="#172033">Vitamin B12-binding protein</text>
+<text x="488" y="126" fill="#172033">BtuF</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Vitamin B12 import system permease protein BtuC (GENE_OR_PROTEIN); btuc_permease_subunit; InterPro:IPR023691" data-node-id="btuc_permease_subunit"><title>Vitamin B12 import system permease protein BtuC (GENE_OR_PROTEIN); btuc_permease_subunit; InterPro:IPR023691</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="904" y="109" fill="#172033">Vitamin B12 import system</text>
+<text x="904" y="126" fill="#172033">permease protein BtuC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Vitamin B12 import ATP-binding protein BtuD (GENE_OR_PROTEIN); btud_atp_binding_subunit; InterPro:IPR023693" data-node-id="btud_atp_binding_subunit"><title>Vitamin B12 import ATP-binding protein BtuD (GENE_OR_PROTEIN); btud_atp_binding_subunit; InterPro:IPR023693</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="275" fill="#172033">Vitamin B12 import ATP-</text>
+<text x="72" y="292" fill="#172033">binding protein BtuD</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cobalamin transport complex (STRUCTURE); cobalamin_transport_complex; GO:1990191" data-node-id="cobalamin_transport_complex"><title>cobalamin transport complex (STRUCTURE); cobalamin_transport_complex; GO:1990191</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="1320" y="109" fill="#172033">cobalamin transport complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ABC-type vitamin B12 transporter activity (MOLECULAR_FUNCTION); abc_vitamin_b12_transporter_activity; GO:0015420" data-node-id="abc_vitamin_b12_transporter_activity"><title>ABC-type vitamin B12 transporter activity (MOLECULAR_FUNCTION); abc_vitamin_b12_transporter_activity; GO:0015420</title>
+<rect x="1724" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="1736" y="109" fill="#172033">ABC-type vitamin B12</text>
+<text x="1736" y="126" fill="#172033">transporter activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cobalamin transport (BIOLOGICAL_PROCESS); cobalamin_transport; GO:0015889" data-node-id="cobalamin_transport"><title>cobalamin transport (BIOLOGICAL_PROCESS); cobalamin_transport; GO:0015889</title>
+<rect x="2140" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="2152" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="2152" y="109" fill="#172033">cobalamin transport</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Vitamin B12 transporter BtuB <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR010101"><code>InterPro:IPR010101</code></a>)</small></td><td>delivers periplasmic cyanocobalamin to</td><td>Vitamin B12-binding protein BtuF <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002491"><code>InterPro:IPR002491</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/11790740"><code>PMID:11790740</code></a> — <q>Transport of CN-Cbl across the outer membrane and its accumulation in the periplasm is mediated by the TonB-dependent transporter BtuB.</q> <small>Establishes sequential delivery from outer-membrane BtuB to periplasmic BtuF.</small></li></ul></td></tr>
 <tr><td>Vitamin B12-binding protein BtuF <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002491"><code>InterPro:IPR002491</code></a>)</small></td><td>docks with substrate onto</td><td>Vitamin B12 import system permease protein BtuC <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023691"><code>InterPro:IPR023691</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29084999"><code>PMID:29084999</code></a> — <q>The CDR3 loop of Nb9 reached into the substrate-binding pocket of BtuF, preventing both B12 binding and BtuCD-F complex formation.</q> <small>Demonstrates substrate-coupled docking of BtuF onto BtuCD.</small></li></ul></td></tr>

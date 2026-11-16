@@ -84,7 +84,49 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-macab_tolc_efflux_function">MacAB-TolC Tripartite Efflux Pump Coupling and Export <small>(FUNCTION)</small></h3>
-<p>Mechanochemical coupling of the inner-membrane MacB ABC ATPase through the periplasmic MacA hexamer to the outer-membrane TolC channel.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MacAB-TolC Tripartite Efflux Pump Coupling and Export">
+<p>Mechanochemical coupling of the inner-membrane MacB ABC ATPase through the periplasmic MacA hexamer to the outer-membrane TolC channel.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-784b12d9d0b7405a-scale"/><label for="graph-784b12d9d0b7405a-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-784b12d9d0b7405a-scale:checked ~ div svg {width:1560px;height:116px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-784b12d9d0b7405a-title graph-784b12d9d0b7405a-desc" width="1560" height="116" viewBox="40 50 1560 116" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-784b12d9d0b7405a-title">MacAB-TolC Tripartite Efflux Pump Coupling and Export</title>
+<desc id="graph-784b12d9d0b7405a-desc">4 nodes and 3 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-784b12d9d0b7405a-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Macrolide Exporter MacB — couples to → Macrolide export protein MacA; Evidence: GO:1990196; PMID:18955484; PDB:5NIK" data-subject="macb_atp_binding_permease" data-object="maca_membrane_fusion_protein">
+<title>Macrolide Exporter MacB — couples to → Macrolide export protein MacA; Evidence: GO:1990196; PMID:18955484; PDB:5NIK</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-784b12d9d0b7405a-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Macrolide export protein MacA — bridges to → Outer membrane channel protein TolC; Evidence: GO:1990196; PMID:28504659; PDB:5NIK" data-subject="maca_membrane_fusion_protein" data-object="tolc_outer_membrane_channel">
+<title>Macrolide export protein MacA — bridges to → Outer membrane channel protein TolC; Evidence: GO:1990196; PMID:28504659; PDB:5NIK</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-784b12d9d0b7405a-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">bridges to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC — mediates → ABC-type xenobiotic transporter activity; Evidence: GO:1990196; GO:0008559; PMID:28504659" data-subject="tolc_outer_membrane_channel" data-object="atp_dependent_xenobiotic_export">
+<title>Outer membrane channel protein TolC — mediates → ABC-type xenobiotic transporter activity; Evidence: GO:1990196; GO:0008559; PMID:28504659</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-784b12d9d0b7405a-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">mediates</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Macrolide Exporter MacB (GENE_OR_PROTEIN); macb_atp_binding_permease; InterPro:IPR050250" data-node-id="macb_atp_binding_permease"><title>Macrolide Exporter MacB (GENE_OR_PROTEIN); macb_atp_binding_permease; InterPro:IPR050250</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Macrolide Exporter MacB</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Macrolide export protein MacA (GENE_OR_PROTEIN); maca_membrane_fusion_protein; InterPro:IPR058623" data-node-id="maca_membrane_fusion_protein"><title>Macrolide export protein MacA (GENE_OR_PROTEIN); maca_membrane_fusion_protein; InterPro:IPR058623</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="109" fill="#172033">Macrolide export protein MacA</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc_outer_membrane_channel; InterPro:IPR058622" data-node-id="tolc_outer_membrane_channel"><title>Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc_outer_membrane_channel; InterPro:IPR058622</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="904" y="109" fill="#172033">Outer membrane channel</text>
+<text x="904" y="126" fill="#172033">protein TolC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ABC-type xenobiotic transporter activity (MOLECULAR_FUNCTION); atp_dependent_xenobiotic_export; GO:0008559" data-node-id="atp_dependent_xenobiotic_export"><title>ABC-type xenobiotic transporter activity (MOLECULAR_FUNCTION); atp_dependent_xenobiotic_export; GO:0008559</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="1320" y="109" fill="#172033">ABC-type xenobiotic</text>
+<text x="1320" y="126" fill="#172033">transporter activity</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MacAB-TolC Tripartite Efflux Pump Coupling and Export">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Macrolide Exporter MacB <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR050250"><code>InterPro:IPR050250</code></a>)</small></td><td>couples to</td><td>Macrolide export protein MacA <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058623"><code>InterPro:IPR058623</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a> <small>GO:1990196 defines MacAB-TolC as consisting of dimeric MacB, hexameric MacA, and trimeric TolC.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18955484"><code>PMID:18955484</code></a> <small>Tikhonova et al. 2009 showed that MacA regulates MacB ATPase activity and macrolide binding.</small></li><li><a href="https://www.rcsb.org/structure/5NIK"><code>PDB:5NIK</code></a> <small>PDB:5NIK resolves the MacB dimer docked to the MacA hexamer.</small></li></ul></td></tr>
 <tr><td>Macrolide export protein MacA <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058623"><code>InterPro:IPR058623</code></a>)</small></td><td>bridges to</td><td>Outer membrane channel protein TolC <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058622"><code>InterPro:IPR058622</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a> <small>GO:1990196 defines MacA as linking inner-membrane MacB to outer-membrane TolC.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/28504659"><code>PMID:28504659</code></a> <small>Fitzpatrick et al. 2017 resolved the cryo-EM structure of the complete MacAB-TolC tripartite assembly.</small></li><li><a href="https://www.rcsb.org/structure/5NIK"><code>PDB:5NIK</code></a> <small>PDB:5NIK captures the tip-to-tip interaction between the MacA hexamer and TolC trimer.</small></li></ul></td></tr>
