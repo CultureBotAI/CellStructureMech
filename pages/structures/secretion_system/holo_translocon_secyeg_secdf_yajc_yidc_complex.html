@@ -121,7 +121,136 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-htl_sec_transport_and_membrane_insertion">Sec holo-translocon couples transport and insertion <small>(FUNCTION)</small></h3>
-<p>SecYEG, SecDF-YajC, and YidC assemble as the bacterial holo-translocon, where the SecYEG core supplies the pore and lateral gate, SecDF supports proton-motive-force assisted translocation, and YidC cooperates with the lateral gate for membrane-protein insertion.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sec holo-translocon couples transport and insertion">
+<p>SecYEG, SecDF-YajC, and YidC assemble as the bacterial holo-translocon, where the SecYEG core supplies the pore and lateral gate, SecDF supports proton-motive-force assisted translocation, and YidC cooperates with the lateral gate for membrane-protein insertion.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-59fd52039a53286a-scale"/><label for="graph-59fd52039a53286a-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-59fd52039a53286a-scale:checked ~ div svg {width:1248px;height:1278px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-59fd52039a53286a-title graph-59fd52039a53286a-desc" width="1248" height="1278" viewBox="40 50 1248 1278" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-59fd52039a53286a-title">Sec holo-translocon couples transport and insertion</title>
+<desc id="graph-59fd52039a53286a-desc">14 nodes and 13 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-59fd52039a53286a-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecYEG translocon complex — forms pore and lateral gate of → Holo-translocon SecYEG-SecDF-YajC-YidC complex; Evidence: ComplexPortal:CPX-1095" data-subject="secyeg_core" data-object="holotranslocon">
+<title>SecYEG translocon complex — forms pore and lateral gate of → Holo-translocon SecYEG-SecDF-YajC-YidC complex; Evidence: ComplexPortal:CPX-1095</title><path d="M1010.0,146 C1010.0,186 594.0,186 594.0,146" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="802.0" y="181" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">forms pore and lateral gate of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecDF-YajC module — assembles with → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="secdf_yajc_module" data-object="secyeg_core">
+<title>SecDF-YajC module — assembles with → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M712,274.0 C802.0,274.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">assembles with</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Membrane protein insertase YidC — assembles with → Holo-translocon SecYEG-SecDF-YajC-YidC complex; Evidence: ComplexPortal:CPX-1095" data-subject="yidc_insertase" data-object="holotranslocon">
+<title>Membrane protein insertase YidC — assembles with → Holo-translocon SecYEG-SecDF-YajC-YidC complex; Evidence: ComplexPortal:CPX-1095</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">assembles with</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="proton-motive force — assists → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095" data-subject="proton_motive_force" data-object="secdf_yajc_module">
+<title>proton-motive force — assists → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095</title><path d="M296,274.0 C386.0,274.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">assists</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Membrane protein insertase YidC — facilitates insertion into → inner-membrane lipid bilayer; Evidence: ComplexPortal:CPX-1095; PMID:27924919" data-subject="yidc_insertase" data-object="inner_membrane_lipid_bilayer">
+<title>Membrane protein insertase YidC — facilitates insertion into → inner-membrane lipid bilayer; Evidence: ComplexPortal:CPX-1095; PMID:27924919</title><path d="M296,108.0 C386.0,108.0 386.0,440.0 476,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">facilitates insertion into</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Holo-translocon SecYEG-SecDF-YajC-YidC complex — enables → protein transport by the Sec complex; Evidence: ComplexPortal:CPX-1095" data-subject="holotranslocon" data-object="sec_transport">
+<title>Holo-translocon SecYEG-SecDF-YajC-YidC complex — enables → protein transport by the Sec complex; Evidence: ComplexPortal:CPX-1095</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Holo-translocon SecYEG-SecDF-YajC-YidC complex — enables → membrane insertase activity; Evidence: ComplexPortal:CPX-1095" data-subject="holotranslocon" data-object="membrane_insertase_activity">
+<title>Holo-translocon SecYEG-SecDF-YajC-YidC complex — enables → membrane insertase activity; Evidence: ComplexPortal:CPX-1095</title><path d="M712,108.0 C802.0,108.0 802.0,440.0 892,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="802.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Protein translocase subunit SecY — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="secy_channel_subunit" data-object="secyeg_core">
+<title>Protein translocase subunit SecY — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,440.0 C594.0,440.0 594.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="594.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Protein translocase subunit SecE — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="sece_clamp_subunit" data-object="secyeg_core">
+<title>Protein translocase subunit SecE — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,606.0 C594.0,606.0 594.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="594.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Protein-export membrane protein SecG — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="secg_accessory_subunit" data-object="secyeg_core">
+<title>Protein-export membrane protein SecG — contributes to → SecYEG translocon complex; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,772.0 C594.0,772.0 594.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="594.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Protein translocase subunit SecD — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="secd_subunit" data-object="secdf_yajc_module">
+<title>Protein translocase subunit SecD — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,938.0 C386.0,938.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="596.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Protein translocase subunit SecF — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="secf_subunit" data-object="secdf_yajc_module">
+<title>Protein translocase subunit SecF — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,1104.0 C386.0,1104.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="679.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Sec translocon accessory complex subunit YajC — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098" data-subject="yajc_accessory_subunit" data-object="secdf_yajc_module">
+<title>Sec translocon accessory complex subunit YajC — contributes to → SecDF-YajC module; Evidence: ComplexPortal:CPX-1095; PMID:27435098</title><path d="M296,1270.0 C386.0,1270.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-59fd52039a53286a-arrow)"/>
+<text x="386.0" y="762.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Holo-translocon SecYEG-SecDF-YajC-YidC complex (STRUCTURE); holotranslocon; cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex" data-node-id="holotranslocon"><title>Holo-translocon SecYEG-SecDF-YajC-YidC complex (STRUCTURE); holotranslocon; cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">Holo-translocon SecYEG-SecDF-</text>
+<text x="488" y="126" fill="#172033">YajC-YidC complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecYEG translocon complex (STRUCTURE); secyeg_core; cellstructuremech:secyeg_translocon_complex" data-node-id="secyeg_core"><title>SecYEG translocon complex (STRUCTURE); secyeg_core; cellstructuremech:secyeg_translocon_complex</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">SecYEG translocon complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecDF-YajC module (STRUCTURE); secdf_yajc_module" data-node-id="secdf_yajc_module"><title>SecDF-YajC module (STRUCTURE); secdf_yajc_module</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="275" fill="#172033">SecDF-YajC module</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Membrane protein insertase YidC (GENE_OR_PROTEIN); yidc_insertase" data-node-id="yidc_insertase"><title>Membrane protein insertase YidC (GENE_OR_PROTEIN); yidc_insertase</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Membrane protein insertase</text>
+<text x="72" y="126" fill="#172033">YidC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="proton-motive force (STATE); proton_motive_force" data-node-id="proton_motive_force"><title>proton-motive force (STATE); proton_motive_force</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">STATE</text>
+<text x="72" y="275" fill="#172033">proton-motive force</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="inner-membrane lipid bilayer (CELLULAR_LOCALIZATION); inner_membrane_lipid_bilayer" data-node-id="inner_membrane_lipid_bilayer"><title>inner-membrane lipid bilayer (CELLULAR_LOCALIZATION); inner_membrane_lipid_bilayer</title>
+<rect x="476" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="421" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="488" y="441" fill="#172033">inner-membrane lipid bilayer</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="protein transport by the Sec complex (BIOLOGICAL_PROCESS); sec_transport; GO:0043952" data-node-id="sec_transport"><title>protein transport by the Sec complex (BIOLOGICAL_PROCESS); sec_transport; GO:0043952</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="904" y="275" fill="#172033">protein transport by the Sec</text>
+<text x="904" y="292" fill="#172033">complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="membrane insertase activity (MOLECULAR_FUNCTION); membrane_insertase_activity; GO:0032977" data-node-id="membrane_insertase_activity"><title>membrane insertase activity (MOLECULAR_FUNCTION); membrane_insertase_activity; GO:0032977</title>
+<rect x="892" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="421" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="904" y="441" fill="#172033">membrane insertase activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Protein translocase subunit SecY (GENE_OR_PROTEIN); secy_channel_subunit" data-node-id="secy_channel_subunit"><title>Protein translocase subunit SecY (GENE_OR_PROTEIN); secy_channel_subunit</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="441" fill="#172033">Protein translocase subunit</text>
+<text x="72" y="458" fill="#172033">SecY</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Protein translocase subunit SecE (GENE_OR_PROTEIN); sece_clamp_subunit" data-node-id="sece_clamp_subunit"><title>Protein translocase subunit SecE (GENE_OR_PROTEIN); sece_clamp_subunit</title>
+<rect x="60" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="587" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="607" fill="#172033">Protein translocase subunit</text>
+<text x="72" y="624" fill="#172033">SecE</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Protein-export membrane protein SecG (GENE_OR_PROTEIN); secg_accessory_subunit" data-node-id="secg_accessory_subunit"><title>Protein-export membrane protein SecG (GENE_OR_PROTEIN); secg_accessory_subunit</title>
+<rect x="60" y="734" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="753" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="773" fill="#172033">Protein-export membrane</text>
+<text x="72" y="790" fill="#172033">protein SecG</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Protein translocase subunit SecD (GENE_OR_PROTEIN); secd_subunit" data-node-id="secd_subunit"><title>Protein translocase subunit SecD (GENE_OR_PROTEIN); secd_subunit</title>
+<rect x="60" y="900" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="919" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="939" fill="#172033">Protein translocase subunit</text>
+<text x="72" y="956" fill="#172033">SecD</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Protein translocase subunit SecF (GENE_OR_PROTEIN); secf_subunit" data-node-id="secf_subunit"><title>Protein translocase subunit SecF (GENE_OR_PROTEIN); secf_subunit</title>
+<rect x="60" y="1066" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="1085" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="1105" fill="#172033">Protein translocase subunit</text>
+<text x="72" y="1122" fill="#172033">SecF</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Sec translocon accessory complex subunit YajC (GENE_OR_PROTEIN); yajc_accessory_subunit" data-node-id="yajc_accessory_subunit"><title>Sec translocon accessory complex subunit YajC (GENE_OR_PROTEIN); yajc_accessory_subunit</title>
+<rect x="60" y="1232" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="1251" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="1271" fill="#172033">Sec translocon accessory</text>
+<text x="72" y="1288" fill="#172033">complex subunit YajC</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sec holo-translocon couples transport and insertion">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>SecYEG translocon complex <small>(<code>cellstructuremech:secyeg_translocon_complex</code>)</small></td><td>forms pore and lateral gate of</td><td>Holo-translocon SecYEG-SecDF-YajC-YidC complex <small>(<code>cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex</code>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-1095"><code>ComplexPortal:CPX-1095</code></a> <small>Complex Portal describes SecYEG as the central pore and lateral gate of CPX-1095.</small></li></ul></td></tr>
 <tr><td>SecDF-YajC module</td><td>assembles with</td><td>SecYEG translocon complex <small>(<code>cellstructuremech:secyeg_translocon_complex</code>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-1095"><code>ComplexPortal:CPX-1095</code></a> <small>CPX-1095 curates SecD, SecF, YajC, SecY, SecE, and SecG as participants in one source complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/27435098"><code>PMID:27435098</code></a> <small>Komar et al. 2016 identify the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex.</small></li></ul></td></tr>

@@ -95,7 +95,104 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mdtabc_tolc_xenobiotic_efflux">MdtABC-TolC exports xenobiotics across the cell envelope <small>(FUNCTION)</small></h3>
-<p>MdtB, MdtC, MdtA, and TolC form an envelope-spanning RND efflux pump that exports drug substrates and other xenobiotics from E. coli.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MdtABC-TolC exports xenobiotics across the cell envelope">
+<p>MdtB, MdtC, MdtA, and TolC form an envelope-spanning RND efflux pump that exports drug substrates and other xenobiotics from E. coli.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-d6e080713284ee8e-scale"/><label for="graph-d6e080713284ee8e-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-d6e080713284ee8e-scale:checked ~ div svg {width:1940px;height:493px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-d6e080713284ee8e-title graph-d6e080713284ee8e-desc" width="1940" height="493" viewBox="40 50 1940 493" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-d6e080713284ee8e-title">MdtABC-TolC exports xenobiotics across the cell envelope</title>
+<desc id="graph-d6e080713284ee8e-desc">9 nodes and 11 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-d6e080713284ee8e-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtB — couples to → Multidrug resistance protein MdtC; Evidence: ComplexPortal:CPX-2119" data-subject="mdtb" data-object="mdtc">
+<title>Multidrug resistance protein MdtB — couples to → Multidrug resistance protein MdtC; Evidence: ComplexPortal:CPX-2119</title><path d="M296,115.5 C386.0,115.5 386.0,296.5 476,296.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="386.0" y="196.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtC — couples to → Multidrug resistance protein MdtA; Evidence: ComplexPortal:CPX-2119" data-subject="mdtc" data-object="mdta">
+<title>Multidrug resistance protein MdtC — couples to → Multidrug resistance protein MdtA; Evidence: ComplexPortal:CPX-2119</title><path d="M712,296.5 C802.0,296.5 802.0,115.5 892,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="802.0" y="196.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtA — couples to → Outer membrane channel protein TolC; Evidence: UniProtKB:P76397" data-subject="mdta" data-object="tolc">
+<title>Multidrug resistance protein MdtA — couples to → Outer membrane channel protein TolC; Evidence: UniProtKB:P76397</title><path d="M1128,115.5 C1218.0,115.5 1218.0,115.5 1308,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="1218.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="MdtABC-TolC multidrug efflux transport complex — enables → xenobiotic transmembrane transporter activity; Evidence: ComplexPortal:CPX-2119" data-subject="mdtabc_tolc" data-object="xenobiotic_transport">
+<title>MdtABC-TolC multidrug efflux transport complex — enables → xenobiotic transmembrane transporter activity; Evidence: ComplexPortal:CPX-2119</title><path d="M712,115.5 C802.0,115.5 802.0,296.5 892,296.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="802.0" y="196.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity — transports → xenobiotic substrate; Evidence: ComplexPortal:CPX-2119" data-subject="xenobiotic_transport" data-object="xenobiotic">
+<title>xenobiotic transmembrane transporter activity — transports → xenobiotic substrate; Evidence: ComplexPortal:CPX-2119</title><path d="M1128,296.5 C1218.0,296.5 1218.0,477.5 1308,477.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="1218.0" y="377.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">transports</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="xenobiotic detoxification by transmembrane export across the cell outer membrane — targets → cell exterior; Evidence: GO:0140330" data-subject="outer_membrane_export" data-object="cell_exterior">
+<title>xenobiotic detoxification by transmembrane export across the cell outer membrane — targets → cell exterior; Evidence: GO:0140330</title><path d="M1544,296.5 C1634.0,296.5 1634.0,115.5 1724,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="1634.0" y="196.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">targets</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtB — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119" data-subject="mdtb" data-object="mdtabc_tolc">
+<title>Multidrug resistance protein MdtB — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119</title><path d="M296,115.5 C386.0,115.5 386.0,115.5 476,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="386.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtC — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119" data-subject="mdtc" data-object="mdtabc_tolc">
+<title>Multidrug resistance protein MdtC — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119</title><path d="M712,296.5 C777,296.5 777,115.5 712,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="777" y="206.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtA — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119" data-subject="mdta" data-object="mdtabc_tolc">
+<title>Multidrug resistance protein MdtA — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119</title><path d="M1010.0,161 C1010.0,281 594.0,281 594.0,161" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="802.0" y="276" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119" data-subject="tolc" data-object="mdtabc_tolc">
+<title>Outer membrane channel protein TolC — contributes to → MdtABC-TolC multidrug efflux transport complex; Evidence: ComplexPortal:CPX-2119</title><path d="M1426.0,161 C1426.0,291 594.0,291 594.0,161" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="1010.0" y="286" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity — contributes to → xenobiotic detoxification by transmembrane export across the cell outer membrane; Evidence: ComplexPortal:CPX-2119; GO:0140330" data-subject="xenobiotic_transport" data-object="outer_membrane_export">
+<title>xenobiotic transmembrane transporter activity — contributes to → xenobiotic detoxification by transmembrane export across the cell outer membrane; Evidence: ComplexPortal:CPX-2119; GO:0140330</title><path d="M1128,296.5 C1218.0,296.5 1218.0,296.5 1308,296.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-d6e080713284ee8e-arrow)"/>
+<text x="1218.0" y="286.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="MdtABC-TolC multidrug efflux transport complex (STRUCTURE); mdtabc_tolc; cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex" data-node-id="mdtabc_tolc"><title>MdtABC-TolC multidrug efflux transport complex (STRUCTURE); mdtabc_tolc; cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex</title>
+<rect x="476" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">MdtABC-TolC multidrug efflux</text>
+<text x="488" y="126" fill="#172033">transport complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtA (GENE_OR_PROTEIN); mdta; InterPro:IPR022824" data-node-id="mdta"><title>Multidrug resistance protein MdtA (GENE_OR_PROTEIN); mdta; InterPro:IPR022824</title>
+<rect x="892" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="904" y="109" fill="#172033">Multidrug resistance protein</text>
+<text x="904" y="126" fill="#172033">MdtA</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtB (GENE_OR_PROTEIN); mdtb; InterPro:IPR022831" data-node-id="mdtb"><title>Multidrug resistance protein MdtB (GENE_OR_PROTEIN); mdtb; InterPro:IPR022831</title>
+<rect x="60" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Multidrug resistance protein</text>
+<text x="72" y="126" fill="#172033">MdtB</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Multidrug resistance protein MdtC (GENE_OR_PROTEIN); mdtc; InterPro:IPR023931" data-node-id="mdtc"><title>Multidrug resistance protein MdtC (GENE_OR_PROTEIN); mdtc; InterPro:IPR023931</title>
+<rect x="476" y="251" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="270" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="290" fill="#172033">Multidrug resistance protein</text>
+<text x="488" y="307" fill="#172033">MdtC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc; InterPro:IPR058622" data-node-id="tolc"><title>Outer membrane channel protein TolC (GENE_OR_PROTEIN); tolc; InterPro:IPR058622</title>
+<rect x="1308" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="1320" y="109" fill="#172033">Outer membrane channel</text>
+<text x="1320" y="126" fill="#172033">protein TolC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="xenobiotic transmembrane transporter activity (MOLECULAR_FUNCTION); xenobiotic_transport; GO:0042910" data-node-id="xenobiotic_transport"><title>xenobiotic transmembrane transporter activity (MOLECULAR_FUNCTION); xenobiotic_transport; GO:0042910</title>
+<rect x="892" y="251" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="270" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="904" y="290" fill="#172033">xenobiotic transmembrane</text>
+<text x="904" y="307" fill="#172033">transporter activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="xenobiotic detoxification by transmembrane export across the cell outer membrane (BIOLOGICAL_PROCESS); outer_membrane_export; GO:0140330" data-node-id="outer_membrane_export"><title>xenobiotic detoxification by transmembrane export across the cell outer membrane (BIOLOGICAL_PROCESS); outer_membrane_export; GO:0140330</title>
+<rect x="1308" y="251" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="270" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="1320" y="290" fill="#172033">xenobiotic detoxification by</text>
+<text x="1320" y="307" fill="#172033">transmembrane export across</text>
+<text x="1320" y="324" fill="#172033">the cell outer membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="xenobiotic substrate (CHEMICAL); xenobiotic" data-node-id="xenobiotic"><title>xenobiotic substrate (CHEMICAL); xenobiotic</title>
+<rect x="1308" y="432" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="451" fill="#075985" font-size="10">CHEMICAL</text>
+<text x="1320" y="471" fill="#172033">xenobiotic substrate</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cell exterior (CELLULAR_LOCALIZATION); cell_exterior" data-node-id="cell_exterior"><title>cell exterior (CELLULAR_LOCALIZATION); cell_exterior</title>
+<rect x="1724" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="1736" y="109" fill="#172033">cell exterior</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MdtABC-TolC exports xenobiotics across the cell envelope">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Multidrug resistance protein MdtB <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR022831"><code>InterPro:IPR022831</code></a>)</small></td><td>couples to</td><td>Multidrug resistance protein MdtC <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023931"><code>InterPro:IPR023931</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-2119"><code>ComplexPortal:CPX-2119</code></a> <small>CPX-2119 curates MdtB and MdtC as linked participants in the E. coli MdtABC-TolC pump.</small></li></ul></td></tr>
 <tr><td>Multidrug resistance protein MdtC <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023931"><code>InterPro:IPR023931</code></a>)</small></td><td>couples to</td><td>Multidrug resistance protein MdtA <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR022824"><code>InterPro:IPR022824</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-2119"><code>ComplexPortal:CPX-2119</code></a> <small>CPX-2119 curates MdtA, MdtB, and MdtC as participants in the E. coli MdtABC-TolC pump.</small></li></ul></td></tr>

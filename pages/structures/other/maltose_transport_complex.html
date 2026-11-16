@@ -90,7 +90,78 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-malefgk2_alternating_access_transport">MalEFGK2 Alternating-Access Maltose Import Cycle <small>(FUNCTION)</small></h3>
-<p>MalE captures periplasmic maltose and docks with the MalF-MalG transmembrane heterodimer, cooperating with MalK2 dimerization and ATP hydrolysis to drive maltose import.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MalEFGK2 Alternating-Access Maltose Import Cycle">
+<p>MalE captures periplasmic maltose and docks with the MalF-MalG transmembrane heterodimer, cooperating with MalK2 dimerization and ATP hydrolysis to drive maltose import.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-ef93381de756a310-scale"/><label for="graph-ef93381de756a310-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-ef93381de756a310-scale:checked ~ div svg {width:2356px;height:312px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-ef93381de756a310-title graph-ef93381de756a310-desc" width="2356" height="312" viewBox="40 50 2356 312" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-ef93381de756a310-title">MalEFGK2 Alternating-Access Maltose Import Cycle</title>
+<desc id="graph-ef93381de756a310-desc">7 nodes and 6 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-ef93381de756a310-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Maltose/maltodextrin-binding periplasmic protein MalE — binds periplasmic region of → Maltose/maltodextrin transport system permease protein MalF; Evidence: PMID:29194754" data-subject="male_periplasmic_binding_protein" data-object="malf_permease_subunit">
+<title>Maltose/maltodextrin-binding periplasmic protein MalE — binds periplasmic region of → Maltose/maltodextrin transport system permease protein MalF; Evidence: PMID:29194754</title><path d="M296,115.5 C386.0,115.5 386.0,115.5 476,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="386.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">binds periplasmic region of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Maltose/maltodextrin transport system permease protein MalF — forms heterodimeric transmembrane pore with → Maltose/maltodextrin transport system permease protein MalG; Evidence: PMID:29194754" data-subject="malf_permease_subunit" data-object="malg_permease_subunit">
+<title>Maltose/maltodextrin transport system permease protein MalF — forms heterodimeric transmembrane pore with → Maltose/maltodextrin transport system permease protein MalG; Evidence: PMID:29194754</title><path d="M712,115.5 C802.0,115.5 802.0,115.5 892,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="802.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">forms heterodimeric transmembrane pore with</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Maltose/maltodextrin import ATP-binding protein MalK — couples ATP dimerization with MalFG in → maltose transport complex; Evidence: PMID:29194754" data-subject="malk_atp_binding_subunit" data-object="maltose_transport_complex">
+<title>Maltose/maltodextrin import ATP-binding protein MalK — couples ATP dimerization with MalFG in → maltose transport complex; Evidence: PMID:29194754</title><path d="M296,296.5 C802.0,296.5 802.0,115.5 1308,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="802.0" y="196.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">couples ATP dimerization with MalFG in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Maltose/maltodextrin transport system permease protein MalG — constitutes transmembrane core of → maltose transport complex; Evidence: PMID:29194754" data-subject="malg_permease_subunit" data-object="maltose_transport_complex">
+<title>Maltose/maltodextrin transport system permease protein MalG — constitutes transmembrane core of → maltose transport complex; Evidence: PMID:29194754</title><path d="M1128,115.5 C1218.0,115.5 1218.0,115.5 1308,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="1218.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">constitutes transmembrane core of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="maltose transport complex — enables → ABC-type maltose transporter activity; Evidence: PMID:26338707" data-subject="maltose_transport_complex" data-object="abc_maltose_transporter_activity">
+<title>maltose transport complex — enables → ABC-type maltose transporter activity; Evidence: PMID:26338707</title><path d="M1544,115.5 C1634.0,115.5 1634.0,115.5 1724,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="1634.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ABC-type maltose transporter activity — drives → maltose transport; Evidence: PMID:26338707" data-subject="abc_maltose_transporter_activity" data-object="maltose_transport">
+<title>ABC-type maltose transporter activity — drives → maltose transport; Evidence: PMID:26338707</title><path d="M1960,115.5 C2050.0,115.5 2050.0,115.5 2140,115.5" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-ef93381de756a310-arrow)"/>
+<text x="2050.0" y="105.5" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">drives</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Maltose/maltodextrin-binding periplasmic protein MalE (GENE_OR_PROTEIN); male_periplasmic_binding_protein; InterPro:IPR006059" data-node-id="male_periplasmic_binding_protein"><title>Maltose/maltodextrin-binding periplasmic protein MalE (GENE_OR_PROTEIN); male_periplasmic_binding_protein; InterPro:IPR006059</title>
+<rect x="60" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Maltose/maltodextrin-binding</text>
+<text x="72" y="126" fill="#172033">periplasmic protein MalE</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Maltose/maltodextrin transport system permease protein MalF (GENE_OR_PROTEIN); malf_permease_subunit; InterPro:IPR035277" data-node-id="malf_permease_subunit"><title>Maltose/maltodextrin transport system permease protein MalF (GENE_OR_PROTEIN); malf_permease_subunit; InterPro:IPR035277</title>
+<rect x="476" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="109" fill="#172033">Maltose/maltodextrin</text>
+<text x="488" y="126" fill="#172033">transport system permease</text>
+<text x="488" y="143" fill="#172033">protein MalF</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Maltose/maltodextrin transport system permease protein MalG (GENE_OR_PROTEIN); malg_permease_subunit; InterPro:IPR050901" data-node-id="malg_permease_subunit"><title>Maltose/maltodextrin transport system permease protein MalG (GENE_OR_PROTEIN); malg_permease_subunit; InterPro:IPR050901</title>
+<rect x="892" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="904" y="109" fill="#172033">Maltose/maltodextrin</text>
+<text x="904" y="126" fill="#172033">transport system permease</text>
+<text x="904" y="143" fill="#172033">protein MalG</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Maltose/maltodextrin import ATP-binding protein MalK (GENE_OR_PROTEIN); malk_atp_binding_subunit; InterPro:IPR015855" data-node-id="malk_atp_binding_subunit"><title>Maltose/maltodextrin import ATP-binding protein MalK (GENE_OR_PROTEIN); malk_atp_binding_subunit; InterPro:IPR015855</title>
+<rect x="60" y="251" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="270" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="290" fill="#172033">Maltose/maltodextrin import</text>
+<text x="72" y="307" fill="#172033">ATP-binding protein MalK</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="maltose transport complex (STRUCTURE); maltose_transport_complex; GO:1990060" data-node-id="maltose_transport_complex"><title>maltose transport complex (STRUCTURE); maltose_transport_complex; GO:1990060</title>
+<rect x="1308" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="1320" y="109" fill="#172033">maltose transport complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ABC-type maltose transporter activity (MOLECULAR_FUNCTION); abc_maltose_transporter_activity; GO:0015423" data-node-id="abc_maltose_transporter_activity"><title>ABC-type maltose transporter activity (MOLECULAR_FUNCTION); abc_maltose_transporter_activity; GO:0015423</title>
+<rect x="1724" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="1736" y="109" fill="#172033">ABC-type maltose transporter</text>
+<text x="1736" y="126" fill="#172033">activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="maltose transport (BIOLOGICAL_PROCESS); maltose_transport; GO:0015768" data-node-id="maltose_transport"><title>maltose transport (BIOLOGICAL_PROCESS); maltose_transport; GO:0015768</title>
+<rect x="2140" y="70" width="236" height="91" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="2152" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="2152" y="109" fill="#172033">maltose transport</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MalEFGK2 Alternating-Access Maltose Import Cycle">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Maltose/maltodextrin-binding periplasmic protein MalE <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006059"><code>InterPro:IPR006059</code></a>)</small></td><td>binds periplasmic region of</td><td>Maltose/maltodextrin transport system permease protein MalF <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR035277"><code>InterPro:IPR035277</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29194754"><code>PMID:29194754</code></a> — <q>MalE binding suppressed the fluctuation of the TMDs and MalF periplasmic region (MalF-P2), and thus prevented the incorrect arrangement of the MalF C-terminal (TM8) helix.</q> <small>Demonstrates MalE interaction with MalF-P2 and stabilization of TM8.</small></li></ul></td></tr>
 <tr><td>Maltose/maltodextrin transport system permease protein MalF <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR035277"><code>InterPro:IPR035277</code></a>)</small></td><td>forms heterodimeric transmembrane pore with</td><td>Maltose/maltodextrin transport system permease protein MalG <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR050901"><code>InterPro:IPR050901</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29194754"><code>PMID:29194754</code></a> — <q>This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .</q> <small>Supports heterodimeric assembly of MalF and MalG.</small></li></ul></td></tr>

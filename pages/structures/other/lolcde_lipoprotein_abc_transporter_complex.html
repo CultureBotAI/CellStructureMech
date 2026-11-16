@@ -89,7 +89,100 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-lolcde_lipoprotein_release">LolCDE releases outer-membrane lipoproteins from the inner membrane <small>(FUNCTION)</small></h3>
-<p>LolC, LolE, and two LolD copies form an ATP-powered inner-membrane complex that releases mature lipoproteins for delivery to the outer membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: LolCDE releases outer-membrane lipoproteins from the inner membrane">
+<p>LolC, LolE, and two LolD copies form an ATP-powered inner-membrane complex that releases mature lipoproteins for delivery to the outer membrane.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-bb5a55d31a6c5d18-scale"/><label for="graph-bb5a55d31a6c5d18-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-bb5a55d31a6c5d18-scale:checked ~ div svg {width:1940px;height:282px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-bb5a55d31a6c5d18-title graph-bb5a55d31a6c5d18-desc" width="1940" height="282" viewBox="40 50 1940 282" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-bb5a55d31a6c5d18-title">LolCDE releases outer-membrane lipoproteins from the inner membrane</title>
+<desc id="graph-bb5a55d31a6c5d18-desc">9 nodes and 10 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-bb5a55d31a6c5d18-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Lipoprotein-releasing system transmembrane protein LolC — recognizes with → Lipoprotein-releasing system transmembrane protein LolE; Evidence: ComplexPortal:CPX-4262" data-subject="lolc" data-object="lole">
+<title>Lipoprotein-releasing system transmembrane protein LolC — recognizes with → Lipoprotein-releasing system transmembrane protein LolE; Evidence: ComplexPortal:CPX-4262</title><path d="M296,108.0 C386.0,108.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">recognizes with</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Lipoprotein-releasing system ATP-binding protein LolD — powers → lipoprotein releasing activity; Evidence: ComplexPortal:CPX-4262" data-subject="lold" data-object="lipoprotein_release">
+<title>Lipoprotein-releasing system ATP-binding protein LolD — powers → lipoprotein releasing activity; Evidence: ComplexPortal:CPX-4262</title><path d="M296,274.0 C594.0,274.0 594.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="594.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">powers</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="LolCDE lipoprotein ABC transporter complex — enables → lipoprotein releasing activity; Evidence: GO:0140306" data-subject="lolcde" data-object="lipoprotein_release">
+<title>LolCDE lipoprotein ABC transporter complex — enables → lipoprotein releasing activity; Evidence: GO:0140306</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="lipoprotein releasing activity — releases → mature outer-membrane lipoprotein; Evidence: GO:0140306" data-subject="lipoprotein_release" data-object="mature_outer_membrane_lipoprotein">
+<title>lipoprotein releasing activity — releases → mature outer-membrane lipoprotein; Evidence: GO:0140306</title><path d="M1128,108.0 C1218.0,108.0 1218.0,274.0 1308,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="1218.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">releases</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="mature outer-membrane lipoprotein — leaves → inner membrane; Evidence: GO:0140306" data-subject="mature_outer_membrane_lipoprotein" data-object="inner_membrane">
+<title>mature outer-membrane lipoprotein — leaves → inner membrane; Evidence: GO:0140306</title><path d="M1544,274.0 C1634.0,274.0 1634.0,108.0 1724,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="1634.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">leaves</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="lipoprotein localization to outer membrane — targets → outer membrane; Evidence: GO:0044874" data-subject="outer_membrane_lipoprotein_localization" data-object="outer_membrane">
+<title>lipoprotein localization to outer membrane — targets → outer membrane; Evidence: GO:0044874</title><path d="M1544,108.0 C1634.0,108.0 1634.0,274.0 1724,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="1634.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">targets</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Lipoprotein-releasing system transmembrane protein LolC — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY" data-subject="lolc" data-object="lolcde">
+<title>Lipoprotein-releasing system transmembrane protein LolC — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Lipoprotein-releasing system ATP-binding protein LolD — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY" data-subject="lold" data-object="lolcde">
+<title>Lipoprotein-releasing system ATP-binding protein LolD — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Lipoprotein-releasing system transmembrane protein LolE — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY" data-subject="lole" data-object="lolcde">
+<title>Lipoprotein-releasing system transmembrane protein LolE — contributes to → LolCDE lipoprotein ABC transporter complex; Evidence: ComplexPortal:CPX-4262; PDB:7MDY</title><path d="M712,274.0 C777,274.0 777,108.0 712,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="777" y="191.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="lipoprotein releasing activity — contributes to → lipoprotein localization to outer membrane; Evidence: ComplexPortal:CPX-4262; GO:0140306" data-subject="lipoprotein_release" data-object="outer_membrane_lipoprotein_localization">
+<title>lipoprotein releasing activity — contributes to → lipoprotein localization to outer membrane; Evidence: ComplexPortal:CPX-4262; GO:0140306</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb5a55d31a6c5d18-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contributes to</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="LolCDE lipoprotein ABC transporter complex (STRUCTURE); lolcde; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex" data-node-id="lolcde"><title>LolCDE lipoprotein ABC transporter complex (STRUCTURE); lolcde; cellstructuremech:lolcde_lipoprotein_abc_transporter_complex</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">LolCDE lipoprotein ABC</text>
+<text x="488" y="126" fill="#172033">transporter complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Lipoprotein-releasing system transmembrane protein LolC (GENE_OR_PROTEIN); lolc" data-node-id="lolc"><title>Lipoprotein-releasing system transmembrane protein LolC (GENE_OR_PROTEIN); lolc</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">Lipoprotein-releasing system</text>
+<text x="72" y="126" fill="#172033">transmembrane protein LolC</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Lipoprotein-releasing system ATP-binding protein LolD (GENE_OR_PROTEIN); lold" data-node-id="lold"><title>Lipoprotein-releasing system ATP-binding protein LolD (GENE_OR_PROTEIN); lold</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="275" fill="#172033">Lipoprotein-releasing system</text>
+<text x="72" y="292" fill="#172033">ATP-binding protein LolD</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Lipoprotein-releasing system transmembrane protein LolE (GENE_OR_PROTEIN); lole" data-node-id="lole"><title>Lipoprotein-releasing system transmembrane protein LolE (GENE_OR_PROTEIN); lole</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="275" fill="#172033">Lipoprotein-releasing system</text>
+<text x="488" y="292" fill="#172033">transmembrane protein LolE</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="lipoprotein releasing activity (MOLECULAR_FUNCTION); lipoprotein_release; GO:0140306" data-node-id="lipoprotein_release"><title>lipoprotein releasing activity (MOLECULAR_FUNCTION); lipoprotein_release; GO:0140306</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">MOLECULAR_FUNCTION</text>
+<text x="904" y="109" fill="#172033">lipoprotein releasing</text>
+<text x="904" y="126" fill="#172033">activity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="lipoprotein localization to outer membrane (BIOLOGICAL_PROCESS); outer_membrane_lipoprotein_localization; GO:0044874" data-node-id="outer_membrane_lipoprotein_localization"><title>lipoprotein localization to outer membrane (BIOLOGICAL_PROCESS); outer_membrane_lipoprotein_localization; GO:0044874</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="1320" y="109" fill="#172033">lipoprotein localization to</text>
+<text x="1320" y="126" fill="#172033">outer membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="mature outer-membrane lipoprotein (GENE_OR_PROTEIN); mature_outer_membrane_lipoprotein" data-node-id="mature_outer_membrane_lipoprotein"><title>mature outer-membrane lipoprotein (GENE_OR_PROTEIN); mature_outer_membrane_lipoprotein</title>
+<rect x="1308" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="1320" y="275" fill="#172033">mature outer-membrane</text>
+<text x="1320" y="292" fill="#172033">lipoprotein</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="inner membrane (CELLULAR_LOCALIZATION); inner_membrane" data-node-id="inner_membrane"><title>inner membrane (CELLULAR_LOCALIZATION); inner_membrane</title>
+<rect x="1724" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="1736" y="109" fill="#172033">inner membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="outer membrane (CELLULAR_LOCALIZATION); outer_membrane" data-node-id="outer_membrane"><title>outer membrane (CELLULAR_LOCALIZATION); outer_membrane</title>
+<rect x="1724" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="255" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="1736" y="275" fill="#172033">outer membrane</text>
+</g>
+</svg></div></figure>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: LolCDE releases outer-membrane lipoproteins from the inner membrane">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Lipoprotein-releasing system transmembrane protein LolC</td><td>recognizes with</td><td>Lipoprotein-releasing system transmembrane protein LolE</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a> <small>CPX-4262 describes lipoprotein recognition by LolC and/or LolE on the periplasmic side of the inner membrane.</small></li></ul></td></tr>
 <tr><td>Lipoprotein-releasing system ATP-binding protein LolD</td><td>powers</td><td>lipoprotein releasing activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a> <small>CPX-4262 describes LolD ATP hydrolysis as the driving force for lipoprotein release.</small></li></ul></td></tr>

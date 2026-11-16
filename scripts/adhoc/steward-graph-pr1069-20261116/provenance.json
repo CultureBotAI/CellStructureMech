@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-16",
+  "issue_or_pr": "https://github.com/CultureBotAI/CellStructureMech/pull/1069",
+  "source_head": "86977e21f86f902505c6f7061c097f662191b196",
+  "base_head": "7a5ef9e01fe8e8bc44f649d94b61b4b2bab5ef2b",
+  "purpose": "Port graph diagrams while preserving current-main page/reference enhancements; regenerate all pages to repair historical drift.",
+  "source_blob_ids": {
+    "scripts/mechanism_graph.py": "17f992d0ebec98327f8844b02047f24277dc315b",
+    "tests/test_mechanism_graph.py": "72801029851c497f124fc29ffa1e56bfc82766be"
+  },
+  "records_changed": false,
+  "outputs_at_port_time": {
+    "scripts/mechanism_graph.py": "20684d7982b8e44ca2a64c8c697fde3cac192325b235a4109f60632314846592",
+    "tests/test_mechanism_graph.py": "8e3b88e8c0ce485926c042bf40daad4fc7347da122b1fd2e59d735b026f57ced",
+    "scripts/render_pages.py": "98c21c6d459cfce28748f7832db981f968b0227040a451278d06806b98fc1b25",
+    "src/cellstructuremech/templates/structure.html": "eb1c9015749deae3adf61b39b3b38dca0bf46b1dabaafaeaec1cc0e737080062"
+  }
+}
