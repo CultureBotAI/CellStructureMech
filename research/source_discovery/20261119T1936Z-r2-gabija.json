@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-11-20T01:12:49Z",
+  "brief": "20261119T1936Z-r2",
+  "base_sha": "7a5ef9e01fe8e8bc44f649d94b61b4b2bab5ef2b",
+  "frontier": "One candidate: Gabija physical GajAB complex; public primary structural paper and exact-term GO authority searches. No whole-literature exhaustion claim.",
+  "sources": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10822852/fullTextXML",
+      "query": "Gabija complex; Results structural organization",
+      "accessed_at": "2026-11-20T01:11:47.850231+00:00",
+      "sha256": "3af9cb495e086cf90cf358746f96e788e4205acec916d57e06f4f31325331e9f",
+      "reachable": true,
+      "candidate": "Gabija GajAB complex"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/ols4/api/search?q=Gabija&ontology=go&rows=20",
+      "query": "Gabija and GajAB in GO",
+      "reachable": true,
+      "matches": 0,
+      "decision": "No exact identity found in these bounded searches. GO:0032991 protein-containing complex is a broader cellular-component term, not exact identity."
+    }
+  ],
+  "deduplication": {
+    "scope": "Canonical and isolated exact-main checkouts; hidden and ignored files included; Git internals, external symlink targets and archive interiors excluded. Open PR changed-file paths also searched.",
+    "matches": "Imported TraitMech Gabija system website reference only; no structure record.",
+    "existing_trait_is_not_structure": true
+  },
+  "candidates": [
+    {
+      "name": "Gabija GajAB complex",
+      "identifier": "cellstructuremech:gabija_gajab_complex",
+      "record_path": "data/structures/other/gabija_gajab_complex.yaml",
+      "disposition": "added_proposed_record",
+      "evidence_scope": "Physical GajA4-GajB4 assembly in a characterized B. cereus system; no universal stoichiometry claim."
+    }
+  ],
+  "saturation": {
+    "status": "not_established",
+    "reason": "This bounded pass adds one candidate; broader source frontier was not exhausted."
+  },
+  "publication": "PR/check status is recorded in the append-only fleet-ops run report; no successful QC or merge is implied."
+}

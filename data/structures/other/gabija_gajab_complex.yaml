@@ -1,0 +1,30 @@
+identifier: cellstructuremech:gabija_gajab_complex
+label: Gabija GajAB complex
+definition: A bacterial antiphage protein complex assembled from GajA and GajB, characterized
+  as an octameric ring containing four copies of each protein in the Bacillus cereus
+  VD045 system.
+definition_source: DOI:10.1038/s41467-024-45173-7
+synonyms:
+- synonym_text: Gabija complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-024-45173-7
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+parent_structures:
+- GO:0032991
+mapping_status: PROPOSED
+evidence:
+- reference: DOI:10.1038/s41467-024-45173-7
+  notes: 'Results, The overall structure and structural organization of the Gabija
+    complex: SEC-MALS and cryo-EM characterize the B. cereus VD045 proteins after
+    heterologous expression in E. coli. This record denotes the physical GajA4-GajB4
+    assembly, not a single protein or the defense phenotype; no distribution across
+    all Gabija systems is asserted.'
+curation_history:
+- timestamp: '2026-11-20T01:12:49Z'
+  curator: Codex
+  action: CREATED_RECORD
+  changes: Added the physical Gabija GajAB assembly from primary structural evidence;
+    retained a local identity after GO term searches and used GO:0032991 only as a
+    broader parent.
+  llm_assisted: true
