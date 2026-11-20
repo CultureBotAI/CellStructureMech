@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gabija_gajab_complex.yaml
+  slug: gabija_gajab_complex
+session:
+  id: 2026-11-20T011249Z-codex-c61e53
+  timestamp: '2026-11-20T01:12:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-6
+    agent_tool: Codex
+links:
+  urls:
+  - https://doi.org/10.1038/s41467-024-45173-7
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - curation_history
+  summary: Add proposed Gabija GajAB complex
+  details: Created one physical-complex record using the shared serializer after native
+    closed-schema validation. Inspected public primary structural evidence and GO
+    authority responses; candidate identity search included hidden and ignored files.
+    Source saturation is not established. Existing records, schemas, workflows and
+    generated artifacts were preserved; publication checks are recorded separately.
